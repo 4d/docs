@@ -37,20 +37,20 @@ Cuando las [variables](variables.md) o los [parámetros](parameters.md) se tipif
 
 El valor por defecto depende del tipo de variable:
 
-| Tipo       | Valor por defecto |
-| ---------- | ----------------- |
-| Booleano   | False             |
-| Fecha      | 00-00-00          |
-| Longint    | 0                 |
-| Hora       | 00:00:00          |
-| Picture    | picture size=0    |
-| Real       | 0                 |
-| Puntero    | Nil=true          |
-| Text       | ""                |
-| Blob       | Tamaño Blob=0     |
-| Object     | null              |
-| Collection | null              |
-| Variant    | indefinido        |
+| Tipo       | Valor por defecto                        |
+| ---------- | ---------------------------------------- |
+| Booleano   | False                                    |
+| Fecha      | 00-00-00                                 |
+| Longint    | 0                                        |
+| Hora       | 00:00:00 |
+| Picture    | picture size=0                           |
+| Real       | 0                                        |
+| Puntero    | Nil=true                                 |
+| Text       | ""                                       |
+| Blob       | Tamaño Blob=0                            |
+| Object     | null                                     |
+| Collection | null                                     |
+| Variant    | indefinido                               |
 
 ### Null como valor por defecto
 

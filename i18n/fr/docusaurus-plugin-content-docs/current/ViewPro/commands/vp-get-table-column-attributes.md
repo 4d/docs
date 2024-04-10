@@ -37,8 +37,8 @@ In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifi�
 
 The command returns an object describing the current attributes of the _column_:
 
-| Propriété           | Type    | Description                                                                                                                     |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Propriété           | Type    | Description                                                                                                                                     |
+| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données. Not returned if the table is displayed automatically |
 | name                | text    | Nom de la colonne de la table.                                                                                                  |
 | footerText          | text    | Valeur du pied de colonne.                                                                                                      |

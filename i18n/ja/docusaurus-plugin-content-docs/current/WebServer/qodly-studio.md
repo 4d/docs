@@ -1,11 +1,11 @@
 ---
 id: qodly-studio
-title: Qodly Studio in 4D
+title: Qodly Studio for 4D
 ---
 
 :::caution デベロッパー・プレビュー
 
-4D の Qodly Studio は現在、**デベロッパー・プレビュー** の段階です。 本番環境で使用すべきではありません。
+Qodly Studio for 4D は現在、**デベロッパー・プレビュー** の段階です。 本番環境で使用すべきではありません。
 
 :::
 
@@ -24,7 +24,7 @@ Qodly Studio では、全く新しい WebUI を使い、データソースの概
 
 :::info
 
-4D で Qodly Studio を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
+Qodly Studio for 4D を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
 
 :::
 
@@ -236,9 +236,83 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 
 
-## ライセンスの使用について
+## 強制ログイン
 
-Qodlyフォームをレンダリングするには、プロジェクトデータベースのメインの Webサーバーでセッションが開かれるため、使用可能なライセンスが必要です。
+Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を使用して、4Dクライアントライセンスを必要とする Webセッションが開かれる数を制御できます。 いつでもユーザーを [ログアウト](#ログアウト)して、消費ライセンス数を減らすこともできます。
+
+### 強制ログインモードの設定
+
+4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を [ロールと権限ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) で設定することができます。設定は **Force login** オプションを使用しておこないます:
+
+![alt-text](../assets/en/WebServer/forcelogin.png)
+
+:::note
+
+このオプションは、[**roles.json** ファイル](../ORDA/privileges.md#rolesjson-ファイル) で直接設定することもできます。
+
+:::
+
+"強制ログイン" モードが **無効** になっている場合 (デフォルトモード)、認証用の Qodlyフォームのレンダリングを含むすべての RESTリクエストは、サーバー上で Webセッションを作成し、認証の結果に関係なく 4D クライアントライセンスを消費します。 "強制ログイン" モードが **有効** になっている場合、ライセンスを消費せずに認証用の簡単な Qodlyフォームを表示することができます。 この Qodlyフォームから、データストアクラスに実装した [`authentify()`](../REST/authUsers.md#function-authentify) 関数を呼び出すだけです。 この場合、ユーザーが実際にログインした場合にのみライセンスが消費されます。
+
+:::info
+
+For more information, refer to [this blog post](https://blog.4d.com/qodly-studio-consume-a-4d-client-licence-only-when-the-authentication-is-successful) that tells the full story.
+
+:::
+
+#### 例題
+
+ログイン/パスワード入力を含む単純な Qodlyフォームで、"Submit" ボタンは DataStore クラスに実装されている以下の `authentify()` 関数を呼び出します:
+
+```4d
+
+exposed Function authentify($credentials : Object) : Text
+
+var $salesPersons : cs.SalesPersonsSelection
+var $sp : cs.SalesPersonsEntity
+
+$salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
+$sp:=$salesPersons.first()
+
+If ($sp#Null)
+    If (Verify password hash($credentials.password; $sp.password))
+
+        Session.clearPrivileges()
+        Session.setPrivileges("") // ゲストセッション
+
+        return "認証に成功しました"
+    Else 
+        return "パスワードに誤りがあります"
+    End if
+Else 
+    return "ユーザーは登録されていません"
+End if 
+```
+
+この呼び出しは許可されており、そして認証が成功しない限り `Session.setPrivileges()` は実行されないため、ライセンスは消費されません。 `Session.setPrivileges()` が呼び出されると、4Dクライアントライセンスが消費され、その後はすべての RESTリクエストが受け入れられます。
+
+
+
+### ログアウト
+
+["強制ログイン" モードが有効](#強制ログインモードの設定) な場合、Qodly Studio for 4D を使って、アプリケーションにログアウト機能を実装できます。
+
+ユーザーをログアウトするには、Qodlyフォームから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
+
+![alt-text](../assets/en/WebServer/logout.png)
+
+Webユーザーセッションからログアウトアクションをトリガーすると、次のような効果があります:
+
+- カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的RESTリクエスト) のみが許可されます。
+- 関連する 4Dライセンスが解放されます。
+- `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
+
+
+
+
+## レンダリングのためのライセンス消費について
+
+QodlyフォームのレンダリングはプロジェクトデータベースのメインWebサーバーを対象とするため、デフォルトモードではあらゆるフォームがレンダリングされるとき、また、"強制ログイン" モードではデータ処理や関数を実行するフォームがレンダリングされるときに、利用可能なライセンスが必要です。
 
 ### URLスキーム
 

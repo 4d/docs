@@ -11,9 +11,9 @@ This parameter allows you to define the format to use to return data of your dat
 
 The following formats are supported:
 
-| Formato  | Descrição                                                                         |
-| -------- | --------------------------------------------------------------------------------- |
-| `json`   | Standard 4D REST server format (used by default)               |
+| Formato  | Descrição                                                                                         |
+| -------- | ------------------------------------------------------------------------------------------------- |
+| `json`   | Standard 4D REST server format (used by default)                               |
 | `looker` | JSON format compliant with the [Looker Studio](https://lookerstudio.google.com/). |
 
 ## Exemplo

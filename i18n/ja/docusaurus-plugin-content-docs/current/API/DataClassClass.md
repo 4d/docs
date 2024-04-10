@@ -29,10 +29,10 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| Release | 内容             |
-| ------- | -------------- |
-| 19 R3   | .exposed 属性を追加 |
-| 17      | 追加             |
+| リリース  | 内容             |
+| ----- | -------------- |
+| 19 R3 | .exposed 属性を追加 |
+| 17    | 追加             |
 
 </details>
 
@@ -127,10 +127,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| Release | 内容                     |
-| ------- | ---------------------- |
-| 17 R5   | *settings* パラメーターをサポート |
-| 17      | 追加                     |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 17 R5 | *settings* パラメーターをサポート |
+| 17    | 追加                     |
 
 </details>
 
@@ -176,9 +176,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -228,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容                     |
-| ------- | ---------------------- |
-| 17 R5   | *settings* パラメーターをサポート |
-| 17      | 追加                     |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 17 R5 | *settings* パラメーターをサポート |
+| 17    | 追加                     |
 
 </details>
 
@@ -426,9 +426,9 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -501,9 +501,9 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -540,9 +540,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -592,10 +592,10 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| Release | 内容               |
-| ------- | ---------------- |
-| 19 R3   | exposed プロパティを追加 |
-| 17 R5   | 追加               |
+| リリース  | 内容               |
+| ----- | ---------------- |
+| 19 R3 | exposed プロパティを追加 |
+| 17 R5 | 追加               |
 
 </details>
 
@@ -665,9 +665,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -755,9 +755,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -800,9 +800,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -841,11 +841,11 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| Release | 内容                  |
-| ------- | ------------------- |
-| 17 R6   | Formula パラメーターをサポート |
-| 17 R5   | 値のプレースホルダーをサポート     |
-| 17      | 追加                  |
+| リリース  | 内容                  |
+| ----- | ------------------- |
+| 17 R6 | Formula パラメーターをサポート |
+| 17 R5 | 値のプレースホルダーをサポート     |
+| 17    | 追加                  |
 
 </details>
 
@@ -1034,7 +1034,7 @@ ds.Class.info:
 次のような結果になります:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // B と C を返します
 // "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
 
@@ -1042,7 +1042,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // A のみを返します
 // "すべての valプロパティ値が 0 と異なるエンティティ" を探します
 // これは、次のクエリと同義です: 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 "少なくとも 1つのプロパティが *値* と異なる" エンティティを検索するクエリを実装したい場合は、 `[]` に文字を入れた特別な表記を使用する必要があります:
@@ -1184,7 +1184,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 | attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
 | args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                    |
 | allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                               |
-| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                  |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](../ORDA/client-server-optimization.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                        |
 | queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                     |
 | queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                               |
 
@@ -1505,9 +1505,9 @@ softwares:{
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 

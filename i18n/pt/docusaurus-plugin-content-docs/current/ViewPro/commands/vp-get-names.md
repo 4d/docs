@@ -30,11 +30,11 @@ You can define where to get the names in _scope_ using either the sheet index (c
 
 A coleção devolvida contém um objeto por nome. As seguintes propriedades do objeto podem ser devolvidas:
 
-| Propriedade                                                           | Tipo | Descrição                      |
-| --------------------------------------------------------------------- | ---- | ------------------------------ |
-| result[ ].name    | Text | nome da célula ou do intervalo |
-| result[ ].formula | Text | formula                        |
-| result[ ].comment | Text | Comentário associado ao nome   |
+| Propriedade                                                                             | Tipo | Descrição                      |
+| --------------------------------------------------------------------------------------- | ---- | ------------------------------ |
+| result\[ ].name    | Text | nome da célula ou do intervalo |
+| result\[ ].formula | Text | formula                        |
+| result\[ ].comment | Text | Comentário associado ao nome   |
 
 Propriedades disponíveis dependendo do tipo de elemento nomeado (célula com nome, intervalo com nome ou fórmula com nome)
 

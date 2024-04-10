@@ -17,10 +17,10 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| Paramètres | Type                                              |    | Description                             |                  |
-| ---------- | ------------------------------------------------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text                                              | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| tableName  | Text                                              | -> | Nom de table                            |                  |
+| Paramètres | Type                                                                              |    | Description                             |                  |
+| ---------- | --------------------------------------------------------------------------------- | -- | --------------------------------------- | ---------------- |
+| vpAreaName | Text                                                                              | -> | Nom d'objet formulaire zone 4D View Pro |                  |
+| tableName  | Text                                                                              | -> | Nom de table                            |                  |
 | options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Table theme properties to modify        | <!-- END REF --> |
 
 #### Description

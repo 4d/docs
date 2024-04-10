@@ -99,9 +99,9 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -173,9 +173,9 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -198,9 +198,9 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -221,9 +221,9 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -252,9 +252,9 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 

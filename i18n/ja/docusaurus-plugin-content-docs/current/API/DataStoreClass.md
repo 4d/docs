@@ -38,10 +38,10 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| Release | 内容                  |
-| ------- | ------------------- |
-| 18      | localID パラメーターをサポート |
-| 17      | 追加                  |
+| リリース | 内容                  |
+| ---- | ------------------- |
+| 18   | localID パラメーターをサポート |
+| 17   | 追加                  |
 
 </details>
 
@@ -106,9 +106,9 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -130,8 +130,13 @@ title: DataStore
 *connectionInfo* で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
 
 * データベースの Webサーバーは、http または https が有効化された状態で開始されていなければなりません。
-* データベースの [**REST サーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている必要があります。
-* データベースにおいて、少なくとも 1つのクライアントライセンスが利用可能でなければなりません。
+* データストアは、[**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている必要があります。また、[データクラスと属性](../REST/configuration.md#テーブルやフィールドの公開) も公開されている必要があります。
+
+:::note
+
+`Open datastore` のリクエストは 4D REST API に依存し、接続を開くために 4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
+
+:::
 
 合致するデータベースが見つからない場合、`Open datastore` は **Null** を返します。
 
@@ -213,9 +218,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -245,9 +250,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -279,9 +284,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -311,9 +316,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -383,9 +388,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 20      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -438,16 +443,16 @@ user / password / timeout / tls を指定してリモートデータストアに
 データフォルダーとともにカレントジャーナルファイルのコピーを作成します:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
 ds.flushAndLock() // 他のプロセスからの書き込み操作をブロックします
 
-$dataFolder:=Folder(fk data folder) 
+$dataFolder:=Folder(fk data folder)
 $dataFolder.copyTo($destination) // データフォルダーをコピーします
 
 $oldJournalPath:=New log file // ジャーナルを閉じて、新しいものを作成します
-$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal:=File($oldJournalPath; fk platform path)
 $oldJournal.moveTo($destination) // 閉じたジャーナルを保存します
 
 ds.unlock() // コピー操作をおこなったので、データストアのロックを解除します
@@ -463,9 +468,9 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -484,7 +489,7 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 `.getAllRemoteContexts()` 関数は、 <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->データストア内のすべてのアクティブな最適化コンテキストに関する情報を格納するオブジェクトのコレクションを返します<!-- END REF -->。
 
-> コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+> コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#クライアントサーバーの最適化) を参照ください。
 
 返されたコレクション内の各オブジェクトは、[`.getRemoteContextInfo()`](#返されるオブジェクト) セクションに記載されているプロパティを持ちます。
 
@@ -540,9 +545,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 20 R3   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R3 | 追加 |
 
 </details>
 
@@ -592,9 +597,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -660,9 +665,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -682,7 +687,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 `.getRemoteContextInfo()` 関数は、 <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> *contextName* で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します<!-- END REF -->。
 
-最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#クライアントサーバーの最適化) を参照ください。
 
 #### 返されるオブジェクト
 
@@ -710,9 +715,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R6   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R6 | 追加 |
 
 </details>
 
@@ -748,9 +753,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R6   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -781,9 +786,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 20      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -821,9 +826,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -853,9 +858,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -925,11 +930,12 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 ## .setAdminProtection()
 
 
+
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R6   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -971,9 +977,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 20 R3   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R3 | 追加 |
 
 </details>
 
@@ -1028,9 +1034,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -1060,7 +1066,7 @@ ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの
 * 自動モードのときとは異なり、先頭エンティティは完全にロードされません。
 * 80件のエンティティ (または `pageLength` に対応するエンティティ数) のページが直ちにサーバーに要求される際、コンテキストの属性のみが要求されます。
 
-> 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+> 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#クライアントサーバーの最適化) を参照ください。
 
 *contextName* には、データクラス属性にリンクする最適化コンテキストの名前を渡します。
 
@@ -1158,10 +1164,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>履歴</summary>
 
-| Release | 内容                          |
-| ------- | --------------------------- |
-| 20      | サーバー側のサポート、新しい `options` 引数 |
-| 17 R6   | 追加                          |
+| リリース  | 内容                          |
+| ----- | --------------------------- |
+| 20    | サーバー側のサポート、新しい `options` 引数 |
+| 17 R6 | 追加                          |
 
 </details>
 
@@ -1271,9 +1277,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -1334,10 +1340,10 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>履歴</summary>
 
-| Release | 内容         |
-| ------- | ---------- |
-| 20      | サーバー側のサポート |
-| 17 R6   | 追加         |
+| リリース  | 内容         |
+| ----- | ---------- |
+| 20    | サーバー側のサポート |
+| 17 R6 | 追加         |
 
 </details>
 
@@ -1370,9 +1376,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 20      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1407,9 +1413,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 

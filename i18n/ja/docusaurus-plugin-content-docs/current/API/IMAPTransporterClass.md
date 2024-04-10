@@ -46,9 +46,9 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 
 </details>
 
@@ -130,10 +130,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容             |
-| ------- | -------------- |
-| 20      | カスタムキーワードをサポート |
-| 18 R6   | 追加             |
+| リリース  | 内容             |
+| ----- | -------------- |
+| 20    | カスタムキーワードをサポート |
+| 18 R6 | 追加             |
 
 
 </details>
@@ -221,9 +221,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R6   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -310,9 +310,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 
 </details>
 
@@ -332,9 +332,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -431,9 +431,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -507,9 +507,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -605,9 +605,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -681,9 +681,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R6   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -747,11 +747,11 @@ $status:=$transporter.expunge()
 
 <details><summary>履歴</summary>
 
-| Release | 内容           |
-| ------- | ------------ |
-| 20      | *id* が返されます  |
-| 18 R5   | *name* は任意です |
-| 18 R4   | 追加           |
+| リリース  | 内容           |
+| ----- | ------------ |
+| 20    | *id* が返されます  |
+| 18 R5 | *name* は任意です |
+| 18 R4 | 追加           |
 
 </details>
 
@@ -801,10 +801,10 @@ $status:=$transporter.expunge()
 
 <details><summary>履歴</summary>
 
-| Release | 内容                 |
-| ------- | ------------------ |
-| 18 R4   | 追加                 |
-| 19      | `isSubscribed` を追加 |
+| リリース  | 内容                 |
+| ----- | ------------------ |
+| 18 R4 | 追加                 |
+| 19    | `isSubscribed` を追加 |
 
 </details>
 
@@ -866,9 +866,9 @@ $status:=$transporter.expunge()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 
 </details>
 
@@ -919,9 +919,9 @@ $status:=$transporter.expunge()
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 
 </details>
 
@@ -992,9 +992,9 @@ ID = 1のメッセージを取得します:
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -1092,9 +1092,9 @@ ID = 1のメッセージを取得します:
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 
 </details>
 
@@ -1166,9 +1166,9 @@ ID = 1のメッセージを取得します:
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -1267,9 +1267,9 @@ ID = 1のメッセージを取得します:
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -1328,10 +1328,10 @@ ID = 1のメッセージを取得します:
 
 <details><summary>履歴</summary>
 
-| Release | 内容             |
-| ------- | -------------- |
-| 20      | カスタムキーワードをサポート |
-| 18 R6   | 追加             |
+| リリース  | 内容             |
+| ----- | -------------- |
+| 20    | カスタムキーワードをサポート |
+| 18 R6 | 追加             |
 
 
 </details>
@@ -1418,9 +1418,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -1495,9 +1495,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R5   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -1631,10 +1631,10 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                      |
-| ------- | --------------------------------------- |
-| 20      | *id*, *flags*, *permanentFlags* が返されます。 |
-| 18 R4   | 追加                                      |
+| リリース  | 内容                                      |
+| ----- | --------------------------------------- |
+| 20    | *id*, *flags*, *permanentFlags* が返されます。 |
+| 18 R4 | 追加                                      |
 
 
 </details>
@@ -1707,9 +1707,9 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -1778,9 +1778,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 

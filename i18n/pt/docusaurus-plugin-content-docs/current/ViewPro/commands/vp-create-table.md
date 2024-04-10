@@ -5,11 +5,11 @@ title: VP CREATE TABLE
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                                                      |
-| ------- | ------------------------------------------------------------------------------------------------------------- |
+| Release | Mudanças                                                                                                                      |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | 19 R8   | Suporte das opções do tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| 18 R6   | Suporte da opção `allowAutoExpand`                                                                            |
-| 19 R6   | Adicionado                                                                                                    |
+| 18 R6   | Suporte da opção `allowAutoExpand`                                                                                            |
+| 19 R6   | Adicionado                                                                                                                    |
 
 </details>
 
@@ -19,11 +19,11 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Parâmetro | Tipo                                                  |    | Descrição                                                       |                  |
-| --------- | ----------------------------------------------------- | -- | --------------------------------------------------------------- | ---------------- |
-| rangeObj  | Object                                                | -> | Objeto intervalo                                                |                  |
-| tableName | Text                                                  | -> | Nome da tabela                                                  |                  |
-| source    | Text                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |                  |
+| Parâmetro | Tipo                                                                                  |    | Descrição                                                       |                  |
+| --------- | ------------------------------------------------------------------------------------- | -- | --------------------------------------------------------------- | ---------------- |
+| rangeObj  | Object                                                                                | -> | Objeto intervalo                                                |                  |
+| tableName | Text                                                                                  | -> | Nome da tabela                                                  |                  |
+| source    | Text                                                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |                  |
 | options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opções adicionais                                               | <!-- END REF --> |
 
 #### Descrição

@@ -73,9 +73,9 @@ Se a tabela *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), 
 
 No parâmetro opcional*settings* pode passar um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                                   |
-| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Rótulo do contexto de otimização [](../ORDA/remoteDatastores.md#clientserver-optimization) aplicado à seleção de entidades. |
+| Propriedade | Tipo | Descrição                                                                                                   |
+| ----------- | ---- | ----------------------------------------------------------------------------------------------------------- |
+| context     | Text | Rótulo do contexto de otimização [](../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
 
 
 #### Exemplo
@@ -858,6 +858,7 @@ Se encontrar uma entidade bloqueada durante a execução de `.drop()`, não é e
 
 Exemplo sem a opção `dk stop dropping on first error`:
 
+
 ```4d
  var $employees; $notDropped : cs. EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
@@ -1635,11 +1636,12 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 
 ```4d
-// ordenar por fórmula
+// order by formula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // ordenar por colecção com ou sem ordenação
+
+  // order by collection with or without sort orders
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1647,6 +1649,7 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
+
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```

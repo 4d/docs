@@ -20,30 +20,30 @@ El comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->e
 
 En _paramObj_, puede pasar varias propiedades:
 
-| Propiedad               | Tipo        | Descripción                                                                                                                                                                                                                          |
-| ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Propiedad               | Tipo                        | Descripción                                                                                                                                                                                                                                                          |
+| ----------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
-| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                                                                                                                                  |
-| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                                                                                                                                    |
-| includeCalcModelCache   | Boolean     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false.                                                                                                          |
-| includeEmptyRegionCells | Boolean     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true                                                                                            |
-| includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                                                                                                                               |
-| includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                                                                                |
-| includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                                                                     |
+| includeAutoMergedCells  | Boolean                     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                                                                                                                                                  |
+| includeBindingSource    | Boolean                     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                                                                                                                                                    |
+| includeCalcModelCache   | Boolean                     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false.                                                                                                          |
+| includeEmptyRegionCells | Boolean                     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true                                                                                                                            |
+| includeFormulas         | Boolean                     | Si se incluye la fórmula al guardar, por defecto=true.                                                                                                                                                                                               |
+| includeStyles           | Boolean                     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                                                                                                |
+| includeUnusedNames      | Boolean                     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                                                                                     |
 
 |saveAsView|Boolean|Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.|
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
-| Parámetros |               | Tipo    | Descripción                                               |
-| :--------- | :------------ | :------ | :-------------------------------------------------------- |
-| param1     |               | text    | El nombre del objeto 4D View Pro                          |
-| param2     |               | 4D.blob | El blob exportado                                         |
-| param3     |               | object  | Referencia al parámetro _paramObj_ del comando            |
-| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
-|            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|            | .errorCode    | integer | Código de error.                                          |
-|            | .errorMessage | text    | Mensaje de error.                                         |
+| Parámetros |                               | Tipo                    | Descripción                                                       |
+| :--------- | :---------------------------- | :---------------------- | :---------------------------------------------------------------- |
+| param1     |                               | text                    | El nombre del objeto 4D View Pro                                  |
+| param2     |                               | 4D.blob | El blob exportado                                                 |
+| param3     |                               | object                  | Referencia al parámetro _paramObj_ del comando                    |
+| param4     |                               | object                  | Un objeto devuelto por el método con un mensaje de estado         |
+|            | .success      | boolean                 | True si exporta con éxito, de lo contrario False. |
+|            | .errorCode    | integer                 | Código de error.                                  |
+|            | .errorMessage | text                    | Mensaje de error.                                 |
 
 #### Ejemplo
 

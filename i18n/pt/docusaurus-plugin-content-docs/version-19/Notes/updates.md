@@ -5,39 +5,39 @@ title: Notas de Lançamento
 
 :::tip
 
-Read [**What’s new in 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D v19 LTS.
+Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D 19 LTS.
 
 :::
 
 :::warning Nota de segurança
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. Para obter mais informações, consulte este [boletim de segurança](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. Para obter mais informações, consulte este [boletim de segurança](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
 
-## 4D v19.7
+## 4D 19.7
 
 #### Destaques
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos os bugs corrigidos no 4D v19.7.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D 19.7.
 
 
-## 4D v19.6
-
-#### Destaques
-
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D v19.6.
-
-
-## 4D v19.5
+## 4D 19.6
 
 #### Destaques
 
-- 4D v19.5 é certificado em Windows 11 22H2
-- 4D v19.5 é certificado em macOS Ventura (macOS 13)
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D 19.6.
+
+
+## 4D 19.5
+
+#### Destaques
+
+- 4D 19.5 is certified on Windows 11 22H2
+- 4D 19.5 is certified on macOS Ventura (macOS 13)
 - A versão SpreadJS foi actualizada (14.1.6).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D v19.5.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
 
 
 ## Lançamentos anteriores

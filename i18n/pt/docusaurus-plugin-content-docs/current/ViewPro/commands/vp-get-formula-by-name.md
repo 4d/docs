@@ -33,10 +33,10 @@ You can define where to get the formula in _scope_ using either the sheet index 
 
 O objeto retornado contém as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                |
+| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula     | Text | Texto da fórmula correspondente à fórmula nomeada ou intervalo nomeado. Para os intervalos nomeados, a fórmula é uma sequência de coordenadas absolutas. |
-| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                                      |
+| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                                                                      |
 
 #### Exemplo
 

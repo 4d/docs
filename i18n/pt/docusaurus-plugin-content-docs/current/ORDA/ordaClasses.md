@@ -82,6 +82,8 @@ Uma base de dados 4D expõe a sua própria classe DataStore na loja de classes `
 
 É possível criar funções na classe DataStore que estarão disponíveis através do objeto `ds`.
 
+
+
 #### Exemplo
 
 ```4d  
@@ -208,6 +210,7 @@ $moreThanAvg:=ds. Company.all().employees.withSalaryGreaterThanAverage()
 
 
 ### Entity Class
+
 
 Cada tabela exposta com ORDA oferece uma classe de Entidade no armazenamento de classes `cs`.
 

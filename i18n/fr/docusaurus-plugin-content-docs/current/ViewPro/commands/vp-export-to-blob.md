@@ -20,30 +20,30 @@ The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->
 
 In _paramObj_, you can pass several properties:
 
-| Propriété               | Type        | Description                                                                                                                                                                                                         |
-| ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriété               | Type                        | Description                                                                                                                                                                                                                                         |
+| ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
-| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                                                                                                                       |
-| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                                                                                                                                    |
-| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.                                                                                                          |
-| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true                                                                                   |
-| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                                                                                                                           |
-| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                                                                                                                             |
-| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                                                                                                                                |
+| includeAutoMergedCells  | Boolean                     | Whether to include the automatically merged cells when saving, default=false.                                                                                                                                                       |
+| includeBindingSource    | Boolean                     | Whether to include the binding source when saving, default=true.                                                                                                                                                                    |
+| includeCalcModelCache   | Boolean                     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.                                                                                                          |
+| includeEmptyRegionCells | Boolean                     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true                                                                                                                   |
+| includeFormulas         | Boolean                     | Whether to include the formula when saving, default=true.                                                                                                                                                                           |
+| includeStyles           | Boolean                     | Whether to include the style when saving, default=true.                                                                                                                                                                             |
+| includeUnusedNames      | Boolean                     | Whether to include the unused custom name when saving, default=true.                                                                                                                                                                |
 
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 
-| Paramètres |               | Type    | Description                                             |
-| :--------- | :------------ | :------ | :------------------------------------------------------ |
-| param1     |               | text    | Nom de l'objet 4D View Pro                              |
-| param2     |               | 4D.blob | The exported blob                                       |
-| param3     |               | object  | A reference to the command's _paramObj_ parameter       |
-| param4     |               | object  | Objet retourné par la méthode avec un message de statut |
-|            | .success      | boolean | Vrai si l'export est réussi, Faux sinon.                |
-|            | .errorCode    | entier  | Code d'erreur.                                          |
-|            | .errorMessage | text    | Message d'erreur.                                       |
+| Paramètres |                               | Type                    | Description                                              |
+| :--------- | :---------------------------- | :---------------------- | :------------------------------------------------------- |
+| param1     |                               | text                    | Nom de l'objet 4D View Pro                               |
+| param2     |                               | 4D.blob | The exported blob                                        |
+| param3     |                               | object                  | A reference to the command's _paramObj_ parameter        |
+| param4     |                               | object                  | Objet retourné par la méthode avec un message de statut  |
+|            | .success      | boolean                 | Vrai si l'export est réussi, Faux sinon. |
+|            | .errorCode    | entier                  | Code d'erreur.                           |
+|            | .errorMessage | text                    | Message d'erreur.                        |
 
 #### Exemple
 

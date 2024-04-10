@@ -103,9 +103,9 @@ For example, you can launch a user authentication and verification procedure whe
 
 The remote user `session` object is available from:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- Triggers,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- Les méthodes projet qui ont l'attribut [Exécuter sur serveur](../Project/code-overview.md#execute-on-server) (elles sont exécutées dans le process jumeau du process client),
+- Les Triggers,
+- Les méthodes base `On Server Open Connection` et `On Server Shutdown Connection`.
 
 :::info
 

@@ -192,11 +192,11 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 [共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
-The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+関数名は [オブジェクトの命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+プロパティと関数は同じ名前空間を共有しているため、同じクラスのプロパティと関数に同じ名前を使用することは許されていません (この場合、エラーが発生します)。
 
 :::
 
@@ -371,7 +371,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::note
 
-A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+[宣言と同時にプロパティを初期化](#宣言と同時にプロパティを初期化する) すると、そのプロパティは自動的にオブジェクトに追加されます。
 
 :::
 
@@ -379,7 +379,7 @@ A property is automatically added to the object when it is [inititalized in the 
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+プロパティと関数は同じ名前空間を共有しているため、同じクラスのプロパティと関数に同じ名前を使用することは許されていません (この場合、エラーが発生します)。
 
 :::
 
@@ -405,7 +405,7 @@ Since properties and functions share the same namespace, using the same name for
 | `cs.<namespace>.<className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
 
 
-If you omit the type in the declaration line, the property is created as a variant.
+宣言時に型を省略すると、プロパティはバリアント型として作成されます。
 
 :::info
 
@@ -416,38 +416,38 @@ If you omit the type in the declaration line, the property is created as a varia
 
 
 
-#### Initializing the property in the declaration line
+#### 宣言と同時にプロパティを初期化する
 
-When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+プロパティを宣言する際には、1つのステートメントでデータ型と初期値の両方を指定することができます。 シンタックスは次の通りです:
 
 `property <propertyName> { : <propertyType>} := <Propertyvalue>`
 
 :::note
 
-When using this syntax, you cannot declare several properties in the declaration line.
+このシンタックスを使用する場合、複数のプロパティを一度に宣言することはできません。
 
 :::
 
-You can omit the type in the declaration line, in which case the type will be inferred when possible. 例:
+宣言の際には型を省略することができます。その場合、可能な限り型は推論されます。 例:
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 
 property name : Text := "Smith"
 property age : Integer := 42
 
-property birthDate := !1988-09-29! //date is inferred
-property fuzzy //variant
+property birthDate := !1988-09-29! // 日付は推測されます
+property fuzzy // バリアント
 ```
 
-When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+プロパティを宣言行で初期化していると、[`new()`](API/ClassClass.md#new) 関数によるインスタンス化の後、コンストラクターが呼び出される前にクラスオブジェクトにプロパティが追加されます。
 
-If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
+もしクラスが他のクラスを[拡張](#class-extends-classname) する場合、親クラスのプロパティは子クラスのプロパティよりも先にインスタンス化されます。
 
 #### 例題
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 
 property name : Text
 property age : Integer
@@ -458,9 +458,9 @@ property color : Text := "Blue"
 
 ```4d
 var $o : cs.MyClass
-$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
-$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
-$o.age:="Smith"  //error with check syntax
+$o:=cs.MyClass.new() // $o:{"color" : "Blue"}
+$o.name:="John" // $o:{"color" : "Blue"; "name" : "John"}
+$o.age:="Smith"  // シンタックスチェックでエラー
 ```
 
 

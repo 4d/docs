@@ -37,20 +37,20 @@ When [variables](variables.md) or [parameters](parameters.md) are typed by means
 
 La valeur par défaut dépend du type de variable :
 
-| Type       | La valeur par défaut |
-| ---------- | -------------------- |
-| Booléen    | False                |
-| Date       | 00-00-00             |
-| Longint    | 0                    |
-| Time       | 00:00:00             |
-| Picture    | picture size=0       |
-| Real       | 0                    |
-| Pointer    | Nil=true             |
-| Text       | ""                   |
-| Blob       | Blob size=0          |
-| Object     | Null                 |
-| Collection | Null                 |
-| Variant    | undefined            |
+| Type       | La valeur par défaut                     |
+| ---------- | ---------------------------------------- |
+| Booléen    | False                                    |
+| Date       | 00-00-00                                 |
+| Longint    | 0                                        |
+| Time       | 00:00:00 |
+| Picture    | picture size=0                           |
+| Real       | 0                                        |
+| Pointer    | Nil=true                                 |
+| Text       | ""                                       |
+| Blob       | Blob size=0                              |
+| Object     | Null                                     |
+| Collection | Null                                     |
+| Variant    | undefined                                |
 
 ### Null comme valeur par défaut
 

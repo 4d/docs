@@ -73,9 +73,9 @@ Si la table *dsTable* n'est pas exposée dans [`ds`](API/DataStoreClass.md#ds), 
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
-| Propriété | Type | Description                                                                                                                  |
-| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
+| Propriété | Type | Description                                                                                            |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------ |
+| context   | Text | Nom du [contexte d'optimisation](../ORDA/client-server-optimization.md) appliqué à l'entity selection. |
 
 
 #### Exemple
@@ -113,7 +113,7 @@ Cette commande ne peut pas être utilisée avec un [datastore distant](../ORDA/r
 
 :::info
 
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+Cette commande est conçue pour permettre aux sélections courantes 4D de bénéficier de la puissance des requêtes ORDA. Pour des raisons de performance, dans 4D monoposte et 4D Server, la commande connecte directement *entitySelection* à la sélection courante. Par conséquent, une fois que *entitySelection* a été utilisée, elle ne doit pas être réutilisée ou modifiée.
 
 :::
 
@@ -128,9 +128,9 @@ Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la séle
 ```4d
 var $entitySel : cs.EmployeeSelection
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel est associée à la dataclass Employee
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
+USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee est mise à jour
 ```
 
 
@@ -291,11 +291,11 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Paramètres      | Type               |    | Description                                                        |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
-| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                              |
-| entitySelection | 4D.EntitySelection | -> | Entity selection à ajouter à l'entity selection d'origine          |
-| Résultat        | 4D.EntitySelection | -> | Entity selection including the added *entity* or *entitySelection* |
+| Paramètres      | Type               |    | Description                                                      |
+| --------------- | ------------------ |:--:| ---------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                            |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à ajouter à l'entity selection d'origine        |
+| Résultat        | 4D.EntitySelection | -> | Entity selection incluant l'*entity* ou *entitySelection*ajoutée |
 <!-- END REF -->
 
 
@@ -448,7 +448,7 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 | Paramètres | Type      |    | Description                  |
 | ---------- | --------- |:--:| ---------------------------- |
 | index      | Integer   | -> | Index de l'entité à renvoyer |
-| Résultat   | 4D.Entity | <- | The entity at that index     |
+| Résultat   | 4D.Entity | <- | L'entité à cet index         |
 <!-- END REF -->
 
 
@@ -797,7 +797,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 | Paramètres | Type       |    | Description                                                             |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | attribute  | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
-| Résultat   | Collection | <- | New collection with distinct paths                                      |
+| Résultat   | Collection | <- | Nouvelle collection avec chemins distincts                              |
 <!-- END REF -->
 
 
@@ -869,6 +869,7 @@ Si une entité verrouillée est rencontrée lors de l'exécution de `.drop()`, e
 #### Exemple
 
 Exemple sans l'option `dk stop dropping on first error` :
+
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
@@ -1658,11 +1659,12 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
 
 ```4d
-// tri par formule
+// order by formula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // tri par collection avec ou dans ordre de tri
+
+  // order by collection with or without sort orders
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))

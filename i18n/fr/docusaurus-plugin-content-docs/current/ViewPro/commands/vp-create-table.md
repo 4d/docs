@@ -5,11 +5,11 @@ title: VP CREATE TABLE
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                                               |
-| ------- | ----------------------------------------------------------------------------------------------------------- |
+| Release | Modifications                                                                                                               |
+| ------- | --------------------------------------------------------------------------------------------------------------------------- |
 | 19 R8   | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| 19 R7   | Support of `allowAutoExpand` option                                                                         |
-| 19 R6   | Ajout                                                                                                       |
+| 19 R7   | Support of `allowAutoExpand` option                                                                                         |
+| 19 R6   | Ajout                                                                                                                       |
 
 </details>
 
@@ -19,11 +19,11 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Paramètres | Type                                                  |    | Description                                                  |                  |
-| ---------- | ----------------------------------------------------- | -- | ------------------------------------------------------------ | ---------------- |
-| rangeObj   | Object                                                | -> | Objet plage                                                  |                  |
-| tableName  | Text                                                  | -> | Nom de la table                                              |                  |
-| source     | Text                                                  | -> | Nom de la propriété du Data context à afficher dans la table |                  |
+| Paramètres | Type                                                                                  |    | Description                                                  |                  |
+| ---------- | ------------------------------------------------------------------------------------- | -- | ------------------------------------------------------------ | ---------------- |
+| rangeObj   | Object                                                                                | -> | Objet plage                                                  |                  |
+| tableName  | Text                                                                                  | -> | Nom de la table                                              |                  |
+| source     | Text                                                                                  | -> | Nom de la propriété du Data context à afficher dans la table |                  |
 | options    | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Options supplémentaires                                      | <!-- END REF --> |
 
 #### Description

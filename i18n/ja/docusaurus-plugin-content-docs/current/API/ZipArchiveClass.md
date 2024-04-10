@@ -39,10 +39,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                                              |
-| ------- | --------------------------------------------------------------- |
-| 19 R3   | `ZIP Compression LZMA`, `ZIP Compression XZ`, `.level` プロパティを追加 |
-| 18      | 追加                                                              |
+| リリース  | 内容                                                              |
+| ----- | --------------------------------------------------------------- |
+| 19 R3 | `ZIP Compression LZMA`, `ZIP Compression XZ`, `.level` プロパティを追加 |
+| 18    | 追加                                                              |
 
 </details>
 
@@ -193,9 +193,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 

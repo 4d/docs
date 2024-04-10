@@ -20,30 +20,30 @@ title: VP EXPORT TO BLOB
 
 _paramObj_ には、複数のプロパティを渡せます:
 
-| プロパティ                   | タイプ         | 説明                                                                                                                                                         |
-| ----------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| プロパティ                   | タイプ                         | 説明                                                                                                                                                         |
+| ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
-| includeAutoMergedCells  | Boolean     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                          |
-| includeBindingSource    | Boolean     | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                            |
-| includeCalcModelCache   | Boolean     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                         |
-| includeEmptyRegionCells | Boolean     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                         |
-| includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
-| includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
-| includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
+| includeAutoMergedCells  | Boolean                     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                          |
+| includeBindingSource    | Boolean                     | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                            |
+| includeCalcModelCache   | Boolean                     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                         |
+| includeEmptyRegionCells | Boolean                     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                         |
+| includeFormulas         | Boolean                     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
+| includeStyles           | Boolean                     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
+| includeUnusedNames      | Boolean                     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
 
 |saveAsView|Boolean|書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。|
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
 
-| 引数     |               | タイプ     | 説明                                |
-| :----- | :------------ | :------ | :-------------------------------- |
-| param1 |               | text    | 4D View Pro オブジェクト名               |
-| param2 |               | 4D.blob | エクスポートされた Blob                    |
-| param3 |               | object  | コマンドの _paramObj_ 引数への参照           |
-| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false |
-|        | .errorCode    | integer | エラーコード。                           |
-|        | .errorMessage | text    | エラーメッセージ。                         |
+| 引数     |                               | タイプ                     | 説明                                |
+| :----- | :---------------------------- | :---------------------- | :-------------------------------- |
+| param1 |                               | text                    | 4D View Pro オブジェクト名               |
+| param2 |                               | 4D.blob | エクスポートされた Blob                    |
+| param3 |                               | object                  | コマンドの _paramObj_ 引数への参照           |
+| param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
+|        | .success      | boolean                 | 書き出しに成功した場合は true 、それ以外の場合は false |
+|        | .errorCode    | integer                 | エラーコード。                           |
+|        | .errorMessage | text                    | エラーメッセージ。                         |
 
 #### 例題
 

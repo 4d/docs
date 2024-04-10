@@ -3,9 +3,9 @@ id: updates
 title: Release Notes
 ---
 
-## 4D v20 R4
+## 4D 20 R4
 
-Lisez [**Les nouveautés de 4D v20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v20-R4/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20 R4.
+Read [**What’s new in 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D 20 R4.
 
 #### Points forts
 
@@ -20,16 +20,16 @@ Lisez [**Les nouveautés de 4D v20 R4**](https://blog.4d.com/fr-whats-new-in-4d-
 - Nouvelle option de compatibilité [Impression non bloquante](../settings/compatibility.md).
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) sur doc.4d.com.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R4) : liste de tous les bugs qui ont été corrigés dans 4D v20 R4.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R4): list of all bugs that have been fixed in 4D 20 R4.
 
 #### Changements de comportement
 
 - L'utilisation d'une ancienne syntaxe pour la déclaration des paramètres (par exemple `C_TEXT($1)` ou `var $1 : Text`) est maintenant dépréciée et génère des warnings lors du typage du code, de la vérification syntaxique et de la compilation.
 - Dans la mise à jour de la [bibliothèque OpenSSL](#library-table), le niveau de sécurité SSL/TLS par défaut a été modifié de 1 à 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
 
-## 4D v20 R3
+## 4D 20 R3
 
-Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20 R3.
+Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), the blog post that lists all new features and enhancements in 4D 20 R3.
 
 #### Points forts
 
@@ -44,16 +44,16 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 - 4D View Pro : Prise en charge de l'[import](../ViewPro/method-list.md#vp-import-from-blob) et de l'[export](../ViewPro/method-list.md#vp-export-to-blob) de documents 4D View Pro au format Blob.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) sur doc.4d.com.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R3) : liste de tous les bugs qui ont été corrigés dans 4D v20 R3.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R3): list of all bugs that have been fixed in 4D 20 R3.
 
 #### Changements de comportement
 
 - Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : _Indice hors de l'intervalle_, _Type incompatible_, et _Déréférencement d'un pointeur Null_. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html).
 - 4D n'inclut plus d'interpréteur PHP interne. Vous devez [configurer et exécuter votre propre interpréteur PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) pour utiliser les commandes PHP.
 
-## 4D v20 R2
+## 4D 20 R2
 
-Lisez [**Les nouveautés de 4D v20 R2**](https://blog.4d.com/fr-whats-new-in-4d-v20-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20 R2.
+Read [**What’s new in 4D 20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D 20 R2.
 
 :::warning Note de sécurité
 
@@ -69,19 +69,19 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) sur doc.4d.com.
 - 4D Write Pro Interface : Nouveau [Table Wizard](../WritePro/writeprointerface.md).
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R2) : liste de tous les bugs qui ont été corrigés dans 4D v20 R2.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R2): list of all bugs that have been fixed in 4D 20 R2.
 
 #### Changements de comportement
 
 - **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 
-## 4D v20.x
+## 4D 20.x
 
-Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20.
+Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.
 
 :::caution Version minimale du client pour 4D Server v20.2 et ultérieures
 
-Pour des raisons internes, la version des clients distants se connectant à 4D Server v20.2 et plus doit être au moins 4D v20.2.
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
 
 :::
 
@@ -93,21 +93,21 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 #### Avertissement concernant la reconstruction de l'index
 
-4D v20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+4D 20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
 
-:::caution Reconstruction d'index 4D v20.1 et versions client/serveur
+:::caution 4D 20.1 index rebuild and client/server versions
 
-4D v20.1 comprend également une mise à jour de la bibliothèque ICU, ce qui a les conséquences suivantes :
+4D 20.1 comprend également une mise à jour de la bibliothèque ICU, ce qui a les conséquences suivantes :
 
 - Elle forcera une reconstruction automatique des index de type alpha, texte et objet.
-- Pour des raisons de cohérence des tris, il est nécessaire que les clients distants 4D et le serveur 4D utilisent la même version : seuls les clients distants 4D v20.1 peuvent se connecter au serveur 4D v20.1 et vice versa.
+- Pour des raisons de cohérence des tris, il est nécessaire que les clients distants 4D et le serveur 4D utilisent la même version : seuls les clients distants 4D 20.1 peuvent se connecter au serveur 4D 20.1 et vice versa.
 
 :::
 
 #### Points forts
 
-- 4D v20.2 est certifié sur macOS Sonoma (macOS 14).
-- (4D v20.1) Nouvelle propriété `plugins` dans le paramètre _options_ de la commande [`Compile project`] (https\://doc.4d.com/4dv20/help/command/en/page1760.html).
+- 4D 20.2 est certifié sur macOS Sonoma (macOS 14).
+- (4D 20.1) New `plugins` property in the _options_ parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md) : [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) renvoie _id_, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) renvoie _id_, _flags_ et _permanentFlags_, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) et [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) prennent en charge les mots-clés personnalisés.
 - Nouvelles classes [WebSocketServer](../API/WebSocketServerClass.md) et [WebSocketConnection](../API/WebSocketConnectionClass.md) pour créer et gérer des connexions WebSocket depuis 4D.
@@ -130,21 +130,21 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Nouvelle option `validateTLSCertificate` pour [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) permettant de contrôler la validation automatique des certificats.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) sur doc.4d.com.
-- Liste des bugs corrigés : [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 #### Changements de comportement
 
-- À partir de la version 20.2, 4D v20 LTS n'est plus compatible avec Windows Server 2012 R2.
+- À partir de la version 20.2, 4D 20 LTS n'est plus compatible avec Windows Server 2012 R2.
 - **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 - Pour la conformité RFC de HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) retourne maintenant tous les noms d'en-têtes **en minuscules**. Si vous voulez que votre code continue à fonctionner comme avant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils sont invalides. Une nouvelle propriété _option_ vous permet de contrôler cette validation.
 - TLS v1.0 et TLS v1.1 sont obsolètes, ils ne sont plus supportés comme `Min TLS version` sur 4D Server. La version 1.3 est maintenant sélectionnée par défaut et est automatiquement utilisée si les constantes `_o_TLSv1_0` ou `_o_TLSv1_1` sont définies avec [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
 - Par souci de cohérence, tous les boutons, cases à cocher et boutons radio sont désormais rendus avec un type "3D" à l'exécution : respectivement `Object type 3D button`, `Object type 3D checkbox`, et `Object type 3D radio button` sont retournés par [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) pour ces objets.
-- Depuis 4D v20, [4D for Mobile](https://developer.4d.com/go-mobile/) n'est plus installé par défaut dans l'environnement 4D. Pour bénéficier des fonctionnalités de développement de 4D for Mobile dans 4D, vous devez [installer le composant 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) dans le dossier ["Components"](../Project/architecture.md#components) de vos projets. Si un projet converti utilise des fonctionnalités du [composant 4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), veillez à l'installer également dans le dossier "Components" du projet.
+- As of 4D 20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. Pour bénéficier des fonctionnalités de développement de 4D for Mobile dans 4D, vous devez [installer le composant 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) dans le dossier ["Components"](../Project/architecture.md#components) de vos projets. Si un projet converti utilise des fonctionnalités du [composant 4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), veillez à l'installer également dans le dossier "Components" du projet.
 
-## 4D v19 R8
+## 4D 19 R8
 
-Lisez [**Les nouveautés de 4D v19 R8**](https://blog.4d.com/fr-whats-new-in-4d-v19-R8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v19 R8.
+Read [**What’s new in 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D 19 R8.
 
 #### Points forts
 
@@ -157,17 +157,17 @@ Lisez [**Les nouveautés de 4D v19 R8**](https://blog.4d.com/fr-whats-new-in-4d-
   - nouvelle commande [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) sur doc.4d.com.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19_R8) : liste de tous les bugs qui ont été corrigés dans 4D v19 R8.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D 19 R8.
 
 #### Changements de comportement
 
 - Pour la conformité RFC de HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) retourne maintenant tous les noms d'en-têtes **en minuscules**. Si vous voulez que votre code continue à fonctionner comme avant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Lorsqu'une action standard est assignée à un [bouton bevel avec menu contextuel lié](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu), l'action standard n'est plus générée si une option de menu contextuel est sélectionnée.
-- Dans les zones Web utilisant blink (CEF), les dialogues affichés à partir de scripts externes sont désormais bloquants s'ils ne sont pas appelés à partir d'une fonction JS `setTimeout()`. Cela est dû aux mises à jour actuelles de CEF, dans lesquelles les dialogues affichés par des fonctions telles que `alert()` ou `print()` ne sont plus gérés par le système d'exploitation mais par la zone Web. Voir [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) et [`WA EXECUTE JAVASCRIPT`] (https\://doc.4d.com/4dv19/help/command/en/page1043.html).
+- Dans les zones Web utilisant blink (CEF), les dialogues affichés à partir de scripts externes sont désormais bloquants s'ils ne sont pas appelés à partir d'une fonction JS `setTimeout()`. Cela est dû aux mises à jour actuelles de CEF, dans lesquelles les dialogues affichés par des fonctions telles que `alert()` ou `print()` ne sont plus gérés par le système d'exploitation mais par la zone Web. Voir [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) et [`WA EXECUTE JAVASCRIPT`] (https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
-## 4D v19 R7
+## 4D 19 R7
 
-Lisez [**Les nouveautés de 4D v19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v19-R7/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v19 R7.
+Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D 19 R7.
 
 #### Points forts
 
@@ -181,18 +181,18 @@ Lisez [**Les nouveautés de 4D v19 R7**](https://blog.4d.com/fr-whats-new-in-4d-
 - Les objets de formulaire zone de texte et de saisie prennent désormais en charge la [propriété de rayon d'angle](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) sur doc.4d.com.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19_R7) : liste de tous les bugs qui ont été corrigés dans 4D v19 R8.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D 19 R7.
 
 #### Changements de comportement
 
 - Pour des raisons de cohérence avec les interfaces standard (par exemple, les explorateurs de fichiers des OS), les règles des list box pour la sélection des lignes/le glisser-déposer ont été modifiées. Une sélection continue ou discontinue de lignes peut être glissée en cliquant simplement sur une ligne sélectionnée et en la déplaçant ; la touche **Alt** n'est plus nécessaire (mais peut toujours être utilisée comme dans les versions précédentes). Lorsque la touche **Maj** ou **Ctrl/Commande** est enfoncée, un clic de souris est pris en compte lorsque le clic est en bas. Pour plus d'informations sur le glisser-déposer dans les list box, vous pouvez consulter [cet article de blog](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) et télécharger [ce projet HDI 4D](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- La numérotation interne de 4D a été modifiée à partir de 4D v19 R7 :
-  - Les versions jusqu'à 4D v19 R6 (incluses) sont numérotées 282xxx,
-  - Les versions à partir de 4D v19 R7 seront numérotées 100xxx.\
+- La numérotation interne de 4D a été modifiée à partir de 4D 19 R7 :
+  - les releases jusqu'à 4D 19 R6 (incluses) sont numérotées 282xxx,
+  - releases from 4D 19 R7 will be numbered 100xxx.\
     Notez qu'une version spécifique de 4D est toujours identifiée de manière unique par un nom de branche et un numéro de build. Le numéro de build augmente par ordre chronologique.
 - La possibilité d'utiliser le protocole REST de Wakanda/4D Mobile pour appeler une méthode de projet a été supprimée. Vous pouvez utiliser les [fonctions de classe de data model ORDA](../REST/ClassFunctions.md) ou les [urls /4DACTION](../WebServer/httpRequests.md#4daction) à la place.
 
-## 4D v19 R6
+## 4D 19 R6
 
 - Nouvelle classe [HTTPRequest](../API/HTTPRequestClass.md).
 - Les fonctions de collection qui peuvent appeler du code supportent maintenant les objets function comme paramètre _formule_ : [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
@@ -200,9 +200,9 @@ Lisez [**Les nouveautés de 4D v19 R7**](https://blog.4d.com/fr-whats-new-in-4d-
 - 4D View Pro : nouvelles commandes [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) et [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) pour gérer les tables dans les feuilles.
 - Possibilité de voir les attributs liés, calculés et alias dans le [Web Data Explorer](../Admin/dataExplorer.md#basics).
 - Pour nous aider à améliorer nos produits, nous collectons désormais automatiquement des données concernant les statistiques d'utilisation des applications 4D Server en cours d'exécution. Cela n'aura aucun impact sur les performances. Voir la nouvelle page expliquant [pourquoi et comment 4D collecte des données](../Admin/data-collect.md).
-- Composants compilés pour Silicon : Sur les plateformes macOS Silicon (Apple ARM CPUs), les composants doivent être recompilés avec 4D v19 R6 ou plus pour être utilisés avec cette version.
+- Composants compilés pour Silicon : Sur les plateformes macOS Silicon (Apple ARM CPUs), les composants doivent être recompilés avec 4D 19 R6 ou plus pour être utilisés avec cette version.
 
-## 4D v19 R5
+## 4D 19 R5
 
 - Le [fichier directory.json](Users/editing#directoryjson-file) du projet peut désormais être [intégré dans le serveur](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) au moment du build, ce qui vous permet de déployer une application client/serveur avec une configuration de sécurité d'utilisateurs et groupes de base.
 - Vous pouvez maintenant [désélectionner les modules inutiles](../Desktop/building.md#deselecting-modules) dans vos applications construites.
@@ -233,7 +233,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 
 ```
 
-## 4D v19 R4
+## 4D 19 R4
 
 - Les [attributs alias](../ORDA/ordaClasses.md#alias-attributes-1) sont disponibles dans les classes ORDA.
 - Prise en charge des instructions [break and continue](../Concepts/flow-control.md#break-and-continue) dans les boucles.
@@ -245,7 +245,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 - Le chapitre [4D View Pro](../ViewPro/getting-started.md) a été ajouté avec de nouvelles commandes : [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
 - Nouvelle [classe SystemWorker](../API/SystemWorkerClass.md).
 - La constante `Alias selection` a été renommée `Allow alias files` pour résoudre un conflit résultant de la prise en charge des attributs d'alias dans ORDA.
-- Pour une meilleure conformité avec les spécifications ORDA, la propriété de champ _Mapper les valeurs NULL en valeurs vides_ est maintenant décochée par défaut dans les bases de données créées avec 4D v19 R4 et plus. Vous pouvez également activer ce comportement par défaut dans vos bases de données converties à partir de versions antérieures en sélectionnant le paramètre de compatibilité Mapper les valeurs NULL en valeurs vides non coché par défaut lors de la création des champs. Il est désormais recommandé de travailler avec des valeurs nulles, car elles sont entièrement prises en charge par ORDA.
+- For better compliance with ORDA specifications, the _Map NULL values to blank values_ field property is now unchecked by default in databases created with 4D 19 R4 and higher. Vous pouvez également activer ce comportement par défaut dans vos bases de données converties à partir de versions antérieures en sélectionnant le paramètre de compatibilité Mapper les valeurs NULL en valeurs vides non coché par défaut lors de la création des champs. Il est désormais recommandé de travailler avec des valeurs nulles, car elles sont entièrement prises en charge par ORDA.
 - En raison de la prise en charge de l'[opérateur ternaire](../Concepts/operators.md#ternary-operator), les deux points ":" ne sont plus autorisés dans les noms de variables, de champs, de constantes, de fonctions, de plugins et de méthodes de projet. Si votre base de données/projet contient des identifiants avec des deux-points, vous devez les remplacer avant de la convertir à la v19 R4 ou à une version plus récente, sinon des erreurs peuvent se produire dans votre code. Par exemple, si vous avez une variable nommée _a:b_, elle peut être interprétée comme une syntaxe d'opérateur ternaire :
 
 ```4d
@@ -253,7 +253,7 @@ $value:=($size>1000) ? a:b // Ici, 'a:b' est considéré comme un opérateur ter
 
 ```
 
-## 4D v19 R3
+## 4D 19 R3
 
 - Les [propriétés calculées](../Concepts/classes.md#fonction-get-and-function-set) sont disponibles dans les classes.
 - Les [attributs calculés](../ORDA/ordaClasses.md#computed-attributes) sont disponibles dans les classes ORDA. Ils sont similaires aux propriétés calculées, mais supportent aussi les fonctions [query](../ORDA/ordaClasses.md#function-query-attributename) et [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename).
@@ -282,22 +282,22 @@ Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.
 
 - Le nouveau composant [4D NetKit](https://github.com/4d/4D-NetKit) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
 
-- 4D v19 R3 utilise un algorithme de hachage plus puissant pour les mots de passe des utilisateurs de 4D : Bcrypt. Ce nouvel algorithme est automatiquement utilisé lorsqu'un mot de passe est modifié à l'aide de la boîte à outils, de la commande `CHANGE PASSWORD` ou de la commande `Set user properties`. Une fois le mot de passe modifié, l'ouverture de la base de données avec une version antérieure à 4D v19 R3 entraînera un refus d'authentification pour ce compte. Si vous utilisez des mots de passe 4D, il est fortement recommandé de sauvegarder le fichier .4db (bases de données binaires) ou le fichier directory.json (projets) avant d'effectuer la mise à jour vers 4D v19 R3 ou une version ultérieure.
+- 4D 19 R3 utilise un algorithme de hachage plus puissant pour les mots de passe des utilisateurs 4D : Bcrypt. Ce nouvel algorithme est automatiquement utilisé lorsqu'un mot de passe est modifié à l'aide de la boîte à outils, de la commande `CHANGE PASSWORD` ou de la commande `Set user properties`. Une fois le mot de passe modifié, l'ouverture de la base de données avec une version antérieure à 4D 19 R3 entraînera un refus d'authentification pour ce compte. Si vous utilisez les mots de passe 4D, il est fortement recommandé de sauvegarder le fichier .4db (bases de données binaires) ou le fichier directory.json (projets) avant d'effectuer la mise à jour vers 4D 19 R3 ou une version ultérieure.
 
 - Par souci d'exactitude, la constante `4D digest` a été renommée `4D REST digest`.
 
-- Gestion des fins de ligne et des nomenclatures pour les commandes XML : Lorsqu'ils sont ouverts dans 4D v19 R3, les projets ou bases de données créé(e)s avec les versions précédentes se comportent différemment en ce qui concerne les caractères de fin de ligne par défaut et la gestion des BOM dans les documents XML : les caractères de saut de ligne (LF) sont utilisés à la place de CR (sur macOS), et les marques d'ordre d'octet (BOM) ne sont pas incluses. Cela permet une meilleure compatibilité avec les outils VCS. Si nécessaire, vous pouvez restaurer le comportement de la v19 R2 en utilisant la commande `XML SET OPTIONS`. Dans les projets ou les bases de données converti(e)s à partir de versions antérieures à 19 R2, ces options sont gérées par deux paramètres de compatibilité.
+- Gestion des fins de ligne et des nomenclatures pour les commandes XML : Lorsqu'ils sont ouverts dans 4D 19 R3, les projets ou bases de données créé(e)s avec les versions précédentes se comportent différemment en ce qui concerne les caractères de fin de ligne par défaut et la gestion des BOM dans les documents XML : les caractères de saut de ligne (LF) sont utilisés à la place de CR (sur macOS), et les marques d'ordre d'octet (BOM) ne sont pas incluses. Cela permet une meilleure compatibilité avec les outils VCS. Si nécessaire, vous pouvez restaurer le comportement de la v19 R2 en utilisant la commande `XML SET OPTIONS`. Dans les projets ou les bases de données converti(e)s à partir de versions antérieures à 19 R2, ces options sont gérées par deux paramètres de compatibilité.
 
 - Suppression du raccourci "Runtime Explorer" dans les projets construits : le raccourci **Cmd/Ctrl+Shift+F9** n'affiche plus la fenêtre du Runtime Explorer dans les applications de projets fusionnés à mono-utilisateurs. Ce raccourci peut désormais être un raccourci d'application utilisateur. Vous pouvez appeler la fenêtre Runtime Explorer en utilisant la nouvelle commande `OPEN RUNTIME EXPLORER`.
 
 - Capacités de débogage étendues avec 4D Server : En mode interprété, 4D Server peut désormais déboguer tous les types de process, y compris les sessions web évolutives. Cette fonction est disponible lorsque le débogueur est connecté au serveur ou à un client distant.\
   _Attention : En mode interprété, afin de rendre le débogage étendu disponible sur la machine serveur, tous les process du serveur sont désormais automatiquement exécutés en mode coopératif lorsque le débogueur est attaché au serveur (paramètre par défaut). Cela peut avoir un impact significatif sur les performances de vos applications converties lorsqu'elles fonctionnent avec 4D Server v19 R3 et plus. Pour rétablir l'exécution préemptive sur le serveur dans ce cas, il suffit de détacher le débogueur du serveur (et de l'attacher à un client distant si nécessaire)._
 
-- Sous Windows, les projets 4D et les bases de données créés avec 4D v19 R3 et les versions ultérieures utilisent l'API [DirectWrite API](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) dans les formulaires. Cette API améliore le rendu du texte, en particulier dans les configurations à DPI élevé. DirectWrite est utilisé pour le rendu de textes statiques et de textes saisis, de cases à cocher, de boutons et de boutons radio. Notez que les listbox utilisent déjà DirectWrite. Une option de compatibilité vous permet d'activer DirectWrite dans les projets et les bases de données créés avec des versions antérieures de 4D.
+- On Windows, 4D projects and databases created with 4D 19 R3 and higher use the [DirectWrite API](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) in forms. Cette API améliore le rendu du texte, en particulier dans les configurations à DPI élevé. DirectWrite est utilisé pour le rendu de textes statiques et de textes saisis, de cases à cocher, de boutons et de boutons radio. Notez que les listbox utilisent déjà DirectWrite. A compatibility option allows you to enable DirectWrite in projects and databases created with previous 4D ersions.
 
-- Si vous utilisez des composants compilés avec 4D v19.0 pour Silicon (Apple ARM CPUs) qui appellent la commande `Count parameters`, nous recommandons de les recompiler avec 4D v19 R3 pour assurer la compatibilité avec 4D v19 R3 et les versions futures. Si un composant n'est pas compilé pour Silicon, il n'est pas nécessaire de le recompiler.
+- If you use components compiled with 4D 19.0 for Silicon (Apple ARM CPUs) which call the `Count parameters` command, we recommend to recompile them with 4D 19 R3 to provide compatibility with 4D 19 R3 and future releases. Si un composant n'est pas compilé pour Silicon, il n'est pas nécessaire de le recompiler.
 
-## 4D v19 R2
+## 4D 19 R2
 
 - Un [fichier .gitignore par défaut](../Preferences/general#create-gitignore-file) peut être créé avec les nouveaux projets
 - Nouvelle [API de classe Blob](../API/BlobClass.md) pour gérer les nouveaux objets [`4D.Blob`](Concepts/dt_blob.md#blob-types)
@@ -307,11 +307,11 @@ Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.
 
 <details><summary>Cliquez pour voir les notes de mise à jour des versions précédentes</summary>
 
-### 4D v19
+### 4D 19
 
 :::warning Note de sécurité
 
-Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour vers 4D v19.7 LTS build 288986 ou plus. Pour plus d'informations, consultez ce [Bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour 4D en release 19.7 LTS build 288986 ou plus. Pour plus d'informations, consultez ce [Bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -325,7 +325,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - La propriété [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) est désormais prise en charge par les colonnes de listbox entity selection.
 - Nouvelle page complète [CLI](../Admin/cli.md).
 
-### 4D v18 R6
+### 4D 18 R6
 
 - [Classe Entity selection](../API/EntitySelectionClass.md) : Les fonctions `.average()`, `.max()` et `.min()` retournent maintenant _undefined_ si l'entity selection est vide.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) et [SMTP Mail](../API/SMTPTransporterClass.md) : La propriété `authenticationMode` active OAuth 2.0
@@ -338,18 +338,18 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 ## Tableau des bibliothèques
 
-| Bibliothèque | Version courante | Mise à jour dans 4D | Commentaire                                                                                                                        |
-| ------------ | ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| ICU          | 73.2             | 20.1                | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets.                      |
-| CEF          | 118              | 20 R3               | Chromium 5993                                                                                                                      |
-| Hunspell     | 1.7.2            | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                |
-| PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                                                    |
-| SpreadJS     | 16.2.6           | 20 R4               | Moteur 4D View Pro                                                                                                                 |
-| OpenSSL      | 3.2.0            | 20 R4               | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
-| libZip       | 1.9.2            | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                         |
-| LZMA         | 5.4.1            | 20                  |                                                                                                                                    |
-| Zlib         | 1.2.13           | 20                  |                                                                                                                                    |
-| webKit       | WKWebView        | 19                  |                                                                                                                                    |
-| PHP          | 8.2.4            | 20                  |                                                                                                                                    |
-| libldap      | 2.6.4            | 20 R3               |                                                                                                                                    |
-| libsasl      | 2.1.28           | 20                  |                                                                                                                                    |
+| Bibliothèque | Version courante                       | Mise à jour dans 4D  | Commentaire                                                                                                                                        |
+| ------------ | -------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ICU          | 73.2                   | 20.1 | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets.                      |
+| CEF          | 118                                    | 20 R3                | Chromium 5993                                                                                                                                      |
+| Hunspell     | 1.7.2  | 20                   | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                |
+| PDFWriter    | 4.3                    | 20                   | FreeType dependency dans 12.2.1                                                                                    |
+| SpreadJS     | 16.2.6 | 20 R4                | Moteur 4D View Pro                                                                                                                                 |
+| OpenSSL      | 3.2.0  | 20 R4                | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
+| libZip       | 1.9.2  | 20                   | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
+| LZMA         | 5.4.1  | 20                   |                                                                                                                                                    |
+| Zlib         | 1.2.13 | 20                   |                                                                                                                                                    |
+| webKit       | WKWebView                              | 19                   |                                                                                                                                                    |
+| PHP          | 8.2.4  | 20                   |                                                                                                                                                    |
+| libldap      | 2.6.4  | 20 R3                |                                                                                                                                                    |
+| libsasl      | 2.1.28 | 20                   |                                                                                                                                                    |

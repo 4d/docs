@@ -37,13 +37,13 @@ In _sheet_, pass the index of the target sheet. Se nenhum indice for especcifica
 
 The command returns an object describing the current attributes of the _column_:
 
-| Propriedade         | Tipo    | Descrição                                                                                                               |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Propriedade         | Tipo    | Descrição                                                                                                                               |
+| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados. Não devolvido se a tabela for apresentada automaticamente |
 | name                | text    | Nome da coluna da tabela.                                                                                               |
 | footerText          | text    | Valor do rodapé da coluna.                                                                                              |
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
-| filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                  |
+| filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                                  |
 
 If _tableName_ is not found or if _column_ index is higher than the number of columns, the command returns **null**.
 

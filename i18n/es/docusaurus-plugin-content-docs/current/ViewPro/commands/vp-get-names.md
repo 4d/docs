@@ -30,11 +30,11 @@ Puede definir dónde obtener los nombres en _scope_ utilizando el índice de la 
 
 La colección devuelta contiene un objeto por nombre. Las propiedades de objetos siguientes pueden ser devueltas:
 
-| Propiedad                                                             | Tipo | Descripción                   |
-| --------------------------------------------------------------------- | ---- | ----------------------------- |
-| result[ ].name    | Text | nombre de celda o de rango    |
-| result[ ].formula | Text | formula                       |
-| result[ ].comment | Text | Comentario asociado al nombre |
+| Propiedad                                                                               | Tipo | Descripción                   |
+| --------------------------------------------------------------------------------------- | ---- | ----------------------------- |
+| result\[ ].name    | Text | nombre de celda o de rango    |
+| result\[ ].formula | Text | formula                       |
+| result\[ ].comment | Text | Comentario asociado al nombre |
 
 Las propiedades disponibles dependen del tipo de elemento con nombre (celda con nombre, rango con nombre o fórmula con nombre).
 

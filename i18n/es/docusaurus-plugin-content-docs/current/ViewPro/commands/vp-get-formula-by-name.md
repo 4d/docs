@@ -33,10 +33,10 @@ Puede definir dónde obtener la fórmula en _scope_ utilizando el índice de la 
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                     |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                     |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula   | Text | Texto de la fórmula correspondiente a la fórmula nombrada o al rango nombrado. Para los rangos nombrados, la fórmula es una secuencia de coordenadas absolutas. |
-| comment   | Text | Comentario correspondiente a la fórmula nombrada o al rango nombrado                                                                                            |
+| comment   | Text | Comentario correspondiente a la fórmula nombrada o al rango nombrado                                                                                                                            |
 
 #### Ejemplo
 

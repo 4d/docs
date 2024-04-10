@@ -30,11 +30,11 @@ You can define where to get the names in _scope_ using either the sheet index (c
 
 La collection retournée contient un objet par nom. Les propriétés d'objets suivantes peuvent être retournées :
 
-| Propriété                                                             | Type | Description                |
-| --------------------------------------------------------------------- | ---- | -------------------------- |
-| result[ ].name    | Text | nom de cellule ou de plage |
-| result[ ].formula | Text | formula                    |
-| result[ ].comment | Text | Commentaire associé au nom |
+| Propriété                                                                               | Type | Description                |
+| --------------------------------------------------------------------------------------- | ---- | -------------------------- |
+| result\[ ].name    | Text | nom de cellule ou de plage |
+| result\[ ].formula | Text | formula                    |
+| result\[ ].comment | Text | Commentaire associé au nom |
 
 Les propriétés disponibles dépendent du type d'élément nommé (cellule nommée, plage nommée ou formule nommée).
 

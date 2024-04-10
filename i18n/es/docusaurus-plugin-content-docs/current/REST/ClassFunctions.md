@@ -49,7 +49,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 
 
-Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. Del lado del servidor, se recibirán en las funciones de clase en los parámetros normales $1, $2, etc.
+Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
 
 Se aplican las siguientes reglas:
 
@@ -127,8 +127,8 @@ La clase de `DataStore` US_Cities ofrece una API:
 
 Class extends DataStoreImplementation
 
-exposed Function getName()
-    $0:="US cities and zip codes manager" 
+exposed Function getName() : Text
+    return "US cities and zip codes manager" 
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -152,11 +152,8 @@ La clase de Dataclass `City` ofrece una PI que devuelve una entidad de ciudad a 
 
 Class extends DataClass
 
-exposed Function getCity()
-    var $0 : cs.CityEntity
-    var $1,$nameParam : text
-    $nameParam:=$1
-    $0:=This.query("name = :1";$nameParam).first()
+exposed Function getCity($city : Text ) : cs.CityEntity
+    return This.query("name = :1";$city).first()
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -202,7 +199,7 @@ La clase de entidad `CityEntity` ofrece una API:
 Class extends Entity
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -228,7 +225,7 @@ La clase de selección de entidad `CityEntity` ofrece una API:
 Class extends EntitySelection
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -252,15 +249,15 @@ La clase `StudentsSelection` tine una función `getAgeAverage`:
 
 Class extends EntitySelection
 
-exposed Function getAgeAverage
-    C_LONGINT($sum;$0)
-    C_OBJECT($s)
+exposed Function getAgeAverage : Integer
+    var $sum : Integer
+    var $s : Object
 
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
     End for each 
-    $0:=$sum/This.length
+    return $sum/This.length
 ```
 
 Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
@@ -285,12 +282,11 @@ La clase `StudentsSelection` tiene una función `getLastSummary`:
 
 Class extends EntitySelection
 
-exposed Function getLastSummary
-    C_TEXT($0)
-    C_OBJECT($last)
+exposed Function getLastSummary : Text
+    var $last : Object
 
     $last:=This.last()
-    $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+    return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -317,21 +313,19 @@ La clase de Dataclass `Students` tiene la función `pushData()` que recibe una e
 
 Class extends DataClass
 
-exposed Function pushData
-    var $1, $entity, $status, $0 : Object
+exposed Function pushData($entity : Object) : Object
+    var $status : Object
 
-    $entity:=$1
-
-    $status:=checkData($entity) // $status es un objeto con una propiedad booleana "success"
-
-    $0:=$status
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     If ($status.success)
         $status:=$entity.save()
        If ($status.success)
-           $0:=$entity
+           return $entity
       End if 
     End if
+
+    return $status
 
 ```
 

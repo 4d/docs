@@ -130,8 +130,13 @@ El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conect
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 
 * su servidor web debe ser lanzado con http y/o https activado,
-* su opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) debe estar marcada,
-* se dispone de al menos una licencia cliente.
+* el datastore debe ser expuesto (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) marcada) así como también los [dataclasses y atributos](../REST/configuration.md#exposing-tables-and-fields).
+
+:::note
+
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión. Consulte la sección [User login mode](../REST/authUsers.md#user-login-modes) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión actual seleccionado.
+
+:::
 
 Si no se encuentra ninguna base de datos coincidente, `Open datastore` devuelve **Null**.
 
@@ -487,7 +492,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->devuelve una colección de objetos que contienen información sobre todos los contextos de optimización de activos en el almacén de datos<!-- END REF -->.
 
-> Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> Para más información sobre cómo se pueden crear contextos, ver [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
 
@@ -685,7 +690,7 @@ En un almacén de datos remoto:
 
 La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore.<!-- END REF -->.
 
-Para más información sobre cómo se pueden crear contextos de optimización, ver [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
+Para más información sobre cómo se pueden crear contextos de optimización, ver [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devuelto
 
@@ -928,6 +933,7 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 ## .setAdminProtection()
 
 
+
 <details><summary>Histórico</summary>
 
 | Lanzamiento | Modificaciones |
@@ -1063,7 +1069,7 @@ Cuando se pasa un contexto a las funciones de clase ORDA, la optimización de la
 * la primera entidad no está totalmente cargada como se hace en el modo automático
 * las páginas de 80 entidades (o de `pageLength` entidades) se piden inmediatamente al servidor con sólo los atributos del contexto
 
-> Para más información sobre la creación de los contextos de optimización, consulte el [párrafo de optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization)
+> Para más información sobre cómo se crean los contextos de optimización, consulte el [párrafo de optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context)
 
 En *contextName*, pase el nombre del contexto de optimización para vincularlo a los atributos de la dataclass.
 

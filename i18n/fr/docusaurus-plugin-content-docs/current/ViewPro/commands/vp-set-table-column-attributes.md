@@ -33,14 +33,14 @@ In _vpAreaName_, pass the name of the 4D View Pro area.
 
 In the _attributes_ parameter, pass an object that contains the properties to set:
 
-| Propriété           | Type    | Description                                                                                                                                                                                      |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données.                                                                                                                       |
-| name                | text    | Nom de la colonne de la table. Doit être unique dans la table. Si ce nom est déjà utilisé par une autre colonne, il n'est pas appliqué et un nom par défaut est automatiquement utilisé.         |
-| formula             | text    | Définit la formule pour chaque cellule de la colonne. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | Valeur du pied de colonne.                                                                                                                                                                       |
-| footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                      |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
+| Propriété           | Type    | Description                                                                                                                                                                                                                              |
+| ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données.                                                                                                                                               |
+| name                | text    | Nom de la colonne de la table. Doit être unique dans la table. Si ce nom est déjà utilisé par une autre colonne, il n'est pas appliqué et un nom par défaut est automatiquement utilisé. |
+| formula             | text    | Définit la formule pour chaque cellule de la colonne. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)                         |
+| footerText          | text    | Valeur du pied de colonne.                                                                                                                                                                                               |
+| footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                                              |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                                             |
 
 In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 

@@ -33,10 +33,10 @@ You can define where to get the formula in _scope_ using either the sheet index 
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété | Type | Description                                                                                                                                               |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriété | Type | Description                                                                                                                                                                               |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula   | Text | Texte de la formule correspondant à la formule nommée ou à la plage nommée. Pour les plages nommées, la formule est une séquence de coordonnées absolues. |
-| comment   | Text | Commentaire correspondant à la formule nommée ou à la plage nommée                                                                                        |
+| comment   | Text | Commentaire correspondant à la formule nommée ou à la plage nommée                                                                                                                        |
 
 #### Exemple
 

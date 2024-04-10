@@ -18,9 +18,9 @@ The 4D application creates processes for its own needs, for example the Main pro
 Existem várias maneiras de criar um processo:
 
 - Execute a method in the Design environment after checking the **New Process** check box in the "Execute Method" dialog box. The method chosen in the Execute Method dialog box is the process method.
-- Use o comando [`New process`] (https\://doc.4d.com/4dv20/help/command/en/page317.html). The method passed as a parameter to the `New process` command is the process method.
-- Use o comando [`Execute on server`] (https\://doc.4d.com/4dv20/help/command/en/page373.html) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
-- Use o comando [`CALL WORKER`] (https\://doc.4d.com/4dv20/help/command/en/page1389.html). Se o processo worker ainda não existir, será criado.
+- Use o comando [`New process`] (https://doc.4d.com/4dv20/help/command/en/page317.html). The method passed as a parameter to the `New process` command is the process method.
+- Use o comando [`Execute on server`] (https://doc.4d.com/4dv20/help/command/en/page373.html) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
+- Use o comando [`CALL WORKER`] (https://doc.4d.com/4dv20/help/command/en/page1389.html). Se o processo worker ainda não existir, será criado.
 
 :::note
 
@@ -66,7 +66,7 @@ Interface elements are used in [Desktop applications](../category/desktop-applic
 
 :::note
 
-Each process also has a separate current selection and current record per table. Para obter mais informações sobre esses conceitos, consulte [doc.4d.com] (https\://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
+Each process also has a separate current selection and current record per table. Para obter mais informações sobre esses conceitos, consulte [doc.4d.com] (https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
 
 :::
 

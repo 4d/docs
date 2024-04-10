@@ -140,11 +140,11 @@ Essa propriedade é **apenas leitura**.
 
 A função `.new()` <!-- REF #ClassClass.new().Summary -->cria e devolve um objecto `cs.className` que é uma nova instância da classe em que é chamado<!-- END REF -->. Essa função está disponível automaticamente para todas as classes da classe store [`cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the *className* class definition. Dentro da função constructor, [`This`](Concepts/classes.md#this) é conectado ao novo objeto sendo construído.
+Pode passar um ou mais parâmetros opcionais *param*, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor) (se houver) na definição de classe *className*. Dentro da função constructor, [`This`](Concepts/classes.md#this) é conectado ao novo objeto sendo construído.
 
 :::note Notas
 
-- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
+- Se `.new()` for chamado em uma [classe singleton](../Concepts/classes.md#singleton-classes) que já tenha sido instanciada, a instância singleton será retornada, e não uma nova instância.
 - Se `.new()` for chamado em uma classe não existente, um erro é retornado.
 
 :::

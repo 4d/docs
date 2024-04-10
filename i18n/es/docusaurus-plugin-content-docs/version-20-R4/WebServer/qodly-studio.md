@@ -141,7 +141,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Lenguaje de programación                                                         | Lenguaje 4D con ORDA                                                                                               | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA |
 | IDE de código                                                                    | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                                                       |
 | Debugger                                                                         | Depurador 4D IDE                                                                                                   | Qodly Studio debugger                                                               |
-| Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                              | Editor de roles y privilegios de Qodly Studio                                       |
+| Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                              | Editor de roles y privilegios de Qodly Studio                                       |
 
 (1) Si hace clic en el botón **Model** en Qodly Studio, no ocurre nada.
 (2) Cuando abre algún código 4D en Qodly Studio, el coloreado de sintaxis no está disponible y se muestra una advertencia "Lsp not loaded".

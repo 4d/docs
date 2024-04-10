@@ -17,10 +17,10 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| 引数         | タイプ                                               |    | 説明                      |                  |
-| ---------- | ------------------------------------------------- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text                                              | -> | 4D View Pro フォームオブジェクト名 |                  |
-| tableName  | Text                                              | -> | Table name              |                  |
+| 引数         | タイプ                                                                               |    | 説明                      |                  |
+| ---------- | --------------------------------------------------------------------------------- | -- | ----------------------- | ---------------- |
+| vpAreaName | Text                                                                              | -> | 4D View Pro フォームオブジェクト名 |                  |
+| tableName  | Text                                                                              | -> | Table name              |                  |
 | 戻り値        | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値          | <!-- END REF --> |
 
 #### 説明
