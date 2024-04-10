@@ -533,7 +533,7 @@ Essa propriedade é **apenas leitura**.
 | ------- | -------- |
 |         |          |
 
-|19 R4|Added|
+|19 R4|Adicionado|
 
 </details>
 
