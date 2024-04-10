@@ -637,9 +637,9 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Parâmetro | Tipo |    | Descrição                                                     |
-| --------- | ---- | -- | ------------------------------------------------------------- |
-| result    | Text | <- | Context attributes linked to the entity, separated by a comma |
+| Parâmetro | Tipo |    | Descrição                                                            |
+| --------- | ---- | -- | -------------------------------------------------------------------- |
+| result    | Text | <- | Atributos de contexto linkados à entidade, separados por uma vírgula |
 <!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
@@ -1629,9 +1629,9 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                        |
-| ---------- | ---------- |:--:| ------------------------------------------------ |
-| Resultados | Collection | <- | Names of touched attributes, or empty collection |
+| Parâmetro  | Tipo       |    | Descrição                                   |
+| ---------- | ---------- |:--:| ------------------------------------------- |
+| Resultados | Collection | <- | Nomes de atributos touched ou coleção vazia |
 <!-- END REF -->
 
 #### Descrição
