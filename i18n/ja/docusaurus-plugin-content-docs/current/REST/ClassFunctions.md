@@ -49,7 +49,7 @@ $city:=ds.City.getCity("Aguada")
 
 
 
-ORDAユーザークラスに定義された関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の $1, $2 などのパラメーターに受け渡されます。
+ORDAユーザークラスに定義された関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
 
 次のルールが適用されます:
 
@@ -123,12 +123,12 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 US_Cities `DataStore`クラスは API を提供しています:
 
 ```  
-// cs.DataStore クラス
+// DataStore クラス
 
 Class extends DataStoreImplementation
 
-exposed Function getName()
-    $0:="US cities and zip codes manager" 
+exposed Function getName() : Text
+    return "US cities and zip codes manager" 
 ```
 
 次のリクエストを実行します:
@@ -145,18 +145,15 @@ exposed Function getName()
 
 ### DataClassクラス関数を使用する
 
-`City` DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
+`City` の DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
 
 ```
-// cs.City クラス
+// Cityクラス
 
 Class extends DataClass
 
-exposed Function getCity()
-    var $0 : cs.CityEntity
-    var $1,$nameParam : text
-    $nameParam:=$1
-    $0:=This.query("name = :1";$nameParam).first()
+exposed Function getCity($city : Text ) : cs.CityEntity
+    return This.query("name = :1";$city).first()
 ```
 
 次のリクエストを実行します:
@@ -194,15 +191,15 @@ exposed Function getCity()
 
 ### Entityクラス関数を使用する
 
-`CityEntity` Entityクラスは API を提供しています:
+`CityEntity` の Entityクラスは API を提供しています:
 
 ```
-// cs.CityEntity クラス
+// CityEntityクラス
 
 Class extends Entity
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 次のリクエストを実行します:
@@ -220,15 +217,15 @@ exposed Function getPopulation()
 
 ### EntitySelectionクラス関数を使用する
 
-`CitySelection` EntitySelectionクラスは API を提供しています:
+`CitySelection` の EntitySelectionクラスは API を提供しています:
 
 ```
-// cs.CitySelection クラス
+// CitySelection クラス
 
 Class extends EntitySelection
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 次のリクエストを実行します:
@@ -248,19 +245,19 @@ exposed Function getPopulation()
 `StudentsSelection` クラスは `getAgeAverage` 関数を持ちます:
 
 ```  
-// cs.StudentsSelection クラス
+// StudentsSelection クラス
 
 Class extends EntitySelection
 
-exposed Function getAgeAverage
-    C_LONGINT($sum;$0)
-    C_OBJECT($s)
+exposed Function getAgeAverage : Integer
+    var $sum : Integer
+    var $s : Object
 
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
     End for each 
-    $0:=$sum/This.length
+    return $sum/This.length
 ```
 
 あらかじめ作成した既存のエンティティセットを使い、次のリクエストを実行します:
@@ -280,17 +277,16 @@ exposed Function getAgeAverage
 `StudentsSelection` クラスは `getLastSummary` 関数を持ちます:
 
 ```  
-// cs.StudentsSelection クラス
+// StudentsSelection クラス
 
 
 Class extends EntitySelection
 
-exposed Function getLastSummary
-    C_TEXT($0)
-    C_OBJECT($last)
+exposed Function getLastSummary : Text
+    var $last : Object
 
     $last:=This.last()
-    $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+    return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 次のリクエストを実行します:
@@ -313,25 +309,23 @@ exposed Function getLastSummary
 `Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
 
 ```
-// cs.Students クラス
+// Students クラス
 
 Class extends DataClass
 
-exposed Function pushData
-    var $1, $entity, $status, $0 : Object
+exposed Function pushData($entity : Object) : Object
+    var $status : Object
 
-    $entity:=$1
-
-    $status:=checkData($entity) // $status は success ブールプロパティを持つオブジェクトです
-
-    $0:=$status
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     If ($status.success)
         $status:=$entity.save()
        If ($status.success)
-           $0:=$entity
+           return $entity
       End if 
     End if
+
+    return $status
 
 ```
 
