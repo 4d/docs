@@ -211,9 +211,9 @@ Cette propriété est en **lecture seule**.
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| Paramètres | Type |    | Description                   |
-| ---------- | ---- | -- | ----------------------------- |
-| Résultat   | Real | <- | Size of the document in bytes |
+| Paramètres | Type |    | Description                  |
+| ---------- | ---- | -- | ---------------------------- |
+| Résultat   | Real | <- | Taille du document en octets |
 <!-- END REF -->
 
 #### Description
@@ -315,10 +315,10 @@ $s:=$fh.readText()
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Paramètres | Type                 |    | Description              |
-| ---------- | -------------------- | -- | ------------------------ |
-| *bytes*    | Real                 | -> | Nombre d'octets à lire   |
-| Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file |
+| Paramètres | Type                 |    | Description                  |
+| ---------- | -------------------- | -- | ---------------------------- |
+| *bytes*    | Real                 | -> | Nombre d'octets à lire       |
+| Résultat   | [4D.Blob](BlobClass) | <- | Octets lus depuis le fichier |
 <!-- END REF -->
 
 
@@ -354,9 +354,9 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 
 <!--REF #FileHandleClass.readLine().Params -->
-| Paramètres | Type |    | Description  |
-| ---------- | ---- | -- | ------------ |
-| Résultat   | Text | <- | Line of text |
+| Paramètres | Type |    | Description    |
+| ---------- | ---- | -- | -------------- |
+| Résultat   | Text | <- | Ligne de texte |
 <!-- END REF -->
 
 
@@ -400,7 +400,7 @@ Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de 
 | Paramètres | Type |    | Description                                  |
 | ---------- | ---- | -- | -------------------------------------------- |
 | *stopChar* | Text | -> | Caractère(s) au(x)quel(s) arrêter la lecture |
-| Résultat   | Text | <- | Text from the file                           |
+| Résultat   | Text | <- | Texte du fichier                             |
 <!-- END REF -->
 
 
@@ -443,9 +443,9 @@ Si le paramètre *stopChar* est passé et non trouvé, `.readText()` renvoie une
 
 
 <!--REF #FileHandleClass.setSize().Params -->
-| Paramètres | Type |    | Description                       |
-| ---------- | ---- | -- | --------------------------------- |
-| size       | Real | -> | New size of the document in bytes |
+| Paramètres | Type |    | Description                           |
+| ---------- | ---- | -- | ------------------------------------- |
+| size       | Real | -> | Nouvelle taille du document en octets |
 <!-- END REF -->
 
 
@@ -476,9 +476,9 @@ Si la valeur de *size* est inférieure à la taille courante du document, le con
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Paramètres | Type                 |    | Description               |
-| ---------- | -------------------- | -- | ------------------------- |
-| *blob*     | [4D.Blob](BlobClass) | -> | Blob to write in the file |
+| Paramètres | Type                 |    | Description                   |
+| ---------- | -------------------- | -- | ----------------------------- |
+| *blob*     | [4D.Blob](BlobClass) | -> | Blob à écrire dans le fichier |
 <!-- END REF -->
 
 
@@ -511,9 +511,9 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Paramètres   | Type |    | Description   |
-| ------------ | ---- | -- | ------------- |
-| *lineOfText* | Text | -> | Text to write |
+| Paramètres   | Type |    | Description    |
+| ------------ | ---- | -- | -------------- |
+| *lineOfText* | Text | -> | Texte à écrire |
 <!-- END REF -->
 
 
@@ -544,9 +544,9 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Paramètres    | Type |    | Description   |
-| ------------- | ---- | -- | ------------- |
-| *textToWrite* | Text | -> | Text to write |
+| Paramètres    | Type |    | Description    |
+| ------------- | ---- | -- | -------------- |
+| *textToWrite* | Text | -> | Texte à écrire |
 <!-- END REF -->
 
 
