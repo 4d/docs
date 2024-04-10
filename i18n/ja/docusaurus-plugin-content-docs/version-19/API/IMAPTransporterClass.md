@@ -757,7 +757,7 @@ $status:=$transporter.expunge()
 | ----- | ------------ |
 | 18 R5 | *name* は任意です |
 
-|18 R4|Added|
+|18 R4|追加|
 
 </details>
 
