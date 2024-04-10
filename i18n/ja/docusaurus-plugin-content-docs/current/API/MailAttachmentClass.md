@@ -27,9 +27,9 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                 |
-| ------- | ---------------------------------- |
-| 19 R2   | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
+| リリース  | 内容                                 |
+| ----- | ---------------------------------- |
+| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -174,9 +174,9 @@ $transporter.send($email)
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                 |
-| ------- | ---------------------------------- |
-| 19 R2   | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
+| リリース  | 内容                                 |
+| ----- | ---------------------------------- |
+| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -267,9 +267,9 @@ $transporter.send($email)
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 19      | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
