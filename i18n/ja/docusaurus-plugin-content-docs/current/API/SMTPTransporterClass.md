@@ -30,11 +30,11 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                   |
-| ------- | ------------------------------------ |
-| 18      | logFile プロパティを追加                     |
-| 17 R5   | bodyCharset と headerCharset プロパティを追加 |
-| 17 R4   | 追加                                   |
+| リリース  | 内容                                   |
+| ----- | ------------------------------------ |
+| 18    | logFile プロパティを追加                     |
+| 17 R5 | bodyCharset と headerCharset プロパティを追加 |
+| 17 R4 | 追加                                   |
 
 </details>
 
@@ -172,9 +172,9 @@ SMTPステータスコードについての詳細は [こちらのページ](htt
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R4   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
@@ -196,10 +196,10 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 <details><summary>履歴</summary>
 
-| Release | 内容             |
-| ------- | -------------- |
-| 17 R5   | MIMEコンテンツをサポート |
-| 17 R4   | 追加             |
+| リリース  | 内容             |
+| ----- | -------------- |
+| 17 R5 | MIMEコンテンツをサポート |
+| 17 R4 | 追加             |
 
 </details>
 
