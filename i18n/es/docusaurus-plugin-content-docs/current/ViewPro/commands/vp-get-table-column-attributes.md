@@ -37,8 +37,8 @@ En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 El comando devuelve un objeto que describe los atributos actuales de la _column_:
 
-| Propiedad           | Tipo    | Descripción                                                                                                                     |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Propiedad           | Tipo    | Descripción                                                                                                                                     |
+| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos. No se devuelve si la tabla se muestra automáticamente |
 | name                | text    | Nombre de la columna de la tabla.                                                                                               |
 | footerText          | text    | Valor del pie de columna.                                                                                                       |
