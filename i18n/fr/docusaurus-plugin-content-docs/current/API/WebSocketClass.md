@@ -85,11 +85,11 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| Paramètres                                        | Type         |    | Description                               |
-| ------------------------------------------------- | ------------ |:--:| ----------------------------------------- |
-| url                                               | Text         | -> | URL à laquelle se connecter               |
-| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objet déclarant les callbacks WebSocket   |
-| Résultat                                          | 4D.WebSocket | <- | New [WebSocket object](#websocket-object) |
+| Paramètres                                        | Type         |    | Description                                 |
+| ------------------------------------------------- | ------------ |:--:| ------------------------------------------- |
+| url                                               | Text         | -> | URL à laquelle se connecter                 |
+| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objet déclarant les callbacks WebSocket     |
+| Résultat                                          | 4D.WebSocket | <- | Nouvel [objet WebSocket](#websocket-object) |
 <!-- END REF -->
 
 
@@ -240,7 +240,7 @@ Cette propriété est en lecture seule.
 | Paramètres | Type    |    | Description                                                       |
 | ---------- | ------- |:--:| ----------------------------------------------------------------- |
 | code       | Integer | -> | Code de statut indiquant la cause de la fermeture de la connexion |
-| reason     | Text    | -> | The reason why the connection is closing                          |
+| reason     | Text    | -> | Cause de la fermeture de la connexion                             |
 <!-- END REF -->
 
 
