@@ -9,11 +9,12 @@ El catálogo describe todas las clases de datos y atributos disponibles en el al
 
 ## Sintaxis disponible
 
-| Sintaxis                                      | Ejemplo              | Descripción                                                                       |
-| --------------------------------------------- | -------------------- | --------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Devuelve una lista de las clases de datos de su proyecto junto con dos URIs       |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Devuelve información sobre todas las clases de datos del proyecto y sus atributos |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Devuelve información sobre una clase de datos y sus atributos                     |
+| Sintaxis                                                                | Ejemplo                | Descripción                                                                       |
+| ----------------------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | Devuelve una lista de las clases de datos de su proyecto junto con dos URIs       |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Devuelve información sobre todas las clases de datos del proyecto y sus atributos |
+| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | Devuelve información sobre una clase de datos y sus atributos                     |
+| [**$catalog/DataStoreClassFunction**](classFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                |
 
 
 ## $catalog
