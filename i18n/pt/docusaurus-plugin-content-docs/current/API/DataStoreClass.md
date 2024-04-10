@@ -130,8 +130,13 @@ Usar a datastore principal do banco de dados 4D:
 O banco de dados *connectionInfo* 4D deve estar disponível como armazém de dados remoto, ou seja:
 
 * seu servidor web deve ser lançado com http ou https ativado,
-* sua opção [**Expor como servidor REST**](REST/configuration.md#starting-the-rest-server) deve estar marcada,
-* se dispõe de ao menos uma licença cliente.
+* the datastore must be exposed ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked) as well as [dataclasses and attributes](../REST/configuration.md#exposing-tables-and-fields).
+
+:::note
+
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+
+:::
 
 Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve **Null**.
 
@@ -490,7 +495,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 A função `.isAdminProtected()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->retorna `True` se [Data Explorer](Admin/dataExplorer.md) acesso for desativado para a sessão de trabalho<!-- END REF -->.
 
-> Para mais informações sobre como podem ser criados contextos, ver [optimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
+> For more information on how contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 Cada objeto da coleção devolvida ccontém as propriedades listadas na seção.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
 
@@ -692,7 +697,7 @@ Em um armazém de dados remoto:
 
 A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> retorna um objeto que contém informações sobre a otimização de contexto *contextName* na datastore.<!-- END REF -->.
 
-Para saber mais sobre como contextos de otimização podem ser criados veja [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devolvido
 
@@ -935,6 +940,7 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 ## .setAdminProtection()
 
 
+
 <details><summary>Histórico</summary>
 
 | Release | Mudanças   |
@@ -1070,7 +1076,7 @@ Quando se passa um contexto para as funções da classe ORDA, a optimização do
 * a primeira entidade não é carregada totalmente, como no modo automático
 * páginas de 80 entidades (ou `pageLength`) são imediatamente perguntadas ao servidor com apenas os atributos no contexto
 
-> Para saber mais sobre os contextos de otimização são construidos, veja  [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/client-server-optimization.md#optimization-context)
 
 em *contextName*, passe o nome do contexto de otimização ao link para os atributos de dataclass.
 
