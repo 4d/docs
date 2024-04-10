@@ -11,10 +11,10 @@ Este parámetro permite definir el formato que se utilizará para devolver los d
 
 Se soportan los siguientes formatos:
 
-| Formato  | Descripción                                                                      |
-| -------- | -------------------------------------------------------------------------------- |
-| `json`   | Formato estándar del servidor 4D REST (utilizado por defecto) |
-| `looker` | Formato JSON compatible con [Looker Studio](https://lookerstudio.google.com/).   |
+| Formato  | Descripción                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------- |
+| `json`   | Formato estándar del servidor 4D REST (utilizado por defecto)               |
+| `looker` | Formato JSON compatible con [Looker Studio](https://lookerstudio.google.com/). |
 
 ## Ejemplo
 
