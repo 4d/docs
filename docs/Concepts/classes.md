@@ -599,7 +599,8 @@ Class constructor ($side : Integer)
 |Parameter|Type||Description|  
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|<!-- END REF -->
+|Result|Object|<-|Object's parent|
+<!-- END REF -->
 
 The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
 
@@ -707,7 +708,8 @@ $message:=$square.description() //I have 4 sides which are all equal
 <!-- REF #_command_.This.Params -->
 |Parameter|Type||Description|  
 |---|---|---|---|
-|Result|Object|<-|Current object|<!-- END REF -->
+|Result|Object|<-|Current object|
+<!-- END REF -->
 
 The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
 
@@ -923,13 +925,13 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can the call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in your application with a single line:
+You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in your application with a single line:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 ```
 
-Since the *buildVehicle()* function modifies the **cs.VehicleFactory** (by incrementing `This.vehicleBuilt`) you need to add the `shared` keyword to it.
+Since the *buildVehicle()* function modifies the **cs.VehicleFactory** singleton (by incrementing `This.vehicleBuilt`) you need to add the `shared` keyword to it.
 
 #### See also
 
