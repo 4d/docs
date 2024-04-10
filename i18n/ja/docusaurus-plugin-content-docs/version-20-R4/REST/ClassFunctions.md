@@ -145,7 +145,7 @@ exposed Function getName()
 
 ### DataClassクラス関数を使用する
 
-`City` DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
+`City` の DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
 
 ```
 // cs.City クラス
@@ -194,7 +194,7 @@ exposed Function getCity()
 
 ### Entityクラス関数を使用する
 
-`CityEntity` Entityクラスは API を提供しています:
+`CityEntity` の Entityクラスは API を提供しています:
 
 ```
 // cs.CityEntity クラス
@@ -220,7 +220,7 @@ exposed Function getPopulation()
 
 ### EntitySelectionクラス関数を使用する
 
-`CitySelection` EntitySelectionクラスは API を提供しています:
+`CitySelection` の EntitySelectionクラスは API を提供しています:
 
 ```
 // cs.CitySelection クラス
