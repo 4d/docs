@@ -17,13 +17,13 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                                                 |                  |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                |                  |
-| tableName  | Text       | -> | Nome da tabela                                                                            |                  |
+| Parâmetro  | Tipo       |    | Descrição                                                                                                 |                  |
+| ---------- | ---------- | -- | --------------------------------------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                                |                  |
+| tableName  | Text       | -> | Nome da tabela                                                                                            |                  |
 | reset      | Parâmetros | -> | True para apagar o estado "dirty" da tabela atual, False para mantê-lo igual. Padrão=True |                  |
-| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                               |                  |
-| Resultados | Collection | <- | Collection of objects with all the items modified since the last reset                    | <!-- END REF --> |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                               |                  |
+| Resultados | Collection | <- | Collection of objects with all the items modified since the last reset                                    | <!-- END REF --> |
 
 #### Descrição
 
