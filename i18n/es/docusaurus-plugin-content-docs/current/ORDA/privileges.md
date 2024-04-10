@@ -143,6 +143,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 |                     |                 | \[].describe | Colección de cadenas              |             | Lista de privilegios                                                           |
 |                     |                 | \[].execute  | Colección de cadenas              |             | Lista de privilegios                                                           |
 |                     |                 | \[].promote  | Colección de cadenas              |             | Lista de privilegios                                                           |
+| forceLogin          |                 |               | Boolean                           |             | True to enable the ["forceLogin" mode](../REST/authUsers.md#force-login-mode)  |
 
 
 :::caution Recordatorio
