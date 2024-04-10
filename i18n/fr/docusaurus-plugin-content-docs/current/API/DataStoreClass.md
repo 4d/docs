@@ -130,8 +130,13 @@ La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conne
 La base de données *connectionInfo* 4D doit être disponible en tant que datastore distant, c'est-à-dire :
 
 * son serveur Web doit être lancé avec http et/ou https activé,
-* son option [**Activer le service REST**](REST/configuration.md#starting-the-rest-server) doit être cochée,
-* au moins une licence client est disponible.
+* le datastore doit être exposé (option [**Exposer en tant que serveur REST**](REST/configuration.md#démarrage-du-serveur-rest) cochée) ainsi que les [dataclasses et les attributs](../REST/configuration.md#exposer-les-tables-et-les-champs).
+
+:::note
+
+Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion. Référez-vous à la section [User login mode](../REST/authUsers.md#user-login-modes) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
+
+:::
 
 Si aucune base de données correspondante n'est trouvée, `Open datastore` retourne **Null**.
 
@@ -444,11 +449,11 @@ $destination.create()
 ds.flushAndLock() //Bloque les opérations d'écriture des autres process
 
 $dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copier le dossier de données
+$dataFolder.copyTo($destination) //Copie le dossier de données
 
-$oldJournalPath:=New log file //Fermer le journal et en créer un nouveau
+$oldJournalPath:=New log file //Ferme le journal et en créer un nouveau
 $oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Sauvegarder l'ancien journal avec les données
+$oldJournal.moveTo($destination) //Sauvegarde l'ancien journal avec les données
 
 ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller le datastore
 ```
@@ -484,7 +489,7 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->retourne une collection d'objets contenant des informations sur tous les contextes d'optimisation actifs dans le datastore<!-- END REF -->.
 
-> Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur).
+> Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
 Chaque objet de la collection retournée contient les propriétés listées dans la section [`.getRemoteContextInfo()`](#objet-retourné).
 
@@ -550,9 +555,9 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Paramètres | Type |    | Description                                    |
-| ---------- | ---- | -- | ---------------------------------------------- |
-| Résultat   | Real | <- | Current value of the global modification stamp |
+| Paramètres | Type |    | Description                                        |
+| ---------- | ---- | -- | -------------------------------------------------- |
+| Résultat   | Real | <- | Valeur courante du marqueur de modification global |
 <!-- END REF -->
 
 
@@ -579,7 +584,7 @@ var $currentStamp : Real
 var $hasModifications : Boolean
 
 $currentStamp:=ds.getGlobalStamp()
-methodWhichCouldModifyEmployees //exécuter du code 
+methodWhichCouldModifyEmployees //exécuter du code
 $hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
 
@@ -682,7 +687,7 @@ Sur un datastore distant :
 
 La fonction `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> retourne un objet qui contient des informations sur le contexte d'optimisation *contextName* dans le datastore.<!-- END REF -->.
 
-Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur).
+Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objet retourné
 
@@ -925,6 +930,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 ## .setAdminProtection()
 
 
+
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -1060,7 +1066,7 @@ Lorsque vous passez un contexte aux fonctions de classe ORDA, l'optimisation des
 * la première entité n'est pas chargée intégralement, à la différence du mode automatique
 * des pages de 80 entités (ou de `pageLength` entités) sont imméditament demandées au serveur avec uniquement les attributs du contexte
 
-> Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur)
+> Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
 Dans *contextName*, passez le nom du contexte d'optimisation à lier aux attributs de la dataclass.
 
@@ -1169,11 +1175,11 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Paramètres | Type    |    | Description                                             |
-| ---------- | ------- | -- | ------------------------------------------------------- |
-| file       | 4D.File | -> | Objet File                                              |
-| options    | Integer | -> | Option d'enregistrement de réponse (serveur uniquement) |
-| reqNum     | Integer | -> | Number of requests to keep in memory (client only)      |
+| Paramètres | Type    |    | Description                                                  |
+| ---------- | ------- | -- | ------------------------------------------------------------ |
+| file       | 4D.File | -> | Objet File                                                   |
+| options    | Integer | -> | Option d'enregistrement de réponse (serveur uniquement)      |
+| reqNum     | Integer | -> | Nombre de requêtes à conserver en mémoire (client seulement) |
 <!-- END REF -->
 
 #### Description
