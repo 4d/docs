@@ -99,7 +99,7 @@ The `session` object allows you to get information about the remote user session
 For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. This way, the 4D server can access user information for all client processes, enabling customized code to be written according to the user's role.
 
 
-### Availability
+### Disponibilidad
 
 The remote user `session` object is available from:
 
