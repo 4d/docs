@@ -127,7 +127,7 @@ You can display or hide the line numbers in the break points area for each windo
 - To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
 - To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display. 
+Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
 
 This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
@@ -289,12 +289,12 @@ The Code Editor includes numerous [navigation shortcuts](#shortcuts).
 The backslash character (`\`) has a specific support in the 4D language:
 
 - inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences). 
+- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
 
 
 :::caution
 
-The backslash character (```\```) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash ```\``` with a double backslash ```\\```. For instance, ```C:\MyDocuments``` will become ```C:\\MyDocuments```. However, if you write ```"C:\MyDocuments\New"```, 4D will display ```"C:\\MyDocuments\New"```. In this case, the second backslash is interpreted incorrectly as ```\N``` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash ```\\``` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. For instance, `C:\MyDocuments` will become `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -429,46 +429,46 @@ When the database is restarted, the list is reinitialized.
 ## Find and replace
 
 
-The Code editor has powerful **find and replace** features that apply to the current window. 
+The Code editor has powerful **find and replace** features that apply to the current window.
 
 A search and replace area can be displayed in the toolbar of any method window:
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar. 
+To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar.
 
 :::tip
 
-The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes. 
+The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes.
 
 :::
 
 
 ### Find
 
-Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area. 
+Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area.
 
 The search defined in this area will be performed in the code located in the window.
 
 The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
 
-Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits. 
+Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
 
 Hit the **Enter** key to select closest occurrence to the cursor. You can also click on the **Next / Previous** buttons ![find-next-previous](../assets/en/code-editor/find-next.png) to select all occurrences sequentially towards the beginning or end of the current method, starting from the initial location of the cursor, or use the **Find Next** and **Find Previous** commands of the [**Edit** menu](#shortcuts).
 
 
 #### Options
 
-- **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà". 
+- **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
 - **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc.
 
 
 
 ### Replace  
 
-Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) . 
+Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) .
 
-The *Replace* entry area is used to define the character string that will replace the one defined above. 
+The *Replace* entry area is used to define the character string that will replace the one defined above.
 
 Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
 
@@ -501,12 +501,12 @@ The Code Live Checker is activated at three levels:
 - when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
 - when you [compile](../Project/compiler.md) the project.
 
-4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression. 
+4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
 
 Two kinds of symbols are displayed:
 
 - **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
-- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile. 
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
 
 When you move the mouse over the symbol, a help tip displays the cause of the error:
 
@@ -533,7 +533,7 @@ You can modify the way 4D indicates matching enclosing characters or disable thi
 
 :::
 
-The Code Live Checker cannot detect some errors that only occur during execution. Execution errors are caught by 4D when the code is executed. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors. 
+The Code Live Checker cannot detect some errors that only occur during execution. Execution errors are caught by 4D when the code is executed. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
 
 
 ## Help tips
@@ -542,7 +542,7 @@ The Code Editor provides various contextual information using help tips. They ap
 
 :::tip
 
-The [status bar](#status-bar) also provides contextual information. 
+The [status bar](#status-bar) also provides contextual information.
 
 :::
 
@@ -570,7 +570,7 @@ The [status bar](#status-bar) also provides contextual information.
 
 The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line.
 
-There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks). 
+There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
 Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
 
@@ -616,7 +616,7 @@ Blocks can be defined by:
 
 ### Select Enclosing Block
 
-The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. 
+The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
 
 If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
 
