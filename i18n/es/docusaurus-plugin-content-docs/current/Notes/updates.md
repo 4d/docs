@@ -118,9 +118,9 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.
 
-:::caution Versión mínima cliente para 4D Server v20.2 y posteriores
+:::caution Versión mínima del cliente para 4D Server 20.2 y posterior
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+For internal reasons, the version of remote clients connecting to 4D Server 20.2 and later must be at least 4D 20.2.
 
 :::
 
@@ -134,9 +134,9 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 4D 20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
-:::caution 4D 20.1 index rebuild and client/server versions
+:::caution 4D 20.1 reconstrucción de índices y versiones cliente/servidor
 
-4D 20.1 also includes an ICU library update, which has the following consequences:
+4D 20.1 también incluye una actualización de la biblioteca ICU, que tiene las siguientes consecuencias:
 
 - Forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto.
 - Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server v20.1 and vice versa.
@@ -146,7 +146,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Destacados
 
-- 4D 20.2 is certified on macOS Sonoma (macOS 14).
+- 4D 20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D 20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [Clase IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan las palabras claves personalizadas.
@@ -174,7 +174,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Cambios de comportamiento
 
-- As of v20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
+- A partir de v20.2, 4D 20 LTS ya no es compatible con Windows Server 2012 R2.
 - **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) se ha definido incorrectamente en 1 en lugar de 0. Se ha realizado una corrección en 4D a partir de las versiones **20.1 HF1** y **20 R2** y el valor es ahora 0.
 - Para el cumplimiento con la RFC HTTP, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) devuelve ahora todos los nombres de encabezados **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Los certificados TLS son ahora validados automáticamente por 4D al enviar peticiones HTTP con [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) y rechazados con un error si no son válidos. Una nueva propiedad *option* le permite controlar esta validación.
@@ -233,8 +233,8 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 #### Cambios de comportamiento
 
 - Para mantener la coherencia con las interfaces estándar (por ejemplo, los exploradores de archivos del sistema operativo), se han modificado las reglas del list box para la selección/arrastrar y soltar de líneas. Se puede arrastrar una selección continua o discontinua de líneas simplemente haciendo clic en una línea seleccionada y moviéndola; la tecla **Alt** ya no es necesaria (pero se puede seguir utilizando como en el caso anterior). Cuando se presiona la tecla **Mayús** o **Ctrl/Comando**, se tiene en cuenta el clic del ratón cuando éste está presionado. Para más información sobre arrastrar y soltar en list box, puede consultar [esta entrada del blog](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) y descargar [este proyecto HDI 4D](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D 19 R7:
-    - releases up to 4D 19 R6 (included) are numbered 282xxx,
+- La numeración interna de 4D ha sido modificada a partir de 4D 19 R7:
+    - las versiones hasta la 4D 19 R6 (incluida) llevan el número 282xxx,
     - releases from 4D 19 R7 will be numbered 100xxx.   
       Note that a specific 4D version is still uniquely identified by a branch name and a build number. El número de build aumenta cronológicamente.
 - Se ha eliminado la posibilidad de utilizar el protocolo Wakanda/4D Mobile REST para llamar a un método proyecto. En su lugar, puede utilizar [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) o las [urls /4DACTION](../WebServer/httpRequests.md#4daction).
@@ -301,7 +301,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Nueva [clase SystemWorker](../API/SystemWorkerClass.md).
 - La constante `Alias selection` ha pasado a llamarse `Allow alias files` para resolver un conflicto derivado del soporte de atributos de alias en ORDA.
 - For better compliance with ORDA specifications, the *Map NULL values to blank values* field property is now unchecked by default in databases created with 4D 19 R4 and higher. También puede activar este comportamiento por defecto en sus bases de datos convertidas de versiones anteriores seleccionando la opción de compatibilidad Asignar valores NULL a valores vacíos desmarcada por defecto en la creación de campos. Ahora se recomienda trabajar con valores Null, ya que ORDA los soporta completamente.
-- Debido a la compatibilidad con el [operador ternario](../Concepts/operators.md#ternary-operator), ya no se permiten los dos puntos ":" en los nombres de variables, campos, constantes, funciones, plugins y métodos proyecto. Si su base de datos/proyecto contiene identificadores con dos puntos, debe reemplazarlos antes de convertirla a v19 R4 o superior, de lo contrario pueden producirse errores en su código. Por ejemplo, si tiene una variable denominada *a:b*, podría interpretarse como sintaxis de operador ternario:
+- Debido a la compatibilidad con el [operador ternario](../Concepts/operators.md#ternary-operator), ya no se permiten los dos puntos ":" en los nombres de variables, campos, constantes, funciones, plugins y métodos proyecto. If your database/project contains identifiers with colons, you must replace them before converting it to 4D 19 R4 or higher, otherwise errors may occur in your code. Por ejemplo, si tiene una variable denominada *a:b*, podría interpretarse como sintaxis de operador ternario:
 
 ```4d
 $value:=($size>1000)? a:b // Aquí 'a:b' se considera un operador ternario.
@@ -338,10 +338,10 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 - 4D 19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. Este nuevo algoritmo se utiliza automáticamente cuando se cambia una contraseña utilizando la Caja de herramientas, el comando `CHANGE PASSWORD` o el comando `Set user properties`. Once a password is modified, opening the database with a version prior to 4D 19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D 19 R3 or later.
 - Para mayor precisión, la constante `4D digest` ha pasado a denominarse `4D REST digest`.
 
-- End-of-line and BOM management for XML commands: When opened in 4D 19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. Esto permite una mejor compatibilidad con las herramientas VCS. Si es necesario, puede restaurar el comportamiento de v19 R2 utilizando el comando `XML SET OPTIONS`. En los proyectos o bases de datos convertidos desde versiones anteriores a la 19 R2, estas opciones se gestionan mediante dos ajustes de compatibilidad.
+- End-of-line and BOM management for XML commands: When opened in 4D 19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. Esto permite una mejor compatibilidad con las herramientas VCS. If necessary, you can restore the 4D 19 R2 behavior using the `XML SET OPTIONS` command. In projects or databases converted from releases prior to 19 R2, these options are managed by two compatibility settings.
 - Se ha eliminado el acceso directo al Explorador de ejecución en los proyectos creados: el acceso directo **Cmd/Ctrl+Mayús+F9** ya no muestra la ventana del Explorador de ejecución en aplicaciones de proyectos fusionados de un solo usuario. Este acceso directo ahora puede ser un acceso directo a una aplicación de usuario. Puede llamar a la ventana del Explorador de ejecución utilizando el nuevo comando `OPEN RUNTIME EXPLORER`.
 - Capacidades de depuración extendidas con 4D Server: en modo interpretado, 4D Server puede ahora depurar todo tipo de procesos, incluidas las sesiones web escalables. Está disponible cuando el depurador está conectado al servidor o a un cliente remoto.   
-  *Atención: en el modo interpretado, para que la depuración extendida esté disponible en la máquina del servidor, todos los procesos del servidor se ejecutan ahora automáticamente en modo cooperativo cuando el depurador está conectado al servidor (configuración predeterminada). Esto puede tener un impacto significativo en el rendimiento de sus aplicaciones convertidas cuando se ejecutan con 4D Server v19 R3 y superiores. Para restaurar la ejecución preferente en el servidor en este caso, todo lo que tiene que hacer es desconectar el depurador del servidor (y conectarlo a un cliente remoto si es necesario).*
+  *Atención: en el modo interpretado, para que la depuración extendida esté disponible en la máquina del servidor, todos los procesos del servidor se ejecutan ahora automáticamente en modo cooperativo cuando el depurador está conectado al servidor (configuración predeterminada). This can have a significant impact on the performance of your converted applications when they run with 4D Server 19 R3 and higher. Para restaurar la ejecución preferente en el servidor en este caso, todo lo que tiene que hacer es desconectar el depurador del servidor (y conectarlo a un cliente remoto si es necesario).*
 - On Windows, 4D projects and databases created with 4D 19 R3 and higher use the [DirectWrite API](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) in forms. Esta API mejora el renderizado de texto, especialmente en configuraciones de alto DPI. DirectWrite se utiliza para la representación de texto con texto estático y de entrada, casillas de verificación, botones y botones radio. Tenga en cuenta que los listboxes ya utilizan DirectWrite. Una opción de compatibilidad permite activar DirectWrite en proyectos y bases de datos creados con versiones anteriores de 4D.
 - If you use components compiled with 4D 19.0 for Silicon (Apple ARM CPUs) which call the `Count parameters` command, we recommend to recompile them with 4D 19 R3 to provide compatibility with 4D 19 R3 and future releases. Si un componente no está compilado para Silicon, no es necesario volver a compilarlo.
 
