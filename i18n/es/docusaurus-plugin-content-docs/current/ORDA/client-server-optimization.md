@@ -6,11 +6,11 @@ title: Client/Server Optimization
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server architectures. Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
 
 - the **optimization context**
-- the **ORDA cache**
+- la **caché ORDA**
 
-## Supported architectures
+## Arquitecturas soportadas
 
-ORDA client/server architectures that support the optimization are:
+Las arquitecturas de cliente/servidor ORDA que soportan la optimización son:
 
 - Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
 - [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
@@ -41,7 +41,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::note Compatibility Note
+:::note Nota de compatibilidad
 
 Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
 
@@ -62,7 +62,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 ### Reusing the `context` property
 
-You can increase the benefits of the optimization by using the **context** property. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a las funciones ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y sin pasar por la fase de aprendizaje.
+Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a las funciones ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y sin pasar por la fase de aprendizaje.
 
 > You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
 
