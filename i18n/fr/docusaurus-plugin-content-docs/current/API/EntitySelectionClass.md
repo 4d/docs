@@ -1664,7 +1664,7 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
 
-  // order by collection with or without sort orders
+  // order by collection avec ou sans tri
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
