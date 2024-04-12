@@ -57,7 +57,7 @@ Read [**What’s new in 4D 20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 :::warning Nota de seguridad
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 20 R2 HF1 build 100440 or higher. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20 R2 HF1 build 100440 o superior. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -87,7 +87,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 :::warning Nota de seguridad
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 20.2 LTS build 100956 or higher. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20.2 LTS build 100956 o superior. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -97,7 +97,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 :::caution 4D 20.1 index rebuild and client/server versions
 
-4D 20.1 also includes an ICU library update, which has the following consequences:
+4D 20.1 también incluye una actualización de la biblioteca ICU, que tiene las siguientes consecuencias:
 
 - Forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto.
 - Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server v20.1 and vice versa.
@@ -106,7 +106,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Destacados
 
-- 4D 20.2 is certified on macOS Sonoma (macOS 14).
+- 4D 20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D 20.1) New `plugins` property in the _options_ parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server integra automáticamente varios diarios: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [Clase IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve _id_, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve _id_, _flags_ y _permanentFlags_, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan palabras claves personalizadas.
@@ -130,11 +130,11 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - Nueva opción `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar la validación automática de certificados.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) en doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Listas de bugs corregidos: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 #### Cambios de comportamiento
 
-- As of v20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
+- A partir de v20.2, 4D 20 LTS ya no es compatible con Windows Server 2012 R2.
 - **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) estaba incorrectamente definido en 1 en lugar de 0. Se ha hecho una corrección en 4D a partir de las versiones **20.1 HF1** y **20 R2** y el valor ahora es 0.
 - Para el cumplimiento de HTTP RFC, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) devuelve ahora todos los nombres de encabezado **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Los certificados TLS son ahora validados automáticamente por 4D al enviar peticiones HTTP con [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) y rechazados con un error si no son válidos. Una nueva propiedad _option_ le permite controlar esta validación.
@@ -186,9 +186,9 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 #### Cambios de comportamiento
 
 - Para mantener la coherencia con las interfaces estándar (por ejemplo, los exploradores de archivos del sistema operativo), se han modificado las reglas del list box para la selección/arrastrar y soltar de líneas. Se puede arrastrar una selección continua o discontinua de líneas simplemente haciendo clic en una línea seleccionada y moviéndola; la tecla **Alt** ya no es necesaria (pero se puede seguir utilizando como en el caso anterior). Cuando se presiona la tecla **Mayús** o **Ctrl/Comando**, se tiene en cuenta el clic del ratón cuando éste está presionado. Para obtener más información sobre la función de arrastrar y soltar en los list boxes, puede consultar [esta entrada del blog](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) y descargar [este proyecto HDI 4D](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D 19 R7:
-  - releases up to 4D 19 R6 (included) are numbered 282xxx,
-  - releases from 4D 19 R7 will be numbered 100xxx.\
+- La numeración interna de 4D ha sido modificada a partir de 4D 19 R7:
+  - las versiones hasta la 4D 19 R6 (incluida) llevan el número 282xxx,
+  - las versiones a partir de 4D 19 R7 se numerarán 100xxx.\
     Tenga en cuenta que una versión específica de 4D sigue estando identificada unívocamente por un nombre de rama y un número de compilación. El número de build aumenta cronológicamente.
 - Se ha eliminado la posibilidad de utilizar el protocolo Wakanda/4D Mobile REST para llamar a un método proyecto. Puedes usar [funciones clase modelo de datos ORDA](../REST/ClassFunctions.md) o [/4DACTION urls](../WebServer/httpRequests.md#4daction).
 
@@ -282,7 +282,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 - El nuevo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite conectarse a API de terceros, como Microsoft Graph.
 
-- 4D 19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. Este nuevo algoritmo se utiliza automáticamente cuando se cambia una contraseña utilizando la Caja de herramientas, el comando `CHANGE PASSWORD` o el comando `Set user properties`. Once a password is modified, opening the database with a version prior to 4D 19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D 19 R3 or later.
+- 4D 19 R3 utiliza un algoritmo hash más fuerte para las contraseñas de los usuarios 4D: Bcrypt. Este nuevo algoritmo se utiliza automáticamente cuando se cambia una contraseña utilizando la Caja de herramientas, el comando `CHANGE PASSWORD` o el comando `Set user properties`. Once a password is modified, opening the database with a version prior to 4D 19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D 19 R3 or later.
 
 - Para mayor precisión, la constante `4D digest` ha pasado a llamarse `4D REST digest`.
 
@@ -311,13 +311,13 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 :::warning Nota de seguridad
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19.7 LTS build 288986 o superior. Para más información, consulte este [Boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
 - [Clase IMAPTransporter](../API/IMAPTransporterClass.md): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, y `.unsubscribe()`.
 - [Clase File](../API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
-- Nueva etiqueta de transformación [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
+- Nueva etiqueta de transformación [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach).
 - Servidor Web: nueva configuración [cookie de sesión SameSite](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Esquemas de color claros y oscuros para [formularios](../FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](../FormEditor/stylesheets#media-queries)
 - Nuevos temas oscuros y claros por defecto en [Preferencias del editor de código](../Preferences/methods.md#theme-list).
