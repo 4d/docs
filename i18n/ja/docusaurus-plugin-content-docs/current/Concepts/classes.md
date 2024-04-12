@@ -596,12 +596,11 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
-| 引数    | タイプ    |    | 説明                                 |
-| ----- | ------ | -- | ---------------------------------- |
-| param | any    | -> | 親コンストラクターに受け渡す引数                   |
-| 戻り値   | Object | <- | 親オブジェクト|<!-- END REF -->
-
-|
+| 引数    | タイプ    |    | 説明               |
+| ----- | ------ | -- | ---------------- |
+| param | any    | -> | 親コンストラクターに受け渡す引数 |
+| 戻り値   | Object | <- | 親オブジェクト          |
+<!-- END REF -->
 
 `Super` キーワードによって、 <!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
 
@@ -707,11 +706,10 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
-| 引数  | タイプ    |    | 説明                                    |
-| --- | ------ | -- | ------------------------------------- |
-| 戻り値 | Object | <- | カレントオブジェクト|<!-- END REF -->
-
-|
+| 引数  | タイプ    |    | 説明         |
+| --- | ------ | -- | ---------- |
+| 戻り値 | Object | <- | カレントオブジェクト |
+<!-- END REF -->
 
 `This` キーワードは、 <!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
 
@@ -927,13 +925,13 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-**cs.VehicleFactory** シングルトンを呼び出すことで、アプリケーションのどこからでも 1行で新しい車両を取得することができます:
+すると、**cs.VehicleFactory** シングルトンを呼び出すことで、アプリケーションのどこからでも 1行で新しい車両を取得することができます:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
 ```
 
-*buildVehicle()* 関数は (`This.vehicleBuilt` をインクリメントして) **cs.VehicleFactory** を変更するので、`shared` キーワードを使う必要があります。
+*buildVehicle()* 関数は (`This.vehicleBuilt` をインクリメントして) **cs.VehicleFactory** シングルトンを変更するので、`shared` キーワードを使う必要があります。
 
 #### 参照
 
