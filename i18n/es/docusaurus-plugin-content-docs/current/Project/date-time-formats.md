@@ -149,7 +149,7 @@ Por ejemplo:
 
 ### Espacios iniciales y finales
 
-Los espacios iniciales y finales de los modelos se recortan automáticamente en las salidas. If you want to add spaces before or after the resulting string, you must enclose them in single quotes.
+Los espacios iniciales y finales de los modelos se recortan automáticamente en las salidas. Si desea añadir espacios antes o después de la cadena resultante, debe encerrarlos entre comillas simples.
 
 Por ejemplo:
 
