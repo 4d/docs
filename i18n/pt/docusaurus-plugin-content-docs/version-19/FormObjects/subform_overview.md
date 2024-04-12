@@ -8,7 +8,7 @@ Um subformulário é um formulário incluído noutro formulário.
 
 ## Terminologia
 
-In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
+Para definir claramente os conceitos implementados com subformulários, aqui estão algumas definições para certos termos utilizados:
 
 * **Subform**: a form intended for inclusion in another form, itself called the parent form.
 * **Parent form**: a form containing one or more subform(s).
