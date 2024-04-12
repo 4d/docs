@@ -101,7 +101,7 @@ For example, you can launch a user authentication and verification procedure whe
 
 ### Disponibilidad
 
-The remote user `session` object is available from:
+El objeto `session` del usuario remoto está disponible en:
 
 - Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
