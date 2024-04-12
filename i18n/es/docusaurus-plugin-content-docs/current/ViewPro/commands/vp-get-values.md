@@ -16,9 +16,9 @@ title: VP Get values
 
 #### Descripción
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
+El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del _rangeObj_ designado<!-- END REF -->.
 
-En _rangeObj_, pase un rango cuyos valores desea recuperar. If _rangeObj_ includes multiple ranges, only the first range is used.
+En _rangeObj_, pase un rango cuyos valores desea recuperar. Si _rangeObj_ incluye varios rangos, sólo se utiliza el primer rango.
 
 La colección devuelta por `VP Get values` contiene una colección bidimensional:
 
