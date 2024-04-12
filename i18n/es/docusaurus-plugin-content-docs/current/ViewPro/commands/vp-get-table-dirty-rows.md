@@ -23,7 +23,7 @@ title: VP Get table dirty rows
 | tableName  | Text       | -> | Nombre de la tabla                                                                                                   |                  |
 | reset      | Boolean    | -> | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
 | sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                                       |                  |
-| Result     | Collection | <- | Collection of objects with all the items modified since the last reset                                               | <!-- END REF --> |
+| Result     | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
 
 #### Descripción
 
@@ -31,15 +31,15 @@ The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _tableName_, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](vp-set-data-context.md) will be taken into account.
+En _tableName_, pase el nombre de la tabla de la que desea obtener las líneas sucias. Sólo se tendrán en cuenta las columnas modificadas vinculadas a un [contexto de datos](vp-set-data-context.md).
 
-By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
+Por defecto, al llamar al comando se borrará el estado _sucio_ de la tabla actual. Para mantener este estado intacto, pase `False` en el parámetro _reset_.
 
 En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
-Each _dirty row_ object in the returned collection contains the following properties:
+Cada objeto _dirty row_ de la colección devuelta contiene las siguientes propiedades:
 
 | Propiedad    | Tipo    | Descripción                              |
 | ------------ | ------- | ---------------------------------------- |
