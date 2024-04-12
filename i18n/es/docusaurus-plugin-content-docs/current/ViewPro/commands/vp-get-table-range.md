@@ -27,11 +27,11 @@ title: VP Get table range
 
 #### Descripción
 
-The `VP Get table range` command <!-- REF #_method_.VP Get table range.Summary -->returns the range of _tableName_<!-- END REF -->.
+El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devuelve el rango de _tableName_<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In the _onlyData_ parameter, you can pass one of the following constants to indicate if you want to get the data only:
+En el parámetro _onlyData_, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
 | Constante             | Valor | Descripción                                                                                                                     |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |
