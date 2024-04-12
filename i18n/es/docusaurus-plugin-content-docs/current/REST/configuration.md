@@ -23,17 +23,17 @@ El mensaje de advertencia "Atención, verifique los privilegios de acceso" apare
 > Debe reiniciar la aplicación 4D para que los cambios surtan efecto.
 
 
-## Controlling REST access
+## Controlando el acceso REST
 
 Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obviamente no es recomendable por razones de seguridad, y también para controlar el uso de las licencias de los clientes.
 
-You can configure REST accesses with one of the following means:
+Puede configurar los accesos REST de una de las siguientes maneras:
 - (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
 - assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - write an `On REST Authentication` database method to intercept and handle every initial REST request.
 
 
-:::info Important
+:::info Importante
 
 - It is recommended not to enable different REST access control features simultaneously to avoid conflicts.
 - If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
