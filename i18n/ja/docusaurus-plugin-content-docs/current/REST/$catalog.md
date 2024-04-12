@@ -9,12 +9,12 @@ title: '$catalog'
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                  | 例題                     | 説明                                    |
-| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------- |
-| [**$catalog**](#catalog)                                                | `/$catalog`            | プロジェクト内のデータクラスのリストを、2つの URI とともに返します。 |
-| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。    |
-| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。               |
-| [**$catalog/DataStoreClassFunction**](classFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば)            |
+| シンタックス                                                           | 例題                     | 説明                                    |
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------- |
+| [**$catalog**](#catalog)                                         | `/$catalog`            | プロジェクト内のデータクラスのリストを、2つの URI とともに返します。 |
+| [**$catalog/$all**](#catalogall)                                 | `/$catalog/$all`       | プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。    |
+| [**$catalog/{dataClass}**](#catalogdataclass)                    | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。               |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#関数の呼び出し) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば)            |
 
 
 ## $catalog
