@@ -90,7 +90,7 @@ La autenticación en el servidor web WebAdmin se realiza utilizando una llave de
 De acuerdo con la gestión de proyectos 4D, sólo se admiten los siguientes usos:
 
 - el desarrollo con Qodly Studio debe realizarse a través de **4D** (monousuario).
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- el despliegue de aplicaciones 4D alimentadas con formularios Qodly debe hacerse utilizando **4D Server**.
 
 ## Abrir Qodly Studio
 
@@ -152,7 +152,7 @@ The following commands and classes are dedicated to the server-side management o
 
 - [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
 - [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly form components.
-- [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly form.
+- Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
 - [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
 
 ### Uso métodos proyecto
@@ -173,7 +173,7 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 
 ### Activación del renderizado
 
-Qodly Studio encapsulates Qodly forms, including layout, data connections, and event-driven logic, in a structured JSON file. This JSON file is processed on-the-fly by the **Qodly renderer** to serve a fully functional web page.
+Qodly Studio encapsulates Qodly forms, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
 
 :::info
 
