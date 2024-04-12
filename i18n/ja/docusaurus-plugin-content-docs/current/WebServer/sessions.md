@@ -85,7 +85,7 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../API/DatastoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
+このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
 
 Webセッションが閉じられた後に [`Session`](API/SessionClass.md#session) コマンドが呼び出されると:
 
