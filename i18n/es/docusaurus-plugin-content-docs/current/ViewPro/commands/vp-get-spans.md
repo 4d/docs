@@ -16,7 +16,7 @@ title: VP Get spans
 
 #### Descripción
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated _rangeObj_<!-- END REF -->.
+El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera los rangos de celdas en el _rangeObj_ designado<!-- END REF -->.
 
 En _rangeObj_, pase un rango de celdas fusionadas que desee recuperar. Si _rangeObj_ no contiene celdas fusionadas, se devuelve un rango vacío.
 
