@@ -317,7 +317,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md) : nouvelles fonctions `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, et `.unsubscribe()`.
 - [Classe File](../API/FileClass.md) : nouvelles fonctions `setAppInfo()` et `getAppInfo()`.
-- Nouvelle balise de transformation [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
+- Nouvelle balise de transformation [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach).
 - Serveur Web : nouveau paramètre [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Prise en charge des couleurs foncées et claires pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
 - Nouveaux thèmes sombres et clairs par défaut dans les [préférences de l'éditeur de code](../Preferences/methods.md#theme-list).
