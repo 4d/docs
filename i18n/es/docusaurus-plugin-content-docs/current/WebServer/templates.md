@@ -3,7 +3,7 @@ id: templates
 title: Páginas de plantillas
 ---
 
-El servidor web de 4D le permite utilizar las páginas de plantillas HTML que contengan etiquetas, es decir, una mezcla de código HTML estático y de referencias 4D añadidas mediante [etiquetas de transformación](Tags/tags.md) como 4DTEXT, 4DIF o 4DINCLUDE. Estas etiquetas suelen insertarse como comentarios de tipo HTML (`<!--#4DTagName TagValue-->`) en el código fuente HTML.
+El servidor web de 4D le permite utilizar las páginas de plantillas HTML que contengan etiquetas, es decir, una mezcla de código HTML estático y de referencias 4D añadidas mediante [etiquetas de transformación](../Tags/transformation-tags.md) como 4DTEXT, 4DIF o 4DINCLUDE. Estas etiquetas suelen insertarse como comentarios de tipo HTML (`<!--#4DTagName TagValue-->`) en el código fuente HTML.
 
 Cuando estas páginas son enviadas por el servidor HTTP, son analizadas y las etiquetas que contienen son ejecutadas y sustituidas por los datos resultantes. Las páginas que reciben los navegadores son una combinación de elementos estáticos y valores procedentes del procesamiento 4D.
 
@@ -31,7 +31,7 @@ Las siguientes etiquetas 4D están disponibles:
 - 4DLOOP y 4DENDLOOP, para hacer bucles en el código HTML,
 - 4DEACH y 4DENDEACH, para hacer bucles en colecciones, selecciones de entidades o propiedades de objetos.
 
-Estas etiquetas se describen en la página [Etiquetas de transformación](Tags/tags.md).
+These tags are described in the [Transformation Tags](../Tags/transformation-tags.md) page.
 
 Es posible combinar etiquetas. Por ejemplo, el siguiente código HTML es permitido:
 
@@ -93,4 +93,4 @@ Las etiquetas 4D aceptan diferentes tipos de datos como parámetros: texto, vari
 
 En este caso, es aconsejable **no utilizar** etiquetas como `4DEVAL` o `4DSCRIPT`, que evalúan parámetros, directamente con este tipo de datos.
 
-Además, según el [principio de recursividad](Tags/tags.md#recursive-processing), el código malicioso puede incluir a su vez etiquetas de transformación. En este caso, es imprescindible utilizar la etiqueta `4DTEXT`. Imagine, por ejemplo, un campo de formulario web llamado "Name", donde los usuarios deben introducir su nombre. Este nombre se muestra mediante una etiqueta `<!--#4DHTML vName-->` en la página. Si el texto del<!--#4DEVAL QUIT 4D-->tipo "\" se inserta en lugar del nombre, la interpretación de esta etiqueta provocará la salida de la aplicación. Para evitar este riesgo, basta con utilizar sistemáticamente la etiqueta `4DTEXT` en este caso. Como esta etiqueta escapa a los caracteres especiales de HTML, cualquier código recursivo malicioso que pueda haberse insertado no será reinterpretado. Para referirnos al ejemplo anterior, el campo "Name" contendrá, en este caso, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" que no será transformado.
+In addition, according to the [principle of recursion](../Tags/transformation-tags.md#recursive-processing), malicious code may itself include transformation tags. En este caso, es imprescindible utilizar la etiqueta `4DTEXT`. Imagine, por ejemplo, un campo de formulario web llamado "Name", donde los usuarios deben introducir su nombre. Este nombre se muestra mediante una etiqueta `<!--#4DHTML vName-->` en la página. Si el texto del<!--#4DEVAL QUIT 4D-->tipo "\" se inserta en lugar del nombre, la interpretación de esta etiqueta provocará la salida de la aplicación. Para evitar este riesgo, basta con utilizar sistemáticamente la etiqueta `4DTEXT` en este caso. Como esta etiqueta escapa a los caracteres especiales de HTML, cualquier código recursivo malicioso que pueda haberse insertado no será reinterpretado. Para referirnos al ejemplo anterior, el campo "Name" contendrá, en este caso, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" que no será transformado.
