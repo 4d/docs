@@ -22,7 +22,7 @@ Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=
 
 ### Utilizar un filtro complejo
 
-A more complex filter is composed of the following elements, which joins two queries:
+Un filtro más complejo se compone de los siguientes elementos, que unen dos consultas:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
