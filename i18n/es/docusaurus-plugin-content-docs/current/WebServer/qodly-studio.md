@@ -180,7 +180,7 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 - Consejos de interfaz de usuario: no se muestran al hacer clic en los iconos ![alt-text](../assets/en/WebServer/tips.png).
 
 
-## Deployment
+## Despliegue
 
 ### Activación del renderizado
 
@@ -215,7 +215,7 @@ However, form rendering happens outside Qodly Studio, and is served by the stand
 
 
 
-### Accessing Qodly forms
+### Acceder a formularios Qodly
 
 Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
@@ -252,7 +252,7 @@ You can also set this option directly in the [**roles.json** file](../ORDA/privi
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. The licence is consumed only when the user is actually logged.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. La licencia se consume solo cuando el usuario está realmente conectado.
 
 :::info
 
@@ -297,11 +297,11 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly form. In Qodly Studio, you can associate this standard action to a button for example:
+To logout the user, you just need to execute the **Logout** standard action from the Qodly form. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
-Triggering the logout action from a web user session has the following effects:
+Al desencadenar la acción de cierre de sesión de una sesión de usuario web, se producen los siguientes efectos:
 
 - the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
 - the associated 4D license is released,
@@ -310,7 +310,7 @@ Triggering the logout action from a web user session has the following effects:
 
 
 
-## About license usage for rendering
+## Acerca del uso de licencias para renderización
 
 In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
