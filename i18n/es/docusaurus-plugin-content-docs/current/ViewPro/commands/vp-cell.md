@@ -23,7 +23,7 @@ title: VP Cell
 
 El comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->devuelve un nuevo objeto de rango que hace referencia a una celda específica<!-- END REF -->.
 
-> Este comando se aplica a los rangos de una sola celda. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
+> Este comando se aplica a los rangos de una sola celda. Para crear un objeto de rango para múltiples celdas, utilice el comando [VP Cells](vp-cells.md).
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
