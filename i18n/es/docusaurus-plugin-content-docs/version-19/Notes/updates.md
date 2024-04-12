@@ -35,7 +35,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 #### Destacados
 
 - 4D 19.5 is certified on Windows 11 22H2
-- 4D 19.5 is certified on macOS Ventura (macOS 13)
+- 4D 19.5 está certificado en macOS Ventura (macOS 13)
 - La versión SpreadJS ha sido actualizada (14.1.6).
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
 
