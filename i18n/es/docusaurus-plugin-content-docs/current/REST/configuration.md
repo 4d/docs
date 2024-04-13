@@ -35,7 +35,7 @@ Puede configurar los accesos REST de una de las siguientes maneras:
 
 :::info Importante
 
-- It is recommended not to enable different REST access control features simultaneously to avoid conflicts.
+- Se recomienda no habilitar simultáneamente diferentes características de control de acceso REST para evitar conflictos.
 - If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
 :::
