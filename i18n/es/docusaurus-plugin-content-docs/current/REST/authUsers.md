@@ -13,12 +13,12 @@ When a web user session is opened, you can handle it through the `Session` objec
 
 ## User login modes
 
-The user login mode allows you to control how REST requests acquire 4D Client licenses. Puedes elegir entre dos modos de inicio de sesión de usuario: "predeterminado" o "inicio de sesión forzado".
+El modo de inicio de sesión del usuario le permite controlar cómo las peticiones REST adquieren licencias 4D Client. Puedes elegir entre dos modos de inicio de sesión de usuario: "predeterminado" o "inicio de sesión forzado".
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
 
 - the **default mode** is used if the "forceLogin" property is missing or set to "false",
-- the **force login** mode is used if the "forceLogin" property is set to "true".
+- el modo **force login** se utiliza si la propiedad "forceLogin" es "true".
 
 :::caution
 
@@ -35,7 +35,7 @@ In Qodly Studio for 4D, the mode can be set using the [**Force login** option](.
 
 ### Modo por defecto
 
-In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). You can use this simple mode if you don't need to control how many licenses are retained on the server. When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
+In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor. When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
 
 
 ### Force login mode
@@ -50,7 +50,7 @@ Este modo le permite implementar la siguiente secuencia de acceso:
 
 1. At the first REST call (for a webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
 2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
-3. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
+3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
@@ -60,7 +60,7 @@ Este modo le permite implementar la siguiente secuencia de acceso:
 Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Estas peticiones son:
 
 - [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
-- `/rest/$catalog/authentify` - the datastore function used to login the user
+- `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
 - `/rest/$getWebForm` - la renderización de un formulario Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
