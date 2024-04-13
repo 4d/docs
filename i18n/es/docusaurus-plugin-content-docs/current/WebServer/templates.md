@@ -31,7 +31,7 @@ Las siguientes etiquetas 4D están disponibles:
 - 4DLOOP y 4DENDLOOP, para hacer bucles en el código HTML,
 - 4DEACH y 4DENDEACH, para hacer bucles en colecciones, selecciones de entidades o propiedades de objetos.
 
-These tags are described in the [Transformation Tags](../Tags/transformation-tags.md) page.
+Estas etiquetas se describen en la página [Etiquetas de transformación](../Tags/transformation-tags.md).
 
 Es posible combinar etiquetas. Por ejemplo, el siguiente código HTML es permitido:
 
