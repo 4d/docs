@@ -177,7 +177,7 @@ Qodly Studio encapsulates Qodly forms, including layout, data connections, and e
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed information on how to render Qodly forms in Qodly.
+Mira [esta página](https://developer.qodly.com/docs/studio/rendering) para obtener información detallada sobre cómo renderizar formularios Qodly en Qodly.
 
 :::
 
