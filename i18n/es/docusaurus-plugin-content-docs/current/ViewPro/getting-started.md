@@ -31,9 +31,9 @@ Los documentos de 4D View Pro se muestran y editan manualmente en un [objeto de 
 
 También puede seleccionar un área 4D View Pro preconfigurada en la [librería de objetos](FormEditor/objectLibrary.md).
 
-> 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
+> Las áreas 4D View Pro también pueden ser [creadas y utilizadas fuera de la pantalla](commands/vp-run-offscreen-area.md).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro commands.
+Puede [configurar el área](configuring.md) utilizando los comandos de la Lista de Propiedades y 4D View Pro.
 
 
 ## Fundamentos de la selección, la entrada y de la navegación
@@ -91,7 +91,7 @@ Las áreas 4D View Pro se benefician de un menú contextual automático que ofre
 
 ## Utilizando los comandos de 4D View Pro
 
-4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands.
+Los comandos 4D View Pro se pueden utilizar en el editor de código 4D, al igual que los comandos de lenguaje 4D.
 
 Since 4D View Pro is a built-in 4D component, you can access its list of commands from the Explorer, in the **Component Methods** section:
 
