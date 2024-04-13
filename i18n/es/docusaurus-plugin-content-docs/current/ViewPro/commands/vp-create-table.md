@@ -40,7 +40,7 @@ En _tableName_, introduzca un nombre para la tabla. El nombre debe:
 - incluir al menos 5 caracteres
 - no incluir espacios o empezar con un número
 
-In _source_, you can pass a property name of a [data context](vp-set-data-context.md) to display its data in the table. Esto vincula la tabla al contexto de datos. Cuando se actualiza el contexto de los datos, los datos mostrados en la tabla se actualizan en consecuencia. La propiedad _source_ debe contener una colección de objetos y cada elemento representa una fila.
+En _source_, puede pasar un nombre de propiedad de un [data context](vp-set-data-context.md) para mostrar sus datos en la tabla. Esto vincula la tabla al contexto de datos. Cuando se actualiza el contexto de los datos, los datos mostrados en la tabla se actualizan en consecuencia. La propiedad _source_ debe contener una colección de objetos y cada elemento representa una fila.
 
 - Si no especifica una _source_, el comando crea una tabla vacía con el tamaño definido en _rangeObj_.
 - Si la _source_ especificada no se puede mostrar completamente en el documento, no se crea ninguna tabla.

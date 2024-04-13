@@ -25,7 +25,7 @@ Read [**What’s new in 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Mudanças de comportamento
 
 - Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
-- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. Chaves RSA, DSA e DH de 1024 bits ou mais e menos de 2048 bits, assim como chaves ECC de 160 bits ou mais e menos de 224 bits, agora não são mais permitidas. Por padrão, a compressão TLS já estava desativada nas versões anteriores do OpenSSL. No nível de segurança 2, ele não pode ser habilitado.
 
 ## 4D 20 R3
 
@@ -57,7 +57,7 @@ Read [**What’s new in 4D 20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 :::warning Nota de segurança
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a atualização para a versão 4D 20 R2 HF1 build 100440 ou superior. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -81,32 +81,32 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 :::caution Versão mínima do cliente para 4D Server v20.2 e posterior
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+Por razões internas, a versão dos clientes remotos que se conectam ao 4D Server v20.2 e posterior deve ser pelo menos 4D 20.2.
 
 :::
 
 :::warning Nota de segurança
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a atualização para a versão 4D 20.2 LTS build 100956 ou superior. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
 #### Aviso de reconstrução do índice
 
-4D 20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
+4D 20 inclui uma atualização da biblioteca ICU (veja abaixo) que forçará uma reconstrução automática dos índices do tipo alfa, texto e objeto. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
 
 :::caution 4D 20.1 index rebuild and client/server versions
 
-4D 20.1 also includes an ICU library update, which has the following consequences:
+4D 20.1 também inclui uma atualização da biblioteca ICU, que tem as seguintes consequências:
 
 - Isso forçará uma reconstrução automática dos índices do tipo alfa, texto e objeto.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server v20.1 and vice versa.
+- Por causa da consistência de ordenação, é necessário que os clientes remotos 4D e o 4D Server usem a mesma versão: somente o 4D 20.1 remoto pode se conectar ao 4D Server v20.1 e vice-versa.
 
 :::
 
 #### Destaques
 
-- 4D 20.2 is certified on macOS Sonoma (macOS 14).
+- 4D 20.2 é certificado em macOS Sonoma (macOS 14).
 - (4D 20.1) New `plugins` property in the _options_ parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns _id_, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns _id_, _flags_ and _permanentFlags_, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
@@ -134,7 +134,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Mudanças de comportamento
 
-- As of v20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
+- A partir da v20.2, o 4D 20 LTS não é mais compatível com o Windows Server 2012 R2.
 - **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new _option_ property allows you to control this validation.
@@ -186,8 +186,8 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 #### Mudanças de comportamento
 
 - Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. Para obter mais informações sobre arrastar e soltar em list boxes, consulte [esta postagem do blog] (https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) e faça download [deste projeto HDI 4D] (https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D 19 R7:
-  - releases up to 4D 19 R6 (included) are numbered 282xxx,
+- A numeração de compilação interna do 4D foi modificada a partir do 4D 19 R7:
+  - as versões até 4D 19 R6 (inclusive) são numeradas como 282xxx,
   - releases from 4D 19 R7 will be numbered 100xxx.\
     Note that a specific 4D version is still uniquely identified by a branch name and a build number. O número de build aumenta cronologicamente.
 - A capacidade de usar o protocolo REST do Wakanda/4D Mobile para chamar um método de projeto foi removida. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
@@ -200,7 +200,7 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 - 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
 - Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer.md#basics).
 - Para nos ajudar a tornar nossos produtos cada vez melhores, agora coletamos automaticamente dados sobre estatísticas de uso em aplicativos 4D Server em execução. Este fato não terá qualquer impacto no desempenho. See the new page explaining [why and how 4D collects data](../Admin/data-collect.md).
-- Components compiled for Silicon: On macOS Silicon platforms (Apple ARM CPUs), components must be recompiled with 4D 19 R6 or higher to be used with this release.
+- Componentes compilados para Silicon: Nas plataformas macOS Silicon (CPUs ARM da Apple), os componentes devem ser recompilados com o 4D 19 R6 ou superior para serem usados com esta versão.
 
 ## 4D 19 R5
 
@@ -281,11 +281,11 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 - The new [4D NetKit](https://github.com/4d/4D-NetKit) component allows you to connect to third-party APIs such as Microsoft Graph.
 
-- 4D 19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. This new algorithm is automatically used when a password is changed using the Tool Box, the `CHANGE PASSWORD` command, or the `Set user properties` command. Once a password is modified, opening the database with a version prior to 4D 19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D 19 R3 or later.
+- 4D 19 R3 usa um algoritmo hash mais forte para senhas de usuários 4D: Bcrypt. This new algorithm is automatically used when a password is changed using the Tool Box, the `CHANGE PASSWORD` command, or the `Set user properties` command. Depois que a senha for modificada, abrir o banco de dados com uma versão anterior ao 4D 19 R3 causará uma recusa de autenticação para essa conta. Se você usa senhas 4D, é altamente recomendável fazer backup do arquivo .4db (bancos de dados binários) ou do arquivo directory.json (projetos) antes de atualizar para o 4D 19 R3 ou posterior.
 
 - For accuracy, the `4D digest` constant has been renamed `4D REST digest`.
 
-- End-of-line and BOM management for XML commands: When opened in 4D 19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. Isso permite uma melhor compatibilidade com as ferramentas VCS. If necessary, you can restore the v19 R2 behavior using the `XML SET OPTIONS` command. Em projetos ou bancos de dados convertidos de versões anteriores ao 19 R2, essas opções são gerenciadas por duas configurações de compatibilidade.
+- Gerenciamento de fim de linha e BOM para comandos XML: Quando abertos no 4D 19 R3, os projetos ou bancos de dados criados com versões anteriores se comportam de forma diferente em relação aos caracteres de fim de linha padrão e ao gerenciamento de BOM em documentos XML: os caracteres de avanço de linha (LF) são usados em vez de CR (no macOS) e as marcas de ordem de byte (BOM) não são incluídas. Isso permite uma melhor compatibilidade com as ferramentas VCS. If necessary, you can restore the v19 R2 behavior using the `XML SET OPTIONS` command. Em projetos ou bancos de dados convertidos de versões anteriores ao 19 R2, essas opções são gerenciadas por duas configurações de compatibilidade.
 
 - Runtime Explorer shortcut removed in built projects: The **Cmd/Ctrl+Shift+F9** shortcut does no longer display the Runtime Explorer window in single-user merged project applications. Esse atalho agora pode ser um atalho de aplicativo do usuário. You can call the Runtime Explorer window using the new `OPEN RUNTIME EXPLORER` command.
 
@@ -316,7 +316,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- New [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach) transformation tag.
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
@@ -337,18 +337,18 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 ## Tabela da biblioteca
 
-| Biblioteca | Versão atual                           | Atualizado em 4D     | Comentário                                                                                                                    |
-| ---------- | -------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| ICU        | 73.2                   | 20.1 | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.   |
-| CEF        | 118                                    | 20 R3                | Chromium 5993                                                                                                                 |
-| Hunspell   | 7.3.27 | 20                   | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                           |
-| PDFWriter  | 4.3                    | 20                   | Dependência FreeType na 12.2.1                                                                |
-| SpreadJS   | 16.2.6 | 20 R4                | Motor 4D View Pro                                                                                                             |
-| OpenSSL    | 3.2.0  | 20 R4                | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
-| libZip     | 19.5                   | 20                   | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                          |
-| LZMA       | 5.4.1  | 20                   |                                                                                                                               |
-| Zlib       | 14.1.6 | 20                   |                                                                                                                               |
-| webKit     | WKWebView                              | 19                   |                                                                                                                               |
-| PHP        | 8.2.4  | 20                   |                                                                                                                               |
-| libldap    | 2.6.4  | 20 R3                |                                                                                                                               |
-| libsasl    | 2.1.28 | 20                   |                                                                                                                               |
+| Biblioteca | Versão atual                           | Atualizado em 4D     | Comentário                                                                                                                      |
+| ---------- | -------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| ICU        | 73.2                   | 20.1 | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |
+| CEF        | 118                                    | 20 R3                | Chromium 5993                                                                                                                   |
+| Hunspell   | 7.3.27 | 20                   | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                             |
+| PDFWriter  | 4.3                    | 20                   | Dependência FreeType na 12.2.1                                                                  |
+| SpreadJS   | 16.2.6 | 20 R4                | Motor 4D View Pro                                                                                                               |
+| OpenSSL    | 3.2.0  | 20 R4                | O nível de segurança TLS/SSL padrão foi atualizado. See [Behavior changes](#behavior-changes) for release 20 R4 |
+| libZip     | 19.5                   | 20                   | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                            |
+| LZMA       | 5.4.1  | 20                   |                                                                                                                                 |
+| Zlib       | 14.1.6 | 20                   |                                                                                                                                 |
+| webKit     | WKWebView                              | 19                   |                                                                                                                                 |
+| PHP        | 8.2.4  | 20                   |                                                                                                                                 |
+| libldap    | 2.6.4  | 20 R3                |                                                                                                                                 |
+| libsasl    | 2.1.28 | 20                   |                                                                                                                                 |

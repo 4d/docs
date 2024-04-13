@@ -31,7 +31,7 @@ The `VP Get table column index` command <!-- REF #_method_.VP Get table column i
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _columnName_, pass the name of the table column for which you want to get the index.
+En _columnName_, pase el nombre de la columna de la tabla para la que desea obtener el índice.
 
 En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 

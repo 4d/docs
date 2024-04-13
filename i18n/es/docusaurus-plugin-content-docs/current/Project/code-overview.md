@@ -134,7 +134,7 @@ En el Explorador, los métodos proyecto que se ofrecen como Servicio Web y se pu
 
 #### Etiquetas 4D y URLs (4DACTION...)
 
-Esta opción se utiliza para reforzar la seguridad del servidor web 4D: cuando no está marcada, el método proyecto no puede ejecutarse a través de una petición HTTP que contenga la URL especial [4DACTION](../WebServer/httpRequests.md#4daction) utilizada para llamar a los métodos 4D, ni las etiquetas especiales [4DSCRIPT, 4DTEXT y 4DHTML](../Tags/tags.md).
+This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/transformation-tags.md).
 
 En el Explorador, los métodos proyecto con este atributo reciben un icono específico![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 

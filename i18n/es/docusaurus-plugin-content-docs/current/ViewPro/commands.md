@@ -3,9 +3,13 @@ id: commands
 title: Comandos
 ---
 
-> **Atención**: Los siguientes comandos no son hilo seguro.
+:::caution
 
-[A](#A.md) - [C](#c.md) - [D](#d.md) - [E](#E.md) - [F](#F.md) - [G](#G.md) - [I](#I.md) - [M](#M.md) - [N](#N.md) - [O](#O.md) - [P](#P.md) - [R](#R.md) - [S](#S.md)
+4D View Pro commands are not thread-safe.
+
+:::
+
+[A](#A) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [I](#I) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [R](#R) - [S](#S)
 
 <a name="A"><b>A</b></a>
 
@@ -19,7 +23,7 @@ title: Comandos
 
 <a name="C"><b>C</b></a>
 
-[VP Cell](commands/vp-cell.md.md) -
+[VP Cell](commands/vp-cell.md) -
 [VP Cells](commands/vp-cells.md) -
 [VP Column](commands/vp-column.md) -
 [VP COLUMN AUTOFIT](commands/vp-column-autofit.md) -

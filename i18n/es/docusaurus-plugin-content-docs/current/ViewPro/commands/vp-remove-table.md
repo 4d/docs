@@ -40,7 +40,7 @@ En _options_, puede especificar comportamientos adicionales. Los valores posible
 | vk table remove style   | 1     | Eliminar estilo pero mantener datos          |
 | vk tabla eliminar datos | 2     | Eliminar datos pero mantener el estilo       |
 
-Los nombres de tablas se definen a nivel de la hoja. You can specify where the table is located using the optional _sheet_ parameter (indexing starts at 0).
+Los nombres de tablas se definen a nivel de la hoja. Puede especificar dónde se encuentra la tabla utilizando el parámetro opcional _sheet_ (la indexación comienza en 0).
 
 #### Ejemplo
 

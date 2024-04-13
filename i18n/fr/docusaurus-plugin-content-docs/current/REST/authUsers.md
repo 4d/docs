@@ -28,7 +28,7 @@ If you modify this property, the server must be restarted to take the change int
 
 :::note
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../webServer/qodly-studio.md#force-login) in the Privileges panel.
+In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
@@ -79,7 +79,7 @@ The `authentify()` function must be implemented in the [DataStore class](../ORDA
 
 This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires appropriate privileges.
 
-The function can receive any authentication or contextual information as [parameter(s)](classFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
+The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
 
 This function should contain two parts:
 
@@ -106,6 +106,7 @@ If ($user#Null) //the user is known
     If (Verify password hash($credentials.password; $user.password))
         Session.setPrivileges("vip")
     Else 
+
         return "Wrong password"
     End if 
 Else 

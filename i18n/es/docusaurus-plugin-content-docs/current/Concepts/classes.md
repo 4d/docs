@@ -237,7 +237,7 @@ En el código de la aplicación, las funciones de clases se llaman como los mét
 
 :::warning Advertencia de seguridad del hilo
 
-If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+Si una función de clase no es hilo seguro y es llamada por un método con el atributo "Puede ejecutarse en proceso apropiativo":
  - el compilador no genera ningún error (lo que es diferente en comparación con los métodos regulares),
  - un error es lanzado por 4D sólo en tiempo de ejecución.
 
@@ -442,7 +442,7 @@ property fuzzy //variant
 
 Cuando se inicializa una propiedad en su línea de declaración, se añade al objeto de la clase después de su instanciación con la función [`new()`](API/ClassClass.md#new) pero antes de llamar al constructor.
 
-If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
+Si una clase [extiende a](#class-extends-classname) otra, las propiedades de la clase padre se instancian antes que las propiedades de la clase hija.
 
 #### Ejemplo
 
@@ -606,9 +606,8 @@ Llama al constructor de la clase padre con las longitudes
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | any    | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto|<!-- END REF -->
-
-|
+| Result     | Object | <- | Padre del objeto                                      |
+<!-- END REF -->
 
 La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite realizar llamadas a la `superclase`, es decir, a la clase padre<!-- END REF -->.
 
@@ -720,11 +719,10 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ | -- | ---------------------------------------- |
-| Result     | Object | <- | Objeto actual|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ | -- | ------------- |
+| Result     | Object | <- | Objeto actual |
+<!-- END REF -->
 
 La palabra clave `This` <!-- REF #_command_.This.Summary -->devuelve una referencia al objeto procesado actualmente<!-- END REF -->.
 
@@ -807,15 +805,15 @@ La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la C
 
 :::info
 
-- A class [inheriting](#class-extends-classname) from a non-shared class cannot be defined as shared.
-- Shared classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md).
+- Una clase [que hereda](#class-extends-classname) de una clase no compartida no puede definirse como compartida.
+- Las clases compartidas no están soportadas por las [clases basadas en ORDA](../ORDA/ordaClasses.md).
 
 :::
 
 
 ### Creación de una clase compartida
 
-To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). Por ejemplo:
+Para crear una clase compartida, añada la palabra clave `shared` antes del [Class Constructor](#class-constructor). Por ejemplo:
 
 ```4d
     //clase compartida: Person
@@ -836,9 +834,9 @@ cs.Person.isShared //true
 
 ### Funciones compartidas
 
-If a function defined inside a shared class modifies objects of the class, it should call [`Use...End use`](shared.md#useend-use) structure to protect access to the shared objects. However, to simplify the code, you can define the function as **shared** so that it automatically triggers internal `Use...End use` when executed.
+Si una función definida al interior de una clase compartida modifica objetos de la clase, debe llamar a [`Use...End use`](shared.md#useend-use) para proteger el acceso a los objetos compartidos. Sin embargo, para simplificar el código, puede definir la función como **compartida**, de modo que active automáticamente un `Use...End use` interno cuando se ejecute.
 
-To create a shared function, add the `shared` keyword before the [Function](#function) keyword in a shared class. Por ejemplo:
+Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
 ```4d
     //clase compartida Foo
@@ -851,37 +849,37 @@ shared Function Bar($value : Integer)
 
 :::note
 
-If the `shared` function keyword is used in a non-shared user class, it is ignored.
+Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se ignora.
 
 :::
 
 
-## Singleton classes
+## Clases Singleton
 
-A **singleton class** is a user class that only produces a single instance. For more information on singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. The instantiated class singleton is then always returned when the [`me`](../API/ClassClass.md#me) property is used.
+El singleton de la clase se instancia en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
-If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.
+Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
-El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application. Singletons are useful to define values that need to be available from anywhere in an application or process.
+El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. Un singleton *process* tiene un valor único para el proceso en el que se instancia, mientras que un singleton *interprocess* tiene un valor único para todos los procesos de la aplicación. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
 
 
-The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
+La propiedad [`.isSingleton`](../API/ClassClass.md#issingleton) de los objetos de clase permite saber si la clase es un singleton.
 
 
 :::info
 
-Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md).
+Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClasses.md).
 
 :::
 
 
 
 
-### Creating a process singleton
+### Creación de un singleton process
 
-To create a process singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
+Para crear una clase singleton process, añada la palabra clave `singleton` antes de [`Class Constructor`](#class-constructor). Por ejemplo:
 
 ```4d
     //clase: ProcessTag
@@ -889,7 +887,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-To use the process singleton:
+Para utilizar el singleton process:
 
 ```4d
     //en un proceso
@@ -911,9 +909,9 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 
 
-### Creating an interprocess singleton
+### Creación de un singleton interprocess
 
-To create an interprocess singleton, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
+Para crear un singleton interprocess, añada las palabras claves `shared singleton` antes del [Class Constructor](#class-constructor). Por ejemplo:
 
 ```4d
 //Class VehicleFactory
@@ -940,13 +938,13 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can the call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in your application with a single line:
+Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo vehículo desde cualquier lugar de su aplicación con una sola línea:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 ```
 
-Since the *buildVehicle()* function modifies the **cs.VehicleFactory** (by incrementing `This.vehicleBuilt`) you need to add the `shared` keyword to it.
+Dado que la función *buildVehicle()* modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
 
 #### Ver también
 

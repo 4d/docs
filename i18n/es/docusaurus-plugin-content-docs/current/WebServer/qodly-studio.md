@@ -80,7 +80,7 @@ After any change to these settings, you must [restart the WebAdmin web server](.
 
 Después de haber habilitado el acceso a Qodly Studio en el nivel 4D, es necesario designar explícitamente cada proyecto al que se puede acceder. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
 
-Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
+Tenga en cuenta que los [parámetros de usuario](../settings/overview.md) pueden definirse a varios niveles y que se aplican prioridades.
 
 
 ### Activando la autenticación
@@ -161,7 +161,7 @@ The following commands and classes are dedicated to the server-side management o
 - [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
 - [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly form components.
 - [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly form.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
+- Clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para gestionar los componentes de formulario Qodly.
 
 
 ### Uso métodos proyecto
@@ -188,7 +188,7 @@ Qodly Studio encapsulates Qodly forms, including layout, data connections, and e
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed information on how to render Qodly forms in Qodly.
+Consulte [esta página](https://developer.qodly.com/docs/studio/rendering) para obtener información detallada sobre cómo renderizar formularios Qodly en Qodly.
 
 :::
 
@@ -289,7 +289,7 @@ Else
 End if 
 ```
 
-This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.
+This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
 
 
@@ -297,7 +297,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly form. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde el formulario Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 

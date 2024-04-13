@@ -14,7 +14,7 @@ Le catalogue décrit toutes les dataclass et les attributs disponibles dans le d
 | [**$catalog**](#catalog)                                                | `/$catalog`            | Retourne une liste des dataclasse de votre projet avec deux URI                        |
 | [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
 | [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | Renvoie des informations sur une dataclass et ses attributs                            |
-| [**$catalog/DataStoreClassFunction**](classFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                     |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                     |
 
 
 ## $catalog

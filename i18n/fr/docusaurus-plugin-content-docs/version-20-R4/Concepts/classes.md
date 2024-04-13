@@ -523,7 +523,7 @@ Class constructor ($side : Integer)
 
 |
 
-The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
+Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet d'appeler la `superclass`, c'est-à-dire la classe parente<!-- END REF -->.
 
 `Super` peut être utilisé de deux différentes manières :
 
@@ -632,7 +632,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 |
 
-The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
+Le mot-clé `This` <!-- REF #_command_.This.Summary -->retourne une référence vers l'objet en cours de traitement<!-- END REF -->.
 
 Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 

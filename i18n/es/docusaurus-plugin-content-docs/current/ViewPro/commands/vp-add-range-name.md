@@ -31,7 +31,7 @@ Puede pasar un objeto con las propiedades adicionales para el rango nombrado en 
 | comment   | Text   | Comentario asociado al rango nombrado                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 > - Un rango nombrado es en realidad una fórmula nombrada que contiene coordenadas. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](vp-add-formula-name.md) method to create named ranges.
-> - Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](vp-get-formula-by-name.md) method.
+> - Las fórmulas que definen rangos con nombre pueden recuperarse con el método [`VP Get formula by name`](vp-get-formula-by-name.md).
 
 #### Ejemplo
 

@@ -124,26 +124,26 @@ En un contexto que no sea *Qodly* (nube), debe crear este archivo en la siguient
 
 La sintaxis del archivo `roles.json` es la siguiente:
 
-| Nombre de propiedad |                 |               | Tipo                              | Obligatorio | Descripción                                                                    |
-| ------------------- | --------------- | ------------- | --------------------------------- | ----------- | ------------------------------------------------------------------------------ |
-| privileges          |                 |               | Colección de objetos `privilege`  | X           | Lista de privilegios definidos                                                 |
-|                     | \[].privilege  |               | String                            |             | Nombre del privilegio                                                          |
-|                     | \[].includes   |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                      |
-| roles               |                 |               | Colección de objetos `role`       |             | Lista de roles definidos                                                       |
-|                     | \[].role       |               | String                            |             | Nombre del rol                                                                 |
-|                     | \[].privileges |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                      |
-| permissions         |                 |               | Object                            | X           | Lista de acciones permitidas                                                   |
-|                     | allowed         |               | Colección de objetos `permission` |             | Lista de permisos permitidos                                                   |
-|                     |                 | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                           |
-|                     |                 | \[].type     | String                            | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method" |
-|                     |                 | \[].read     | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].create   | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].update   | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].drop     | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].describe | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].execute  | Colección de cadenas              |             | Lista de privilegios                                                           |
-|                     |                 | \[].promote  | Colección de cadenas              |             | Lista de privilegios                                                           |
-| forceLogin          |                 |               | Boolean                           |             | True to enable the ["forceLogin" mode](../REST/authUsers.md#force-login-mode)  |
+| Nombre de propiedad |                 |               | Tipo                              | Obligatorio | Descripción                                                                       |
+| ------------------- | --------------- | ------------- | --------------------------------- | ----------- | --------------------------------------------------------------------------------- |
+| privileges          |                 |               | Colección de objetos `privilege`  | X           | Lista de privilegios definidos                                                    |
+|                     | \[].privilege  |               | String                            |             | Nombre del privilegio                                                             |
+|                     | \[].includes   |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                         |
+| roles               |                 |               | Colección de objetos `role`       |             | Lista de roles definidos                                                          |
+|                     | \[].role       |               | String                            |             | Nombre del rol                                                                    |
+|                     | \[].privileges |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                         |
+| permissions         |                 |               | Object                            | X           | Lista de acciones permitidas                                                      |
+|                     | allowed         |               | Colección de objetos `permission` |             | Lista de permisos permitidos                                                      |
+|                     |                 | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                              |
+|                     |                 | \[].type     | String                            | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method"    |
+|                     |                 | \[].read     | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].create   | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].update   | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].drop     | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].describe | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].execute  | Colección de cadenas              |             | Lista de privilegios                                                              |
+|                     |                 | \[].promote  | Colección de cadenas              |             | Lista de privilegios                                                              |
+| forceLogin          |                 |               | Boolean                           |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode) |
 
 
 :::caution Recordatorio

@@ -5,18 +5,18 @@ title: Sesiones web
 
 The 4D web server provides built-in features for managing **web sessions**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
 
-Web sessions allow to:
+Las sesiones web permiten:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
 - manage session through a `Session` object and the [Session API](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
-- associate privileges to the user running the session.
+- asociar privilegios al usuario que ejecuta la sesión.
 
 ## Usages
 
-Web sessions are used for:
+Las sesiones web se utilizan para:
 
-- [Web applications](gettingStarted.md) sending http requests,
+- [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
 
@@ -58,7 +58,7 @@ El nombre de la cookie puede obtenerse utilizando la propiedad [`.sessionCookieN
 
 :::note
 
-Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
+La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
 
 :::
 
@@ -85,9 +85,9 @@ Una sesión web escalable se cierra cuando:
 
 La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que significa que el servidor web cerrará automáticamente las sesiones inactivas después de 60 minutos.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DatastoreClass.md#open-datastore) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](API/SessionClass.md#session):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiédad [`.storage`](API/SessionClass.md#storage) está vacía
@@ -95,7 +95,7 @@ When a web session is closed, if the [`Session`](API/SessionClass.md#session) co
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+Puede cerrar una sesión desde un formulario Qodly utilizando la función [**cerrar sesión**](qodly-studio.md#logout).
 
 :::
 
@@ -104,7 +104,7 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 Los privilegios pueden asociarse a sesiones de usuario web. En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
 
-You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. En su código, puede comprobar los privilegios de la sesión para permitir o denegar el acceso utilizando la función [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Asigna privilegios utilizando la función [`.setPrivileges()`](API/SessionClass.md#setprivileges). En su código, puede comprobar los privilegios de la sesión para permitir o denegar el acceso utilizando la función [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Ejemplo:
 
@@ -118,7 +118,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para más información, por favor consulte la página [**Privilegios**](../ORDA/privileges.md) del capítulo ORDA.
 
 :::
 
@@ -202,4 +202,4 @@ End if
 
 ## Ver también (entrada de blog)
 
-[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+[Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)

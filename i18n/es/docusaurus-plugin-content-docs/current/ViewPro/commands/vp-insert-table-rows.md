@@ -39,7 +39,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 
 Este comando inserta algunas líneas en la tabla _tableName_, NO en la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
 
-If the _tableName_ table is bound to a [data context](vp-set-data-context.md), the command inserts new, empty element(s) in the collection.
+Si la tabla _tableName_ está vinculada a un [contexto de datos](vp-set-data-context.md), el comando inserta nuevos elementos vacíos en la colección.
 
 If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
 

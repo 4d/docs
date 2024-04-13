@@ -764,7 +764,7 @@ $status:=$transporter.expunge()
 | ----------- | ------------------- |
 | 18 R5       | *name<* es opcional |
 
-|18 R4|Added|
+|v18 R4|Añadido|
 
 </details>
 

@@ -21,7 +21,7 @@ The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-En _sheet_, pase el índice de la hoja objetivo. If _sheet_ is omitted, the command applies to the current sheet.
+En _sheet_, pase el índice de la hoja objetivo. Si se omite _sheet_, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 

@@ -29,7 +29,7 @@ Para eliminar un estilo y volver a la configuración de estilo por defecto (si l
 - dar al parámetro _styleObj_ un valor NULL eliminará toda configuración de estilo del _rangeObj_,
 - si se le da a un atributo un valor NULL, se eliminará este atributo específico de _rangeObj_.
 
-For more information about style objects and style sheets, see the [Style Objects](../configuring.md#style-objects) paragraph.
+Para obtener más información sobre los objetos de estilo y las hojas de estilo, consulte el párrafo [Objetos de estilo](../configuring.md#style-objects).
 
 #### Ejemplo
 

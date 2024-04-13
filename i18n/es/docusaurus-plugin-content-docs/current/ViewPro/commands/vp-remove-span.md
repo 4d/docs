@@ -26,11 +26,10 @@ Para eliminar todas las fusiones de celdas de este documento:
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan1.PNG)
 
 ```4d
- //find all cell spans
+ //identifica todas las celdas fusionadas
  $span:=VP Get spans(VP All("ViewProArea"))
 
- 
-  //remove the cell spans
+ //eliminar las fusiones
  VP REMOVE SPAN($span)
 ```
 
