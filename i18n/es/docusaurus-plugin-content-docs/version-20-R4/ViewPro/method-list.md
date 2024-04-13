@@ -2422,7 +2422,7 @@ El siguiente código comprueba si las líneas de vista previa se muestran u ocul
 
 #### Descripción
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated _rangeObj_<!-- END REF -->.
+El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera los rangos de celdas en el _rangeObj_ designado<!-- END REF -->.
 
 En _rangeObj_, pase un rango de celdas fusionadas que desee recuperar. Si _rangeObj_ no contiene celdas fusionadas, se devuelve un rango vacío.
 
@@ -2754,7 +2754,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 #### Descripción
 
-The `VP Get table range` command <!-- REF #_method_.VP Get table range.Summary -->returns the range of _tableName_<!-- END REF -->.
+El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devuelve el rango de _tableName_<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
@@ -2934,7 +2934,7 @@ End if
 
 #### Descripción
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
+El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del _rangeObj_ designado<!-- END REF -->.
 
 En _rangeObj_, pase un rango cuyos valores desea recuperar. Si _rangeObj_ incluye varios rangos, sólo se utiliza el primer rango.
 
@@ -3593,7 +3593,7 @@ En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se sopor
 
 Este objeto puede crearse con el comando [VP Font to object](#vp-font-to-object).
 
-The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](#vp-set-cell-style), for example.
+La cadena abreviada devuelta puede asignarse a la propiedad "fuente" de una celda con la función [VP SET CELL STYLE](#vp-set-cell-style), por ejemplo.
 
 #### Ejemplo
 
@@ -3696,7 +3696,7 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet to p
 
 > * Las áreas 4D View Pro sólo pueden imprimirse con el comando `VP PRINT`.
 > * Los comandos del tema de lenguaje 4D **Impresión** no son compatibles con `VP PRINT`.
-> * Este comando está destinado a la impresión individual por parte del usuario final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
+> * Este comando está destinado a la impresión individual por parte del usuario final. Para trabajos de impresión automatizados, se aconseja exportar el área 4D View Pro como PDF con el método [VP EXPORT DOCUMENT](#vp-export-document).
 
 #### Ejemplo
 
