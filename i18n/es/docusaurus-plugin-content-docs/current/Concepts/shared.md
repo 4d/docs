@@ -114,7 +114,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 The following functions automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when the function is executed:
 
 - [collection functions](../API/CollectionClass.md) that modify shared collections
-- [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)).
+- [funciones compartidas](classes.md#shared-functions) (definidas en [clases compartidas](classes.md#shared-classes)).
 
 :::
 
