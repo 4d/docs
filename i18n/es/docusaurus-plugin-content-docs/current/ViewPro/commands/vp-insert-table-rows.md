@@ -30,7 +30,7 @@ title: VP INSERT TABLE ROWS
 
 The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or _count_ empty row(s) in the specified _tableName_ at the specified _row_ index<!-- END REF -->.
 
-In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the _row_ index:
+En el parámetro _insertAfter_, puede pasar una de las siguientes constantes para indicar si la(s) línea(s) debe(n) ser insertada(s) antes o después del índice _row_:
 
 | Constante                | Valor | Descripción                                                                                         |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------- |
