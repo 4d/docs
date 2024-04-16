@@ -22,7 +22,7 @@ The command allows you to use a generic code to set and format the types of valu
 
 In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The parameter _valueObj_ is an object that includes properties for the value and the [format](../configuring.md#cell-format) to assign to _rangeObj_. Puede contener las siguientes propiedades:
+El parámetro _valueObj_ es un objeto que incluye propiedades para el valor y el [formato](../configuring.md#cell-format) a asignar a _rangeObj_. Puede contener las siguientes propiedades:
 
 | Propiedad | Tipo                                     | Descripción                                                                                                                                                                                          |
 | --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
