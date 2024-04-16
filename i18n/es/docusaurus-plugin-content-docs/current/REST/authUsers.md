@@ -5,7 +5,7 @@ title: Usuarios y sesiones
 
 When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
-When a web user session is opened, you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizan la misma cookie de sesión.
+Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizan la misma cookie de sesión.
 
 > - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
 > - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
@@ -50,7 +50,7 @@ Este modo le permite implementar la siguiente secuencia de acceso:
 
 1. At the first REST call (for a webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
 2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
-3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
+3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de acceso básico que no acceda a datos; puede ser un formulario Qodly (llamado a través de la petición `/rest/$getWebForm`).
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)

@@ -7,7 +7,7 @@ title: Objetos y colecciones compartidos
 
 Los objetos compartidos y las colecciones compartidas se almacenan en variables de tipo estándar [`Object`](dt_object.md) y [`Collection`](dt_collection.md), pero deben instanciarse utilizando comandos específicos:
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
+- para crear un objeto compartido, utilice la función [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) o llame a la función [`new()`](../API/ClassClass.md#new) de una [clase](classes.md#shared-classes) compartida,
 - para crear una colección compartida, utilice el comando [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
 
 :::note
@@ -18,7 +18,7 @@ Los objetos y colecciones compartidos pueden definirse como propiedades de objet
 
 Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
 
-A unique, global catalog returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Un catálogo único y global devuelto por el comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) está siempre disponible en toda la aplicación y sus componentes, y puede utilizarse para almacenar todos los objetos y colecciones compartidos.
 
 ## Utilización de objetos o colecciones compartidos
 
@@ -82,11 +82,11 @@ Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades s
 
 ### Storage
 
-**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command. Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
+**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html). Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
 
 Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 
-For more information, refer to the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command description.
+Para más información, consulte el comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
 
 ## Use...End use
 
@@ -111,7 +111,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 
 :::note
 
-The following functions automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when the function is executed:
+Las siguientes funciones activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
 
 - [collection functions](../API/CollectionClass.md) that modify shared collections
 - [funciones compartidas](classes.md#shared-functions) (definidas en [clases compartidas](classes.md#shared-classes)).

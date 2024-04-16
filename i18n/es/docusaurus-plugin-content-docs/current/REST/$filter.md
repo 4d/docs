@@ -37,7 +37,7 @@ También puede utilizar la propiedad params de 4D.
 
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+Para más información sobre cómo consultar datos en 4D, consulte la documentación de [dataClass.query()](../API/DataClassClass.md#query).
 > Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
 > 
 > <li>Comillas ('): \u0027</li>
