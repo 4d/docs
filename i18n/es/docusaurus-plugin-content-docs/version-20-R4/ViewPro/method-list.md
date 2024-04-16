@@ -991,7 +991,7 @@ El parámetro opcional _paramObj_ le permite definir múltiples propiedades para
 **Notas sobre el formato CSV**:
 
 - Al exportar un documento 4D View Pro al formato CSV, es posible que se pierdan algunos parámetros, ya que sólo se guardan el texto y los valores.
-- Todos los valores se guardan como cadenas entre comillas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+- Todos los valores se guardan como cadenas entre comillas. Para más información sobre valores separados por delimitadores, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 - La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato de archivo SpreadJS**:
