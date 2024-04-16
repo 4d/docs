@@ -11,7 +11,7 @@ title: リリースノート
 #### ハイライト
 
 - [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) エラー処理構文のサポート。
-- QUICネットワークレイヤーは [ブロードキャスト](../Desktop/clientServer.md#リモートプロジェクトを開く) に対応しました。
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), and [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - [制限付エンティティセレクション](../ORDA/entities.md#制限付エンティティセレクション) をサポート。
 - [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#isingleton), [`.me`](../API/ClassClass.md#me).
 - [宣言と同時にクラスプロパティを初期化](../Concepts/classes.md/#宣言と同時にプロパティを初期化するe) できるようになりました。
@@ -280,6 +280,7 @@ title: リリースノート
     - [埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) または (Microsoft Edge WebView2 に基づく) [Windowsシステムのレンダリングエンジン](../FormObjects/webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでのセキュリティを強化しました:
         - Webエリアにおいてディスク上のファイルにアクセスする場合にも、CORSポリシーが適用されるようになりました。 たとえば、`WA OPEN URL` を使用して .html ファイルを開こうとした場合、その .html ファイルには、フォルダー外のファイルへのリンクを含めることはできません。
         - Webエリアへの外部コンテンツのドロップは常にブロックされ、`WA enable URL drop` 設定が true に設定されている場合には、[`On Window Opening Denied` イベント](../Events/onWindowOpeningDenied.md) をトリガーします。`WA enable URL drop` 設定が false に設定されている場合、マウスカーソルのアイコンのみが変更され、`On Window Opening Denied` イベントはフィルターされます。 ドロップアクションを許可するには、Webエリアのオブジェクトメソッドにおいて以下のような追加のコードを実行する必要があります:
+
 
 ```4d
 WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
