@@ -23,7 +23,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Pase la hoja de estilo a eliminar en el parámetro _styleName_.
 
-You can define where to remove the style in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+Puede definir dónde eliminar el estilo en el parámetro opcional _sheet_ utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
