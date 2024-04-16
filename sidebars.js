@@ -714,8 +714,7 @@ module.exports =
 						"WebServer/errorPages",
 						"WebServer/authentication",
 						"WebServer/sessions",
-						"WebServer/preemptiveWeb",
-						"WebServer/qodly-studio"
+						"WebServer/preemptiveWeb"
 					],
 				},
 		{
