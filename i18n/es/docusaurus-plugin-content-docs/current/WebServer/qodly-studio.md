@@ -60,6 +60,7 @@ Para permitir el acceso a Qodly Studio, debe permitirlo explícitamente en dos n
 * a nivel 4D (4D o 4D Server)
 * a nivel del proyecto
 
+
 Si uno de los dos niveles (o ambos) no están habilitados, se niega el acceso a Qodly Studio (se devuelve una página 403).
 
 #### En nivel 4D
@@ -256,7 +257,7 @@ When the "force login" mode is **disabled** (default mode), any REST request, in
 
 :::info
 
-For more information, refer to [this blog post](https://blog.4d.com/qodly-studio-consume-a-4d-client-licence-only-when-the-authentication-is-successful) that tells the full story.
+For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
 
 :::
 
