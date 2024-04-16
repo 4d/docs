@@ -60,6 +60,7 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 * 4Dレベルで (4D または 4D Server)
 * プロジェクトレベルで
 
+
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
 
 #### 4Dレベルで
@@ -256,7 +257,7 @@ Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#�
 
 :::info
 
-For more information, refer to [this blog post](https://blog.4d.com/qodly-studio-consume-a-4d-client-licence-only-when-the-authentication-is-successful) that tells the full story.
+For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
 
 :::
 
