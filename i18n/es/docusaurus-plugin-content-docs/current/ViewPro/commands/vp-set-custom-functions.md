@@ -44,7 +44,7 @@ En el parámetro _formulaObj_, pase un objeto que contenga las fórmulas 4D que 
 
 #### Ejemplo
 
-You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender and the company's peak month:
+Desea utilizar objetos fórmula en un área 4D View Pro para añadir números, recuperar el apellido y el sexo de un cliente y el mes pico de la empresa:
 
 ```4d
 Case of
