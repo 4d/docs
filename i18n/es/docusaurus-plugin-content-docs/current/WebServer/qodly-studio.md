@@ -225,7 +225,7 @@ Sus formularios Qodly están disponibles a través de la siguiente url:
 IP:port/$lib/renderer/?w=QodlyFormName
 ```
 
-...where *IP:port* represents the address of the web server and *QodlyFormName* is the name of the Qodly form.
+...donde *IP:port* representa la dirección del servidor web y *QodlyFormName* es el nombre del formulario Qodly.
 
 Por ejemplo:
 
