@@ -31,7 +31,7 @@ A janela tem as seguintes características principais:
 
 Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+Todos os objetos propostos na biblioteca de objetos padrão estão descritos em [nesta seção em doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 ## Utilização da biblioteca de objetos padrão
 
@@ -53,7 +53,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 ### Abrir uma biblioteca de objetos
 
-A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database.
+Uma determinada biblioteca de objetos só pode ser aberta por um banco de dados de cada vez. However, several different libraries can be opened in the same database.
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 

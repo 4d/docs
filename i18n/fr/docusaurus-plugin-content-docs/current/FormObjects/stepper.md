@@ -18,9 +18,9 @@ Un stepper peut être directement associé à une variable numérique, heure ou 
     * [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
     * [step](properties_Scale.md#step) = 600 (10\*60)
 * Pour les valeurs de type date, la valeur saisie dans la propriété [Pas](properties_Scale.md#step) représente des jours. Les propriétés Minimum et Maximum sont ignorées.
-> For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variable.md#declaring-variables) as `Time` or `Date`.
+> For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variables.md#declaring-variables) as `Time` or `Date`.
 
-Pour plus d'informations, veuillez vous reporter à la section [Utiliser des indicateurs](progressIndicator.md#using-indicatire) de la page "Indicateurs de progression".
+For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
 
 ## Propriétés prises en charge
 [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) -[Bas](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Saisissable](properties_Entry.md#enterable) - [Exécuter méthode objet](properties_Action.md#execute-object-method) - [Type d'expression](properties_Object.md#expression-type) (uniquement "entier", "numérique", "date", ou "heure") - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)

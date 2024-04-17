@@ -15,10 +15,6 @@
     "message": "プロジェクト管理",
     "description": "The label for category Project Management in sidebar docs"
   },
-  "sidebar.docs.category.4D Language Concepts": {
-    "message": "ランゲージのコンセプト",
-    "description": "The label for category 4D Language Concepts in sidebar docs"
-  },
   "sidebar.docs.category.Data Types": {
     "message": "データタイプ",
     "description": "The label for category Data Types in sidebar docs"
@@ -30,14 +26,6 @@
   "sidebar.docs.category.ORDA": {
     "message": "ORDA",
     "description": "The label for category ORDA in sidebar docs"
-  },
-  "sidebar.docs.category.Class API Reference": {
-    "message": "クラス API リファレンス",
-    "description": "The label for category Class API Reference in sidebar docs"
-  },
-  "sidebar.docs.category.Handling Code": {
-    "message": "コードの扱い方",
-    "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {
     "message": "デバッガー",
@@ -70,10 +58,6 @@
   "sidebar.docs.category.TLS Protocol": {
     "message": "TLSプロトコル",
     "description": "The label for category TLS Protocol in sidebar docs"
-  },
-  "sidebar.docs.category.Licenses & Data Collection": {
-    "message": "ライセンス＆データ収集",
-    "description": "The label for category Licenses & Data Collection in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
     "message": "アクセス権限",
@@ -159,10 +143,6 @@
     "message": "メニュー",
     "description": "The label for category Menus in sidebar docs"
   },
-  "sidebar.docs.category.User Settings": {
-    "message": "ユーザー設定",
-    "description": "The label for category User Settings in sidebar docs"
-  },
   "sidebar.docs.category.Build Application": {
     "message": "アプリケーションビルド",
     "description": "The label for category Build Application in sidebar docs"
@@ -185,15 +165,15 @@
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
-    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html"
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
   },
   "sidebar.docs.link.4D SVG": {
     "message": "4D SVG",
-    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html"
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
   },
   "sidebar.docs.link.4D Widgets": {
     "message": "4D Widgets",
-    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html"
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
     "message": "4D WritePro インターフェース",
@@ -209,7 +189,7 @@
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html"
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
   },
   "sidebar.docs.category.Getting Started.link.generated-index.title": {
     "message": "はじめに",
@@ -381,6 +361,126 @@
   },
   "sidebar.docs.link.Commands": {
     "message": "コマンド",
-    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html"
+    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
+  },
+  "sidebar.docs.category.Commands": {
+    "message": "コマンド",
+    "description": "The label for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.A": {
+    "message": "A",
+    "description": "The label for category A in sidebar docs"
+  },
+  "sidebar.docs.category.A.link.generated-index.title": {
+    "message": "A",
+    "description": "The generated-index page title for category A in sidebar docs"
+  },
+  "sidebar.docs.category.C": {
+    "message": "C",
+    "description": "The label for category C in sidebar docs"
+  },
+  "sidebar.docs.category.C.link.generated-index.title": {
+    "message": "C",
+    "description": "The generated-index page title for category C in sidebar docs"
+  },
+  "sidebar.docs.category.D": {
+    "message": "D",
+    "description": "The label for category D in sidebar docs"
+  },
+  "sidebar.docs.category.D.link.generated-index.title": {
+    "message": "D",
+    "description": "The generated-index page title for category D in sidebar docs"
+  },
+  "sidebar.docs.category.E": {
+    "message": "E",
+    "description": "The label for category E in sidebar docs"
+  },
+  "sidebar.docs.category.E.link.generated-index.title": {
+    "message": "E",
+    "description": "The generated-index page title for category E in sidebar docs"
+  },
+  "sidebar.docs.category.F": {
+    "message": "F",
+    "description": "The label for category F in sidebar docs"
+  },
+  "sidebar.docs.category.F.link.generated-index.title": {
+    "message": "F",
+    "description": "The generated-index page title for category F in sidebar docs"
+  },
+  "sidebar.docs.category.G": {
+    "message": "G",
+    "description": "The label for category G in sidebar docs"
+  },
+  "sidebar.docs.category.G.link.generated-index.title": {
+    "message": "G",
+    "description": "The generated-index page title for category G in sidebar docs"
+  },
+  "sidebar.docs.category.I": {
+    "message": "I",
+    "description": "The label for category I in sidebar docs"
+  },
+  "sidebar.docs.category.I.link.generated-index.title": {
+    "message": "I",
+    "description": "The generated-index page title for category I in sidebar docs"
+  },
+  "sidebar.docs.category.M": {
+    "message": "M",
+    "description": "The label for category M in sidebar docs"
+  },
+  "sidebar.docs.category.M.link.generated-index.title": {
+    "message": "M",
+    "description": "The generated-index page title for category M in sidebar docs"
+  },
+  "sidebar.docs.category.N": {
+    "message": "N",
+    "description": "The label for category N in sidebar docs"
+  },
+  "sidebar.docs.category.N.link.generated-index.title": {
+    "message": "N",
+    "description": "The generated-index page title for category N in sidebar docs"
+  },
+  "sidebar.docs.category.O": {
+    "message": "O",
+    "description": "The label for category O in sidebar docs"
+  },
+  "sidebar.docs.category.O.link.generated-index.title": {
+    "message": "O",
+    "description": "The generated-index page title for category O in sidebar docs"
+  },
+  "sidebar.docs.category.P": {
+    "message": "P",
+    "description": "The label for category P in sidebar docs"
+  },
+  "sidebar.docs.category.P.link.generated-index.title": {
+    "message": "P",
+    "description": "The generated-index page title for category P in sidebar docs"
+  },
+  "sidebar.docs.category.R": {
+    "message": "R",
+    "description": "The label for category R in sidebar docs"
+  },
+  "sidebar.docs.category.R.link.generated-index.title": {
+    "message": "R",
+    "description": "The generated-index page title for category R in sidebar docs"
+  },
+  "sidebar.docs.category.S": {
+    "message": "S",
+    "description": "The label for category S in sidebar docs"
+  },
+  "sidebar.docs.category.S.link.generated-index.title": {
+    "message": "S",
+    "description": "The generated-index page title for category S in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio": {
+    "message": "Qodly Studio",
+    "description": "The label for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.title": {
+    "message": "Qodly Studio",
+    "description": "The generated-index page title for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
+    "message": "Qodly Studio を使用して強力な Webインターフェースを構築する。",
+    "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   }
 }

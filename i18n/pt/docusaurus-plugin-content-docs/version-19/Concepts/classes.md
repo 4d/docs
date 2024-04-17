@@ -70,7 +70,7 @@ Também pode utilizar o atalho **Ctrl+Shift+Alt+k** .
 
 #### Explorador
 
-**.style**: Integer
+Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
 
 Para criar uma nova classe, pode:
 
@@ -155,7 +155,7 @@ Quando 4D não encontrar uma função ou uma propriedade numa classe, procura-a 
 As palavras-chave 4D específicas podem ser utilizadas nas definições de classes:
 
 - `Função <Name>` para definir as funções de classe dos objectos.
-- `Class constructor` to define the properties of the objects.
+- `Class constructor` para definir as propriedades dos objetos.
 - `A classe estende-se a <ClassName>` para definir a herança.
 
 ### Function
@@ -265,7 +265,7 @@ $area:=$rect.getArea() //5000
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-// code
+// código
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -390,7 +390,7 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// Definição da função
 Function getArea()
  var $0 : Integer
  $0:=(This.height)*(This.width)
@@ -457,7 +457,7 @@ This -> Object
 | ---------- | ------ | -- | -------------- |
 | Resultados | object | <- | Objecto actual |
 
-A palavra-chave `This` devolve uma referência ao objecto actualmente processado. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+A palavra-chave `This` devolve uma referência ao objecto actualmente processado. Em 4D, ele pode ser usado em [contextos diferentes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 

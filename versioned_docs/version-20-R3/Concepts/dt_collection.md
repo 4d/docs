@@ -5,7 +5,7 @@ title: Collection
 
 Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Collection type variables are managed using [object notation](dt_object.md#properties).
 
 To access a collection element, you need to pass the element number inside square brackets:
 
@@ -144,4 +144,13 @@ Several functions accept a _propertyPath_ as parameter. This parameter stands fo
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
  $vmin:=$col.min(["My.special.property"]) //error
+```
+
+## Undefined
+
+Reading the **length** property of an undefined collection produces 0:
+
+```4d
+     var $c : Collection //variable created but no collection is defined
+     $size:=$c.length //$size = 0
 ```

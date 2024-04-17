@@ -7,17 +7,85 @@ Null and Undefined are data types that handle cases where the value of an expres
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. This value is returned by an expression that does not contain any value.
+Null is a special data type with only one possible value: **null**. This value is returned by an expression that does not contain any value. Trying to read a property of a **null** value returns an error.
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. This function can be used with the following expressions for setting or comparing the null value:
 
 - object attributes
 - collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Undefined
 
-Undefined is not actually a data type. It denotes a variable that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+Undefined is not actually a data type. It denotes a variable that has not yet been defined. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+
+A variant variable has **undefined** as [default value](data-types.md#default-values).
+
+A field cannot be undefined (the `Undefined` command always returns False for a field). 
+
+Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+
+- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+
+```4d
+     var $o : Object
+     var $val : Integer
+     $val:=10 //$val=10
+     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+      //$val=0
+```
+
+- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
+	- Object, collection, pointer: Null
+	- Picture: Empty picture
+	- Boolean: False
+	- String: ""
+	- Number: 0
+	- Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+	- Time: 0 (number of ms)
+	- Undefined, Null: no change
+
+```4d
+     var $o : Object
+     $o:=New object("a";2)
+     $o.a:=$o.b //$o.a=0
+```
+
+- Assigning an undefined value to a non existing object property does nothing.
+
+- An undefined value passed as parameter to a project method is automatically converted to 0 or "" according to the declared parameter type.
+
+```4d
+     var $o : Object
+     mymethod($o.a) //pass an undefined parameter
+     
+      //In mymethod method
+     #Declare ($myText : Text) //parameter type is text
+      // $myText contains ""
+```
+
+- A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:
+
+```4d
+     var $o : Object
+     If($o.a) // false
+     End if
+     Case of
+        :($o.a) // false
+     End case
+```
+
+
+:::tip
+
+When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+
+```4d
+ $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
+  //to avoid errors in the code
+```
+
+:::
 
 
 ## Null operators

@@ -10,7 +10,10 @@ La gestión de errores responde a dos necesidades principales:
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
 
-Básicamente, hay dos maneras de manejar los errores en 4D. Puede [instalar un método de gestión de errores](#installing-an-error-handling-method), o escribir una palabra clave [`Try()`](#tryexpression) antes de los fragmentos de código que llamen a una función, método o expresión que pueda lanzar un error.
+Básicamente, hay dos maneras de manejar los errores en 4D. Puede:
+
+- [instalar un método de gestión de errores](#installing-an-error-handling-method), o
+- utilice una palabra clave [`Try()`](#tryexpression) o una estructura [`Try/Catch`](#trycatchend-try) antes de los fragmentos de código que llamen a una función, método o expresión que pueda lanzar un error.
 
 :::tip Buenas prácticas
 
@@ -44,7 +47,7 @@ Para dejar de interceptar los errores en un contexto de ejecución y devolver la
 ON ERR CALL("";ek local) //devuelve el control al proceso local
 ```
 
-El comando [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+El comando [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -138,7 +141,13 @@ ON ERR CALL("")
 
 ## Try(expression)
 
-The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. El uso de `Try(expression)` ofrece una manera fácil de manejar casos de error simples con un número muy bajo de líneas de código, y sin requerir un método de gestión de errores.
+La sentencia `Try(expression)` permite probar una expresión de una sola línea en su contexto de ejecución real (incluyendo, en particular, los valores de las variables locales) e interceptar los errores que arroje para que no se muestre el diálogo de error 4D. El uso de `Try(expression)` ofrece una manera fácil de manejar casos de error simples con un número muy bajo de líneas de código, y sin requerir un método de gestión de errores.
+
+:::note
+
+Si desea probar un código más complejo que una expresión de una sola línea, puede considerar la posibilidad de utilizar una estructura [`Try/Catch`](#trycatchend-try).
+
+:::
 
 La sintaxis formal de la declaración `Try(expresión)` es:
 
@@ -150,9 +159,9 @@ Try (expression) : any | Undefined
 
 *expresion* puede ser toda expresión válida.
 
-If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Undefined`.
+Si se produce un error durante su ejecución, se intercepta y no se muestra ningún diálogo de error, si un [método de gestión de errores](#installing-an-error-handling-method) fue instalado o no antes de la llamada a `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Define`.
 
-Puede gestionar el error o errores utilizando el comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
+Puede gestionar el error o errores utilizando el comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
 
 :::note
 
@@ -206,8 +215,85 @@ Else
    ALERT( "Error: "+JSON Stringify($status.errors))
 End if
 
-``` 
+```
 
 
 
+## Try...Catch...End try
 
+La estructura `Try...Catch...End try` permite probar el código de un bloque en su contexto de ejecución real (incluyendo, en particular, los valores de las variables locales) e interceptar los errores que lanza para que no se muestre el diálogo de error de 4D.
+
+A diferencia de la palabra clave `Try(expression)` que evalúa una expresión de una sola línea, la estructura `Try...Catch...End try` permite evaluar cualquier bloque de código, desde el más simple al más complejo, sin necesidad de un método de gestión de errores. Además, el bloque `Catch` puede utilizarse para gestionar el error de forma personalizada.
+
+
+La sintaxis formal de la estructura `Try...Catch...End try` es:
+
+```4d
+
+Try 
+    statement(s) // Código a evaluar
+Catch
+    statement(s) // Código a ejecutar en caso de error
+End try
+
+```
+
+El código entre las palabras clave `Try` y `Catch` se ejecuta en primer lugar, luego el flujo depende del error o errores encontrados durante esta ejecución.
+
+- Si no se lanza ningún error, la ejecución del código continúa después de la palabra clave correspondiente `End try`. El código situado entre las palabras clave `Catch` y `End try` no se ejecuta.
+- Si la ejecución del bloque de código arroja un error no diferido **, el flujo de ejecución se detiene y ejecuta el bloque de código correspondiente `Catch`.
+- Si la ejecución del bloque de código arroja un *error diferido*, el flujo de ejecución continúa hasta el final del bloque `Try` y luego ejecuta el bloque de código correspondiente `Catch`.
+
+:::note
+
+Si se lanza un error *diferido* fuera del bloque `Try`, la ejecución del código continúa hasta el final del método o función.
+
+:::
+
+:::info
+
+Para más información sobre los errores *diferidos* y *no diferidos*, consulte la descripción del comando [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html).
+
+:::
+
+
+En el bloque de código `Catch`, puede gestionar los errores utilizando los comandos estándar de gestión de errores. La función [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) contiene la colección de los últimos errores. En este bloque de código puede declarar [un método de gestión de errores](#installing-an-error-handling-method), en cuyo caso se llama en caso de error (de lo contrario se muestra el diálogo de error de 4D).
+
+:::note
+
+Si se instala un [método de gestión de errores](#installing-an-error-handling-method) en el código colocado entre las palabras clave `Try` y `Catch`, se llama en caso de error.
+
+:::
+
+### Ejemplo
+
+La combinación de transacciones y estructuras `Try...Catch...End try` permite escribir código seguro para funciones críticas.
+
+```4d
+Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
+    var $newInvoice : cs.invoiceEntity
+    var $newInvoiceLine : cs.invoiceLineEntity
+    var $item : Object
+    ds.startTransaction()
+    Try
+        $newInvoice:=This.new()
+        $newInvoice.customer:=$customer
+        $newInvoice.invoiceRef:=$invoiceRef
+        For each ($item; $items)
+            $newInvoiceLine:=ds.invoiceLine.new()
+            $newInvoiceLine.item:=$item.item
+            $newInvoiceLine.amount:=$item.amount
+            $newInvoiceLine.invoice:=$newInvoice
+            // llamar a otras funciones específicas para validar la línea de factura
+            $newInvoiceLine.save()
+        End for each 
+        $newInvoice.save()
+        ds.validateTransaction()
+    Catch
+        ds.cancelTransaction()
+        ds.logErrors(Last errors)
+        $newInvoice:=Null
+    End try
+    return $newInvoice
+
+```

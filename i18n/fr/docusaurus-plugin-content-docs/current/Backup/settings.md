@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Préférences de sauvegarde
+title: Paramètres de sauvegarde
 ---
 
 Les paramètres de sauvegarde sont définis sur trois pages dans la [boîte de dialogue des Paramètres](../settings/overview.md). Vous pouvez définir :
@@ -109,34 +109,34 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
     - **Normal** (par défaut) : cette option constitue un compromis vitesse de sauvegarde/taille des archives.
     - **Elevé** : le taux de compression maximal est appliqué aux archives. Les fichiers d’archives prennent le moins de place possible sur le disque mais la sauvegarde peut être sensiblement ralentie.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. Vous pouvez paramétrer ces mécanismes en fonction de vos besoins. Les menus associés à ces options vous permettent de choisir un taux **Faible**, **Moyen**, **Elevé** ou **Aucun** (défaut).
+- **Taux d’entrelacement et Taux de redondance** 4D peut générer des archives à l’aide d’algorithmes spécifiques, basés sur des mécanismes d’optimisation (entrelacement) et de sécurisation (redondance). Vous pouvez paramétrer ces mécanismes en fonction de vos besoins. Les menus associés à ces options vous permettent de choisir un taux **Faible**, **Moyen**, **Elevé** ou **Aucun** (défaut).
     - **Taux d’entrelacement** : l’entrelacement consiste à stocker les données dans des secteurs non contigus afin de limiter les risques en cas d’endommagement des secteurs. Plus le taux est élevé, plus la sécurité est élevée ; en contrepartie, le traitement des données consomme davantage de mémoire.
     - **Taux de redondance** : la redondance permet de sécuriser les données présentes dans un fichier en répétant plusieurs fois les mêmes informations. Plus le taux est élevé, plus le fichier est sécurisé, mais plus le stockage est lent et la taille du fichier importante.
 
 
-### Automatic Restore and log integration
+### Restitution automatique et intégration des journaux
 
 - **Restituer la dernière sauvegarde si la base est endommagée** : lorsque cette option est cochée, le programme déclenche automatiquement la restitution du fichier de données de la dernière sauvegarde valide de l'application s’il détecte une anomalie (fichier corrompu par exemple) lors du lancement de l'application. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
 
-- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. If there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+- **Intégrer les derniers journaux si la base est incomplète** : Lorsque cette option est cochée, le programme intègre automatiquement le fichier journal courant s'il contient des opérations qui ne sont pas présentes dans le fichier de données. S'il existe une séquence valide de fichiers .journal dans le même dossier, le programme intègre au préalable tous les fichiers .journal nécessaires, du plus ancien au plus récent.
 
-    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+    Cette situation se présente, par exemple, si une panne de courant survient alors que des opérations dans le cache de données n'ont pas encore été écrites sur le disque, ou après qu'une anomalie a été détectée lors de l'ouverture du fichier de données et qu'une restitution a eu lieu.
 
     :::note
 
-    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+    Cette fonction implique que le programme analyse tous les fichiers journaux dans le dossier des fichiers journaux courant au démarrage. Par conséquent, pour des raisons de performance, assurez-vous qu'aucun fichier journal inutile n'est stocké dans ce dossier.
 
     :::
 
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> Dans le cas d'une restitution automatique, seuls les éléments suivants sont restitués : - fichier .4DD - fichier .4DIndx - fichier .4DSyncData - fichier .4DSyncHeader - dossier External Data
 > 
 > Si vous souhaitez obtenir les fichiers joints ou les fichiers de projet, vous devez effectuer une [restauration manuelle](restore.md#manually-restoring-a-backup-standard-dialog).
 
 :::caution
 
-If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+Si le fichier de données [est crypté](../MSC/encrypt.md), assurez-vous d'avoir [enregistré la clé de cryptage des données](../MSC/encrypt#saving-the-encryption-key) dans un fichier `.4DKeyChain` stocké au premier niveau du disque, de sorte que 4D puisse y accéder si la fonction de restitution automatique se déclenche. Dans le cas contraire, une erreur sera renvoyée pendant la séquence de restitution.
 
 :::

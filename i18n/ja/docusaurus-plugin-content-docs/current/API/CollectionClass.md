@@ -84,13 +84,11 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                                   |
-| ----- | ----------------------------------------------------------------------- |:--:| ------------------------------------ |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                             |
-| 戻り値   | Collection                                                              | <- | 新しいコレクション|<!-- END REF -->
-
-
-|
+| 引数    | タイプ                                                                     |    | 説明             |
+| ----- | ----------------------------------------------------------------------- |:--:| -------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値       |
+| 戻り値   | Collection                                                              | <- | New collection |
+<!-- END REF -->
 
 
 #### 説明
@@ -162,7 +160,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -172,13 +170,11 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                                     |
-| ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
-| 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
-
-
-|
+| 引数    | タイプ                                                                 |    | 説明                    |
+| ----- | ------------------------------------------------------------------- |:--:| --------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値            |
+| 戻り値   | Collection                                                          | <- | New shared collection |
+<!-- END REF -->
 
 
 #### 説明
@@ -239,9 +235,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -249,13 +245,11 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #collection.at().Params -->
-| 引数    | タイプ     |    | 説明                                       |
-| ----- | ------- |:--:| ---------------------------------------- |
-| index | Integer | -> | 取得する要素のインデックス                            |
-| 戻り値   | any     | <- | そのインデックスにある要素|<!-- END REF -->
-
-
-|
+| 引数    | タイプ     |    | 説明            |
+| ----- | ------- |:--:| ------------- |
+| index | Integer | -> | 取得する要素のインデックス |
+| 戻り値   | any     | <- | そのインデックスにある要素 |
+<!-- END REF -->
 
 
 #### 説明
@@ -287,7 +281,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -297,14 +291,11 @@ $element:=$col.at(10) // undefined
 
 
 <!-- REF #collection.average().Params -->
-| 引数           | タイプ             |    | 説明                                       |
-| ------------ | --------------- |:--:| ---------------------------------------- |
-| propertyPath | Text            | -> | 計算に使用するオブジェクトプロパティのパス                    |
-| 戻り値          | Real, Undefined | <- | コレクションの値の算術平均|<!-- END REF -->
-
-
-
-|
+| 引数           | タイプ             |    | 説明                    |
+| ------------ | --------------- |:--:| --------------------- |
+| propertyPath | Text            | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | Real, Undefined | <- | コレクションの値の算術平均         |
+<!-- END REF -->
 
 
 
@@ -353,7 +344,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -363,12 +354,10 @@ $element:=$col.at(10) // undefined
 
 
 <!-- REF #collection.clear().Params -->
-| 引数  | タイプ        |    | 説明                                           |
-| --- | ---------- |:--:| -------------------------------------------- |
-| 戻り値 | Collection | <- | 全要素が削除された元のコレクション|<!-- END REF -->
-
-
-|
+| 引数  | タイプ        |    | 説明                |
+| --- | ---------- |:--:| ----------------- |
+| 戻り値 | Collection | <- | 全要素が削除された元のコレクション |
+<!-- END REF -->
 
 
 #### 説明
@@ -396,7 +385,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -406,14 +395,12 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| 引数    | タイプ        |    | 説明                                           |
-| ----- | ---------- |:--:| -------------------------------------------- |
-| col2  | Collection | -> | 追加するコレクション                                   |
-| index | Integer    | -> | 追加要素を挿入する位置 (デフォルトは length+1)                |
-| 戻り値   | Collection | <- | 追加要素を格納した元のコレクション|<!-- END REF -->
-
-
-|
+| 引数    | タイプ        |    | 説明                            |
+| ----- | ---------- |:--:| ----------------------------- |
+| col2  | Collection | -> | 追加するコレクション                    |
+| index | Integer    | -> | 追加要素を挿入する位置 (デフォルトは length+1) |
+| 戻り値   | Collection | <- | 追加要素を格納した元のコレクション             |
+<!-- END REF -->
 
 
 #### 説明
@@ -449,7 +436,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -462,10 +449,8 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 | 引数    | タイプ                                                            |    | 説明                                                    |
 | ----- | -------------------------------------------------------------- |:--:| ----------------------------------------------------- |
 | value | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
-| 戻り値   | Collection                                                     | <- | 元のコレクションに値が追加された新規コレクション|<!-- END REF -->
-
-
-|
+| 戻り値   | Collection                                                     | <- | 元のコレクションに値が追加された新規コレクション                              |
+<!-- END REF -->
 
 
 #### 説明
@@ -497,9 +482,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                           |
+| リリース   | 内容                                           |
 | ------ | -------------------------------------------- |
-| v18 R3 | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
+| 18 R3  | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
 | v16 R6 | 追加                                           |
 
 </details>
@@ -513,10 +498,8 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | option       | Integer    | -> | `ck resolve pointers`: コピー前にポインターを解決する<br/>`ck shared`: 共有コレクションを返す |
 | groupWithCol | Collection | -> | 結果のコレクションとグループする共有コレクション                                                  |
 | groupWithObj | Object     | -> | 結果のコレクションとグループする共有オブジェクト                                                  |
-| 戻り値          | Collection | <- | 元のコレクションのディープ・コピー|<!-- END REF -->
-
-
-|
+| 戻り値          | Collection | <- | 元のコレクションのディープ・コピー                                                         |
+<!-- END REF -->
 
 
 #### 説明
@@ -631,7 +614,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -641,13 +624,11 @@ End use
 
 
 <!-- REF #collection.count().Params -->
-| 引数           | タイプ  |    | 説明                                      |
-| ------------ | ---- |:--:| --------------------------------------- |
-| propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス                   |
-| 戻り値          | Real | <- | コレクション内の要素の数|<!-- END REF -->
-
-
-|
+| 引数           | タイプ  |    | 説明                    |
+| ------------ | ---- |:--:| --------------------- |
+| propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | Real | <- | コレクション内の要素の数          |
+<!-- END REF -->
 
 
 #### 説明
@@ -682,7 +663,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -692,14 +673,12 @@ End use
 
 
 <!-- REF #collection.countValues().Params -->
-| 引数           | タイプ                                             |    | 説明                                  |
-| ------------ | ----------------------------------------------- |:--:| ----------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | 数える値                                |
-| propertyPath | Text                                            | -> | 計算に使用するオブジェクトプロパティのパス               |
-| 戻り値          | Real                                            | <- | 値の出現回数  |<!-- END REF -->
-
-
-|
+| 引数           | タイプ                                             |    | 説明                    |
+| ------------ | ----------------------------------------------- |:--:| --------------------- |
+| value        | Text, Number, Boolean, Date, Object, Collection | -> | 数える値                  |
+| propertyPath | Text                                            | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | Real                                            | <- | 値の出現回数                |
+<!-- END REF -->
 
 
 #### 説明
@@ -766,9 +745,9 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                      |
+| リリース   | 内容                      |
 | ------ | ----------------------- |
-| v20    | `ck count values` をサポート |
+| 20     | `ck count values` をサポート |
 | v16 R6 | 追加                      |
 
 </details>
@@ -777,14 +756,12 @@ End use
 
 
 <!-- REF #collection.distinct().Params -->
-| 引数           | タイプ        |    | 説明                                               |
-| ------------ | ---------- |:--:| ------------------------------------------------ |
-| propertyPath | Text       | -> | 重複しない値を取得する属性のパス                                 |
-| options      | Integer    | -> | `ck diacritical`, `ck count values`              |
-| 戻り値          | Collection | <- | 重複しない値のみを格納した新規コレクション|<!-- END REF -->
-
-
-|
+| 引数           | タイプ        |    | 説明                                  |
+| ------------ | ---------- |:--:| ----------------------------------- |
+| propertyPath | Text       | -> | 重複しない値を取得する属性のパス                    |
+| options      | Integer    | -> | `ck diacritical`, `ck count values` |
+| 戻り値          | Collection | <- | 重複しない値のみを格納した新規コレクション               |
+<!-- END REF -->
 
 
 #### 説明
@@ -831,7 +808,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -841,14 +818,12 @@ End use
 
 
 <!-- REF #collection.equal().Params -->
-| 引数          | タイプ        |    | 説明                                                         |
-| ----------- | ---------- |:--:| ---------------------------------------------------------- |
-| collection2 | Collection | -> | 比較するコレクション                                                 |
-| option      | Integer    | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a")   |
-| 戻り値         | Boolean    | <- | コレクションが同一の場合には true、それ以外は false|<!-- END REF -->
-
-
-|
+| 引数          | タイプ        |    | 説明                                                       |
+| ----------- | ---------- |:--:| -------------------------------------------------------- |
+| collection2 | Collection | -> | 比較するコレクション                                               |
+| option      | Integer    | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| 戻り値         | Boolean    | <- | コレクションが同一の場合には true、それ以外は false                          |
+<!-- END REF -->
 
 
 #### 説明
@@ -891,9 +866,9 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -902,16 +877,14 @@ End use
 
 
 <!-- REF #collection.every().Params -->
-| 引数         | タイプ         |    | 説明                                               |
-| ---------- | ----------- |:--:| ------------------------------------------------ |
-| startFrom  | Integer     | -> | テストを開始するインデックス                                   |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                     |
-| methodName | Text        | -> | メソッド名                                            |
-| param      | Mixed       | -> | *formula* または *methodName* に渡す引数                 |
-| 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                               |
+| ---------- | ----------- |:--:| -------------------------------- |
+| startFrom  | Integer     | -> | テストを開始するインデックス                   |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                     |
+| methodName | Text        | -> | メソッド名                            |
+| param      | Mixed       | -> | *formula* または *methodName* に渡す引数 |
+| 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true            |
+<!-- END REF -->
 
 
 #### 説明
@@ -989,13 +962,13 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1004,10 +977,8 @@ $b:=$c.every($f;Is real) //$b=false
 | propertyPath | Text       | -> | 新しいコレクションに抽出する値のオブジェクトプロパティパス                                                                   |
 | targetpath   | Text       | -> | 抽出先のプロパティパスあるいはプロパティ名                                                                           |
 | option       | Integer    | -> | `ck keep null`: 返されるコレクションに null プロパティを含めます (デフォルトでは無視されます)。 *targetPath* を渡した場合には、この引数は無視されます。 |
-| 戻り値          | Collection | <- | 抽出した値を格納した新しいコレクション|<!-- END REF -->
-
-
-|
+| 戻り値          | Collection | <- | 抽出した値を格納した新しいコレクション                                                                             |
+<!-- END REF -->
 
 
 #### 説明
@@ -1022,7 +993,7 @@ $b:=$c.every($f;Is real) //$b=false
     デフォルトでは、*propertyPath* のパスの要素が null あるいは undefined であった場合には、その要素は無視され、返されるコレクションに格納されません。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの要素は返されるコレクションに null 要素として格納されます。
 
 
-*   一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、対応する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
+*   一つ以上の *propertyPath* 引数に相当する、一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、合致する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 
 #### 例題 1
@@ -1067,7 +1038,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1078,15 +1049,13 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| 引数        | タイプ                                             |    | 説明                                         |
-| --------- | ----------------------------------------------- |:--:| ------------------------------------------ |
-| value     | number, Text, Collection, Object, Date, Boolean | -> | 代入する値                                      |
-| startFrom | Integer                                         | -> | 開始インデックス (含まれる)                            |
-| end       | Integer                                         | -> | 終了インデックス (含まれない)                           |
-| 戻り値       | collection                                      | <- | 値が代入された元のコレクション|<!-- END REF -->
-
-
-|
+| 引数        | タイプ                                             |    | 説明               |
+| --------- | ----------------------------------------------- |:--:| ---------------- |
+| value     | number, Text, Collection, Object, Date, Boolean | -> | 代入する値            |
+| startFrom | Integer                                         | -> | 開始インデックス (含まれる)  |
+| end       | Integer                                         | -> | 終了インデックス (含まれない) |
+| 戻り値       | collection                                      | <- | 値が代入された元のコレクション  |
+<!-- END REF -->
 
 
 #### 説明
@@ -1127,9 +1096,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1138,15 +1107,13 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.filter().Params -->
-| 引数         | タイプ         |    | 説明                                                             |
-| ---------- | ----------- |:--:| -------------------------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                   |
-| methodName | Text        | -> | メソッド名                                                          |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                               |
-| 戻り値        | Collection  | <- | フィルターされた要素を格納した新しいコレクション (シャロウ・コピー)|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                                 |
+| ---------- | ----------- |:--:| ---------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                       |
+| methodName | Text        | -> | メソッド名                              |
+| param      | any         | -> | *formula* または *methodName* に渡す引数   |
+| 戻り値        | Collection  | <- | フィルターされた要素を格納した新しいコレクション(シャロウ・コピー) |
+<!-- END REF -->
 
 
 #### 説明
@@ -1217,9 +1184,9 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1228,16 +1195,14 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
 
 
 <!-- REF #collection.find().Params -->
-| 引数         | タイプ         |    | 説明                                                          |
-| ---------- | ----------- |:--:| ----------------------------------------------------------- |
-| startFrom  | Integer     | -> | 検索を開始するインデックス                                               |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                |
-| methodName | Text        | -> | メソッド名                                                       |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                            |
-| 戻り値        | any         | <- | 最初に見つかった値。見つからなかった場合には Undefined|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                               |
+| ---------- | ----------- |:--:| -------------------------------- |
+| startFrom  | Integer     | -> | 検索を開始するインデックス                    |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                     |
+| methodName | Text        | -> | メソッド名                            |
+| param      | any         | -> | *formula* または *methodName* に渡す引数 |
+| 戻り値        | any         | <- | 最初に見つかった値。見つからなかった場合には Undefined |
+<!-- END REF -->
 
 
 #### 説明
@@ -1309,9 +1274,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1321,16 +1286,14 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 
 <!-- REF #collection.findIndex().Params -->
-| 引数         | タイプ         |    | 説明                                                          |
-| ---------- | ----------- |:--:| ----------------------------------------------------------- |
-| startFrom  | Integer     | -> | 検索を開始するインデックス                                               |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                |
-| methodName | Text        | -> | メソッド名                                                       |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                            |
-| 戻り値        | Integer     | <- | 最初に見つかった値のインデックス。見つからなかった場合には -1|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                               |
+| ---------- | ----------- |:--:| -------------------------------- |
+| startFrom  | Integer     | -> | 検索を開始するインデックス                    |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                     |
+| methodName | Text        | -> | メソッド名                            |
+| param      | any         | -> | *formula* または *methodName* に渡す引数 |
+| 戻り値        | Integer     | <- | 最初に見つかった値のインデックス。見つからなかった場合には -1 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1388,9 +1351,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1398,12 +1361,10 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 <!-- REF #collection.first().Params -->
-| 引数  | タイプ |    | 説明                                     |
-| --- | --- |:--:| -------------------------------------- |
-| 戻り値 | any | <- | コレクションの先頭要素|<!-- END REF -->
-
-
-|
+| 引数  | タイプ |    | 説明          |
+| --- | --- |:--:| ----------- |
+| 戻り値 | any | <- | コレクションの先頭要素 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1436,9 +1397,9 @@ $first:=$emptyCol.first() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1449,10 +1410,8 @@ $first:=$emptyCol.first() // このコードは undefined を返します
 | 引数    | タイプ        |    | 説明                                      |
 | ----- | ---------- |:--:| --------------------------------------- |
 | depth | Integer    | -> | ネストされたコレクションの階層をどの範囲まで平坦化するか。 デフォルト = 1 |
-| 戻り値   | Collection | <- | 平坦化されたコレクション|<!-- END REF -->
-
-
-|
+| 戻り値   | Collection | <- | 平坦化されたコレクション                            |
+<!-- END REF -->
 
 
 #### 説明
@@ -1493,23 +1452,22 @@ $col.flat(MAXLONG)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| 引数         | タイプ         |    | 説明                                                            |
-| ---------- | ----------- |:--:| ------------------------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                  |
-| methodName | Text        | -> | メソッド名                                                         |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                              |
-| 戻り値        | Collection  | <- | 変換された値を格納し、1レベルのネストが解除された新しいコレクション|<!-- END REF -->
-
-|
+| 引数         | タイプ         |    | 説明                                 |
+| ---------- | ----------- |:--:| ---------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                       |
+| methodName | Text        | -> | メソッド名                              |
+| param      | any         | -> | *formula* または *methodName* に渡す引数   |
+| 戻り値        | Collection  | <- | 変換された値を格納し、1レベルのネストが解除された新しいコレクション |
+<!-- END REF -->
 
 #### 説明
 
@@ -1587,9 +1545,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1597,14 +1555,12 @@ $c2:=$c.flatMap($f; $c.sum())
 
 
 <!-- REF #collection.includes().Params -->
-| 引数        | タイプ     |    | 説明                                                       |
-| --------- | ------- |:--:| -------------------------------------------------------- |
-| toSearch  | 式       | -> | コレクション内を検索する式                                            |
-| startFrom | Integer | -> | 検索を開始するインデックス                                            |
-| 戻り値       | Boolean | <- | *toSearch* がコレクションにある場合は true。<!-- END REF -->
-
-
-|
+| 引数        | タイプ     |    | 説明                             |
+| --------- | ------- |:--:| ------------------------------ |
+| toSearch  | 式       | -> | コレクション内を検索する式                  |
+| startFrom | Integer | -> | 検索を開始するインデックス                  |
+| 戻り値       | Boolean | <- | *toSearch* がコレクションにある場合は true。 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1654,7 +1610,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1665,14 +1621,12 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <!-- REF #collection.indexOf().Params -->
 
-| 引数        | タイプ     |    | 説明                                                                   |
-| --------- | ------- |:--:| -------------------------------------------------------------------- |
-| toSearch  | 式       | -> | コレクション内を検索する式                                                        |
-| startFrom | Integer | -> | 検索を開始するインデックス                                                        |
-| 戻り値       | Integer | <- | 最初に見つかった toSearch のインデックス。見つからなかった場合には -1|<!-- END REF -->
-
-
-|
+| 引数        | タイプ     |    | 説明                                        |
+| --------- | ------- |:--:| ----------------------------------------- |
+| toSearch  | 式       | -> | コレクション内を検索する式                             |
+| startFrom | Integer | -> | 検索を開始するインデックス                             |
+| 戻り値       | Integer | <- | 最初に見つかった toSearch のインデックス。見つからなかった場合には -1 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1715,7 +1669,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1725,14 +1679,12 @@ $c2:=$c.flatMap($f; $c.sum())
 
 
 <!-- REF #collection.indices().Params -->
-| 引数          | タイプ        |    | 説明                                                          |
-| ----------- | ---------- |:--:| ----------------------------------------------------------- |
-| queryString | Text       | -> | 検索条件                                                        |
-| value       | any        | -> | プレースホルダー使用時: 比較する値                                          |
-| 戻り値         | Collection | <- | queryString に合致するコレクション要素のインデックス|<!-- END REF -->
-
-
-|
+| 引数          | タイプ        |    | 説明                               |
+| ----------- | ---------- |:--:| -------------------------------- |
+| queryString | Text       | -> | 検索条件                             |
+| value       | any        | -> | プレースホルダー使用時: 比較する値               |
+| 戻り値         | Collection | <- | queryString に合致するコレクション要素のインデックス |
+<!-- END REF -->
 
 
 #### 説明
@@ -1774,7 +1726,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1784,14 +1736,12 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.insert().Params -->
-| 引数      | タイプ        |    | 説明                                          |
-| ------- | ---------- |:--:| ------------------------------------------- |
-| index   | Integer    | -> | 要素の挿入位置                                     |
-| element | any        | -> | コレクションに挿入する要素                               |
-| 戻り値     | Collection | <- | 要素の挿入された元のコレクション|<!-- END REF -->
-
-
-|
+| 引数      | タイプ        |    | 説明               |
+| ------- | ---------- |:--:| ---------------- |
+| index   | Integer    | -> | 要素の挿入位置          |
+| element | any        | -> | コレクションに挿入する要素    |
+| 戻り値     | Collection | <- | 要素の挿入された元のコレクション |
+<!-- END REF -->
 
 
 #### 説明
@@ -1829,7 +1779,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1839,14 +1789,12 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.join().Params -->
-| 引数        | タイプ     |    | 説明                                                     |
-| --------- | ------- |:--:| ------------------------------------------------------ |
-| delimiter | Text    | -> | 要素間に用いる区切り文字                                           |
-| option    | Integer | -> | `ck ignore null or empty`: 戻り値に null と空の文字列を含めない       |
-| 戻り値       | Text    | <- | 区切り文字を使ってコレクションの全要素をつなげた文字列|<!-- END REF -->
-
-
-|
+| 引数        | タイプ     |    | 説明                                               |
+| --------- | ------- |:--:| ------------------------------------------------ |
+| delimiter | Text    | -> | 要素間に用いる区切り文字                                     |
+| option    | Integer | -> | `ck ignore null or empty`: 戻り値に null と空の文字列を含めない |
+| 戻り値       | Text    | <- | 区切り文字を使ってコレクションの全要素をつなげた文字列                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -1877,9 +1825,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1887,12 +1835,10 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.last().Params -->
-| 引数  | タイプ |    | 説明                                      |
-| --- | --- |:--:| --------------------------------------- |
-| 戻り値 | any | <- | コレクションの最後の要素|<!-- END REF -->
-
-
-|
+| 引数  | タイプ |    | 説明           |
+| --- | --- |:--:| ------------ |
+| 戻り値 | any | <- | コレクションの最後の要素 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1928,7 +1874,7 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1938,14 +1884,12 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 
 <!-- REF #collection.lastIndexOf().Params -->
-| 引数        | タイプ     |    | 説明                                                                   |
-| --------- | ------- |:--:| -------------------------------------------------------------------- |
-| toSearch  | 式       | -> | コレクション内を検索する要素                                                       |
-| startFrom | Integer | -> | 検索を開始するインデックス                                                        |
-| 戻り値       | Integer | <- | 最後に見つかった toSearch のインデックス。見つからなかった場合には -1|<!-- END REF -->
-
-
-|
+| 引数        | タイプ     |    | 説明                                        |
+| --------- | ------- |:--:| ----------------------------------------- |
+| toSearch  | 式       | -> | コレクション内を検索する要素                            |
+| startFrom | Integer | -> | 検索を開始するインデックス                             |
+| 戻り値       | Integer | <- | 最後に見つかった toSearch のインデックス。見つからなかった場合には -1 |
+<!-- END REF -->
 
 
 #### 説明
@@ -1991,7 +1935,7 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R5 | 追加 |
 
@@ -2027,9 +1971,9 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2038,15 +1982,13 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 
 <!-- REF #collection.map().Params -->
-| 引数         | タイプ         |    | 説明                                              |
-| ---------- | ----------- |:--:| ----------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                    |
-| methodName | Text        | -> | メソッド名                                           |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                |
-| 戻り値        | Collection  | <- | 変換された値を格納する新しいコレクション|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                               |
+| ---------- | ----------- |:--:| -------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                     |
+| methodName | Text        | -> | メソッド名                            |
+| param      | any         | -> | *formula* または *methodName* に渡す引数 |
+| 戻り値        | Collection  | <- | 変換された値を格納する新しいコレクション             |
+<!-- END REF -->
 
 
 #### 説明
@@ -2095,7 +2037,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2105,13 +2047,11 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 
 <!-- REF #collection.max().Params -->
-| 引数           | タイプ                                             |    | 説明                                     |
-| ------------ | ----------------------------------------------- |:--:| -------------------------------------- |
-| propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス                     |
-| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最大値|<!-- END REF -->
-
-
-|
+| 引数           | タイプ                                             |    | 説明                 |
+| ------------ | ----------------------------------------------- |:--:| ------------------ |
+| propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス |
+| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最大値        |
+<!-- END REF -->
 
 
 #### 説明
@@ -2149,7 +2089,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2159,13 +2099,11 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 
 <!-- REF #collection.min().Params -->
-| 引数           | タイプ                                             |    | 説明                                     |
-| ------------ | ----------------------------------------------- |:--:| -------------------------------------- |
-| propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス                     |
-| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最小値|<!-- END REF -->
-
-
-|
+| 引数           | タイプ                                             |    | 説明                 |
+| ------------ | ----------------------------------------------- |:--:| ------------------ |
+| propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス |
+| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最小値        |
+<!-- END REF -->
 
 
 #### 説明
@@ -2201,9 +2139,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R3 | 追加 |
 
 </details>
 
@@ -2215,10 +2153,8 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 | ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------- |
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                                                |
 | colsToSort | Collection  | -> | コレクションのコレクション、または {`collection`:*colToSort*;`order`:`ck ascending` / `ck descending`} プロパティを持つオブジェクトのコレクション |
-| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション|<!-- END REF -->
-
-
-|
+| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション                                                                                             |
+<!-- END REF -->
 
 
 #### 説明
@@ -2342,7 +2278,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2352,15 +2288,13 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 
 <!-- REF #collection.orderBy().Params -->
-| 引数          | タイプ        |    | 説明                                                      |
-| ----------- | ---------- |:--:| ------------------------------------------------------- |
-| pathStrings | Text       | -> | コレクションの並べ替え基準とするプロパティパス                                 |
-| pathObjects | Collection | -> | 条件オブジェクトのコレクション                                         |
-| ascOrDesc   | Integer    | -> | `ck ascending` または `ck descending` (スカラー値)              |
-| 戻り値         | Collection | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)|<!-- END REF -->
-
-
-|
+| 引数          | タイプ        |    | 説明                                         |
+| ----------- | ---------- |:--:| ------------------------------------------ |
+| pathStrings | Text       | -> | コレクションの並べ替え基準とするプロパティパス                    |
+| pathObjects | Collection | -> | 条件オブジェクトのコレクション                            |
+| ascOrDesc   | Integer    | -> | `ck ascending` または `ck descending` (スカラー値) |
+| 戻り値         | Collection | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)               |
+<!-- END REF -->
 
 
 #### 説明
@@ -2370,7 +2304,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-引数を渡さなかった場合、メソッドはコレクション内のスカラー値を昇順に並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。 この自動並べ替え順は、*ascOrDesc* パラメーターに `ck ascending` あるいは `ck descending` 定数を渡すことで変更できます (以下参照)。
+引数を渡さなかった場合、メソッドはコレクション内のスカラー値を昇順に並べ替えます (オブジェクトやコレクションなどの他の型は内部的な順序で返されます)。 この自動並べ替え順は、*ascOrDesc* パラメーターに `ck ascending` あるいは `ck descending` 定数を渡すことで変更できます (以下参照)。
 
 また、引数を渡すことで、コレクション要素をどのように並べ替えるかを指定することもできます。 次の 3つのシンタックスがサポートされています:
 
@@ -2487,9 +2421,9 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2499,15 +2433,13 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 引数         | タイプ         |    | 説明                                                      |
-| ---------- | ----------- |:--:| ------------------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                            |
-| methodName | Text        | -> | メソッド名                                                   |
-| extraParam | any         | -> | 渡す引数                                                    |
-| 戻り値        | Collection  | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                           |
+| ---------- | ----------- |:--:| ---------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                 |
+| methodName | Text        | -> | メソッド名                        |
+| extraParam | any         | -> | 渡す引数                         |
+| 戻り値        | Collection  | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー) |
+<!-- END REF -->
 
 
 #### 説明
@@ -2596,7 +2528,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2607,12 +2539,10 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.pop().Params -->
-| 引数  | タイプ |    | 説明                                      |
-| --- | --- |:--:| --------------------------------------- |
-| 戻り値 | any | <- | コレクションの最後の要素|<!-- END REF -->
-
-
-|
+| 引数  | タイプ |    | 説明           |
+| --- | --- |:--:| ------------ |
+| 戻り値 | any | <- | コレクションの最後の要素 |
+<!-- END REF -->
 
 
 #### 説明
@@ -2648,7 +2578,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2658,13 +2588,11 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.push().Params -->
-| 引数      | タイプ        |    | 説明                                          |
-| ------- | ---------- |:--:| ------------------------------------------- |
-| element | Mixed      | -> | コレクションに追加する要素                               |
-| 戻り値     | Collection | <- | 要素の追加された元のコレクション|<!-- END REF -->
-
-
-|
+| 引数      | タイプ        |    | 説明               |
+| ------- | ---------- |:--:| ---------------- |
+| element | Mixed      | -> | コレクションに追加する要素    |
+| 戻り値     | Collection | <- | 要素の追加された元のコレクション |
+<!-- END REF -->
 
 
 #### 説明
@@ -2710,9 +2638,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
+| リリース   | 内容                  |
 | ------ | ------------------- |
-| v17 R5 | querySettings をサポート |
+| 17 R5  | querySettings をサポート |
 | v16 R6 | 追加                  |
 
 </details>
@@ -2721,15 +2649,13 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.query().Params -->
-| 引数            | タイプ        |    | 説明                                                   |
-| ------------- | ---------- |:--:| ---------------------------------------------------- |
-| queryString   | Text       | -> | 検索条件                                                 |
-| value         | Mixed      | -> | プレースホルダー使用時: 比較する値                                   |
-| querySettings | Object     | -> | クエリオプション: parameters, attributes 他                   |
-| 戻り値           | Collection | <- | queryString に合致するコレクション要素|<!-- END REF -->
-
-
-|
+| 引数            | タイプ        |    | 説明                                 |
+| ------------- | ---------- |:--:| ---------------------------------- |
+| queryString   | Text       | -> | 検索条件                               |
+| value         | Mixed      | -> | プレースホルダー使用時: 比較する値                 |
+| querySettings | Object     | -> | クエリオプション: parameters, attributes 他 |
+| 戻り値           | Collection | <- | queryString に合致するコレクション要素          |
+<!-- END REF -->
 
 
 #### 説明
@@ -2820,9 +2746,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2837,10 +2763,8 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 | methodName | Text                                            | -> | メソッド名                                             |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
 | param      | 式                                               | -> | 渡す引数                                              |
-| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果|<!-- END REF -->
-
-
-|
+| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -2914,9 +2838,9 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -2930,10 +2854,8 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 | methodName | Text                                            | -> | メソッド名                                             |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
 | param      | 式                                               | -> | 渡す引数                                              |
-| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果|<!-- END REF -->
-
-
-|
+| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -3009,7 +2931,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3019,14 +2941,12 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.remove().Params -->
-| 引数      | タイプ        |    | 説明                                          |
-| ------- | ---------- |:--:| ------------------------------------------- |
-| index   | Integer    | -> | 削除を開始する要素の位置                                |
-| howMany | Integer    | -> | 削除する要素の数、省略時は 1要素を削除                        |
-| 戻り値     | Collection | <- | 要素が削除された元のコレクション|<!-- END REF -->
-
-
-|
+| 引数      | タイプ        |    | 説明                   |
+| ------- | ---------- |:--:| -------------------- |
+| index   | Integer    | -> | 削除を開始する要素の位置         |
+| howMany | Integer    | -> | 削除する要素の数、省略時は 1要素を削除 |
+| 戻り値     | Collection | <- | 要素が削除された元のコレクション     |
+<!-- END REF -->
 
 
 #### 説明
@@ -3073,7 +2993,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3085,14 +3005,12 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.resize().Params -->
-| 引数           | タイプ                                             |    | 説明                                         |
-| ------------ | ----------------------------------------------- |:--:| ------------------------------------------ |
-| size         | Integer                                         | -> | コレクションの新しいサイズ                              |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | 新規要素のデフォルト値                                |
-| 戻り値          | Collection                                      | <- | リサイズされた元のコレクション|<!-- END REF -->
-
-
-|
+| 引数           | タイプ                                             |    | 説明              |
+| ------------ | ----------------------------------------------- |:--:| --------------- |
+| size         | Integer                                         | -> | コレクションの新しいサイズ   |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | 新規要素のデフォルト値     |
+| 戻り値          | Collection                                      | <- | リサイズされた元のコレクション |
+<!-- END REF -->
 
 
 #### 説明
@@ -3136,7 +3054,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3147,12 +3065,10 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <!-- REF #collection.reverse().Params -->
 
-| 引数  | タイプ        |    | 説明                                             |
-| --- | ---------- |:--:| ---------------------------------------------- |
-| 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション|<!-- END REF -->
-
-
-|
+| 引数  | タイプ        |    | 説明                  |
+| --- | ---------- |:--:| ------------------- |
+| 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション |
+<!-- END REF -->
 
 
 #### 説明
@@ -3180,7 +3096,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3190,12 +3106,10 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.shift().Params -->
-| 引数  | タイプ |    | 説明                                     |
-| --- | --- |:--:| -------------------------------------- |
-| 戻り値 | any | <- | コレクションの先頭要素|<!-- END REF -->
-
-
-|
+| 引数  | タイプ |    | 説明          |
+| --- | --- |:--:| ----------- |
+| 戻り値 | any | <- | コレクションの先頭要素 |
+<!-- END REF -->
 
 
 #### 説明
@@ -3230,7 +3144,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3240,14 +3154,12 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.slice().Params -->
-| 引数        | タイプ        |    | 説明                                                      |
-| --------- | ---------- |:--:| ------------------------------------------------------- |
-| startFrom | Integer    | -> | 開始インデックス (含まれる)                                         |
-| end       | Integer    | -> | 終了インデックス (含まれない)                                        |
-| 戻り値       | Collection | <- | 抜粋要素を格納した新しいコレクション(シャロウ・コピー)|<!-- END REF -->
-
-
-|
+| 引数        | タイプ        |    | 説明                           |
+| --------- | ---------- |:--:| ---------------------------- |
+| startFrom | Integer    | -> | 開始インデックス (含まれる)              |
+| end       | Integer    | -> | 終了インデックス (含まれない)             |
+| 戻り値       | Collection | <- | 抜粋要素を格納した新しいコレクション(シャロウ・コピー) |
+<!-- END REF -->
 
 
 #### 説明
@@ -3285,9 +3197,9 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -3296,16 +3208,14 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.some().Params -->
-| 引数         | タイプ         |    | 説明                                                   |
-| ---------- | ----------- |:--:| ---------------------------------------------------- |
-| startFrom  | Integer     | -> | テストを開始するインデックス                                       |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                         |
-| methodName | Text        | -> | メソッド名                                                |
-| param      | Mixed       | -> | 渡す引数                                                 |
-| 戻り値        | Boolean     | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明                        |
+| ---------- | ----------- |:--:| ------------------------- |
+| startFrom  | Integer     | -> | テストを開始するインデックス            |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト              |
+| methodName | Text        | -> | メソッド名                     |
+| param      | Mixed       | -> | 渡す引数                      |
+| 戻り値        | Boolean     | <- | 少なくとも一つの要素がテストをパスすれば true |
+<!-- END REF -->
 
 
 #### 説明
@@ -3373,9 +3283,9 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -3384,15 +3294,13 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.sort().Params -->
-| 引数         | タイプ         |    | 説明                                         |
-| ---------- | ----------- |:--:| ------------------------------------------ |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                               |
-| methodName | Text        | -> | メソッド名                                      |
-| extraParam | any         | -> | methodName に渡す引数                           |
-| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション|<!-- END REF -->
-
-
-|
+| 引数         | タイプ         |    | 説明               |
+| ---------- | ----------- |:--:| ---------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト     |
+| methodName | Text        | -> | メソッド名            |
+| extraParam | any         | -> | methodName に渡す引数 |
+| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション  |
+<!-- END REF -->
 
 
 #### 説明
@@ -3461,7 +3369,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3471,13 +3379,11 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 
 <!-- REF #collection.sum().Params -->
-| 引数           | タイプ  |    | 説明                                       |
-| ------------ | ---- |:--:| ---------------------------------------- |
-| propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス                    |
-| 戻り値          | Real | <- | コレクション要素の値の合計|<!-- END REF -->
-
-
-|
+| 引数           | タイプ  |    | 説明                    |
+| ------------ | ---- |:--:| --------------------- |
+| propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | Real | <- | コレクション要素の値の合計         |
+<!-- END REF -->
 
 
 #### 説明
@@ -3527,7 +3433,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3537,14 +3443,11 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 
 <!-- REF #collection.unshift().Params -->
-| 引数                         | タイプ                                    |    | 説明               |
-| -------------------------- | -------------------------------------- |:--:| ---------------- |
-| value                      | Text, Number, Object, Collection, Date | -> | コレクションの先頭に挿入する値  |
-| 戻り値                        | Real                                   | <- | 要素の追加された元のコレクション |
-|<!-- END REF -->
-
-
-|                                        |    |                  |
+| 引数    | タイプ                                    |    | 説明               |
+| ----- | -------------------------------------- |:--:| ---------------- |
+| value | Text, Number, Object, Collection, Date | -> | コレクションの先頭に挿入する値  |
+| 戻り値   | Real                                   | <- | 要素の追加された元のコレクション |
+<!-- END REF -->
 
 
 #### 説明

@@ -11,7 +11,7 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 
 ### Disponibilidade do modo SDI
 
-The SDI mode is available in the following execution environment only:
+O modo SDI está disponível somente no seguinte ambiente de execução:
 
 - Windows
 - Aplicação 4D fundida, autônoma ou cliente
@@ -21,7 +21,7 @@ The SDI mode is available in the following execution environment only:
 Enabling and using the SDI mode in your application require the following steps:
 
 1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Database Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+2. Construa uma aplicação mesclada (monoposto /ou aplicação cliente).
 
 Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
 

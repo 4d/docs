@@ -8,7 +8,7 @@ This "Getting started" section is geared at first-time users who want an overall
 
 ## Exemplo Hello World
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+Vamos começar fazendo com que o servidor Web envie "Hello World" para o navegador. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
 
 ### Iniciar o servidor Web
 
@@ -23,7 +23,7 @@ Para iniciar o servidor web 4D:
 
 The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
 
-1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Inicie um navegador da Web e conecte-se ao endereço IP do servidor da Web (a porta http padrão do servidor Web 4D é 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
 
 É apresentada a página inicial predefinida:
 
@@ -69,7 +69,7 @@ Create a basic database with, for example, a single table containing some record
 
 The most simple solution to display data is to call a [template page](templates.md) containing tags.
 
-1. Using any text editor, create a file containing the following lines:
+1. Usando qualquer editor de texto, crie um arquivo com as seguintes linhas:
 
 ```html
 <html>
@@ -208,7 +208,7 @@ var $webUser : cs.WebUsersEntity
 $webUser:=ds.WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
-// the password would be entered by the user
+// a senha seria inserida pelo usuário
 $webUser.password:=Generate password hash("123")
 $webUser.userId:="john@4d.com"
 $webUser.save()
@@ -218,7 +218,7 @@ $webUser.save()
 
 ### Autenticação de usuários
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> Para ser seguro de ponta a ponta, deve toda a conexão seja estabelecida via [https](webServerConfig.md#enable-https).
 
 1. Abra o Explorador e crie um método projeto chamado "login".
 

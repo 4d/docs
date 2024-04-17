@@ -7,7 +7,7 @@ Les collections sont des listes ordonnées de valeurs de types similaires ou dif
 
 Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Les bases de la syntaxe](Concepts/dt_object.md#syntax-basics)).
 
-Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
+Pour accéder à un élément d'une collection, vous devez passer le numéro de l'élément entre crochets :
 
 ```4d
 collectionRef[expression]
@@ -56,13 +56,13 @@ Voici un exemple :
 Vous pouvez créer deux types de collections :
 
 - collections standard (non partagées), à l'aide de la commande [`New collection`](API/CollectionClass.md#new-collection). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- collections partagées, à l'aide de la commande [`New shared collection`](API/CollectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
+- des collections partagées, à l'aide de la commande [`New shared collection`](API/CollectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
 Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
 ## Fonctions de collection
 
-Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions méthodes*). Les fonctions de collection sont répertoriées dans la section [Class API Reference](API/CollectionClass.md).
+Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions membres*). Les fonctions de collection sont répertoriées dans la section [Class API Reference](API/CollectionClass.md).
 
 Par exemple :
 
@@ -79,10 +79,10 @@ Certaines fonctions retournent la collection d'origine après modification, de m
 ```
 
 
-### paramètre cheminPropriété
+### paramètre propertyPath
 
 
-Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce paramètre peut contenir :
+Plusieurs fonctions acceptent un paramètre nommé _propertyPath_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
@@ -90,6 +90,6 @@ Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce param
 **Attention :** Lorsque des fonctions ou un paramètre cheminPropriété sont attendus, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin :
 
 ```4d
- $vmin:=$col.min("My.special.property") //indéfini
+ $vmin:=$col.min("My.special.property") //undefined
  $vmin:=$col.min(["My.special.property"]) //erreur
 ```

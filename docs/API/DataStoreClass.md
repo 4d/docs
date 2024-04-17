@@ -38,10 +38,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Support of localID parameter|
-|v17|Added|
+|18|Support of localID parameter|
+|17|Added|
 
 </details>
 
@@ -52,7 +52,8 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |Parameter|Type||Description|
 |---|---|---|---|
 |localID|Text|->|Local ID of the remote datastore to return|
-|Result |cs.DataStore|<-|Reference to the datastore|<!-- END REF -->
+|Result |cs.DataStore|<-|Reference to the datastore|
+<!-- END REF -->
 
 #### Description
 
@@ -106,9 +107,9 @@ Using the main datastore on the 4D database:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -120,7 +121,8 @@ Using the main datastore on the 4D database:
 |---|---|---|---|
 |connectionInfo|Object|->|Connection properties used to reach the remote datastore|
 |localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |cs.DataStore|<-|Datastore object|<!-- END REF -->
+|Result |cs.DataStore|<-|Datastore object|
+<!-- END REF -->
 
 #### Description
 
@@ -129,8 +131,13 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 
 * its web server must be launched with http and/or https enabled,
-* its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
-* at least one client license is available.
+* the datastore must be exposed ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked) as well as [dataclasses and attributes](../REST/configuration.md#exposing-tables-and-fields).
+
+:::note
+
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+
+:::
 
 If no matching database is found, `Open datastore` returns **Null**.
 
@@ -212,9 +219,9 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -244,9 +251,9 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -256,7 +263,8 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -277,9 +285,9 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -289,7 +297,8 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -308,9 +317,9 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -320,7 +329,8 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|<!-- END REF -->
+|Result|Object|<-|Information about the encryption of the current datastore and of each table|
+<!-- END REF -->
 
 #### Description
 
@@ -380,9 +390,9 @@ You want to know the number of encrypted tables in the current data file:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -392,23 +402,24 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 
 #### Description
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
+The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
 
 :::info
 
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked. 
+Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
 
 When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
 
@@ -418,14 +429,14 @@ The datastore is unlocked when:
 - the process that called the `.flushAndLock()` function is killed.
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
 
 An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
 
 :::
 
@@ -434,16 +445,16 @@ Other 4D features and services including [backup](../Backup/backup.md), [vss](ht
 You want to create a copy of the data folder along with its current journal file:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
 ds.flushAndLock() //Block write operations from other processes
 
-$dataFolder:=Folder(fk data folder) 
+$dataFolder:=Folder(fk data folder)
 $dataFolder.copyTo($destination) //Copy the data folder
 
 $oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal:=File($oldJournalPath; fk platform path)
 $oldJournal.moveTo($destination) //Save the old journal with data
 
 ds.unlock() //Our copy is over, we can now unlock the datastore
@@ -459,9 +470,9 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -471,7 +482,8 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Collection|<-|Collection of optimization context objects|<!-- END REF -->
+|Result|Collection|<-|Collection of optimization context objects|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -479,7 +491,7 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
 
-> For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> For more information on how contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
 
@@ -535,9 +547,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -547,7 +559,8 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Real|<-|Current value of the global modification stamp|<!-- END REF -->
+|Result|Real|<-|Current value of the global modification stamp|
+<!-- END REF -->
 
 
 #### Description
@@ -559,13 +572,13 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
 For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
- 
+
 #### Example
 
 ```4d
@@ -573,7 +586,7 @@ var $currentStamp : Real
 var $hasModifications : Boolean
 
 $currentStamp:=ds.getGlobalStamp()
-methodWhichCouldModifyEmployees //call some code 
+methodWhichCouldModifyEmployees //call some code
 $hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
 
@@ -586,9 +599,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -598,7 +611,8 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 <!-- REF #DataStoreClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|<!-- END REF -->
+|Result|Object|<-|Datastore properties|
+<!-- END REF -->
 
 #### Description
 
@@ -653,9 +667,9 @@ On a remote datastore:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -666,7 +680,8 @@ On a remote datastore:
 |Parameter|Type||Description|
 |---|---|---|---|
 |contextName|Text|->|Name of the context|
-|Result|Object|<-|Description of the optimization context|<!-- END REF -->
+|Result|Object|<-|Description of the optimization context|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -674,7 +689,7 @@ On a remote datastore:
 
 The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Returned object
 
@@ -702,9 +717,9 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Added|
+|17 R6|Added|
 
 </details>
 
@@ -714,7 +729,8 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of objects, where each object describes a request|<!-- END REF -->
+|Result|Collection|<-|Collection of objects, where each object describes a request|
+<!-- END REF -->
 
 #### Description
 
@@ -739,9 +755,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -751,7 +767,8 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|<!-- END REF -->
+|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+<!-- END REF -->
 
 #### Description
 
@@ -771,9 +788,9 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -783,12 +800,13 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- REF #DataStoreClass.locked().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if locked|<!-- END REF -->
+|Result|Boolean|<-|True if locked|
+<!-- END REF -->
 
 
 #### Description
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->. 
+The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
 
 You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
 
@@ -810,9 +828,9 @@ The function will also return `True` if the datastore was locked by another admi
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -822,7 +840,8 @@ The function will also return `True` if the datastore was locked by another admi
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -842,9 +861,9 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -856,7 +875,8 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 |---|---|---|---|
 |curPassPhrase |Text|->|Current encryption passphrase|
 |curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|<!-- END REF -->
+|Result|Object|<-|Result of the encryption key matching|
+<!-- END REF -->
 
 #### Description
 
@@ -914,11 +934,12 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 ## .setAdminProtection()
 
 
+
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -929,7 +950,8 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|<!-- END REF -->
+|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+<!-- END REF -->
 
 #### Description
 
@@ -959,9 +981,9 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -971,7 +993,8 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newStamp|Real|->|New value of global modification stamp|<!-- END REF -->
+|newStamp|Real|->|New value of global modification stamp|
+<!-- END REF -->
 
 
 :::info Advanced mode
@@ -989,7 +1012,7 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
@@ -1015,9 +1038,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1033,7 +1056,8 @@ ds.setGlobalStamp($newValue)
 |attributes|Text|->|Attribute list separated by a comma|
 |attributesColl|Collection|->|Collection of attribute names (text)|
 |contextType|Text|->|If provided, value must be "main" or "currentItem"|
-|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|<!-- END REF -->
+|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -1046,7 +1070,7 @@ When you pass a context to the ORDA class functions, the REST request optimizati
 * the first entity is not fully loaded as done in automatic mode
 * pages of 80 entities (or `pageLength` entities) are immediately asked to the server with only the attributes in the context
 
-> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/client-server-optimization.md#optimization-context)
 
 In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
 
@@ -1144,10 +1168,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Server side support, new `options` parameter|
-|v17 R6|Added|
+|20|Server side support, new `options` parameter|
+|17 R6|Added|
 
 </details>
 
@@ -1159,7 +1183,8 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 |---|---|---|---|
 |file |4D.File|->|File object |
 |options |Integer|->|Log response option (server only)|
-|reqNum |Integer|->|Number of requests to keep in memory (client only)|<!-- END REF -->
+|reqNum |Integer|->|Number of requests to keep in memory (client only)|
+<!-- END REF -->
 
 #### Description
 
@@ -1259,9 +1284,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -1271,7 +1296,8 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 <!-- REF #DataStoreClass.startTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|:---:|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 
 #### Description
@@ -1322,10 +1348,10 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Server side support|
-|v17 R6|Added|
+|20|Server side support|
+|17 R6|Added|
 
 </details>
 
@@ -1335,15 +1361,16 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->. 
+The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
 
-It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped. 
+It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped.
 
-This function does nothing if logging of ORDA requests was not started on the machine. 
+This function does nothing if logging of ORDA requests was not started on the machine.
 
 #### Example
 
@@ -1357,9 +1384,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1369,14 +1396,15 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.unlock().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 
 #### Description
 
-The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
+The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
+If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
 
 The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
 
@@ -1393,9 +1421,9 @@ If the `.unlock()` function is called in an unlocked datastore, it does nothing.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -1405,7 +1433,8 @@ If the `.unlock()` function is called in an unlocked datastore, it does nothing.
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 

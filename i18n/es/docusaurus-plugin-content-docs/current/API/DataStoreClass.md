@@ -38,10 +38,10 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                |
-| ------- | ----------------------------- |
-| v18     | Soporte del parámetro localID |
-| v17     | Añadidos                      |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 18          | Soporte del parámetro localID |
+| 17          | Añadidos                      |
 
 </details>
 
@@ -49,12 +49,11 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 
 <!-- REF #_command_.ds.Params -->
-| Parámetros | Tipo         |    | Descripción                                               |
-| ---------- | ------------ | -- | --------------------------------------------------------- |
-| localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
-| Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
-
-|
+| Parámetros | Tipo         |    | Descripción                                     |
+| ---------- | ------------ | -- | ----------------------------------------------- |
+| localID    | Text         | -> | ID local del almacén de datos remoto a devolver |
+| Result     | cs.DataStore | <- | Referencia al almacén de datos                  |
+<!-- END REF -->
 
 #### Descripción
 
@@ -107,9 +106,9 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -121,9 +120,8 @@ Utilizando el almacén de datos principal de la base 4D:
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Result         | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
-
-|
+| Result         | cs.DataStore | <- | Objeto del almacén de datos                                                      |
+<!-- END REF -->
 
 #### Descripción
 
@@ -132,8 +130,13 @@ El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conect
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 
 * su servidor web debe ser lanzado con http y/o https activado,
-* su opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) debe estar marcada,
-* se dispone de al menos una licencia cliente.
+* el datastore debe ser expuesto (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) marcada) así como también los [dataclasses y atributos](../REST/configuration.md#exposing-tables-and-fields).
+
+:::note
+
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión. Consulte la sección [User login mode](../REST/authUsers.md#user-login-modes) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión actual seleccionado.
+
+:::
 
 Si no se encuentra ninguna base de datos coincidente, `Open datastore` devuelve **Null**.
 
@@ -215,9 +218,9 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -247,9 +250,9 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -257,11 +260,10 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -282,9 +284,9 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -292,11 +294,10 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -315,9 +316,9 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -325,11 +326,10 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                         |
-| ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                                                              |
+| ---------- | ------ |:--:| ------------------------------------------------------------------------ |
+| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
+<!-- END REF -->
 
 #### Descripción
 
@@ -391,9 +391,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -401,12 +401,10 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 
 #### Descripción
@@ -473,9 +471,9 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -483,11 +481,10 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parámetros | Tipo       |    | Descripción                                                               |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                                    |
+| ---------- | ---------- | -- | ---------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos contextos de optimización |
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
@@ -495,7 +492,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->devuelve una colección de objetos que contienen información sobre todos los contextos de optimización de activos en el almacén de datos<!-- END REF -->.
 
-> Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> Para más información sobre cómo se pueden crear contextos, ver [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
 
@@ -551,9 +548,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -561,12 +558,10 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Parámetros | Tipo |    | Descripción                                                                 |
-| ---------- | ---- | -- | --------------------------------------------------------------------------- |
-| Result     | Real | <- | Valor actual del marcador de modificación global|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                                      |
+| ---------- | ---- | -- | ------------------------------------------------ |
+| Result     | Real | <- | Valor actual del marcador de modificación global |
+<!-- END REF -->
 
 
 #### Descripción
@@ -605,9 +600,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -615,11 +610,10 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                 |
-| ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                      |
+| ---------- | ------ |:--:| -------------------------------- |
+| Result     | Object | <- | Propiedades del almacén de datos |
+<!-- END REF -->
 
 #### Descripción
 
@@ -674,9 +668,9 @@ En un almacén de datos remoto:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -684,12 +678,11 @@ En un almacén de datos remoto:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parámetros  | Tipo   |    | Descripción                                                         |
-| ----------- | ------ | -- | ------------------------------------------------------------------- |
-| contextName | Text   | -> | Nombre del contexto                                                 |
-| Result      | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
-
-|
+| Parámetros  | Tipo   |    | Descripción              |
+| ----------- | ------ | -- | ------------------------ |
+| contextName | Text   | -> | Nombre del contexto      |
+| Result      | Object | <- | Descripción del contexto |
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
@@ -697,7 +690,7 @@ En un almacén de datos remoto:
 
 La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore.<!-- END REF -->.
 
-Para más información sobre cómo se pueden crear contextos de optimización, ver [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
+Para más información sobre cómo se pueden crear contextos de optimización, ver [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devuelto
 
@@ -725,9 +718,9 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R6       | Añadidos       |
 
 </details>
 
@@ -735,11 +728,10 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                                                    |
+| ---------- | ---------- |:--:| -------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una solicitud |
+<!-- END REF -->
 
 #### Descripción
 
@@ -764,9 +756,9 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -774,11 +766,10 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                                |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                                                     |
+| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------------- |
+| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -798,9 +789,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -808,12 +799,10 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| Parámetros | Tipo    |    | Descripción                                  |
-| ---------- | ------- | -- | -------------------------------------------- |
-| Result     | Boolean | <- | True si bloqueado|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo    |    | Descripción       |
+| ---------- | ------- | -- | ----------------- |
+| Result     | Boolean | <- | True si bloqueado |
+<!-- END REF -->
 
 
 #### Descripción
@@ -840,9 +829,9 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -850,11 +839,10 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -873,9 +861,9 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -883,13 +871,12 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Parámetros    | Tipo   |    | Descripción                                                                         |
-| ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
-| curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
-| curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
-| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
-
-|
+| Parámetros    | Tipo   |    | Descripción                                              |
+| ------------- | ------ | -- | -------------------------------------------------------- |
+| curPassPhrase | Text   | -> | Frase de cifrado actual                                  |
+| curDataKey    | Object | -> | Llave de encriptación de datos actual                    |
+| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación |
+<!-- END REF -->
 
 #### Descripción
 
@@ -946,11 +933,12 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 ## .setAdminProtection()
 
 
+
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -959,11 +947,10 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                                                           |
-| ---------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| status     | Boolean | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                                                                                |
+| ---------- | ------- | -- | -------------------------------------------------------------------------------------------------------------------------- |
+| status     | Boolean | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso |
+<!-- END REF -->
 
 #### Descripción
 
@@ -993,9 +980,9 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -1003,12 +990,10 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
-| Parámetros | Tipo |    | Descripción                                                                |
-| ---------- | ---- | -- | -------------------------------------------------------------------------- |
-| newStamp   | Real | -> | Nuevo valor del marcador de modificación global|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                                     |
+| ---------- | ---- | -- | ----------------------------------------------- |
+| newStamp   | Real | -> | Nuevo valor del marcador de modificación global |
+<!-- END REF -->
 
 
 :::info Modo avanzado
@@ -1052,9 +1037,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1062,17 +1047,16 @@ ds.setGlobalStamp($newValue)
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Parámetros      | Tipo         |    | Descripción                                                                                                            |
-| --------------- | ------------ | -- | ---------------------------------------------------------------------------------------------------------------------- |
-| contextName     | Text         | -> | Nombre del contexto                                                                                                    |
-| dataClassName   | Text         | -> | Nombre de la dataclass                                                                                                 |
-| dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                                                             |
-| attributes      | Text         | -> | Lista de atributos separados por comas                                                                                 |
-| attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                                                               |
-| contextType     | Text         | -> | Si se suministra, el valor debe ser "main" o "currentItem"                                                             |
-| pageLength      | Integer      | -> | Longitud de la página de la selección de entidades asociada al contexto (por defecto es 80)|<!-- END REF -->
-
-|
+| Parámetros      | Tipo         |    | Descripción                                                                                 |
+| --------------- | ------------ | -- | ------------------------------------------------------------------------------------------- |
+| contextName     | Text         | -> | Nombre del contexto                                                                         |
+| dataClassName   | Text         | -> | Nombre de la dataclass                                                                      |
+| dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                                  |
+| attributes      | Text         | -> | Lista de atributos separados por comas                                                      |
+| attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                                    |
+| contextType     | Text         | -> | Si se suministra, el valor debe ser "main" o "currentItem"                                  |
+| pageLength      | Integer      | -> | Longitud de la página de la selección de entidades asociada al contexto (por defecto es 80) |
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
@@ -1085,7 +1069,7 @@ Cuando se pasa un contexto a las funciones de clase ORDA, la optimización de la
 * la primera entidad no está totalmente cargada como se hace en el modo automático
 * las páginas de 80 entidades (o de `pageLength` entidades) se piden inmediatamente al servidor con sólo los atributos del contexto
 
-> Para más información sobre la creación de los contextos de optimización, consulte el [párrafo de optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization)
+> Para más información sobre cómo se crean los contextos de optimización, consulte el [párrafo de optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context)
 
 En *contextName*, pase el nombre del contexto de optimización para vincularlo a los atributos de la dataclass.
 
@@ -1182,10 +1166,10 @@ End case
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                           |
-| ------- | -------------------------------------------------------- |
-| v20     | Soporte del lado del servidor, nuevo parámetro `options` |
-| v17 R6  | Añadidos                                                 |
+| Lanzamiento | Modificaciones                                           |
+| ----------- | -------------------------------------------------------- |
+| 20          | Soporte del lado del servidor, nuevo parámetro `options` |
+| 17 R6       | Añadidos                                                 |
 
 </details>
 
@@ -1193,13 +1177,12 @@ End case
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------ |
-| file       | 4D.File | -> | Objeto File                                                                                |
-| options    | Integer | -> | Opción de registro de respuesta (servidor únicamente)                                      |
-| reqNum     | Integer | -> | Número de peticiones a mantener en memoria (cliente únicamente)|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                     |
+| ---------- | ------- | -- | --------------------------------------------------------------- |
+| file       | 4D.File | -> | Objeto File                                                     |
+| options    | Integer | -> | Opción de registro de respuesta (servidor únicamente)           |
+| reqNum     | Integer | -> | Número de peticiones a mantener en memoria (cliente únicamente) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1297,9 +1280,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -1307,12 +1290,10 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1362,10 +1343,10 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                |
-| ------- | ----------------------------- |
-| v20     | Soporte del lado del servidor |
-| v17 R6  | Añadidos                      |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20          | Soporte del lado del servidor |
+| 17 R6       | Añadidos                      |
 
 </details>
 
@@ -1373,11 +1354,10 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1399,9 +1379,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1409,12 +1389,10 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1438,9 +1416,9 @@ Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -1448,11 +1426,10 @@ Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 

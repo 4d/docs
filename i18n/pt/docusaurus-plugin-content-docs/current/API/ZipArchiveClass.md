@@ -37,10 +37,10 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                       |
-| ------ | ------------------------------------------------------------------------------ |
-| v19 R3 | Adição das propriedades `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
-| v18    | Adicionado                                                                     |
+| Release | Mudanças                                                                       |
+| ------- | ------------------------------------------------------------------------------ |
+| 19 R3   | Adição das propriedades `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
+| 18      | Adicionado                                                                     |
 
 </details>
 
@@ -55,9 +55,8 @@ End if
 | zipStructure    | Object     | -> | Objeto File ou Folder a comprimir                    |
 | destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
 | options         | Integer    | -> | Option *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object     | <- | Objeto de estado|<!-- END REF -->
-
-|
+| Resultados      | Object     | <- | Objeto de estado                                     |
+<!-- END REF -->
 
 #### Descrição
 
@@ -193,9 +192,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 
@@ -203,13 +202,12 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                 |
-| ---------- | ---------- |:--:| ----------------------------------------- |
-| zipFile    | 4D. File   | -> | Arquivos Zip                              |
-| senha      | Text       | -> | Senha do arquivo ZIP, se houver           |
-| Resultados | Parâmetros | <- | Objeto arquivo|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                       |
+| ---------- | ---------- |:--:| ------------------------------- |
+| zipFile    | 4D. File   | -> | Arquivos Zip                    |
+| senha      | Text       | -> | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros | <- | Objeto arquivo                  |
+<!-- END REF -->
 
 #### Descrição
 

@@ -38,9 +38,9 @@ Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -74,9 +74,9 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -84,11 +84,10 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 
 <!-- REF #EntityClass.clone().Params -->
-| Parámetros | Tipo      |    | Descripción                                                              |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Nueva entidad que hace referencia al registro|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                   |
+| ---------- | --------- |:--:| --------------------------------------------- |
+| Result     | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -115,9 +114,9 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -125,13 +124,12 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parámetros          | Tipo       |    | Descripción                                                |
-| ------------------- | ---------- |:--:| ---------------------------------------------------------- |
-| entityToCompare     | 4D.Entity  | -> | Entidad a comparar con la entidad original                 |
-| attributesToCompare | Collection | -> | Nombre de los atributos a comparar                         |
-| Result              | Collection | <- | Diferencias entre las entidades|<!-- END REF -->
-
-|
+| Parámetros          | Tipo       |    | Descripción                                |
+| ------------------- | ---------- |:--:| ------------------------------------------ |
+| entityToCompare     | 4D.Entity  | -> | Entidad a comparar con la entidad original |
+| attributesToCompare | Collection | -> | Nombre de los atributos a comparar         |
+| Result              | Collection | <- | Diferencias entre las entidades            |
+<!-- END REF -->
 
 #### Descripción
 
@@ -316,9 +314,9 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -329,9 +327,8 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 | Parámetros | Tipo    |    | Descripción                                                                        |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
-| Result     | Object  | <- | Resultado de la operación soltar|<!-- END REF -->
-
-|
+| Result     | Object  | <- | Resultado de la operación soltar                                                   |
+<!-- END REF -->
 
 #### Descripción
 
@@ -423,9 +420,9 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -433,11 +430,10 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 
 <!-- REF #EntityClass.first().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                        |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                             |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -462,9 +458,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -472,11 +468,10 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parámetros | Tipo   |    | Descripción                                                             |
-| ---------- | ------ |:--:| ----------------------------------------------------------------------- |
-| filler     | Object | -> | Objeto a partir del cual se llena la entidad|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ |:--:| -------------------------------------------- |
+| filler     | Object | -> | Objeto a partir del cual se llena la entidad |
+<!-- END REF -->
 
 #### Descripción
 
@@ -547,9 +542,9 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -557,11 +552,10 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parámetros | Tipo         |    | Descripción                                                             |
-| ---------- | ------------ |:--:| ----------------------------------------------------------------------- |
-| Result     | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad|<!-- END REF -->
-
-|
+| Parámetros | Tipo         |    | Descripción                                  |
+| ---------- | ------------ |:--:| -------------------------------------------- |
+| Result     | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |
+<!-- END REF -->
 
 #### Descripción
 
@@ -592,9 +586,9 @@ El siguiente código genérico duplica cualquier entidad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -633,9 +627,9 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19R5   | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19R5        | Añadidos       |
 
 </details>
 
@@ -643,11 +637,10 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Parámetros | Tipo |    | Descripción                                                                                      |
-| ---------- | ---- | -- | ------------------------------------------------------------------------------------------------ |
-| result     | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma|<!-- END REF -->
-
-|
+| Parámetros | Tipo |    | Descripción                                                           |
+| ---------- | ---- | -- | --------------------------------------------------------------------- |
+| result     | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma |
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
@@ -691,9 +684,9 @@ Devuelve:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -701,11 +694,10 @@ Devuelve:
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra)|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                                              |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------ |
+| Result     | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -734,9 +726,9 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -744,11 +736,10 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                          |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| Result     | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada)|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------- |
+| Result     | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -780,9 +771,9 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -790,12 +781,11 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parámetros      | Tipo               |    | Descripción                                                                     |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------- |
-| entitySelection | 4D.EntitySelection | -> | La posición de la entidad se da en función de esta selección de entidades       |
-| Result          | Integer            | <- | Posición de la entidad en una selección de entidades|<!-- END REF -->
-
-|
+| Parámetros      | Tipo               |    | Descripción                                                               |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------- |
+| entitySelection | 4D.EntitySelection | -> | La posición de la entidad se da en función de esta selección de entidades |
+| Result          | Integer            | <- | Posición de la entidad en una selección de entidades                      |
+<!-- END REF -->
 
 #### Descripción
 
@@ -828,9 +818,9 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -838,11 +828,10 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                          |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False.|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                                               |
+| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------- |
+| Result     | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
+<!-- END REF -->
 
 #### Descripción
 
@@ -867,9 +856,9 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -877,11 +866,10 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 
 <!-- REF #EntityClass.last().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                       |
-| ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                            |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -906,9 +894,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -919,9 +907,8 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 | Parámetros | Tipo    |    | Descripción                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |
-| Result     | Object  | <- | Resultado de la operación de bloqueo|<!-- END REF -->
-
-|
+| Result     | Object  | <- | Resultado de la operación de bloqueo                                             |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1023,9 +1010,9 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1035,11 +1022,10 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 
 <!-- REF #EntityClass.next().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                         |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                              |
+| ---------- | --------- |:--:| ---------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1067,9 +1053,9 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1077,11 +1063,10 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 
 
 <!-- REF #EntityClass.previous().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                        |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                             |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1108,9 +1093,9 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1118,11 +1103,10 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 
 <!-- REF #EntityClass.reload().Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Result     | Object | <- | Objeto estado|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ |:--:| ------------- |
+| Result     | Object | <- | Objeto estado |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1171,9 +1155,9 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1181,12 +1165,11 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 
 <!-- REF #EntityClass.save().Params -->
-| Parámetros | Tipo    |    | Descripción                                                  |
-| ---------- | ------- |:--:| ------------------------------------------------------------ |
-| mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática         |
-| Result     | Object  | <- | Resultado de la operación guardar|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                          |
+| ---------- | ------- |:--:| ---------------------------------------------------- |
+| mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática |
+| Result     | Object  | <- | Resultado de la operación guardar                    |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1306,9 +1289,9 @@ Actualización de una entidad con la opción `dk auto merge`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1321,9 +1304,8 @@ Actualización de una entidad con la opción `dk auto merge`:
 | filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                              |
 | filterCol    | Collection | -> | Colección de atributos a extraer                                                                               |
 | options      | Integer    | -> | `dk with primary key`: añade la propiedad \_\_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP |
-| Result       | Object     | <- | Objeto creado a partir de la entidad|<!-- END REF -->
-
-|
+| Result       | Object     | <- | Objeto creado a partir de la entidad                                                                           |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1595,9 +1577,9 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1605,11 +1587,10 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 
 <!-- REF #EntityClass.touched().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                                  |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                                                       |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------- |
+| Result     | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1640,9 +1621,9 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1650,11 +1631,10 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| Result     | Collection | <- | Nombres de atributos tocados, o colección vacía|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                                     |
+| ---------- | ---------- |:--:| ----------------------------------------------- |
+| Result     | Collection | <- | Nombres de atributos tocados, o colección vacía |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1714,9 +1694,9 @@ En este caso:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1724,11 +1704,10 @@ En este caso:
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Result     | Object | <- | Objeto estado|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ |:--:| ------------- |
+| Result     | Object | <- | Objeto estado |
+<!-- END REF -->
 
 #### Descripción
 

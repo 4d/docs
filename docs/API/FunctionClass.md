@@ -109,10 +109,10 @@ Parameters are received within the method, in the order they are specified in th
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Renamed (New formula -> Formula)|
-|v17 R3|Added|
+|17 R6|Renamed (New formula -> Formula)|
+|17 R3|Added|
 
 </details>
 
@@ -123,7 +123,8 @@ Parameters are received within the method, in the order they are specified in th
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|<!-- END REF -->
+|Result|4D.Function|<-|Native function encapsulating the formula|
+<!-- END REF -->
 
 
 #### Description
@@ -245,11 +246,11 @@ Calling a formula using object notation:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Support of *context* parameter |
-|v17 R6|Renamed New formula from string -> Formula from string|
-|v17 R3|Added|
+|20 R3|Support of *context* parameter |
+|17 R6|Renamed New formula from string -> Formula from string|
+|17 R3|Added|
 
 </details>
 
@@ -261,7 +262,8 @@ Calling a formula using object notation:
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
 |context|Number|->|`sk execute in current database` (default) or `sk execute in host database`|
-|Result|4D.Function|<-|Native object encapsulating the formula|<!-- END REF -->
+|Result|4D.Function|<-|Native object encapsulating the formula|
+<!-- END REF -->
 
 
 #### Description
@@ -312,9 +314,9 @@ The following code will create a dialog accepting a formula in text format:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R3|Added|
+|17 R3|Added|
 
 </details>
 
@@ -326,7 +328,8 @@ The following code will create a dialog accepting a formula in text format:
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|<!-- END REF -->
+|Result|any|<-|Value from formula execution|
+<!-- END REF -->
 
 
 #### Description
@@ -374,9 +377,9 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R3|Added|
+|17 R3|Added|
 
 </details>
 
@@ -388,7 +391,8 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|<!-- END REF -->
+|Result|any|<-|Value from formula execution|
+<!-- END REF -->
 
 
 #### Description
@@ -426,9 +430,9 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 

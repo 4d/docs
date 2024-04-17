@@ -35,13 +35,11 @@ To connect remotely to a 4D Server project:
 
 The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
+If 4D Server is connected to the same subnetwork as the remote 4D, select **Available**. 4D Server includes a built-in broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
 
 ![](../assets/en/getStart/serverConnect.png)
 
 To connect to a server from the list, double-click on its name or select it and click the **OK** button.
-
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
 
 If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
 
@@ -87,3 +85,35 @@ However, you need to pay attention to the following behavior differences compare
 - 4D uses its own internal components and plug-ins instead of those in 4D Server.
 
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
+
+
+## Remote user sessions
+
+On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+
+
+### Usage
+
+The `session` object allows you to get information about the remote user session. You can share data between all processes of the user session using the [`session.storage`](../API/SessionClass.md#storage) shared object. 
+
+For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. This way, the 4D server can access user information for all client processes, enabling customized code to be written according to the user's role.
+
+
+### Availability
+ 
+The remote user `session` object is available from:
+
+- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- Triggers,
+- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+
+:::info
+
+All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+
+:::
+
+### See also (blog post)
+
+[4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+

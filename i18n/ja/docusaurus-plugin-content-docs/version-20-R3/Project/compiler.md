@@ -60,7 +60,7 @@ title: コンパイル
 
 ### 型宣言を生成する
 
-**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
+**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 コンパイラーメソッドは、すべての変数・配列の型宣言 (プロセスおよびインタープロセス) と [メソッドの引数定義](../Concepts/parameters.md#compiler_methods-メソッド) を集約したプロジェクトメソッドです。 これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
 
 これらのメソッドは、必ず `Compiler_` で始まります。 [コンパイラー設定](#コンパイラーメソッド) にて、5つのコンパイラーメソッドそれぞれに対してデフォルト名を設定することができます。 4D により生成、管理されるコンパイラーメソッドは自動的に "非表示" 属性が割り当てられます:
 
@@ -135,16 +135,16 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 コンパイラーによって実施されるコード解析の実行周期数を設定するために使用します。これは、コンパイルの所要時間に影響します。
 
 - **すべて定義させる**: コンパイルのために実施できるステップをすべておこないます。
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **ローカル変数のみ自動定義させる**: プロセスおよびインタープロセス変数、そしてメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
+- **自動変数定義は行わない**: ローカル、プロセス、インタープロセス変数およびメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべての変数およびメソッド引数が明示的に宣言されていなければなりません。
 
 #### コンパイル対象CPU
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -179,7 +179,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 - **インタープロセス変数**: インタープロセス変数定義を集約します。
 - **配列**: プロセス配列定義を集約します。
 - **インタープロセス配列**: インタープロセス配列定義を集約します。
-- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 

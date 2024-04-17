@@ -112,7 +112,7 @@ You can usually work in two ways with the contents of hierarchical lists: by pos
 
 ### Utilização de números de referência dos items (itemRef)
 
-Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
+Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. Este valor é apenas destinado ao seu próprio uso: 4D simplesmente o mantém.
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 
@@ -143,7 +143,7 @@ Pode controlar se os itens da lista hierárquica podem ser modificados pelo usu�
 
 - Independentemente da fonte de dados da lista hierárquica, é possível controlar todo o objeto com a propriedade [Editável](properties_Entry.md#enterable).
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. Para obter mais informações, consulte [Definição das propriedades da lista](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
 
 ## Propriedades compatíveis
 

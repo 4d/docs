@@ -169,7 +169,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
+| Desktop forms                                                | 4D IDE                                                                                      | *non supporté*                          |
 | Programming language                                         | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
 | Débogueur                                                    | 4D IDE debugger                                                                             | Qodly Studio debugger                   |
@@ -203,19 +203,19 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | 4D Language                                                 | Commentaire         |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
+| QodlyScript | 4D Language                                                 | Commentaire             |
+| ----------- | ----------------------------------------------------------- | ----------------------- |
+| ,           | ;                                                           | argument separator      |
+| =           | :=                                                          | opérateur d'assignation |
+| ==          | =                                                           | comparison operator     |
+| declare     | #Declare                                                    |                         |
+| switch      | Case of                                                     |                         |
+| constructor | Class constructor                                           |                         |
+| extends     | Class extends                                               |                         |
+| end         | End for, End For each, End if, End case, End use, End while |                         |
+| forEach     | For each                                                    |                         |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 

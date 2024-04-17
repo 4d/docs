@@ -27,7 +27,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 | "/LOGS"      | Logs フォルダー                            |
 | "/PACKAGE"   | プロジェクトのルートフォルダー (拡張子 4dbase の有無に関わらず) |
 | "/PROJECT"   | Project フォルダー                         |
-| "/RESOURCES" | カレントプロジェクトの Sources フォルダー             |
+| "/RESOURCES" | カレントプロジェクトの Resources フォルダー           |
 | "/SOURCES"   | カレントプロジェクトの Sources フォルダー             |
 
 ## POSIX シンタックス

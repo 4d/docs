@@ -12,7 +12,7 @@ title: On Double Clicked
 
 El evento `On Double Clicked` se genera cuando el usuario hace doble clic en un objeto. El tiempo máximo de separación de un doble clic se define en las preferencias del sistema.
 
-Si la propiedad [`On Clicked`](onClicked.md) o `On Double Clicked` de evento de objeto de onDoubleClicked.md está seleccionada para un objeto, puede detectar y manejar los clics dentro o sobre el objeto, utilizando el comando `FORM event` que devuelve [`On Clicked`](onClicked.md) o `On Double Clicked`, dependiendo del caso.
+Si la propiedad de evento de objeto [`On Clicked`](onClicked.md) u `On Double Clicked` está seleccionada para un objeto, puede detectar y manejar los clics dentro o sobre el objeto, utilizando el comando `FORM event` que devuelve [`On Clicked`](onClicked.md) o `On Double Clicked`, dependiendo del caso.
 
 Si se seleccionan ambos eventos para un objeto, se generará el evento `On Clicked` y luego el evento `On Double Clicked` cuando el usuario haga doble clic en el objeto.
 

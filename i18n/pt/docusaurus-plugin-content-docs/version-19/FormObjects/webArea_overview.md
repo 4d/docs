@@ -58,7 +58,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)`: função a passar como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Recebe o parâmetro `result`.
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). Você pode usar o comando `C_OBJECT` para retornar os objetos.
 
 > Por padrão, 4D trabalha em UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
@@ -173,7 +173,7 @@ Em Windows, não é recomendado acessar, através de uma área web, o servidor w
 
 ### Inserção de protocolo (macOS)
 
-As URLs manejadas por programação em áreas web em macOS devem começar com o  protocolo. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+As URLs manejadas por programação em áreas web em macOS devem começar com o  protocolo. Por exemplo, você precisa passar a cadeia de caracteres "http://www.mysite.com" e não apenas "www.mysite.com".
 
 ## Acesso ao inspector web
 
@@ -200,7 +200,7 @@ Para mais informações, consultar a descrição do comando `WA SET PREFERENCE`.
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
-> The web inspector is included in the embedded web rendering engine. Para uma descrição detalhada nas funcionalidades do depurador, veja a documentação fornecida pelo motor de renderização web.
+> O inspetor web está incluído no mecanismo de renderização web incorporado. Para uma descrição detalhada nas funcionalidades do depurador, veja a documentação fornecida pelo motor de renderização web.
 
 ## Propriedades compatíveis
 

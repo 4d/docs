@@ -4,7 +4,7 @@ title: Começando
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Permite que você incorpore funcionalidades avançadas de planilha em seus projetos.
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
@@ -83,7 +83,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   clique numa célula ou num intervalo de células:
-    *   **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
+    *   **Filtrar**: permite ocultar linhas através de filtros (consulte "Filtragem linhas" na [documentação SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
     *   **Ordenar**: ordena o conteúdo da coluna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
@@ -140,21 +140,21 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 *   área - O nome da área 4D View Pro
 *   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                              |
-| ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
-| area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                            |
-| ranges      |                   | collection | Coleção de intervalo(s)                                             | sempre disponível                                            |
-|             | \[ ].name        | text       | Nome do intervalo                                                   | name                                                         |
-|             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
-|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                               |
-|             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                              |
-|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                             |
-|             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                               |
+| Propriedade |                   | Tipo       | Descrição                                                                 | Disponível para                                              |
+| ----------- | ----------------- | ---------- | ------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| area        |                   | text       | Nome de objeto formulário área 4D View Pro                                | sempre disponível                                            |
+| ranges      |                   | collection | Coleção de intervalo(s)                                                   | sempre disponível                                            |
+|             | \[ ].name        | text       | Nome do intervalo                                                         | name                                                         |
+|             | \[ ].sheet       | number     | Índice da folha (índice da folha atual por padrão) (contagem começa em 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
+|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                                  | célula, células, linha, linhas                               |
+|             | \[ ].rowCount    | number     | Contagem de linhas                                                        | células, linhas                                              |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                                 | célula, células, coluna, colunas                             |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                      | cells, columns                                               |
 
 
 ## Importação e exportação de documentos
 
-4D View Pro supports the import and export of several document formats:
+4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
 * .4vp
 * .xlsx

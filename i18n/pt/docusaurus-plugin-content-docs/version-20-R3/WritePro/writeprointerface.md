@@ -7,7 +7,7 @@ title: Interface 4D Write Pro
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+A [documentação principal da interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) pode ser encontrada no manual *Desenho 4D*.
 
 Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 
@@ -49,7 +49,7 @@ The user adjusts the zoom level according to their preference by selecting the d
 
 After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
 
-Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
+Once the table has been integrated into the document, the user can customize its style. As ferramentas de formatação da barra de ferramentas e da barra lateral ainda estão disponíveis.
 
 ### Configuração do modelo do WP Table Wizard
 
@@ -78,27 +78,27 @@ In the current implementation (4D v20 R2), formulas in breaks, data sources and 
 
 The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
-The template file in JSON format contains the following attributes:
+O arquivo de modelo no formato JSON contém os seguintes atributos:
 
-| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                 |
-|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                              |
-| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                              |
-| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                           |
-| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| columns.source       | Text       | x           | Formula                                                                                                                                                   |
-| breaks               | Collection |             | Collection of break objects. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                   |
-| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                               |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                   |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                        |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                   |
-| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                  |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                   |
+| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                       |
+|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                             |
+| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                                    |
+| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                                 |
+| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| columns.source       | Text       | x           | Formula                                                                                                                                                         |
+| breaks               | Collection |             | Coleção de objetos de interrupção. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                         |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                                     |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                         |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                              |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                         |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                        |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                         |
 
 :::note idioma francês
 
@@ -160,7 +160,7 @@ Translation files translate the names of templates, themes, tables, fields, and 
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
-The translation file in JSON format contains the following attributes:
+O arquivo de tradução no formato JSON contém os seguintes atributos:
 
 | Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
@@ -214,7 +214,7 @@ The translation file serves an additional role when a user selects a table in th
 
 ```
 
-#### Theme files
+#### Arquivos de temas
 
 A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
 

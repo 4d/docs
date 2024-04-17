@@ -64,11 +64,11 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Alias attributes in the Entity Class
-|v19 R3|Computed attributes in the Entity Class
-|v18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
+|19 R4|Alias attributes in the Entity Class
+|19 R3|Computed attributes in the Entity Class
+|18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
 </details>
 
 
@@ -81,6 +81,8 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 - **Class name**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object. 
+
+
 
 #### Example
 
@@ -131,19 +133,16 @@ Function GetBestOnes()
 Then you can get an entity selection of the "best" companies by executing: 
 
 
-
-
-
-
-
-
 ```4d
 	var $best : cs.CompanySelection
 	$best:=ds.Company.GetBestOnes()
 ```
 
-> [Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class). 
+:::info
 
+[Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class). 
+
+:::
 
 #### Example with a remote datastore
 
@@ -205,9 +204,8 @@ Class extends EntitySelection
 
 //Extract the employees with a salary greater than the average from this entity selection 
 
-Function withSalaryGreaterThanAverage
-	C_OBJECT($0)
-	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+	return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -217,7 +215,15 @@ Then you can get employees with a salary greater than the average in any entity 
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
+:::info
+
+[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class). 
+
+:::
+
+
 ### Entity Class
+
 
 Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
@@ -252,13 +258,13 @@ For information, please refer to the [Alias attributes](#alias-attributes-1) sec
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
 // The getPopulation() function is usable inside the class
-$0:=This.getPopulation()>50000
+	return This.getPopulation()>50000
 ```
 
 Then you can call this code: 
@@ -794,8 +800,6 @@ $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName and name are "Archaeology II"
 ```
-
-
 
 
 ## Exposed vs non-exposed functions

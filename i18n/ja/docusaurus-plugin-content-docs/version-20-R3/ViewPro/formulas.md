@@ -230,8 +230,17 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:   
-> |プロパティ|    型|   説明| |---|---|---| |value|   Date|   日付| |time |Real|  時間 (秒単位)|
+:::note
+
+引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
+
+| プロパティ | タイプ  | 説明       |
+| ----- | ---- | -------- |
+| value | Date | 日付値      |
+| time  | Real | 数値 (秒単位) |
+
+:::
+
 
 4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
 
@@ -246,7 +255,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
     | プロパティ | タイプ  | 説明       |
     | ----- | ---- | -------- |
-    | value | Date | 日付値      |
+    | value | 日付   | 日付値      |
     | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。

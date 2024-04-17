@@ -126,7 +126,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Por exemplo:
+Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
     //declaração inválida
@@ -162,9 +162,9 @@ Quando os parâmetros são declarados, são inicializados com o [**valor por def
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 A declaração `return` finaliza a execução de uma função ou de um método e pode ser utilizado para devolver uma expressão a quem chamar.
@@ -220,7 +220,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;18;4;23;17)
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Os parâmetros estão todos disponíveis no código chamado por meio da sintaxe `${N}` e o tipo de parâmetros extras é [Variant](dt_variant.md) por padrão (você pode declará-los usando a [notação variadic](#declaring-variadic-parameters)). Basta ter a certeza de que os parâmetros existem, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
 
 ```4d
 // Método projeto OneMethodAmongOthers
@@ -245,7 +245,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) foo("hello";"world";!01/01/2021!
 
 Não é obrigatório declarar parâmetros variáveis. Os parâmetros variáveis não declarados recebem automaticamente o tipo [Variant](dt_variant.md).
 
-However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
+Entretanto, para evitar erros de incompatibilidade de tipos durante a execução do código, você pode declarar um número variável de parâmetros usando a notação "..." nos protótipos de suas funções, construtores de classes e métodos (parâmetros variádicos). Você especifica o tipo do parâmetro seguindo a notação "..." com o tipo desejado.
 
 ```4d
 #DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
@@ -258,7 +258,7 @@ Fonction myfunction ( ... : Text)
 ```
 
 
-When declaring multiple parameters, variadic notation must be employed at last position, for example:
+Ao declarar vários parâmetros, a notação variadic deve ser empregada na última posição, por exemplo:
 
 ```4d
 #DECLARE ( param: Real ; ... : Text )
@@ -273,7 +273,7 @@ Function myfunction (var1: Integer ; ... : Text)
 
 #### Exemplo
 
-Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
+Aqui temos um método chamado `SumNumbers` que retorna o total calculado para todos os números passados como parâmetros:
 
 ```4d
 
@@ -289,7 +289,7 @@ return $total
 
 ```
 
-This method can be called with a variable number of Real parameters. In case of wrong parameter type, an error will be returned before the method is executed :
+Esse método pode ser chamado com um número variável de parâmetros Real. No caso de um tipo de parâmetro incorreto, um erro será retornado antes que o método seja executado:
 
 ```4d
 
@@ -301,15 +301,15 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 :::note Nota de compatibilidade
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred.
+A sintaxe herdada para declarar parâmetros variádicos (`C_TEXT(${4})`) ainda é compatível, mas a notação variádica agora é a preferida.
 
 :::
 
-## `Compiler_Methods` method
+## Método `Compiler_Methods`
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword, parameters are declared. Por exemplo:
+Ao usar a palavra-chave `#DECLARE`, os parâmetros são declarados. Por exemplo:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
@@ -353,7 +353,7 @@ Função add($x : Variante; $y : Integer)-> $result : Integer
     // todos os parâmetros são declarados com o seu tipo
 ```
 
-- Gatilhos - O parâmetro $0 (Longint), que é o resultado de um gatilho, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
+- Triggers - O parâmetro $0 (Longint), o resultado de um trigger, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
 - Objectos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over` , é tipado pelo compilador se o parâmetro não tiver sido explicitamente declarado. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 

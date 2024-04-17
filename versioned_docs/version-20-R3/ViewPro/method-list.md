@@ -263,7 +263,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *styleName* parameter lets you assign a name to the style sheet. If the name is already used within the same scope, the new style sheet replaces the existing one. Note that you can use the same name for different scopes (see below).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-objects-properties).
+Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
 
@@ -402,9 +402,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -663,9 +663,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -727,11 +727,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
-|v19 R7|Support of `allowAutoExpand` option
-|v19 R6|Added
+|19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
+|19 R7|Support of `allowAutoExpand` option
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -913,9 +913,9 @@ use the following code:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 
@@ -923,6 +923,7 @@ use the following code:
 **VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )<!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
+
 
 
 
@@ -998,7 +999,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 
 |Parameter|  |Type| Description|
 |---|---|---|---|
-|param1|  |text| The name of the 4D View Pro object|
+|param1|  |text| The name of the 4D View Pro area object|
 |param2|  |text| The filepath of the exported 4D View Pro object|
 |param3|  |object| A reference to the command's *paramObj*|
 |param4|  |object| An object returned by the method with a status message|
@@ -1100,7 +1101,7 @@ In *paramObj*, you can pass several properties:
 
 |Property|Type|Description|
 |---------|--- |------|
-|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed.|
+|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
 |includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
 |includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
 |includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
@@ -1108,6 +1109,7 @@ In *paramObj*, you can pass several properties:
 |includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
 |includeStyles|Boolean|Whether to include the style when saving, default=true.|
 |includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
+
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
@@ -1273,6 +1275,8 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
  
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1288,9 +1292,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1458,9 +1462,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1676,9 +1680,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1812,7 +1816,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
 |scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Text|<-|Named formula or named range definition|<!-- END REF -->
+|Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description
 
@@ -1933,6 +1937,7 @@ You want to retrieve information about the number of frozen columns and rows:
 
 ```4d
 var $panesObj : Object
+
  
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2439,6 +2444,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In *styleName*, pass the name of the style sheet to get.
 
+
 You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
 * `vk current sheet`
@@ -2531,9 +2537,9 @@ In this case, the current sheet uses two style objects:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2591,9 +2597,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2645,9 +2651,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2709,9 +2715,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2756,9 +2762,9 @@ If *tableName* is not found, the command returns **null**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2808,9 +2814,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -2897,7 +2903,7 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -2962,8 +2968,8 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parameter|Type||Description|
 
+|Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -2993,70 +2999,13 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 ## I
 
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-|vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
-|paramObj   |Object|->|Import options|<!-- END REF -->
-
-#### Description
-
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface. 
-
-In *paramObj*, you can pass several properties:
-
-|Property|Type|Description|
-|---------|--- |------|
-|formula|4D.Function|Callback method to be launched when the import has completed.|
-|calcOnDemand|Boolean|Whether to calculate formulas only when they are demanded, default=false.|
-|dynamicReferences|Boolean|Whether to calculate functions with dynamic reference, default=true.|
-|fullRecalc|Boolean|Whether to calculate after loading the json data, false by default.|
-|includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
-|includeStyles|Boolean|Whether to include the style when loading, default=true.|
-|includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
-|openMode|Integer|can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
-
-The following parameters can be used in the callback method:
-
-|Parameter| |Type|Description|
-|:----|:----|:----|:----|
-|param1| |text|The name of the 4D View Pro object|
-|param2| |4D.Blob|The imported blob|
-|param3| |object|A reference to the command's *paramObj* parameter|
-|param4| |object|An object returned by the method with a status message|
-| |.success|boolean|True if import with success, False otherwise.|
-| |.errorCode|integer|Error code.|
-| |.errorMessage|text|Error message.|
-
-
-#### Example
-
-You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### See also
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
-
 ### VP IMPORT DOCUMENT
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3131,12 +3080,26 @@ End if
 You want to import a password protected Microsoft Excel document into a 4D View Pro area:
 
 ```4d
+	//Import code
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
  
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+	//myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Example 3
 
@@ -3159,6 +3122,65 @@ Here's the result:
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
 
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
+|paramObj   |Object|->|Import options|<!-- END REF -->
+
+#### Description
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface. 
+
+In *paramObj*, you can pass several properties:
+
+|Property|Type|Description|
+|---------|--- |------|
+|formula|4D.Function|Callback method to be launched when the import has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
+|calcOnDemand|Boolean|Whether to calculate formulas only when they are demanded, default=false.|
+|dynamicReferences|Boolean|Whether to calculate functions with dynamic reference, default=true.|
+|fullRecalc|Boolean|Whether to calculate after loading the json data, false by default.|
+|includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
+|includeStyles|Boolean|Whether to include the style when loading, default=true.|
+|includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
+|openMode|Integer|can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
+
+The following parameters can be used in the callback method:
+
+|Parameter| |Type|Description|
+|:----|:----|:----|:----|
+|param1| |text|The name of the 4D View Pro area object|
+|param2| |4D.Blob|The imported blob|
+|param3| |object|A reference to the command's *paramObj* parameter|
+|param4| |object|An object returned by the method with a status message|
+| |.success|boolean|True if import with success, False otherwise.|
+| |.errorCode|integer|Error code.|
+| |.errorMessage|text|Error message.|
+
+
+#### Example
+
+You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### See also
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
+
+
 ### VP IMPORT FROM OBJECT
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Syntax -->
@@ -3177,7 +3199,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](languageOverview.html#4d-view-pro-object) section.
+In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 An error is returned if the *viewPro* object is invalid.
 
@@ -3268,9 +3290,9 @@ The results is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3320,9 +3342,9 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3404,9 +3426,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3517,6 +3539,8 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
 
+
+
 #### Description
 
 The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. The new empty document replaces any data already inserted in the area.
@@ -3594,9 +3618,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3812,6 +3836,7 @@ VP REMOVE SHEET("ViewProArea";2)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|<!-- END REF -->
+
 #### Description
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
@@ -3883,9 +3908,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Added
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3935,9 +3960,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3981,9 +4006,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4067,9 +4092,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4348,6 +4373,8 @@ Function onEvent()
  // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
  
+
+
  // Stop the timer
    SET TIMER(0)
  
@@ -4482,9 +4509,9 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -4909,9 +4936,9 @@ End case
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -5086,6 +5113,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 #### See also
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
+
 
 ### VP SET DATE VALUE
 
@@ -5497,6 +5525,7 @@ The PDF:
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
 |Parameter|Type||Description|
@@ -5810,6 +5839,7 @@ Result:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -5863,9 +5893,9 @@ With a page break:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5967,9 +5997,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6106,6 +6136,7 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+
 
 #### Example
 
@@ -6352,6 +6383,8 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Description
+
+
 
 The `VP SHOW CELL` command <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
 

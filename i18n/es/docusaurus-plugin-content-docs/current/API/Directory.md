@@ -9,9 +9,9 @@ title: Clase Directory
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -31,9 +31,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -53,9 +53,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -75,9 +75,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -99,9 +99,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -121,9 +121,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -143,9 +143,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -165,9 +165,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -187,9 +187,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -209,9 +209,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
@@ -233,9 +233,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -255,9 +255,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -277,9 +277,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -299,9 +299,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
@@ -322,9 +322,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
@@ -346,9 +346,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -368,9 +368,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -390,9 +390,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
@@ -404,9 +404,8 @@ Esta propiedad es **de sólo lectura**.
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
 | newName           | Text      | -> | Nombre para la copia                                   |
 | overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
-| Result            | 4D.Folder | <- | Carpeta o archivo copiado|<!-- END REF -->
-
-|
+| Result            | 4D.Folder | <- | Carpeta o archivo copiado                              |
+<!-- END REF -->
 
 #### Descripción
 
@@ -445,21 +444,20 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #directory.file().Params -->
-| Parámetros | Tipo    |    | Descripción                                                             |
-| ---------- | ------- | -- | ----------------------------------------------------------------------- |
-| path       | Text    | -> | Ruta POSIX relativa                                                     |
-| Result     | 4D.File | <- | Objeto `File` (null si la ruta no es válida)|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| path       | Text    | -> | Ruta POSIX relativa                          |
+| Result     | 4D.File | <- | Objeto `File` (null si la ruta no es válida) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -487,21 +485,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.files().Params -->
-| Parámetros | Tipo       |    | Descripción                                                     |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de archivos                                |
-| Result     | Collection | <- | Colección de objetos de archivo hijo|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de archivos     |
+| Result     | Collection | <- | Colección de objetos de archivo hijo |
+<!-- END REF -->
 
 #### Descripción
 
@@ -551,21 +548,20 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.folder().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                   |
-| ---------- | --------- | -- | ----------------------------------------------------------------------------- |
-| path       | Text      | -> | Ruta POSIX relativa                                                           |
-| Result     | 4D.Folder | <- | Objeto carpeta creado (null si *path*no es válido)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                        |
+| ---------- | --------- | -- | -------------------------------------------------- |
+| path       | Text      | -> | Ruta POSIX relativa                                |
+| Result     | 4D.Folder | <- | Objeto carpeta creado (null si *path*no es válido) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -593,21 +589,20 @@ Un objeto `Folder` o null si *path* no es válido.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.folders().Params -->
-| Parámetros | Tipo       |    | Descripción                                                     |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de carpetas                                |
-| Result     | Collection | <- | Colección de objetos de carpeta hijo|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de carpetas     |
+| Result     | Collection | <- | Colección de objetos de carpeta hijo |
+<!-- END REF -->
 
 #### Descripción
 
@@ -642,9 +637,9 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
@@ -654,9 +649,8 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 | Parámetros | Tipo    |    | Descripción                                       |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
-| Result     | Picture | <- | Icono|<!-- END REF -->
-
-|
+| Result     | Picture | <- | Icono                                             |
+<!-- END REF -->
 
 #### Descripción
 

@@ -53,6 +53,12 @@ O valor por defeito depende do tipo de variável:
 | Diferente de | indefinido          |
 
 
+### Null como valor padrão
+
+As variáveis do tipo Object, Collection, Pointer e Picture têm **null** como valor padrão, mas na verdade recebem um status intermediário quando são declaradas e não atribuídas. Eles *se comportam como* os valores **null**, mas com algumas diferenças, gerando menos erros quando o código tenta acessá-los.
+
+
+
 ## Conversão de tipos de dados
 
 A linguagem 4D contém operadores e comandos para converter entre tipos de dados, onde tais conversões são significativas. A língua 4D obriga à verificação do tipo de dados. Por exemplo, não se pode escrever: "abc"+0.5+!12/25/96!-?00:30:45?. Isto irá gerar erros de sintaxe.

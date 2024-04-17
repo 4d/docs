@@ -60,7 +60,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Los métodos de compilación son los métodos proyecto que agrupan todas las declaraciones de tipos de las variables y de los arrays (proceso e interproceso), así como los [parámetros de los métodos](../Concepts/parameters.md#compiler_methods-method). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -135,16 +135,16 @@ Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-f
 Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
 
 - **Definir los tipos de las variables**: pasa por todas las etapas que hacen posible la compilación.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método no se realiza. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
+- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales, así como los parámetros de los métodos, se han escrito claramente.
 
 #### Objetivo de compilación
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -179,7 +179,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). Para más información, consulte método [`Compiler_Methods`](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 

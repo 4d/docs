@@ -9,9 +9,9 @@ La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications  |
+| Release | Modifications  |
 | ------- | -------------- |
-| v19 R6  | Classe ajoutée |
+| 19 R6   | Classe ajoutée |
 
 </details>
 
@@ -77,10 +77,10 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                |
-| ------- | -------------------------------------------- |
-| v20     | Validation TLS par défaut                    |
-| v19 R7  | Prise en charge de la propriété *decodeData* |
+| Release | Modifications                                                          |
+| ------- | ---------------------------------------------------------------------- |
+| 20      | Validation TLS par défaut                                              |
+| 19 R7   | Prise en charge des propriétés *automaticRedirections* et *decodeData* |
 
 </details>
 
@@ -88,13 +88,12 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Paramètres | Type           |    | Description                                        |
-| ---------- | -------------- |:--:| -------------------------------------------------- |
-| url        | Text           | -> | URL à laquelle envoyer la requête                  |
-| options    | Object         | -> | Propriétés de configuration de la requête          |
-| Résultat   | 4D.HTTPRequest | <- | Nouvel objet HTTPRequest<!-- END REF -->
-
-|
+| Paramètres | Type           |    | Description                               |
+| ---------- | -------------- |:--:| ----------------------------------------- |
+| url        | Text           | -> | URL à laquelle envoyer la requête         |
+| options    | Object         | -> | Propriétés de configuration de la requête |
+| Résultat   | 4D.HTTPRequest | <- | Nouvel objet HTTPRequest                  |
+<!-- END REF -->
 
 #### Description
 
@@ -109,7 +108,7 @@ Dans *url*, passez l'URL où vous voulez envoyer la requête. La syntaxe à util
 {https://}[{user}:[{password}]@]host[ :{port}][/{path}][ ?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Si vous omettez la partie "scheme" (`http://` ou `https://`), une requête https est envoyée.
 
 Par exemple, vous pouvez passer les chaînes suivantes :
 
@@ -130,6 +129,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 
 | Propriété              | Type                                            | Description                                                                                                                                                                                                                                                   | Par défaut  |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| automaticRedirections  | Boolean                                         | Si true, les redirections sont effectuées automatiquement (jusqu'à 5 redirections sont gérées, la 6e réponse de redirection est renvoyée s'il y en a une)                                                                                                     | True        |
 | body                   | Variant                                         | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                           | undefined   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Définit le dossier actif des certificats du client                                                                                                                                                                                                            | undefined   |
 | dataType               | Text                                            | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon) | "auto"      |
@@ -196,9 +196,9 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R4  | Ajout         |
+| 20 R4   | Ajout         |
 
 </details>
 
@@ -206,29 +206,28 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Paramètres | Type       |    | Description                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Data to be parsed                                                                |
-| Résultat   | Object     | <- | Object, each property is a part of the multipart data|<!-- END REF -->
-
-|
+| Paramètres | Type       |    | Description                                                         |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------- |
+| data       | Text, Blob | -> | Données à analyser                                                  |
+| Résultat   | Object     | <- | Objet dont chaque propriété est une partie des données multiparties |
+<!-- END REF -->
 
 #### Description
 
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+La commande `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analyse un texte ou un blob multipart/form-data (message HTTP "response") et en extrait le contenu dans un objet. Chaque propriété de l'objet renvoyé correspond à une partie des données multiparties<!-- END REF -->.
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+HTTP lui-même est un protocole de communication sans état. Dans ce cadre, les clients initient la communication en envoyant des messages "request" aux serveurs, en spécifiant des détails tels que la méthode, la cible, les en-têtes, le contenu, etc. Les serveurs, à leur tour, répondent par des messages "response" qui contiennent les mêmes détails. `HTTP Parse message` analyse le message "request" ou "response" et retourne un objet structuré.
 
 :::
 
 
 #### Exemple
 
-In the following example, we parse the data from a text file containing HTTP requests.
+Dans l'exemple suivant, nous analysons les données d'un fichier texte contenant des requêtes HTTP.
 
-Here is the content of the file:
+Voici le contenu du fichier :
 
 ```
 POST /batch/gmail/v1/ HTTP/1.1
@@ -257,7 +256,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
-To parse the file:
+Pour analyser le fichier :
 
 ```4d
 var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
@@ -353,9 +352,9 @@ La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                               |
+| Release | Modifications                                                               |
 | ------- | --------------------------------------------------------------------------- |
-| v19 R8  | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
+| 19 R8   | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
 
 </details>
 
@@ -395,11 +394,10 @@ La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnR
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -452,9 +450,8 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 | Paramètres | Type           |    | Description                                         |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Délai d'attente maximum en secondes pour la réponse |
-| Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest<!-- END REF -->
-
-|
+| Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
+<!-- END REF -->
 
 #### Description
 

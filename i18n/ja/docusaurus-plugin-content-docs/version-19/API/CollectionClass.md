@@ -141,7 +141,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -204,7 +204,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -261,7 +261,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -298,7 +298,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -345,7 +345,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -387,9 +387,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                           |
+| リリース   | 内容                                           |
 | ------ | -------------------------------------------- |
-| v18 R3 | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
+| 18 R3  | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
 | v16 R6 | 追加                                           |
 
 </details>
@@ -514,7 +514,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -559,7 +559,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -633,7 +633,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -683,7 +683,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -738,7 +738,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -831,13 +831,13 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -861,7 +861,7 @@ End if
 
  デフォルトでは、*propertyPath* のパスの要素が null あるいは undefined であった場合には、その要素は無視され、返されるコレクションに格納されません。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの要素は返されるコレクションに null 要素として格納されます。
 
-* 一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、対応する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
+* 一つ以上の *propertyPath* 引数に相当する、一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、合致する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 #### 例題 1
 
@@ -899,7 +899,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -951,7 +951,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1041,7 +1041,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1135,7 +1135,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1210,7 +1210,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1266,7 +1266,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1319,7 +1319,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1368,7 +1368,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1410,7 +1410,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1467,7 +1467,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R5 | 追加 |
 
@@ -1497,7 +1497,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1557,7 +1557,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1605,7 +1605,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1653,7 +1653,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1687,6 +1687,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 * *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -1701,7 +1702,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
  | ck ascending  | Longint | 0 | 要素は昇順に並べられます (デフォルト) |
  | ck descending | Longint | 1 | 要素は降順に並べられます         |
 
- このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
+ このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は内部的な順序で返されます)。
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
@@ -1787,7 +1788,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1890,7 +1891,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1934,7 +1935,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1987,9 +1988,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
+| リリース   | 内容                  |
 | ------ | ------------------- |
-| v17 R5 | querySettings をサポート |
+| 17 R5  | querySettings をサポート |
 | v16 R6 | 追加                  |
 
 </details>
@@ -2089,7 +2090,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2174,7 +2175,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2226,7 +2227,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2281,7 +2282,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2317,7 +2318,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2358,7 +2359,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2406,7 +2407,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2481,7 +2482,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2565,7 +2566,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2625,7 +2626,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 

@@ -112,7 +112,18 @@ O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela correspond
 
 Este comando não pode ser utilizado com um [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+:::info
+
+Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. Por motivos de desempenho, no 4D single-user e no 4D Server, o comando conecta diretamente *entitySelection* à seleção atual. Portanto, uma vez que *a entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
+
+:::
+
+:::note
+
+Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+
+:::
+
 
 #### Exemplo
 
@@ -126,9 +137,9 @@ Parâmetros
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -184,9 +195,9 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -195,7 +206,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 #### Descrição
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidades<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidades, dependendo do tipo de [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
+Quaalquer atributo de dataclass pode ser usado como um apropriedade de uma seleção de entidade a retornar <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidades<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidades, dependendo do tipo de [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
@@ -265,11 +276,11 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                              |
-| ------ | ----------------------------------------------------- |
-| v19 R7 | Suporte do parâmetro *entitySelection*                |
-| v18 R5 | Compatível apenas com seleções de entidade alteráveis |
-| v17    | Adicionado                                            |
+| Release | Mudanças                                              |
+| ------- | ----------------------------------------------------- |
+| 18 R6   | Suporte do parâmetro *entitySelection*                |
+| 18 R5   | Compatível apenas com seleções de entidade alteráveis |
+| 17      | Adicionado                                            |
 
 </details>
 
@@ -357,9 +368,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -379,7 +390,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### Descrição
 
-A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
+A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina a seleção da entidade com um parâmetro *entity* ou *entitySelection* utilizando o operador lógico AND<!-- END REF -->; se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
 
 *   Se passar *entity* como parâmetro, se combina esta entidade com a entity selection. Se a entidade pertencer à entity selection, se devolve uma nova entity selection que só contém a entidade. Senão, uma seleção de entidades vazia é retornada.
 *   Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Uma nova seleção de entidade que contenha só as entidades que são referenciadas em ambas as seleções sejam retornadas. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
@@ -424,9 +435,9 @@ Se quisermos ter uma seleção de empregados chamados "Jones" que morem em Nova 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -466,10 +477,10 @@ A função devolve Null se o *index* estiver para além dos limites de selecçã
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
-| v17    | Adicionado                                              |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
+| 17      | Adicionado                                              |
 
 </details>
 
@@ -486,7 +497,7 @@ A função devolve Null se o *index* estiver para além dos limites de selecçã
 
 #### Descrição
 
-A função `.average()` <!-- REF #EntitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of *attributePath* in the entity selection<!-- END REF -->.
+A função `.average()` <!-- REF #EntitySelectionClass.average().Summary -->devolve a média aritmética (média) de todos os valores não nulos de *attributePath* na selecção de entidades<!-- END REF -->.
 
 Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 
@@ -521,9 +532,9 @@ Se quisermos obter uma lista de funcionários cujo salário for superior ao sal�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -571,9 +582,9 @@ Se *entity* e a entity selection não pertencerem à mesma dataclass, se produz 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -590,7 +601,7 @@ Se *entity* e a entity selection não pertencerem à mesma dataclass, se produz 
 
 #### Descrição
 
-A função `.count()` <!-- REF #EntitySelectionClass.count().Summary -->returns the number of entities in the entity selection with a non-null value in *attributePath*<!-- END REF -->.
+A função `.count()` <!-- REF #EntitySelectionClass.count().Summary -->retorna o número de entidades da seleção de entidades com um valor não nulo em *attributePath*<!-- END REF -->.
 > Só são levados em consideração os valores escalares. Os valores de tipo objeto ou coleção são considerados valores nulos.
 
 Um erro é retornado se:
@@ -618,9 +629,9 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -683,10 +694,10 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v20    | Suporte de `dk count values` |
-| v17    | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 20      | Suporte de `dk count values` |
+| 17      | Adicionado                   |
 
 </details>
 
@@ -704,7 +715,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 #### Descrição
 
-A função `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
+A função `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->retorna uma coleção contendo apenas valores diferentes (distintos) em *attributePath* na seleção de entidade<!-- END REF -->.
 
 A coleção retornada é ordenada automaticamente. Valores **Null** não são retornados.
 
@@ -771,9 +782,9 @@ $jobs:=ds. Employee.all().distinct("jobName";dk count values)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -831,9 +842,9 @@ $paths:=ds. Employee.all().distinctPaths("fullData")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -894,9 +905,9 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -922,7 +933,7 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 #### Descrição
 
-A função `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->returns a collection containing *attributePath* values extracted from the entity selection<!-- END REF -->.
+A função `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->retorna uma coleção contendo *attributePath* valores extraídos da seleção de entidade<!-- END REF -->.
 
 *attributePath* pode ser:
 
@@ -1005,9 +1016,9 @@ Dada a seguinte tabela e relação:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1023,7 +1034,7 @@ Dada a seguinte tabela e relação:
 
 #### Descrição
 
-A função `.first()` <!-- REF #EntitySelectionClass.first().Summary -->returns a reference to the entity in the first position of the entity selection<!-- END REF -->.
+A função `.first()` <!-- REF #EntitySelectionClass.first().Summary -->devolve uma referência à entidade na primeira posição da selecção de entidades<!-- END REF -->.
 
 O resultado desta função é similar a:
 
@@ -1064,9 +1075,9 @@ Há, entretanto, uma diferença entre ambas as afirmações quando a seleção e
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -1114,9 +1125,9 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19R5  | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19R5    | Adicionado |
 
 </details>
 
@@ -1168,9 +1179,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1211,9 +1222,9 @@ Form.products.add(Form.product)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1259,9 +1270,9 @@ Para mais informação, consulte [Entity selection ordenadas ou desordenadas](OR
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1277,7 +1288,7 @@ Para mais informação, consulte [Entity selection ordenadas ou desordenadas](OR
 
 #### Descrição
 
-A função `.last()` <!-- REF #EntitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
+A função `.last()` <!-- REF #EntitySelectionClass.last().Summary -->retorna uma referência à entidade na últim aposição da seleção de entidade<!-- END REF -->.
 
 O resultado desta função é similar a:
 
@@ -1310,9 +1321,9 @@ Se a entity selection estiver vazia, a função devolve Null.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1344,10 +1355,10 @@ As entity selections sempre têm uma propriedade `.length`.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v17    | Adicionado                                              |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 17      | Adicionado                                              |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
 
 </details>
 
@@ -1364,7 +1375,7 @@ As entity selections sempre têm uma propriedade `.length`.
 
 #### Descrição
 
-A função `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retorna o valor mais alto (ou máximo) entre todos os valores de *attributePath* na seleção de entidade<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+A função `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retorna o valor mais alto (ou máximo) entre todos os valores de *attributePath* na seleção de entidade<!-- END REF -->. De facto, devolve o valor da última entidade da selecção de entidades, tal como seria ordenada por ordem crescente utilizando a função [`.orderBy()`](#orderby).
 
 Se passar em *attributePath* uma rota a uma propriedade de objeto que contenha diferentes tipos de valores, a função `.max()` devolverá o valor máximo dentro do primeiro tipo escalar na ordem da lista de tipos 4D como padrão (ver a descrição de [`.sort()`](CollectionClass.md#sort)).
 
@@ -1397,10 +1408,10 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v17    | Adicionado                                              |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 17      | Adicionado                                              |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
 
 
 </details>
@@ -1418,7 +1429,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 #### Descrição
 
-A função `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retorna o menor valor (mínimo) entre todos os valores de attributePath na seleção de entidade<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
+A função `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retorna o menor valor (mínimo) entre todos os valores de attributePath na seleção de entidade<!-- END REF -->.  De facto, devolve a primeira entidade da selecção de entidades, tal como seria ordenada por ordem ascendente utilizando a função [`.orderBy()`](#orderby) (excluindo os valores **null**).
 
 Se passar em *attributePath* uma rota a uma propriedade objeto que contenha diferentes tipos de valores, a função `.min()` devolverá o valor mínimo dentro do primeiro tipo de valor escalar na ordem da lista de tipos (ver a descrição de [`.sort()`](CollectionClass.md#sort)).
 
@@ -1449,10 +1460,10 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                         |
-| ------ | -------------------------------- |
-| v19 R7 | Suporte do parâmetro *keepOrder* |
-| v17    | Adicionado                       |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 18 R6   | Suporte do parâmetro *keepOrder* |
+| 17      | Adicionado                       |
 
 </details>
 
@@ -1471,7 +1482,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 #### Descrição
 
-A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclui da seleção de entidade que é aplicada a *entity* ou as entidaddes de *entitySelection* e retorna a seleção de entidade resultante<!-- END REF -->.
 
 *   Se passar *entity* como parâmetro, a função cria uma nova seleção de entidade sem *entity* (se *entity* pertencer à seleção de entidade). Se *entity* não for incluída na seleção de entidade original, uma nova referência para a seleção de entidade é retornada.
 *   Se a entity selection não estiver ordenada, *entity* se adiciona em qualquer lugar da seleção, sem uma ordem específica. > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
@@ -1532,9 +1543,9 @@ Employee.newSelection(dk keep ordered)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1552,7 +1563,7 @@ Employee.newSelection(dk keep ordered)
 
 #### Descrição
 
-A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro.
+A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combina a seleção de entidade com *entity* ou parâmetro*entitySelection* usando o operador lógico (não exclusivo) OR<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro.
 
 *   Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Se a entidade pertencer à selecção de entidades, é devolvida uma nova referência à selecção de entidades. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
 *   Se a seleção de entidade original e o parâmetro *entitySelection* for vazio, uma seleção de entidade vazia é retornada. Se a seleção de entidade original for vazia, uma referência a  *entitySelection* ou uma seleção de entidade contendo apenas *entity* será retornada.
@@ -1594,9 +1605,9 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1614,7 +1625,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 #### Descrição
 
-A função `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
+A função `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->retorna uma nova seleção de entidade ordenada contendo todas as entidades da seleção de entidade na ordem especificada por *pathString* ou critérios*pathObjects*<!-- END REF -->.
 > * Este método não modifica a seleção de entidade original
 > * Para saber mais sobre propriedade compartilhável de entity selections, consulte [Entity selections compartilháveis ou modificáveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
@@ -1674,9 +1685,9 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R6   | Adicionado |
 
 </details>
 
@@ -1797,11 +1808,11 @@ Neste exemplo, o objeto campo "marks" em **Students** dataClass contém as notas
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                               |
-| ------ | -------------------------------------- |
-| v17 R6 | Soporte dos Parâmetros Formula         |
-| v17 R5 | Suporte dos marcadores para os valores |
-| v17    | Adicionado                             |
+| Release | Mudanças                               |
+| ------- | -------------------------------------- |
+| 17 R6   | Soporte dos Parâmetros Formula         |
+| 17 R5   | Suporte dos marcadores para os valores |
+| 17      | Adicionado                             |
 
 </details>
 
@@ -1821,7 +1832,7 @@ Neste exemplo, o objeto campo "marks" em **Students** dataClass contém as notas
 
 #### Descrição
 
-A função `.query()` <!-- REF #EntitySelectionClass.query().Summary -->pesquisa por entidades que satisfazem o critério de pesquisa especificado em *queryString* ou *formula* e (opcionalmente) *value*(s) entre todas as entidades na seleção de entidade<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #EntitySelectionClass.query().Summary -->pesquisa por entidades que satisfazem o critério de pesquisa especificado em *queryString* ou *formula* e (opcionalmente) *value*(s) entre todas as entidades na seleção de entidade<!-- END REF -->, e retorna um novo objeto de tipo `EntitySelection` contendo todas as entidades que foram encontradas. Se aplica carregamento diferido/lazy loading.
 > Esta função não modifica a seleção de entidades original.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
@@ -1857,9 +1868,9 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1868,7 +1879,7 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 #### Descrição
 
-A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. Esta propriedade está disponível para objectos `EntitySelection` gerados através de consultas se a propriedade `"queryPath":true` tiver sido passada no parâmetro *querySettings* da função [`.query()`](#query).
 
 Para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
@@ -1881,9 +1892,9 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1893,7 +1904,7 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 #### Descrição
 
-A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<!-- END REF -->. Esta propriedade é disponível para objetos `EntitySelection` gerados através de pesquisas se a propriedade `"queryPlan":true` for passada no parâmetro *querySettings* da função [`.query()`](#query).
 
 Para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
@@ -1905,9 +1916,9 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -1924,7 +1935,7 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 #### Descrição
 > Esta função só funciona com datastore remota (cliente / servidor ou conexão`Open datastore` ).
 
-A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> de forma que na próxima vez que 4D exige a seleção de entidade será recarregada da database.
+A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->imediatamente "invalida" os dados da seleção de entidade na cache local ORDA<!-- END REF --> de forma que na próxima vez que 4D exige a seleção de entidade será recarregada da database.
 
 Como padrão, a cache ORDA local é invaidade depois de 30 segundos. No contexto de aplicações cliente/servidor usando ORDA e a linguagem clássica, este método permite assegurar que a aplicação remota vai sempre funcionar com os últimos dados.
 
@@ -1986,9 +1997,9 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R3   | Adicionado |
 
 </details>
 
@@ -2060,9 +2071,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -2080,7 +2091,7 @@ $result2:=$invoices.selected($creditSel)
 
 #### Descrição
 
-A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna uma porção da seleção de entidade em uma nova seleção de entidade<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna uma porção da seleção de entidade em uma nova seleção de entidade<!-- END REF -->, seleccionada a partir do índice *startFrom* para o índice *end* (*end* não está incluído) ou para a última entidade da selecção de entidades. Este método devolve uma cópia superficial da selecção de entidades (utiliza as mesmas referências de entidades).
 > Esta função não modifica a seleção de entidades original.
 
 Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se as referências às mesmas entidades de *entitySelection* já pertencem à seleção de entidades, se duplicam e se adicionam novas referencias.
@@ -2123,9 +2134,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 
 
@@ -2147,7 +2158,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a
 #### Descrição
 
 
-A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retorna a soma de todos os valores *attributePath* na seleção de entidade<!-- END REF -->.
 
 `.sum()` retorna 0 se a seleção de entidade for vazia.
 
@@ -2179,9 +2190,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -2202,7 +2213,7 @@ $sum:=$sel.sum("salary")
 
 #### Descrição
 
-A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
+A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->cria e devolve uma colecção onde cada elemento é um objecto que contém um conjunto de propriedades e valores <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
 
 Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "*", todos os atributos são extraídos. Os atributos com [tipo](DataClassClass.md#attributename) propriedade como "relatedEntity" são extraídos com a forma simples: um objecto com propriedade \_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
 

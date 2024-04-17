@@ -136,9 +136,9 @@ Permet de définir le nombre de passes (analyse du code) effectuées par le comp
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -163,7 +163,7 @@ Utilisez cette zone pour définir le type par défaut pour les objets de base de
 - **Numérique** : Permet de forcer le typage numérique de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Vous pouvez optimiser le fonctionnement de votre base de données en choisissant le type Entier long.
 - **Bouton** : Utilisé pour forcer le typage d'un bouton de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Ce type s'applique aux boutons ainsi qu'aux cases à cocher, aux boutons image, aux grilles de boutons, aux pop-up menus image et aux listes déroulantes.
 
-### Compiler Methods for
+### Méthodes Compilateur pour
 
 Cette zone vous permet de renommer les méthodes du compilateur qui sont générées automatiquement par le compilateur lorsque vous cliquez sur [Générer le typage](#générer-le-typage).
 

@@ -258,7 +258,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés, reportez-vous à la section [Propriétés des objets de style](configuring.md#style-objects-properties).
+Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Vous pouvez désigner l'emplacement dans lequel vous souhaitez définir la feuille de style dans le paramètre optionnel *sheet*, à l'aide de l'indice de la feuille (la numérotation commence à zéro) ou à l'aide des constantes suivantes :
 
@@ -941,6 +941,7 @@ saisissez le code suivant :
 
 
 
+
 | Paramètres | Type   |    | Description                                 |
 | ---------- | ------ | -- | ------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
@@ -979,7 +980,7 @@ Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriété
 | includeBindingSource       | boolean     | 4DVP et Microsoft Excel uniquement. True (par défaut) pour exporter les valeurs du contexte de données courant en tant que valeurs de cellule dans le document exporté (les contextes de données eux-mêmes ne sont pas exportés). Sinon Faux. La liaison de cellule est toujours exportée. Pour la gestion des contextes de données et des fusions de cellules, voir [VP SET DATA CONTEXT](#vp-set-data-context) et [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                   |
 | sheet                      | number      | PDF uniquement (optionnel) - Numéro de la feuille à exporter (débute à 0). -2=toutes les feuilles visibles (par défaut), -1=feuille courante uniquement                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | pdfOptions                 | object      | PDF uniquement (optionnel) - Options pour l'export en PDF <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>nom de l'application qui a créé le document original à partir duquel il a été converti.</td></tr><tr><td>title</td><td>text</td><td>titre du document.</td></tr><tr><td>author</td><td>text</td><td>nom de la personne ayant créé ce document.</td></tr><tr><td>keywords</td><td>text</td><td>mots-clés associés au document.</td></tr><tr><td>subject</td><td>text</td><td>sujet du document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions                 | object      | CSV uniquement (optionnel) - Options pour l'export en CSV <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Objet plage de toutes les cellules</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Délimiteur de ligne. Par défaut : "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Délimiteur de colonne. Par défaut : ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| csvOptions                 | object      | CSV uniquement (optionnel) - Options pour l'export en CSV <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Objet plage de toutes les cellules</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Délimiteur de ligne. Default: `"\r\n"`</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Délimiteur de colonne. Default: `","`</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | sjsOptions                 | object      | SJS uniquement (optionnel) - Options pour l'export en sjs <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `\<customProperty>` | any         | Propriété personnalisée qui sera disponible via le paramètre $3 dans la méthode de callback.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
@@ -1012,7 +1013,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 
 | Paramètres |               | Type    | Description                                             |
 | ---------- | ------------- | ------- | ------------------------------------------------------- |
-| param1     |               | text    | Nom de l'objet 4D View Pro                              |
+| param1     |               | text    | The name of the 4D View Pro area object                 |
 | param2     |               | text    | Chemin d'accès de l'objet 4D View Pro exporté           |
 | param3     |               | object  | Référence au *paramObj* de la commande                  |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
@@ -1119,17 +1120,18 @@ The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->
 
 Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 
-| Propriété               | Type        | Description                                                                                                    |
-| ----------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed.                                      |
-| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                  |
-| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                               |
-| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.     |
-| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
-| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                      |
-| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                        |
-| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                           |
-| saveAsView              | Boolean     | Whether to apply the format string to exporting value when saving, default=false.                              |
+| Propriété               | Type        | Description                                                                                                                                                                 |
+| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. |
+| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                                                                               |
+| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                                                                                            |
+| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.                                                                  |
+| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true                                                              |
+| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                                                                                   |
+| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                                                                                     |
+| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                                                                                        |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
@@ -1290,22 +1292,24 @@ Pour trouver "Total" et le remplacer par "Grand Total" :
 ```4d
 var $range;$condition;$result : Object
 
- $range:=VP All("ViewProArea")
+$range:=VP All("ViewProArea")
 
- $condition:=New object
- $condition.target:=vk find target text
- $condition.all:=True //Rechercher le document entier
- $condition.flags:=vk find flag exact match
+$condition:=New object
+$condition.target:=vk find target text
+$condition.all:=True //Search entire document
+$condition.flags:=vk find flag exact match
 
-  // Remplacer les cellules contenant uniquement 'Total' dans la feuille courante par "Grand Total"
- $result:=VP Find($range;"Total";$condition;"Grand Total")
+  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
-  // Rechercher un objet de plage vide
- If($result.ranges.length=0)
-    ALERT("Aucun résultat trouvé")
- Else
-    ALERT($result.ranges.length+" résultats trouvés")
- End if
+
+$result:=VP Find($range;"Total";$condition;"Grand Total")
+
+  // Check for empty range object 
+If($result.ranges.length=0)
+    ALERT("No result found")
+Else
+    ALERT($result.ranges.length+" results found")
+End if
 ```
 
 
@@ -1559,6 +1563,7 @@ La commande `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->
 Dans *rangeObj*, passez une plage contenant le style à récupérer.
 
 * Si *rangeObj* contient une plage cellule, le style de la cellule est retourné.
+
 * Si *rangeObj* contient une plage qui n'est pas une plage cellule, le style de la première cellule de la plage est retourné.
 * Si *rangeObj* contient plusieurs plages, seul le style de la première cellule de la première plage est retourné.
 
@@ -1860,7 +1865,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
 | name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
-| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
+| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
@@ -1937,6 +1942,7 @@ Vous souhaitez récupérer les formules des colonnes Sum et Average de ce docume
 Vous pouvez utiliser ce code :
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -1987,6 +1993,7 @@ Vous souhaitez récupérer des informations sur le nombre de colonnes et de lign
 
 ```4d
 var $panesObj : Object
+
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2514,6 +2521,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
+
 Vous pouvez définir où lire la feuille de style via le paramètre *sheet* en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
@@ -2634,7 +2642,7 @@ La commande `VP Get table column attributes` <!-- REF #_method_.VP Get table col
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 The command returns an object describing the current attributes of the *column*:
@@ -2697,7 +2705,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 In *columnName*, pass the name of the table column for which you want to get the index.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 Si *tableName* ou *columnName* n'est pas trouvé, la commande renvoie -1.
@@ -2755,7 +2763,7 @@ In *tableName*, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2823,7 +2831,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1      | Get the cell range for the table data area only                                   |
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé, la commande renvoie **null**.
@@ -2916,7 +2924,7 @@ La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 
@@ -2984,7 +2992,7 @@ Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la p
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3051,9 +3059,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Paramètre|Type||Description|
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                            |
+| Résultat   | Object | <- | Objet contenant les options de workbook|<!-- END REF -->
+
+|
 
 #### Description
 
@@ -3079,65 +3091,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| Paramètres | Type    |    | Description                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro     |
-| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro      |
-| paramObj   | Object  | -> | Options d'import|<!-- END REF -->
-
-|
-
-#### Description
-
-La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
-
-Dans *paramObj*, vous pouvez passer plusieurs propriétés :
-
-| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                                               |
-| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                   |
-| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                        |
-| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                                                |
-| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                  |
-| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                               |
-| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
-
-Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
-
-| Paramètres |               | Type    | Description                                             |
-|:---------- |:------------- |:------- |:------------------------------------------------------- |
-| param1     |               | text    | Nom de l'objet 4D View Pro                              |
-| param2     |               | 4D.Blob | Le blob importé                                         |
-| param3     |               | object  | Référence au *paramObj* de la commande                  |
-| param4     |               | object  | Objet retourné par la méthode avec un message de statut |
-|            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
-|            | .errorCode    | entier  | Code d'erreur.                                          |
-|            | .errorMessage | text    | Message d'erreur.                                       |
-
-
-#### Exemple
-
-Vous souhaitez importer dans la "ViewProArea" un document 4D View Pro précédemment enregistré en tant que Blob dans la première entité de la dataclass Table.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### Voir également
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3222,12 +3175,26 @@ End if
 Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :
 
 ```4d
+    //Import code
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Exemple 3
 
@@ -3247,6 +3214,67 @@ Here's the result: ![example-import-csv](../assets/en/ViewPro/vp-import-document
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Paramètres | Type    |    | Description                                 |
+| ---------- | ------- | -- | ------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro     |
+| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro      |
+| paramObj   | Object  | -> | Options d'import|<!-- END REF -->
+
+|
+
+#### Description
+
+La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe le *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+
+Dans *paramObj*, vous pouvez passer plusieurs propriétés :
+
+| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | Callback method to be launched when the import has completed. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command.                                                                                                                                                                                                                                                                                             |
+| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                   |
+| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                        |
+| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                                                |
+| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                               |
+| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+
+Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
+
+| Paramètres |               | Type    | Description                                             |
+|:---------- |:------------- |:------- |:------------------------------------------------------- |
+| param1     |               | text    | The name of the 4D View Pro area object                 |
+| param2     |               | 4D.Blob | Le blob importé                                         |
+| param3     |               | object  | Référence au *paramObj* de la commande                  |
+| param4     |               | object  | Objet retourné par la méthode avec un message de statut |
+|            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
+|            | .errorCode    | entier  | Code d'erreur.                                          |
+|            | .errorMessage | text    | Message d'erreur.                                       |
+
+
+#### Exemple
+
+Vous souhaitez importer dans la "ViewProArea" un document 4D View Pro précédemment enregistré en tant que Blob dans la première entité de la dataclass Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Voir également
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 
 ### VP IMPORT FROM OBJECT
@@ -3269,7 +3297,7 @@ La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, référez-vous à la section [Objet 4D View Pro](languageOverview.html#4d-view-pro-object).
+Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
@@ -3461,7 +3489,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -3621,7 +3649,11 @@ Vous souhaitez assigner une valeur à une plage nommée "Total".
 | ---------- | ---- | -- | ------------------------------------------------------------------------ |
 | vpAreaName | Text | -> | Nom de la zone 4D View Pro dans le formulaire|<!-- END REF -->
 
+
+
 |
+
+
 
 #### Description
 
@@ -3927,7 +3959,9 @@ VP REMOVE SHEET("ViewProArea";2)
 | Paramètres | Type   |    | Description                            |
 | ---------- | ------ | -- | -------------------------------------- |
 | rangeObj   | Object | -> | Objet plage|<!-- END REF -->
+
 |
+
 #### Description
 
 La commande `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
@@ -4226,7 +4260,7 @@ If *tableName* does not exist, nothing happens.
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -4479,6 +4513,8 @@ Function onEvent()
   :(FORM Event.code=On Timer)
  // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
+
+
 
  // Stop the timer
    SET TIMER(0)
@@ -4960,6 +4996,7 @@ The document's current sheet is the first sheet:
 Set the current sheet to the third sheet:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -5237,6 +5274,7 @@ Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
+
 ### VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
@@ -5451,11 +5489,11 @@ Vous pouvez supprimer les formules dans *rangeObj* en les remplaçant par une ch
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Première ligne
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Deuxième ligne
 
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Associer les formules et les formules
 ```
 
 *myMethod* :
@@ -5658,6 +5696,7 @@ Le PDF :
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -5983,6 +6022,7 @@ Résultat:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6289,6 +6329,7 @@ Le paramètre *timeValue* spécifie une heure exprimée en secondes à attribuer
 
 Le paramètre optionnel *formatPattern* définit un [pattern](configuring.md#format-des-cellules) (modèle) pour le paramètre *timeValue*.
 
+
 #### Exemple
 
 ```4d
@@ -6499,26 +6540,8 @@ Le tableau suivant répertorie les options de classeur disponibles :
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                 |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                             |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
-| scrollbarAppearance                   | number                  | Scrollbar appearance. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                 |
-| scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                |
-| scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                             |
-| scrollByPixel                         | boolean                 | Enable precision scrolling by pixel.                                                                                                                                                                                                                   |
-| scrollIgnoreHidden                    | boolean                 | The scroll bar ignores hidden rows or columns.                                                                                                                                                                                                         |
-| scrollPixel                           | entier                  | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15. |
-| showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                             |
-| showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                          |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                             |
-| showHorizontalScrollbar               | boolean                 | Display the horizontal scroll bar.                                                                                                                                                                                                                     |
-| showResizeTip                         | number                  | How to display the resize tip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                        |
-| showScrollTip                         | number                  | How to display the scroll tip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                        |
-| showVerticalScrollbar                 | boolean                 | Display the vertical scroll bar.                                                                                                                                                                                                                       |
-| tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                     |
-| tabNavigationVisible                  | boolean                 | Display the sheet tab navigation.                                                                                                                                                                                                                      |
-| tabStripPosition                      | number                  | Position of the tab strip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>                                                                                                                                                                            |
-| tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                       |
-| tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                           |
-| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. Default and minimum is 80.                                                                                                                                                                      |
-| useTouchLayout                        | boolean                 | Whether to use touch layout to present the Spread component.                                                                                                                                                                                           |
+
+| scrollbarAppearance | number | Scrollbar appearance. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>| | scrollbarMaxAlign | boolean | The scroll bar aligns with the last row and column of the active sheet. | | scrollbarShowMax | boolean | The displayed scroll bars are based on the entire number of columns and rows in the sheet. | | scrollByPixel | boolean | Enable precision scrolling by pixel. | | scrollIgnoreHidden | boolean | The scroll bar ignores hidden rows or columns. | | scrollPixel | integer | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15. | | showDragDropTip | boolean | Display the drag-drop tip. | | showDragFillSmartTag | boolean | Display the drag fill dialog. | | showDragFillTip | boolean | Display the drag-fill tip. | | showHorizontalScrollbar | boolean | Display the horizontal scroll bar. | | showResizeTip | number | How to display the resize tip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>| | showScrollTip | number | How to display the scroll tip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table> | | showVerticalScrollbar | boolean | Display the vertical scroll bar. | | tabEditable | boolean | The sheet tab strip can be edited. | | tabNavigationVisible | boolean | Display the sheet tab navigation. | | tabStripPosition | number | Position of the tab strip. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>| | tabStripRatio | number | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar. | | tabStripVisible | boolean | Display the sheet tab strip. | | tabStripWidth | number | Width of the tab strip when position is left or right. Default and minimum is 80. | | useTouchLayout | boolean | Whether to use touch layout to present the Spread component. |
 
 #### Exemple
 
@@ -6555,6 +6578,8 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Description
+
+
 
 La commande `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->repositionne verticalement et horizontalement la vue du *rangeObj*<!-- END REF -->.
 

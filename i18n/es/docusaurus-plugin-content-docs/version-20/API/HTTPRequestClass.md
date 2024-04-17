@@ -9,9 +9,9 @@ La clase `HTTPRequest` está disponible en el almacén de clases `4D`. Para crea
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Clase añadida  |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Clase añadida  |
 
 </details>
 
@@ -77,10 +77,10 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                       |
-| ------- | ------------------------------------ |
-| v20     | Validación TLS por defecto           |
-| v19 R7  | Soporte de la propiedad *decodeData* |
+| Lanzamiento | Modificaciones                                                |
+| ----------- | ------------------------------------------------------------- |
+| 20          | Validación TLS por defecto                                    |
+| 19 R7       | Soporte de propiedades *automaticRedirections* y *decodeData* |
 
 </details>
 
@@ -130,6 +130,7 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 
 | Propiedad              | Tipo                                            | Descripción                                                                                                                                                                                                                                                                                 | Por defecto  |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| automaticRedirections  | Boolean                                         | Si es true, las redirecciones se realizan automáticamente (se gestionan hasta 5 redirecciones, se devuelve la 6ª respuesta de redirección si la hay)                                                                                                                                        | True         |
 | body                   | Variant                                         | Cuerpo de la petición (necesario en el caso de las peticiones `post` o `put`). Puede ser un texto, un blob, o un objeto. El content-type se determina a partir del tipo de esta propiedad a menos que se defina dentro de los encabezados                                                   | indefinido   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define la carpeta de certificados de cliente activa                                                                                                                                                                                                                                         | indefinido   |
 | dataType               | Text                                            | Tipo de atributo del cuerpo de la respuesta. Valores: "text", "blob", "object", o "auto". Si "auto", el tipo de contenido del cuerpo se deducirá de su tipo MIME (object para JSON, texto para texto, javascript, xml, mensaje http y formulario codificado en url, blob en caso contrario) | "auto"       |
@@ -272,9 +273,9 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                               |
-| ------- | ---------------------------------------------------------------------------- |
-| v19 R8  | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
+| Lanzamiento | Modificaciones                                                               |
+| ----------- | ---------------------------------------------------------------------------- |
+| 19 R8       | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
 
 </details>
 

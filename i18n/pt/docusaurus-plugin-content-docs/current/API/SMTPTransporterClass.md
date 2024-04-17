@@ -30,11 +30,11 @@ Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transp
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                       |
-| ------ | ---------------------------------------------- |
-| v18    | Nova propriedade logFile                       |
-| v17 R5 | Novas propriedades bodyCharset e headerCharset |
-| v17 R4 | Adicionado                                     |
+| Release | Mudanças                                       |
+| ------- | ---------------------------------------------- |
+| 18      | Nova propriedade logFile                       |
+| 17 R5   | Novas propriedades bodyCharset e headerCharset |
+| 17 R4   | Adicionado                                     |
 
 </details>
 
@@ -42,12 +42,11 @@ Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transp
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parâmetro  | Tipo               |    | Descrição                                                               |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
-| server     | Object             | -> | Informação de servidor de correio                                       |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo               |    | Descrição                                           |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Object             | -> | Informação de servidor de correio                   |
+| Resultados | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -118,12 +117,11 @@ A função devolve um [**objecto SMTP transporter**](#smtp-transporter-object). 
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parâmetro  | Tipo               |    | Descrição                                                               |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
-| server     | Object             | -> | Informação de servidor de correio                                       |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo               |    | Descrição                                           |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Object             | -> | Informação de servidor de correio                   |
+| Resultados | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -179,9 +177,9 @@ Para informações sobre códigos de estado SMTP, consulte por favor [esta pági
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
@@ -203,10 +201,10 @@ A coleção SMTP é automaticamente fechada:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                 |
-| ------ | ------------------------ |
-| v17 R5 | Suporte de conteúdo Mime |
-| v17 R4 | Adicionado               |
+| Release | Mudanças                 |
+| ------- | ------------------------ |
+| 17 R5   | Suporte de conteúdo Mime |
+| 17 R4   | Adicionado               |
 
 </details>
 
@@ -217,9 +215,8 @@ A coleção SMTP é automaticamente fechada:
 | Parâmetro  | Tipo   |    | Descrição                                             |
 | ---------- | ------ |:--:| ----------------------------------------------------- |
 | mail       | Object | -> | [Email](EmailObjectClass.md#email-object) para enviar |
-| Resultados | Object | <- | Status SMTP|<!-- END REF -->
-
-|
+| Resultados | Object | <- | Status SMTP                                           |
+<!-- END REF -->
 
 #### Descrição
 

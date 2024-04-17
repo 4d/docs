@@ -86,9 +86,9 @@ Los objetos manejadores de archivos no pueden ser compartidos.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
@@ -114,9 +114,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
@@ -142,9 +142,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
@@ -166,9 +166,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
@@ -203,20 +203,19 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| Parámetros | Tipo |    | Descripción                                              |
-| ---------- | ---- | -- | -------------------------------------------------------- |
-| Result     | Real | <- | Tamaño del documento en bytes|<!-- END REF -->
-
-|
+| Parámetros | Tipo |    | Descripción                   |
+| ---------- | ---- | -- | ----------------------------- |
+| Result     | Real | <- | Tamaño del documento en bytes |
+<!-- END REF -->
 
 #### Descripción
 
@@ -236,9 +235,9 @@ La función `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->devuelve
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode**: Text<!-- END REF -->
@@ -261,9 +260,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
@@ -308,23 +307,20 @@ $s:=$fh.readText()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción                                         |
-| ---------- | -------------------- | -- | --------------------------------------------------- |
-| *bytes*    | Real                 | -> | Número de bytes a leer                              |
-| Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
-
-
-
-|
+| Parámetros | Tipo                 |    | Descripción              |
+| ---------- | -------------------- | -- | ------------------------ |
+| *bytes*    | Real                 | -> | Número de bytes a leer   |
+| Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
+<!-- END REF -->
 
 
 
@@ -350,22 +346,19 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readLine().Params -->
-| Parámetros | Tipo |    | Descripción                               |
-| ---------- | ---- | -- | ----------------------------------------- |
-| Result     | Text | <- | Línea de texto|<!-- END REF -->
-
-
-
-|
+| Parámetros | Tipo |    | Descripción    |
+| ---------- | ---- | -- | -------------- |
+| Result     | Text | <- | Línea de texto |
+<!-- END REF -->
 
 
 
@@ -396,22 +389,20 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readText().Params -->
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| *stopChar* | Text | -> | Caracter(es) en los que dejar de leer        |
-| Result     | Text | <- | Texto del archivo|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                           |
+| ---------- | ---- | -- | ------------------------------------- |
+| *stopChar* | Text | -> | Caracter(es) en los que dejar de leer |
+| Result     | Text | <- | Texto del archivo                     |
+<!-- END REF -->
 
 
 #### Descripción
@@ -444,21 +435,19 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size*: Real)<!-- END REF -->
 
 
 <!--REF #FileHandleClass.setSize().Params -->
-| Parámetros | Tipo |    | Descripción                                                    |
-| ---------- | ---- | -- | -------------------------------------------------------------- |
-| size       | Real | -> | Nuevo tamaño del documento en bytes|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                         |
+| ---------- | ---- | -- | ----------------------------------- |
+| size       | Real | -> | Nuevo tamaño del documento en bytes |
+<!-- END REF -->
 
 
 #### Descripción
@@ -479,21 +468,19 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción                                              |
-| ---------- | -------------------- | -- | -------------------------------------------------------- |
-| *blob*     | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo                 |    | Descripción                   |
+| ---------- | -------------------- | -- | ----------------------------- |
+| *blob*     | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo |
+<!-- END REF -->
 
 
 #### Descripción
@@ -515,9 +502,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
@@ -525,12 +512,10 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Parámetros   | Tipo |    | Descripción                                 |
-| ------------ | ---- | -- | ------------------------------------------- |
-| *lineOfText* | Text | -> | Texto a escribir|<!-- END REF -->
-
-
-|
+| Parámetros   | Tipo |    | Descripción      |
+| ------------ | ---- | -- | ---------------- |
+| *lineOfText* | Text | -> | Texto a escribir |
+<!-- END REF -->
 
 
 #### Descripción
@@ -551,21 +536,19 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Parámetros    | Tipo |    | Descripción                                 |
-| ------------- | ---- | -- | ------------------------------------------- |
-| *textToWrite* | Text | -> | Texto a escribir|<!-- END REF -->
-
-
-|
+| Parámetros    | Tipo |    | Descripción      |
+| ------------- | ---- | -- | ---------------- |
+| *textToWrite* | Text | -> | Texto a escribir |
+<!-- END REF -->
 
 
 #### Descripción

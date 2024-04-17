@@ -59,8 +59,8 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 | lists.json              | Listes définies                                                                                                                                                                                                                                 | JSON   |
 | filters.json            | Filtres définis                                                                                                                                                                                                                                 | JSON   |
 | styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                           | CSS    |
-| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                           | CSS    |
-| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                       | CSS    |
+| styleSheets_mac.css     | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                       | CSS    |
+| styleSheets_windows.css | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                           | CSS    |
 
 #### Dossier DatabaseMethods
 

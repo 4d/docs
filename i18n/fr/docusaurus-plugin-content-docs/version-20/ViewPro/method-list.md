@@ -258,7 +258,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés, reportez-vous à la section [Propriétés des objets de style](configuring.md#style-objects-properties).
+Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Vous pouvez désigner l'emplacement dans lequel vous souhaitez définir la feuille de style dans le paramètre optionnel *sheet*, à l'aide de l'indice de la feuille (la numérotation commence à zéro) ou à l'aide des constantes suivantes :
 
@@ -399,9 +399,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -668,9 +668,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                               |
+| Release | Modifications                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Prise en charge de l'option `allowAutoExpand`                                                               |
-| v19 R6  | Ajout                                                                                                       |
+| 19 R8   | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7   | Prise en charge de l'option `allowAutoExpand`                                                               |
+| 19 R6   | Ajout                                                                                                       |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -1219,9 +1219,9 @@ var $range;$condition;$result : Object
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1394,9 +1394,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1622,9 +1622,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1760,7 +1760,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
 | name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
-| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
+| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
@@ -2172,6 +2172,8 @@ La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
+
+
 #### Exemple
 
 Dans le document suivant :
@@ -2373,6 +2375,7 @@ Dans *rangeObj*, passez une plage de cellules fusionnées que vous souhaitez ré
 
 #### Exemple
 
+
 Pour centrer le texte des cellules fusionnées dans ce document :
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
@@ -2402,7 +2405,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | styleName  | Text    | -> | Nom du style                                             |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Style sheet object|<!-- END REF -->
+| Résultat   | Object  | <- | Objet feuille de style|<!-- END REF -->
 
 |
 
@@ -2506,9 +2509,9 @@ Dans ce cas, la feuille courante utilise deux objets style :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2534,7 +2537,7 @@ La commande `VP Get table column attributes` <!-- REF #_method_.VP Get table col
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 The command returns an object describing the current attributes of the *column*:
@@ -2567,9 +2570,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2597,7 +2600,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 In *columnName*, pass the name of the table column for which you want to get the index.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 Si *tableName* ou *columnName* n'est pas trouvé, la commande renvoie -1.
@@ -2623,9 +2626,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2655,7 +2658,7 @@ In *tableName*, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2690,9 +2693,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2723,7 +2726,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1      | Get the cell range for the table data area only                                   |
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé, la commande renvoie **null**.
@@ -2737,9 +2740,9 @@ Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2792,9 +2795,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -2816,7 +2819,7 @@ La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 
@@ -2875,6 +2878,7 @@ Si l'objet retourné inclut une date ou une heure, il est traité en tant que da
 * valeur date - l'heure est complétée comme suit : minuit au format HH:mm:ss (00:00:00)
 
 Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la première cellule est retournée. La commande retourne un objet null si la cellule est vide.
+
 
 
 
@@ -3055,6 +3059,18 @@ $o.password:="excel123"
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
+
 #### Exemple 3
 
 Vous souhaitez importer un fichier `.txt` qui utilise une virgule (",") comme délimiteur :
@@ -3094,7 +3110,7 @@ La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, référez-vous à la section [Objet 4D View Pro](languageOverview.html#4d-view-pro-object).
+Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
@@ -3189,9 +3205,9 @@ Le résultat est le suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3243,9 +3259,9 @@ Voir les exemples pour [VP INSERT TABLE ROWS](#vp-insert-table-rows) et [VP SET 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3284,7 +3300,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -3327,9 +3343,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3525,9 +3541,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3564,7 +3580,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
-If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+Collection de données à charger dans le contexte de données
 
 #### Exemple
 
@@ -3623,6 +3639,7 @@ Ouvrira une fenêtre de dialogue d'impression :
 ## R
 
 ### VP RECOMPUTE FORMULAS
+
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Syntax -->
 **VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text ) <!-- END REF -->
@@ -3823,9 +3840,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajout         |
+| 19 R6   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3877,9 +3894,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3925,9 +3942,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4014,9 +4031,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4048,7 +4065,7 @@ If *tableName* does not exist, nothing happens.
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -4259,6 +4276,7 @@ Function onEvent()
 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 La méthode callback (de rétro-appel) *OffscreenArea* :
@@ -4437,9 +4455,9 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -4457,7 +4475,7 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 #### Description
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->The `VP SET BINDING PATH` command<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
 Dans *rangeObj*, passez un objet qui est soit une plage de cellules, soit une plage combinée de cellules.
 
@@ -4507,7 +4525,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### Description
 
-La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
+La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->affecte une valeur spécifiée à une plage de cellules désignée<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la valeur indiquée sera répétée dans chaque cellule.
 
@@ -4763,7 +4781,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### Description
 
-La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->The `VP SET CURRENT SHEET` command<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
@@ -4876,9 +4894,9 @@ End case
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -5046,12 +5064,12 @@ Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres
 #### Exemple
 
 ```4d
-//Set the cell value as the current date and time
+//Attribuer la date et l'heure locales à la valeur de la cellule 
 
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
 
-//Set the cell value as the 18th of December
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
+ //Attribuer le 18 décembre à la valeur de la cellule
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
 #### Voir également
@@ -5191,6 +5209,8 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
+
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
 | Paramètres | Type |  | Description |
@@ -5200,6 +5220,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |rangeObj |Objet|->|Objet de plage| |formula |Text|->|Formule ou méthode 4D| |formatPattern |Text|->|Format du champ|<!-- END REF -->
 
 #### Description
+
 
 La commande `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->affecte une formule ou une méthode 4D spécifique à une plage de cellules désignée<!-- END REF -->.
 
@@ -5523,6 +5544,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ### VP SET ROW COUNT
 
+
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 **VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->
 
@@ -5785,6 +5807,7 @@ Vous souhaitez masquer le quadrillage et les en-têtes des lignes et colonnes.
 var $options : Object
 
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False
@@ -5825,7 +5848,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 Dans *visible*, passez `True` pour afficher les lignes d'impression, et `False` pour les cacher. `True` est passé par défaut.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 
 > La numérotation démarre à 0.
@@ -5856,9 +5879,9 @@ Avec un saut de page :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5893,7 +5916,7 @@ Dans le paramètre *attributes*, passez un objet contenant les propriétés à d
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                       |
 | filterButtonVisible | boolean | Définit si le bouton de filtre de la colonne de la table est affiché (la valeur par défaut est `True` lors de la création de la table).                                                           |
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé ou si *column* est supérieur au nombre de colonnes, la commande ne fait rien.
@@ -5901,7 +5924,7 @@ Si *tableName* n'est pas trouvé ou si *column* est supérieur au nombre de colo
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context;$options : Object
@@ -5960,9 +5983,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea" ; "PeopleTable" ; 0 ; \
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6144,11 +6167,11 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 
 Le paramètre *valueObj* est un objet qui définit la valeur et le [format](configuring.md#cell-format) à assigner à *rangeObj*. Il peut contenir les propriétés suivantes :
 
-| Propriété | Type                                     | Description                                                                                                                                                                                       |
-| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à assigner à *rangeObj* (exceptée heure). Passez null pour effacer le contenu de la cellule.                                                                                               |
-| time      | Real                                     | Valeur heure (en secondes) à assigner à *rangeObj*                                                                                                                                                |
-| format    | Text                                     | Pattern for value/time property. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format de cellule](configuring.md#formats-des-cellules). |
+| Propriété | Type                                     | Description                                                                                                                                                                                           |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à assigner à *rangeObj* (exceptée heure). Passez null pour effacer le contenu de la cellule.                                                                                                   |
+| time      | Real                                     | Valeur heure (en secondes) à assigner à *rangeObj*                                                                                                                                                    |
+| format    | Text                                     | Modèle pour la propriété value/time. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format de cellule](configuring.md#formats-des-cellules). |
 
 #### Exemple
 
@@ -6308,8 +6331,8 @@ Le tableau suivant répertorie les options de classeur disponibles :
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
 | highlightInvalidData                  | boolean                 | Invalid data is highlighted.                                                                                                                                                                                                                           |
 | iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                            |
-| iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
-| iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
+| iterativeCalculationMaximumChange     | numérique               | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
+| iterativeCalculationMaximumIterations | numérique               | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                         |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |

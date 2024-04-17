@@ -53,6 +53,12 @@ The default value depends on the variable type:
 |Variant|undefined|
 
 
+### Null as default value
+
+Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.   
+
+
+
 ## Converting data types
 
 The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.

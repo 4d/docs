@@ -7,7 +7,7 @@ Bem-vindo a 4D! You will find below all necessary information about how to insta
 
 ## Configuração necessária
 
-Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
+Consulte a [página de download do produto](https://us.4d.com/product-download) no site da 4D para obter a configuração mínima do Mac / Windows para a sua série 4D.
 
 All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
 
@@ -167,4 +167,4 @@ Para o Reino Unido:
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
 - Telefone: 01625 536178
 
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+Encontre a comunidade de desenvolvedores 4D em linha aqui: [https://discuss.4d.com](https://discuss.4d.com).

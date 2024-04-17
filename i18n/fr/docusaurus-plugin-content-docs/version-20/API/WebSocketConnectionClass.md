@@ -5,9 +5,9 @@ title: WebSocketConnection
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -73,7 +73,7 @@ Cette propriété est en lecture seule.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 | Paramètres | Type                 |    | Description                                    |
 | ---------- | -------------------- |:--:| ---------------------------------------------- |
-| message    | Texte / Blob / Objet | -> | Le message à envoyer<!-- END REF -->
+| message    | Text / Blob / Object | -> | Le message à envoyer<!-- END REF -->
 
 |
 

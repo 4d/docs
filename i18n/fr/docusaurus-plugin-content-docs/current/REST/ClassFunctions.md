@@ -4,13 +4,13 @@ title: Appeler des fonctions de classe ORDA
 ---
 
 
-Vous pouvez appeler les [fonctions de classe de modèles de données](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
+Vous pouvez appeler les [fonctions de classe](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
 Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
-avec des données contenues dans le corps de la requête POST : `["Paris"]`
+avec des données contenues dans le corps de la requête POST : `["Aguada"]`
 
 Dans le langage 4D, cet appel équivaut à :
 
@@ -42,14 +42,14 @@ Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 > La fonction est d'abord recherchée dans la classe de sélection d'entité. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Tout le code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser un process préemptif*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) est ignorée par le serveur REST).
 
 
 ## Paramètres
 
 
 
-Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.
+Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
 
 Les règles suivantes s'appliquent :
 
@@ -65,7 +65,7 @@ Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#
 
 Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parmaètres dans le corps :** ["Aguada","Paris"]
+**Paramètres dans le body :** ["Aguada","Paris"]
 
 Tous les types de données JSON sont pris en charge dans les paramètres, y compris les pointeurs JSON. Les dates peuvent être passées sous forme de chaînes au format de date ISO 8601 (par exemple, "2020-08-22T22:00:000Z").
 
@@ -96,11 +96,11 @@ Mêmes propriétés que pour un [paramètre d'entité](#entity-parameter). De pl
 Reportez-vous aux exemples de [création](#creating-an-entity-with-a-related-entity) ou de [mise à jour](#updating-an-entity-with-a-related-entity) des entités avec des entités associées.
 
 
-### Paramètre de sélection d'entité
+### Paramètre d'entity selection
 
-La sélection d'entité doit avoir été définie au préalable à l'aide de [$method=entityset]($method.md#methodentityset).
+L'entity selection doit avoir été définie au préalable à l'aide de [$method=entityset]($method.md#methodentityset).
 
-> Si la requête envoie une sélection d'entité modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec la sélection d'entité modifiée.
+> Si la requête envoie une entity selection modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec l'entity selection modifiée.
 
 
 | Propriétés            | Type    | Description                                                                             |
@@ -127,8 +127,8 @@ La classe de `DataStore` US_Cities fournit une API :
 
 Class extends DataStoreImplementation
 
-exposed Function getName()
-    $0:="US cities and zip codes manager" 
+exposed Function getName() : Text
+    return "US cities and zip codes manager" 
 ```
 
 Vous pouvez lancer cette requête :
@@ -152,11 +152,8 @@ La classe de Dataclass `City` fournit une API qui retourne une entité de ville 
 
 Class extends DataClass
 
-exposed Function getCity()
-    var $0 : cs.CityEntity
-    var $1,$nameParam : text
-    $nameParam:=$1
-    $0:=This.query("name = :1";$nameParam).first()
+exposed Function getCity($city : Text ) : cs.CityEntity
+    return This.query("name = :1";$city).first()
 ```
 
 Vous pouvez lancer cette requête :
@@ -202,7 +199,7 @@ La classe d'entité `CityEntity` fournit une API :
 Class extends Entity
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 Vous pouvez lancer cette requête :
@@ -218,9 +215,9 @@ Vous pouvez lancer cette requête :
 ```
 
 
-### Utiliser une fonction de classe d'une sélection d'entité
+### Utiliser une fonction de classe d'une entity selection
 
-La classe de sélection d'entité `CityEntity` fournit une API :
+La classe d'entity selection `CityEntity` fournit une API :
 
 ```
 // CitySelection class
@@ -228,7 +225,7 @@ La classe de sélection d'entité `CityEntity` fournit une API :
 Class extends EntitySelection
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 Vous pouvez lancer cette requête :
@@ -252,15 +249,15 @@ La classe `StudentsSelection` a une fonction `getAgeAverage` :
 
 Class extends EntitySelection
 
-exposed Function getAgeAverage
-    C_LONGINT($sum;$0)
-    C_OBJECT($s)
+exposed Function getAgeAverage : Integer
+    var $sum : Integer
+    var $s : Object
 
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
     End for each 
-    $0:=$sum/This.length
+    return $sum/This.length
 ```
 
 Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette requête :
@@ -285,12 +282,11 @@ La classe `StudentsSelection` a une fonction `getLastSummary` :
 
 Class extends EntitySelection
 
-exposed Function getLastSummary
-    C_TEXT($0)
-    C_OBJECT($last)
+exposed Function getLastSummary : Text
+    var $last : Object
 
     $last:=This.last()
-    $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+    return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 Vous pouvez lancer cette requête :
@@ -317,21 +313,19 @@ La classe de Dataclass `Students` possède la fonction `pushData()` qui reçoit 
 
 Class extends DataClass
 
-exposed Function pushData
-    var $1, $entity, $status, $0 : Object
+exposed Function pushData($entity : Object) : Object
+    var $status : Object
 
-    $entity:=$1
-
-    $status:=checkData($entity) // $status est un objet avec une propriété booléenne "success"
-
-    $0:=$status
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     If ($status.success)
         $status:=$entity.save()
        If ($status.success)
-           $0:=$entity
+           return $entity
       End if 
     End if
+
+    return $status
 
 ```
 
@@ -560,7 +554,7 @@ Les entités ayant les clés primaires sont 1 et 2 ont été mises à jour.
 }
 ```
 
-### Utiliser une sélection d'entité mise à jour sur le client
+### Utiliser une entity selection mise à jour sur le client
 
 A l'aide de la fonction `getAgeAverage()` [définie ci-dessus](#using-an-entityselection-class-function-and-an-entityset).
 

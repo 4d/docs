@@ -131,7 +131,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
+    :(vResult=1) //Teste se o número é 1
        ALERT("One.") //Se for 1, mostrar um alerta
     :(vResult=2) //Testar se o número é 2
        ALERT("Two.") //Se for 2, exibe um alerta

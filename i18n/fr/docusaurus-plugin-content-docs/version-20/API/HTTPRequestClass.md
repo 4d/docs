@@ -9,9 +9,9 @@ La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications  |
+| Release | Modifications  |
 | ------- | -------------- |
-| v19 R6  | Classe ajoutée |
+| 19 R6   | Classe ajoutée |
 
 </details>
 
@@ -77,10 +77,10 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                |
-| ------- | -------------------------------------------- |
-| v20     | Validation TLS par défaut                    |
-| v19 R7  | Prise en charge de la propriété *decodeData* |
+| Release | Modifications                                                          |
+| ------- | ---------------------------------------------------------------------- |
+| 20      | Validation TLS par défaut                                              |
+| 19 R7   | Prise en charge des propriétés *automaticRedirections* et *decodeData* |
 
 </details>
 
@@ -109,7 +109,7 @@ Dans *url*, passez l'URL où vous voulez envoyer la requête. La syntaxe à util
 {https://}[{user}:[{password}]@]host[ :{port}][/{path}][ ?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Si vous omettez la partie "scheme" (`http://` ou `https://`), une requête https est envoyée.
 
 Par exemple, vous pouvez passer les chaînes suivantes :
 
@@ -130,6 +130,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 
 | Propriété              | Type                                            | Description                                                                                                                                                                                                                                                   | Par défaut  |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| automaticRedirections  | Boolean                                         | Si true, les redirections sont effectuées automatiquement (jusqu'à 5 redirections sont gérées, la 6e réponse de redirection est renvoyée s'il y en a une)                                                                                                     | True        |
 | body                   | Variant                                         | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                           | undefined   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Définit le dossier actif des certificats du client                                                                                                                                                                                                            | undefined   |
 | dataType               | Text                                            | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon) | "auto"      |
@@ -272,9 +273,9 @@ La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                               |
+| Release | Modifications                                                               |
 | ------- | --------------------------------------------------------------------------- |
-| v19 R8  | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
+| 19 R8   | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
 
 </details>
 

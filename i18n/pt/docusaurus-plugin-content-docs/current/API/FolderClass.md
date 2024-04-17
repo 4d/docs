@@ -59,10 +59,10 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                    |
-| ------ | --------------------------- |
-| v19 R8 | Suporte de `fk home folder` |
-| v17 R5 | Adicionado                  |
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 19 R8   | Suporte de `fk home folder` |
+| 17 R5   | Adicionado                  |
 
 </details>
 
@@ -76,9 +76,8 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 | folderConstant | Integer    | -> | Constante Pasta 4D                                    |
 | pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path`   |
 | *              |            | -> | * para devolver a pasta da base de dados do anfitrião |
-| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->
-
-|
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder                                    |
+<!-- END REF -->
 
 #### Descrição
 
@@ -126,9 +125,9 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -148,21 +147,19 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                    |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                    |
+| ---------- | ---------- | -- | ------------------------------------------------------------ |
+| Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário |
+<!-- END REF -->
 
 
 #### Descrição
@@ -208,23 +205,22 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                                |
-| ----------------- | ---------- | -- | -------------------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho             |
-| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                             |
-| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                            |
-| Resultados        | 4D. File   | <- | Alias ou referência de atalho|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                                    |
+| ----------------- | ---------- | -- | -------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                 |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                |
+| Resultados        | 4D. File   | <- | Alias ou referência de atalho                |
+<!-- END REF -->
 
 #### Descrição
 
@@ -264,20 +260,19 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parâmetro | Tipo    |    | Descrição                                               |
-| --------- | ------- | -- | ------------------------------------------------------- |
-| option    | Integer | -> | Opção de eliminação de pasta|<!-- END REF -->
-
-|
+| Parâmetro | Tipo    |    | Descrição                    |
+| --------- | ------- | -- | ---------------------------- |
+| option    | Integer | -> | Opção de eliminação de pasta |
+<!-- END REF -->
 
 #### Descrição
 
@@ -338,22 +333,21 @@ Quando `Apagar com conteúdo` for aprovado:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                               |
-| ----------------- | ---------- | -- | --------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                        |
-| newName           | Text       | -> | Nome completo para a pasta movida       |
-| Resultados        | 4D. Folder | <- | Pasta movida|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                         |
+| ----------------- | ---------- | -- | --------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                  |
+| newName           | Text       | -> | Nome completo para a pasta movida |
+| Resultados        | 4D. Folder | <- | Pasta movida                      |
+<!-- END REF -->
 
 #### Descrição
 
@@ -394,21 +388,20 @@ Quer mover-se e renomear uma pasta:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                    |
-| ---------- | ---------- | -- | -------------------------------------------- |
-| newName    | Text       | -> | Novo nome completo para a pasta              |
-| Resultados | 4D. Folder | <- | Renomeado arquivo|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                       |
+| ---------- | ---------- | -- | ------------------------------- |
+| newName    | Text       | -> | Novo nome completo para a pasta |
+| Resultados | 4D. Folder | <- | Renomeado arquivo               |
+<!-- END REF -->
 
 #### Descrição
 

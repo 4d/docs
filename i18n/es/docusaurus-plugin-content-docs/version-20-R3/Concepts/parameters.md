@@ -164,9 +164,9 @@ Cuando se declaran los parámetros, se inicializan con el valor por defecto [**c
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 La instrucción `return` finaliza la ejecución de una función o de un método y puede utilizarse para devolver una expresión a quien la llama.
@@ -308,18 +308,18 @@ La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigu
 
 :::
 
-## `Compiler_Methods` method
+## Método `Compiler_Methods`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos llamados tan pronto como pretenda compilar su proyecto.
 
-When using the `#DECLARE` keyword, parameters are declared. Por ejemplo:
+Cuando se utiliza la palabra clave `#DECLARE`, se declaran los parámetros. Por ejemplo:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+    // todos los parámetros se declaran con su tipo
 ```
 
-However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
+Sin embargo, el compilador 4D necesita que declare todos sus parámetros en un método específico utilizando una sintaxis especial:
 
 - puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
 - el(los) nombre(s) del método debe(n) empezar por "**Compiler**", por ejemplo "Compiler_MyParameters".
@@ -338,11 +338,11 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Puede crear y rellenar automáticamente un método `Compiler` que contenga todos sus parámetros utilizando el botón [**Métodos Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** del diálogo de Propiedades del compilador.
 
 :::info
 
-Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
+Algunos contextos no soportan la declaración en un método "Compiler", por lo que se tratan de forma específica:
 
 - Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de tipo de datos Text. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
@@ -350,7 +350,7 @@ Some contexts do not support declaration in a "Compiler" method, thus they are h
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Functions - Function parameters are automatically declared for compilation in the function prototype. Por ejemplo:
+- Funciones - Los parámetros de función se declaran automáticamente para la compilación en el prototipo de la función. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer

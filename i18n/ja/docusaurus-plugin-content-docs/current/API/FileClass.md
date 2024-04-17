@@ -61,9 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 19 R4 | 新しい `HTTP Client log file` 定数 |
+| 17 R5 | 追加                            |
 
 </details>
 
@@ -77,9 +78,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | fileConstant | Integer | -> | 4Dファイル定数                                       |
 | pathType     | Integer | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *            |         | -> | ホストデータベースのファイルを返すには * を渡します                    |
-| 戻り値          | 4D.File | <- | 新規ファイルオブジェクト|<!-- END REF -->
-
-|
+| 戻り値          | 4D.File | <- | 新規ファイルオブジェクト                                   |
+<!-- END REF -->
 
 #### 説明
 
@@ -115,6 +115,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | Debug log file                    | 12 | `SET DATABASE PARAMETER(Debug log recording)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                      |
 | Diagnostic log file               | 11 | `SET DATABASE PARAMETER(Diagnostic log recording)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                 |
 | Directory file                    | 16 | プロジェクトアプリケーションにおいて、ユーザーとグループ (あれば) の定義が格納された directory.json ファイル。 このファイルは、データベースの user settings フォルダー (デフォルト、プロジェクトに対してグローバル)、または data settings フォルダー (データファイル専用) に保管されます。                                                                                                                   |
+| HTTP Client log file              | 24 | `HTTP SET OPTION(HTTP client log)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                                 |
 | HTTP debug log file               | 9  | `WEB SET OPTION(Web debug log)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                                    |
 | HTTP log file                     | 8  | `WEB SET OPTION(Web log recording)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                                |
 | IMAP Log file                     | 23 | `SET DATABASE PARAMETER(IMAP Log)` コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。                                                                                                                                                                                                                 |
@@ -135,9 +136,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -156,9 +157,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF file.create().Note -->
@@ -169,11 +170,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!--REF #FileClass.create().Params -->
-| 引数  | タイプ     |    | 説明                                                              |
-| --- | ------- | -- | --------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false|<!-- END REF -->
-
-|
+| 引数  | タイプ     |    | 説明                                   |
+| --- | ------- | -- | ------------------------------------ |
+| 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
+<!-- END REF -->
 
 #### 説明
 
@@ -201,23 +201,22 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.createAlias().Params -->
-| 引数                | タイプ       |    | 説明                                                |
-| ----------------- | --------- | -- | ------------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                          |
-| aliasName         | Text      | -> | エイリアスまたはショートカットの名称                                |
-| aliasType         | Integer   | -> | エイリアスリンクのタイプ                                      |
-| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照|<!-- END REF -->
-
-|
+| 引数                | タイプ       |    | 説明                       |
+| ----------------- | --------- | -- | ------------------------ |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
+| aliasName         | Text      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | Integer   | -> | エイリアスリンクのタイプ             |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照   |
+<!-- END REF -->
 
 #### 説明
 
@@ -257,9 +256,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -267,11 +266,10 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 
 <!-- REF #FileClass.delete().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 #### 説明
 
@@ -314,21 +312,19 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 引数  | タイプ    |    | 説明                                                              |
-| --- | ------ | -- | --------------------------------------------------------------- |
-| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身|<!-- END REF -->
-
-
-|
+| 引数  | タイプ    |    | 説明                                   |
+| --- | ------ | -- | ------------------------------------ |
+| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
+<!-- END REF -->
 
 
 #### 説明
@@ -409,23 +405,21 @@ ALERT($info.Copyright)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                                  |
-| ----------------- | --------- | -- | ----------------------------------- |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                             |
-| newName           | Text      | -> | 移動先でのファイルの完全な名称                     |
-| 戻り値               | 4D.File   | <- | 移動したファイル|<!-- END REF -->
-
-
-|
+| 引数                | タイプ       |    | 説明              |
+| ----------------- | --------- | -- | --------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー         |
+| newName           | Text      | -> | 移動先でのファイルの完全な名称 |
+| 戻り値               | 4D.File   | <- | 移動したファイル        |
+<!-- END REF -->
 
 
 #### 説明
@@ -456,22 +450,21 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| 引数      | タイプ                              |    | 説明                                               |
-| ------- | -------------------------------- | -- | ------------------------------------------------ |
-| mode    | Text                             | -> | 開くモード: "read", "write", "append"                 |
-| options | Object                           | -> | 開くオプション                                          |
-| 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト|<!-- END REF -->
-
-|
+| 引数      | タイプ                              |    | 説明                               |
+| ------- | -------------------------------- | -- | -------------------------------- |
+| mode    | Text                             | -> | 開くモード: "read", "write", "append" |
+| options | Object                           | -> | 開くオプション                          |
+| 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト            |
+<!-- END REF -->
 
 #### 説明
 
@@ -535,21 +528,20 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
-| 引数      | タイプ     |    | 説明                                     |
-| ------- | ------- | -- | -------------------------------------- |
-| newName | Text    | -> | ファイルの新しい完全な名称                          |
-| 戻り値     | 4D.File | <- | 名称変更されたファイル|<!-- END REF -->
-
-|
+| 引数      | タイプ     |    | 説明            |
+| ------- | ------- | -- | ------------- |
+| newName | Text    | -> | ファイルの新しい完全な名称 |
+| 戻り値     | 4D.File | <- | 名称変更されたファイル   |
+<!-- END REF -->
 
 #### 説明
 
@@ -578,21 +570,20 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容            |
-| ----- | ------------- |
-| v20   | WinIcon をサポート |
-| v19   | 追加            |
+| リリース | 内容            |
+| ---- | ------------- |
+| 20   | WinIcon をサポート |
+| 19   | 追加            |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 引数   | タイプ    |    | 説明                                                                     |
-| ---- | ------ | -- | ---------------------------------------------------------------------- |
-| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ|<!-- END REF -->
-
-|
+| 引数   | タイプ    |    | 説明                                          |
+| ---- | ------ | -- | ------------------------------------------- |
+| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
+<!-- END REF -->
 
 #### 説明
 
@@ -669,20 +660,19 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 
 <!--REF #FileClass.setContent().Params -->
-| 引数      | タイプ  |    | 説明                                       |
-| ------- | ---- | -- | ---------------------------------------- |
-| content | BLOB | -> | ファイルの新しいコンテンツ|<!-- END REF -->
-
-|
+| 引数      | タイプ  |    | 説明            |
+| ------- | ---- | -- | ------------- |
+| content | BLOB | -> | ファイルの新しいコンテンツ |
+<!-- END REF -->
 
 #### 説明
 
@@ -701,10 +691,10 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                               |
-| ------ | ------------------------------------------------ |
-| v19 R3 | 新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用 |
-| v17 R5 | 追加                                               |
+| リリース  | 内容                                               |
+| ----- | ------------------------------------------------ |
+| 19 R3 | 新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用 |
+| 17 R5 | 追加                                               |
 
 </details>
 
@@ -713,15 +703,13 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setText().Params -->
-| 引数          | タイプ     |    | 説明                                  |
-| ----------- | ------- | -- | ----------------------------------- |
-| text        | Text    | -> | ファイルに保存するテキスト                       |
-| charSetName | Text    | -> | 文字セットの名前                            |
-| charSetNum  | Integer | -> | 文字セットの番号                            |
-| breakMode   | Integer | -> | 改行の処理モード|<!-- END REF -->
-
-
-|
+| 引数          | タイプ     |    | 説明            |
+| ----------- | ------- | -- | ------------- |
+| text        | Text    | -> | ファイルに保存するテキスト |
+| charSetName | Text    | -> | 文字セットの名前      |
+| charSetNum  | Integer | -> | 文字セットの番号      |
+| breakMode   | Integer | -> | 改行の処理モード      |
+<!-- END REF -->
 
 
 #### 説明

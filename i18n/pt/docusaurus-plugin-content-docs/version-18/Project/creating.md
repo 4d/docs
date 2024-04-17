@@ -7,9 +7,9 @@ title: Criar um projeto 4D
 
 New 4D projects can only be created from **4D Developer** (see [Developing a project](developing.md)).
 
-**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes only. For deployment, 4D projects are provided as .4dz files (zipped files). For more information, please refer to [Building a project package](building.md).
+**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes only. Para implantação, os projetos 4D são fornecidos como arquivos .4dz (arquivos compactados). For more information, please refer to [Building a project package](building.md).
 
-> You can create project databases by exporting existing binary databases. See "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
+> You can create project databases by exporting existing binary databases. Consulte "Exportar de um banco de dados 4D" em [doc.4d.com](https://doc.4d.com).
 
 ## Criar arquivos do projeto
 

@@ -3,13 +3,14 @@ id: debugLogFiles
 title: Description des fichiers d'historique
 ---
 
-Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés à l'aide des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
+Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Les informations des journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -150,6 +151,35 @@ Les champs suivants sont enregistrés pour Requête et Réponse :
 | TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)      |
 | ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication) |
 | SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log    |
+
+## 4DHTTPClientLog.txt
+
+This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+Pour lancer ce journal :
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//other values are available
+```
+
+Les champs suivants sont enregistrés pour Requête et Réponse :
+
+| Noms des champs | Description                                                                      |
+| --------------- | -------------------------------------------------------------------------------- |
+| SequenceID      | Numéro d'opération séquentiel et unique dans la session de log                   |
+| ConnectionID    | Identifiant UUID de process de connexion                                         |
+| LocalIP         | Client IP address                                                                |
+| PeerIP          | Server IP address                                                                |
+| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
+| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+
+Depending on log options, various other fields can also be logged.
+
+- For request: request line, headers, request body
+- For response: status line, headers, response body (uncompressed), if any
+
 
 ## 4DDebugLog.txt (standard)
 
@@ -328,10 +358,10 @@ Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis un
 Pour lancer ce journal :
 
 ```4d
-    //sur une machine distante
+    //on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //peut également être envoyé en mémoire
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
+    //can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -378,11 +408,11 @@ Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le s
 Pour lancer ce journal :
 
 ```4d
-    //sur le serveur
+    //on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... parameter is optional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+    //srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

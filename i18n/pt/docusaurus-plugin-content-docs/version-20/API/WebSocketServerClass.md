@@ -5,9 +5,9 @@ title: WebSocketServer
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -40,7 +40,7 @@ Além disso, terá de criar duas classes de utilizador que conterão funções d
 
 É necessário [criar o servidor WebSocket](#4dwebsocketservernew) dentro de um [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para manter a ligação activa.
 
-The [4D Web Server](WebServerClass.md) must be started.
+O [servidor 4D Web](WebServerClass.md) deve ser iniciado.
 
 
 ### Exemplo

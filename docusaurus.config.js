@@ -29,24 +29,24 @@ module.exports = {
 		  // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-         '20-R3': {
-              label: 'v20 R3 BETA',
+         '20-R4': {
+              label: '20 R4 BETA',
               banner: 'none',
             },
-         '20-R2': {
-              label: 'v20 R2',
+		 '20-R3': {
+              label: '20 R3',
               banner: 'none',
             },
          '20': {
-              label: 'v20',
+              label: '20',
               banner: 'none',
             },
             '19': {
-              label: 'v19',
+              label: '19',
               banner: 'none',
             },
             '18': {
-              label: 'v18',
+              label: '18',
               banner: 'none',
             },
           },
@@ -102,7 +102,7 @@ module.exports = {
       {
         "fromExtensions":["html"],
 		createRedirects(existingPath) {
-          if (existingPath.includes('/docs')) 
+          if (existingPath.includes('/docs'))
 			{
             // Redirect from /docs/en to /docs
 				return [
@@ -230,7 +230,7 @@ module.exports = {
           ],
         },
       ],
-      "copyright": "© 2023 4D SAS - All rights reserved",
+      "copyright": "© 2024 4D SAS - All rights reserved",
     },
   }
 }

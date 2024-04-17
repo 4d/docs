@@ -1,21 +1,22 @@
 ---
 id: debugLogFiles
-title: ログファイルの詳細
+title: ログファイル
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html)、[WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html)、あるいは [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1160.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([標準](#4ddebuglogtxt-標準) & [タブ分け](#4ddebuglogtxt-タブ分け))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
-* [ORDAリクエストのログファイル](#orda-requests)
+* [ORDAリクエストのログファイル](#ordaリクエスト)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
 
@@ -126,6 +127,8 @@ SET DATABASE PARAMETER(Client Log Recording;1) // リモートサイド
 | connection\_uuid                | プロセス接続の UUID識別子                                      |
 | server\_process\_unique\_id | サーバー上の固有プロセスID                                       |
 
+
+
 ## HTTPDebugLog.txt
 
 このログファイルは、各 HTTPリクエストとそれぞれのレスポンスを rawモードで記録します。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
@@ -133,8 +136,6 @@ SET DATABASE PARAMETER(Client Log Recording;1) // リモートサイド
 このログの開始方法:
 
 ```4d
-
-
 
 WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可能
 ```
@@ -149,6 +150,36 @@ WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可�
 | TimeStamp      | (システムが開始されてからの) ミリ秒単位でのタイムスタンプ      |
 | ConnectionID   | 接続UUID (通信に使用された VTCPSocket の UUID) |
 | SequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号      |
+
+
+## 4DHTTPClientLog.txt
+
+このログファイルは、4D HTTPクライアントを通過する HTTPトラフィックを記録します。 ヘッダーを含むリクエストおよびレスポンス全体が記録され、オプションでボディ部分も記録することができます。
+
+このログの開始方法:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+// 他の値も利用できます
+```
+
+リクエストとレスポンスの両方に対して以下のフィールドが記録されます:
+
+| フィールド名          | 説明                                             |
+| --------------- | ---------------------------------------------- |
+| SequenceID      | ログセッション内で固有かつシーケンシャルなオペレーション番号                 |
+| ConnectionID    | プロセス接続の UUID識別子                                |
+| LocalIP         | クライアントの IPアドレス                                 |
+| PeerIP          | サーバー IPアドレス                                    |
+| TimeStamp       | リクエストが送信された時点、またはレスポンスが完全に受信された時点のタイムスタンプ (ms) |
+| ElapsedTimeInMs | (レスポンスのみ) リクエストタイムスタンプとの差分                     |
+
+ログオプションに応じて、他の様々なフィールドを記録に含めることができます。
+
+- リクエストの場合: リクエスト行、ヘッダー、リクエスト本文
+- レスポンスの場合: ステータス行、ヘッダー、非圧縮のレスポンス本文 (あれば)
+
 
 ## 4DDebugLog.txt (標準)
 
@@ -249,6 +280,7 @@ SET DATABASE PARAMETER (Diagnostic log recording; 1)
 SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 ```
 
+
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt
 
 これらのログファイルは、以下のコマンドを使用して始動された、4Dアプリケーションとメールサーバー (SMTP、POP3、IMAP) 間の通信をそれぞれ記録します:
@@ -267,11 +299,11 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
  このログを開始するには:
 
- ```4d
- SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
+```4d
+SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
  SET DATABASE PARAMETER(POP3 Log;1) // POP3ログを開始
  SET DATABASE PARAMETER(IMAP Log;1) // IMAPログを開始
- ```
+```
 
 > 4D Server: 4D Server 管理ウィンドウ内の [メンテナンスページ](ServerWindow/maintenance.md) の **リクエストとデバッグのログを開始** ボタンをクリックします。
 
@@ -328,7 +360,7 @@ ORDAリクエストログは、ORDAリクエストとサーバーのレスポン
 ```4d
     // リモートマシンにて
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
     // メモリに送ることもできます
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
@@ -378,9 +410,9 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 ```4d
     // サーバーマシンにて
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
     // srl... パラメーターは任意です
-SET DATABASE PARAMETER(4D Server log recording;0) 
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note
@@ -541,6 +573,18 @@ SET DATABASE PARAMETER(4D Server log recording;0)
                 }
             }
         },
+        "HTTPClientLogs": {
+             "description": "Configuration for http client logs",
+             "type": "object",
+             "properties": {
+                  "state": {
+                       "description": "Configure http client logs",
+                       "type": "integer",
+                       "minimum": 0,
+                       "maximum": 7
+                  },
+             }
+        },
         "POP3Logs": {
             "description": "Configuration for POP3 logs",
             "type": "object",
@@ -620,6 +664,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
  },
  "IMAPLogs": {
         "state" : 1
+
  },
  "ORDALogs": {
         "state" : 1,

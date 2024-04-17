@@ -29,7 +29,7 @@ N'oubliez pas que les noms de propriétés font la différence entre les majuscu
 :::
 
 
-Vous gérez les variables, les champs ou les expressions de type Objet en utilisant la [notation objet](dt_object.md#syntax-basics) ou les commandes disponibles dans le thème **Objets (langage)**. A noter que des commandes spécifiques du thème **Recherches**, telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
+You manage Object type variables, fields or expressions using the standard [object notation](#properties) or the commands available in the **Objects (Language)** theme. A noter que des commandes spécifiques du thème **Recherches**, telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
@@ -124,7 +124,7 @@ Vous pouvez créer deux types d'objets :
 
 ## Propriétés
 
-Object notation can be used to access object property values through a chain of tokens. Avec la notation objet, il est possible d'accéder aux propriétés d'objets (aussi appelées attributs d'objets) de deux façons :
+You access object property values through a chain of tokens. Object properties can be accessed in two ways:
 
 - using a "dot" symbol: > object.propertyName
 
@@ -144,17 +144,13 @@ Exemples :
 
 ```
 
-Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
+Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
 
 ```4d
  $vAge:=employee.children[2].age
 ```
 
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
-
-
-
-
 
 - avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Exemples :
 
@@ -171,7 +167,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $measures:=Lire mesures base.DB.tables
 ```
 
-- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
+- **Project methods** or **Functions** that return objects. Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -191,7 +187,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 ### Valeur Null
 
-Lorsque la notation objet est utilisée, la valeur **null** est prise en charge via la commande **Null**. Cette commande peut être utilisée pour affecter ou comparer la valeur null aux propriétés d'objets ou aux éléments de collections, par exemple :
+When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
 
 ```4d
  myObject.address.zip:=Null
@@ -202,72 +198,7 @@ For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ### Valeur Indéfinie
 
-L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous :
-
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html) with them:
-
-```4d
-     var $o : Object
-     var $val : Integer
-     $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
-      //$val=0
-```
-
-- La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
-
-```4d
-     var $c : Collection //variable created but no collection is defined
-     $size:=$c.length //$size = 0
-```
-
-- Une valeur indéfinie passée en paramètre à une méthode projet est automatiquement convertie en 0 ou en "" en fonction de la déclaration du type du paramètre.
-
-```4d
-     var $o : Object
-     mymethod($o.a) //pass an undefined parameter
-
-      //In mymethod method
-     #Declare ($myText : Text) //parameter type is text
-      // $myText contains ""
-```
-
-- Une expression de condition est automatiquement convertie à Faux lorsque son évaluation donne Indéfinie avec les mots-clés Si et Au cas ou :
-
-```4d
-     var $o : Object
-     If($o.a) // false
-     End if
-     Case of
-        :($o.a) // false
-     End case
-```
-
-L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type :
- - Objet, collection, pointeur : Null
- - Image : image vide
- - Booléen : False
- - Chaîne : ""
- - Numérique : 0
- - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
- - Heure : 0 (nombre de ms)
- - Indéfini, Null : pas de changement
-
-```4d
-     var $o : Object
-     $o:=New object("a";2)
-     $o.a:=$o.b //$o.a=0
-```
-
-- L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
-
-
-Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : `String`, `Num`, `Time`, `Date`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :
-
-```4d
- $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie
-  //afin d'éviter des erreurs dans le code
-```
+L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Assigning an undefined value to an existing object property reinitializes or clears its value. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 

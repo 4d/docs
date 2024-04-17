@@ -25,8 +25,8 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 ### Regras adicionais para SQL
 
-- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+- Somente os caracteres _0123456789abcdefghijklmnopqrstuvwxyz são aceitos
+- Os nomes não devem incluir nenhuma palavra-chave SQL (comando, atributo, etc.).
 
 **Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
 
@@ -320,7 +320,7 @@ If(Records in set("$Selection"+String($i))>0)
 
 ## Seleções temporárias
 
-From the scope point of view, there are two types of named selections:
+Do ponto de vista do escopo, há dois tipos de seleções temporárias:
 
 - Seleções temporárias interprocesso
 - Seleções temporárias processo.

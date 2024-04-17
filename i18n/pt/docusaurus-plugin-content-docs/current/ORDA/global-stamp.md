@@ -1,6 +1,6 @@
 ---
 id: global-stamp
-title: Using the Global Stamp
+title: Usando o selo global
 ---
 
 
@@ -61,7 +61,7 @@ The 4D Structure Editor allows you to enable or disable data change tracking usi
 
 Para ativar o rastreamento de alterações de dados:
 
-1. Select the table(s) for which you want to enable data change tracking.
+1. Selecione a(s) tabela(s) para as quais você deseja habilitar o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
 3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 
@@ -73,20 +73,31 @@ Em seguida, 4D faz as seguintes alterações:
 
 Para desativar o rastreamento de alterações de dados:
 
-1. Select the table(s) for which you want to remove data change tracking.
+1. Selecione a(s) tabela(s) para as quais você deseja remover o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
 3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 
-4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
+Em seguida, 4D remove o campo `__GlobalStamp` da(s) tabela(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
 
 
 
 ## Exemplo
 
-```4d var $oldStamp : Real var $tableName : Text var $modifiedEmps : cs.EmployeeSelection var $deletedEmpsInfo : cs.__DeletedRecordsSelection
+```4d
+var $oldStamp : Real
+var $tableName : Text
+var $modifiedEmps : cs.EmployeeSelection
+var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
-$tableName:="Employee" $oldStamp:=... //load the previous stamp value  
-//from which you want to compare the current stamp
+$tableName:="Employee"
+$oldStamp:=... //load the previous stamp value  
+    //from which you want to compare the current stamp
 
-If ($oldStamp # ds.getGlobalStamp()) //get all new or modified entities $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp) //get all deleted entities     $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName) End if
+If ($oldStamp # ds.getGlobalStamp())
+        //get all new or modified entities
+    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+        //get all deleted entities
+    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+    $oldStamp; $tableName)
+End if
+```

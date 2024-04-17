@@ -138,7 +138,7 @@ $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
 ### Métodos do menu
-Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Atribui-se o método ao comando menu usando o editor de menu ou um comando do tema "Menus". O método executa-se quando o comando do menu é escolhido. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
+Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Atribui-se o método ao comando menu usando o editor de menu ou um comando do tema "Menus". O método executa-se quando o comando do menu é escolhido. Esse processo é um dos principais aspectos da personalização de um banco de dados. By creating custom menus with menu methods that perform specific actions, you personalize your database.
 
 Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. Por exemplo, um comando de menu para introduzir registos pode chamar um método que executa duas tarefas: exibir o formulário de introdução apropriado, e chamar o comando `ADD RECORD` até que o usuário cancele a atividade de introdução de dados.
 

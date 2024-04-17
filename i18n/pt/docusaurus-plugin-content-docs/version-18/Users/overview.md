@@ -11,7 +11,7 @@ If more than one person uses a database, which is usually the case in client-ser
 
 O sistema de acesso por senha de 4D é baseado em usuários e grupos. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
 
-Groups can then be assigned access privileges to specific parts or features of the database (Design access, HTTP server, SQL server, etc.), or any custom part.
+Os grupos podem então receber privilégios de acesso a partes ou funcionalidades específicas do banco de dados (acesso ao modo Desenho, servidor HTTP, servidor SQL, etc.) ou a qualquer parte personalizada.
 
 O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Design sendo atribuidos ao grupo "Devs":
 
@@ -40,11 +40,11 @@ In project databases (.4DProject or .4dz files), 4D users and groups can be conf
 
 ## Editor de toolbox
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+Os editores dos usuários e grupos estão localizados na caixa de ferramentas de 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
+> O editor de usuários e grupos pode ser exibido em execução com ajuda do comando [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html).
 
 ## Ficheiro Directory.json
 
@@ -53,6 +53,6 @@ Users, groups, as well as their access rights are stored in a specific database 
 Esse arquivo pode ser armazenado nos seguintes locais:
 
 - in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. Essas propriedades são usadas por padrão no banco de dados.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
+- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. A configuração personalizada não será afetada por uma atualização do banco de dados.
 
 > If users and groups management is not active, the directory.json is not created.

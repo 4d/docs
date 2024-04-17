@@ -5,7 +5,7 @@ title: Collection
 
 Las colecciones son listas ordenadas de valores de tipos similares o diferentes (texto, número, fecha, objeto, booleano, colección o null).
 
-Para manipular las variables de tipo Colección, debe utilizar la notación objeto (ver [Sintaxis-básica](Conceptos/dt_object.md#sintaxis-básica)).
+Las variables de tipo colección se gestionan mediante la [notación de objetos](dt_object.md#properties).
 
 Para acceder a un elemento de la colección, hay que pasar el número del elemento entre corchetes:
 
@@ -144,4 +144,13 @@ Varias funciones aceptan una _propertyPath_ como parámetro. Este parámetro sig
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido
  $vmin:=$col.min(["My.special.property"]) //error
+```
+
+## Indefinido
+
+La lectura de la propiedad **length** de una colección indefinida produce 0:
+
+```4d
+     var $c : Collection //variable creada pero sin colección definida
+     $size:=$c.length //$size = 0
 ```

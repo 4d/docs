@@ -19,7 +19,7 @@ As seguintes convenções são utilizadas na sintaxe da função:
 
 ## Comandos clássicos
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). A título de referência, são enumerados a seguir:
+In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. Estes comandos são descritos no manual *Linguagem 4D* em [doc.4d.com](https://doc.4d.com). A título de referência, são enumerados a seguir:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 

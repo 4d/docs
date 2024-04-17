@@ -17,18 +17,25 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 ## Criação de variáveis
 
-Cria-se variáveis declarando-as. A linguagem 4D oferece duas maneiras de declarar variáveis:
+Normalmente, você cria variáveis declarando-as. A linguagem 4D oferece duas maneiras de declarar variáveis:
 
 - utilizando a palavra-chave `var` (recomendado, especialmente se o seu código utilizar objectos e classes),
-- Você cria as variáveis declarando-as mediante um dos comandos dos temas "Compilador" ou "Arrays".
+- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
-**Nota:** apesar de não recomendado, pode criar variáveis simplesmente usando-as; não precisa definir as variáveis formalmente como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Quando as variáveis são declaradas, são inicializadas com o valor predefinido [**correspondente ao seu tipo**](data-types.md#default-values), que manterão durante a sessão, desde que não lhes tenha sido [atribuído](#assigning-data).
+
+:::note
+
+Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
  MyDate:=Current date+30 //MyDate é criada e obtém a data atual mais  30 días
 ```
 
-Quando as variáveis são declaradas, são inicializadas com o valor predefinido [**correspondente ao seu tipo**](data-types.md#default-values), que manterão durante a sessão, desde que não lhes tenha sido [atribuído](#assigning-data).
+When a variable is created before being declared, it is not initialized at the declaration step.
+
+:::
+
 
 
 ### Usando a palavra-chave `var`

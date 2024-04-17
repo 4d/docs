@@ -364,9 +364,9 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -374,12 +374,11 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
-| Parámetros | Tipo       |    | Descripción                             |
-| ---------- | ---------- |:--:| --------------------------------------- |
-| mime       | Blob, Text | -> | Email en MIME                           |
-| Result     | Object     | <- | Objeto Email|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción   |
+| ---------- | ---------- |:--:| ------------- |
+| mime       | Blob, Text | -> | Email en MIME |
+| Result     | Object     | <- | Objeto Email  |
+<!-- END REF -->
 
 #### Descripción
 
@@ -449,10 +448,10 @@ $status:=$transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
-| v17 R5  | Modificado     |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
+| 17 R5       | Modificado     |
 
 </details>
 
@@ -460,13 +459,12 @@ $status:=$transporter.send($email)
 
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
-| Parámetros | Tipo   |    | Descripción                                                |
-| ---------- | ------ |:--:| ---------------------------------------------------------- |
-| mail       | Object | -> | Objeto Email                                               |
-| options    | Object | -> | Opciones de codificación y de charset del mail             |
-| Result     | Text   | <- | Objeto email convertido en MIME|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                                    |
+| ---------- | ------ |:--:| ---------------------------------------------- |
+| mail       | Object | -> | Objeto Email                                   |
+| options    | Object | -> | Opciones de codificación y de charset del mail |
+| Result     | Text   | <- | Objeto email convertido en MIME                |
+<!-- END REF -->
 
 #### Descripción
 

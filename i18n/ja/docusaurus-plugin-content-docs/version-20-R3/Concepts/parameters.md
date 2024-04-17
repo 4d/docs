@@ -162,9 +162,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 </details>
 
 `return`文は、関数やメソッドの実行を終了させ、呼び出し元に式を返すために使用します。
@@ -306,18 +306,18 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // エラー
 
 :::
 
-## `Compiler_Methods` method
+## `Compiler_Methods` メソッド
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+[インタープリターモード](interpreted.md) では必須ではないものの、プロジェクトをコンパイルする予定があれば、メソッドの各パラメーターを宣言しておくべきでしょう。
 
-When using the `#DECLARE` keyword, parameters are declared. 例:
+`#DECLARE` キーワードを使用すると、パラメーターは宣言されます。 例:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+    // すべての引数はデータ型とともに宣言されます
 ```
 
-However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
+しかしながら、4Dコンパイラーのために、特殊なシンタックスを使って専用メソッド内でパラメーターをすべて宣言する必要があります:
 
 - プロジェクトメソッドのパラメーター宣言は、コンパイル用に 1つ以上のプロジェクトメソッドにまとめることができます。
 - これらの専用メソッドの名前は "**Compiler**" で始まります。例: "Compiler_MyParameters"。
@@ -336,11 +336,11 @@ However, the 4D compiler needs that you declare all your parameters in a specifi
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+コンパイラー設定の [**コンパイラーメソッド...**](../Project/compiler.md#コンパイラーメソッド) セクションで定義した `Compiler` メソッドは、コンパイラーウィンドウの **型宣言を生成** ボタンを使用すると自動的に作成されます。
 
 :::info
 
-Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
+コンテキストによっては、"Compiler" メソッドでの宣言をサポートしていないため、別途処理されます:
 
 - データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
@@ -348,7 +348,7 @@ Some contexts do not support declaration in a "Compiler" method, thus they are h
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Functions - Function parameters are automatically declared for compilation in the function prototype. 例:
+- 関数 - 関数の引数は、関数プロトタイプにおいてコンパイルのために自動的に宣言されます。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer

@@ -29,10 +29,10 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added .exposed attribute|
-|v17|Added|
+|19 R3|Added .exposed attribute|
+|17|Added|
 
 </details>
 
@@ -128,10 +128,10 @@ Considering the following table properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of the *settings* parameter|
-|v17|Added|
+|17 R5|Support of the *settings* parameter|
+|17|Added|
 
 </details>
 
@@ -142,7 +142,8 @@ Considering the following table properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|<!-- END REF -->
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -176,9 +177,9 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -188,7 +189,8 @@ In the optional *settings* parameter, you can pass an object containing addition
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -227,10 +229,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of the *settings* parameter|
-|v17|Added|
+|17 R5|Support of the *settings* parameter|
+|17|Added|
 
 </details>
 
@@ -242,7 +244,8 @@ $ds.Persons.clearRemoteCache()
 |---------|--- |:---:|------|
 |objectCol |Collection|->|Collection of objects to be mapped with entities|
 |settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+<!-- END REF -->
 
 #### Description
 
@@ -426,9 +429,9 @@ In this example, the first entity will be created and saved but the second will 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -440,7 +443,8 @@ In this example, the first entity will be created and saved but the second will 
 |---------|--- |:---:|------|
 |primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|<!-- END REF -->
+|Result|4D.Entity|<-|Entity matching the designated primary key|
+<!-- END REF -->
 
 #### Description
 
@@ -500,9 +504,9 @@ This example illustrates the use of the *context* property:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -512,7 +516,8 @@ This example illustrates the use of the *context* property:
 <!-- REF #DataClassClass.getCount().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|<!-- END REF -->
+|result|Integer|<-|Number of entities in the dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -538,9 +543,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -550,7 +555,8 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|<!-- END REF -->
+|Result|cs.DataStore|<-|Datastore of the dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -589,10 +595,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added exposed property|
-|v17 R5|Added|
+|19 R3|Added exposed property|
+|17 R5|Added|
 
 </details>
 
@@ -602,7 +608,8 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|<!-- END REF -->
+|Result|Object|<-|Information on the dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -661,9 +668,9 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -673,7 +680,8 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
+|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
+<!-- END REF -->
 
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -750,9 +758,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -762,7 +770,8 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|<!-- END REF -->
+|Result|4D.Entity|<-|New entity matching the Dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -794,9 +803,9 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -807,7 +816,8 @@ This example creates a new entity in the "Log" Dataclass and records information
 |Parameter|Type||Description|
 |---|---|---|---|
 |keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+<!-- END REF -->
 
 #### Description
 
@@ -834,11 +844,11 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Support of Formula parameters|
-|v17 R5|Support of placeholders for values|
-|v17|Added|
+|17 R6|Support of Formula parameters|
+|17 R5|Support of placeholders for values|
+|17|Added|
 
 </details>
 
@@ -852,7 +862,8 @@ When created, the entity selection does not contain any entities (`mySelection.l
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+<!-- END REF -->
 
 #### Description
 
@@ -1032,15 +1043,15 @@ ds.Class.info:
 Consider the following results:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // returns B and C
 // finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
 // returns A only
 // finds "entities where all val properties are different from 0"
-// which is the equivalent to 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+// which is the equivalent to
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
@@ -1058,7 +1069,7 @@ You can use any letter from the alphabet as the `[a]` notation.
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query). 
+This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
 
 :::
 
@@ -1183,7 +1194,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 |attributes|Object|**Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
 |args|Object|Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).|
 |allowFormulas| Boolean|True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).|
-|context|Text|Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](../ORDA/remoteDatastores.md#context) section.|
+|context|Text|Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](../ORDA/client-server-optimization.md#optimization-context) section.|
 |queryPlan| Boolean |In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query()` and `dataClass.query()` functions.|
 |queryPath|Boolean| In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query()` and `dataClass.query()` functions.|
 
@@ -1504,9 +1515,9 @@ We want to disallow formulas, for example when the user enters their query:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1516,7 +1527,8 @@ We want to disallow formulas, for example when the user enters their query:
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
+|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 

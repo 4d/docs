@@ -1,27 +1,27 @@
 ---
 id: global-stamp
-title: Using the Global Stamp
+title: Utilizando el sello global
 ---
 
 
 
 ## Generalidades
 
-4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.
+4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales, etc.
 
-The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Sin embargo, tenga en cuenta que el sello puede modificarse utilizando la función [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
+El sello de modificación global es un número, siempre mantenido por 4D, incluso en caso de restauración de la base de datos, importación, etc. Sin embargo, tenga en cuenta que el sello puede modificarse utilizando la función [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
 
-Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
+Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
-1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity. In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
+1. El valor actual del sello de modificación global se guarda en el atributo especial "__GlobalStamp" de la entidad implicada. En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
-2. The global modification stamp value is incremented.
+2. Se incrementa el valor del sello de modificación global.
 
 Este mecanismo permite identificar las entidades que han sido modificadas, añadidas o suprimidas desde un momento dado, y aplicar las medidas oportunas (ver el ejemplo).
 
 :::info
 
-Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock).
+No confunda el **sello de modificación global** con el **sello de entidad** interna, utilizado para la [funcionalidad bloqueo optimista](entities.md#automatic-optimistic-lock).
 
 :::
 
@@ -29,7 +29,7 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 ## Configuración del seguimiento de cambios en los datos
 
-Por defecto, el sello de modificación global no se crea (la función [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) devuelve 0. To enable data change tracking, you need to add special fields and a table to your structure. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
+Por defecto, el sello de modificación global no se crea (la función [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) devuelve 0. Para habilitar el seguimiento de cambios en los datos, debe añadir campos especiales y una tabla a su estructura. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
 
 ### Requisitos de estructura
 
@@ -37,15 +37,15 @@ Para habilitar el seguimiento de cambios de datos, la estructura de la aplicaci�
 
 Además, para garantizar el correcto funcionamiento de la funcionalidad, se requieren las siguientes condiciones:
 
-- The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
+- El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
 - Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
-| Campo         | Tipo           | Descripción                               |
-| ------------- | -------------- | ----------------------------------------- |
-| __PrimaryKey  | Text           | Llave primaria de la entidad eliminada    |
-| __Stamp       | Entero 64 bits | Global stamp just before the deletion     |
-| __TableName   | Text           | Nombre de la tabla de entidades eliminada |
-| __TableNumber | Entero largo   | Número de la tabla de entidades eliminada |
+| Campo         | Tipo           | Descripción                                |
+| ------------- | -------------- | ------------------------------------------ |
+| __PrimaryKey  | Text           | Llave primaria de la entidad eliminada     |
+| __Stamp       | Entero 64 bits | Sello global justo antes de la eliminación |
+| __TableName   | Text           | Nombre de la tabla de entidades eliminada  |
+| __TableNumber | Entero largo   | Número de la tabla de entidades eliminada  |
 
 Sólo puede realizar un seguimiento de los cambios de los datos de las tablas que tengan el campo `__GlobalStamp`.
 

@@ -4,23 +4,23 @@ import Link from '@docusaurus/Link';
 
 const localizedLinks = {
   "homepage.sections.core-development.langage-ref-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html',
+    message: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html',
     id: 'homepage.sections.core-development.langage-ref-url',
   }),
   "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html',
+    message: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html',
     id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
   }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html',
+    message: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html',
+    message: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html',
+    message: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html',
     id: 'homepage.sections.textensions.4D-Widgets-url',
   }),
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
@@ -72,29 +72,29 @@ const Sections = [
         <Link to="Project/overview" >
           <Translate>Project Management</Translate>
         </Link>
-        <Link to="Concepts/about">
-          <Translate>Language Concepts</Translate>
-        </Link>
-        <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
-          <Translate>Language Reference (4D Doc Center)</Translate>
-        </Link>
-        <Link to="ORDA/overview" >
-          <Translate>Object Relational Data Access (ORDA)</Translate>
-        </Link>
-        <Link to="API/overview" >
-          <Translate>Class Functions</Translate>
-        </Link>
-        <Link to="code-editor/overview" >
+         <Link to="code-editor/write-class-method" >
           <Translate>Handling Code</Translate>
-        </Link>
-        <Link to="Tags/tags" >
-          <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Debugging/basics" >
           <Translate>Debugging</Translate>
         </Link>
-        <Link to="settings/overview" >
-          <Translate>Settings</Translate>
+         <Link to="ORDA/overview" >
+          <Translate>Object Relational Data Access (ORDA)</Translate>
+        </Link>
+       <Link to="Concepts/about">
+          <Translate>Language Concepts</Translate>
+        </Link>
+       <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
+          <Translate>Language Reference (4D Doc Center)</Translate>
+        </Link>
+        <Link to="API/overview" >
+          <Translate>Class Functions</Translate>
+        </Link>
+        <Link to="Develop/processes" >
+          <Translate>Processes</Translate>
+        </Link>
+        <Link to="Tags/transformation-tags" >
+          <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Preferences/overview" >
           <Translate>Preferences</Translate>
@@ -168,7 +168,7 @@ const Sections = [
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-NetKit/tree/20R3">
+        <Link to="https://github.com/4d/4D-NetKit/tree/20R4">
           <Translate>4D NetKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
@@ -201,11 +201,14 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="WebServer/overview">
+        <Link to="WebServer/">
           <Translate>Web Server</Translate>
         </Link>
         <Link to="WebServer/gettingStarted">
           <Translate>Web Development</Translate>
+        </Link>
+        <Link to="WebServer/qodly-studio">
+          <Translate>Qodly Studio</Translate>
         </Link>
         <Link to="REST/gettingStarted">
           <Translate>REST Server</Translate>

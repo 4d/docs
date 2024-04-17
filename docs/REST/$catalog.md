@@ -4,7 +4,7 @@ title: $catalog
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.   
+The catalog describes all the dataclasses and attributes available in the datastore.  
 
 
 ## Available syntaxes
@@ -14,6 +14,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 |[**$catalog**](#catalog)|`/$catalog`|Returns a list of the dataclasses in your project along with two URIs|
 |[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns information about all of your project's dataclasses and their attributes|
 |[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
+|[**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls)|`/$catalog/authentify`|Executes the datastore class function if it exists|
 
 
 ## $catalog

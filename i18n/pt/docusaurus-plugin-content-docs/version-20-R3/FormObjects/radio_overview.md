@@ -66,7 +66,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - o destaque do botão nunca aparece.
 
 
 
@@ -78,7 +78,7 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
   ![](../assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - o destaque do botão nunca aparece.
 
 
 ### Bevel arredondado

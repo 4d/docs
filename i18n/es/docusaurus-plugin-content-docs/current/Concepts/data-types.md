@@ -53,6 +53,12 @@ El valor por defecto depende del tipo de variable:
 | Variant    | indefinido        |
 
 
+### Null como valor por defecto
+
+Las variables de tipo Object, Collection, Pointer y Picture tienen **null** como valor por defecto, pero en realidad obtienen un estado intermedio cuando se declaran y no se asignan. *Se comportan como* los valores **null**, pero con algunas diferencias, generando menos errores cuando el código intenta acceder a ellos.
+
+
+
 ## Convertir los tipos de datos
 
 El lenguaje 4D contiene operadores y comandos para convertir entre tipos de datos, cuando dichas conversiones tienen sentido. El lenguaje 4D aplica la verificación de tipos de datos. Por ejemplo, no se puede escribir: "abc"+0.5+!12/25/96!-?00:30:45?. Esto generará errores de sintaxis.

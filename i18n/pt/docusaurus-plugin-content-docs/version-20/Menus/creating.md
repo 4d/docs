@@ -5,7 +5,7 @@ title: Criação de menus e barras de menus
 
 É possível criar menus e barras de menu:
 
-- usando o editor de menus da janela da caixa de ferramentas 4D. In this case, menus and menu bars are stored in the application's structure.
+- usando o editor de menus da janela da caixa de ferramentas 4D. Nesse caso, os menus e as barras de menu são armazenados na estrutura da aplicação.
 - dinamicamente, utilizando os comandos de linguagem do tema "Menus". In this case, menus and menu bars are not stored, they only exist in memory.
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
@@ -13,14 +13,14 @@ You can combine both features and use menus created in structure as templates to
 
 ## Barra de menu padrão
 
-A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
+Uma aplicação personalizada deve conter pelo menos uma barra de menu com um menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
 
 This allows the user to access the Application environment as soon as the project is created. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
 
 A barra de menus predefinida inclui três menus:
 
 - **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
-- **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
+- **Editar**: padrão e completamente modificável. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
 > > > Menu items appear *in italics* because they consist of references and not hard-coded text. Consultar [Propriedade Título](properties.md#title).
 
@@ -60,7 +60,7 @@ Utilize `INSERT MENU ITEM` ou `APPEND MENU ITEM` para inserir ou adicionar itens
 ## Eliminar menus e itens
 
 ### Utilizar o editor de menus
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
+Você pode excluir uma barra de menus, um menu ou um item de menu a qualquer momento. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. Quando você exclui a última referência de um menu, o 4D exibe um alerta.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 
@@ -81,7 +81,7 @@ Once you have created a menu, you can attach it to one or several other menus (s
 
 Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+Você pode criar submenus de submenus em uma profundidade praticamente ilimitada. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
 
 At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
 

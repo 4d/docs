@@ -141,7 +141,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -205,7 +205,7 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -263,7 +263,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -301,7 +301,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -349,7 +349,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -392,9 +392,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                |
+| Release | Modifications                                                |
 | ------- | ------------------------------------------------------------ |
-| v18 R3  | Nouvelle option *ck shared*. Nouveaux paramètres *groupWith* |
+| 18 R3   | Nouvelle option *ck shared*. Nouveaux paramètres *groupWith* |
 | v16 R6  | Ajout                                                        |
 
 </details>
@@ -520,7 +520,7 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -566,7 +566,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -641,7 +641,7 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -692,7 +692,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -748,7 +748,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -842,14 +842,14 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
 </details>
 
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 
@@ -872,7 +872,7 @@ Le contenu de la collection retournée dépend du paramètre *targetPath* :
 
  Par défaut, les éléments pour lesquels *propertyPath* est null ou undefined sont ignorés dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour intégrer ces valeurs comme des éléments null dans la collection retournée.
 
-* Si un ou plusieurs paramètre(s) *targetPath* sont passés, `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet contenant les propriétés *targetPath* dont les valeurs sont celles des propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
+* Si un ou plusieurs paramètres *targetPath* sont passés (correspondant à un ou plusieurs paramètres *propertyPath* ), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec des propriétés *targetPath* contenant les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
 #### Exemple 1
 
@@ -911,7 +911,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -964,7 +964,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1055,7 +1055,7 @@ Le code de ***TypeLookUp*** est :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1150,7 +1150,7 @@ Le code de la méthode ***FindCity*** est :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1226,7 +1226,7 @@ Le code de la méthode ***FindCity*** est :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1283,7 +1283,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1303,7 +1303,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 #### Description
 
-La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, and not elements themselves. Les positions sont retournées dans un ordre croissant.
+La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, et non les éléments eux-mêmes. Les positions sont retournées dans un ordre croissant.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Le paramètre *queryString* doit respecter la syntaxe suivante :
@@ -1337,7 +1337,7 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1387,7 +1387,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1430,7 +1430,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1488,7 +1488,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R5  | Ajout         |
 
@@ -1520,7 +1520,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1581,7 +1581,7 @@ Voici la méthode ***Percentage*** :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1630,7 +1630,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1679,7 +1679,7 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1713,6 +1713,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
 * *pathObjects* : Collection. Vous pouvez ajouter autant d'objets dans la collection *pathObjects* que nécessaire. Par défaut, les propriétés sont triées par ordre croissant ("descending" est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
 
+
 ```4d
 {
     "propertyPath": string,
@@ -1727,7 +1728,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
  | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
  | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
 
- Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
@@ -1814,7 +1815,7 @@ Tri avec un chemin de propriété :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1918,7 +1919,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1963,7 +1964,7 @@ Lorsqu'elle est appliquée à une collection vide, .`pop()` retourne ***undefine
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2015,9 +2016,9 @@ Vous souhaitez trier la collection résultante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                    |
+| Release | Modifications                    |
 | ------- | -------------------------------- |
-| v17 R5  | Prise en charge de querySettings |
+| 17 R5   | Prise en charge de querySettings |
 | v16 R6  | Ajout                            |
 
 </details>
@@ -2117,7 +2118,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2203,7 +2204,7 @@ Avec la méthode ***Flatten*** suivante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2256,7 +2257,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2310,7 +2311,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2347,7 +2348,7 @@ La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2389,7 +2390,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2409,7 +2410,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 #### Description
 
-La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, sélectionné à partir de l'index *startFrom* jusqu'à l'index *end* (end n'est pas inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
@@ -2438,7 +2439,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2514,7 +2515,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2599,7 +2600,7 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2660,7 +2661,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 

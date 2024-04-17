@@ -61,9 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|19 R4|New `HTTP Client log file` constant|
+|17 R5|Added|
 
 </details>
 
@@ -113,6 +114,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 |Debug log file|12|Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Stored in the Logs folder. |
 |Diagnostic log file|11|Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Stored in the Logs folder. |
 |Directory file|16|directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file). |
+|HTTP Client log file|24|Log file created by the `HTTP SET OPTION(HTTP client log)` command. Stored in the Logs folder. |
 |HTTP debug log file|9|Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder. |
 |HTTP log file|8|Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.|
 |IMAP Log file|23|Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.|  
@@ -133,9 +135,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added
+|18 R6|Added
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -154,9 +156,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF file.create().Note -->
@@ -197,9 +199,9 @@ Creation of a preferences file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -251,9 +253,9 @@ You want to create an alias to a file in your database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
@@ -308,9 +310,9 @@ You want to delete a specific file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added
+|19|Added
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -400,9 +402,9 @@ ALERT($info.Copyright)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -444,9 +446,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -523,9 +525,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -564,10 +566,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of WinIcon|
-|v19|Added|
+|20|Support of WinIcon|
+|19|Added|
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -653,9 +655,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -683,10 +685,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
-|v17 R5|Added|
+|19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
+|17 R5|Added|
 
 </details>
 

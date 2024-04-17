@@ -53,19 +53,21 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 ### `Sources`
 
-Contents|Description|Format|
---------|-------|----|
-catalog.4DCatalog|Table and field definitions|XML|
-folders.json|Explorer folder definitions|JSON|
-menus.json|Menu definitions|JSON|
-settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML|
-tips.json|Defined tips|JSON|
-lists.json|Defined lists|JSON|
-filters.json|Defined filters|JSON|
+Contents|Description|Format
+--------|-------|----
+catalog.4DCatalog|Table and field definitions|XML
+catalog_editor.json|Custom positions and colors of tables, fields, and links in the Structure editor. Depends on a [Compatibility setting](../settings/compatibility.md) in converted projects|JSON
+folders.json|Explorer folder definitions|JSON
+menus.json|Menu definitions|JSON
+settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML
+tips.json|Defined tips|JSON
+lists.json|Defined lists|JSON
+filters.json|Defined filters|JSON
 dependencies.json|Names of [components to load](components.md) in the project|JSON|
-styleSheets.css|CSS style sheets|CSS|
-styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS| 
-styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS|
+styleSheets.css|CSS style sheets|CSS
+styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
+styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    
+
 
 
 #### `DatabaseMethods`

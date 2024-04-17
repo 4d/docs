@@ -19,6 +19,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.size.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
 
 
@@ -26,9 +27,9 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
@@ -46,10 +47,8 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-
-|
+| Resultados  | 4D. MailAttachment | <- | Objeto anexo                                                          |
+<!-- END REF -->
 
 
 #### Descrição
@@ -168,9 +167,9 @@ $transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D. MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
@@ -188,10 +187,8 @@ $transporter.send($email)
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-
-|
+| Resultados  | 4D. MailAttachment | <- | Objeto anexo                                                          |
+<!-- END REF -->
 
 
 #### Descrição
@@ -228,12 +225,10 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                    |
-| ---------- | -------- |:--:| -------------------------------------------- |
-| Resultados | 4D. Blob | <- | Conteúdo do anexo|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo     |    | Descrição         |
+| ---------- | -------- |:--:| ----------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do anexo |
+<!-- END REF -->
 
 
 #### Descrição
@@ -265,9 +260,9 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o ca
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -276,6 +271,16 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o ca
 #### Descrição
 
 A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->A propriedade `.platformPath` devolve<!-- END REF -->.
+
+
+## .size
+
+<!-- REF #MailAttachmentClass.size.Syntax -->**.size** : Integer<!-- END REF -->
+
+
+#### Descrição
+
+A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary -->o valor do cabeçalho `size` do arquivo de anexo<!-- END REF -->. A propriedade `.size` é retornada quando a mensagem MIME define um cabeçalho de tamanho na parte do anexo.
 
 
 ## .type

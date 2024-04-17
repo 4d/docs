@@ -1,6 +1,6 @@
 {
   "link.title.Community": {
-    "message": "Community",
+    "message": "Communauté",
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.Support": {
@@ -8,7 +8,7 @@
     "description": "The title of the footer links column with title=Support in the footer"
   },
   "link.title.Company": {
-    "message": "Company",
+    "message": "Société",
     "description": "The title of the footer links column with title=Company in the footer"
   },
   "link.item.label.4D Developer Center": {
@@ -48,7 +48,7 @@
     "description": "The label of footer link with label=Knowledgebase linking to https://kb.4d.com"
   },
   "link.item.label.Downloads": {
-    "message": "Downloads",
+    "message": "Téléchargements",
     "description": "The label of footer link with label=Downloads linking to https://us.4d.com/product-download/Feature-Release"
   },
   "link.item.label.Resources": {
@@ -56,27 +56,27 @@
     "description": "The label of footer link with label=Resources linking to https://us.4d.com/resources"
   },
   "link.item.label.Get Support": {
-    "message": "Get Support",
+    "message": "Aide",
     "description": "The label of footer link with label=Get Support linking to https://us.4d.com/4d-technical-support"
   },
   "link.item.label.About 4D": {
-    "message": "About 4D",
+    "message": "A propos de 4D",
     "description": "The label of footer link with label=About 4D linking to https://us.4d.com/about-us"
   },
   "link.item.label.Contact us": {
-    "message": "Contact us",
+    "message": "Contacts",
     "description": "The label of footer link with label=Contact us linking to https://us.4d.com/contact-us"
   },
   "link.item.label.4D around the world": {
-    "message": "4D around the world",
+    "message": "4D dans le monde",
     "description": "The label of footer link with label=4D around the world linking to https://us.4d.com/4d-around-the-world"
   },
   "link.item.label.Careers": {
-    "message": "Careers",
+    "message": "Carrière",
     "description": "The label of footer link with label=Careers linking to https://us.4d.com/Careers"
   },
   "copyright": {
-    "message": "© 2023 4D SAS - All rights reserved",
+    "message": "© 2024 4D SAS - All rights reserved",
     "description": "The footer copyright"
   }
 }

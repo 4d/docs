@@ -3,144 +3,140 @@ id: write-class-method
 title: Éditeur de code
 ---
 
-4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more.
+4D dispose d'un puissant éditeur de code intégré qui offre un large choix de fonctionnalités pour une édition de code hautement productive, telles que la complétion intelligente du code, la navigation dans le code, le débogage, la recherche, et bien plus encore.
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
-The Code Editor works much like a text editor. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.
+L'éditeur de code fonctionne comme un éditeur de texte. L'écriture d'une méthode ou d'une classe est généralement une combinaison de saisie de texte, de sélection de composants et de déplacement d'éléments à partir de l'explorateur ou d'autres fenêtres. Vous pouvez également utiliser diverses fonctions d'anticipation (type-ahead) pour créer des méthodes plus rapidement.
 
-You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
+Vous pouvez faire défiler le contenu des méthodes, des classes et des fonctions, qui peuvent comprendre jusqu'à 32 000 lignes de code ou 2 Go de texte.
 
-The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. For more information on how to handle errors, see [Debugging](../Debugging/basics.md).
+L'éditeur de code 4D fournit un contrôle de base des erreurs de syntaxe. Un contrôle d'erreur supplémentaire est effectué lors de l'exécution du code. Pour plus d'informations sur la gestion des erreurs, voir [Débogage](../Debugging/basics.md).
 
 ## Interface
 
 ### Toolbar (Barre d’outils)
 
-Each Code Editor window has a toolbar that provides instant access to basic functions related to code execution and editing.
+Chaque fenêtre de l'éditeur de code dispose d'une barre d'outils qui permet un accès instantané aux fonctionnalités de base liées à l'exécution et à l'édition du code.
 
-| Element                          | Icône                                                                             | Description                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Method execution**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
-| **Find in method**               | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                               |
-| **Macros**                       | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](#macros).                                                                                                                                                         |
-| **Expand all / Collapse all**    | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
-| **Method information**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
-| **Last clipboard values**        | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
-| **Clipboards**                   | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
-| **Menu déroulant de navigation** | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below                                                                                                                                                                                                                         |
+| Élément                                 | Icône                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Exécuter la méthode**                 | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Lorsque vous travaillez avec des méthodes, chaque fenêtre de l'éditeur de code dispose d'un bouton qui peut être utilisé pour exécuter la méthode en cours. A l'aide du menu associé à ce bouton, vous pouvez choisir le type d'exécution:<ul><li> **Exécuter dans un nouveau process** : Crée un process et exécute la méthode en mode standard dans ce process.</li><li>**Exécuter et déboguer dans un nouveau process** : Crée un nouveau process et affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans ce process.</li><li>**Exécuter dans le process application** : Exécute la méthode en mode standard dans le contexte du process Application (en d'autres termes, la fenêtre d'affichage de l'enregistrement).</li><li>**Exécuter et déboguer dans le process application** : Affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans le contexte du processus d'application (en d'autres termes, la fenêtre d'affichage de l'enregistrement).</li></ul>Pour plus d'informations sur l'exécution des méthodes, voir [Méthodes projet](../Concepts/methods.md#calling-project-methods). |
+| **Chercher dans la méthode**            | ![search-icon](../assets/en/code-editor/search.png)                               | Affiche la zone [*Chercher*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                                  |
+| **Liste des macros**                    | ![macros-button](../assets/en/code-editor/macros.png)                             | Insère une macro dans la sélection. Cliquez sur la flèche déroulante pour afficher la liste des macros disponibles. Pour plus d'informations sur la création et l'instanciation des macros, voir [Macros](#macros).                                                                                                                                                                               |
+| **Contracter tout / Déployer tout**     | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Ces boutons permettent de déployer ou de contracter toutes les structures de flux de contrôle du code.                                                                                                                                                                                                                                                                                            |
+| **Propriétés de la méthode**            | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Affiche la boîte de dialogue [Propriétés de la méthode](../Concepts/methods.md#project-method-properties) (méthodes de projet uniquement).                                                                                                                                                                                                                                                        |
+| **Dernières valeurs du Presse-papiers** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Affiche les dernières valeurs stockées dans le presse-papiers.                                                                                                                                                                                                                                                                                                                                    |
+| **Presse-papiers**                      | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Neuf presse-papiers sont disponibles dans l'éditeur de code. Vous pouvez [utiliser ces presse-papiers](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) en cliquant directement dessus ou en utilisant des raccourcis clavier. Vous pouvez utiliser l'[option Préférences](Preferences/methods.md#options-1) pour les masquer.                                            |
+| **Menu déroulant de navigation**        | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Vous permet de naviguer à l'intérieur des méthodes et des classes avec du contenu étiqueté automatiquement ou des marqueurs déclarés manuellement. Voir ci-dessous                                                                                                                                                                                                                                |
 
 
-### Editing area
+### Zone d'édition
 
-This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
+C'est ici que vous écrivez et modifiez votre code. L'éditeur indente automatiquement le texte du code et colore les différents éléments de la syntaxe pour une structure de code claire.
 
-You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
+Vous pouvez personnaliser l'affichage de la zone d'édition. Toute personnalisation est automatiquement reportée sur toutes les fenêtres de l'éditeur de code :
 
-| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                                                       |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                           |
-| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Clic avec le bouton droit de la souris sur un élément de langage (variable, mot-clé, etc.) > Sous-menu **Style**. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                |
-| **thèmes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                      |
-| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                      |
+| Option | Description | Set in... |
 
-#### Change bars
+|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > Sous-menu **Style**. > Sous-menu **Style**. Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. Cette option s'applique à tous les éléments du code (noms de commandes, variables, commentaires, etc.). | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
 
-Colored bars instantly show you where lines of code were modified since the method was opened:
+#### Barres de modification
+
+Des barres de couleur vous indiquent en temps réel où les lignes de code ont été modifiées depuis l'ouverture de la méthode :
 
 ![](../assets/en/code-editor/change-bars.png)
 
-The change bars change colors to indicate whether or not the modifications were saved:
+La couleur de la barre de modification indique si les modifications ont été enregistrées ou non :
 
-- yellow: Line was modified and method has not yet been saved.
-- green: Line was modified and method has been saved.
+- jaune : La ligne a été modifiée et la méthode n'a pas encore été enregistrée.
+- vert : La ligne a été modifiée et la méthode a été enregistrée.
 
 
 
-### Lists area
+### Zone des listes
 
-The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
+La zone des listes permet d'afficher une ou plusieurs listes d'éléments nécessaires à l'écriture des méthodes et des classes (commandes, constantes, formulaires, etc.). Vous pouvez choisir le nombre et le contenu des listes affichées dans la fenêtre.
 
-By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
+Par défaut, l'éditeur de code affiche quatre listes. Vous pouvez masquer ou afficher toutes les listes en cliquant sur l'icône en bas à droite de la fenêtre. ![](../assets/en/code-editor/show-hide-list.png)
 
-You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.
+Vous pouvez agrandir ou réduire la largeur relative de chaque zone de liste en faisant glisser l'une de ses partitions. Il est également possible d'ajuster la taille de la zone de liste par rapport à celle de la zone d'édition en faisant glisser la ligne de séparation entre les deux.
 
-- Double-clicking on an item in a list causes it to be inserted into the editing area, at the location of the cursor.
-- To **modify the contents** of a list, click on the title area of the list concerned: a pop-up menu appears, enabling you to choose the type of item to be displayed.
+- Un double-clic sur un élément d'une liste entraîne son insertion dans la zone d'édition, à l'endroit où se trouve le curseur.
+- Pour **modifier le contenu** d'une liste, cliquez sur la zone de titre de la liste concernée : un menu contextuel apparaît, vous permettant de choisir le type d'élément à afficher.
 
 ![](../assets/en/code-editor/list-area.png)
 
-- To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu. The **Remove this list** command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the **show or hide lists**  button at the bottom right of the window or hide them by default in the **Preferences**.
+- Pour ajouter ou supprimer une liste, cliquez sur la zone de titre de l'une des listes et choisissez la commande correspondante dans le menu contextuel. La commande **Supprimer cette liste** est désactivée lorsque vous cliquez sur la dernière liste. Si vous souhaitez masquer toutes les listes, vous devez soit cliquer sur le bouton **Montrer ou cacher les listes**  en bas à droite de la fenêtre, soit les masquer par défaut dans les **Préférences**.
 
-- You can hide the lists in all the windows in the following ways:
-  - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
-  - Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option. For the modifications made in the **Preferences** dialog box to be taken into account, any open methods, classes or functions must first be closed then reopened.
+- Vous pouvez masquer les listes dans toutes les fenêtres de la manière suivante :
+  - Sélectionnez l'option **Affichage > Listes** dans le menu **Méthode** (une coche indique si les listes sont affichées)
+  - Décochez l'option **Préférences** > **Méthodes** > **Options** > **Afficher les listes** . Pour que les modifications apportées dans la boîte de dialogue **Préférences** soient prises en compte, toutes les méthodes ouvertes, classes ou fonctions doivent d'abord être fermées puis rouvertes.
 
-#### Available lists of items
+#### Listes d'éléments disponibles
 
-You can display the following lists of items in the lists area of the Code Editor window:
+Vous pouvez afficher les listes d'éléments suivantes dans la zone des listes de la fenêtre de l'éditeur de code :
 
-- **All tables and fields**: Database table and field names in the form of a hierarchical list. When you insert a field name into the method by double-clicking on its name, 4D inserts it while respecting the syntax and adds the name of the table or subtable as the case may be.
-- **Table** (submenu): Field names of the table selected using the submenu.
-- **Current table**: Field names of the current table (available in triggers, form methods and object methods).
-- **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
-- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. For example: [Table];"Form".
-- **Methods**: Database project method names.
-- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
-- **Folders** (submenu): Contents of the folder selected using the submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](#creating-and-using-macros)).
-- **Commands**: 4D language commands in alphabetical order.
-- **Commands by themes**: 4D language commands classified by theme in the form of a hierarchical list.
-- **Menu bars**: Names and numbers of menu bars [created with the 4D Menu bar editor](../Menus/creating.md).
-- **Constants**: 4D constants and those of any plug-ins, classified by theme in the form of a hierarchical list.
-- **Lists**: Names of lists.
-- **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
-- **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
-- **SQL Functions**: 4D SQL functions.
+- **Toutes les tables et les champs**: Noms des tables et des champs de la base de données sous la forme d'une liste hiérarchique. Lorsque vous insérez un nom de champ dans la méthode en double-cliquant sur son nom, 4D l'insère en respectant la syntaxe et ajoute le nom de la table ou de la sous-table selon le cas.
+- **Table** (sous-menu) : Noms des champs de la table sélectionnée à l'aide d'un sous-menu.
+- **Table courante**: noms des champs de la table courante (disponibles dans les triggers, les méthodes formulaire et les méthodes objet).
+- **Formulaires Projet**: Nom des formulaires projet de la base de données. Lorsque vous double-cliquez sur le nom d'un formulaire projet, 4D l'insère en respectant la syntaxe : le nom du formulaire est inséré entre guillemets.
+- **Formulaires table**: Noms des tables et des formulaires de la base de données sous la forme d'une liste hiérarchique. Lorsque vous insérez un nom de formulaire dans une méthode en double-cliquant sur son nom, 4D l'insère en respectant la syntaxe : le nom du formulaire est inséré entre guillemets et est précédé du nom de la table et d'un point-virgule. Par exemple: [Table]; "Formulaire".
+- **Méthodes**: noms des méthodes projet de la base de données.
+- **Tous les dossiers**: Noms des dossiers et sous-dossiers d'objets définis dans la base de données, affichés sous la forme d'une liste hiérarchique. Les dossiers peuvent être utilisés pour organiser les objets de manière personnalisée. Ils sont gérés à partir de la page Démarrage de l'Explorateur.
+- **Dossiers** (sous-menu) : Contenu du dossier sélectionné à l'aide d'un sous-menu.
+- **Macros**: Noms des macros définies pour la base de données (voir [Créer et utiliser des macros](#creating-and-using-macros)).
+- **Commandes**: Commandes du langage 4D par ordre alphabétique.
+- **Commandes par thèmes**: Commandes du langage 4D classées par thème sous forme de liste hiérarchique.
+- **Barres de menu**: Noms et numéros des barres de menu [créées avec l'éditeur de barres de menu 4D](../Menus/creating.md).
+- **Constantes**: constantes 4D et celles des éventuels plug-ins, classées par thème sous forme de liste hiérarchique.
+- **Listes**: Noms des listes.
+- **Commandes des plug-ins**: Commandes pour tous les plug-ins installés dans la base de données (s'il y en a), classés par thème sous la forme d'une liste hiérarchique.
+- **Mots clés SQL**: ensemble de mots-clés reconnus par l'analyseur de syntaxe SQL de 4D. Cette liste comprend des commandes (par exemple SELECT), des clauses (par exemple WHERE) ainsi que des fonctions (ABS).
+- **Fonctions SQL**: fonctions SQL de 4D.
 
-**Note:** Except for the Macros element, all the lists are in alphabetical order.
+**Note :** A l'exception de l'élément Macros, toutes les listes sont classées par ordre alphabétique.
 
-#### Save as template
+#### Enregistrer comme modèle
 
-You can save the lists set in the Code Editor window in the form of a template. Once the template is saved, the parameters set in it will be used for each new Code Editor window that is opened.
+Vous pouvez enregistrer les listes définies dans la fenêtre de l'éditeur de code sous la forme d'un modèle. Une fois le modèle enregistré, les paramètres définis dans ce dernier seront utilisés pour chaque nouvelle fenêtre de l'éditeur de code qui sera ouverte.
 
-The following parameters are stored in the template:
+Les paramètres suivants sont stockés dans le modèle :
 
-- Relative size of the editing and list areas
-- Number of lists
-- Location and contents of each list
-- Relative width of each list
+- Taille relative des zones d'édition et de liste
+- Nombre de listes
+- Emplacement et contenu de chaque liste
+- Largeur relative de chaque liste
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+Pour enregistrer une fenêtre de l'éditeur de code en tant que modèle, choisissez **Méthode** > **Enregistrer comme modèle**. Le modèle est enregistré immédiatement (aucune boîte de dialogue ne s'affiche). Il est stocké dans les **Préférences ** de l'application 4D. Si un modèle précédent existe déjà, il est remplacé.
 
-### Break points area
+### Zone de points d'arrêt
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
+Cette zone, située à gauche de la zone d'édition, permet d'afficher les numéros de ligne et d'insérer des points d'arrêt directement à côté d'instructions spécifiques. Les points d'arrêt sont utiles pendant la phase de débogage de votre programmation. Ils arrêtent l'exécution de votre code à des endroits spécifiques et affichent le débogueur.
 
-For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
+Pour plus d'informations sur les points d'arrêt, voir la section [Débogage](../Debugging/breakpoints.md#breakpoints) .
 
-You can display or hide the line numbers in the break points area for each window of the Code Editor.
+Vous pouvez afficher ou masquer les numéros de ligne dans la zone de points d'arrêt pour chaque fenêtre de l'éditeur de code.
 
-- To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
-- To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
+- Pour activer ou désactiver l'affichage des numéros de ligne par défaut, choisissez **Préférences** > **Méthodes** > **Afficher numéros de lignes**.
+- Pour modifier cet affichage séparément pour chaque fenêtre de l'éditeur de code, choisissez **Méthode** > **Affichage** > **Numéros de lignes**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+L'affichage des numéros de ligne permet de se repérer plus facilement dans la fenêtre. La commande **Méthode** > **Aller à la ligne n°...** vous permet également de profiter de cet affichage.
 
-This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+Ce type de recherche est utile lorsqu'il est utilisé conjointement avec le [compilateur](../Project/compiler.md), qui signale les erreurs d'exécution par le numéro de ligne où elles se produisent.
 
-### Status bar
+### Barre d'état
 
-The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
+La barre d'état située en bas à droite de la fenêtre de l'éditeur affiche à tout moment la position du curseur :
 
 ![](../assets/en/code-editor/status-bar.png)
 
-- **Ln**: Line number
-- **Col**: Column number, i.e., the level in the hierarchy of programming structures. The first level is 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
-- **Ch**: Location of character in the line.
-- ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
+- **Ln**: Numéro de ligne
+- **Col**: Numéro de colonne, c'est-à-dire le niveau dans la hiérarchie des structures de programmation. Le premier niveau est 0. Le numéro de colonne est utile pour le débogage car cette information peut être fournie par l'interpréteur en cas d'erreur dans le code.
+- **Ch**: Emplacement du caractère dans la ligne.
+- ![](../assets/en/code-editor/show-hide-list.png): Masquer/afficher les listes.
 
-When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png)
+Lorsque vous placez le curseur dans une commande, une fonction ou un paramètre, la barre d'état affiche la syntaxe de la commande. Si vous écrivez ou sélectionnez un paramètre, la zone affiche le paramètre actuel en **gras** : ![](../assets/en/code-editor/status-bar-bold.png)
 
 ### Menu déroulant de navigation
 
@@ -182,7 +178,7 @@ En ajoutant des marqueurs dans votre code, vous pouvez ajouter les balises suiva
 Vous les déclarez en ajoutant des commentaires tels que :
 
 ```4d
-// FIXME : Corrige les éléments suivants
+// FIXME : Corriger les éléments suivants
 ```
 
 Les déclarations ne sont pas sensibles à la casse ; écrire `fixme` : a le même effet.
@@ -212,227 +208,227 @@ Pour afficher les balises d'une méthode ou d'une classe par ordre alphabétique
 
 ### Raccourcis
 
-Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
+De nombreuses fonctionnalités de l'éditeur de code de 4D sont disponibles par le biais de raccourcis clavier par défaut.
 
 :::info macOS
 
-Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+Sous macOS, utilisez la touche **Command** au lieu de la touche **Ctrl** mentionnée (Windows).
 
 :::
 
-| **Shortcut**                                                    | **Action**                                                                                                                                 |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Selection and navigation**                                    |                                                                                                                                            |
-| Double-click                                                    | Select a language element name                                                                                                             |
-| [Alt]+Double-click                                              | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
-| [Shift]+[right arrow]                                           | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
-| [Shift]+[left arrow]                                            | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
-| [Shift]+[down arrow]                                            | Create and enlarge a selection, line by line, from the top to the bottom                                                                   |
-| [Shift]+[up arrow]                                              | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
-| [Ctrl]+[Shift]+[right arrow]                                    | Create and enlarge the selection, word by word, from the right                                                                             |
-| [Ctrl]+[Shift]+[left arrow]                                     | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
-| [Ctrl]+[right arrow]                                            | Move the insertion point, word by word, from left to right                                                                                 |
-| [Ctrl]+[left arrow]                                             | Move the insertion point, word by word, from right to left                                                                                 |
-| [Alt]+[down arrow]                                              | Move the line(s) where the cursor is to the bottom                                                                                         |
-| [Alt]+[up arrow]                                                | Move the line(s) where the cursor is to the top                                                                                            |
-| [Home]                                                          | Place the insertion point at the beginning of the line                                                                                     |
-| [End]                                                           | Place the insertion point at the end of the line                                                                                           |
-| [Ctrl]+[Home]                                                   | Place the insertion point at the beginning of the method                                                                                   |
-| [Ctrl]+[End]                                                    | Place the insertion point at the end of the method                                                                                         |
-| [Shift]+[Home]                                                  | Select all the characters in the line that are to the left of the cursor                                                                   |
-| [Shift]+[End]                                                   | Select all the characters in the line that are to the right of the cursor                                                                  |
-| [PgUp]                                                          | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
-| [PgDn]                                                          | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
-| [**Introspection**](#goto-definition)                           |                                                                                                                                            |
-| [Ctrl]+K or [Alt]+double-click                                  | Same as [**Goto definition**](#goto-definition) command                                                                                    |
-| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
-| [**Chercher et remplacer**](#find-and-replace)                  |                                                                                                                                            |
-| [Ctrl]+F                                                        | Chercher                                                                                                                                   |
-| [Ctrl]+G                                                        | Find Next                                                                                                                                  |
-| [Ctrl]+[Shift]+G                                                | Find Previous                                                                                                                              |
-| [Ctrl]+E                                                        | Find Same Next                                                                                                                             |
-| [Ctrl]+[Shift]+E                                                | Find Same Previous                                                                                                                         |
-| [Ctrl]+[Alt]+F                                                  | Replace                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                                  | Replace Next                                                                                                                               |
-| [Ctrl]+[Alt]+[Shift]+G                                          | Replace Previous                                                                                                                           |
-| [**Clipboards**](#clipboards)                                   |                                                                                                                                            |
-| [Shift]+click or [Alt]+click on clipboard icon                  | Copy selected text to a clipboard                                                                                                          |
-| [Ctrl]+[Shift]+number key                                       | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                                  | Paste contents of a clipboard at cursor location                                                                                           |
-| [Ctrl]+number key                                               | Paste contents of the number clipboard at cursor location                                                                                  |
+| **Raccourci**                                           | **Action**                                                                                                                                        |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sélection et navigation**                             |                                                                                                                                                   |
+| Double-clic                                             | Sélectionne un nom d'élément du langage                                                                                                           |
+| [Alt]+Double-clic                                       | Sélectionne un nom d'élément du langage contenant des espaces (constante, méthode, etc.)                                                          |
+| [Maj]+[flèche droite]                                   | Crée et agrandit la sélection, caractère par caractère, vers la droite, ou Réduit la sélection, caractère par caractère, à partir de la gauche    |
+| [Maj]+[flèche gauche]                                   | Réduit la sélection, caractère par caractère, à partir de la droite ou Crée et agrandit la sélection, caractère par caractère, vers la gauche     |
+| [Maj]+[flèche vers le bas]                              | Crée et agrandit une sélection, ligne par ligne, du haut vers le bas                                                                              |
+| [Maj]+[flèche haut]                                     | Crée et agrandit une sélection, ligne par ligne, du bas vers le haut                                                                              |
+| [Ctrl]+[Maj]+[flèche droite]                            | Crée et agrandit la sélection, mot par mot, de droite à gauche                                                                                    |
+| [Ctrl]+[Maj]+[flèche gauche]                            | Réduit la sélection, mot par mot, à partir de la droite, ou crée et agrandit la sélection, mot par mot, à partir de la gauche                     |
+| [Ctrl]+[flèche droite]                                  | Déplace le point d'insertion, mot par mot, de gauche à droite                                                                                     |
+| [Ctrl]+[flèche gauche]                                  | Déplace le point d'insertion, mot par mot, de droite à gauche                                                                                     |
+| [Alt]+[flèche vers le bas]                              | Déplace la ou les ligne(s) où se trouve le curseur vers le bas                                                                                    |
+| [Alt]+[flèche haut]                                     | Déplace la ou les ligne(s) où se trouve le curseur vers le haut                                                                                   |
+| [Home]                                                  | Place le point d'insertion au début de la ligne                                                                                                   |
+| [Fin]                                                   | Place le point d'insertion à la fin de la ligne                                                                                                   |
+| [Ctrl]+[Home]                                           | Place le point d'insertion au début de la méthode                                                                                                 |
+| [Ctrl]+[Fin]                                            | Place le point d'insertion à la fin de la méthode                                                                                                 |
+| [Maj]+[Home]                                            | Sélectionne tous les caractères de la ligne qui se trouvent à gauche du curseur                                                                   |
+| [Maj]+[Fin]                                             | Sélectionne tous les caractères de la ligne qui se trouvent à droite du curseur                                                                   |
+| [PgAV]                                                  | Fait défiler le contenu de la méthode, page par page, du bas vers le haut (ne modifie pas le point d'insertion)                                   |
+| [PgAR]                                                  | Fait défiler le contenu de la méthode, page par page, du haut vers le bas (ne modifie pas le point d'insertion)                                   |
+| [**Introspection**](#goto-definition)                   |                                                                                                                                                   |
+| [Ctrl]+K ou [Alt]+double-clic                           | Identique à la commande [**Aller à définition**](#goto-definition)                                                                                |
+| \[Ctrl\] (Windows) ou \[Alt\] (macOS)+survol d'un token | Souligne le token (élément de langage identifié). Clic sur le token souligné = identique à la commande [**Aller à définition**](#goto-definition) |
+| [**Chercher et remplacer**](#find-and-replace)          |                                                                                                                                                   |
+| [Ctrl]+F                                                | Chercher                                                                                                                                          |
+| [Ctrl]+G                                                | Chercher suivant                                                                                                                                  |
+| [Ctrl]+[Maj]+G                                          | Chercher précédent                                                                                                                                |
+| [Ctrl]+E                                                | Chercher identique suivant                                                                                                                        |
+| [Ctrl]+[Maj]+E                                          | Chercher identique précédent                                                                                                                      |
+| [Ctrl]+[Alt]+F                                          | Remplacer                                                                                                                                         |
+| [Ctrl]+[Alt]+G                                          | Remplacer suivant                                                                                                                                 |
+| [Ctrl]+[Alt]+[Maj]+G                                    | Remplacer précédent                                                                                                                               |
+| [**Presse-papiers**](#clipboards)                       |                                                                                                                                                   |
+| [Maj]+clic ou [Alt]+clic sur l'icône du presse-papiers  | Copier le texte sélectionné dans un presse-papiers                                                                                                |
+| [Ctrl]+[Maj]+touche numérotée                           | Copier le texte sélectionné dans le presse-papiers de ce numéro                                                                                   |
+| [Ctrl]+clic sur l'icône du presse-papiers               | Coller le contenu d'un presse-papiers à l'emplacement du curseur                                                                                  |
+| [Ctrl]+[Maj]+touche numérotée                           | Coller le contenu du presse-papiers de ce numéro à l'emplacement du curseur                                                                       |
 
 :::tip
 
-Most of these shortcuts can be customized in the [4D Preferences](../Preferences/shortcuts.md) dialog box.
+La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dialogue [Préférences 4D](../Preferences/shortcuts.md).
 
 :::
 
 
 
-## Editing Code
+## Edition du code
 
-4D uses standard text editing techniques for typing and editing in the Code Editor.
+4D utilise des techniques d'édition de texte standard pour la saisie et la modification dans l'Éditeur de code.
 
-The Code Editor uses display conventions (style, color) for the syntax elements. You can [customize these conventions](#customizing-the-editing-area). As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).
+L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Vous pouvez [personnaliser ces conventions](#customizing-the-editing-area). Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
 
-You can use the arrow keys to move from line to line quickly. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
+Vous pouvez utiliser les touches fléchées pour vous déplacer rapidement d'une ligne à l'autre. Utiliser les touches fléchées pour se déplacer sur plusieurs lignes est plus rapide que de cliquer car l'éditeur retarde l'évaluation de la ligne pour les erreurs.
 
-Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
+Sous Windows, l'éditeur de code comprend un éditeur de code d'entrée (IME) pour faciliter l'édition de code sur les systèmes japonais ou chinois.
 
-The Code Editor includes numerous [navigation shortcuts](#shortcuts).
+L'Éditeur de code comprend de nombreux [raccourcis de navigation](#shortcuts).
 
-#### Using the backslash
+#### Utilisation du backslash
 
-The backslash character (`\`) has a specific support in the 4D language:
+Le caractère backslash (`\`) bénéficie d'un support spécifique dans le langage 4D :
 
-- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+- inséré à la fin des lignes, il permet d'écrire une seule instruction sur [plusieurs lignes](../Concepts/quick-tour.md#code-on-several-lines).
+- il permet de définir des [séquences d'échappement](../Concepts/quick-tour.md#escape-sequences).
 
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\MyDocuments`will become`C:\\MyDocuments`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemins Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple par une barre oblique inverse double. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété incorrectement comme `\N` (une [séquence d'échappement](../Concepts/quick-tour.md#s%C3%A9quences-d%C3%A9chappement) existante). Vous devez donc saisir un double backslash lorsque vous souhaitez avoir une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 
 :::
 
 
 
-### Drag-and-drop
+### Glisser-déposer
 
-From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
+Depuis l'explorateur, vous pouvez glisser-déposer des tables, des champs, des formulaires, des méthodes projet, des constantes ou des commandes 4D. Lorsque vous glissez et déposez un élément, 4D utilise toujours la bonne syntaxe. Par exemple, si vous faites glisser le nom de champ Prénom de la table `[People]`, il apparaît dans l'Éditeur de code comme `[People]Prénom`. De même, si vous faites glisser le nom du formulaire Input de la table People, il apparaît dans l'Éditeur de code comme `[People];"Input"`.
 
-When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. You can then use a syntax that better suits your usage.
-
-
-Vous pouvez également effectuer un glisser-déposer à l'intérieur d'une méthode, d'une classe ou d'une fonction, ou entre deux méthodes, classes ou fonctions différentes. Dans l'éditeur de code, le mécanisme de glisser-déposer est activé dès qu'une portion de texte est sélectionnée. By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
+Lorsque vous insérez une commande en la faisant glisser depuis la page **Commandes** de l'Explorateur, elle apparaît avec sa syntaxe (qui comprend tous ses paramètres) dans l'Éditeur de code. Cette fonctionnalité vous rappelle simplement les paramètres que la commande attend. Vous pouvez alors utiliser la syntaxe qui convient le mieux à votre utilisation.
 
 
+Vous pouvez également effectuer un glisser-déposer à l'intérieur d'une méthode, d'une classe ou d'une fonction, ou entre deux méthodes, classes ou fonctions différentes. Dans l'éditeur de code, le mécanisme de glisser-déposer est activé dès qu'une portion de texte est sélectionnée. Par défaut, le mécanisme de glisser-déposer **déplace** le texte sélectionné. Pour **copier** celui-ci, maintenez la touche **Ctrl** (Windows) ou la touche **Option** (macOS) enfoncée pendant l'opération.
 
-### Changing case
 
-You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
-- **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. This type of notation is often used for variable nomenclatures. hireDate and PurchaseDate are examples of two variants of camel case notation.
+### Modification de la casse
 
-When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
+Vous pouvez modifier automatiquement la casse des caractères sélectionnés en utilisant les commandes du menu **Méthodes** > **Casse** ou le menu contextuel de l'éditeur :
 
-### Swap expression
+- **Majuscule** / **Minuscule** : Basculer les caractères sélectionnés en majuscules ou en minuscules.
+- **camelCase** / **CamelCase** : Changer les caractères sélectionnés en "camel case". Cela consiste à passer en majuscule chaque première lettre d'un groupe de mots attachés. Ce type de notation est souvent utilisé pour les nomenclatures de variables. hireDate et PurchaseDate sont des exemples de deux variantes de la notation en camel case.
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
+Lorsque vous appliquez l'une de ces commandes à une sélection de texte, les espaces et les caractères "_" sont supprimés et la première lettre de chaque mot est mise en majuscule.
+
+### Inverser l'expression
+
+La fonctionnalité **Inverser expression** peut être utilisée pour inverser les arguments d'une expression assignant une valeur. Par exemple,
 
 `variable1:=variable2`
 
-becomes
+devient
 
 `variable2:=variable1`
 
-This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
+Cette fonctionnalité est extrêmement utile pour inverser un ensemble d'affectations utilisées pour obtenir ou définir des propriétés, ou pour corriger des erreurs de saisie. Pour utiliser cette fonctionnalité, sélectionnez la ou les ligne(s) à modifier, puis choisissez **Méthode** > **Inverser l'expression** ou utilisez le menu contextuel de la zone. Dans la sélection, seules les lignes assignant une valeur seront modifiées.
 
-### Clipboards
+### Presse-papiers
 
-In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
+En plus de l'opération standard copier-coller, 4D offre deux fonctionnalités supplémentaires qui vous permettent de travailler avec le contenu des différents presse-papiers :
 
-- The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Each of the different contents saved in this way can be reused at any time. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
+- Le programme stocke en mémoire les 10 dernières actions de "copier" ou "couper" qui ont été effectuées dans l'Éditeur de code pendant la session en cours. Chacun des différents contenus enregistrés de cette manière peut être réutilisé à tout moment. Pour cela, utilisez la commande **Historique du Presse-papier** du menu contextuel de l'éditeur de code ou le bouton "Dernières valeurs du presse-papiers" de la barre d'outils :
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    The first few words of the copied or cut items are displayed. Select an item to insert it at the current location of the cursor.
+    Les premiers mots des éléments copiés ou coupés sont affichés. Sélectionnez un élément pour l'insérer à l'emplacement courant du curseur.
 
-- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
+- Neuf presse-papiers numérotés supplémentaires sont disponibles et peuvent être utilisés directement à l'aide des boutons de la barre d'outils de l'Éditeur de code ou [en utilisant des raccourcis clavier](#shortcuts) :
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
 
-### Moving lines
+### Déplacement des lignes
 
-You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the **Alt/Option** + **Up Arrow** or **Down Arrow** [keyboard shorcut](#shortcuts).
-
-
+Vous pouvez déplacer la ligne où se trouve le curseur directement sans devoir la sélectionner d'abord en utilisant les commandes **Déplacer lignes en haut** et **Déplacer lignes en bas** dans le menu **Méthode**. Vous pouvez également le faire en utilisant le [raccourci clavier](#shortcuts) touche **Alt/Option** + flèche **Haut** ou flèche **Bas**.
 
 
 
-### Autocomplete functions
 
-The Code Editor provides autocomplete functions. 4D automatically displays suggestions based on the first few characters typed.
 
-In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
+### Fonctions d'autocomplétion
+
+L'Éditeur de Code fournit des fonctionnalités d'autocomplétion. 4D affiche automatiquement des suggestions basées sur les premiers caractères saisis.
+
+Dans l'exemple ci-dessous, en tapant la chaîne de caractères "cop", un triangle bleu s'affiche pour indiquer que plusieurs suggestions sont disponibles :
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
-When the characters you enter correspond to a single possibility, this suggested value appears greyed out (and is inserted if you hit the **Tab** key): ![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
+Lorsque les caractères que vous saisissez correspondent à une seule possibilité, cette valeur suggérée apparaît en gris (et est insérée si vous appuyez sur la touche **Tabulation**) : ![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
 
-> If you checked the **Insert () and closing } ) ] "** option in the **Methods** page of the **Preferences**, 4D will also automatically add **()** after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion): ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
+> Si vous avez coché l'option **Insérer () et fermer } ) ] "** dans la page **Méthodes** des **Préférences**, 4D ajoutera également automatiquement **()** après une commande 4D, un mot-clé ou une méthode projet qui nécessite un ou plusieurs arguments obligatoires (après avoir accepté une suggestion ou une complétion) : ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
-Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:![](../assets/en/code-editor/autocomplete-code-structures.png)
+L'autocomplétion fonctionne également avec les structures de code (par exemple, If..End if, For each...End for each) : lorsque vous saisissez la première partie de la structure, l'éditeur de code suggérera automatiquement la partie de fermeture : ![](../assets/en/code-editor/autocomplete-code-structures.png)
 
-If there are several suggestions available, 4D displays them in a pop-up list when you hit the **Tab** key:
+S'il y a plusieurs suggestions disponibles, 4D les affiche dans une liste déroulante lorsque vous appuyez sur la touche **Tabulation** :
 
 ![](../assets/en/code-editor/autocomplete-popup.png)
 
-The list is in alphabetical order. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
+La liste est par ordre alphabétique. Choisissez la valeur en double-cliquant dessus ou faites défiler la liste à l'aide des touches fléchées du clavier, puis appuyez sur **Entrée**, **Retour arrière** ou **Tabulation** pour insérer la valeur sélectionnée.
 
-By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
+Par défaut, vous pouvez également insérer une valeur suggérée en appuyant sur l'un des délimiteurs suivants `( ; : = < [ {` après avoir sélectionné une valeur : la valeur insérée est ensuite suivie du délimiteur, prête pour la saisie des données.
 
-![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** key --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
+![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** clé --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
 
-> You can disable the use of delimiters for inserting suggested values in **Preferences** > **Methods** > **Options**.
+> Vous pouvez désactiver l'utilisation de délimiteurs pour insérer des valeurs suggérées dans les **Préférences** > **Méthodes** > **Options**.
 
-You can press the **Esc** key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.
+Vous pouvez appuyer sur la touche **Esc** pour fermer la liste déroulante ou vous pouvez continuer à taper pendant qu'elle est ouverte. Les valeurs suggérées dans la liste déroulante sont mises à jour à mesure que des caractères supplémentaires sont saisis.
 
-If the characters typed correspond to different types of objects, the list displays them in their current style. The following types of objects can be displayed:
+Si les caractères saisis correspondent à différents types d'objets, la liste les affiche dans leur style courant. Les types d'objets suivants peuvent être affichés :
 
-- 4D commands
-- SQL commands
-- User methods
-- Table names
-- Field names
+- Commandes 4D
+- Commandes SQL
+- Méthodes utilisateur
+- Noms de tables
+- Noms de champs
 - Constantes
-- Local, process or interprocess variable, declared in the method
-- Object property names
-- Plug-in commands
-- 4D keywords
-- SQL keywords
-- Macros (displayed between < >)
+- Variables déclarées dans la méthode
+- Noms de propriétés d'objets
+- Commandes de plug-ins
+- Mots-clés 4D
+- Mots-clés SQL
+- Macros (affichées entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
+> Pour des raisons pratiques, vous pouvez désactiver l'affichage automatique de la liste des suggestions pour les **constantes**, les **variables (locales ou interprocess) et attributs d'objets**, les **tables** et/ou les **prototypes**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
 
-#### Object property names
+#### Noms de propriétés d'objets
 
-4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
+4D affiche automatiquement des suggestions sensibles à la casse de tous les noms de propriétés d'objet valides dans le code 4D lorsque vous :
 
-- type a dot "." after an object or
-- use the Tab key after a dereferenced object pointer "->".
+- tapez un point "." après un objet ou
+- utilisez la touche Tab après un pointeur d'objet déréférencé "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
-> The `length` property is always included for use with collections.
+> La propriété `length` est toujours incluse pour une utilisation avec les collections.
 
-Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
+Une fois créés, les noms de propriété sont stockés dans une liste globale interne et sont disponibles dès lors qu'une méthode/classe/fonction est ouverte, fermée ou change de focus.
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+La liste des suggestions est mise à jour dynamiquement lorsque vous modifiez le code. Lorsque vous basculez entre les fenêtres, les noms de propriétés nouveaux/modifiés sont toujours ajoutés à la liste globale. La liste est également mise à jour lorsque vous prévisualisez une méthode, une classe ou une fonction dans l'Explorateur.
 
-When the database is restarted, the list is reinitialized.
+Lorsque la base de données est redémarrée, la liste est réinitialisée.
 
-> You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
+> Vous pouvez désactiver l'affichage automatique des propriétés d'objet dans les **Préférences** > **Méthodes** > **suggestions**.
 
 
 ## Chercher et remplacer
 
 
-The Code editor has powerful **find and replace** features that apply to the current window.
+L'éditeur de code dispose de puissantes fonctionnalités de **recherche et remplacement** qui s'appliquent à la fenêtre en cours.
 
-A search and replace area can be displayed in the toolbar of any method window:
+Une zone de recherche et de remplacement peut être affichée dans la barre d'outils de n'importe quelle fenêtre de méthode :
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar.
+Pour afficher cette zone, cliquez sur l'icône **Chercher dans la méthode** de la [barre d'outils](#toolbar) ou sélectionnez une fonction de recherche ou de remplacement soit via un [**raccourci**](#shortcuts) soit via une commande du sous-menu **Édition > Rechercher**. Vous pouvez fermer cette zone à tout moment en cliquant sur le bouton **x** situé à l'extrême droite de la barre d'outils.
 
 :::tip
 
-The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes.
+La fonctionnalité **Rechercher dans le développement** de la barre d'outils 4D ou du menu **Édition** n'est pas spécifique à l'éditeur de code mais peut être utilisée pour rechercher une valeur parmi toutes les méthodes et classes.
 
 :::
 
@@ -457,7 +453,7 @@ Hit the **Enter** key to select closest occurrence to the cursor. You can also c
 
 
 
-### Replace
+### Remplacer
 
 Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) .
 
@@ -484,28 +480,50 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
+## Warnings and errors
 
-## Syntax errors
+Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+The Code Live Checker is activated at three levels:
+
+- when you write code in the code editor,
+- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
+- when you [compile](../Project/compiler.md) the project.
+
+4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+
+Two kinds of symbols are displayed:
+
+- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. Ils n'empêchent pas la compilation.
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+
+When you move the mouse over the symbol, a help tip displays the cause of the error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
+The Code Live Checker is activated while you enter the code. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated.
 
-When the method, class or function is validated, 4D checks for:
+You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 
-- basic syntax errors
+The Code Live Checker checks for:
+
+- basic syntax errors (wrong operators, misspellings and the like)
 - the structure of statements (`If`, `End if` and so on)
-- matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
+- matching enclosing characters in the code such as parentheses or brackets (see tip below)
+- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+
+:::tip
+
+When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.
+:::
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+The Code Live Checker cannot detect some errors that only occur during execution. Execution errors are caught by 4D when the code is executed. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+
 
 ## Help tips
 
@@ -533,7 +551,7 @@ The [status bar](#status-bar) also provides contextual information.
 
 ## Comment / Uncomment
 
-Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. The length of comments is limited to the maximum size of 32,000 characters per line. Le nombre de lignes n'est pas limité.
+Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. The length of comments is limited to the maximum size of 32,000 characters per line.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
@@ -572,7 +590,7 @@ There are several ways to expand and collapse code:
 
 Blocks can be defined by:
 
-- Quotation marks
+- Guillemets
 - Parentheses
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Braces
@@ -677,7 +695,7 @@ This command displays its results in a new window.
 
 
 
-## Macros
+## Liste des macros
 
 
 Vous pouvez utiliser des macro-commandes dans vos méthodes. Les macro-commandes permettent de gagner beaucoup de temps lors de la saisie de code.
@@ -773,6 +791,7 @@ Voici la liste des balises et leur mode d'utilisation :
 |                                  | - index : Presse-papiers à coller. Valeurs = numéro du presse-papiers (0 à 9).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 - Les macros peuvent être appelées à l'aide du menu contextuel de l'éditeur de code ou à l'aide de la fonction type-ahead (voir la section suivante).
+
 - Si vous voulez vous conformer aux spécifications du langage XML, vous ne devez pas utiliser de caractères étendus (caractères accentués, guillemets, etc.).
 
 Voici un exemple de définition de macro :

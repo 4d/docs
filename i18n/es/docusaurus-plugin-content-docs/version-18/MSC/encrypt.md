@@ -49,7 +49,7 @@ En este paso, tiene dos opciones:
 - introduzca la frase secreta actual(2) y haga clic en **OK**. O
 - conecte un dispositivo como una llave USB y haga clic en el botón **Escanear dispositivos**.
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session. (2) La frase de contraseña actual es la frase de contraseña utilizada para generar la clave de cifrado actual.
+(1) El llavero 4D almacena todas las llaves de cifrado de datos válidas introducidas durante la sesión de aplicación. (2) La frase de contraseña actual es la frase de contraseña utilizada para generar la clave de cifrado actual.
 
 En todos los casos, si se proporciona información válida, 4D se reinicia en modo de mantenimiento (si no es ya el caso) y ejecuta la operación.
 

@@ -4,7 +4,7 @@ title: 権限
 ---
 
 
-データ保護と、承認ユーザーによる迅速かつ容易なデータアクセスを両立することは、Webアプリケーションにとって大きな課題です。 ORDA のセキュリティアーキテクチャーはデータストアの中心に実装されており、プロジェクト内のさまざまなリソース (データストア、データクラス、関数など) に対して、すべてのユーザーセッションに特定の権限を定義することができます。
+データ保護と、承認ユーザーによる迅速かつ容易なデータアクセスを両立することは、Webアプリケーションにとって大きな課題です。 ORDA のセキュリティアーキテクチャーはデータストアの中心に実装されており、プロジェクト内のさまざまなリソース (データストア、データクラス、関数など) に対して、すべての Web または REST ユーザーセッションに特定の権限を定義することができます。
 
 
 
@@ -12,7 +12,7 @@ title: 権限
 
 ORDA のセキュリティアーキテクチャーは、権限、許諾アクション (read、create など)、およびリソースの概念に基づいています。
 
-ユーザーがログインすると、そのセッションには自動的に関連する権限がロードされます。 権限は、[`session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数によって、セッションに割り当てられます。
+Webユーザーまたは RESTユーザーがログインすると、そのセッションには自動的に関連する権限がロードされます。 権限は、[`session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数によって、セッションに割り当てられます。
 
 セッション内で送信されるユーザーリクエストは、プロジェクトの `roles.json` ファイルで定義された権限に対して評価されます。
 
@@ -37,6 +37,11 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 - データクラスレベルで定義されたパーミッションは、データストアの設定をオーバーライドします (あれば)。 デフォルトでは、データクラスのすべての属性が、データクラスのパーミッションを継承します。
 - データクラスとは異なり、属性レベルで定義されたパーミッションは、親のデータクラスの設定をオーバーライドするのではなく、それに追加されます。 たとえば、同じ許諾アクションに対し、データクラスのレベルでは "general" という権限名を、データクラスの属性のレベルでは "detail" という権限名を割り当てた場合、その属性にアクセスするには、セッションに "general" と "detail" の両方の権限が設定されている必要があります。
 
+:::info
+
+パーミッションは、データストアオブジェクトへのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
+
+:::
 
 ## 許諾アクション
 
@@ -119,25 +124,26 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                 |               | タイプ                        | 必須 | 説明                                                                 |
-| ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------ |
-| privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                        |
-|             | \[].privilege  |               | String                     |    | アクセス権の名称                                                           |
-|             | \[].includes   |               | String の Collection        |    | 内包する権限名のリスト                                                        |
-| roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
-|             | \[].role       |               | String                     |    | ロール名                                                               |
-|             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
-| permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
-|             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
-|             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
-|             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
-|             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].drop     | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].describe | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].execute  | String の Collection        |    | 権限名のリスト                                                            |
-|             |                 | \[].promote  | String の Collection        |    | 権限名のリスト                                                            |
+| プロパティ名      |                 |               | タイプ                        | 必須 | 説明                                                                       |
+| ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------------ |
+| privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                              |
+|             | \[].privilege  |               | String                     |    | アクセス権の名称                                                                 |
+|             | \[].includes   |               | String の Collection        |    | 内包する権限名のリスト                                                              |
+| roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                             |
+|             | \[].role       |               | String                     |    | ロール名                                                                     |
+|             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                              |
+| permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                         |
+|             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                         |
+|             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                      |
+|             |                 | \[].type     | String                     | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method"       |
+|             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].drop     | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].describe | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].execute  | String の Collection        |    | 権限名のリスト                                                                  |
+|             |                 | \[].promote  | String の Collection        |    | 権限名のリスト                                                                  |
+| forceLogin  |                 |               | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true |
 
 
 :::caution 留意事項
@@ -161,7 +167,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // プロジェクトが開かれるのを防ぐことができます
  ALERT("roles.json ファイルが不正なため、アプリケーションを終了します。")
  QUIT 4D
-End if 
+End if
 ```
 
 ## 運用のための権限の初期化

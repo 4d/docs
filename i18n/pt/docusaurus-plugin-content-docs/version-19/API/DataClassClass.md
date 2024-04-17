@@ -25,9 +25,9 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -118,10 +118,10 @@ Considerando as propriedades de tabela abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v17 R5 | Compatibilidade do parâmetro *settings* |
-| v17    | Adicionado                              |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 17 R5   | Compatibilidade do parâmetro *settings* |
+| 17      | Adicionado                              |
 
 </details>
 
@@ -168,10 +168,10 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v17 R5 | Compatibilidade do parâmetro *settings* |
-| v17    | Adicionado                              |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 17 R5   | Compatibilidade do parâmetro *settings* |
+| 17      | Adicionado                              |
 
 </details>
 
@@ -365,9 +365,9 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -441,9 +441,9 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -492,9 +492,9 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -567,9 +567,9 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -609,9 +609,9 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -651,11 +651,11 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                               |
-| ------ | -------------------------------------- |
-| v17 R6 | Soporte dos Parâmetros Formula         |
-| v17 R5 | Suporte dos marcadores para os valores |
-| v17    | Adicionado                             |
+| Release | Mudanças                               |
+| ------- | -------------------------------------- |
+| 17 R6   | Soporte dos Parâmetros Formula         |
+| 17 R5   | Suporte dos marcadores para os valores |
+| 17      | Adicionado                             |
 
 </details>
 
@@ -691,7 +691,7 @@ attributePath|formula comparator value
 
 onde:
 
-* **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass You can also use a **placeholder** (see below).
+* **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass Você também pode usar um **placeholder** (veja abaixo).
 > *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
 
 * **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Dentro da fórmula, a entidade está disponível através do objeto `This`.
@@ -958,7 +958,7 @@ No parâmetro *querySettings* é possível passar um objeto que conteha opções
 | attributes    | Object     | **attributePath**: path of attribute on which you want to execute the query. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass<table><tr><th>Tipo</th><th>Descrição</th></tr><tr><td>String</td><td>attributePath expressado com a notação de pontos, por exemplo: "name" ou "user.address.zipCode"</td></tr><tr><td>Coleção de strings</td><td>Cada string da coleção representa um nível de attributePath, por exemplo: \["name"] ou \["user","address","zipCode"]. Usar uma coleção permite pesquisar atributos com nomes que não se ajustem à notação de pontos, por exemplo \["4Dv17.1","en/fr"]</td></tr></table>Pode combinar marcadores de posição indexados (valores passados diretamente nos parâmetros *value*) e os valores de marcadores de posição com nome na mesma pesquisa. |
 | args          | Object     | Parámetro(s) a passar para as fórmulas, se houver. O objeto **args** será recebido em $1 dentro das fórmulas e, portanto, seus valores estarão disponíveis através de *$1.property* (ver exemplo 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | allowFormulas | Parâmetros | True para permitir as chamadas de fórmulas na pesquisa (padrão). Passe falso para desautorizar a execução de fórmulas. Se for estabelecido como false y `query()` receber uma fórmula, se envia um erro (1278 - Fórmula não permitida neste método membro).                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| context       | Text       | Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913) page.                                                                                                                                                                                                                                               |
+| context       | Text       | Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade está projetada para processamento cliente/servidor; para obter mais informações, consulte a página [**Otimização cliente/servidor**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913).                                                                                                                                                                                                                             |
 | queryPlan     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                                                      |
 | queryPath     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                               |
 

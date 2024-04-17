@@ -59,9 +59,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -133,9 +133,9 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -154,9 +154,9 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF file.create().Note -->
@@ -198,9 +198,9 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
@@ -254,9 +254,9 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
@@ -311,9 +311,9 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -400,9 +400,9 @@ ALERT($info.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
@@ -454,9 +454,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -497,9 +497,9 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -581,9 +581,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -615,9 +615,9 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->
@@ -654,13 +654,13 @@ If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the 
 
 Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. The following constants, found in the **System Documents** theme are available:
 
-| Parâmetros                    | Valor | Comentário                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                       |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                  |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                   |
+| ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                               |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                                           |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                      |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                       |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

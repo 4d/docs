@@ -67,7 +67,7 @@ Los archivos de clase se almacenan automáticamente en la ubicación adecuada cu
 
 #### Menú Archivo y barra de herramientas
 
-Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nuevo > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
+Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nueva > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
 
 También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
 
@@ -137,9 +137,9 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Una clase es un objeto en sí mismo, de ["Class" class](API/classClass.md).
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Un objeto clase tiene las siguientes propiedades y funciones:
 
-- String [`name`](API/ClassClass.md#name)
+- cadena [`name`](API/ClassClass.md#name)
 - objeto [`superclass`](API/ClassClass.md#superclass) (null si ninguno)
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase.
 

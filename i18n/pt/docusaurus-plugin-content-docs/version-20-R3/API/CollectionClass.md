@@ -162,9 +162,9 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -239,9 +239,9 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -285,9 +285,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -351,9 +351,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -394,9 +394,9 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -416,7 +416,7 @@ $vSize:=$col.length //$vSize=0
 
 #### Descrição
 
-A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou no índice *especificado* posição na instância de coleção e devolve a colecção editada<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
+A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou no índice *especificado* posição na instância de coleção e devolve a colecção editada<!-- END REF -->. Ao contrário da função `.insert()`, `.combine()` adiciona cada valor de *col2* na coleção original, e não como um único elemento de coleção.
 > Essa função modifica a coleção original.
 
 Como padrão, elementos *col2* são adicionados ao final da collection original. Pode passar em *index* a posição onde quiser que os elmentos *col2* sejam inseridos na coleção.
@@ -447,9 +447,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -495,10 +495,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                             |
-| ------ | ---------------------------------------------------- |
-| v18 R3 | Nova opção *ck shared*. Novos parâmetros *groupWith* |
-| v16 R6 | Adicionado                                           |
+| Release | Mudanças                                             |
+| ------- | ---------------------------------------------------- |
+| 18 R3   | Nova opção *ck shared*. Novos parâmetros *groupWith* |
+| v16 R6  | Adicionado                                           |
 
 </details>
 
@@ -624,9 +624,9 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -675,9 +675,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -759,10 +759,10 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v20    | Suporte de `ck count values` |
-| v16 R6 | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 20      | Suporte de `ck count values` |
+| v16 R6  | Adicionado                   |
 
 </details>
 
@@ -823,9 +823,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -883,10 +883,10 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -975,13 +975,13 @@ $b:=$c.every("TypeLookUp";Is real) //$b=false
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1008,7 +1008,7 @@ Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
     Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos null na coleção retornada.
 
 
-*   Se um ou mais parâmetros *targetPath* forem passados,, `.extract()` preenche a nova coelção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Se mantém os valores null (o parámetro *option* se ignora) com esta sintaxe.
+*   If one or more *targetPath* parameter(s) are passed (corresponding to one or more *propertyPath* parameter(s)), `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the matching *propertyPath* properties. Se mantém os valores null (o parámetro *option* se ignora) com esta sintaxe.
 
 
 #### Exemplo 1
@@ -1053,9 +1053,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1113,10 +1113,10 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1137,7 +1137,7 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 #### Descrição
 
-A função `.map()` <!-- REF #collection.filter().Summary -->devolve uma nova coleção contendo todos os elementos da coleção original para a qual a *fórmula * ou *methodName* resultado for **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.map()` <!-- REF #collection.filter().Summary -->devolve uma nova coleção contendo todos os elementos da coleção original para a qual a *fórmula * ou *methodName* resultado for **true**<!-- END REF -->. Esta função devolve uma ***cópia superficial***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 Pode determinar a chamada de retorno a ser executada para filtrar os elementos de recolha utilizando qualquer um dos dois:
@@ -1202,10 +1202,10 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1293,10 +1293,10 @@ var $c;$c2;$c3 : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1372,9 +1372,9 @@ var $c : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1415,9 +1415,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1472,9 +1472,9 @@ $col.flat(MAXLONG)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1563,9 +1563,9 @@ var $c; $c2 : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1627,9 +1627,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1688,9 +1688,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1747,9 +1747,9 @@ Para uma descrição detalhada dos parâmetros *queryString* e *value*, veja a f
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1802,9 +1802,9 @@ Qualquer tipo de elemento aceito por uma coleção pode ser inserido, mesmo outr
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1850,9 +1850,9 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1901,9 +1901,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1960,9 +1960,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R5  | Adicionado |
 
 </details>
 
@@ -1994,10 +1994,10 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2061,9 +2061,9 @@ var $1 : Object
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2115,9 +2115,9 @@ Se a coleção estiver vazia, `.max()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2167,9 +2167,9 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R3   | Adicionado |
 
 </details>
 
@@ -2266,11 +2266,10 @@ $city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
 $country:=["France"; "France"; "Morocco"; "Germany"; "US"]
 $continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
 
-$continent.multiSort($country; {collection: $city; order: ck ascending})
-//$continent=["Africa", "America","Europe","Europe","Europe"]
-//$country=["Morocco", "US","Germany","France","France"]
-//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
-
+$continent.multiSort([$country; {collection: $city; order: ck ascending}])
+//$continent=["Africa","America","Europe","Europe","Europe"]
+//$country=["Morocco","US","France","France","Germany"]
+//$city=["Rabat","San Diego","Lyon","Paris","Eching"]
 ```
 
 #### Exemplo 3
@@ -2307,9 +2306,9 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2335,7 +2334,7 @@ A função `.orderBy()` <!-- REF #collection.orderBy().Summary -->devolve uma no
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
-Se não passar nenhum parâmetro, a função ordena os valores escalares da coleção em ordem ascendente (outros tipos de elementos, como objetos ou coleções, se devolvem desordenados). Pode modificar esta ordem automático passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (ver abaixo).
+If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). Pode modificar esta ordem automático passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (ver abaixo).
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 
@@ -2451,10 +2450,10 @@ Ordenar com uma rota de propriedade:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2552,9 +2551,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2604,9 +2603,9 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2666,10 +2665,10 @@ Você deseja ordenar a coleção resultante:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v17 R5 | Assistência de querySettings |
-| v16 R6 | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 17 R5   | Assistência de querySettings |
+| v16 R6  | Adicionado                   |
 
 </details>
 
@@ -2771,15 +2770,16 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 
 
 
+
 <!-- REF collection.reduce().Desc -->
 ## .reduce()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2871,9 +2871,9 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -2964,9 +2964,9 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3028,9 +3028,9 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3091,9 +3091,9 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3137,9 +3137,9 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->devolve uma c�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3187,9 +3187,9 @@ Se a colecção estiver vazia, este método não faz nada.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3209,7 +3209,7 @@ Se a colecção estiver vazia, este método não faz nada.
 
 #### Descrição
 
-A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta função devolve uma *cópia superficial* da colecção. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 A colecção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom* , a colecção devolvida contém todos os elementos desde *startFrom* até ao último elemento da colecção original.
@@ -3242,10 +3242,10 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -3330,10 +3330,10 @@ Quer saber se pelo menos um valor de colecção é >0.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -3424,9 +3424,9 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3490,9 +3490,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 

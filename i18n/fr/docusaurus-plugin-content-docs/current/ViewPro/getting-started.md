@@ -4,7 +4,7 @@ title: Prise en main
 ---
 
 
-4D View Pro est un [composant 4D](Concepts/components.md) qui comprend une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [méthodes](method-list.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [commands](commands.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
@@ -31,9 +31,9 @@ Les documents 4D View Pro sont affichés et modifiés manuellement dans un [obje
 
 Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans la [bibliothèque d'objets](FormEditor/objectLibrary.md).
 
-> Les zones 4D View Pro peuvent également être [créées et utilisées hors écran](method-list.md#vp-run-offscreen-area).
+> 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
 
-Vous pouvez [configurer la zone](configuring.md) à l'aide de la liste de propriétés et des méthodes 4D View Pro.
+You can [configure the area](configuring.md) using the Property List and 4D View Pro commands.
 
 
 ## Fondamentaux de la sélection, de la saisie et de la navigation
@@ -89,15 +89,15 @@ Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre d
       ![](../assets/en/ViewPro/vpContext2.PNG)
 
 
-## Utilisation des méthodes 4D View Pro
+## Using 4D View Pro commands
 
-4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands.
+4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands.
 
-4D View Pro étant un composant 4D intégré, vous pouvez accéder à sa liste de méthodes à partir de l'Explorateur, dans la section **Méthodes composants** :
+Since 4D View Pro is a built-in 4D component, you can access its list of commands from the Explorer, in the **Component Methods** section:
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-Pour une liste détaillée des méthodes composants, voir [Liste des méthodes](method-list.md).
+For a detailed list, see [Commands](commands.md).
 
 ### Traiter une zone 4D View Pro
 
@@ -105,7 +105,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-La plupart des méthodes 4D View Pro nécessitent un paramètre *vpAreaName*, qui est le [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -120,20 +120,20 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Certaines méthodes 4D View Pro nécessitent un paramètre *rangeObj*. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des méthodes 4D View Pro, vous pouvez créer des plages et les passer à d'autres méthodes pour lire ou écrire dans des emplacements spécifiques de votre document.
+Some 4D View Pro commands require a *rangeObj* parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-Vous pouvez utiliser la méthode [VP Cells](method-list.md#vp-cells) :
+You can use the [VP Cells](commands/vp-cells.md) method:
 
 ```4d 
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 ```
 
-Vous pouvez ensuite passer `$myRange` à une autre méthode 4D View Pro pour modifier ces cellules (par exemple ajouter une bordure à l'ensemble des cellules avec [VP SET BORDER](method-list.md#vp-set-border)).
+You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](commands/vp-set-border.md)).
 
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
@@ -162,4 +162,4 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 * .sjs
 * .pdf (à des fins d'export uniquement)
 
-Pour plus de détails, consultez la description de [VP IMPORT DOCUMENT](method-list.md#vp-import-document) et [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
+For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).

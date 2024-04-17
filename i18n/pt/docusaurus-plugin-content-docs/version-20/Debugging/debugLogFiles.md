@@ -3,13 +3,14 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os registos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os históricos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([padrão](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -150,6 +151,35 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 | TimeStamp      | Timestamp em milisegundos (desde início sistema)             |
 | ConnectionID   | Connection UUID (UUID de VTCPSocket usada para comunicação)  |
 | SequenceNumber | Número de operação único e sequencial da sessão de histórico |
+
+## 4DHTTPClientLog.txt
+
+Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+Como iniciar esse log:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//outros valores estão disponíveis
+```
+
+Os campos abaixo são registrados tanto para Request quanto para Response:
+
+| Campo nome      | Descrição                                                                        |
+| --------------- | -------------------------------------------------------------------------------- |
+| SequenceID      | Número de operação único e sequencial da sessão de histórico                     |
+| ConnectionID    | Identificador UUID da conexão de processo                                        |
+| LocalIP         | Endereço IP do Cliente                                                           |
+| PeerIP          | Endereço IP do servidor                                                          |
+| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
+| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+
+Depending on log options, various other fields can also be logged.
+
+- Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
+- Para resposta: linha de estado, cabeçalhos, corpo da resposta (não compactado), se houver
+
 
 ## 4DDebugLog.txt (standard)
 
@@ -324,10 +354,10 @@ O registo ORDA do lado do cliente regista cada pedido ORDA enviado a partir de u
 Como iniciar esse log:
 
 ```4d
-    //numa máquina remota
+    //on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //pode também ser enviado para a memória
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
+    //can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -374,11 +404,11 @@ O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo serv
 Como iniciar esse log:
 
 ```4d
-    //no servidor
+    //on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... O parâmetro é opcional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+    //srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

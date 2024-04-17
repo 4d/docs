@@ -4,7 +4,7 @@ title: はじめに
 ---
 
 
-4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [メソッド](method-list.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
+4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [コマンド](commands.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
@@ -31,9 +31,9 @@ title: はじめに
 
 また、[オブジェクトライブラリ](FormEditor/objectLibrary.md) であらかじめ設定された 4D View Pro エリアを選択することもできます。
 
-> 4D View Pro エリアは、[オフスクリーンでも作成・使用する](method-list.md#vp-run-offscreen-area) ことができます。
+> 4D View Pro エリアは、[オフスクリーンでも作成・使用する](commands/vp-run-offscreen-area.md) ことができます。
 
-[エリアの設定](configuring.md) は、プロパティリストと 4D View Pro メソッドを使っておこないます。
+[エリアの設定](configuring.md) は、プロパティリストと 4D View Pro コマンドを使っておこないます。
 
 
 ## セレクション、入力、およびナビゲージョンの基本
@@ -89,15 +89,15 @@ title: はじめに
       ![](../assets/en/ViewPro/vpContext2.PNG)
 
 
-## 4D View Pro メソッドの使い方
+## 4D View Pro コマンドの使い方
 
-4D View Pro メソッドは、ほかの 4Dランゲージコマンドと同様に 4D のコードエディターにて使用することができます。
+4D View Pro コマンドは、ほかの 4Dランゲージコマンドと同様に 4D のコードエディターにて使用することができます。
 
-4D View Pro はビルトインの 4Dコンポーネントであるため、そのメソッドの一覧はエクスプローラーにおいて、メソッドページの **コンポーネントメソッド** 内に表示されます:
+4D View Pro はビルトインの 4Dコンポーネントであるため、そのコマンドの一覧はエクスプローラーにおいて、メソッドページの **コンポーネントメソッド** 内に表示されます:
 
 ![コンポーネントメソッド](../assets/en/ViewPro/explorer-methods.png)
 
-コンポーネントメソッドの詳細な一覧については [メソッドリスト](method-list.md) を参照ください。
+詳細な一覧については [コマンド](commands.md) を参照ください。
 
 ### 4D View Proのエリアの操作
 
@@ -105,7 +105,7 @@ title: はじめに
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-ほとんどの 4D View Pro メソッドは、[**4D View Pro のフォームエリア名**](FormObjects/viewProArea_overview.md) (4Dフォームオブジェクト) を *vpAreaName* 引数として必要とします。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。
+ほとんどの 4D View Pro コマンドは、[**4D View Pro のフォームエリア名**](FormObjects/viewProArea_overview.md) (4Dフォームオブジェクト) を *vpAreaName* 引数として必要とします。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。
 
 たとえば、"myVpArea" という名前の 4D View Pro エリアの列数を設定するには、次のように書きます:
 
@@ -120,20 +120,20 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### レンジオブジェクトの使い方
 
-4D View Pro のメソッドの中には、*rangeObj* 引数を必要とするものがあります。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro メソッドを使って、作成したレンジを他のメソッドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。
+4D View Pro のコマンドの中には、*rangeObj* 引数を必要とするものがあります。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro コマンドを使って、作成したレンジを他のコマンドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。
 
 たとえば、次のセルに対応するレンジオブジェクトを作成したい場合:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-[VP Cells](method-list.md#vp-cells) メソッドを使用できます:
+[VP Cells](commands/vp-cells.md) コマンドを使用できます:
 
 ```4d 
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 ```
 
-その後、`$myRange` を別の 4D View Pro メソッドに渡して、これらのセルを変更することができます (たとえば、[VP SET BORDER](method-list.md#vp-set-border) でに境界線を追加します)。
+その後、`$myRange` を別の 4D View Pro コマンドに渡して、これらのセルを変更することができます (たとえば、[VP SET BORDER](commands/vp-set-border.md) でに境界線を追加します)。
 
 4D View Pro のレンジオブジェクトは、いくつかのプロパティで構成されます:
 
@@ -162,4 +162,4 @@ $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 * .sjs
 * .pdf (エクスポートのみ)
 
-詳細については [VP IMPORT DOCUMENT](method-list.md#vp-import-document) と [VP EXPORT DOCUMENT](method-list.md#vp-export-document) の説明を参照ください。
+詳細については [VP IMPORT DOCUMENT](commands/vp-import-document.md) と [VP EXPORT DOCUMENT](commands/vp-export-document.md) の説明を参照ください。

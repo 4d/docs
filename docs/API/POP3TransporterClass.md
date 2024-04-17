@@ -34,9 +34,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -47,7 +47,8 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+<!-- END REF -->
 
 
 #### Description
@@ -105,7 +106,8 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+<!-- END REF -->
 
 #### Description
 
@@ -148,9 +150,9 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -160,7 +162,8 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 <!-- REF #POP3TransporterClass.delete().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message to delete|<!-- END REF -->
+|msgNumber|Integer|->|Number of the message to delete|
+<!-- END REF -->
 
 ##### Description
 
@@ -193,9 +196,9 @@ Executing this method does not actually remove any email. The flagged email will
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -205,7 +208,8 @@ Executing this method does not actually remove any email. The flagged email will
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|boxInfo object|<!-- END REF -->
+|Result|Object|<-|boxInfo object|
+<!-- END REF -->
 
 ##### Description
 
@@ -240,10 +244,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of *headerOnly* parameter|
-|v18 R2|Added|
+|20|Support of *headerOnly* parameter|
+|18 R2|Added|
 
 </details>
 
@@ -255,7 +259,8 @@ The `boxInfo` object returned contains the following properties:
 |---------|--- |:---:|------|
 |msgNumber|Integer|->|Number of the message in the list |
 |headerOnly|Boolean|->|True to download only the email headers (default is False) |
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+<!-- END REF -->
 
 ##### Description
 
@@ -307,9 +312,9 @@ You want to know the sender of the first mail of the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -320,7 +325,8 @@ You want to know the sender of the first mail of the mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|->|Number of the message in the list |
-|Result|Object|<-|mailInfo object|<!-- END REF -->
+|Result|Object|<-|mailInfo object|
+<!-- END REF -->
 
 ##### Description
 
@@ -365,9 +371,9 @@ The method returns **Null** if:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -377,7 +383,8 @@ The method returns **Null** if:
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of `mailInfo` objects|<!-- END REF -->
+|Result|Collection|<-|Collection of `mailInfo` objects|
+<!-- END REF -->
 
 ##### Description
 
@@ -428,9 +435,9 @@ You want to know the total number and size of emails in the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -441,7 +448,8 @@ You want to know the total number and size of emails in the mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Number of the message in the list|
-|Result|Blob|<-|Blob of the MIME string returned from the mail server|<!-- END REF -->
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+<!-- END REF -->
 
 ##### Description
 
@@ -491,9 +499,9 @@ You want to know the total number and size of emails in the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -503,7 +511,8 @@ You want to know the total number and size of emails in the mailbox:
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 ##### Description
 

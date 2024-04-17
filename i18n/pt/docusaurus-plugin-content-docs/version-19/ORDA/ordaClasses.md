@@ -61,9 +61,9 @@ Além disso, as instâncias de objetos das classes de usuárioes do modelo de da
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                                                                |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| v18 R5 | As funções de classe do modelo de dados não são expostas ao REST por defeito. Novas palavras-chave `exposed` e `local`. |
+| Release | Mudanças                                                                                                                |
+| ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 18 R5   | As funções de classe do modelo de dados não são expostas ao REST por defeito. Novas palavras-chave `exposed` e `local`. |
 </details>
 
 ### Classe DataStore

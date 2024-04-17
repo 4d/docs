@@ -12,7 +12,7 @@ You log in a user to your application by passing the user's name and password to
 
 Quando um usuário é registrado com sucesso, uma sessão é aberta. See below to know how to handle the session cookie in subsequent client requests, if necessary.
 
-The session will automatically be closed once the timeout is reached.
+A sessão será encerrada automaticamente quando o tempo limite for atingido.
 
 ## Cookie de sessão
 
@@ -24,11 +24,11 @@ When a first valid REST request is received, the server creates the session and 
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 ```
 
-In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
+In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Caso contrário, uma nova sessão será aberta e outra licença será usada.
 
 ### Exemplo
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+A maneira de lidar com os cookies de sessão depende, na verdade, de seu cliente HTTP. Este exemplo mostra como extrair e reenviar o cookie de sessão no contexto de solicitações tratadas por meio do comando 4D `HTTP Request`.
 
 ```4d
 // Creating headers

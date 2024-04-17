@@ -29,10 +29,10 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R3  | Ajout de l'attribut .exposed |
-| v17     | Ajout                        |
+| 19 R3   | Ajout de l'attribut .exposed |
+| 17      | Ajout                        |
 
 </details>
 
@@ -127,10 +127,10 @@ Considérant les propriétés de table suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -138,12 +138,11 @@ Considérant les propriétés de table suivantes :
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Paramètres | Type               |    | Description                                                                  |
-| ---------- | ------------------ |:--:| ---------------------------------------------------------------------------- |
-| settings   | Object             | -> | Option de création : contexte                                                |
-| Résultat   | 4D.EntitySelection | <- | Références vers toutes les entités de la dataclass<!-- END REF -->
-
-|
+| Paramètres | Type               |    | Description                                        |
+| ---------- | ------------------ |:--:| -------------------------------------------------- |
+| settings   | Object             | -> | Option de création : contexte                      |
+| Résultat   | 4D.EntitySelection | <- | Références vers toutes les entités de la dataclass |
+<!-- END REF -->
 
 #### Description
 
@@ -177,9 +176,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -187,11 +186,10 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -230,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -241,13 +239,12 @@ $ds.Persons.clearRemoteCache()
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Paramètres | Type               |    | Description                                                        |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------ |
-| objectCol  | Collection         | -> | Collection d'objets à faire correspondre à des entités             |
-| settings   | Object             | -> | Option de création : contexte                                      |
-| Résultat   | 4D.EntitySelection | <- | Entity selection issue de la collection|<!-- END REF -->
-
-|
+| Paramètres | Type               |    | Description                                            |
+| ---------- | ------------------ |:--:| ------------------------------------------------------ |
+| objectCol  | Collection         | -> | Collection d'objets à faire correspondre à des entités |
+| settings   | Object             | -> | Option de création : contexte                          |
+| Résultat   | 4D.EntitySelection | <- | Entity selection issue de la collection                |
+<!-- END REF -->
 
 #### Description
 
@@ -269,9 +266,9 @@ Pour chaque objet de *objectCol* :
   * Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
   * Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   * Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
-> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> La propriété "\_\_KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\_\_NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
-**Related entities**
+**Entités liées**
 
 Les objets de *objectCol* peuvent contenir un ou plusieurs objet(s) imbriqué(s) décrivant une ou plusieurs entité(s) relative(s), ce qui peut être utile pour créer ou modifier des relations entre les entités.
 
@@ -429,9 +426,9 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -439,13 +436,12 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Paramètres | Type            |    | Description                                                                |
-| ---------- | --------------- |:--:| -------------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valeur de la clé primaire de l'entité à récupérer                          |
-| settings   | Object          | -> | Option de création : contexte                                              |
-| Résultat   | 4D.Entity       | <- | Entité correspondant à la clé primaire indiquée|<!-- END REF -->
-
-|
+| Paramètres | Type            |    | Description                                       |
+| ---------- | --------------- |:--:| ------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valeur de la clé primaire de l'entité à récupérer |
+| settings   | Object          | -> | Option de création : contexte                     |
+| Résultat   | 4D.Entity       | <- | Entité correspondant à la clé primaire indiquée   |
+<!-- END REF -->
 
 #### Description
 
@@ -505,9 +501,9 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -515,11 +511,10 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 
 <!-- REF #DataClassClass.getCount().Params -->
-| Paramètres | Type    |    | Description                                                   |
-| ---------- | ------- | -- | ------------------------------------------------------------- |
-| result     | Integer | <- | Nombre d'entités dans la dataclass|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                        |
+| ---------- | ------- | -- | ---------------------------------- |
+| result     | Integer | <- | Nombre d'entités dans la dataclass |
+<!-- END REF -->
 
 #### Description
 
@@ -545,9 +540,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -555,11 +550,10 @@ $number:=$ds.Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Paramètres | Type         |    | Description                                         |
-| ---------- | ------------ |:--:| --------------------------------------------------- |
-| Résultat   | cs.DataStore | <- | Datastore de la dataclass<!-- END REF -->
-
-|
+| Paramètres | Type         |    | Description               |
+| ---------- | ------------ |:--:| ------------------------- |
+| Résultat   | cs.DataStore | <- | Datastore de la dataclass |
+<!-- END REF -->
 
 #### Description
 
@@ -598,10 +592,10 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications           |
+| Release | Modifications           |
 | ------- | ----------------------- |
-| v19 R3  | Ajout propriété exposed |
-| v17 R5  | Ajout                   |
+| 19 R3   | Ajout propriété exposed |
+| 17 R5   | Ajout                   |
 
 </details>
 
@@ -609,11 +603,10 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Paramètres | Type   |    | Description                                              |
-| ---------- | ------ | -- | -------------------------------------------------------- |
-| Résultat   | Object | <- | Informations sur la dataclass|<!-- END REF -->
-
-|
+| Paramètres | Type   |    | Description                   |
+| ---------- | ------ | -- | ----------------------------- |
+| Résultat   | Object | <- | Informations sur la dataclass |
+<!-- END REF -->
 
 #### Description
 
@@ -672,9 +665,9 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -682,12 +675,10 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| Paramètres | Type   |    | Description                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass.|<!-- END REF -->
-
-
-|
+| Paramètres | Type   |    | Description                                                 |
+| ---------- | ------ | -- | ----------------------------------------------------------- |
+| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
+<!-- END REF -->
 
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
@@ -764,9 +755,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -774,11 +765,10 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Paramètres | Type      |    | Description                                                            |
-| ---------- | --------- | -- | ---------------------------------------------------------------------- |
-| Résultat   | 4D.Entity | <- | Nouvelle entité correspondant à la dataclass<!-- END REF -->
-
-|
+| Paramètres | Type      |    | Description                                  |
+| ---------- | --------- | -- | -------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Nouvelle entité correspondant à la dataclass |
+<!-- END REF -->
 
 #### Description
 
@@ -810,9 +800,9 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -823,15 +813,14 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 | Paramètres | Type               |    | Description                                                                                                                            |
 | ---------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder  | Integer            | -> | `dk keep ordered` : crée une entity selection triée,<br/>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
-| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass|<!-- END REF -->
-
-|
+| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass                                                                                     |
+<!-- END REF -->
 
 #### Description
 
 La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
 
-> Pour plus d'informations sur les sélections d'entités non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
 Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
 
@@ -852,11 +841,11 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                     |
+| Release | Modifications                                     |
 | ------- | ------------------------------------------------- |
-| v17 R6  | Prise en charge des paramètres Formula            |
-| v17 R5  | Prise en charge des placeholders pour les valeurs |
-| v17     | Ajout                                             |
+| 17 R6   | Prise en charge des paramètres Formula            |
+| 17 R5   | Prise en charge des placeholders pour les valeurs |
+| 17      | Ajout                                             |
 
 </details>
 
@@ -864,15 +853,14 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 
 <!-- REF #DataClassClass.query().Params -->
-| Paramètres    | Type               |    | Description                                                                                                                                                                     |
-| ------------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Critères de recherche en texte                                                                                                                                                  |
-| formula       | Object             | -> | Critères de recherche en objet formule                                                                                                                                          |
-| value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                                                       |
-| querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                               |
-| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula*|<!-- END REF -->
-
-|
+| Paramètres    | Type               |    | Description                                                                                                                                          |
+| ------------- | ------------------ | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text               | -> | Critères de recherche en texte                                                                                                                       |
+| formula       | Object             | -> | Critères de recherche en objet formule                                                                                                               |
+| value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                            |
+| querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                    |
+| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula* |
+<!-- END REF -->
 
 #### Description
 
@@ -1046,15 +1034,15 @@ ds.Class.info:
 Considérons les résultats suivants :
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // renvoie B et C
 // trouve "entités avec 0 dans au moins une propriété val"
 
 ds.Class.query("info.coll[].val != :1";0)
 // renvoie uniquement A
 // trouve les "entités dont toutes les propriétés val sont différentes de 0"
-// ce qui est équivalent à 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+// ce qui est équivalent à
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Si vous souhaitez mettre en œuvre une recherche qui trouve les entités dont "au moins une propriété est différente de *value*", vous devez utiliser une notation spéciale en utilisant une lettre dans les `[]` :
@@ -1196,7 +1184,7 @@ Dans le paramètre *querySettings* vous pouvez passer un objet contenant des opt
 | attributes    | Object  | **Placeholders nommés pour les chemins d'attributs** utilisés dans *queryString* ou *formula*. Les attributs sont exprimés sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour un chemin d'attribut dans *queryString* or *formula* (":placeholder"), et où valeur peut être une chaine ou une collection de chaines. Chaque valeur est un chemin qui peut désigner soit un attribut scalaire ou relatif de la dataclass soit une propriété d'un champ objet de la dataclass<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath exprimé à l'aide de la notation à point, ex : "name" ou "user.address.zipCode"</td></tr><tr><td>Collection de chaînes</td><td>Chaque chaine de la collection représente un niveau d'attributePath, ex : \["name"] ou \["user","address","zipCode"]. L'utilisation d'une collection permet de rechercher des attributs dont les noms ne sont pas conformes à la notation à point, ex : ["4Dv17.1","en/fr"]</td></tr></table>Vous pouvez combiner les valeurs des placeholders indexés (valeurs passées directement dans les paramètres *value*) et les valeurs des placeholders nommés dans la même recherche. |
 | args          | Object  | Paramètre(s) à passer aux formules, le cas échéant. L'objet **args** sera reçu dans $1 à l'intérieur des formules et donc ses valeurs seront disponibles via la propriété *$1.property* (cf. exemple 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | allowFormulas | Boolean | Vrai pour autoriser les appels de formules dans la query (défaut). Passez faux pour interdire l'exécution de formules. Si la `query()` contient une formule alors que cette propriété est à Faux, une erreur est retournée (1278 - Formule non autorisée).                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| context       | Text    | Nom du contexte d'optimisation automatique appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est conçue pour les traitements client/serveur ; pour plus d'informations, veuillez vous reporter à la section [**Optimisation client/serveur**](../ORDA/remoteDatastores.md#context).                                                                                                                                                                                                                                                                                                                                 |
+| context       | Text    | Nom du contexte d'optimisation automatique appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est conçue pour les traitements client/serveur ; pour plus d'informations, veuillez vous reporter à la [**section Optimisation client/serveur**](../ORDA/client-server-optimization.md#optimization-context).                                                                                                                                                                                                                                                                                                          |
 | queryPlan     | Boolean | Dans l'entity selection résultante, retourne ou ne retourne la description détaillée de la recherche juste avant d'être exécutée, i.e. La propriété retournée est un objet qui inclut chaque recherche et sous-recherche programmée (dans le cas d'une recherche complexe). Cette option est utile durant la phase de développement d'une application. Elle est utilisée conjointement à queryPath. Par défaut, si elle est omise : faux. **Note** : Cette propriété est prise en charge uniquement par les fonctions `entitySelection.query()` et `dataClass.query()`.                                                                                                                                                          |
 | queryPath     | Boolean | Dans l'entity selection résultante, retourne ou ne retourne pas la description détaillée de la recherche telle qu'elle est effectuée. La propriété retournée est un objet qui contient le chemin utilisé pour la recherche (généralement identique à celui de queryPlan, mais il peut être différent si le moteur parvient à optimiser la recherche), la durée du traitement et le nombre d'enregistrements trouvés. Cette option est utile durant la phase de développement d'une application. Par défaut, si elle est omise : faux. **Note** : Cette propriété est prise en charge uniquement par les fonctions `entitySelection.query()` et `dataClass.query()`.                                                              |
 
@@ -1517,9 +1505,9 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1527,11 +1515,10 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Paramètres | Type   |    | Description                                                                                                   |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| settings   | Object | -> | Objet définissant le timeout et la taille maximum du cache ORDA pour la dataclass.|<!-- END REF -->
-
-|
+| Paramètres | Type   |    | Description                                                                        |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------- |
+| settings   | Object | -> | Objet définissant le timeout et la taille maximum du cache ORDA pour la dataclass. |
+<!-- END REF -->
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
 

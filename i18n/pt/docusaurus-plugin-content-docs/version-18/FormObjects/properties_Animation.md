@@ -35,7 +35,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 ---
 
-## Switch continuously on clicks
+## Alternar continuamente em cliques
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 

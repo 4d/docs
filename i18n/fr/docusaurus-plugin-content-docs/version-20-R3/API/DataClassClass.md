@@ -29,10 +29,10 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R3  | Ajout de l'attribut .exposed |
-| v17     | Ajout                        |
+| 19 R3   | Ajout de l'attribut .exposed |
+| 17      | Ajout                        |
 
 </details>
 
@@ -127,10 +127,10 @@ Considérant les propriétés de table suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -177,9 +177,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -230,10 +230,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -269,9 +269,9 @@ Pour chaque objet de *objectCol* :
   * Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
   * Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   * Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
-> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> La propriété "\_\_KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\_\_NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
-**Related entities**
+**Entités liées**
 
 Les objets de *objectCol* peuvent contenir un ou plusieurs objet(s) imbriqué(s) décrivant une ou plusieurs entité(s) relative(s), ce qui peut être utile pour créer ou modifier des relations entre les entités.
 
@@ -429,9 +429,9 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -505,9 +505,9 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -545,9 +545,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -598,10 +598,10 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications           |
+| Release | Modifications           |
 | ------- | ----------------------- |
-| v19 R3  | Ajout propriété exposed |
-| v17 R5  | Ajout                   |
+| 19 R3   | Ajout propriété exposed |
+| 17 R5   | Ajout                   |
 
 </details>
 
@@ -672,9 +672,9 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -764,9 +764,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -810,9 +810,9 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -831,7 +831,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
 
-> Pour plus d'informations sur les sélections d'entités non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
 Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
 
@@ -852,11 +852,11 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                     |
+| Release | Modifications                                     |
 | ------- | ------------------------------------------------- |
-| v17 R6  | Prise en charge des paramètres Formula            |
-| v17 R5  | Prise en charge des placeholders pour les valeurs |
-| v17     | Ajout                                             |
+| 17 R6   | Prise en charge des paramètres Formula            |
+| 17 R5   | Prise en charge des placeholders pour les valeurs |
+| 17      | Ajout                                             |
 
 </details>
 
@@ -1518,9 +1518,9 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 

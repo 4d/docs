@@ -15,10 +15,17 @@ Uma vez definida uma classe de usuário, pode **instanciar** objectos desta clas
 Por exemplo, se criar criar uma classe `Pessoa` com a seguinte definição:
 
 ```4d  
-//Class: Person.4dm Class constructor($firstname : Text; $lastname : Text)
+//Class: Person.4dm
+Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
- This.lastName:=$lastname Function sayHello()->$welcome : Text
- $welcome:="Hello "+This.firstName+" "+This.lastName
+ This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+ $fullName:=This.firstName+" "+This.lastName
+
+Function sayHello() -> $welcome : Text
+
+ $welcome:="Hello "+This.fullName
 ```
 
 Ou em um método, criar uma "Pessoa":
@@ -45,7 +52,10 @@ Ao nomear classes, deve ter em mente as seguintes regras:
 
 Por exemplo, se quiser definir uma classe chamada "Polígono", precisa  criar o seguinte arquivo:
 
+```
 Project folder
+```
+
 
 ### Eliminação de uma classe
 
@@ -66,7 +76,7 @@ Também pode utilizar o atalho **Ctrl+Shift+Alt+k** .
 
 #### Explorador
 
-**.style**: Integer
+Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
 
 Para criar uma nova classe, pode:
 
@@ -83,7 +93,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
   - uma função de classe é um bloco de código
   - **Ir para a definição** sobre um membro objecto procura por declarações de classe Função; por exemplo, "$o.f()" encontrará "Função f".
   - **As referências de pesquisa** na declaração de função de classe procura a função utilizada como membro objecto; por exemplo, "Função f" encontrará "$o.f()".
-- No Explorador e Depurador de Tempo de Execução, as funções de classe são exibidas com o `\&#060;ClassName&#062;` construtor ou `\&#060;ClassName&#062;.\&#060;FunctionName&#062;` formato.
+- No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
 
 ## Lojas de classe
 
@@ -96,13 +106,18 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 ### `cs`
 
-#### cs -> classStore
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| classStore | object | <- | Class store de usuário para o projeto ou componente |
+<!-- REF #_command_.cs.Syntax -->**cs** : Object<!-- END REF -->
 
-O comando `cs` devolve a loja de classes de utilizadores para o projecto ou componente actual. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
+
+<!-- REF #_command_.cs.Params -->
+| Parâmetro  | Tipo   |    | Descrição                                                                      |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------ |
+| classStore | Object | <- | Class store de usuário para o projeto ou componente|<!-- END REF -->
+
+|
+
+O comando `cs` <!-- REF #_command_.cs.Summary -->O comando cs devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
 
 #### Exemplo
 
@@ -114,13 +129,16 @@ $instance:=cs.myClass.new()
 
 ### `4D`
 
-#### 4D -> classStore
+<!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
-| Parâmetro  | Tipo   |    | Descrição      |
-| ---------- | ------ | -- | -------------- |
-| classStore | object | <- | Class store 4D |
+<!-- REF #_command_.4D.Params -->
+| Parâmetro  | Tipo   |    | Descrição                                 |
+| ---------- | ------ | -- | ----------------------------------------- |
+| classStore | Object | <- | Class store 4D|<!-- END REF -->
 
-O comando `4D` devolve a classe store para as classes 4D incorporadas disponíveis. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
+|
+
+O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a loja de classe para classes embutidas<!-- END REF -->. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemplo
 
@@ -136,11 +154,14 @@ Quando uma classe for [definida](#class-definition) no projeto, ela é carregada
 
 - [`nome`](API/ClassClass.md#name) string
 - [`objecto superclasse`](API/ClassClass.md#superclass) (nulo se nenhum)
-- [`função new()`](API/ClassClass.md#new) , permitindo instanciar objectos de classe.
+- [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
+- [`isShared`](API/ClassClass.md#isshared) propriedade, verdadeiro se a classe for [compartilhada](#shared-classes)
+- [`isSingleton`](API/ClassClass.md#issingleton) propriedade, verdadeiro se a classe define um [singleton](#singleton-classes).
+- [`me`](API/ClassClass.md#me) propriedade, permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objecto de classe pode fazer referência a um objecto [`construtor`](#class-constructor) (opcional).
 
-Um objecto de classe é um objecto partilhado [](shared.md) e pode por isso ser acedido a partir de diferentes processos 4D simultaneamente.
+Um objeto de classe em si é um objeto [compartilhado](shared.md) e, portanto, pode ser acessado de diferentes processos 4D simultaneamente.
 
 ### Herança
 
@@ -163,19 +184,30 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 #### Sintaxe
 
 ```4d
-Function <name>({$parameterName : type; ...}){->$parameterName : type}
-// code
+{shared} Função <name>({$parameterName : tipo; ...}){->$parameterName : type}
+// código
 ```
 
-As funções de classe são propriedades específicas da classe. São objectos da classe [4D. Function](API/FunctionClass.md#about-4dfunction-objects) .
+As funções de classe são propriedades específicas da classe. São objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Função` seguida pelo nome da função.
 
-No ficheiro de definição de classe, as declarações de função utilizam a palavra-chave `Função` , e o nome da função. O nome da função deve estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
+Se a função for declarada em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` para que a função possa ser chamada sem a estrutura [`Use...End use`.](shared.md#useend-use) Para mais informações, consulte o parágrafo de [Funções compartilhadas](#shared-functions) abaixo.
+
+O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Como propriedades e funções compartilham o mesmo espaço de nomes, usar o mesmo nome para uma propriedade e uma função da mesma classe não é permitido (um erro é lançado nesse caso).
+
+:::
+
 
 :::tip
 
 **Dica:** Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs. MyClass. "`.
 
 :::
+
+
 
 Imediatamente a seguir ao nome da função, os [parâmetros ](#parameters) da função podem ser declarados com um nome e um tipo de dados atribuídos, incluindo o parâmetro de retorno (opcional). Por exemplo:
 
@@ -194,17 +226,20 @@ Function setFullname($firstname : Text; $lastname : Text)
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
 
-No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#class-function-parameters) se existirem. As seguintes sintaxes são suportadas:
+No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#parameters) se existirem. As seguintes sintaxes são suportadas:
 
 - utilização do operador `()`. Por exemplo, `myObject.methodName("hello")`
 - use of a "4D. Function" class member method:
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Aviso de segurança de thread:** Se uma função de classe não for thread-safe e for chamada por um método com o atributo "Pode ser executado num processo preemptivo":
-> 
-> - o compilador não gera qualquer erro (o que é diferente dos métodos normais),
-> - um erro é lançado por 4D apenas em tempo de execução.
+:::warning Aviso de segurança de thread
+
+Se uma função de classe não for thread-safe e for chamada por um método com o atributo "Pode ser executado num processo preemptivo":
+ - o compilador não gera qualquer erro (o que é diferente dos métodos normais),
+ - um erro é lançado por 4D apenas em tempo de execução.
+
+:::
 
 #### Parâmetros
 
@@ -213,21 +248,17 @@ Os parâmetros da função são declarados utilizando o nome do parâmetro e o t
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> Se o tipo não for indicado, o parâmetro será definido como `Variant`.
 
-A [sintaxe 4D clássica](parameters.md#sequential-parameters) para parâmetros de métodos pode ser utilizada para declarar parâmetros de funções de classe. Ambas as sintaxes podem ser misturadas. Por exemplo:
+:::note
 
-```4d
-Function add($x : Integer)
- var $2; $value : Integer
- var $0 : Text
- $value:=$x+$2
- $0:=String($value)
-```
+Se o tipo não for indicado, o parâmetro será definido como `Variant`.
+
+:::
+
 
 #### Valor retornado
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list. Por exemplo:
+Você declara o parâmetro de retorno (opcional) adicionando uma seta (`->`) e a definição do parâmetro de retorno após a lista de parâmetro(s) de entrada, ou dois pontos (`:`) e somente o tipo do parâmetro de retorno. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -281,17 +312,21 @@ Parâmetros
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
-// code
+{shared} {singleton} Class Constructor({$parameterName : type; ...})
+// código
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e pode ser usada para criar e inicializar objetos da classe de usuário.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor numa classe (caso contrário, é devolvido um erro). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependerem de parâmetros passados ao construtor, pode defini-los utilizando a palavra-chave [`property`](#property).
+
+Usando a palavra-chave `compartilhou` cria uma classe compartilhada ****, usada apenas para instanciar objetos compartilhados. Para mais informações, consulte o parágrafo [Classes compartilhadas](#shared-classes).
+
+Usar a palavra-chave `singleton` cria um **singleton**, usado para criar uma única instância. Para mais informações, consulte o parágrafo de [Classes Singleton](#singleton-classes).
 
 
 #### Exemplo
@@ -323,7 +358,19 @@ A declaração de propriedades de classe melhora as sugestões do editor de cód
 
 As propriedades são declaradas para novos objectos quando se chama a função [`new()`](API/ClassClass.md#new). No entanto, não são automaticamente adicionadas aos objectos (só são adicionadas quando lhes é atribuído um valor).
 
+:::note
+
+Uma propriedade é automaticamente adicionada ao objeto quando ela é [inicializada na linha de declaração](#initializing-the-property-in-the-declaration-line).
+
+:::
+
 Os nomes de propriedades devem estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Como propriedades e funções compartilham o mesmo espaço de nomes, usar o mesmo nome para uma propriedade e uma função da mesma classe não é permitido (um erro é lançado nesse caso).
+
+:::
 
 
 O tipo de propriedade pode ser um dos seguintes tipos suportados:
@@ -346,6 +393,9 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 | `cs.<className>`                   | Objecto do nome da classe de usuário                                                                                                              |
 | `cs.<namespace>.<className>` | For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor". |
 
+
+Se você omitir o tipo na linha de declaração, a propriedade é criada como uma variante.
+
 :::info
 
 A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function` ou `Class Constructor`.
@@ -353,19 +403,53 @@ A palavra-chave `property` só pode ser utilizada em métodos classe e fora de q
 :::
 
 
+
+
+#### Inicializando a propriedade na linha de declaração
+
+Ao declarar uma propriedade, você tem a flexibilidade de especificar seu tipo de dados e fornecer seu valor em uma única instrução. A sintaxe suportada é:
+
+`propriedade <propertyName> { : <propertyType>} := <Propertyvalue>`
+
+:::note
+
+Ao usar essa sintaxe, você não pode declarar várias propriedades na linha de declaração.
+
+:::
+
+Você pode omitir o tipo na linha da declaração, caso em que o tipo será inferido quando possível. Por exemplo:
+
+```4d
+// Class: MyClass
+
+property name : Text := "Smith"
+property age : Integer := 42
+
+property birthDate := !1988-09-29! //data é inferida
+propriedade fuzzy //variante
+```
+
+Quando você inicializa uma propriedade em sua linha de declaração, ela é adicionada ao objeto da classe após sua instanciação com a função [`new()`](API/ClassClass.md#new), mas antes que o construtor seja chamado.
+
+Se uma classe [estende](#class-extends-classname) outra classe, as propriedades da classe pai são instanciadas antes das propriedades da classe filha.
+
 #### Exemplo
 
 ```4d
-Sintaxe
+// Class: MyClass
+
+property name : Text
+property age : Integer
+property color : Text := "Blue"
 ```
 
 Num método:
 
 ```4d
-var $o : cs. MyClass
-$o:=cs. MyClass.new() //$o:{}
-$o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith" //erro com a sintaxe de verificação
+var $o : cs.MyClass
+$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
+$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
+$o.age:="Smith"  //error com a sintaxe checada
 ```
 
 
@@ -374,11 +458,12 @@ $o.age:="Smith" //erro com a sintaxe de verificação
 #### Sintaxe
 
 ```4d
-Sintaxe
+{shared} Function get <name>()->$result : type
+// code
 ```
 
 ```4d
-Function set <name>($parameterName : type)
+{shared} Function set <name>($parameterName : type)
 // código
 ```
 
@@ -396,6 +481,8 @@ No arquivo de definição da classe, as declarações de propriedades computadas
 `A função get` devolve um valor do tipo de propriedade e `A função set` recebe um parâmetro do tipo de propriedade. Ambos os argumentos devem estar em conformidade com os parâmetros da função [](#parameters).
 
 Quando ambas as funções são definidas, a propriedade calculada é **read-write**. Se apenas for definida uma `Function get`, a propriedade calculada é **só de leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve *undefined* quando a propriedade é lida.
+
+Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que possam ser chamadas sem a estrutura [`Use...End use`.](shared.md#useend-use). Para mais informações, consulte o parágrafo de [Funções compartilhadas](#shared-functions) abaixo.
 
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter *. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 
@@ -438,7 +525,7 @@ Function get fullAddress()->$result : Object
  $result.zipCode:=This.zipCode
  $result.city:=This.city
  $result.state:=This.state
- $result.country:=This.country 
+ $result.country:=This.country
 ```
 
 ### `Class extends <ClassName>`
@@ -457,6 +544,7 @@ A extensão de classe deve respeitar as seguintes regras:
 - Uma classe de usuário não pode estender uma classe de usuário de outro projeto ou componente.
 - Uma classe usuário não se pode estender a si própria.
 - Não é possível estender classes de forma circular (ou seja, "a" estende "b" que estende "a").
+- Não é possível definir uma [classe de usuário compartilhada](#shared-classes) estendida de uma classe de usuário não compartilhada.
 
 A violação de uma regra deste tipo não é detectada pelo editor de código ou pelo intérprete, apenas o compilador e o `verificam a sintaxe` e, neste caso, emitem um erro.
 
@@ -467,26 +555,41 @@ Uma classe estendida pode chamar o construtor de sua classe pai usando o comando
 Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Polygon`.
 
 ```4d
-Polygon.4dm
+//Classe: Square
+
+//path: Classes/Square.4dm
+
+Classe extends Polygon
+
+Construtor da classe ($side : Integer)
+
+ // Chama o construtor da classe pai com comprimentos
+ // fornecidos para a largura e altura do Polygon
+ Super($side;$side)
+ // Em classes derivadas, Super tem de ser chamado antes de
+ // poder usar 'This'
+ This.name:="Square"
+
+
+
+ Function getArea() -> $area : Integer
+  $area:=This.height*This.width
 ```
 
 
 
 ### `Super`
 
-#### Sintaxe
+<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
-```4d
-Super {( param{;...;paramN} )} {-> Object}
-```
-
-
+<!-- REF #_command_.Super.Params -->
 | Parâmetro  | Tipo   |    | Descrição                                   |
 | ---------- | ------ | -- | ------------------------------------------- |
-| param      | misto  | -> | Parâmetro(s) a passar para o construtor pai |
-| Resultados | object | <- | Pai do objecto                              |
+| param      | any    | -> | Parâmetro(s) a passar para o construtor pai |
+| Resultados | Object | <- | Pai do objecto                              |
+<!-- END REF -->
 
-A palavra-chave `Super` permite efectuar chamadas para a superclasse ``, ou seja, a classe-mãe.
+A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas para a superclasse ``, ou seja, a classe pai<!-- END REF -->.
 
 `Super` tem dois objectivos diferentes:
 
@@ -583,21 +686,20 @@ Parâmetros
 
 ### `This`
 
-#### Sintaxe
 
-```4d
-This -> Object
-```
+<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
+<!-- REF #_command_.This.Params -->
 | Parâmetro  | Tipo   |    | Descrição      |
 | ---------- | ------ | -- | -------------- |
-| Resultados | object | <- | Objecto actual |
+| Resultados | Object | <- | Objecto actual |
+<!-- END REF -->
 
-A palavra-chave `This` devolve uma referência ao objecto actualmente processado. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+A palavra-chave `This` <!-- REF #_command_.This.Summary -->devolve uma referência ao objeto atualmente processado<!-- END REF -->.
 
 Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
-Quando uma fórmula é chamada como método membro de um objecto, o seu `This` é definido como o objecto ao qual o método é chamado. Por exemplo:
+Quando uma [fórmula](../API/FunctionClass.md) é chamada como método membro de um objeto, seu `This` é definido como o objeto no qual o método é chamado. Por exemplo:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
@@ -611,7 +713,7 @@ Quando se utiliza uma função [construtora de classe](#class-constructor) (com 
 
  // Create properties on This as
  // desired by assigning to them
- This.a:=42 
+ This.a:=42
 ```
 
 ```4d
@@ -642,6 +744,7 @@ $val:=$o.f() //8
 
 Neste exemplo, o objecto atribuído à variável $o não tem a sua própria propriedade *f* , herda-a da sua classe. Uma vez que *f* é chamado como um método de $o, o seu `Este` refere-se a $o.
 
+
 ## Comandos de classe
 
 Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de classe.
@@ -657,3 +760,159 @@ Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de class
 #### `OB Instance of ( object ; class ) -&#062; Boolean`
 
 `OB Instância de` devolve `true` se o objecto `` pertencer à classe `` ou a uma das suas classes herdadas, e `false` caso contrário.
+
+
+## Classes compartilhadas
+
+Você pode criar **classes compartilhadas**. Uma classe compartilhada é uma classe de usuário que instancia um objeto [compartilhado](shared.md) quando a função [`new()`](../API/ClassClass.md#new) é chamada para a classe. Uma classe compartilhada só pode criar objetos compartilhados.
+
+Classes compartilhadas também suportam **funções compartilhadas** que podem ser chamadas sem [`Usar...Fim de uso`](shared.md#useend-use) estruturas.
+
+A propriedade de objetos de Classe[`.isShared`](../API/ClassClass.md#isshared)   permite saber se a classe é compartilhada.
+
+:::info
+
+- Uma classe [herdando](#class-extends-classname) de uma classe não compartilhada não pode ser definida como compartilhada.
+- As classes compartilhadas não são suportadas pelas [classes baseadas em ORDA](../ORDA/ordaClasses.md).
+
+:::
+
+
+### Criação de uma classe compartilhada
+
+To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). Por exemplo:
+
+```4d
+    //classe compartilhada: Person
+shared Class Constructor($firstname : Text; $lastname : Text)
+ This.firstName:=$firstname
+ This.lastName:=$lastname
+
+```
+
+```4d
+//myMethod
+var $person := cs.Person.new("John"; "Smith")
+OB Is shared($person) // true
+cs.Person.isShared //true
+```
+
+
+
+### Funções compartilhadas
+
+Se uma função definida dentro de uma classe compartilhada modifica objetos da classe, ela deve chamar a estrutura [`Use...End use`](shared.md#useend-use) para proteger o acesso aos objetos compartilhados. No entanto, para simplificar o código, você pode definir a função como **compartilhada** para que ela acione automaticamente o `Use...End use` interno quando executado.
+
+Para criar uma função compartilhada, adicione a palavra-chave `shared` antes da palavra-chave [Function](#function) em uma classe compartilhada. Por exemplo:
+
+```4d
+    //classe compartilhada Foo
+classe compartilhada Construtor()
+  This.variable:=1
+
+função compartilhada Bar($value : Inteiro)
+  This.variable:=$value //não é necessário chamar use/end use
+```
+
+:::note
+
+Se a palavra-chave `shared` for usada em uma classe de usuário não compartilhada, ela será ignorada.
+
+:::
+
+
+## Classes Singleton
+
+Uma classe **singleton** é uma classe de usuário que produz apenas uma única instância. Para obter mais informações sobre singletons, consulte a [página da Wikipedia sobre singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+
+A classe singleton é instanciada na primeira chamada da propriedade [`cs.<class>.me`](../API/ClassClass.md#me). A classe singleton instanciada é então sempre retornada quando a propriedade [`me`](../API/ClassClass.md#me) é usada.
+
+Se você precisa instanciar um singleton com parâmetros, você também pode chamar a função [`new()`](../API/ClassClass.md#new). Nesse caso, é recomendado instanciar o singleton em algum código executado no início da aplicação.
+
+O escopo de uma instância singleton pode ser o processo atual ou todos os processos. Um singleton de *processo* tem um valor único para o processo em que é instanciado, enquanto um singleton de *interprocesso* tem um valor único para todos os processos da aplicação. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
+
+
+The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
+
+
+:::info
+
+As classes Singleton não são suportadas pelas [classes baseadas em ORDA](../ORDA/ordaClasses.md).
+
+:::
+
+
+
+
+### Criação de um singleton process
+
+Para criar um processo de classe singleton, adicione a palavra-chave `singleton` antes [`Class Constructor`](#class-constructor). Por exemplo:
+
+```4d
+    //class: ProcessTag
+singleton Class Constructor()
+ This.tag:=Random
+```
+
+Para usar o singleton process:
+
+```4d
+    //em um processo
+var $mySingleton := cs.ProcessTag.me //Primeira instância
+    //$mySingleton.tag = 5425 por exemplo
+...
+var $myOtherSingleton := cs.ProcessTag.me
+    //$myOtherSingleton.tag = 5425
+
+```
+```4d
+    //em um processo
+var $mySingleton := cs.ProcessTag.me //Primeira instância
+    //$mySingleton.tag = 14856 por exemplo
+...
+var $myOtherSingleton := cs.ProcessTag.me
+    //$myOtherSingleton.tag = 14856
+```
+
+
+
+### Criação de um singleton interprocesso
+
+Para criar um singleton entre processos, adicione as palavras-chave `shared singleton` antes do [Construtor de Classe](#class-constructor). Por exemplo:
+
+```4d
+//Classe VehicleFactory
+
+property vehicleBuilt : Integer
+
+shared singleton Class constructor()
+  This.vehicleBuilt := 0 //Número de veículos feitos pela fábrica
+
+shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
+
+  Case of
+    : $type="car"
+      $vehicle:=cs.Car.new()
+    : $type="truck"
+      $vehicle:=cs.Truck.new()
+    : $type="sport car"
+      $vehicle:=cs.SportCar.new()
+    : $type="motorbike"
+      $vehicle:=cs.Motorbike.new()
+  Else
+    $vehicle:=cs.Car.new()
+  End case
+  This.vehicleBuilt+=1
+```
+
+Você pode então chamar o **cs.VehicleFactory** singleton para obter um novo veículo de qualquer lugar em sua aplicação com uma única linha:
+
+```4d
+$vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
+```
+
+Como a função *buildVehicle()* modifica o singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), você precisa adicionar a palavra-chave `shared` a ela.
+
+#### Veja também
+
+Veja também [esta postagem no blog](https://blog.4d.com/singleton) para mais detalhes.

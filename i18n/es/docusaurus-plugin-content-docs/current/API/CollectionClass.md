@@ -84,13 +84,11 @@ Una colección se inicializa con:
 
 
 <!-- REF #_command_.New collection.Params -->
-| Parámetros | Tipo                                                                    |    | Descripción                                |
-| ---------- | ----------------------------------------------------------------------- |:--:| ------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                    |
-| Result     | Collection                                                              | <- | Nueva colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo                                                                    |    | Descripción             |
+| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection |
+| Result     | Collection                                                              | <- | Nueva colección         |
+<!-- END REF -->
 
 
 #### Descripción
@@ -162,9 +160,9 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -172,13 +170,11 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parámetros | Tipo                                                                |    | Descripción                                      |
-| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida            |
-| Result     | Collection                                                          | <- | New shared collection|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo                                                                |    | Descripción                           |
+| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida |
+| Result     | Collection                                                          | <- | New shared collection                 |
+<!-- END REF -->
 
 
 #### Descripción
@@ -239,9 +235,9 @@ Esta función modifica la colección original.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -249,13 +245,11 @@ Esta función modifica la colección original.
 
 
 <!-- REF #collection.at().Params -->
-| Parámetros | Tipo    |    | Descripción                                          |
-| ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Índice del elemento a devolver                       |
-| Result     | any     | <- | El elemento en ese índice|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo    |    | Descripción                    |
+| ---------- | ------- |:--:| ------------------------------ |
+| index      | Integer | -> | Índice del elemento a devolver |
+| Result     | any     | <- | El elemento en ese índice      |
+<!-- END REF -->
 
 
 #### Descripción
@@ -287,9 +281,9 @@ $element:=$col.at(10) // indefinido
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -297,14 +291,11 @@ $element:=$col.at(10) // indefinido
 
 
 <!-- REF #collection.average().Params -->
-| Parámetros   | Tipo            |    | Descripción                                                                           |
-| ------------ | --------------- |:--:| ------------------------------------------------------------------------------------- |
-| propertyPath | Text            | -> | Ruta de la propiedad del objeto que se utilizará para el cálculo                      |
-| Result       | Real, Undefined | <- | Media aritmética (promedio) de los valores de la colección|<!-- END REF -->
-
-
-
-|
+| Parámetros   | Tipo            |    | Descripción                                                      |
+| ------------ | --------------- |:--:| ---------------------------------------------------------------- |
+| propertyPath | Text            | -> | Ruta de la propiedad del objeto que se utilizará para el cálculo |
+| Result       | Real, Undefined | <- | Media aritmética (promedio) de los valores de la colección       |
+<!-- END REF -->
 
 
 
@@ -353,9 +344,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -363,12 +354,10 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 
 <!-- REF #collection.clear().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección original con todos los elementos eliminados|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                                           |
+| ---------- | ---------- |:--:| ----------------------------------------------------- |
+| Result     | Collection | <- | Colección original con todos los elementos eliminados |
+<!-- END REF -->
 
 
 #### Descripción
@@ -396,9 +385,9 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -410,10 +399,8 @@ $vSize:=$col.length //$vSize=0
 | ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------- |
 | col2       | Collection | -> | Colección a combinar                                                                                  |
 | index      | Integer    | -> | Posición a la que se deben combinar los elementos de inserción en la colección (por defecto=length+1) |
-| Result     | Collection | <- | Colección original que contiene elementos combinados|<!-- END REF -->
-
-
-|
+| Result     | Collection | <- | Colección original que contiene elementos combinados                                                  |
+<!-- END REF -->
 
 
 #### Descripción
@@ -449,9 +436,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -462,10 +449,8 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 | Parámetros | Tipo                                                           |    | Descripción                                                                                                              |
 | ---------- | -------------------------------------------------------------- |:--:| ------------------------------------------------------------------------------------------------------------------------ |
 | value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Valores a concatenar. Si *value* es una colección, todos los elementos de la colección se añaden a la colección original |
-| Result     | Collection                                                     | <- | Nueva colección con valor(es) añadido(s) a la colección original|<!-- END REF -->
-
-
-|
+| Result     | Collection                                                     | <- | Nueva colección con valor(es) añadido(s) a la colección original                                                         |
+<!-- END REF -->
 
 
 #### Descripción
@@ -497,10 +482,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                          |
-| ------- | ------------------------------------------------------- |
-| v18 R3  | Nueva opción *ck shared*. Nuevos parámetros *groupWith* |
-| v16 R6  | Añadidos                                                |
+| Lanzamiento | Modificaciones                                          |
+| ----------- | ------------------------------------------------------- |
+| 18 R3       | Nueva opción *ck shared*. Nuevos parámetros *groupWith* |
+| v16 R6      | Añadidos                                                |
 
 </details>
 
@@ -513,10 +498,8 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | option       | Integer    | -> | `ck resolve pointers`: resolver punteros antes de copiar,<br/>`ck shared`: devolver una colección compartida |
 | groupWithCol | Collection | -> | Colección compartida que se agrupa con la colección resultante                                                     |
 | groupWithObj | Object     | -> | Objeto compartido que se agrupa con la colección resultante                                                        |
-| Result       | Collection | <- | Copia profunda de la colección original|<!-- END REF -->
-
-
-|
+| Result       | Collection | <- | Copia profunda de la colección original                                                                            |
+<!-- END REF -->
 
 
 #### Descripción
@@ -636,9 +619,9 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -649,10 +632,8 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 | Parámetros   | Tipo |    | Descripción                                                      |
 | ------------ | ---- |:--:| ---------------------------------------------------------------- |
 | propertyPath | Text | -> | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real | <- | Número de elementos en la colección|<!-- END REF -->
-
-
-|
+| Result       | Real | <- | Número de elementos en la colección                              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -687,9 +668,9 @@ Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -701,10 +682,8 @@ Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. 
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                                   |
 | propertyPath | Text                                            | -> | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real                                            | <- | Número de apariciones del valor |<!-- END REF -->
-
-
-|
+| Result       | Real                                            | <- | Número de ocurrencias del valor                                  |
+<!-- END REF -->
 
 
 #### Descripción
@@ -771,10 +750,10 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v20     | Soporte de `ck count values` |
-| v16 R6  | Añadidos                     |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 20          | Soporte de `ck count values` |
+| v16 R6      | Añadidos                     |
 
 </details>
 
@@ -782,14 +761,12 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 
 <!-- REF #collection.distinct().Params -->
-| Parámetros   | Tipo       |    | Descripción                                                           |
-| ------------ | ---------- |:--:| --------------------------------------------------------------------- |
-| propertyPath | Text       | -> | Ruta del atributo cuyos valores distintos desea obtener               |
-| options      | Integer    | -> | `ck diacritical`, `ck count values`                                   |
-| Result       | Collection | <- | Nueva colección con sólo valores distintos|<!-- END REF -->
-
-
-|
+| Parámetros   | Tipo       |    | Descripción                                             |
+| ------------ | ---------- |:--:| ------------------------------------------------------- |
+| propertyPath | Text       | -> | Ruta del atributo cuyos valores distintos desea obtener |
+| options      | Integer    | -> | `ck diacritical`, `ck count values`                     |
+| Result       | Collection | <- | Nueva colección con sólo valores distintos              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -836,9 +813,9 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -846,14 +823,12 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 
 <!-- REF #collection.equal().Params -->
-| Parámetros  | Tipo       |    | Descripción                                                                               |
-| ----------- | ---------- |:--:| ----------------------------------------------------------------------------------------- |
-| collection2 | Collection | -> | Colección a comparar                                                                      |
-| option      | Integer    | -> | `ck diacritical`: evaluación diacrítica ("A" # "a" por ejemplo)                           |
-| Result      | Boolean    | <- | True si las colecciones son idénticas, false en caso contrario|<!-- END REF -->
-
-
-|
+| Parámetros  | Tipo       |    | Descripción                                                     |
+| ----------- | ---------- |:--:| --------------------------------------------------------------- |
+| collection2 | Collection | -> | Colección a comparar                                            |
+| option      | Integer    | -> | `ck diacritical`: evaluación diacrítica ("A" # "a" por ejemplo) |
+| Result      | Boolean    | <- | True si las colecciones son idénticas, false en caso contrario  |
+<!-- END REF -->
 
 
 #### Descripción
@@ -896,10 +871,10 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -907,16 +882,14 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 
 <!-- REF #collection.every().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                           |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Índice para iniciar la prueba en                                                      |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                        |
-| methodName | Text        | -> | Nombre de un método                                                                   |
-| param      | Mixed       | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                    |
-| Result     | Boolean     | <- | True si todos los elementos han pasado la prueba con éxito|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                                |
+| ---------- | ----------- |:--:| ---------------------------------------------------------- |
+| startFrom  | Integer     | -> | Índice para iniciar la prueba en                           |
+| formula    | 4D.Function | -> | Objeto fórmula                                             |
+| methodName | Text        | -> | Nombre de un método                                        |
+| param      | Mixed       | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*         |
+| Result     | Boolean     | <- | True si todos los elementos han pasado la prueba con éxito |
+<!-- END REF -->
 
 
 #### Descripción
@@ -994,13 +967,13 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1009,10 +982,8 @@ $b:=$c.every($f;Is real) //$b=false
 | propertyPath | Text       | -> | Ruta de la propiedad del objeto cuyos valores deben ser extraídos a la nueva colección                                                  |
 | targetpath   | Text       | -> | Ruta de la propiedad de destino o nombre de la propiedad                                                                                |
 | option       | Integer    | -> | `ck keep null`: incluye la propiedad null en la colección devuelta (se ignora por defecto). Parámetro ignorado si se pasa *targetPath*. |
-| Result       | Collection | <- | Nueva colección que contiene los valores extraídos|<!-- END REF -->
-
-
-|
+| Result       | Collection | <- | Nueva colección que contiene los valores extraídos                                                                                      |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1027,7 +998,7 @@ El contenido de la colección devuelta depende del parámetro *targetPath*:
     Por defecto, los elementos cuya *propertyPath* es null o indefinida se ignoran en la colección resultante. Puede pasar la constante `ck keep null` en el parámetro *option* para incluir estos valores como elementos nulos en la colección devuelta.
 
 
-*   Si se pasan uno o más parámetros *targetPath*, `.extract()` rellena la nueva colección con las propiedades *propertyPath* y cada elemento de la nueva colección es un objeto con propiedades *targetPath* rellenadas con las propiedades *propertyPath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
+*   Si se pasan uno o más parámetros *targetPath* (correspondientes a uno o más parámetros *propertyPath*), `.extract()` rellena la nueva colección con las propiedades *propertyPath* y cada elemento de la nueva colección es un objeto con las propiedades *targetPath* llenadas con las propiedades *propertyPath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
 
 
 #### Ejemplo 1
@@ -1072,9 +1043,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1083,15 +1054,13 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parámetros | Tipo                                            |    | Descripción                                                              |
-| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------ |
-| value      | number, Text, Collection, Object, Date, Boolean | -> | Valor a asignar                                                          |
-| startFrom  | Integer                                         | -> | Índice de inicio (incluido)                                              |
-| end        | Integer                                         | -> | Índice final (no incluido)                                               |
-| Result     | collection                                      | <- | Colección original con los valores rellenados|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo                                            |    | Descripción                               |
+| ---------- | ----------------------------------------------- |:--:| ----------------------------------------- |
+| value      | number, Text, Collection, Object, Date, Boolean | -> | Valor a asignar                           |
+| startFrom  | Integer                                         | -> | Índice de inicio (incluido)               |
+| end        | Integer                                         | -> | Índice final (no incluido)                |
+| Result     | collection                                      | <- | Colección original con valores rellenados |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1132,10 +1101,10 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1143,15 +1112,13 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 
 <!-- REF #collection.filter().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                                         |
-| ---------- | ----------- |:--:| --------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                                      |
-| methodName | Text        | -> | Nombre de un método                                                                                 |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                                  |
-| Result     | Collection  | <- | Nueva colección que contiene los elementos filtrados (copia superficial)|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                                          |
+| ---------- | ----------- |:--:| -------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto fórmula                                                       |
+| methodName | Text        | -> | Nombre de un método                                                  |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                   |
+| Result     | Collection  | <- | Nueva colección que contiene elementos filtrados (copia superficial) |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1222,10 +1189,10 @@ Quiere filtrar los elementos según su tipo de valor:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1233,16 +1200,14 @@ Quiere filtrar los elementos según su tipo de valor:
 
 
 <!-- REF #collection.find().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                        |
-| ---------- | ----------- |:--:| ---------------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                                                 |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                     |
-| methodName | Text        | -> | Nombre de un método                                                                |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                 |
-| Result     | any         | <- | Primer valor encontrado, o Undefined si no se encuentra|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                             |
+| ---------- | ----------- |:--:| ------------------------------------------------------- |
+| startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                      |
+| formula    | 4D.Function | -> | Objeto fórmula                                          |
+| methodName | Text        | -> | Nombre de un método                                     |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*      |
+| Result     | any         | <- | Primer valor encontrado, o Undefined si no se encuentra |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1314,10 +1279,10 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1326,16 +1291,14 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                            |
-| ---------- | ----------- |:--:| -------------------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                                                     |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                         |
-| methodName | Text        | -> | Nombre de un método                                                                    |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                     |
-| Result     | Integer     | <- | Índice del primer valor encontrado, o -1 si no se encuentra|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                                 |
+| ---------- | ----------- |:--:| ----------------------------------------------------------- |
+| startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                          |
+| formula    | 4D.Function | -> | Objeto fórmula                                              |
+| methodName | Text        | -> | Nombre de un método                                         |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*          |
+| Result     | Integer     | <- | Índice del primer valor encontrado, o -1 si no se encuentra |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1393,9 +1356,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1403,12 +1366,10 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 <!-- REF #collection.first().Params -->
-| Parámetros | Tipo |    | Descripción                                                |
-| ---------- | ---- |:--:| ---------------------------------------------------------- |
-| Result     | any  | <- | Primer elemento de la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                     |
+| ---------- | ---- |:--:| ------------------------------- |
+| Result     | any  | <- | Primer elemento de la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1441,9 +1402,9 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1454,10 +1415,8 @@ $first:=$emptyCol.first() // devuelve Undefined
 | Parámetros | Tipo       |    | Descripción                                                                         |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
 | depth      | Integer    | -> | A qué profundidad debe aplanarse una estructura de colección anidada. Por defecto=1 |
-| Result     | Collection | <- | Colección aplanada|<!-- END REF -->
-
-
-|
+| Result     | Collection | <- | Colección aplanada                                                                  |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1498,23 +1457,22 @@ $col.flat(MAXLONG)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                                       |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                                    |
-| methodName | Text        | -> | Nombre de un método                                                                               |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                                |
-| Result     | Collection  | <- | Colección de valores transformados y aplanados en una profundidad de 1|<!-- END REF -->
-
-|
+| Parámetros | Tipo        |    | Descripción                                                            |
+| ---------- | ----------- |:--:| ---------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto fórmula                                                         |
+| methodName | Text        | -> | Nombre de un método                                                    |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                     |
+| Result     | Collection  | <- | Colección de valores transformados y aplanados en una profundidad de 1 |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1592,9 +1550,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1602,14 +1560,12 @@ $c2:=$c.flatMap($f; $c.sum())
 
 
 <!-- REF #collection.includes().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                |
-| ---------- | --------- |:--:| -------------------------------------------------------------------------- |
-| toSearch   | expresión | -> | Expresión a buscar en la colección                                         |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                         |
-| Result     | Boolean   | <- | True si *toSearch* se encuentra en la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo      |    | Descripción                                     |
+| ---------- | --------- |:--:| ----------------------------------------------- |
+| toSearch   | expresión | -> | Expresión a buscar en la colección              |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en              |
+| Result     | Boolean   | <- | True si *toSearch* se encuentra en la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1659,9 +1615,9 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1670,14 +1626,12 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <!-- REF #collection.indexOf().Params -->
 
-| Parámetros | Tipo      |    | Descripción                                                                                                   |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------- |
-| toSearch   | expresión | -> | Expresión a buscar en la colección                                                                            |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                                            |
-| Result     | Integer   | <- | Índice de la primera ocurrencia de toSearch en la colección, -1 si no se encuentra|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                        |
+| ---------- | --------- |:--:| ---------------------------------------------------------------------------------- |
+| toSearch   | expresión | -> | Expresión a buscar en la colección                                                 |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                 |
+| Result     | Integer   | <- | Índice de la primera ocurrencia de toSearch en la colección, -1 si no se encuentra |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1720,9 +1674,9 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1730,14 +1684,12 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 
 <!-- REF #collection.indices().Params -->
-| Parámetros  | Tipo       |    | Descripción                                                                                     |
-| ----------- | ---------- |:--:| ----------------------------------------------------------------------------------------------- |
-| queryString | Text       | -> | Criterio de búsqueda                                                                            |
-| value       | any        | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición                              |
-| Result      | Collection | <- | Índice(s) de elementos que coinciden con queryString en la colección|<!-- END REF -->
-
-
-|
+| Parámetros  | Tipo       |    | Descripción                                                          |
+| ----------- | ---------- |:--:| -------------------------------------------------------------------- |
+| queryString | Text       | -> | Criterio de búsqueda                                                 |
+| value       | any        | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición   |
+| Result      | Collection | <- | Índice(s) de elementos que coinciden con queryString en la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1779,9 +1731,9 @@ Para una descripción detallada de los parámetros *queryString* y *value*, cons
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1789,14 +1741,12 @@ Para una descripción detallada de los parámetros *queryString* y *value*, cons
 
 
 <!-- REF #collection.insert().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                         |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| index      | Integer    | -> | Dónde insertar el elemento                                                          |
-| element    | any        | -> | Elemento a insertar en la colección                                                 |
-| Result     | Collection | <- | Colección original que contiene los elementos insertados|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                                              |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| index      | Integer    | -> | Dónde insertar el elemento                               |
+| element    | any        | -> | Elemento a insertar en la colección                      |
+| Result     | Collection | <- | Colección original que contiene los elementos insertados |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1834,9 +1784,9 @@ Se puede insertar cualquier tipo de elemento aceptado por una colección, inclus
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1844,14 +1794,12 @@ Se puede insertar cualquier tipo de elemento aceptado por una colección, inclus
 
 
 <!-- REF #collection.join().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                      |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
-| delimiter  | Text    | -> | Separador a utilizar entre elementos                                                                             |
-| option     | Integer | -> | `ck ignore null or empty`: ignorar las cadenas nulas y vacías en el resultado                                    |
-| Result     | Text    | <- | Cadena que contiene todos los elementos de la colección, separados por un delimitador|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo    |    | Descripción                                                                           |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------------- |
+| delimiter  | Text    | -> | Separador a utilizar entre elementos                                                  |
+| option     | Integer | -> | `ck ignore null or empty`: ignorar las cadenas nulas y vacías en el resultado         |
+| Result     | Text    | <- | Cadena que contiene todos los elementos de la colección, separados por un delimitador |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1882,9 +1830,9 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1892,12 +1840,10 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 
 <!-- REF #collection.last().Params -->
-| Parámetros | Tipo |    | Descripción                                                |
-| ---------- | ---- |:--:| ---------------------------------------------------------- |
-| Result     | any  | <- | Último elemento de la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                     |
+| ---------- | ---- |:--:| ------------------------------- |
+| Result     | any  | <- | Último elemento de la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1933,9 +1879,9 @@ $last:=$emptyCol.last() // devuelve Indefinido
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1943,14 +1889,12 @@ $last:=$emptyCol.last() // devuelve Indefinido
 
 
 <!-- REF #collection.lastIndexOf().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                  |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------ |
-| toSearch   | expresión | -> | El elemento que se va a buscar dentro de la colección                                                        |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                                           |
-| Result     | Integer   | <- | Índice de la última ocurrencia de toSearch en la colección, -1 si no se encuentra|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo      |    | Descripción                                                                       |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------- |
+| toSearch   | expresión | -> | El elemento que se va a buscar dentro de la colección                             |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                |
+| Result     | Integer   | <- | Índice de la última ocurrencia de toSearch en la colección, -1 si no se encuentra |
+<!-- END REF -->
 
 
 #### Descripción
@@ -1996,9 +1940,9 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R5      | Añadidos       |
 
 </details>
 
@@ -2032,10 +1976,10 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2043,15 +1987,13 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 
 <!-- REF #collection.map().Params -->
-| Parámetros | Tipo        |    | Descripción                                                   |
-| ---------- | ----------- |:--:| ------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto fórmula                                                |
-| methodName | Text        | -> | Nombre de un método                                           |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*            |
-| Result     | Collection  | <- | Colección de valores transformados|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                        |
+| ---------- | ----------- |:--:| -------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto fórmula                                     |
+| methodName | Text        | -> | Nombre de un método                                |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName* |
+| Result     | Collection  | <- | Colección de valores transformados                 |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2100,9 +2042,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2113,10 +2055,8 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 | Parámetros   | Tipo                                            |    | Descripción                                                         |
 | ------------ | ----------------------------------------------- |:--:| ------------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Ruta de la propiedad del objeto que se utilizará para la evaluación |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Valor máximo en la colección|<!-- END REF -->
-
-
-|
+| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Valor máximo en la colección                                        |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2154,9 +2094,9 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2167,10 +2107,8 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 | Parámetros   | Tipo                                            |    | Descripción                                                         |
 | ------------ | ----------------------------------------------- |:--:| ------------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Ruta de la propiedad del objeto que se utilizará para la evaluación |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Valor mínimo en la colección|<!-- END REF -->
-
-
-|
+| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Valor mínimo en la colección                                        |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2206,9 +2144,9 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -2220,10 +2158,8 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 | ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------------------------------------ |
 | formula    | 4D.Function | -> | Objeto fórmula                                                                                                           |
 | colsToSort | Collection  | -> | Colección de colecciones y/u objetos con propiedades {`collection`:*colToSort*;`order`:`ck ascending` o `ck descending`} |
-| Result     | Collection  | <- | Colección original ordenada|<!-- END REF -->
-
-
-|
+| Result     | Collection  | <- | Colección original ordenada                                                                                              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2305,10 +2241,10 @@ $city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
 $country:=["France"; "France"; "Morocco"; "Germany"; "US"]
 $continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
 
-$continent.multiSort($country; {collection: $city; order: ck ascending})
-//$continent=["Africa", "America","Europe","Europe","Europe"]
-//$country=["Morocco", "US","Germany","France","France"]
-//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+$continent.multiSort([$country; {collection: $city; order: ck ascending}])
+//$continent=["Africa","America","Europe","Europe","Europe"]
+//$country=["Morocco","US","France","France","Germany"]
+//$city=["Rabat","San Diego","Lyon","Paris","Eching"]
 
 ```
 
@@ -2346,9 +2282,9 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2356,15 +2292,13 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parámetros  | Tipo       |    | Descripción                                                                   |
-| ----------- | ---------- |:--:| ----------------------------------------------------------------------------- |
-| pathStrings | Text       | -> | Ruta(s) de propiedad(es) a utilizar para ordenar la colección                 |
-| pathObjects | Collection | -> | Colección de objetos criterio                                                 |
-| ascOrDesc   | Integer    | -> | `ck ascending` o `ck descending` (valores escalares)                          |
-| Result      | Collection | <- | Copia ordenada de la colección (copia superficial)|<!-- END REF -->
-
-
-|
+| Parámetros  | Tipo       |    | Descripción                                                   |
+| ----------- | ---------- |:--:| ------------------------------------------------------------- |
+| pathStrings | Text       | -> | Ruta(s) de propiedad(es) a utilizar para ordenar la colección |
+| pathObjects | Collection | -> | Colección de objetos criterio                                 |
+| ascOrDesc   | Integer    | -> | `ck ascending` o `ck descending` (valores escalares)          |
+| Result      | Collection | <- | Copia ordenada de la colección (copia superficial)            |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2374,7 +2308,7 @@ La función `.fill()` <!-- REF #collection.orderBy().Summary -->devuelve una nue
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
-Si no se pasa ningún parámetro, la función ordena los valores escalares de la colección en orden ascendente (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados). Puede modificar este orden automático pasando las constantes `ck ascending` o `ck descending` en el parámetro *ascOrDesc* (ver más abajo).
+Si no se pasa ningún parámetro, la función ordena los valores escalares de la colección en orden ascendente (otros tipos de elementos como objetos o colecciones se devuelven con un orden interno). Puede modificar este orden automático pasando las constantes `ck ascending` o `ck descending` en el parámetro *ascOrDesc* (ver más abajo).
 
 También puede pasar un parámetro de criterios para definir cómo deben ordenarse los elementos de la colección. Se admiten tres sintaxis para este parámetro:
 
@@ -2491,10 +2425,10 @@ Ordenar con una ruta de propiedad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2503,15 +2437,13 @@ Ordenar con una ruta de propiedad:
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                   |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                |
-| methodName | Text        | -> | Nombre de un método                                                           |
-| extraParam | any         | -> | Parámetro(s) a pasar                                                          |
-| Result     | Collection  | <- | Copia ordenada de la colección (copia superficial)|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                        |
+| ---------- | ----------- |:--:| -------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto fórmula                                     |
+| methodName | Text        | -> | Nombre de un método                                |
+| extraParam | any         | -> | Parámetro(s) a pasar                               |
+| Result     | Collection  | <- | Copia ordenada de la colección (copia superficial) |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2601,9 +2533,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2612,12 +2544,10 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.pop().Params -->
-| Parámetros | Tipo |    | Descripción                                                |
-| ---------- | ---- |:--:| ---------------------------------------------------------- |
-| Result     | any  | <- | Último elemento de la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                     |
+| ---------- | ---- |:--:| ------------------------------- |
+| Result     | any  | <- | Último elemento de la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2653,9 +2583,9 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2663,13 +2593,11 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 
 <!-- REF #collection.push().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                       |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------- |
-| element    | Mixed      | -> | Elemento(s) a añadir a la colección                                               |
-| Result     | Collection | <- | Colección original que contiene los elementos añadidos|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                                            |
+| ---------- | ---------- |:--:| ------------------------------------------------------ |
+| element    | Mixed      | -> | Elemento(s) a añadir a la colección                    |
+| Result     | Collection | <- | Colección original que contiene los elementos añadidos |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2715,10 +2643,10 @@ Desea ordenar la colección resultante:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones           |
-| ------- | ------------------------ |
-| v17 R5  | Soporte de querySettings |
-| v16 R6  | Añadidos                 |
+| Lanzamiento | Modificaciones           |
+| ----------- | ------------------------ |
+| 17 R5       | Soporte de querySettings |
+| v16 R6      | Añadidos                 |
 
 </details>
 
@@ -2726,15 +2654,13 @@ Desea ordenar la colección resultante:
 
 
 <!-- REF #collection.query().Params -->
-| Parámetros    | Tipo       |    | Descripción                                                                            |
-| ------------- | ---------- |:--:| -------------------------------------------------------------------------------------- |
-| queryString   | Text       | -> | Criterio de búsqueda                                                                   |
-| value         | Mixed      | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición                     |
-| querySettings | Object     | -> | Opciones de búsqueda: parámetros, atributos                                            |
-| Result        | Collection | <- | Elemento(s) que coincide(n) con queryString en la colección|<!-- END REF -->
-
-
-|
+| Parámetros    | Tipo       |    | Descripción                                                        |
+| ------------- | ---------- |:--:| ------------------------------------------------------------------ |
+| queryString   | Text       | -> | Criterio de búsqueda                                               |
+| value         | Mixed      | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición |
+| querySettings | Object     | -> | Opciones de búsqueda: parámetros, atributos                        |
+| Result        | Collection | <- | Elemento(s) que coincide(n) con queryString en la colección        |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2829,10 +2755,10 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2846,10 +2772,8 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 | methodName | Text                                            | -> | Nombre de un método                                                                      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
 | param      | expresión                                       | -> | Parámetro(s) a pasar                                                                     |
-| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador|<!-- END REF -->
-
-
-|
+| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador                                                       |
+<!-- END REF -->
 
 
 #### Descripción
@@ -2923,9 +2847,9 @@ Con el siguiente método ***Flatten***:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -2939,10 +2863,8 @@ Con el siguiente método ***Flatten***:
 | methodName | Text                                            | -> | Nombre de un método                                                                      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
 | param      | expresión                                       | -> | Parámetro(s) a pasar                                                                     |
-| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador|<!-- END REF -->
-
-
-|
+| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador                                                       |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3018,9 +2940,9 @@ Con el siguiente método ***Flatten***:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3028,14 +2950,12 @@ Con el siguiente método ***Flatten***:
 
 
 <!-- REF #collection.remove().Params -->
-| Parámetros | Tipo       |    | Descripción                                                            |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento en el que se inicia la eliminación                            |
-| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite               |
-| Result     | Collection | <- | Colección original sin elementos eliminados|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                                              |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| index      | Integer    | -> | Elemento en el que se inicia la eliminación              |
+| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite |
+| Result     | Collection | <- | Colección original sin elementos eliminados              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3082,9 +3002,9 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3094,14 +3014,12 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 
 <!-- REF #collection.resize().Params -->
-| Parámetros   | Tipo                                            |    | Descripción                                                  |
-| ------------ | ----------------------------------------------- |:--:| ------------------------------------------------------------ |
-| size         | Integer                                         | -> | Nuevo tamaño de la colección                                 |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valor por defecto para llenar nuevos elementos               |
-| Result       | Collection                                      | <- | Colección original redimensionada|<!-- END REF -->
-
-
-|
+| Parámetros   | Tipo                                            |    | Descripción                                    |
+| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
+| size         | Integer                                         | -> | Nuevo tamaño de la colección                   |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valor por defecto para llenar nuevos elementos |
+| Result       | Collection                                      | <- | Colección original redimensionada              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3145,9 +3063,9 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3156,12 +3074,10 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 <!-- REF #collection.reverse().Params -->
 
-| Parámetros | Tipo       |    | Descripción                                                |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Result     | Collection | <- | Copia invertida de la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                     |
+| ---------- | ---------- |:--:| ------------------------------- |
+| Result     | Collection | <- | Copia invertida de la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3189,9 +3105,9 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3199,12 +3115,10 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una 
 
 
 <!-- REF #collection.shift().Params -->
-| Parámetros | Tipo |    | Descripción                                                |
-| ---------- | ---- |:--:| ---------------------------------------------------------- |
-| Result     | any  | <- | Primer elemento de la colección|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |    | Descripción                     |
+| ---------- | ---- |:--:| ------------------------------- |
+| Result     | any  | <- | Primer elemento de la colección |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3239,9 +3153,9 @@ Si la colección está vacía, este método no hace nada.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3249,14 +3163,12 @@ Si la colección está vacía, este método no hace nada.
 
 
 <!-- REF #collection.slice().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                                    |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Índice de inicio (incluido)                                                                    |
-| end        | Integer    | -> | Índice final (no incluido)                                                                     |
-| Result     | Collection | <- | Nueva colección que contiene elementos cortados (copia superficial)|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo       |    | Descripción                                                         |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------- |
+| startFrom  | Integer    | -> | Índice de inicio (incluido)                                         |
+| end        | Integer    | -> | Índice final (no incluido)                                          |
+| Result     | Collection | <- | Nueva colección que contiene elementos cortados (copia superficial) |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3294,10 +3206,10 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -3305,16 +3217,14 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 
 <!-- REF #collection.some().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                             |
-| ---------- | ----------- |:--:| --------------------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Índice para iniciar la prueba en                                                        |
-| formula    | 4D.Function | -> | Objeto fórmula                                                                          |
-| methodName | Text        | -> | Nombre de un método                                                                     |
-| param      | Mixed       | -> | Parámetro(s) a pasar                                                                    |
-| Result     | Boolean     | <- | True si al menos un elemento ha superado la prueba con éxito|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                                                  |
+| ---------- | ----------- |:--:| ------------------------------------------------------------ |
+| startFrom  | Integer     | -> | Índice para iniciar la prueba en                             |
+| formula    | 4D.Function | -> | Objeto fórmula                                               |
+| methodName | Text        | -> | Nombre de un método                                          |
+| param      | Mixed       | -> | Parámetro(s) a pasar                                         |
+| Result     | Boolean     | <- | True si al menos un elemento ha superado la prueba con éxito |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3382,10 +3292,10 @@ Quiere saber si al menos un valor de la colección es >0.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -3393,15 +3303,13 @@ Quiere saber si al menos un valor de la colección es >0.
 
 
 <!-- REF #collection.sort().Params -->
-| Parámetros | Tipo        |    | Descripción                                            |
-| ---------- | ----------- |:--:| ------------------------------------------------------ |
-| formula    | 4D.Function | -> | Objeto fórmula                                         |
-| methodName | Text        | -> | Nombre de un método                                    |
-| extraParam | any         | -> | Parámetros del método                                  |
-| Result     | Collection  | <- | Colección original ordenada|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                 |
+| ---------- | ----------- |:--:| --------------------------- |
+| formula    | 4D.Function | -> | Objeto fórmula              |
+| methodName | Text        | -> | Nombre de un método         |
+| extraParam | any         | -> | Parámetros del método       |
+| Result     | Collection  | <- | Colección original ordenada |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3470,9 +3378,9 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3483,10 +3391,8 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 | Parámetros   | Tipo |    | Descripción                                                      |
 | ------------ | ---- |:--:| ---------------------------------------------------------------- |
 | propertyPath | Text | -> | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real | <- | Suma de los valores de la colección|<!-- END REF -->
-
-
-|
+| Result       | Real | <- | Suma de los valores de la colección                              |
+<!-- END REF -->
 
 
 #### Descripción
@@ -3536,9 +3442,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3546,14 +3452,11 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 
 <!-- REF #collection.unshift().Params -->
-| Parámetros                 | Tipo                                   |    | Descripción                                       |
-| -------------------------- | -------------------------------------- |:--:| ------------------------------------------------- |
-| value                      | Text, Number, Object, Collection, Date | -> | Valor(es) a insertar al principio de la colección |
-| Result                     | Real                                   | <- | Colección que contiene los elementos añadidos     |
-|<!-- END REF -->
-
-
-|                                        |    |                                                   |
+| Parámetros | Tipo                                   |    | Descripción                                       |
+| ---------- | -------------------------------------- |:--:| ------------------------------------------------- |
+| value      | Text, Number, Object, Collection, Date | -> | Valor(es) a insertar al principio de la colección |
+| Result     | Real                                   | <- | Colección que contiene los elementos añadidos     |
+<!-- END REF -->
 
 
 #### Descripción

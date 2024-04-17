@@ -137,9 +137,9 @@ Une liste de mots séparés par des espaces utilisés comme sélecteurs de class
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles                                         |
-| ------ | --------------- | --------------------------------------------------------- |
-| classe | string          | One string with CSS name(s) separated by space characters |
+| Nom   | Type de données | Valeurs possibles                                         |
+| ----- | --------------- | --------------------------------------------------------- |
+| class | string          | One string with CSS name(s) separated by space characters |
 
 #### Objets pris en charge
 

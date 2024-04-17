@@ -9,9 +9,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -31,9 +31,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -53,9 +53,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -75,9 +75,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -99,9 +99,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -121,9 +121,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -143,9 +143,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -165,9 +165,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -187,9 +187,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -209,9 +209,9 @@ title: Directory クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
@@ -233,9 +233,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -255,9 +255,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -277,9 +277,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -299,9 +299,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
@@ -322,9 +322,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
@@ -346,9 +346,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -368,9 +368,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -390,23 +390,22 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
-| 引数                | タイプ       |    | 説明                                     |
-| ----------------- | --------- |:--:| -------------------------------------- |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                                |
-| newName           | Text      | -> | コピー先フォルダーの名前                           |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します      |
-| 戻り値               | 4D.Folder | <- | コピーされたフォルダー|<!-- END REF -->
-
-|
+| 引数                | タイプ       |    | 説明                                |
+| ----------------- | --------- |:--:| --------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
+| newName           | Text      | -> | コピー先フォルダーの名前                      |
+| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| 戻り値               | 4D.Folder | <- | コピーされたフォルダー                       |
+<!-- END REF -->
 
 #### 説明
 
@@ -445,21 +444,20 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #directory.file().Params -->
-| 引数   | タイプ     |    | 説明                                                               |
-| ---- | ------- | -- | ---------------------------------------------------------------- |
-| path | Text    | -> | ファイルのPOSIX相対パス名                                                  |
-| 戻り値  | 4D.File | <- | `File` オブジェクト (無効な POSIXパスの場合には null)|<!-- END REF -->
-
-|
+| 引数   | タイプ     |    | 説明                              |
+| ---- | ------- | -- | ------------------------------- |
+| path | Text    | -> | ファイルのPOSIX相対パス名                 |
+| 戻り値  | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -487,21 +485,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.files().Params -->
-| 引数      | タイプ        |    | 説明                                            |
-| ------- | ---------- | -- | --------------------------------------------- |
-| options | Integer    | -> | ファイルリストのオプション                                 |
-| 戻り値     | Collection | <- | 子ファイルオブジェクトのコレクション|<!-- END REF -->
-
-|
+| 引数      | タイプ        |    | 説明                 |
+| ------- | ---------- | -- | ------------------ |
+| options | Integer    | -> | ファイルリストのオプション      |
+| 戻り値     | Collection | <- | 子ファイルオブジェクトのコレクション |
+<!-- END REF -->
 
 #### 説明
 
@@ -550,21 +547,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.folder().Params -->
-| 引数   | タイプ       |    | 説明                                                                             |
-| ---- | --------- | -- | ------------------------------------------------------------------------------ |
-| path | Text      | -> | ファイルのPOSIX相対パス名                                                                |
-| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な POSIX *path* の場合には null)|<!-- END REF -->
-
-|
+| 引数   | タイプ       |    | 説明                                            |
+| ---- | --------- | -- | --------------------------------------------- |
+| path | Text      | -> | ファイルのPOSIX相対パス名                               |
+| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -592,21 +588,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.folders().Params -->
-| 引数      | タイプ        |    | 説明                                             |
-| ------- | ---------- | -- | ---------------------------------------------- |
-| options | Integer    | -> | フォルダーリストのオプション                                 |
-| 戻り値     | Collection | <- | 子フォルダーオブジェクトのコレクション|<!-- END REF -->
-
-|
+| 引数      | タイプ        |    | 説明                  |
+| ------- | ---------- | -- | ------------------- |
+| options | Integer    | -> | フォルダーリストのオプション      |
+| 戻り値     | Collection | <- | 子フォルダーオブジェクトのコレクション |
+<!-- END REF -->
 
 #### 説明
 
@@ -641,21 +636,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 
 <!-- REF #directory.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                              |
-| ---- | ------- | -- | ------------------------------- |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
-
-|
+| 引数   | タイプ     |    | 説明                       |
+| ---- | ------- | -- | ------------------------ |
+| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | Picture | <- | アイコン                     |
+<!-- END REF -->
 
 #### 説明
 

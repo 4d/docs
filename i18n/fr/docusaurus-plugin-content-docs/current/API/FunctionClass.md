@@ -109,10 +109,10 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                     |
+| Release | Modifications                     |
 | ------- | --------------------------------- |
-| v17 R6  | Renommée (New formula -> Formula) |
-| v17 R3  | Ajout                             |
+| 17 R6   | Renommée (New formula -> Formula) |
+| 17 R3   | Ajout                             |
 
 </details>
 
@@ -120,13 +120,11 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 
 <!-- REF #_command_.Formula.Params -->
-| Paramètres | Type        |    | Description                                                       |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------- |
-| formulaExp | Expression  | -> | Formule à retourner comme objet                                   |
-| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule|<!-- END REF -->
-
-
-|
+| Paramètres | Type        |    | Description                            |
+| ---------- | ----------- |:--:| -------------------------------------- |
+| formulaExp | Expression  | -> | Formule à retourner comme objet        |
+| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule |
+<!-- END REF -->
 
 
 #### Description
@@ -248,11 +246,11 @@ Appeler une formule à l'aide de la notation objet :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                             |
+| Release | Modifications                                             |
 | ------- | --------------------------------------------------------- |
-| v20 R3  | Prise en charge du paramètre *context*                    |
-| v17 R6  | Renommée : New formula from string -> Formula from string |
-| v17 R3  | Ajout                                                     |
+| 20 R3   | Prise en charge du paramètre *context*                    |
+| 17 R6   | Renommée : New formula from string -> Formula from string |
+| 17 R3   | Ajout                                                     |
 
 </details>
 
@@ -264,10 +262,8 @@ Appeler une formule à l'aide de la notation objet :
 | ------------- | ----------- |:--:| ------------------------------------------------------------------------------ |
 | formulaString | Text        | -> | Formule texte à retourner comme objet                                          |
 | context       | Number      | -> | `sk execute in current database` (par défaut) ou `sk execute in host database` |
-| Résultat      | 4D.Function | <- | Objet natif encapsulant la formule|<!-- END REF -->
-
-
-|
+| Résultat      | 4D.Function | <- | Objet natif encapsulant la formule                                             |
+<!-- END REF -->
 
 
 #### Description
@@ -317,9 +313,9 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajout         |
+| 17 R3   | Ajout         |
 
 </details>
 
@@ -331,10 +327,8 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 | ------------- | ---------- |:--:| --------------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objet à retourner par la commande This dans la formule                            |
 | formulaParams | Collection | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
-| Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
-
-
-|
+| Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule                              |
+<!-- END REF -->
 
 
 #### Description
@@ -382,9 +376,9 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajout         |
+| 17 R3   | Ajout         |
 
 </details>
 
@@ -392,14 +386,12 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 
 <!-- REF #FunctionClass.call().Params -->
-| Paramètres | Type   |    | Description                                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule                          |
-| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté              |
-| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
-
-
-|
+| Paramètres | Type   |    | Description                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule             |
+| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
+| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule               |
+<!-- END REF -->
 
 
 #### Description
@@ -437,9 +429,9 @@ A noter que `.call()` est similaire à [`.apply()`](#apply), néanmoins les para
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajout         |
+| 18 R2   | Ajout         |
 
 </details>
 

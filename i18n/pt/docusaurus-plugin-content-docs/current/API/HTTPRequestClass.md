@@ -9,9 +9,9 @@ A classe `HTTPRequest` está disponível a partir da loja de classes `4D` . Voc�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças          |
-| ------ | ----------------- |
-| v19 R6 | Classe adicionada |
+| Release | Mudanças          |
+| ------- | ----------------- |
+| 19 R6   | Classe adicionada |
 
 </details>
 
@@ -71,10 +71,10 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v20    | Validação TLS por padrão            |
-| v19 R7 | Suporte de propriedade *decodeData* |
+| Release | Mudanças                                                       |
+| ------- | -------------------------------------------------------------- |
+| 20      | Validação TLS por padrão                                       |
+| 18 R6   | Suporte às propriedades *automaticRedirections* e *decodeData* |
 
 </details>
 
@@ -82,13 +82,12 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetro  | Tipo           |    | Descrição                                           |
-| ---------- | -------------- |:--:| --------------------------------------------------- |
-| url        | Text           | -> | URL para onde enviar o pedido                       |
-| options    | Object         | -> | Pedir propriedades de configuração                  |
-| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo           |    | Descrição                          |
+| ---------- | -------------- |:--:| ---------------------------------- |
+| url        | Text           | -> | URL para onde enviar o pedido      |
+| options    | Object         | -> | Pedir propriedades de configuração |
+| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest           |
+<!-- END REF -->
 
 #### Descrição
 
@@ -124,6 +123,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 | Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Por padrão    |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| automaticRedirections  | Parâmetros                                      | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                           | True          |
 | body                   | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType               | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |
@@ -190,9 +190,9 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R4   | Adicionado |
 
 </details>
 
@@ -200,27 +200,26 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                  |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
-| data       | Text, Blob | -> | Dados a serem analisados                                                                   |
-| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                       |
+| ---------- | ---------- |:--:| --------------------------------------------------------------- |
+| data       | Text, Blob | -> | Dados a serem analisados                                        |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
+<!-- END REF -->
 
 #### Descrição
 
-O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analisa um texto ou blob multipart/form-data (mensagem HTTP "response") e extrai o conteúdo para um objeto. Cada propriedade do objeto retornado corresponde a uma parte dos dados multipartes<!-- END REF -->.
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+HTTP em si, é um protocolo de comunicação sem estado. Neste quadro, os clientes iniciam uma comunicação enviando mensagens "request" aos servidores, especificando detalhes como método, alvo, cabeçalhos, conteúdo, etc. Os servidores, respondem com mensagens de "resposta" que incluem os mesmos detalhes. `HTTP Parse message` analisa a mensagem "request" ou de "response" em um objeto bem organizado.
 
 :::
 
 
 #### Exemplo
 
-In the following example, we parse the data from a text file containing HTTP requests.
+No exemplo a seguir, analisamos os dados de um arquivo de texto que contém solicitações HTTP.
 
 Aqui está o conteúdo do arquivo:
 
@@ -347,9 +346,9 @@ A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                               |
-| ------ | ---------------------------------------------------------------------- |
-| v19 R8 | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
+| Release | Mudanças                                                               |
+| ------- | ---------------------------------------------------------------------- |
+| 19 R8   | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
 
 </details>
 
@@ -389,11 +388,10 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -446,9 +444,8 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->o URL do 
 | Parâmetro  | Tipo           |    | Descrição                                           |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->
-
-|
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
+<!-- END REF -->
 
 #### Descrição
 

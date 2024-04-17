@@ -23,12 +23,6 @@
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
   },
-  "Class API Reference": {
-    "message": "Class API Reference"
-  },
-  "Handling code": {
-    "message": "Handling code"
-  },
   "Debugging": {
     "message": "Debugging"
   },
@@ -52,9 +46,6 @@
   },
   "TLS Protocol": {
     "message": "TLS Protocol"
-  },
-  "Licenses & Data Collection": {
-    "message": "Licenses & Data Collection"
   },
   "Access Rights": {
     "message": "Access Rights"
@@ -154,9 +145,6 @@
   },
   "homepage.hero.title": {
     "message": "Documentation for 4D developers"
-  },
-  "Documentation updates": {
-    "message": "Documentation updates"
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
@@ -557,19 +545,19 @@
     "message": "Release Notes"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Progress.100-6341911.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -579,9 +567,6 @@
   },
   "Class Functions": {
     "message": "Class Functions"
-  },
-  "Handling Code": {
-    "message": "Handling Code"
   },
   "Transformation Tags": {
     "message": "Transformation Tags"
@@ -604,5 +589,11 @@
   },
   "Licenses": {
     "message": "Licenses"
+  },
+  "Processes": {
+    "message": "Processes"
+  },
+  "Qodly Studio": {
+    "message": "Qodly Studio"
   }
 }

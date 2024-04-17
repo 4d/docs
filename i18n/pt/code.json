@@ -23,12 +23,6 @@
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
   },
-  "Class API Reference": {
-    "message": "Referência da API de classe"
-  },
-  "Handling code": {
-    "message": "Gerenciamento do código"
-  },
   "Debugging": {
     "message": "Depuração"
   },
@@ -52,9 +46,6 @@
   },
   "TLS Protocol": {
     "message": "Protocolo TLS"
-  },
-  "Licenses & Data Collection": {
-    "message": "Licenças e recolha de dados"
   },
   "Access Rights": {
     "message": "Direitos de acesso"
@@ -154,9 +145,6 @@
   },
   "homepage.hero.title": {
     "message": "Documentação para os programadores 4D"
-  },
-  "Documentation updates": {
-    "message": "Actualizações da documentação"
   },
   "theme.ErrorPageContent.title": {
     "message": "Esta página caiu.",
@@ -557,19 +545,19 @@
     "message": "Notas de Lançamento"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Progress.100-6341911.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -580,9 +568,6 @@
   "Class Functions": {
     "message": "Class Functions"
   },
-  "Handling Code": {
-    "message": "Gerenciamento do código"
-  },
   "Transformation Tags": {
     "message": "Etiquetas de transformação"
   },
@@ -591,7 +576,7 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Barra lateral de documentos",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -604,5 +589,11 @@
   },
   "Licenses": {
     "message": "Licenças"
+  },
+  "Processes": {
+    "message": "Processos"
+  },
+  "Qodly Studio": {
+    "message": "Qodly Studio"
   }
 }

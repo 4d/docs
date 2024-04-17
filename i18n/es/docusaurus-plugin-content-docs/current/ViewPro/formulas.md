@@ -25,7 +25,7 @@ Al escribir una fórmula, puede utilizar diferentes atajos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. Para ello, introduzca estas fórmulas utilizando el comando [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
+También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
 
 ### Operadores y operandos
 
@@ -108,7 +108,7 @@ Si sólo utiliza coordenadas de celda, por ejemplo, `C5`, 4D View Pro interpreta
 
 Puede combinar las referencias absolutas y relativas insertando un signo de dólar delante de la letra o el número solo, por ejemplo, `$C5` o `C$5`. Una referencia mixta permite especificar la fila o la columna como absolutas, permitiendo al mismo tiempo que la otra parte de la dirección se refiera a ella de forma relativa.
 
-Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. Puede crear o modificar celdas con nombre o rangos de celdas con nombre utilizando el método [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
+Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](commands/vp-add-range-name.md) command.
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
@@ -118,7 +118,7 @@ La siguiente tabla muestra el efecto de las diferentes notaciones:
 | $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                                     |
 | $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez. |
 | C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez |
-| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](method-list.md#vp-add-range-name) sin importar donde se use la referencia.         |
+| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](commands/vp-add-range-name.md) sin importar donde se use la referencia.            |
 
 
 
@@ -145,27 +145,27 @@ Las funciones personalizadas 4D permiten acceder, desde sus fórmulas 4D View Pr
 
 Las funciones personalizadas 4D pueden recibir los [parámetros ](#parameters) desde el área 4D View Pro, y devolver los valores.
 
-Usted declara todas sus funciones utilizando el método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions). Ejemplos:
+You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Ejemplos:
 
 ```4d
-o:=New object
+$o:=New object
 
-//Nombre de la fonción en 4D View Pro: "DRIVERS_LICENCE"
+//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-/variable process
+//process variable
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//campo table
+//table field
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//método proyecto
+//project method
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//Comando 4D
+//4D command
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//expresión y parámetro 4D 
+//4D expression and parameter
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
@@ -181,7 +181,7 @@ Queremos imprimir "Hola Mundo" en una celda del área 4D View Pro utilizando un 
 1.  Cree un método proyecto "myMethod" con el siguiente código:
 
 ```4d
- #DECLARE->$hw Text
+ #DECLARE->$hw :Text
  $hw:="Hello World"
 
 ```
@@ -226,19 +226,34 @@ Tenga en cuenta que los ( ) son obligatorios, incluso si no se pasan parámetros
 =METHODWITHOUTNAME()
 ```
 
-Puede declarar el nombre, el tipo y el número de parámetros a través de la colección de *parámetros* de la función que declaró utilizando el método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions). Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades *minParams* y *maxParams*.
+You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades *minParams* y *maxParams*.
 
-Para más información sobre los tipos de parámetros entrantes soportados, consulte la descripción del método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
+For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
-> Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
-> |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
+Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente.
+
+Los parámetros Fecha y Objeto se tratan de la siguiente manera:
+
+* Las fechas en *jstype* se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
+
+| Propiedad | Tipo  | Descripción      |
+| --------- | ----- | ---------------- |
+| value     | Fecha | Valor fecha      |
+| time      | Real  | Hora en segundos |
+
+* Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+
+| Propiedad | Tipo   | Descripción      |
+| --------- | ------ | ---------------- |
+| value     | Object | Object parameter |
+
+### Valores devueltos
 
 Los métodos proyecto 4D también pueden devolver valores en la fórmula de la celda 4D View Pro a través de $0. Los siguientes tipos de datos son soportados para los parámetros devueltos:
 
 * [text](Concepts/dt_string.md) (convertido en cadena de caracteres en 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido a número en 4D View Pro)
 * [date](Concepts/dt_date.md) (convertido en tipo JS Date en 4D View Pro - hora, minuto, segundo = 0)
-
 * [time](Concepts/dt_time.md) (convertida en tipo JS Date en 4D View Pro - date en date de base, es decir, 30/12/1899)
 * [boolean](Concepts/dt_boolean.md) (convertido a bool en 4D View Pro)
 * [imagen](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg otros tipos convertidos en png) crea un URI (data:image/png;base64,xxxx) y luego se utiliza como fondo en 4D View Pro en la celda donde se ejecuta la fórmula
@@ -277,7 +292,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ## Compatibilidad
 
-Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. No obstante, se recomienda utilizar el método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
+Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. Sin embargo, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referenciación de campos mediante la estructura virtual
 
@@ -309,7 +324,7 @@ Por ejemplo, si declaró el campo "Name" de la tabla "People" en la estructura v
 =LEN(PEOPLE_NAME())
 ```
 
-> Si un campo tiene el mismo nombre que un [método 4D], tiene prioridad sobre el método.
+> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
 
 #### Ejemplo
 
@@ -354,15 +369,15 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 ### Declarar los métodos autorizados
 
-Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. Por razones de seguridad, debe declarar explícitamente los métodos que pueden ser llamados por el usuario con el método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
+Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
 
 
 #### Requisitos
 
 Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 
-*   **Autorizado**: fue declarado explícitamente utilizando el método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
+*   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
 *   **Ejecutable**: pertenece al proyecto local o a un componente cargado con la opción "Compartido por los componentes y el proyecto local" activada (ver [Compartir los métodos proyecto](../Concepts/components.md#sharing-of-project-methods)).
 *   **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
-> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir con la gramática de identificación JavaScript (ver [Estándar ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver *Acceso a los datos*) se ignora en todos los casos.
+> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir con la gramática de identificación JavaScript (ver [Estándar ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver *Acceso a los datos*) se ignora en todos los casos.
 

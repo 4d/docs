@@ -43,11 +43,11 @@ Vous pouvez à tout moment savoir si votre base utilise un fichier d’historiqu
 
 Pour créer un fichier d’historique :
 
-1. Dans la Page **Sauvegarde/Configuration** des Propriétés de la base, cochez l’option **Utiliser le fichier d’historique**. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. Dans la Page **Sauvegarde/Configuration** des Propriétés de la base, cochez l’option **Utiliser le fichier d’historique**. Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
 
-2. Keep the default name or rename it, and then select the file location. Si vous disposez d’au moins deux disques durs, il est recommandé de placer l’historique sur un autre disque que celui contenant la base, afin de pouvoir l’exploiter en cas de perte totale du disque de la base. Si le disque dur de la base de données est perdu, vous pouvez toujours rappeler votre fichier d'historique.
+2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier. Si vous disposez d’au moins deux disques durs, il est recommandé de placer l’historique sur un autre disque que celui contenant la base, afin de pouvoir l’exploiter en cas de perte totale du disque de la base. Si le disque dur de la base de données est perdu, vous pouvez toujours rappeler votre fichier d'historique.
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Cliquez sur **Enregistrer**. Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
 4. Validez la boîte de dialogue des Propriétés de la base.
 

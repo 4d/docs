@@ -254,7 +254,7 @@ This property keeps the selection visible within the object after it has lost th
 
 ---
 
-## Shortcut
+## Raccourci
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 

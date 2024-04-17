@@ -953,7 +953,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 * "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
-* "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
+* "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
 * "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:
@@ -1027,7 +1027,7 @@ OB SET($ob;"label";"Edit...")
 
 ### Gestão de eventos
 
-Several events can be handled while using an object list box array:
+Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
 * **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
   * numa zona de introdução de texto

@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-objects-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -940,6 +940,7 @@ utilice el siguiente código:
 
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -978,7 +979,7 @@ El parámetro opcional *paramObj* le permite definir múltiples propiedades para
 | includeBindingSource       | boolean     | Sólo 4DVP y Microsoft Excel. True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el documento exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta. Para la gestión de los contextos de datos y de las fusiones de celdas, ver [VP SET DATA CONTEXT](#vp-set-data-context) y [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                           |
 | sheet                      | number      | PDF únicamente (opcional) - Índice de la hoja a exportar (empezando por 0). -2=todas las hojas visibles (**por defecto**), -1= sólo la hoja actual                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | pdfOptions                 | object      | PDF únicamente (opcional) - Opciones para la exportación en pdf <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>creator</td><td>text</td><td>nombre de la aplicación que creó el documento original a partir del cual se convirtió.</td></tr><tr><td>title</td><td>text</td><td>título del documento.</td></tr><tr><td>author</td><td>text</td><td>nombre de la persona que creó ese documento.</td></tr><tr><td>keywords</td><td>text</td><td>palabras clave asociadas al documento.</td></tr><tr><td>asunto</td><td>text</td><td>asunto del documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions                 | object      | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>object</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de línea. Por defecto: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de columna. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| csvOptions                 | object      | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>object</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de línea. Por defecto: `"\r\n"`</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de columna. Por defecto: `","`</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | sjsOptions                 | object      | Sólo SJS (opcional) - Opciones para la exportación sjs <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>si incluir las celdas fusionadas automáticamente, por defecto es false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>si incluir la fuente de vinculación, por defecto es true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>si desea incluir los datos adicionales de cálculo. Puede ser más rápido al abrir el archivo con esos datos, por defecto es false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto es true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>si incluir las fórmulas, por defecto es true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>si incluir el estilo, por defecto es true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>si incluir los nombres personalizados no utilizados, por defecto es true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>si aplicar la cadena de formato a los valores exportados, por defecto es false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `\<customProperty>` | any         | Toda propiedad personalizada que estará disponible a través del parámetro $3 en el método de retrollamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
@@ -1011,7 +1012,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 
 | Parámetros |               | Tipo    | Descripción                                               |
 | ---------- | ------------- | ------- | --------------------------------------------------------- |
-| param1     |               | text    | El nombre del objeto 4D View Pro                          |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                  |
 | param2     |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | param3     |               | object  | Referencia al *paramObj* del comando                      |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -1113,17 +1114,18 @@ El comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->e
 
 En *paramObj*, puede pasar varias propiedades:
 
-| Propiedad               | Tipo        | Descripción                                                                                                                 |
-| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado.                                  |
-| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                         |
-| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                           |
-| includeCalcModelCache   | Boolean     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false. |
-| includeEmptyRegionCells | Boolean     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true      |
-| includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                      |
-| includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                       |
-| includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                            |
-| saveAsView              | Boolean     | Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.                                           |
+| Propiedad               | Tipo        | Descripción                                                                                                                                                                     |
+| ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado. Ver [Pasar un método de retrollamada (fórmula)](#passing-a-callback-method-formula). |
+| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                                                                             |
+| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                                                                               |
+| includeCalcModelCache   | Boolean     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false.                                                     |
+| includeEmptyRegionCells | Boolean     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true                                                          |
+| includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                                                                          |
+| includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                           |
+| includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                |
+
+|saveAsView|Boolean|Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.|
 
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
@@ -1292,6 +1294,8 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
   // Reemplazar las celdas que contienen sólo "Total" en la hoja actual con "Grand Total"
+
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
   // Comprobar si el objeto de rango está vacío
@@ -1554,6 +1558,7 @@ El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->d
 En *rangeObj*, pase un rango que contenga el estilo a recuperar.
 
 * Si *rangeObj* contiene un rango de celdas, se devuelve el estilo de la celda.
+
 * Si *rangeObj* contiene un rango que no es un rango de celdas, se devuelve el estilo de la primera celda del rango.
 * Si *rangeObj* contiene varios rangos, sólo se devuelve el estilo de la primera celda del primer rango.
 
@@ -1763,11 +1768,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario       |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)        |
-| Result     | Object  | <- | Default style settings |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                  |
+| ---------- | ------- | -- | ------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                  |
+| Result     | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
 
 |
 
@@ -1855,7 +1860,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Text   | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -1932,6 +1937,7 @@ Quiere recuperar las fórmulas de las columnas Sum y Average de este documento:
 Puede utilizar este código:
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -1982,6 +1988,7 @@ Quiere recuperar información sobre el número de columnas y líneas congeladas:
 
 ```4d
 var $panesObj : Object
+
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2510,6 +2517,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En *styleName*, pase el nombre del estilo a leer.
 
+
 Puede definir de dónde obtener la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 * `vk current sheet`
@@ -2981,7 +2989,7 @@ Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3048,9 +3056,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parámetro|Tipo||Descripción|
 
-|---|---|---|---| |vpAreaName  |Text|->|Nombre del objeto del formulario de área de 4D View Pro| |Resultado |Object|<-|Object containing the workbook options|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
+| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
+
+|
 
 #### Descripción
 
@@ -3076,65 +3088,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro       |
-| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro      |
-| paramObj   | Object  | -> | Opciones de importación|<!-- END REF -->
-
-|
-
-#### Descripción
-
-El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido<!-- END REF -->. *vpBlob* debe contener un documento 4D View Pro previamente guardado como Blob, ya sea mediante el comando [VP EXPORT TO BLOB](#vp-export-to-blob) o a través de la interfaz de 4D View Pro.
-
-En *paramObj*, puede pasar varias propiedades:
-
-| Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | Método de retrollamada que se lanzará cuando la importación haya finalizado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| calcOnDemand        | Boolean     | Si se calculan las fórmulas sólo cuando se solicitan, por defecto=false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| dynamicReferences   | Boolean     | Si calcular funciones con referencia dinámica, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| fullRecalc          | Boolean     | Si calcular después de cargar los datos json, false por defecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| includeFormulas     | Boolean     | Si se incluye la fórmula al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| includeStyles       | Boolean     | Si se incluye el estilo al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| includeUnusedStyles | Boolean     | Si incluir el estilo de nombre no utilizado al convertir excel xml al json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| openMode            | Integer     | puede ser: <br/>0: modo abierto normal, sin lazy e incremental. Al abrir el documento, el evento de la interfaz de usuario y la interfaz de usuario podrían actualizarse y responder en puntos de tiempo específicos. <br/>1: modo abierto perezoso (lazy). Al abrir el documento, solo la hoja activa se cargará directamente. Las demás hojas sólo se cargarán cuando se vayan a utilizar. <br/>2: modo abierto incremental. Al abrir un documento, la interfaz de usuario y el evento de interfaz de usuario podrían actualizarse y responder directamente. |
-
-Los siguientes parámetros se pueden utilizar en el método de retrollamada:
-
-| Parámetros |               | Tipo    | Descripción                                                               |
-|:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
-| param1     |               | text    | El nombre del objeto 4D View Pro                                          |
-| param2     |               | 4D.Blob | El blob importado                                                         |
-| param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
-| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
-|            | .success      | boolean | True si la importación se realiza correctamente, False en caso contrario. |
-|            | .errorCode    | integer | Código de error.                                                          |
-|            | .errorMessage | text    | Mensaje de error.                                                         |
-
-
-#### Ejemplo
-
-Desea importar al "ViewProArea" un documento 4D View Pro previamente guardado como Blob en la primera entidad de la dataclass Table.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### Ver también
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3219,12 +3172,26 @@ End if
 Desea importar un documento Microsoft Excel protegido por contraseña a un área 4D View Pro:
 
 ```4d
-$o:=New object
+    //Importar código
+var $o : Objeto
+$o:=Nuevo objeto
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Ejemplo 3
 
@@ -3244,6 +3211,67 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Parámetros | Tipo    |    | Descripción                                        |
+| ---------- | ------- | -- | -------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro       |
+| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro      |
+| paramObj   | Object  | -> | Opciones de importación|<!-- END REF -->
+
+|
+
+#### Descripción
+
+El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido<!-- END REF -->. *vpBlob* debe contener un documento 4D View Pro previamente guardado como Blob, ya sea mediante el comando [VP EXPORT TO BLOB](#vp-export-to-blob) o a través de la interfaz de 4D View Pro.
+
+En *paramObj*, puede pasar varias propiedades:
+
+| Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | Método de retrollamada que se lanzará cuando la importación haya finalizado. Ver [Pasar un método de retrollamada (fórmula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                                                                                                |
+| calcOnDemand        | Boolean     | Si se calculan las fórmulas sólo cuando se solicitan, por defecto=false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| dynamicReferences   | Boolean     | Si calcular funciones con referencia dinámica, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| fullRecalc          | Boolean     | Si calcular después de cargar los datos json, false por defecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| includeFormulas     | Boolean     | Si se incluye la fórmula al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| includeStyles       | Boolean     | Si se incluye el estilo al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| includeUnusedStyles | Boolean     | Si incluir el estilo de nombre no utilizado al convertir excel xml al json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| openMode            | Integer     | puede ser: <br/>0: modo abierto normal, sin lazy e incremental. Al abrir el documento, el evento de la interfaz de usuario y la interfaz de usuario podrían actualizarse y responder en puntos de tiempo específicos. <br/>1: modo abierto perezoso (lazy). Al abrir el documento, solo la hoja activa se cargará directamente. Las demás hojas sólo se cargarán cuando se vayan a utilizar. <br/>2: modo abierto incremental. Al abrir un documento, la interfaz de usuario y el evento de interfaz de usuario podrían actualizarse y responder directamente. |
+
+Los siguientes parámetros se pueden utilizar en el método de retrollamada:
+
+| Parámetros |               | Tipo    | Descripción                                                               |
+|:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                                  |
+| param2     |               | 4D.Blob | El blob importado                                                         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
+| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
+|            | .success      | boolean | True si la importación se realiza correctamente, False en caso contrario. |
+|            | .errorCode    | integer | Código de error.                                                          |
+|            | .errorMessage | text    | Mensaje de error.                                                         |
+
+
+#### Ejemplo
+
+Desea importar al "ViewProArea" un documento 4D View Pro previamente guardado como Blob en la primera entidad de la dataclass Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Ver también
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 
 ### VP IMPORT FROM OBJECT
@@ -3266,7 +3294,7 @@ El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summ
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](languageOverview.html#4d-view-pro-object).
+En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](configuring.md#4d-view-pro-object).
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
@@ -3618,7 +3646,11 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | ---------- | ---- | -- | ----------------------------------------------------------------------- |
 | vpAreaName | Text | -> | Nombre del área 4D View Pro en el formulario|<!-- END REF -->
 
+
+
 |
+
+
 
 #### Descripción
 
@@ -3924,7 +3956,9 @@ VP REMOVE SHEET("ViewProArea";2)
 | Parámetros | Tipo   |    | Descripción                             |
 | ---------- | ------ | -- | --------------------------------------- |
 | rangeObj   | Object | -> | Objeto rango|<!-- END REF -->
+
 |
+
 #### Descripción
 
 El comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->elimina el span de las celdas en *rangeObj*<!-- END REF -->.
@@ -4478,6 +4512,8 @@ Function onEvent()
  // Para asegurarse de no reiniciar el temporizador si llama a otros comandos de 4D View después de este punto
          This.isWaiting:=False
 
+
+
  // Detener el temporizador
    SET TIMER(0)
 
@@ -4957,6 +4993,7 @@ La hoja actual del documento es la primera hoja:
 Define la hoja actual en la tercera hoja:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -5236,6 +5273,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
+
 ### VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
@@ -5450,11 +5488,11 @@ Las fórmulas de *rangeObj* se eliminan sustituyéndolas por una cadena vacía (
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Primera línea
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Segunda línea
 
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Definir las celdas con las fórmulas
 ```
 
 *myMethod*:
@@ -5657,6 +5695,7 @@ El PDF:
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -5982,6 +6021,7 @@ Resultado:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6288,6 +6328,7 @@ El parámetro *timeValue* indica una hora expresada en segundos que se asignará
 
 El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *timeValue*.
 
+
 #### Ejemplo
 
 ```4d
@@ -6487,26 +6528,8 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 | referenceStyle                        | number                  | Estilo para referencias de celdas y rangos en fórmulas de celdas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar el estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table>                                                                                                                                                                                    |
 | resizeZeroIndicator                   | number                  | Política de dibujo cuando las líneas o columnas se redimensionan a 0. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Utiliza la política de dibujo cuando las líneas o columnas se redimensionan a 0.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Dibuja dos líneas cortas cuando la línea o la columna se redimensiona a cero.</td></tr></table>                                                                                                                                                                                |
 | rowResizeMode                         | number                  | La forma en que se redimensionan las líneas. Los valores disponibles son los mismos qe columnResizeMode                                                                                                                                                                                              |
-| scrollbarAppearance                   | number                  | Apariencia de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Apariencia de la barra de desplazamiento móvil.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table>                                                                                                                                                                                                            |
-| scrollbarMaxAlign                     | boolean                 | La barra de desplazamiento se alinea con la última línea y columna de la hoja activa.                                                                                                                                                                                                                |
-| scrollbarShowMax                      | boolean                 | Las barras de desplazamiento mostradas se basan en el número total de columnas y líneas de la hoja.                                                                                                                                                                                                  |
-| scrollByPixel                         | boolean                 | Activar desplazamiento de precisión por píxel.                                                                                                                                                                                                                                                       |
-| scrollIgnoreHidden                    | boolean                 | La barra de desplazamiento ignora líneas o columnas ocultas.                                                                                                                                                                                                                                         |
-| scrollPixel                           | integer                 | Decide el desplazamiento por ese número de píxeles cuando scrollByPixel es true. Los píxeles finales de desplazamiento son el resultado de `scroll delta * scrollPixel`. Por ejemplo: delta de desplazamiento es 3, scrollPixel es 5, los píxeles finales de desplazamiento son 15.                  |
-| showDragDropTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                              |
-| showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                                        |
-| showDragFillTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                              |
-| showHorizontalScrollbar               | boolean                 | Mostrar la barra de desplazamiento horizontal.                                                                                                                                                                                                                                                       |
-| showResizeTip                         | number                  | Cómo mostrar el tip de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                                           |
-| showScrollTip                         | number                  | How to display the scroll tip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                                                       |
-| showVerticalScrollbar                 | boolean                 | Mostrar la barra de desplazamiento vertical.                                                                                                                                                                                                                                                         |
-| tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                                                                   |
-| tabNavigationVisible                  | boolean                 | Mostrar la navegación por pestañas.                                                                                                                                                                                                                                                                  |
-| tabStripPosition                      | number                  | Posición de la barra de pestañas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                    |
-| tabStripRatio                         | number                  | Valor porcentual (0,x) que especifica qué parte del espacio horizontal se asignará al tabulador. El resto del área horizontal (1 - 0.x) se asignará a la barra de desplazamiento horizontal.                                                                                                         |
-| tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                                                         |
-| tabStripWidth                         | number                  | Ancho de la etiqueta cuando la posición es izquierda o derecha. Por defecto y el mínimo es 80.                                                                                                                                                                                                       |
-| useTouchLayout                        | boolean                 | Si se va a utilizar el diseño táctil para presentar el componente Spread.                                                                                                                                                                                                                            |
+
+| scrollbarAppearance | number | Aspecto de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Apariencia de la barra de desplazamiento móvil.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table>| | scrollbarMaxAlign | boolean | La barra de desplazamiento se alinea con la última fila y columna de la hoja activa. | | scrollbarShowMax | boolean | Las barras de desplazamiento mostradas se basan en el número total de columnas y filas de la hoja. | | scrollByPixel | boolean | Habilitar el desplazamiento de precisión por píxel. | | scrollIgnoreHidden | boolean | La barra de desplazamiento ignora las filas o columnas ocultas. | | scrollPixel | integer | Decide el desplazamiento por ese número de píxeles a la vez cuando scrollByPixel es verdadero. Los píxeles finales de desplazamiento son el resultado de `scroll delta * scrollPixel`. Por ejemplo: delta de desplazamiento es 3, scrollPixel es 5, los píxeles finales de desplazamiento son 15. | | showDragDropTip | boolean | Display the drag-drop tip. | | showDragFillSmartTag | boolean | Display the drag fill dialog. | | showDragFillTip | boolean | Display the drag-fill tip. | | showHorizontalScrollbar | boolean | Mostrar la barra de desplazamiento horizontal. | | showResizeTip | number | Cómo mostrar el consejo de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No se muestra la punta de redimensionamiento.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Solo se muestra la punta de redimensionamiento vertical.</td></tr></table>| | showScrollTip | number | How to display the scroll tip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Solo se muestra la punta de desplazamiento horizontal.</td></tr><tr><td> vk show scroll tip none </td><td> No se muestra la punta de desplazamiento.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Sólo se muestra la punta de desplazamiento vertical.</td></tr></table> | | showVerticalScrollbar | boolean | Display the vertical scroll bar. | | tabEditable | boolean | The sheet tab strip can be edited. | | tabNavigationVisible | boolean | Display the sheet tab navigation. | | tabStripPosition | number | Position of the tab strip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>| | tabStripRatio | number | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. El resto del área horizontal (1 - 0.x) se asignará a la barra de desplazamiento horizontal. | | tabStripVisible | boolean | Display the sheet tab strip. | | tabStripWidth | number | Width of the tab strip when position is left or right. Por defecto y el mínimo es 80. | | useTouchLayout | boolean | Si se va a utilizar el diseño táctil para presentar el componente Spread. |
 
 #### Ejemplo
 
@@ -6543,6 +6566,8 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Descripción
+
+
 
 El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del *rangeObj*<!-- END REF -->.
 

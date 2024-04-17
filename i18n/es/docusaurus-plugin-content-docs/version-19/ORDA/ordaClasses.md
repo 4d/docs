@@ -61,9 +61,9 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                                              |
-| ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| v18 R5  | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
+| Lanzamiento | Modificaciones                                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 18 R5       | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
 ### Clase DataStore

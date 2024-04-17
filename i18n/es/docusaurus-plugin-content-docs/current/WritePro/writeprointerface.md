@@ -80,29 +80,29 @@ El archivo de plantilla debe almacenarse en una carpeta "[`Resources`](../Projec
 
 El archivo de plantilla en formato JSON contiene los siguientes atributos:
 
-| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                          |
-|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                            |
-| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                       |
-| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                               |
-| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
-| columns.source       | Text       | x           | Formula                                                                                                                                                              |
-| breaks               | Collection |             | Collection of break objects. El orden de las interrupciones es importante. Corresponde al orden en el documento cuando las rupturas están sobre las líneas de datos. |
-| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                              |
-| breakFormulas        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                   |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                              |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                   |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                              |
-| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                      |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                              |
+| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                              |
+|:-------------------- |:---------- |:----------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| tableDataSource      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                                |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                           |
+| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                                   |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
+| columns.source       | Text       | x           | Formula                                                                                                                                                                  |
+| breaks               | Collection |             | Colección de objetos de ruptura. El orden de las interrupciones es importante. Corresponde al orden en el documento cuando las rupturas están sobre las líneas de datos. |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                                  |
+| breakFormulas        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                       |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                  |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                       |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                  |
+| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                          |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                  |
 
 :::note Francés
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+Si es probable que su aplicación se ejecute en un 4D con el idioma configurado en francés, asegúrese de utilizar [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) en sus fórmulas para que se interpreten correctamente independientemente de la configuración de idioma del usuario.
 
 :::
 
@@ -169,7 +169,7 @@ El archivo de traducción en formato JSON contiene los siguientes atributos:
 | formulas  | Collection |             | Colección de objetos fórmula traducidos                                                   |
 | fileNames | Collection |             | Colección de objetos fileName traducidos (aplicables al tema y al nombre de la plantilla) |
 
-Whitin each one of these attribute, the translation object includes the following attributes:
+En cada uno de estos atributos, el objeto de traducción incluye los atributos siguientes:
 
 | Atributo    | Tipo | Obligatorio | Descripción                           |
 |:----------- |:---- |:----------- |:------------------------------------- |

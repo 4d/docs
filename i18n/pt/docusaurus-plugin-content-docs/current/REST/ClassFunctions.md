@@ -49,7 +49,7 @@ As funções são chamadas no objeto correspondente no datastore do servidor.
 
 
 
-É possível enviar parâmetros para funções definidas em classes usuários ORDA. No lado do servidor, serão recebidos nas funções de classe nos parâmetros normais $1, $2, etc.
+É possível enviar parâmetros para funções definidas em classes usuários ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
 
 As regras abaixo são válidas:
 
@@ -123,10 +123,12 @@ Esta base de dados é exposta como um datastore remoto no localhost (porta 8111)
 A classe de `DataStore` US_Cities fornece uma API:
 
 ```  
-// DataStore class Class extends DataStoreImplementation
+// DataStore class
 
-exposed Function getName()
-    $0:="US cities and zip codes manager" 
+Class extends DataStoreImplementation
+
+exposed Function getName() : Text
+    return "US cities and zip codes manager" 
 ```
 
 Pode então executar este pedido:
@@ -146,13 +148,12 @@ Pode então executar este pedido:
 A classe Dataclass `City` fornece uma API que devolve uma entidade cidade a partir de um nome passado como parâmetro:
 
 ```
-// City class Class extends DataClass
+// City class
 
-exposed Function getCity()
- var $0 : cs. CityEntity
- var $1,$nameParam : text
- $nameParam:=$1
- $0:=This.query("name = :1";$nameParam).first()
+Class extends DataClass
+
+exposed Function getCity($city : Text ) : cs.CityEntity
+    return This.query("name = :1";$city).first()
 ```
 
 Pode então executar este pedido:
@@ -193,10 +194,12 @@ Le résultat est une entité:
 A classe de entidade `CityEntity` fornece uma API:
 
 ```
-// CityEntity class Class extends Entity
+// CityEntity class
+
+Class extends Entity
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 Pode então executar este pedido:
@@ -217,10 +220,12 @@ Pode então executar este pedido:
 A classe de selection de entidade `CitySelection` fornece uma API:
 
 ```
-// CitySelection class Class extends EntitySelection
+// CitySelection class
+
+Class extends EntitySelection
 
 exposed Function getPopulation()
-    $0:=This.zips.sum("population")
+    return This.zips.sum("population")
 ```
 
 Pode então executar este pedido:
@@ -240,17 +245,19 @@ Pode então executar este pedido:
 A classe `StudentsSelection` tem uma função `getAgeAverage`:
 
 ```  
-// StudentsSelection Class Class extends EntitySelection
+// StudentsSelection Class
 
-exposed Function getAgeAverage
- C_LONGINT($sum;$0)
- C_OBJECT($s)
+Class extends EntitySelection
 
- $sum:=0
- For each ($s;This)
-     $sum:=$sum+$s.age()
- End for each 
- $0:=$sum/This.length
+exposed Function getAgeAverage : Integer
+    var $sum : Integer
+    var $s : Object
+
+    $sum:=0
+    For each ($s;This)
+        $sum:=$sum+$s.age()
+    End for each 
+    return $sum/This.length
 ```
 
 Uma vez criado um conjunto de entidades, é possível executar este pedido:
@@ -270,14 +277,16 @@ Uma vez criado um conjunto de entidades, é possível executar este pedido:
 A classe `StudentsSelection` tem uma função `getLastSummary`:
 
 ```  
-// StudentsSelection Class Class extends EntitySelection
+// StudentsSelection Class
 
-exposed Function getLastSummary
- C_TEXT($0)
- C_OBJECT($last)
 
- $last:=This.last()
- $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+Class extends EntitySelection
+
+exposed Function getLastSummary : Text
+    var $last : Object
+
+    $last:=This.last()
+    return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 Pode então executar este pedido:
@@ -300,23 +309,23 @@ Pode então executar este pedido:
 A classe de Dataclass `Students` tem a função `pushData()` que recebe uma entidade que contém dados do cliente. O método `checkData()` executa alguns controlos. Se estiverem corretas, a entidade é guardada e devolvida.
 
 ```
-// Students Class Class extends DataClass
+// Students Class
 
-exposed Function pushData
- var $1, $entity, $status, $0 : Object
+Class extends DataClass
 
- $entity:=$1
+exposed Function pushData($entity : Object) : Object
+    var $status : Object
 
- $status:=checkData($entity) // $status is an object with a success boolean property
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
- $0:=$status
+    If ($status.success)
+        $status:=$entity.save()
+       If ($status.success)
+           return $entity
+      End if 
+    End if
 
- If ($status.success)
-     $status:=$entity.save()
-     If ($status.success)
-         $0:=$entity
-     End if 
- End if
+    return $status
 
 ```
 

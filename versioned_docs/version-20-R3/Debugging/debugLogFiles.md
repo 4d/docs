@@ -1,15 +1,16 @@
 ---
 id: debugLogFiles
-title: Description of log files
+title: Log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -128,6 +129,8 @@ For each process, the following fields are logged:
 |connection\_uuid| UUID identifier of process connection|
 |server\_process\_unique\_id |Unique process ID on Server|
 
+
+
 ## HTTPDebugLog.txt  
 
 This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
@@ -135,8 +138,6 @@ This log file records each HTTP request and each response in raw mode. Whole req
 How to start this log:
 
 ```4d
-
-
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //other values are available
@@ -152,6 +153,36 @@ The following fields are logged for both Request and Response:
 |TimeStamp| Timestamp in milliseconds (since system startup)|
 |ConnectionID| Connection UUID (UUID of VTCPSocket used for communication)|
 |SequenceNumber| Unique and sequential operation number in the logging session|
+
+
+## 4DHTTPClientLog.txt  
+
+This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+How to start this log:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//other values are available
+```
+
+The following fields are logged for both Request and Response:
+
+|Field name| Description|
+|---|---|
+|SequenceID |Unique and sequential operation number in the logging session|
+|ConnectionID| UUID identifier of process connection|
+|LocalIP| Client IP address|
+|PeerIP| Server IP address|
+|TimeStamp |Timestamp (ms) at the time the request is sent or the response is fully received|
+|ElapsedTimeInMs|(response only) Difference with the request timestamp|
+
+Depending on log options, various other fields can also be logged.
+
+- For request: request line, headers, request body
+- For response: status line, headers, response body (uncompressed), if any
+
 
 ## 4DDebugLog.txt (standard)  
 
@@ -252,6 +283,7 @@ SET DATABASE PARAMETER (Diagnostic log recording; 1)
 SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 ```
 
+
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
@@ -270,11 +302,11 @@ The log files can be produced in two versions:
 
  To start this log:
 
- ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
- ```
+```4d
+SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+```
 
 > 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](ServerWindow/maintenance.md) of the 4D Server administration window.
 
@@ -332,7 +364,7 @@ How to start this log:
 ```4d
 	//on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 	//can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
@@ -382,9 +414,9 @@ How to start this log:
 ```4d
 	//on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-	//srl... parameter is optional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+	//srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note
@@ -437,7 +469,7 @@ You can use a **log configuration file** to easily manage log recording in a pro
 
 ### How to enable the file
 
-There are several ways to enable the log configuration file, depending on your configuration: 
+There are several ways to enable the log configuration file, depending on your configuration:
 
 - **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
@@ -450,7 +482,7 @@ There are several ways to enable the log configuration file, depending on your c
 - **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
 	* Windows: `Users\[userName]\AppData\Roaming\4D Server`
 	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
-	
+
 :::note
 
 If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
@@ -545,6 +577,18 @@ The log configuration file is a `.json` file that must comply with the following
                 }
             }
         },
+        "HTTPClientLogs": {
+		     "description": "Configuration for http client logs",
+		     "type": "object",
+		     "properties": {
+		          "state": {
+		               "description": "Configure http client logs",
+		               "type": "integer",
+		               "minimum": 0,
+		               "maximum": 7
+		          },
+		     }
+		},
         "POP3Logs": {
             "description": "Configuration for POP3 logs",
             "type": "object",
@@ -624,6 +668,7 @@ Here is an example of log configuration file:
  },
  "IMAPLogs": {
         "state" : 1
+
  },
  "ORDALogs": {
         "state" : 1,

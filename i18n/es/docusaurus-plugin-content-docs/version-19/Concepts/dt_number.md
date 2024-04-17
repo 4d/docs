@@ -59,16 +59,33 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 | Menor o igual que | Número <= Número | Boolean  | 10 <= 11   | True  |
 |                   |                  |          | 11 <= 10   | False |
 
+### Módulo
+
 El operador modulo % divide el primer número entre el segundo y devuelve un resto de número entero. He aquí algunos ejemplos:
 
 - 10 % 2 devuelve 0 porque 10 está dividido uniformemente por 2.
 - 10 % 3 devuelve 1 porque el resto es 1.
 - 10,5 % 2 devuelve 0 porque el resto no es un número entero.
 
-**ATENCIÓN:**
+:::warning
 
-- El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando `Mod`.
-- El operador de división entero largo \ devuelve valores significativos sólo con números enteros.
+El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)].
+
+:::
+
+### División entera
+
+El operador de división entero largo \ devuelve valores significativos sólo con números enteros.
+
+### Comparación real
+
+Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+
+:::note
+
+Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *épsilon* y no tiene en cuenta el parámetro `SET REAL COMPARISON LEVEL`.
+
+:::
 
 ### Prioridad
 

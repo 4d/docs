@@ -23,12 +23,6 @@
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
   },
-  "Class API Reference": {
-    "message": "Referencia de la API de la clase"
-  },
-  "Handling code": {
-    "message": "Gestión de código"
-  },
   "Debugging": {
     "message": "Depuración"
   },
@@ -52,9 +46,6 @@
   },
   "TLS Protocol": {
     "message": "Protocolo TLS"
-  },
-  "Licenses & Data Collection": {
-    "message": "Licencias y recolección de datos"
   },
   "Access Rights": {
     "message": "Derechos de acceso"
@@ -154,9 +145,6 @@
   },
   "homepage.hero.title": {
     "message": "Documentación para desarrolladores 4D"
-  },
-  "Documentation updates": {
-    "message": "Actualizaciones de la documentación"
   },
   "theme.ErrorPageContent.title": {
     "message": "Esta página ha colapsado.",
@@ -378,7 +366,7 @@
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
+    "message": "Lectura de un minuto|{readingTime} min de lectura",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
@@ -557,19 +545,19 @@
     "message": "Notas del lanzamiento"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Progress.100-6341911.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html"
+    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -579,9 +567,6 @@
   },
   "Class Functions": {
     "message": "Class Functions"
-  },
-  "Handling Code": {
-    "message": "Gestión del código"
   },
   "Transformation Tags": {
     "message": "Etiquetas de transformación"
@@ -599,10 +584,16 @@
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "Alternar la barra de navegación",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "Licenses": {
     "message": "Licencias"
+  },
+  "Processes": {
+    "message": "Procesos"
+  },
+  "Qodly Studio": {
+    "message": "Qodly Studio"
   }
 }

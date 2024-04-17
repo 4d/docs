@@ -66,7 +66,7 @@ Também pode utilizar o atalho **Ctrl+Shift+Alt+k** .
 
 #### Explorador
 
-**.style**: Integer
+Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
 
 Para criar uma nova classe, pode:
 
@@ -96,13 +96,16 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 ### `cs`
 
-#### cs -> classStore
+<!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| classStore | object | <- | Class store de usuário para o projeto ou componente |
+<!-- REF #_command_.cs.Params -->
+| Parâmetro  | Tipo   |    | Descrição                                                                      |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------ |
+| classStore | Object | <- | Class store de usuário para o projeto ou componente|<!-- END REF -->
 
-O comando `cs` devolve a loja de classes de utilizadores para o projecto ou componente actual. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
+|
+
+O comando `cs` <!-- REF #_command_.cs.Summary -->O comando cs devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
 
 #### Exemplo
 
@@ -114,13 +117,16 @@ $instance:=cs.myClass.new()
 
 ### `4D`
 
-#### 4D -> classStore
+<!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
-| Parâmetro  | Tipo   |    | Descrição      |
-| ---------- | ------ | -- | -------------- |
-| classStore | object | <- | Class store 4D |
+<!-- REF #_command_.4D.Params -->
+| Parâmetro  | Tipo   |    | Descrição                                 |
+| ---------- | ------ | -- | ----------------------------------------- |
+| classStore | Object | <- | Class store 4D|<!-- END REF -->
 
-O comando `4D` devolve a classe store para as classes 4D incorporadas disponíveis. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
+|
+
+O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a loja de classe para classes embutidas<!-- END REF -->. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemplo
 
@@ -167,7 +173,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-As funções de classe são propriedades específicas da classe. São objectos da classe [4D. Function](API/FunctionClass.md#about-4dfunction-objects) .
+As funções de classe são propriedades específicas da classe. São objetos da classe [4D.Function](API/FunctionClass.md).
 
 No ficheiro de definição de classe, as declarações de função utilizam a palavra-chave `Função` , e o nome da função. O nome da função deve estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
 
@@ -194,7 +200,7 @@ Function setFullname($firstname : Text; $lastname : Text)
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
 
-No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#class-function-parameters) se existirem. As seguintes sintaxes são suportadas:
+No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#parameters) se existirem. As seguintes sintaxes são suportadas:
 
 - utilização do operador `()`. Por exemplo, `myObject.methodName("hello")`
 - use of a "4D. Function" class member method:
@@ -215,19 +221,10 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > Se o tipo não for indicado, o parâmetro será definido como `Variant`.
 
-A [sintaxe 4D clássica](parameters.md#sequential-parameters) para parâmetros de métodos pode ser utilizada para declarar parâmetros de funções de classe. Ambas as sintaxes podem ser misturadas. Por exemplo:
-
-```4d
-Function add($x : Integer)
- var $2; $value : Integer
- var $0 : Text
- $value:=$x+$2
- $0:=String($value)
-```
 
 #### Valor retornado
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list. Por exemplo:
+Você declara o parâmetro de retorno (opcional) adicionando uma seta (`->`) e a definição do parâmetro de retorno após a lista de parâmetro(s) de entrada, ou dois pontos (`:`) e somente o tipo do parâmetro de retorno. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -282,14 +279,14 @@ Parâmetros
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-// code
+// código
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e pode ser usada para criar e inicializar objetos da classe de usuário.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor numa classe (caso contrário, é devolvido um erro). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependerem de parâmetros passados ao construtor, pode defini-los utilizando a palavra-chave [`property`](#property).
 
@@ -438,7 +435,7 @@ Function get fullAddress()->$result : Object
  $result.zipCode:=This.zipCode
  $result.city:=This.city
  $result.state:=This.state
- $result.country:=This.country 
+ $result.country:=This.country
 ```
 
 ### `Class extends <ClassName>`
@@ -467,26 +464,44 @@ Uma classe estendida pode chamar o construtor de sua classe pai usando o comando
 Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Polygon`.
 
 ```4d
-Polygon.4dm
+//Class: Square
+
+//path: Classes/Square.4dm
+
+Class extends Polygon
+
+Class constructor ($side : Integer)
+
+ // It calls the parent class's constructor with lengths
+ // provided for the Polygon's width and height
+ Super($side;$side)
+ // In derived classes, Super must be called before you
+ // can use 'This'
+ This.name:="Square"
+
+
+
+ Function getArea()
+  C_LONGINT($0)
+  $0:=This.height*This.width
 ```
 
 
 
 ### `Super`
 
-#### Sintaxe
 
-```4d
-Super {( param{;...;paramN} )} {-> Object}
-```
+<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
-
+<!-- REF #_command_.Super.Params -->
 | Parâmetro  | Tipo   |    | Descrição                                   |
 | ---------- | ------ | -- | ------------------------------------------- |
-| param      | misto  | -> | Parâmetro(s) a passar para o construtor pai |
-| Resultados | object | <- | Pai do objecto                              |
+| param      | any    | -> | Parâmetro(s) a passar para o construtor pai |
+| Resultados | Object | <- | Pai do objecto|<!-- END REF -->
 
-A palavra-chave `Super` permite efectuar chamadas para a superclasse ``, ou seja, a classe-mãe.
+|
+
+A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas para a superclasse ``, ou seja, a classe pai<!-- END REF -->.
 
 `Super` tem dois objectivos diferentes:
 
@@ -583,17 +598,17 @@ Parâmetros
 
 ### `This`
 
-#### Sintaxe
 
-```4d
-This -> Object
-```
+<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
-| Parâmetro  | Tipo   |    | Descrição      |
-| ---------- | ------ | -- | -------------- |
-| Resultados | object | <- | Objecto actual |
+<!-- REF #_command_.This.Params -->
+| Parâmetro  | Tipo   |    | Descrição                                 |
+| ---------- | ------ | -- | ----------------------------------------- |
+| Resultados | Object | <- | Objecto actual|<!-- END REF -->
 
-A palavra-chave `This` devolve uma referência ao objecto actualmente processado. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+|
+
+A palavra-chave `This` <!-- REF #_command_.This.Summary -->devolve uma referência ao objeto atualmente processado<!-- END REF -->.
 
 Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
@@ -611,7 +626,7 @@ Quando se utiliza uma função [construtora de classe](#class-constructor) (com 
 
  // Create properties on This as
  // desired by assigning to them
- This.a:=42 
+ This.a:=42
 ```
 
 ```4d

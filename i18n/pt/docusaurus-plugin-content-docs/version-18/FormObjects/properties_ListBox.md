@@ -107,7 +107,7 @@ Estas propriedades interagem da seguinte forma:
 
 * Se definir colunas que são apenas estáticas, estas não podem ser deslocadas.
 
-* Se definir colunas bloqueadas, mas não estáticas, pode ainda alterar a sua posição livremente na área bloqueada. However, a locked column cannot be moved outside of this locked area.
+* Se definir colunas bloqueadas, mas não estáticas, pode ainda alterar a sua posição livremente na área bloqueada. No entanto, uma coluna bloqueada não pode ser movida para fora dessa área bloqueada.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 

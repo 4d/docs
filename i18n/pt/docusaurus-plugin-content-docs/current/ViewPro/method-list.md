@@ -258,7 +258,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 O parâmetro *styleName* permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-Em *styleObj*, designe as configurações da folha de estilos (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). Para obter a lista completa de propriedades de estilo, consulte [Propriedades do objeto de estilo](configuring.md#style-objects-properties).
+Em *styleObj*, designe as configurações da folha de estilos (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
@@ -934,6 +934,7 @@ utilizar o seguinte código:
 
 
 
+
 | Parâmetro  | Tipo   |    | Descrição                                       |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro      |
@@ -972,7 +973,7 @@ O parâmetro opcional *paramObj* permite definir várias propriedades para o obj
 | includeBindingSource       | boolean      | 4DVP e Microsoft Excel apenas. True (padrão) para exportar os valores do contexto de dados atual como valores de célula no documento exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada. Para o gerenciamento do contexto de dados e da vinculação de células, consulte [VP SET DATA CONTEXT](#vp-set-data-context) e [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                   |
 | sheet                      | number       | Somente PDF (opcional) - Índice da planilha a ser exportada (a partir de 0). -2=todas as planilhas visíveis (**default**), -1=apenas a planilha atual                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | pdfOptions                 | object       | Apenas PDF (opcional) - Opções para exportação de PDF <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>nome do aplicativo que criou o documento original a partir do qual ele foi convertido.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>nome da pessoa que criou o documento.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>assunto do documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| csvOptions                 | object       | Apenas CSV (opcional) - Opções para exportação csv <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Objeto intervalo de células</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| csvOptions                 | object       | Apenas CSV (opcional) - Opções para exportação csv <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Objeto intervalo de células</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Default: `"\r\n"`</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. Por padrão: `","`</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | sjsOptions                 | object       | Somente SJS (opcional) - Opções para exportação sjs <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>se as células mescladas automaticamente devem ser incluídas; o padrão é false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>se deve incluir a fonte de vinculação; o padrão é true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>se deve incluir os dados extras de cálculo. Pode ser mais rápido ao abrir o arquivo com esses dados; o padrão é false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado; o padrão é true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>se as fórmulas devem ser incluídas; o padrão é true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>se o estilo deve ser incluído; por padrão é true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>se os nomes personalizados não utilizados devem ser incluídos; o padrão é true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>se a string de formato deve ser aplicada à exportação de valores; o padrão é false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `\<customProperty>` | any          | Qualquer propriedade personalizada que estará disponível por meio do parâmetro $3 no método de retorno de chamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
@@ -994,7 +995,7 @@ O parâmetro opcional *paramObj* permite definir várias propriedades para o obj
 
 **Notas sobre o formato de arquivo SpreadJS**:
 
-* [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
+* [Arquivos do SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) são arquivos compactados.
 * A exportação nesse formato é executada de forma assíncrona; use a fórmula `` propriedade do paramObj ** para o código a ser executado após a exportação.
 
 Após a conclusão da operação de exportação, o `VP EXPORT DOCUMENT` aciona automaticamente a execução do método definido na propriedade *formula* do *paramObj*, se usado.
@@ -1005,7 +1006,7 @@ Ao incluir o parâmetro opcional *paramObj* , o comando permite que você use o 
 
 | Parâmetro |               | Tipo    | Descrição                                                    |
 | --------- | ------------- | ------- | ------------------------------------------------------------ |
-| param1    |               | text    | O nome do objeto 4D View Pro                                 |
+| param1    |               | text    | The name of the 4D View Pro area object                      |
 | param2    |               | text    | O caminho do ficheiro do objeto 4D View Pro exportado        |
 | param3    |               | object  | Uma referência ao *paramObj* do comando                      |
 | param4    |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
@@ -1105,17 +1106,18 @@ O comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->ex
 
 Em *paramObj*, você pode passar várias propriedades:
 
-| Propriedade             | Tipo         | Descrição                                                                                                                     |
-| ----------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D. Function | (obrigatório) Método de retorno de chamada a ser lançado quando a exportação estiver concluída.                               |
-| includeAutoMergedCells  | Parâmetros   | Se deve incluir as células mescladas automaticamente ao salvar; padrão=falso.                                                 |
-| includeBindingSource    | Parâmetros   | Se deve incluir a fonte de vinculação ao salvar, padrão = true.                                                               |
-| includeCalcModelCache   | Parâmetros   | Se deve incluir os dados extras de cálculo. Pode afetar a velocidade de abertura do arquivo; padrão=false.                    |
-| includeEmptyRegionCells | Parâmetros   | Se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado, default=true |
-| includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                      |
-| includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                              |
-| includeUnusedNames      | Parâmetros   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                    |
-| saveAsView              | Parâmetros   | Se a string de formato deve ser aplicada ao valor de exportação ao ser salva, padrão = falso.                                 |
+| Propriedade             | Tipo         | Descrição                                                                                                                                                                                          |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D. Function | (obrigatório) Método de retorno de chamada a ser lançado quando a exportação estiver concluída. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
+| includeAutoMergedCells  | Parâmetros   | Se deve incluir as células mescladas automaticamente ao salvar; padrão=falso.                                                                                                                      |
+| includeBindingSource    | Parâmetros   | Se deve incluir a fonte de vinculação ao salvar, padrão = true.                                                                                                                                    |
+| includeCalcModelCache   | Parâmetros   | Se deve incluir os dados extras de cálculo. Pode afetar a velocidade de abertura do arquivo; padrão=false.                                                                                         |
+| includeEmptyRegionCells | Parâmetros   | Se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado, default=true                                                                      |
+| includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                                                                                           |
+| includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                                                                                                   |
+| includeUnusedNames      | Parâmetros   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                                                                                         |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
@@ -1280,15 +1282,17 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Pesquisa em todo o documento
+$condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
-  // Substituir as células que contêm apenas 'Total' na folha atual por "Total Geral"
-$result:=VP Find($range; "Total";$condition; "Total Geral")
+  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
-  // Verificar se existe um objeto de intervalo vazio 
+
+$result:=VP Find($range;"Total";$condition;"Grand Total")
+
+  // Check for empty range object 
 If($result.ranges.length=0)
-    ALERT("Nenhum resultado encontrado")
+    ALERT("No result found")
 Else
     ALERT($result.ranges.length+" results found")
 End if
@@ -1542,6 +1546,7 @@ O comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->de
 Em *rangeObj*, passe um intervalo que contenha o estilo a ser recuperado.
 
 * Se *rangeObj* contiver um intervalo de células, o estilo da célula será retornado.
+
 * Se *rangeObj* contiver um intervalo que não seja um intervalo de células, o estilo da primeira célula do intervalo será retornado.
 * Se *rangeObj* contiver vários intervalos, somente o estilo da primeira célula do primeiro intervalo será retornado.
 
@@ -1751,11 +1756,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                          |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário             |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)           |
-| Resultados | Object  | <- | Default style settings |<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                             |
+| ---------- | ------- | -- | ----------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)              |
+| Resultados | Object  | <- | Parâmetros de estilo padrão<!-- END REF -->
 
 |
 
@@ -1842,7 +1847,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                   |
 | name       | Text   | -> | Nome do intervalo nomeado                                                    |
 | scope      | Number | -> | Âmbito alvo (padrão=folha atual)                                             |
-| Resultados | Text   | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
+| Resultados | Object | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
 
 |
 
@@ -1919,6 +1924,7 @@ Você deseja recuperar as fórmulas nas colunas Sum e Average desse documento:
 Pode utilizar este código:
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -1969,6 +1975,7 @@ Pretende obter informações sobre o número de colunas e linhas congeladas:
 
 ```4d
 var $panesObj : Object
+
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2496,6 +2503,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 Em *styleName*, passe o nome da folha de estilo a obter.
 
+
 Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
@@ -2964,7 +2972,7 @@ Se *rangeObj* contiver várias células ou vários intervalos, o valor da primei
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3031,9 +3039,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parâmetro|Tipo||Descrição|
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                   |
+| ---------- | ------ | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                  |
+| Resultados | Object | <- | Objeto que contém as opções do livro de trabalho|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -3059,65 +3071,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| Parâmetro  | Tipo     |    | Descrição                                       |
-| ---------- | -------- | -- | ----------------------------------------------- |
-| vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro      |
-| vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro          |
-| paramObj   | Object   | -> | Opções de importação|<!-- END REF -->
-
-|
-
-#### Descrição
-
-O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
-
-Em *paramObj*, você pode passar várias propriedades:
-
-| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D. Function | Método de retorno de chamada a ser iniciado quando a importação for concluída.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| calcOnDemand        | Parâmetros   | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| dynamicReferences   | Parâmetros   | Se deve calcular funções com referência dinâmica; padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| fullRecalc          | Parâmetros   | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| includeUnusedStyles | Parâmetros   | Se deve incluir o estilo de nome não utilizado ao converter o xml do Excel para o json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| openMode            | Integer      | pode ser: <br/>0: modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos. <br/>1: modo aberto preguiçoso. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos. |
-
-Os seguintes parâmetros podem ser usados no método de retorno de chamada:
-
-| Parâmetro |               | Tipo     | Descrição                                                    |
-|:--------- |:------------- |:-------- |:------------------------------------------------------------ |
-| param1    |               | text     | O nome do objeto 4D View Pro                                 |
-| param2    |               | 4D. Blob | O blob importado                                             |
-| param3    |               | object   | Uma referência ao parâmetro *paramObj* do comando            |
-| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado   |
-|           | .success      | boolean  | True se a importação for bem-sucedida, False caso contrário. |
-|           | .errorCode    | integer  | Código de erro.                                              |
-|           | .errorMessage | text     | Mensagem de erro.                                            |
-
-
-#### Exemplo
-
-Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### Veja também
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3202,12 +3155,26 @@ End if
 Você deseja importar um documento do Microsoft Excel protegido por senha para uma área do 4D View Pro:
 
 ```4d
+    //Import code
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Exemplo 3
 
@@ -3227,6 +3194,67 @@ Aqui está o resultado: ![example-import-csv](../assets/en/ViewPro/vp-import-doc
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Parâmetro  | Tipo     |    | Descrição                                       |
+| ---------- | -------- | -- | ----------------------------------------------- |
+| vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro      |
+| vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro          |
+| paramObj   | Object   | -> | Opções de importação|<!-- END REF -->
+
+|
+
+#### Descrição
+
+O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+
+Em *paramObj*, você pode passar várias propriedades:
+
+| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D. Function | Método de retorno de chamada a ser iniciado quando a importação for concluída. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                                      |
+| calcOnDemand        | Parâmetros   | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| dynamicReferences   | Parâmetros   | Se deve calcular funções com referência dinâmica; padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| fullRecalc          | Parâmetros   | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| includeUnusedStyles | Parâmetros   | Se deve incluir o estilo de nome não utilizado ao converter o xml do Excel para o json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| openMode            | Integer      | pode ser: <br/>0: modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos. <br/>1: modo aberto preguiçoso. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos. |
+
+Os seguintes parâmetros podem ser usados no método de retorno de chamada:
+
+| Parâmetro |               | Tipo     | Descrição                                                    |
+|:--------- |:------------- |:-------- |:------------------------------------------------------------ |
+| param1    |               | text     | The name of the 4D View Pro area object                      |
+| param2    |               | 4D. Blob | O blob importado                                             |
+| param3    |               | object   | Uma referência ao parâmetro *paramObj* do comando            |
+| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado   |
+|           | .success      | boolean  | True se a importação for bem-sucedida, False caso contrário. |
+|           | .errorCode    | integer  | Código de erro.                                              |
+|           | .errorMessage | text     | Mensagem de erro.                                            |
+
+
+#### Exemplo
+
+Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Veja também
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 
 ### VP IMPORT FROM OBJECT
@@ -3249,7 +3277,7 @@ O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. Para mais informações sobre os objectos 4D View Pro, consulte a seção [objeto 4D View Pro](languageOverview.html#4d-view-pro-object).
+Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Um erro é retornado se o objeto *viewPro* for inválido.
 
@@ -3596,7 +3624,11 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | ---------- | ---- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
+
+
 |
+
+
 
 #### Descrição
 
@@ -3900,7 +3932,9 @@ VP REMOVE SHEET("ViewProArea";2)
 | Parâmetro | Tipo   |    | Descrição                                   |
 | --------- | ------ | -- | ------------------------------------------- |
 | rangeObj  | Object | -> | Objeto intervalo|<!-- END REF -->
+
 |
+
 #### Descrição
 
 O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o intervalo das células em *rangeObj*<!-- END REF -->.
@@ -4446,6 +4480,8 @@ Se quiser carregar um grande documento offscreen, aguardar todos os cálculos pa
  // Para ter certeza de não reiniciar o temporizador se você chamar o comando 4D View após este ponto
          Esta. sWaiting:=False
 
+
+
  // Pare o timer
    SET TIMER(0)
 
@@ -4813,13 +4849,13 @@ Em *rangeObj*, passe um objeto que contenha um intervalo. If the range contains 
 
 The *propertyObj* parameter lets you specify the attributes to apply to the columns in the *rangeObj*. Estes atributos são:
 
-| Propriedade | Tipo    | Descrição                                                                    |
-| ----------- | ------- | ---------------------------------------------------------------------------- |
-| width       | number  | Largura da coluna expressa em píxeis                                         |
-| pageBreak   | boolean | True to insert a page break before the first column of the range, else false |
-| visible     | boolean | True se a coluna for visível, senão false                                    |
-| resizable   | boolean | True se a coluna puder ser redimensionada, senão false                       |
-| header      | text    | Texto do cabeçalho da coluna                                                 |
+| Propriedade | Tipo    | Descrição                                                                                 |
+| ----------- | ------- | ----------------------------------------------------------------------------------------- |
+| width       | number  | Largura da coluna expressa em píxeis                                                      |
+| pageBreak   | boolean | True para inserir uma quebra de página antes da primeira coluna do intervalo, senão false |
+| visible     | boolean | True se a coluna for visível, senão false                                                 |
+| resizable   | boolean | True se a coluna puder ser redimensionada, senão false                                    |
+| header      | text    | Texto do cabeçalho da coluna                                                              |
 
 #### Exemplo
 
@@ -4915,6 +4951,7 @@ A folha atual do documento é a primeira folha:
 Definir a folha atual como a terceira folha:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -5051,7 +5088,7 @@ In *options*, you can pass an object that specifies additional options. As propr
 | reset               | Object | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                                   |
 | autoGenerateColumns | Object | Apenas utilizado quando os dados são uma coleção. True (default) to specify that columns must be generated automatically when the data context is bound. Neste caso, aplicam-se as seguintes regras: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). A primeira subcoleção determina o número de colunas criadas.</li></ul> |
 
-In *sheet*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
+In *sheet*, pass the index of the sheet that will receive the data context. Se nenhum índice for passado, o contexto será aplicado à folha atual.
 
 If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
 
@@ -5178,6 +5215,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
+
 ### VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
@@ -5197,11 +5235,11 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 O comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->atribui um valor de data especificado a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pass any custom format or you can use one of the following constants:
+The optional *formatPattern* defines a pattern for the *dateValue* parameter. Passe qualquer formato personalizado ou você pode usar uma das seguintes constantes:
 
 | Parâmetros              | Descrição                              | Padrão predefinido dos EUA |
 | ----------------------- | -------------------------------------- | -------------------------- |
@@ -5319,7 +5357,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 #### Descrição
 
-O comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
+O comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->atribui uma fórmula ou um método 4D especificado a um intervalo de células designado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
 
@@ -5371,7 +5409,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 #### Descrição
 
-O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
+O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->atribui uma coleção de fórmulas que começa no intervalo de células especificado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
@@ -5433,7 +5471,7 @@ $formulas.push(New collection("";"")) // second collection VP SET FORMULAS(VP Ce
 
 #### Descrição
 
-O comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen. The location of the line depends on where the frozen column or row is on the sheet:
+O comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. Uma linha sólida é exibida para indicar que as colunas e linhas estão congeladas. The location of the line depends on where the frozen column or row is on the sheet:
 
 * **Columns on the left or right**: For columns on the left of the sheet, the line is displayed on the right side of the last frozen column. For columns on the right side of the sheet, the line is displayed on the left side of the first frozen column.
 * **Rows on the top or bottom**: For rows at the top of the sheet, the line is displayed below the last frozen row. For rows at the bottom of the sheet, the line is displayed above the first frozen row.
@@ -5531,7 +5569,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 O comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area to print in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 Pode passar um objeto que contenha as definições para vários atributos de impressão no parâmetro *printInfo*. Para ver a lista completa dos atributos disponíveis, consulte [Atributos de impressão](configuring.md#print-attributes).
 
@@ -5589,6 +5627,7 @@ O PDF:
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -5761,7 +5800,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 #### Descrição
 
-O comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
+O comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomeia uma planilha no documento carregado em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -5901,6 +5940,7 @@ Resultados:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -5984,14 +6024,14 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In the *attributes* parameter, pass an object that contains the properties to set:
 
-| Propriedade         | Tipo    | Descrição                                                                                                                                                                               |
-| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                           |
-| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used.                             |
-| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                              |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                            |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                               |
+| Propriedade         | Tipo    | Descrição                                                                                                                                                                           |
+| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                       |
+| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used.                         |
+| formula             | text    | Define a fórmula para cada célula da coluna. Veja [Structured Reference Formulas na documentação SpreadJS](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) |
+| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                          |
+| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                        |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                           |
 
 Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
@@ -6198,6 +6238,7 @@ The *timeValue* parameter specifies a time expressed in seconds to be assigned t
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
 
+
 #### Exemplo
 
 ```4d
@@ -6272,7 +6313,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 #### Descrição
 
-O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
+O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->atribui uma coleção de valores começando no intervalo de células especificado<!-- END REF -->.
 
 In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
 > * If *rangeObj* is not a cell range, only the first cell of the range is used.
@@ -6334,66 +6375,48 @@ As opções modificadas do livro são guardadas com o documento.
 
 A tabela seguinte lista as opções de libro disponíveis:
 
-| Propriedade                           | Tipo                    | Descrição                                                                                                                                                                                                                                                          |
-| ------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| allowUserDragMerge                    | boolean                 | The drag merge operation is allowed (select cells and drag the selection to merge cells)                                                                                                                                                                           |
-| allowAutoCreateHyperlink              | boolean                 | Permite a criação automática de hiperlinks na planilha.                                                                                                                                                                                                            |
-| allowContextMenu                      | boolean                 | O menu de contexto incorporado pode ser aberto.                                                                                                                                                                                                                    |
-| allowCopyPasteExcelStyle              | boolean                 | Styles from a spreadsheet can be copied and pasted to Excel, and vice-versa.                                                                                                                                                                                       |
-| allowDynamicArray                     | boolean                 | Permite arrays dinâmicos em folhas de trabalho                                                                                                                                                                                                                     |
-| allowExtendPasteRange                 | boolean                 | Estende o intervalo colado se o intervalo colado não for suficiente para os dados colados                                                                                                                                                                          |
-| allowSheetReorder                     | boolean                 | É permitida a reordenação de folhas                                                                                                                                                                                                                                |
-| allowUndo                             | boolean                 | É permitido desfazer as edições.                                                                                                                                                                                                                                   |
-| allowUserDeselect                     | boolean                 | É permitido desmarcar células específicas de uma seleção.                                                                                                                                                                                                          |
-| allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                                   |
-| allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                                       |
-| allowUserEditFormula                  | boolean                 | As fórmulas podem ser introduzidas nas células                                                                                                                                                                                                                     |
-| allowUserResize                       | boolean                 | As colunas e as linhas podem ser redimensionadas                                                                                                                                                                                                                   |
-| allowUserZoom                         | boolean                 | É permitido fazer zoom (ctrl + roda do rato)                                                                                                                                                                                                                       |
-| autoFitType                           | number                  | O conteúdo é formatado para caber em células, ou células e cabeçalhos. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> O conteúdo ajusta-se automaticamente às células</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                             |
-| backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                                      |
-| backgroundImage                       | string / picture / file | Imagem de fundo para a área.                                                                                                                                                                                                                                       |
-| backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> No centro da zona.</td></tr><tr><td> vk image layout none </td><td>3</td><td> No canto superior esquerdo da área, com seu tamanho original.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                              |
-| calcOnDemand                          | boolean                 | As fórmulas só são calculadas quando são solicitadas.                                                                                                                                                                                                              |
-| columnResizeMode                      | number                  | Modo de redimensionamento de colunas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Utilizar o modo de redimensionamento normal (ou seja, as restantes colunas são afetadas)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Usar o modo split (ou seja, as colunas restantes não são afetadas)</td></tr></table>                                                                                                                                                                              |
-| copyPasteHeaderOptions                | number                  | Cabeçalhos a incluir quando os dados são copiados ou colados. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                      |
-| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists). |
-| cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                               |
-| cutCopyIndicatorVisible               | boolean                 | Apresenta um indicador quando se copia ou corta o item selecionado.                                                                                                                                                                                                |
-| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Preenche automaticamente as células. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Preenche as células com todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Preenche as células com séries. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Preenche as células com valores e não com formatação. </td></tr></table>                                                                                                                                                                    |
-| enableAccessibility                   | boolean                 | O suporte de acessibilidade está ativado na folha de cálculo.                                                                                                                                                                                                      |
-| enableFormulaTextbox                  | boolean                 | A caixa de texto da fórmula está activada.                                                                                                                                                                                                                         |
-| grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                          |
-| highlightInvalidData                  | boolean                 | Os dados inválidos são realçados.                                                                                                                                                                                                                                  |
-| iterativeCalculation                  | boolean                 | Ativa o cálculo iterativo. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative).                                                                                                             |
-| iterativeCalculationMaximumChange     | numeric                 | Quantidade máxima de variação entre dois valores de cálculo.                                                                                                                                                                                                       |
-| iterativeCalculationMaximumIterations | numeric                 | Número de vezes que a fórmula deve ser recalculada.                                                                                                                                                                                                                |
-| newTabVisible                         | boolean                 | Apresentar um separador especial para permitir que os usuários insiram novas folhas.                                                                                                                                                                               |
-| numbersFitMode                        | number                  | Muda o modo de exibição quando a largura de dados/data é maior que a largura da coluna. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                            |
-| pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range) for more information on invisible ranges.           |
-| referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                            |
-| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Usa a política de desenho atual quando a linha ou coluna é redimensionada para zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                           |
-| rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                              |
-| scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                                     |
-| scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                            |
-| scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                                         |
-| scrollByPixel                         | boolean                 | Ativar a deslocação de precisão por pixel.                                                                                                                                                                                                                         |
-| scrollIgnoreHidden                    | boolean                 | A barra de rolagem ignora as linhas ou colunas ocultas.                                                                                                                                                                                                            |
-| scrollPixel                           | integer                 | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15.             |
-| showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                                         |
-| showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                      |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                         |
-| showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                                          |
-| showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> São apresentadas dicas de redimensionamento horizontal e vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Somente a ponta de redimensionamento vertical é exibida.</td></tr></table>                                                                                                                                                                                         |
-| showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> São apresentadas dicas de deslocação horizontal e vertical.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Só é mostrada a ponta de deslocamento horizontal.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Só é apresentada a ponta de deslocamento vertical.</td></tr></table>                                                                                                                                                                                         |
-| showVerticalScrollbar                 | boolean                 | Mostrar a barra de deslocação vertical.                                                                                                                                                                                                                            |
-| tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                                 |
-| tabNavigationVisible                  | boolean                 | Display the sheet tab navigation.                                                                                                                                                                                                                                  |
-| tabStripPosition                      | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> A posição da tabulação é relativa à parte superior da pasta de trabalho.</td></tr></table>                                                                                                                                                                                         |
-| tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                                   |
-| tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                       |
-| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. O padrão e o mínimo são 80.                                                                                                                                                                                 |
-| useTouchLayout                        | boolean                 | Se deve ser usado o layout de toque para apresentar o componente Spread.                                                                                                                                                                                           |
+| Propriedade                           | Tipo                    | Descrição                                                                                                                                                                                                                                                                    |
+| ------------------------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| allowUserDragMerge                    | boolean                 | The drag merge operation is allowed (select cells and drag the selection to merge cells)                                                                                                                                                                                     |
+| allowAutoCreateHyperlink              | boolean                 | Permite a criação automática de hiperlinks na planilha.                                                                                                                                                                                                                      |
+| allowContextMenu                      | boolean                 | O menu de contexto incorporado pode ser aberto.                                                                                                                                                                                                                              |
+| allowCopyPasteExcelStyle              | boolean                 | Styles from a spreadsheet can be copied and pasted to Excel, and vice-versa.                                                                                                                                                                                                 |
+| allowDynamicArray                     | boolean                 | Permite arrays dinâmicos em folhas de trabalho                                                                                                                                                                                                                               |
+| allowExtendPasteRange                 | boolean                 | Estende o intervalo colado se o intervalo colado não for suficiente para os dados colados                                                                                                                                                                                    |
+| allowSheetReorder                     | boolean                 | É permitida a reordenação de folhas                                                                                                                                                                                                                                          |
+| allowUndo                             | boolean                 | É permitido desfazer as edições.                                                                                                                                                                                                                                             |
+| allowUserDeselect                     | boolean                 | É permitido desmarcar células específicas de uma seleção.                                                                                                                                                                                                                    |
+| allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                                             |
+| allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                                                 |
+| allowUserEditFormula                  | boolean                 | As fórmulas podem ser introduzidas nas células                                                                                                                                                                                                                               |
+| allowUserResize                       | boolean                 | As colunas e as linhas podem ser redimensionadas                                                                                                                                                                                                                             |
+| allowUserZoom                         | boolean                 | É permitido fazer zoom (ctrl + roda do rato)                                                                                                                                                                                                                                 |
+| autoFitType                           | number                  | O conteúdo é formatado para caber em células, ou células e cabeçalhos. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> O conteúdo ajusta-se automaticamente às células</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                                       |
+| backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". A cor de fundo inicial fica oculta quando uma backgroundImage é definida.                                                                           |
+| backgroundImage                       | string / picture / file | Imagem de fundo para a área.                                                                                                                                                                                                                                                 |
+| backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> No centro da zona.</td></tr><tr><td> vk image layout none </td><td>3</td><td> No canto superior esquerdo da área, com seu tamanho original.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                                        |
+| calcOnDemand                          | boolean                 | As fórmulas só são calculadas quando são solicitadas.                                                                                                                                                                                                                        |
+| columnResizeMode                      | number                  | Modo de redimensionamento de colunas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Utilizar o modo de redimensionamento normal (ou seja, as restantes colunas são afetadas)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Usar o modo split (ou seja, as colunas restantes não são afetadas)</td></tr></table>                                                                                                                                                                                        |
+| copyPasteHeaderOptions                | number                  | Cabeçalhos a incluir quando os dados são copiados ou colados. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                                |
+| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. Veja em [os documentos SpreadJS](https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists). |
+| cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                                         |
+| cutCopyIndicatorVisible               | boolean                 | Apresenta um indicador quando se copia ou corta o item selecionado.                                                                                                                                                                                                          |
+| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Preenche automaticamente as células. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Preenche as células com todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Preenche as células com séries. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Preenche as células com valores e não com formatação. </td></tr></table>                                                                                                                                                                              |
+| enableAccessibility                   | boolean                 | O suporte de acessibilidade está ativado na folha de cálculo.                                                                                                                                                                                                                |
+| enableFormulaTextbox                  | boolean                 | A caixa de texto da fórmula está activada.                                                                                                                                                                                                                                   |
+| grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                    |
+| highlightInvalidData                  | boolean                 | Os dados inválidos são realçados.                                                                                                                                                                                                                                            |
+| iterativeCalculation                  | boolean                 | Ativa o cálculo iterativo. Veja em [os documentos do SpreadJS](https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative).                                                                                                          |
+| iterativeCalculationMaximumChange     | numeric                 | Quantidade máxima de variação entre dois valores de cálculo.                                                                                                                                                                                                                 |
+| iterativeCalculationMaximumIterations | numeric                 | Número de vezes que a fórmula deve ser recalculada.                                                                                                                                                                                                                          |
+| newTabVisible                         | boolean                 | Apresentar um separador especial para permitir que os usuários insiram novas folhas.                                                                                                                                                                                         |
+| numbersFitMode                        | number                  | Muda o modo de exibição quando a largura de dados/data é maior que a largura da coluna. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                                      |
+| pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>Veja [a documentação SpreadJS](https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range) para mais informações sobre intervalos invisíveis. |
+| referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                      |
+| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Usa a política de desenho atual quando a linha ou coluna é redimensionada para zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                                     |
+| rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                                        |
+
+| scrollbarAppearance | number | Scrollbar appearance. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>| | scrollbarMaxAlign | boolean | The scroll bar aligns with the last row and column of the active sheet. | | scrollbarShowMax | boolean | The displayed scroll bars are based on the entire number of columns and rows in the sheet. | | scrollByPixel | boolean | Enable precision scrolling by pixel. | | scrollIgnoreHidden | boolean | The scroll bar ignores hidden rows or columns. | | scrollPixel | integer | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15. | | showDragDropTip | boolean | Display the drag-drop tip. | | showDragFillSmartTag | boolean | Display the drag fill dialog. | | showDragFillTip | boolean | Display the drag-fill tip. | | showHorizontalScrollbar | boolean | Display the horizontal scroll bar. | | showResizeTip | number | How to display the resize tip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> São apresentadas dicas de redimensionamento horizontal e vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> Nenhuma dica de redimensionamento é exibida.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Somente a ponta de redimensionamento vertical é exibida.</td></tr></table>| | showScrollTip | number | How to display the scroll tip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> São apresentadas dicas de deslocação horizontal e vertical.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Só é mostrada a ponta de deslocamento horizontal.</td></tr><tr><td> vk show scroll tip none </td><td> Nenhuma dica de rolagem é exibida.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Só é apresentada a ponta de deslocamento vertical.</td></tr></table> | | showVerticalScrollbar | boolean | Display the vertical scroll bar. | | tabEditable | boolean | The sheet tab strip can be edited. | | tabNavigationVisible | boolean | Display the sheet tab navigation. | | tabStripPosition | number | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> A posição da tabulação é relativa à parte inferior da pasta de trabalho.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> A posição da tabulação é relativa à esquerda da pasta de trabalho.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> A posição da tabulação é relativa à direita da pasta de trabalho.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> A posição da tabulação é relativa à parte superior da pasta de trabalho.</td></tr></table>| | tabStripRatio | number | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar. | | tabStripVisible | boolean | Display the sheet tab strip. | | tabStripWidth | number | Width of the tab strip when position is left or right. O padrão e o mínimo são 80. | | useTouchLayout | boolean | Whether to use touch layout to present the Spread component. |
 
 #### Exemplo
 
@@ -6429,6 +6452,8 @@ $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProAre
 
 #### Descrição
 
+
+
 O comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
@@ -6443,7 +6468,7 @@ Estão disponíveis os seguintes selectores:
 | `vk position nearest` | Alinhamento ao limite mais próximo (superior, inferior, esquerda, direita, centro). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Posição vertical da vista (topo, centro, fundo) - célula ou linha </li><li>Posição horizontal da vista (esquerda, centro, direita) - célula ou coluna</li> | X                     | X                     |
 | `vk position right`   | Alinhamento horizontal à direita da célula ou coluna                                                                                                                                                                                        |                       | X                     |
 | `vk position top`     | Alinhamento vertical ao topo da célula ou linha                                                                                                                                                                                             | X                     |                       |
-> This command is only effective if repositioning the view is possible. For example, if the *rangeObj* is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if *rangeObj* is in cell C3 and the view is repositioned to the center or the bottom right. A vista mantém-se inalterada.
+> Este comando só é eficaz se o reposicionamento da vista for possível. For example, if the *rangeObj* is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if *rangeObj* is in cell C3 and the view is repositioned to the center or the bottom right. A vista mantém-se inalterada.
 
 #### Exemplo
 
@@ -6488,7 +6513,7 @@ Resultados:
 
 #### Descrição
 
-O comando `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->stops the calculation of all formulas in *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
+O comando `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->para o cálculo de todas as fórmulas em *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
 
 O comando pausa o serviço de cálculo no 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after `VP SUSPEND COMPUTING` command  is executed are not calculated.
 

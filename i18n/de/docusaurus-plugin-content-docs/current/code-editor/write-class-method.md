@@ -37,13 +37,11 @@ This is where you write and edit your code. The editor automatically indents cod
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Beschreibung                                                                                                                                                                                                | Set in...                                                                                                                                                                                                  |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
-| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                           |
-| **themes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
-| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
+| Option | Description | Set in... |
+
+
+
+|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.). | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
 
 #### Change bars
 
@@ -484,28 +482,50 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
+## Warnings and errors
 
-## Syntax errors
+Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+The Code Live Checker is activated at three levels:
+
+- when you write code in the code editor,
+- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
+- when you [compile](../Project/compiler.md) the project.
+
+4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+
+Two kinds of symbols are displayed:
+
+- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+
+When you move the mouse over the symbol, a help tip displays the cause of the error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
+The Code Live Checker is activated while you enter the code. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated.
 
-When the method, class or function is validated, 4D checks for:
+You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 
-- basic syntax errors
+The Code Live Checker checks for:
+
+- basic syntax errors (wrong operators, misspellings and the like)
 - the structure of statements (`If`, `End if` and so on)
-- matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
+- matching enclosing characters in the code such as parentheses or brackets (see tip below)
+- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+
+:::tip
+
+When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.
+:::
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+The Code Live Checker cannot detect some errors that only occur during execution. Execution errors are caught by 4D when the code is executed. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+
 
 ## Help tips
 
@@ -773,6 +793,7 @@ Here is the list of tags and their mode of use:
 |                                  | - index: Clipboard to be pasted. Values = number of the clipboard (0 to 9).                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 - Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).
+
 - If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 
 Here is an example of a macro definition:

@@ -54,7 +54,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`Application version`](https://doc.4d.com/4dv19/help/command/en/page493.html)                     | 493    |
 | [`APPLY TO SELECTION`](https://doc.4d.com/4dv19/help/command/en/page70.html)                       | 70     |
 | [`Arctan`](https://doc.4d.com/4dv19/help/command/en/page20.html)                                   | 20     |
-| [`ARRAY BLOB`](https://doc.4d.com/4dv19/help/command/en/page1222.html)                             | 1222   |
+| [`ARRAY BLOB`](https://doc.4d.com/4dv19/help/command/en/page1429.html)                             | 1222   |
 | [`ARRAY BOOLEAN`](https://doc.4d.com/4dv19/help/command/en/page223.html)                           | 223    |
 | [`ARRAY DATE`](https://doc.4d.com/4dv19/help/command/en/page224.html)                              | 224    |
 | [`ARRAY INTEGER`](https://doc.4d.com/4dv19/help/command/en/page220.html)                           | 220    |
@@ -449,7 +449,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`GET PRINTABLE AREA`](https://doc.4d.com/4dv19/help/command/en/page703.html)                      | 703    |
 | [`GET PRINTABLE MARGIN`](https://doc.4d.com/4dv19/help/command/en/page711.html)                    | 711    |
 | [`Get printed height`](https://doc.4d.com/4dv19/help/command/en/page702.html)                      | 702    |
-| [`Get process activity`](https://doc.4d.com/4dv19/help/command/en/page1495.html)                   | 1495   |
+| [`Get process activity`](https://doc.4d.com/4dv19/help/command/en/page1197.html)                   | 1495   |
 | [`GET PROCESS VARIABLE`](https://doc.4d.com/4dv19/help/command/en/page371.html)                    | 371    |
 | [`GET QUERY DESTINATION`](https://doc.4d.com/4dv19/help/command/en/page1155.html)                  | 1155   |
 | [`Get query limit`](https://doc.4d.com/4dv19/help/command/en/page1156.html)                        | 1156   |

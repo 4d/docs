@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Controles Abas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
@@ -63,7 +63,7 @@ You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-P
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
+O comando é executado quando ocorre o evento `On Clicked`. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
 
 Eis um exemplo de método objeto:
 

@@ -57,9 +57,9 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados     | Valores possíveis                        |
-| ------ | ----------------- | ---------------------------------------- |
-| labels | liste, collection | A list of values to fill the tab control |
+| Nome   | Tipo de dados     | Valores possíveis                                          |
+| ------ | ----------------- | ---------------------------------------------------------- |
+| labels | liste, collection | Uma lista de valores para preencher o controlo de pestanas |
 
 #### Objectos suportados
 
@@ -220,9 +220,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                       |
-| ---------- | ------------- | ----------------------------------------------------------------------- |
-| dataSource | string        | A 4D variable, field name, or an arbitrary complex language expression. |
+| Nome       | Tipo de dados | Valores possíveis                                                                 |
+| ---------- | ------------- | --------------------------------------------------------------------------------- |
+| dataSource | string        | Uma variável 4D, nome de campo ou uma expressão de linguagem complexa arbitrária. |
 
 #### Objectos suportados
 
@@ -303,9 +303,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Selection Name
+## Nome da seleção
 
-`Named selection list boxes`
+`List boxes de tipo seleção nomeada`
 
 Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma seleção nomeada válida. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 

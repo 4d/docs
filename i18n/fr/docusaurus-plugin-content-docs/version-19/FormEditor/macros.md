@@ -110,7 +110,7 @@ Voici la description du contenu du fichier JSON :
 | -------- | ------------------- | ------------------------ | ------ | ----------------------------------------------------------------- |
 | macros   |                     |                          | object | liste des macros définis                                          |
 |          | `<macroName>` |                          | object | définition de la macro                                            |
-|          |                     | classe                   | string | nom de classe de la macro                                         |
+|          |                     | class                    | string | nom de classe de la macro                                         |
 |          |                     | `<customProperty>` | any    | (optionnel) valeur personnalisée à récupérer dans le constructeur |
 
 Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à la fonction [constructeur](#class-constructor) de la macro.
@@ -214,7 +214,7 @@ Voici les propriétés retournées dans le paramètre *$editor* :
 | $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
+Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Toutes les propriétés sont optionnelles:
 
 | Propriété         | Type       | Description                                                 |
 | ----------------- | ---------- | ----------------------------------------------------------- |

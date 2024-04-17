@@ -449,7 +449,7 @@ exposed Function putToSchool()
  $0:=$status
 ```
 
-You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
+Você executa esta solicitação, chamada em uma entidade Students: **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Corpo da solicitação:
 
 ```
 [{

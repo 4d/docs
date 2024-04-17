@@ -230,8 +230,17 @@ Puede declarar el nombre, el tipo y el número de parámetros a través de la co
 
 Para más información sobre los tipos de parámetros entrantes soportados, consulte la descripción del método [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
 
-> Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
-> |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
+:::note
+
+Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente. Las fechas en *jstype* se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
+
+| Propiedad | Tipo  | Descripción      |
+| --------- | ----- | ---------------- |
+| value     | Fecha | Valor fecha      |
+| time      | Real  | Hora en segundos |
+
+:::
+
 
 Los métodos proyecto 4D también pueden devolver valores en la fórmula de la celda 4D View Pro a través de $0. Los siguientes tipos de datos son soportados para los parámetros devueltos:
 

@@ -217,7 +217,7 @@ Este tema contém informações gerais sobre o funcionamento da base de dados, t
 
 Este tema apresenta informações sobre o servidor Web principal da aplicação (apenas disponível se o servidor Web estiver ativo):
 
-* Ficheiro Web a enviar: nome do ficheiro Web que está à espera de ser enviado (se existir)
+* Arquivo Web para Enviar: nome do arquivo Web aguardando ser enviado (se houver)
 * Utilização da cache Web: número de páginas presentes na cache Web, bem como a sua percentagem de utilização
 * Tempo decorrido do servidor Web: duração da utilização do servidor Web no formato horas:minutos:segundos
 * Contagem de visitas à Web: número total de pedidos HTTP recebidos desde o lançamento do servidor Web, bem como o número instantâneo de pedidos por segundo
@@ -265,13 +265,13 @@ Para visualizar o tipo de parâmetro, seleccione a opção **Mostrar tipos** no 
 
 ![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
-After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
+Depois de implementar a lista de parâmetros, você pode arrastar e soltar parâmetros e resultados de funções para o painel [Custom Watch Pane](#custom-watch-pane).
 
 Também pode utilizar o comando [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para obter a cadeia de chamadas por programação.
 
-## Custom Watch Pane
+## Painel de Observação Personalizado
 
-O Painel de controle personalizado é útil para avaliar expressões. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
+O Painel de controle personalizado é útil para avaliar expressões. É semelhante ao [Watch Pane](#watch-pane), exceto que aqui você decide quais expressões são exibidas. Qualquer tipo de expressão pode ser avaliado:
 
 * campo
 * variável
@@ -289,45 +289,45 @@ O Painel de controle personalizado é útil para avaliar expressões. It is simi
 
 Existem várias formas de adicionar expressões à lista:
 
-* Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
-* Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
-* Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
+* Arraste e solte um objeto ou expressão do painel Watch ou do painel Call Chain
+* Selecione uma expressão no painel [Source Code](#source-code-pane) e pressione **ctrl+D**  (Windows) ou **cmd+D** (macOS)
+* Dê duplo clique em algum lugar no espaço vazio do Custom Watch Pane (adiciona uma expressão com um nome de espaço reservado que você pode editar)
 
 Pode introduzir qualquer fórmula que devolva um resultado.
 
-To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
+Para editar uma expressão, clique nela para selecioná-la e, em seguida, clique novamente ou pressione **Enter** em seu teclado.
 
-To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
+Para excluir uma expressão, clique nela para selecioná-la e, em seguida, pressione **Backspace** ou **Delete** no teclado.
 > **Aviso:** Tenha cuidado quando avalia uma expressão 4D que modifica o valor de uma das variáveis de sistema (por exemplo, a variável OK) porque a execução do resto do método pode ser alterada.
 
 ### Menu contextual
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+O menu de contexto do Custom Watch Pane lhe dá acesso ao editor de fórmulas 4D e a outras opções:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
+**New Expression**: Insere uma nova expressão e exibe o 4D Formula Editor.
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+Para obter mais informações sobre o Formula Editor, consulte o manual <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference.</a>
 
-* **Insert Command**: Shortcut for inserting a 4D command as a new expression.
-* **Delete All**: Removes all expressions from the Custom Watch Pane.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions.
+* **Inserir comando**: Atalho para inserir um comando 4D como uma nova expressão.
+* **Delete All**: Remove todas as expressões do Custom Watch Pane.
+* **Expressões padrão**: Copia a lista de expressões do Watch Pane.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> Essa opção não está disponível no modo de depuração remota (consulte [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
 
-* **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
-* **Show Types**: Displays the type of each item in the list (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
-* **Show Icons**: Displays an icon denoting the type of each item.
+* **Collapse All/Expand All (Recolher tudo/Expandir tudo)**: Recolhe ou expande todas as listas hierárquicas.
+* **Show Types**: Exibe o tipo de cada item da lista (quando apropriado).
+* **Show Field and Table Numbers (Mostrar números de campos e tabelas)**: Exibe o número de cada tabela ou campo do site **Fields**. Útil se você trabalhar com tabelas, números de campo ou ponteiros usando comandos como `Table` ou `Field`.
+* **Show Icons**: Exibe um ícone que indica o tipo de cada item.
 * **Tabelas e campos ordenados**: Apresenta a tabela e os campos por ordem alfabética.
-* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. Para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
+* **Show Integers in Hexadecimal**: Exibe números usando notação hexadecimal. Para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
 
 ## Panel de código fuente
 
-The Source Code Pane shows the source code of the method or function currently being traced.
+O painel Código-fonte mostra o código-fonte do método ou função que está sendo rastreado no momento.
 
 Esta área também permite adicionar ou remover [**pontos de ruptura**](breakpoints.md).
 
@@ -346,11 +346,11 @@ Isto também funciona com as selecções:
 
 ### Adição de expressões ao painel de controle personalizado
 
-You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
+Você pode copiar qualquer expressão selecionada do painel Código-fonte para o painel Relógio personalizado [](#custom-watch-pane).
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
-    * Drag and drop the selected text to the Expression area of the Custom Watch Pane
+    * Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
     * Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
     * Clique com o botão direito do rato no texto selecionado **>** **Copiar para o painel de expressões**
 
@@ -378,11 +378,11 @@ Por exemplo:
   // ...
 ```
 
-Digamos que o contador de programas esteja definido na linha `If (This condition)`. Quando você clica no botão **Step over**, o contador do programa passa diretamente para a linha `DO_SOMETHING_ELSE`. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+Digamos que o contador de programas esteja definido na linha `If (This condition)`. Quando você clica no botão **Step over**, o contador do programa passa diretamente para a linha `DO_SOMETHING_ELSE`. Para examinar os resultados da linha `DO_SOMETHING`, você pode mover o contador do programa para essa linha e executá-la.
 
 ### Menu contextual
 
-The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
+O menu contextual do painel Código-fonte fornece acesso a várias funções que são úteis ao executar métodos no modo Rastreamento:
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
@@ -396,9 +396,9 @@ The contextual menu of the Source Code Pane provides access to several functions
 * **Copiar**: cópia padrão da expressão selecionada no contêiner de dados.
 * **Copiar para a janela de expressão**: copia a expressão selecionada para a janela de avaliação.
 * **Execute to cursor**:Executa as instruções entre o contador de programas e a linha selecionada do método (onde está o cursor).
-* **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
-* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Quaisquer alterações efetuadas modificam permanentemente o ponto de interrupção.
+* **Set Next Statement**:Move o contador do programa para a linha selecionada sem executar essa linha ou qualquer outra intermediária. A linha designada só será executada se o usuário clicar em um dos botões de execução.
+* **Toggle Breakpoint** (também disponível no Code Editor): Alternativamente, insere ou remove o ponto de interrupção correspondente à linha selecionada. Isso modifica o ponto de interrupção permanentemente: por exemplo, se você remover um ponto de interrupção no depurador, ele não aparecerá mais no método original.
+* **Edit Breakpoint** (também disponível no Code Editor): Exibe a caixa de diálogo Propriedades do ponto de interrupção. Quaisquer alterações efetuadas modificam permanentemente o ponto de interrupção.
 
 ### Localizar seguinte/anterior
 

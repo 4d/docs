@@ -28,7 +28,7 @@ Para ligar à página Web do Explorador de dados:
   - o menu **Registros** (em 4D monousuário)
   - o menu **Window** (no 4D Server)
 
-- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
+- mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 

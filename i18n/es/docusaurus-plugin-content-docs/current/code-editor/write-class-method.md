@@ -37,13 +37,9 @@ Aquí es donde se escribe y edita el código. El editor aplica automáticamente 
 
 Puede personalizar la visualización del área de edición. Toda personalización se transmite automáticamente a todas las ventanas del editor de código:
 
-| Opción                                          | Descripción                                                                                                                                                                                                 | Definido en...                                                                                                                                                   |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **fuente** y **tamaño de la fuente**            | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                      | **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Vista** > **Fuente más grande** o **Fuente más pequeña**                                |
-| **estilo y color de los elementos de sintaxis** | Asignar un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los distintos colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).        | Haga clic derecho en un elemento lingüístico (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md) |
-| **espacios**                                    | Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Ver > Espacios en blanco**                                                                                                                            |
-| **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                      |
-| **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                      |
+| Opción | Descripción | Definir en... |
+
+|---|---|---| |**fuente** y **tamaño de fuente**| Defin la fuente y el tamaño de los caracteres que se utilizarán en el área de edición| **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Ver** > **Fuente más grande** o **Fuente más pequeña** |**estilo y color de los elementos de sintaxis**| asigna un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los diferentes colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).| Haga clic derecho en un elemento del lenguaje (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md)| |**espacios**| Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Vista > Espacios en blanco** |**temas**| Puede seleccionar el tema Oscuro o Claro, o definir uno personalizado | **Preferencias** > [**Métodos**](../Preferences/methods.md) |**ancho de las sangrías de código**| Defina el ancho de las sangrías de código| **Preferencias** > [**Métodos**](../Preferences/methods.md)
 
 #### Barras de cambio
 
@@ -291,7 +287,7 @@ El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4
 
 :::caution
 
-El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). En general, 4D interpretará correctamente los nombres de ruta de Windows introducidos en el Editor de código sustituyendo la barra invertida simple `\` por una barra invertida doble ``\\`. Por ejemplo,``C:\MisDocumentos`se convertirá en`C:\MisDocumentos`. Sin embargo, si escribe`"C:\MisDocumentos\New"`, 4D mostrará`"C:\MisDocumentos\New"`. En este caso, la segunda barra invertida se interpreta incorrectamente como`\N`(una [secuencia de escape] existente (../Concepts/quick-tour.md#escape-sequences)). Por lo tanto, debe introducir una barra invertida doble`\\` cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
+El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. Por ejemplo, `C:\MyDocuments` se convertirá en `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -388,14 +384,14 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Nombres de las tablas
 - Nombres de los campos
 - Constantes
-- Variable local, proceso o interproceso, declarada en el método
+- Variables declaradas en el método
 - Nombres de propiedad objeto
 - Comandos del Plug-in
 - Palabras claves 4D
 - Palabras clave SQL
 - Macros (mostradas entre < >)
 
-> Por razones prácticas, puede desactivar la visualización automática de la lista de sugerencias para las **constantes**, las **variables (locales o interprocesos) y los atributos de objeto** y/o las **tablas**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes**, **tables** and/or **prototypes**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
 
 #### Nombres de propiedad objeto
 
@@ -484,28 +480,50 @@ El comando **Editar > Marcar todo** se activa cuando ya se ha especificado una b
 
 
 
+## Advertencias y errores
 
-## Errores de sintaxis
+Gracias al Verificador en vivo de código 4D, la sintaxis, la consistencia y la estructura del código introducido se comprueban automáticamente para evitar errores de ejecución. Por ejemplo, el Verificador en vivo de código puede detectar que falta un paréntesis derecho o que utilizo un atributo dataclass desconocido.
 
-4D comprueba automáticamente la sintaxis del método para ver si es correcta. Si introduce texto o selecciona un componente que no es sintácticamente correcto, 4D muestra un símbolo para indicar la expresión incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
+El Verificador en vivo de código se activa en tres niveles:
+
+- cuando escriba código en el editor de código,
+- cuando [verifique la sintaxis](../Project/compiler.md#check-syntax) en el compilador,
+- cuando [compile](../Project/compiler.md) el proyecto.
+
+4D comprueba automáticamente la sintaxis del código para ver si es correcta. Si introduce texto o selecciona un componente que no es correcto, 4D muestra un símbolo para indicar la expresión incorrecta.
+
+Se muestran dos tipos de símbolos:
+
+- **advertencias** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): las advertencias pretenden llamar su atención sobre declaraciones que podrían provocar errores de ejecución. No impiden la compilación.
+- **errores**![error](../assets/en/code-editor/error-icon.png): los errores son anomalías que impiden que el código se ejecute correctamente. Deben ser corregidos, de lo contrario el proyecto no se compilará.
+
+Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-Al introducir un código, puede comprobar inmediatamente la sintaxis de la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
+El Verificador en vivo de código se activa mientras ingresa el código. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método.
 
-Cuando se valida el método, clase o función, 4D verifica:
+Puede formatear la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea.
 
-- errores de sintaxis básicos
+El Verificador en vivo de código verifica lo siguiente:
+
+- errores de sintaxis básicos (operadores equivocados, errores ortográficos y similares)
 - la estructura de las instrucciones (`If`, `End if` y así sucesivamente)
-- que coincidan con los caracteres que encierran el código, como paréntesis o comillas. Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los caracteres de inicio/fin con rectángulos grises:
+- coincidencia de caracteres en el código, tales como paréntesis o corchetes (ver el consejo más abajo)
+- las llamadas de atributos y funciones según su modelo (ORDA) y las definiciones de clase de usuario. Por ejemplo, el Verificador de código en vivo genera un error cuando una llamada a un atributo calculado de base de datos no es compatible con el tipo de atributo calculado declarado.
+
+:::tip
+
+Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los caracteres de inicio/fin con rectángulos grises por defecto:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> Si hace clic en un caracter delimitador del código, 4D indica por defecto su coincidencia con rectángulos grises. Puede modificar la forma en que 4D indica los caracteres de cierre coincidentes o desactivar esta función en **Preferencias** > **Métodos** > **Opciones** > **Paréntesis coincidentes**.
+Puede modificar la forma en que 4D indica los caracteres de coincidencia de encerramiento o desactivar esta función en las [**Preferencias**](../Preferences/methods.md#options-1).
 
-El editor de código sólo puede comprobar errores de sintaxis evidentes (faltas de ortografía y similares). No verifica errores que sólo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código.
+:::
 
-4D tiene un depurador integrado (ver [Depuración](../Debugging/debugger.md)) para manejar y corregir estos errores. El compilador también ofrece una ayuda indispensable para detectar errores. Para más información sobre el compilador, consulte el capítulo [Compilación](../Project/compiler.md).
+El Verificador en vivo de código no puede detectar algunos errores que solo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código. Sin embargo, tenga en cuenta que el compilador [](../Project/compiler.md) también proporciona una ayuda indispensable para detectar errores.
+
 
 ## Mensajes de ayuda
 
@@ -533,7 +551,7 @@ La [barra de estado](#status-bar) también ofrece información contextual.
 
 ## Comentar / Descomentar
 
-El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
+El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea.
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 
@@ -774,6 +792,7 @@ Aquí está la lista de etiquetas y su modo de uso:
 
 - Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).\
   ** If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
+
 - Si desea ajustarse a las especificaciones del lenguaje XML, no debe utilizar caracteres extendidos (caracteres acentuados, comillas, etc.).
 
 Este es un ejemplo de definición de una macro:

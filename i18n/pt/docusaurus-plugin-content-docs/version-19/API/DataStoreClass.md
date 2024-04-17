@@ -29,10 +29,10 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v18    | Suporte do parámetro localID |
-| v17    | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 18      | Suporte do parámetro localID |
+| 17      | Adicionado                   |
 
 </details>
 
@@ -101,9 +101,9 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 
@@ -207,9 +207,9 @@ Em caso de erro, o comando devolve **Null**. Se não for possível acessar o arm
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -239,9 +239,9 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 
@@ -274,9 +274,9 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -346,9 +346,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -423,9 +423,9 @@ Em um armazém de dados remoto:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R6   | Adicionado |
 
 </details>
 
@@ -462,9 +462,9 @@ Ver o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -495,9 +495,9 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -528,9 +528,9 @@ quando nesta função não for chamada, as novas seleções de entidades podem s
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -602,9 +602,9 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -646,9 +646,9 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R6   | Adicionado |
 
 </details>
 
@@ -722,9 +722,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 
@@ -787,9 +787,9 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R6   | Adicionado |
 
 </details>
 
@@ -820,9 +820,9 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 

@@ -14,9 +14,14 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
 - Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
+- New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
+- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
 - New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
 - New [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) command.
 
+#### Behavior changes
+
+- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
 
 
 ## 4D v20 R3
@@ -50,6 +55,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 ## 4D v20 R2
 
 Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
+
 
 
 :::warning Security Note
@@ -367,7 +373,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | CEF       | 118             | 20 R3         | Chromium 5993                                                                            |
 | Hunspell  | 1.7.2           | 20            | Used for spell checking in 4D forms and 4D Write Pro                                     |
 | PDFWriter | 4.3             | 20            | FreeType dependency in 12.2.1                                                            |
-| SpreadJS  | 16.0.4          | 20            | 4D View Pro engine                                                                       |
+| SpreadJS  | 16.2.6          | 20 R4         | 4D View Pro engine                                                                       |
 | OpenSSL   | 3.1.1           | 20            |                                                                                          |
 | libZip    | 1.9.2           | 20            | Used by zip class, 4D Write Pro, svg and serverNet components                            |
 | LZMA      | 5.4.1           | 20            |                                                                                          |
@@ -376,4 +382,3 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | PHP       | 8.2.4           | 20            |                                                                                          |
 | libldap   | 2.6.4           | 20 R3         |                                                                                          |
 | libsasl   | 2.1.28          | 20            |                                                                                          |
-

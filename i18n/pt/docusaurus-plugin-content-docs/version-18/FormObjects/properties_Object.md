@@ -34,9 +34,9 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### Gramática JSON
 
-| Nome | Tipo de dados | Valores possíveis                                                    |
-| ---- | ------------- | -------------------------------------------------------------------- |
-| name | string        | Any allowed name which does not belong to an already existing object |
+| Nome | Tipo de dados | Valores possíveis                                                 |
+| ---- | ------------- | ----------------------------------------------------------------- |
+| name | string        | Qualquer nome permitido que não pertença a um objeto já existente |
 
 #### Objectos suportados
 
@@ -51,7 +51,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > O tamanho do nome da variável é limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
-The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
+As variáveis de objeto do formulário permitem controlar e monitorar os objetos. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
@@ -99,7 +99,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 | Nome       | Tipo de dados              | Valores possíveis         |
 | ---------- | -------------------------- | ------------------------- |
-| dataSource | string ou array de strings | <ul><li>4D variable, field name, or arbitrary complex language expression.</li><li>Cadeia vazia para [variáveis dinâmicas](#variáveis-dinâmicas).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
+| dataSource | string ou array de strings | <ul><li>Variável 4D, nome de campo ou expressão de linguagem complexa arbitrária.</li><li>Cadeia vazia para [variáveis dinâmicas](#variáveis-dinâmicas).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
 
 #### Objectos suportados
 
@@ -211,7 +211,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 ---
 
-## Radio Group
+## Grupo Rádio
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
@@ -260,7 +260,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
+| Cálculo                | Num | Text | Date | Hora | Bool | Pict | tipo var rodapé         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
 | Mínimo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |

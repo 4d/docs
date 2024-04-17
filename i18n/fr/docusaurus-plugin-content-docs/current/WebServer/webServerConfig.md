@@ -43,7 +43,7 @@ Dossier qui contient les fichiers de certificat TLS pour le serveur web.
 
 Par défaut, avec 4D ou 4D Server, ces fichiers doivent être placés à côté du [dossier du projet](Project/architecture.md#project-folder).
 
-Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). You must copy these files manually on the remote machine.
+Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). Vous devez copier ces fichiers manuellement sur la machine distante.
 
 > Les fichiers de certificat TLS sont *key.pem* (document contenant la clé de chiffrement privée) et *cert.pem* (document contenant le certificat).
 

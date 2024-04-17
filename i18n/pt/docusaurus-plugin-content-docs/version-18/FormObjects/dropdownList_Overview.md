@@ -5,7 +5,7 @@ title: Lista suspensa ou drop down
 
 ## Visão Geral
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+As listas drop-down são objetos que permitem que o usuário selecione de uma lista. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
 
 Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes referem aos mesmos objetos. Ambos os nomes referem aos mesmos objetos. Como no exemplo abaixo, a aparência desses objetos podem diferenciar levemente de acordo com a plataforma:
 
@@ -33,7 +33,7 @@ Drop-down list objects are initialized by loading a list of values into an array
 
 Neste caso, o nome da variável associada ao objeto de formulário deve ser *$aCities*. Esse código pode ser colocado no método formulário e executado quando o evento de formulário `On Load` acontecer.
 
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Por exemplo:
+* Antes que o objeto seja exibido, carregue os valores para uma lista em um array usando o comando [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html). Por exemplo:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
@@ -61,7 +61,7 @@ Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declara
  End case
 ```
 
-You must select each [event] that you test for in your Case statement. Os arrays sempre contém um número finito de elementos. A lista de elementos é dinâmica e pode ser modificada por um método. Itens em um array podem ser modificados, ordenados e terem itens adicionados.
+Deve selecionar cada [evento] que você testa em sua instrução Case. Os arrays sempre contém um número finito de elementos. A lista de elementos é dinâmica e pode ser modificada por um método. Itens em um array podem ser modificados, ordenados e terem itens adicionados.
 
 ## Utilizar uma lista de seleção
 

@@ -38,9 +38,9 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -74,9 +74,9 @@ $myEntity.save() //sauvegarder l'entity
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -115,9 +115,9 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -316,9 +316,9 @@ vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -339,7 +339,7 @@ La fonction `.drop()` <!-- REF #EntityClass.drop().Summary -->supprime du datast
 
 Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#verrouillage-d-une-entite) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté à chaque sauvegarde de l'enregistrement.
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 
 Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le paramètre *mode* : dans ce cas, l'entité est supprimée même si la valeur du marqueur interne est différente (si la clé primaire est identique).
 
@@ -423,9 +423,9 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -462,9 +462,9 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -547,9 +547,9 @@ Vous pouvez également utiliser une entité relative fournie sous forme d'objet 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -592,9 +592,9 @@ Le code générique suivant duplique toute entité :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -633,9 +633,9 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19R5   | Ajout         |
+| 19R5    | Ajout         |
 
 </details>
 
@@ -691,9 +691,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -734,9 +734,9 @@ Si l'entité n'appartient pas à une entity selection, la fonction renvoie Null.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -780,9 +780,9 @@ Le stamp (marqueur interne) d'une entité est automatiquement incrémenté par 4
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -828,9 +828,9 @@ La valeur résultante est comprise entre 0 et la longueur de l'entity selection 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -867,9 +867,9 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -905,9 +905,9 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -935,7 +935,7 @@ Un enregistrement verrouillé peut être déverrouillé :
 
 > Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 
 Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramètre *mode* : dans ce cas, aucune erreur n'est générée et l'entité est simplement rechargée si le stamp a changé (si l'entité existe toujours et si la clé primaire est toujours la même).
 
@@ -961,7 +961,7 @@ L'objet retourné par `.lock( )` contient les propriétés suivantes :
 |                  | user4d_id           | number                | Identifiant utilisateur dans le répertoire de la base 4D                                                                                                                   |
 |                  | host_name           | text                  | Nom de la machine                                                                                                                                                          |
 |                  | task_name           | text                  | Nom du process                                                                                                                                                             |
-|                  | client_version      | text                  | Version du client                                                                                                                                                          |
+|                  | client_version      | text                  | Release of the client                                                                                                                                                      |
 |                  |                     |                       | ***Disponible uniquement pour un verrouillage par session REST :***                                                                                                        |
 |                  | host                | text                  | URL ayant verrouillé l'entité (ex : "www.myserver.com")                                                                                                                    |
 |                  | IPAddr              | text                  | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
@@ -1022,9 +1022,9 @@ Exemple avec option `dk reload if stamp changed` :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1065,9 +1065,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1106,9 +1106,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1169,9 +1169,9 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1304,9 +1304,9 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1593,9 +1593,9 @@ Retourne :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1638,9 +1638,9 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -1712,9 +1712,9 @@ Dans ce cas :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 

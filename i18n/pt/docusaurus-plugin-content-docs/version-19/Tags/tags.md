@@ -42,7 +42,7 @@ Parsing the contents of a *template* source is done in two contexts:
 
 - Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
 
-- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, <http://www.server.com/dir/page.shtm>).
+- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. Nesse último caso, por motivos de otimização, as páginas sufixadas com ".htm" e ".html" NÃO são analisadas. Para analisar páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, <http://www.server.com/dir/page.shtm>).
 
 ### Processamento recursivo
 
@@ -79,7 +79,7 @@ Pass the "WEBFOLDER" keyword to restore the default path (relative to the page).
 O código seguinte, que deve especificar um caminho relativo para cada chamada:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DINCLUDE folder/subpage1.html-->
 <!--#4DINCLUDE folder/subpage2.html-->
 <!--#4DINCLUDE folder/subpage3.html-->
@@ -89,7 +89,7 @@ O código seguinte, que deve especificar um caminho relativo para cada chamada:
 ... é equivalente a:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DBASE folder/-->
 <!--#4DINCLUDE subpage1.html-->
 <!--#4DINCLUDE subpage2.html-->
@@ -214,7 +214,7 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ```html
     <table class="table">    
-         <!--#4DCODE 
+         <!--#4DCODE
             $salePersons:=getSalesPersons
           -->          
        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
@@ -257,13 +257,14 @@ The number of loops is based on the number of entities of the entity selection. 
 #### Exemplo com `PROCESS 4D TAGS`
 
 ```4d
-var customers : cs. CustomersSelection
+var customers : cs.CustomersSelection
 var $input; $output : Text
 
-customers:=ds. Customers.all()
-$input:="<!--#4DEACH $cust in customers-->" 
+customers:=ds.Customers.all()
+$input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" PROCESS 4D TAGS($input; $output)
+$input:=$input+"<!--#4DENDEACH-->"
+PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
 
@@ -469,7 +470,7 @@ O seguinte código:
 
 ```4d
  FIRST RECORD([People])
- While(Not(End selec tion([People])))
+ While(Not(End selection([People])))
     ...
     NEXT RECORD([People])
  End while
@@ -510,7 +511,7 @@ O seguinte exemplo de código:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <br/>
 <!--#4DENDLOOP-->
 ```
 
@@ -641,7 +642,7 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
-Também é possível inserir expressões 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
+Também é possível inserir expressões 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). A conversão de expressões segue as mesmas regras das variáveis. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 

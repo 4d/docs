@@ -17,18 +17,18 @@ Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usu
 > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 
 * **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
-* **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
-> > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+* **Abra a caixa de diálogo Welcome Wizard** (configuração de fábrica): O 4D exibe a caixa de diálogo Welcome Wizard (Assistente de boas-vindas).
+> **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
 
 ### Criação de formulários automática
 
-> This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
+> Essa opção é usada somente em bancos de dados binários; ela é ignorada na arquitetura do projeto. Ver doc.4d.com.
 
 #### Janela com guias (somente macOS)
 
-Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
+A partir do macOS Sierra, os aplicativos Mac podem se beneficiar do recurso Automatic Window Tabbing, que ajuda a organizar várias janelas: as janelas de documentos são empilhadas em uma única janela principal e podem ser navegadas por meio de guias. Esse recurso é útil em telas pequenas e/ou ao usar um trackpad.
 
-You can benefit from this feature in the following environments (with 4D 64-bit versions only):
+Você pode se beneficiar desse recurso nos seguintes ambientes (somente com versões 4D de 64 bits):
 
 * Janelas do Editor de Métodos
 * Janelas do editor de formulários
@@ -37,54 +37,54 @@ Todas as janelas destes editores podem ser colocadas no formulário de tabulaç�
 
 ![](../assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+Um conjunto de comandos no menu **Janela** permite gerenciar as abas:
 
 ![](../assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+Na caixa de diálogo Preferências do 4D, a opção **Janela guia** permite controlar esse recurso:
 
 ![](../assets/en/Preferences/general4.png)
 
 Estão disponíveis três opções:
 
-* **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
+* **De acordo com as Preferências do sistema** (padrão): As janelas 4D se comportarão como definido nas Preferências do sistema do macOS (Em tela cheia, Sempre ou Manualmente).
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
-* **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+* **Sempre**: Abrir um novo documento no editor de formulários 4D ou nos editores de métodos sempre resultará na criação de uma nova guia.
 
 ### Sair do modo Desenho ao passar para o modo Aplicação
 
-If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
+Se essa opção estiver marcada, quando o usuário alternar para o ambiente do aplicativo usando o comando de menu **Test Application** , todas as janelas do ambiente de design serão fechadas. Se essa opção não estiver marcada (configuração padrão), as janelas do ambiente Design permanecerão visíveis no plano de fundo do ambiente Application.
 
 ### Ativar a criação de bases de dados binárias
 
-Se selecionar esta opção, são adicionados dois itens ao menu **Ficheiro > Novo** e ao botão **Novo** da barra de ferramentas:
+Se você marcar essa opção, dois itens serão adicionados ao menu **File > New** e ao botão da barra de ferramentas **New** :
 
 * **Base de dados...**
 * **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
+Esses itens permitem a criação de bancos de dados binários (consulte a seção [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html)). Eles não são mais propostos por padrão porque 4D recomenda o uso de arquitetura baseada em projeto para novos desenvolvimentos.
 
 ## Ao criar um novo projeto
 
-### Usar ficheiro de registo
+### Usar arquivo de registo
 
-When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
+Quando essa opção está marcada, um arquivo de registro é iniciado automaticamente e usado quando um novo banco de dados é criado. Para mais informações, consulte o arquivo [Log (.journal)](Backup/log.md).
 
 ### Criar pacote
 
-When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
+Quando essa opção for marcada, os bancos de dados 4D são criados automaticamente em uma pasta com o sufixo .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. No Windows, isto não tem qualquer impacto particular.
+Graças a esse princípio, no macOS, as pastas do banco de dados aparecem como pacotes com propriedades específicas. No Windows, isto não tem qualquer impacto particular.
 
 ### Linguagem de comparação de texto
 
-This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
+Esse parâmetro configura o idioma padrão usado para o processamento e a comparação de cadeias de caracteres em novos bancos de dados. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão (configuração de fábrica), 4D usa o idioma do usuário atual definido no sistema.
 
-A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
+Um banco de dados 4D pode, portanto, operar em uma linguagem diferente da do sistema. Quando um banco de dados é aberto, o motor 4D detecta a linguagem usada pelo arquivo de dados e fornece a linguagem (modo interpretador ou compilado). As comparações de texto, independentemente de serem realizadas pelo mecanismo de banco de dados ou pelo idioma, são feitas no mesmo idioma.
 
-When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
+Ao criar um novo arquivo de dados, o 4D usa o idioma previamente definido nesse menu. Ao abrir um arquivo de dados que não está no mesmo idioma que a estrutura, o idioma do arquivo de dados é usado e o código do idioma é copiado para a estrutura.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 ## Localização da documentação
@@ -100,15 +100,15 @@ You can choose to access the 4D online documentation site directly or to access 
 
 Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
 ### Sítio Web
 
-URL access to the on-line documentation for the version on 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+URL access to the on-line documentation for the version on 4D Doc Center. 4D cria chamadas para as páginas da documentação com base nessa URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
 
 ### Procurar primeiro na pasta local
 
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
-* When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+* Quando essa opção está marcada, 4D procura primeiro a página na pasta local. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
 * When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.

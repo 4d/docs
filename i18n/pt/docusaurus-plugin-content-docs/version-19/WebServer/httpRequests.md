@@ -3,7 +3,7 @@ id: httpRequests
 title: Processamento de pedidos HTTP
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+O servidor web 4D oferece várias funcionalidades para lidar com solicitações HTTP:
 
 - the `On Web Connection` database method, a router for your web application,
 - o URL `/4DACTION` para chamar o código do lado do servidor
@@ -39,11 +39,11 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 Estes parâmetros devem ser declarados como se indica a seguir:
 
 ```4d
-//On Web Connection database method
+//Método base On Web Authentication
 
  C_TEXT($1;$2;$3;$4;$5;$6)
 
-//Code for the method
+//Código do método
 ```
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
@@ -72,13 +72,13 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 | <http://123.4.567.89/Customers/Add>  | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note que você está livre para usar este parâmetro a sua conveniência. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
-The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
+O segundo parâmetro ($2) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+If your application uses this information, it is up to you to parse the header and the body. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
 > For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 ### $3 - Endereço IP do cliente Web
@@ -145,7 +145,7 @@ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".ps
 
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
-A form can be submitted through two methods (both can be used with 4D):
+Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D):
 
 - POST, normalmente utilizado para enviar dados para o servidor Web,
 - GET, normalmente utilizado para pedir dados ao servidor Web.
@@ -326,7 +326,7 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 
@@ -359,14 +359,14 @@ As funcionalidades deste método são:
 - The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
 - Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
 
-Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` sempre retorna valores do tipo Text.
 
 ## Outros comandos do servidor Web
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
+- o comando `WEB GET HTTP BODY` retorna o corpo como texto bruto, permitindo qualquer análise que você possa precisar
+- o comando `WEB GET HTTP HEADER` retornam os cabeçalhos da solicitação. É útil lidar com cookies personalizados, por exemplo (com o comando `WEB SET HTTP HEADER`).
 - the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
@@ -377,6 +377,6 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 
 ## Método projeto COMPILER_WEB
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
+O método COMPILER\_WEB, se existir, é chamado sistematicamente quando o servidor HTTP recebe uma solicitação dinâmica e chama ao motor 4D. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.

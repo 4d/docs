@@ -27,7 +27,7 @@ O desenvolvimento multi-usuário é gerido através de ferramentas de **source c
 Os ficheiros de projeto podem ser [compilados](compiler.md) e facilmente implementados. 4D permite criar três tipos de aplicações a partir de seus projetos:
 
 - aplicações [web](WebServer/webServer.md),
-- [mobile](https://developer.4d.com/4d-for-ios/) applications,
+- aplicações [móveis](https://developer.4d.com/4d-for-ios/),
 - aplicações [desktop](Desktop/building.md) (cliente/servidor ou usuário único).
 
 Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.

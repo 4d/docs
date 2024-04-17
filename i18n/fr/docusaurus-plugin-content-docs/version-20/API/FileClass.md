@@ -61,9 +61,10 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
-| ------- | ------------- |
-| v17 R5  | Ajout         |
+| Release | Modifications                             |
+| ------- | ----------------------------------------- |
+| 19 R4   | Nouvelle constante `HTTP Client log file` |
+| 17 R5   | Ajout                                     |
 
 </details>
 
@@ -115,6 +116,7 @@ Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier sy
 | Debug log file                    | 12     | Fichier d'enregistrement des événements pour le débogage créé par la commande `SET DATABASE PARAMETER(Debug log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                       |
 | Diagnostic log file               | 11     | Fichier de diagnostic de 4D, créé par la commande `SET DATABASE PARAMETER(Diagnostic log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                              |
 | Directory file                    | 16     | fichier directory.json, contenant la description des groupes et utilisateurs (le cas échéant) du projet. Il se situe soit dans le dossier Settings de l'utilisateur (par défaut, s'applique à tout le projet), soit dans le dossier Settings du data (spécifique à un fichier de données).                                                                                                                                                                                      |
+| HTTP Client log file              | 24     | Fichier journal créé par la commande `HTTP SET OPTION(HTTP client log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                           |
 | HTTP debug log file               | 9      | Fichier d'enregistrement des requêtes Web créé par la commande `WEB SET OPTION(Web log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                |
 | HTTP log file                     | 8      | Fichier de débogage des requêtes HTTP, créé par la commande `WEB SET OPTION(Web debug log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                       |
 | IMAP Log file                     | 23     | Fichier d'historique créé par la commande `SET DATABASE PARAMETER(IMAP Log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                      |
@@ -135,9 +137,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -156,9 +158,9 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et renvoie 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF file.create().Note -->
@@ -201,9 +203,9 @@ Création d'un fichier de préférences dans le dossier principal :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -257,9 +259,9 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
@@ -318,9 +320,9 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -413,9 +415,9 @@ ALERT($info.Copyright)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -460,9 +462,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -541,9 +543,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -584,10 +586,10 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications              |
+| Release | Modifications              |
 | ------- | -------------------------- |
-| v20     | Prise en charge de WinIcon |
-| v19     | Ajout                      |
+| 20      | Prise en charge de WinIcon |
+| 19      | Ajout                      |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -675,9 +677,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -707,10 +709,10 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                       |
+| Release | Modifications                                                                       |
 | ------- | ----------------------------------------------------------------------------------- |
-| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
-| v17 R5  | Ajout                                                                               |
+| 19 R3   | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
+| 17 R5   | Ajout                                                                               |
 
 </details>
 

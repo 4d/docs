@@ -19,6 +19,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->                         |
 | [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->                         |
 | [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary --> |
+| [<!-- INCLUDE #MailAttachmentClass.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.size.Summary -->                         |
 | [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->                         |
 
 
@@ -26,9 +27,9 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -171,9 +172,9 @@ $transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -268,9 +269,9 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 </details>
 
 
@@ -280,6 +281,17 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 #### Descripción
 
 La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+
+
+## .size
+
+
+<!-- REF #MailAttachmentClass.size.Syntax -->**.size** : Integer<!-- END REF -->
+
+
+#### Descripción
+
+La propiedad `.size` contiene <!-- REF #MailAttachmentClass.size.Summary -->el valor del encabezado `size` del archivo adjunto<!-- END REF -->. La propiedad `.size` se devuelve cuando el mensaje MIME define un encabezado de tamaño en la parte adjunta.
 
 
 ## .type

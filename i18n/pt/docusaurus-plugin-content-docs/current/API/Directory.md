@@ -9,9 +9,9 @@ title: Directory Class
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -31,9 +31,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -53,9 +53,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -75,9 +75,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -99,9 +99,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -121,9 +121,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -143,9 +143,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -165,9 +165,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -187,9 +187,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -209,9 +209,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
@@ -233,9 +233,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -255,9 +255,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -277,9 +277,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -299,9 +299,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.original.Syntax -->**.original** : 4D. Folder<!-- END REF -->
@@ -322,9 +322,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.parent.Syntax -->**.parent** : 4D. Folder<!-- END REF -->
@@ -346,9 +346,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -368,9 +368,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -390,9 +390,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D. Folder<!-- END REF -->
@@ -404,9 +404,8 @@ Essa propriedade é **apenas leitura**.
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
 | overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado|<!-- END REF -->
-
-|
+| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado                               |
+<!-- END REF -->
 
 #### Descrição
 
@@ -445,21 +444,20 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D. File<!-- END REF -->
 
 
 <!-- REF #directory.file().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                                                |
-| ---------- | -------- | -- | ------------------------------------------------------------------------ |
-| path       | Text     | -> | Rota POSIX relativa                                                      |
-| Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo     |    | Descrição                                     |
+| ---------- | -------- | -- | --------------------------------------------- |
+| path       | Text     | -> | Rota POSIX relativa                           |
+| Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -487,21 +485,20 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.files().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                      |
-| ---------- | ---------- | -- | -------------------------------------------------------------- |
-| options    | Integer    | -> | Opções da lista de arquivos                                    |
-| Resultados | Collection | <- | Coleção de objetos de arquivo filho|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                           |
+| ---------- | ---------- | -- | ----------------------------------- |
+| options    | Integer    | -> | Opções da lista de arquivos         |
+| Resultados | Collection | <- | Coleção de objetos de arquivo filho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -552,21 +549,20 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D. Folder<!-- END REF -->
 
 
 <!-- REF #directory.folder().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                     |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------------- |
-| path       | Text       | -> | Rota POSIX relativa                                                           |
-| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                          |
+| ---------- | ---------- | -- | -------------------------------------------------- |
+| path       | Text       | -> | Rota POSIX relativa                                |
+| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -594,21 +590,20 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #directory.folders().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| options    | Integer    | -> | Opções da lista de pasta                                     |
-| Resultados | Collection | <- | Coleção de objetos de pasta filho|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                         |
+| ---------- | ---------- | -- | --------------------------------- |
+| options    | Integer    | -> | Opções da lista de pasta          |
+| Resultados | Collection | <- | Coleção de objetos de pasta filho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -643,9 +638,9 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
@@ -655,9 +650,8 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 | Parâmetro  | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
-| Resultados | Imagem  | <- | Ícone|<!-- END REF -->
-
-|
+| Resultados | Imagem  | <- | Ícone                                           |
+<!-- END REF -->
 
 #### Descrição
 

@@ -64,11 +64,11 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                                              |
-| ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| v19 R4  | Atributos alias en la Entity Class                                                                                          |
-| v19 R3  | Atributos calculados en la Entity Class                                                                                     |
-| v18 R5  | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
+| Lanzamiento | Modificaciones                                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 19 R4       | Atributos alias en la Entity Class                                                                                          |
+| 19 R3       | Atributos calculados en la Entity Class                                                                                     |
+| 18 R5       | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
 
@@ -81,6 +81,8 @@ Una base de datos 4D expone su propia clase DataStore en el class store `cs`.
 - **Nombre de clase**: cs.DataStore
 
 Puede crear funciones en la clase DataStore que estarán disponibles a través del objeto `ds`.
+
+
 
 #### Ejemplo
 
@@ -131,17 +133,16 @@ Function GetBestOnes()
 A continuación, puede obtener una selección de entidades de las "mejores" empresas ejecutando:
 
 
-
-
-
-
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [Los atributos calculados](#computed-attributes) se definen en [la clase Entity](#entity-class).
+:::info
 
+[Los atributos calculados](#computed-attributes) se definen en [la clase Entity](#entity-class).
+
+:::
 
 #### Ejemplo con un datastore remoto
 
@@ -196,16 +197,15 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 #### Ejemplo
 
 ```4d
-// Clase cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Clase extends EntitySelection
+Class extends EntitySelection
 
-//Extrae de esta selección de entidades los empleados con un salario superior a la media  
+//Extraer los empleados con un salario superior a la media de esta selección de entidades 
 
-Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -215,7 +215,15 @@ A continuación, puede obtener los empleados con un salario superior a la media 
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
+:::info
+
+[Los filtros de selección de entidades restringidas](entities.md#restricting-entity-selections) se definen en la clase de datos [](#dataclass-class).
+
+:::
+
+
 ### Entity Class
+
 
 Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 
@@ -250,13 +258,13 @@ Para más información, consulte la sección [Atributos alias](#alias-attributes
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("población")
 
 
 Function isBigCity(): Boolean
-// La función getPopulation() es utilizable e la clase
-$0:=This.getPopulation()>50000
+// La función getPopulation() es utilizable dentro de la clase
+    return This.getPopulation()>50000
 ```
 
 Luego puede llamar este código:
@@ -679,9 +687,9 @@ Atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
 Un atributo alias hereda su propiedad [`type`](../API/DataClassClass.md#attributename) del atributo destino:
 
 - si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "storage", el tipo de datos del alias es del mismo tipo,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "relatedEntity" o "relatedEntities", el tipo de datos del alias es del tipo `4D.Entity` o `4D.EntitySelection` ("*classname*Entity" o "*classname*Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
+Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassClass.md#attributename), que contiene la ruta de sus atributos de destino. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
 
 
 ### Ejemplos
@@ -762,8 +770,6 @@ $arch:=ds.Course.query("courseName = :1"; "Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName y name son "Archaeology II"
 ```
-
-
 
 
 ## Funciones expuestas y no expuestas

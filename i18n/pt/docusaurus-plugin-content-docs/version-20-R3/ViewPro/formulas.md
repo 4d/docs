@@ -5,7 +5,7 @@ title: Fórmulas e funções
    
 ## Usando fórmulas
 
-A spreadsheet formula is an expression that calculates the value of a cell.
+Uma fórmula de planilha é uma expressão que calcula o valor de uma célula.
 
 ### Introduzir fórmulas
 
@@ -21,11 +21,11 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formulas.PNG)
 
-- digite a primeira letra de uma função para entrar. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+- digite a primeira letra de uma função para entrar. Um menu pop-up que lista as funções e referências disponíveis é exibido, permitindo que você selecione os elementos desejados:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
 
 ### Operadores e Operandos
 
@@ -40,20 +40,20 @@ Todas as fórmulas têm operandos e operadores:
 
 ## Valores e operadores
 
-4D View Pro suporta cinco tipos de dados. For each data type, specific literal values and operators are supported.
+4D View Pro suporta cinco tipos de dados. Para cada tipo de dados, há suporte para valores literais e operadores específicos.
 
-| Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                             |
-| ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                       |
-| [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                      |
+| Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                      |
+| ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (adição)<br/>- (subtração)<br/>* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
+| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                       |
+| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                  |
+| [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                |
+| [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                               |
 
 
 ### Operadores de comparação
 
-The following operators can be used with two operands of the same type:
+Os operadores a seguir podem ser usados com dois operandos do mesmo tipo:
 
 | Operador   | Comparação           |
 | ---------- | -------------------- |
@@ -86,13 +86,13 @@ Lista dos operadores, do mais importante para o menos importante:
 
 ## Referências de células
 
-As fórmulas referem-se frequentemente a outras células através de endereços de células. Pode copiar estas fórmulas para outras células. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+As fórmulas referem-se frequentemente a outras células através de endereços de células. Pode copiar estas fórmulas para outras células. Por exemplo, a fórmula a seguir, inserida na célula C8, adiciona os valores nas duas células acima dela e exibe o resultado.
 
 ```
 = C6 + C7
 ```
 
-Essa fórmula se refere às células C6 e C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Essa fórmula se refere às células C6 e C7. Ou seja, 4D View Pro é instruído a consultar essas outras células para obter os valores a serem usados na fórmula.
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
@@ -128,7 +128,7 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) for details and examples.
+Consulte a [** lista ampliada de funções SpreadJS**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) para obter detalhes e exemplos.
 
 
 ## Funções 4D
@@ -230,8 +230,17 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
 
-> If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
-> |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
+:::note
+
+If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+
+| Propriedade | Tipo | Descrição         |
+| ----------- | ---- | ----------------- |
+| value       | Date | Valor data        |
+| time        | Real | Tempo em segundos |
+
+:::
+
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
@@ -287,7 +296,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 #### Requisitos
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
-*   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
+*   Os nomes das tabelas e dos campos devem estar em conformidade com (consulte [o standard ECMA ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
@@ -362,5 +371,5 @@ Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. Nesse caso, os nomes dos métodos projeto devem estar em conformidade com a gramática de identificadores JavaScript (consulte [standard ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 

@@ -61,9 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças                              |
+| ------- | ------------------------------------- |
+| 19 R4   | Nova constante `HTTP Client log file` |
+| 17 R5   | Adicionado                            |
 
 </details>
 
@@ -77,9 +78,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | fileConstant | Integer  | -> | Constante de arquivo 4D                             |
 | pathType     | Integer  | -> | `fk posix path` (por defeito) ou `fk platform path` |
 | *            |          | -> | * para devolver o arquivo da base de dados anfitriã |
-| Resultados   | 4D. File | <- | Novo objeto arquivo|<!-- END REF -->
-
-|
+| Resultados   | 4D. File | <- | Novo objeto arquivo                                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -115,6 +115,7 @@ No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, u
 | Debug log file                    | 12    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Debug log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                              |
 | Diagnostic log file               | 11    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Diagnostic log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                         |
 | Directory file                    | 16    | directório.json, contendo a descrição dos usuários e grupos (se houver) para a aplicação do projecto. Pode ser localizado ou na pasta de configurações do usuário (por padrão, global ao projecto), ou na pasta de definições de dados (específica a um arquivo de dados).                                                                                                                                                                    |
+| HTTP Client log file              | 24    | Arquivo de histórico criado pelo comando `HTTP SET OPTION (HTTP client log)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                       |
 | HTTP debug log file               | 9     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web debug log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                            |
 | HTTP log file                     | 8     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                        |
 | IMAP Log file                     | 23    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(IMAP Log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                         |
@@ -135,9 +136,9 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -156,9 +157,9 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF file.create().Note -->
@@ -169,11 +170,10 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 
 <!--REF #FileClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                      |
-| ---------- | ---------- | -- | ---------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se o arquivo foi criado com sucesso, falso caso contrário<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                      |
+| ---------- | ---------- | -- | -------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
+<!-- END REF -->
 
 #### Descrição
 
@@ -201,23 +201,22 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                                                |
-| ----------------- | ---------- | -- | ------------------------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho                             |
-| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                                             |
-| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                                            |
-| Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                                     |
+| ----------------- | ---------- | -- | --------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho  |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                  |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                 |
+| Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -257,9 +256,9 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -267,11 +266,10 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -314,21 +312,19 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                            |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
-| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo   |    | Descrição                                                 |
+| ---------- | ------ | -- | --------------------------------------------------------- |
+| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist |
+<!-- END REF -->
 
 
 #### Descrição
@@ -409,23 +405,21 @@ ALERT($info.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                 |
-| ----------------- | ---------- | -- | ----------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
-| newName           | Text       | -> | Nome completo do ficheiro movido          |
-| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
-
-
-|
+| Parâmetro         | Tipo       |    | Descrição                        |
+| ----------------- | ---------- | -- | -------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                 |
+| newName           | Text       | -> | Nome completo do ficheiro movido |
+| Resultados        | 4D. File   | <- | Arquivo movido                   |
+<!-- END REF -->
 
 
 #### Descrição
@@ -456,22 +450,21 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetro  | Tipo                             |    | Descrição                                          |
-| ---------- | -------------------------------- | -- | -------------------------------------------------- |
-| mode       | Text                             | -> | Modo de abertura: "read", "write", "append"        |
-| options    | Object                           | -> | Opções de abertura                                 |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo                             |    | Descrição                                   |
+| ---------- | -------------------------------- | -- | ------------------------------------------- |
+| mode       | Text                             | -> | Modo de abertura: "read", "write", "append" |
+| options    | Object                           | -> | Opções de abertura                          |
+| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle                     |
+<!-- END REF -->
 
 #### Descrição
 
@@ -535,21 +528,20 @@ $fhandle:=$f.open("read")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                     |
-| ---------- | -------- | -- | --------------------------------------------- |
-| newName    | Text     | -> | Novo nome completo para o ficheiro            |
-| Resultados | 4D. File | <- | Ficheiro renomeado|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo     |    | Descrição                          |
+| ---------- | -------- | -- | ---------------------------------- |
+| newName    | Text     | -> | Novo nome completo para o ficheiro |
+| Resultados | 4D. File | <- | Ficheiro renomeado                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -578,21 +570,20 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v20    | Suporte de WinIcon |
-| v19    | Adicionado         |
+| Release | Mudanças           |
+| ------- | ------------------ |
+| 20      | Suporte de WinIcon |
+| 19      | Adicionado         |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                                        |
-| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll|<!-- END REF -->
-
-|
+| Parâmetro | Tipo   |    | Descrição                                                                             |
+| --------- | ------ | -- | ------------------------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll |
+<!-- END REF -->
 
 #### Descrição
 
@@ -666,20 +657,19 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetro | Tipo |    | Descrição                                                 |
-| --------- | ---- | -- | --------------------------------------------------------- |
-| content   | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
+<!-- END REF -->
 
 #### Descrição
 
@@ -698,10 +688,10 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                   |
-| ------ | ---------------------------------------------------------- |
-| v19 R3 | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
-| v17 R5 | Adicionado                                                 |
+| Release | Mudanças                                                   |
+| ------- | ---------------------------------------------------------- |
+| 19 R3   | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
+| 17 R5   | Adicionado                                                 |
 
 </details>
 
@@ -710,15 +700,13 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 
 <!--REF #FileClass.setText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                                               |
-| ----------- | ------- | -- | ----------------------------------------------------------------------- |
-| text        | Text    | -> | Texto a armazenar no arquivo                                            |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                                          |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres                                       |
-| breakMode   | Integer | -> | Modo de processamento para retornos de linha|<!-- END REF -->
-
-
-|
+| Parâmetro   | Tipo    |    | Descrição                                   |
+| ----------- | ------- | -- | ------------------------------------------- |
+| text        | Text    | -> | Texto a armazenar no arquivo                |
+| charSetName | Text    | -> | Nome do conjunto de caracteres              |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
+| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+<!-- END REF -->
 
 
 #### Descrição
@@ -740,13 +728,13 @@ Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a i
 
 Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
-| Parâmetros                    | Valor | Comentário                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                       |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                  |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                   |
+| ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                               |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                                           |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                      |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                       |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

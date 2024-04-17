@@ -7,7 +7,7 @@ Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros po
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. Para obter mais informações, consulte [Preferencies](../Preferencies/general.md).
 
 
 ## Aceder os parâmetros
@@ -20,14 +20,14 @@ Pode aceder à caixa de diálogo Parâmetros:
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
--   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
+-   **User Settings...** gives you access to settings that can be stored externally in a user file. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
 -   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
 
 ### Informações de bloqueio
 
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
--   O arquivo *settings.4DSettings* é 'Somente leitura' (Projetos somente). Modifying a setting will display an alert to unlock it, if possible.
+-   O arquivo *settings.4DSettings* é 'Somente leitura' (Projetos somente). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
 -   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.

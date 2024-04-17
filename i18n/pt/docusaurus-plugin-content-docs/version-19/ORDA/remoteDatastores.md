@@ -3,49 +3,49 @@ id: datastores
 title: Utilizar um datastore remoto
 ---
 
-A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
+Um [datastore](dsMapping.md#datastore) exposto em uma aplicação 4D pode ser acessado simultaneamente através de diferentes clientes:
 
-- 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
+- As aplicações 4D remotas usando ORDA para acessar o datastore principal com o comando `ds`. Note que a aplicação 4D remota ainda pode acessar o banco de dados no modo clássico. Esses acessos são tratados pelo **servidor de aplicações 4D**.
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Esses acessos são transmitidos pelo servidor **HTTP REST**.
-- As petições 4D for iOS para atualizar aplicações iOS. These accesses are handled by the **HTTP server**.
+- As petições 4D for iOS para atualizar aplicações iOS. Esses acessos são transmitidos pelo **servidor HTTP**.
 
-When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
+Quando você trabalha com um datastore remoto referenciado por chamadas para o comando `Open datastore`, a conexão entre os processos solicitantes e o datastore remoto é tratada por sessões.
 
 ## Abertura de sessões
 
-When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application. This session automatically manages access to data, entity selections, or entities.
+When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application. Essa sessão gerencia automaticamente o acesso a dados, seleções de entidades ou entidades.
 
-The `localID` is local to the machine that connects to the remote datastore, which means:
+O `localID` é local para a máquina que conecta ao datastore remoto, o que significa:
 
-- If other processes of the same application need to access the same remote datastore, they can use the same `localID` and thus, share the same session.
-- If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
-- If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
+- Se outros processos da mesma aplicação precisam acessar o mesmo datastore remoto, eles podem usar o mesmo `localID` e, assim, compartilhar a mesma sessão.
+- Se outro processo da mesma aplicação abrir o mesmo datastore remoto, mas com outro `localID`, ele criará uma sessão no datastore remoto.
+- Se outra máquina se conectar ao mesmo datastore remoto com o mesmo `localID`, ela criará outra sessão com outro cookie.
 
 Estes princípios são ilustrados nos gráficos seguintes:
 
 ![](../assets/en/ORDA/sessions.png)
 
-> For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
+> Para sessões abertas por solicitações REST, consulte [Usuários e sessões](REST/authUsers.md).
 
 ## Visionamento de sessões
 
-Processes that manage sessions for datastore access are shown in the 4D Server administration window:
+Os processos que gerenciam sessões para acesso ao armazenamento de dados são mostrados na janela de administração do 4D Server:
 
 - nome: "REST Handler: \<process name\>"
 - type: type Worker Server HTTP
 - session: o nome da sessão é o nome de usuário passado para o comando Open datastore.
 
-In the following example, two processes are running for the same session:
+No exemplo a seguir, dois processos estão sendo executados na mesma sessão:
 
 ![](../assets/en/ORDA/sessionAdmin.png)
 
 ## Bloqueio e transacções
 
-ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
+Os recursos do ORDA relacionados ao bloqueio de entidades e à transação são gerenciados no nível do processo em repositórios de dados remotos, assim como no modo cliente/servidor do ORDA:
 
-- If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory.
-- Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. Não têm impacto noutros datastores.
-- Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
+- Se um processo bloqueia uma entidade de um repositório de dados remoto, a entidade é bloqueada para todos os outros processos, mesmo quando esses processos compartilham a mesma sessão (consulte [Bloqueio de entidades](entities.md#entity-locking)). Se várias entidades que apontam para um mesmo registro tiverem sido bloqueadas em um processo, todas elas deverão ser desbloqueadas no processo para remover o bloqueio. Se um bloqueio tiver sido colocado em uma entidade, o bloqueio será removido quando não houver mais referência a essa entidade na memória.
+- As transações podem ser iniciadas, validadas ou canceladas separadamente em cada datastore remoto usando as funções `dataStore.startTransaction()`, `dataStore.cancelTransaction()`e `dataStore.validateTransaction()` . Não têm impacto noutros datastores.
+- Os comandos clássicos da linguagem 4D (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) só se aplicam ao datastore principal (retornado por `ds`). Se uma entidade de um datastore remoto é segurada por uma transação em um processo, outros processos não podem atualizá-lo, mesmo que esses processos compartilhem a mesma sessão.
 - Os bloqueios nas entidades são removidos e as transações são anuladas:
   - quando o processo é eliminado.
   - quando a sessão é encerrada no servidor
@@ -53,6 +53,6 @@ ORDA features related to entity locking and transaction are managed at process l
 
 ## Fechamento das sessões
 
-A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
+Uma sessão é automaticamente encerrada por 4D quando não há atividade durante seu período de tempo limite. O tempo limite padrão é de 60 minutos, mas esse valor pode ser modificado usando o parâmetro `connectionInfo` do comando `Open datastore` .
 
-If a request is sent to the remote datastore after the session has been closed, it is automatically re-created if possible (license available, server not stopped...). However, keep in mind that the context of the session regarding locks and transactions is lost (see above).
+Se uma solicitação for enviada ao repositório de dados remoto depois que a sessão tiver sido fechada, ela será recriada automaticamente, se possível (licença disponível, servidor não parado...). No entanto, lembre-se de que o contexto da sessão em relação a bloqueios e transações é perdido (veja acima).

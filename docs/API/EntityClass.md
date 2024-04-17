@@ -38,9 +38,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -78,9 +78,9 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -90,7 +90,8 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 <!-- REF #EntityClass.clone().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record|<!-- END REF -->
+|Result|4D.Entity|<-|New entity referencing the record|
+<!-- END REF -->
 
 #### Description
 
@@ -118,9 +119,9 @@ This function can only be used with entities already saved in the database. It c
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -132,7 +133,8 @@ This function can only be used with entities already saved in the database. It c
 |---------|--- |:---:|------|
 |entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
 |attributesToCompare|Collection|-> |Name of attributes to be compared |
-|Result|Collection|<-|Differences between the entities|<!-- END REF -->
+|Result|Collection|<-|Differences between the entities|
+<!-- END REF -->
 
 #### Description
 
@@ -317,9 +319,9 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -330,7 +332,8 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
-|Result|Object|<-|Result of drop operation|<!-- END REF -->
+|Result|Object|<-|Result of drop operation|
+<!-- END REF -->
 
 #### Description
 
@@ -422,9 +425,9 @@ Example with `dk force drop if stamp changed` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -434,7 +437,8 @@ Example with `dk force drop if stamp changed` option:
 <!-- REF #EntityClass.first().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+<!-- END REF -->
 
 #### Description
 
@@ -459,9 +463,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -471,7 +475,8 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF #EntityClass.fromObject().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|filler|Object|->|Object from which to fill the entity|<!-- END REF -->
+|filler|Object|->|Object from which to fill the entity|
+<!-- END REF -->
 
 #### Description
 
@@ -543,9 +548,9 @@ You could also use a related entity given as an object:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -555,7 +560,8 @@ You could also use a related entity given as an object:
 <!-- REF #EntityClass.getDataClass().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|DataClass object to which the entity belongs|<!-- END REF -->
+|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+<!-- END REF -->
 
 #### Description
 
@@ -586,9 +592,9 @@ The following generic code duplicates any entity:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -627,9 +633,9 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19R5|Added|
+|19R5|Added|
 
 </details>
 
@@ -639,7 +645,8 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Text|<-|Context attributes linked to the entity, separated by a comma|<!-- END REF -->
+|result|Text|<-|Context attributes linked to the entity, separated by a comma|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -683,9 +690,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -695,7 +702,8 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.getSelection().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+<!-- END REF -->
 
 #### Description
 
@@ -724,9 +732,9 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -736,7 +744,8 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- REF #EntityClass.getStamp().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|<!-- END REF -->
+|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+<!-- END REF -->
 
 #### Description
 
@@ -769,9 +778,9 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -782,7 +791,8 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
-|Result|Integer|<-|Position of the entity in an entity selection|<!-- END REF -->
+|Result|Integer|<-|Position of the entity in an entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -815,9 +825,9 @@ The resulting value is included between 0 and the length of the entity selection
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -827,7 +837,8 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- REF #EntityClass.isNew().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|<!-- END REF -->
+|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+<!-- END REF -->
 
 #### Description
 
@@ -852,9 +863,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -864,7 +875,8 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 <!-- REF #EntityClass.last().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+<!-- END REF -->
 
 #### Description
 
@@ -889,9 +901,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -902,7 +914,8 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
-|Result|Object|<-|Result of lock operation|<!-- END REF -->
+|Result|Object|<-|Result of lock operation|
+<!-- END REF -->
 
 #### Description
 
@@ -1004,9 +1017,9 @@ Example with `dk reload if stamp changed` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1018,7 +1031,8 @@ Example with `dk reload if stamp changed` option:
 <!-- REF #EntityClass.next().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+<!-- END REF -->
 
 #### Description
 
@@ -1046,9 +1060,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1058,7 +1072,8 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- REF #EntityClass.previous().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+<!-- END REF -->
 
 #### Description
 
@@ -1085,9 +1100,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1097,7 +1112,8 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF #EntityClass.reload().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|<!-- END REF -->
+|Result|Object|<-|Status object|
+<!-- END REF -->
 
 #### Description
 
@@ -1146,9 +1162,9 @@ The object returned by `.reload( )` contains the following properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1159,7 +1175,8 @@ The object returned by `.reload( )` contains the following properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
-|Result|Object|<-|Result of save operation|<!-- END REF -->
+|Result|Object|<-|Result of save operation|
+<!-- END REF -->
 
 #### Description
 
@@ -1280,9 +1297,9 @@ Updating an entity with `dk auto merge` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1295,7 +1312,8 @@ Updating an entity with `dk auto merge` option:
 |filterString |Text |->|Attribute(s) to extract (comma-separated string)|
 |filterCol |Collection |->|Collection of attribute(s) to extract|
 |options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
-|Result|Object|<-|Object built from the entity|<!-- END REF -->
+|Result|Object|<-|Object built from the entity|
+<!-- END REF -->
 
 #### Description
 
@@ -1567,9 +1585,9 @@ Returns:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1579,7 +1597,8 @@ Returns:
 <!-- REF #EntityClass.touched().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|<!-- END REF -->
+|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+<!-- END REF -->
 
 #### Description
 
@@ -1610,9 +1629,9 @@ In this example, we check to see if it is necessary to save the entity:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1622,7 +1641,8 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- REF #EntityClass.touchedAttributes().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Names of touched attributes, or empty collection|<!-- END REF -->
+|Result|Collection|<-|Names of touched attributes, or empty collection|
+<!-- END REF -->
 
 #### Description
 
@@ -1682,9 +1702,9 @@ In this case:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1694,7 +1714,8 @@ In this case:
 <!-- REF #EntityClass.unlock().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|<!-- END REF -->
+|Result|Object|<-|Status object|
+<!-- END REF -->
 
 #### Description
 

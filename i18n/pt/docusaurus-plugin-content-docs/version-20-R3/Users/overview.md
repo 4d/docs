@@ -5,7 +5,7 @@ title: Descrição geral do controlo de acesso
 
 If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
 
-4D access control strategy depends on your deployment configuration:
+A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 
 - em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
@@ -36,7 +36,7 @@ Single-user applications are desktop applications, deployed with 4D or merged wi
 
 ### Identificação de usuário
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Assim, a autenticação do usuário é delegada ao nível do SO.
+Para identificar o usuário atual em um aplicativo 4D de usuário único, você pode contar com o comando [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html), que retorna o usuário que abriu a sessão do sistema. Assim, a autenticação do usuário é delegada ao nível do SO.
 
 You can then allow or deny access within your application by using code such as:
 
@@ -45,7 +45,7 @@ If(Current system user = $user) //you can store users in a database table
     // give access to some features End if
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
+Se quiser usar o nome de usuário do sistema em 4D em vez de "Desenhador" (por exemplo, em arquivos de registro), é possível chamar o comando [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), por exemplo:
 
 ```4d
 SET USER ALIAS(Current system user)

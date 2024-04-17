@@ -33,9 +33,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -151,9 +151,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -197,9 +197,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -246,9 +246,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -303,9 +303,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -363,9 +363,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
@@ -428,9 +428,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 
@@ -493,9 +493,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 

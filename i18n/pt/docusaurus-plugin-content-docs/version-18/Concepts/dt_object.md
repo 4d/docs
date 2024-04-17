@@ -215,7 +215,7 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
 
 ## Identificadores de propriedade de objetos
 
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. Devem estar em conformidade com a gramática de identificadores JavaScript (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - the first character must be a letter, an underscore (_), or a dollar sign ($),
 - subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),

@@ -31,13 +31,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTE METHOD` ou `EXECUTE FORMULA` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) or [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-Les commandes `EXECUTE METHOD` et `Get database parameter` constituent aussi une exception à ce principe : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+The [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands are an exception: their scope is global to the application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-La commande `COMPONENT LIST` permet de connaître la liste des composants chargés par le projet hôte.
+The [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) command can be used to obtain the list of components that are loaded by the host project.
 
 
 ### Commandes non utilisables
@@ -77,15 +77,15 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 ![](../assets/en/Concepts/shared-methods.png)
 
-Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). Ces méthodes constituent les **points d’entrée** du composant.
+Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
 A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. In certain cases, you may need to allow a component to access the project methods of your host project.
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Une fois que les méthodes projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode hôte depuis l'intérieur d'un composant à l'aide des commandes `EXECUTE FORMULA` ou `EXECUTE METHOD`. Par exemple :
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) or [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) command. Par exemple :
 
-```4d 
+```4d
 // Méthode hôte
 component_method("host_method_name")
 ```
@@ -93,8 +93,8 @@ component_method("host_method_name")
 
 ```4d
 // component_method
- C_TEXT($1)
- EXECUTE METHOD($1)
+#DECLARE ($param : Text)
+EXECUTE METHOD($param)
 ```
 
 > Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il ne sera pas possible d'effectuer l'opération.   
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Partage des classes et des fonctions
 
-Si vous souhaitez que les classes et fonctions de vos composants soient exposées dans les projets hôtes, vous devez déclarer un namespace. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
+Par défaut, les classes et fonctions des composants ne peuvent pas être appelées depuis l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes et fonctions de composants soient exposées dans les projets hôtes, vous devez déclarer un espace de nom (namespace) du composant. De plus, vous pouvez contrôler comment les classes de composants et les fonctions sont suggérées dans l'éditeur de code hôte.
 
 ### Déclaration du namespace
 
@@ -116,15 +116,15 @@ Pour permettre aux classes et aux fonctions de votre composant d'être exposées
 Lorsque vous saisissez une valeur, vous déclarez que les classes et les fonctions du composant seront disponibles dans [user class store (**cs**)](../Concepts/classes.md#cs) du code du projet hôte, par le biais du namespace `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
-//dans le projet hôte
-var $rect: cs.eGeometry.Rectangle 
+//in host project
+var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+L'espace de nom d'un composant [compilé](#protection-of-components-compilation) sera ajouté entre parenthèses après le nom du composant dans la page [Component Methods page](../Concepts/components.md#using-components) des projets hôtes :
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
@@ -161,7 +161,7 @@ Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les
 
 ## Passage de variables
 
-Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. The local, process and interprocess variables are not shared between components and host projects.
+Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
 Exemple utilisant un tableau :
 
@@ -220,7 +220,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Gestion des erreurs
 
-Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du prpjet hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
 
 ## Accès aux tables du projet hôte
@@ -332,12 +332,12 @@ Lecture dans une base de données externe :
 
 ## Utilisation de formulaires
 
-- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant.
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans le projet matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
 > Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant du projet hôte sera affiché, dans le contexte du projet hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
-- Vous pouvez publier des formulaires de composants comme sous-formulaires dans les projets hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
+- You can [publish component forms as subforms](../FormEditor/properties_FormProperties.md#published-as-subform) in the host projects. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
 
 > Dans le contexte d'un composant, tout formulaire projet référencé doit appartenir au composant. Par exemple, à l'intérieur d'un composant, le fait de référencer un formulaire projet hôte à l'aide de `DIALOG` ou de `Open form window` déclenchera une erreur.
 
@@ -357,7 +357,7 @@ Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de
 
 L'exécution du code d'initialisation ou de fermeture se fait au moyen de la méthode base `On Host Database Event`.
 
-> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base`On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base`On Host Database Event` dans la base hôte afin de pouvoir l'appeler.
+> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'[option**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés.
 
 
 ## Protection des composants : la compilation
@@ -370,10 +370,10 @@ Par défaut, tout le code d’un projet utilisé comme matrice installé comme c
 
 Pour assurer la protection du code d'un composant, [compilez et générerez](Desktop/building.md#build-component) simplement le projet utilisé comme matrice et fournissez-le sous forme de fichier .4dz. Lorsqu’un projet compilé utilisé comme matrice est installé comme composant :
 
-- The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
+- Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
 
 ## Partage des composants
 
-We encourage you to support the 4D developer community by sharing your components, preferably on the [GitHub platform](https://github.com/topics/4d-component). We recommend that you use the **`4d-component`** topic to be correctly referenced.  
+Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.  

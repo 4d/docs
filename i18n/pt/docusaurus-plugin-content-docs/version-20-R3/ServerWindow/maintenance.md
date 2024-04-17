@@ -43,7 +43,7 @@ This area indicates the duration of the 4D Server application execution since th
 
 ### Reiniciar o servidor...
 
-This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. Os usuários 4D podem então ser reconectados.
+Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. Os usuários 4D podem então ser reconectados.
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 
@@ -51,7 +51,7 @@ This button can be used to immediately close and restart the project. When you c
 
 This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
 
-- **Last backup**: date and time of last backup.
+- **Último backup**: data e hora do último backup.
 - **Next backup**: date and time of next scheduled backup.
 - **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
 - **Available space**: space available on the backup volume.
@@ -85,8 +85,8 @@ This button allows you to load a special server [log configuration file](Debuggi
 
 ### Pausar no registo
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+This button suspends all currently logging operations started on the server. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+> É possível pausar e retomar o registro em log usando o comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).

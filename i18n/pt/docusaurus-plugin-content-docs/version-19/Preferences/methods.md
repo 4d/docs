@@ -90,7 +90,7 @@ Permite-lhe desativar/ativar os parâmetros do código "internacional" para a ap
 
 #### Indentação
 
-Changes the indentation value for the 4D code in the Method editor. A largura deve ser especificada em pontos (10 por defeito).
+Altera o valor de indentação do código 4D no editor de métodos. A largura deve ser especificada em pontos (10 por defeito).
 
 O código 4D é automaticamente indentado para revelar a sua estrutura:
 
@@ -104,7 +104,7 @@ Lets you display the line numbers by default in each window of the Method editor
 
 #### Mostrar as listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. Você também pode mostrar ou ocultar cada lista diretamente no editor de métodos.
 
 #### Destacar os blocos lógicos
 

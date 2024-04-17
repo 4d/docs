@@ -7,7 +7,7 @@ title: Editor de código
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
-O editor de código funciona de forma semelhante a um editor de texto. Escrever um método ou uma classe é geralmente uma combinação de digitar texto, selecionar componentes e arrastar itens do Explorador ou de outras janelas. You can also use various type-ahead functions to create methods faster.
+O editor de código funciona de forma semelhante a um editor de texto. Escrever um método ou uma classe é geralmente uma combinação de digitar texto, selecionar componentes e arrastar itens do Explorador ou de outras janelas. Você também pode usar várias funções de preenchimento automático para criar métodos mais rapidamente.
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
@@ -37,15 +37,11 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 É possível personalizar a apresentação da área de edição. Qualquer personalização é automaticamente passada para todas as janelas do editor de código:
 
-| Opção                                     | Descrição                                                                                                                                                                                     | Definido em...                                                                                                                                                                                                                    |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **tipo de letra** e **tamanho de letra**  | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Ver** > **Tipo de letra maior** ou **Tipo de letra menor**                                                                                              |
-| **estilo e cor dos elementos de sintaxe** | atribui uma cor e/ou estilo específicos a cada tipo de elemento da linguagem 4D.  Você também pode alterar as diferentes cores usadas na interface da área de edição (destaque, fundo, etc.). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Submenu > **Estilo**. Ou **Preferências** > [**Métodos**](../Preferences/methods.md) |
-| **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                     | **Método > Ver > Espaços em branco**                                                                                                                                                                                              |
-| **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                      | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
-| **largura das indentações de código**     | Definir a largura das indentações do código                                                                                                                                                   | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
+| Option | Description | Set in... |
 
-#### Change bars
+|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) Submenu > **Estilo**. Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.). | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
+
+#### Mudar barras
 
 Colored bars instantly show you where lines of code were modified since the method was opened:
 
@@ -84,7 +80,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **All tables and fields**: Database table and field names in the form of a hierarchical list. When you insert a field name into the method by double-clicking on its name, 4D inserts it while respecting the syntax and adds the name of the table or subtable as the case may be.
 - **Table** (submenu): Field names of the table selected using the submenu.
 - **Current table**: Field names of the current table (available in triggers, form methods and object methods).
-- **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
+- **Formulários projeto**: nomes de formulários projeto de banco de dados. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
 - **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por exemplo: [Table]; "Form".
 - **Métodos**: nomes de métodos projeto do banco de dados.
 - **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. As pastas podem ser utilizadas para organizar objetos de uma forma personalizada. São geridos a partir da página inicial do explorador.
@@ -116,7 +112,7 @@ To save a Code Editor window as a template, choose **Method** > **Save As Templa
 
 ### Área de pontos de paragem
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
+This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Os pontos de interrupção são úteis durante a fase de depuração de sua programação. They stop the execution of your code at specific locations and display the debugger.
 
 For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
 
@@ -199,7 +195,7 @@ All markers located inside functions are indented in the dropdown list, except f
 
 #### Ordem de visualização
 
-Tags are displayed in their appearing order inside the method/class.
+As etiquetas são exibidas em sua ordem de aparecimento dentro do método/classe.
 
 To display the tags of a method or class in alphabetical order, do one of the following:
 
@@ -291,7 +287,7 @@ The backslash character (`\`) has a specific support in the 4D language:
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\MyDocuments`will become`C:\\MyDocuments`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. For instance, `C:\MyDocuments` will become `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -299,7 +295,7 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 ### Arrastar e largar
 
-From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
+From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. Quando você arrasta e solta um elemento, 4D sempre usa a sintaxe correta. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. Assim, você pode usar uma sintaxe mais adequada ao seu uso.
 
@@ -317,7 +313,7 @@ You can automatically modify the case of selected characters using the commands 
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
-### Swap expression
+### Trocar expressão
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 
@@ -337,7 +333,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    São apresentadas as primeiras palavras dos itens copiados ou cortados. Select an item to insert it at the current location of the cursor.
+    São apresentadas as primeiras palavras dos itens copiados ou cortados. Selecione um item para inseri-lo no local atual do cursor.
 
 - Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
 
@@ -388,14 +384,14 @@ If the characters typed correspond to different types of objects, the list displ
 - Nomes de tabelas
 - Nomes de campos
 - Constantes
-- Variável local, processo ou inter-processo, declarada no método
+- Variables declared in the method
 - Nomes de propriedade de objeto
 - Comandos Plug-in
 - Palavras-chave 4D
 - Palavras-chave SQL
 - Macros (apresentadas entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes**, **tables** and/or **prototypes**. These options are found in **Preferences** > **Methods** > **Options**
 
 #### Nomes de propriedade de objeto
 
@@ -412,7 +408,7 @@ Once created, property names are stored in an internal global list and are avail
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+A lista de sugestões é atualizada dinamicamente enquanto você edita o código. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
 
 Quando o banco de dados é reiniciado, a lista é reinicializada.
 
@@ -445,7 +441,7 @@ The search defined in this area will be performed in the code located in the win
 
 The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Pode então utilizar este texto ou substituí-lo por outro.
 
-Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
+Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. Também indica a posição atual do cursor entre todos os resultados.
 
 Hit the **Enter** key to select closest occurrence to the cursor. Também pode clicar nos botões **Próximo / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para selecionar todas as ocorrências sequencialmente no início ou no fim do método atual, a partir da localização inicial do cursor, ou utilizar os comandos **Procurar seguinte** e **Procurar anterior** do menu [**Editar**](#shortcuts).
 
@@ -484,28 +480,50 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
+## Avisos e erros
 
-## Erros de sintaxe
+Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
-4D automatically checks the method syntax to see if it is correct. Se introduzir texto ou selecionar um componente que não esteja sintaticamente correto, 4D apresenta um símbolo para indicar a expressão incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+The Code Live Checker is activated at three levels:
+
+- quando você escreve código no editor de código,
+- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
+- quando você [compila](../Project/compiler.md) o projeto.
+
+4D verifica automaticamente a sintaxe do código para ver se está correta. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+
+Dois tipos de símbolos são exibidos:
+
+- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. Não impedem a compilação.
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. Eles devem ser corrigidos, caso contrário o projeto não será compilado.
+
+When you move the mouse over the symbol, a help tip displays the cause of the error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
+O Verificador de código ao vivo é ativado enquanto você insere o código. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. Quando salvar ou fechar a janela, todo o método é validado.
 
-Quando o método, classe ou função é validado, 4D verifica:
+You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 
-- erros básicos de sintaxe
+The Code Live Checker checks for:
+
+- erros básicos de sintaxe (operadores errados, erros de ortografia e similares)
 - the structure of statements (`If`, `End if` and so on)
-- matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
+- matching enclosing characters in the code such as parentheses or brackets (see tip below)
+- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+
+:::tip
+
+When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
+:::
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+The Code Live Checker cannot detect some errors that only occur during execution. Erros de execução são capturados por 4D quando o código é executado. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+
 
 ## Dicas de ajuda
 
@@ -533,7 +551,7 @@ A [barra de estado](#status-bar) também fornece informações contextuais.
 
 ## Comentar / Não comentar
 
-There is no limit on the number of lines. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code.
+There is no limit on the number of lines. O editor de código não aplica nenhum estilo específico nos comentários. The length of comments is limited to the maximum size of 32,000 characters per line.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
@@ -602,7 +620,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 ## Marcadores
 
-4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D permite que você associe marcadores a certas linhas em seus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
 ![](../assets/en/code-editor/bookm.png)
 
@@ -669,7 +687,7 @@ To display the documentation of a 4D "classic" language command, select the comm
 
 The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
 
-The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+The current item is either the one selected or the one where the cursor is located. Pode ser um nome de campo, nome de variável, comando, cadeia de caracteres e assim por diante. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 
@@ -773,6 +791,7 @@ Eis a lista de etiquetas e o seu modo de utilização:
 |                                  | - index: Área de transferência a ser colada. Valores = número da área de transferência (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 - As macros podem ser chamadas utilizando o menu de contexto do editor de código ou utilizando a função de antecipação de digitação (ver a seção seguinte).
+
 - Se quiser estar em conformidade com as especificações da linguagem XML, não deve utilizar caracteres alargados (caracteres acentuados, aspas, etc.).
 
 Aqui está um exemplo de definição de macro:

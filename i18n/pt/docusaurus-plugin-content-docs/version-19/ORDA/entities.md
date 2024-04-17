@@ -14,9 +14,9 @@ Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
-Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. Para obter mais informações, consulte [Usando atributos de entidade](#using-entity-attributes).
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+Por exemplo, se quisermos criar uma nova entidade na classe de dados "Employee" no repositório de dados atual com "John" e "Dupont" atribuídos aos atributos firstname e name:
 
 ```4d
 var $myEntity : cs. EmployeeEntity
@@ -25,11 +25,11 @@ $myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
 $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
 $myEntity.save() //save the entity
 ```
-> Uma entidade é definida apenas no processo em que foi criada. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> Uma entidade é definida apenas no processo em que foi criada. Não é possível, por exemplo, armazenar uma referência a uma entidade em uma variável interprocessos e usá-la em outro processo.
 
 ## Entidades e referências
 
-Uma entidade contém uma referência a um registo 4D. Entidades diferentes podem fazer referência ao mesmo registo 4D. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+Uma entidade contém uma referência a um registo 4D. Entidades diferentes podem fazer referência ao mesmo registo 4D. Além disso, como uma entidade pode ser armazenada em uma variável de objeto 4D, diferentes variáveis podem conter uma referência à mesma entidade.
 
 Se executar o seguinte código:
 
@@ -62,9 +62,9 @@ Este facto é ilustrado pelo gráfico seguinte:
 
 ![](../assets/en/ORDA/entityRef2.png)
 
-Note-se, no entanto, que as entidades se referem ao mesmo registo. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+Note-se, no entanto, que as entidades se referem ao mesmo registo. Em todos os casos, se você chamar o método `entity.save( )` , o registro será atualizado (exceto em caso de conflito, consulte [Bloqueio de entidades](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Por exemplo:
+De fato, `$e1` e `$e2` não são a entidade em si, mas uma referência à entidade. Isso significa que você pode passá-los diretamente para qualquer função ou método, e ele funcionará como um ponteiro, e mais rápido do que um ponteiro 4D. Por exemplo:
 
 ```4d
  For each($entity;$selection)
@@ -83,13 +83,13 @@ E o método é:
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+Você pode lidar com entidades como qualquer outro objeto em 4D e passar suas referências diretamente como  [parâmetros](Concepts/parameters.md).
+> With the entities, there is no concept of "current record" as in the classic 4D language. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Também não há bloqueio automático em uma entidade (consulte [Bloqueio de entidades](#entity-locking)). Quando uma entidade é carregada, ela usa o mecanismo [lazy loading](glossary.md#lazy-loading) , o que significa que somente as informações necessárias são carregadas. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
 
 ## Utilização de atributos de entidades
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+> Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) .
 
 Por exemplo, para definir um atributo de armazenamento:
 
@@ -111,11 +111,11 @@ O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com
  $EntitySel:=ds. Company.all().first().companyProjects //get the selection of projects for the company
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. Por exemplo, considere a seguinte estrutura:
+Observe que tanto *theClient* quanto *companyProjects* no exemplo acima são atributos de relação primária e representam uma relação direta entre as duas classes de dados. No entanto, os atributos de relação também podem ser criados com base em caminhos através de relações em vários níveis, incluindo referências circulares. Por exemplo, considere a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of the manager of an employee, you can simply write:
+Cada trabalhador pode ser um gestor e pode ter um gestor. Para obter o gerente do gerente de um funcionário, você pode simplesmente escrever:
 
 ```4d
  $myEmp:=ds. Employee.get(50)
@@ -124,81 +124,80 @@ Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of 
 
 ## Atribuição de valores a atributos de relação
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+Na arquitetura ORDA, os atributos de relação contêm diretamente dados relacionados a entidades:
 
-* An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-* A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+* Um atributo de relação do tipo N->1 (**relatedEntity** kind) contém uma entidade
+* Um atributo de relação do tipo 1->N (**relatedEntities** kind) contém uma seleção de entidade
 
 Vejamos a seguinte estrutura (simplificada):
 
 ![](../assets/en/ORDA/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+Neste exemplo, uma entidade na classe de dados "Employee" contém um objeto do tipo Entity no atributo "employer" (ou um valor nulo). Uma entidade na classe de dados "Company" contém um objeto do tipo EntitySelection no atributo "staff" (ou um valor nulo).
+> Na ORDA, a propriedade Automática ou Manual das relações não tem efeito.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Por exemplo:
+Para atribuir um valor diretamente ao atributo "employer", você deve passar uma entidade existente da classe de dados "Company". Por exemplo:
 
 ```4d
- $emp:=ds. Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds. Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // crie um funcionário
+ $emp.lastname:="Smith" // atribua um valor a um atributo
+ $emp. mployer:=ds.Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
  $emp.save()
 ```
 
-You can also directly get the "one" related entity through its primary key value (Number or Text). Por exemplo:
+Você também pode obter diretamente a entidade relacionada através de sua chave primária (Número ou texto). Por exemplo:
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=ds.Company.get(2)
-  //gets the Company entity with primary key value 2
-  //assigns it to the employee
+  //obtém a entidade Company com o valor de chave primária 2
+  //atribui ao funcionário
  $emp.save()
 ```
 
-This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
+Isso é particularmente útil quando você está importando grandes quantidades de dados de um banco de dados relacional. Este tipo de importação geralmente contém uma coluna "ID", que faz referência a uma chave primária que você pode atribuir diretamente a um atributo de relação.
 
 
-You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
+Você pode atribuir ou modificar o valor de um "1" atributo da entidade relacionada a partir do dataclass "N" diretamente através do atributo relacionado. Por exemplo, se você deseja modificar o atributo de nome de uma entidade relacionada da Empresa de uma entidade funcional, você pode escrever:
 
 ```code4d
- $emp:=ds. Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds. //modificar o atributo name da empresa relacionada
+ $emp.employer.save() //salvar o atributo relacionado
+  //a entidade relacionada é atualizada
 ```
 
 ## Criar uma selecção de entidade
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Você pode criar um objeto de tipo [seleção de entidade](dsMapping.md#entity-selection) da seguinte forma:
 
-* Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
-* Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
+* Consultando as entidades [em um dataclass](API/DataClassClass.md#query) ou em um [existente seleção de entidade](API/EntitySelectionClass.md#query);
+* Usando a função [`.all()`](API/DataClassClass.md#all) de dataclass para selecionar todas as entidades em um dataclass;
 * Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-* Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
-* Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
+* Usando a função [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar uma seleção de entidade existente;
+* Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como [`. r()`](API/EntitySelectionClass.md#or);
 * Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Tenha em atenção que uma seleção de entidade apenas contém referências a entidades. Diferentes selecções de entidades podem conter referências às mesmas entidades.
+Você pode criar e usar simultaneamente tantas seleções de entidades diferentes quanto desejar para uma classe de dados. Lembre-se de que uma seleção de entidade contém apenas referências a entidades. Seleções diferentes de entidades podem conter referências para as mesmas entidades.
 
 ### Entity selections partilháveis ou alteráveis
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Uma seleção de entidade pode ser **compartilhável** (pode ser lida por vários processos, mas não pode ser alterada após a criação) ou **alterável** (suporta a função [`.add()`](API/EntitySelectionClass.md#add) , mas só pode ser usada pelo processo atual).
 
 #### Propriedades
 
-A **shareable** entity selection has the following characteristics:
+Uma seleção de entidade **compartilhável** tem as seguintes características:
 
-* it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-* it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
-* não permite a adição de novas entidades. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+* ele pode ser armazenado em um objeto compartilhado ou em uma coleção compartilhada e pode ser passado como parâmetro entre vários processos ou trabalhadores;
+* pode ser armazenado em vários objetos ou coleções compartilhados, ou em um objeto ou coleção compartilhado que já pertença a um grupo (ele não tem um identificador de bloqueio **);
+* não permite a adição de novas entidades. A tentativa de adicionar uma entidade a uma seleção de entidade compartilhável acionará um erro (1637 - Esta seleção de entidade não pode ser alterada). Para adicionar uma entidade a uma seleção de entidade compartilhável, você deve primeiro transformá-la em uma seleção de entidade não compartilhável usando a função [`.copy()`](API/EntitySelectionClass.md#copy) , antes de chamar [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> A maioria das funções de seleção de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) suporta seleções de entidades compartilháveis, pois não precisam alterar a seleção de entidades original (elas retornam uma nova).
 
-An **alterable** entity selection has the following characteristics:
+Uma seleção **alternável** da entidade tem as seguintes características:
 
-* it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-* it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
+* não pode ser compartilhado entre processos, nem armazenado em um objeto ou coleção compartilhada. A tentativa de armazenar uma seleção de entidade não compartilhável em um objeto ou coleção compartilhada acionará um erro (-10721 - Tipo de valor não suportado em um objeto compartilhado ou coleção compartilhada);
+* aceita a adição de novas entidades, ou seja, é compatível com a função [`.add()`](API/EntitySelectionClass.md#add) .
 
 #### Como é que são definidos?
 
@@ -421,9 +420,9 @@ Estes princípios são apresentados no diagrama seguinte:
 
 São implementados os seguintes mecanismos de otimização:
 
-* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
+* Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois.
 
-* Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
+* As solicitações subsequentes enviadas ao servidor sobre a mesma seleção de entidade reutilizam automaticamente o contexto de otimização e obtêm apenas os atributos necessários do servidor, o que acelera o processamento. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
 
 * An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
 
@@ -451,9 +450,9 @@ Thanks to the optimization, this request will only get data from used attributes
 
 ### Utilizar a propriedade context
 
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. Pode ser passado como parâmetro para os métodos ORDA que devolvem novas selecções de entidades, de modo a que as selecções de entidades solicitem diretamente ao servidor os atributos utilizados e contornem a fase de aprendizagem.
+Você pode aumentar os benefícios da otimização usando a propriedade **context** . Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Pode ser passado como parâmetro para os métodos ORDA que devolvem novas selecções de entidades, de modo a que as selecções de entidades solicitem diretamente ao servidor os atributos utilizados e contornem a fase de aprendizagem.
 
-A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
+A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
 
 **Exemplo com o método `dataClass.query( )`:**
@@ -479,9 +478,9 @@ A same optimization context property can be passed to unlimited number of entity
 
 ### List box baseado em uma seleção de entidades
 
-Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
+A otimização da seleção de entidades é aplicada automaticamente a caixas de listagem baseadas em seleção de entidades em configurações de cliente/servidor, ao exibir e rolar o conteúdo de uma caixa de listagem: somente os atributos exibidos na caixa de listagem são solicitados ao servidor.
 
-A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). This feature allows you to not overload the list box initial context in this case, especially if the "page" requests additional attributes. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
+Um contexto "modo de página" específico também é fornecido ao carregar a entidade atual através do item **Atual** expressão de propriedade da caixa de lista (consulte [coleção ou caixas de lista de tipos de seleção de entidade](FormObjects/listbox_overview.md#list-box-types)). Esse recurso permite que você não sobrecarregue o contexto inicial da caixa de lista neste caso, especialmente se a "página" solicitar atributos adicionais. Observe que somente o uso da expressão **Current item** criará/usará o contexto da página (o acesso por meio de `entitySelection\[index]` alterará o contexto de seleção da entidade).
 
 Subsequent requests to server sent by entity browsing methods will also support this optimization. The following methods automatically associate the optimization context of the source entity to the returned entity:
 
@@ -490,10 +489,10 @@ Subsequent requests to server sent by entity browsing methods will also support 
 * `entity.last( )`
 * `entity.previous( )`
 
-For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
+Por exemplo, o código a seguir carrega a entidade selecionada e permite a navegação na seleção da entidade. As entidades são carregadas em um contexto separado e o contexto inicial da caixa de listagem não é alterado:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement //expressão do item atual
+  //... fazer algo
+ $myEntity:=$myEntity.next() //carrega a próxima entidade usando o mesmo contexto
 ```

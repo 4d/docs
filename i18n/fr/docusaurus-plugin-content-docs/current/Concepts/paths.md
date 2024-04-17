@@ -21,14 +21,14 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                |
-| ------------ | ------------------------------------------------------ |
-| "/DATA"      | Dossier data courant                                   |
-| "/LOGS"      | Dossier Logs                                           |
-| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
-| "/PROJECT"   | Dossier Project                                        |
-| "/RESOURCES" | Dossier de ressources courant du projet                |
-| "/SOURCES"   | Current project sources folder                         |
+| filesystem   | Désigne                                                  |
+| ------------ | -------------------------------------------------------- |
+| "/DATA"      | Dossier data courant                                     |
+| "/LOGS"      | Dossier Logs                                             |
+| "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) |
+| "/PROJECT"   | Dossier Project                                          |
+| "/RESOURCES" | Dossier de ressources du projet courant                  |
+| "/SOURCES"   | Dossier des sources du projet courant                    |
 
 ## Syntaxe POSIX
 

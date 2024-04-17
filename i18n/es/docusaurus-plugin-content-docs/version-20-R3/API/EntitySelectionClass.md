@@ -112,7 +112,18 @@ El comando `USE ENTITY SELECTION` actualiza la selección actual de la tabla que
 
 Este comando no puede utilizarse con un [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+:::info
+
+Este comando está diseñado para hacer que las selecciones actuales 4D se beneficien del poder de las consultas ORDA. Por razones de rendimiento, en 4D monousuario y 4D Server, el comando conecta directamente *entitySelection* a la selección actual. Por lo tanto, una vez que se ha utilizado *entitySelection*, no debe reutilizarse ni alterarse posteriormente.
+
+:::
+
+:::note
+
+Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+
+:::
+
 
 #### Ejemplo
 
@@ -130,9 +141,9 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -186,9 +197,9 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -265,11 +276,11 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                |
-| ------- | --------------------------------------------- |
-| v19 R7  | Soporte del parámetro *entitySelection*       |
-| v18 R5  | Sólo soporta las entity selections alterables |
-| v17     | Añadidos                                      |
+| Lanzamiento | Modificaciones                                |
+| ----------- | --------------------------------------------- |
+| 19 R7       | Soporte del parámetro *entitySelection*       |
+| 18 R5       | Sólo soporta las entity selections alterables |
+| 17          | Añadidos                                      |
 
 </details>
 
@@ -356,9 +367,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -424,9 +435,9 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -469,10 +480,10 @@ $emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                       |
-| ------- | ---------------------------------------------------- |
-| v18 R6  | Devuelve undefined si la entity selection está vacía |
-| v17     | Añadidos                                             |
+| Lanzamiento | Modificaciones                                       |
+| ----------- | ---------------------------------------------------- |
+| 18 R6       | Devuelve undefined si la entity selection está vacía |
+| 17          | Añadidos                                             |
 
 </details>
 
@@ -523,9 +534,9 @@ Queremos obtener una lista de empleados cuyo salario es superior al salario medi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -572,9 +583,9 @@ Si *entity* y la entity selection no pertenecen a la misma dataclass, se produce
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -619,9 +630,9 @@ Queremos averiguar el número total de empleados de una empresa sin contar a los
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -684,10 +695,10 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v20     | Soporte de `dk count values` |
-| v17     | Añadidos                     |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 20          | Soporte de `dk count values` |
+| 17          | Añadidos                     |
 
 </details>
 
@@ -774,9 +785,9 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -831,9 +842,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -892,9 +903,9 @@ Ejemplo con la opción `dk stop dropping on first error`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 
 </details>
 
@@ -1001,9 +1012,9 @@ Dada la siguiente tabla y relación:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1059,9 +1070,9 @@ Sin embargo, hay una diferencia entre ambas afirmaciones cuando la selección es
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -1110,9 +1121,9 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19R5   | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19R5        | Añadidos       |
 
 </details>
 
@@ -1166,9 +1177,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -1208,9 +1219,9 @@ Form.products.add(Form.product)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1261,9 +1272,9 @@ Para más información, consulte [Entity selection ordenadas o desordenadas](ORD
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1311,9 +1322,9 @@ Si la entity selection está vacía, la función devuelve Null.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1345,10 +1356,10 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                       |
-| ------- | ---------------------------------------------------- |
-| v17     | Añadidos                                             |
-| v18 R6  | Devuelve undefined si la entity selection está vacía |
+| Lanzamiento | Modificaciones                                       |
+| ----------- | ---------------------------------------------------- |
+| 17          | Añadidos                                             |
+| 18 R6       | Devuelve undefined si la entity selection está vacía |
 
 </details>
 
@@ -1398,10 +1409,10 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                       |
-| ------- | ---------------------------------------------------- |
-| v17     | Añadidos                                             |
-| v18 R6  | Devuelve undefined si la entity selection está vacía |
+| Lanzamiento | Modificaciones                                       |
+| ----------- | ---------------------------------------------------- |
+| 17          | Añadidos                                             |
+| 18 R6       | Devuelve undefined si la entity selection está vacía |
 
 
 </details>
@@ -1450,10 +1461,10 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                    |
-| ------- | --------------------------------- |
-| v19 R7  | Soporte del parámetro *keepOrder* |
-| v17     | Añadidos                          |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 19 R7       | Soporte del parámetro *keepOrder* |
+| 17          | Añadidos                          |
 
 </details>
 
@@ -1535,9 +1546,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1597,9 +1608,9 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1677,9 +1688,9 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R6       | Añadidos       |
 
 </details>
 
@@ -1799,11 +1810,11 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                             |
-| ------- | ------------------------------------------ |
-| v17 R6  | Soporte de los parámetros Formula          |
-| v17 R5  | Soporte de los marcadores para los valores |
-| v17     | Añadidos                                   |
+| Lanzamiento | Modificaciones                             |
+| ----------- | ------------------------------------------ |
+| 17 R6       | Soporte de los parámetros Formula          |
+| 17 R5       | Soporte de los marcadores para los valores |
+| 17          | Añadidos                                   |
 
 </details>
 
@@ -1857,9 +1868,9 @@ Se pueden encontrar más ejemplos de búsquedas en la página [`.query()`](DataC
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1880,9 +1891,9 @@ Para más información, consulte el párrafo **querySettings** en la página [`.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1904,9 +1915,9 @@ Para más información, consulte el párrafo **querySettings** en la página [`.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 
 </details>
 
@@ -1983,9 +1994,9 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R3       | Añadidos       |
 
 </details>
 
@@ -2050,9 +2061,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -2113,9 +2124,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 
 
@@ -2169,9 +2180,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 

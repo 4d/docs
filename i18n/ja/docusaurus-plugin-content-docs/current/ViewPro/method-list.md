@@ -941,6 +941,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -979,7 +980,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 | includeBindingSource       | boolean     | 4DVP および Microsoft Excel のみ。 true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したドキュメントのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。 データコンテキストおよびセルバインドの管理については、[VP SET DATA CONTEXT](#vp-set-data-context) および [VP SET BINDING PATH](#vp-set-binding-path) を参照ください。                                                                                                           |
 | sheet                      | number      | PDF のみ (任意) - 書き出すシートのインデックス (0 起点)。 -2 = 表示されている全シート (デフォルト)、-1 = カレントシートのみ                                                                                                                                                                                                                                                                                                                       |
 | pdfOptions                 | object      | PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>creator</td><td>text</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>text</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>text</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>text</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>text</td><td>ドキュメントの題名。</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                              |
-| csvOptions                 | object      | CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                              |
+| csvOptions                 | object      | CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: `"\r\n"`</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: `","`</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                              |
 | sjsOptions                 | object      | SJSのみ (任意) - sjs 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>自動的に結合されたセルを含めるかどうか。デフォルトは false。</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>バインドされたソースを含めるかどうか。デフォルトは true。</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>計算の追加データを含めるか。 追加データによって、ファイルを開くのが速くなる場合があります。デフォルトは false。</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>フォーミュラを含めるかどうか。デフォルトは true。</td></tr><tr><td>includeStyles</td><td>boolean</td><td>スタイルを含めるかどうか。デフォルトは true。</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>使用されていないカスタム名を含めるかどうか。デフォルトは true。</td></tr><tr><td>saveAsView</td><td>boolean</td><td>書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                              |
 | `\<customProperty>` | any         | コールバックメソッドの $3 引数を通して利用可能な任意のプロパティ。                                                                                                                                                                                                                                                                                                                                                                |
 
@@ -1012,7 +1013,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 | 引数     |               | タイプ     | 説明                                |
 | ------ | ------------- | ------- | --------------------------------- |
-| param1 |               | text    | 4D View Pro オブジェクト名               |
+| param1 |               | text    | 4D View Pro エリアのオブジェクト名           |
 | param2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス  |
 | param3 |               | object  | コマンドの *paramObj* 引数への参照           |
 | param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
@@ -1114,17 +1115,18 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 *paramObj* には、複数のプロパティを渡せます:
 
-| プロパティ                   | タイプ         | 説明                                                              |
-| ----------------------- | ----------- | --------------------------------------------------------------- |
-| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。                              |
-| includeAutoMergedCells  | Boolean     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                               |
-| includeBindingSource    | Boolean     | バインドされたソースを含めるかどうか。デフォルトは true。                                 |
-| includeCalcModelCache   | Boolean     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。              |
-| includeEmptyRegionCells | Boolean     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。 |
-| includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                     |
-| includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                       |
-| includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                              |
-| saveAsView              | Boolean     | 書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。                        |
+| プロパティ                   | タイプ         | 説明                                                                                    |
+| ----------------------- | ----------- | ------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッドの渡し方](#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
+| includeAutoMergedCells  | Boolean     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                     |
+| includeBindingSource    | Boolean     | バインドされたソースを含めるかどうか。デフォルトは true。                                                       |
+| includeCalcModelCache   | Boolean     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                    |
+| includeEmptyRegionCells | Boolean     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                       |
+| includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                           |
+| includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                             |
+| includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                    |
+
+|saveAsView|Boolean|書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。|
 
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
@@ -1555,6 +1557,7 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 *rangeObj* 引数で、スタイルを取得するレンジを指定します。
 
 * *rangeObj* 引数としてセルレンジを渡した場合、セルのスタイルが返されます。
+
 * *rangeObj* 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
 * *rangeObj* 引数に複数のレンジが含まれている場合、最初のレンジの最初のセルのスタイルのみが返されます。
 
@@ -1764,11 +1767,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| 引数         | タイプ     |    | 説明                                                 |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名                         |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                        |
-| 戻り値        | Object  | <- | Default style settings |<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                      |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名              |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)             |
+| 戻り値        | Object  | <- | デフォルトスタイル設定 |<!-- END REF -->
 
 |
 
@@ -1856,7 +1859,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                         |
 | name       | Text   | -> | 命名レンジの名前                                        |
 | scope      | Number | -> | ターゲットのスコープ (デフォルト=カレントシート)                      |
-| 戻り値        | Text   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
+| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
 
 |
 
@@ -1933,6 +1936,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 以下のコードを使用することができます:
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -1983,6 +1987,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 ```4d
 var $panesObj : Object
+
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2511,6 +2516,7 @@ VP SET CELL STYLE($range;$style)
 
 *styleName* には、取得するスタイルシートの名前を渡します。
 
+
 任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
 * `vk current sheet`
@@ -2982,7 +2988,7 @@ $tables:=VP Get tables("ViewProArea")
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3049,9 +3055,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|引数|タイプ||説明|
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |戻り値 |Object|<-|Object containing the workbook options|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                                                |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                           |
+| 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト|<!-- END REF -->
+
+|
 
 #### 説明
 
@@ -3077,65 +3087,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| 引数         | タイプ     |    | 説明                                    |
-| ---------- | ------- | -- | ------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
-| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob             |
-| paramObj   | Object  | -> | 読み込みのオプション|<!-- END REF -->
-
-|
-
-#### 説明
-
-`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
-
-*paramObj* には、複数のプロパティを渡せます:
-
-| プロパティ               | タイプ         | 説明                                                                                                                                                                                                                                                                                        |
-| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。                                                                                                                                                                                                                                                                  |
-| calcOnDemand        | Boolean     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                   |
-| dynamicReferences   | Boolean     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                           |
-| fullRecalc          | Boolean     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                     |
-| includeFormulas     | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                               |
-| includeStyles       | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                 |
-| includeUnusedStyles | Boolean     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                |
-| openMode            | Integer     | 0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ドキュメントを開くと、特定の時点で UI と UIイベントが更新され、応答します。 <br/>1 (lazy): レイジー (遅延) オープンモード。 ドキュメントを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。 <br/>2 (incremental): インクリメンタル (増分) オープンモード。 ドキュメントを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。 |
-
-コールバックメソッドでは、以下のパラメーターを使用することができます:
-
-| 引数     |               | タイプ     | 説明                                |
-|:------ |:------------- |:------- |:--------------------------------- |
-| param1 |               | text    | 4D View Pro オブジェクト名               |
-| param2 |               | 4D.Blob | インポートされた Blob                     |
-| param3 |               | object  | コマンドの *paramObj* 引数への参照           |
-| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | boolean | 読み込みに成功した場合は true 、それ以外の場合は false |
-|        | .errorCode    | integer | エラーコード。                           |
-|        | .errorMessage | text    | エラーメッセージ。                         |
-
-
-#### 例題
-
-myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.myTable.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### 参照
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3220,12 +3171,26 @@ End if
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
 ```4d
+    	// 読み込みコード
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
-
+ 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    // myImport コールバックメソッド
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("読み込みに成功しました。")
+Else 
+     ALERT("エラー: "+$status.errorMessage)
+End if
+```
+
 
 #### 例題 3
 
@@ -3245,6 +3210,67 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| 引数         | タイプ     |    | 説明                                    |
+| ---------- | ------- | -- | ------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
+| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob             |
+| paramObj   | Object  | -> | 読み込みのオプション|<!-- END REF -->
+
+|
+
+#### 説明
+
+`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
+
+*paramObj* には、複数のプロパティを渡せます:
+
+| プロパティ               | タイプ         | 説明                                                                                                                                                                                                                                                                                        |
+| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [コールバックメソッドの渡し方](#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                                                                                                                               |
+| calcOnDemand        | Boolean     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                   |
+| dynamicReferences   | Boolean     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                           |
+| fullRecalc          | Boolean     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                     |
+| includeFormulas     | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                               |
+| includeStyles       | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                 |
+| includeUnusedStyles | Boolean     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                |
+| openMode            | Integer     | 0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ドキュメントを開くと、特定の時点で UI と UIイベントが更新され、応答します。 <br/>1 (lazy): レイジー (遅延) オープンモード。 ドキュメントを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。 <br/>2 (incremental): インクリメンタル (増分) オープンモード。 ドキュメントを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。 |
+
+コールバックメソッドでは、以下のパラメーターを使用することができます:
+
+| 引数     |               | タイプ     | 説明                                |
+|:------ |:------------- |:------- |:--------------------------------- |
+| param1 |               | text    | 4D View Pro エリアのオブジェクト名           |
+| param2 |               | 4D.Blob | インポートされた Blob                     |
+| param3 |               | object  | コマンドの *paramObj* 引数への参照           |
+| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
+|        | .success      | boolean | 読み込みに成功した場合は true 、それ以外の場合は false |
+|        | .errorCode    | integer | エラーコード。                           |
+|        | .errorMessage | text    | エラーメッセージ。                         |
+
+
+#### 例題
+
+myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.myTable.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### 参照
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 
 ### VP IMPORT FROM OBJECT
@@ -3619,7 +3645,11 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | ---------- | ---- | -- | -------------------------------------------------- |
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名|<!-- END REF -->
 
+
+
 |
+
+
 
 #### 説明
 
@@ -3925,7 +3955,9 @@ VP REMOVE SHEET("ViewProArea";2)
 | 引数       | タイプ    |    | 説明                                   |
 | -------- | ------ | -- | ------------------------------------ |
 | rangeObj | Object | -> | レンジオブジェクト|<!-- END REF -->
+
 |
+
 #### 説明
 
 `VP REMOVE SPAN` コマンドは、 <!-- REF #_method_.VP REMOVE SPAN.Summary -->*rangeObj* で指定したレンジ内のセル結合を解除します<!-- END REF -->。
@@ -4479,6 +4511,8 @@ Function onEvent()
     // この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします
             This.isWaiting:=False
 
+
+
     // タイマーを停止します
             SET TIMER(0)
 
@@ -4958,6 +4992,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 カレントシートを第3シートに設定します:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -5235,6 +5270,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
+
 ### VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
@@ -5449,11 +5485,11 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // 一行目
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // 二行目
 
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // フォーミュラをセルに設定します
 ```
 
 *myMethod*:
@@ -5656,6 +5692,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -5981,6 +6018,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6287,6 +6325,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 任意の *formatPattern* 引数は、*timeValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
 
+
 #### 例題
 
 ```4d
@@ -6485,26 +6524,8 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 | referenceStyle                        | number                  | セルフォーミュラにおける、セルやレンジ参照のスタイル。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> A1 スタイルを使用します。</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> R1C1 スタイルを使用します。</td></tr></table>                                                                                                                                   |
 | resizeZeroIndicator                   | number                  | 行やカラムのサイズが 0 に変更されたときの描画ポリシー。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> 行やカラムのサイズが 0 に変更されたときに、現在の描画ポリシーを使用します。</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> 行やカラムのサイズが 0 に変更されたときに、2本の短い線を描画します。</td></tr></table>                                                                                                                                 |
 | rowResizeMode                         | number                  | 行のリサイズモード。 使用可能な値は columnResizeMode と同じです。                                                                                                                                                       |
-| scrollbarAppearance                   | number                  | スクロールバーの見た目。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> モバイル風のスクロールバー。</td></tr><tr><td> vk scrollbar appearance skin (デフォルト)</td><td>0</td><td> Excel風のクラシックなスクロールバー。</td></tr></table>                                                                                                                                                  |
-| scrollbarMaxAlign                     | boolean                 | スクロールバーをアクティブシートの最後の行およびカラムに揃えます。                                                                                                                                                                |
-| scrollbarShowMax                      | boolean                 | シートのカラムと行の総数に基づいてスクロールバーを表示します。                                                                                                                                                                  |
-| scrollByPixel                         | boolean                 | ピクセル単位のスクロールを有効にします。                                                                                                                                                                             |
-| scrollIgnoreHidden                    | boolean                 | スクロールバーは非表示の行やカラムを無視します。                                                                                                                                                                         |
-| scrollPixel                           | integer                 | scrollByPixel が true の場合、スクロール毎のピクセル数を指定します。 最終的にスクロールするピクセル数は `scrolling delta (スクロールの相対変化値) * scrollPixel` によって算出されます。 例: scrolling delta が 3、scrollPixel が 5 の場合、最終的なスクロールピクセル数は 15 です。       |
-| showDragDropTip                       | boolean                 | ドラッグ＆ドロップの Tip を表示します。                                                                                                                                                                           |
-| showDragFillSmartTag                  | boolean                 | ドラッグ＆フィルダイアログを表示します。                                                                                                                                                                             |
-| showDragFillTip                       | boolean                 | ドラッグ＆フィルの Tip を表示します。                                                                                                                                                                            |
-| showHorizontalScrollbar               | boolean                 | 横スクロールバーを表示します。                                                                                                                                                                                  |
-| showResizeTip                         | number                  | リサイズ Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> 縦と横のリサイズ Tip が表示されます。</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> 横のリサイズ Tip のみ表示されます。</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> リサイズ Tip は表示されません。</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> 縦のリサイズ Tip のみ表示されます。</td></tr></table>                                                                                                                                           |
-| showScrollTip                         | number                  | スクロール Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> 縦と横のスクロール Tip が表示されます。</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> 横のスクロール Tip のみ表示されます。</td></tr><tr><td> vk show scroll tip none </td><td> スクロール Tip は表示されません。</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> 縦のスクロール Tip のみ表示されます。</td></tr></table>                                                                                                                                          |
-| showVerticalScrollbar                 | boolean                 | 縦スクロールバーを表示します。                                                                                                                                                                                  |
-| tabEditable                           | boolean                 | タブストリップの編集を有効にします。                                                                                                                                                                               |
-| tabNavigationVisible                  | boolean                 | タブナビゲーションを表示します。                                                                                                                                                                                 |
-| tabStripPosition                      | number                  | タブストリップの位置を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> タブストリップはワークブックの下側に位置します。</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> タブストリップはワークブックの左側に位置します。</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> タブストリップはワークブックの右側に位置します。</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> タブストリップはワークブックの上側に位置します。</td></tr></table>                                                                                                                                             |
-| tabStripRatio                         | number                  | スプレッドシートエリアの幅において、タブストリップが占める割合を指定します (0.x)。 残るスペース (1 - 0.x) には横スクロールバーが表示されます。                                                                                                                 |
-| tabStripVisible                       | boolean                 | タブストリップを表示します。                                                                                                                                                                                   |
-| tabStripWidth                         | number                  | タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。                                                                                                                                               |
-| useTouchLayout                        | boolean                 | Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。                                                                                                                                                     |
+
+| scrollbarAppearance | number | スクロールバーの見た目。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> モバイル風のスクロールバー。</td></tr><tr><td> vk scrollbar appearance skin (デフォルト)</td><td>0</td><td> Excel風のクラシックなスクロールバー。</td></tr></table>| | scrollbarMaxAlign | boolean | スクロールバーをアクティブシートの最後の行およびカラムに揃えます。 | | scrollbarShowMax | boolean | シートのカラムと行の総数に基づいてスクロールバーを表示します。 | | scrollByPixel | boolean | ピクセル単位のスクロールを有効にします。 | | scrollIgnoreHidden | boolean | スクロールバーは非表示の行やカラムを無視します。 | | scrollPixel | integer | scrollByPixel が true の場合、スクロール毎のピクセル数を指定します。 最終的にスクロールするピクセル数は `scrolling delta (スクロールの相対変化値) * scrollPixel` によって算出されます。 例: scrolling delta が 3、scrollPixel が 5 の場合、最終的なスクロールピクセル数は 15 です。 | | showDragDropTip | boolean | ドラッグ＆ドロップの Tip を表示します。 | | showDragFillSmartTag | boolean | ドラッグ＆フィルダイアログを表示します。 | | showDragFillTip | boolean | ドラッグ＆フィルの Tip を表示します。 | | showHorizontalScrollbar | boolean | 横スクロールバーを表示します。 | | showResizeTip | number | リサイズ Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> 縦と横のリサイズ Tip が表示されます。</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> 横のリサイズ Tip のみ表示されます。</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> リサイズ Tip は表示されません。</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> 縦のリサイズ Tip のみ表示されます。</td></tr></table>| | showScrollTip | number | スクロール Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> 縦と横のスクロール Tip が表示されます。</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> 横のスクロール Tip のみ表示されます。</td></tr><tr><td> vk show scroll tip none </td><td> スクロール Tip は表示されません。</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> 縦のスクロール Tip のみ表示されます。</td></tr></table> | | showVerticalScrollbar | boolean | 縦スクロールバーを表示します。 | | tabEditable | boolean | タブストリップの編集を有効にします。 | | tabNavigationVisible | boolean | タブナビゲーションを表示します。 | | tabStripPosition | number | タブストリップの位置を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> タブストリップはワークブックの下側に位置します。</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> タブストリップはワークブックの左側に位置します。</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> タブストリップはワークブックの右側に位置します。</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> タブストリップはワークブックの上側に位置します。</td></tr></table>| | tabStripRatio | number | スプレッドシートエリアの幅において、タブストリップが占める割合を指定します (0.x)。 残るスペース (1 - 0.x) には横スクロールバーが表示されます。 | | tabStripVisible | boolean | タブストリップを表示します。 | | tabStripWidth | number | タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。 | | useTouchLayout | boolean | Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。 |
 
 #### 例題
 
@@ -6541,6 +6562,8 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### 説明
+
+
 
 `VP SHOW CELL` コマンドは、 <!-- REF #_method_.VP SHOW CELL.Summary -->*rangeObj* で指定したレンジの表示位置を変更します<!-- END REF -->。
 

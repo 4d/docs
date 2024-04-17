@@ -64,11 +64,11 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                   |
-| ------ | -------------------------------------------------------------------- |
-| v19 R4 | Entity クラスのエイリアス属性                                                   |
-| v19 R3 | Entity クラスの計算属性                                                      |
-| v18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
+| リリース  | 内容                                                                   |
+| ----- | -------------------------------------------------------------------- |
+| 19 R4 | Entity クラスのエイリアス属性                                                   |
+| 19 R3 | Entity クラスの計算属性                                                      |
+| 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 </details>
 
 
@@ -81,6 +81,8 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 - **クラス名**: cs.DataStore
 
 DataStore クラス内には、`ds` オブジェクトを介して使用する関数を作成することができます。
+
+
 
 #### 例題
 
@@ -131,17 +133,16 @@ Function GetBestOnes()
 全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
 
-
-
-
-
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
+:::info
 
+[計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
+
+:::
 
 #### リモートデータストアの例
 
@@ -203,9 +204,8 @@ Class extends EntitySelection
 
 // 給与が平均超えの社員を当該エンティティセレクションから抽出します
 
-Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -215,7 +215,15 @@ Function withSalaryGreaterThanAverage
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
+:::info
+
+[エンティティセレクションを制限する](entities.md#制限付エンティティセレクション) フィルターは [DataClass クラス](#dataclass-クラス) 内で定義されます。
+
+:::
+
+
 ### Entity クラス
+
 
 ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラスストアに公開されます。
 
@@ -250,13 +258,13 @@ Entity クラスでは、`Alias` キーワードを使用して **エイリア�
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
 // 関数 getPopulation() をクラス内で使用することができます
-$0:=This.getPopulation()>50000
+    return This.getPopulation()>50000
 ```
 
 次のように関数を呼び出すことができます:
@@ -789,8 +797,6 @@ $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName と name は "Archaeology II" に変更されます
 ```
-
-
 
 
 ## 公開vs非公開関数

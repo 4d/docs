@@ -29,10 +29,10 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v19 R3  | Añadido el atributo .exposed |
-| v17     | Añadidos                     |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 19 R3       | Añadido el atributo .exposed |
+| 17          | Añadidos                     |
 
 </details>
 
@@ -127,10 +127,10 @@ Considerando las propiedades de tabla siguientes:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -138,12 +138,11 @@ Considerando las propiedades de tabla siguientes:
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| settings   | Object             | -> | Opciones de construcción: context                                                                   |
-| Result     | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                                              |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------ |
+| settings   | Object             | -> | Opciones de construcción: context                                        |
+| Result     | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos |
+<!-- END REF -->
 
 #### Descripción
 
@@ -177,9 +176,9 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -187,11 +186,10 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -230,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -241,13 +239,12 @@ $ds.Persons.clearRemoteCache()
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                   |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| objectCol  | Collection         | -> | Colección de objetos a mapear con entidades                                   |
-| settings   | Object             | -> | Opciones de construcción: context                                             |
-| Result     | 4D.EntitySelection | <- | Selección de entidades llenadas desde la colección|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                     |
+| ---------- | ------------------ |:--:| ----------------------------------------------- |
+| objectCol  | Collection         | -> | Colección de objetos a mapear con entidades     |
+| settings   | Object             | -> | Opciones de construcción: context               |
+| Result     | 4D.EntitySelection | <- | Selección de entidades llenadas de la colección |
+<!-- END REF -->
 
 #### Descripción
 
@@ -429,9 +426,9 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -439,13 +436,12 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parámetros | Tipo            |    | Descripción                                                                     |
-| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar                            |
-| settings   | Object          | -> | Opciones de construcción: context                                               |
-| Result     | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada|<!-- END REF -->
-
-|
+| Parámetros | Tipo            |    | Descripción                                          |
+| ---------- | --------------- |:--:| ---------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar |
+| settings   | Object          | -> | Opciones de construcción: context                    |
+| Result     | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada |
+<!-- END REF -->
 
 #### Descripción
 
@@ -505,9 +501,9 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -515,11 +511,10 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 
 <!-- REF #DataClassClass.getCount().Params -->
-| Parámetros | Tipo    |    | Descripción                                                    |
-| ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                         |
+| ---------- | ------- | -- | ----------------------------------- |
+| result     | Integer | <- | Número de entidades en la dataclass |
+<!-- END REF -->
 
 #### Descripción
 
@@ -545,9 +540,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -555,11 +550,10 @@ $number:=$ds.Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parámetros | Tipo         |    | Descripción                                          |
-| ---------- | ------------ |:--:| ---------------------------------------------------- |
-| Result     | cs.DataStore | <- | Datastore de la dataclass|<!-- END REF -->
-
-|
+| Parámetros | Tipo         |    | Descripción               |
+| ---------- | ------------ |:--:| ------------------------- |
+| Result     | cs.DataStore | <- | Datastore de la dataclass |
+<!-- END REF -->
 
 #### Descripción
 
@@ -598,10 +592,10 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                     |
-| ------- | ---------------------------------- |
-| v19 R3  | Se ha añadido la propiedad exposed |
-| v17 R5  | Añadidos                           |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 19 R3       | Se ha añadido la propiedad exposed |
+| 17 R5       | Añadidos                           |
 
 </details>
 
@@ -609,11 +603,10 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                    |
-| ---------- | ------ | -- | -------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre la clase de datos|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                         |
+| ---------- | ------ | -- | ----------------------------------- |
+| Result     | Object | <- | Información sobre la clase de datos |
+<!-- END REF -->
 
 #### Descripción
 
@@ -672,9 +665,9 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -682,12 +675,10 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                          |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo   |    | Descripción                                                               |
+| ---------- | ------ | -- | ------------------------------------------------------------------------- |
+| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos. |
+<!-- END REF -->
 
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -764,9 +755,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -774,11 +765,10 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                 |
-| ---------- | --------- | -- | --------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                      |
+| ---------- | --------- | -- | ------------------------------------------------ |
+| Result     | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos |
+<!-- END REF -->
 
 #### Descripción
 
@@ -810,9 +800,9 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -823,9 +813,8 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 | Parámetros | Tipo               |    | Descripción                                                                                                                                                    |
 | ---------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder  | Integer            | -> | `dk keep ordered`: crea una selección de entidades ordenada,<br/>`dk no ordenada`: crea una selección de entidades no ordenada (por defecto si se omite) |
-| Result     | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos|<!-- END REF -->
-
-|
+| Result     | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos                                                                                      |
+<!-- END REF -->
 
 #### Descripción
 
@@ -852,11 +841,11 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                             |
-| ------- | ------------------------------------------ |
-| v17 R6  | Soporte de los parámetros Formula          |
-| v17 R5  | Soporte de los marcadores para los valores |
-| v17     | Añadidos                                   |
+| Lanzamiento | Modificaciones                             |
+| ----------- | ------------------------------------------ |
+| 17 R6       | Soporte de los parámetros Formula          |
+| 17 R5       | Soporte de los marcadores para los valores |
+| 17          | Añadidos                                   |
 
 </details>
 
@@ -864,15 +853,14 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 
 <!-- REF #DataClassClass.query().Params -->
-| Parámetros    | Tipo               |    | Descripción                                                                                                                                                                             |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Criterios de búsqueda como cadena                                                                                                                                                       |
-| formula       | Object             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                                               |
-| value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                                                          |
-| querySettings | Object             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                        |
-| Result        | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula*|<!-- END REF -->
-
-|
+| Parámetros    | Tipo               |    | Descripción                                                                                                                                                  |
+| ------------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| queryString   | Text               | -> | Criterios de búsqueda como cadena                                                                                                                            |
+| formula       | Object             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                    |
+| value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                               |
+| querySettings | Object             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                             |
+| Result        | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
+<!-- END REF -->
 
 #### Descripción
 
@@ -1046,7 +1034,7 @@ ds.Class.info:
 Considere los siguientes resultados:
 
 ```4d
-¡ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // devuelve B y C
 // encuentra "entidades con 0 en al menos una propiedad val"
 
@@ -1054,7 +1042,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // sólo devuelve A
 // encuentra "entidades en las que todas las propiedades val son distintas de 0"
 // lo que equivale a 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Si desea implementar una búsqueda que encuentre entidades en las que "al menos una propiedad sea diferente del valor **", deberá utilizar una notación especial utilizando una letra en el `[]`:
@@ -1196,7 +1184,7 @@ En el parámetro *querySettings* se puede pasar un objeto que contenga opciones 
 | attributes    | Object  | **attributePath**: path of attribute on which you want to execute the query. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* o *formula* (":placeholder") y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar un escalar o un atributo relacionado de la dataclass o una propiedad en un campo de objeto de la dataclass<table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>String</td><td>attributePath expresado con la notación de puntos, por ejemplo: "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo: \["name"] o \["user","address","zipCode"]. El uso de una colección permite consultar atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, ["4Dv17.1", "en/fr"]</td></tr></table>Puede combinar marcadores de posición indexados (valores pasados directamente en los parámetros *value*) y los valores de marcadores de posición con nombre en la misma búsqueda. |
 | args          | Object  | Parámetro(s) a pasar a las fórmulas, si las hay. El objeto **args** se recibirá en $1 dentro de las fórmulas y, por tanto, sus valores estarán disponibles a través de *$1.property* (ver ejemplo 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | allowFormulas | Boolean | True para permitir las llamadas de fórmulas en la búsqueda (por defecto). Pase false para desautorizar la ejecución de fórmulas. Si se establece como false y `query()` recibe una fórmula, se envía un error (1278 - Fórmula no permitida en este método miembro).                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| context       | Text    | Etiqueta para el contexto de optimización automática aplicado a la entity selection. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está diseñada para el procesamiento cliente/servidor; para más información, consulte la sección [**Optimización cliente/servidor**](../ORDA/remoteDatastores.md#context).                                                                                                                                                                                                                                                                                     |
+| context       | Text    | Etiqueta para el contexto de optimización automática aplicado a la entity selection. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está diseñada para el procesamiento cliente/servidor; para más información, consulte la sección [**Optimización cliente/servidor**](../ORDA/client-server-optimization.md#optimization-context).                                                                                                                                                                                                                                                              |
 | queryPlan     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda justo antes de que se ejecute, es decir, la búsqueda planificada. La propiedad devuelta es un objeto que incluye cada búsqueda y sub búsqueda prevista (en el caso de una búsqueda compleja). Esta opción es útil durante la fase de desarrollo de una aplicación. Suele utilizarse junto con queryPath. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones `entitySelection.query()` y `dataClass.query()`.                                                                                                                                                            |
 | queryPath     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda tal cual es realizada. La propiedad devuelta es un objeto que contiene la ruta utilizada para la búsqueda (normalmente idéntica a la de queryPlan, pero puede diferir si el motor consigue optimizar la búsqueda), así como el tiempo de procesamiento y el número de registros encontrados. Esta opción es útil durante la fase de desarrollo de una aplicación. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones `entitySelection.query()` y `dataClass.query()`.                                                                                                   |
 
@@ -1517,9 +1505,9 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1527,11 +1515,10 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                                             |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------------- |
-| settings   | Object | -> | Objeto que define el tiempo de espera y el tamaño máximo de la caché ORDA para el dataclass.|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                                                                                  |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------------------- |
+| settings   | Object | -> | Objeto que define el tiempo de espera y el tamaño máximo de la caché ORDA para el dataclass. |
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 

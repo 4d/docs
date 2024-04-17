@@ -60,6 +60,7 @@ module.exports =
 							],
 						},
 						"Project/components",
+						"Project/date-time-formats",
 						"Project/documentation",
 					],
 				},
@@ -101,6 +102,7 @@ module.exports =
 						"ORDA/global-stamp",
 						"ORDA/datastores",
 						"ORDA/privileges",
+						"ORDA/client-server-optimization",
 						"ORDA/glossary"
 					],
 				},
@@ -112,10 +114,6 @@ module.exports =
 							type: "category",
 							label: "Concepts",
 							items: [
-								{
-									type: "category",
-									label: "About 4D Language",
-									items: [
 										"Concepts/about",
 										"Concepts/quick-tour",
 										"Concepts/operators",
@@ -156,23 +154,11 @@ module.exports =
 										"Concepts/identifiers",
 										"Concepts/paths"
 									],
-								},
-
-								{
-									type: "category",
-									label: "Processes",
-									items: [
-										"Develop/processes",
-										"Develop/preemptive",
-									]
-								},
-
-							],
 						},
 						{
 							type: 'link',
 							label: 'Commands', //
-							href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html',
+							href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html',
 						},
 						{
 							type: "category",
@@ -229,7 +215,7 @@ module.exports =
 						"Develop/preemptive",
 					]
 				},
-				"Tags/tags",
+				"Tags/transformation-tags",
 				{
 					type: "category",
 					label: "Preferences",
@@ -370,15 +356,291 @@ module.exports =
 								"ViewPro/getting-started",
 								"ViewPro/configuring",
 								"ViewPro/formulas",
-								"ViewPro/method-list",
 								"ViewPro/classes",
-								"ViewPro/advanced-programming"
+								"ViewPro/advanced-programming",
+								{
+									type: "category",
+									label: "Commands",
+									link: {
+										type: 'doc',
+										id: 'ViewPro/commands'
+										},
+									items: [
+										{
+											type: "category",
+											label: "A",
+											link: {
+												type: 'generated-index',
+												title: 'A',
+												slug: '/commands/A',
+												},
+											items: [
+												"ViewPro/commands/vp-add-formula-name",
+												"ViewPro/commands/vp-add-range-name",
+												"ViewPro/commands/vp-add-selection",
+												"ViewPro/commands/vp-add-sheet",
+												"ViewPro/commands/vp-add-span",
+												"ViewPro/commands/vp-add-stylesheet",
+												"ViewPro/commands/vp-all"
+												]
+										},
+										{
+											type: "category",
+											label: "C",
+											link: {
+												type: 'generated-index',
+												title: 'C',
+												slug: '/commands/C',
+												},
+											items: [
+												"ViewPro/commands/vp-cell",
+												"ViewPro/commands/vp-cells",
+												"ViewPro/commands/vp-column",
+												"ViewPro/commands/vp-column-autofit",
+												"ViewPro/commands/vp-combine-ranges",
+												"ViewPro/commands/vp-convert-from-4d-view",
+												"ViewPro/commands/vp-convert-to-picture",
+												"ViewPro/commands/vp-copy-to-object",
+												"ViewPro/commands/vp-create-table"
+												]
+										},
+										{
+											type: "category",
+											label: "D",
+											link: {
+												type: 'generated-index',
+												title: 'D',
+												slug: '/commands/D',
+												},
+											items: [
+												"ViewPro/commands/vp-delete-columns",
+												"ViewPro/commands/vp-delete-rows"
+												]
+										},
+										{
+											type: "category",
+											label: "E",
+											link: {
+												type: 'generated-index',
+												title: 'E',
+												slug: '/commands/E',
+												},
+											items: [
+												"ViewPro/commands/vp-export-document",
+												"ViewPro/commands/vp-export-to-blob",
+												"ViewPro/commands/vp-export-to-object"
+												]
+										},
+										{
+											type: "category",
+											label: "F",
+											link: {
+												type: 'generated-index',
+												title: 'F',
+												slug: '/commands/F',
+												},
+											items: [
+												"ViewPro/commands/vp-find",
+												"ViewPro/commands/vp-find-table",
+												"ViewPro/commands/vp-flush-commands",
+												"ViewPro/commands/vp-font-to-object"
+												]
+										},
+										{
+											type: "category",
+											label: "G",
+											link: {
+												type: 'generated-index',
+												title: 'G',
+												slug: '/commands/G',
+												},
+											items: [
+												"ViewPro/commands/vp-get-active-cell",
+												"ViewPro/commands/vp-get-binding-path",
+												"ViewPro/commands/vp-get-cell-style",
+												"ViewPro/commands/vp-get-column-attributes",
+												"ViewPro/commands/vp-get-column-count",
+												"ViewPro/commands/vp-get-current-sheet",
+												"ViewPro/commands/vp-get-data-context",
+												"ViewPro/commands/vp-get-default-style",
+												"ViewPro/commands/vp-get-formula",
+												"ViewPro/commands/vp-get-formula-by-name",
+												"ViewPro/commands/vp-get-formulas",
+												"ViewPro/commands/vp-get-frozen-panes",
+												"ViewPro/commands/vp-get-names",
+												"ViewPro/commands/vp-get-print-info",
+												"ViewPro/commands/vp-get-row-attributes",
+												"ViewPro/commands/vp-get-row-count",
+												"ViewPro/commands/vp-get-selection",
+												"ViewPro/commands/vp-get-sheet-count",
+												"ViewPro/commands/vp-get-sheet-index",
+												"ViewPro/commands/vp-get-sheet-name",
+												"ViewPro/commands/vp-get-sheet-options",
+												"ViewPro/commands/vp-get-show-print-lines",
+												"ViewPro/commands/vp-get-spans",
+												"ViewPro/commands/vp-get-stylesheet",
+												"ViewPro/commands/vp-get-stylesheets",
+												"ViewPro/commands/vp-get-table-column-attributes",
+												"ViewPro/commands/vp-get-table-column-index",
+												"ViewPro/commands/vp-get-table-dirty-rows",
+												"ViewPro/commands/vp-get-table-range",
+												"ViewPro/commands/vp-get-table-theme",
+												"ViewPro/commands/vp-get-tables",
+												"ViewPro/commands/vp-get-value",
+												"ViewPro/commands/vp-get-values",
+												"ViewPro/commands/vp-get-workbook-options"
+												]
+										},
+										{
+											type: "category",
+											label: "I",
+											link: {
+												type: 'generated-index',
+												title: 'I',
+												slug: '/commands/I',
+												},
+											items: [
+												"ViewPro/commands/vp-import-document",
+												"ViewPro/commands/vp-import-from-blob",
+												"ViewPro/commands/vp-import-from-object",
+												"ViewPro/commands/vp-insert-columns",
+												"ViewPro/commands/vp-insert-rows",
+												"ViewPro/commands/vp-insert-table-columns",
+												"ViewPro/commands/vp-insert-table-rows"
+												]
+										},
+										{
+											type: "category",
+											label: "M",
+											link: {
+												type: 'generated-index',
+												title: 'M',
+												slug: '/commands/M',
+												},
+											items: [
+												"ViewPro/commands/vp-move-cells"
+												]
+										},
+										{
+											type: "category",
+											label: "N",
+											link: {
+												type: 'generated-index',
+												title: 'N',
+												slug: '/commands/N',
+												},
+											items: [
+												"ViewPro/commands/vp-name",
+												"ViewPro/commands/vp-new-document"
+												]
+										},
+										{
+											type: "category",
+											label: "O",
+											link: {
+												type: 'generated-index',
+												title: 'O',
+												slug: '/commands/O',
+												},
+											items: [
+												"ViewPro/commands/vp-object-to-font",
+												]
+										},
+										{
+											type: "category",
+											label: "P",
+											link: {
+												type: 'generated-index',
+												title: 'P',
+												slug: '/commands/P',
+												},
+											items: [
+												"ViewPro/commands/vp-paste-from-object",
+												"ViewPro/commands/vp-print"
+												]
+										},
+										{
+											type: "category",
+											label: "R",
+											link: {
+												type: 'generated-index',
+												title: 'R',
+												slug: '/commands/R',
+												},
+											items: [
+												"ViewPro/commands/vp-recompute-formulas",
+												"ViewPro/commands/vp-remove-name",
+												"ViewPro/commands/vp-remove-sheet",
+												"ViewPro/commands/vp-remove-span",
+												"ViewPro/commands/vp-remove-stylesheet",
+												"ViewPro/commands/vp-remove-table",
+												"ViewPro/commands/vp-remove-table-columns",
+												"ViewPro/commands/vp-remove-table-rows",
+												"ViewPro/commands/vp-reset-selection",
+												"ViewPro/commands/vp-resize-table",
+												"ViewPro/commands/vp-resume-computing",
+												"ViewPro/commands/vp-row",
+												"ViewPro/commands/vp-row-autofit",
+												"ViewPro/commands/vp-run-offscreen-area"
+
+												]
+										},
+										{
+											type: "category",
+											label: "S",
+											link: {
+												type: 'generated-index',
+												title: 'S',
+												slug: '/commands/S',
+												},
+											items: [
+												"ViewPro/commands/vp-set-active-cell",
+												"ViewPro/commands/vp-set-allowed-methods",
+												"ViewPro/commands/vp-set-binding-path",
+												"ViewPro/commands/vp-set-boolean-value",
+												"ViewPro/commands/vp-set-border",
+												"ViewPro/commands/vp-set-cell-style",
+												"ViewPro/commands/vp-set-column-attributes",
+												"ViewPro/commands/vp-set-column-count",
+												"ViewPro/commands/vp-set-current-sheet",
+												"ViewPro/commands/vp-set-custom-functions",
+												"ViewPro/commands/vp-set-data-context",
+												"ViewPro/commands/vp-set-date-time-value",
+												"ViewPro/commands/vp-set-date-value",
+												"ViewPro/commands/vp-set-default-style",
+												"ViewPro/commands/vp-set-field",
+												"ViewPro/commands/vp-set-formula",
+												"ViewPro/commands/vp-set-formulas",
+												"ViewPro/commands/vp-set-frozen-panes",
+												"ViewPro/commands/vp-set-num-value",
+												"ViewPro/commands/vp-set-print-info",
+												"ViewPro/commands/vp-set-row-attributes",
+												"ViewPro/commands/vp-set-row-count",
+												"ViewPro/commands/vp-set-selection",
+												"ViewPro/commands/vp-set-sheet-count",
+												"ViewPro/commands/vp-set-sheet-name",
+												"ViewPro/commands/vp-set-sheet-options",
+												"ViewPro/commands/vp-set-show-print-lines",
+												"ViewPro/commands/vp-set-table-column-attributes",
+												"ViewPro/commands/vp-set-table-theme",
+												"ViewPro/commands/vp-set-text-value",
+												"ViewPro/commands/vp-set-time-value",
+												"ViewPro/commands/vp-set-value",
+												"ViewPro/commands/vp-set-values",
+												"ViewPro/commands/vp-set-workbook-options",
+												"ViewPro/commands/vp-show-cell",
+												"ViewPro/commands/vp-suspend-computing"
+												]
+										}
+											]
+									},
+
 									]
 							},
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html',
 						},
 						{
 						  type: 'doc',
@@ -398,17 +660,17 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
@@ -453,29 +715,50 @@ module.exports =
 						"WebServer/errorPages",
 						"WebServer/authentication",
 						"WebServer/sessions",
-						"WebServer/preemptiveWeb",
-						"WebServer/qodly-studio"
+						"WebServer/preemptiveWeb"
 					],
+				},
+		{
+				 type: "category",
+				 label: "Qodly Studio",
+				 link: {
+					type: 'generated-index',
+					title: 'Qodly Studio',
+					description: 'Using Qodly Studio to build powerful web interfaces.',
+					slug: '/category/qodly-studio-in-4d',
+					keywords: [
+					  'Qodly Studio'
+					],
+					image: '/img/docusaurus.png'
+				  },
+				 items: [
+					"WebServer/qodly-studio",
+					"WebServer/from-qodlyscript-to-4d",
+				  ],
 				},
 				{
 					type: "category",
-					label: "REST Server",
+					label: "REST API",
 					link: {
 						type: 'generated-index',
-						title: 'REST Server',
-						description: 'Configuring the 4D REST Server and using the REST API.',
+						title: 'REST API',
+						description: 'Exposing your datastore to REST and using the REST API.',
 						keywords: ['REST server'],
 						image: '/img/docusaurus.png',
 					},
 					items: [
 						{
 						type: "category",
-						label: "Guides",
+						label: "Exposing your datastore in REST",
 						link: {
-							type: 'doc',
-							id: 'REST/gettingStarted',
-						},
+								type: 'generated-index',
+								title: 'Exposing your datastore in REST',
+								description: 'Configure your datastore for REST access',
+								keywords: ['REST access'],
+								image: '/img/docusaurus.png',
+							},
 						items: [
+								'REST/gettingStarted',
 								"REST/configuration",
 								"REST/authUsers",
 								"REST/genInfo",
@@ -522,6 +805,7 @@ module.exports =
 								"REST/entityset",
 								"REST/expand",
 								"REST/filter",
+								"REST/format",
 								"REST/imageformat",
 								"REST/lock",
 								"REST/method",

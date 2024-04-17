@@ -22,7 +22,7 @@ Por exemplo: `$filter="firstName=john"` onde `firstName` é o **atributo**, `=` 
 
 ### Utilizar um filtro complexo
 
-Um filtro mais complexo é composto pelos seguintes elementos, que juntam duas consultas:
+A more complex filter is composed of the following elements, which joins two queries:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
@@ -37,7 +37,7 @@ Também pode usar a propriedade params de 4D.
 
 Por exemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` onde firstName e salary são os atributos da classe de dados Employee.
 
-Para mais informações sobre como consultar dados em 4D, consulte a documentação [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
+For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
 > Ao inserir aspas (') ou aspas duplas ("), deve escapar-lhes utilizando o seu código de caracteres:
 > 
 > <li>Aspas ('): \u0027</li>

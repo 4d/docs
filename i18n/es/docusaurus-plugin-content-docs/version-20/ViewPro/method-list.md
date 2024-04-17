@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-objects-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -398,9 +398,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -667,9 +667,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -734,11 +734,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                                  |
-| ------- | --------------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Soporte de opciones del tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Soporte de la opción `allowAutoExpand`                                                                          |
-| v19 R6  | Añadidos                                                                                                        |
+| Lanzamiento | Modificaciones                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------- |
+| 19 R8       | Soporte de opciones del tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7       | Soporte de la opción `allowAutoExpand`                                                                          |
+| 19 R6       | Añadidos                                                                                                        |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -990,7 +990,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando `VP EXPORT DOCUM
 
 | Variable |               | Tipo    | Descripción                                               |
 | -------- | ------------- | ------- | --------------------------------------------------------- |
-| $1       |               | text    | El nombre del objeto 4D View Pro                          |
+| $1       |               | text    | El nombre del objeto de área 4D View Pro                  |
 | $2       |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | $3       |               | object  | Referencia al *paramObj* del comando                      |
 | $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -1218,9 +1218,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1394,9 +1394,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1622,9 +1622,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1672,11 +1672,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario       |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)        |
-| Result     | Object  | <- | Default style settings |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                  |
+| ---------- | ------- | -- | ------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                  |
+| Result     | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
 
 |
 
@@ -1760,7 +1760,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Text   | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -2172,6 +2172,8 @@ El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary --
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
+
+
 #### Ejemplo
 
 En el siguiente documento:
@@ -2374,6 +2376,7 @@ En *rangeObj*, pase un rango de celdas fusionadas que desee recuperar. Si *range
 
 #### Ejemplo
 
+
 Para centrar el texto de las celdas fusionadas en este documento:
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
@@ -2507,9 +2510,9 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2569,9 +2572,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2625,9 +2628,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2692,9 +2695,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2739,9 +2742,9 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2794,9 +2797,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -2881,13 +2884,14 @@ Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la
 
 
 
+
 #### Ejemplo
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3057,6 +3061,18 @@ $o.password:="excel123"
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
+
 #### Ejemplo 3
 
 Quiere importar un archivo `.txt` que utiliza una coma (",") como delimitador:
@@ -3096,7 +3112,7 @@ El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summ
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](languageOverview.html#4d-view-pro-object).
+En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](configuring.md#4d-view-pro-object).
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
@@ -3191,9 +3207,9 @@ El resultado es:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3245,9 +3261,9 @@ Ver ejemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) y [VP SET TABLE 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3329,9 +3345,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3527,9 +3543,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3625,6 +3641,7 @@ El código siguiente:
 ## R
 
 ### VP RECOMPUTE FORMULAS
+
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Syntax -->
 **VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text ) <!-- END REF -->
@@ -3826,9 +3843,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3880,9 +3897,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3928,9 +3945,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4017,9 +4034,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4262,6 +4279,7 @@ Function onEvent()
 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 El método de retrollamada *OffscreenArea*:
@@ -4440,9 +4458,9 @@ Una vez ejecutado este código, las funciones definidas pueden utilizarse en las
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -4881,9 +4899,9 @@ End case
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -5196,6 +5214,8 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
+
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
 | Parámetros | Tipo |  | Descripción |
@@ -5205,6 +5225,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
 
 #### Descripción
+
 
 El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->asigna una fórmula especificada o un método 4D a un rango de celdas designado<!-- END REF -->.
 
@@ -5528,6 +5549,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ### VP SET ROW COUNT
 
+
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 **VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->
 
@@ -5790,6 +5812,7 @@ Quiere ocultar las líneas de la cuadrícula, así como los encabezados de las l
 var $options : Object
 
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False
@@ -5861,9 +5884,9 @@ Con un salto de página:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5965,9 +5988,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6317,17 +6340,17 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 | scrollIgnoreHidden                    | boolean                 | La barra de desplazamiento ignora líneas o columnas ocultas.                                                                                                                                                                                                                                          |
 | scrollPixel                           | integer                 | Decide el desplazamiento por ese número de píxeles cuando scrollByPixel es true. Los píxeles finales de desplazamiento son el resultado de `scroll delta * scrollPixel`. Por ejemplo: delta de desplazamiento es 3, scrollPixel es 5, los píxeles finales de desplazamiento son 15.                   |
 | showDragDropTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
-| showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                                         |
+| showDragFillSmartTag                  | boolean                 | Mostrar el diálogo de arrastrar y rellenar.                                                                                                                                                                                                                                                           |
 | showDragFillTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
 | showHorizontalScrollbar               | boolean                 | Mostrar la barra de desplazamiento horizontal.                                                                                                                                                                                                                                                        |
-| showResizeTip                         | number                  | Cómo mostrar el tip de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                                            |
-| showScrollTip                         | number                  | How to display the scroll tip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                                                        |
+| showResizeTip                         | number                  | Cómo mostrar el tip de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No se muestra la punta de redimensionamiento.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Solo se muestra la punta de redimensionamiento vertical.</td></tr></table>                                                                                                                                                                                                            |
+| showScrollTip                         | number                  | Cómo mostrar el tip de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Solo se muestra la punta de desplazamiento horizontal.</td></tr><tr><td> vk show scroll tip none </td><td> No se muestra la punta de desplazamiento.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Sólo se muestra la punta de desplazamiento vertical.</td></tr></table>                                                                                                                                                                                                                |
 | showVerticalScrollbar                 | boolean                 | Mostrar la barra de desplazamiento vertical.                                                                                                                                                                                                                                                          |
-| tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                                                                    |
+| tabEditable                           | boolean                 | La pestaña de la hoja se puede editar.                                                                                                                                                                                                                                                                |
 | tabNavigationVisible                  | boolean                 | Mostrar la navegación por pestañas.                                                                                                                                                                                                                                                                   |
 | tabStripPosition                      | number                  | Posición de la barra de pestañas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                     |
 | tabStripRatio                         | number                  | Valor porcentual (0,x) que especifica qué parte del espacio horizontal se asignará al tabulador. El resto del área horizontal (1 - 0.x) se asignará a la barra de desplazamiento horizontal.                                                                                                          |
-| tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                                                          |
+| tabStripVisible                       | boolean                 | Mostrar la barra de pestañas de la hoja.                                                                                                                                                                                                                                                              |
 | tabStripWidth                         | number                  | Ancho de la etiqueta cuando la posición es izquierda o derecha. Por defecto y el mínimo es 80.                                                                                                                                                                                                        |
 | useTouchLayout                        | boolean                 | Si se va a utilizar el diseño táctil para presentar el componente Spread.                                                                                                                                                                                                                             |
 

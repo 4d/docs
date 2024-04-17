@@ -142,9 +142,9 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -164,7 +164,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 ### Digitação por defeito
 
-Use this area to set the default type for ambiguous database objects.
+Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
 
 - **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
@@ -195,7 +195,7 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 Estas duas listas contêm quatro colunas:
 
 - Names of process and interprocess variables and arrays used in your project. Estas variáveis são enumeradas por ordem alfabética.
-- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
@@ -237,7 +237,7 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
 
-Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
+Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. Também permite a criação de interfaces customizadas de exibição de erros.
 
 The length of the error file depends on the number of errors and warnings issued by the compiler.
 

@@ -545,7 +545,7 @@ The [status bar](#status-bar) also provides contextual information.
 
 ## Comment / Uncomment  
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. 
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks). 
 

@@ -51,7 +51,7 @@ Você pode colocar a pasta PlugIns em dois locais diferentes:
   - No Windows: junto ao ficheiro .exe
   - Under macOS: at the first level of the Contents folder inside the application package.   
     In this case, plug-ins are available in every database opened by this application.
-- No mesmo nível do arquivo de estrutura do banco de dados. In this case,  plug-ins are only available in this particular database.
+- No mesmo nível do arquivo de estrutura do banco de dados. Nesse caso, os plug-ins só estão disponíveis nesse banco de dados específico.
 
 A escolha do ubicação depende de como você deseja usar o plug-in.
 

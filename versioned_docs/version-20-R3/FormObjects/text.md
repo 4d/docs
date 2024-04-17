@@ -44,9 +44,9 @@ Once a text is rotated, you can still change its size or position, as well as al
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of Corner radius property |
+|19 R7|Support of Corner radius property |
 
 </details>
 

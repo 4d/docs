@@ -7,7 +7,7 @@ Les collections sont des listes ordonnées de valeurs de types similaires ou dif
 
 Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)).
 
-Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
+Pour accéder à un élément d'une collection, vous devez passer le numéro de l'élément entre crochets :
 
 ```4d
 collectionRef[expression]
@@ -79,7 +79,7 @@ Certaines méthodes retournent la collection d'origine après modification, de m
 ```
 
 
-### paramètre cheminPropriété
+### paramètre propertyPath
 
 
 Plusieurs méthodes de collection admettent un _paramètre nommé cheminPropriété_. Ce paramètre peut contenir :
@@ -90,6 +90,6 @@ Plusieurs méthodes de collection admettent un _paramètre nommé cheminProprié
 **Attention :** Lorsqu'un paramètre cheminPropriété est attendu, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin:
 
 ```4d
- $vmin:=$col.min("My.special.property") //indéfini
+ $vmin:=$col.min("My.special.property") //undefined
  $vmin:=$col.min(["My.special.property"]) //erreur
 ```

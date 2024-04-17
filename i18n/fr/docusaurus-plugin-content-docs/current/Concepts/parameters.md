@@ -162,9 +162,9 @@ Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur p
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode et peut être utilisée pour retourner une expression à l'appelant.
@@ -280,6 +280,8 @@ Nous avons ici une méthode appelée `SumNumbers` qui renvoie le total calculé 
 
 #DECLARE( ... : Real) : Real 
 
+
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -306,28 +308,61 @@ La syntaxe legacy de déclaration des paramètres variadiques (`C_TEXT(${4})`) e
 
 :::
 
-## `Compiler_Methods` method
+## Compilation
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword, parameters are declared. Par exemple :
+:::note
+
+You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+
+:::
+
+
+### Parameters declared in prototypes
+
+When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Exemples :
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+    // all method parameters are declared with their type
 ```
 
-However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
+```4d
+    // On Web Connection Database Method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text)
+```
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // all function parameters are declared with their type
+```
+
+:::tip
+
+Declaring parameters in prototypes is a good practice, even in non-compiled projects.
+
+:::
+
+### Method parameters declared outside prototypes
+
+It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+
+#### `Compiler_Methods` method
+
+When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
 
 - vous pouvez regrouper tous les paramètres des variables locales des méthodes projet dans une ou plusieurs méthode(s) projet
-- le nom de la ou des méthode(s) doit commencer par "**Compiler**", par exemple "Compiler_MyParameters".
-- à l'intérieur d'une telle méthode, vous pouvez prédéclarer les paramètres de chaque méthode en utilisant la syntaxe suivante : `C_XXX(nomMéthode;paramètre)`.
+- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
+- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 Par exemple :
 
 ```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$1) 
+ // Compiler_Methods
+ C_REAL(OneMethodAmongOthers;$1;$2) 
 ```
 
 :::note
@@ -336,26 +371,13 @@ Cette syntaxe n'est pas exécutable en mode interprété.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
 :::info
 
-Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
+#### Particular cases
 
-- Méthodes base - Par exemple, la méthode base `On Web Connection` reçoit six paramètres de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
-
-```4d
-// Sur connexion Web
-C_TEXT($1;$2;$3;$4;$5;$6)
-
-```
-
-- Functions - Function parameters are automatically declared for compilation in the function prototype. Par exemple :
-
-```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // tous les paramètres sont déclarés avec leur type
-```
+Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
@@ -374,6 +396,11 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 :::
+
+### Conflicts between declarations
+
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
 
 
 

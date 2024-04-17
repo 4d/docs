@@ -175,9 +175,9 @@ Tous les attributs de la dataclass sont exposés en tant que propriétés de la 
 
 Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas accès aux données. La lecture ou l'écriture des données se fait à travers des [objets entité](entities.md#using-entity-attributes).
 
-#### Computed and Alias attributes
+#### Attributs calculés et Alias
 
-[Computed attributes](ordaClasses.md#computed-attributes) and [alias attributes](ordaClasses.md#alias-attributes) are "virtual" attributes. Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
+Les [attributs calculés](ordaClasses.md#computed-attributes) et les[attributs alias](ordaClasses.md#alias-attributes) sont des attributs "virtuels". Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
 
 
 ### Entité

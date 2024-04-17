@@ -22,7 +22,7 @@ For example: `$filter="firstName=john"` where `firstName` is the **attribute**, 
 
 ### Using a complex filter
 
-A more compex filter is composed of the following elements, which joins two queries:
+A more complex filter is composed of the following elements, which joins two queries:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
@@ -37,7 +37,7 @@ You can also use 4D's params property.
 
 For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation. 
+For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation. 
 
 
 >When inserting quotes (') or double quotes ("), you must escape them using using their character code:

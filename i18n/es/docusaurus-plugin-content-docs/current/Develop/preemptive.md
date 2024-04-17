@@ -48,9 +48,9 @@ Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a 
 
 ## Declarar un método apropiativo
 
-Por defecto, 4D ejecuta todos los métodos proyecto de su aplicación en modo cooperativo. If you want to benefit from the preemptive mode feature, the first step consists of explicitly declaring all methods that you want to be started in preemptive mode whenever possible -- that is, methods that you consider capable of being run in a preemptive process. El compilador [verificará que estos métodos sean realmente hilo seguro](#writing-a-thread-safe-method) durante el tiempo de compilación. También puede desactivar el modo apropiativo para algunos métodos, si es necesario.
+Por defecto, 4D ejecuta todos los métodos proyecto de su aplicación en modo cooperativo. Si desea beneficiarse de la función de modo apropiativo, el primer paso consiste en declarar explícitamente todos los métodos que desee que se inicien en modo apropiativo siempre que sea posible, es decir, los métodos que considere que pueden ejecutarse en un proceso apropiativo. El compilador [verificará que estos métodos sean realmente hilo seguro](#writing-a-thread-safe-method) durante el tiempo de compilación. También puede desactivar el modo apropiativo para algunos métodos, si es necesario.
 
-Tenga en cuenta que declarar un método "capable" de uso apropiativo lo hace elegible para la ejecución apropiativa, pero no garantiza que realmente se ejecute en modo apropiativo en tiempo de ejecución. Starting a process in preemptive mode results from an [evaluation performed by 4D](#when-is-a-process-started-preemptively) regarding the properties of all the methods in the call chain of the process.
+Tenga en cuenta que declarar un método "capable" de uso apropiativo lo hace elegible para la ejecución apropiativa, pero no garantiza que realmente se ejecute en modo apropiativo en tiempo de ejecución. Iniciar un proceso en modo apropiativo resulta de una [evaluación realizada por 4D](#cuando-se-inicia-un-proceso-de-forma-apropiativa) con respecto a las propiedades de todos los métodos en la cadena de llamadas del proceso.
 
 Para declarar su método como elegible para su uso en modo apropiativo, debe utilizar la opción de declaración "Modo de ejecución" en el diálogo Propiedades del Método:
 
@@ -58,25 +58,25 @@ Para declarar su método como elegible para su uso en modo apropiativo, debe uti
 
 Se ofrecen las siguientes opciones:
 
-- **Can be run in preemptive processes**: By checking this option, you declare that the method is able of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. La propiedad "preemptive" del método toma el valor "capable".
+- **Puede ser ejecutado en procesos apropiativos**: al marcar esta opción, usted declara que el método puede ser ejecutado en un proceso apropiativo y por lo tanto debe ser ejecutado en modo apropiativo siempre que sea posible. La propiedad "preemptive" del método toma el valor "capable".
 
   Cuando esta opción está seleccionada, el compilador de 4D verificará que el método es realmente capaz y devolverá errores si este no es el caso, por ejemplo, si llama directa o indirectamente a comandos o métodos que no pueden ser ejecutados en modo apropiativo (la cadena de llamadas completa es analizada pero los errores sólo son reportados al primer nivel). A continuación, puede editar el método para que sea hilo seguro, o seleccionar otra opción.
 
-  Si la elegibilidad del método apropiativo es aprobada, éste se etiquetará internamente como "thread-safe" y se ejecutará en modo apropiativo siempre que se cumplan las condiciones requeridas. This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a [specific context](#when-is-a-process-started-preemptively).
+  Si la elegibilidad del método apropiativo es aprobada, éste se etiquetará internamente como "thread-safe" y se ejecutará en modo apropiativo siempre que se cumplan las condiciones requeridas. Esta propiedad define la elegibilidad del modo apropiativo, pero no garantiza que el método se ejecute realmente en modo apropiativo, ya que este modo de ejecución requiere un [contexto específico] (#cuando-se-inicia-un-proceso-de-forma apropiativa).
 
-- **Cannot be run in preemptive processes**: By checking this option, you declare that the method must never be run in preemptive mode, and therefore must always be run in cooperative mode, as in previous 4D versions. La propiedad "preemptive" del método toma el valor "incapable".
+- **No puede ser ejecutado en procesos apropiativos**: marcando esta opción, declara que el método nunca debe ser ejecutado en modo apropiativo, y por lo tanto debe ser ejecutado siempre en modo cooperativo, como en versiones anteriores de 4D. La propiedad "preemptive" del método toma el valor "incapable".
 
   Cuando esta opción está marcada, el compilador de 4D no verificará la capacidad del método para ejecutarse de forma apropiativa; se etiquetará automáticamente como "thread-unsafe" internamente (incluso si es teóricamente compatible). Cuando se llama en ejecución, este método "contaminará" todos los otros métodos en el mismo hilo, forzando así que este hilo se ejecute en modo cooperativo, incluso si los otros métodos son hilo-seguro.
 
-- **Indifferent**(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. La propiedad "preemptive" del método se establece como "indifferent".
+- **Indiferente**(por defecto): al marcar esta opción, se declara que no se quiere manejar la propiedad del modo apropiativo para el método. La propiedad "preemptive" del método se establece como "indifferent".
 
   Cuando esta opción está seleccionada, el compilador de 4D evaluará la compatibilidad del método con el modo apropiativo y lo etiquetará internamente como "thread-safe" o "thread-unsafe". No se devuelve ningún error relacionado con la ejecución apropiativa. Si el método se evalúa como "thread-safe", en la ejecución no impedirá el uso del modo apropiativo si se llama en un contexto apropiativo. Por el contrario, si el método se evalúa como "thread-unsafe", en ejecución impedirá la ejecución del modo apropiativo cuando sea llamado.
 
-Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the `New process` command). Si se marca como "thread-safe" internamente, sólo se tiene en cuenta cuando se llama desde otros métodos dentro de una cadena de llamadas.
+Tenga en cuenta que con esta opción, sea cual sea la evaluación de su compatibilidad con el modo apropiativo, el método siempre se ejecutará en modo cooperativo cuando sea llamado directamente por 4D como primer método padre (por ejemplo a través del comando `New process`). Si se marca como "thread-safe" internamente, sólo se tiene en cuenta cuando se llama desde otros métodos dentro de una cadena de llamadas.
 
 :::note Caso particular
 
-If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
+Si el método también tiene la propiedad [**Compartido por componentes y base de datos local**](../Project/code-overview.md#shared-by-components-and-host-database), definiendo la opción **Indiferente** etiquetará automáticamente el método como hilo-inseguro. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
 
 :::
 
@@ -88,14 +88,14 @@ La ejecución en modo apropiativo solo está disponible en modo compilado.
 
 :::
 
-In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named _parent_ method) and executes the process in preemptive or cooperative mode, depending on this property:
+En modo compilado, cuando se inicia un proceso creado por los comandos `New process` o `CALL WORKER`, 4D lee la propiedad apropiativa del método del proceso (también llamado método _padre_) y ejecuta el proceso en modo apropiativo o cooperativo, dependiendo de esta propiedad:
 
 - Si el método del proceso es hilo seguro (validado durante la compilación), el proceso se ejecuta en un hilo apropiativo.
 - Si el método del proceso no es hilo seguro, el proceso se ejecuta en un hilo cooperativo.
-- Si la propiedad apropiativa del método de proceso fue definida "indifferent", por compatibilidad el proceso se ejecuta en un hilo cooperativo (incluso si el método es realmente capaz de utilizar apropiativo). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
+- Si la propiedad apropiativa del método de proceso fue definida "indifferent", por compatibilidad el proceso se ejecuta en un hilo cooperativo (incluso si el método es realmente capaz de utilizar apropiativo). Tenga en cuenta, sin embargo, que esta funcionalidad de compatibilidad sólo se aplica cuando el método se utiliza como método de proceso: un método declarado "indifferent" pero etiquetado internamente como "thread-safe" por el compilador puede ser llamado de forma apropiativa por otro método (ver más adelante).
 
-La propiedad real hilo seguro depende de la cadena de llamada. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. Un hilo apropiativo sólo se puede crear cuando toda la cadena es hilo seguro y el método de proceso ha sido declarado "Se puede ejecutar en proceso apropiativo".
-On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
+La propiedad real hilo seguro depende de la cadena de llamada. Si un método con la propiedad declarada como "capable" llama a un método hilo no seguro en cualquiera de sus subniveles, se devolverá un error de compilación: si un único método en toda la cadena de llamadas es hilo no seguro, "contaminará" a todos los demás métodos y la ejecución apropiativa será rechazada por el compilador. Un hilo apropiativo sólo se puede crear cuando toda la cadena es hilo seguro y el método de proceso ha sido declarado "Se puede ejecutar en proceso apropiativo".
+Por otro lado, el mismo método hilo seguro puede ejecutarse en un hilo apropiativo cuando está en una cadena de llamada, y en un hilo cooperativo cuando está en otra cadena de llamada.
 
 Por ejemplo, considere los siguientes métodos proyecto:
 
@@ -129,13 +129,13 @@ La ejecución de un método en modo apropiativo dependerá de su propiedad "ejec
 
 ![](../assets/en/Develop/legend.png)
 
-| Declaración y cadena de llamadas      | Compilación | Seguridad de hilo resultante           | Ejecución                 | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------- | ----------- | -------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Develop/scenar1.png) | OK          | ![](../assets/en/Develop/scenar2.png)  | Apropiativo               | CallComp es el método padre, declarado "capaz" de uso apropiativo; ya que MyComp es internamente hilo seguro, CallComp es hilo seguro y el proceso es apropiativo                                                                                                                                                                                                                                                                                                      |
+| Declaración y cadena de llamadas      | Compilación | Seguridad de hilo resultante           | Ejecución                 | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------- | ----------- | -------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Develop/scenar1.png) | OK          | ![](../assets/en/Develop/scenar2.png)  | Apropiativo               | CallComp es el método padre, declarado "capaz" de uso apropiativo; ya que MyComp es internamente hilo seguro, CallComp es hilo seguro y el proceso es apropiativo                                                                                                                                                                                                                                                                                                                                                      |
 | ![](../assets/en/Develop/scenar3.png) | Error       | ![](../assets/en/Develop/scenar4.png)  | La ejecución es imposible | CallDial es el método padre, declarado "capaz"; MyDialog es "indiferente". Sin embargo, ya que MyDialog está internamente hilo inseguro, contamina la cadena de llamadas. La compilación falla debido a un conflicto entre la declaración deCallDial y su capacidad real. La solución es o bien modificar MyDialog para que sea hilo seguro, de modo que la ejecución es apropiativa, o cambiar la declaración de propiedad de CallDial para correrlo como cooperativo |
-| ![](../assets/en/Develop/scenar5.png) | OK          | ![](../assets/en/Develop/scenar6.png)  | Cooperativo               | Como CallDial se declara "incapaz" de uso apropiativo, la compilación es internamente hilo inseguro, la ejecución siempre será cooperativa, cualquiera que sea el estado de MyDialog                                                                                                                                                                                                                                                                                   |
-| ![](../assets/en/Develop/scenar7.png) | OK          | ![](../assets/en/Develop/scenar8.png)  | Cooperativo               | Como CallComp es el método padre con la propiedad "indiferente", luego el proceso es cooperativo incluso si toda la cadena es hilo seguro.                                                                                                                                                                                                                                                                                                                             |
-| ![](../assets/en/Develop/scenar9.png) | OK          | ![](../assets/en/Develop/scenar10.png) | Cooperativo               | Como CallDial es el método padre (la propiedad era "indiferente"), entonces el proceso es cooperativo y la compilación exitosa                                                                                                                                                                                                                                                                                                                                         |
+| ![](../assets/en/Develop/scenar5.png) | OK          | ![](../assets/en/Develop/scenar6.png)  | Cooperativo               | Como CallDial se declara "incapaz" de uso apropiativo, la compilación es internamente hilo inseguro, la ejecución siempre será cooperativa, cualquiera que sea el estado de MyDialog                                                                                                                                                                                                                                                                                                                                   |
+| ![](../assets/en/Develop/scenar7.png) | OK          | ![](../assets/en/Develop/scenar8.png)  | Cooperativo               | Como CallComp es el método padre con la propiedad "indiferente", luego el proceso es cooperativo incluso si toda la cadena es hilo seguro.                                                                                                                                                                                                                                                                                                                                                             |
+| ![](../assets/en/Develop/scenar9.png) | OK          | ![](../assets/en/Develop/scenar10.png) | Cooperativo               | Como CallDial es el método padre (la propiedad era "indiferente"), entonces el proceso es cooperativo y la compilación exitosa                                                                                                                                                                                                                                                                                                                                                                      |
 
 ### Cómo buscar el modo de ejecución actual
 
@@ -155,7 +155,7 @@ Para ser hilo seguro, un método debe respetar las siguientes reglas:
 - No debe utilizar ninguna variable interproceso(1)
 - No debe llamar a objetos de interfaz(2) (sin embargo, hay excepciones, ver más abajo).
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
+(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
 Los [procesos Worker](processes.md#worker-processes) también permiten intercambiar mensajes entre cualquier proceso, incluidos los procesos apropiativos.
 
 (2) El comando [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
@@ -163,7 +163,7 @@ Los [procesos Worker](processes.md#worker-processes) también permiten intercamb
 :::note Notas
 
 - En el caso de un método "Compartido por componentes y bases de datos locales", debe seleccionarse la propiedad "Puede ejecutarse en procesos apropiativos".
-- Todas las declaraciones SQL son hilo seguro. SQL code inserted in `Begin SQL`/`End SQL` blocks must comply with the following conditions:
+- Todas las declaraciones SQL son hilo seguro. El código SQL insertado en los bloques `Begin SQL`/`End SQL` debe cumplir las siguientes condiciones:
   - Debe aplicarse a 4D Server o a la base de datos local de 4D (ODBC o bases de datos remotas vía `SQL LOGIN` no son hilo seguro. Sin embargo, las bases de datos locales usadas con `USE DATABASE` son hilo seguro).
   * Todo trigger llamado por sentencias SQL debe ser hilo seguro (ver [Triggers](#triggers) a continuación).
 
@@ -189,7 +189,7 @@ Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo 
 
 - [Diálogo de error estándar](../Debugging/basics). El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). El botón **Rastrear** está desactivado.
 - Indicadores de progreso estándar
-- Diálogos `ALERT`, `Request` y `CONFIRM`. El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- Diálogos `ALERT`, `Request` y `CONFIRM`. El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). Tenga en cuenta que si 4D Server se ha lanzado como un servicio en Windows sin permitir la interacción del usuario, los diálogos no se mostrarán.
 
 ### Triggers
 
@@ -199,7 +199,7 @@ Cuando un método utiliza un comando que puede llamar a un trigger, el compilado
  SAVE RECORD([Table_1]) //activar en Table_1, si existe, debe ser hilo seguro
 ```
 
-Here is the list of commands that are checked at compilation time for trigger thread safety:
+Aquí está la lista de comandos que se verifican en tiempo de compilación para la seguridad de hilos de trigger:
 
 `SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
 
@@ -216,7 +216,7 @@ En este caso, se evalúan todos los triggers. Si se detecta un comando que no se
 
 ### Métodos de gestión de errores
 
-[Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
+[Metodos-captura-error](../Concepts/error-handling.md) instalados por el comando `ON ERR CALL` deben ser hilo seguro si es probable que sean llamados desde un proceso apropiativo. Para manejar este caso, el compilador verifica la propiedad hilo seguro de los métodos proyecto de captura de errores pasados al comando `ON ERR CALL` durante la compilación y devuelve errores apropiados si no cumplen con la ejecución apropiativa.
 
 Tenga en cuenta que esta comprobación solo es posible cuando el nombre del método se pasa como una constante y no se calcula, como se muestra a continuación:
 
@@ -225,7 +225,7 @@ Tenga en cuenta que esta comprobación solo es posible cuando el nombre del mét
  ON ERR CALL("myErrMethod "+String($vNum)) //no será verificado por el compilador
 ```
 
-In addition, if an error-catching project method cannot be called at runtime (following a thread safety issue, or for any reason like "method not found"), the error -10532 "Cannot call error handling project method 'methodName'" is generated.
+Además, si un método de proyecto captador de errores no puede ser llamado en tiempo de ejecución (después de un problema de seguridad de hilo, o por cualquier razón como "método no encontrado"), se genera el error -10532 "No se puede llamar al método de gestión de errores 'methodName'".
 
 ### Compatibilidad de punteros
 

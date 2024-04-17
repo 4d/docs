@@ -17,12 +17,16 @@ Variables are language objects; you can create and use variables that will never
 
 ## Declaring Variables
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+You usually create variables by declaring them. The 4D language offers two ways to declare variables:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
+- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
+- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
+
+:::note
+
+Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -30,14 +34,11 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
+When a variable is created before being declared, it is not initialized at the declaration step.
 
+:::
 
-### Using the `var` keyword
-
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
-
-To declare a variable of any type with the `var` keyword, use the following syntax:
+To declare a variable of any type, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -81,7 +82,8 @@ The following table lists all supported `varType` values:
 |`cs.<namespace><className>`|Object of the `<namespace>` component class name|
 
 
-#### Examples
+
+### Examples
 
 - To declare local and process basic variables:
 

@@ -43,7 +43,7 @@ A resolução recomendada é 1920x1080.
 #### Aplicação 4D
 
 - Desenvolvimento: 4D v20 R2 ou superior
-- Deployment: 4D Server v20 R2 or higher
+- Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
@@ -87,7 +87,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Ativando autenticação
 
-Authentication on the WebAdmin web server is granted using an access key. Para obter mais detalhes, consulte [Chave de acesso](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
 ### Ativação da renderização
 
@@ -126,7 +126,7 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 Recomendamos o uso de funções classe em vez de métodos projeto. Apenas as funções de classe podem ser chamadas a partir de componentes. No entanto, você ainda pode usar seus métodos projeto no Qodly Studio de duas maneiras:
 
 - Você pode chamar seus métodos a partir de funções classe.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Você pode executar diretamente [seus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) a partir de Qodly Explorer.
 
 ## Abertura do Qodly Studio
 
@@ -153,7 +153,7 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 ## Utilizar Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+A documentação oficial de Qodly Studio está disponível no site de documentação de Qodly [](https://developer.qodly.com/docs/studio/overview).
 
 You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 
@@ -222,7 +222,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Nomes de comandos
 
-QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
+Os nomes dos comandos QodlyScript são escritos em letras maiúsculas e minúsculas, sem espaços. Talvez você precise adaptar esses comandos à linguagem 4D.
 
 - Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - No entanto, alguns comandos foram renomeados para uma melhor conformidade. Eles estão listados abaixo:
@@ -286,7 +286,7 @@ QodlyScript command names are written in camel case without spaces. Talvez você
 
 You can develop with Qodly Studio while your computer is not connected to the internet. Nesse caso, entretanto, os seguintes recursos não estão disponíveis:
 
-- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- [Modelos](https://developer.qodly.com/docs/studio/design-webforms/templates): a biblioteca de modelos está vazia
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 
@@ -296,11 +296,11 @@ To render webforms, you must have an available license, as rendering a webform o
 
 ### Esquemas URL
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
+A configuração do esquema de URL do Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar formulários Web. With the appropriate configuration, you can avoid unnecessary license retaining.
 
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 
 #### Exemplo
 

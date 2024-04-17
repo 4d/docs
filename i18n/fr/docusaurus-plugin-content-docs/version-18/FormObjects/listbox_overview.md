@@ -735,7 +735,7 @@ Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage
 | entier    | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
 | boolean   | case à cocher                                             | menu déroulant (enumération obligatoire)                                                         |
 | color     | couleur de fond                                           | text                                                                                             |
-| evénement | bouton avec libellé                                       |                                                                                                  |
+| event     | bouton avec libellé                                       |                                                                                                  |
 |           |                                                           | Tous les widgets peuvent associer un unit toggle button ou ellipsis button à la cellule.         |
 
 Vous définissez l'affichage de la cellule et les variations à l'aide d'attributs spécifiques dans chaque objet (voir ci-dessous).
@@ -753,7 +753,7 @@ Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie
 |            |                                                                          | "0-9" si min>=0                          |
 | Boolean    | case à cocher                                                            | N/A                                      |
 | color      | N/A                                                                      | N/A                                      |
-| evénement  | N/A                                                                      | N/A                                      |
+| event      | N/A                                                                      | N/A                                      |
 
 ### Attributs
 
@@ -761,25 +761,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "text", "real", "integer", "boolean", "color" et "event". Le tableau suivant liste tous les attributs acceptés dans les tableaux d'objets des list box, suivant la valeur de "valueType" (tout autre attribut est ignoré). Les formats d'affichage et des exemples sont fournis ci-dessous.
 
-|                       | valueType                                             | text | réel | entier | boolean | color | evénement |
-| --------------------- | ----------------------------------------------------- | ---- | ---- | ------ | ------- | ----- | --------- |
-| *Attributs*           | *Description*                                         |      |      |        |         |       |           |
-| value                 | valeur de la cellule (saisie ou affichage)            | x    | x    | x      |         |       |           |
-| min                   | valeur minimum                                        |      | x    | x      |         |       |           |
-| max                   | valeur maximum                                        |      | x    | x      |         |       |           |
-| behavior              | valeur "threeStates"                                  |      |      | x      |         |       |           |
-| requiredList          | menu déroulant défini dans l'objet                    | x    | x    | x      |         |       |           |
-| choiceList            | combo box défini dans l'objet                         | x    | x    | x      |         |       |           |
-| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"           | x    | x    | x      |         |       |           |
-| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs" | x    | x    | x      |         |       |           |
-| saveAs                | "reference" ou "value"                                | x    | x    | x      |         |       |           |
-| choiceListReference   | RefList 4D, affiche une combo box                     | x    | x    | x      |         |       |           |
-| choiceListName        | nom d'énumération 4D, affiche une combo box           | x    | x    | x      |         |       |           |
-| unitList              | tableau de X éléments                                 | x    | x    | x      |         |       |           |
-| unitReference         | indice de l'élément sélectionné                       | x    | x    | x      |         |       |           |
-| unitsListReference    | RefList 4D pour les unités                            | x    | x    | x      |         |       |           |
-| unitsListName         | nom d'énumération 4D pour les unités                  | x    | x    | x      |         |       |           |
-| alternateButton       | ajouter un bouton alternatif                          | x    | x    | x      | x       | x     |           |
+|                       | valueType                                             | text | réel | entier | boolean | color | event |
+| --------------------- | ----------------------------------------------------- | ---- | ---- | ------ | ------- | ----- | ----- |
+| *Attributs*           | *Description*                                         |      |      |        |         |       |       |
+| value                 | valeur de la cellule (saisie ou affichage)            | x    | x    | x      |         |       |       |
+| min                   | valeur minimum                                        |      | x    | x      |         |       |       |
+| max                   | valeur maximum                                        |      | x    | x      |         |       |       |
+| behavior              | valeur "threeStates"                                  |      |      | x      |         |       |       |
+| requiredList          | menu déroulant défini dans l'objet                    | x    | x    | x      |         |       |       |
+| choiceList            | combo box défini dans l'objet                         | x    | x    | x      |         |       |       |
+| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"           | x    | x    | x      |         |       |       |
+| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs" | x    | x    | x      |         |       |       |
+| saveAs                | "reference" ou "value"                                | x    | x    | x      |         |       |       |
+| choiceListReference   | RefList 4D, affiche une combo box                     | x    | x    | x      |         |       |       |
+| choiceListName        | nom d'énumération 4D, affiche une combo box           | x    | x    | x      |         |       |       |
+| unitList              | tableau de X éléments                                 | x    | x    | x      |         |       |       |
+| unitReference         | indice de l'élément sélectionné                       | x    | x    | x      |         |       |       |
+| unitsListReference    | RefList 4D pour les unités                            | x    | x    | x      |         |       |       |
+| unitsListName         | nom d'énumération 4D pour les unités                  | x    | x    | x      |         |       |       |
+| alternateButton       | ajouter un bouton alternatif                          | x    | x    | x      | x       | x     |       |
 
 #### value
 

@@ -99,9 +99,9 @@ Méthode ***OpenForm*** :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -109,13 +109,11 @@ Méthode ***OpenForm*** :
 
 
 <!-- REF #_command_.New signal.Params -->
-| Paramètres  | Type      |    | Description                                             |
-| ----------- | --------- |:--:| ------------------------------------------------------- |
-| Description | Text      | -> | Description du signal                                   |
-| Résultat    | 4D.Signal | <- | Object encapsulant le signal|<!-- END REF -->
-
-
-|
+| Paramètres  | Type      |    | Description                  |
+| ----------- | --------- |:--:| ---------------------------- |
+| Description | Text      | -> | Description du signal        |
+| Résultat    | 4D.Signal | <- | Object encapsulant le signal |
+<!-- END REF -->
 
 
 #### Description
@@ -174,9 +172,9 @@ La méthode ***doSomething*** est par exemple :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -199,9 +197,9 @@ Cette propriété est en **lecture-écriture**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -222,9 +220,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -232,12 +230,10 @@ Cette propriété est en **lecture seule**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description
@@ -255,9 +251,9 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -265,13 +261,11 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 
 <!-- REF #SignalClass.wait().Params -->
-| Paramètres | Type    |    | Description                                                 |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| timeout    | Real    | -> | Délai d'attente maximum du signal en secondes               |
-| Résultat   | Boolean | <- | Etat de la propriété `.signaled`|<!-- END REF -->
-
-
-|
+| Paramètres | Type    |    | Description                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| timeout    | Real    | -> | Délai d'attente maximum du signal en secondes |
+| Résultat   | Boolean | <- | Etat de la propriété `.signaled`              |
+<!-- END REF -->
 
 
 #### Description

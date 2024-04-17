@@ -61,9 +61,10 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 19 R4       | Nueva constante `HTTP Client log file` |
+| 17 R5       | Añadidos                               |
 
 </details>
 
@@ -115,6 +116,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 | Debug log file                    | 12    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Debug log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                            |
 | Diagnostic log file               | 11    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Diagnostic log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                       |
 | Directory file                    | 16    | archivo directory.json, que contiene la descripción de los usuarios y grupos (si los hay) del proyecto. Puede situarse en la carpeta user settings (por defecto, se aplica a todo el proyecto), o en la carpeta data settings (específica para un archivo de datos).                                                                                                                                                                                                               |
+| HTTP Client log file              | 24    | Archivo de historial creado por el comando `HTTP SET OPTION(HTTP client log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                      |
 | HTTP debug log file               | 9     | Archivo de registro creado por el comando `WEB SET OPTION(Web debug log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                          |
 | HTTP log file                     | 8     | Archivo de registro creado por el comando `WEB SET OPTION(Web log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                      |
 | IMAP Log file                     | 23    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(IMAP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                       |
@@ -135,9 +137,9 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -156,9 +158,9 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF file.create().Note -->
@@ -201,9 +203,9 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -257,9 +259,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
@@ -319,9 +321,9 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -414,9 +416,9 @@ ALERT($info.Copyright)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -461,9 +463,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -542,9 +544,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ): 4D.File<!-- END REF -->
@@ -585,10 +587,10 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v20     | Soporte de WinIcon |
-| v19     | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 20          | Soporte de WinIcon |
+| 19          | Añadidos           |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -676,9 +678,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -708,10 +710,10 @@ La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescri
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                       |
-| ------- | -------------------------------------------------------------------- |
-| v19 R3  | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
-| v17 R5  | Añadidos                                                             |
+| Lanzamiento | Modificaciones                                                       |
+| ----------- | -------------------------------------------------------------------- |
+| 19 R3       | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
+| 17 R5       | Añadidos                                                             |
 
 </details>
 

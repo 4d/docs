@@ -38,9 +38,9 @@ Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](OR
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -74,9 +74,9 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -84,11 +84,10 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 
 <!-- REF #EntityClass.clone().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                        |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Nova entidade referenciando o registro<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                              |
+| ---------- | ---------- |:--:| -------------------------------------- |
+| Resultados | 4D. Entity | <- | Nova entidade referenciando o registro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -115,9 +114,9 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -125,13 +124,12 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parâmetro           | Tipo       |    | Descrição                                                |
-| ------------------- | ---------- |:--:| -------------------------------------------------------- |
-| entityToCompare     | 4D. Entity | -> | Entidade a ser comparada com a entidade original         |
-| attributesToCompare | Collection | -> | Nome dos atributos a serem comparados                    |
-| Resultados          | Collection | <- | Diferenças entre as entidades|<!-- END REF -->
-
-|
+| Parâmetro           | Tipo       |    | Descrição                                        |
+| ------------------- | ---------- |:--:| ------------------------------------------------ |
+| entityToCompare     | 4D. Entity | -> | Entidade a ser comparada com a entidade original |
+| attributesToCompare | Collection | -> | Nome dos atributos a serem comparados            |
+| Resultados          | Collection | <- | Diferenças entre as entidades                    |
+<!-- END REF -->
 
 #### Descrição
 
@@ -316,9 +314,9 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -329,9 +327,8 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 | Parâmetro  | Tipo    |    | Descrição                                                                       |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
-| Resultados | Object  | <- | Resultado da operação drop<!-- END REF -->
-
-|
+| Resultados | Object  | <- | Resultado da operação de exclusão                                               |
+<!-- END REF -->
 
 #### Descrição
 
@@ -423,9 +420,9 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -433,11 +430,10 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 
 <!-- REF #EntityClass.first().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                       |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referencia à primeira entidade da entity selection (Null se a seleção estiver vazia)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                            |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
+| Resultados | 4D. Entity | <- | Referencia à primeira entidade da entity selection (Null se a seleção estiver vazia) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -462,9 +458,9 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -472,11 +468,10 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                             |
-| --------- | ------ |:--:| --------------------------------------------------------------------- |
-| filler    | Object | -> | Objeto para o qual vai preencher a entidade<!-- END REF -->
-
-|
+| Parâmetro | Tipo   |    | Descrição                            |
+| --------- | ------ |:--:| ------------------------------------ |
+| filler    | Object | -> | Object from which to fill the entity |
+<!-- END REF -->
 
 #### Descrição
 
@@ -547,9 +542,9 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -557,11 +552,10 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parâmetro  | Tipo          |    | Descrição                                                               |
-| ---------- | ------------- |:--:| ----------------------------------------------------------------------- |
-| Resultados | 4D. DataClass | <- | Objeto DataClass ao qual a entidade pertence|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo          |    | Descrição                                    |
+| ---------- | ------------- |:--:| -------------------------------------------- |
+| Resultados | 4D. DataClass | <- | Objeto DataClass ao qual a entidade pertence |
+<!-- END REF -->
 
 #### Descrição
 
@@ -592,9 +586,9 @@ O seguinte código genérico duplica qualquer entidade:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -633,9 +627,9 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19R5  | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19R5    | Adicionado |
 
 </details>
 
@@ -643,11 +637,10 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Parâmetro | Tipo |    | Descrição                                                                                      |
-| --------- | ---- | -- | ---------------------------------------------------------------------------------------------- |
-| result    | Text | <- | atributos de contexto linkados à entidade, separados por uma vírgula<!-- END REF -->
-
-|
+| Parâmetro | Tipo |    | Descrição                                                            |
+| --------- | ---- | -- | -------------------------------------------------------------------- |
+| result    | Text | <- | Atributos de contexto linkados à entidade, separados por uma vírgula |
+<!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -689,9 +682,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -699,11 +692,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                                                             |
-| ---------- | ------------------- |:--:| ----------------------------------------------------------------------------------------------------- |
-| Resultados | 4D. EntitySelection | <- | Seleção de entidade a que pertence a entidade (null se não for encontrado)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo                |    | Descrição                                                                  |
+| ---------- | ------------------- |:--:| -------------------------------------------------------------------------- |
+| Resultados | 4D. EntitySelection | <- | Seleção de entidade a que pertence a entidade (null se não for encontrado) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -732,9 +724,9 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -742,11 +734,10 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                                   |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| Resultados | Integer | <- | Estampa da entidade (0 se a entidade foi criada)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo    |    | Descrição                                        |
+| ---------- | ------- |:--:| ------------------------------------------------ |
+| Resultados | Integer | <- | Estampa da entidade (0 se a entidade foi criada) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -778,9 +769,9 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -788,12 +779,11 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parâmetro       | Tipo                |    | Descrição                                                                |
-| --------------- | ------------------- |:--:| ------------------------------------------------------------------------ |
-| entitySelection | 4D. EntitySelection | -> | A posição da entidade é dada de acordo com a selecção desta entidade     |
-| Resultados      | Integer             | <- | Posição da entidade numa selecção de entidade|<!-- END REF -->
-
-|
+| Parâmetro       | Tipo                |    | Descrição                                                            |
+| --------------- | ------------------- |:--:| -------------------------------------------------------------------- |
+| entitySelection | 4D. EntitySelection | -> | A posição da entidade é dada de acordo com a selecção desta entidade |
+| Resultados      | Integer             | <- | Posição da entidade numa selecção de entidade                        |
+<!-- END REF -->
 
 #### Descrição
 
@@ -826,9 +816,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -836,11 +826,10 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso.|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                                  |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+<!-- END REF -->
 
 #### Descrição
 
@@ -865,9 +854,9 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -875,11 +864,10 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 
 <!-- REF #EntityClass.last().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                            |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                                 |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------- |
+| Resultados | 4D. Entity | <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -904,9 +892,9 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -917,9 +905,8 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 | Parâmetro  | Tipo    |    | Descrição                                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o carimbo for alterado |
-| Resultados | Object  | <- | Resultado da operação de bloqueio|<!-- END REF -->
-
-|
+| Resultados | Object  | <- | Resultado da operação de bloqueio                                                    |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1021,9 +1008,9 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1033,11 +1020,10 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 
 <!-- REF #EntityClass.next().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                     |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                          |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
+| Resultados | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1065,9 +1051,9 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1075,11 +1061,10 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 
 <!-- REF #EntityClass.previous().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                                  |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| Resultados | 4D. Entity | <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1106,9 +1091,9 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1116,11 +1101,10 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 
 <!-- REF #EntityClass.reload().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                   |
-| ---------- | ------ |:--:| ------------------------------------------- |
-| Resultados | Object | <- | Objeto de estado|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo   |    | Descrição        |
+| ---------- | ------ |:--:| ---------------- |
+| Resultados | Object | <- | Objeto de estado |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1169,9 +1153,9 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1179,12 +1163,11 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 
 <!-- REF #EntityClass.save().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                      |
-| ---------- | ------- |:--:| -------------------------------------------------------------- |
-| mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática            |
-| Resultados | Object  | <- | Resultado da operação de salvamento|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo    |    | Descrição                                           |
+| ---------- | ------- |:--:| --------------------------------------------------- |
+| mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática |
+| Resultados | Object  | <- | Resultado da operação de salvamento                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1304,9 +1287,9 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1319,9 +1302,8 @@ Atualizar uma entidade com a opção `dk auto merge` :
 | filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
 | filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
 | options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
-| Resultados   | Object     | <- | Objeto criado a partir da entidade|<!-- END REF -->
-
-|
+| Resultados   | Object     | <- | Objeto criado a partir da entidade                                                                                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1593,9 +1575,9 @@ Retorna:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1603,11 +1585,10 @@ Retorna:
 
 
 <!-- REF #EntityClass.touched().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                                 |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True se tiver modificado ao menos um atributo da entidade e ainda não for salvo, se não, False|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                                      |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se tiver modificado ao menos um atributo da entidade e ainda não for salvo, se não, False |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1638,9 +1619,9 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1648,11 +1629,10 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------- |
-| Resultados | Collection | <- | Nomes de atributos touched ou coleção vazia<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                   |
+| ---------- | ---------- |:--:| ------------------------------------------- |
+| Resultados | Collection | <- | Nomes de atributos touched ou coleção vazia |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1712,9 +1692,9 @@ Nesse modo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1722,11 +1702,10 @@ Nesse modo:
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                   |
-| ---------- | ------ |:--:| ------------------------------------------- |
-| Resultados | Object | <- | Objeto de estado|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo   |    | Descrição        |
+| ---------- | ------ |:--:| ---------------- |
+| Resultados | Object | <- | Objeto de estado |
+<!-- END REF -->
 
 #### Descrição
 

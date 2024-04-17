@@ -59,16 +59,33 @@ Negative numbers are specified with the minus sign (-). For example:
 |Less than or equal to |Number <= Number |Boolean |10 <= 11 |True|
   |||| 11 <= 10 |False|
 
+### Modulo
+
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
 - 10 % 2 returns 0 because 10 is evenly divided by 2.
 - 10 % 3 returns 1 because the remainder is 1.
 - 10.5 % 2 returns 0 because the remainder is not a whole number.
 
-**WARNING:**
+:::warning
 
-- The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only.
+The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+
+:::
+
+### Longint division 
+
+The longint division operator \ returns significant values with integer numbers only.
+
+### Real comparison
+
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+
+:::note
+
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+
+:::
 
 ### Precedence
 

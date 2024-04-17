@@ -45,13 +45,13 @@ Vous pouvez à tout moment savoir si votre application utilise un fichier d’hi
 
 Pour créer un fichier d’historique :
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** . Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
 
-2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
+2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier. Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Cliquez sur **Enregistrer**. Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
-4. Validate the Settings dialog box.
+4. Validez la boîte de dialogue des Propriétés.
 
 Pour que vous puissiez directement créer un fichier d’historique, les données doivent se trouver dans une des situations suivantes :
 

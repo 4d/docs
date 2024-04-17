@@ -9,9 +9,9 @@ A classe `HTTPRequest` está disponível a partir da loja de classes `4D` . Voc�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças          |
-| ------ | ----------------- |
-| v19 R6 | Classe adicionada |
+| Release | Mudanças          |
+| ------- | ----------------- |
+| 19 R6   | Classe adicionada |
 
 </details>
 
@@ -71,10 +71,10 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v20    | Validação TLS por padrão            |
-| v19 R7 | Suporte de propriedade *decodeData* |
+| Release | Mudanças                                                       |
+| ------- | -------------------------------------------------------------- |
+| 20      | Validação TLS por padrão                                       |
+| 18 R6   | Suporte às propriedades *automaticRedirections* e *decodeData* |
 
 </details>
 
@@ -124,6 +124,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 | Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Por padrão    |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| automaticRedirections  | Parâmetros                                      | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                           | True          |
 | body                   | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType               | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |
@@ -266,9 +267,9 @@ A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                               |
-| ------ | ---------------------------------------------------------------------- |
-| v19 R8 | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
+| Release | Mudanças                                                               |
+| ------- | ---------------------------------------------------------------------- |
+| 19 R8   | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
 
 </details>
 

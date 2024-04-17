@@ -9,11 +9,12 @@ Le catalogue décrit toutes les dataclass et les attributs disponibles dans le d
 
 ## Syntaxe
 
-| Syntaxe                                       | Exemple              | Description                                                                            |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
+| Syntaxe                                                                 | Exemple                | Description                                                                            |
+| ----------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | Retourne une liste des dataclasse de votre projet avec deux URI                        |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
+| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | Renvoie des informations sur une dataclass et ses attributs                            |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                     |
 
 
 ## $catalog

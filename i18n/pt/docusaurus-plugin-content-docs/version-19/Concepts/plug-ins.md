@@ -50,7 +50,7 @@ Pode colocar a pasta Plugins em dois locais diferentes:
 - Ao nível da aplicação 4D executável, ou seja:
   - No Windows: junto ao ficheiro .exe
   - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
-- Ao mesmo nível que a pasta Project. In this case, plug-ins are only available in this particular project.
+- Ao mesmo nível que a pasta Project. Nesse caso, os plug-ins só estão disponíveis nesse projeto específico.
 
 A escolha do ubicação depende de como você deseja usar o plug-in.
 

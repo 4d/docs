@@ -19,6 +19,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.size.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
 
 
@@ -26,9 +27,9 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                 |
-| ------ | ---------------------------------- |
-| v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
+| リリース  | 内容                                 |
+| ----- | ---------------------------------- |
+| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -46,10 +47,8 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-
-|
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -175,9 +174,9 @@ $transporter.send($email)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                 |
-| ------ | ---------------------------------- |
-| v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
+| リリース  | 内容                                 |
+| ----- | ---------------------------------- |
+| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -195,10 +194,8 @@ $transporter.send($email)
 | cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-
-|
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -235,12 +232,10 @@ $transporter.send($email)
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 引数  | タイプ     |    | 説明                               |
-| --- | ------- |:--:| -------------------------------- |
-| 戻り値 | 4D.Blob | <- | 添付の中身|<!-- END REF -->
-
-
-|
+| 引数  | タイプ     |    | 説明    |
+| --- | ------- |:--:| ----- |
+| 戻り値 | 4D.Blob | <- | 添付の中身 |
+<!-- END REF -->
 
 
 #### 説明
@@ -272,9 +267,9 @@ $transporter.send($email)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -283,6 +278,16 @@ $transporter.send($email)
 #### 説明
 
 `.platformPath` プロパティは、 <!-- REF #MailAttachmentClass.platformPath.Summary -->カレントプラットフォームのシンタックスで表現された添付ファイルのパスを返します<!-- END REF -->。
+
+
+## .size
+
+<!-- REF #MailAttachmentClass.size.Syntax -->**.size** : Integer<!-- END REF -->
+
+
+#### 説明
+
+`.size` プロパティは、 <!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 
 ## .type

@@ -3,18 +3,22 @@ id: WebSocketClass
 title: WebSocket
 ---
 
-<details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R2 | Adicionado |
-
-</details>
 
 
 A classe `WebSocket` permite-lhe abrir uma ligação de cliente WebSocket com um servidor, enviar e receber dados e fechar a ligação.
 
 As ligações cliente WebSocket são úteis, por exemplo, para receber dados financeiros em tempo real ou enviar e receber mensagens de um chat.
+
+
+<details><summary>Histórico</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R2   | Adicionado |
+
+</details>
+
 
 ### Exemplo
 
@@ -70,9 +74,9 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v20 R3 | Suporte da propriedade `headers` em *connectionHandler* |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 20 R3   | Suporte da propriedade `headers` em *connectionHandler* |
 
 </details>
 
@@ -81,14 +85,12 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| Parâmetro                                         | Tipo         |    | Descrição                                                             |
-| ------------------------------------------------- | ------------ |:--:| --------------------------------------------------------------------- |
-| url                                               | Text         | -> | URL a que se deve ligar                                               |
-| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objeto que declara as chamadas de retorno WebSocket                   |
-| Resultados                                        | 4D.WebSocket | <- | Novo [objeto WebSocket](#websocket-object)|<!-- END REF -->
-
-
-|
+| Parâmetro                                         | Tipo         |    | Descrição                                           |
+| ------------------------------------------------- | ------------ |:--:| --------------------------------------------------- |
+| url                                               | Text         | -> | URL a que se deve ligar                             |
+| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objeto que declara as chamadas de retorno WebSocket |
+| Resultados                                        | 4D.WebSocket | <- | New [WebSocket object](#websocket-object)           |
+<!-- END REF -->
 
 
 A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->cria e devolve um novo objeto [`4D.WebSocket`](#websocket-object) ligado ao servidor WebSocket no endereço que passou em *url*<!-- END REF -->. O objeto `4D.WebSocket` fornece uma API para criar e gerir uma ligação WebSocket a um servidor, bem como para enviar e receber dados de e para o servidor.
@@ -207,7 +209,7 @@ Os conteúdos seguintes são enviados em função do tipo de *mensagem*:
 | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | Text   | Texto em UTF-8                                                                                                      |
 | Blob   | Dados binários                                                                                                      |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
+| Object | Texto em JSON UTF-8 (mesmo resultado de [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->
@@ -238,11 +240,8 @@ Esta propriedade é só de leitura.
 | Parâmetro | Tipo    |    | Descrição                                                                |
 | --------- | ------- |:--:| ------------------------------------------------------------------------ |
 | code      | Integer | -> | Código de estado que explica porque é que a ligação está a ser encerrada |
-| reason    | Text    | -> | O motivo pelo qual a ligação está a fechar|<!-- END REF -->
-
-
-
-|
+| reason    | Text    | -> | O motivo pelo qual a ligação está a fechar                               |
+<!-- END REF -->
 
 
 

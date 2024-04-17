@@ -7,9 +7,6 @@ Utilizando petições HTTP padrão, o servidor 4D REST permite às aplicações 
 
 Para iniciar usando as funcionalidades REST, precisa iniciar e configurar o servidor 4D REST.
 
-> - Em 4D Server, abrir uma sessão REST exige que uma licença cliente 4D free esteja disponível.<br/>
-> - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
-> - You need to manage the [session cookie](authUsers.md#session-cookie) to use the same session for your requesting application.
 
 
 
@@ -26,27 +23,33 @@ A mensagem de aviso "Atenção, verifique os privilégios de acesso" é exibida 
 > Deve reiniciar a aplicação 4D para que as suas alterações tenham efeito.
 
 
-## Configuração de acesso REST
+## Controlling REST access
 
 Como padrão, acessos REST são abertos a todos os usuários que são obviamente não configurados para razões de segurança e também para controlar uso de licenças de cliente.
 
-Pode configurar os acessos REST de uma das maneiras abaixo:
-- assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Structure Settings;
-- escrever um método de database `On REST Authentication` para interceptar e manejar qualquer petição inicial REST.
+You can configure REST accesses with one of the following means:
+- (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
+- assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
+- write an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-> Não pode usar as duas funcionalidades ao mesmo tempo. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
 
+:::info Important
+
+- It is recommended not to enable different REST access control features simultaneously to avoid conflicts.
+- If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+
+:::
 
 ### Utilização dos parâmetros da estrutura
 
-O menu **Leitura/Escrita** na página "**Web** > **Web Features**" das configurações de estrutura especifica um grupo de usuários 4D que está autorizado a estabelecer o link para a aplicação 4D usando consultas REST.
+The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
 Como padrão, o menu mostra `<Anyone>`, o que significa que os acessos REST estão abertos a todos os usuários. Quando tiver especificado um grupo, só contas de usuários 4D que pertençam ao grupo podem ser usadas [acesso a 4D através de petições REST](authUsers.md). Se uma conta for usada que não pertença a esse grupo, 4D retorna um erro de autenticação para o emissor da petição.
 
 > Para essa configuração funcionar, o método de database `On REST Authentication` não deve ser definido. Se existir, 4D ignora os parâmetros de aceso definidos nas propriedades do banco de dados.
 
 ### Método base On REST Authentication
-O método database `On REST Authentication` lhe oferece uma forma personalizada de controlar a abertura de sessões REST em 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Quando receber uma [solicitação para abrir uma sessão REST](authUsers.md), os identificadores de conexão são oferecidos no cabeçalho da solicitação. O método database `On REST Authentication` é chamado para poder avaliar estes identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores. Para obter mais informação, consulte a [documentación](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html) do método database`On REST Authentication`.
+O método database `On REST Authentication` lhe oferece uma forma personalizada de controlar a abertura de sessões REST em 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Quando receber uma [solicitação para abrir uma sessão REST](authUsers.md), os identificadores de conexão são oferecidos no cabeçalho da solicitação. O método database `On REST Authentication` é chamado para poder avaliar estes identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 
 
@@ -90,3 +93,12 @@ Para eliminar a exposição REST de um campo:
 2. Desmarque a opção **Expor como recurso REST** para o campo. ![alt-text](../assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
 
 > Para que um campo seja accessível a través de REST, a tabela pai também deve ser. Se a tabela pai não estiver exposta, nenhum dos campos estará, independente de seu estado.
+
+
+## Modo preventivo
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+
+With 4D single-user, interpreted code is always run in cooperative mode.

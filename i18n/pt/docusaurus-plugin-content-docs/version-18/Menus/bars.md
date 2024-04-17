@@ -13,9 +13,9 @@ You can enhance the appearance of each menu bar by associating a custom splash s
 
 ![](../assets/en/Menus/splash1.png)
 
-A custom splash screen picture can come from any graphic application. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
+Uma imagem personalizada de tela de inicialização pode vir de qualquer aplicativo gráfico. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
 
-The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
+The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note a área "Imagem de fundo" na parte direita da janela. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
 
 - To paste a picture from the clipboard, choose **Paste**.
 - To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
@@ -36,4 +36,4 @@ To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X
 
 ![](../assets/en/Menus/splash3.png)
 
-4D mostra uma pré-visualização da barra de menu assim como o ecrã inicial. You can scroll down the menus and sub-menus to preview their contents. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+4D mostra uma pré-visualização da barra de menu assim como o ecrã inicial. Você pode rolar os menus e submenus para visualizar seu conteúdo. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.

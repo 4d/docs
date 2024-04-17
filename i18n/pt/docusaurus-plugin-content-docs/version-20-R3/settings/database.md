@@ -26,13 +26,13 @@ Os ficheiros bloqueados podem ser lidos, mas o seu conteúdo não pode ser modif
 
 This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
 
-The current location of this folder is displayed in the "Current:" area. You can click in this area to show the pathname as a scrolldown list:
+The current location of this folder is displayed in the "Current:" area. Você pode clicar nessa área para mostrar o nome do caminho como uma lista suspensa:
 
 ![](../assets/en/settings/temporary-file-location.png)
 
 São oferecidos três opções de localização:
 
--   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. The files are put into a subfolder whose name consists of the database name and a unique identifier.
+-   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. Você pode descobrir o local atual definido pelo seu sistema usando o comando 4D [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html). The files are put into a subfolder whose name consists of the database name and a unique identifier.
 -   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.
 -   **User Defined**: This option is used to set a custom location. If the location option is modified, it will be necessary to restart the database in order for the new option to be taken into account. 4D verifica se a pasta selecionada pode ser acedida por escrita. If this is not the case, the application tries other options until a valid folder is found.
 
@@ -51,7 +51,7 @@ São oferecidos três opções de localização:
     -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) theme that accept the wildcard character ("@") in the object parameter.
     -   For security reasons, only the Administrator or Designer of the database can modify this parameter.
 
--   **Current data language:** Used to configure the language used for character string processing and comparison. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. Por padrão, 4D usa a linguagem do sistema.
+-   **Current data language:** Used to configure the language used for character string processing and comparison. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.
 
     Um projeto 4D pode, portanto, operar em uma linguagem diferente da do sistema. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
 
@@ -59,7 +59,7 @@ São oferecidos três opções de localização:
 
 -   **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes. By default, when this option is not checked, 4D uses a sophisticated algorithm that takes linguistic characteristics into account.
 
-    This algorithm is similar to the one used by word-processing software to determine the boundaries when selecting a word that is double-clicked. For more information about this algorithm, refer to the following address: `http://userguide.icu-project.org/boundaryanalysis`.
+    This algorithm is similar to the one used by word-processing software to determine the boundaries when selecting a word that is double-clicked. Para obter mais informações sobre este algoritmo, consulte o seguinte endereço: `http://userguide.icu-project.org/boundaryanalysis`.
 
     Quando esta opção está selecionada, 4D utiliza um algoritmo simplificado. In this configuration, any non-alphanumeric character (i.e., not a letter or a number) is considered as a keyword separator. This setting meets specific requirements associated with certain languages such as Japanese.
 
@@ -100,7 +100,7 @@ You use the settings on this tab to configure the cache memory for the database.
 
     The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. Geralmente, a cache adaptativa oferece um melhor desempenho.
 
--   **Limpar a cache a cada ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D salva os dados colocados no cache em intervalos regulares. You can specify any time interval between 1 second and 500 minutes. Por padrão, 4D salva seus dados a cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
+-   **Limpar a cache a cada ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D salva os dados colocados no cache em intervalos regulares. Você pode especificar qualquer intervalo de tempo entre 1 segundo e 500 minutos. Por padrão, 4D salva seus dados a cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. Você também pode chamar o comando [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) para acionar a descarga a qualquer momento.
 
     When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
 

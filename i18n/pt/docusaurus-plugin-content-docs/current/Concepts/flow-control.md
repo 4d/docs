@@ -147,7 +147,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
+    :(vResult=1) //Teste se o número é 1
        ALERT("One.") //Se for 1, mostrar um alerta
     :(vResult=2) //Testar se o número é 2
        ALERT("Two.") //Se for 2, exibe um alerta
@@ -777,9 +777,9 @@ End for
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 A declaração `return` pode ser chamada de qualquer lugar. Quando uma declaração `return` é utilizada numa função ou método, a execução da função ou método é interrompida. O código restante não é executado e o controlo é devolvido ao autor da chamada.

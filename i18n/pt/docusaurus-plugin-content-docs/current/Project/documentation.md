@@ -36,7 +36,7 @@ In the Explorer, 4D automatically displays the documentation file with the same 
 
 All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
 
-The `Documentation` folder architecture is the following:
+A arquitetura da pasta `Documentation` é a seguinte:
 
 - `Documentation`
     + `Classes`
@@ -85,7 +85,7 @@ Para visualizar a documentação na janela do Explorer:
 
 You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
 
-If there is no documentation file for the selected element, you can:
+Se não houver um arquivo de documentação para o elemento selecionado, você poderá:
 
 - click on the **Create** button in the `Documentation` pane or,
 - choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
@@ -113,7 +113,7 @@ Se existir um ficheiro com o nome `\&#060;MethodName&#062;.md` na pasta `\&#060;
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#using-help-tips).
+Caso contrário, o editor de código exibe [o comentário do bloco na parte superior do código do método](../code-editor/write-class-method.md#using-help-tips).
 
 :::
 

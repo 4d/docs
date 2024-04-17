@@ -41,7 +41,7 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 
 ## Animação
 
-In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
+In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. Estas opções de propriedade podem ser combinadas para melhorar seus botões de imagem.
 
 * By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. Por outras palavras, não regressa à primeira imagem da série.
 
@@ -50,7 +50,7 @@ Estão disponíveis os seguintes outros modos:
 * [Repetir a sequência](properties_Animation.md#loopBackToFirstFrame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
-* [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
+* [Alternar continuamente em cliques](properties_Animation.md#switch-continuously-on-clicks)
 * [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 * [Utilizar o último marco como desativado](properties_Animation.md#use-last-frame-as-disabled)
 > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. A numeração das imagens no quadro começa com 0.

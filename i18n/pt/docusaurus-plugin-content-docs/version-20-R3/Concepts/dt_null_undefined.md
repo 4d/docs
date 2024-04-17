@@ -7,17 +7,85 @@ Nulo e Indefinido são tipos de dados que tratam de casos em que o valor de uma 
 
 ## Null
 
-Null é um tipo de dados especial com um único valor possível: **null**. Este valor é devolvido por uma expressão que não contém nenhum valor.
+Null é um tipo de dados especial com um único valor possível: **null**. Este valor é devolvido por uma expressão que não contém nenhum valor. Tentar ler uma propriedade de um valor **null** retorna um erro.
 
 Na linguagem 4D e para os atributos dos campos dos objetos, os valores nulos são gerenciados através da função `Null`. Esta função pode ser usada com as expressões abaixo para definir ou comparar o valor nulo:
 
 - atributos de objetos
 - elementos da coleção
-- variáveis do objecto, colecção, ponteiro, imagem, ou tipo de variante.
+- variáveis do objeto, coleção, ponteiro, imagem ou tipo variante (ver também [Null como valor padrão](data-types.md#null-as-default-value).
 
 ## Indefinido
 
-Indefinido não é realmente um tipo de dados. Denota uma variável que ainda não foi definida. Uma função (um método projeto que devolve um resultado) pode devolver um valor indefinido se, dentro do método, se atribuir ao resultado da função ($0) uma expressão indefinida (uma expressão calculada com ao menos uma variável indefinida). Um campo não pode ser indefinido (o comando `Undefined` sempre devolve False para um campo). Uma variável variant tem **indefinido** como valor por definição.
+Indefinido não é realmente um tipo de dados. Denota uma variável que ainda não foi definida. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+
+A variant variable has **undefined** as [default value](data-types.md#default-values).
+
+Um campo não pode ser indefinido (o comando `Undefined` sempre devolve False para um campo).
+
+Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+
+- Atribuir um valor indefinido a variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) com elas:
+
+```4d
+     C_OBJECT($o)
+     C_LONGINT($val)
+     $val:=10 //$val=10
+     $val:=$o. //$o.a é indefinido (sem erro), e atribuir este valor limpa a variável
+      //$val=0
+```
+
+- A atribuição de um valor indefinido a um objecto existente reinicia ou limpa o seu valor, dependendo do seu tipo:
+    - Objecto, colecção, ponteiro: Null
+    - Imagem: Imagem vazia
+    - Booleano: Falso
+    - String: ""
+    - Número: 0
+    - Data: !00-00-00-00! se a configuração "Usar tipo de data em vez de formato de data ISO nos objetos" estiver habilitada, caso contrário ""
+    - Hora: 0 (número de ms)
+    - Indefinido, Null: sem mudança
+
+```4d
+     C_OBJECT($o)
+     $o:=New object("a";2)
+     $o.a:=$o.b //$o.a=0
+```
+
+- Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
+
+- Um valor indefinido passado como parâmetro para um método de projecto é automaticamente convertido em 0 ou "" de acordo com o tipo de parâmetro declarado.
+
+```4d
+     C_OBJECT($o)
+     meumétodo($o. ) //passa um parâmetro indefinido
+
+      //In mymethod
+     C_TEXT($1) //parameter type é texto
+      // $1 contém ""
+```
+
+- Uma expressão de condição é automaticamente convertida em falsa quando se avalia para indefinida com as palavras-chave If e Case:
+
+```4d
+     C_OBJECT($o)
+     If($o.a) // false
+     End if
+     Case of
+        :($o.a) // false
+     End case
+```
+
+
+:::tip
+
+Quando expressões de um certo tipo são esperadas em seu código 4D, pode garantir que tenha o tipo correto mesmo quando são avaliadas como indefinidas, cercando-as com o comando de transformação 4D apropriado: `String`, `Num`, `Date`, `Time`, `Bool`. Estes comandos devolvem um valor vazio de tipo especificado quando a expressão é avaliada como indefinida. Por exemplo:
+
+```4d
+ $myString:=Caixa minúscula(String($o.a.b))) // certifique-se de obter um valor de string mesmo que não esteja definido
+  // para evitar erros no código
+```
+
+:::
 
 
 ## Operadores Null

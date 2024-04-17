@@ -34,7 +34,7 @@ Entretanto, nenhum operador pode ser aplicado aos BLOBs.
 
 ## Verificar se uma variável contém um blob escalar ou um `4D. Blob`
 
-Use the [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) command to determine if a value is of type Blob or Object. Para verificar se um objeto é um objeto blob (`4D.Blob`), use a [instância OB de](https://doc.4d.com/4dv20/help/command/en/page1731.html):
+Utilizar o comando [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) para determinar se um valor é do tipo Blob ou Objeto. Para verificar se um objeto é um objeto blob (`4D.Blob`), use a [instância OB de](https://doc.4d.com/4dv20/help/command/en/page1731.html):
 
 ```4d
 ` Declare a variable of type BLOB

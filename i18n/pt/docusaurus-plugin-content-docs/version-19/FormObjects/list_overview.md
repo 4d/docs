@@ -4,17 +4,17 @@ title: Lista hierárquica
 ---
 
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+As listas hierárquicas são objetos de formulário que podem ser utilizados para apresentar dados como listas com um ou mais níveis que podem ser expandidos ou recolhidos.
 
 ![](../assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. As listas hierárquicas suportam um número ilimitado de subníveis.
+Quando apropriado, o ícone de expansão/colapso é automaticamente apresentado à esquerda do item. As listas hierárquicas suportam um número ilimitado de subníveis.
 
 ## Fonte de dados de lista hierárquica
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de uma das seguintes formas:
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode.
+- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
 - Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
 
 In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
@@ -23,9 +23,9 @@ In both cases, you manage a hierarchical list at runtime through its *ListRef* r
 
 A hierarchical list is both a **language object** existing in memory and a **form object**.
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
+O **objeto de linguagem ** é referenciado por um ID interno único do tipo Longint, designado por *ListRef* na manual da Linguagem 4D. Este ID é devolvido pelos comandos que podem ser utilizados para criar listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Existe apenas uma instância do objeto língua na memória e qualquer modificação efetuada neste objeto é imediatamente transferida para todos os locais onde é utilizado.
 
-The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
+O **objeto de formulário** não é necessariamente único: podem existir várias representações da mesma lista hierárquica na mesma forma ou em formas diferentes. Tal como acontece com outros objetos de formulário, especifica-se o objeto na linguagem utilizando a sintaxe (*; "ListName", etc.).
 
 You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value.
 
@@ -111,7 +111,7 @@ You can usually work in two ways with the contents of hierarchical lists: by pos
 
 ### Utilização de números de referência dos items (itemRef)
 
-Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
+Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. Este valor é apenas destinado ao seu próprio uso: 4D simplesmente o mantém.
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 
@@ -142,7 +142,7 @@ Pode controlar se os itens da lista hierárquica podem ser modificados pelo usu�
 
 - Independentemente da fonte de dados da lista hierárquica, é possível controlar todo o objeto com a propriedade [Editável](properties_Entry.md#enterable).
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. Para obter mais informações, consulte [Definição das propriedades da lista](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
 
 ## Propriedades compatíveis
 
