@@ -29,12 +29,12 @@ module.exports = {
 		  // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-         '20-R4': {
-              label: '20 R4 BETA',
+         '20-R5': {
+              label: '20 R5 BETA',
               banner: 'none',
             },
-		 '20-R3': {
-              label: '20 R3',
+		 '20-R4': {
+              label: '20 R4',
               banner: 'none',
             },
          '20': {
