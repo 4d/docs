@@ -172,4 +172,4 @@ Por ejemplo:
 
 ## Ver también
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.
+Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.

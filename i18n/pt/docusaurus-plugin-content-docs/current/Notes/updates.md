@@ -11,7 +11,7 @@ Leia [**O que há de novo no 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-
 #### Destaques
 
 - Suporte de estruturas de manipulação de erros [`Try... Catch...End try`](../Concepts/error-handling.md#trycatchend-try)
-- A camada de rede QUIC agora suporta [transmissão](../Desktop/clientServer.md#opening-a-remote-project).
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), and [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - Suporte de [seleções de entidades restritas](../ORDA/entities.md#restricting-entity-selections).
 - Suporte de [classes compartilhadas](../Concepts/classes.md#shared-classes) e [classes singleton](../Concepts/classes.md#singleton-classes). Novas propriedades da Classe: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
 - Suporte à [inicializando uma propriedade de classe em sua linha de declaração](../Concepts/classes.md/#initializing-the-property-in-the-declaration-line).
@@ -280,6 +280,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
     - Segurança aprimorada em áreas da web que utilizam o [motor de renderização da web incorporado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) ou o [motor de renderização do sistema Windows](../FormObjects/webArea_overview.md#web-rendering-engine) (baseado no Microsoft Edge WebView2):
         - As políticas CORS agora se aplicam ao acesso a arquivos em disco em áreas da Web. Por exemplo, ao abrir um arquivo .html com `WA OPEN URL`, esse arquivo .html não pode conter links que apontem para arquivos fora de sua pasta
         - Soltar um conteúdo externo dentro das áreas da web agora está bloqueado e aciona o evento [`On Window Opening Denied` ](../Events/onWindowOpeningDenied.md) quando a preferência `WA enable URL drop` for definida como Verdadeiro (quando definido como falso, a preferência `WA enable URL drop`  modifica só o ícone de cursor  e filtra o evento `On Window Opening Denied`). Para permitir uma ação de soltar, você precisa executar um código adicional no método de objeto da área da Web:
+
 
 ```4d
 WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))

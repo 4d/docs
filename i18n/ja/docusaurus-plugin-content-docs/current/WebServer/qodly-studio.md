@@ -60,6 +60,7 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 * 4Dレベルで (4D または 4D Server)
 * プロジェクトレベルで
 
+
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
 
 #### 4Dレベルで
@@ -242,7 +243,7 @@ Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#�
 
 ### 強制ログインモードの設定
 
-4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を [ロールと権限ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) で設定することができます。設定は **Force login** オプションを使用しておこないます:
+4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を [Roles and Privileges ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) で設定することができます。設定は **Force login** オプションを使用しておこないます:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
@@ -256,7 +257,7 @@ Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#�
 
 :::info
 
-For more information, refer to [this blog post](https://blog.4d.com/qodly-studio-consume-a-4d-client-licence-only-when-the-authentication-is-successful) that tells the full story.
+詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
 
 :::
 
@@ -303,7 +304,7 @@ End if
 
 Webユーザーセッションからログアウトアクションをトリガーすると、次のような効果があります:
 
-- カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的RESTリクエスト) のみが許可されます。
+- カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的restリクエスト) のみが許可されます。
 - 関連する 4Dライセンスが解放されます。
 - `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
 

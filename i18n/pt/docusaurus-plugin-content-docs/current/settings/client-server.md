@@ -16,13 +16,21 @@ Essa opção permite que você indique se o banco de dados do 4D Server aparecer
 -   Quando essa opção está marcada (padrão), o banco de dados é tornado público e aparece na lista de bancos de dados publicados (guia**Available**).
 -   Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Custom** da caixa de diálogo de conexão.
 
-> Se você modificar esse parâmetro, deverá reiniciar o banco de dados do servidor para que ele seja levado em consideração.
+:::note
+
+Se você modificar esse parâmetro, deverá reiniciar o banco de dados do servidor para que ele seja levado em consideração.
+
+:::
 
 #### Nome da publicação
 
-Essa opção permite alterar o nome de publicação de um banco de dados do 4D Server, *, ou seja,*, o nome exibido na guia dinâmica **Available** da caixa de diálogo de conexão (consulte a seção [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html)). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
 
-> Esse parâmetro não é levado em conta em aplicativos cliente-servidor personalizados. Em teoria, o aplicativo cliente se conecta diretamente ao aplicativo servidor, sem passar pela caixa de diálogo de conexão. No entanto, em caso de erro, essa caixa de diálogo pode ser exibida; nesse caso, o nome de publicação do aplicativo do servidor é o nome do projeto compilado.
+:::note
+
+Esse parâmetro não é levado em conta em aplicativos cliente-servidor personalizados. Em teoria, o aplicativo cliente se conecta diretamente ao aplicativo servidor, sem passar pela caixa de diálogo de conexão. No entanto, em caso de erro, essa caixa de diálogo pode ser exibida; nesse caso, o nome de publicação do aplicativo do servidor é o nome do projeto compilado.
+
+:::
 
 #### Número do porto
 
@@ -48,18 +56,18 @@ O 4D Server usa três portas TCP para comunicações entre servidores internos e
 
 #### Autenticação do usuário com o servidor de domínio
 
-Essa opção permite que você implemente recursos de SSO (*Single Sign On*) em seu banco de dados 4D Server no Windows. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis. Essa opção é descrita na seção [Single Sign On (SSO) no Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) .
+Essa opção permite que você implemente recursos de SSO (*Single Sign On*) em seu banco de dados 4D Server no Windows. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
 
 #### Service Principal Name
 
-Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preencher esse campo se quiser usar o Kerberos como protocolo de autenticação. Essa opção é descrita na seção [Single Sign On (SSO) no Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) .
+Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preencher esse campo se quiser usar o Kerberos como protocolo de autenticação. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
 
 #### Camada de rede
 
 Essa caixa suspensa contém 3 opções de camada de rede para escolher entre: **legacy**, **ServerNet** e **QUIC** (somente no modo de projeto), que são usadas para lidar com comunicações entre o 4D Server e máquinas 4D remotas (clientes).
 -   **Legacy**: Essa antiga camada de rede "legado" ainda é mantida para garantir a compatibilidade com bancos de dados criados antes da versão 15. Essa camada de rede também pode ser ativada por programação usando o comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) .
--   **ServerNet** (por padrão): Disponível desde 4D v15, o ServerNet é baseado em uma API moderna e robusta, fácil de manter e facilita a implementação das mais recentes tecnologias de rede, ao mesmo tempo em que oferece um alto nível de desempenho e segurança.
--   **QUIC** (disponível somente no modo de projeto): Habilita a camada de rede QUIC no servidor. Essa camada de rede está disponível na versão beta. Ainda não é recomendado que se use em produção, no entanto pode ser ativado em seus aplicativos cliente/servidor para fins de avaliação.
+-   **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
+-   **QUIC** (disponível somente no modo de projeto): Habilita a camada de rede QUIC no servidor.
 
      **Notas**:
     - A seleção dessa opção substitui a opção Use legacy network layer (Usar camada de rede legada), caso ela tenha sido definida com o comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) .

@@ -49,7 +49,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 
 
-Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
+Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase.
 
 Se aplican las siguientes reglas:
 

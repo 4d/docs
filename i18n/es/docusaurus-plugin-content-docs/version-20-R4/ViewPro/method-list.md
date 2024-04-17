@@ -3374,7 +3374,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or _count_ empty row(s) in the specified _tableName_ at the specified _row_ index<!-- END REF -->.
 
-In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the _row_ index:
+En el parámetro _insertAfter_, puede pasar una de las siguientes constantes para indicar si la(s) línea(s) debe(n) ser insertada(s) antes o después del índice _row_:
 
 | Constante                | Valor | Descripción                                                                                         |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------- |
@@ -3893,7 +3893,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Pase la hoja de estilo a eliminar en el parámetro _styleName_.
 
-You can define where to remove the style in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+Puede definir dónde eliminar el estilo en el parámetro opcional _sheet_ utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
