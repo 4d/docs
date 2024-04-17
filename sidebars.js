@@ -59,6 +59,7 @@ module.exports =
 								"settings/compatibility"
 							],
 						},
+						"Project/components",
 						"Project/date-time-formats",
 						"Project/documentation",
 					],

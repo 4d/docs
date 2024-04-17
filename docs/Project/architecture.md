@@ -63,9 +63,11 @@ settings.4DSettings|*Structure* database settings. They are not taken into accou
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
+dependencies.json|Names of [components to load](components.md) in the project|JSON|
 styleSheets.css|CSS style sheets|CSS
 styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
 styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    
+
 
 
 #### `DatabaseMethods`
@@ -222,11 +224,13 @@ CompilerIntermediateFiles|Intermediate files resulting from Apple Silicon compil
 
 ## `Components`
 
-This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
+Legacy folder containing components (must be stored at the same level as the Project folder). 
 
-> An application project can be used itself as a component:
-> - for development: put an alias of the .4dproject file in the Components folder of the host project.
-> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
+:::info
+
+It is now recommended to [use the **dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare your components instead of the Components folder.
+
+:::
 
 
 ## `Plugins`
