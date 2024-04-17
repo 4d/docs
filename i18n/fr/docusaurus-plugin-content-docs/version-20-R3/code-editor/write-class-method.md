@@ -461,21 +461,21 @@ Appuyez sur la touche **Entrée** pour sélectionner l'occurrence la plus proche
 
 Cliquez sur le bouton de bascule **v** sur le côté gauche de la *zone Recherche* pour afficher/masquer la zone *Remplacer*. Vous pouvez également sélectionner **Chercher > Remplacer...** dans le menu **Édition** ou taper **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS).
 
-The *Replace* entry area is used to define the character string that will replace the one defined above.
+La zone de saisie *Remplacer* est utilisée pour définir la chaîne de caractères qui remplacera celle définie ci-dessus.
 
-Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
+Cliquez sur le bouton **Remplacer** pour lancer la recherche avec toutes les options définies et remplacer la première occurrence trouvée. 4D commence la recherche à partir du point d'insertion de texte en cours et la poursuit jusqu'à la fin de la méthode. Il est ensuite possible de continuer à chercher/remplacer en utilisant les commandes **Remplacer suivant** et **Remplacer précédent** du [menu **Edition**](#shortcuts).
 
-Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
+Cliquez sur le bouton **Tout remplacer** pour remplacer toutes les occurrences correspondant aux critères de recherche directement dans la méthode ouverte.
 
 
 
-### Find Same
+### Chercher identique
 
-The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
+La commande **Chercher identique** permet de rechercher les chaînes de caractères identiques à celle sélectionnée. Cette commande n'est active que si vous avez sélectionné au moins un caractère dans l'éditeur de code.
 
-The search carried out is of the "Find Next" type in the current code editor window.
+La recherche effectuée est de type "Chercher suivant" dans la fenêtre courante de l'éditeur de code.
 
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+Les commandes **Chercher identique suivant** et **Chercher identique précédent** permettent de trouver des chaînes de caractères *strictement* identiques à celles sélectionnées. Par exemple, la casse doit correspondre.
 
 
 ### Bookmark All
