@@ -24,7 +24,7 @@ title: クライアント-サーバーページ
 
 #### 公開名
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
+このオプションでは、4D Server データベースの公開名を変更できます。 この名前は接続ダイアログボックスの **利用可能** ページに表示されます ([リモートプロジェクトを開く](../Desktop/clientServer/md#リモートプロジェクトを開く) 参照)。 デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
 
 :::note
 
@@ -56,17 +56,17 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
 
 #### サービスプリンシパル名 (SPN)
 
-Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
 
 #### ネットワークレイヤー
 
 ここでは、ドロップダウンメニューにて 3つのネットワークオプションから選択できます: **Legacy**、**ServerNet** 、**QUIC** (プロジェクトモードのみ)。ネットワークレイヤーは、4D Server とリモートの 4Dマシン (クライアント) 間の通信を管理するのに使用されます。
--   **Legacy**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 旧式ネットワークレイヤーは、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドを使用してプログラミングによって有効にすることもできます。
--   **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
+-   **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 旧式ネットワークレイヤーは、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドを使用してプログラミングによって有効にすることもできます。
+-   **ServerNet** (デフォルト): サーバーの ServerNet ネットワークレイヤーを有効にします (4D 15 以降で利用可能)。
 -   **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。
 
      **注記**:
