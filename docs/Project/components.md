@@ -50,6 +50,7 @@ The **/Sources/dependencies.json** file contents must be like:
 ```
 
 
+
 ... where "myComponent1" and "myComponent2" are the name of the components located at the same level as you project that you want to be loaded in your project.
 
 
@@ -93,10 +94,10 @@ In an opened project, you can get information about dependencies and their curre
 
 To display the Dependencies panel:
 
-- with 4D, select the **Design/Project Dependencies** menu item (Development environment),
+- with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
 ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.
+- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
 ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
