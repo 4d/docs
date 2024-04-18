@@ -99,7 +99,7 @@ If you do not pass any parameters, `New collection` creates an empty collection 
 
 You must assign the returned reference to a 4D variable of the Collection type.
 
->Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+>Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
@@ -895,7 +895,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 |startFrom|Integer|->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
+|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
 |Result|Boolean|<-|True if all elements successfully passed the test|
 <!-- END REF -->
 
@@ -1713,6 +1713,7 @@ Optionally, you can pass the index of collection from which to start the search 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
+
 |value|any|->|Value(s) to compare when using placeholder(s)|
 |Result|Collection |<-|Element index(es) matching queryString in the collection|
 <!-- END REF -->
@@ -2359,6 +2360,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 ```4d
 {
     "propertyPath": string,
+
     "descending": boolean
 
 }
@@ -2637,7 +2639,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- REF #collection.push().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|element|Mixed|->|Element(s) to add to the collection|
+|element|any|->|Element(s) to add to the collection|
 |Result|Collection |<-|Original collection containing added elements|
 <!-- END REF -->
 
@@ -2700,7 +2702,7 @@ You want to sort the resulting collection:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
-|value|Mixed|->|Value(s) to compare when using placeholder(s)|
+|value|any|->|Value(s) to compare when using placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes|
 |Result|Collection |<-|Element(s) matching queryString in the collection|
 <!-- END REF -->
@@ -2785,6 +2787,7 @@ This example returns persons hired more than 90 days ago:
 
 
 #### Example 3
+
 
 More examples of queries can be found in the `dataClass.query()` page.
 
@@ -3274,7 +3277,7 @@ The returned collection contains the element specified by *startFrom* and all su
 |startFrom |Integer |->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|param |Mixed |->|Parameter(s) to pass|
+|param |any |->|Parameter(s) to pass|
 |Result|Boolean|<-|True if at least one element successfully passed the test|
 <!-- END REF -->
 
