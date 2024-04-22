@@ -215,7 +215,7 @@ You can pass any number of values of the following supported types:
 
 Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.  
 
-::: 
+:::
 
 (\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
@@ -255,20 +255,20 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 #### Description
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->. 
+The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
 
 >This function does not modify the original collection.
 
 Negative integers count back from the last item in the collection.
 
-The function returns Undefined if *index* is beyond collection limits. 
+The function returns Undefined if *index* is beyond collection limits.
 
 #### Example
 
 
 
 ```4d
-var $col : Collection 
+var $col : Collection
 $col:=New collection(10; 20; 30; 40; 50)
 $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
@@ -528,7 +528,7 @@ The *groupWithCol* or *groupWithObj* parameters allow you to designate a collect
 
 :::note
 
-Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned. 
+Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned.
 
 :::
 
@@ -1394,7 +1394,7 @@ The `.first()` function <!-- REF #collection.first().Summary -->returns the firs
 
 >This function does not modify the original collection.
 
-The function returns Undefined if the collection is empty. 
+The function returns Undefined if the collection is empty.
 
 #### Example
 
@@ -1440,7 +1440,7 @@ $first:=$emptyCol.first() // returns Undefined
 
 The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened. 
+By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
 
 >This function does not modify the original collection.
 
@@ -1494,7 +1494,7 @@ $col.flat(MAXLONG)
 
 #### Description
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). 
+The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s).
 
 This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
 
@@ -1884,7 +1884,7 @@ The `.last()` function <!-- REF #collection.last().Summary -->returns the last e
 
 >This function does not modify the original collection.
 
-The function returns Undefined if the collection is empty. 
+The function returns Undefined if the collection is empty.
 
 #### Example
 
@@ -2219,7 +2219,7 @@ If `.multiSort()` is called with no parameters, the function has the same effect
 
 **Single-level synchronized sort**
 
-To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner. 
+To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
 
 :::note
 
@@ -2238,13 +2238,13 @@ The formula receives the following parameters:
 
 **Multi-level synchronized sort**
 
-Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level. 
+Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
 
 The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
 
 :::note
 
-The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm. 
+The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
 
 :::
 
@@ -2690,12 +2690,13 @@ You want to sort the resulting collection:
 
 |Release|Changes|
 |---|---|
+|20 R6|Support of comparisons with object and collection references|
 |17 R5|Support of querySettings|
 |v16 R6|Added|
 
 </details>
 
-<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.query().Params -->
@@ -2714,15 +2715,154 @@ The `.query()` function <!-- REF #collection.query().Summary -->returns all elem
 
 >This function does not modify the original collection.
 
+
+#### queryString parameter
+
 The *queryString* parameter uses the following syntax:
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
+where:
 
-> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+* **propertyPath**: path of property on which you want to execute the query. This parameter can be a simple name (for example "country") or any valid attribute path (for example "country.name".) In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+
+
+* **comparator**: symbol that compares *propertyPath* and *value*. The following symbols are supported:
+
+ |Comparison| Symbol(s)| Comment|
+ |---|---|---|
+ |Equal to |=, == |Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.|
+ ||===, IS| Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic|
+ |Not equal to| #, != |Supports the wildcard (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).|
+ ||!==, IS NOT| Considers the @ as a standard character|
+ |Not condition applied on a statement| NOT| Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)).|
+ |Less than| <| |
+ |Greater than| > ||
+ |Less than or equal to| <=||
+ |Greater than or equal to| >= ||
+ |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)|
+
+* **value**: the value to compare to the current value of the property of each element in the collection. It can be a [**placeholder**](#using-placeholders) or any expression matching the element's data type property.
+When using a constant value, the following rules must be respected:
+  * **text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
+  * **boolean** type constants: **true** or **false** (case sensitive).
+  * **numeric** type constants: decimals are separated by a '.' (period).
+  * **date** type constants: "YYYY-MM-DD" format
+  * **null** constant: using the "null" keyword will find **null** and **undefined** properties.  
+  * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+> Using a **collection reference** or **object reference** in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter) in this case.
+
+* **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
+
+ |Conjunction|Symbol(s)|
+ |---|---|
+ |AND|&, &&, and|
+ |OR | &#124;,&#124;&#124;, or|
+
+
+#### Using quotes
+
+When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. For example:
+
+```4d
+"employee.name = 'smith' AND employee.firstname = 'john'"
+```
+
+>Single quotes (') are not supported in searched values since they would break the query string. For example "comp.name = 'John's pizza' " will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).
+
+#### Using parenthesis
+
+You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
+
+```4d
+"(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
+```
+
+#### Using placeholders
+
+4D allows you to use placeholders for *propertyPath* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
+
+Two types of placeholders can be used: **indexed placeholders** and **named placeholders**.
+
+- **Indexed placeholders**: parameters are inserted as `:paramIndex` (for example ":1", ":2"...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters.
+
+Example:
+
+```4d
+$c:=$myCol.query(":1=:2";"city";"Chicago")
+```
+
+- **Named placeholders**: parameters are inserted as `:paramName` (for example ":myparam") and their values are provided in the "attributes" and/or "parameters" objects in the *querySettings* parameter.
+
+Example:
+
+```4d
+$o.attributes:={att:"city"}
+$o.parameters:={name:"Chicago")
+$c:=$myCol.query(":att=:name";$o)
+```
+
+You can mix all argument kinds in *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
+
+* direct values (no placeholders),
+* indexed placeholders and/or named placeholders.
+
+Using placeholders in queries **is recommended** for the following reasons:
+
+1. It prevents malicious code insertion: if you directly use user-filled variables within the query string, a user could modifiy the query conditions by entering additional query arguments. For example, imagine a query string like:
+
+```4d
+ $vquery:="status = 'public' & name = "+myname //user enters their name
+ $result:=$col.query($vquery)
+```
+
+This query seems secured since non-public data are filtered. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+
+When using placeholders, overriding security conditions is not possible:
+
+```4d
+ $result:=$col.query("status='public' & name=:1";myname)
+```
+
+In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. Looking for a person named "smith OR status='private'" will just fail.
+
+2. It prevents having to worry about formatting or character issues, especially when handling *propertyPath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
+
+3. It allows the use of variables or expressions in query arguments. Examples:
+
+```4d
+$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+$result2:=$col.query("company.name = :1";"John's Pizzas")
+```
+
+> Using a **collection reference** or **object reference** in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter) in this case.
+
+
+#### Looking for null values
+
+When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
+
+```4d
+$vSingles:=$colPersons.query("spouse = :1";Null) // will NOT work
+```
+
+You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
+
+```4d
+$vSingles:=$colPersons.query("spouse = null") //correct syntax
+```
+
+#### querySettings parameter
+
+In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
+
+|Property| Type| Description|
+|---|---|---|
+|parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
+|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
+
 
 #### Example 1
 
@@ -2788,8 +2928,20 @@ This example returns persons hired more than 90 days ago:
 
 #### Example 3
 
+Queries with dates:
+
+```4d
+
+$entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
+$entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
+```
+
+
+:::info
 
 More examples of queries can be found in the `dataClass.query()` page.
+
+:::
 
 <!-- END REF -->
 
