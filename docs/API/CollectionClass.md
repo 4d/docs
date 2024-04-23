@@ -2690,7 +2690,7 @@ You want to sort the resulting collection:
 
 |Release|Changes|
 |---|---|
-|20 R6|Support of comparisons with object and collection references|
+|20 R6|Support of queries using object or collection references|
 |17 R5|Support of querySettings|
 |v16 R6|Added|
 
@@ -2744,8 +2744,8 @@ where:
  |Greater than or equal to| >= ||
  |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)|
 
-* **value**: the value to compare to the current value of the property of each element in the collection. It can be a [**placeholder**](#using-placeholders) or any expression matching the element's data type property.
-When using a constant value, the following rules must be respected:
+* **value**: the value to compare to the current value of the property of each element in the collection. It can be any expression matching the element's data type property or a [**placeholder**](#using-placeholders).
+When using a constant value expression, the following rules must be respected:
   * **text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
   * **boolean** type constants: **true** or **false** (case sensitive).
   * **numeric** type constants: decimals are separated by a '.' (period).
@@ -2760,6 +2760,20 @@ When using a constant value, the following rules must be respected:
  |---|---|
  |AND|&, &&, and|
  |OR | &#124;,&#124;&#124;, or|
+
+
+
+#### querySettings parameter
+
+In the *querySettings* parameter, you can pass an object containing query options. The following properties are supported:
+
+|Property| Type| Description|
+|---|---|---|
+|parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
+|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
+
+> Using this parameter is mandatory if you want to query a collection using a **collection reference** or **object reference** (see XXX).
+
 
 
 #### Using quotes
@@ -2854,18 +2868,44 @@ You will not get the expected result because the null value will be evaluated by
 $vSingles:=$colPersons.query("spouse = null") //correct syntax
 ```
 
-#### querySettings parameter
+#### Object or collection reference as value
 
-In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
+You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
 
-|Property| Type| Description|
+The following comparators are supported:
+
+|Comparison| Symbol(s)|
 |---|---|---|
-|parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
-|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
+|Equal to |=, == |
+|Not equal to| #, != |
+ 
+ 
+To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. For example:
+
+```4d
+var $o1 : Object:={a: 1}
+var $o2 : Object:={a: 1}
+var $o3 : Object:=$o1
+
+var $col; $colResult : Collection
+
+$col:=[{o: $o1}; {o: $o2}; {o: $o3} ]
+$colResult:=$col.query("o = :v"; {parameters: {v: $o1}})
+
+If ($colResult.length=1) && ($colResult[0].o=$o1)
+$result:=True
+Else
+$result:=False
+End if
+
+``` 
+
+
+
+
 
 
 #### Example 1
-
 
 
 ```4d
