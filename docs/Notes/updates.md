@@ -4,6 +4,14 @@ title: Release Notes
 ---
 
 
+## 4D 20 R6
+
+Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R6/), the blog post that lists all new features and enhancements in 4D 20 R6.
+
+#### Highlights
+
+
+
 ## 4D 20 R5
 
 Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
@@ -407,7 +415,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|ICU|73.2|20.1|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
+|ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
@@ -418,5 +426,5 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Zlib|1.2.13|20||
 |webKit|WKWebView|19||
 |PHP|8.2.4|20||
-|libldap|2.6.4|20 R3||
+|libldap|**2.6.7**|**20 R6**||
 |libsasl|2.1.28|20||
