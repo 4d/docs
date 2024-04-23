@@ -2713,6 +2713,8 @@ You want to sort the resulting collection:
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 
+An empty collection is returned if the collection in which the query is executed does not contain the searched *value*. 
+
 >This function does not modify the original collection.
 
 
@@ -2744,15 +2746,14 @@ where:
  |Greater than or equal to| >= ||
  |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)|
 
-* **value**: the value to compare to the current value of the property of each element in the collection. It can be any expression matching the element's data type property or a [**placeholder**](#using-placeholders).
-When using a constant value expression, the following rules must be respected:
+* **value**: the value to compare to the current value of the property of each element in the collection. It can be any constant value expression matching the element's data type property or a [**placeholder**](#using-placeholders).
+When using a constant value, the following rules must be respected:
   * **text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
   * **boolean** type constants: **true** or **false** (case sensitive).
   * **numeric** type constants: decimals are separated by a '.' (period).
   * **date** type constants: "YYYY-MM-DD" format
   * **null** constant: using the "null" keyword will find **null** and **undefined** properties.  
   * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
-> Using a **collection reference** or **object reference** in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter) in this case.
 
 * **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
@@ -2760,20 +2761,6 @@ When using a constant value expression, the following rules must be respected:
  |---|---|
  |AND|&, &&, and|
  |OR | &#124;,&#124;&#124;, or|
-
-
-
-#### querySettings parameter
-
-In the *querySettings* parameter, you can pass an object containing query options. The following properties are supported:
-
-|Property| Type| Description|
-|---|---|---|
-|parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
-|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
-
-> Using this parameter is mandatory if you want to query a collection using a **collection reference** or **object reference** (see XXX).
-
 
 
 #### Using quotes
@@ -2851,7 +2838,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-> Using a **collection reference** or **object reference** in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter) in this case.
+> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter).
 
 
 #### Looking for null values
@@ -2880,26 +2867,51 @@ The following comparators are supported:
 |Not equal to| #, != |
  
  
-To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. For example:
+To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Example with an object reference:
 
 ```4d
-var $o1 : Object:={a: 1}
-var $o2 : Object:={a: 1}
-var $o3 : Object:=$o1
+var $o1:={a: 1}
+var $o2:={a: 1} //same object but another reference
+var $o3:=$o1 //same object and reference
 
 var $col; $colResult : Collection
 
-$col:=[{o: $o1}; {o: $o2}; {o: $o3} ]
-$colResult:=$col.query("o = :v"; {parameters: {v: $o1}})
-
-If ($colResult.length=1) && ($colResult[0].o=$o1)
-$result:=True
-Else
-$result:=False
-End if
+$col:=[{o: $o1}; {o: $o2}; {o: $o3}]
+$colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
+	//$colResult.length=2
+	//$colResult[0].o=$o1 is true
+	//$colResult[1].o=$o1 is true
 
 ``` 
 
+Example with a collection reference:
+
+```4d
+
+$c1:=[1; 2; 3]
+$c2:=[1; 2; 3] //same collection but another reference
+$c3:=$c1 //same collection and reference
+
+$col:=[{c: $c1}; {c: $c2}; {c: $c3}]
+$col2:=$col.query("c = :v"; {parameters: {v: $c3}})
+	//$col2.length=2
+	//$col2[0].o=$c1 is true
+	//$col2[1].o=$c1 is true
+
+``` 
+
+
+
+#### querySettings parameter
+
+In the *querySettings* parameter, you can pass an object containing query placeholders as objects. The following properties are supported:
+
+|Property| Type| Description|
+|---|---|---|
+|parameters|Object|**Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.|
+|attributes|Object|**Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.|
+
+> Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
 
 
 
