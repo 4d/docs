@@ -3,10 +3,9 @@ id: onOpenExternalLink
 title: On Open External Link
 ---
 
-| コード | 呼び出し元                                     | 定義                |
-| --- | ----------------------------------------- | ----------------- |
-| 52  | [Webエリア](FormObjects/webArea_overview.md) | 外部URL がブラウザーで開かれた |
-
+| コード | 呼び出し元                                      | 定義                |
+| --- | ------------------------------------------ | ----------------- |
+| 52  | [Web エリア](FormObjects/webArea_overview.md) | 外部URL がブラウザーで開かれた |
 
 ## 説明
 
@@ -14,6 +13,6 @@ title: On Open External Link
 
 `WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
-
 ### 参照
+
 [`On URL Filtering`](onUrlFiltering.md)
