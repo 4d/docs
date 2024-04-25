@@ -7,17 +7,17 @@ title: Text
 
 ## Autorizar selector fuente/color
 
-Cuando esta propiedad está activa, los comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) y [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) pueden ser llamados para mostrar las ventanas de selección de fuentes y colores del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
+When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
 
 #### Gramática JSON
 
-| Propiedad            | Tipos de datos | Valores posibles          |
-| -------------------- | -------------- | ------------------------- |
+| Propiedad            | Tipos de datos | Valores posibles                             |
+| -------------------- | -------------- | -------------------------------------------- |
 | allowFontColorPicker | boolean        | false (por defecto), true |
 
 #### Objetos soportados
 
-[Entrada](input_overview.md)
+[Input](input_overview.md)
 
 ---
 
@@ -25,8 +25,10 @@ Cuando esta propiedad está activa, los comandos [OPEN FONT PICKER](https://doc.
 
 Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
-Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
-> This is normal text.<br/> **This is bold text.**
+You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+
+> This is normal text.<br/>
+> **This is bold text.**
 
 #### Gramática JSON
 
@@ -36,7 +38,7 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](h
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
@@ -44,8 +46,10 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](h
 
 Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
-También puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
-> Este es un texto normal.<br/> *Este es un texto en itálica.*
+You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+
+> This is normal text.<br/>
+> _This is text in italics._
 
 #### Gramática JSON
 
@@ -55,7 +59,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET FONT S
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
@@ -71,14 +75,15 @@ Hace que el texto tenga una línea por debajo.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
 ## Fuente
 
-Esta propiedad permite indicar el **tema de la fuente** o la **familia de fuente** utilizada en el objeto.
-> Las propiedades **Tema de la fuente** y de la **familia de la fuente** son mutuamente excluyentes. Un tema de fuente se encarga de los atributos de fuente, incluido el tamaño. Una familia de fuentes permite definir el nombre, el tamaño y el color de la fuente.
+This property allows you to specify either the **font theme** or the **font family** used in the object.
+
+> **Font theme** and **font family** properties are mutually exclusive. Un tema de fuente se encarga de los atributos de fuente, incluido el tamaño. Una familia de fuentes permite definir el nombre, el tamaño y el color de la fuente.
 
 ### Tema de fuente
 
@@ -92,8 +97,8 @@ Con el tema de fuente, se garantiza que los títulos se muestren siempre de acue
 
 Hay tres temas de fuentes disponibles:
 
-- **normal**: estilo automático, aplicado por defecto a todo nuevo objeto creado en el editor de formularios.
-- Los temas de fuentes **principales** y **suplementarios** solo son soportados por las [áreas de texto](text.md) y las [áreas de entrada](input_overview.md). Estos temas están pensados principalmente para diseñar cajas de diálogo. Se refieren a los estilos de fuente utilizados, respectivamente, para el texto principal y la información adicional en las ventanas de su interfaz. A continuación se muestran las cajas de diálogo típicas (macOS y Windows) que utilizan estos temas de fuentes:
+- **normal**: automatic style, applied by default to any new object created in the Form editor.
+- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). Estos temas están pensados principalmente para diseñar cajas de diálogo. Se refieren a los estilos de fuente utilizados, respectivamente, para el texto principal y la información adicional en las ventanas de su interfaz. A continuación se muestran las cajas de diálogo típicas (macOS y Windows) que utilizan estos temas de fuentes:
 
 ![](../assets/en/FormObjects/FontThemes.png)
 
@@ -107,27 +112,28 @@ Hay tres temas de fuentes disponibles:
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ### Familia de fuentes
 
 Hay dos tipos de nombres de familias de fuentes:
 
-- *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
-- *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- _family-name:_ The name of a font-family, like "times", "courier", "arial", etc.
+- _generic-family:_ The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-Puede definirla utilizando el comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
+You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
 
 #### Gramática JSON
 
 | Nombre     | Tipos de datos | Valores posibles                    |
 | ---------- | -------------- | ----------------------------------- |
 | fontFamily | string         | Nombre de la familia de fuentes CSS |
-> 4D recomienda utilizar sólo fuentes [seguras para la web](https://www.w3schools.com/cssref/css_websafe_fonts.asp).
+
+> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
@@ -137,13 +143,13 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                           |
-| -------- | -------------- | ------------------------------------------ |
+| Nombre   | Tipos de datos | Valores posibles                                                           |
+| -------- | -------------- | -------------------------------------------------------------------------- |
 | fontSize | integer        | Tamaño de letra en puntos. Valor mínimo: 0 |
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
@@ -151,7 +157,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 Designa el color de la fuente.
 
-> Esta propiedad también define el color de [borde](#border-line-style-dotted-line-type) (si lo hay) del objeto cuando se utiliza el estilo "plano" o "punteado".
+> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
 
 El color puede ser especificado por:
 
@@ -159,7 +165,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 #### Gramática JSON
 
@@ -169,22 +175,23 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Indicadores de progreso ](progressIndicator.md) - [Regla](ruler.md) - [Botón Radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
 ## Expresión color fuente
 
-`List box de tipo colección/selección de entidades`
+`Selection and collection/entity selection type list boxes`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) command in the 4D Language Reference manual.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
-También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk font color expression`.
-> Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 
-El siguiente ejemplo utiliza un nombre de variable: introduzca *CompanyColor* para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
+> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+
+The following example uses a variable name: enter _CompanyColor_ for the **Font Color Expression** and, in the form method, write the following code:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -205,11 +212,11 @@ Foreground color;Dark shadow color)
 
 ## Expresión estilo
 
-`List box de tipo colección/selección de entidades`
+`Selection and collection/entity selection type list boxes`
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede utilizar las constantes del tema [Estilos de fuentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
 Ejemplo:
 
@@ -217,18 +224,19 @@ Ejemplo:
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk font style expression`.
-> Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
+
+> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                     |
-| -------------- | -------------- | ---------------------------------------------------- |
+| Nombre         | Tipos de datos | Valores posibles                                                     |
+| -------------- | -------------- | -------------------------------------------------------------------- |
 | rowStyleSource | string         | Expresión de estilo a evaluar para cada línea/celda. |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -244,14 +252,14 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 :::note
 
-- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
-- "justify" sólo es compatible con las [entradas ](input_overview.md) y [áreas de texto](text.md)
+- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
 
 :::
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Caja grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Botón radio](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 
@@ -259,12 +267,12 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 Ubicación vertical del texto dentro del área que lo contiene.
 
-La opción **Predeterminado** (`automático` valor JSON) define la alineación según el tipo de datos que se encuentran en cada columna:
+The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
 
-- `abajo` para todos los datos (excepto las imágenes) y
-- `arriba` para los datos del tipo imagen.
+- `bottom` for all data (except pictures) and
+- `top` for picture type data.
 
-Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) y [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html).
+This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
 
 #### Gramática JSON
 
@@ -274,88 +282,86 @@ Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
 
 ---
 
 ## Meta Info expression
 
-`List box de tipo colección o entity selection (selección de entidades)`
+`Collection or entity selection type list boxes`
 
-Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
+Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. You must pass an **object variable** or an **expression that returns an object**. Se soportan las siguientes propiedades:
 
-| Nombre de propiedad | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string  | Color de la fuente. Todo color CSS (por ejemplo: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                    |
-| fill                | string  | Color de fondo. Todo color CSS (por ejemplo: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                        |
-| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | boolean | Designa la línea correspondiente como no seleccionable (* es decir, *, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
-| disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                                        |
+| Nombre de propiedad | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| stroke              | string  | Color de la fuente. Todo color CSS (por ejemplo: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| fill                | string  | Color de fondo. Todo color CSS (por ejemplo: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| unselectable        | boolean | Designates the corresponding row as not being selectable (_i.e._, highlighting is not possible). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
+| disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Valores por defecto: False.                                                                                                                                                                                                                                                                                       |
 
 La propiedad especial "cell" permite aplicar un conjunto de propiedades a una sola columna:
 
-| Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                      |
-| ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| cell                |              |                | object | Propiedades aplicables a una o varias columnas                                                                                                                                                                                                   |
-|                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                  |
-|                     |              | *propertyName* | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
+| Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                                                                      |
+| ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell                |              |                | object | Propiedades aplicables a una o varias columnas                                                                                                                                                                                                                                                   |
+|                     | _columnName_ |                | object | _columnName_ is the object name of the list box column                                                                                                                                                                                                                                           |
+|                     |              | _propertyName_ | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Note**: "unselectable" and "disabled" properties can only be defined at row level. Se ignoran si se pasan en el objeto "celda" |
 
-> Los parámetros de estilo definidos con esta propiedad se ignoran si ya se han definido otros parámetros de estilo mediante expresiones (*es decir, *, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Ejemplos**
+**Examples**
 
-En un método proyecto *Color*, escriba el siguiente código:
+In a _Color_ project method, write the following code:
 
 ```4d
-//Método Color
-//Define el color de la fuente para ciertas líneas y el color de fondo para las columnas Col2 y Col3
+//Color method
+//Sets font color for certain rows and background color for Col2 and Col3 columns
 Form.meta:=New object
-If(This.ID>5) //ID es un atributo de los objetos/entidades de la colección
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
-    "Col3";New object("fill";"red"))
+  	"Col3";New object("fill";"red"))
 Else
   Form.meta.stroke:="orange"
 End if
 ```
 
-**Buenas prácticas:** por razones de optimización, normalmente se recomienda crear el objeto `meta.cell` una vez en el método del formulario:
+**Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
 
 ```4d
-  //método formulario
+  //form method
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Col2";New object("fill";"black");\
-        "Col3";New object("fill";"red"))  
-        // también puede definir otros conjuntos de estilos  
+       	"Col3";New object("fill";"red"))  
+ // you can also define other style sets  
        Form.colStyle2:=New object("Col2";New object("fill";"green");\
-        "Col3";New object("fontWeight";"bold"))  
+       	"Col3";New object("fontWeight";"bold"))  
  End case
 ```
 
-Entonces, el método *Color* contendría:
+Then, the _Color_ method would contain:
 
 ```4d
-  //método Color
+  //Color method
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reutilizar el mismo objeto para un mejor rendimiento
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
  Else
-    Form.meta.stroke:="orange"
-    Form.meta.cell:=Form.colStyle2
+ 	Form.meta.stroke:="orange"
+	Form.meta.cell:=Form.colStyle2
  End if
  ...
 ```
 
-
-
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                     |
-| ---------- | -------------- | ---------------------------------------------------- |
+| Nombre     | Tipos de datos | Valores posibles                                                     |
+| ---------- | -------------- | -------------------------------------------------------------------- |
 | metaSource | string         | Expresión de objeto a evaluar para cada línea/celda. |
 
 #### Objetos soportados
@@ -366,7 +372,7 @@ Entonces, el método *Color* contendría:
 
 ## Multistyle
 
-Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas `<SPAN> HTML` presentes en el área.
+Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
 
 Por defecto, esta opción no está activa.
 
@@ -378,7 +384,7 @@ Por defecto, esta opción no está activa.
 
 #### Objetos soportados
 
-[Área de entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -386,14 +392,14 @@ Por defecto, esta opción no está activa.
 
 Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
 
-| Valor de orientación | Result                                         |
-| -------------------- | ---------------------------------------------- |
-| 0 (por defecto)      | ![](../assets/en/FormObjects/orientation1.png) |
-| 90                   | ![](../assets/en/FormObjects/orientation2.png) |
-| 180                  | ![](../assets/en/FormObjects/orientation3.png) |
-| 270                  | ![](../assets/en/FormObjects/orientation4.png) |
+| Valor de orientación               | Result                                         |
+| ---------------------------------- | ---------------------------------------------- |
+| 0 (por defecto) | ![](../assets/en/FormObjects/orientation1.png) |
+| 90                                 | ![](../assets/en/FormObjects/orientation2.png) |
+| 180                                | ![](../assets/en/FormObjects/orientation3.png) |
+| 270                                | ![](../assets/en/FormObjects/orientation4.png) |
 
-Además de [áreas de texto estáticas](text.md), los objetos de texto de las [áreas de entrada](input_overview.md) pueden girar cuando no son[editables](properties_Entry.md#enterable). Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
+In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
 
 #### Gramática JSON
 
@@ -403,17 +409,17 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 #### Objetos soportados
 
-[Entrada](input_overview.md) (no editable) - [Área de texto](text.md)
+[Input](input_overview.md) (non-enterable) - [Text Area](text.md)
 
 ---
 
 ## Array colores de fuente
 
-`List box de tipo array`
+`Array type list boxes`
 
 Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
@@ -423,33 +429,34 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Array de estilos
 
-`List box de tipo array`
+`Array type list boxes`
 
 Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar el array (utilizando un método), utilice las constantes del tema [Estilos de fuente](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. To fill the array (using a method), use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                    |
-| -------------- | -------------- | ----------------------------------- |
+| Nombre         | Tipos de datos | Valores posibles                                    |
+| -------------- | -------------- | --------------------------------------------------- |
 | rowStyleSource | string         | El nombre de un array entero largo. |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Almacenar con etiquetas de estilo por defecto
 
-Esta propiedad sólo está disponible para un área de entrada [Multi-estilo](#multi-estilo). Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
+This property is only available for a [Multi-style](#multi-style) input area.
+Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
 
 Por ejemplo, este es un texto que incluye una modificación de estilo:
 
@@ -458,21 +465,21 @@ Por ejemplo, este es un texto que incluye una modificación de estilo:
 Cuando la propiedad está desactivada, el área sólo almacena la modificación. Por lo tanto, los contenidos almacenados son:
 
 ```
-¡Qué <SPAN STYLE="font-size:13.5pt">hermoso</SPAN> día!
+What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!
 ```
 
 Cuando la propiedad está activa, el área almacena toda la información de formato. La primera etiqueta genérica describe el estilo por defecto y luego cada variación es objeto de un par de etiquetas anidadas. Por lo tanto, los contenidos almacenados en el área son:
 
 ```
-<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">¡Qué <SPAN STYLE="font-size:13.5pt">hermoso</SPAN> día!</SPAN>
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!</SPAN>
 ```
 
 #### Gramática JSON
 
-| Nombre            | Tipos de datos | Valores posibles           |
-| ----------------- | -------------- | -------------------------- |
+| Nombre            | Tipos de datos | Valores posibles                                              |
+| ----------------- | -------------- | ------------------------------------------------------------- |
 | storeDefaultStyle | boolean        | true, false (por defecto). |
 
 #### Objetos soportados
 
-[Entrada](input_overview.md)
+[Input](input_overview.md)
