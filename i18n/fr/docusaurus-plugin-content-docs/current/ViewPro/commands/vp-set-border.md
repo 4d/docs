@@ -9,11 +9,11 @@ title: VP SET BORDER
 
 <!-- REF #_method_.VP SET BORDER.Params -->
 
-| Paramètres     | Type   |    | Description                         |                  |
-| -------------- | ------ | -- | ----------------------------------- | ---------------- |
-| rangeObj       | Object | -> | Objet plage                         |                  |
-| borderStyleObj | Object | -> | Objet contenant le style de bordure |                  |
-| borderPosObj   | Object | -> | Object containing border placement  | <!-- END REF --> |
+| Paramètres     | Type   |    | Description                               |                  |
+| -------------- | ------ | -- | ----------------------------------------- | ---------------- |
+| rangeObj       | Object | -> | Objet plage                               |                  |
+| borderStyleObj | Object | -> | Objet contenant le style de bordure       |                  |
+| borderPosObj   | Object | -> | Objet contenant la position de la bordure | <!-- END REF --> |
 
 #### Description
 
