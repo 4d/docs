@@ -129,7 +129,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - Support of `WinIcon` in [`file.setAppInfo()`](../API/FileClass.md#setappinfo) function.
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
 - Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 #### Mudanças de comportamento
