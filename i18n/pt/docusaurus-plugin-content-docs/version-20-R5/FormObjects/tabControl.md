@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
@@ -25,21 +25,18 @@ If the tab control is wide enough to display all the tabs with both the labels a
 
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
-
 ### JSON Exemplo
 
 ```4d
-    "myTab": {
-  "type": "tab",
-   "left": 60, 
-  "top": 160,  
-  "width": 100, 
-  "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
- }
+	"myTab": {
+		"type": "tab",
+ 		"left": 60,	
+		"top": 160,	 
+		"width": 100,	
+		"height": 20,	
+		"labelsPlacement": "bottom"	//define the direction
+	}
 ```
-
-
 
 ## Adicionando etiquetas a um controle de tabulação
 
@@ -51,13 +48,13 @@ There are several ways to supply the labels for a tab control:
 
 ### Utilização de um objecto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
 
-| Propriedade    | Tipo       | Descrição                                                                                                                                                  |
-| -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. Se for inválido, vazio ou não definido, o controle de tabulação estará vazio |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                        |
-| `currentValue` | Text       | Valor atual selecionado                                                                                                                                    |
+| Propriedade    | Tipo       | Descrição                                                                                                                                                                                  |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `valores`      | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. Se for inválido, vazio ou não definido, o controle de tabulação estará vazio |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                                     |
+| `currentValue` | Text       | Valor atual selecionado                                                                                                                                                                    |
 
 The initialization code must be executed before the form is presented to the user.
 
@@ -68,10 +65,9 @@ Form.tabControl:=New object Form.tabControl.values:=New collection("Page 1"; "Pa
 Form.tabControl.index:=2 //start on page 3
 ```
 
-
 ### Utilizar uma lista de seleção
 
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
+You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tob control.
 
 ### Utilizar um array texto
 
@@ -83,20 +79,20 @@ Você pode criar um array Text que contenha os nomes de cada página do formulá
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
 
+> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
 
 ## Funcionalidades do Goto page
 
 ### Comando FORM GOTO PAGE
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
 
 Eis um exemplo de método objeto:
 
@@ -117,8 +113,6 @@ When you assign the `gotoPage` [standard action](properties_Action.md#standard-a
 
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
 
-
-
 ## Propriedades compatíveis
 
-[Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Lista de opções](properties_DataSource.md#choice-list-static-list) - [Classe](properties_Object.md#css-class) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) - [Tamanho de fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensagem de ajuda](properties_Help.md#help-tip) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome de objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Ação padrão](properties_Action.md#standard-action) - [Direção de controle aba](properties_Appearance.md#tab-control-direction) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Tamanho vertical](properties_ResizingOptions.md#vertical-sizing) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width) 
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
