@@ -15,7 +15,7 @@ Les images sont affichées en boucle continue. Lorsque l'utilisateur atteint la 
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -31,7 +31,7 @@ Affiche la première image en permanence, sauf lorsque l'utilisateur clique sur 
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -47,7 +47,7 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -57,13 +57,13 @@ Permet de parcourir le contenu du bouton d'image à la vitesse spécifiée (en g
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles |
-| ---------- | --------------- | ----------------- |
-| frameDelay | entier          | minimum : 0       |
+| Nom        | Type de données | Valeurs possibles           |
+| ---------- | --------------- | --------------------------- |
+| frameDelay | entier          | minimum : 0 |
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -79,7 +79,7 @@ Modifie le contenu du bouton image lorsque le curseur de la souris passe dessus.
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -90,9 +90,9 @@ Permet de définir la dernière vignette comme étant celle à afficher lorsque 
 #### Grammaire JSON
 
 | Nom                    | Type de données | Valeurs possibles |
-|:---------------------- | --------------- | ----------------- |
+| :--------------------- | --------------- | ----------------- |
 | useLastFrameAsDisabled | boolean         | true, false       |
 
 #### Objets pris en charge
 
-[Bouton image](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
