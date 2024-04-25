@@ -20,22 +20,21 @@ title: 座標とサイズ
 
 このプロパティが有効化されていると、セルの内容がすべて表示され、切り落とされることがないように各行の高さが自動的に計算されます (ただし[ワードラップ](properties_Display.md#ワードラップ) オプションが無効化されている場合を除きます)。
 
-* 行の高さを計算する際には、以下のものが考慮されます:
-  * 中身の型 (テキスト、数値、日付、時間、ピクチャー (計算結果はピクチャーフォーマットによります)、オブジェクト)
-  * コントロールの型 (入力、チェックボックス、リスト、ドロップダウン)
-  * フォント、フォントスタイル、フォントサイズ
-  * [ワードラップ](properties_Display.md#ワードラップ) オプション: 無効化されている場合、高さは段落の数に応じます (行は切り落とされます)。有効化されている場合、高さは行数に応じます (切り落とされません)。
+- 行の高さを計算する際には、以下のものが考慮されます:
+  - 中身の型 (テキスト、数値、日付、時間、ピクチャー (計算結果はピクチャーフォーマットによります)、オブジェクト)
+  - コントロールの型 (入力、チェックボックス、リスト、ドロップダウン)
+  - フォント、フォントスタイル、フォントサイズ
+  - [ワードラップ](properties_Display.md#ワードラップ) オプション: 無効化されている場合、高さは段落の数に応じます (行は切り落とされます)。有効化されている場合、高さは行数に応じます (切り落とされません)。
 
-* 行の高さを計算する際には、以下のものは考慮されません:
-  * 非表示のカラムの中身
-  * プロパティリスト内、あるいはプログラミングによって設定された [行の高さ](#行の高さ) および [行高さ配列](#行高さ配列) プロパティ (あった場合)
+- 行の高さを計算する際には、以下のものは考慮されません:
+  - 非表示のカラムの中身
+  - プロパティリスト内、あるいはプログラミングによって設定された [行の高さ](#行の高さ) および [行高さ配列](#行高さ配列) プロパティ (あった場合)
 
 :::caution
 
 自動行高オプションを有効化すると、ランタイムにおいて追加の計算が必要となるため、リストボックスが大量の行数を持つ場合には、スクロール時のスムーズさに影響が出る可能性があります。
 
 :::
-
 
 #### JSON 文法
 
@@ -45,7 +44,7 @@ title: 座標とサイズ
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -55,13 +54,13 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称     | データタイプ | とりうる値  |
-| ------ | ------ | ------ |
+| 名称     | データタイプ | とりうる値                  |
+| ------ | ------ | ---------------------- |
 | bottom | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [四角](shapes_overview.md#四角) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -71,13 +70,13 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称   | データタイプ | とりうる値  |
-| ---- | ------ | ------ |
+| 名称   | データタイプ | とりうる値                  |
+| ---- | ------ | ---------------------- |
 | left | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -87,13 +86,13 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称    | データタイプ | とりうる値  |
-| ----- | ------ | ------ |
+| 名称    | データタイプ | とりうる値                  |
+| ----- | ------ | ---------------------- |
 | right | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -103,13 +102,13 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称  | データタイプ | とりうる値  |
-| --- | ------ | ------ |
+| 名称  | データタイプ | とりうる値                  |
+| --- | ------ | ---------------------- |
 | top | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -127,7 +126,8 @@ title: 座標とサイズ
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。 最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
+最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。
+最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
 
 :::note
 
@@ -144,8 +144,8 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称           | データタイプ  | とりうる値  |
-| ------------ | ------- | ------ |
+| 名称           | データタイプ  | とりうる値                  |
+| ------------ | ------- | ---------------------- |
 | borderRadius | integer | 最小値: 0 |
 
 #### 対象オブジェクト
@@ -157,70 +157,74 @@ title: 座標とサイズ
 ## 高さ
 
 オブジェクトの縦のサイズを指定します。
+
 > オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
 
 #### JSON 文法
 
-| 名称     | データタイプ | とりうる値  |
-| ------ | ------ | ------ |
+| 名称     | データタイプ | とりうる値                  |
+| ------ | ------ | ---------------------- |
 | height | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
 ## 幅
 
 オブジェクトの横のサイズを指定します。
-> * オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
-> * [リストボックス列](listbox_overview.md#リストボックス列) に [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) プロパティが設定されている場合には、ユーザーは手動でカラムサイズを変更することもできます。
-> * リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
+
+> - オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
+> - [リストボックス列](listbox_overview.md#リストボックス列) に [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) プロパティが設定されている場合には、ユーザーは手動でカラムサイズを変更することもできます。
+> - リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 #### JSON 文法
 
-| 名称    | データタイプ | とりうる値  |
-| ----- | ------ | ------ |
+| 名称    | データタイプ | とりうる値                  |
+| ----- | ------ | ---------------------- |
 | width | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
 ## 最大幅
 
 列の最大幅 (ピクセル単位)。 列やフォームをサイズ変更する際、このサイズよりも列幅を大きくすることはできません。
+
 > リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 #### JSON 文法
 
-| 名称       | データタイプ | とりうる値  |
-| -------- | ------ | ------ |
+| 名称       | データタイプ | とりうる値                  |
+| -------- | ------ | ---------------------- |
 | maxWidth | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
 ## 最小幅
 
 列の最小幅 (ピクセル単位)。 列やフォームをサイズ変更する際、このサイズよりも列幅を小さくすることはできません。
+
 > リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 #### JSON 文法
 
-| 名称       | データタイプ | とりうる値  |
-| -------- | ------ | ------ |
+| 名称       | データタイプ | とりうる値                  |
+| -------- | ------ | ---------------------- |
 | minWidth | number | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -230,17 +234,17 @@ title: 座標とサイズ
 
 #### JSON 文法
 
-| 名称        | データタイプ | とりうる値                           |
-| --------- | ------ | ------------------------------- |
+| 名称        | データタイプ | とりうる値                                              |
+| --------- | ------ | -------------------------------------------------- |
 | rowHeight | string | "em" または "px" (デフォルト) 単位の css 値 |
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[List Box](listbox_overview.md#overview)
 
 #### 参照
 
-[行高さ配列](#行高さ配列)
+[Row Height Array](#row-height-array)
 
 ---
 
@@ -258,8 +262,9 @@ RowHeights{5}:=3
 ```
 
 ここで行の単位が "行" であったとすると、リストボックスの 5行目は 3行分の高さになる一方、他の行はデフォルトの高さを保ちます。
-> * 行高さ配列プロパティは、階層リストボックスに対しては効力を持ちません。
-> * 配列型およびコレクション/エンティティセレクション型のリストボックスの場合、このプロパティは [自動行高](#自動行高) オプションがチェックされていない場合に限り使用可能です。
+
+> - 行高さ配列プロパティは、階層リストボックスに対しては効力を持ちません。
+> - 配列型およびコレクション/エンティティセレクション型のリストボックスの場合、このプロパティは [自動行高](#自動行高) オプションがチェックされていない場合に限り使用可能です。
 
 #### JSON 文法
 
@@ -269,11 +274,11 @@ RowHeights{5}:=3
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[List Box](listbox_overview.md#overview)
 
 #### 参照
 
-[行の高さ](#行の高さ)
+[Row Height](#row-height)
 
 ---
 
@@ -285,8 +290,8 @@ RowHeights{5}:=3
 
 #### JSON 文法
 
-| 名称                | データタイプ | とりうる値       |
-| ----------------- | ------ | ----------- |
+| 名称                | データタイプ | とりうる値                          |
+| ----------------- | ------ | ------------------------------ |
 | horizontalPadding | number | ピクセル数 (>=0) |
 
 #### 対象オブジェクト
@@ -295,7 +300,7 @@ RowHeights{5}:=3
 
 #### 参照
 
-[縦方向パディング](#縦方向パディング)
+[Vertical Padding](#vertical-padding)
 
 ---
 
@@ -305,8 +310,8 @@ RowHeights{5}:=3
 
 #### JSON 文法
 
-| 名称              | データタイプ | とりうる値       |
-| --------------- | ------ | ----------- |
+| 名称              | データタイプ | とりうる値                          |
+| --------------- | ------ | ------------------------------ |
 | verticalPadding | number | ピクセル数 (>=0) |
 
 #### 対象オブジェクト
@@ -315,4 +320,4 @@ RowHeights{5}:=3
 
 #### 参照
 
-[横方向パディング](#横方向パディング)
+[Horizontal Padding](#horizontal-padding)
