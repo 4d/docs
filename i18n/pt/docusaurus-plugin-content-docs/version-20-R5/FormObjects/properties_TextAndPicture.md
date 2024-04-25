@@ -3,22 +3,21 @@ id: propertiesTextAndPicture
 title: Texto e imagem
 ---
 
-
 ## Rota de acesso ao Fundo
 
-Define o caminho da imagem que será desenhada no fundo do objeto. Se o objeto utilizar um [ícone ](#picture-pathname) com [estados diferentes](#number-of-states), a imagem de fundo suportará automaticamente o mesmo número de estados.
+Define o caminho da imagem que será desenhada no fundo do objeto. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
 
-O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para imagens estáticas](properties_Picture.md#pathname).
+The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
-| Nome                    | Tipo de dados | Valores possíveis                                                                                                     |
-| ----------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Nome                    | Tipo de dados | Valores possíveis                                                                                                                                     |
+| ----------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | customBackgroundPicture | string        | Caminho relativo na sintaxe POSIX. Deve ser utilizado em conjunto com a opção "Personalizado" da propriedade "Style". |
 
 #### Objectos suportados
 
-[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
 ---
 
@@ -28,13 +27,13 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Gramática JSON
 
-| Nome  | Tipo de dados | Valores possíveis                                                                                                                                                  |
-|:-----:|:-------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |     text      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+|  Nome | Tipo de dados | Valores possíveis                                                                                                                                                  |
+| :---: | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| style |      text     | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Botão rádio](radio_overview.md) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -48,17 +47,18 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 | ----------------------- | ------------------------------------------------------------ |
 | Sem margem              | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | Com margem de 13 píxeis | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
-> Esta propriedade funciona em conjunto com a propriedade [Margem vertical](#vertical-margin).
+
+> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                     |
-| ------------- | ------------- | ----------------------------------------------------- |
+| Nome          | Tipo de dados | Valores possíveis                                                                     |
+| ------------- | ------------- | ------------------------------------------------------------------------------------- |
 | customBorderX | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
-[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
 ---
 
@@ -74,7 +74,7 @@ Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Objectos suportados
 
-[Cabeçalho do List Box](listbox_overview.md#list-box-headers)
+[List Box Header](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -86,19 +86,19 @@ O título do botão será deslocado para a direita e para baixo em função do n
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis |
-| ------------ | ------------- | ----------------- |
-| customOffset | number        | mínimo: 0         |
+| Nome         | Tipo de dados | Valores possíveis         |
+| ------------ | ------------- | ------------------------- |
+| customOffset | number        | mínimo: 0 |
 
 #### Objectos suportados
 
-[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
 ---
 
 ## Número de estados
 
-Esta propriedade define o número exato de estados presentes na imagem utilizada como ícone para um [botão com ícone](button_overview.md), uma [caixa de verificação](checkbox_overview.md) ou um [botão radio](radio_overview.md) personalizado.
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
 
 A imagem pode conter de 2 a 6 estados.
 
@@ -119,17 +119,15 @@ Cada estado é representado por uma imagem diferente. Na imagem de origem, os es
 
 ![](../assets/en/FormObjects/six-states.png)
 
-
-
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                               |
-| ---------- | ------------- | ----------------------------------------------- |
+| Nome       | Tipo de dados | Valores possíveis                                                               |
+| ---------- | ------------- | ------------------------------------------------------------------------------- |
 | iconFrames | number        | Número de estados na imagem do ícone. Mínimo: 1 |
 
 #### Objectos suportados
 
-[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -137,19 +135,19 @@ Cada estado é representado por uma imagem diferente. Na imagem de origem, os es
 
 Define o caminho da imagem que será utilizada como ícone para o objeto.
 
-O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para imagens estáticas](properties_Picture.md#pathname).
+The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
 
-> Quando utilizada como ícone para objetos ativos, a imagem deve ser concebida para suportar [um número de estados](#number-of-states) variável.
+> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
 
 #### Gramática JSON
 
-| Nome | Tipo de dados | Valores possíveis                                |
-| ---- | ------------- | ------------------------------------------------ |
+| Nome | Tipo de dados | Valores possíveis                                                |
+| ---- | ------------- | ---------------------------------------------------------------- |
 | icon | picture       | Caminho relativo ou filesystem na sintaxe POSIX. |
 
 #### Objectos suportados
 
-[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Cabeçalho da caixa de listagem](listbox_overview.md#list-box-headers) - [Botão rádio](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -159,13 +157,13 @@ Esta propriedade permite modificar a localização relativa do título do botão
 
 Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
-| Opção        | Descrição                                                                                                                             | Exemplo                                                           |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| **Direita**  | O texto é colocado à esquerda do ícone. O conteúdo do botão é alinhado à direita.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                 | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Esquerda** | O texto é colocado à direita do ícone. O conteúdo do botão é alinhado à esquerda.                                                     | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centrado** | O texto do ícone é centrado vertical e horizontalmente no botão. Este parâmetro é útil, por exemplo, para o texto incluído num ícone. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
+| Opção        | Descrição                                                                                                                                                             | Exemplo                                                           |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Left**     | O texto é colocado à esquerda do ícone. O conteúdo do botão é alinhado à direita.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Top**      | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                 | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Right**    | O texto é colocado à direita do ícone. O conteúdo do botão é alinhado à esquerda.                                                     | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Bottom**   | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centered** | O texto do ícone é centrado vertical e horizontalmente no botão. Este parâmetro é útil, por exemplo, para o texto incluído num ícone. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
 
@@ -175,13 +173,13 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 #### Objectos suportados
 
-[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
 ## Image hugs title
 
-Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](#horizontal-alignment).
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
@@ -189,11 +187,10 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ![](../assets/en/FormObjects/hugs.png)
 
-
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis    |
-| -------------- | ------------- | -------------------- |
+| Nome           | Tipo de dados | Valores possíveis                       |
+| -------------- | ------------- | --------------------------------------- |
 | imageHugsTitle | boolean       | true (padrão), false |
 
 #### Objectos suportados
@@ -212,13 +209,13 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                     |
-| ------------- | ------------- | ----------------------------------------------------- |
+| Nome          | Tipo de dados | Valores possíveis                                                                     |
+| ------------- | ------------- | ------------------------------------------------------------------------------------- |
 | customBorderY | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
-[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
 ---
 
@@ -234,9 +231,10 @@ The appearance and location of this symbol depends on the button style and the c
 
 To attach a pop-up menu symbol to a button, there are two display options available:
 
-|                         Linked                          |                          Separado                          |
-|:-------------------------------------------------------:|:----------------------------------------------------------:|
+|                          Linked                         |                          Separado                          |
+| :-----------------------------------------------------: | :--------------------------------------------------------: |
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
+
 > The actual availability of a "separated" mode depends on the style of the button and the platform.
 
 Each option specifies the relation between the button and the attached pop-up menu:
@@ -252,12 +250,12 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                                                           |
-|:-------------- | ------------- | --------------------------------------------------------------------------- |
+| Nome           | Tipo de dados | Valores possíveis                                    |
+| :------------- | ------------- | ---------------------------------------------------- |
 | popupPlacement | string        | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
 
 #### Objectos suportados
