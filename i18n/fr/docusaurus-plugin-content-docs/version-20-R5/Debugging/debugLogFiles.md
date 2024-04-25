@@ -7,23 +7,23 @@ Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") q
 
 Les informations des journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
-* [4DRequestsLog.txt](#4drequestslogtxt)
-* [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
-* [HTTPDebugLog.txt](#httpdebuglogtxt)
-* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
-* 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
-* [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
-* [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [Fichier journal des requêtes ORDA](#orda-requests)
+- [4DRequestsLog.txt](#4drequestslogtxt)
+- [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
+- [HTTPDebugLog.txt](#httpdebuglogtxt)
+- [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
+- 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
+- [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
+- [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- [ORDA requests log file](#orda-requests)
 
 > Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server " est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
 Les fichiers journaux partagent certains champs, ce qui vous permet d'établir une chronologie et de faire des connexions entre les entrées lors du débogage :
 
-* `sequence_number` : ce numéro est unique parmi tous les fichiers journaux de débogage et est incrémenté à chaque nouvelle entrée, quel que soit le fichier journal, de manière à ce que vous puissiez connaître la séquence exacte des opérations.
-* `connection_uuid` : pour chaque process 4D créé sur un client 4D qui se connecte au serveur, cet UUID de connexion est stocké à la fois côté serveur et client. Il vous permet d'identifier facilement le client distant qui a lancé le process.
+- `sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
+- `connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. Il vous permet d'identifier facilement le client distant qui a lancé le process.
 
 ## 4DRequestsLog.txt
 
@@ -31,48 +31,49 @@ Ce fichier de log enregistre les requêtes standard envoyées par la machine du 
 
 Pour lancer ce journal :
 
-* sur le serveur :
+- sur le serveur :
 
 ```4d
 SET DATABASE PARAMETER(4D Server log recording;1)
 //côté serveur
 ```
 
-* sur le client :
+- sur le client :
 
 ```4d
 SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
-> Cette instruction démarre également le fichier [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
+
+> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### En-têtes
 
 Ce fichier commence avec les en-têtes suivants :
 
-* Log Session Identifier (Identifiant de session d'historique)
-* Nom du serveur qui héberge l'application
-* User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
+- Log Session Identifier (Identifiant de session d'historique)
+- Nom du serveur qui héberge l'application
+- User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
 
 #### Contenu
 
 Pour chaque requête, les champs suivants sont enregistrés :
 
-| Noms des champs                            | Description                                                                                                                                                                                                                                        |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sequence_number                            | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                     |
-| time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                       |
-| systemid                                   | ID système                                                                                                                                                                                                                                         |
-| component                                  | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                             |
-| process\_info\_index                   | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                |
-| request                                    | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                  |
-| bytes_in                                   | Nombre d'octets reçus                                                                                                                                                                                                                              |
-| bytes_out                                  | Nombre d'octets envoyés                                                                                                                                                                                                                            |
-| server\_duration &#124; exec\_duration | Dépend de l'endroit où l'historique est généré :<li>*server\_duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. Correspond au chemin B vers F dans l'image ci-dessous, OU</li><li>*exec\_duration* lorsqu'il est généré sur le serveur --Temps en microsecondes pris par le serveur pour traiter la requête. Correspond au chemin B vers F dans l'image ci-dessous.</li>                                                                                                                                                 |
-| write\_duration                          | Temps en microsecondes pour envoyer :<li>La requête (lorsqu'elle est exécutée sur le client). Correspond au chemin A vers B dans l'image ci-dessous.</li><li>La réponse (lorsqu'elle est exécutée sur le serveur). Correspond au chemin E vers F dans l'image ci-dessous.</li>                                                                                                                                                            |
-| task_kind                                  | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                |
-| rtt                                        | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. Correspond respectivement aux chemins A vers D et E vers H dans l'image ci-dessous.<li>Mesuré uniquement lorsque la couche réseau ServerNet est utilisée, retourne 0 lorsque l'ancienne couche réseau est utilisée.</li><li>Dans les versions antérieures à Windows 10 ou à Windows Server 2016, l'appel retournera la valeur 0.</li> |
-| extra                                      | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                   |
+| Noms des champs                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sequence_number                                           | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| time                                                                           | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                                                                                                                                                    |
+| systemid                                                                       | ID système                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| component                                                                      | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                       |
+| process\_info\_index               | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                                                                                                                                                                                        |
+| request                                                                        | [C/S or ORDA request ID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) or message string for SQL requests or `LOG EVENT` messages                                                                                                                                                                                                                                                                                                                   |
+| bytes_in                                                  | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| bytes_out                                                 | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| server\_duration \| exec\_duration | Depends on where the log is generated:<li>_server\_duration_ when generated on the client --Time taken in microseconds for the server to process the request and return a response. B to F in image below, OR</li><li>_exec\_duration_ when generated on the server --Time taken in microseconds for the server to process the request. B to E in image below.</li> |
+| write\_duration                                          | Time taken in microseconds for sending the:<li>Request (when run on the client). A to B in image below.</li><li>Response (when run on the server). E to F in image below.</li>                                                                                                                                                                            |
+| task_kind                                                 | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                          |
+| rtt                                                                            | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. A to D and E to H in image below.<li>Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.</li><li>For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0.</li>                                                |
+| extra                                                                          | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                                                                                                                                                                                                                                                |
 
 Acheminement de la requête :
 
@@ -84,50 +85,49 @@ Ce fichier de log enregistre des informations sur chaque process créé sur la m
 
 Pour lancer ce journal :
 
-* sur le serveur :
+- sur le serveur :
 
 ```4d
 SET DATABASE PARAMETER(4D Server log recording;1) //côté serveur
 ```
 
-* sur le client :
+- sur le client :
 
 ```4d
 SET DATABASE PARAMETER(Client Log Recording;1) //côté distant
 ```
-> Cette déclaration démarre également l'historique du fichier [4DRequestsLog.txt](#4drequestslogtxt).
+
+> This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
 
 #### En-têtes
 
 Ce fichier commence avec les en-têtes suivants :
 
-* Log Session Identifier (Identifiant de session d'historique)
-* Nom du serveur qui héberge l'application
-* User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
+- Log Session Identifier (Identifiant de session d'historique)
+- Nom du serveur qui héberge l'application
+- User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
 
 #### Contenu
 
 Pour chaque process, les champs suivants sont enregistrés :
 
-| Noms des champs                   | Description                                                    |
-| --------------------------------- | -------------------------------------------------------------- |
-| sequence_number                   | Numéro d'opération séquentiel et unique dans la session de log |
-| time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"   |
-| process\_info_index             | Numéro de process séquentiel et unique                         |
-| CDB4DBaseContext                  | UUID du contexte de base du composant DB4D                     |
-| systemid                          | ID système                                                     |
-| server\_process\_id           | ID du process sur le serveur                                   |
-| remote\_process\_id           | ID du process sur le client                                    |
-| process\_name                   | Nom du process                                                 |
-| cID                               | Identifiant de la connexion 4D                                 |
-| uID                               | Identifiant du client 4D                                       |
-| IP Client                         | Addresse IPv4/IPv6 du client                                   |
-| host_name                         | Nom d'hôte du client                                           |
-| user_name                         | Nom de connexion utilisateur sur le client                     |
-| connection\_uuid                | Identifiant UUID de process de connexion                       |
-| server\_process\_unique\_id | ID unique du process sur le serveur                            |
-
-
+| Noms des champs                                                                               | Description                                                                                                                  |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| sequence_number                                                          | Numéro d'opération séquentiel et unique dans la session de log                                                               |
+| time                                                                                          | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm" |
+| process\_info_index                                | Numéro de process séquentiel et unique                                                                                       |
+| CDB4DBaseContext                                                                              | UUID du contexte de base du composant DB4D                                                                                   |
+| systemid                                                                                      | ID système                                                                                                                   |
+| server\_process\_id                               | ID du process sur le serveur                                                                                                 |
+| remote\_process\_id                               | ID du process sur le client                                                                                                  |
+| process\_name                                                           | Nom du process                                                                                                               |
+| cID                                                                                           | Identifiant de la connexion 4D                                                                                               |
+| uID                                                                                           | Identifiant du client 4D                                                                                                     |
+| IP Client                                                                                     | Addresse IPv4/IPv6 du client                                                                                                 |
+| host_name                                                                | Nom d'hôte du client                                                                                                         |
+| user_name                                                                | Nom de connexion utilisateur sur le client                                                                                   |
+| connection\_uuid                                                        | Identifiant UUID de process de connexion                                                                                     |
+| server\_process\_unique\_id | ID unique du process sur le serveur                                                                                          |
 
 ## HTTPDebugLog.txt
 
@@ -138,20 +138,19 @@ Pour lancer ce journal :
 ```4d
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
-//d'autres valeurs sont disponibles
+//other values are available
 ```
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
 
-| Noms des champs | Description                                                       |
-| --------------- | ----------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                        |
+| Noms des champs | Description                                                                          |
+| --------------- | ------------------------------------------------------------------------------------ |
+| SocketID        | ID du socket utilisé pour la communication                                           |
 | PeerIP          | Adresse IPv4 de l'hôte (client)                                   |
 | PeerPort        | Port utilisé par l'hôte (client)                                  |
 | TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)      |
 | ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication) |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log    |
-
+| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log                       |
 
 ## 4DHTTPClientLog.txt
 
@@ -167,12 +166,12 @@ HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
 
-| Noms des champs | Description                                                                      |
-| --------------- | -------------------------------------------------------------------------------- |
-| SequenceID      | Numéro d'opération séquentiel et unique dans la session de log                   |
-| ConnectionID    | Identifiant UUID de process de connexion                                         |
-| LocalIP         | Client IP address                                                                |
-| PeerIP          | Server IP address                                                                |
+| Noms des champs | Description                                                                                         |
+| --------------- | --------------------------------------------------------------------------------------------------- |
+| SequenceID      | Numéro d'opération séquentiel et unique dans la session de log                                      |
+| ConnectionID    | Identifiant UUID de process de connexion                                                            |
+| LocalIP         | Client IP address                                                                                   |
+| PeerIP          | Server IP address                                                                                   |
 | TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
 | ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
 
@@ -180,7 +179,6 @@ Depending on log options, various other fields can also be logged.
 
 - For request: request line, headers, request body
 - For response: status line, headers, response body (uncompressed), if any
-
 
 ## 4DDebugLog.txt (standard)
 
@@ -201,11 +199,11 @@ Les champs suivants sont enregistrés pour chaque évènement :
 | Colonne # | Description                                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 1         | Numéro d'opération séquentiel et unique dans la session de log                                                                   |
-| 2         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                       |
-| 3         | ID process (p=xx) et ID unique process (puid=xx)                                                                                 |
-| 4         | Niveau de stack (pile)                                                                                                           |
+| 2         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)    |
+| 3         | ID process (p=xx) et ID unique process (puid=xx)                                           |
+| 4         | Niveau de stack (pile)                                                                                        |
 | 5         | Peut être Nom de commande / Nom de méthode / Message / Info Start Stop task / Nom, événement ou callback plugin / UUID connexion |
-| 6         | Durée de l'opération de connexion en millisecondes (différent 2e colonne)                                                        |
+| 6         | Durée de l'opération de connexion en millisecondes (différent 2e colonne)                                     |
 
 ## 4DDebugLog.txt (tabulé)
 
@@ -223,56 +221,56 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 Les champs suivants sont enregistrés pour chaque évènement :
 
-| Colonne # | Noms des champs                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| --------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 3         | ProcessID                       | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| 4         | unique_processID                | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 5         | stack_level                     | Niveau de stack (pile)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 6         | operation_type                  | Type d'opération enregistrée. Il peut s'agir d'une valeur absolue :<p><ol><li>Command</li><li>Méthode (méthode projet, méthode base, etc.)</li><li>Message (envoyé par la commande [LOG EVENT](https://doc.4d.com/4dv20/help/command/fe/page667.html) uniquement)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task (Process)</li><li>Méthode membre (méthode attachée à une collection ou un objet)</li></ol></p>Lors de la fermeture d'un niveau de stack, les colonnes `operation_type`, `operation` et `operation_parameters` ont la même valeur que le niveau de stack d'ouverture enregistré dans la colonne `stack_opening_sequence_number`. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>Les 1re et 2e lignes ouvrent un niveau de stack, les 3e et 4e lignes ferment un niveau de stack. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e. |
-| 7         | operation                       | Peut représenter (en fonction du type d'opération) :<li>un ID de commande du langage (lorsque type=1)</li><li>un nom de méthode (lorsque type=2)</li><li>une combinaison de pluginIndex;pluginCommand (lorsque type=4, 5, 6 ou 7). Peut contenir des éléments tels que '3;2'</li><li>un UUID de connexion de process (lorsque type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 8         | operation_parameters            | Paramètres passés aux commandes, méthodes ou aux plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| 9         | form_event                      | Evénement formulaire, le cas échéant ; vide dans les autres cas (par conséquent cette colonne est utilisée lorsque le code est exécuté dans une méthode formulaire ou méthode objet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 10        | stack_opening_sequence_number | Niveaux de fermeture de stacks uniquement : numéro de séquence du niveau d'ouverture de stack correspondant                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 11        | stack_level_execution_time    | Niveaux de fermeture de stacks uniquement : Durée en micro secondes de l'action enregistrée courante (cf. 10e colonne des lignes 123 et 124 dans l'historique ci-dessus)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Colonne # | Noms des champs                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1         | sequence_number                                                         | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 2         | time                                                                                         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 3         | ProcessID                                                                                    | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 4         | unique_processID                                                        | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 5         | stack_level                                                             | Niveau de stack (pile)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 6         | operation_type                                                          | Type d'opération enregistrée. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv20/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e. |
+| 7         | operation                                                                                    | May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 8         | operation_parameters                                                    | Paramètres passés aux commandes, méthodes ou aux plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 9         | form_event                                                              | Evénement formulaire, le cas échéant ; vide dans les autres cas (par conséquent cette colonne est utilisée lorsque le code est exécuté dans une méthode formulaire ou méthode objet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 10        | stack_opening_sequence_number | Niveaux de fermeture de stacks uniquement : numéro de séquence du niveau d'ouverture de stack correspondant                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 11        | stack_level_execution_time    | Niveaux de fermeture de stacks uniquement : Durée en micro secondes de l'action enregistrée courante (cf. 10e colonne des lignes 123 et 124 dans l'historique ci-dessus)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## 4DDiagnosticLog.txt
 
-Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier à l'aide de la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html).
+Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
 
 Pour lancer ce journal :
 
 ```4d
- SET DATABASE PARAMETER(Diagnostic log recording;1) //lancer l'enregistrement
+ SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording
 ```
 
 Les champs suivants sont enregistrés pour chaque évènement :
 
-| Nom des champs     | Description                                                    |
-| ------------------ | -------------------------------------------------------------- |
-| sequenceNumber     | Numéro d'opération séquentiel et unique dans la session de log |
-| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)     |
-| loggerID           | Optionnel                                                      |
-| componentSignature | Optionnel - signature de composant interne                     |
-| messageLevel       | Info, Attention, Erreur                                        |
-| message            | Description de la saisie de journal                            |
+| Nom des champs     | Description                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| sequenceNumber     | Numéro d'opération séquentiel et unique dans la session de log                                                                |
+| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm) |
+| loggerID           | Optionnel                                                                                                                     |
+| componentSignature | Optionnel - signature de composant interne                                                                                    |
+| messageLevel       | Info, Attention, Erreur                                                                                                       |
+| message            | Description de la saisie de journal                                                                                           |
 
 En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.
 
 ### Niveaux du journal de diagnostic
 
-Le fichier *4DDiagnosticLog.txt* peut enregistrer différents niveaux de messages, de `ERROR` (le plus important) à `TRACE` (le moins important). Par défaut, le niveau `INFO` est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).
+The _4DDiagnosticLog.txt_ file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
 
-Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur `Diagnostic log level` de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en fonction de vos besoins. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
 
-| Constante   | Description                                                          | Lorsque sélectionné, inclut                                   |
-| ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| `Log error` | Numéro d'opération séquentiel et unique dans la session d'historique | `Log error`                                                   |
-| `Log warn`  | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             | `Log error`, `Log warn`                                       |
-| `Log info`  | ID du Process 4D                                                     | `Log error`, `Log warn`, `Log info`                           |
-| `Log debug` | ID unique du process                                                 | `Log error`, `Log warn`, `Log info`, `Log debug`              |
-| `Log trace` | Autres informations internes (pour les services techniques de 4D)    | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+| Constante   | Description                                                                                                                 | Lorsque sélectionné, inclut                                   |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | Numéro d'opération séquentiel et unique dans la session d'historique                                                        | `Log error`                                                   |
+| `Log warn`  | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms) | `Log error`, `Log warn`                                       |
+| `Log info`  | _Default level_ - Important application event                                                                               | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | ID unique du process                                                                                                        | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | Autres informations internes (pour les services techniques de 4D)                                        | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
 Voici un exemple :
 
@@ -281,24 +279,23 @@ SET DATABASE PARAMETER (Diagnostic log recording; 1)
 SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 ```
 
-
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, et 4DIMAPLog.txt
 
 Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le serveur de mail (SMTP, POP3, IMAP) initialisé par les commandes suivantes :
 
-* SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
-* POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
-* IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
+- SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
+- POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
+- IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
 
 Les fichiers peuvent être générés en deux versions :
 
-* une version classique :
-  * fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  * sans pièces jointes
-  * avec un recyclage automatique tous les 10 MB
-  * conçue pour des fonctions de débogage habituelles
+- une version classique :
+  - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+  - sans pièces jointes
+  - avec un recyclage automatique tous les 10 MB
+  - conçue pour des fonctions de débogage habituelles
 
- Pour démarrer ce journal :
+Pour démarrer ce journal :
 
 ```4d
 SET DATABASE PARAMETER(SMTP Log;1) //démarrer le journal SMTP
@@ -306,44 +303,45 @@ SET DATABASE PARAMETER(POP3 Log;1) //démarrer le journal POP3
 SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 ```
 
-> 4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](ServerWindow/maintenance.md) de la fenêtre d'administration de 4D Server.
+> 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](ServerWindow/maintenance.md) of the 4D Server administration window.
 
-   Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
+Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
-* une version étendue :
-  * pièce(s) jointe(s) inclue(s) pas de recyclage automatique
-  * nom personnalisé
-  * réservée à des fins spécifiques
+- une version étendue :
+  - pièce(s) jointe(s) inclue(s)
+    pas de recyclage automatique
+  - nom personnalisé
+  - réservée à des fins spécifiques
 
- Pour démarrer ce journal :
+Pour démarrer ce journal :
 
- ```4d
- $server:=New object
- ...
- //SMTP
- $server.logFile:="MySMTPAuthLog.txt"
- $transporter:=SMTP New transporter($server)
+```4d
+$server:=New object
+...
+//SMTP
+$server.logFile:="MySMTPAuthLog.txt"
+$transporter:=SMTP New transporter($server)
 
- // POP3
- $server.logFile:="MyPOP3AuthLog.txt"
- $transporter:=POP3 New transporter($server)
+// POP3
+$server.logFile:="MyPOP3AuthLog.txt"
+$transporter:=POP3 New transporter($server)
 
- //IMAP
- $server.logFile:="MyIMAPAuthLog.txt"
- $transporter:=IMAP New transporter($server)
- ```
+//IMAP
+$server.logFile:="MyIMAPAuthLog.txt"
+$transporter:=IMAP New transporter($server)
+```
 
 #### Contenu
 
 Pour chaque requête, les champs suivants sont enregistrés :
 
-| Colonne # | Description                                                    |
-| --------- | -------------------------------------------------------------- |
-| 1         | Numéro d'opération séquentiel et unique dans la session de log |
-| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)       |
-| 3         | ID du Process 4D                                               |
-| 4         | ID unique du process                                           |
-| 5         | <ul><li>Informations sur le lancement d'une session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et l'état TLS, ou</li><li>données échangées entre le serveur et le client, en commençant par "S <" (données reçues depuis le serveur SMTP, POP3 ou IMAP) ou "C>" (données envoyées par le client IMAP) : liste des modes d'authentification envoyés par le serveur et mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3 ou IMAP, les informations sur l'en-tête de l'e-mail envoyé (version standard uniquement) et si l'e-mail est sauvegardé sur le serveur, ou</li><li>Les informations sur la clôture de la session IMAP.</li></ul>                                     |
+| Colonne # | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1         | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 3         | ID du Process 4D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 4         | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 5         | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul> |
 
 ## Requêtes ORDA
 
@@ -359,82 +357,81 @@ Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis un
 Pour lancer ce journal :
 
 ```4d
-    //on a remote machine
+	//on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
-    //can be also sent to memory
+	//can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
 :::note
 
-Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté client à l'aide de `SET DATABASE PARAMETER`. Il est toutefois nécessaire si vous souhaitez enregistrer le champ unique `sequenceNumber`.
+Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
 
 :::
 
-
 Les champs suivants sont enregistrés pour chaque requête :
 
-| Noms des champs | Description                                                    | Exemple                                                   |
-| --------------- | -------------------------------------------------------------- | --------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log | 104                                                       |
-| url             | URI de la requête                                              | "rest/Persons(30001)"                                     |
-| startTime       | Date et heure de début au format ISO 8601                      | "2019-05-28T08:25:12.346Z"                                |
-| endTime         | Date et heure de fin au format ISO 8601                        | "2019-05-28T08:25:12.371Z"                                |
-| duration        | Durée du traitement du client en millisecondes (ms)            | 25                                                        |
-| response        | Objet réponse du serveur                                       | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| Noms des champs | Description                                                            | Exemple                                                                                                                                                                                                                                                 |
+| --------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log         | 104                                                                                                                                                                                                                                                     |
+| url             | URI de la requête                                                      | "rest/Persons(30001)"                                                                                                                                                                                                                |
+| startTime       | Date et heure de début au format ISO 8601                              | "2019-05-28T08:25:12.346Z"                                                                                                                                                                              |
+| endTime         | Date et heure de fin au format ISO 8601                                | "2019-05-28T08:25:12.371Z"                                                                                                                                                                              |
+| duration        | Durée du traitement du client en millisecondes (ms) | 25                                                                                                                                                                                                                                                      |
+| response        | Objet réponse du serveur                                               | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
 
 #### Exemple
 
 Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :
 
 ```json
-    {
-        "sequenceNumber": 7880,
-        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
-        "startTime": "2023-05-15T10:43:39.400Z",
-        "endTime": "2023-05-15T10:43:39.419Z",
-        "duration": 19,
-        "response": {
-            "status": 200,
-            "body": 75651
-        }
-    }
+	{
+		"sequenceNumber": 7880,
+		"url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+		"startTime": "2023-05-15T10:43:39.400Z",
+		"endTime": "2023-05-15T10:43:39.419Z",
+		"duration": 19,
+		"response": {
+			"status": 200,
+			"body": 75651
+		}
+	}
 ```
 
 ### Côté serveur
 
-Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Les informations du journal sont enregistrées dans un fichier .jsonl sur le disque de la machine serveur (par défaut, *ordaRequests.jsonl*).
+Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Log information is saved in a .jsonl file on the server machine disk (by default, _ordaRequests.jsonl_).
 
 Pour lancer ce journal :
 
 ```4d
-    //on the server
+	//on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
 ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
-    //srl... parameter is optional
+	//srl... parameter is optional
 SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note
 
-Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté serveur à l'aide de `SET DATABASE PARAMETER`. Toutefois, il est nécessaire si vous souhaitez enregistrer les champs uniques `sequenceNumber` et `duration`.
+Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
 
 :::
 
 Les champs suivants sont enregistrés pour chaque requête :
 
-| Noms des champs | Description                                                                                                            | Exemple                                                   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log                                                         | 104                                                       |
-| url             | URI de la requête                                                                                                      | "rest/Persons(30001)"                                     |
-| startTime       | Date et heure de début au format ISO 8601                                                                              | "2019-05-28T08:25:12.346Z"                                |
-| duration        | Durée de traitement du serveur en microsecondes (µ)                                                                    | 2500                                                      |
-| response        | Objet de réponse du serveur, peut être configuré dans [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
-| ipAddress       | Adresse IP utilisateur                                                                                                 | "192.168.1.5"                                             |
-| userName        | Nom de l'utilisateur 4D                                                                                                | "henry"                                                   |
-| systemUserName  | Login de l'utilisateur sur la machine                                                                                  | "hsmith"                                                  |
-| machineName     | Nom de la machine de l'utilisateur                                                                                     | "PC de Henry Smith                                        |
+| Noms des champs | Description                                                                                                   | Exemple                                                                                                                                                                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log                                                | 104                                                                                                                                                                                                                                                     |
+| url             | URI de la requête                                                                                             | "rest/Persons(30001)"                                                                                                                                                                                                                |
+| startTime       | Date et heure de début au format ISO 8601                                                                     | "2019-05-28T08:25:12.346Z"                                                                                                                                                                              |
+| duration        | Durée de traitement du serveur en microsecondes (µ)                                        | 2500                                                                                                                                                                                                                                                    |
+| response        | Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| ipAddress       | Adresse IP utilisateur                                                                                        | "192.168.1.5"                                                                                                                                                                                           |
+| userName        | Nom de l'utilisateur 4D                                                                                       | "henry"                                                                                                                                                                                                                                                 |
+| systemUserName  | Login de l'utilisateur sur la machine                                                                         | "hsmith"                                                                                                                                                                                                                                                |
+| machineName     | Nom de la machine de l'utilisateur                                                                            | "PC de Henry Smith                                                                                                                                                                                                                                      |
 
 #### Exemple
 
@@ -442,53 +439,52 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ```json
    {
-        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
-        "systemUserName": "Admin",
-        "userName": "Designer",
-        "machineName": "DESKTOP-QSK9738",
-        "taskID": 5,
-        "taskName": "P_1",
-        "startTime": "2023-05-15T11:43:39.401",
-        "response": {
-            "status": 200,
-            "body": 75651
-        },
-        "sequenceNumber": 7008,
-        "duration": 240
-    }
+		"url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+		"systemUserName": "Admin",
+		"userName": "Designer",
+		"machineName": "DESKTOP-QSK9738",
+		"taskID": 5,
+		"taskName": "P_1",
+		"startTime": "2023-05-15T11:43:39.401",
+		"response": {
+			"status": 200,
+			"body": 75651
+		},
+		"sequenceNumber": 7008,
+		"duration": 240
+	}
 
 ```
 
-
 ## Utilisation d'un fichier de configuration de log
 
-Vous pouvez utiliser un **fichier de configuration de log** pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
+You can use a **log configuration file** to easily manage log recording in a production environment. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
 
 ### Activation du fichier
 
 Il existe plusieurs façons d'activer le fichier de configuration du journal, en fonction de votre configuration :
 
-- **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
-- **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le dossier [Settings](../Project/architecture.md#settings-1) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
-- **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-    * Windows : `Users\[userName]\AppData\Roaming\[application]`
-    * macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-    * Windows: `Users\[userName]\AppData\Roaming\4D`
-    * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-    * Windows: `Users\[userName]\AppData\Roaming\4D Server`
-    * macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
+- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+  - Windows: `Users\[userName]\AppData\Roaming\[application]`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+  - Windows: `Users\[userName]\AppData\Roaming\4D`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
-Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settings et AppData/Library, le fichier du dossier Settings aura la priorité.
+If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
 
 :::
 
 ### Description du fichier JSON
 
-Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+The log configuration file is a `.json` file that must comply with the following json schema:
 
 ```json
 {
@@ -575,17 +571,17 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
             }
         },
         "HTTPClientLogs": {
-             "description": "Configuration for http client logs",
-             "type": "object",
-             "properties": {
-                  "state": {
-                       "description": "Configure http client logs",
-                       "type": "integer",
-                       "minimum": 0,
-                       "maximum": 7
-                  },
-             }
-        },
+		     "description": "Configuration for http client logs",
+		     "type": "object",
+		     "properties": {
+		          "state": {
+		               "description": "Configure http client logs",
+		               "type": "integer",
+		               "minimum": 0,
+		               "maximum": 7
+		          },
+		     }
+		},
         "POP3Logs": {
             "description": "Configuration for POP3 logs",
             "type": "object",
