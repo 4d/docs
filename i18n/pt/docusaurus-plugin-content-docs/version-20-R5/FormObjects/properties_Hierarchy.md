@@ -5,13 +5,13 @@ title: Hierarquia
 
 ## List box hierárquica
 
-`List boxes de tipo array`
+`Array type list boxes`
 
-Essa propriedade especifica que o list box deve ser exibido em forma hierárquica. No formulário JSON essa funcionalidade é ativada [quando o *dataSource* valor de propriedade for um array](properties_Object.md#hierarchical-list-box), ou seja uma coleção.
+Essa propriedade especifica que o list box deve ser exibido em forma hierárquica. In the JSON form, this feature is triggered [when the _dataSource_ property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 
-Opções adicionais (**Variable 1...10**) estão disponíveis quando a opção *List box hierárquica* for selecionada, correspondendo a cada array *dataSource* para usar como quebra de coluna. A cada vez que um valor é digitado em um campo, uma nova linha é adicionada. Podem ser especificadas até 10 variáveis. Essas variáveis estabelecem os níveis hierárquicos a serem exibidos na primeira coluna.
+Additional options (**Variable 1...10**) are available when the _Hierarchical List Box_ option is selected, corresponding to each _dataSource_ array to use as break column. A cada vez que um valor é digitado em um campo, uma nova linha é adicionada. Podem ser especificadas até 10 variáveis. Essas variáveis estabelecem os níveis hierárquicos a serem exibidos na primeira coluna.
 
-Ver [List box hierárquicos](listbox_overview.md#hierarchical-list-boxes)
+See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 #### Gramática JSON
 
