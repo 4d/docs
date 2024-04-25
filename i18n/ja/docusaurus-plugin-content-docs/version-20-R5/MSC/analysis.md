@@ -5,7 +5,8 @@ sidebar_label: ログ解析ページ
 ---
 
 ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 この機能はアプリケーション利用状況の解析、エラーや不具合の原因となった処理を探すなどの場合に役立ちます。 クライアント/サーバーモードの場合、各クライアントマシンごとの操作を検証することもできます。
-> データベースのデータに対しておこなわれた操作をロールバックさせることもできます。 詳細は [ロールバック](rollback.md) ページを参照してください。
+
+> データベースのデータに対しておこなわれた操作をロールバックさせることもできます。 For more information, refer to [Rollback page](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
 
@@ -13,31 +14,39 @@ sidebar_label: ログ解析ページ
 
 この情報を使用して各操作のソースとコンテキストを識別できます:
 
-- **操作**: ログファイル中での一連の操作番号
-- **アクション**: データに対しておこなわれた操作のタイプ。 この列には以下の操作のいずれかが記録されます:
-    - データファイルを開く: データファイルを開いた
-    - データファイルを閉じる: 開いたデータファイルを閉じた
-    - コンテキストの作成する: 実行コンテキストを指定するプロセスを作成した
-    - コンテキストを閉じる: プロセスを閉じた
-    - 追加: レコードを作成、格納した
-    - BLOB を追加: BLOBフィールドに BLOB を格納した
-    - 削除: レコードを削除した
-    - 更新: レコードを更新した
-    - トランザクションの開始: トランザクションを開始した
-    - トランザクションの受け入れ: トランザクションを受け入れた
-    - トランザクションのキャンセル: トランザクションをキャンセルした
-    - コンテキストの更新: 追加データを変更した (例: `CHANGE CURRENT USER` あるいは `SET USER ALIAS` の呼び出し)
+- **Operation**: Sequence number of operation in the log file.
 
-- **テーブル**: 追加/削除/更新されたレコードまたは BLOB の所属テーブル
-- **プライマリーキー/BLOB**: 各レコードのプライマリーキーのコンテンツ (プライマリーキーが複数のフィールドから構成されているときには、値はセミコロンで区切られています)、またはオペレーションに関連した BLOB のシーケンス番号
-- **プロセス**: 処理が実行された内部プロセス番号。 この内部番号は処理のコンテキストに対応します。
-- **サイズ**: 操作により処理されたデータのサイズ (バイト単位)
-- **日付と時刻**: 処理が実行された日付と時刻
-- **システムユーザー**: 操作を実行したユーザーのシステム名。 クライアント/サーバーモードでは、クライアントマシン名が表示されます。シングルユーザーモードでは、ユーザーのセッション名が表示されます。
-- **4Dユーザー**: 操作を実行したユーザーの 4Dユーザー名。 ユーザーに対してエイリアスが設定されていた場合、4Dユーザー名の代わりのそのエイリアスが表示されます。
-- **値**: レコードの追加や更新の場合、フィールドの値。 値はセミコロン “;” で区切られます。 文字形式に表現できる値のみを表示します。  
-  ***注**: データベースが暗号化されており、開かれたログファイルに対応する有効なデータキーが提供されていない場合、暗号化された値はこのカラムには表示されません。*
-- **レコード**: レコード番号
+- **Action**: Type of operation performed on the data. この列には以下の操作のいずれかが記録されます:
+  - データファイルを開く: データファイルを開いた
+  - データファイルを閉じる: 開いたデータファイルを閉じた
+  - コンテキストの作成する: 実行コンテキストを指定するプロセスを作成した
+  - コンテキストを閉じる: プロセスを閉じた
+  - 追加: レコードを作成、格納した
+  - BLOB を追加: BLOBフィールドに BLOB を格納した
+  - 削除: レコードを削除した
+  - 更新: レコードを更新した
+  - トランザクションの開始: トランザクションを開始した
+  - トランザクションの受け入れ: トランザクションを受け入れた
+  - トランザクションのキャンセル: トランザクションをキャンセルした
+  - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 
-選択したアプリケーションのカレントログファイル (デフォルトで "データファイル名.journal" というファイル名) の内容を更新するには **解析** をクリックします。 **ブラウズ**ボタンをクリックすると、アプリケーションの他のログファイルを選択できます。 **書き出し...** ボタンを使用してファイルの内容をテキストとして書き出せます。
+- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
 
+- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
+
+- **Process**: Internal number of process in which the operation was carried out. この内部番号は処理のコンテキストに対応します。
+
+- **Size**: Size (in bytes) of data processed by the operation.
+
+- **Date and Hour**: Date and hour when the operation was performed.
+
+- **System User**: System name of the user that performed the operation. クライアント/サーバーモードでは、クライアントマシン名が表示されます。シングルユーザーモードでは、ユーザーのセッション名が表示されます。
+
+- **4D User**: 4D user name of the user that performed the operation. ユーザーに対してエイリアスが設定されていた場合、4Dユーザー名の代わりのそのエイリアスが表示されます。
+
+- **Values**: Values of fields for the record in the case of addition or modification. 値はセミコロン “;” で区切られます。 Only values represented in alphanumeric form are displayed.\
+  _**Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column._
+
+- **Records**: Record number.
+
+Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). <strong x-id="1">ブラウズ</strong>ボタンをクリックすると、アプリケーションの他のログファイルを選択できます。 The **Export...** button can be used to export the contents of the file as text.
