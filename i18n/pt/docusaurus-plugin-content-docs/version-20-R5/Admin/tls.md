@@ -9,7 +9,7 @@ Todos os servidores 4D podem se comunicar em modo seguro através do protocolo T
 - o servidor de aplicação (aplicações desktop cliente-servidor)
 - o servidor SQL
 
-Além disso, o cliente HTTP (comando `HTTP get` por exemplo) também é compatível com o protocolo TLS.
+In addition, the 4D HTTP client (`HTTP get` command for example) also supports the TLS protocol.
 
 ## Visão Geral
 
@@ -23,13 +23,13 @@ Configuração de rede usando TSL:
 
 O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim garantir a confidencialidade e integridade da troca de informações:
 
-- **Autenticação**: As identidades do emissor e do receptor são confirmadas.
-- **Confidencialidade**: O dado enviado é criptografado para que um terceiro não possa entender a mensagem.
-- **Integridade**: Os dados recebidos não foram modificados, seja por acidente ou com má intenção.
+- **Authentication**: The sender and receiver identities are confirmed.
+- **Confidentiality**: The sent data is encrypted so that no third person can understand the message.
+- **Integrity**: The received data has not been changed, by accident or malevolently.
 
 TLS usa uma técnica de criptografia de chave pública baseado em duas chaves assimétricas para criptografia e descriptografia: uma chave pública e outra privada. A chave privada é usada para criptografar os dados. O emissor (o website) não dá essa chave para ninguém.
 
-A chave pública é usada para decriptografar a informação e enviá-la para os recipientes (navegadores web) através de um **certificado**. O certificado é fornecido através de uma autoridade de certificação. O site paga ao provedor de certificados para fornecer um certificado que garanta a autenticação do servidor e contenha a chave pública que permita a troca de dados em um modo seguro.
+The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. O certificado é fornecido através de uma autoridade de certificação. O site paga ao provedor de certificados para fornecer um certificado que garanta a autenticação do servidor e contenha a chave pública que permita a troca de dados em um modo seguro.
 
 :::note
 
@@ -37,19 +37,15 @@ Os navegadores web autorizam apenas os certificados emitidos por uma autoridade 
 
 :::
 
-
-
 ## Versão mínima
 
-Como padrão, a versão mínima de um protocolo de segurança aceito pelos servidores 4D é TLS 1.3. Pode modificar esse valor usando o seletor `Min TLS version` do comando `SET DATABASE PARAMETER`.
+Como padrão, a versão mínima de um protocolo de segurança aceito pelos servidores 4D é TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
 
 :::note
 
-Você pode controlar separadamente a [versão mínima do TLS](WebServer/webServerConfig.md#minimum-tls-version) para **objetos do webServer**.
+You can control separately the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) for **webServer objects**.
 
 :::
-
-
 
 ## Habilitando TLS com o servidor HTTP
 
@@ -63,24 +59,24 @@ Para poder usar o protocolo TLS com o servidor HTTP 4D, você deve:
 
 #### Formato
 
-Certificados TLS gerenciados por 4D devem ser no **PEM format**. Se seu fornecedor de certificado envia um certificado que está no formato binário tais como .crt, .pfx ou .p12, tem que converter para o formato PEM para poder usá-lo. Há sites em que você pode fazer essa conversão on-line.
+TLS certificates managed by 4D must be in the **PEM format**. Se seu fornecedor de certificado envia um certificado que está no formato binário tais como .crt, .pfx ou .p12, tem que converter para o formato PEM para poder usá-lo. Há sites em que você pode fazer essa conversão on-line.
 
 #### Criptografia
 
 4D fornece certificados nos formatos de criptografia abaixo:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\(cryptosystem\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
-:::info Compatibilidade
+:::info Compatibidade
 
-O formato de criptografia ECDSA não é compatível com [a camada de rede legado 4D](../settings/client-server.md#network-layer).
+The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
 
 :::
 
 :::note
 
-4D oferece dois comandos para ajudar a peticionar um certificado RSA, [veja o tutorial abaixo](#how-to-get-a-rsa-certificate-tutorial).
+4D proposes two commands to help you requesting a RSA certificate, [see the tutorial below](#how-to-get-a-rsa-certificate-tutorial).
 
 :::
 
@@ -88,48 +84,43 @@ O formato de criptografia ECDSA não é compatível com [a camada de rede legado
 
 Os arquivos de certificado incluem:
 
-- **key.pem**: um documento que contém a chave de criptografia privada,
-- **cert.pem**: um documento que contém o certificado.
+- **key.pem**: a document containing the private encryption key,
+- **cert.pem**: a document containing the certificate.
 
-Os arquivos **key.pem** e **cert.pem** devem estar localizados:
+Both **key.pem** and **cert.pem** files must be located:
 
-- com 4D Server ou 4D no modo local, ao lado da [pasta do projeto](Project/architecture.md#project-folder)
-- com o 4D em modo remoto, na pasta do banco de dados do cliente na máquina remota (para obter mais informações sobre a localização dessa pasta, consulte o comando [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html)). Deve copiar esses arquivos manualmente na máquina remota.
+- with 4D Server or 4D in local mode, next to the [project folder](Project/architecture.md#project-folder)
+- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html) command). Deve copiar esses arquivos manualmente na máquina remota.
 
 ### Ativar TLS
 
-Para que as conexões TLS sejam aceitas pelo servidor HTTP, você deve ativar HTTPS. Consulte o parágrafo [**Habilitar HTTPS**](WebServer/webServerConfig.md#enable-https) para saber como ativar o TLS no servidor HTTP.
+Para que as conexões TLS sejam aceitas pelo servidor HTTP, você deve ativar HTTPS. Refer to the [**Enable HTTPS**](WebServer/webServerConfig.md#enable-https) paragraph to know the different ways to enable TLS for the HTTP server.
 
 :::note
 
-O servidor 4D web é compatível com a opção HSTS para prevenir um navegador de
+The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
 
 :::
 
-
 ### Perfect Forward Secrecy (PFS)
 
-[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adiciona mais um nível de segurança para suas comunicações. Ao invés de usar chaves de troca pré-estabelecidas, PFS cria chaves de sessão cooperativamente entre as partes que se comunicam usando os algoritmos Difie-Hellman (DH). A maneira conjunta com a qual essas chaves são construídas cria um "segredo compartilhado" que impede partes externas de as comprometerem.
+[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adds an additional layer of security to your communications. Ao invés de usar chaves de troca pré-estabelecidas, PFS cria chaves de sessão cooperativamente entre as partes que se comunicam usando os algoritmos Difie-Hellman (DH). A maneira conjunta com a qual essas chaves são construídas cria um "segredo compartilhado" que impede partes externas de as comprometerem.
 
-Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. Se o arquivo *dhparams.pem* (documento que contém a chave privada DH do servidor) ainda não existir, 4D vai gerar o arquivo automaticamente com um tamanho de chave de  2048. A geração inicial deste arquivo pode levar vários minutos. O arquivo é colocado com os arquivos [*key.pem* e *cert.pem*](#installing-certificate-files).
+Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. If the _dhparams.pem_ file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. A geração inicial deste arquivo pode levar vários minutos. The file is placed with the [_key.pem_ and _cert.pem_ files](#installing-certificate-files).
 
-Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) e quiser habilitar o PFS, deve comprovar que contenha entradas com algoritmos DH ou ECDH (Elliptic-curve Diffie-Hellman).
-
-
+If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
 
 ## Ativando TLS com os outros servidores
 
 Para usar TLS com o servidor de aplicações 4D (aplicações cliente-servidor de desktop) ou o servidor SQL, você só precisa ativar comunicações TLS e o servidor automaticamente configura as conexões na inicialização.
 
-- Com o servidor de aplicações, selecione a opção **Encriptar comunicações cliente-servidor** na página ["Opções cliente-servidor/rede" da caixa de diálogo Parâmetros](.../settings/client-server#encrypt-client-server-communications).
-- Com o servidor SQL, selecione a opção **Habilitar TLS** na página ["SQL" na caixa de diálogo Parâmetros](../settings/sql#sql-server-publishing).
-
-
-
+- With the application server, select the **Encrypt Client-Server Communications** option in the ["Client-server/Network options" page of the Settings dialog box](../settings/client-server#encrypt-client-server-communications).
+- With the SQL server, select the **Enable TLS** option in the ["SQL" page of the Settings dialog box](../settings/sql#sql-server-publishing).
 
 ## Como obter o certificado RSA? (tutorial)
 
 Um servidor trabalhando em modo seguro significa que precisa de um certificado digital de uma autoridade de certificações. Esse certificado contém várias informações tais como a ID do site assim como a chave pública usada para comunicar com o servidor. Esse certificado é transmitido aos clientes (por exemplo os navegadores Web) conectando a esse servidor. Quando o certificado tiver sido identificado e aceito, a comunicação é feita em modo seguro.
+
 > Navegadores web autorizam apenas os certificados emitidos por autoridades de certificação referenciados em suas propriedades.
 
 ![](../assets/en/WebServer/tls2.png)
@@ -138,16 +129,20 @@ A autoridade de certificação é escolhida de acordo com vários critérios. Se
 
 Para obter um certificado digital:
 
-1. Crie uma chave privada usando o comando `GENERATE ENCRYPTION KEYPAIR`.
-> **Aviso**: por razões de segurança, a chave privada deve ser sempre mantida em segredo. Na verdade deve ser mantida sempre na máquina servidor. Para o servidor web, o arquivo Key.pem deve ser localizado na pasta Project.
+1. Generate a private key using the `GENERATE ENCRYPTION KEYPAIR` command.
 
-2. Use o comando `GENERATE CERTIFICATE REQUEST` para emitir uma petição de certificado.
+> **Warning**: For security reasons, the private key should always be kept secret. Na verdade deve ser mantida sempre na máquina servidor. Para o servidor web, o arquivo Key.pem deve ser localizado na pasta Project.
 
-3. Envie a petição de certificado à autoridade de certificação escolhida. Para preencher uma petição de certificado, pode ser necessário entrar em contato com a autoridade de certificação. A autoridade checa que a informação transmitida seja correta. A petição de certificado é gerada em um BLOB usando o formato PKCS codificado em base64 (formato PEM). Esse princípio permite que copie e cole as chaves como texto e as envie via E-mail sem modificar o conteúdo da chave. Por exemplo pode salvar o BLOB que contém a petição de certificado em um documento texto (usando o comando `BLOB TO DOCUMENT`), e então abrir e copiar e colar seu conteúdo em um mail ou um formulário web a ser enviado para a autoridade de certificação.
+2. Use the `GENERATE CERTIFICATE REQUEST` command to issue a certificate request.
 
-4. Quando tiver o certificado, crie um arquivo texto chamado "cert.pem" e cole seu conteúdo do certificado dentro dele. Pode receber um certificado de várias maneiras (geralmente por email ou formulário HTML). 4D aceita todos os formatos de texto relacionados à plataformas para certificados (OS X, PC, Linux, etc). No entanto, o certificado deve estar no formato [PEM](#format), *ou seja,*, PKCS codificado em base64.
+3. Envie a petição de certificado à autoridade de certificação escolhida.
+   Para preencher uma petição de certificado, pode ser necessário entrar em contato com a autoridade de certificação. A autoridade checa que a informação transmitida seja correta. A petição de certificado é gerada em um BLOB usando o formato PKCS codificado em base64 (formato PEM). Esse princípio permite que copie e cole as chaves como texto e as envie via E-mail sem modificar o conteúdo da chave. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
+
+4. Quando tiver o certificado, crie um arquivo texto chamado "cert.pem" e cole seu conteúdo do certificado dentro dele.
+   Pode receber um certificado de várias maneiras (geralmente por email ou formulário HTML). 4D aceita todos os formatos de texto relacionados à plataformas para certificados (OS X, PC, Linux, etc). However, the certificate must be in [PEM format](#format), _i.e._, PKCS encoded in base64.
+
 > Caracteres CR final de linha não são compatíveis em si; deve usar ou CRLF ou LF.
 
-5. Coloque o arquivo “cert.pem” no [local apropriado](#installing-certificate-files).
+5. Place the “cert.pem” file in the [appropriate location](#installing-certificate-files).
 
 O servidor 4D pode trabalhar em modo seguro. Um certificado é normalmente válido entre 3 meses e um ano.
