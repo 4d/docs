@@ -7,29 +7,26 @@ title: Glossaire
 
 ![](../assets/en/ORDA/mainConcepts.png)
 
-
-
 ## Action
 
 Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
 
 ## Attribut
 
-Un attribut est la plus petite cellule de stockage dans une base de données relationnelle (voir aussi [Attribut relationnel](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
+An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
 
-*   Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
-*   Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
-> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+- Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
+- Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
+
+> _Attributes_ and _properties_ are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
-Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [propertyPath](#propertyPath).
-
+Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. See also [PropertyPath](#propertyPath).
 
 ## Class code
 
 Code pour la (les) fonction(s) de classe utilisateurs.
-
 
 ## Champ calculé
 
@@ -53,19 +50,18 @@ Une dataclass est un objet qui décrit les données. Les tables de la base de do
 
 Une dataclass est reliée à un seul datastore.
 
-
 ## DataClass class
 
 Classe pour des objets dataclass spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
 
 ## Datastore
 
-Un datastore est l'objet d'interface fourni par ORDA pour référencer une structure et accéder à ses données. La base de données principale, retournée par la commande `ds`, est disponible en tant que datastore (le datastore principal).
+Un datastore est l'objet d'interface fourni par ORDA pour référencer une structure et accéder à ses données. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
 Un datastore fournit :
 
-*   une connexion à la base de données 4D
-*   un ensemble de dataclasses pour travailler avec la base de données
+- une connexion à la base de données 4D
+- un ensemble de dataclasses pour travailler avec la base de données
 
 La base peut être une base locale 4D (le datastore principal), ou une base 4D Server exposée en ressource REST (un datastore distant).
 
@@ -75,10 +71,9 @@ Un datastore ne référence qu'une seule base de données. Il est toutefois poss
 
 Classe pour des objets datastore spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
 
-
 ## DataStoreImplementation
 
-Nom interne de la classe générique DataStore dans le class store `4D`.
+Internal name of the generic DataStore class in the `4D` class store.
 
 ## Copie profonde
 
@@ -86,7 +81,7 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 ## ds
 
-`ds` est la commande de langage 4D qui retourne une référence d'objet [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
+`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. Elle correspond au datastore disponible sur la base de données principale 4D.
 
 ## Entity
 
@@ -102,18 +97,15 @@ Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête e
 
 Une sélection d'entités contient :
 
-
-*   un ensemble de 0 à X références d'entités,
-*   une propriété length (toujours),
-*   les propriétés queryPlan et queryPath (si demandées lors de la requête).
+- un ensemble de 0 à X références d'entités,
+- une propriété length (toujours),
+- les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
 Une sélection d'entités peut également être vide.
 
-
 ## Generic class
 
-Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
-
+Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
 
 ## Lazy loading
 
@@ -127,7 +119,7 @@ L'objet Datastore correspondant à la base 4D ouverte (autonome ou client/serveu
 
 Les objets ORDA tels que les "datastores", "dataclasses", "entity selections" et "entities" définissent les classes d'objets. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
 
-Par exemple, la méthode `query()` est une "member function" de dataclass. Si vous avez stocké un objet dataclass dans la variable `$myClass`, vous pouvez écrire :
+For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
 
 ```code4d
 $myClass.query("name = smith")
@@ -137,16 +129,16 @@ $myClass.query("name = smith")
 
 Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Cela inclut :
 
-*   number
-*   text
-*   Null
-*   boolean
-*   date
-*   object
-*   collection
-*   image(\*)
+- number
+- text
+- Null
+- boolean
+- date
+- object
+- collection
+- image(\*)
 
-*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
+_(\*) picture type is not supported by statistical methods such as_ `entitySelection.max( )`.
 
 ## Verrouillage optimiste
 
@@ -156,15 +148,15 @@ En mode "verrouillage optimiste", les entités ne sont pas verrouillées explici
 
 Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que l'on y accède, en utilisant la méthode entity.lock( ). Les autres process ne peuvent ni mettre à jour ni supprimer l'entité tant qu'elle n'est pas déverrouillée. Le langage 4D classique n'autorise que les verrouillages pessimistes. Voir "Verrouillage optimiste".
 
-
 ## Privilege
 
 The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
 ## Propriété
 
-Voir [Attribut](#attribute).
-> > Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+See [Attribute](#attribute).
+
+> \> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 
@@ -182,8 +174,8 @@ Ce sont des dataclasses liées par des attributs de relation.
 
 Les attributs de relation sont utilisés pour conceptualiser les relations entre les dataclasses (N vers 1 et 1 vers N).
 
-*   Relation N vers 1 (la dataclassA fait référence à une occurrence de la dataclassB) : un attribut de relation est disponible dans dataclassA et fait référence à une instance de dataclassB.
-*   Relation 1 vers N (une occurrence de dataclassB fait référence à plusieurs occurrences de dataclassA) : un attribut de relation est disponible dans la dataclassB et fait référence à plusieurs instances de la dataclassA.
+- Relation N vers 1 (la dataclassA fait référence à une occurrence de la dataclassB) : un attribut de relation est disponible dans dataclassA et fait référence à une instance de dataclassB.
+- Relation 1 vers N (une occurrence de dataclassB fait référence à plusieurs occurrences de dataclassA) : un attribut de relation est disponible dans la dataclassB et fait référence à plusieurs instances de la dataclassA.
 
 Une dataclass peut avoir des attributs de relation récursifs.
 
@@ -199,16 +191,13 @@ Les sélections d'entités peuvent faire référence à des entités relatives s
 
 Une base de données 4D ouverte sur 4D ou 4D Server (disponible via HTTP) et exposée en tant que ressource REST. Cette base de données peut être référencée localement en tant que Datastore à partir d'autres postes de travail, où un locaID lui est attribué. Le datastore distant peut être utilisé à travers les concepts ORDA (datastore, dataclass, sélection d'entités, etc.). Cette utilisation est soumise à un système de licence.
 
-
 ## Ressource
 
 An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
 
-
 ## Role
 
 A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
-
 
 ## Session
 
@@ -216,7 +205,7 @@ Lorsque l'application 4D se connecte à un datastore distant, une session est cr
 
 Chaque fois qu'une nouvelle session est ouverte, une licence est utilisée. Chaque fois qu'une session est fermée, la licence est libérée.
 
-Les sessions inactives sont automatiquement fermées après un délai. Le timeout par défaut est de 48 heures, il peut être défini par le développeur (il doit être >= 60 minutes).
+Les sessions inactives sont automatiquement fermées après un délai. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
 
 ## Copie superficielle (Shallow copy)
 
