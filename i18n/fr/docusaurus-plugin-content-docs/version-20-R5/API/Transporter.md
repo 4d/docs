@@ -6,6 +6,7 @@ title: Classe Transporter
 ## Description
 
 <!-- REF transporter.acceptUnsecureConnection.Desc -->
+
 ## .acceptUnsecureConnection
 
 <details><summary>Historique</summary>
@@ -13,15 +14,16 @@ title: Classe Transporter
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R4   | Ajout         |
+
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.acceptUnsecureConnection` contient <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** si 4D est autorisé à établir une connexion non chiffrée<!-- END REF --> lorsqu'une connexion chiffrée n'est pas possible.
+The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
-Elle contient **False** si les connexions non chiffrées ne sont pas autorisées, auquel cas une erreur est retournée lorsque la connexion chiffrée n'est pas possible.
+It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
 Ports sécurisés disponibles :
 
@@ -36,11 +38,13 @@ Ports sécurisés disponibles :
 - POP3
   - 110 : Port POP3 non chiffré
   - 995 : POP3 avec mise à niveau STARTTLS si le serveur le prend en charge.
+
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.authenticationModeIMAP.Desc -->
+
 ## .authenticationMode
 
 <details><summary>Historique</summary>
@@ -55,7 +59,7 @@ Ports sécurisés disponibles :
 
 #### Description
 
-La propriété `.authenticationMode` contient <!-- REF #transporter.authenticationMode.Summary -->le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie<!-- END REF -->.
+The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
@@ -73,6 +77,7 @@ Valeurs possibles :
 ---
 
 <!-- REF transporter.authenticationModePOP3.Desc -->
+
 ## .authenticationMode
 
 <details><summary>Historique</summary>
@@ -87,25 +92,26 @@ Valeurs possibles :
 
 #### Description
 
-La propriété `.authenticationMode` contient le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie.
+The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
 Valeurs possibles :
 
-| Valeur   | Constantes                     | Commentaire                                                   |
-| -------- | ------------------------------ | ------------------------------------------------------------- |
+| Valeur   | Constantes                     | Commentaire                                                                      |
+| -------- | ------------------------------ | -------------------------------------------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentification à l'aide du protocole APOP (POP3 uniquement) |
-| CRAM-MD5 | `POP3 authentication CRAM MD5` | Authentification à l'aide du protocole CRAM-MD5               |
-| LOGIN    | `POP3 authentication login`    | Authentification à l'aide du protocole LOGIN                  |
-| OAUTH2   | `POP3 authentication OAUTH2`   | Authentification à l'aide du protocole OAuth2                 |
-| PLAIN    | `POP3 authentication plain`    | Authentification à l'aide du protocole PLAIN                  |
+| CRAM-MD5 | `POP3 authentication CRAM MD5` | Authentification à l'aide du protocole CRAM-MD5                                  |
+| LOGIN    | `POP3 authentication login`    | Authentification à l'aide du protocole LOGIN                                     |
+| OAUTH2   | `POP3 authentication OAUTH2`   | Authentification à l'aide du protocole OAuth2                                    |
+| PLAIN    | `POP3 authentication plain`    | Authentification à l'aide du protocole PLAIN                                     |
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.authenticationModeSMTP.Desc -->
+
 ## .authenticationMode
 
 <details><summary>Historique</summary>
@@ -120,7 +126,7 @@ Valeurs possibles :
 
 #### Description
 
-La propriété `.authenticationMode` contient le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie.
+The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
@@ -138,6 +144,7 @@ Valeurs possibles :
 ---
 
 <!-- REF transporter.bodyCharset.Desc -->
+
 ## .bodyCharset
 
 <details><summary>Historique</summary>
@@ -153,22 +160,23 @@ Valeurs possibles :
 
 #### Description
 
-La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary -->  le jeu de caractères et l'encodage utilisés pour le corps de l'email<!-- END REF -->.
+The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
-**Valeurs possibles :**
+**Possible values:**
 
-| Constante                | Valeur                         | Commentaire                                                                                                    |
-| ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                      |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                      |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset* : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* &*bodyCharset* : US-ASCII si possible, sinon UTF-8 & base64                                    |
+| Constante                | Valeur                                                                                      | Commentaire                                                                                                                                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
+| mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)                                                                                       |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & base64                                                                                                                                        |
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.connectionTimeOut.Desc -->
+
 ## .connectionTimeOut
 
 <details><summary>Historique</summary>
@@ -183,13 +191,14 @@ La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary
 
 #### Description
 
-La propriété `.connectionTimeOut` contient <!-- REF #transporter.connectionTimeOut.Summary -->le temps d'attente maximal (en secondes) autorisé pour établir une connexion avec le serveur<!-- END REF -->. Par défaut, si la propriété n'a pas été définie dans l'objet server (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), la valeur utilisée est 30.
+The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.headerCharset.Desc -->
+
 ## .headerCharset
 
 <details><summary>Historique</summary>
@@ -204,26 +213,27 @@ La propriété `.connectionTimeOut` contient <!-- REF #transporter.connectionTim
 
 #### Description
 
-La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Summary --> le jeu de caractères et l'encodage utilisés pour l'en-tête de l'email<!-- END REF -->. L'en-tête comprend les éléments suivants de l'e-mail :
+The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. L'en-tête comprend les éléments suivants de l'e-mail :
 
 - subject,
 - attachment filename(s),
 - email name.
 
-**Valeurs possibles :**
+**Possible values:**
 
-| Constante                | Valeur                         | Commentaire                                                                                                |
-| ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                  |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                 |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset* : US-ASCII si possible, sinon UTF-8 & Quoted-printable (valeur par défaut) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* &*bodyCharset* : US-ASCII si possible, sinon UTF-8 & base64                                |
+| Constante                | Valeur                                                                                      | Commentaire                                                                                                                                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
+| mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)                                                                                           |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & base64                                                                                                                                        |
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.host.Desc -->
+
 ## .host
 
 <details><summary>Historique</summary>
@@ -238,13 +248,14 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 
 #### Description
 
-La propriété `.host` contient <!-- REF #transporter.host.Summary -->le nom ou l'adresse IP du serveur hôte<!-- END REF -->. Utilisée pour les échanges de courrier (SMTP, POP3, IMAP).
+The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Utilisée pour les échanges de courrier (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.logFile.Desc -->
+
 ## .logFile
 
 <details><summary>Historique</summary>
@@ -259,19 +270,20 @@ La propriété `.host` contient <!-- REF #transporter.host.Summary -->le nom ou 
 
 #### Description
 
-La propriété `.logFile` contient <!-- REF #transporter.logFile.Summary -->le chemin complet du fichier d'historique qui a été défini (le cas échéant) pour la connexion<!-- END REF -->. Le chemin peut être relatif (au dossier Logs courant) ou absolu.
+The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. Le chemin peut être relatif (au dossier Logs courant) ou absolu.
 
-Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE PARAMETER`), les fichiers log étendus stockent le contenu MIME de tous les emails envoyés et n'ont pas de limite de taille. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
+Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
 
-- **Connexions SMTP** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **Connexions POP3** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **Connexions IMAP** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **SMTP connections** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **POP3 connections** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **IMAP connections** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.port.Desc -->
+
 ## .port
 
 <details><summary>Historique</summary>
@@ -286,7 +298,7 @@ Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE
 
 #### Description
 
-La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numéro de port utilisé pour les transactions d'emails<!-- END REF -->. Par défaut, si la propriété *port* n'a pas été définie dans l'objet *server* (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
+The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the _port_ property has not been set in the _server_ object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -297,6 +309,7 @@ La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numér
 ---
 
 <!-- REF transporter.sendTimeOut.Desc -->
+
 ## .sendTimeOut
 
 <details><summary>Historique</summary>
@@ -304,19 +317,21 @@ La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numér
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R4   | Ajout         |
+
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
 
 #### Description
 
-La propriété `.sendTimeOut` contient <!-- REF #transporter.sendTimeOut.Summary --> le temps d'attente maximum (en secondes) d'un appel à `.send()` avant le timeout (l'expiration du délai)<!-- END REF -->. Par défaut, si la propriété `.sendTimeOut` n'a pas été définie dans l'objet `server`, la valeur 100 est utilisée.
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.user.Desc -->
+
 ## .user
 
 <details><summary>Historique</summary>
@@ -331,13 +346,14 @@ La propriété `.sendTimeOut` contient <!-- REF #transporter.sendTimeOut.Summary
 
 #### Description
 
-La propriété `.user` contient <!-- REF #transporter.user.Summary --> le nom d'utilisateur employé pour l'authentification sur le serveur de messagerie<!-- END REF -->.
+The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
 
 <!-- END REF -->
 
 ---
 
 <!-- REF transporter.checkConnection().Desc -->
+
 ## .checkConnection()
 
 <details><summary>Historique</summary>
@@ -350,29 +366,30 @@ La propriété `.user` contient <!-- REF #transporter.user.Summary --> le nom d'
 
 <!-- REF #transporter.checkConnection().Syntax -->**.checkConnection()** : Object<!-- END REF -->
 
-
 <!-- REF #transporter.checkConnection().Params -->
-| Paramètres | Type   |    | Description                                    |
-| ---------- | ------ |:--:| ---------------------------------------------- |
-| Résultat   | Object | <- | Statut de la connexion de l'objet transporteur |
+
+| Paramètres | Type   |     | Description                                    |
+| ---------- | ------ | :-: | ---------------------------------------------- |
+| Résultat   | Object |  <- | Statut de la connexion de l'objet transporteur |
+
 <!-- END REF -->
 
 #### Description
 
-La fonction `.checkConnection()` <!-- REF #transporter.checkConnection().Summary --> vérifie la connexion à l'aide des informations stockées dans l'objet transporteur<!-- END REF -->recrée la connexion si nécessaire, et renvoie son statut. Cette fonction vous permet de vérifier que les valeurs fournies par l'utilisateur sont valides et cohérentes.
+The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. Cette fonction vous permet de vérifier que les valeurs fournies par l'utilisateur sont valides et cohérentes.
 
 #### Objet retourné
 
 La fonction envoie une requête au serveur de mail et retourne un objet décrivant le statut. Cet objet peut avoir les propriétés suivantes :
 
-| Propriété  |                          | Type       | Description                                                                                                                 |
-| ---------- | ------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| success    |                          | boolean    | Vrai si la vérification a été effectuée avec succès, sinon Faux                                                             |
-| status     |                          | number     | (SMTP uniquement) Code du statut retourné par le serveur de messagerie (0 en cas de problème non lié au traitement du mail) |
-| statusText |                          | text       | Message du statut retourné par le serveur de messagerie, ou dernière erreur retournée dans la pile d'erreurs 4D             |
-| errors     |                          | collection | Pile d'erreurs 4D (non retournée si une réponse du serveur de messagerie est reçue)                                         |
-|            | \[ ].errCode            | number     | Code d'erreur 4D                                                                                                            |
-|            | \[ ].message            | text       | Description de l'erreur 4D                                                                                                  |
-|            | \[ ].componentSignature | text       | Signature du composant interne qui a retourné l'erreur                                                                      |
+| Propriété  |                                                                                              | Type       | Description                                                                                                                                                       |
+| ---------- | -------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success    |                                                                                              | boolean    | Vrai si la vérification a été effectuée avec succès, sinon Faux                                                                                                   |
+| status     |                                                                                              | number     | (SMTP uniquement) Code du statut retourné par le serveur de messagerie (0 en cas de problème non lié au traitement du mail) |
+| statusText |                                                                                              | text       | Message du statut retourné par le serveur de messagerie, ou dernière erreur retournée dans la pile d'erreurs 4D                                                   |
+| errors     |                                                                                              | collection | Pile d'erreurs 4D (non retournée si une réponse du serveur de messagerie est reçue)                                                            |
+|            | \[ ].errCode            | number     | Code d'erreur 4D                                                                                                                                                  |
+|            | \[ ].message            | text       | Description de l'erreur 4D                                                                                                                                        |
+|            | \[ ].componentSignature | text       | Signature du composant interne qui a retourné l'erreur                                                                                                            |
 
 <!-- END REF -->
