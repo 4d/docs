@@ -7,7 +7,7 @@ title: 一般ページ
 
 ## デザイン
 
-このエリアには **ツールバー表示** オプションがあります。 このオプションがチェックされていると、デザインモードで 4Dツールバーが表示されます。
+This area contains the **Display toolbar** option. このオプションがチェックされていると、デザインモードで 4Dツールバーが表示されます。
 
 ## 一般
 
@@ -15,17 +15,16 @@ title: 一般ページ
 
 ### 起動時モード
 
-このメニューを使用して、データベースのデフォルトの起動モードを、**デザイン** モードまたは **アプリケーション** モードに設定できます。 特記されない限り、パスワードアクセスシステムが無効の場合には、4D はデフォルトでデザインモードで開きます。
-
+You use this menu to select the default startup mode for the database: **Design** or **Application**. 特記されない限り、パスワードアクセスシステムが無効の場合には、4D はデフォルトでデザインモードで開きます。
 
 ## コンポーネント
 
-このエリアでは、[コンポーネントの開発者](../Extensions/develop-components.md) に向けて、コンポーネントインストール後にそのクラスや関数を 4Dコードエディターに公開するための設定を提供しています。
+This area allows [component developers](../Extensions/develop-components.md) to configure how their component classes and functions will be exposed in the 4D Code Editor once the component is installed.
 
 ### クラスストア内でのコンポーネント名前空間
 
-このエリアでは、ホストプロジェクトのコードにおける、コンポーネントのクラスおよび関数の名前空間を宣言します。 [コンポーネント名前空間の宣言](../Extensions/develop-components.md#コンポーネント名前空間の宣言) 参照。
+このエリアでは、ホストプロジェクトのコードにおける、コンポーネントのクラスおよび関数の名前空間を宣言します。 See [Declaring the component namespace](../Extensions/develop-components.md#declaring-the-component-namespace).
 
 ### コンパイル時にコード補完用のシンタックスファイルを生成する
 
-このオプションをチェックすると、コンパイル時にシンタックスファイル (JSON形式) が自動作成されます。 [コンパイル済みコンポーネントのコード補完](../Extensions/develop-components.md#コンパイル済みコンポーネントのコード補完) 参照。 
+このオプションをチェックすると、コンパイル時にシンタックスファイル (JSON形式) が自動作成されます。 See [Code completion for compiled components](../Extensions/develop-components.md#code-completion-for-compiled-components).
