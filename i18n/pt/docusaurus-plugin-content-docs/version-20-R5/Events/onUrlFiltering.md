@@ -5,8 +5,7 @@ title: On URL Filtering
 
 | Code | Pode ser chamado por                        | Definição                          |
 | ---- | ------------------------------------------- | ---------------------------------- |
-| 51   | [Área Web](FormObjects/webArea_overview.md) | Um URL foi bloqueado pela área Web |
-
+| 51   | [Web Area](FormObjects/webArea_overview.md) | Um URL foi bloqueado pela área Web |
 
 ## Descrição
 
@@ -15,4 +14,5 @@ This event is generated when the loading of a URL is blocked by the Web area bec
 You can find out the blocked URL using the `WA Get last filtered URL` command.
 
 ### Veja também
+
 [`On Open External Link`](onOpenExternalLink.md)
