@@ -3,12 +3,11 @@ id: markers
 title: Marcadores
 ---
 
-
-Essas propriedades permitem que você especifique o local exato dos marcadores na régua vertical de um formulário de tabela ****. Os marcadores são utilizados principalmente em formulários de saída. Eles controlam as informações que são listadas e definem as áreas de cabeçalho, quebras, detalhes e rodapé do formulário. Qualquer objeto colocado nessas áreas é exibido ou impresso no local apropriado.
+These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Os marcadores são utilizados principalmente em formulários de saída. Eles controlam as informações que são listadas e definem as áreas de cabeçalho, quebras, detalhes e rodapé do formulário. Qualquer objeto colocado nessas áreas é exibido ou impresso no local apropriado.
 
 Sempre que qualquer formulário for usado para saída, seja para exibição na tela ou para impressão, as linhas de marcador de saída entrarão em vigor e as áreas serão exibidas ou impressas nos locais designados. Os marcadores também têm efeito quando um formulário é usado como o formulário de lista em uma área de subformulário. No entanto, não têm nenhum efeito quando é utilizado um formulário para introdução de dados.
 
-Os métodos associados aos objetos nessas áreas são executados quando as áreas são impressas ou exibidas, desde que os eventos apropriados tenham sido ativados. Por exemplo, um método de objeto colocado na área do cabeçalho é executado quando ocorre o evento `On Header` .
+Os métodos associados aos objetos nessas áreas são executados quando as áreas são impressas ou exibidas, desde que os eventos apropriados tenham sido ativados. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
 
 ---
 
@@ -16,15 +15,15 @@ Os métodos associados aos objetos nessas áreas são executados quando as área
 
 As áreas de quebra de formulário são exibidas uma vez no final da lista de registros e são impressas uma vez após a impressão dos registros em um relatório.
 
-A área de quebra é definida como a área entre a linha de controle de detalhes e a linha de controle de quebra. Pode haver [várias áreas de quebra](#additional-areas) em seu relatório.
+A área de quebra é definida como a área entre a linha de controle de detalhes e a linha de controle de quebra. There can be [several Break areas](#additional-areas) in your report.
 
 É possível tornar as áreas de Quebra menor ou maior. É possível usar uma área de quebra para exibir informações que não fazem parte dos registros (instruções, data atual, hora atual etc.) ou para exibir uma linha ou outro elemento gráfico que conclua a exibição da tela. Em um relatório impresso, é possível usar uma área de quebra para calcular e imprimir subtotais e outros cálculos de resumo.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados                     | Valores possíveis                                                                                               |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Posição do marcador de quebra ou coleção de posições do marcador de quebra em pixels.<br/>Valor mínimo: 0 |
+| Nome        | Tipo de dados                 | Valores possíveis                                                                                                                         |
+| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer \| integer collection | Posição do marcador de quebra ou coleção de posições do marcador de quebra em pixels.<br/>Valor mínimo: 0 |
 
 ---
 
@@ -36,8 +35,8 @@ A área de dFormulário detalhado é exibida na tela e impressa uma vez para cad
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                         |
-| ---------- | ------------- | ----------------------------------------- |
+| Nome       | Tipo de dados | Valores possíveis                                                         |
+| ---------- | ------------- | ------------------------------------------------------------------------- |
 | markerBody | integer       | Posição do marcador de detalhe. Mínimo: 0 |
 
 ---
@@ -52,9 +51,9 @@ Você pode usar a área do Rodapé para imprimir gráficos, números de página,
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis |
-| ------------ | ------------- | ----------------- |
-| markerFooter | integer       | mínimo: 0         |
+| Nome         | Tipo de dados | Valores possíveis         |
+| ------------ | ------------- | ------------------------- |
+| markerFooter | integer       | mínimo: 0 |
 
 ---
 
@@ -64,7 +63,7 @@ A área de cabeçalho do formulário é exibida na parte superior de cada tela e
 
 Você pode tornar a área de Cabeçalho menor ou maior. Você pode usar a área do Cabeçalho para nomes de colunas, para instruções, informações adicionais, ou até mesmo um gráfico, como um logotipo de empresa ou um padrão decorativo.
 
-Também é possível colocar e usar objetos ativos na área do cabeçalho dos formulários de saída exibidos como subformulários, na janela de exibição de registros ou usando os comandos `DISPLAY SELECTION` e `MODIFY SELECTION` . Podem ser inseridos os seguintes objetos ativos:
+You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Podem ser inseridos os seguintes objetos ativos:
 
 - Botões, botões imagem,
 - Combo boxes, listas pendentes, menus pop-up de imagens,
@@ -72,23 +71,23 @@ Também é possível colocar e usar objetos ativos na área do cabeçalho dos fo
 - Botões rádio, caixas de selecção, caixas de selecção 3D,
 - Indicadores de progresso, réguas, degraus, fiadeiras.
 
-Ações padrão, como `Add Subrecord`, `Cancel` (listas exibidas usando `DISPLAY SELECTION` e `MODIFY SELECTION`) ou `Automatic splitter` podem ser atribuídas aos botões inseridos. Os eventos a seguir se aplicam aos objetos ativos que você insere na área do Cabeçalho: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Lembre-se de que o método de formulário é chamado com o evento `On Header` depois de chamar os métodos de objeto da área.
+Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. The following events apply to the active objects you insert in the Header area: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Keep in mind that the form method is called with the `On Header` event after calling the object methods of the area.
 
-O formulário pode conter [áreas de cabeçalho adicionais](#additional-areas) para serem associadas a intervalos adicionais. Um cabeçalho de nível 1 é impresso imediatamente antes da impressão dos registros agrupados pelo primeiro campo classificado.
+The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. Um cabeçalho de nível 1 é impresso imediatamente antes da impressão dos registros agrupados pelo primeiro campo classificado.
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados                     | Valores possíveis                                                                                                     |
-| ------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Posição do marcador de cabeçalho ou coleção de posições do marcador de cabeçalho em pixels.<br/>Valor mínimo: 0 |
+| Nome         | Tipo de dados                 | Valores possíveis                                                                                                                               |
+| ------------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer \| integer collection | Posição do marcador de cabeçalho ou coleção de posições do marcador de cabeçalho em pixels.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionais
 
 Você pode criar áreas de interrupção e áreas de cabeçalho adicionais para um relatório. Essas áreas adicionais permitem imprimir subtotais e outros cálculos em um relatório e exibir outras informações de forma eficaz.
 
-Áreas adicionais são definidas quando você usa uma coleção de posições nas propriedades [Form Break](#form-break) e [Form Header](#form-header) .
+Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
 
-> No editor 4D Form, você cria linhas de controle adicionais mantendo pressionada a tecla **Alt** enquanto clica no marcador de controle apropriado.
+> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
 
 Um formulário sempre começa com as áreas Cabeçalho, Detalhe, Quebra nível 0 e Rodapé.
 
@@ -97,17 +96,17 @@ A interrupção no nível 0 zero inclui todos os registros; ela ocorre depois qu
 Um nível de interrupção 1 ocorre depois que os registros agrupados pelo primeiro campo classificado são impressos.
 
 | Etiqueta | Descrição          | Prints after groups created by: |
-| -------- | ------------------ | ------------------------------- |
-| B1       | Nível de ruptura 1 | Primeiro campo classificado     |
-| B2       | Nível de ruptura 2 | Segundo campo ordenado          |
-| B3       | Nível de ruptura 3 | Terceiro campo classificado     |
+| -------- | ------------------ | ----------------------------------------------- |
+| B1       | Nível de ruptura 1 | Primeiro campo classificado                     |
+| B2       | Nível de ruptura 2 | Segundo campo ordenado                          |
+| B3       | Nível de ruptura 3 | Terceiro campo classificado                     |
 
 As áreas de cabeçalho adicionais estão associadas às pausas. Um cabeçalho de nível 1 é impresso imediatamente antes da impressão dos registros agrupados pelo primeiro campo classificado.
 
 | Etiqueta | Descrição            | Prints after groups created by: |
-| -------- | -------------------- | ------------------------------- |
-| H1       | Cabeçalho no nível 1 | Primeiro campo classificado     |
-| H2       | Cabeçalho no nível 2 | Segundo campo ordenado          |
-| H3       | Cabeçalho no nível 3 | Terceiro campo classificado     |
+| -------- | -------------------- | ----------------------------------------------- |
+| H1       | Cabeçalho no nível 1 | Primeiro campo classificado                     |
+| H2       | Cabeçalho no nível 2 | Segundo campo ordenado                          |
+| H3       | Cabeçalho no nível 3 | Terceiro campo classificado                     |
 
-Se você usar a função `Subtotal` para iniciar o processamento de Quebra, deverá criar uma área de Quebra para cada nível de Quebra que será gerado pela ordem de classificação, menos um. Se não for necessário imprimir nada em uma das áreas de quebra, é possível reduzir seu tamanho a nada colocando o marcador em cima de outra linha de controle. Se você tiver mais níveis de classificação do que áreas de quebra, a última área de quebra será repetida durante a impressão.
+If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. Se não for necessário imprimir nada em uma das áreas de quebra, é possível reduzir seu tamanho a nada colocando o marcador em cima de outra linha de controle. Se você tiver mais níveis de classificação do que áreas de quebra, a última área de quebra será repetida durante a impressão.
