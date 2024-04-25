@@ -14,7 +14,7 @@ title: VP Get formula by name
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                        |                  |
 | name       | Text   | -> | Nom de la plage nommée                                         |                  |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante) |                  |
-| Résultat   | Object | <- | Named formula or named range definition                        | <!-- END REF --> |
+| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée          | <!-- END REF --> |
 
 #### Description
 
