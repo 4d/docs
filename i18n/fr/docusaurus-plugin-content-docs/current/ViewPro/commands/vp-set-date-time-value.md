@@ -14,7 +14,7 @@ title: VP SET DATE TIME VALUE
 | rangeObj      | Object | -> | Objet plage          |                  |
 | dateValue     | Date   | -> | Valeur date à fixer  |                  |
 | timeValue     | Time   | -> | Valeur heure à fixer |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur  | <!-- END REF --> |
 
 #### Description
 
