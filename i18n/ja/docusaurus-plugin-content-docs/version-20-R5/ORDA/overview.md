@@ -3,12 +3,11 @@ id: overview
 title: ORDA
 ---
 
-ORDA とは **オブジェクト・リレーショナル・データアクセス (Object Relational Data Access)** の意味です。 これは、オブジェクトを介してデータベースのモデルとデータにアクセスできるようにする革新的なテクノロジーです。
+ORDA stands for **Object Relational Data Access**. これは、オブジェクトを介してデータベースのモデルとデータにアクセスできるようにする革新的なテクノロジーです。
 
-この概念には、[レイジーローディング](glossary.md#レイジーローディング) と合わせてリレーションが暗示的に織り込まれており、デベロッパーはありがちなデータセレクションや転送の煩わしさから解放されます。
+Relations are transparently included in the concept, in combination with [lazy loading](glossary.md#lazy-loading), to remove all the typical hassles of data selection or transfer from the developer.
 
-ORDA では、[データストア](dsMapping.md#データストア) と呼ばれる抽象化レイヤーを通してデータにアクセスします。 データストアとは、データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトです。 たとえば、テーブルは [データクラス](dsMapping.md#データクラス) オブジェクトにマップされ、フィールドはデータクラスの [属性](dsMapping.md#属性)で、レコードは [エンティティ](dsMapping.md#entity) および [エンティティセレクション](dsMapping.md#エンティティセレクション) を介してアクセスされます。
-
+With ORDA, data is accessed through an abstraction layer, the [datastore](dsMapping.md#datastore). データストアとは、データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトです。 For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
 
 ## ORDAを使う理由
 
@@ -20,15 +19,12 @@ ORDA のデータモデルでは、単一のデータクラスだけで旧来の
 
 クエリは、エンティティセレクションと呼ばれるエンティティのリストを返し、これは SQL のクエリの行セットの役割を果たします。 違いは、各エンティティは自身がどこに所属するかを "知っている" うえ、他のすべてのエンティティとのリレーションを "理解している" ということです。 これはつまり、クエリ内において様々な情報の断片をどのようにリレートさせたらいいか、あるいは、変更された値をリレーショナルストラクチャーに書き込む際にどのようにそれを更新したらいいかを、デベロッパーは説明する必要がないということです。
 
-これに加えて、エンティティセレクションあるいはエンティティなどの ORDA オブジェクトは、リストボックスや変数などのユーザーインターフェース (UI) オブジェクトに簡単に割り当てることができます。 `This` や `Form` コマンドといった強力な機能と組み合わせることで、オブジェクトやコレクションに基づいた、モダンでモジュラーなインターフェースをビルドすることができるようになります。
+これに加えて、エンティティセレクションあるいはエンティティなどの ORDA オブジェクトは、リストボックスや変数などのユーザーインターフェース (UI) オブジェクトに簡単に割り当てることができます。 Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
 
 ## ORDAの使い方
 
-原則として、ORDA はオブジェクト型を扱います。 ORDA では、データストア自身を含めすべての主要な概念は、オブジェクトを通して利用可能です。 4D では、データストアは自動的に [4D ストラクチャーにマッピングされます](dsMapping.md)。
+原則として、ORDA はオブジェクト型を扱います。 ORDA では、データストア自身を含めすべての主要な概念は、オブジェクトを通して利用可能です。 In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 
 ORDA のオブジェクトは 4D の標準オブジェクトと同様に扱えますが、どれだけでなく特定のプロパティおよびメソッドの恩恵を自動的に享受することができます。
 
-ORDA オブジェクトは 4D メソッドによって必要なときに作成・インスタンス化されます (別途作成する必要はありません)。 また、ORDA データモデルオブジェクトは、[カスタム関数が追加可能なクラス](ordaClasses.md) とも関連づけられます。
-
-
-
+ORDA オブジェクトは 4D メソッドによって必要なときに作成・インスタンス化されます (別途作成する必要はありません)。 However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
