@@ -19,7 +19,9 @@ To know what is exposed as the datastore, create a new project method, write the
 TRACE
 ```
 
-Executar o método: ele chama simplesmente a janela do depurador. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Executar o método: ele chama simplesmente a janela do depurador.
+In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore.
+Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -29,13 +31,14 @@ It means for example that, whenever you need to refer to the city field of the [
 ds. Company.city //returns the name of the city
 ```
 
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
 
-> ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
+> ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` will not refer to the ds.Company.city attribute.
 
-You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
+You have also noticed the extra `hires` property in the ds.Company dataclass. Não corresponde a um campo. `hires` is actually the name of the _One to many_ relation between Company and Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Nome da relação conforme definido no Inspetor*
+![](../assets/en/ORDA/struc2s.png)
+_Name of the relation as defined in the Inspector_
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 
@@ -45,10 +48,10 @@ ds. Company.hires //returns the list of employees
 
 Mas não vá demasiado depressa. Vejamos agora como registar dados em dataclasses ORDA.
 
-
 ## Adicionar dados
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
+
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
@@ -62,7 +65,7 @@ A new entity object contains a "copy" of all attributes of its parent dataclass,
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID é automaticamente preenchido
+//$entity.ID is automatically filled
 ```
 
 Atualmente, a entidade só existe na memória. To store it in the data file, you need to save it using the `save()` member method:
@@ -70,11 +73,3 @@ Atualmente, a entidade só existe na memória. To store it in the data file, you
 ```code4d
 $status:=$entity.save()
 ```
-
-
-
-
-
-
-
-
