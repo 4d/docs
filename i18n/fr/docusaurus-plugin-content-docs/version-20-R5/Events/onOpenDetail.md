@@ -3,19 +3,17 @@ id: onOpenDetail
 title: On Open Detail
 ---
 
-| Code | Peut être appelé par                                     | Définition                                                                                              |
-| ---- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 25   | Formulaire - [List Box](FormObjects/listbox_overview.md) | Le formulaire détaillé associé au formulaire de sortie ou à la list box est sur le point d'être ouvert. |
-
+| Code | Peut être appelé par                               | Définition                                                                                                              |
+| ---- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 25   | Form - [List Box](FormObjects/listbox_overview.md) | Le formulaire détaillé associé au formulaire de sortie ou à la list box est sur le point d'être ouvert. |
 
 ## Description
 
-L'événement `On Open Detail` peut être utilisé dans les contextes suivants :
+The `On Open Detail` event can be used in the following contexts:
 
-- **Formulaires de sortie** : un enregistrement est sur le point d'être affiché dans le formulaire détaillé associé au formulaire de sortie. Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
-- List box [**de type sélection**](FormObjects/listbox_overview.md#selection-list-boxes) : Cet événement est généré lorsqu'un enregistrement est sur le point d'être affiché dans le formulaire détaillé associé à une list box de type sélection (et avant l'ouverture de ce formulaire).
-
+- **Output forms**: A record is about to be displayed in the detail form associated with the output form. This event cannot be selected for project forms, it is only available with **table forms**.
+- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
 
 ### Numéro de ligne affiché
 
-La commande 4D `Displayed line number` fonctionne avec l'événement formulaire `On Open Detail`. Elle retourne le numéro de la ligne en cours de traitement tandis qu'une liste d'enregistrements ou de lignes de list box s'affiche à l'écran.
+The `Displayed line number` 4D command works with the `On Open Detail` form event. Elle retourne le numéro de la ligne en cours de traitement tandis qu'une liste d'enregistrements ou de lignes de list box s'affiche à l'écran.
