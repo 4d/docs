@@ -3,13 +3,12 @@ id: onTimer
 title: Sur minuteur
 ---
 
-| Code | Peut être appelé par | Définition                                                            |
-| ---- | -------------------- | --------------------------------------------------------------------- |
-| 27   | Formulaire           | Le nombre de graduations défini par la commande `SET TIMER` est passé |
-
+| Code | Peut être appelé par | Définition                                                        |
+| ---- | -------------------- | ----------------------------------------------------------------- |
+| 27   | Formulaire           | The number of ticks defined by the `SET TIMER` command has passed |
 
 ## Description
 
-Cet événement est généré uniquement si la méthode formulaire contient un appel à la commande `SET TIMER` réalisé antérieurement.
+This event is generated only if the form method contains a previous call to the `SET TIMER` command.
 
-Lorsque la propriété d'événement formulaire `On Timer` est sélectionnée, seule la méthode formulaire recevra l'événement, aucune méthode objet ne sera appelée.
+When the `On Timer` form event property is selected, only the form method will receive the event, no object method will be called.
