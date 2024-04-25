@@ -11,7 +11,8 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties.
+Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
@@ -19,28 +20,28 @@ For example, consider a part number with a format such as "RB-1762-1".
 
 The alpha format would be:
 
- ##-####-#
+\##-####-#
 
 When the user enters "RB17621," the field displays:
 
- RB-1762-1
+RB-1762-1
 
 The field actually contains "RB17621".
 
 If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
- (#######)
+(#######)
 
 and the user enters "proportion", the field displays:
 
- (portion)
+(portion)
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                                                    |
-| ---------- | --------------- | ------------------------------------------------------------------------------------ |
+| Nom        | Type de données | Valeurs possibles                                                                                       |
+| ---------- | --------------- | ------------------------------------------------------------------------------------------------------- |
 | textFormat | string          | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
 #### Objets pris en charge
@@ -62,41 +63,39 @@ Display formats for dates can be defined:
 
 The table below shows choices available:
 
-| Nom du format                   | Chaine JSON           | Exemple (système US)          |
-| ------------------------------- | --------------------- | ----------------------------- |
-| System date short               | systemShort (default) | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium          | Wed, Mar 25, 2020             |
-| System date long                | systemLong            | Wednesday, March 25, 2020     |
-| RFC 822                         | rfc822                | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury          | 03/25/20 but 04/25/2032 *(2)* |
-| Internal date long              | long                  | March 25, 2020                |
-| Internal date abbreviated *(1)* | abbreviated           | Mar 25, 2020                  |
-| Internal date short             | short                 | 03/25/2020                    |
-| ISO Date Time *(3)*             | iso8601               | 2020-03-25T00:00:00           |
+| Nom du format                                      | Chaine JSON                              | Exemple (système US)                       |
+| -------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------- |
+| System date short                                  | systemShort (default) | 03/25/20                                                      |
+| System date abbreviated _(1)_   | systemMedium                             | Wed, Mar 25, 2020                                             |
+| System date long                                   | systemLong                               | Wednesday, March 25, 2020                                     |
+| RFC 822                                            | rfc822                                   | Tue, 25 Mar 2020 22:00:00 GMT |
+| Short Century                                      | shortCentury                             | 03/25/20 but 04/25/2032 _(2)_              |
+| Internal date long                                 | long                                     | March 25, 2020                                                |
+| Internal date abbreviated _(1)_ | abbreviated                              | Mar 25, 2020                                                  |
+| Internal date short                                | short                                    | 03/25/2020                                                    |
+| ISO Date Time _(3)_             | iso8601                                  | 2020-03-25T00:00:00           |
 
-*(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
+_(1)_ To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
+_(2)_ The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
 
-*(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
+_(3)_ The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
+
 > Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
-
-
 
 ### Custom formats
 
 Customized date formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Par exemple :
 
 | Pattern                  | Exemple (système US) |
-| ------------------------ | -------------------- |
-| "eeee, dd"               | Wednesday, 29        |
-| "'Day' #D 'of the year'" | Day #333 of the year |
-
+| ------------------------ | --------------------------------------- |
+| "eeee, dd"               | Wednesday, 29                           |
+| "'Day' #D 'of the year'" | Day #333 of the year                    |
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                  |
-| ---------- | --------------- | -------------------------------------------------- |
+| Nom        | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                   |
+| ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dateFormat | string          | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a [supported pattern](../Project/date-time-formats.md) + " blankIfNull"</li> |
 
 :::note blankIfNull
@@ -112,6 +111,7 @@ By default, a null date is displayed with zeros, e.g. 00/00/00. With the "blankI
 ---
 
 ## Number Format
+
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
@@ -120,20 +120,21 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 ### Placeholders
 
-In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
+In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (\*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Le placeholder | Effect for leading or trailing zero |
-| -------------- | ----------------------------------- |
-| #              | Displays nothing                    |
-| 0              | Displays 0                          |
-| ^              | Displays a space (1)                |
-| *              | Displays an asterisk                |
+| Le placeholder | Effect for leading or trailing zero     |
+| -------------- | --------------------------------------- |
+| #              | Displays nothing                        |
+| 0              | Displays 0                              |
+| ^              | Displays a space (1) |
+| -              | Displays an asterisk                    |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
 For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
+
 > No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
@@ -143,10 +144,11 @@ Suppose you use the format ##0 to display three digits. If the user enters nothi
 ### Separator characters
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
+
 > On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
-> 
-> * in a Real type field, using this key will insert the decimal separator defined in the system,
-> * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+>
+> - in a Real type field, using this key will insert the decimal separator defined in the system,
+> - in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
 ### Decimal points and other display characters
 
@@ -154,13 +156,13 @@ You can use a decimal point in a number display format. If you want the decimal 
 
 You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
 
- $##0
+$##0
 
 a dollar sign always appears because it is placed before the placeholders.
 
 If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
 
- ###.##0
+\###.##0
 
 the point appears only if the user enters at least four digits.
 
@@ -170,20 +172,21 @@ Spaces are treated as characters in number display formats.
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
- Positive;Negative;Zero
+Positive;Negative;Zero
 
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
+
 > The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
- $###,##0.00;($###,##0.00);
+$###,##0.00;($###,##0.00);
 
 Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
 
- $###,##0.00;($###,##0.00)
+$###,##0.00;($###,##0.00)
 
 In this case, the display for zero would be $0.00.
 
@@ -191,11 +194,11 @@ In this case, the display for zero would be $0.00.
 
 If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
 
- &3
+&3
 
 would display 759.62 as:
 
- 7.60e+2
+7.60e+2
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
@@ -203,8 +206,8 @@ The scientific notation format is the only format that will automatically round 
 
 You can display a number in hexadecimal using the following display formats:
 
-* `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-* `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+- `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+- `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
 ### XML notation
 
@@ -216,50 +219,50 @@ You can display a number as a time (with a time format) by using `&/` followed b
 
 For example, the format:
 
- &/5
+&/5
 
 corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
 
- 6:56 AM
+6:56 AM
 
 ### Exemples
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-| Format Entered                         | Positive         | Negative      | Zero                         |
-| -------------------------------------- | ---------------- | ------------- | ---------------------------- |
-| ###                                    | <<<              | <<<           |                              |
-| ####                                   | 1234             | <<<<          |                              |
-| #######                                | 1234             | -1234         |                              |
-| #####.##                               | 1234.5           | -1234.5       |                              |
-| ####0.00                               | 1234.50          | -1234.50      | 0.00                         |
-| #####0                                 | 1234             | -1234         | 0                            |
-| +#####0;–#####0;0                      | +1234            | -1234         | 0                            |
-| #####0DB;#####0CR;0                    | 1234DB           | 1234CR        | 0                            |
-| #####0;(#####0)                        | 1234             | (1234)        | 0                            |
-| ###,##0                                | 1,234            | -1,234        | 0                            |
-| ##,##0.00                              | 1,234.50         | -1,234.50     | 0.00                         |
-| \^\^\^\^\^\^\^                  | 1234             | -1234         |                              |
-| \^\^\^\^\^\^0                    | 1234             | -1234         | 0                            |
-| \^\^\^,\^\^0                      | 1,234            | -1,234        | 0                            |
-| \^\^,\^\^0.00                      | 1,234.50         | -1,234.50     | 0.00                         |
-| \*\*\*\*\*\*\*           | \*\*\*1234 | \*\*-1234 | \*\*\*\*\*\*\* |
-| \*\*\**\*\*0               | \*\*\*1234 | \*\*-1234 | \*\*\*\*\*\*0    |
-| \*\*\*,*\*0                  | \*\*1,234    | \*-1,234    | \*\*\*\*\*\*0    |
-| \*\*,\*\*0.00                  | \*1,234.50     | -1,234.50     | \*\*\*\*\*0.00     |
-| $\*,\*\*0.00;–$\*,\*\*0.00 | $1,234.50        | -$1,234.50    | $\*\*\*\*0.00        |
-| $\^\^\^\^0                         | $ 1234           | $–1234        | $    0                       |
-| $\^\^\^0;–$\^\^\^0               | $1234            | –$1234        | $   0                        |
-| $\^\^\^0 ;($\^\^\^0)             | $1234            | ($1234)       | $   0                        |
-| $\^,\^\^0.00 ;($\^,\^\^0.00)     | $1,234.50        | ($1,234.50)   | $    0.00                    |
-| &2                                     | 1.2e+3           | -1.2e+3       | 0.0e+0                       |
-| &5                                     | 1.23450e+3       | -1.23450e+3   | 0.00000                      |
-| &xml                                   | 1234.5           | -1234.5       | 0                            |
+| Format Entered                                                                        | Positive                   | Negative                                       | Zero                           |
+| ------------------------------------------------------------------------------------- | -------------------------- | ---------------------------------------------- | ------------------------------ |
+| ###                                                                                   | <<<                        | <<<                                            |                                |
+| ####                                                                                  | 1234                       | <<<<                                           |                                |
+| #######                                                                               | 1234                       | -1234                                          |                                |
+| #####.##                                                              | 1234.5     | -1234.5                        |                                |
+| ####0.00                                                              | 1234.50    | -1234.50                       | 0.00           |
+| #####0                                                                                | 1234                       | -1234                                          | 0                              |
+| +#####0;–#####0;0                                                                     | +1234                      | -1234                                          | 0                              |
+| #####0DB;#####0CR;0                                                                   | 1234DB                     | 1234CR                                         | 0                              |
+| #####0;(#####0)                                                    | 1234                       | (1234)                      | 0                              |
+| ###,##0                                                                               | 1,234                      | -1,234                                         | 0                              |
+| ##,##0.00                                                             | 1,234.50   | -1,234.50                      | 0.00           |
+| \^\^\^\^\^\^\^                                                                 | 1234                       | -1234                                          |                                |
+| \^\^\^\^\^\^0                                                                   | 1234                       | -1234                                          | 0                              |
+| \^\^\^,\^\^0                                                                     | 1,234                      | -1,234                                         | 0                              |
+| \^\^,\^\^0.00                                                     | 1,234.50   | -1,234.50                      | 0.00           |
+| \*\*\*\*\*\*\*                                                                        | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*\*                 |
+| \*\*\*\*\*\*0                                                                         | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*0                  |
+| \*\*\*,\*\*0                                                                          | \*\*1,234                  | \*-1,234                                       | \*\*\*\*\*\*0                  |
+| \*\*,\*\*0.00                                                         | \*1,234.50 | -1,234.50                      | \*\*\*\*\*0.00 |
+| $\*,\*\*0.00;–$\*,\*\*0.00                            | $1,234.50  | -$1,234.50                     | $\*\*\*\*0.00  |
+| $\^\^\^\^0                                                                        | $ 1234                     | $–1234                                         | $    0                         |
+| $\^\^\^0;–$\^\^\^0                                                              | $1234                      | –$1234                                         | $   0                          |
+| $\^\^\^0 ;($\^\^\^0)                                         | $1234                      | ($1234)                     | $   0                          |
+| $\^,\^\^0.00 ;($\^,\^\^0.00) | $1,234.50  | ($1,234.50) | $    0.00      |
+| &2                                                                | 1.2e+3     | -1.2e+3                        | 0.0e+0         |
+| &5                                                                | 1.23450e+3 | -1.23450e+3                    | 0.00000        |
+| &xml                                                              | 1234.5     | -1234.5                        | 0                              |
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                                              |
-| ------------ | --------------- | -------------------------------------------------------------- |
+| Nom          | Type de données | Valeurs possibles                                                                 |
+| ------------ | --------------- | --------------------------------------------------------------------------------- |
 | numberFormat | string          | Numbers (including a decimal point or minus sign if necessary) |
 
 #### Objets pris en charge
@@ -289,6 +292,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
+
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
@@ -317,7 +321,6 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Grammaire JSON
 
-
 | Nom           | Type de données | Valeurs possibles                                                                                     |
 | ------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | string          | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
@@ -341,35 +344,33 @@ Display formats for times can be defined:
 
 The table below shows the Time field display formats and gives examples:
 
-| Nom du format                | Chaine JSON  | Commentaires                                                                                                                                     | Exemple pour 04:30:25           |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                        |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                           |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 heures 30 minutes 25 secondes |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 heures 30 minutes             |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                       |
-| MM SS                        | mm_ss        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270:25                          |
-| Min Sec                      | MM_SS        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270 Minutes 25 Secondes         |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25             |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                        |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                      |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC                 |
-
+| Nom du format                            | Chaine JSON                                        | Commentaires                                                                                                                                                                     | Exemple pour 04:30:25     |
+| ---------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| HH:MM:SS | hh_mm_ss |                                                                                                                                                                                  | 04:30:25                  |
+| HH:MM                    | hh_mm                         |                                                                                                                                                                                  | 04:30                                     |
+| Hour Min Sec                             | HH_MM_SS |                                                                                                                                                                                  | 4 heures 30 minutes 25 secondes                           |
+| Hour Min                                 | HH_MM                         |                                                                                                                                                                                  | 4 heures 30 minutes                                       |
+| HH:MM AM/PM              | hh_mm_am |                                                                                                                                                                                  | 4:30 a.m. |
+| MM SS                                    | mm_ss                         | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270:25                                    |
+| Min Sec                                  | MM_SS                         | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270 Minutes 25 Secondes                                   |
+| ISO Date Time                            | iso8601                                            | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format                 | 0000-00-00T04:30:25       |
+| System time short                        | - (default)                     | Standard time format defined in the system                                                                                                                                       | 04:30:25                  |
+| System time long abbreviated             | systemMedium                                       | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format | 4•30•25 AM                                                |
+| System time long                         | systemLong                                         | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format        | 4:30:25 AM HNEC           |
 
 ### Custom formats
 
 Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Par exemple :
 
-| Pattern                                | Exemple (système US)             |
-| -------------------------------------- | -------------------------------- |
-| "HH 'hours' mm 'minutes' ss 'seconds'" | 13 heures 25 minutes 12 secondes |
-| "hh:mm aa"                             | 01:25 PM                         |
-
+| Pattern                                | Exemple (système US) |
+| -------------------------------------- | --------------------------------------- |
+| "HH 'hours' mm 'minutes' ss 'seconds'" | 13 heures 25 minutes 12 secondes        |
+| "hh:mm aa"             | 01:25 PM                |
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                  |
-| ---------- | --------------- | -------------------------------------------------- |
+| Nom        | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                |
+| ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | timeFormat | string          | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + " blankIfNull"</li><li>Custom formats: any format built using [a supported pattern](../Project/date-time-formats.md) + "blankIfNull"</li> |
 
 :::note blankIfNull
@@ -386,19 +387,19 @@ By default, a null time is displayed with zeros, e.g. "00:00:00". With the "blan
 
 When a [boolean expression](properties_Object.md#expression-type) is displayed as:
 
-* a text in an [input object](input_overview.md)
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+- a text in an [input object](input_overview.md)
+- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
 ... you can select the text to display for each value:
 
-* **Text when True** - the text to be displayed when the value is "true"
-* **Text when False** - the text to be displayed when the value is "false"
+- **Text when True** - the text to be displayed when the value is "true"
+- **Text when False** - the text to be displayed when the value is "false"
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                                                        |
-| ------------- | --------------- | ------------------------------------------------------------------------ |
-| booleanFormat | string          | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Nom           | Type de données | Valeurs possibles                                                                                        |
+| ------------- | --------------- | -------------------------------------------------------------------------------------------------------- |
+| booleanFormat | string          | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", e.g. "Assigned;Unassigned" |
 
 #### Objets pris en charge
 
@@ -416,13 +417,13 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                  |
-| ----------- | --------------- | -------------------------------------------------- |
+| Nom         | Type de données | Valeurs possibles                                                                                                             |
+| ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | controlType | string          | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -452,13 +453,13 @@ Allows a check box object to accept a third state. La variable associée à la c
 
 List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
 
-* 0 = unchecked box,
-* 1 = checked box,
-* 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
-* -1 = invisible check box,
-* -2 = unchecked box, not enterable,
-* -3 = checked box, not enterable,
-* -4 = semi-checked box, not enterable
+- 0 = unchecked box,
+- 1 = checked box,
+- 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
+- -1 = invisible check box,
+- -2 = unchecked box, not enterable,
+- -3 = checked box, not enterable,
+- -4 = semi-checked box, not enterable
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
@@ -478,8 +479,8 @@ In this case as well, the [Title](#title) property is also available so that the
 
 This property is available for a list box column if:
 
-* the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-* the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+- the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
+- the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
 
 In that cases, the title of the check box can be entered using this property.
 
@@ -491,7 +492,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -501,14 +502,15 @@ Controls the display of values when list box columns are too narrow to show thei
 
 This option is available for columns with any type of contents, except pictures and objects.
 
-* When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+- When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
- ![](../assets/en/FormObjects/property_truncate1.png)
+![](../assets/en/FormObjects/property_truncate1.png)
+
 > The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
-* When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+- When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
- ![](../assets/en/FormObjects/property_truncate2.png)
+![](../assets/en/FormObjects/property_truncate2.png)
 
 The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
 
@@ -516,8 +518,8 @@ The Truncate with ellipsis option is enabled by default and can be specified wit
 
 The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
 
-* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-* For Check box type Boolean formats, labels are always clipped.
+- For Pop-up type Boolean formats, labels are truncated with an ellipsis,
+- For Check box type Boolean formats, labels are always clipped.
 
 #### Grammaire JSON
 
@@ -535,14 +537,14 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the <code>On load</code> event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
 
 #### Automatic visibility in list forms
 
 In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
 
-* **If record selected** (JSON name: "selectedRows")
-* **If record not selected** (JSON name: "unselectedRows")
+- **If record selected** (JSON name: "selectedRows")
+- **If record not selected** (JSON name: "unselectedRows")
 
 This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
 
@@ -552,8 +554,8 @@ This property is only used when drawing objects located in the body of a list fo
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                                                       |
-| ---------- | --------------- | --------------------------------------------------------------------------------------- |
+| Nom        | Type de données | Valeurs possibles                                                                                                             |
+| ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | visibility | string          | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
 
 #### Objets pris en charge
@@ -564,7 +566,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 ## Wordwrap
 
-> Pour les [input](input_overview.md), disponibles lorsque la propriété [Multiligne](properties_Entry.md#multiline) est définie sur "oui".
+> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
 
 Manages the display of contents when it exceeds the width of the object.
 
@@ -574,9 +576,9 @@ Manages the display of contents when it exceeds the width of the object.
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
-* In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+- In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
 
-* In multiline columns/areas, 4D carries out automatic line returns.
+- In multiline columns/areas, 4D carries out automatic line returns.
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
@@ -600,15 +602,15 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 `JSON grammar: "automatic"`
 
-* In single-line areas, words located at the end of lines are truncated and there are no line returns.
-* In multiline areas, 4D carries out automatic line returns.
+- In single-line areas, words located at the end of lines are truncated and there are no line returns.
+- In multiline areas, 4D carries out automatic line returns.
 
 ![](../assets/en/FormObjects/wordwrap1.png)
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                         |
-| -------- | --------------- | --------------------------------------------------------- |
+| Nom      | Type de données | Valeurs possibles                                                            |
+| -------- | --------------- | ---------------------------------------------------------------------------- |
 | wordwrap | string          | "automatic" (à l'exception de list box), "normal", "none" |
 
 #### Objets pris en charge
