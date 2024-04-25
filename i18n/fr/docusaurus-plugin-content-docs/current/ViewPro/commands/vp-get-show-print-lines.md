@@ -9,11 +9,11 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| Paramètres | Type    |    | Description                                      |                  |
-| ---------- | ------- | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro          |                  |
-| sheet      | Integer | <- | Numéro d'indice de la feuille                    |                  |
-| Résultat   | Boolean | <- | True if print lines are visible, False otherwise | <!-- END REF --> |
+| Paramètres | Type    |    | Description                                                |                  |
+| ---------- | ------- | -- | ---------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                    |                  |
+| sheet      | Integer | <- | Numéro d'indice de la feuille                              |                  |
+| Résultat   | Boolean | <- | True si les lignes d'impression sont visibles, sinon False | <!-- END REF --> |
 
 #### Description
 
