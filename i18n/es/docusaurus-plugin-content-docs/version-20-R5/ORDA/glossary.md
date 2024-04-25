@@ -7,29 +7,26 @@ title: Glosario
 
 ![](../assets/en/ORDA/mainConcepts.png)
 
-
-
 ## Acción
 
-Todas las acciones que pueden realizarse en un [recurso](#resource). Las acciones disponibles son: crear, leer, actualizar, eliminar, ejecutar, promover y describir.
+Every action that can be done on a [resource](#resource). Las acciones disponibles son: crear, leer, actualizar, eliminar, ejecutar, promover y describir.
 
 ## Atributo
 
-Un atributo es la celda de almacenamiento más pequeña de una base de datos relacional (ver también [Atributo relacional](#relación-atributo)). No hay que confundir los atributos de la dataclass con los atributos de las entidades:
+An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). No hay que confundir los atributos de la dataclass con los atributos de las entidades:
 
-*   En un objeto dataclass, cada propiedad es un atributo de dataclass que se asigna a un campo correspondiente en la tabla correspondiente (mismo nombre y tipo).
-*   En un objeto entity, los atributos de entidades son propiedades que contienen los valores para los atributos del almacén de datos correspondientes.
-> Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+- En un objeto dataclass, cada propiedad es un atributo de dataclass que se asigna a un campo correspondiente en la tabla correspondiente (mismo nombre y tipo).
+- En un objeto entity, los atributos de entidades son propiedades que contienen los valores para los atributos del almacén de datos correspondientes.
+
+> _Attributes_ and _properties_ are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## AttributePath
 
-Un attributePath es la ruta de un atributo al interior de una determinada clase de datos o de una entidad. Ver también [PropertyPath](#propertyPath).
-
+Un attributePath es la ruta de un atributo al interior de una determinada clase de datos o de una entidad. See also [PropertyPath](#propertyPath).
 
 ## Class code
 
 Código para la(s) función(es) de clase usuarios.
-
 
 ## Atributo calculado
 
@@ -53,19 +50,18 @@ Una dataclass es un modelo de objeto que describe los datos. Las tablas de la ba
 
 Un dataclass está relacionado con un único datastore.
 
-
 ## DataClass class
 
 Clase para los objetos dataclass específicos, en la que se pueden añadir funciones personalizadas.
 
 ## Datastore
 
-Un dtastore es el objeto de interfaz suministrado por ORDA para referenciar una estructura y acceder a sus datos. La base de datos principal, devuelta por el comando `ds`, está disponible como datastore (el datastore principal).
+Un dtastore es el objeto de interfaz suministrado por ORDA para referenciar una estructura y acceder a sus datos. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
 Un datastore ofrece:
 
-*   una conexión a la base de datos 4D
-*   un conjunto de clases de datos para trabajar con la base de datos
+- una conexión a la base de datos 4D
+- un conjunto de clases de datos para trabajar con la base de datos
 
 La base puede ser una base local 4D (el datastore principal), o una base 4D Server expuesta como recurso REST (un datastore remoto).
 
@@ -75,10 +71,9 @@ Un datastore referencia solo a una base de datos. Sin embargo, es posible abrir 
 
 Clase para los objetos datastore, en la que puede agregar funciones personalizadas.
 
-
 ## DataStoreImplementation
 
-Nombre interno de la clase genérica DataStore en el class store `4D`.
+Internal name of the generic DataStore class in the `4D` class store.
 
 ## Copia profunda
 
@@ -86,7 +81,7 @@ Una copia profunda (deep copy) duplica un objeto y todas las referencias que con
 
 ## ds
 
-`ds` es el comando del lenguaje 4D que devuelve una referencia de objeto [datastore](dsMapping.md#datastore). Coincide con el datastore disponible en la base de datos principal 4D.
+`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. Coincide con el datastore disponible en la base de datos principal 4D.
 
 ## Entity
 
@@ -102,18 +97,15 @@ Una selección de entidades es un objeto. Cuando se consulta el datastore, se de
 
 Una selección de entidades contiene:
 
-
-*   un conjunto de 0 a X referencias de entidades,
-*   una propiedad length (siempre),
-*   las propiedades queryPlan y queryPath (si se preguntan durante la consulta).
+- un conjunto de 0 a X referencias de entidades,
+- una propiedad length (siempre),
+- las propiedades queryPlan y queryPath (si se preguntan durante la consulta).
 
 Una selección de entidades también puede estar vacía.
 
-
 ## Generic class
 
-Clase integrada para los objetos ORDA tales como las entidades o las dataclasses. Las funciones y propiedades de las clases genéricas están disponibles automáticamente en las clases usuario extendidas, por ejemplo `EmployeeEntity`.
-
+Clase integrada para los objetos ORDA tales como las entidades o las dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
 
 ## Lazy loading
 
@@ -127,7 +119,7 @@ El objeto Datastore correspondiente a la base 4D abierta (autónoma o cliente/se
 
 Los objetos ORDA, como los datastores, dataclasses, entity selections y entities, definen las clases de objetos. Proporcionan los métodos específicos para interactuar directamente con ellos. Estos métodos también se llaman funciones miembros (member functions). Estos métodos se utilizan llamándolos sobre una instancia del objeto.
 
-Por ejemplo, el método `query()` es una member function de dataclass. Si ha almacenado un objeto dataclass en la variable `$myClass`, puede escribir:
+For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
 
 ```code4d
 $myClass.query("name = smith")
@@ -137,16 +129,16 @@ $myClass.query("name = smith")
 
 En esta documentación, el tipo de datos "Mixto" se utiliza para designar los distintos tipos de valores que pueden almacenarse en los atributos de las clases de datos. Incluye:
 
-*   number
-*   text
-*   null
-*   boolean
-*   date
-*   object
-*   collection
-*   imagen(\*)
+- number
+- text
+- null
+- boolean
+- date
+- object
+- collection
+- imagen(\*)
 
-*(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como* `entitySelection.max( )`.
+_(\*) picture type is not supported by statistical methods such as_ `entitySelection.max( )`.
 
 ## Bloqueo optimista
 
@@ -156,15 +148,15 @@ En el modo "bloqueo optimista", las entidades no se bloquean explícitamente ant
 
 Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acceda a ella, utilizando el método entity.lock( ). Los otros procesos no pueden actualizar ni suprimir la entidad hasta que se desbloquee. El lenguaje 4D clásico sólo permite bloqueos pesimistas. Ver "Bloqueo optimista".
 
-
 ## Privilegio
 
-La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
 ## Propiedad
 
-Ver [Atributo](#attribute).
-> > *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+See [Attribute](#attribute).
+
+> \> <em x-id="3">Attributes</em> and <em x-id="3">properties</em> are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 
@@ -182,8 +174,8 @@ Estas son dataclasses vinculadas por los atributos de relación.
 
 Los atributos de relación se utilizan para conceptualizar las relaciones entre las clases de datos (muchos a uno y uno a muchos).
 
-*   Relación Muchos a uno (la dataclassA hace referencia a una instancia de la dataclassB): un atributo de relación está disponible en la dataclassA y hace referencia a una instancia de dataclassB.
-*   Relación Uno a muchos (una ocurrencia de la dataclassB hace referencia a varias ocurrencias de la dataclassA): un atributo de relación está disponible en la dataclassB y hace referencia a varias instancias de la dataclassA.
+- Relación Muchos a uno (la dataclassA hace referencia a una instancia de la dataclassB): un atributo de relación está disponible en la dataclassA y hace referencia a una instancia de dataclassB.
+- Relación Uno a muchos (una ocurrencia de la dataclassB hace referencia a varias ocurrencias de la dataclassA): un atributo de relación está disponible en la dataclassB y hace referencia a varias instancias de la dataclassA.
 
 Una dataclass puede tener atributos de relación recursivos.
 
@@ -199,16 +191,13 @@ Las selecciones de entidades pueden referirse a entidades relacionadas según lo
 
 Una base de datos 4D abierta en un servidor 4D o 4D Server (disponible a través de HTTP) y expuesta como recurso REST. Esta base de datos puede ser referenciada localmente como un Datastore desde otras estaciones de trabajo, donde se le asigna un locaID. El almacén de datos remoto puede utilizarse mediante los conceptos ORDA (almacén de datos, clase de datos, selección de entidades...). Este uso se somete a un sistema de licencia.
 
-
 ## Recurso
 
-Un elemento ORDA sobre el que se puede permitir o no cualquier[acción](#action) en función de un [privilegio](#privilege). Los recursos disponibles son: el almacén de datos, una clase de datos, un atributo de clase de datos, una función del modelo de datos ORDA o un método proyecto.
-
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Los recursos disponibles son: el almacén de datos, una clase de datos, un atributo de clase de datos, una función del modelo de datos ORDA o un método proyecto.
 
 ## Rol
 
-Un rol es un [privilegio](#privilege) publicado destinado a ser utilizado por un administrador. Puede contener uno o varios privilegios.
-
+A role is a published [privilege](#privilege) intended to be used by an administrator. Puede contener uno o varios privilegios.
 
 ## Session
 
@@ -216,7 +205,7 @@ Cuando la aplicación 4D se conecta a un datastore Remoto, se crea una sesión e
 
 Cada vez que se abre una nueva sesión, se utiliza una licencia. Cada vez que se cierra una sesión, se libera la licencia.
 
-Las sesiones inactivas se cierran automáticamente después de un tiempo de espera. El tiempo de espera por defecto es de 48 horas, puede ser fijado por el desarrollador (debe ser >= 60 minutos).
+Las sesiones inactivas se cierran automáticamente después de un tiempo de espera. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
 
 ## Copia superficial (Shallow copy)
 
