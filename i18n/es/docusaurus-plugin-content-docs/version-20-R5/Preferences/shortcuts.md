@@ -9,6 +9,6 @@ Esta página lista todos los atajos utilizados en el entorno Diseño de 4D (exce
 
 Para modificar un atajo, puede seleccionar/deseleccionar el elemento a modificar (Mayúscula, Alt o tecla de letra) en la lista. También puede hacer doble clic en un acceso directo para configurarlo mediante una caja de diálogo específica.
 
-Tenga en cuenta que cada acceso directo incluye implícitamente la tecla **Ctrl** (Windows) o **Comando** (macOS).
+Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
 
-Si edita esta lista, la configuración de sus accesos directos personalizados se almacena en un archivo *4DShortcutsvXX.xml*, creado en el mismo nivel que [el archivo de preferencias usuario](overview.md#storage). Por lo tanto, cada vez que se actualiza 4D se mantienen sus preferencias de atajos de teclado. 
+If you edit this list, your custom shortcuts settings are stored in a _4DShortcutsvXX.xml_ file, created at the same level as the [user preferences file](overview.md#storage). Por lo tanto, cada vez que se actualiza 4D se mantienen sus preferencias de atajos de teclado.
