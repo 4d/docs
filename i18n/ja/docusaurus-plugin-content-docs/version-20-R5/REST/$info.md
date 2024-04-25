@@ -1,11 +1,12 @@
 ---
 id: info
-title: '$info'
+title: $info
 ---
 
 4D Server のキャッシュに保存されているエンティティセットおよびユーザーセッションの情報を返します。
 
 ## 説明
+
 プロジェクトに対してこのリクエストを送信すると、次のプロパティに情報を取得します:
 
 | プロパティ          | タイプ        | 説明                                 |
@@ -18,32 +19,35 @@ title: '$info'
 | sessionInfo    | Collection | 各ユーザーセッションの情報が格納されているオブジェクトのコレクション |
 
 ### entitySet
+
 4D Server のキャッシュに保存されている各エンティティセットについて、次の情報が返されます:
 
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String  | エンティティセットを参照する UUID                                                                                                                                                                                               |
+| dataClass     | String  | データクラスの名称。                                                                                                                                                                                                        |
+| selectionSize | Number  | エンティティセットに含まれるエンティティの数                                                                                                                                                                                            |
+| sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                             |
+| refreshed     | 日付      | エンティティセットが最後に使用された日付または作成日。                                                                                                                                                                                       |
+| expires       | 日付      | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 This value is either two hours by default or what you defined using `$timeout`. |
 
-| プロパティ         | タイプ     | 説明                                                                                                                                             |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | エンティティセットを参照する UUID                                                                                                                            |
-| dataClass     | String  | データクラスの名称。                                                                                                                                     |
-| selectionSize | Number  | エンティティセットに含まれるエンティティの数                                                                                                                         |
-| sorted        | Boolean | エンティティセットが (`$orderby` の使用により) 順列ありの場合には true、順列なしの場合は false。                                                                                  |
-| refreshed     | 日付      | エンティティセットが最後に使用された日付または作成日。                                                                                                                    |
-| expires       | 日付      | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 デフォルトのタイムアウトは2時間ですが、`$timeout` を使って指定することもできます。 |
+For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 
-エンティティセットを作成する方法についての詳細は `$method=entityset` を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には `$method=release` を使います。
-> 最適化のため、4D は独自のエンティティセットを生成します。つまり、`$method=entityset` で作成した以外のエンティティセットも返されます。
-> **重要** プロジェクトにおいて、4D の **パスワードアクセスシステム** を起動している場合には、Admin グループのユーザーとしてログインしている必要があります。
+> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
+
+> **IMPORTANT**
+> If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
 
 ### sessionInfo
 
-各ユーザーセッションについては、次の情報が *sessionInfo* コレクションに返されます:
+For each user session, the following information is returned in the _sessionInfo_ collection:
 
-| プロパティ      | タイプ    | 説明                             |
-| ---------- | ------ | ------------------------------ |
-| sessionID  | String | セッションを参照する UUID                |
-| userName   | String | セッションを実行中のユーザー名                |
+| プロパティ      | タイプ    | 説明                                                |
+| ---------- | ------ | ------------------------------------------------- |
+| sessionID  | String | セッションを参照する UUID                                   |
+| userName   | String | セッションを実行中のユーザー名                                   |
 | lifeTime   | Number | ユーザーセッションのタイムアウト (デフォルトは 3600) |
-| expiration | 日付     | ユーザーセッションの有効期限                 |
+| expiration | 日付     | ユーザーセッションの有効期限                                    |
 
 ## 例題
 
@@ -114,4 +118,5 @@ sessionInfo: [
 ]
 }
 ```
+
 > エンティティセットに続く進捗インジケーターの情報は、4Dによって内部的に使用されます。
