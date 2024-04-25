@@ -3,8 +3,6 @@ id: global-stamp
 title: Usando o selo global
 ---
 
-
-
 ## Visão Geral
 
 4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.
@@ -13,7 +11,8 @@ The global modification stamp is a number, always maintained by 4D, even in case
 
 Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
 
-1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity. In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
+1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity.
+   In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
 
 2. The global modification stamp value is incremented.
 
@@ -25,8 +24,6 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 :::
 
-
-
 ## Configurando rastreamento de alterações de dados
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
@@ -37,11 +34,11 @@ To enable data change tracking, the application structure must contain at least 
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
-- The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
-- Uma tabela `__DeletedRecords` deve ser adicionada, com os seguintes campos:
+- The `__GlobalStamp` field must must be of type _Integer 64 bits_, with _automatic index_, _Expose as REST resource_, and _Invisible_ properties selected.
+- A `__DeletedRecords` table must be added, with the following fields:
 
-| Campo         | Tipo            | Descrição                             |
-| ------------- | --------------- | ------------------------------------- |
+| Campo                                                   | Tipo            | Descrição                             |
+| ------------------------------------------------------- | --------------- | ------------------------------------- |
 | __PrimaryKey  | Text            | Chave primária da entidade excluída   |
 | __Stamp       | Integer 64 bits | Global stamp just before the deletion |
 | __TableName   | Text            | Nome da tabela de entidades excluída  |
@@ -63,23 +60,20 @@ Para ativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja habilitar o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
-3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
+3. É exibida uma caixa de diálogo de confirmação. Click **OK**.
 
 Em seguida, 4D faz as seguintes alterações:
 
-- Um campo pré-configurado `__GlobalStamp` é adicionado à(s) tabela(s).
+- A preconfigured `__GlobalStamp` field is added to the table(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
-
 
 Para desativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja remover o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
-3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
+3. É exibida uma caixa de diálogo de confirmação. Click **OK**.
 
-Em seguida, 4D remove o campo `__GlobalStamp` da(s) tabela(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
-
-
+4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
 
 ## Exemplo
 
@@ -91,13 +85,13 @@ var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
 $tableName:="Employee"
 $oldStamp:=... //load the previous stamp value  
-    //from which you want to compare the current stamp
+	//from which you want to compare the current stamp
 
 If ($oldStamp # ds.getGlobalStamp())
-        //get all new or modified entities
-    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
-        //get all deleted entities
-    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName)
+		//get all new or modified entities
+	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+		//get all deleted entities
+	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+	$oldStamp; $tableName)
 End if
 ```
