@@ -15,7 +15,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -31,7 +31,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -47,7 +47,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -57,13 +57,13 @@ title: アニメーション
 
 #### JSON 文法
 
-| 名称         | データタイプ  | とりうる値  |
-| ---------- | ------- | ------ |
+| 名称         | データタイプ  | とりうる値                  |
+| ---------- | ------- | ---------------------- |
 | frameDelay | integer | 最小値: 0 |
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -79,7 +79,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
@@ -90,9 +90,9 @@ title: アニメーション
 #### JSON 文法
 
 | 名称                     | データタイプ  | とりうる値       |
-|:---------------------- | ------- | ----------- |
+| :--------------------- | ------- | ----------- |
 | useLastFrameAsDisabled | boolean | true, false |
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
