@@ -5,25 +5,26 @@ title: 環境設定
 
 環境設定は、作業環境に影響する様々なオプションを指定します (例: デフォルトオプション、表示テーマ、コードエディター機能、ショートカット)。 これらの設定は、4D や 4D Server アプリケーションで開くすべてのプロジェクトに適用されます。
 
-**4D Server**: 複数のユーザーが同時に環境設定を更新しようとすると、オブジェクトのロックが発生します。 一度に一人のユーザーのみが環境設定ダイアログボックスを使用できます。
-> 4D は開かれているプロジェクト固有の設定をおこなうための **ストラクチャー設定** ダイアログも提供しています (**デザイン** メニューから利用可能です)。 詳細はデータベース設定の章を参照ください。
+**4D Server**: Object locking occurs when two or more users try to modify the settings in the Preferences dialog box at the same time. 一度に一人のユーザーのみが環境設定ダイアログボックスを使用できます。
+
+> 4D offers a different set of parameters specific to the open projet: **Settings** (available from the **Design** menu). 詳細はデータベース設定の章を参照ください。
 
 ## アクセス
 
-環境設定ダイアログボックスにアクセスするには **編集** (Windows) または **4D** アプリケーションメニュー (macOS) から **環境設定...** を選択します:
+You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the **4D** Application menu (macOS):
 
 ![](../assets/en/Preferences/overviewAccess.png)
 
 このメニューコマンドは、プロジェクトが開かれていない場合でも利用できます。
 
-`OPEN SETTINGS WINDOW` コマンドや、"環境設定" 標準アクションを (ボタンやメニューに割り当てて) 使用することで、アプリケーションモードでも環境設定ダイアログボックスを表示できます。
+You can also display the Preferences dialog box in Application mode using the "Preferences" standard action (associated with a menu item or a button) or using the `OPEN SETTINGS WINDOW` command.
 
 ## ストレージ
 
-環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。このファイルは、[`Get 4D folder`](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
+Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html) command:
 
-*   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
-*   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
+- Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
+- macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
 
 ## パラメーターのカスタマイズと初期設定
 
@@ -35,9 +36,8 @@ title: 環境設定
 
 パラメーターは手作業でデフォルト値に置き換えられたときにも太字で表示されます。 このように、カスタマイズされたパラメーターはすべて目視で識別することができます。
 
-パラメーターをデフォルト値に戻し、カスタマイズされたことを示す太字スタイルを取り除くためには、**初期設定にリセット** ボタンをクリックします:
+To reset the parameters to their default values and remove the bold style indicating that they have been customized, click on the **Reset to factory settings** button:
 
 ![](../assets/en/Preferences/overviewSettings.png)
 
 このボタンをクリックすると、現在表示されているページの全パラメーターがリセットされます。 現在のページで最低でも一つのパラメーターが変更されると、このボタンはアクティブになります。
-
