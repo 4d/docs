@@ -10,10 +10,9 @@ Um botão radio aparece na forma de um texto seguido de um círculo. However, ra
 ![](../assets/en/FormObjects/radio1.png)
 
 É selecionado um botão rádio:
+
 - quando o usuário clica nele
 - when it has the focus and the user presses the **Space bar** key.
-
-
 
 ## Configuração de botões radio
 
@@ -24,12 +23,10 @@ Os botões rádio são controlados com métodos. Como todos os botões, um botã
 ![](../assets/en/FormObjects/radio2.png)
 
 Selecting one radio button in a group sets that button to 1 and all of the others in the group to 0. Só pode ser selecionado um botão rádio de cada vez.
+
 > You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
 
 The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
-
-
-
 
 ## Estilos de botões
 
@@ -37,24 +34,21 @@ Radio [button styles](properties_TextAndPicture.md#button-style) control radio b
 
 4D fornece botões rádio nos seguintes estilos predefinidos:
 
-
 ### Clássico
 
-The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+The Regular radio button style is a standard system button (_i.e._, a small bullseye with text) which executes code when a user clicks on it.
 
 ![](../assets/en/FormObjects/radio_regular.png)
 
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
-
 ### Plano
 
-The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+The Flat radio button style is a standard system button (_i.e._, a small bullseye with text) which executes code when a user clicks on it.
 
 ![](../assets/en/FormObjects/radio_flat.png)
 
 Por padrão, o estilo Plano tem um aspeto minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
-
 
 ### Barra de ferramentas
 
@@ -62,43 +56,38 @@ O estilo de botão rádio está pensado principalmente para sua integração em 
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
- - *Windows* - o botão é realçado.
+- _Windows_ - the button is highlighted.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - o destaque do botão nunca aparece.
-
-
+- _macOS_ - the highlight of the button never appears.
 
 ### Bevel
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
- - *Windows* - o botão é realçado.
+- _Windows_ - the button is highlighted.
 
-  ![](../assets/en/FormObjects/radio_bevel.png)
+![](../assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - o destaque do botão nunca aparece.
-
+- _macOS_ - the highlight of the button never appears.
 
 ### Bevel arredondado
 
-O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas.
+The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+- _Windows_ - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - os cantos do botão são arredondados. ![](../assets/en/FormObjects/roundedBevel.png)
-
+- _macOS_ - the corners of the button are rounded.
+  ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
 The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+- _Windows_ - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the button is displayed as a two-tone system button.
-
-
+- _macOS_ - the button is displayed as a two-tone system button.
 
 ### OS X Texturizado
 
@@ -106,27 +95,23 @@ The OS X Textured radio button style is nearly identical to the [Toolbar](#toolb
 
 Como padrão, o estilo OS X Textured aparece como:
 
- - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+- _Windows_ - a toolbar-like button with a label in the center and the background is always displayed.
 
- - *macOS* - - um botão sistema padrão que mostra uma mudança de cor cinza claro a cinza escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- _macOS_ - a standard system button displaying a color change from light to dark gray. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
-  ![](../assets/en/FormObjects/OSXTextured.png)
-
-
+![](../assets/en/FormObjects/OSXTextured.png)
 
 ### Office XP
 
-O estilo de botão Office XP combina a aparência de estilo [Clássico](#regular) com o comportamento de estilo [Barra de ferramentas](#toolbar).
+The Office XP button style combines the appearance of the [Regular](#regular) style (standard system button) with the [Toolbar](#toolbar) style's behavior.
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
- - *Windows* - seu fundo só aparece quando o mouse passa por cima.
+- _Windows_ - its background only appears when the mouse rolls over it.
 
-  ![](../assets/en/FormObjects/radio_xp.png)
+![](../assets/en/FormObjects/radio_xp.png)
 
- - *macOS* - seu fundo é sempre mostrado.
-
-
+- _macOS_ - its background is always displayed.
 
 ### Contrair/expandir
 
@@ -136,10 +121,9 @@ Este estilo de botão pode ser utilizado para adicionar um ícone padrão contra
 
 :::info
 
-O estilo Contrair/Expandir tem o nome "disclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
+The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
 
 :::
-
 
 ### Botão disclosure
 
@@ -149,24 +133,23 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 :::info
 
-O estilo Disclosure tem o nome "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
+The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
 
 :::
 
-
 ### Personalizado
 
-O estilo de botão radio Personalizado aceita uma imagem de fundo personalizada e permite gerir parâmetros adicionais, como o [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e as [margens](properties_TextAndPicture.md#horizontalMargin).
-
+The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 
 ## Propriedades compatíveis
 
 Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-> (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
+> (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
+> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Propriedades específicas adicionais estão disponíveis dependendo do [estilo botão](#button-styles):
+Additional specific properties are available depending on the [button style](#button-styles):
 
-- [Rota de acesso do fundo](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
+- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
