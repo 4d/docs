@@ -3,7 +3,6 @@ id: objectLibrary
 title: Bibliotecas de objetos
 ---
 
-
 Pode utilizar bibliotecas de objectos nos seus formulários. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
 4D propõe dois tipos de bibliotecas de objetos:
@@ -11,10 +10,9 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 - uma biblioteca de objetos padrão, pré-configurada, disponível em todos os seus projetos.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
-
 ## Criar e utilizar bibliotecas de objetos personalizadas
 
-The standard object library is available from the Form editor: click on the last button of the toolbar:  
+The standard object library is available from the Form editor: click on the last button of the toolbar:\
 ![](../assets/en/FormEditor/library1.png)
 
 A biblioteca é apresentada numa janela separada:
@@ -24,15 +22,15 @@ A biblioteca é apresentada numa janela separada:
 A janela tem as seguintes características principais:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
+- You can filter the window contents by using the **Categories** menu:
+  ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
-    - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
-    - or drag and drop the object from the library The object is then added to the form.
+  - right-click on an object and select **Copy** in the contextual menu
+  - or drag and drop the object from the library The object is then added to the form.
 
 Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
-Todos os objetos propostos na biblioteca de objetos padrão estão descritos em [nesta seção em doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
-
+All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 ## Utilização da biblioteca de objetos padrão
 
@@ -41,7 +39,6 @@ Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object l
 Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
 Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
-
 
 ### Criar uma biblioteca de objetos
 
@@ -58,6 +55,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
+
 - **.4dproject**
 - **.4dz**
 
@@ -65,7 +63,6 @@ Na realidade, as bibliotecas de objectos personalizados são projectos 4D cláss
 
 - formulários projecto
 - páginas formulário 1
-
 
 ### Construir uma biblioteca de objectos
 
@@ -77,11 +74,10 @@ As operações básicas estão disponíveis no menu de contexto ou no menu de op
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Cortar** ou **Copiar** para o papelão
-- **Colar** um objecto do papelão
-- **Apagar** - apaga o objecto da biblioteca
-- **Renomear** - aparece uma caixa de diálogo que lhe permite renomear o item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
-
+- **Cut** or **Copy** to the pasteboard
+- **Paste** an object from the pasteboard
+- **Clear** - deletes the object from the library
+- **Rename** - a dialog box appears allowing you to rename the item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
 
 Pode colocar objectos individuais (incluindo subformulários) ou conjuntos de objectos numa biblioteca de objectos. Cada objecto ou conjunto é agrupado num único item:
 
@@ -92,6 +88,7 @@ Uma biblioteca de objectos pode conter até 32.000 elementos.
 Os objectos são copiados com todas as suas propriedades, tanto gráficas como funcionais, incluindo os seus métodos. Estas propriedades são mantidas na íntegra quando o elemento é copiado para um formulário ou outra biblioteca.
 
 #### Objetos dependentes
+
 A utilização de copiar-colar ou arrastar-e-soltar com determinados objetos de biblioteca também faz com que os seus objetos dependentes sejam copiados. Por exemplo, copiar um botão fará com que o método objeto que pode estar anexado também seja copiado. Estes objetos dependentes não podem ser copiados ou arrastados e largados diretamente.
 
 Segue-se uma lista de objetos dependentes que serão colados na biblioteca enquanto o objeto principal que os utiliza (quando aplicável):
@@ -101,4 +98,3 @@ Segue-se uma lista de objetos dependentes que serão colados na biblioteca enqua
 - Imagens
 - Dicas de ajuda (ligadas a um campo)
 - Métodos objecto
-
