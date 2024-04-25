@@ -5,24 +5,22 @@ title: Conditions et boucles
 
 Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonction, vous utiliserez toujours un ou plusieurs types de structure de programmation. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :
 
-- **Séquentielle**: une structure séquentielle est une structure simple et linéaire. Une séquence est une série d'instructions que 4D exécute l'une après l'autre, de la première à la dernière. Une routine d'une ligne, fréquemment utilisée pour les méthodes objets, est le cas le plus simple d'une structure séquentielle. Par exemple : `[People]lastName:=Uppercase([People]lastName)`
-- **Conditionnelle** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. L’une des structures conditionnelles est la structure [`If...Else...End if`](#ifelseend-if), qui aiguille le déroulement du programme vers une séquence ou une autre. L’autre structure conditionnelle est la structure [`Case of...Else...End case`](#case-ofelseend-case), qui oriente le programme vers une séquence parmi une ou plusieurs alternatives.
-- **Répétitive** : Il est très courant, lorsque vous écrivez des méthodes, de rencontrer des cas où vous devez répéter une séquence d’instructions un certain nombre de fois. Pour traiter ces besoins, le langage 4D vous propose plusieurs structures répétitives :
+- **Sequential**: a sequential structure is a simple, linear structure. Une séquence est une série d'instructions que 4D exécute l'une après l'autre, de la première à la dernière. Une routine d'une ligne, fréquemment utilisée pour les méthodes objets, est le cas le plus simple d'une structure séquentielle. For example: `[People]lastName:=Uppercase([People]lastName)`
+- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
+- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. Pour traiter ces besoins, le langage 4D vous propose plusieurs structures répétitives :
 
-    - [`While...End while`](#whileend-while)
-    - [`Repeat...Until`](#repeatuntil)
-    - [`For...End for`](#forend-for)
-    - [`For each...End for each`](#for-eachend-for-each)
+  - [`While...End while`](#whileend-while)
+  - [`Repeat...Until`](#repeatuntil)
+  - [`For...End for`](#forend-for)
+  - [`For each...End for each`](#for-eachend-for-each)
 
-Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition un certain nombre de fois. `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
+Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each...End for each` allows mixing both ways and is designed to loop within objects and collections.
 
-**Note :** 4D vous permet d’imbriquer des structures de programmation jusqu’à une “profondeur” de 512 niveaux.
-
-
+**Note:** 4D allows you to embed programming structures up to a "depth" of 512 levels.
 
 ## If...Else...End if
 
-La syntaxe de la structure conditionnelle `If...Else...End if` est la suivante :
+The formal syntax of the `If...Else...End if` control flow structure is:
 
 ```4d
  If(Boolean_Expression)
@@ -32,14 +30,15 @@ La syntaxe de la structure conditionnelle `If...Else...End if` est la suivante :
 End if
 ```
 
-A noter que l'élément `Else` est optionnel, vous pouvez écrire :
+Note that the `Else` part is optional; you can write:
+
 ```4d
  If(Boolean_Expression)
     instruction(s)
  End if
 ```
 
-La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Le `Else` est optionnel ; lorsqu’il est omis, c’est la première ligne d’instructions suivant le `End if` (s’il y en a une) qui est exécutée.
+The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
 
 A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
@@ -49,7 +48,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  End if
 ```
 
-L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
+L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```4d
  If(MethodA)
@@ -59,25 +58,23 @@ L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même 
  End if
 ```
 
-Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
+The result is similar and _MethodB_ is evaluated only if necessary.
 
-> **Note :** L'[opérateur ternaire](operators.md#ternary-operator) permet d'écrire des expressions conditionnelles sur une seule ligne et peut remplacer une séquence complète d'instructions If...Else.
+> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..Else statements.
 
 #### Exemple
 
 ```4d
-  // Ask the user to enter a name
+  // Demander à l'utilisateur de saisir un nom
  $Find:=Request(Type a name)
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if
- End if
  End if 
 ```
 
-**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+**Tip:** Branching can be performed without statements to be executed in one case or the other. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```4d
  If(Expression_booléenne)
@@ -85,6 +82,7 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
     instruction(s)
  End if
 ```
+
 ou :
 
 ```4d
@@ -96,40 +94,43 @@ ou :
 
 ## Case of...Else...End case
 
-La syntaxe de la structure conditionnelle `Case of...Else...End case` est la suivante :
+The formal syntax of the `Case of...Else...End case` control flow structure is:
+
 ```4d
  Case of
-    :(Expression_booléenne)
-       instruction(s)
-    :(Expression_booléenne)
+    :(Boolean_Expression)
+       statement(s)
+    :(Boolean_Expression)
        statement(s)
        .
        .
        .
-
-    :(Expression_booléenne)
-       instruction(s)
+ 
+    :(Boolean_Expression)
+       statement(s)
     Else
-       instruction(s)
+       statement(s)
  End case
 ```
 
-A noter que l'élément `Else` est optionnel, vous pouvez écrire :
+Note that the `Else` part is optional; you can write:
+
 ```4d
  Case of
-    :(Expression_booléenne)
-       instruction(s)
-    :(Expression_booléenne)
+    :(Boolean_Expression)
+       statement(s)
+    :(Boolean_Expression)
        statement(s)
        .
        .
        .
-
-    :(Expression_booléenne)
-       instruction(s)
+ 
+    :(Boolean_Expression)
+       statement(s)
  End case
 ```
-Tout comme la structure `If...Else...End if`, la structure `Case of...Else...End case` permet également à votre méthode de choisir parmi plusieurs séquences d’instructions. A la différence de la structure `If...Else...End`, la structure `Case of...Else...End case` peut tester un nombre illimité d’expressions booléennes et exécuter la séquence d’instructions correspondant à la valeur TRUE.
+
+As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
 
 Chaque expression booléenne débute par le caractère deux points (`:`). La combinaison de deux points et d’une expression booléenne est appelée un cas. Par exemple, la ligne suivante est un cas :
 
@@ -137,9 +138,9 @@ Chaque expression booléenne débute par le caractère deux points (`:`). La com
 :(bValidate=1)
 ```
 
-Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Si aucun des cas n’est TRUE, aucune instruction n’est exécutée (s'il n'y a pas d'élément `Else`).
+Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
 
-Vous pouvez placer une instruction Else après le dernier cas. Si tous les cas sont FALSE, les instructions suivant le `Else` seront exécutées.
+Vous pouvez placer une instruction Else après le dernier cas. If all of the cases are FALSE, the statements following the `Else` will be executed.
 
 #### Exemple
 
@@ -147,214 +148,160 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ... Case of
-    :(vResult=1) //Tester si le chiffre est 1
-       ALERT("One.") //Si le chiffre est 1, afficher une alerte
-    :(vResult=2) //Tester si le chiffre est 2
-       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
-    :(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+    :(vResult=1) // Teste si le numéro est 1
+       ALERT("One.") // Si c’est 1, afficher une alerte
+    :(vResult=2) // Teste si le numéro est 2
+       ALERT("Two.") // Si c’est 2, afficher une alerte
+    :(vResult=3) // Teste si le numéro est 3
+       ALERT("Three.") // Si c’est 3, afficher une alerte
+    Else  // Si ce n’est ni 1 ni 2 ni 3, afficher une alerte
        ALERT("It was not one, two, or three.")
- //déclaration(s)
- End case //Si le chiffre est 2, afficher une alerte
-    :(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
- //statement(s)
  End case
 ```
 
-A titre de comparaison, voici la version avec `If...Else...End if` de la même méthode :
+For comparison, here is the `If...Else...End if` version of the same method:
 
 ```4d
- If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) //Teste si le numéro est 1
+    ALERT("One.") //Si c’est 1, afficher une alerte
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Test si le numéro est 2
+       ALERT("Two.") //Si c’est 2, afficher une alerte
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Teste si le numéro est 3
+          ALERT("Three.") //Si c’est 3, afficher une alerte
+       Else //Si ce n’est ni 1, 2 ni 3, afficher l’alerte
           ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") //Si le chiffre est 1, afficher une alerte
- Else
-    If(vResult=2) //Tester si le chiffre est 2
-       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
        End if
     End if
  End if
 ```
 
-Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
+Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
 
-Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante :
+Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence.
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
     :(vResult=1)
-       ...
+       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //this case will never be detected
+       ... //statement(s)
+ End case
 ```
 
 ... les instructions associées au cas complexe ne seront jamais exécutées. En effet, pour que ce cas soit TRUE, ses deux conditions booléennes doivent l’être. Or, la première condition est celle du cas simple situé précédemment. Lorsqu'elle est TRUE, le cas simple est exécuté et 4D sort de la structure conditionnelle, sans évaluer le cas complexe. Pour que ce type de méthode fonctionne, vous devez écrire :
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
+    :(vResult=1)
+       ... //statement(s)
  End case
 ```
 
-**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+
+
+**Tip:** Branching can be performed without statements to be executed in one case or another. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+
 ```4d
  Case of
-    :(Expression_booléenne)
-    :(Expression_booléenne)
+    :(Boolean_Expression)
+    :(Boolean_Expression)
       ...
-
-    :(Expression_booléenne)
-       instruction(s)
+ 
+    :(Boolean_Expression)
+       statement(s)
     Else
-       instruction(s)
+       statement(s)
  End case
 ```
 
 ou :
+
 ```4d
  Case of
-    :(Expression_booléenne)
-    :(Expression_booléenne)
-        instruction(s)
+    :(Boolean_Expression)
+    :(Boolean_Expression)
+       statement(s)
        ...
-
-    :(Expression_booléenne)
-       instruction(s)
+        
+    :(Boolean_Expression)
+       statement(s)
     Else
-       instruction(s)
  End case
 ```
 
 ou :
+
 ```4d
  Case of
     Else
        instruction(s)
  End case
 ```
-
 
 ## While...End while
 
-La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
+The formal syntax of the `While...End while` control flow structure is:
 
 ```4d
  While(Boolean_Expression)
-    statement(s)
+ 	statement(s)
     {break}  
     {continue}
  End while
 ```
 
-Une boucle `While...End while` exécute les instructions comprises entre `While` et `End while` aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
+A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
 
-Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
-Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle `While...End while`. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.
+It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
 
-La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car _NeverStop_ est toujours TRUE :
+La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. The following loop continues forever because _NeverStop_ is always TRUE:
+
 ```4d
  NeverStop:=True
  While(NeverStop)
  End while
 ```
 
-Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. Pour plus d'informations sur ce point, reportez-vous à la section [Débogueur](error-handling.md).
+Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. For more information about tracing a method, see the [Error handling](error-handling.md) page.
 
 #### Exemple
 
 ```4d
- CONFIRM("Add a new record?") //L'utilisateur souhaite-t-il ajouter un enregistrement ? CONFIRM("Add a new record?") //The user wants to add a record?
- While(OK=1) // Tant que l'utilisateur accepte
-    ADD RECORD([aTable]) // Ajouter un nouvel enregistrement
-End while // Une boucle While se termine toujours par End while
+ CONFIRM("Add a new record?") //The user wants to add a record?
+ While(OK=1) //Loop as long as the user wants to
+    ADD RECORD([aTable]) //Add a new record
+ End while //The loop always ends with End while
 ```
 
-Dans cet exemple, la valeur de la variable système `OK` est définie par la commande `CONFIRM` avant que le programme n’entre dans la boucle. Si l’utilisateur clique sur le bouton **OK** dans la boîte de dialogue de confirmation, la variable `OK` prend la valeur 1 et la boucle est exécutée. Dans le cas contraire, la variable `OK` prend la valeur 0 et la boucle est ignorée. Une fois que le programme entre dans la boucle, la commande `ADD RECORD` permet de continuer à l’exécuter car elle met la variable système `OK` à 1 lorsque l’utilisateur sauvegarde l’enregistrement. Lorsque l’utilisateur annule (ne valide pas) le dernier enregistrement, la variable système `OK` prend la valeur 0 et la boucle s’arrête.
+In this example, the `OK` system variable is set by the `CONFIRM` command before the loop starts. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Otherwise, the `OK` system variable is set to 0 and the loop is skipped. Once the loop starts, the `ADD RECORD` command keeps the loop going because it sets the `OK` system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the `OK` system variable is set to 0 and the loop stops.
 
 ## Repeat...Until
 
-La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suivante :
+The formal syntax of the `Repeat...Until` control flow structure is:
 
 ```4d
 Repeat
-    statement(s)
+	statement(s)
     {break}  
     {continue}
 Until(Boolean_Expression)
 ```
-La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control.md#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
-L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
+A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
 
-Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
+The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 #### Exemple
 
-Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
+Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
 
 ```4d
  Repeat
@@ -364,7 +311,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 
 ## For...End for
 
-La syntaxe de la structure répétitive `For...End for` est la suivante :
+The formal syntax of the `For...End for` control flow structure is:
 
 ```4d
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -374,21 +321,21 @@ For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 End for
 ```
 
-La structure `For...End for` est une boucle contrôlée par un compteur :
+The `For...End for` loop is a loop controlled by a counter variable:
 
-- La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
-- La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
-- Lorsque le compteur atteint la valeur définie par *End_Expression*, la boucle s'arrête.
+- The counter variable _Counter_Variable_ is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by _Start_Expression_.
+- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value _Increment_Expression_. If you do not specify _Increment_Expression_, the counter variable is incremented by one (1), which is the default.
+- When the counter variable passes the _End_Expression_ value, the loop stops.
 
-**Important :** Les expressions numériques *Start_Expression*, *End_Expression* et *Increment_Expression* sont évaluées une seule fois, au début de la boucle. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.
+**Important:** The numeric expressions _Start_Expression_, _End_Expression_ and _Increment_Expression_ are evaluated once at the beginning of the loop. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.
 
-**Astuce :** En revanche, vous pouvez, si vous le souhaitez, modifier la valeur de la variable *Counter_Variable* depuis l'intérieur de la boucle et cela affectera l'exécution de la boucle.
+**Tip:** However, for special purposes, you can change the value of the counter variable _Counter_Variable_ within the loop; this will affect the loop.
 
-- Généralement, *Start_Expression* est inférieure à *End_Expression*.
-- Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.
-- Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
+- Usually _Start_Expression_ is less than _End_Expression_.
+- If _Start_Expression_ and _End_Expression_ are equal, the loop will execute only once.
+- If _Start_Expression_ is greater than _End_Expression_, the loop will not execute at all unless you specify a negative _Increment_Expression_. Reportez-vous ci-dessous au paragraphe décrivant ce point.
 
-Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 #### Exemples élémentaires
 
@@ -404,7 +351,7 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 
 ```4d
  For($vlElem;1;Size of array(anArray))
-  //Faire quelque chose avec l'élément
+  //Do something with the element
     anArray{$vlElem}:=...
  End for
 ```
@@ -413,7 +360,7 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 
 ```4d
  For($vlChar;1;Length(vtSomeText))
-  //Faire quelque chose avec le caractère si c'est une tabulation
+  //Do something with the character if it is a TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
@@ -425,21 +372,21 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 ```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
-  //Faire quelque chose avec chaque enregistrement
+  //Do something with the record
     SEND RECORD([aTable])
   //...
-  // Passer à l'enregistrement suivant
+  //Go to the next record
     NEXT RECORD([aTable])
  End for
 ```
 
-La plupart des structures `For...End for` que vous écrirez dans vos projets ressembleront à celles présentées ci-dessus.
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### Variable compteur
 
 #### Décrémenter la variable compteur
 
-Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
+Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. To do so, you must specify _Start_Expression_ greater than _End_Expression_ and a negative _Increment_Expression_. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 
 5. La boucle suivante s'exécute 100 fois :
 
@@ -453,7 +400,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  //Faire quelque chose avec l'élément
+  //Do something with the element
     anArray{$vlElem}:=...
  End for
 ```
@@ -462,7 +409,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
-  //Faire quelque chose avec le caractère si c'est une tabulation
+  //Do something with the character if it is a TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
@@ -474,23 +421,23 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 ```4d
  LAST RECORD([aTable])
  For($vlRecord;Records in selection([aTable]);1;-1)
-  //Faire quelque chose avec chaque enregistrement
+  //Do something with the record
     SEND RECORD([aTable])
   //...
-  //Passer à l'enregistrement précédent
+  //Go to the previous record
     PREVIOUS RECORD([aTable])
  End for
 ```
 
 #### Incrementer la variable compteur de plus de 1
 
-Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur (positive ou négative) dont la valeur absolue est supérieure à un.
+If you need to, you can use an _Increment_Expression_ (positive or negative) whose absolute value is greater than one.
 
 9. La boucle suivante ne traite que les éléments pairs du tableau anArray :
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
-  //Faire quelque chose avec l'élément 2,4...2n
+  //Do something with the element #2,#4...#2n
     anArray{$vlElem}:=...
  End for
 ```
@@ -510,23 +457,26 @@ Vous pouvez utiliser comme compteurs des variables réelles et entières, interp
 
 ### Comparaison des structures répétitives
 
-Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 fois :
+Let's go back to the first `For...End for` example. La boucle suivante s'exécute 100 fois :
+
 ```4d
  For(vCounter;1;100)
   //Faire quelque chose
  End for
 ```
 
-Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action. Voici la boucle `While...End while` équivalente :
+It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+
 ```4d
- $i :=1 // Initialisation du compteur
-While ($i<=100) // Boucle 100 fois
-  // Faire quelque chose
-    $i :=$i +1 // Il faut incrémenter le compteur
+ $i:=1 //Initialize the counter
+ While($i<=100) //Loop 100 times
+  //Do something
+    $i:=$i+1 //Need to increment the counter
  End while
 ```
 
-Voici la boucle `Repeat...Until` équivalente :
+Here is the equivalent `Repeat...Until` loop:
+
 ```4d
  $i :=1 // Initialisation du compteur
  Repeat
@@ -537,14 +487,13 @@ Until($i=100) // Boucle 100 fois
 
 :::tip
 
-La boucle `For...End for` est généralement plus rapide que les boucles `While...End while` et `Repeat...Until` , car 4D teste la condition en interne pour chaque cycle de la boucle et incrémente le compteur. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure `For...End for`.
+The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
 
 :::
 
-
 ### Structures For...End for emboîtées
 
-Vous pouvez emboîter autant de structures répétitives que vous voulez (dans les limites du raisonnable). Cela s'applique aux structures de type `For...End for`. Il y a dans ce cas une erreur courante à éviter : assurez-vous d'utiliser une variable compteur différente par structure de boucle.
+Vous pouvez emboîter autant de structures répétitives que vous voulez (dans les limites du raisonnable). This includes nesting `For...End for` loops. Il y a dans ce cas une erreur courante à éviter : assurez-vous d'utiliser une variable compteur différente par structure de boucle.
 
 Voici deux exemples :
 
@@ -553,10 +502,10 @@ Voici deux exemples :
 ```4d
  For($vlElem;1;Size of array(anArray))
   //...
-  // Faire quelque chose avec la ligne
-  // ...
+  //Do something with the row
+  //...
     For($vlSubElem;1;Size of array(anArray{$vlElem}))
-  //Faire quelque chose avec l'élément
+  //Do something with the element
        anArray{$vlElem}{$vlSubElem}:=...
     End for
  End for
@@ -585,7 +534,7 @@ Voici deux exemples :
 
 ## For each...End for each
 
-La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
+The formal syntax of the `For each...End for each` control flow structure is:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -595,41 +544,41 @@ La syntaxe de la structure répétitive (ou boucle) `For each...End for each` es
  End for each
 ```
 
-La structure `For each...End for each` exécute le cycle d'instructions définies pour chaque *Elément_courant* de *Expression*. Le type de *Elément_courant* dépend du type de *Expression*. La boucle `For each...End for each` peut itérer parmi trois types d'*Expression* :
+The `For each...End for each` structure iterates a specified _Current_item_ over all values of the _Expression_. The _Current_item_ type depends on the _Expression_ type. The `For each...End for each` loop can iterate through three _Expression_ types:
 
 - collections : boucle sur chaque élément de la collection,
 - entity selections : boucle sur chaque entity,
 - objets : boucle sur chaque propriété d'objet.
 
-Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
+The following table compares the three types of `For each...End for each`:
 
-|                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
-| ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
-| Type Elément_courant                      | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
-| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Object                        |
-| Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
-| Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
+|                                                   | Boucle sur collections                                         | Boucle sur entity selections       | Boucle sur objets             |
+| ------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| Type Elément_courant         | Variable du même type que les éléments de la collection        | Entity                             | Variable texte                |
+| Types d’expressions                               | Collection (avec des éléments du même type) | Entity selection                   | Object                        |
+| Nombre de boucles (par défaut) | Nombre d'éléments de la collection                             | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
+| Prise en charge de Paramètres début / fin         | Oui                                                            | Oui                                | Non                           |
 
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
-- Par défaut, les _instructions_ incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
-- Les paramètres optionnels *début* et *fin* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
-- La boucle `For each...End for each` peut être utilisée sur une **collection partagée** ou un **objet partagé**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Use...End use`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Use...End use` :
-    - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
-    - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
+- By default, the enclosed _statement(s)_ are executed for each value in _Expression_. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
+- The _begin_ and _end_ optional parameters can be used with collections and entity selections to define boundaries for the loop.
+- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
+  - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
+  - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
 
-Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Boucle sur collections
 
-Lorsque `For each...End for each` est utilisée avec une _Expression_ de type _Collection_, le paramètre _Elément_courant_ est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
+When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
 
-La collection doit contenir uniquement des éléments du même type. Dans le cas contraire, une erreur sera retournée dès que la première valeur de type différent sera assignée à la variable _Elément_courant_.
+The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
 
-A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
+At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the _Current_Item_ variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
-- Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable _Elément_courant_ ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
+- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- The _Current_Item_ variable must be of the same type as the collection elements. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
 #### Exemple
 
@@ -658,11 +607,11 @@ Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
 ### Boucle sur entity selections
 
-Lorsque `For each...End for each` est utilisé avec une *Expression* du type *Entity selection* , le paramètre *Current_Item* est l'entité en cours de traitement.
+When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
 
-Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre *Elément_courant* reçoit automatiquement l'entity qui est en cours de traitement.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. On each loop iteration, the _Current_Item_ parameter is automatically filled with the entity of the entity selection that is currently processed.
 
-**Note :** Si l'entity selection contient une entity qui a été supprimée entre-temps par un autre process, elle est automatiquement ignorée durant la boucle.
+**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
 
 Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
 
@@ -680,7 +629,7 @@ Vous souhaitez augmenter le salaire de tous les employés britanniques dans une 
 
 ### Boucles sur des propriétés d'objets
 
-Lorsque `For each...End for each` est utilisée avec une *Expression* de type Objet, le paramètre *Elément_courant* est une variable texte qui reçoit automatiquement le nom de la propriété en cours de traitement.
+When `For each...End for each` is used with an _Expression_ of the Object type, the _Current_Item_ parameter is a text variable automatically filled with the name of the currently processed property.
 
 Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
@@ -695,6 +644,7 @@ Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'o
     "age": 20
 }
 ```
+
 Vous pouvez écrire :
 
 ```4d
@@ -712,21 +662,27 @@ Vous pouvez écrire :
     "age": 20
 }
 ```
+
 ### Paramètres début / fin
 
 Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.
 
-**Note :** Les paramètres *début* et *fin* sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).
+**Note:** The _begin_ and _end_ parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
 
-- Dans le paramètre *début*, passez la position de l'élément de *Expression* auquel démarrer l'itération (*début* est inclus).
-- Dans le paramètre *fin*, vous pouvez passer la position de l'élément de *Expression* auquel stopper l'itération (*fin* est exclus).
+- In the _begin_ parameter, pass the element position in _Expression_ at which to start the iteration (_begin_ is included).
+- In the _end_ parameter, you can also pass the element position in _Expression_ at which to stop the iteration (_end_ is excluded).
 
-Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expression*, les éléments sont itérés depuis *début* jusqu'au dernier inclus. Si les paramètres *début* et *fin* sont des valeurs positives, ils représentent des positions d'éléments dans *Expression*. Si *begin* est une valeur négative, elle est recalculée comme `begin:=begin+Taille expression` (elle est considérée comme un décalage à partir de la fin de *Expression*). Si la valeur calculée est négative, *begin* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
+If _end_ is omitted or if _end_ is greater than the number of elements in _Expression_, elements are iterated from _begin_ until the last one (included).
+If the _begin_ and _end_ parameters are positive values, they represent actual positions of elements in _Expression_.
+If _begin_ is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of _Expression_). If the calculated value is negative, _begin_ is set to 0.
+**Note:** Even if begin is negative, the iteration is still performed in the standard order.
+If _end_ is a negative value, it is recalculed as `end:=end+Expression size`
 
 Par exemple :
+
 - une collection contient 10 éléments (numérotés de 0 à 9)
-- début=-4 > début=-4+10=6 > l'itération démarre au 6e élément (numéro 5)
-- fin=-2 > fin=-2+10=8 > l'itération stoppe avant le 8e élément (numéro 7), i.e.
+- début=-4 -> début=-4+10=6 -> l'itération démarre au 6e élément (numéro 5)
+- fin=-2 -> fin=-2+10=8 -> l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément.
 
 #### Exemple
 
@@ -747,26 +703,26 @@ Par exemple :
 
 ### Conditions Until et While
 
-Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. Lorsqu'une instruction `Until(condition)` est associée à la boucle, l'itération stoppe dès que la condition est évaluée à `True`, tandis que dans le cas d'une instruction `While(condition)`, l'itération stoppe dès que la condition est évaluée à `False`.
+You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
 
 Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 
-- La condition `Until` est testée à la fin de chaque itération, donc si *Expression* n'est ni vide ni Null, la boucle sera exécutée au moins une fois.
-- La condition `While` est testée au début de chaque itération, donc en fonction du résultat de la condition, la boucle peut ne pas être exécutée du tout.
+- The `Until` condition is tested at the end of each iteration, so if the _Expression_ is not empty or null, the loop will be executed at least once.
+- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
 #### Exemple
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
-
+ 
  $total:=0
- For each($num;$colNum)While($total<30) //testé au début
+ For each($num;$colNum)While($total<30) //tested at the beginning
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
-
+ 
  $total:=1000
- For each($num;$colNum)Until($total>30) //testé à la fin
+ For each($num;$colNum)Until($total>30) //tested at the end
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
@@ -774,42 +730,39 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 
 ## break et continue
 
-Toutes les structures de boucles ci-dessus prennent en charge les instructions `break` et `continue`. Ces instructions vous donnent plus de contrôle sur les boucles en vous permettant de sortir de la boucle et de contourner, à tout moment, l'itération en cours.
+All looping structures above support both `break` and `continue` statements. Ces instructions vous donnent plus de contrôle sur les boucles en vous permettant de sortir de la boucle et de contourner, à tout moment, l'itération en cours.
 
 ### break
 
-L'instruction `break` met fin à la boucle qui la contient. Le contrôle du programme passe à l'instruction située immédiatement après le corps de la boucle.
+The `break` statement terminates the loop containing it. Le contrôle du programme passe à l'instruction située immédiatement après le corps de la boucle.
 
-Si l'instruction `break` se trouve à l'intérieur d'une [boucle imbriquée](#nested-forend-for-looping-structures) (boucle dans une autre boucle), l'instruction `break` mettra fin à la boucle la plus interne.
-
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
 
 #### Exemple
 
 ```4d
 For (vCounter;1;100)
-    If ($tab{vCounter}="") //si une condition devient vraie
-        break //fin de la boucle For
-    End if
+	If ($tab{vCounter}="") //if a condition becomes true
+		break //end of the for loop
+	End if
 End for
 ```
 
 ### continue
 
-L'instruction `continue` met fin à l'exécution des instructions de l'itération de la boucle courante, et poursuit l'exécution de la boucle à l'itération suivante.
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
 
 ```4d
 var $text : Text
 For ($i; 0; 9)
-    If ($i=3)
-        continue //traite directement l'itération suivante
-    End if
-    $text:=$text+String($i)
+	If ($i=3)
+		continue //go directly to the next iteration
+	End if
+	$text:=$text+String($i)
 End for
 // $text="012456789" 
 
 ```
-
-
 
 ## return {expression}
 
@@ -818,11 +771,12 @@ End for
 | Release | Modifications |
 | ------- | ------------- |
 | 19 R4   | Ajout         |
+
 </details>
 
-L'instruction `return` peut être appelée de n'importe où. Lorsqu'une instruction `return` est utilisée dans une fonction ou une méthode, l'exécution de la fonction ou de la méthode est arrêtée. Le code restant n'est pas exécuté et le contrôle est renvoyé à l'appelant.
+The `return` statement can be called from anywhere. When a `return` statement is used in a function or method, the execution of the function or method is stopped. Le code restant n'est pas exécuté et le contrôle est renvoyé à l'appelant.
 
-L'instruction `return` peut être utilisée pour [retourner une valeur](parameters.md#return-expression) à l'appelant.
+The `return` statement can be used to [return a value](parameters.md#return-expression) to the caller.
 
 #### Exemple
 
@@ -830,17 +784,17 @@ L'instruction `return` peut être utilisée pour [retourner une valeur](paramete
 var $message : Text
 var $i : Integer
 
-While (True) //boucle infinie
-    $i:=$i+1
-    $message+=String($i)+"A\r"  // jusqu'à 5
-    logConsole($message)
-    If ($i=5)
-        return //stops the loop
-    End if 
-    $message+=String($i)+"B\r"  // jusqu'à 4
-    logConsole($message)
+While (True) //infinite loop
+	$i:=$i+1
+	$message+=String($i)+"A\r"  // until 5
+	logConsole($message)
+	If ($i=5)
+		return //stops the loop
+	End if 
+	$message+=String($i)+"B\r"  // until 4
+	logConsole($message)
 End while 
-$message+=String($i)+"C\r"  //jamais exécutée 
+$message+=String($i)+"C\r"  //never executed 
 logConsole($message)
 
 // 1A
@@ -854,4 +808,3 @@ logConsole($message)
 // 5A
 
 ```
-
