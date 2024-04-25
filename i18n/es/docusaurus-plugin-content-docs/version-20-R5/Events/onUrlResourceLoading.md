@@ -5,15 +5,14 @@ title: On URL Resource Loading
 
 | Code | Puede ser llamado por                       | Definición                               |
 | ---- | ------------------------------------------- | ---------------------------------------- |
-| 48   | [Área Web](FormObjects/webArea_overview.md) | Se carga un nuevo recurso en el área web |
-
+| 48   | [Web Area](FormObjects/webArea_overview.md) | Se carga un nuevo recurso en el área web |
 
 ## Descripción
 
-Este evento se genera cada vez que se carga un nuevo recurso (imagen, marco, etc.) en la página web actual.
+This event is generated each time a new resource (picture, frame, etc.) is loaded on the current Web page.
 
-La variable [Progresión](FormObjects/properties_WebArea.md#progression) asociada al área permite conocer el estado actual de la carga.
-
+The [Progression](FormObjects/properties_WebArea.md#progression) variable associated with the area lets you find out the current state of the loading.
 
 ### Ver también
+
 [`On Open External Link`](onOpenExternalLink.md)
