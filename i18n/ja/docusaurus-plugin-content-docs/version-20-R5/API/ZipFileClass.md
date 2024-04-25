@@ -5,8 +5,8 @@ title: ZIPFile
 
 [File](FileClass.md) クラスの次のプロパティや関数は `ZIPFile` オブジェクトにおいて利用可能です:
 
-| ZIPFile で利用可能な [File](FileClass.md) API                                                       | 説明                   |
-| --------------------------------------------------------------------------------------------- | -------------------- |
+| ZIPFile で利用可能な [File](FileClass.md) API                                             | 説明                   |
+| ----------------------------------------------------------------------------------- | -------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](FileClass.md#copyto)                   |                      |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](FileClass.md#creationdate)         |                      |
 | [<!-- INCLUDE #document.creationTime.Syntax -->](FileClass.md#creationtime)         |                      |
