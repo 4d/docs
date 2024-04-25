@@ -129,7 +129,7 @@ Permite definir el número de pases (análisis de código) que realiza el compil
 
 - **Definir los tipos de las variables**: pasa por todas las etapas que hacen posible la compilación.
 - **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método no se realiza. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales, así como los parámetros de los métodos, se han escrito claramente.
 
 
 #### Objetivo de compilación
