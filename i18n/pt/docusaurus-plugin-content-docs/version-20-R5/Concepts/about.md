@@ -15,7 +15,6 @@ A linguagem integrada 4D, que conta com mais de 1300 comandos, faz com que 4D se
 
 A flexibilidade e poder da lnguagem de programação 4D faz com que seja ferramenta ideal para todos os níveis de usuários e desenvolvedores oferecendo uma completa gama de tarefas de gestão da informação. Os usuários principiantes podem realizar rapidamente os cálculos. Os usuários mais experientes podem personalizar seus bancos de dados mesmo sem saber programação. Desenvolvedores com experiência podem usar essa linguagem de programação poderosa para adicionar funcionalidades sofisticadas para seus bancos de dados, inclusive transferência de arquivos, comunicação, monitoramento. Os desenvolvedores com experiência em programação em outras linguagens podem adicionar seus próprios comandos à linguagem 4D.
 
-
 ## O que é uma linguagem?
 
 A linguagem 4D não é muito diferente da linguagem falada usada diariamente. É uma forma de comunicação usada para expressar ideias, informar e instruir. Como em uma linguagem falada, 4D tem seu vocabulário, gramática e sintaxe; pode usar a linguagem para dizer a 4D como gerenciar seus dados e seu banco de dados.
@@ -41,13 +40,14 @@ A linguagem lhe dá controle total sobre o design e operação de seus banco de 
 
 A linguagem 4D lhe permite tomar o controle total de seus dados de uma maneira poderosa e elegante. A linguagem é fácil o suficiente para os iniciantes e sofisticada o bastante para os desenvolvedores com experiência. Fornece transições suavez desde as funções do banco de dados integradas até ter um banco de dados completamente personalizado.
 
-Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. Por exemplo, quando usar o comando Query, é apresentado o Editor de Consultas (ao qual se pode acessar no modo Desenho, usando o comando Query do menu Registros). Pode dizer ao comando para pesquisar por dados descritos explicitamente. Por exemplo, ([People];[People]Last Name="Smith") encontra todas as pessoas chamadas Smith em seu banco de dados.
+Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. For example, when you use the `QUERY` command, you are presented with the Query Editor (which can be accessed in the Design mode using the Query command in the Records menu. Pode dizer ao comando para pesquisar por dados descritos explicitamente. For example, `QUERY([People];[People]Last Name="Smith")` will find all the people named Smith in your database.
 
-A linguagem 4D é bem poderosa - um comando pode substituir centenas ou até milhares de linhas de códigos escritas nas linguagens tradicionais. Surpreendentemente, esse poder vem com bastante simplicidade - comandos com nomes em inglês comum. Por exemplo, para realizar uma pesquisa, se utiliza o comando `QUERY`; para adicionar um novo registro, se utiliza o comando `ADD RECORD`.
+A linguagem 4D é bem poderosa - um comando pode substituir centenas ou até milhares de linhas de códigos escritas nas linguagens tradicionais. Surpreendentemente, esse poder vem com bastante simplicidade - comandos com nomes em inglês comum. For example, to perform a query, you use the `QUERY` command; to add a new record, you use the `ADD RECORD` command.
 
 A linguagem foi criada para você realizar facilmente qualquer tarefa. Adicionar um registro, ordenar registros, pequisar por dados e operações similares são especificadas com comandos simples e diretos. Mas a linguagem também pode controlar as portas seriais, ler documentos no disco, controlar o processamento de transações complexas e muito mais.
 
-A linguagem 4D realiza mesmo as tarefas mais sofisticadas com relativa simplicidade. Realizar essas tarefas sem usar a linguagem seria muito complicado. Mesmo com os comandos poderosos da linguagem, algumas tarefas podem ser complexas e difícil. Uma ferramenta sozinha não torna uma tarefa possível; a tarefa em si mesma pode ser tão difícil que a ferramenta só vai facilitar o processo. Por exemplo, um processador de textos faz com que escrever um livro seja muito mais fácil e rápido, mas não vai escrever o livro para você. Usar a linguagem 4D faz com que o processamento de gerenciamento de seus dados seja mais fácil e permite lidar com tarefas complicadas com confiança.
+A linguagem 4D realiza mesmo as tarefas mais sofisticadas com relativa simplicidade. Realizar essas tarefas sem usar a linguagem seria muito complicado.
+Mesmo com os comandos poderosos da linguagem, algumas tarefas podem ser complexas e difícil. Uma ferramenta sozinha não torna uma tarefa possível; a tarefa em si mesma pode ser tão difícil que a ferramenta só vai facilitar o processo. Por exemplo, um processador de textos faz com que escrever um livro seja muito mais fácil e rápido, mas não vai escrever o livro para você. Usar a linguagem 4D faz com que o processamento de gerenciamento de seus dados seja mais fácil e permite lidar com tarefas complicadas com confiança.
 
 ## Essa é uma linguagem de computação "tradicional?"?
 
