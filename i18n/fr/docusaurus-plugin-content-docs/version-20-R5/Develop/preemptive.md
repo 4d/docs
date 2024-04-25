@@ -1,5 +1,5 @@
 ---
-id: preemptive
+id: preemptive-processes
 title: Preemptive Processes
 ---
 
@@ -23,7 +23,7 @@ The use of preemptive mode is supported in the following execution contexts:
 | 4D remote        | yes, with [ServerNet or QUIC](../settings/client-server#network-layer) |
 | 4D single-user   | oui                                                                    |
 | Compiled mode    | oui                                                                    |
-| Interpreted mode | no                                                                     |
+| Interpreted mode | non                                                                    |
 
 If the execution context supports preemptive mode and if the method is "thread-safe", a new 4D process launched using the `New process` or `CALL WORKER` commands, or the "Run method" menu item, will be executed in a preemptive thread.
 
