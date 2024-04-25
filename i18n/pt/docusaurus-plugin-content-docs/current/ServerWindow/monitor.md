@@ -23,7 +23,6 @@ The graphic area lets you see the evolution in real time of several parameters: 
 
 Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
 
-
 ## Área Visão geral
 
 The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
@@ -31,7 +30,7 @@ The "Overview" area provides various information concerning the system, applicat
 - **System Information**: Computer, system and IP address of server
 - **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
 - **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **Licença**: descrição da licença. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **License**: Description of license. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
