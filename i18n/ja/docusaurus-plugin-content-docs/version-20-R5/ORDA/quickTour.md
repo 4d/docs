@@ -7,7 +7,7 @@ ORDA はオブジェクトベースであるため、ORDA を使うにはオブ�
 
 ## データストアの説明
 
-4Dデータベースストラクチャーが [ORDA の前提条件](overview.md#orda-prerequisites) に準拠していれば、ORDA のデータストアは自動的にこれに基づいて機能します。
+The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
 この例題では、以下の単純な 4Dデータベースストラクチャーを使用します:
 
@@ -19,7 +19,9 @@ ORDA はオブジェクトベースであるため、ORDA を使うにはオブ�
 TRACE
 ```
 
-このメソッドを実行すると、デバッガーウィンドウが呼び出されます。 式を挿入するために式エリアをダブルクリックし、`ds` と入力します。 これは、データストアオブジェクトを返します。 オブジェクトを展開すると、`ds` オブジェクトのプロパティとしてテーブルとフィールドが ORDA によって自動的に公開されることがわかります。
+このメソッドを実行すると、デバッガーウィンドウが呼び出されます。
+In the Expression area, double-click to insert an expression and enter `ds`. これは、データストアオブジェクトを返します。
+Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -29,13 +31,14 @@ TRACE
 ds.Company.city // 都市の名前を返します
 ```
 
-> ORDA の世界では，ds.Company は **データクラス** です。 ds.Company.city は **属性** です。
+> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
 
-> ORDA は大文字と小文字を区別します。 `ds.company.city` が ds.Company.city 属性を参照することはありません。
+> ORDA は大文字と小文字を区別します。 `ds.company.city` will not refer to the ds.Company.city attribute.
 
-また、ds.Company データクラスに `hires` プロパティが追加されていることにお気づきでしょうか。 これはフィールドに対応した属性ではありません。 `hires` は、実際には Company と Employee の間の *1対N* リレーションの名前です:
+You have also noticed the extra `hires` property in the ds.Company dataclass. これはフィールドに対応した属性ではありません。 `hires` is actually the name of the _One to many_ relation between Company and Employee:
 
-![](../assets/en/ORDA/struc2s.png) *インスペクターで定義されているリレーションの名前*
+![](../assets/en/ORDA/struc2s.png)
+_Name of the relation as defined in the Inspector_
 
 つまり、ある会社で働く従業員のリストにアクセスしたいとき、ORDA では次のように書きます:
 
@@ -45,11 +48,11 @@ ds.Company.hires // 従業員のリストを返します
 
 しかし、急ぎすぎてはいけません。 まずは、ORDA のデータクラスにデータを記録する方法を見ていきましょう。
 
-
 ## データの追加
 
-ORDA では、`new()` コマンドを使ってデータクラスにレコードを追加することができます。
-> ORDA の世界では、レコードは **エンティティ** であり、エンティティはそれ自体がオブジェクトです。 特定のオブジェクトに付随するコマンドを **メンバーメソッド** と呼びます。
+In ORDA, you can add a record to a dataclass using the `new()` command.
+
+> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
 $entity:=ds.Company.new() // Company データクラスに
@@ -62,19 +65,11 @@ $entity:=ds.Company.new() // Company データクラスに
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID は自動的に設定されます
+//$entity.ID is automatically filled
 ```
 
-今のところ、エンティティはメモリ上にしか存在しません。 データファイルに保存するには、`save()` メンバーメソッドを使って保存する必要があります。
+今のところ、エンティティはメモリ上にしか存在しません。 To store it in the data file, you need to save it using the `save()` member method:
 
 ```code4d
 $status:=$entity.save()
 ```
-
-
-
-
-
-
-
-
