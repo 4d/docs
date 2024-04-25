@@ -8,12 +8,12 @@ title: エラー処理
 エラー処理は次の2つの要望に応えます:
 
 - 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
-- 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
+- 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など)  を独自のインターフェースに置換できます。
 
 基本的に、4D でエラー処理する方法は 2つあります。 次のことが可能です:
 
-- [エラー処理メソッドを実装](#エラー処理メソッドの実装) する
-- エラーを投げる可能性のある関数・メソッド・式を呼び出すコードの前に [`Try()`キーワード](#tryexpression) または [`Try/Catch` 文](#trycatchend-try) を使う
+- [install an error-handling method](#installing-an-error-handling-method), or
+- use a [`Try()` keyword](#tryexpression) or a [`Try/Catch` structure](#trycatchend-try) before pieces of code that call a function, method, or expression that can throw an error.
 
 :::tip グッドプラクティス
 
@@ -21,13 +21,11 @@ title: エラー処理
 
 :::
 
-
 ## エラー/ステータス
 
-`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
+`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は _status_ オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
 ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドや `Try()` キーワードを介して対応する必要があります。
-
 
 ## エラー処理メソッドの実装
 
@@ -35,7 +33,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
+エラー処理用のプロジェクトメソッドを _実装_ するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -47,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](https://doc.4d.com/4dv20/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -81,8 +79,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 エラーが発生した場合、以下の図のように 1つのメソッドのみが呼び出されます:
 
-![エラー管理](../assets/en/Concepts/error-schema.png)
-
+![error management](../assets/en/Concepts/error-schema.png)
 
 ### メソッド内でのエラー処理
 
@@ -97,13 +94,12 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 :::info
 
-4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています。 *4D ランゲージリファレンスマニュアル* を参照ください。
+4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています。 _4D ランゲージリファレンスマニュアル_ を参照ください。
 
 :::
 
 - [`Last errors`](https://doc.4d.com/4dv19/help/command/ja/page1799.html) コマンドは、4Dアプリケーションのカレントエラースタックに関する情報をコレクションとして返します。 また、同じ情報を配列として返す [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/ja/page1015.html) コマンドを使用することもできます。
 - `Get call chain` コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。
-
 
 #### 例題
 
@@ -119,7 +115,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 ```4d
 // errorMethod プロジェクトメソッド
  If(Error#1006) // これはユーザーによる割り込みではありません
-    ALERT("エラー "+String(Error)+" が発生しました。 問題となったコードはこちらです: \""+Error formula+"\"")
+    ALERT("エラー "+String(Error)+" が発生しました。問題となったコードはこちらです: \""+Error formula+"\"")
  End if
 ```
 
@@ -131,11 +127,10 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 ON ERR CALL("emptyMethod") // emptyMethod は空のエラー処理メソッドです
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-    ALERT("ファイルが見つかりません。")
+ ALERT("ファイルが見つかりません。")
 End if
 ON ERR CALL("")
 ```
-
 
 ## Try(expression)
 
@@ -143,7 +138,7 @@ ON ERR CALL("")
 
 :::note
 
-単一行の式よりも複雑なコードを試したい場合は、[`Try/Catch` 文](#trycatchend-try) の使用も検討できます。
+If you want to try a more complex code than a single-line expression, you might consider using a [`Try/Catch` structure](#trycatchend-try).
 
 :::
 
@@ -155,18 +150,17 @@ Try (expression) : any | Undefined
 
 ```
 
-*expression* には任意の有効な式を使用できます。
+_expression_ には任意の有効な式を使用できます。
 
-実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
+実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 _expression_ が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
+エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 _expression_ が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
-もし *expression* によって [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされた場合、エラー発生時にはそれが呼び出されます。
+もし _expression_ によって [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされた場合、エラー発生時にはそれが呼び出されます。
 
 :::
-
 
 ### 例題
 
@@ -180,7 +174,6 @@ If ($fileHandle # Null)
   $text:=Try($fileHandle.readText()) || "ファイル読み込みエラー"
 End if
 ```
-
 
 2. ゼロ除算エラーを処理します。 ここでは 0 を返し、エラーをスローするようにします:
 
@@ -215,83 +208,79 @@ End if
 
 ```
 
-
-
 ## Try...Catch...End try
 
-`Try...Catch...End try` 文は、実際の実行コンテキスト (特にローカル変数の値を含む) でコードブロックをテストし、スローされるエラーをキャッチすることで、4D のエラーダイアログボックスが表示されないようにできます。
+The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
 
-`Try(expression)` キーワードが単一の行の式を評価するのとは異なり、`Try...Catch...End try` 文は、単純なものから複雑なものまで、任意のコードブロックを評価することができます。エラー処理メソッドは必要としない点は同じです。 また、`Catch` ブロックは、任意の方法でエラーを処理するために使用できます。
+Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way.
 
-
-`Try...Catch...End try` 構文の正式なシンタックスは、以下の通りです:
+The formal syntax of the `Try...Catch...End try` structure is:
 
 ```4d
 
 Try 
-    statement(s) // 評価するコード
+ statement(s) // 評価するコード
 Catch
-    statement(s) // エラーの場合に実行するコード
+ statement(s) // エラーの場合に実行するコード
 End try
 
 ```
 
-`Try` と `Catch` キーワード間のコードが最初に実行されます。 その後のフローは、実行状況によって異なります。
+The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution.
 
-- エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
-- コードブロックの実行が *非遅延エラー* をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
-- コードブロックの実行が *遅延エラー* をスローした場合には、実行フローは停止しません。`Try` の最後まで実行したのちに、対応する `Catch` コードブロックを実行します。
+- If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
+- If the code block execution throws a _non-deferred error_, the execution flow stops and executes the corresponding `Catch` code block.
+- If the code block execution throws a _deferred error_, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block.
 
 :::note
 
-*遅延* エラーが `Try` ブロック外で投げられた場合、メソッドまたは関数の終わりまでコードが実行されます。
+If a _deferred_ error is thrown outside of the `Try` block, the code execution continues until the end of the method or function.
 
 :::
 
 :::info
 
-*遅延* および *非遅延* エラーについての詳細は、[`throw`](https://doc.4d.com/4dv20R/help/command/ja/page1805.html) コマンドの説明を参照ください。
+For more information on _deferred_ and _non-deferred_ errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
 
 :::
 
-
-`Catch` コードブロックでは、標準のエラー処理コマンドを使用してエラーを処理できます。 [`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドは、現在のエラースタックをコレクションとして返します。 このコードブロック内で [エラー処理メソッド](#エラー処理メソッドの実装) を宣言すると、エラー発生時にはそれが呼び出されます (宣言しない場合には、4Dエラーダイアログが表示されます)。
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 
-[エラー処理メソッド](#エラー処理メソッドの実) が `Try` と `Catch` キーワード間のコード内でインストールされている場合には、エラー発生時にそれが呼ばれます。
+If an [error-handling method](#installing-an-error-handling-method) is installed in the code placed between the `Try` and the `Catch` keywords, it is called in case of error.
 
 :::
 
 ### 例題
 
-トランザクションと `Try...Catch...End try` 文を組み合わせることで、重要な機能のためにセキュアなコードを書くことができます。
+Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical features.
 
 ```4d
 Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
-    var $newInvoice : cs.invoiceEntity
-    var $newInvoiceLine : cs.invoiceLineEntity
-    var $item : Object
-    ds.startTransaction()
-    Try
-        $newInvoice:=This.new()
-        $newInvoice.customer:=$customer
-        $newInvoice.invoiceRef:=$invoiceRef
-        For each ($item; $items)
-            $newInvoiceLine:=ds.invoiceLine.new()
-            $newInvoiceLine.item:=$item.item
-            $newInvoiceLine.amount:=$item.amount
-            $newInvoiceLine.invoice:=$newInvoice
-            // インボイス項目を検証するその他の関数を呼び出します
-            $newInvoiceLine.save()
-        End for each 
-        $newInvoice.save()
-        ds.validateTransaction()
-    Catch
-        ds.cancelTransaction()
-        ds.logErrors(Last errors)
-        $newInvoice:=Null
-    End try
-    return $newInvoice
+	var $newInvoice : cs.invoiceEntity
+	var $newInvoiceLine : cs.invoiceLineEntity
+	var $item : Object
+	ds.startTransaction()
+	Try
+		$newInvoice:=This.new()
+		$newInvoice.customer:=$customer
+		$newInvoice.invoiceRef:=$invoiceRef
+		For each ($item; $items)
+			$newInvoiceLine:=ds.invoiceLine.new()
+			$newInvoiceLine.item:=$item.item
+			$newInvoiceLine.amount:=$item.amount
+			$newInvoiceLine.invoice:=$newInvoice
+                        // インボイス項目を検証するその他の関数を呼び出します
+			$newInvoiceLine.save()
+		End for each 
+		$newInvoice.save()
+		ds.validateTransaction()
+	Catch
+		ds.cancelTransaction()
+		ds.logErrors(Last errors)
+		$newInvoice:=Null
+	End try
+	return $newInvoice
 
 ```
