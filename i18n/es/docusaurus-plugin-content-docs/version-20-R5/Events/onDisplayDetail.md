@@ -3,38 +3,35 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Puede ser llamado por                                    | Definición                                                                                                               |
-| ---- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| 8    | Formulario - [List Box](FormObjects/listbox_overview.md) | Un registro está a punto de ser mostrado en un formulario lista o una línea está a punto de ser mostrada en un list box. |
-
+| Code | Puede ser llamado por                              | Definición                                                                                                                               |
+| ---- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 8    | Form - [List Box](FormObjects/listbox_overview.md) | Un registro está a punto de ser mostrado en un formulario lista o una línea está a punto de ser mostrada en un list box. |
 
 ## Descripción
 
-El evento `On Display Detail` puede utilizarse en los siguientes contextos:
+The `On Display Detail` event can be used in the following contexts:
 
 ### Formulario de salida
 
-Un registro está a punto de ser visualizado en un formulario de lista que se muestra vía `DISPLAY SELECTION` y `MODIFY SELECTION`.
+A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 
-> Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.
+> This event cannot be selected for project forms, it is only available with **table forms**.
 
 En este contexto, se desencadena la siguiente secuencia de llamadas a métodos y eventos de formulario:
 
 - Para cada registro:
-    - Para cada objeto en el área detallada:
-        - Método objeto con el evento `On Display Detail`
-    - Método formulario con el evento `On Display Detail`
+  - Para cada objeto en el área detallada:
+    - Object method with `On Display Detail` event
+  - Form method with `On Display Detail` event
 
-> El área del encabezado se maneja con el evento [`On Header`](onHeader.md).
+> The header area is handled using the [`On Header`](onHeader.md) event.
 
-Llamar a un comando 4D que muestra una caja de diálogo desde el evento `On Display Detail` no está permitido y provocará un error de sintaxis. Más concretamente, los comandos en cuestión son: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION` y `MODIFY SELECTION`.
-
+Calling a 4D command that displays a dialog box from the `On Display Detail` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
 
 ### List box selección
 
-Este evento se genera cuando se muestra una línea de list box [**de tipo selección**](FormObjects/listbox_overview.md#selection-list-boxes).
-
+This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
 
 ### Número de línea mostrado
 
-El comando 4D `Número de línea mostrado` funciona con el evento formulario `On Display Detail`. Devuelve el número de la línea que se está procesando mientras se visualiza en pantalla una lista de registros o de líneas de list box.
+The `Displayed line number` 4D command works with the `On Display Detail` form event. Devuelve el número de la línea que se está procesando mientras se visualiza en pantalla una lista de registros o de líneas de list box.
