@@ -3,16 +3,15 @@ id: macros
 title: フォームエディターマクロ
 ---
 
-
 4D のフォームエディターはマクロをサポートしています。 1つ以上のアクションを実行するための指示をマクロと呼びます。 呼び出されると、マクロは登録された指示を実行し、自動的に指定のアクションをおこないます。
 
 たとえば、定期レポートに特定のフォーマットが指定されている場合 (例: テキストによってフォントカラーが赤や緑であるなど)、マクロを作成してフォントカラーの設定を自動でおこなうことができます。 4Dフォームエディターのマクロでは、次のことがおこなえます:
 
-*   4Dコードを作成・実行する
-*   ダイアログを表示する
-*   オブジェクトを選択する
-*   フォームやフォームオブジェクトおよびそれらのプロパティを追加・編集・削除する
-*   プロジェクトファイルを編集する (更新・削除)
+- 4Dコードを作成・実行する
+- ダイアログを表示する
+- オブジェクトを選択する
+- フォームやフォームオブジェクトおよびそれらのプロパティを追加・編集・削除する
+- プロジェクトファイルを編集する (更新・削除)
 
 フォームエディター用のカスタム機能を定義するため、マクロコードは [クラス関数](Concepts/classes.md) と [JSON のフォームオブジェクトプロパティ](FormObjects/properties_Reference.md) を使用できます。
 
@@ -43,32 +42,33 @@ title: フォームエディターマクロ
 ```4d
 Function onInvoke($editor : Object)->$result : Object
 
-    var $btnHello : Object
+ var $btnHello : Object
 
-    // "Hello" ボタンを作成します
-    $btnHello:=New object("type"; "button"; \
-    "text"; "Hello World!"; \
-    "method"; New object("source"; "ALERT(\"Hello World!\")"); \
-    "events"; New collection("onClick"); \
-    "width"; 120; \
-    "height"; 20; \
-    "top"; 0; \
-    "left"; 0)  
+ // "Hello" ボタンを作成します
+ $btnHello:=New object("type"; "button"; \
+ "text"; "Hello World!"; \
+ "method"; New object("source"; "ALERT(\"Hello World!\")"); \
+ "events"; New collection("onClick"); \
+ "width"; 120; \
+ "height"; 20; \
+ "top"; 0; \
+ "left"; 0)  
 
-    // 現在のページにボタンを追加します
-    $editor.editor.currentPage.objects.btnHello:=$btnHello  
+ // 現在のページにボタンを追加します
+ $editor.editor.currentPage.objects.btnHello:=$btnHello  
 
-    // フォームエディター上で新規作成したボタンを選択します
-    $editor.editor.currentSelection.clear() //unselect elements
-    $editor.editor.currentSelection.push("btnHello")    
+ // フォームエディター上で新規作成したボタンを選択します
+ $editor.editor.currentSelection.clear() //unselect elements
+ $editor.editor.currentSelection.push("btnHello")    
 
-    // 4D に変更内容を通知します
-    $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
-        "currentPage"; $editor.editor.currentPage)
+ // 4D に変更内容を通知します
+ $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
+  "currentPage"; $editor.editor.currentPage)
 ```
 
-マクロを呼び出します: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
-
+マクロを呼び出します:
+![](../assets/en/FormEditor/macroex1.png)
+![](../assets/en/FormEditor/macroex2.png)
 
 ## フォームエディターでマクロを呼び出す
 
@@ -90,8 +90,6 @@ Function onInvoke($editor : Object)->$result : Object
 
 ![](../assets/en/FormEditor/macroStructure.png)
 
-
-
 ## マクロの宣言
 
 `formMacros.json` ファイルの構造は次の通りです:
@@ -109,12 +107,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-| 属性     |                     |                          | タイプ    | 説明                         |
-| ------ | ------------------- | ------------------------ | ------ | -------------------------- |
-| macros |                     |                          | object | 定義されたマクロのリスト               |
-|        | `<macroName>` |                          | object | マクロ定義                      |
-|        |                     | class                    | string | マクロクラス名                    |
-|        |                     | `<customProperty>` | any    | (任意) コンストラクターによって取得するカスタム値 |
+| 属性     |               |                    | タイプ    | 説明                                            |
+| ------ | ------------- | ------------------ | ------ | --------------------------------------------- |
+| macros |               |                    | object | 定義されたマクロのリスト                                  |
+|        | `<macroName>` |                    | object | マクロ定義                                         |
+|        |               | class              | string | マクロクラス名                                       |
+|        |               | `<customProperty>` | any    | (任意) コンストラクターによって取得するカスタム値 |
 
 カスタムプロパティはマクロの [constructor](#class-constructor) 関数に受け渡されます。
 
@@ -138,23 +136,17 @@ JSONファイルの説明です:
 }
 ```
 
-
-
 ## マクロのインスタンス化
 
 プロジェクトおよびコンポーネントにおいてインスタンス化するマクロは、それぞれ [4Dクラス](Concepts/classes.md) として宣言する必要があります。
 
 クラスの名称は、`formMacros.json` ファイルで [class](#マクロの宣言) 属性に定義した名前と同一でなくてはなりません。
 
-マクロは、アプリケーションの起動時にインスタンス化されます。 そのため、関数の追加やパラメーターの編集など、マクロクラスになんらかの変更を加えた場合には、それらを反映するにはアプリケーションを再起動する必要があります。
-
-
-
+マクロは、アプリケーションの起動時にインスタンス化されます。 そのため、関数の追加やパラメーターの編集など、マクロクラスの構造や その [コンストラクター](#class-constructor) になんらかの変更を加えた場合には、それらを反映するにはアプリケーションを再起動する必要があります。
 
 ## マクロ関数
 
 マクロクラスは、1つの `Class constructor` のほかに、`onInvoke()` および `onError()` という 2つの関数を持つことができます。
-
 
 ### Class constructor
 
@@ -169,8 +161,6 @@ JSONファイルの説明です:
 アプリケーションの起動時にクラスがインスタンス化される際に、このコンストラクターが呼び出されます。
 
 [マクロの宣言](#マクロの宣言) に追加したカスタムプロパティは、クラスコンストラクターが引数として受け取ります。
-
-
 
 #### 例題
 
@@ -189,12 +179,11 @@ JSONファイルの説明です:
 
 以下のように書くことができます:
 
-```4d  
+```4d
 // クラス "AlignOnTarget"
 Class constructor($macro : Object)
     This.myParameter:=$macro.myParam // left    ...
 ```
-
 
 ### onInvoke()
 
@@ -203,7 +192,7 @@ Class constructor($macro : Object)
 | 引数      | タイプ    | 説明                                            |
 | ------- | ------ | --------------------------------------------- |
 | $editor | Object | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
-| $result | Object | マクロによって変更されたフォームプロパティ (任意)                    |
+| $result | Object | マクロによって変更されたフォームプロパティ (任意) |
 
 マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
@@ -211,40 +200,38 @@ Class constructor($macro : Object)
 
 マクロによってオブジェクトを変更・追加・削除した場合、操作を反映させるには最後に結果のプロパティを `$result` に返します。 返されたプロパティは解析され、フォームに対して変更が適用されます。 戻り値に含まれるプロパティが少ないほど、この処理にかかる時間も削減されます。
 
-*$editor* 引数にて渡されるプロパティは次の通りです:
+_$editor_ 引数にて渡されるプロパティは次の通りです:
 
-| プロパティ                            | タイプ        | 説明                               |
-| -------------------------------- | ---------- | -------------------------------- |
-| $editor.editor.form              | Object     | フォーム全体                           |
-| $editor.editor.file              | File       | フォームファイルの Fileオブジェクト             |
-| $editor.editor.name              | String     | フォームの名称                          |
-| $editor.editor.table             | number     | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
-| $editor.editor.currentPageNumber | number     | 現在のページの番号                        |
-| $editor.editor.currentPage       | Object     | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
-| $editor.editor.currentSelection  | Collection | 選択されているオブジェクトの名称のコレクション          |
-| $editor.editor.formProperties    | Object     | カレントフォームのプロパティ                   |
-| $editor.editor.target            | string     | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称 |
+| プロパティ                                                            | タイプ        | 説明                                               |
+| ---------------------------------------------------------------- | ---------- | ------------------------------------------------ |
+| $editor.editor.form              | Object     | フォーム全体                                           |
+| $editor.editor.file              | File       | フォームファイルの Fileオブジェクト                             |
+| $editor.editor.name              | String     | フォームの名称                                          |
+| $editor.editor.table             | number     | フォームのテーブル番号。プロジェクトフォームの場合は 0。                    |
+| $editor.editor.currentPageNumber | number     | 現在のページの番号                                        |
+| $editor.editor.currentPage       | Object     | 現在のページ (フォームオブジェクトおよび入力順序を格納) |
+| $editor.editor.currentSelection  | Collection | 選択されているオブジェクトの名称のコレクション                          |
+| $editor.editor.formProperties    | Object     | カレントフォームのプロパティ                                   |
+| $editor.editor.target            | string     | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称                 |
 
 マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
-| プロパティ             | タイプ        | 説明                                |
-| ----------------- | ---------- | --------------------------------- |
-| currentPage       | Object     | マクロによって変更されたオブジェクトを含む currentPage |
-| currentSelection  | Collection | マクロによって変更された currentSelection     |
-| formProperties    | Object     | マクロによって変更された formProperties       |
+| プロパティ                             | タイプ        | 説明                                |
+| --------------------------------- | ---------- | --------------------------------- |
+| currentPage                       | Object     | マクロによって変更されたオブジェクトを含む currentPage |
+| currentSelection                  | Collection | マクロによって変更された currentSelection     |
+| formProperties                    | Object     | マクロによって変更された formProperties       |
 | editor.groups     | Object     | マクロによって変更されたグループ情報                |
 | editor.views      | Object     | マクロによって変更されたビュー情報                 |
 | editor.activeView | String     | 有効なビュー名                           |
 
-
 たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
 ```4d
-    $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
-            "editor"; New object("groups"; $editor.editor.form.editor.groups))
+	$result:=New object("currentPage"; $editor.editor.currentPage ; \ 
+			"editor"; New object("groups"; $editor.editor.form.editor.groups))
 
 ```
-
 
 #### `method` 属性
 
@@ -254,10 +241,9 @@ Class constructor($macro : Object)
 
 - 次の構造を持つオブジェクトの使用:
 
-| プロパティ | タイプ | 説明 |
-| ----- | --- | -- |
-|       |     |    |
- source|文字列|メソッドコード|
+| プロパティ  | タイプ    | 説明      |
+| ------ | ------ | ------- |
+| source | String | メソッドコード |
 
 後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 
@@ -268,7 +254,6 @@ Class constructor($macro : Object)
 - フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在しない場合、そのオブジェクトは作成されます。
 - フォーム上で存在する `$4dId` キーが、`$result` 内には存在しない場合、当該オブジェクトは削除されます。
 - フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在する場合、そのオブジェクトは変更されます。
-
 
 #### 例題
 
@@ -294,16 +279,15 @@ Function onInvoke($editor : Object)->$result : Object
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
-
 ### onError()
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| 引数           |                       | タイプ        | 説明                                   |
-| ------------ | --------------------- | ---------- | ------------------------------------ |
-| $editor      |                       | Object     | [onInvoke](#oninvoke) に渡されたオブジェクト    |
-| $resultMacro |                       | Object     | [onInvoke](#oninvoke) によって返されたオブジェクト |
-| $error       |                       | Collection | エラースタック                              |
+| 引数           |                                                                                           | タイプ        | 説明                                   |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
+| $editor      |                                                                                           | Object     | [onInvoke](#oninvoke) に渡されたオブジェクト    |
+| $resultMacro |                                                                                           | Object     | [onInvoke](#oninvoke) によって返されたオブジェクト |
+| $error       |                                                                                           | Collection | エラースタック                              |
 |              | [].errCode            | Number     | エラーコード                               |
 |              | [].message            | Text       | エラーの詳細                               |
 |              | [].componentSignature | Text       | 内部コンポーネントのシグネチャー                     |
@@ -321,13 +305,13 @@ Function onInvoke($editor : Object)->$result : Object
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)
-    var $obj : Object
-    var $txt : Text
-    $txt:=""
-
-    For each ($obj; $error)
-        $txt:=$txt+$obj.message+" \n"
-    End for each 
-
-    ALERT($txt)
+	var $obj : Object
+	var $txt : Text
+	$txt:=""
+	
+	For each ($obj; $error)
+		$txt:=$txt+$obj.message+" \n"
+	End for each 
+	
+	ALERT($txt)
 ```
