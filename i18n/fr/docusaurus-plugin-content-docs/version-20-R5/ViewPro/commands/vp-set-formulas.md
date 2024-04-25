@@ -12,7 +12,7 @@ title: VP SET FORMULAS
 | Paramètres  | Type       |    | Description             |                  |
 | ----------- | ---------- | -- | ----------------------- | ---------------- |
 | rangeObj    | Object     | -> | Objet plage de cellules |                  |
-| formulasCol | Collection | -> | Collection of formulas  | <!-- END REF --> |
+| formulasCol | Collection | -> | Collection de formules  | <!-- END REF --> |
 
 #### Description
 
