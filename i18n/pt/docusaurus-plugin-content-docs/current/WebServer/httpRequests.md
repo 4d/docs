@@ -6,11 +6,10 @@ title: Processamento de pedidos HTTP
 O servidor web 4D oferece várias funcionalidades para lidar com solicitações HTTP:
 
 - the `On Web Connection` database method, a router for your web application,
-- o URL `/4DACTION` para chamar o código do lado do servidor
+- the `/4DACTION` URL to call server-side code
 - `WEB GET VARIABLES` to get values from HTML objects sent to the server
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- o método projeto *COMPILER_WEB*, para declarar suas variáveis.
-
+- the _COMPILER_WEB_ project method, to declare your variables.
 
 ## On Web Connection
 
@@ -20,32 +19,31 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
 
-For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+For example, the URL "_a/b/c_" will call the database method, but "_a/b/c.html_" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
 ### Sintaxe
 
-**On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
+**On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
 
-| Parâmetros | Tipo |    | Descrição                                             |
-| ---------- | ---- |:--:| ----------------------------------------------------- |
-| $1         | Text | <- | URL                                                   |
-| $2         | Text | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text | <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text | <- | Endereço IP do servidor                               |
-| $5         | Text | <- | Nome de usuario                                       |
-| $6         | Text | <- | Senha                                                 |
-
+| Parâmetros | Tipo |     | Descrição                                                                |
+| ---------- | ---- | :-: | ------------------------------------------------------------------------ |
+| $1         | Text |  <- | URL                                                                      |
+| $2         | Text |  <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text |  <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text |  <- | Endereço IP do servidor                                                  |
+| $5         | Text |  <- | Nome de usuario                                                          |
+| $6         | Text |  <- | Senha                                                                    |
 
 Estes parâmetros devem ser declarados como se indica a seguir:
 
 ```4d
-//Método base On Web Authentication
-
+//On Web Connection database method
+ 
  C_TEXT($1;$2;$3;$4;$5;$6)
-
-//Código do método
+ 
+//Code for the method
 ```
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
@@ -58,9 +56,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 ```
 
-
 > Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
-
 
 ### $1 - Dados extra do URL
 
@@ -68,28 +64,28 @@ The first parameter ($1) is the URL entered by users in the address area of thei
 
 Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
 
-| URL introduzido no navegador Web     | Valor do parâmetro $1    |
-| ------------------------------------ | ------------------------ |
-| 123.4.567.89                         | /                        |
-| http://123.4.567.89                  | /                        |
-| 123.4.567.89/Customers               | /Customers               |
-| http://123.4.567.89/Customers/Add    | /Customers/Add           |
+| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $1                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 123.4.567.89                                                                                      | /                                                                                     |
+| http://123.4.567.89                                                               | /                                                                                     |
+| 123.4.567.89/Customers                                                                            | /Customers                                                                            |
+| http://123.4.567.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
-
+Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. For example, you can establish a convention where the value "_/Customers/Add_" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
 O segundo parâmetro ($2) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
+If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
 
+> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 ### $3 - Endereço IP do cliente Web
 
 O parâmetro $3 recebe o endereço IP do computador do navegador. This information can allow you to distinguish between intranet and internet connections.
+
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
 ### $4 - Endereço IP do servidor
@@ -99,23 +95,22 @@ The $4 parameter receives the IP address requested by the 4D Web Server. 4D allo
 ### $5 e $6 - Nome de usuário e palavra-passe
 
 The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
+
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
-
-
-
 
 ## /4DACTION
 
-***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
+\*\*/4DACTION/\*\*_MethodName_<br/>
+\*\*/4DACTION/\*\*_MethodName/Param_
 
-| Parâmetros | Tipo |    | Descrição                                           |
-| ---------- | ---- |:--:| --------------------------------------------------- |
-| MethodName | Text | -> | Nome do método de projeto 4D a ser executado        |
-| Param      | Text | -> | Parâmetro texto a ser passado para o método projeto |
+| Parâmetros | Tipo |     | Descrição                                           |
+| ---------- | ---- | :-: | --------------------------------------------------- |
+| MethodName | Text |  -> | Nome do método de projeto 4D a ser executado        |
+| Param      | Text |  -> | Parâmetro texto a ser passado para o método projeto |
 
-**Utilização:** URL ou ação de formulário.
+**Usage:** URL or Form action.
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. O método receberá este parâmetro em *$1*.
+This URL allows you to call the _MethodName_ 4D project method with an optional _Param_ text parameter. The method will receive this parameter in _$1_.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. Se o atributo não for verificado, o pedido Web é rejeitado.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
@@ -138,7 +133,7 @@ This example describes the association of the `/4DACTION` URL with an HTML pictu
 <IMG SRC="/4DACTION/getPhoto/smith">
 ```
 
-O método `getPhoto` é o seguinte:
+The `getPhoto` method is as follows:
 
 ```4d
 C_TEXT($1) // This parameter must always be declared
@@ -155,6 +150,7 @@ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".ps
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
 Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D):
+
 - POST, normalmente utilizado para enviar dados para o servidor Web,
 - GET, normalmente utilizado para pedir dados ao servidor Web.
 
@@ -216,10 +212,6 @@ vExact="Word" OK="Search"
 End if
 ```
 
-
-
-
-
 ## Obter valores de pedidos HTTP
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
@@ -271,54 +263,6 @@ return false
 </form>
 </body>
 </html>
-return false
-}
-}
-//--></script>
-</head>
-<body>
-<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
- name="frmWelcome"
- onsubmit="return GetBrowserInformation(frmWelcome)">
-  <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
-  <input name="vtUserName" value="" size="30" type="text"></p>
-
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
-<input name="vsbRegister" value="Register" type="submit">
-<input name="vsbInformation" value="Information" type="submit"></p>
-
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
-<input name="vtNav_appCodeName" value="" type="hidden">
-<input name="vtNav_userAgent" value="" type="hidden"></p>
-</form>
-</body>
-</html>
-return false
-}
-}
-//--></script>
-</head>
-<body>
-<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
- name="frmWelcome"
- onsubmit="return GetBrowserInformation(frmWelcome)">
-  <h1>Welcome to Spiders United</h1>
-  <p><b>Please enter your name:</b>
-  <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
-<input name="vsbRegister" value="Register" type="submit">
-<input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
-<input name="vtNav_appCodeName" value="" type="hidden">
-<input name="vtNav_userAgent" value="" type="hidden"></p>
-</form>
-</body>
-</html>
 ```
 
 Quando 4D envia a página para um navegador Web, ela se parece com isso:
@@ -329,7 +273,8 @@ As principais características desta página são:
 
 - It includes three **Submit** buttons: `vsbLogOn`, `vsbRegister` and `vsbInformation`.
 - When you click **Log On**, the submission of the form is first processed by the JavaScript function `LogOn`. If no name is entered, the form is not even submitted to 4D, and a JavaScript alert is displayed.
-- The form has a POST 4D method as well as a Submit script (*GetBrowserInformation*) that copies the browser properties to the four hidden objects whose names starts with *vtNav_App*. Inclui também o objecto `vtUserName`.
+- The form has a POST 4D method as well as a Submit script (_GetBrowserInformation_) that copies the browser properties to the four hidden objects whose names starts with _vtNav_App_.
+  It also includes the `vtUserName` object.
 
 Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user clicks on one of the buttons on the HTML form.
 
@@ -339,9 +284,9 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
  C_LONGINT($user)
-
+ 
  Case of
-
+ 
   // The Log On button was clicked
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
@@ -351,15 +296,15 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
           WWW POST EVENT("Log On";WWW Log information)
   // The WWW POST EVENT method saves the information in a database table
        Else
-
+ 
           $0:=WWW Register
   // The WWW Register method lets a new Web user register
        End if
-
+ 
   // The Register button was clicked
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
-
+ 
   // The Information button was clicked
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
@@ -368,18 +313,17 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
 
 As funcionalidades deste método são:
 
-- The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
-- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
+- The values of the variables _vtNav_appName_, _vtNav_appVersion_, _vtNav_appCodeName_, and _vtNav_userAgent_ (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the _GetBrowserInformation_ JavaScript script.
+- Out of the _vsbLogOn_, _vsbRegister_ and _vsbInformation_ variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
 
-Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` sempre retorna valores do tipo Text.
-
+Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
 
 ## Outros comandos do servidor Web
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- o comando `WEB GET HTTP BODY` retorna o corpo como texto bruto, permitindo qualquer análise que você possa precisar
-- o comando `WEB GET HTTP HEADER` retornam os cabeçalhos da solicitação. É útil lidar com cookies personalizados, por exemplo (com o comando `WEB SET HTTP HEADER`).
+- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
+- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
 - the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
@@ -393,5 +337,3 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 O método COMPILER\_WEB, se existir, é chamado sistematicamente quando o servidor HTTP recebe uma solicitação dinâmica e chama ao motor 4D. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
-
-
