@@ -7,9 +7,7 @@ As barras de menu constituem a principal interface das aplicações personalizad
 
 4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
 
-
 ## Tela inicial
-
 
 You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. Pode conter um logótipo ou qualquer tipo de imagem. Por padrão, 4D mostra o logo 4D na tela inicial:
 
@@ -17,18 +15,20 @@ You can enhance the appearance of each menu bar by associating a custom splash s
 
 Uma imagem personalizada de tela de inicialização pode vir de qualquer aplicativo gráfico. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
 
-The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note a área "Imagem de fundo" na parte direita da janela. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
+The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note a área "Imagem de fundo" na parte direita da janela.
+To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
+
 - To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
+- To open a picture stored in a disk file, choose **Open**.
+  If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
 
 ![](../assets/en/Menus/splash2.png)
 
 You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
 
-> Pode escolher se quer exibir ou esconder a janela usando a opção **Mostrar a barra de ferramentas** nas Propriedades do Banco de Dados.
+> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
 
 To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
-
 
 ## Pré-visualização de barras de menu
 
