@@ -3,7 +3,6 @@ id: markers
 title: Markers
 ---
 
-
 These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Markers are mainly used in output forms. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
 
 Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. However, they have no effect when a form is used for input.
@@ -22,9 +21,9 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 #### Grammaire JSON
 
-| Nom         | Type de données                   | Valeurs possibles                                                                                   |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
+| Nom         | Type de données               | Valeurs possibles                                                                                                             |
+| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer \| integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
 
 ---
 
@@ -36,8 +35,8 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                          |
-| ---------- | --------------- | ------------------------------------------ |
+| Nom        | Type de données | Valeurs possibles                                                          |
+| ---------- | --------------- | -------------------------------------------------------------------------- |
 | markerBody | entier          | Position du marqueur de détail. Minimum: 0 |
 
 ---
@@ -52,9 +51,9 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| markerFooter | entier          | minimum : 0       |
+| Nom          | Type de données | Valeurs possibles           |
+| ------------ | --------------- | --------------------------- |
+| markerFooter | entier          | minimum : 0 |
 
 ---
 
@@ -78,9 +77,9 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 #### Grammaire JSON
 
-| Nom          | Type de données                   | Valeurs possibles                                                                                     |
-| ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
+| Nom          | Type de données               | Valeurs possibles                                                                                                               |
+| ------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer \| integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
 
 ## Additional areas
 
