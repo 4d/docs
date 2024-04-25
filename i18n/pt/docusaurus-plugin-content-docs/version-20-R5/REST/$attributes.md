@@ -1,39 +1,35 @@
 ---
 id: attributes
-title: '$attributes'
+title: $attributes
 ---
 
-Permite selecionar os atributos relacionados que deseja obter da classe de dados (*por exemplo*, `Company(1)?$attributes=employees.lastname` ou `Employee?$attributes=employer.name`).
-
+Allows selecting the related attribute(s) to get from the dataclass (_e.g._, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
 
 ## Descrição
 
-Quando tiver atributos de relação numa classe de dados, utilize `$attributes` para definir o caminho dos atributos cujos valores pretende obter para a entidade ou entidades relacionadas.
+When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
 
-É possível aplicar `$attributes` a uma entidade (*por exemplo*, People(1)) ou a uma seleção de entidades (*por exemplo*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+You can apply `$attributes` to an entity (_e.g._, People(1)) or an entity selection (_e.g._, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
 
+- If `$attributes` is not specified in a query, or if the "\*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
 
-- Se `$attributes` não for especificado numa consulta, ou se for passado o valor "*", são extraídos todos os atributos disponíveis. **Os atributos da entidade relacionada** são extraídos de forma simples: um objeto com a propriedade `__KEY` (chave primária) e `URI`. Atributos de **Entidades relacionadas**  não são extraídos.
+- If `$attributes` is specified for **related entity** attributes:
+  - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
+  - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
+  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
 
-- Se `$attributes` for especificado para atributos de **entidade relacionada**:
-    - `$attributes=relatedEntity`: a entidade relacionada é devolvida com um formulário simples (propriedade __KEY diferida (chave primária)) e `URI`.
-    - `$attributes=relatedEntity.*`: todos os atributos da entidade relacionada são devolvidos
-    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: só são devolvidos os atributos da entidade relacionada.
+- If `$attributes` is specified for **related entities** attributes:
+  - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
 
-
-- Se `$attributes` for especificado para **entidades relacionadas** atributos:
-    - `$attributes=relatedEntities.*`: todas as propriedades de todas as entidades relacionadas são devolvidas
-    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: só são devolvidos os atributos das entidades relacionadas.
-
-
+  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
 
 ## Exemplo com entidades relacionadas
 
 Se passarmos a petição REST seguinte para nossa classe de dados Company (que tem um atributo de relação "empregados"):
 
- `GET  /rest/Company(1)/?$attributes=employees.lastname`
+`GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Resposta**:
+**Response**:
 
 ```
 {
@@ -42,65 +38,63 @@ Se passarmos a petição REST seguinte para nossa classe de dados Company (que t
     "__TIMESTAMP": "2018-04-25T14:41:16.237Z",
     "__STAMP": 2,
     "employees": {
-        "__ENTITYSET": "/rest/Company(1)/employees?$expand=employees",
-        "__GlobalStamp": 50,
-        "__COUNT": 135,
-        "__FIRST": 0,
-        "__ENTITIES": [
-            {
-                "__KEY": "1",
-                "__TIMESTAMP": "2019-12-01T20:18:26.046Z",
-                "__STAMP": 5,
-                "lastname": "ESSEAL"
-            },
-            {
-                "__KEY": "2",
-                "__TIMESTAMP": "2019-12-04T10:58:42.542Z",
-                "__STAMP": 6,
-                "lastname": "JONES"
-            },
-            ...
+		"__ENTITYSET": "/rest/Company(1)/employees?$expand=employees",
+		"__GlobalStamp": 50,
+		"__COUNT": 135,
+		"__FIRST": 0,
+		"__ENTITIES": [
+			{
+				"__KEY": "1",
+				"__TIMESTAMP": "2019-12-01T20:18:26.046Z",
+				"__STAMP": 5,
+				"lastname": "ESSEAL"
+			},
+			{
+				"__KEY": "2",
+				"__TIMESTAMP": "2019-12-04T10:58:42.542Z",
+				"__STAMP": 6,
+				"lastname": "JONES"
+			},
+			...
     }
 }
 ```
 
 Se se pretender obter todos os atributos dos empregados:
 
- `GET  /rest/Company(1)/?$attributes=employees.*`
+`GET  /rest/Company(1)/?$attributes=employees.*`
 
 Se pretender obter os atributos apelido e nome da profissão dos empregados:
 
- `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
-
+`GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 ## Exemplo com entidade relacionada
 
 Se passarmos a petição REST seguinte para nossa classe de dados Employee (que tem vários atributos relacionais, incluindo "employer"):
 
+`GET  /rest/Employee(1)?$attributes=employer.name`
 
- `GET  /rest/Employee(1)?$attributes=employer.name`
-
-**Resposta**:
+**Response**:
 
 ```
 {
-    "__entityModel": "Employee",
-    "__KEY": "1",
-    "__TIMESTAMP": "2019-12-01T20:18:26.046Z",
-    "__STAMP": 5,
-    "employer": {
-        "__KEY": "1",
-        "__TIMESTAMP": "2018-04-25T14:41:16.237Z",
-        "__STAMP": 0,
-        "name": "Adobe"
-    }
+	"__entityModel": "Employee",
+	"__KEY": "1",
+	"__TIMESTAMP": "2019-12-01T20:18:26.046Z",
+	"__STAMP": 5,
+	"employer": {
+		"__KEY": "1",
+		"__TIMESTAMP": "2018-04-25T14:41:16.237Z",
+		"__STAMP": 0,
+		"name": "Adobe"
+	}
 }
 ```
 
 Se quiser obter todos os atributos do empregador:
 
- `GET  /rest/Employee(1)?$attributes=employer.*`
+`GET  /rest/Employee(1)?$attributes=employer.*`
 
 Se quiser obter os sobrenomes de todos os funcionários da empresa:
 
- `GET  /rest/Employee(1)?$attributes=employer.employees.lastname`
+`GET  /rest/Employee(1)?$attributes=employer.employees.lastname`
