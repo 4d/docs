@@ -7,13 +7,12 @@ title: On Selection Change
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | A seleção no objeto é modificada |
 
-
 ## Descrição
 
 Este evento pode ser gerado em diferentes contextos.
 
-
 ### 4D View Pro
+
 A seleção atual de linhas ou de colunas é modificada. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 | Propriedade   | Tipo          | Descrição                               |
@@ -38,17 +37,14 @@ A seleção atual de linhas ou de colunas é modificada. In this context, the [e
 
 O registo atual ou a seleção atual de linhas é modificado num formulário lista.
 
-
 ### Lista hierárquica
 
 This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
 
-
-### Entrada & 4D Write Pro
+### Input & 4D Write Pro
 
 The text selection or the position of the cursor in the area is modified following a click or a keystroke.
 
-
 ### List box
-This event is generated each time the current selection of rows or columns of the list box is modified.
 
+This event is generated each time the current selection of rows or columns of the list box is modified.
