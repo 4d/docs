@@ -5,7 +5,7 @@ title: Coordenadas y dimensiones
 
 ## Altura de línea automática
 
-Esta propiedad sólo está disponible para los list boxes con las siguientes [fuentes de datos](properties_Object.md#data-source):
+This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
 - collection o entity selection,
 - array (no jerárquico).
@@ -14,28 +14,27 @@ Esta propiedad no está seleccionada por defecto. Cuando se utiliza para al meno
 
 :::note
 
-Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 :::
 
-Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
+When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
 
-* El cálculo de la altura de línea tiene en cuenta:
-  * todo tipo de contenido (texto, números, fechas, horas, imágenes (el cálculo depende del formato de la imagen), objetos),
-  * todo tipo de control (entradas, casillas de selección, listas, listas desplegables),
-  * fuentes, estilos y tamaños de letra,
-  * la opción [Wordwrap](properties_Display.md#wordwrap): si está desactivada, la altura se basa en el número de párrafos (las líneas se truncan); si está activada, la altura se basa en el número de líneas (no se trunca).
+- El cálculo de la altura de línea tiene en cuenta:
+  - todo tipo de contenido (texto, números, fechas, horas, imágenes (el cálculo depende del formato de la imagen), objetos),
+  - todo tipo de control (entradas, casillas de selección, listas, listas desplegables),
+  - fuentes, estilos y tamaños de letra,
+  - the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
-* El cálculo de la altura de línea no tiene en cuenta:
-  * contenido de columna oculta
-  * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
+- El cálculo de la altura de línea no tiene en cuenta:
+  - contenido de columna oculta
+  - [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 
 :::caution
 
-> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+\> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 :::
-
 
 #### Gramática JSON
 
@@ -45,7 +44,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -55,13 +54,13 @@ Coordenadas inferiores del objeto en el formulario.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| bottom | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| bottom | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [ Rectángulo](shapes_overview.md#rectangle) - Regla/20> - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -71,13 +70,13 @@ Coordenadas de izquierda del objeto en el formulario.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| left   | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| left   | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -87,13 +86,13 @@ Coordenadas de derecha del objeto en el formulario.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| right  | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| right  | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -103,19 +102,19 @@ Coordenadas superiores del objeto en el formulario.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| top    | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| top    | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
 ## Radio de redondeo
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                         |
 | ----------- | -------------------------------------- |
@@ -127,100 +126,105 @@ Define la redondez de las esquinas (en píxeles) del objeto. Por defecto, el val
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-El valor mínimo es 0, en este caso se dibuja un objeto estándar no redondeado. El valor máximo depende del tamaño del rectángulo (no puede superar la mitad del tamaño del lado más corto del rectángulo) y se calcula dinámicamente.
+El valor mínimo es 0, en este caso se dibuja un objeto estándar no redondeado.
+El valor máximo depende del tamaño del rectángulo (no puede superar la mitad del tamaño del lado más corto del rectángulo) y se calcula dinámicamente.
 
 :::note
 
-Con [áreas de texto](text.md) y [entradas](input_overview.md):
+With [text areas](text.md) and [inputs](input_overview.md):
 
-- la propiedad de radio de la esquina sólo está disponible con los [estilos de línea de borde](properties_BackgroundAndBorder.md#border-line-style) "ninguno", "sólido" o "punteado",
-- la redondez de la esquina se dibuja fuera del área del objeto (el objeto aparece más grande en el formulario pero su [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) no se amplían).
+- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style),
+- the corner roundness is drawn outside the area of the object (the object appears larger in the form but its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are not extended).
 
 ![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
-También se puede definir esta propiedad utilizando los comandos [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) y [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html).
+You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles |
-| ------------ | -------------- | ---------------- |
-| borderRadius | integer        | mínimo: 0        |
+| Nombre       | Tipos de datos | Valores posibles          |
+| ------------ | -------------- | ------------------------- |
+| borderRadius | integer        | mínimo: 0 |
 
 #### Objetos soportados
 
-[Entrada](input_overview.md) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 ---
 
 ## Altura
 
 Esta propiedad designa el tamaño vertical de un objeto.
+
 > Algunos objetos pueden tener una altura predefinida que no se puede modificar.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| height | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| height | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
 ## Ancho
 
 Esta propiedad designa el tamaño horizontal de un objeto.
-> * Algunos objetos pueden tener una altura predefinida que no se puede modificar.
-> * Si la propiedad [Redimensionable](properties_ResizingOptions.md#resizable) se utiliza para una [columna de list box](listbox_overview.md#list-box-columns), el usuario también puede cambiar manualmente el tamaño de la columna.
-> * Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+
+> - Algunos objetos pueden tener una altura predefinida que no se puede modificar.
+> - If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
+> - When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-| ancho  | number         | mínimo: 0        |
+| Nombre | Tipos de datos | Valores posibles          |
+| ------ | -------------- | ------------------------- |
+| ancho  | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [Línea](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
 ## Ancho máximo
 
 El ancho máximo de la columna (en píxeles). El ancho de la columna no puede aumentarse más allá de este valor al redimensionar la columna o el formulario.
-> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+
+> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles |
-| -------- | -------------- | ---------------- |
-| maxWidth | number         | mínimo: 0        |
+| Nombre   | Tipos de datos | Valores posibles          |
+| -------- | -------------- | ------------------------- |
+| maxWidth | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Ancho mínimo
 
 El ancho mínimo de la columna (en píxeles). El ancho de la columna no puede reducirse más allá de este valor al redimensionar la columna o el formulario.
-> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+
+> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles |
-| -------- | -------------- | ---------------- |
-| minWidth | number         | mínimo: 0        |
+| Nombre   | Tipos de datos | Valores posibles          |
+| -------- | -------------- | ------------------------- |
+| minWidth | number         | mínimo: 0 |
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -230,8 +234,8 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles                                 |
-| --------- | -------------- | ------------------------------------------------ |
+| Nombre    | Tipos de datos | Valores posibles                                                    |
+| --------- | -------------- | ------------------------------------------------------------------- |
 | rowHeight | string         | valor css en la unidad "em" o "px" (por defecto) |
 
 #### Objetos soportados
@@ -240,7 +244,7 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 #### Ver también
 
-[Array altura de las líneas](#row-height-array)
+[Row Height Array](#row-height-array)
 
 ---
 
@@ -258,13 +262,14 @@ RowHeights{5}:=3
 ```
 
 Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea del list box tendrá una altura de tres líneas, mientras que todas las demás líneas mantendrán su altura por defecto.
-> * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
-> * Para los array y list boxes colecciones/selección de entidades, esta propiedad sólo está disponible si la opción [Alto de línea automático](#automatic-row-height) no está seleccionada.
+
+> - Para los list box de tipo array, esta propiedad sólo está disponible si la opción <a href="#automatic-row-height">Altura de línea automática</a> no está seleccionada.
+> - For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                 |
-| --------------- | -------------- | -------------------------------- |
+| Nombre          | Tipos de datos | Valores posibles                                 |
+| --------------- | -------------- | ------------------------------------------------ |
 | rowHeightSource | string         | Nombre de una variable array 4D. |
 
 #### Objetos soportados
@@ -273,7 +278,7 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 #### Ver también
 
-[Altura de las líneas](#row-height)
+[Row Height](#row-height)
 
 ---
 
@@ -285,17 +290,17 @@ Establece un relleno horizontal para las celdas. El valor se establece en píxel
 
 #### Gramática JSON
 
-| Nombre            | Tipos de datos | Valores posibles                 |
-| ----------------- | -------------- | -------------------------------- |
-| horizontalPadding | number         | Número de píxeles (debe ser >=0) |
+| Nombre            | Tipos de datos | Valores posibles                                  |
+| ----------------- | -------------- | ------------------------------------------------- |
+| horizontalPadding | number         | Number of pixels (must be >=0) |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
 #### Ver también
 
-[Relleno vertical](#vertical-padding)
+[Vertical Padding](#vertical-padding)
 
 ---
 
@@ -305,14 +310,14 @@ Establece un relleno vertical para las celdas. El valor se establece en píxeles
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                 |
-| --------------- | -------------- | -------------------------------- |
-| verticalPadding | number         | Número de píxeles (debe ser >=0) |
+| Nombre          | Tipos de datos | Valores posibles                                  |
+| --------------- | -------------- | ------------------------------------------------- |
+| verticalPadding | number         | Number of pixels (must be >=0) |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
 #### Ver también
 
-[Relleno horizontal](#horizontal-padding)
+[Horizontal Padding](#horizontal-padding)
