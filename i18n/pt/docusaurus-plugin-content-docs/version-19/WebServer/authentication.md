@@ -19,7 +19,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ![](../assets/en/WebServer/serverAccess.png)
 
-> Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
+> As solicitações que começam com `rest/` são tratadas diretamente pelo [servidor REST](REST/configuration.md).
 
 ### Personalizado (padrão)
 
@@ -27,11 +27,11 @@ Basically in this mode, it's up to the developer to define how to authenticate u
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
-- either, delegate the user authentication to a third-party application (e.g. a social network, SSO);
-- or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). The important thing is that you never store the password in clear, using such code:
+- ou delegar a autenticação do usuário a um aplicativo de terceiros (por exemplo, uma rede social, SSO);
+- Ou fornecer uma interface para o usuário (por exemplo, um formulário da Web) para que ele possa criar sua conta no banco de dados de clientes; em seguida, você pode autenticar os usuários com qualquer algoritmo personalizado (veja [este exemplo](sessions.md#example) no capítulo "Sessões de usuário"). O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
 
 ```4d
-//... user account creation
+//... criar conta de usuário
 ds.webUser.password:=Generate password hash($password)  
 ds.webUser.save()
 ```
@@ -40,7 +40,7 @@ See also [this example](gettingStarted.md#authenticating-users) from the "Gettin
 
 If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.
 
-> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode).
+> **Aviso:** Se o método de banco de dados `On Web Authentication` não existir, as conexões serão aceitas automaticamente (modo de teste).
 
 ### Protocolo Basic
 
@@ -50,19 +50,19 @@ When a user connects to the server, a standard dialog box appears on their brows
 
 Os valores introduzidos são então avaliados:
 
-- If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
-  - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. Se a palavra-passe estiver incorreta, a ligação é recusada.
-  - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
+- Se a opção **Include 4D passwords (Incluir senhas 4D** ) estiver marcada, as credenciais do usuário serão avaliadas primeiro em relação à [tabela interna de usuários 4D](Users/overview.md).
+  - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
+  - Se o nome de usuário não existir na tabela de usuários 4D, a mensagem [`On Web Authentication`](#on-web-authentication) é chamado. Se o método de banco de dados `On Web Authentication` não existir, as conexões serão rejeitadas.
 
-- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
-> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validação de usuários/senhas é realizada pela aplicação 4D Server.
+- Se a opção **Incluir senhas 4D** não estiver marcada, credenciais de usuário são enviadas para o método de banco de dados [`On Web Authentication`](#on-web-authentication) juntamente com outros parâmetros de conexão (endereço IP e porta, URL .) para que você possa processá-los. Se o método de banco de dados `On Web Authentication` não existir, as conexões serão rejeitadas.
+> Com o servidor da Web 4D Client, lembre-se de que todos os sites publicados pelas máquinas 4D Client compartilharão a mesma tabela de usuários. Validação de usuários/senhas é realizada pela aplicação 4D Server.
 
 ### Protocolo DIGEST
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
 Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
-> You must restart the web server in order for the changes made to these parameters to be taken into account.
+> Você deve reiniciar o servidor Web para que as alterações feitas nesses parâmetros sejam levadas em conta.
 
 ## On Web Authentication
 
@@ -74,15 +74,15 @@ The `On Web Authentication` database method is automatically called when a reque
 
 The `On Web Authentication` database method is therefore called:
 
-- when the web server receives a URL requesting a resource that does not exist
-- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
-- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
+- quando o servidor da Web recebe um URL solicitando um recurso que não existe
+- quando o servidor da Web receber uma URL que começa com `4DACTION/`, `4DCGI/`...
+- quando o servidor da Web receber uma URL de acesso à raiz e nenhuma página inicial foi definida nas Configurações ou por meio do comando `WEB SET HOME PAGE`
+- quando o servidor da Web processar um código de execução de tag (por exemplo, `4DSCRIPT`) em uma página semidinâmica.
 
 O método banco de dados `On Web Authentication` NÃO é chamado:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- quando o servidor da Web receber uma URL que começa com `rest/` e o servidor REST for iniciado (nesse caso, a autenticação é tratada por meio do [método de banco de dados`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou das [configurações Structure](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxe
 
@@ -112,14 +112,14 @@ Estes parâmetros devem ser declarados da seguinte forma:
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
 
 ```4d
-// On Web Authentication database method
+// Método de banco de dados de autenticação na Web
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 
 ```
-> All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-mode) selecionado.)
 
 #### $1 - URL
 
