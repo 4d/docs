@@ -1,24 +1,21 @@
 ---
 id: atomic_$atonce
-title: '$atomic/$atOnce'
+title: $atomic/$atOnce
 ---
-
 
 Permite que las acciones de la solicitud REST estén en una transacción. Si no hay errores, la transacción se valida. En caso contrario, la transacción se cancela.
 
-
 ## Descripción
 
-Cuando tiene varias acciones juntas, puede utilizar `$atomic/$atOnce` para asegurarse de que ninguna de las acciones se complete si una de ellas falla. Puede utilizar `$atomic` o `$atOnce`.
-
+When you have multiple actions together, you can use `$atomic/$atOnce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atOnce`.
 
 ## Ejemplo
 
 Llamamos a la siguiente petición REST en una transacción.
 
- `POST  /rest/Employee?$method=update&$atomic=true`
+`POST  /rest/Employee?$method=update&$atomic=true`
 
-**Datos POST**:
+**POST data**:
 
 ```json
 [
@@ -66,4 +63,5 @@ Obtenemos el siguiente error en la segunda entidad y por lo tanto la primera ent
     ]
 }
 ```
-> Aunque el salario de la primera entidad tiene un valor de 45000, este valor no se guardó en el servidor y tampoco se modificó el *timestamp (__STAMP)*. Si recargamos la entidad, veremos el valor anterior.
+
+> Aunque el salario de la primera entidad tiene un valor de 45000, este valor no se guardó en el servidor y tampoco se modificó el _timestamp (__STAMP)_. Si recargamos la entidad, veremos el valor anterior.
