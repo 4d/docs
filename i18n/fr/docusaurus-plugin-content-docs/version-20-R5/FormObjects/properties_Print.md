@@ -9,24 +9,24 @@ Cette propriété permet de gérer le mode d'impression des objets dont la taill
 
 Vous ne pouvez pas placer deux objets (ou plus) avec une taille variable côte à côte dans un formulaire. Vous pouvez placer des objets de taille fixe à côté d’un objet qui sera imprimé avec une taille variable si l’objet de taille variable est plus long d’au moins une ligne que l’objet placé à son côté et que leurs limites supérieures sont alignées. Si cette condition n’est pas respectée, le contenu des autres champs sera répété pour toute tranche horizontale de l’objet de taille variable.
 
-> Les commandes `Print object` et `Print form` ne sont pas compatibles avec cette option.
+> The `Print object` and `Print form` commands do not support this property.
 
 Les options d'impression sont les suivantes :
 
-- L'option **Variable** / **Impression taille variable** cochée : 4D agrandit ou réduit la zone de l'objet du formulaire afin d'imprimer tous les sous-enregistrements.
+- **Variable** option / **Print Variable Frame** checked: 4D enlarges or reduces the form object area in order to print all the subrecords.
 
-- L'option **Fixe (Tronqué)** / **Impression taille variable** non cochée : 4D imprime uniquement le contenu qui apparaît dans la zone de l'objet. Le formulaire n'est imprimé qu'une seule fois et le contenu non imprimé est ignoré.
+- **Fixed (Truncation)** option / **Print Variable Frame** unchecked: 4D only prints the contents that appear in the object area. Le formulaire n'est imprimé qu'une seule fois et le contenu non imprimé est ignoré.
 
-- **Fixe (Enregistrements multiples)** (sous-formulaires uniquement) : la taille initiale de la zone de sous-formulaire est conservée mais 4D imprime le formulaire plusieurs fois afin d'imprimer tous les enregistrements.
+- **Fixed (Multiple Records)** (subforms only): the initial size of the subform area is kept but 4D prints the form several times in order to print all the records.
 
-> Cette propriété peut être définie par programmation à l'aide de la commande `OBJECT SET PRINT VARIABLE FRAME`.
+> This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
 
 #### Grammaire JSON
 
-|    Nom     | Type de données | Valeurs possibles                                                 |
-|:----------:|:---------------:| ----------------------------------------------------------------- |
-| printFrame |     string      | "fixed", "variable", (sous-formulaire uniquement) "fixedMultiple" |
+|     Nom    | Type de données | Valeurs possibles                                                                    |
+| :--------: | :-------------: | ------------------------------------------------------------------------------------ |
+| printFrame |      string     | "fixed", "variable", (sous-formulaire uniquement) "fixedMultiple" |
 
 #### Objets pris en charge
 
-[Zone de saisie](input_overview.md) - [Sous-formulaires](subform_overview.md) (sous-formulaires liste uniquement) - [Zones 4D Write Pro](writeProArea_overview.md)
+[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)
