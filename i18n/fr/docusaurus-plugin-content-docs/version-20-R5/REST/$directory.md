@@ -1,10 +1,9 @@
 ---
 id: directory
-title: '$directory'
+title: $directory
 ---
 
 Le répertoire gère l'accès des utilisateurs via les requêtes REST.
-
 
 ## $directory/login
 
@@ -12,14 +11,14 @@ Ouvre une session REST sur votre application 4D et connecte l'utilisateur.
 
 ### Description
 
-Utilisez `$directory/login` pour ouvrir une session dans votre application 4D via REST et connectez un utilisateur. Vous pouvez également modifier le timeout par défaut de la session 4D.
+Use `$directory/login` to open a session in your 4D application through REST and login a user. Vous pouvez également modifier le timeout par défaut de la session 4D.
 
-Tous les paramètres doivent être passés dans les **en-têtes** d'une méthode POST :
+All parameters must be passed in **headers** of a POST method:
 
-| Clé de l'en-tête  | Valeur de l'en-tête                                                                                |
-| ----------------- | -------------------------------------------------------------------------------------------------- |
-| username-4D       | Utilisateur - Non obligatoire                                                                      |
-| password-4D       | Password in plain text - Not mandatory                                                             |
+| Clé de l'en-tête  | Valeur de l'en-tête                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| username-4D       | Utilisateur - Non obligatoire                                                                                                         |
+| password-4D       | Password in plain text - Not mandatory                                                                                                |
 | session-4D-length | Timeout d'inactivité de la session (en minutes). Ne peut pas être inférieur à 60 - Non obligatoire |
 
 :::caution
@@ -43,7 +42,7 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
-**Résultat** :
+**Result**:
 
 Si la connexion a réussi, le résultat sera le suivant :
 
