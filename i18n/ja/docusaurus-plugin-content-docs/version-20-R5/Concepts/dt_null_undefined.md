@@ -19,7 +19,7 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 
 未定義 (undefined) は、実際にはデータタイプではありません。 未定義は、まだ定義されていない変数を示します。 オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の値のプロパティを読み取ると、**undefined** が返されます。
 
-バリアント型変数は **undefined** が [デフォルト値](data-types.md#デフォルト値) となっています。
+バリアント型変数は **undefined** が [デフォルト値](data-types.md#デフォルト値)となっています。
 
 フィールドは、未定義にはできません (フィールドの場合、`Undefined` コマンドは常に False を返します)。
 
@@ -36,14 +36,14 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 ```
 
 - 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
-    - オブジェクト、コレクション、ポインター: Null
-    - ピクチャー: 空のピクチャー
-    - ブール: False
-    - 文字列: ""
-    - 数値: 0
-    - 日付:  "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
-    - 時間: 0 (ミリ秒単位)
-    - 未定義、Null: 変化なし
+  - オブジェクト、コレクション、ポインター: Null
+  - ピクチャー: 空のピクチャー
+  - ブール: False
+  - 文字列: ""
+  - 数値: 0
+  - 日付:  "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
+  - 時間: 0 (ミリ秒単位)
+  - 未定義、Null: 変化なし
 
 ```4d
      var $o : Object
@@ -75,32 +75,29 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
      End case
 ```
 
-
 :::tip
 
 4Dコード内の式に対して特定の型であることが要求される場合、その式を適切な 4Dキャストコマンド (`String`, `Num`, `Date`, `Time`, `Bool`) で囲うことで、たとえ未定義に評価されたとしても正しい型を確実に得ることができます。 これらのコマンドは式が未定義と評価された場合に、指定された型の空の値を返します。 例:
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) // 未定義の場合でもコード内でエラーが起きないように
-  // 文字列の値が得られるようにします
+ $myString:=Lowercase(String($o.a.b)) // 未定義の場合でも文字列の値を取得し、
+  // コード内でエラーが起きないようにします
 ```
 
 :::
 
-
 ## Null 演算子
 
+| 演算  | シンタックス                  | 戻り値     | 式                                                              | 値     |
+| --- | ----------------------- | ------- | -------------------------------------------------------------- | ----- |
+| 等しい | Null `=` Null           | Boolean | a.nullProp `=` b.nullProp      | true  |
+|     | Null `=` Undefined      | Boolean | a.nullProp `=` b.undefinedProp | true  |
+|     | Null `=` _scalar value_ | Boolean | a.nullProp `=` 42                              | false |
+| 異なる | Null `#` Null           | Boolean | a.nullProp `#` b.nullProp      | false |
+|     | Null `#` Undefined      | Boolean | a.nullProp `#` b.undefinedProp | false |
+|     | Null `#` _scalar value_ | Boolean | a.nullProp `#` 42                              | true  |
 
-| 演算  | シンタックス             | 戻り値     | 式                              | 値     |
-| --- | ------------------ | ------- | ------------------------------ | ----- |
-| 等しい | Null `=` Null      | Boolean | a.nullProp `=` b.nullProp      | true  |
-|     | Null `=` Undefined | Boolean | a.nullProp `=` b.undefinedProp | true  |
-|     | Null `=` *スカラー値*   | Boolean | a.nullProp `=` 42              | false |
-| 異なる | Null `#` Null      | Boolean | a.nullProp `#` b.nullProp      | false |
-|     | Null `#` Undefined | Boolean | a.nullProp `#` b.undefinedProp | false |
-|     | Null `#` *スカラー値*   | Boolean | a.nullProp `#` 42              | true  |
-
-*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
+_スカラー値_ は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
 
 ```4d
 var $object : Object
@@ -112,31 +109,30 @@ var $text : Text
 
 :::info
 
-大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による比較は null値に対応しておらず、エラーが返されます。
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による比較は Null値に対応しておらず、エラーが返されます。
 
 :::
 
 ## 未定義演算子
 
+| 演算  | シンタックス                                             | 戻り値     | 式                                                                   | 値     |
+| --- | -------------------------------------------------- | ------- | ------------------------------------------------------------------- | ----- |
+| 等しい | Undefined `=` Undefined                            | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
+|     | Undefined `=` Null                                 | Boolean | a.undefinedProp `=` c.nullProp      | true  |
+|     | Undefined `=` _その他の値_                              | Boolean | a.undefinedProp `=` 42                              | false |
+| 異なる | Undefined `#` Undefined                            | Boolean | a.undefinedProp `#` b.undefinedProp | false |
+|     | Undefined `#` Null                                 | Boolean | a.undefinedProp `#` b.nullProp      | false |
+|     | Undefined `#` _その他の値_                              | Boolean | a.undefinedProp `#` 42                              | true  |
+| 大きい | Undefined `>` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `>` "abc"                           | false |
+| 小さい | Undefined `<` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `<` "abc"                           | false |
+| 以上  | Undefined `>=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `>=` "abc"                          | false |
+| 以下  | Undefined `<=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `<=` "abc"                          | false |
 
-| 演算  | シンタックス                                                | 戻り値     | 式                                   | 値     |
-| --- | ----------------------------------------------------- | ------- | ----------------------------------- | ----- |
-| 等しい | Undefined `=` Undefined                               | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
-|     | Undefined `=` Null                                    | Boolean | a.undefinedProp `=` c.nullProp      | true  |
-|     | Undefined `=` *その他の値*                                 | Boolean | a.undefinedProp `=` 42              | false |
-| 異なる | Undefined `#` Undefined                               | Boolean | a.undefinedProp `#` b.undefinedProp | false |
-|     | Undefined `#` Null                                    | Boolean | a.undefinedProp `#` b.nullProp      | false |
-|     | Undefined `#` *その他の値*                                 | Boolean | a.undefinedProp `#` 42              | true  |
-| 大きい | Undefined `>` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `>` "abc"        | false |
-| 小さい | Undefined `<` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `<` "abc"        | false |
-| 以上  | Undefined `>=` string, Date, Time, Boolean, number | Boolean | a.undefinedProp `>=` "abc"       | false |
-| 以下  | Undefined `<=` string, Date, Time, Boolean, number | Boolean | a.undefinedProp `<=` "abc"       | false |
-
-*その他の値* は、未定義でも null でもない値を持つ任意の型の式です。
+_その他の値_ は、未定義でも Null でもない値を持つ任意の型の式です。
 
 :::info
 
-大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、BLOB、オブジェクト、コレクション、未定義値または null値に対応しておらず、エラーが返されます。
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、BLOB、オブジェクト、コレクション、未定義値または Null値に対応しておらず、エラーが返されます。
 
 :::
 
@@ -151,13 +147,13 @@ $vEmp:=New object
 $vEmp.name:="Smith"
 
 $vEmp.children:=Null
-
+ 
 $result:=Undefined($vEmp.name) //False
 $result:=($vEmp.name=Null) //False
-
+ 
 $result:=Undefined($vEmp.children) //False
 $result:=($vEmp.children=Null) //True
-
+ 
 $result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
@@ -171,7 +167,7 @@ var $vVar : Variant
 
 $vObj:=New object
 $vObj.null:=Null
-//note that $vVar is not assigned 
+// $vVar は代入前の状態です
 
 $result:=($vObj.undefined=42) //False
 $result:=($vObj.undefined=$vObj.null) //True
@@ -182,9 +178,8 @@ $result:=($vObj.undefined#42) //True
 $result:=($vObj.undefined#$vVar) //False
 
 $result:=($vObj.undefined>"hello") //False
-$result:=($vObj.undefined>$vVar)  //Error
-$result:=($vObj.undefined>$vObj.null)  //Error
+$result:=($vObj.undefined>$vVar)  //エラー
+$result:=($vObj.undefined>$vObj.null)  //エラー
 $result:=($vVar < 42) //False
 
 ```
-
