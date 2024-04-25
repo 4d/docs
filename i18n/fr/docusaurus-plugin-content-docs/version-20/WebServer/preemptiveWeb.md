@@ -14,13 +14,13 @@ Le tableau suivant permet d'indiquer si l'utilisation du mode préemptif pour le
 
 | 4D Server           | Interprété ([associé au débogueur](../Debugging/debugging-remote.md)) | Interprété (non associé au débogueur) | Compilé         |
 | ------------------- | --------------------------------------------------------------------- | ------------------------------------- | --------------- |
-| Serveur REST        | coopératif                                                            | préemptif                             | préemptif       |
+| Serveur REST        | coopératif                                                            | preemptive                            | preemptive      |
 | Serveur Web         | coopératif                                                            | coopératif                            | *paramètre web* |
 | Server Web Services | coopératif                                                            | coopératif                            | *paramètre web* |
 
 | 4D distant/monoposte | Interprété | Compilé         |
 | -------------------- | ---------- | --------------- |
-| Serveur REST         | coopératif | préemptif       |
+| Serveur REST         | coopératif | preemptive      |
 | Serveur Web          | coopératif | *paramètre web* |
 | Server Web Services  | coopératif | *paramètre web* |
 
