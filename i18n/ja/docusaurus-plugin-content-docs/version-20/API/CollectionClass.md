@@ -906,7 +906,7 @@ End use
 | startFrom  | Integer     | -> | テストを開始するインデックス                                   |
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                     |
 | methodName | Text        | -> | メソッド名                                            |
-| param      | Mixed       | -> | *formula* または *methodName* に渡す引数                 |
+| param      | 複合          | -> | *formula* または *methodName* に渡す引数                 |
 | 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
 
 
@@ -2519,7 +2519,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF #collection.push().Params -->
 | 引数      | タイプ        |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
-| element | Mixed      | -> | コレクションに追加する要素                               |
+| element | 複合         | -> | コレクションに追加する要素                               |
 | 戻り値     | Collection | <- | 要素の追加された元のコレクション|<!-- END REF -->
 
 
@@ -2583,7 +2583,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 | 引数            | タイプ        |    | 説明                                                   |
 | ------------- | ---------- |:--:| ---------------------------------------------------- |
 | queryString   | Text       | -> | 検索条件                                                 |
-| value         | Mixed      | -> | プレースホルダー使用時: 比較する値                                   |
+| value         | 複合         | -> | プレースホルダー使用時: 比較する値                                   |
 | querySettings | Object     | -> | クエリオプション: parameters, attributes 他                   |
 | 戻り値           | Collection | <- | queryString に合致するコレクション要素|<!-- END REF -->
 
@@ -3160,7 +3160,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 | startFrom  | Integer     | -> | テストを開始するインデックス                                       |
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                         |
 | methodName | Text        | -> | メソッド名                                                |
-| param      | Mixed       | -> | 渡す引数                                                 |
+| param      | 複合          | -> | 渡す引数                                                 |
 | 戻り値        | Boolean     | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
 
 
