@@ -20,7 +20,7 @@ O comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->
 
 Em `number`, passe um número correspondente à quantidade de folhas que o documento conterá depois que o comando for executado.
 
-> **Aviso**: O comando excluirá folhas se a quantidade anterior de folhas em seu documento for superior ao número passado. Por exemplo, se houver 5 folhas no documento e você definir a contagem de folhas como 3, o comando excluirá as folhas de número 4 e 5.
+> **Aviso**: O comando excluirá folhas se a quantidade anterior de folhas em seu documento for superior ao número passado. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
 
 #### Exemplo
 
