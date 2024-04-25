@@ -48,7 +48,7 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-A variante pode ser usada para declarar parâmetros de métodos ($0, $1,...) que podem ser de vários tipos. Neste caso, pode construir o seu código testando, por exemplo, o tipo de valor do parâmetro:
+Variant can be used to declare method parameters ($0, $1,...) that can be of various types. Neste caso, pode construir o seu código testando, por exemplo, o tipo de valor do parâmetro:
 
 ```4d
 C_VARIANT($1)
@@ -57,8 +57,7 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-//statement(s)
- End case
+End case
 ```
 
-> Quando as variáveis variant não são necessárias (ou seja, quando o tipo de dados é conhecido), recomenda-se a utilização de variáveis de tipo regular. As variáveis de tipo regular proporcionam um melhor desempenho, tornam o código mais claro e são úteis para o compilador evitar erros relacionados com a passagem de tipos de dados inesperados. 
+> Quando as variáveis variant não são necessárias (ou seja, quando o tipo de dados é conhecido), recomenda-se a utilização de variáveis de tipo regular. As variáveis de tipo regular proporcionam um melhor desempenho, tornam o código mais claro e são úteis para o compilador evitar erros relacionados com a passagem de tipos de dados inesperados.
