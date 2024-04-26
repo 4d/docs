@@ -789,7 +789,7 @@ Este es un ejemplo de definición de una macro:
 | `</macro>`                                                                           | Fin de la definición de macro                                                                                                                                |
 | `</macros>`                                                                          | Fin del archivo XML de macros                                                                                                                                |
 
-#### Acerca de la etiqueta \`<method>
+#### Acerca de la etiqueta `<method>`
 
 The `<method>` tag allows you to generate and use macro-commands that execute 4D project methods. Esto permite a los desarrolladores crear funciones sofisticadas que pueden distribuirse mediante macrocomandos asociados a los componentes. For example, the following macro will cause the _MyMethod_ method to be executed with the name of the current method as parameter:
 
