@@ -97,7 +97,7 @@ If you do not pass any parameters, `New collection` creates an empty collection 
 
 You must assign the returned reference to a 4D variable of the Collection type.
 
->Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+>Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
