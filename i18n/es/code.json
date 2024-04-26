@@ -42,7 +42,7 @@
     "message": "Administración Web"
   },
   "Command Line Interface": {
-    "message": "Interfaz de línea de comando"
+    "message": "Interfaz de línea de\n          comando"
   },
   "TLS Protocol": {
     "message": "Protocolo TLS"
