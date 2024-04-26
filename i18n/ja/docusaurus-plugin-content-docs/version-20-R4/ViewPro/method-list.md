@@ -619,11 +619,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| 引数       | タイプ    |    | 説明                              |                  |
-| -------- | ------ | -- | ------------------------------- | ---------------- |
-| vpObject | Object | -> | 変換するエリアを格納した 4D View Pro オブジェクト |                  |
-| rangeObj | Object | -> | レンジオブジェクト                       |                  |
-| 戻り値      | Object | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
+| 引数       | タイプ     |    | 説明                              |                  |
+| -------- | ------- | -- | ------------------------------- | ---------------- |
+| vpObject | Object  | -> | 変換するエリアを格納した 4D View Pro オブジェクト |                  |
+| rangeObj | Object  | -> | レンジオブジェクト                       |                  |
+| 戻り値      | Picture | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
 
 #### 説明
 
@@ -1539,7 +1539,9 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 _rangeObj_ 引数で、スタイルを取得するレンジを指定します。
 
 - _rangeObj_ 引数としてセルレンジを渡した場合、セルのスタイルが返されます。
+
 - _rangeObj_ 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
+
 - _rangeObj_ 引数に複数のレンジが含まれている場合、最初のレンジの最初のセルのスタイルのみが返されます。
 
 #### 例題
