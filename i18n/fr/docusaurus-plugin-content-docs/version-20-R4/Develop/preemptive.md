@@ -1,5 +1,5 @@
 ---
-id: preemptive
+id: preemptive-processes
 title: Preemptive Processes
 ---
 
@@ -59,7 +59,7 @@ To declare your method eligible for use in preemptive mode, you need to use the 
 
 ![](../assets/en/Develop/preemptif.png)
 
-Les options suivantes sont prises en charge :
+Les options suivantes sont prises en charge :
 
 - **Can be run in preemptive processes**: By checking this option, you declare that the method is able of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. La propriété "preemptive" de la méthode prend pour valeur "capable".
 
@@ -281,5 +281,3 @@ To do this, you must surround the code to be excluded from command thread safety
 ```
 
 Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.
-
-
