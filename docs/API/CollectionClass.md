@@ -1713,7 +1713,6 @@ Optionally, you can pass the index of collection from which to start the search 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
-
 |value|any|->|Value(s) to compare when using placeholder(s)|
 |Result|Collection |<-|Element index(es) matching queryString in the collection|
 <!-- END REF -->
