@@ -87,7 +87,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|<!-- END REF -->
+|Result|Collection|<-|The new collection|<!-- END REF -->
 
 
 #### Description
@@ -173,7 +173,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|<!-- END REF -->
+|Result|Collection|<-|The new shared collection|<!-- END REF -->
 
 
 #### Description
@@ -889,7 +889,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 #### Description
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 You designate the callback to be executed to evaluate collection elements using either:
 

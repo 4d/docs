@@ -73,7 +73,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|<!-- END REF -->
+|Result|Collection|<-|The new collection|<!-- END REF -->
 
 #### Description
 
@@ -153,7 +153,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|<!-- END REF -->
+|Result|Collection|<-|The new shared collection|<!-- END REF -->
 
 #### Description
 
