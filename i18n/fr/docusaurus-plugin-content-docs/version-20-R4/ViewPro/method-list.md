@@ -619,11 +619,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Paramètres | Type   |    | Description                                     |                  |
-| ---------- | ------ | -- | ----------------------------------------------- | ---------------- |
-| vpObject   | Object | -> | Objet 4D View Pro contenant la zone à convertir |                  |
-| rangeObj   | Object | -> | Objet plage                                     |                  |
-| Résultat   | Object | <- | Image SVG de la zone                            | <!-- END REF --> |
+| Paramètres | Type    |    | Description                                     |                  |
+| ---------- | ------- | -- | ----------------------------------------------- | ---------------- |
+| vpObject   | Object  | -> | Objet 4D View Pro contenant la zone à convertir |                  |
+| rangeObj   | Object  | -> | Objet plage                                     |                  |
+| Résultat   | Picture | <- | Image SVG de la zone                            | <!-- END REF --> |
 
 #### Description
 
@@ -1539,7 +1539,9 @@ The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->
 In _rangeObj_, pass a range containing the style to retrieve.
 
 - If _rangeObj_ contains a cell range, the cell style is returned.
+
 - If _rangeObj_ contains a range that is not a cell range, the style of the first cell in the range is returned.
+
 - If _rangeObj_ contains several ranges, only the style of the first cell in the first range is returned.
 
 #### Exemple
