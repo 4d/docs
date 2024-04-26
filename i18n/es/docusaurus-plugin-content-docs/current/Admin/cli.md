@@ -3,7 +3,7 @@ id: cli
 title: Interfaz de línea de comando
 ---
 
-You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and [tool4d](#tool4d)) using command lines. Más concretamente, esta funcionalidad le permite:
+Puede utilizar el Terminal de macOS o la consola de Windows para manejar sus aplicaciones 4D (4D, 4D Server, aplicación fusionada y [tool4d](#tool4d)) utilizando líneas de comando. Más concretamente, esta funcionalidad le permite:
 
 - lanzar una base de datos de forma remota, lo que puede ser especialmente útil para administrar los servidores web.
 - ejecutar pruebas automáticas para sus aplicaciones.
@@ -12,10 +12,10 @@ You can use the macOS Terminal or the Windows console to drive your 4D applicati
 
 Puede ejecutar líneas de comando para las aplicaciones 4D utilizando el terminal macOS o la consola Windows.
 
-- Under macOS, you should use the `open` command.
+- En macOS, debe utilizar el comando `open`.
 - En Windows, puede pasar los argumentos directamente.
 
-> En macOS, se pueden pasar los argumentos directamente yendo a la carpeta donde se encuentra la aplicación dentro del paquete (Contents/MacOS), lo que permite direccionar el flujo stderr. For example, if the 4D package is located in the `MyFolder` folder, you must write the command line as follows: `/MyFolder/4D.app/Contents/MacOS/4D`. However, we recommend that you use the `open` command whenever you do not need to access the stderr stream.
+> En macOS, se pueden pasar los argumentos directamente yendo a la carpeta donde se encuentra la aplicación dentro del paquete (Contents/MacOS), lo que permite direccionar el flujo stderr. Por ejemplo, si el paquete 4D se encuentra en la carpeta `MyFolder`, debe escribir la línea de comandos de la siguiente manera: `/MyFolder/4D.app/Contents/MacOS/4D`. Sin embargo, recomendamos que utilice el comando `open` siempre que no necesite acceder al stream stderr.
 
 ## Lanzar una aplicación 4D
 
