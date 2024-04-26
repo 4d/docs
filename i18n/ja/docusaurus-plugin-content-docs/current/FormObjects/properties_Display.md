@@ -194,7 +194,7 @@ _(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標�
 
 ### 科学的記数法
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. たとえば次のフォーマットを指定すると:
+科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:
 
 &3
 
@@ -208,16 +208,16 @@ If you want to display numbers in scientific notation, use the **ampersand** (&)
 
 次の表示フォーマットを使用して、数値を 16進表記で表示することができます:
 
-- `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-- `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+- `&x`: このフォーマットでは 16進数が “0xFFFF” 形式で表示されます。
+- `&$`: このフォーマットでは 16進数が “$FFFF” 形式で表示されます。
 
 ### XML記法
 
-The `&xml` format will make a number compliant with XML standard rules. 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
+`&xml` フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
 
 ### 数値を時間として表示する
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。
+`&/`の後に数字を指定することにより、数値を時間として (時間フォーマットで) 表示することができます。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。
 
 たとえば次のフォーマットを指定すると:
 
