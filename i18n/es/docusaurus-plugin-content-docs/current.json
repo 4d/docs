@@ -52,7 +52,7 @@
     "description": "The label for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Command Line Interface": {
-    "message": "Interfaz de línea de comando",
+    "message": "Interfaz de línea de\n          comando",
     "description": "The label for category Command Line Interface in sidebar docs"
   },
   "sidebar.docs.category.TLS Protocol": {
@@ -292,7 +292,7 @@
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.doc.Command Line Interface": {
-    "message": "Interfaz de línea de comando",
+    "message": "Interfaz de línea de\n          comando",
     "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
   },
   "sidebar.docs.doc.TLS Protocol": {
