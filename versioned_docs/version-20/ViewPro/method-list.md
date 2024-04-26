@@ -610,7 +610,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 |---|---|---|---|
 |vpObject| Object|->|4D View Pro object containing the area to convert|
 |rangeObj| Object|->|Range object|
-|Result| Object|<-|SVG picture of the area|<!-- END REF -->
+|Result| Picture|<-|SVG picture of the area|<!-- END REF -->
 
 #### Description
 
@@ -3249,6 +3249,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ### VP MOVE CELLS
 
+
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -4400,6 +4401,7 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 
 The *boolValue* parameter allows you to pass the boolean value (**True** or **False**) that will be assigned to the *rangeObj*.
+
   
 #### Example
 
