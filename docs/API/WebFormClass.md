@@ -64,9 +64,9 @@ This function does nothing if:
 - the *state* is currently not enabled in the web form,
 - the *state* does not exist for the web form.
 
-If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time on the client once the function ends.
+If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on states, please refer to [developer.qodly.com](https://developer.qodly.com/docs).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs).
 
 
 
@@ -74,7 +74,7 @@ For more information on states, please refer to [developer.qodly.com](https://de
 ### .enableState()
 
 <!-- REF #WebFormClass.enableState().Syntax -->
-**.enableState**( *state* : string)<!-- END REF -->
+**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 |Parameter|Type||Description|
@@ -90,9 +90,9 @@ This function does nothing if:
 - the *state* has already been enabled on the web form,
 - the *state* does not exist for the web form.
 
-If you enable or [disable](#disablestate) several states in the same user function, all modifications are sent at the same time on the client once the function ends.
+If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on states, please refer to [developer.qodly.com](https://developer.qodly.com/docs).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs).
 
 
 ### .setError()
