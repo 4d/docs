@@ -15,7 +15,7 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 | タイプ                              | 機能                                      | 式の型/式タイプ | データタイプ                        | JSON 定義                                                                                                                                  |
 | -------------------------------- | --------------------------------------- | -------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                           | コレクションに基づく                              | Object   | Numeric, Text, Date, または Time | `dataSourceTypeHint: object` + `numberFormat: <format>` または `textFormat: <format>` または `dateFormat: <format>` または `timeFormat: <format>` |
+| オブジェクト                           | コレクションに基づく                              | オブジェクト   | Numeric, Text, Date, または Time | `dataSourceTypeHint: object` + `numberFormat: <format>` または `textFormat: <format>` または `dateFormat: <format>` または `timeFormat: <format>` |
 | 配列                               | 配列に基づく                                  | 配列       | Numeric, Text, Date, または Time | `dataSourceTypeHint: arrayNumber` または `arrayText` または `arrayDate` または `arrayTime`                                                        |
 | 選択リスト (値を保存)  | 選択リストに基づく (標準)       | リスト      | 選択された項目値                      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                             |
 | 選択リスト (参照を保存) | 選択リストに基づく (項目の位置を保存) | リスト      | 選択された項目参照                     | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                      |
@@ -30,11 +30,11 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 ドロップダウンリストのデータソースとして、[コレクション](Concepts/dt_collection) を内包した [オブジェクト](Concepts/dt_object.md) を使用できます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ             | 説明                                                                                                                                                                                       |
-| -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `値`            | Collection      | 必須 - スカラー値のコレクション。 すべての同じ型の値でなくてはなりません。 Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number          | 選択項目のインデックス (0 と `collection.length-1` の間の値)。 -1 に設定すると、プレースホルダー文字列として currentValue が表示されます。                                                                          |
-| `currentValue` | Collection要素と同じ | 選択中の項目 (コードにより設定した場合はプレースホルダーとして使用される)                                                                                                                                |
+| プロパティ          | タイプ             | 説明                                                                                                                                            |
+| -------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `値`            | Collection      | 必須 - スカラー値のコレクション。 すべての同じ型の値でなくてはなりません。 サポートされている型:<li>文字列</li><li>数値</li><li>日付</li><li>時間</li>空、または未定義の場合、ドロップダウンリストは空になります |
+| `index`        | number          | 選択項目のインデックス (0 と `collection.length-1` の間の値)。 -1 に設定すると、プレースホルダー文字列として currentValue が表示されます。                               |
+| `currentValue` | Collection要素と同じ | 選択中の項目 (コードにより設定した場合はプレースホルダーとして使用される)                                                                                     |
 
 オブジェクトにその他のプロパティが含まれている場合、それらは無視されます。
 
@@ -45,12 +45,12 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 - オブジェクトとそのプロパティを作成するコードを実行します。 たとえば、ドロップダウンリストに紐づいた [変数](properties_Object.md#変数あるいは式) が "myList" であれば、[On Load](Events/onLoad.md) フォームイベントに次のように書けます:
 
 ```4d
-// Form.myDrop is the datasource of the form object
- 
+// Form.myDrop はフォームオブジェクトのデータソースです
+
 Form.myDrop:=New object
 Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1  //currentValue is a placeholder
-Form.myDrop.currentValue:="Select a fruit" 
+Form.myDrop.index:=-1  // currentValue をプレースホルダーに使います
+Form.myDrop.currentValue:="フルーツを選択してください" 
 ```
 
 ドロップダウンリストには、プレースホルダー文字列が表示されます:
@@ -103,13 +103,13 @@ Form.myDrop.index //3
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) // 新規レコードの場合
+          aCities:=3 // デフォルトの値を表示します
+       Else // 既存レコードの場合には、保存された値を表示します
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) // ユーザーが選択を変更した場合
+       City:=aCities{aCities} // フィールドに新しい値を代入
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -166,4 +166,35 @@ Form.myDrop.index //3
 
 ## プロパティ一覧
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[文字フォーマット](properties_Display.md#文字フォーマット) -
+[太字](properties_Text.md#太字) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) -
+[選択リスト](properties_DataSource.md#選択リスト) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[データタイプ (式の型)](properties_DataSource.md#データタイプ-式の型) -
+[データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) -
+[日付フォーマット](properties_Display.md#日付フォーマット) -
+[式の型](properties_Object.md#式の型) -
+[フォーカス可](properties_Entry.md#フォーカス可) -
+[フォント](properties_Text.md#フォント) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[フォントサイズ](properties_Text.md#フォントサイズ) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[イタリック](properties_Text.md#イタリック) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[レンダリングしない](properties_Display.md#レンダリングしない) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[標準アクション](properties_Action.md#標準アクション) -
+[値を記憶](properties_Object.md#値を記憶) -
+[時間フォーマット](properties_Display.md#時間フォーマット) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[タイプ](properties_Object.md#タイプ) -
+[下線](properties_Text.md#下線) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[幅](properties_CoordinatesAndSizing.md#幅)
