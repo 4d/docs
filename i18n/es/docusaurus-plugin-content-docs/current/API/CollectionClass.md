@@ -80,7 +80,7 @@ Una colección se inicializa con:
 | Parámetros | Tipo                                                                    |     | Descripción                                |
 | ---------- | ----------------------------------------------------------------------- | :-: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | Valor(es) de collection |
-| Result     | Collection                                                              |  <- | Nueva colección                            |
+| Result     | Collection                                                              |  <- | The new collection                         |
 
 <!-- END REF -->
 
@@ -162,7 +162,7 @@ Se crea una nueva colección y se añade un nuevo elemento:
 | Parámetros | Tipo                                                                |     | Descripción                                              |
 | ---------- | ------------------------------------------------------------------- | :-: | -------------------------------------------------------- |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | Valor(es) de la collection compartida |
-| Result     | Collection                                                          |  <- | New shared collection                                    |
+| Result     | Collection                                                          |  <- | The new shared collection                                |
 
 <!-- END REF -->
 
@@ -850,7 +850,7 @@ Por defecto, se realiza una evaluación no diacrítica. If you want the evaluati
 
 #### Descripción
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ method<!-- END REF -->.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -1615,12 +1615,11 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <!-- REF #collection.indices().Params -->
 
-| Parámetros  | Tipo |     | Descripción          |
-| ----------- | ---- | :-: | -------------------- |
-| queryString | Text |  -> | Criterio de búsqueda |
-
-|value|any|->|Value(s) to compare when using placeholder(s)|
-|Result|Collection |<-|Element index(es) matching queryString in the collection|
+| Parámetros  | Tipo       |     | Descripción                                                                                                                 |
+| ----------- | ---------- | :-: | --------------------------------------------------------------------------------------------------------------------------- |
+| queryString | Text       |  -> | Criterio de búsqueda                                                                                                        |
+| value       | any        |  -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición |
+| Result      | Collection |  <- | Element index(es) matching queryString in the collection                                                 |
 
 <!-- END REF -->
 
@@ -2229,6 +2228,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 ```4d
 {
     "propertyPath": string,
+
 
     "descending": boolean
 
