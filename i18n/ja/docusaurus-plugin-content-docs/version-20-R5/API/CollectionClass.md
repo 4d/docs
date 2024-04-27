@@ -77,10 +77,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <!-- REF #_command_.New collection.Params -->
 
-| 引数    | タイプ                                                                     |     | 説明             |
-| ----- | ----------------------------------------------------------------------- | :-: | -------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | コレクションの値       |
-| 戻り値   | Collection                                                              |  <- | New collection |
+| 引数    | タイプ                                                                     |     | 説明                 |
+| ----- | ----------------------------------------------------------------------- | :-: | ------------------ |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | コレクションの値           |
+| 戻り値   | Collection                                                              |  <- | The new collection |
 
 <!-- END REF -->
 
@@ -159,10 +159,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <!-- REF #_command_.New shared collection.Params -->
 
-| 引数    | タイプ                                                                 |     | 説明                    |
-| ----- | ------------------------------------------------------------------- | :-: | --------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | 共有コレクションの値            |
-| 戻り値   | Collection                                                          |  <- | New shared collection |
+| 引数    | タイプ                                                                 |     | 説明                        |
+| ----- | ------------------------------------------------------------------- | :-: | ------------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | 共有コレクションの値                |
+| 戻り値   | Collection                                                          |  <- | The new shared collection |
 
 <!-- END REF -->
 
@@ -852,7 +852,7 @@ _options_ 引数として、以下の定数を 1つ、または組み合わせ�
 
 #### 説明
 
-`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、_formula_ オブジェクトまたは _methodName_ に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->。
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ method<!-- END REF -->.
 
 次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
 
@@ -1617,11 +1617,11 @@ _toSearch_ 引数は検出すべき要素と完全に一致している必要が
 
 <!-- REF #collection.indices().Params -->
 
-| 引数          | タイプ        |     | 説明                                 |
-| ----------- | ---------- | :-: | ---------------------------------- |
-| queryString | Text       |  -> | 検索条件                               |
-| value       | any        |  -> | プレースホルダー使用時: 比較する値 |
-| 戻り値         | Collection |  <- | queryString に合致するコレクション要素のインデックス   |
+| 引数          | タイプ        |     | 説明                                                                          |
+| ----------- | ---------- | :-: | --------------------------------------------------------------------------- |
+| queryString | Text       |  -> | 検索条件                                                                        |
+| value       | any        |  -> | プレースホルダー使用時: 比較する値                                          |
+| 戻り値         | Collection |  <- | Element index(es) matching queryString in the collection |
 
 <!-- END REF -->
 
@@ -2231,6 +2231,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 ```4d
 {
     "propertyPath": string,
+
     "descending": boolean
 
 }
