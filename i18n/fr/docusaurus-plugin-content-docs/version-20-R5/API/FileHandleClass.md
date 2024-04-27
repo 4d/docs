@@ -100,7 +100,7 @@ The `.breakModeRead` property can be defined at the handle creation with the [`f
 
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -126,7 +126,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -150,7 +150,7 @@ The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the
 
 The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. La valeur par défaut est "UTF-8".
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -172,7 +172,7 @@ This property is **read-only**.
 
 The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -186,7 +186,7 @@ This property is **read-only**.
 
 The `.file` property returns <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -244,7 +244,7 @@ The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode 
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. La valeur par défaut est "read".
 
-This property is **read-only**.
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
