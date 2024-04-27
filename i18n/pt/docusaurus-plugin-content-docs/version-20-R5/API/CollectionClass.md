@@ -80,7 +80,7 @@ Uma coleção se inicializa com:
 | Parâmetro  | Tipo                                                                    |     | Descrição                                  |
 | ---------- | ----------------------------------------------------------------------- | :-: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | Valor(es) de collection |
-| Resultados | Collection                                                              |  <- | Nova coleção                               |
+| Resultados | Collection                                                              |  <- | The new collection                         |
 
 <!-- END REF -->
 
@@ -92,7 +92,7 @@ If you do not pass any parameters, `New collection` creates an empty collection 
 
 Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
 
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new collection by passing one or several _value_(s) as parameter(s).
 
@@ -162,7 +162,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 | Parâmetro  | Tipo                                                                |     | Descrição                        |
 | ---------- | ------------------------------------------------------------------- | :-: | -------------------------------- |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | Valores da collection compartida |
-| Resultados | Collection                                                          |  <- | New shared collection            |
+| Resultados | Collection                                                          |  <- | The new shared collection        |
 
 <!-- END REF -->
 
@@ -842,7 +842,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. If you want the eva
 
 #### Descrição
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ method<!-- END REF -->.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
@@ -1600,7 +1600,7 @@ Optionally, you can pass the index of collection from which to start the search 
 | ----------- | ---------- | :-: | ------------------------------------------------------------------------------------ |
 | queryString | Text       |  -> | Critérios de pesquisa                                                                |
 | value       | any        |  -> | Valores a comparar quando usar placeholders (valores temporários) |
-| Resultados  | Collection |  <- | Índices elemento correspondendo a queryString na coleção                             |
+| Resultados  | Collection |  <- | Element index(es) matching queryString in the collection          |
 
 <!-- END REF -->
 
@@ -2202,7 +2202,9 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 ```4d
 {
     "propertyPath": string,
+
     "descending": boolean
+
 }
 ```
 
