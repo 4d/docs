@@ -701,7 +701,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the _attributePath_ in the entity selection<!-- END REF -->.
 
-La collection retournée est automatiquement triée. **Null** values are not returned.
+La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas retournées.
 
 In the _attributePath_ parameter, pass the entity attribute whose distinct values you want to get. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. If the _attributePath_ leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Les types sont renvoyés dans l'ordre suivant :
 
@@ -712,7 +712,7 @@ In the _attributePath_ parameter, pass the entity attribute whose distinct value
 
 You can use the `[]` notation to designate a collection when _attributePath_ is a path within an object (see examples).
 
-In the _options_ parameter, you can pass one or a combination of the following constants:
+Dans le paramètre _options_, vous pouvez passer une ou une combinaison des constantes suivantes :
 
 | Constante         | Valeur | Commentaire                                                                                                                                                                                                                               |
 | ----------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -929,7 +929,7 @@ By default, entities for which _attributePath_ is _null_ or undefined are ignore
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-With this syntax, `.extract()` populates the returned collection with the _attributePath_ properties. Each element of the returned collection is an object with _targetPath_ properties filled with the corresponding _attributePath_ properties. Null values are kept (_option_ parameter is ignored with this syntax).
+With this syntax, `.extract()` populates the returned collection with the _attributePath_ properties. Each element of the returned collection is an object with _targetPath_ properties filled with the corresponding _attributePath_ properties. Les valeurs null sont conservées (le paramètre _option_ est ignoré avec cette syntaxe).
 
 If several _attributePath_ are given, a _targetPath_ must be given for each. Only valid pairs \[_attributePath_, _targetPath_] are extracted.
 
