@@ -94,6 +94,17 @@ If you enable or [disable](#disablestate) several states within the same user fu
 
 For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
 
+#### Example
+
+You enable a specific state named "wrongCredentials" in case of error in your login page:
+
+```4d
+Function authenticationError()
+	If (Session.info.type#"remote")
+		Web Form.enableState("wrongCredentials")
+	End if
+```
+
 
 ### .setError()
 
