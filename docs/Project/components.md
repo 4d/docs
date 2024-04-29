@@ -130,22 +130,29 @@ This item is not displayed if the dependency is inactive because its files are n
 :::
 
 
-### Dependency Status
+### Filtering Dependencies
 
-A project dependency can have different status in the current configuration. You can filter dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: the dependency is correctly loaded and can be used in the project.
-- **Inactive**: the dependency is not loaded in the project and is not available. There are many possible reasons for this status: conflict with another component (see below), missing files, version incompatibility...
-- **Conflict**: the dependency is loaded but is in conflict with at least one other dependency (same name at another location). Dependencies in conflict are grouped so that you can check the origin of the conflict and take appropriate actions.
+- **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: conflict with another component, missing files, version incompatibility...
+- **Conflict**: Dependencies that are loaded but are in conflict with at least one other dependency (same name at another location). Dependencies in conflict are grouped so that you can check the origin of the conflict and take appropriate actions.
 
+### Dependency Status
 
-Dependencies requiring the developer's attention (**Inactive** and **Conflict**) are indicated by a label at the right side of the line and a specific background color:
+Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
 
 ![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
+The following status labels are available:
+- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher priority in the loading sequence.  
+- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower priority in the loading sequence.
+- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).  
 
-In case of inactive or conflict status, a tooltip is displayed when you hover over the dependency line, detailing the reason for this status:
+A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
