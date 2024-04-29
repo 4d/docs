@@ -38,7 +38,7 @@ Vous souhaitez définir une plage pour la colonne ci-dessous (dans la feuille co
 Le code est le suivant :
 
 ```4d
- $column:=VP Column("ViewProArea";3) // column D
+ $column:=VP Column("ViewProArea";3) // colonne D
 ```
 
 #### Voir également

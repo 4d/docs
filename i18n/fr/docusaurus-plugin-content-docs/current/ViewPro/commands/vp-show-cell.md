@@ -9,11 +9,11 @@ title: VP SHOW CELL
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Paramètres | Type    |    | Description                                               |                  |
-| ---------- | ------- | -- | --------------------------------------------------------- | ---------------- |
-| rangeObj   | Object  | -> | Objet plage                                               |                  |
-| vPos       | Integer | -> | Position verticale de la vue de la cellule ou de la ligne |                  |
-| hPos       | Integer | -> | Horizontal view position of cell or row                   | <!-- END REF --> |
+| Paramètres | Type    |    | Description                                                 |                  |
+| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
+| rangeObj   | Object  | -> | Objet plage                                                 |                  |
+| vPos       | Integer | -> | Position verticale de la vue de la cellule ou de la ligne   |                  |
+| hPos       | Integer | -> | Position horizontale de la vue de la cellule ou de la ligne | <!-- END REF --> |
 
 #### Description
 

@@ -5,12 +5,12 @@ title: ストラクチャーページ
 
 ## プライマリーキー
 
-環境設定内のこれらのオプションによって、新しくテーブルが追加されたとき、または [プライマリーキー管理](hthttps://doc.4d.com/4Dv19/4D/19/Primary-key-manager.300-5416826.ja.html) 機能の使用によって 4D が自動的に追加するプライマリーキーのデフォルトの名前と型を変更することができます。
+These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
 
 次のオプションから選択することができます:
 
-*   **Name** (デフォルトでは "ID"): プライマリーキーのフィールドのデフォルト名を設定します。 [4D の命名規則](Concepts/identifiers.md#テーブルとフィールド) に従う範囲内であればどんな名前も使用できます。
-*   **デフォルトタイプ** (デフォルトでは [倍長整数](Concepts/dt_number.md)): プライマリーキーフィールドのデフォルトの型を設定します。 UUID を選択することもできます。 この場合、デフォルトで作成されたプライマリーキーフィールドは [文字型](Concepts/dt_string.md) となり、**UUIDフォーマット** と　**自動UUID** プロパティにチェックが入っています。
+- **Name** ("ID" by default): Sets the default name of primary key fields. You can use any name you want, as long as it respects the [4D naming rules](Concepts/identifiers.md#tables-and-fields).
+- **Type** ([Longint](Concepts/dt_number.md) by default): Sets the default type of primary key fields. UUID を選択することもできます。 In this case, the primary key fields created by default are of the [Alpha type](Concepts/dt_string.md) and have the **UUID Format** and **Auto UUID** field properties checked.
 
 ## ストラクチャーエディター
 
@@ -18,9 +18,8 @@ title: ストラクチャーページ
 
 ### ストラクチャーの描画クォリティ
 
-このオプションで、ストラクチャーエディターの描画レベルを変更できます。 デフォルトで品質は **高** に設定されています。 標準品質を選択して、表示速度を優先させることができます。 この設定の効果は主にズーム機能を使用する際に実感することができます ([ストラクチャーエディター](https://doc.4d.com/4Dv19/4D/19/Structure-editor.300-5416818.ja.html) のズーム参照)。
+このオプションで、ストラクチャーエディターの描画レベルを変更できます。 By default, the quality is set to **High**. 標準品質を選択して、表示速度を優先させることができます。 The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
 
 ### フォルダーが表示対象外のとき
 
-このオプションは、ストラクチャーエディターでフォルダーによって選択する際の、テーブルが表示対象外のときのアピアランスを設定できます ([フォルダーごとにテーブルをハイライト/薄暗くする](https://doc.4d.com/4Dv19/4D/19/Structure-editor.300-5416818.ja.html#4592928) 参照)。 薄暗く表示 (テーブルイメージの代わりに影が表示される) または非表示 (テーブルは完全に見えなくなる) が選択できます。
-
+This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). 薄暗く表示 (テーブルイメージの代わりに影が表示される) または非表示 (テーブルは完全に見えなくなる) が選択できます。

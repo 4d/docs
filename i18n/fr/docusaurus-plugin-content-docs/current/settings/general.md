@@ -7,7 +7,7 @@ La page Général contient des options permettant de configurer les paramètres 
 
 ## Développeur
 
-Cette zone comporte l'option **Afficher la barre d'outils**. Lorsqu'elle est cochée, la barre d'outils 4D est affichée dans l'environnement de Développement.
+This area contains the **Display toolbar** option. Lorsqu'elle est cochée, la barre d'outils 4D est affichée dans l'environnement de Développement.
 
 ## Général
 
@@ -15,8 +15,7 @@ Cette zone vous permet de personnaliser diverses options relatives au démarrage
 
 ### Mode de démarrage
 
-Ce menu permet de sélectionner le mode dans lequel vous souhaitez que la base soit ouverte par défaut : **Développement** ou **Application**. A moins que vous ne le spécifiiez, 4D s'ouvre par défaut en mode Développement s’il n’y a pas de mots de passe en contrôlant l’accès.
-
+You use this menu to select the default startup mode for the database: **Design** or **Application**. A moins que vous ne le spécifiiez, 4D s'ouvre par défaut en mode Développement s’il n’y a pas de mots de passe en contrôlant l’accès.
 
 ## Composant
 
@@ -24,8 +23,8 @@ This area allows [component developers](../Extensions/develop-components.md) to 
 
 ### Namespace du composant dans le class store
 
-Utilisez cette zone pour déclarer un espace de nommage pour les classes et les fonctions du composant dans le code des projets hôtes. Voir [Déclaration du namespace du composant](../Extensions/develop-components.md#declaring-the-component-namespace).
+Utilisez cette zone pour déclarer un espace de nommage pour les classes et les fonctions du composant dans le code des projets hôtes. See [Declaring the component namespace](../Extensions/develop-components.md#declaring-the-component-namespace).
 
 ### Générer le fichier de syntaxe pour l'auto-complétion à la compilation
 
-Lorsque vous cochez cette option, un fichier de syntaxe (format JSON) est automatiquement créé lors de la phase de compilation. Voir [Complétion de code pour les composants compilés](../Extensions/develop-components.md#code-completion-for-compiled-components). 
+Lorsque vous cochez cette option, un fichier de syntaxe (format JSON) est automatiquement créé lors de la phase de compilation. See [Code completion for compiled components](../Extensions/develop-components.md#code-completion-for-compiled-components).

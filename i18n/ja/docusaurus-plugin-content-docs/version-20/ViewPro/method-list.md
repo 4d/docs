@@ -611,11 +611,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| 引数       | タイプ    |    | 説明                                       |
-| -------- | ------ | -- | ---------------------------------------- |
-| vpObject | Object | -> | 変換するエリアを格納した 4D View Pro オブジェクト          |
-| rangeObj | Object | -> | レンジオブジェクト                                |
-| 戻り値      | Object | <- | エリアの SVGピクチャー|<!-- END REF -->
+| 引数       | タイプ     |    | 説明                                       |
+| -------- | ------- | -- | ---------------------------------------- |
+| vpObject | Object  | -> | 変換するエリアを格納した 4D View Pro オブジェクト          |
+| rangeObj | Object  | -> | レンジオブジェクト                                |
+| 戻り値      | Picture | <- | エリアの SVGピクチャー|<!-- END REF -->
 
 |
 
@@ -3344,6 +3344,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ### VP MOVE CELLS
 
+
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -4226,7 +4227,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 | 引数         | タイプ    |    | 説明                                                                               |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト                                                         |
-| 戻り値        | Mixed  | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
+| 戻り値        | 複合     | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
 
 |
 
@@ -4535,6 +4536,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 
 *boolValue* 引数には、*rangeObj* のセルレンジに割り当てるブール値 (**true** あるいは **false**) を渡します。
+
 
 #### 例題
 

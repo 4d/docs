@@ -48,7 +48,7 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant peut être utilisé pour déclarer des paramètres de méthode ($0, $1, etc.) pouvant être de différents types. Dans ce cas, vous pouvez générer votre code en testant le type de valeur du paramètre, par exemple :
+Variant can be used to declare method parameters ($0, $1,...) that can be of various types. Dans ce cas, vous pouvez générer votre code en testant le type de valeur du paramètre, par exemple :
 
 ```4d
 C_VARIANT($1)
@@ -57,8 +57,7 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-//statement(s)
- End case
+End case
 ```
 
-> Lorsque des variables variant ne sont pas nécessaires (c'est-à-dire lorsque le type de données est connu), il est recommandé d'utiliser des variables typées standard. Les variables typées standard fournissent de meilleures performances, un code plus clair et permettent au compilateur d'éviter les bugs liés à des types de données passés qui sont inattendus. 
+> Lorsque des variables variant ne sont pas nécessaires (c'est-à-dire lorsque le type de données est connu), il est recommandé d'utiliser des variables typées standard. Les variables typées standard fournissent de meilleures performances, un code plus clair et permettent au compilateur d'éviter les bugs liés à des types de données passés qui sont inattendus.

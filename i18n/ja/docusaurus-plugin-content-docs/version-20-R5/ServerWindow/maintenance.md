@@ -3,23 +3,21 @@ id: maintenance
 title: メンテナンスページ
 ---
 
-
-**メンテナンス** ページには、アプリケーションの現在の動作状況に関する情報が表示されます。 また、基本的なメンテナンス機能にアクセスすることもできます:
+The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. また、基本的なメンテナンス機能にアクセスすることもできます:
 
 ![](../assets/en/Admin/server-maintenance.png)
 
-
 ## 最新の検査/圧縮:
 
-このエリアには、データベース上で実行された最新の [データの検査](MSC/verify.md) および [圧縮処理](MSC/compact.md) の日付、時刻、状況が表示されます。
+These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
 
 ### レコードとインデックスを検査
 
 このボタンを使用して、サーバーを止めることなく検査処理を直接起動できます。 検証の間、サーバーの動作が遅くなるかもしれないことに留意してください。
 
-データベースのすべてのレコードとすべてのインデックスが検証されます。 検査対象を絞り込んだり、追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
+データベースのすべてのレコードとすべてのインデックスが検証されます。 If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
 
-検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 ### データ圧縮
 
@@ -27,19 +25,17 @@ title: メンテナンスページ
 
 ![](../assets/en/Admin/server-shut.png)
 
-アプリケーションが実際に停止された後、4D Server はデータベースのデータに対する標準の圧縮処理をおこないます。 追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
+アプリケーションが実際に停止された後、4D Server はデータベースのデータに対する標準の圧縮処理をおこないます。 If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
 
 圧縮が終了すると、4D Server は自動でデータベースを再開します。 その後、4Dユーザーの再接続が可能になります。
 
 > 圧縮リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
 
-検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
-
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 ## 動作時間
 
 このエリアには、サーバーが開始されてからの稼働時間 (日、時、分) が表示されます。
-
 
 ### サーバを再起動...
 
@@ -49,44 +45,41 @@ title: メンテナンスページ
 
 ## 前回のバックアップ
 
-このエリアには、データベースの [前回のバックアップ](MSC/backup.md) の日付・時刻と、予定された次のバックアップがあれば、それに関する情報が表示されます。 自動バックアップは、ストラクチャー設定の **スケジューラー** ページで設定します
+This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
 
-- **前回のバックアップ**: 前回のバックアップ日時。
-- **次回のバックアップ**: 予定された次のバックアップ日時。
-- **必要なスペース**: バックアップに必要な計算された空き容量。 バックアップファイルの実際のサイズは (圧縮などの) 設定や、データファイルの変化により変わります。
-- **空きスペース**: バックアップボリュームの空き容量。
+- **Last backup**: date and time of last backup.
+- **Next backup**: date and time of next scheduled backup.
+- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Available space**: space available on the backup volume.
 
-
-**バックアップ開始** ボタンを使用して、現在のバックアップパラメーター ( バックアップするファイル、アーカイブの場所、オプションなど) を使用したバックアップを即座に開始できます。 **環境設定...** ボタンをクリックして、これらのパラメーターを確認できます。 サーバー上でのバックアップがおこなわれる間、クライアントマシンはブロックされ (ただし接続解除はされません)、新規のクライアント接続はできなくなります。
-
+The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. サーバー上でのバックアップがおこなわれる間、クライアントマシンはブロックされ (ただし接続解除はされません)、新規のクライアント接続はできなくなります。
 
 ## リクエストとデバッグログ
 
 このエリアには、(ログファイルが有効化されている場合に) ログファイルの記録に要した時間が表示され、ログの有効化も管理できます。
 
-ログファイルについては、[**ログファイルの詳細**](Debugging/debugLogFiles.md) を参照ください。
+Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
 ### リクエストとデバッグのログを開始/停止
 
-**リクエストとデバッグのログを開始** ボタンでログファイルが開始されます。 これによりフォーマンスが著しく低下する場合があるため、これはアプリケーションの開発フェーズでのみ使用します。
+The **Start Request and Debug Logs** button starts log files. これによりフォーマンスが著しく低下する場合があるため、これはアプリケーションの開発フェーズでのみ使用します。
 
 > このボタンは、サーバー上で実行されているオペレーションしか記録しません。
 
-ログが有効になると、ボタンのタイトルが **リクエストとデバッグのログを停止** に変わり、いつでもリクエストの記録を停止できます。 停止後にログを再開すると、以前のファイルは消去されることに留意してください。
+When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. 停止後にログを再開すると、以前のファイルは消去されることに留意してください。
 
 ### レポートを表示
 
-**レポートを表示** (リモートのデスクトップクライアントから処理を実行した場合は **レポートをダウンロード**) ボタンをクリックすると、システムウィンドウが開いて、リクエストログファイルが表示されます。
+The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
 ### ログ設定ファイルを読み込む
 
-このボタンを押すと、特殊な [ログ設定ファイル](Debugging/debugLogFiles.md#ログ設定ファイルを使用する) (`.json` ファイル) をサーバーに読み込むことができます。 この特殊ファイルは、特定のケースを監視・調査するために 4Dテクニカルサービスが提供することがあります。
-
+This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). この特殊ファイルは、特定のケースを監視・調査するために 4Dテクニカルサービスが提供することがあります。
 
 ### ログを停止する
 
 このボタンを押すと、サーバーで開始されたログを記録する処理がすべて中断されます。 この機能は、サーバーの処理を一時的に軽くするのに便利です。
 
-ログが停止されると、ボタンのタイトルが **ログを再開する** に変わり、これを押すことでログの記録を再開することができます。
+When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
-> ログの停止や再開は、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドでおこなうこともできます。
+> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.

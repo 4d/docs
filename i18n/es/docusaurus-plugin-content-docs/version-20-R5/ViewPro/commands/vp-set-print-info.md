@@ -23,7 +23,7 @@ Pase el nombre del área 4D View Pro en _vpAreaName_. Si pasa un nombre que no e
 
 Puede pasar un objeto que contenga las definiciones para varios atributos de impresión en el parámetro _printInfo_. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet to print (counting begins at 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
+En el parámetro opcional _sheet_, puede designar una hoja específica a imprimir (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
 - `vk current sheet`
 

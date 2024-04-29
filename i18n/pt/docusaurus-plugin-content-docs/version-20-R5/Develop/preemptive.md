@@ -182,7 +182,7 @@ Os métodos com a propriedade "Pode ser executado em processos preemptivos" ser�
 
 O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
 
-### Interface de usuário
+### Interface do usuário
 
 Como são acessos "externos", as chamadas para objetos da interface do usuário, como formulários, bem como para o depurador, não são permitidas em threads preemptivas.
 

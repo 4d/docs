@@ -5,53 +5,47 @@ title: Administración
 
 4D ofrece varias herramientas integradas para iniciar, detener o supervisar el servidor web integrado.
 
-
 ## Iniciar el servidor Web 4D
 
-> Para poder lanzar el servidor web de 4D o 4D Server, debe tener una licencia "4D Web Application". Para más información, consulte el [sitio web de 4D](https://www.4d.com).
-
+> Para poder lanzar el servidor web de 4D o 4D Server, debe tener una licencia "4D Web Application". For more information, please refer to the [4D Web site](https://www.4d.com).
 
 Un proyecto 4D puede iniciar y monitorizar un servidor web para la aplicación principal (host) así como para cada componente alojado.
 
 El servidor web principal de 4D puede iniciarse de diferentes maneras:
 
-*   Utilizando un botón o comando de menú.
-    *   4D: **Ejecución > iniciar el servidor web**<br/>![](../assets/en/WebServer/start1.png)
-    *   4D Server: en la página del servidor HTTP, haga clic en **Iniciar servidor HTTP**<br/>![](../assets/en/WebServer/start2.png)
+- Utilizando un botón o comando de menú.
+  - 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
+  - 4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
-*   Se inicia automáticamente cada vez que se abre la aplicación 4D. Para ello, despliegue la página **Web\/Configuración** de la Configuración y seleccione la casilla **Lanzar el servidor web al inicio**:<br/>![](../assets/en/WebServer/config.png)
+- Se inicia automáticamente cada vez que se abre la aplicación 4D. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
-*   Por programación, llamando la función [`webServer.start()`](API/WebServerClass.md#start) o el comando `WEB START SERVER`.
+- Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 
-El servidor web de cualquier componente puede iniciarse llamando a la función [`webServer.start()`](API/WebServerClass.md#start) en el objeto servidor web del componente.
+The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
+
 > No es necesario relanzar la aplicación 4D para iniciar o detener el servidor web.
 
 ## Detener el servidor Web 4D
 
 El servidor web principal de 4D puede detenerse de diferentes maneras:
 
-*   Utilizando el menú 4D **Ejecución\>Detener el servidor Web**, o vía el botón **Detener el servidor HTTP** de la página Servidor HTTP de 4D Server (ambos elementos muestran **Iniciar...** cuando el servidor no está ya iniciado).
+- Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
 
-*   Por programación, llamando la función [`webServer.stop()`](API/WebServerClass.md#stop) o el comando `WEB STOP SERVER`.
+- Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
 
-El servidor web de cualquier componente puede detenerse llamando a la función `webServer.stop()` en el objeto servidor web del componente.
-
+The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
 
 ## Probar el servidor Web 4D
 
-El comando **Test Web Server** puede utilizarse para asegurarse de que el servidor web integrado funciona correctamente (sólo en 4D). Este comando es accesible en el menú **Ejecutar** cuando se lanza el servidor web:
+The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
 
 ![](../assets/en/WebServer/test1.png)
-
 
 Al seleccionar este comando, la página de inicio del sitio web publicado por la aplicación 4D se muestra en una ventana de su navegador web predeterminado:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-
-Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
-
-
+Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. The page is called using the _localhost_ URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
 
 ## Borrar la caché
 
@@ -59,127 +53,121 @@ En cualquier momento, puede vacíar la caché de las páginas y de las imágenes
 
 Para ello, puede:
 
--   4D: haga clic en el botón **Borrar la caché** de la página [Web/Opciones (I)](../settings/web.md) de la caja de diálogo Parámetros.
--   4D Server: haga clic en el botón **Borrar la caché** de la página HTTP de la ventana Administración de 4D Server.
+- 4D: click on the **Clear Cache** button in the [Web/Options (I) page](../settings/web.md) of the Settings dialog box.
+- 4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
 
 La caché se borra inmediatamente.
-> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
 
-
+> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
 
 ## Explorador de ejecución
 
-La página **Watch** (sección **Web**) del Explorador de ejecución muestra la información del servidor web, en particular:
+The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
 
-*   **Uso de la caché web**: indica el número de páginas presentes en la caché web así como su porcentaje de uso. Esta información sólo está disponible si el servidor web está activo y si el tamaño de la caché es mayor que 0.
+- **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. Esta información sólo está disponible si el servidor web está activo y si el tamaño de la caché es mayor que 0.
 
-*   **Tiempo de actividad del servidor web**: indica la duración del uso (en formato horas:minutos:segundos) del servidor web. Esta información sólo está disponible si el servidor web está activo.
+- **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. Esta información sólo está disponible si el servidor web está activo.
 
-*   **Conteo de visitas web**: indica el número total de peticiones HTTP recibidas desde el arranque del servidor web, así como un número instantáneo de peticiones por segundo (medida tomada entre dos actualizaciones del Explorador de ejecución). Esta información sólo está disponible si el servidor web está activo.
-
-
-
+- **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). Esta información sólo está disponible si el servidor web está activo.
 
 ## URL para la administración
 
-Las URL de administración del sitio web le permiten controlar el sitio web publicado en su servidor. 4D Web Server acepta cuatro URLs específicas: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* y */4DWEBTEST*.
+Las URL de administración del sitio web le permiten controlar el sitio web publicado en su servidor. 4D Web Server accepts four particular URLs: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ and _/4DWEBTEST_.
 
-> */4DSTATS*, */4DHTMLSTATS* y */4DCACHECLEAR* sólo están disponibles para el diseñador y el administrador de la base de datos. Si el sistema de contraseñas 4D no ha sido activado, estas URLs están disponibles para todos los usuarios. /4DWEBTEST está siempre disponible.
-
+> _/4DSTATS_, _/4DHTMLSTATS_ and _/4DCACHECLEAR_ are only available to the Designer and Administrator of the database. Si el sistema de contraseñas 4D no ha sido activado, estas URLs están disponibles para todos los usuarios. /4DWEBTEST está siempre disponible.
 
 ### /4DSTATS
 
-La URL **/4DSTATS** devuelve varios elementos de información en una tabla HTML (visualizable en un navegador):
+The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
 
-| Elemento                  | Descripción                                                        |
-| ------------------------- | ------------------------------------------------------------------ |
-| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes)              |
-| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                               |
-| Cached Object Max Size    | Tamaño máximo de cada objeto en la caché (en bytes)                |
-| Cache Use                 | Porcentaje de caché utilizado                                      |
-| Cached Objects            | Número de objetos encontrados en la caché, **incluyendo imágenes** |
+| Elemento                  | Descripción                                                              |
+| ------------------------- | ------------------------------------------------------------------------ |
+| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes) |
+| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                  |
+| Cached Object Max Size    | Tamaño máximo de cada objeto en la caché (en bytes)   |
+| Cache Use                 | Porcentaje de caché utilizado                                            |
+| Cached Objects            | Number of objects found in the cache, **including pictures**             |
 
 Esta información puede permitirle comprobar el funcionamiento de su servidor y, eventualmente, adaptar los parámetros correspondientes.
-> El comando `WEB GET STATISTICS` permite obtener también información sobre cómo se está utilizando la caché de las páginas estáticas.
+
+> The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
 
 ### /4DHTMLSTATS
 
-La URL */4DHTMLSTATS* devuelve, también como una HTML, la misma información que la URL */4DSTATS*. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
+The _/4DHTMLSTATS_ URL returns, also as an HTML table, the same information as the _/4DSTATS_ URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
 | Elemento                  | Descripción                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------------ |
-| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes)                                |
-| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                                                 |
-| Cached Object Max Size    | Tamaño máximo de cada objeto en la caché (en bytes)                                  |
+| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes)             |
+| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                              |
+| Cached Object Max Size    | Tamaño máximo de cada objeto en la caché (en bytes)               |
 | Cache Use                 | Porcentaje de caché utilizado                                                        |
-| Cached Objects            | Número de objetos encontrados en la caché, **sin imágenes**                          |
+| Cached Objects            | Number of objects found in the cache, **without pictures**                           |
 | Objetos filtrados         | Número de objetos en la caché que no se cuentan por URL, en particular, las imágenes |
-
 
 ### /4DCACHECLEAR
 
-La URL */4DCACHECLEAR* elimina inmediatamente las páginas estáticas y las imágenes de la caché. Por tanto, permite "forzar" la actualización de las páginas que han sido modificadas.
+The _/4DCACHECLEAR_ URL immediately clears the cache of the static pages and images. Por tanto, permite "forzar" la actualización de las páginas que han sido modificadas.
 
 ### /4DWEBTEST
 
-La URL */4DWEBTEST* permite verificar el estado del servidor web. Cuando se llama a esta URL, 4D devuelve un archivo texto con los campos HTTP siguientes llenos:
+The _/4DWEBTEST_ URL is designed to check the web server status. Cuando se llama a esta URL, 4D devuelve un archivo texto con los campos HTTP siguientes llenos:
 
-| Campo HTTP | Descripción                                 | Ejemplo                                                                                                                         |
-| ---------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Fecha      | fecha actual en el formato RFC 822          | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/Número de versión                        | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| Campo HTTP | Descripción                                              | Ejemplo                                                                                                                                                                                                                                                                                                                                            |
+| ---------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fecha      | fecha actual en el formato RFC 822                       | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                                                                                                                                                                                                       |
+| Server     | 4D/Número de versión                                     | 4D/18.5.0 (Build 18R5.257368)                                                                                                                                                                                                                                                   |
 | User-Agent | nombre y versión @ dirección IP del cliente | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
-
-
 
 ## Logs
 
 4D le permite generar dos historiales de peticiones web:
 
-- un historial de depuración, útil en la fase de desarrollo del servidor web (*HTTPDebugLog.txt*),
-- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (*logweb.txt*).
+- a debug log, useful in the web server development phase (_HTTPDebugLog.txt_),
+- a standardized web request log, rather used for statistic purposes (_logweb.txt_).
 
-Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del proyecto de aplicación.
+Both log files are automatically created in the **Logs** folder of the application project.
 
 ### HTTPDebugLog.txt
 
-El [archivo de depuracièon http](webServerConfig.md#debug-log) puede activarse vía el objeto [`web server`](webServerObject.md) o el comando `WEB FIXER OPTION`.
+The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
 
 Este archivo de historial registra cada petición HTTP y cada respuesta en modo bruto (raw). Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
 Los siguientes campos se registran tanto para la solicitud como para la respuesta:
 
-| Nombre del campo | Descripción                                                        |
-| ---------------- | ------------------------------------------------------------------ |
-| SocketID         | ID del socket utilizado para la comunicación                       |
+| Nombre del campo | Descripción                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| SocketID         | ID del socket utilizado para la comunicación                                          |
 | PeerIP           | Dirección IPv4 del host (cliente)                                  |
 | PeerPort         | Puerto utilizado por host (cliente)                                |
 | TimeStamp        | Timestamp en milisegundos (desde el inicio del sistema)            |
 | ConnectionID     | Conexión UUID (UUID del VTCPSocket utilizado para la comunicación) |
-| SequenceNumber   | Número de operación único y secuencial en la sesión de historial   |
-
+| SequenceNumber   | Número de operación único y secuencial en la sesión de historial                      |
 
 ### logweb.txt
 
-El [archivo de registros de historial web](webServerConfig.md#log-recording) puede activarse vía el objeto [`web server`](webServerObject.md), el comando `WEB SET OPTION`, o la página **Web/Log (tipo)** de las propiedades. Debe seleccionar el formato de historial.
+The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. Debe seleccionar el formato de historial.
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as:
+_host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_
+Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 El formato DLF (Combined Log Format) es similar al formato CLF (Common Log Format) y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent. Esta es la descripción de los formatos CLF/DLF (no personalizables):
 
-| Nombre del campo     | Descripción                                                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                 | Dirección IP del cliente (por ejemplo: "192.100.100.10)                                                                                                                   |
-| rfc931               | información no generada por 4D, siempre es - (un signo menos                                                                                                              |
-| user                 | nombre de usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).                             |
+| Nombre del campo                                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host                                                                 | Dirección IP del cliente (por ejemplo: "192.100.100.10)                                                                                                                                                                                                                                   |
+| rfc931                                                               | información no generada por 4D, siempre es - (un signo menos                                                                                                                                                                                                                                                                                              |
+| user                                                                 | nombre de usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).                                                                                                                                     |
 | DD/MMM/YYYY:HH:MM:SS | DD: día, MMM: una abreviatura de 3 letras para el nombre del mes (Jan, Feb,...), YYYY: año, HH: hora, MM: minutos, SS: segundos. La fecha y hora son locales al servidor. |
-| request              | solicitud enviada por el cliente (por ejemplo, GET /index.htm HTTP/1.0                                                                                                    |
-| state                | respuesta dada por el servidor                                                                                                                                            |
-| length               | tamaño de los datos devueltos (excepto el encabezado HTTP) o 0                                                                                                            |
-| Referer              | Sólo DLF- Contiene la URL de la página que apunta al documento solicitado.                                                                                                |
-| User-agent           | DLF únicamente - Contiene el nombre y la versión del navegador o del software del cliente en el origen de la solicitud                                                    |
+| request                                                              | solicitud enviada por el cliente (por ejemplo, GET /index.htm HTTP/1.0                                                                                                                                                                                                                                                    |
+| state                                                                | respuesta dada por el servidor                                                                                                                                                                                                                                                                                                                                               |
+| length                                                               | tamaño de los datos devueltos (excepto el encabezado HTTP) o 0                                                                                                                                                                                                                                                                                            |
+| Referer                                                              | Sólo DLF- Contiene la URL de la página que apunta al documento solicitado.                                                                                                                                                                                                                                                                                   |
+| User-agent                                                           | DLF únicamente - Contiene el nombre y la versión del navegador o del software del cliente en el origen de la solicitud                                                                                                                                                                                                                                                       |
 
 #### ELF/WLF
 
@@ -190,62 +178,62 @@ El formato WLF (WebStar Log Format) fue desarrollado específicamente para el se
 ##### Configurar los campos
 
 Al elegir el formato ELF o WLF, el área "Web Log Token Selection" muestra los campos disponibles para el formato elegido. Deberá seleccionar cada campo para incluirlo en el registro. Para ello, marque los campos deseados.
+
 > No puede seleccionar el mismo campo dos veces.
 
 La siguiente tabla enumera los campos disponibles para cada formato (en orden alfabético) y describe su contenido:
 
-| Campo          | ELF | WLF | Valor                                                                                                                                                 |
-| -------------- | --- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                                                                                             |
-| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                                                                                                   |
-| C_DNS          | X   | X   | Dirección IP del DNS (ELF: campo idéntico al campo C_IP)                                                                                              |
-| C_IP           | X   | X   | Dirección IP del cliente (por ejemplo 192.100.100.10)                                                                                                 |
-| CONNECTION_ID  |     | X   | Número de identificación de la conexión                                                                                                               |
-| CS(COOKIE)     | X   | X   | Información sobre las cookies contenidas en la petición HTTP                                                                                          |
-| CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                                                                                                        |
-| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                                                                                                   |
-| CS(USER_AGENT) | X   | X   | Información sobre el software y el sistema operativo del cliente                                                                                      |
-| CS_SIP         | X   | X   | Dirección IP del servidor                                                                                                                             |
-| CS_URI         | X   | X   | URI sobre el que se realiza la petición                                                                                                               |
-| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                                                 |
-| CS_URI_STEM  | X   | X   | Parte de la solicitud sin los parámetros de la consulta                                                                                               |
-| DATE           | X   | X   | DD: día, MMM: abreviación de 3 letras para el mes (Jan, Feb,...), YYYY: año                                                                           |
-| METHOD         | X   | X   | Método HTTP utilizado para la solicitud enviada al servidor                                                                                           |
-| PATH_ARGS      |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                                               |
-| STATUS         | X   | X   | Respuesta ofrecida por el servidor                                                                                                                    |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                                   |
-| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                                           |
-| USER           | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos). Si el nombre de usuario contiene espacios, se sustituyen por _ (subrayado) |
-| URL            |     | X   | URL solicitado por el cliente                                                                                                                         |
+| Campo                                                  | ELF | WLF | Valor                                                                                                                                                                                                                            |
+| ------------------------------------------------------ | --- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED                    |     | X   | Número de bytes recibidos por el servidor                                                                                                                                                                                        |
+| BYTES_SENT                        | X   | X   | Número de bytes enviados por el servidor al cliente                                                                                                                                                                              |
+| C_DNS                             | X   | X   | Dirección IP del DNS (ELF: campo idéntico al campo C_IP)                                                                                                                 |
+| C_IP                              | X   | X   | Dirección IP del cliente (por ejemplo 192.100.100.10)                                                                                                         |
+| CONNECTION_ID                     |     | X   | Número de identificación de la conexión                                                                                                                                                                                          |
+| CS(COOKIE)                          | X   | X   | Información sobre las cookies contenidas en la petición HTTP                                                                                                                                                                     |
+| CS(HOST)                            | X   | X   | Campo Host de la petición HTTP                                                                                                                                                                                                   |
+| CS(REFERER)                         | X   | X   | URL de la página que apunta al documento solicitado                                                                                                                                                                              |
+| CS(USER_AGENT) | X   | X   | Información sobre el software y el sistema operativo del cliente                                                                                                                                                                 |
+| CS_SIP                            | X   | X   | Dirección IP del servidor                                                                                                                                                                                                        |
+| CS_URI                            | X   | X   | URI sobre el que se realiza la petición                                                                                                                                                                                          |
+| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                                                                                                                            |
+| CS_URI_STEM  | X   | X   | Parte de la solicitud sin los parámetros de la consulta                                                                                                                                                                          |
+| DATE                                                   | X   | X   | DD: día, MMM: abreviación de 3 letras para el mes (Jan, Feb,...), YYYY: año                                   |
+| METHOD                                                 | X   | X   | Método HTTP utilizado para la solicitud enviada al servidor                                                                                                                                                                      |
+| PATH_ARGS                         |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                                                                                                          |
+| STATUS                                                 | X   | X   | Respuesta ofrecida por el servidor                                                                                                                                                                                               |
+| TIME                                                   | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                                                              |
+| TRANSFER_TIME                     | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                                                                                                                      |
+| USER                                                   | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos). Si el nombre de usuario contiene espacios, se sustituyen por _ (subrayado) |
+| URL                                                    |     | X   | URL solicitado por el cliente                                                                                                                                                                                                    |
 
 > Las fechas y horas se indican en GMT.
 
-
 #### Frecuencia del backup
 
-Dado que un archivo *logweb.txt* puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. La activación de una copia de seguridad puede basarse en un periodo de tiempo determinado (expresado en horas, días, semanas o meses), o en función del tamaño del archivo; cuando se alcanza el plazo establecido (o el tamaño del archivo), 4D cierra y archiva automáticamente el archivo de registro actual y crea uno nuevo.
+Since a _logweb.txt_ file can become considerably large, it is possible to set up an automatic archiving mechanism. La activación de una copia de seguridad puede basarse en un periodo de tiempo determinado (expresado en horas, días, semanas o meses), o en función del tamaño del archivo; cuando se alcanza el plazo establecido (o el tamaño del archivo), 4D cierra y archiva automáticamente el archivo de registro actual y crea uno nuevo.
 
-Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo *logweb.txt*.
+When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the _logweb.txt_ file.
 
 El fichero archivado se renombra según el siguiente ejemplo "DYYY_MM_DD_Thh_mm_ss.txt". For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: “D2020_09_04_T15_50_07.txt.” y 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parámetros de backup
 
-Los parámetros de copia de seguridad automáticadel logweb.txt se definen en la página **Web/Log (copia de seguridad)** de los parámetros:
+The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
 
 ![](../assets/en/WebServer/backup.png)
 
-Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
-*   **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
+- **No Backup**: The scheduled backup function is deactivated.
 
-*   **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
-    *   **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+- **Every X hour(s)**: This option is used to program backups on an hourly basis. Puede introducir un valor entre 1 y 24 .
+  - **starting at**: Used to set the time at which the first back up will begin.
 
-*   **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
+- **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
 
-*   **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+- **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 
-*   **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Enter 1 if you want to perform a monthly backup.
+- **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. Enter 1 if you want to perform a monthly backup.
 
-*   **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Una copia de seguridad se activa automáticamente cuando el archivo alcanza el tamaño especificado. Puedes definir un límite de tamaño de 1, 10, 100 o 1000 MB.
+- **Every X MB**: This option is used to program backups based on the size of the current request log file. Una copia de seguridad se activa automáticamente cuando el archivo alcanza el tamaño especificado. Puedes definir un límite de tamaño de 1, 10, 100 o 1000 MB.

@@ -612,7 +612,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 | ---------- | ------ | -- | ------------------------------------------------ |
 | vpObject   | Object | -> | Objeto 4D View Pro que contém a área a converter |
 | rangeObj   | Object | -> | Objeto intervalo                                 |
-| Resultados | Object | <- | Imagem SVG da área|<!-- END REF -->
+| Resultados | Imagem | <- | Imagem SVG da área|<!-- END REF -->
 
 |
 
@@ -3320,6 +3320,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ### VP MOVE CELLS
 
+
 <details><summary>Histórico</summary>
 
 | Release | Mudanças   |
@@ -4494,6 +4495,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 
 O parâmetro *boolValue* permite-lhe passar o valor booleano (**True** ou **False**) que será atribuído ao *rangeObj*.
+
 
 #### Exemplo
 

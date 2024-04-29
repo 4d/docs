@@ -3,7 +3,6 @@ id: propertiesTextAndPicture
 title: テキスト、ピクチャー
 ---
 
-
 ## 背景パス名
 
 オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
@@ -28,8 +27,8 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-|  名称   | データタイプ | とりうる値                                                                                                                                                              |
-|:-----:|:------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|   名称  | データタイプ | とりうる値                                                                                                                                                              |
+| :---: | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### 対象オブジェクト
@@ -48,12 +47,13 @@ title: テキスト、ピクチャー
 | ------------ | ------------------------------------------------------------ |
 | マージンなし       | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | 13 ピクセルのマージン | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
+
 > このプロパティは [縦方向マージン](#縦方向マージン) プロパティとの組み合わせで機能します。
 
 #### JSON 文法
 
-| 名称            | データタイプ | とりうる値                   |
-| ------------- | ------ | ----------------------- |
+| 名称            | データタイプ | とりうる値                                   |
+| ------------- | ------ | --------------------------------------- |
 | customBorderX | number | "カスタム" スタイルで利用可。 最小値: 0 |
 
 #### 対象オブジェクト
@@ -74,7 +74,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#リストボックスヘッダー)
+[List Box Header](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -86,8 +86,8 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名称           | データタイプ | とりうる値  |
-| ------------ | ------ | ------ |
+| 名称           | データタイプ | とりうる値                  |
+| ------------ | ------ | ---------------------- |
 | customOffset | number | 最小値: 0 |
 
 #### 対象オブジェクト
@@ -119,12 +119,10 @@ title: テキスト、ピクチャー
 
 ![](../assets/en/FormObjects/six-states.png)
 
-
-
 #### JSON 文法
 
-| 名称         | データタイプ | とりうる値                     |
-| ---------- | ------ | ------------------------- |
+| 名称         | データタイプ | とりうる値                                     |
+| ---------- | ------ | ----------------------------------------- |
 | iconFrames | number | ソースピクチャーに含まれる状態の数。 最小値: 1 |
 
 #### 対象オブジェクト
@@ -159,13 +157,13 @@ title: テキスト、ピクチャー
 
 このプロパティの各種オプションの結果を次に示します:
 
-| オプション  | 説明                                                        | 例題                                                                |
-| ------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
-| **左**  | テキストはアイコンの左に置かれます。 ボタンの内容は右揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **上**  | テキストはアイコンの上に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **右**  | テキストはアイコンの右に置かれます。 ボタンの内容は左揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **下**  | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **中央** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
+| オプション        | 説明                                                        | 例題                                                                |
+| ------------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Left**     | テキストはアイコンの左に置かれます。 ボタンの内容は右揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Top**      | テキストはアイコンの上に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Right**    | テキストはアイコンの右に置かれます。 ボタンの内容は左揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Bottom**   | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centered** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### JSON 文法
 
@@ -189,16 +187,15 @@ title: テキスト、ピクチャー
 
 ![](../assets/en/FormObjects/hugs.png)
 
-
 #### JSON 文法
 
-| 名称             | データタイプ  | とりうる値               |
-| -------------- | ------- | ------------------- |
+| 名称             | データタイプ  | とりうる値                                  |
+| -------------- | ------- | -------------------------------------- |
 | imageHugsTitle | boolean | true (デフォルト), false |
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) (ヘルプ以外のスタイル) - [チェックボックス](checkbox_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル) - [ラジオボタン](radio_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル)
+[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
 
 ---
 
@@ -212,8 +209,8 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名称            | データタイプ | とりうる値                   |
-| ------------- | ------ | ----------------------- |
+| 名称            | データタイプ | とりうる値                                   |
+| ------------- | ------ | --------------------------------------- |
 | customBorderY | number | "カスタム" スタイルで利用可。 最小値: 0 |
 
 #### 対象オブジェクト
@@ -235,8 +232,9 @@ title: テキスト、ピクチャー
 ポップアップメニューシンボルをボタンに付加する際に、リンクと分離という2つのオプションから選択することができます:
 
 |                           リンク                           |                             分離                             |
-|:-------------------------------------------------------:|:----------------------------------------------------------:|
+| :-----------------------------------------------------: | :--------------------------------------------------------: |
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
+
 > 実際に "分離" モードを利用できるかどうかは、ボタンスタイルとプラットフォームによって決まります。
 
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
@@ -252,14 +250,14 @@ title: テキスト、ピクチャー
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page1006.html)、[`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page542.html) コマンドを使用してこれを処理します。
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
 
 #### JSON 文法
 
-| 名称             | データタイプ | とりうる値                                                                       |
-|:-------------- | ------ | --------------------------------------------------------------------------- |
+| 名称             | データタイプ | とりうる値                                                |
+| :------------- | ------ | ---------------------------------------------------- |
 | popupPlacement | string | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
 
 #### 対象オブジェクト
 
-[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

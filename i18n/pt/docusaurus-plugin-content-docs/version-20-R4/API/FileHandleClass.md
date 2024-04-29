@@ -281,7 +281,7 @@ Esta propriedade é **read/write**.
 
 :::caution
 
-When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. Entretanto, a unidade de medição de deslocamento (offset) difere de acordo com a função de leitura: com [`readBlob()`](#readblob)`.offset` é um número de bytes, enquanto que com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
 
 ```4d
   // Abra um arquivo texto europeu usando a codificação utf-16 (dois bytes por caractere)
@@ -376,7 +376,7 @@ Quando esta função é executada, a posição atual ([`.offset`](#offset)) é a
 
 :::caution Alerta
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para saber mais, veja a [descrição de .offset](#offset).
+Essa função assume que a propriedade [`.offset`](#offset) é um número de caracteres, não um número de bytes. Para saber mais, veja a [descrição de .offset](#offset).
 
 :::
 
@@ -423,7 +423,7 @@ Quando esta função é executada, o ([.offset](#offset)) é colocado logo após
 
 :::caution Alerta
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para saber mais, veja a [descrição de .offset](#offset).
+Essa função assume que a propriedade [`.offset`](#offset) é um número de caracteres, não um número de bytes. Para saber mais, veja a [descrição de .offset](#offset).
 
 :::
 

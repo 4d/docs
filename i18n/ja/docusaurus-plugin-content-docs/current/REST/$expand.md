@@ -1,25 +1,24 @@
 ---
 id: expand
-title: '$expand'
+title: $expand
 ---
 
+Expands an image stored in an Image attribute (_e.g._, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+or<br/>
+Expands an BLOB attribute to save it.
 
-画像属性に保存されているピクチャーを展開します (*例*: `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/> または <br/> 保存するために BLOB属性を展開します。
-
-> **互換性に関する注記**: 互換性のため、$expand はリレーション属性を展開するのに使用できます (*例*: `Company(1)?$expand=staff` または `Employee/?$filter="firstName BEGIN a"&$expand=employer`)。 しかしながら、これらの場合には [`$attributes`]($attributes.md) を使用するのが推奨されます。
-
-
+> **Compatibility**: For compatibility reasons, $expand can be used to expand a relational attribute (_e.g._, `Company(1)?$expand=staff` or `Employee/?$filter="firstName BEGIN a"&$expand=employer`). It is however recommended to use [`$attributes`]($attributes.md) for this feature.
 
 ## 画像属性の表示
 
 画像属性の全体像を表示させるには、次のように書きます:
 
- `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-画像形式についての詳細は [`$imageformat`]($imageformat.md) を参照ください。 version パラメーターについての詳細は [`$version`]($version.md) を参照ください。
+For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
 
 ## BLOB属性のディスク保存
 
 データクラスに保存されている BLOB をディスクに保存するには、$binary に "true" を渡すことで、次のように書けます:
 
-  `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
+`GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

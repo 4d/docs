@@ -7,7 +7,6 @@ title: On Close Box
 | --- | ----- | ---------------------- |
 | 22  | フォーム  | ウィンドウのクローズボックスがクリックされた |
 
-
 ## 説明
 
 `On Close Box` イベントは、ユーザーがウィンドウのクローズボックスをクリックすると生成されます。
@@ -23,8 +22,7 @@ title: On Close Box
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("レコードが変更されました。 変更を保存しますか？
-          ")
+          CONFIRM("レコードが変更されました。 変更を保存しますか？")
           If(OK=1)
              ACCEPT
           Else

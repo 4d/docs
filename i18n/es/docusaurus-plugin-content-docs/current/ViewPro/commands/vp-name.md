@@ -14,7 +14,7 @@ title: VP Name
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                     |                  |
 | rangeName  | Text    | -> | Nombre del rango existente                                       |                  |
 | sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Range object of name                                             | <!-- END REF --> |
+| Result     | Object  | <- | Rango de nombre                                                  | <!-- END REF --> |
 
 #### Descripción
 

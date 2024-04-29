@@ -13,7 +13,7 @@ title: VP SET TEXT VALUE
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage          |                  |
 | textValue     | Text   | -> | Valeur texte à fixer |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur  | <!-- END REF --> |
 
 #### Description
 

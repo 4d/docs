@@ -3,78 +3,77 @@ id: sessions
 title: Webセッション
 ---
 
-4D Webサーバーは、**Webセッション** を管理するビルトインの機能を提供します。 Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
+The 4D web server provides built-in features for managing **web sessions**. Webセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 Webセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
 
 Webセッションでは、以下のことが可能です:
 
-- 同一のWebクライアントからの複数のリクエストを、無制限のプリエンプティブプロセスで同時に処理 (Webセッションは **スケーラブル**です)。
-- `Session` オブジェクトと [Session API](API/SessionClass.md) を介したセッションの管理。
-- セッションの [.storage](../API/SessionClass.md#storage) を使用して、Webクライアントのプロセス間でデータを保存および共有。
+- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
+- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - セッションを実行しているユーザーに権限を関連付ける。
 
 ## 用途
 
 Webセッションは次のものに使用されます:
 
-- HTTPリクエストを送信する [Webアプリケーション](gettingStarted.md)
-- [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodlyフォーム](qodly-studio.md) が使用する [REST API](../REST/authUsers.md) への呼び出し
-
+- [Web applications](gettingStarted.md) sending http requests,
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
 ## Webセッションの有効化
 
 セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。 セッション管理を有効化する方法は複数あります:
 
-- ストラクチャー設定の Web / オプション (I) ページの **スケーラブルセッション** を使用する (永続的な設定): ![alt-text](../assets/en/WebServer/settingsSession.png)
+- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting):
+  ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
+このオプションは、新規プロジェクトではデフォルトで選択されています。 It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
+- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the _settings_ parameter of the [`.start()`](API/WebServerClass.md#start) function). この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
-> メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
+> The `WEB SET OPTION` command can also set the session mode for the main Web server.
 
 いずれの場合も、設定はマシンに対しローカルなものです。つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。
 
-> **互換性について**: 4D v18 R6 以前の 4Dバージョンで作成されたプロジェクトでは、**旧式セッション** オプションが使用できます (詳細については、[doc.4d.com](https://doc.4d.com) の Webサイトを参照ください)。
-
+> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
 
 ## セッションの実装
 
-[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID_*AppName*"、*AppName* はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。 この cookie は、アプリケーションのカレントWebセッションを参照します。
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. この cookie は、アプリケーションのカレントWebセッションを参照します。
 
 :::info
 
-この cookie の名前は、[`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) プロパティを使用して取得できます。
+The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
 
 :::
 
-1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID_*AppName*" cookie の存在と値をチェックします。
+1. In each web client request, the Web server checks for the presence and the value of the private "4DSID__AppName_" cookie.
 
 2. cookie に値がある場合、4D は既存セッションの中からこのクッキーを作成したセッションを探し、見つかった場合には再利用します。
 
-2. クライアントからのリクエストが、すでに開かれているセッションに対応していない場合:
+3. クライアントからのリクエストが、すでに開かれているセッションに対応していない場合:
 
-- プライベートな "4DSID_*AppName*" cookie を持つ新しいセッションが Webサーバー上に作成されます。
-- 新しいゲスト `Session` オブジェクトが作成され、このスケーラブルWebセッション専用に使用されます。
+- a new session with a private "4DSID__AppName_" cookie is created on the web server
+- a new Guest `Session` object is created and is dedicated to the scalable web session.
 
 :::note
 
-RESTリクエストのための Webセッションを作成するには、利用可能なライセンスが必要な場合があります。詳細は [こちらのページ](../REST/authUsers.md) を参照ください。
+Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
 
 :::
 
-カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](API/SessionClass.md#session) コマンドを介してアクセスできます。
+The `Session` object of the current session can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
 :::info
 
-Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
+Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
 :::
 
 ## セッション情報の保存と共有
 
-各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
+Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
 
 ## セッションの有効期限
 
@@ -85,43 +84,41 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-Webセッションが閉じられた後に [`Session`](API/SessionClass.md#session) コマンドが呼び出されると:
+When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
-- `Session` オブジェクトには権限が含まれていません (ゲストセッション)。
-- [`.storage`](API/SessionClass.md#storage) プロパティは空です。
+- the `Session` object does not contain privileges (it is a Guest session)
+- the [`.storage`](API/SessionClass.md#storage) property is empty
 - 新しいセッションcookie がセッションに関連付けられています。
 
 :::info
 
-[**ログアウト**](qodly-studio.md#ログアウト) 機能を使用して、Qodly フォームからのセッションを閉じることができます。
+You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
 
 :::
-
 
 ## 権限
 
 Webユーザーセッションには、権限を関連付けることができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
 
-権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。
+You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 例:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-    // アクセス権が付与されているので、何もしません
+	//Access is granted, do nothing
 Else
-    // 認証ページを表示します
+	//Display an authentication page
 End if
 ```
 
 :::info
 
-権限は ORDAアーキテクチャーの中心に実装されており、データストアやデータクラス関数へのアクセスを制御するための強力な技術を開発者に提供します。 詳細については、ORDA の章の [**権限**](../ORDA/privileges.md) を参照ください。
+権限は ORDAアーキテクチャーの中心に実装されており、データストアやデータクラス関数へのアクセスを制御するための強力な技術を開発者に提供します。 For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
 
 :::
-
 
 ## 例題
 
@@ -131,25 +128,23 @@ CRMアプリケーションを使って、各営業担当者が自分の顧客�
 
 営業担当者がログインし、Webサーバー上でセッションを開き、上位3名の顧客をセッションに読み込ませたいとします。
 
-
 1. セッションを開くために以下の URL を実行します:
 
 ```
 http://localhost:8044/authenticate.shtml
 ```
 
-> 本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、[HTTPS接続](API/WebServerClass.md#httpsenabled) を使用する必要があります。
+> In a production environment, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.
 
-
-2. `authenticate.shtml` ページは、*userId* と *password* の入力フィールドを含むフォームで、4DACTION の POSTアクションを送信します:
+2. The `authenticate.shtml` page is a form containing _userId_ et _password_ input fields and sending a 4DACTION POST action:
 
 ```html
 <!DOCTYPE html>
 <html>
 <body bgcolor="#ffffff">
 <FORM ACTION="/4DACTION/authenticate" METHOD=POST>
-    UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
-    Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+	UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+	Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
 </FORM>
 </body>
@@ -158,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. authenticate project メソッドは、*userID* に合致する担当者を探し、*SalesPersons* テーブルに保存されているハッシュ値をパスワードと照合します。
+3. The authenticate project method looks for the _userID_ person and validates the password against the hashed value already stored in the _SalesPersons_ table:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
@@ -202,4 +197,4 @@ End if
 
 ## 関連項目 (ブログ記事)
 
-[高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)

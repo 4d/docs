@@ -611,11 +611,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Paramètres | Type   |    | Description                                     |
-| ---------- | ------ | -- | ----------------------------------------------- |
-| vpObject   | Object | -> | Objet 4D View Pro contenant la zone à convertir |
-| rangeObj   | Object | -> | Objet plage                                     |
-| Résultat   | Object | <- | Image SVG de la zone|<!-- END REF -->
+| Paramètres | Type    |    | Description                                     |
+| ---------- | ------- | -- | ----------------------------------------------- |
+| vpObject   | Object  | -> | Objet 4D View Pro contenant la zone à convertir |
+| rangeObj   | Object  | -> | Objet plage                                     |
+| Résultat   | Picture | <- | Image SVG de la zone|<!-- END REF -->
 
 |
 
@@ -3341,6 +3341,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ### VP MOVE CELLS
 
+
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -4531,6 +4532,7 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 
 
 Le paramètre *boolValue* vous permet de passer la valeur booléenne (**True** ou **False**) qui sera assignée à *rangeObj*.
+
 
 #### Exemple
 

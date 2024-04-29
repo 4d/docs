@@ -14,14 +14,14 @@ Le tableau suivant permet d'indiquer si l'utilisation du mode préemptif pour le
 
 | 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilé         |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------- |
-| Serveur REST        | coopératif                                                                                                               | préemptif                                                    | préemptif       |
+| Serveur REST        | coopératif                                                                                                               | preemptive                                                   | preemptive      |
 | Serveur Web         | coopératif                                                                                                               | coopératif                                                   | *paramètre web* |
 | Server Web Services | coopératif                                                                                                               | coopératif                                                   | *paramètre web* |
 | Legacy REST         | coopératif                                                                                                               | *paramètre web*                                              | *paramètre web* |
 
 | 4D distant/monoposte | Interprété | Compilé         |
 | -------------------- | ---------- | --------------- |
-| Serveur REST         | coopératif | préemptif       |
+| Serveur REST         | coopératif | preemptive      |
 | Serveur Web          | coopératif | *paramètre web* |
 | Server Web Services  | coopératif | *paramètre web* |
 | Legacy REST          | coopératif | *paramètre web* |

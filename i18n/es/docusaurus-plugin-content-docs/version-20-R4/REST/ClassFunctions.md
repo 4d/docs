@@ -58,7 +58,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
 
 ### Parámetro de valor escalar
@@ -128,7 +128,7 @@ La clase de `DataStore` US_Cities ofrece una API:
 Class extends DataStoreImplementation
 
 exposed Function getName()
-    $0:="US cities and zip codes manager" 
+    $0:="US cities and zip codes manager"
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -139,7 +139,7 @@ A continuación, puede ejecutar esta petición:
 
 ```
 {
-"result": "US cities and zip codes manager" 
+"result": "US cities and zip codes manager"
 }
 ```
 
@@ -181,12 +181,12 @@ El resultado es una entidad:
     "county": {
         "__deferred": {
             "uri": "/rest/County(72003)",
-            "__KEY": "72003" 
+            "__KEY": "72003"
         }
     },
     "zips": {
         "__deferred": {
-            "uri": "/rest/City(1)/zips?$expand=zips" 
+            "uri": "/rest/City(1)/zips?$expand=zips"
         }
     }
 }
@@ -259,7 +259,7 @@ exposed Function getAgeAverage
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
-    End for each 
+    End for each
     $0:=$sum/This.length
 ```
 
@@ -302,7 +302,7 @@ A continuación, puede ejecutar esta petición:
 
 ```
 {
-    "result": "Wilbert - Bull is ... 21" 
+    "result": "Wilbert - Bull is ... 21"
 }
 ```
 
@@ -322,7 +322,7 @@ exposed Function pushData
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status es un objeto con una propiedad booleana "success"
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     $0:=$status
 
@@ -330,7 +330,7 @@ exposed Function pushData
         $status:=$entity.save()
        If ($status.success)
            $0:=$entity
-      End if 
+      End if
     End if
 
 ```
@@ -346,7 +346,7 @@ Cuerpo de la petición:
 "__DATACLASS":"Students",
 "__ENTITY":true,
 "firstname":"Ann",
-"lastname":"Brown" 
+"lastname":"Brown"
 }]
 ```
 
@@ -392,7 +392,7 @@ Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **
 
 #### Result
 
-``` 
+```
 {
     "__entityModel": "Students",
     "__DATACLASS": "Students",
@@ -403,7 +403,7 @@ Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **
     "firstname": "Ann",
     "lastname": "BROWNIE",
     "schoolID": null,
-    "school": null 
+    "school": null
 }
 ```
 
@@ -442,7 +442,7 @@ Cuerpo de la petición:
        "school": {
         "__deferred": {
             "uri": "/rest/Schools(2)",
-            "__KEY": "2" 
+            "__KEY": "2"
         }
     }
 }
@@ -514,14 +514,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Bucle en la selección de entidades
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if 
-    End for each 
+        End if
+    End for each
 
     $0:=$keys
 ```
@@ -540,9 +540,9 @@ Cuerpo de la petición:
 [
 {
 "__ENTITIES":true,
-"__DATASET":"9B9C053A111E4A288E9C1E48965FE671" 
+"__DATASET":"9B9C053A111E4A288E9C1E48965FE671"
 },
-"Passed" 
+"Passed"
 ]
 
 ```
@@ -573,10 +573,10 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 // $newStudent es una entidad "student" a procesar
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// Hemos añadido una entidad a la selección de entidades $students en el cliente
-$students.add($newStudent) 
+// We add an entity to the $students entity selection on the client
+$students.add($newStudent)
 
-// Llamamos a una función en la clase StudentsSelection que devuelve la edad media de los estudiantes en la selección de entidades
-// La función se utiliza en el servidor en la selección de la entidad $students actualizada, que incluye el estudiante añadido por el cliente
+// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
+// The function is executed on the server on the updated $students entity selection which included the student added from the client
 $ageAverage:=$students.getAgeAverage()
 ```

@@ -3,7 +3,6 @@ id: webServerObject
 title: Objeto Web Server
 ---
 
-
 A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
 
 For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
@@ -14,17 +13,17 @@ For example, if you installed two components in your main application, you can s
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D. WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
-> Os [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) herdados da linguagem 4D são compatíveis, mas não é possível selecionar o servidor Web ao qual eles se aplicam (veja abaixo).
+> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
 Each web server (host application or component) can be used in its own separate context, including:
+
 - `On Web Authentication` and `On Web Connection` database method calls
 - o processamento das etiquetas 4D e das chamadas de métodos,
 - sessões Web e gestão do protocolo TLS.
 
 This allows you to develop independant components and features that come with their own web interfaces.
-
 
 ## Instanciar um objeto servidor Web
 
@@ -38,53 +37,52 @@ $nbSrv:=WEB Server list.length
 To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
 
 ```4d
-    //create an object variable of the 4D. WebServer class
-var webServer : 4D. WebServer 
-    //call the web server from the current context
+	//create an object variable of the 4D.WebServer class
+var webServer : 4D.WebServer 
+	//call the web server from the current context
 webServer:=WEB Server  
 
-    //equivalent to
+	//equivalent to
 webServer:=WEB Server(Web server database)
 ```
 
 Se a aplicação utilizar componentes e o usuário pretender chamar:
+
 - o servidor Web da aplicação host a partir de um componente ou
 - o servidor que recebeu o pedido (qualquer que seja o servidor),
 
 também pode ser utilizado:
 
 ```4d
-var webServer : 4D. WebServer 
-    //call the host web server from a component  
+var webServer : 4D.WebServer 
+	//call the host web server from a component  
 webServer:=WEB Server(Web server host database)  
-    //call the target web server
+	//call the target web server
 webServer:=WEB Server(Web server receiving request)  
 ```
-
 
 ## Funções do servidor Web
 
 A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
-| Funções                                  | Parâmetro        | Valor retornado  | Descrição             |
-| ---------------------------------------- | ---------------- | ---------------- | --------------------- |
+| Funções                                  | Parâmetro                           | Valor retornado                     | Descrição             |
+| ---------------------------------------- | ----------------------------------- | ----------------------------------- | --------------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objecto) | Inicia o servidor web |
-| [`stop()`](API/WebServerClass.md#start)  | -                | -                | Pára o servidor Web   |
+| [`stop()`](API/WebServerClass.md#start)  | -                                   | *                                   | Pára o servidor Web   |
 
 To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
 
 ```4d
 var $status : Object
-    //to start a web server with default settings
+  	//to start a web server with default settings
 $status:=webServer.start()
-    //to start the web server with custom settings  
-    //$settings object contains web server properties
+	//to start the web server with custom settings  
+	//$settings object contains web server properties
 webServer.start($settings)
 
-    //to stop the web server
+	//to stop the web server
 $status:=webServer.stop()
 ```
-
 
 ## Propriedades do servidor web
 
@@ -99,12 +97,11 @@ Estas propriedades são definidas:
 - If the web server is not started, the properties contain the values that will be used at the next web server startup.
 - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
-
+> _isRunning_, _name_, _openSSLVersion_, and _perfectForwardSecrecy_ are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
 ## Âmbito dos comandos 4D Web
 
-A linguagem 4D contém [vários comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) que podem ser usados para controlar o servidor Web. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |

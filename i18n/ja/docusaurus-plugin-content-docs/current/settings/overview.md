@@ -7,36 +7,33 @@ title: 設定
 
 ![](../assets/en/settings/main.png)
 
-> 4D は、4D IDE (統合開発環境) アプリケーションに適用される、**環境設定** と呼ばれるもうひとつの設定グループを提供します。 詳細は [環境設定](../Preferences/general.md) を参照ください。
-
+> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
 
 ## ストラクチャー設定を開く
 
 ストラクチャー設定ダイアログを開くには、以下のいずれかの手順をおこないます:
 
--   **デザイン ＞ 設定...** メニューオプションを使用する
--   4Dツールバーの **設定** ボタンをクリックする
--   4D Server上では、**編集 ＞ 設定...** メニューオプションを使用する
+- using the **Design > Settings...** menu option
+- by clicking **Settings** on the 4D toolbar
+- on 4D Server, using the **Edit > Settings...** menu option
 
-[**ユーザー設定** モードが有効化されている](../Desktop/user-settings.md) 場合には、**設定...** は **ストラクチャー設定** に名称変更され、次の 2つのメニューコマンドが追加されます:
+When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
--   **ユーザー設定...** は外部のユーザーファイルに保存される設定へのアクセスを提供します。 これらの設定が変更されていると、ストラクチャー設定の代わりに使用されます。
--   **データファイル用のユーザー設定...** はカレントデータファイルに紐づいた外部のユーザーファイルに保存される設定へのアクセスを提供します。 これらの設定が変更されていると、ユーザー設定やストラクチャー設定の代わりに使用されます。
+- **User Settings...** gives you access to settings that can be stored externally in a user file. これらの設定が変更されていると、ストラクチャー設定の代わりに使用されます。
+- **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. これらの設定が変更されていると、ユーザー設定やストラクチャー設定の代わりに使用されます。
 
 ### ロック情報
 
 プロジェクトモードおよびクライアント/サーバーモードの両方において、以下のような場合にロックは起こりえます:
 
--   *settings.4DSettings* ファイルが "読み取り専用" であるとき (プロジェクトモードのみ)。 この場合に設定を変更しようとすると、(それが可能である場合には) アンロックするためのアラートが表示されます。
--   2人以上のユーザーが同じ設定を同時に編集しようとしたとき。 最初のユーザーがウィンドウを閉じてロックを解除するまで、その設定は使用することができません。 (クライアント/サーバーモードのみ)
+- The _settings.4DSettings_ file is 'Read-only' (Projects only). この場合に設定を変更しようとすると、(それが可能である場合には) アンロックするためのアラートが表示されます。
+- 2人以上のユーザーが同じ設定を同時に編集しようとしたとき。 最初のユーザーがウィンドウを閉じてロックを解除するまで、その設定は使用することができません。 (クライアント/サーバーモードのみ)
 
 どちらのケースにおいても、設定は "読み取り専用" として開くことはできますが、ロックが解除されるまでは使用することができません。
 
-
-
 ## パラメーターのカスタマイズ
 
-設定ダイアログボックスでは、変更された設定内容は **太字** で表示されます:
+In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
 
 ![](../assets/en/settings/customize-settings.png)
 
@@ -46,9 +43,8 @@ title: 設定
 
 ほとんどの設定は即座に有効になります。 しかし、(起動時モードの設定など) いくつかはデータベースが再起動されたときに有効となります。 この場合、変更した設定が次回起動時から有効になることを知らせるダイアログボックスが表示されます。
 
-
 ## 設定のリセット
 
-パラメーターをデフォルト値に戻し、カスタマイズされたことを示す太字スタイルを取り除くためには、**初期設定にリセット** をクリックします.
+To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
 
 このボタンをクリックすると、現在表示されているページの全パラメーターがリセットされます。 現在のページで最低でも一つのパラメーターが変更されると、このボタンはアクティブになります。

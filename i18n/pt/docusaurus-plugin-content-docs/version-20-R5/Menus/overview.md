@@ -14,6 +14,7 @@ A **menu bar** is a group of menus that can be displayed on a screen together. E
 You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
 
 Quando conceber menus, tenha em mente as duas regras seguintes:
+
 - Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
 - Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
 
@@ -23,8 +24,8 @@ Para criar menus e barras de menu, pode utilizar qualquer um deles:
 - comandos de linguagem para o tema "Menus",
 - uma combinação de ambos.
 
-
 ## Editor de menus
+
 The Menu editor is accessed using the **Menus** button of the Toolbox.
 
 ![](../assets/en/Menus/editor1.png)

@@ -3,15 +3,13 @@ id: sql-server
 title: Página servidor SQL
 ---
 
-
 The **SQL Server** page groups together information about the integrated SQL server of 4D Server. It also includes a button that can be used to control the activation of the server.
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
 
-
 The upper part of the page provides information about the current status of the SQL server of 4D Server.
 
-- **Estado**: Iniciado ou Parado
+- **State**: Started or Stopped
 - **Starting time**: Date and time the SQL server was last launched.
 - **Uptime**: Time elapsed since last startup of the SQL server.
 

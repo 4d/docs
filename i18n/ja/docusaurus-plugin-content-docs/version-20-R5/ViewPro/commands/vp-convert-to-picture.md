@@ -9,11 +9,11 @@ title: VP Convert to picture
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| 引数       | タイプ    |    | 説明                              |                  |
-| -------- | ------ | -- | ------------------------------- | ---------------- |
-| vpObject | Object | -> | 変換するエリアを格納した 4D View Pro オブジェクト |                  |
-| rangeObj | Object | -> | レンジオブジェクト                       |                  |
-| 戻り値      | Object | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
+| 引数       | タイプ     |    | 説明                              |                  |
+| -------- | ------- | -- | ------------------------------- | ---------------- |
+| vpObject | Object  | -> | 変換するエリアを格納した 4D View Pro オブジェクト |                  |
+| rangeObj | Object  | -> | レンジオブジェクト                       |                  |
+| 戻り値      | Picture | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
 
 #### 説明
 

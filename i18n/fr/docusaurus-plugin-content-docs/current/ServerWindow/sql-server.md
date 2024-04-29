@@ -3,24 +3,22 @@ id: sql-server
 title: Page Serveur SQL
 ---
 
-
-La page **SQL Server** regroupe les informations relatives au serveur SQL intégré de 4D Server. Elle comporte également un bouton permettant de contrôler l’activation du serveur.
+The **SQL Server** page groups together information about the integrated SQL server of 4D Server. Elle comporte également un bouton permettant de contrôler l’activation du serveur.
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
 
-
 La partie supérieure de la page fournit des informations sur le statut courant du serveur SQL de 4D Server.
 
-- **Etat** : Démarré ou Arrêté
-- **Date de démarrage** : Date et heure du dernier lancement du serveur SQL.
-- **Durée de fonctionnement** : Délai écoulé depuis le dernier démarrage du serveur SQL.
+- **State**: Started or Stopped
+- **Starting time**: Date and time the SQL server was last launched.
+- **Uptime**: Time elapsed since last startup of the SQL server.
 
 ## Démarrer / Arrêter le serveur SQL
 
 Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur SQL de 4D Server.
 
-- Lorsque l’état du serveur SQL est "Démarré", le bouton est libellé **Arrêter le serveur SQL**. Si vous cliquez sur ce bouton, le serveur SQL de 4D Server est immédiatement stoppé, il ne répond plus aux requêtes SQL externes reçues sur le port TCP désigné.
-- Lorsque l’état du serveur SQL est "Arrêté", le bouton est libellé **Démarrer le serveur SQL**. Si vous cliquez sur ce bouton, le serveur SQL de 4D Server est immédiatement démarré, il répond aux requêtes SQL externes reçues sur le port TCP désigné. A noter que vous devez disposer d’une licence adéquate pour pouvoir exploiter le serveur SQL de 4D.
+- When the SQL server state is "Started," the button is titled **Stop SQL Server**. Si vous cliquez sur ce bouton, le serveur SQL de 4D Server est immédiatement stoppé, il ne répond plus aux requêtes SQL externes reçues sur le port TCP désigné.
+- When the SQL server state is "Stopped," the button is titled **Start SQL Server**. Si vous cliquez sur ce bouton, le serveur SQL de 4D Server est immédiatement démarré, il répond aux requêtes SQL externes reçues sur le port TCP désigné. A noter que vous devez disposer d’une licence adéquate pour pouvoir exploiter le serveur SQL de 4D.
 
 > Le serveur SQL peut également être lancé automatiquement au démarrage de l’application (option des Préférences) ou par programmation.
 
