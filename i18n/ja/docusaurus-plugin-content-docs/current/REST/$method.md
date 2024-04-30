@@ -23,7 +23,7 @@ title: $method
 
 With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) _(e.g._, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
+You can also delete the entities in an entity set, by calling [`$entityset/{}`]($entityset.md#entitysetentitysetid).
 
 ### 例題
 
@@ -31,11 +31,11 @@ You can also delete the entities in an entity set, by calling [`$entityset/{enti
 
 `POST  /rest/Employee(22)/?$method=delete`
 
-<a href="$filter.md"><code>$filter</code></a> を使ったクエリも可能です:
+を使ったクエリも可能です:
 
 `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-<a href="$entityset.md#entitysetentitysetid"><code>$entityset/{entitySetID}</code></a> で呼び出したエンティティセットを削除する場合は次のように書きます:
+で呼び出したエンティティセットを削除する場合は次のように書きます:
 
 `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
