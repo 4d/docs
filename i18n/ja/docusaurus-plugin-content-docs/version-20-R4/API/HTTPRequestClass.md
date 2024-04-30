@@ -145,8 +145,8 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | onResponse             | [Function](FunctionClass.md)                    | レスポンス受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                    | undefined   |
 | onTerminate            | [Function](FunctionClass.md)                    | リクエスト終了時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                    | undefined   |
 | protocol               | Text                                            | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                      | "auto"      |
-| proxyAuthentication    | [authentication オブジェクト](#authentication-object) | プロキシ認証のためのオブジェクト                                                                                                                                                         | undefined   |
-| serverAuthentication   | [authentication オブジェクト](#authentication-object) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
+| proxyAuthentication    | [authentication オブジェクト](#authentication-オブジェクト) | プロキシ認証のためのオブジェクト                                                                                                                                                         | undefined   |
+| serverAuthentication   | [authentication オブジェクト](#authentication-オブジェクト) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | returnResponseBody     | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                           | true        |
 | timeout                | Real                                            | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                              | 未定義         |
 | validateTLSCertificate | Boolean                                         | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                             | true        |
@@ -158,8 +158,8 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 | 引数      | タイプ                                         |
 | ------- | ------------------------------------------- |
-| $param1 | [`HTTPRequest` オブジェクト](#httprequest-object) |
-| $param2 | [`event` オブジェクト](#event-object)             |
+| $param1 | [`HTTPRequest` オブジェクト](#httprequest-オブジェクト) |
+| $param2 | [`event` オブジェクト](#event-オブジェクト)             |
 
 以下は、コールバック呼び出しの流れです:
 

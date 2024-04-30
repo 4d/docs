@@ -3,62 +3,53 @@ id: manData
 title: Manipulação de dados
 ---
 
-Todos [os atributos, classes](configuration.md#exposing-tables-and-fields) e métodos da datastore expostos podem ser acessados através de REST. Os nomes de classes de dados, atributos e métodos são sensíveis às maiúsculas e minúsculas, entretanto, os dados das pesquisas não são.
+All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](ClassFunctions.md) can be accessed through REST. Os nomes de classes de dados, atributos e métodos são sensíveis às maiúsculas e minúsculas, entretanto, os dados das pesquisas não são.
 
 ## Pesquisas de dados
 
-Para pesquisar diretamente aos dados, pode fazer isso usando a função [`$filter`]($filter.md). Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
+To query data directly, you can do so using the [`$filter`]($filter.md) function. Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
-
-
-
 
 ## Adicionar, modificar e apagar entidades
 
 Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
-Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
+To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
-
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 ## Navegando dados
 
-Adicione [`$skip`]($skip.md) (para definir qual entidade a iniciar) e [`$top/$limit`]($top_$limit.md) (para definir quantas entidades retornar) petições REST para suas pesquisas ou seleções de entidade para navegar a coleção de entidades.
-
-
+Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
 ## Criar e gerenciar conjuntos de entidades
 
-Um conjunto de entidades (ou então *seleções de entidades*) é uma coleção de entidades obtidas através de petições REST que é armazenada no cache de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
+An entity set (aka _entity selection_) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
-Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua petição REST. Como uma medida de segurança, também pode usar [`$savedfilter`]($savedfilter.md) ou [`$savedorderby`]($savedorderby.md) quando chamar [`$filter`]($filter.md) ou [`$orderby`]($orderby.md) assim se o conjunto de entidade alguma ver for removido ou der time out no servidor, pode ser facilmente recuperado com a mesma ID que antes.
+To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-Para acessar o conjunto de entidades, deve usar `$entityset/{entitySetID}`, por exemplo:
+To access the entity set, you must use `$entityset/{entitySetID}`, for example:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
+By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
 
-Como padrão, um conjunto de entidades é armazenado por duas horas; entretanto pode mudar o timeout ao passar um novo valor a [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
-
-Se quiser remover um conjunto de entidades da cache 4D Server, pode usar [`$method=release`]($method.md#methodrelease).
+If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
 
 Se modificar qualquer dos atributos de entidade no conjunto de entidades, o valor será atualizado. Entretanto, se modificar um valor que era uma parte da pesquisa executada para criar o conjunto de entidades, não será removido do conjunto de entidades mesmo se não se enquadrar mais nos critérios de pesquisa. Qualquer entidade que apagar não será mais parte do conjunto de entidades.
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-Usando [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), pode combinar dois conjuntos de entidade que foram previamente criados. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
+Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
-Uma nova seleção de entidades é retornada, entretanto também pode criar um novo conjunto de entidades chamando [`$method=entityset`]($method.md#methodentityset) no fim da petição REST.
-
-
+A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
 ## Calcular dados
 
-Usando [`$compute`]($compute.md), pode computar **average**, **count**, **min**, **max**, ou **sum** para um atributo específico em uma classe de dados. Pode também computar todos os valores com a palavra chave $all.
+By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. Pode também computar todos os valores com a palavra chave $all.
 
 Por exemplo, para obter o maior salário:
 
@@ -68,37 +59,34 @@ Para computar todos os valores e retornar um objeto JSON:
 
 `/rest/Employee/salary/?$compute=$all`
 
-
 ## Chamar as funções de classe do modelo de dados
 
-Pode chamar as [funções da classe usuário](ClassFunctions.md) ORDA do modelo de dados através de pedidos POST, para poder beneficiar da API da aplicação direcionada. Por exemplo, se tiver definido uma função `getCity()` na dataclass City, pode chamá-la utilizando o seguinte pedido:
+You can call ORDA Data Model [user class functions](ClassFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
-com dados no corpo do pedido: `["Paris"]`
+with data in the body of the request: `["Paris"]`
 
-
-> Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7BdataClass%7D.html#4d-configuration).
-
+> Pode chamar métodos de projeto 4D que são <a href="%7BdataClass%7D.html#4d-configuration">expostos como serviços REST</a>.
 
 ## Selecionar atributos a obter
 
-Sempre pode definir que atributos a retornar na resposta REST depois de uma petição inicial ao passar sua rota na petição (*e.g.*, `Company(1)/name,revenues/`)
+You can always define which attributes to return in the REST response after an initial request by passing their path in the request (_e.g._, `Company(1)/name,revenues/`)
 
 Pode aplicar essa técnica a:
 
-| Object                | Sintaxe                                             | Exemplo                                                       |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| Dataclass             | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
-| Coleção de entidades  | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Entidade especificada | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
-|                       | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
-| Seleção de entidades  | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
+| Object                | Sintaxe                                                                                                                           | Exemplo                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Dataclass             | {dataClass}/{att1,att2...}                                                        | /People/firstName,lastName                                                      |
+| Coleção de entidades  | {dataClass}/{att1,att2...}/?$filter="{filter}"                                    | /People/firstName,lastName/?$filter="lastName='a@'"                |
+| Entidade especificada | {dataClass}({ID})/{att1,att2...}                               | /People(1)/firstName,lastName                                |
+|                       | {dataClass}:{attribute}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
+| Seleção de entidades  | {dataClass}/{att1,att2...}/$entityset/{entitySetID}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
-Os atributos devem ser delimitados por uma vírgula, *ou seja*, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
-
+The attributes must be delimited by a comma, _i.e._, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
 
 ### Exemplos
+
 Aqui alguns exemplos, mostrando como especificar que atributos vai retornar dependendo da técnica usada para recuperar entidades.
 
 Pode aplicar esse filtro das maneiras a seguir:
@@ -109,14 +97,13 @@ Pode aplicar esse filtro das maneiras a seguir:
 
 #### Exemplo com uma dataclass
 
-As petições abaixo retornar apenas o primeiro nome e o último nome da classe de dados People (seja a classe de dados inteira ou a seleção de entidades baseada na pesquisa definida em`$filter`).
+The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
 
- `GET  /rest/People/firstName,lastName/`
-
+`GET  /rest/People/firstName,lastName/`
 
 **Resultado**:
 
-````
+```
 {
     __entityModel: "People",
     __COUNT: 4,
@@ -149,14 +136,13 @@ As petições abaixo retornar apenas o primeiro nome e o último nome da classe 
         }
     ]
 }
-````
-
+```
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
-**Resultadoi**:
+**Resultado**:
 
-````
+```
 {
     __entityModel: "People",
     __COUNT: 1,
@@ -171,18 +157,17 @@ As petições abaixo retornar apenas o primeiro nome e o último nome da classe 
         }
     ]
 }
-````
-
+```
 
 #### Exemplo entidade
 
 As petições abaixo retornar apenas os atributos primeiro nome e último sobrenome de uma entidade especifica na dataclasse People:
 
- `GET  /rest/People(3)/firstName,lastName/`
+`GET  /rest/People(3)/firstName,lastName/`
 
-**Resultadoi**:
+**Resultado**:
 
-````
+```
 {
     __entityModel: "People",
     __KEY: "3",
@@ -190,14 +175,13 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
     firstName: "Pete",
     lastName: "Marley"
 }
-````
+```
 
-
- `GET  /rest/People(3)/`
+`GET  /rest/People(3)/`
 
 **Resultado**:
 
-````
+```
 {
     __entityModel: "People",
     __KEY: "3",
@@ -214,36 +198,32 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
     },
     fullName: "Pete Marley",
     employerName: "microsoft"
-
+ 
 }
-````
+```
 
 #### Exemplo de conjunto de Entidades
 
-Quanto tiver [criado um conjunto de entidade](#creating-and-managing-entity-set), pode filtrar a informação nele definindo quais atributos a retornar:
+Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
- `` `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer ``
-
+`GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 ## Vendo um atributo de imagem
 
 Se quiser ver um atributo de imagem integralmente, escreva o abaixo:
 
- `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-Para saber mais sobre formatos de imagem, veja [`$imageformat`]($imageformat.md). Para saber mais sobre parâmetros de versão, veja [`$version`]($version.md).
+For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
 
 ## Salvar um atributo BLOB ao disco
 
 Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
-  `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
-
+`GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
 
 ## Recuperar apenas uma entidade
 
-Pode usar a sintaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Por exemplo, pode escrever:
+You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Por exemplo, pode escrever:
 
- `GET  /rest/Company:companyCode("Acme001")`
- 
- 
+`GET  /rest/Company:companyCode("Acme001")`

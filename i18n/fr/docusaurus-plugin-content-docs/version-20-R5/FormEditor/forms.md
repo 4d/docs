@@ -3,23 +3,22 @@ id: forms
 title: Formulaires
 ---
 
-
 Les formulaires fournissent l'interface par laquelle les informations sont saisies, modifiées et imprimées dans une application de bureau. A l'aide des formulaires, les utilisateurs peuvent interagir avec les données d'une base de données et imprimer des rapports. Les formulaires permettent de créer des boîtes de dialogue personnalisées, des palettes ou toute fenêtre personnalisée.
 
 ![](../assets/en/FormObjects/form1.png)
 
 Les formulaires peuvent également contenir d'autres formulaires grâce aux fonctionnalités suivantes :
 
-- [les objets sous-formulaires](FormObjects/subform_overview.md)
-- [les formulaires hérités](properties_FormProperties.md#inherited-forms)
+- [subform objects](FormObjects/subform_overview.md)
+- [inherited forms](properties_FormProperties.md#inherited-forms)
 
 ## Création de formulaires
 
 Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suivants :
 
-- **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
-- **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
-- **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture.md#sources-folder). Voici un exemple :
+- **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
+- **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Voici un exemple :
 
 ```
 {
@@ -71,9 +70,9 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 
 Il existe deux catégories de formulaires :
 
-- **Les formulaires projet** - Formulaires indépendants qui ne sont rattachés à aucune table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
+- **Project forms** - Independent forms that are not attached to any table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
 
-- **Les formulaires table** - Rattachés à des tables spécifiques et bénéficient ainsi de fonctions automatiques utiles pour développer des applications basées sur des bases de données. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
+- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
 
 En règle générale, vous sélectionnez la catégorie de formulaire lorsque vous créez le formulaire, mais vous pouvez la modifier par la suite.
 
@@ -88,7 +87,7 @@ Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de
 
 - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
 - Organisez chaque sujet sur sa propre page.
-- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order).
+- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
 - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
@@ -99,7 +98,7 @@ Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusie
 
 ## Formulaires hérités
 
-Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
+4D forms can use and be used as "inherited forms," meaning that all of the objects from _Form A_ can be used in _Form B_. In this case, _Form B_ "inherits" the objects from _Form A_.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
@@ -112,17 +111,18 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3. Page zéro du formulaire ouvert
 4. Page courante du formulaire ouvert.
 
-Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order) par défaut des objets dans le formulaire.
+This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 
 Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en compte lorsque celui-ci est utilisé comme formulaire hérité. En revanche, les méthodes des objets qu’il contient sont appelées.
 
-Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
+To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\<None>` in the Property List (or " " in JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+To stop inheriting a form, select `\<None>` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
 
 ## Propriétés prises en charge

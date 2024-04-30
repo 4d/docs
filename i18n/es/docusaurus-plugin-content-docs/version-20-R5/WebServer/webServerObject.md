@@ -3,7 +3,6 @@ id: webServerObject
 title: Objeto servidor web
 ---
 
-
 Un proyecto 4D puede iniciar y monitorear un servidor web para la aplicación principal (host) así como para cada componente alojado.
 
 Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede iniciar y supervisar hasta tres servidores web independientes desde su aplicación:
@@ -14,17 +13,17 @@ Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede 
 
 Aparte de la memoria, no hay límite en el número de componentes y por lo tanto, de servidores web, que se pueden adjuntar a un solo proyecto de aplicación 4D.
 
-Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
+Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
-> Los [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
+> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
 Cada servidor web (aplicación local o componente) puede ser utilizado en su propio contexto independiente, incluyendo:
-- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
+
+- `On Web Authentication` and `On Web Connection` database method calls
 - el procesamiento de las etiquetas 4D y las llamadas de métodos,
 - sesiones web y gestión del protocolo TLS.
 
 Esto le permite desarrollar componentes independientes y funcionalidades que vienen con sus propias interfaces web.
-
 
 ## Instanciar un objeto servidor web
 
@@ -35,19 +34,20 @@ $nbSrv:=WEB Server list.length
 //el valor de $nbSrv es 1
 ```
 
-Para instanciar un objeto servidor web, llame al comando [`WEB Server`](API/WebServerClass.md#web-server):
+To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
 
 ```4d
-    //crear una variable objeto de la clase 4D.WebServer
+	//create an object variable of the 4D.WebServer class
 var webServer : 4D.WebServer 
-    //llamar al servidor web desde el contexto actual
+	//call the web server from the current context
 webServer:=WEB Server  
 
-    //equivalente a
+	//equivalent to
 webServer:=WEB Server(Web server database)
 ```
 
 Si la aplicación utiliza componentes y quiere llamar a:
+
 - el servidor web de la aplicación local a partir de un componente o
 - el servidor que ha recibido la solicitud (sin importar el servidor),
 
@@ -55,56 +55,53 @@ también se puede utilizar:
 
 ```4d
 var webServer : 4D.WebServer 
-    //llamar al servidor web local desde un componente  
+	//call the host web server from a component  
 webServer:=WEB Server(Web server host database)  
-    //llamar al servidor web objetivo
+	//call the target web server
 webServer:=WEB Server(Web server receiving request)  
 ```
 
-
 ## Funciones del servidor web
 
-Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
+A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
-| Funciones                                | Parámetros       | Valor devuelto  | Descripción             |
-| ---------------------------------------- | ---------------- | --------------- | ----------------------- |
+| Funciones                                | Parámetros                          | Valor devuelto                     | Descripción             |
+| ---------------------------------------- | ----------------------------------- | ---------------------------------- | ----------------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objeto) | Iniciar el servidor web |
-| [`stop()`](API/WebServerClass.md#start)  | -                | -               | Detener el servidor Web |
+| [`stop()`](API/WebServerClass.md#start)  | -                                   | *                                  | Detener el servidor Web |
 
-Para iniciar y detener un servidor web, basta con llamar a las funciones [`start()`](API/WebServerClass.md#start) y [`stop()`](API/WebServerClass.md#stop) del objeto servidor web:
+To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
 
 ```4d
 var $status : Object
-    //para iniciar un servidor web con los parámetros por defecto
+  	//to start a web server with default settings
 $status:=webServer.start()
-    //para iniciar el servidor web con los parámetros personalizados  
-    //$settings object contains web server properties
+	//to start the web server with custom settings  
+	//$settings object contains web server properties
 webServer.start($settings)
 
-    //para detener el servidor web
+	//to stop the web server
 $status:=webServer.stop()
 ```
 
-
 ## Propiedades del servidor web
 
-Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
+A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
 
 Estas propiedades son definidas:
 
-1. con la ayuda del parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start) (excepto en el caso de las propiedades de sólo lectura, ver más adelante),
-2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
+1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
+2. if not used, using the `WEB SET OPTION` command (host applications only),
 3. si no se utiliza, en los parámetros de la aplicación local o del componente.
 
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
-- Si el servidor web se inicia, las propiedades contienen los valores reales utilizados por el servidor web (la configuración por defecto puede haber sido reemplazada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
+- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
-> *isRunning*, *name*, *openSSLVersion* y *perfectForwardSecrecy* son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
-
+> _isRunning_, _name_, _openSSLVersion_, and _perfectForwardSecrecy_ are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
 ## Alcance de los comandos 4D Web
 
-El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. Sin embargo, estos comandos están diseñados para trabajar con un único servidor web (por defecto). Cuando utilice estos comandos en el contexto de los objetos servidor web, asegúrese de que su alcance es el adecuado.
+The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. Sin embargo, estos comandos están diseñados para trabajar con un único servidor web (por defecto). Cuando utilice estos comandos en el contexto de los objetos servidor web, asegúrese de que su alcance es el adecuado.
 
 | Comando                         | Alcance                                  |
 | ------------------------------- | ---------------------------------------- |

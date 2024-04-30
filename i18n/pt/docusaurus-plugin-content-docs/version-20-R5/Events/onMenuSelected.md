@@ -7,7 +7,6 @@ title: On Menu Selected
 | ---- | -------------------- | ----------------------------------------------------------- |
 | 18   | Formulário           | Foi selecionado um item de menu na barra de menus associada |
 
-
 ## Descrição
 
 The `On Menu Selected` event is sent to the form method when a command of a menu bar associated to the form is selected. You can then call the `Menu selected` language command to test the selected menu.

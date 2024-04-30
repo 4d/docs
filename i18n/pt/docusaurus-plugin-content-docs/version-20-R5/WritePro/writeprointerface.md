@@ -7,7 +7,7 @@ title: Interface 4D Write Pro
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-A [documentação principal da interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) pode ser encontrada no manual *Desenho 4D*.
+The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the _4D Design Reference manual_.
 
 Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 
@@ -55,9 +55,9 @@ Once the table has been integrated into the document, the user can customize its
 
 A configuração dos modelos inclui:
 
-* Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-* Translating table, field, and formula names from the [translation file](#translation-files).
-* Designing graphic styles and customized  themes from the [theme file](#theme-files).
+- Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
+- Translating table, field, and formula names from the [translation file](#translation-files).
+- Designing graphic styles and customized  themes from the [theme file](#theme-files).
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
@@ -70,7 +70,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 - os atributos dataclass que podem ser usados como colunas da tabela,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitação
+:::info Limitation
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitação será eliminada na próxima versão.
 
@@ -80,27 +80,27 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 O arquivo de modelo no formato JSON contém os seguintes atributos:
 
-| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                       |
-|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                             |
-| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                                    |
-| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                                 |
-| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
-| columns.source       | Text       | x           | Formula                                                                                                                                                         |
-| breaks               | Collection |             | Coleção de objetos de interrupção. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                         |
-| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                                     |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                         |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                              |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                         |
-| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                        |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                         |
+| Atributo                             | Tipo       | Obrigatório | Descrição                                                                                                                                                                                                       |
+| :----------------------------------- | :--------- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource                      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                                                                             |
+| columns                              | Collection | x           | Coleção de colunas de tabela                                                                                                                                                                                    |
+| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                                                 |
+| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                                                                    |
+| columns.source       | Text       | x           | Formula                                                                                                                                                                                                         |
+| breaks                               | Collection |             | Coleção de objetos de interrupção. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                                                                    |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                                                                         |
+| breakFormulas                        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                                                                                     |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                                                                    |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                                                         |
+| bcorFormulas                         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                                                              |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                                                                    |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                                                         |
+| extraFormulas                        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                                                                        |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                                                                    |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                         |
 
-:::note idioma francês
+:::note French language
 
 If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
 
@@ -133,20 +133,20 @@ Eis um breve exemplo do aspeto do seu ficheiro JSON:
         }
     ],
     "breakFormulas": [{
-            "label": "Empresa",
-            "fonte": "This.item.toCompany.name"
-    }, {
-            "label": "Soma dos salários",
+            "label": "Company",
+            "source": "This.item.toCompany.name"
+	}, {
+            "label": "Sum of salaries",
             "source": "String(This.breakItems.sum(\"salary\"); \"###,###.00\")"
         }
     ],
     "bcorFormulas": [{
-            "label": "Soma dos salários",
+            "label": "Sum of salaries",
             "source": "String(This.tableData.sum(\"salary\"); \"###,###.00\")"
         }
     ],
     "extraFormulas": [{
-            "label": "Soma dos salários",
+            "label": "Sum of salaries",
             "source": "String(This.tableData.sum(\"salary\"); \"###,###.00\")"
         }
     ]
@@ -162,17 +162,17 @@ Each translation file must be named with the corresponding language code (for ex
 
 O arquivo de tradução no formato JSON contém os seguintes atributos:
 
-| Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
-|:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Coleção de objetos de tabela traduzidos                                               |
-| fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
-| formulas  | Collection |             | Coleção de objetos fórmula traduzidos                                                 |
+| Atributo  | Tipo       | Obrigatório | Descrição                                                                                                |
+| :-------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------------- |
+| tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                                                  |
+| fields    | Collection |             | Coleção de objetos de campo traduzidos                                                                   |
+| formulas  | Collection |             | Coleção de objetos fórmula traduzidos                                                                    |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
 | Atributo    | Tipo | Obrigatório | Descrição                           |
-|:----------- |:---- |:----------- |:----------------------------------- |
+| :---------- | :--- | :---------- | :---------------------------------- |
 | original    | Text | x           | Texto original destinado à tradução |
 | translation | Text | x           | Versão traduzida do texto original  |
 
@@ -211,7 +211,7 @@ The translation file serves an additional role when a user selects a table in th
         }
     ]
 }
-
+    
 ```
 
 #### Arquivos de temas
@@ -220,32 +220,31 @@ A list of themes is provided by default in the 4D Write Pro Interface component,
 
 O ficheiro de tema em formato JSON contém os seguintes atributos:
 
-| Atributo | Tipo   | Obrigatório | Descrição                                                                                                                             |
-|:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
-| default  | Object |             | Objeto que contém o estilo padrão aplicável a todas as linhas.                                                                        |
-| tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                           |
-| rows     | Object |             | Objeto que contém a definição de estilo aplicável a todas as linhas.                                                                  |
-| cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                 |
-| header1  | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de cabeçalho.                                                      |
-| header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
-| header3  | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de cabeçalho.                                                      |
-| header4  | Object |             | Object containing the style definition applicable to the fourth header row.                                                           |
-| header5  | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de cabeçalho.                                                        |
+| Atributo | Tipo   | Obrigatório | Descrição                                                                                                                                                                                                                |
+| :------- | :----- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | Object |             | Objeto que contém o estilo padrão aplicável a todas as linhas.                                                                                                                                           |
+| tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                                                                                              |
+| rows     | Object |             | Objeto que contém a definição de estilo aplicável a todas as linhas.                                                                                                                                     |
+| cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                                                                                    |
+| header1  | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de cabeçalho.                                                                                                                         |
+| header2  | Object |             | Object containing the style definition applicable to the second header row.                                                                                                                              |
+| header3  | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de cabeçalho.                                                                                                                         |
+| header4  | Object |             | Object containing the style definition applicable to the fourth header row.                                                                                                                              |
+| header5  | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de cabeçalho.                                                                                                                           |
 | headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
-| data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                           |
-| break1   | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de quebra.                                                         |
-| break2   | Object |             | Objeto que contém a definição de estilo aplicável à segunda linha de quebra.                                                          |
-| break3   | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de quebra.                                                         |
-| break4   | Object |             | Objeto que contém a definição de estilo aplicável à quarta linha de quebra.                                                           |
-| break5   | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de quebra.                                                           |
+| data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                                                                                              |
+| break1   | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de quebra.                                                                                                                            |
+| break2   | Object |             | Objeto que contém a definição de estilo aplicável à segunda linha de quebra.                                                                                                                             |
+| break3   | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de quebra.                                                                                                                            |
+| break4   | Object |             | Objeto que contém a definição de estilo aplicável à quarta linha de quebra.                                                                                                                              |
+| break5   | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de quebra.                                                                                                                              |
 | breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
-| bcor     | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                       |
-
+| bcor     | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                                                                                          |
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
 | Atributos WP    | Constante WP correspondente |
-|:--------------- |:--------------------------- |
+| :-------------- | :-------------------------- |
 | textAlign       | wk text align               |
 | backgroundColor | wk background color         |
 | borderColor     | wk border color             |
@@ -292,9 +291,9 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
            "fontSize": "15pt"
     }
 }
-
+    
 ```
 
 #### Veja também
 
-[4D Write Pro - Assistente de tabelas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)

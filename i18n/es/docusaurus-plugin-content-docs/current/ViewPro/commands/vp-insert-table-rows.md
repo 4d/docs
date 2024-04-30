@@ -41,7 +41,7 @@ Este comando inserta algunas líneas en la tabla _tableName_, NO en la hoja. El 
 
 Si la tabla _tableName_ está vinculada a un [contexto de datos](vp-set-data-context.md), el comando inserta nuevos elementos vacíos en la colección.
 
-If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
+Si _tableName_ no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
 
 #### Ejemplo
 

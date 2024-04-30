@@ -182,7 +182,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
     :(Form event code=On Load)
        var $o : Object
        $o:=New object
-  // Define "vpHello" function from the "myMethod" method
+  // Definir a função "vpHello" a partir do método "myMethod"
        $o.vpHello:=New object
        $o.vpHello.formula:=Formula(myMethod)
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)

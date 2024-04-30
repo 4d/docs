@@ -14,14 +14,14 @@ Quando apropriado, o ícone de expansão/colapso é automaticamente apresentado 
 
 O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de uma das seguintes formas:
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
-- Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
+- Atribuir diretamente uma referência de lista hierárquica à [variável ou à expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+Em ambos os casos, gere uma lista hierárquica em tempo de execução através da sua referência *ListRef*, utilizando os comandos [Lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) na linguagem 4D.
 
 ## RefList e nome de objeto
 
-A hierarchical list is both a **language object** existing in memory and a **form object**.
+Uma lista hierárquica é simultaneamente um **objeto de linguagem** existente na memória e um **objeto de formulário**.
 
 O **objeto de linguagem ** é referenciado por um ID interno único do tipo Longint, designado por *ListRef* na manual da Linguagem 4D. Este ID é devolvido pelos comandos que podem ser utilizados para criar listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Existe apenas uma instância do objeto língua na memória e qualquer modificação efetuada neste objeto é imediatamente transferida para todos os locais onde é utilizado.
 

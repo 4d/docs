@@ -7,7 +7,7 @@ Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.
 
 ## Funções booleanas
 
-4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . Para obter mais informações, consulte as descrições desses comandos
+4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Para obter mais informações, consulte as descrições desses comandos
 
 ### Exemplo
 
@@ -31,37 +31,37 @@ myBoolean:=(myButton=1)
 
 4D suporta dois operadores lógicos que trabalham com expressões booleanas: conjunção (AND) e disjunção inclusiva (OR). Uma lógica E retorna VERDADEIRA se ambas as expressões forem VERDADEIRAS. Uma lógica OU retorna VERDADEIRA se pelo menos uma das expressões for VERDADEIRA. O quadro seguinte mostra os operadores lógicos:
 
-| Operação | Sintaxe                 | Retorna    | Expression                   | Valor |
-| -------- | ----------------------- | ---------- | ---------------------------- | ----- |
-| AND      | Boolean & Boolean       | Parâmetros | ("A" = "A") & (15 # 3)       | True  |
-|          |                         |            | ("A" = "B") & (15 # 3)       | False |
-|          |                         |            | ("A" = "B") & (15 = 3)       | False |
-| OU       | Boolean  &#124; Boolean | Parâmetros | ("A" = "A") &#124; (15 # 3)  | True  |
-|          |                         |            | ("A" = "B") &#124;  (15 # 3) | True  |
-|          |                         |            | ("A" = "B") &#124;  (15 = 3) | False |
+| Operação | Sintaxe                               | Retorna    | Expression                                                                       | Valor |
+| -------- | ------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ----- |
+| AND      | Boolean & Boolean | Parâmetros | ("A" = "A") & (15 # 3) | True  |
+|          |                                       |            | ("A" = "B") & (15 # 3) | False |
+|          |                                       |            | ("A" = "B") & (15 = 3) | False |
+| OU       | Boolean  \| Boolean                   | Parâmetros | ("A" = "A") \| (15 # 3)                    | True  |
+|          |                                       |            | ("A" = "B") \|  (15 # 3)                   | True  |
+|          |                                       |            | ("A" = "B") \|  (15 = 3)                   | False |
 
 A tabela seguinte é a tabela da verdade para o operador lógico AND:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
-| ----- | ----- | ------------- |
-| True  | True  | True          |
-| True  | False | False         |
-| False | True  | False         |
-| False | False | False         |
+| ----- | ----- | --------------------------------- |
+| True  | True  | True                              |
+| True  | False | False                             |
+| False | True  | False                             |
+| False | False | False                             |
 
 A tabela seguinte é a tabela da verdade para o operador lógico OR:
 
-| Expr1 | Expr2 | Expr1 &#124; Expr2 |
-| ----- | ----- | ------------------ |
-| True  | True  | True               |
-| True  | False | True               |
-| False | True  | True               |
-| False | False | False              |
+| Expr1 | Expr2 | Expr1 \| Expr2 |
+| ----- | ----- | -------------- |
+| True  | True  | True           |
+| True  | False | True           |
+| False | True  | True           |
+| False | False | False          |
 
-**Dica:** Se você precisa calcular a disjunção exclusiva entre Expr1 e Expr2, avalie:
+**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> Em contextos booleanos, a linguagem 4D também é compatível [operadores de curto-circuito](operators.md#short-circuit-operators) (`&&` e `||`) e o conceito [truthy and falsy](operators.md#truthy-and-falsy) . 
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept.

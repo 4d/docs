@@ -5,7 +5,7 @@ title: Barras de menús
 
 Las barras de menú constituyen la principal interfaz de las aplicaciones personalizadas. Para cada aplicación personalizada, debe crear al menos una barra de menú con al menos un menú. Por defecto, Menu Bar #1 es la barra de menús que se muestra en el entorno de la aplicación. Puede cambiar la barra de menús que se muestra utilizando el comando `SET MENU BAR`.
 
-4D le permite asociar una imagen de pantalla de inicio personalizada con cada barra de menús y previsualizar esta barra de menú en cualquier momento.
+4D permite asociar una imagen de pantalla de inicio personalizada con cada barra de menús y previsualizar esta barra de menú en cualquier momento.
 
 ## Pantalla de bienvenida
 

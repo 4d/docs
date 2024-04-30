@@ -9,11 +9,11 @@ title: VP SET ALLOWED METHODS
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 
-| Paramètres | Type   |    | Description                              |                  |
-| ---------- | ------ | -- | ---------------------------------------- | ---------------- |
-| methodObj  | Object | -> | Allowed methods in the 4D View Pro areas | <!-- END REF --> |
+| Paramètres | Type   |    | Description                                    |                  |
+| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| methodObj  | Object | -> | Méthodes autorisées dans les zones 4D View Pro | <!-- END REF --> |
 
-> **Compatibility**
+> **Compatibilité**
 
 > For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](vp-set-custom-functions.md) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 

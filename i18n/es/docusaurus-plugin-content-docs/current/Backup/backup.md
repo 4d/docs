@@ -6,31 +6,34 @@ title: Copia de seguridad
 
 Una copia de seguridad puede iniciarse de tres maneras:
 
-- Manualmente, utilizando el comando **Copia de seguridad...** del menú 4D **Archivo** o el botón **Copia de seguridad** del [Centro de mantenimiento y seguridad](MSC/backup.md).
+- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
 - Automáticamente, utilizando el programador que se puede definir en las Propiedades,
-- Por programación, utilizando el comando `BACKUP`.
+- Programmatically, using the `BACKUP` command.
 
-> 4D Server: es posible iniciar una copia de seguridad manualmente desde una máquina remota mediante un método que llama al comando `BACKUP`. El comando se ejecutará, en todos los casos, en el servidor.
+> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. El comando se ejecutará, en todos los casos, en el servidor.
 
 ## Copia de seguridad manual
 
-1. Seleccione el elemento **Copia de seguridad...** en el menú **Archivo** de 4D. The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. Esta ubicación se define en la página **Copia de seguridad/configuración** de las Propiedades de la base.
+1. Select the **Backup...** command in the 4D **File** menu.
+   The backup window appears:
+   ![](../assets/en/Backup/backup01.png)
+   You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
 
-- También puede abrir el [Centro de mantenimiento y seguridad](MSC/overview.md) de 4D y mostrar la [página de copias de seguridad](MSC/backup.md).
+- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
 
-El botón **Propiedades de la base...**hace que se muestre la página Copia de seguridad/Configuración de las Propiedades de la estructura.
+The **Database properties...** button causes the Backup/Configuration page of the Structure Settings to be displayed.
 
- 2. Haga clic en **Copia de seguridad** para iniciar la copia de seguridad utilizando los parámetros actuales.
+2. Click **Backup** to start the backup using current parameters.
 
 ## Backup automático periódico
 
-Las copias de seguridad programadas se inician automáticamente. Se configuran en la página **Backup/Planificador** de las ** Propiedades**.
+Las copias de seguridad programadas se inician automáticamente. They are configured in the **Backup/Scheduler** page of the **Settings**.
 
-Las copias de seguridad se realizan automáticamente a las horas definidas en esta página sin ningún tipo de intervención del usuario. Para más información sobre el uso de esta caja de diálogo, consulte [Definir las copias de seguridad periódicas](settings.md#scheduler).
+Las copias de seguridad se realizan automáticamente a las horas definidas en esta página sin ningún tipo de intervención del usuario. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 ## Comando BACKUP
 
-Puede utilizar los métodos base `On Backup Startup` and `On Backup Shutdown` para controlar el proceso de copia de seguridad (consulte el manual *Lenguaje de 4D*). Puede utilizar el método base `On Backup Startup` y `On Backup Shutdown`, para controlar el proceso de backup (ver el manual *Lenguaje de 4D*).
+When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the _4D Language Reference_ manual).
 
 ## Cómo funciona la copia de seguridad
 
@@ -38,11 +41,11 @@ Una vez iniciada la copia de seguridad, 4D muestra una caja de diálogo con un t
 
 ![](../assets/en/Backup/backupProgress.png)
 
-Este termómetro también se muestra en la página [Backup del CSM](MSC/backup.md) si ha utilizado esta caja de diálogo.
+This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
 
-El botón **Parar** permite al usuario interrumpir la copia de seguridad en cualquier momento (consulte [Manejar los problemas de la copia de seguridad](backup.md#handling-backup-issues) más adelante).
+The **Stop** button lets the user interrupt the backup at any time (refer to [Handling backup issues](backup.md#handling-backup-issues) below).
 
-El estado de la última copia de seguridad (correcta o fallida) se almacena en el área de información de la [página de copias de seguridad en el CSM](MSC/backup.md) o en la **página de mantenimiento** de 4D Server. También se registra en la base **Backup journal.txt**.
+The status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server. It is also recorded in the database **Backup journal.txt**.
 
 ### Acceso a la aplicación durante la copia de seguridad
 
@@ -51,19 +54,21 @@ El estado de la última copia de seguridad (correcta o fallida) se almacena en e
 Por el contrario, si sólo se hace una copia de seguridad del archivo de datos, se sigue permitiendo el acceso a la estructura. En este caso, las posibilidades de acceso a la aplicación son las siguientes:
 
 - Con 4D versión monopuesto, la aplicación está bloqueada tanto para lectura como para escritura; todos los procesos están congelados. No se puede realizar ninguna acción.
-- Con 4D Server, la aplicaci´n sólo está bloqueada en escritura; las máquinas cliente pueden ver los datos. Si una máquina cliente envía una petición de adición, eliminación o cambio al servidor, aparece una ventana que pide al usuario que espere hasta el final de la copia de seguridad. Una vez guardada la aplicación, la ventana desaparece y se realiza la acción. Para cancelar la petición en proceso y no esperar a que finalice la copia de seguridad, basta con hacer clic en el botón **Cancelar la operación**. Sin embargo, si la acción que espera ser ejecutada proviene de un método lanzado antes de la copia de seguridad, no debe cancelarla porque sólo se cancelan las operaciones que quedan por realizar. Además, un método parcialmente ejecutado puede causar inconsistencias lógicas en los datos.
+- Con 4D Server, la aplicaci´n sólo está bloqueada en escritura; las máquinas cliente pueden ver los datos. Si una máquina cliente envía una petición de adición, eliminación o cambio al servidor, aparece una ventana que pide al usuario que espere hasta el final de la copia de seguridad. Una vez guardada la aplicación, la ventana desaparece y se realiza la acción. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. Sin embargo, si la acción que espera ser ejecutada proviene de un método lanzado antes de la copia de seguridad, no debe cancelarla porque sólo se cancelan las operaciones que quedan por realizar. Además, un método parcialmente ejecutado puede causar inconsistencias lógicas en los datos.
 
-> Cuando la acción que espera ser ejecutada proviene de un método y el usuario hace clic en el botón **Cancelar operación**, 4D Server devuelve el error -9976 (Este comando no puede ejecutarse porque la copia de seguridad de la base está en progreso).
+> When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
 ### Gestión de los problemas de las copias de seguridad
 
 Puede ocurrir que una copia de seguridad no se ejecute correctamente. Puede haber varias causas de fallo en la copia de seguridad: interrupción del usuario, archivo adjunto no encontrado, problemas en el disco de destino, transacción incompleta, etc. 4D procesa la incidencia según la causa.
 
-En todos los casos, tenga en cuenta que el estado de la última copia de seguridad (correcta o fallida) se almacena en el área de información de la [página de copias de seguridad en el CSM](MSC/backup.md) o en la **página de mantenimiento** de 4D Server, así como en el **Backup journal.txt**.
+In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the **Backup journal.txt**.
 
-- **Interrupción del usuario**: el botón **Parar** de la caja de diálogo de progreso permite a los usuarios interrumpir la copia de seguridad en cualquier momento. En este caso, la copia de elementos se detiene y se genera el error 1406. Puedes interceptar este error en el método base `On Backup Shutdown`.
-- **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la aplicación y de los archivos adjuntos accesibles) y devuelve un error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. La espera entre los dos intentos se define en la página **Backup/Backup y Restauración** de las Propiedades. Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
+- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. En este caso, la copia de elementos se detiene y se genera el error 1406. You can intercept this error in the `On Backup Shutdown` database method.
+- **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of application files and accessible attached files) and returns an error.
+- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.):
+  If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Settings.
+  Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. You can intercept this error in the `On Backup Shutdown` database method.
 
 ## Historial de copias de seguridad (Backup Journal)
 
@@ -75,18 +80,20 @@ El historial de copia de seguridad se llama "Backup Journal[001].txt" y se coloc
 
 En determinadas estrategias de copia de seguridad (por ejemplo, en el caso de que se realicen copias de seguridad de numerosos archivos adjuntos), el historial de copias de seguridad puede alcanzar rápidamente un gran tamaño. Se pueden utilizar dos mecanismos para controlar este tamaño:
 
-- **Copia de seguridad automática**: antes de cada copia de seguridad, la aplicación examina el tamaño del archivo historial de copia de seguridad actual. Si es superior a 10 MB, se archiva el archivo actual y se crea un nuevo archivo con el número [xxx] incrementado, por ejemplo "Backup Journal[002].txt”. Una vez alcanzado el número de archivo 999, la numeración vuelve a empezar por el 1 y los archivos existentes serán sustituidos.
-- **Posibilidad de reducir la cantidad de información registrada**: para ello, basta con modificar el valor de la llave `VerboseMode` en el archivo *Backup.4DSettings* del proyecto. Por defecto, esta llave está definida como True. Si cambia el valor de esta llave a False, sólo se almacenará en el diario de copias de seguridad la información principal: fecha y hora de inicio de la operación y los errores encontrados. Las llaves XML relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*.
+- **Automatic backup**: Before each backup, the application examines the size of the current backup journal file. Si es superior a 10 MB, se archiva el archivo actual y se crea un nuevo archivo con el número [xxx] incrementado, por ejemplo "Backup Journal[002].txt”. Una vez alcanzado el número de archivo 999, la numeración vuelve a empezar por el 1 y los archivos existentes serán sustituidos.
+- **Possibility of reducing the amount of information recorded**: To do this, simply modify the value of the `VerboseMode` key in the _Backup.4DSettings_ file of the project. Por defecto, esta llave está definida como True. Si cambia el valor de esta llave a False, sólo se almacenará en el diario de copias de seguridad la información principal: fecha y hora de inicio de la operación y los errores encontrados. The XML keys concerning backup configuration are described in the _4D XML Keys Backup_ manual.
 
 ## backupHistory.json
 
-Toda la información relativa a las últimas operaciones de copia de seguridad y restauración se almacena en el archivo **backupHistory.json** de la aplicación. Registra la ruta de cada archivo guardado (incluidos los adjuntos), así como el número, la fecha, la hora, la duración y el estado de cada operación. Para limitar el tamaño del archivo, el número de operaciones registradas es el mismo que el número de copias de seguridad disponibles ("Conservar sólo los últimos X archivos de copia de seguridad") definido en las propiedades de la copia de seguridad.
+All information regarding the latest backup and restore operations are stored in the application's **backupHistory.json** file. Registra la ruta de cada archivo guardado (incluidos los adjuntos), así como el número, la fecha, la hora, la duración y el estado de cada operación. Para limitar el tamaño del archivo, el número de operaciones registradas es el mismo que el número de copias de seguridad disponibles ("Conservar sólo los últimos X archivos de copia de seguridad") definido en las propiedades de la copia de seguridad.
 
-El archivo **backupHistory.json** se crea en la carpeta de destino de la copia de seguridad actual. Puede obtener la ruta real de este archivo utilizando la siguiente declaración:
+The **backupHistory.json** file is created in the current backup destination folder. Puede obtener la ruta real de este archivo utilizando la siguiente declaración:
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **Atención**  
-> La eliminación o el desplazamiento del archivo **backupHistory.json** hará que se reinicie el siguiente número de copia de seguridad.
-> El archivo **backupHistory.json** está formateado para ser utilizado por la aplicación 4D. Si lo que busca es un informe legible en las operaciones de copia de seguridad, quizá le resulte más preciso el diario de copias de seguridad.
+
+> **WARNING**\
+> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
+
+> The **backupHistory.json** file is formatted to be used by the 4D application. Si lo que busca es un informe legible en las operaciones de copia de seguridad, quizá le resulte más preciso el diario de copias de seguridad.

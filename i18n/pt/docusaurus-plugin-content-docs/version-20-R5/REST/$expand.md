@@ -1,25 +1,24 @@
 ---
 id: expand
-title: '$expand'
+title: $expand
 ---
 
+Expands an image stored in an Image attribute (_e.g._, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+or<br/>
+Expands an BLOB attribute to save it.
 
-Expande uma imagem armazenada num atributo Image (*, por exemplo,*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/> ou<br/> Expande um atributo BLOB para o guardar.
-
-> **Compatibilidade**: Por razões de compatibilidade, $expand pode ser utilizado para expandir um atributo relacional (*e.g.*, `Company(1)?$expand=staff` ou `Employee/?$filter="firstName BEGIN a"&$expand=employer`). No entanto, recomenda-se a utilização do endereço [`$attributes`]($attributes.md) para esta funcionalidade.
-
-
+> **Compatibility**: For compatibility reasons, $expand can be used to expand a relational attribute (_e.g._, `Company(1)?$expand=staff` or `Employee/?$filter="firstName BEGIN a"&$expand=employer`). It is however recommended to use [`$attributes`]($attributes.md) for this feature.
 
 ## Vendo um atributo de imagem
 
 Se quiser ver um atributo de imagem integralmente, escreva o abaixo:
 
- `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-Para saber mais sobre formatos de imagem, veja [`$imageformat`]($imageformat.md). Para saber mais sobre parâmetros de versão, veja [`$version`]($version.md).
+For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
 
 ## Salvar um atributo BLOB ao disco
 
 Se quiser salvar um BLOB armazenado em sua classe de dados pode escrever o seguinte passando também "true" a $binary:
 
-  `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
+`GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

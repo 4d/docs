@@ -3,18 +3,17 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                                  | Définition                                   |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| 31   | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) - [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - Formulaire - [Liste hiérarchique](FormObjects/list_overview.md) - [Zone de saisie](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | La sélection faite dans l'objet est modifiée |
-
+| Code | Peut être appelé par                                                                                                                                                                                                                                                  | Définition                                   |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | La sélection faite dans l'objet est modifiée |
 
 ## Description
 
 Cet événement peut être généré dans différents contextes.
 
-
 ### 4D View Pro
-La sélection courante de lignes ou de colonnes est modifiée. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
+
+La sélection courante de lignes ou de colonnes est modifiée. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 | Propriété     | Type        | Description                        |
 | ------------- | ----------- | ---------------------------------- |
@@ -38,17 +37,14 @@ La sélection courante de lignes ou de colonnes est modifiée. Dans ce contexte,
 
 L'enregistrement courant ou la sélection courante de lignes est modifié(e) sous dans un formulaire liste.
 
-
 ### Liste hiérarchique
 
 Cet événement est généré à chaque fois que la sélection faite dans la liste hiérarchique est modifiée après un clic de souris ou une frappe.
 
-
-### Zone de saisie et 4D Write Pro
+### Input & 4D Write Pro
 
 La sélection de texte ou la position du curseur dans la zone est modifiée suite à un clic ou une frappe.
 
-
 ### List box
-Cet événement est généré chaque fois que la sélection courante de lignes ou de colonnes de la list box est modifiée.
 
+Cet événement est généré chaque fois que la sélection courante de lignes ou de colonnes de la list box est modifiée.

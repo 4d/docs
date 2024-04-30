@@ -3,10 +3,9 @@ id: onBeginUrlLoading
 title: On Begin URL Loading
 ---
 
-| コード | 呼び出し元                                     | 定義                       |
-| --- | ----------------------------------------- | ------------------------ |
-| 47  | [Webエリア](FormObjects/webArea_overview.md) | 新しい URL が Web エリアにロードされた |
-
+| コード | 呼び出し元                                      | 定義                       |
+| --- | ------------------------------------------ | ------------------------ |
+| 47  | [Web エリア](FormObjects/webArea_overview.md) | 新しい URL が Web エリアにロードされた |
 
 ## 説明
 

@@ -1,10 +1,9 @@
 ---
 id: directory
-title: '$directory'
+title: $directory
 ---
 
 El directorio gestiona el acceso de los usuarios a través de peticiones REST.
-
 
 ## $directory/login
 
@@ -12,14 +11,14 @@ Abre una sesión REST en su aplicación 4D y conecta al usuario.
 
 ### Descripción
 
-Utilice `$directory/login` para abrir una sesión en su aplicación 4D a través de REST y conecte un usuario. También puede modificar el tiempo de espera por defecto de la sesión 4D.
+Use `$directory/login` to open a session in your 4D application through REST and login a user. También puede modificar el tiempo de espera por defecto de la sesión 4D.
 
-Todos los parámetros deben pasarse en **encabezados**de un método POST:
+All parameters must be passed in **headers** of a POST method:
 
-| Llave de encabezado | Valor del encabezado                                                                         |
-| ------------------- | -------------------------------------------------------------------------------------------- |
-| username-4D         | Usuario - No obligatorio                                                                     |
-| password-4D         | Contraseña en texto plano - No es obligatorio                                                |
+| Llave de encabezado | Valor del encabezado                                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| username-4D         | Usuario - No obligatorio                                                                                                        |
+| password-4D         | Contraseña en texto plano - No es obligatorio                                                                                   |
 | session-4D-length   | Tiempo de inactividad de la sesión (minutos). No puede ser inferior a 60 - No es obligatorio |
 
 :::caution

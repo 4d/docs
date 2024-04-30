@@ -623,7 +623,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 | ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
 | vpObject   | Object | -> | Objeto 4D View Pro que contém a área a converter |                  |
 | rangeObj   | Object | -> | Objeto intervalo                                 |                  |
-| Resultados | Object | <- | Imagem SVG da área                               | <!-- END REF --> |
+| Resultados | Imagem | <- | Imagem SVG da área                               | <!-- END REF --> |
 
 #### Descrição
 
@@ -1354,7 +1354,7 @@ The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->
 
 Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Para aumentar o desempenho e reduzir o número de solicitações enviadas, os comandos do 4D View Pro chamados pelo desenvolvedor são armazenados em um buffer de comando. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
+Para aumentar o desempenho e reduzir o número de solicitações enviadas, os comandos do 4D View Pro chamados pelo desenvolvedor são armazenados em um buffer de comando. Quando chamado, `VP FLUSH COMMANDS` executa os comandos como um lote ao sair do método e esvazia o conteúdo do buffer de comandos.
 
 #### Exemplo
 
@@ -1530,7 +1530,9 @@ The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->
 In _rangeObj_, pass a range containing the style to retrieve.
 
 - If _rangeObj_ contains a cell range, the cell style is returned.
+
 - If _rangeObj_ contains a range that is not a cell range, the style of the first cell in the range is returned.
+
 - If _rangeObj_ contains several ranges, only the style of the first cell in the first range is returned.
 
 #### Exemplo
@@ -2341,7 +2343,7 @@ The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summa
 
 Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
+No parâmetro opcional _sheet_, pode designar uma planilha específica (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
 #### Objeto devolvido
 
@@ -4398,7 +4400,7 @@ $result:=VP Run offscreen area($o)
 
 #### Descrição
 
-The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
+O comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define uma célula especificada como ativa<!-- END REF -->.
 
 Em _rangeObj_, passe um intervalo contendo uma única célula como um objeto (consulte [VP Cell](#vp-cell)). If _rangeObj_ is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
@@ -5632,11 +5634,11 @@ VP SET SELECTION($currentSelection)
 
 #### Descrição
 
-The `VP SET SHEET COUNT` command <!-- REF #_method_.VP SET SHEET COUNT.Summary -->sets the number of sheets in _vpAreaName_<!-- END REF -->.
+O comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->define o número de folhas em _vpAreaName_<!-- END REF -->.
 
-In `number`, pass a number corresponding to how many sheets the document will contain after the command is executed.
+Em `number`, passe um número correspondente à quantidade de folhas que o documento conterá depois que o comando for executado.
 
-> **Warning**: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
+> **Aviso**: O comando excluirá folhas se a quantidade anterior de folhas em seu documento for superior ao número passado. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
 
 #### Exemplo
 
@@ -5672,17 +5674,17 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 #### Descrição
 
-The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in _vpAreaName_<!-- END REF -->.
+O comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomeia uma planilha no documento carregado em _vpAreaName_<!-- END REF -->.
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _name_, pass a new name for the sheet.
+Em _name_, introduza um novo nome para a folha.
 
-In _sheet_, pass the index of the sheet to rename.
+Em _sheet_, passe o índice da folha a ser renomeada.
 
 > A indexação começa em 0.
 
-If no _sheet_ is passed, the command renames the current sheet.
+Se nenhum _sheet_ for passado, o comando renomeia a planilha atual.
 
 O novo nome não pode conter os seguintes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5691,7 +5693,7 @@ O comando não faz nada se:
 - o novo nome contém caracteres proibidos
 - o valor do novo nome está em branco
 - o novo nome já existe
-- the passed _sheet_ index does not exist
+- o índice _sheet_ passado não existe
 
 #### Exemplo
 
@@ -5719,13 +5721,13 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 #### Descrição
 
-The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the _vpAreaName_ area<!-- END REF -->.
+O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir várias opções de planilha da área _vpAreaName_<!-- END REF -->.
 
 Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
-Pass an object containing definitions for the options to set in the _sheetOptions_ parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
+Passe um objeto que contenha definições para as opções a serem definidas no parâmetro _sheetOptions_. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
+No parâmetro opcional _sheet_, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
 - `vk current sheet`
 
@@ -5734,14 +5736,14 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet (cou
 Pretende proteger todas as células exceto o intervalo C5:D10:
 
 ```4d
-// Activate protection on the current sheet
+// Ativar a proteção na planilha atual
 var $options : Object
   
 $options:=New object
 $options.isProtected:=True
 VP SET SHEET OPTIONS("ViewProArea";$options)
   
-// mark cells C5:D10 as 'unlocked'
+// marcar as células C5:D10 como 'unlocked'
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
@@ -5761,7 +5763,7 @@ $options.protectionOptions.allowResizeRows=True;
 // Allow user to resize columns
 $options.protectionOptions.allowResizeColumns=True;
     
-// Apply protection on the current sheet
+// Aplicar proteção na planilha atual
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
@@ -6244,10 +6246,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                        |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro       |                  |
-| optionObj  | Object | -> | Object containing the workbook options to be set | <!-- END REF --> |
+| Parâmetro  | Tipo   |    | Descrição                                      |                  |
+| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro     |                  |
+| optionObj  | Object | -> | Objeto que contém as opções do livro a definir | <!-- END REF --> |
 
 #### Descrição
 

@@ -3,24 +3,22 @@ id: sql-server
 title: SQLサーバーページ
 ---
 
-
-**SQLサーバー** ページには、4D Server に統合された SQLサーバーについての情報が集められています。 また、SQLサーバーを有効にするためのボタンも含まれています。
+The **SQL Server** page groups together information about the integrated SQL server of 4D Server. また、SQLサーバーを有効にするためのボタンも含まれています。
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
 
-
 ページの上部には、4D Server の SQLサーバーの現在の状況が表示されます。
 
-- **状況**: 開始または停止
-- **開始時刻**: SQLサーバーの起動日と時刻。
-- **動作時間**: SQLサーバーが最後に開始されてからの経過時間。
+- **State**: Started or Stopped
+- **Starting time**: Date and time the SQL server was last launched.
+- **Uptime**: Time elapsed since last startup of the SQL server.
 
 ## SQLサーバー開始/停止
 
 このボタンは切り替え表示され、4D Server SQLサーバーをコントロールするために使用します。
 
-- SQLサーバーの状態が "開始" の場合、ボタンのタイトルは **SQLサーバー停止** になります。 このボタンをクリックすると、4D Server SQLサーバーは即座に停止し、指定した TCPポートで受信される外部からの SQLクエリには応答しなくなります。
-- SQLサーバーの状態が "停止" の場合、ボタンのタイトルは **SQLサーバー開始** になります。 このボタンをクリックすると、4D Server SQLサーバーは即座に開始し、指定した TCPポートで受信される外部からの SQLクエリに応答します。 4D SQLサーバーを使用するには、適切なライセンスが必要な点に注意してください。
+- When the SQL server state is "Started," the button is titled **Stop SQL Server**. このボタンをクリックすると、4D Server SQLサーバーは即座に停止し、指定した TCPポートで受信される外部からの SQLクエリには応答しなくなります。
+- When the SQL server state is "Stopped," the button is titled **Start SQL Server**. このボタンをクリックすると、4D Server SQLサーバーは即座に開始し、指定した TCPポートで受信される外部からの SQLクエリに応答します。 4D SQLサーバーを使用するには、適切なライセンスが必要な点に注意してください。
 
 > ストラクチャー設定で設定してアプリケーション起動と同時に、またはプログラムを使用して必要な時に、SQLサーバーを自動で開始することができます。
 

@@ -14,7 +14,7 @@ title: VP Name
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                |                  |
 | rangeName  | Text    | -> | Nom de plage existante                                                 |                  |
 | sheet      | Integer | -> | Emplacement de la plage (si omis, feuille courante) |                  |
-| Résultat   | Object  | <- | Range object of name                                                   | <!-- END REF --> |
+| Résultat   | Object  | <- | Plage nommée                                                           | <!-- END REF --> |
 
 #### Description
 

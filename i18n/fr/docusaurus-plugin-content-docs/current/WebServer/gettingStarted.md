@@ -5,7 +5,6 @@ title: Développement Web
 
 This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
 
-
 ## Hello World Example
 
 Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
@@ -37,13 +36,10 @@ The default home page is displayed:
 
 ```4d
 Case of 
-    : ($1="/hello")
-        WEB SEND TEXT("Hello World!")
-    Else 
-        // Error 404 for example
-End case
-    Else 
-        // Erreur 404 par exemple
+	: ($1="/hello")
+		WEB SEND TEXT("Hello World!")
+	Else 
+		// Error 404 for example
 End case 
 ```
 
@@ -59,14 +55,14 @@ The web server handles the request and returns:
 
 ![](../assets/en/WebServer/hello.png)
 
-
 ## Getting data from the database
 
 Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
 
 Create a basic database with, for example, a single table containing some records:
 
-![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
+![](../assets/en/WebServer/hello2.png)
+![](../assets/en/WebServer/hello3.png)
 
 ### Displaying data in a page
 
@@ -98,10 +94,9 @@ http://localhost/friends.shtml
 
 ### REST request
 
-If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+If we not only want to _display_ data, but to _use_ it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
 
-
-1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des ** Paramètres**, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
+1. We will use the REST server to access data: go the **Settings** dialog box, select **Web** > **Web Features**, and check the **Expose as REST server** option.
 
 ![](../assets/en/WebServer/hello5.png)
 
@@ -115,14 +110,14 @@ The web server returns the results in JSON:
 
 ```json
 {
-    "__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
-    "dataClasses": [
-        {
-            "name": "Friends",
-            "uri": "/rest/$catalog/Friends",
-            "dataURI": "/rest/Friends"
-        }
-    ]
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
 }
 ```
 
@@ -140,53 +135,50 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 
 ```json
 {
-    "__DATACLASS": "Friends",
-    "__entityModel": "Friends",
-    "__GlobalStamp": 0,
-    "__COUNT": 4,
-    "__FIRST": 0,
-    "__ENTITIES": [
-        {
-            "__KEY": "1",
-            "__TIMESTAMP": "2020-10-27T14:29:01.914Z",
-            "__STAMP": 1,
-            "ID": 1,
-            "lastName": "Smith",
-            "firstName": "John"
-        },
-        {
-            "__KEY": "2",
-            "__TIMESTAMP": "2020-10-27T14:29:16.035Z",
-            "__STAMP": 1,
-            "ID": 2,
-            "lastName": "Brown",
-            "firstName": "Danny"
-        },
-        {
-            "__KEY": "3",
-            "__TIMESTAMP": "2020-10-27T14:29:43.945Z",
-            "__STAMP": 1,
-            "ID": 3,
-            "lastName": "Purple",
-            "firstName": "Mark"
-        },
-        {
-            "__KEY": "4",
-            "__TIMESTAMP": "2020-10-27T14:34:58.457Z",
-            "__STAMP": 1,
-            "ID": 4,
-            "lastName": "Dupont",
-            "firstName": "Jenny"
-        }
-    ],
-    "__SENT": 4
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
 }
 ```
 
 This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
-
-
-
 
 ## Login and session
 
@@ -196,8 +188,8 @@ In the above sections, we get free access to the application from web requests. 
 
 The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
 
-- Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
-- The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- Users are stored in a dedicated, unexposed table (named _WebUsers_ for example)
+- The _WebUsers_ table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
 
 1. Create a table with some fields, for example:
 
@@ -217,15 +209,13 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-
-
 ### Authentification des utilisateurs
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
 
 1. Open the Explorer and create a project method named "login".
 
-3. Write the following code:
+2. Write the following code:
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -247,20 +237,16 @@ $password:=$avalues{$indexPassword}
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
 If ($user#Null) //a user was found
-        //check the password
+		//check the password
     If (Verify password hash($password; $user.password))
-            //password ok, fill the session
+    		//password ok, fill the session
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-            //You can use the user session to store any information
+        	//You can use the user session to store any information
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
-    End if 
-Else 
-    WEB SEND TEXT("Wrong user name or password.")
-End if
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")
@@ -270,7 +256,6 @@ End if
 3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
 
 ![](../assets/en/WebServer/hello0.png)
-
 
 4. In your browser, enter the following URL:
 
@@ -288,5 +273,4 @@ Wrong credentials would be rejected:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page. 
-
+Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.

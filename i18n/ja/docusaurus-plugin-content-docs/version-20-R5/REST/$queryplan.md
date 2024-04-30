@@ -1,25 +1,26 @@
 ---
 id: queryplan
-title: '$queryplan'
+title: $queryplan
 ---
 
-
-4D Server に渡したクエリを返します (*例*: `$queryplan=true`)
+Returns the query as it was passed to 4D Server (_e.g._, `$queryplan=true`)
 
 ## 説明
+
 $queryplan は、4D Server に渡したクエリプランを返します。
 
-| プロパティ    | タイプ    | 説明                                      |
-| -------- | ------ | --------------------------------------- |
-| item     | String | 渡された実際のクエリ                              |
+| プロパティ    | タイプ    | 説明                                                         |
+| -------- | ------ | ---------------------------------------------------------- |
+| item     | String | 渡された実際のクエリ                                                 |
 | subquery | 配列     | (サブクエリが存在する場合) item プロパティを格納する追加のオブジェクト |
 
-クエリプランについての詳細は [queryPlan と queryPath](genInfo.md#querypath-と-queryplan) を参照ください。
+For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
 ## 例題
+
 以下のクエリを渡した場合:
 
- `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
+`GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
 #### レスポンス:
 

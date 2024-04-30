@@ -3,23 +3,21 @@ id: maintenance
 title: Page maintenance
 ---
 
-
-La page **Maintenance** fournit diverses informations relatives au fonctionnement courant de la base. Elle donne également accès aux fonctions de maintenance élémentaires :
+The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. Elle donne également accès aux fonctions de maintenance élémentaires :
 
 ![](../assets/en/Admin/server-maintenance.png)
 
-
 ## Dernière vérification/dernier compactage
 
-Ces zones indiquent la date, l’heure et le statut de la dernière [vérification des données](MSC/verify.md) et de la dernière [opération de compactage](MSC/compact.md) effectuées sur la base.
+These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
 
 ### Vérifier enregistrements et index
 
 Ce bouton permet de lancer directement l’opération de vérification, sans interruption du serveur. A noter que le serveur peut être sensiblement ralenti durant l’opération.
 
-Tous les enregistrements et tous les index de la base sont vérifiés. Si vous souhaitez pouvoir cibler la vérification ou disposer d’options supplémentaires, vous devez utiliser le [Centre de sécurité et de maintenance](MSC/overview.md) (CSM).
+Tous les enregistrements et tous les index de la base sont vérifiés. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
 
-A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 ### Compacter les données...
 
@@ -27,19 +25,17 @@ Ce bouton permet de lancer directement une opération de compactage des données
 
 ![](../assets/en/Admin/server-shut.png)
 
-Après l’interruption effective de la base, 4D Server effectue un compactage standard des données de la base. Si vous souhaitez disposer d’options supplémentaires, vous devez utiliser le [Centre de sécurité et de maintenance (CSM)](MSC/overview.md).
+Après l’interruption effective de la base, 4D Server effectue un compactage standard des données de la base. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
 
 Une fois le compactage terminé, 4D Server relance automatiquement l'application. Les utilisateurs 4D peuvent alors se reconnecter.
 
 > Si la demande de compactage a été effectuée depuis un client 4D distant, ce poste est automatiquement reconnecté par 4D Server.
 
-A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
-
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
 ## Durée de fonctionnement
 
 Cette zone indique la durée de fonctionnement du serveur depuis son dernier démarrage (jours, heures et minutes).
-
 
 ### Redémarrer le serveur...
 
@@ -49,39 +45,36 @@ Ce bouton vous permet de provoquer un redémarrage immédiat du serveur. Lorsque
 
 ## Dernière sauvegarde
 
-Cette zone indique la date et l’heure de la [dernière sauvegarde](MSC/backup.md) de la base et fournit des informations relatives à la prochaine sauvegarde automatique, le cas échéant. Les sauvegardes automatiques sont paramétrées via la page **Périodicité** des propriétés de la base.
+This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
 
-- **Dernière sauvegarde** : date et heure de la dernière sauvegarde automatique.
-- **Prochaine sauvegarde** : date et heure de la prochaine sauvegarde.
-- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. La véritable taille réelle du fichier de sauvegarde pourra varier en fonction des paramétrages (compression...) et des variations du fichier de données.
-- **Place disponible** : place disponible sur le volume de sauvegarde.
+- **Last backup**: date and time of last backup.
+- **Next backup**: date and time of next scheduled backup.
+- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Available space**: space available on the backup volume.
 
-
-Le bouton **Sauvegarder la base** permet de démarrer une sauvegarde immédiate de la base en utilisant les paramètres de sauvegarde courants (fichiers sauvegardés, emplacement des archives, options, etc.). Vous pouvez visualiser ces paramètres en cliquant sur le bouton **Propriétés...**. Pendant une sauvegarde sur le serveur, les postes clients sont "bloqués" (mais pas déconnectés) et il n’est pas possible à de nouveaux clients de se connecter.
-
+The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. Pendant une sauvegarde sur le serveur, les postes clients sont "bloqués" (mais pas déconnectés) et il n’est pas possible à de nouveaux clients de se connecter.
 
 ## Requêtes et débogage
 
 Cette zone indique la durée d’enregistrement des fichiers d'historique (lorsqu’ils sont activés) et vous permet de gérer leur activation.
 
-Consultez la section [**Description des fichiers d'historique**](Debugging/debugLogFiles.md) pour obtenir plus de détails sur les fichiers d'historique.
+Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
 ### Start/Stop Request and Debug Logs
 
-Le bouton **Démarrer les journaux des requêtes et de débogage** permet de démarrer les fichiers de compte-rendu. Ce mode pouvant dégrader sensiblement les performances du serveur, il est à réserver à la phase de mise au point de l’application.
+The **Start Request and Debug Logs** button starts log files. Ce mode pouvant dégrader sensiblement les performances du serveur, il est à réserver à la phase de mise au point de l’application.
 
 > Ce bouton enregistre uniquement les opérations exécutées sur le serveur.
 
-Une fois l’enregistrement des requêtes activé, le libellé du bouton devient **Arrêter les journaux des requêtes et de débogage**, permettant de stopper l’enregistrement des requêtes à tout moment. A noter qu’une reprise de l’enregistrement après un arrêt "écrase" le fichier précédent.
+When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. A noter qu’une reprise de l’enregistrement après un arrêt "écrase" le fichier précédent.
 
 ### Voir le compte rendu
 
-Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un client distant) permet d’ouvrir une fenêtre système affichant le fichier journal.
+The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
 ### Load logs configuration file
 
-Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Such a file can be provided by 4D technical services to monitor and study specific cases.
-
+This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 
 ### Pause logging
 

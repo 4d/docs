@@ -3,5 +3,4 @@ id: backup
 title: Page Sauvegarde
 ---
 
-Ces options sont détaillées dans le chapitre [**Paramètres de sauvegarde**](../Backup/settings.md).
-
+These options are detailed in the [**Backup Settings**](../Backup/settings.md) chapter.

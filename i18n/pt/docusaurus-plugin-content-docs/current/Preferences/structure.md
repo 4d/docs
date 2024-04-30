@@ -5,12 +5,12 @@ title: Página Estrutura
 
 ## Chave primária
 
-Essas opções nas preferências modificam o nome padrão e o tipo dos campos de chave primária que são adicionados automaticamente por 4D quando novas tabelas são criadas ou por meio do [Gestor de chaves primárias](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
+These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
 
 As opções abaixo estão disponíveis:
 
-*   **Nome** ("ID" por padrão): define o nome padrão dos campos chaves primárias. Pode utilizar o nome que quiser, desde que respeite as [regras de nomenclatura de 4D](Concepts/identifiers.md#tables-and-fields).
-*   **Tipo** ([Longint](Concepts/dt_number.md) por padrão): define o tipo padrão dos campos chaves primárias. Pode escolher o tipo de UUID. Neste caso, os campos chaves primárias criados por padrão são do [tipo Alpha](Concepts/dt_string.md) e têm as propriedades de campo **UUID Format** e **Auto UUID** selecionadas.
+- **Name** ("ID" by default): Sets the default name of primary key fields. You can use any name you want, as long as it respects the [4D naming rules](Concepts/identifiers.md#tables-and-fields).
+- **Type** ([Longint](Concepts/dt_number.md) by default): Sets the default type of primary key fields. Pode escolher o tipo de UUID. In this case, the primary key fields created by default are of the [Alpha type](Concepts/dt_string.md) and have the **UUID Format** and **Auto UUID** field properties checked.
 
 ## Editor de estrutura
 
@@ -18,9 +18,8 @@ Este grupo de opções configura o ecrã do editor de estrutura de 4D.
 
 ### Qualidade gráfica da estrutura
 
-Esta opção varia o nível de detalho gráfico no editor de estrutura. Por defeito, a qualidade está definida como **Alta**. Pode selecionar a qualidade Standard para dar prioridade à velocidade de visualização. O efeito deste parâmetro é sobretudo perceptível quando se utiliza a função de zoom (ver o parágrafo "Zoom" em [Editor de estrutura](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
+Esta opção varia o nível de detalho gráfico no editor de estrutura. By default, the quality is set to **High**. Pode selecionar a qualidade Standard para dar prioridade à velocidade de visualização. The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
 
 ### Quando uma pasta é escurecida, o seu conteúdo é:
 
-Esta opção define o aspeto das tabelas escurecidas no editor de estruturas, quando efetua selecções por pasta (ver [Destacar/escurecer tabelas por pasta](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). As opções possíveis são Reduzido (uma sombra substitui a imagem da tabela) e Invisível (a tabela desaparece completamente).
-
+This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). As opções possíveis são Reduzido (uma sombra substitui a imagem da tabela) e Invisível (a tabela desaparece completamente).

@@ -11,8 +11,8 @@ Null is a special data type with only one possible value: **null**. Cette valeur
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
-- object attributes
-- collection elements
+- attributs d'objets
+- éléments de collections
 - variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Undefined
@@ -80,8 +80,8 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie
+  //afin d'éviter des erreurs dans le code
 ```
 
 :::

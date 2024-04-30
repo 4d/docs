@@ -1,15 +1,15 @@
 ---
 id: querypath
-title: '$querypath'
+title: $querypath
 ---
-   	
-Retourne la requête telle qu'elle a été exécutée par 4D Server (par exemple, `$querypath=true`)
+
+Returns the query as it was executed by 4D Server (_e.g._, `$querypath=true`)
 
 ## Description
 
-`$querypath` retourne la requête telle qu'elle a été exécutée par 4D Server. Si, par exemple, une partie de la requête passée ne retourne aucune entité, le reste de la requête n'est pas exécuté. La requête lancée est optimisée, comme vous pouvez le voir dans ce $ `$querypath`.
+`$querypath` returns the query as it was executed by 4D Server. Si, par exemple, une partie de la requête passée ne retourne aucune entité, le reste de la requête n'est pas exécuté. The query requested is optimized as you can see in this `$querypath`.
 
-Pour plus d'informations sur les chemins de requête, reportez-vous à [queryPlan ete queryPath](genInfo.md#querypath-and-queryplan).
+For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
 Dans la collection d'étapes, il existe un objet avec les propriétés suivantes qui définissent la requête exécutée :
 
@@ -24,17 +24,17 @@ Dans la collection d'étapes, il existe un objet avec les propriétés suivantes
 
 Si vous exécutez la requête suivante :
 
- `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
+`GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
 Et si aucune entité n'a été trouvée, le chemin de la requête suivant sera retourné si vous saisissez ce qui suit :
 
-`GET  /rest/$querypath`
+` GET  /rest/$querypath`
 
-**Réponse** :
+**Response**:
 
 ```
 __queryPath: {
-
+ 
     steps: [
         {
             description: "AND",
@@ -60,19 +60,19 @@ __queryPath: {
             ]
         }
     ]
-
+ 
 }
 ```
 
 En revanche, si la première requête retourne plus d'une entité, la seconde sera exécutée. Si nous exécutons la requête suivante :
 
- `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
+`GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 
 Si au moins une entité a été trouvée, le chemin de la requête suivant sera retourné si vous saisissez ce qui suit :
 
- `GET  /rest/$querypath`
+`GET  /rest/$querypath`
 
-**Réponse** :
+**Respose**:
 
 ```
 "__queryPath": {

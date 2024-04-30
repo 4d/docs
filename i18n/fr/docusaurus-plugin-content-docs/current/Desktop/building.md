@@ -7,21 +7,21 @@ title: Générateur d'application
 
 Le générateur d'applications vous permet de :
 
-* Générer une structure compilée, sans code interprété,
-* Générer une application autonome exécutable, c'est-à-dire fusionnée avec 4D Volume Desktop, le moteur de base de données 4D,
-* Générer différentes applications à partir de la même structure compilée via un projet XML,
-* Générer des applications client-serveur homogènes,
-* Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
-* Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
+- Build a compiled structure or component, without interpreted code,
+- Build a stand-alone, double-clickable application, _i.e._, merged with 4D Volume Desktop, the 4D database engine,
+- Générer différentes applications à partir de la même structure compilée via un projet XML,
+- Générer des applications client-serveur homogènes,
+- Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
+- Save your build settings for future use (_Save settings_ button).
 
-> Les applications compilées sont basées sur des [fichiers .4dz files](#build-compiled-structure) qui sont en **lecture seule**. A noter que l'utilisation de commandes ou de fonctions qui modifient les fichiers sources (telles que `CREATE INDEX` ou `CREATE TABLE` (SQL)) n'est pas possible par défaut dans les applications compilées. Vous pouvez néanmoins créer des applications spécifiques qui prennent en charge les modifications locales en utilisant la clé XML du `PackProject` (voir [doc.4d.com](https://doc.4d.com)).
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 ## Vue d’ensemble
 
 Générer un package de projet peut être réalisée à l'aide de :
 
-* soit la commande [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
-* Utiliser la [Page Application](#application) ou la [Page Client/Serveur](#client-server) de boîte de dialogue du Générateur d'applications.
+- either the [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html) command,
+- or the [Build Application dialog](#application-builder).
 
 :::tip
 
@@ -29,10 +29,9 @@ You can also download and use [`Build4D`](https://github.com/4d-depot/Build4D), 
 
 :::
 
-
 ### Construire application cliente
 
-Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](../assets/en/Project/buildappProj.png)
 
@@ -44,33 +43,33 @@ La génération ne peut s'effectuer qu'une fois le projet compilé. Si vous sél
 
 ### buildApp.4DSettings
 
-Chaque paramètre de génération de l'application est sauvegardé en tant que clé XML dans le fichier XML de l'application nommé `buildApp.4DSettings`, situé dans le dossier [`Settings` du projet](../Project/architecture.md#settings-1).
+Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-1).
 
-Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
+Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command.
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
 
 ### Fichier d'historique
 
-Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+When an application is built, 4D generates a log file named _BuildApp.log.xml_ in the **Logs** folder of the project. Le fichier d'historique stocke les informations suivantes pour chaque génération :
 
-* Le début et la fin de la génération des cibles,
-* Le nom et le chemin d'accès complet des fichiers générés,
-* La date et l'heure de la génération,
-* Toutes les erreurs qui se sont produites,
-* Tout problème de signature (par exemple, un plug-in non signé).
+- Le début et la fin de la génération des cibles,
+- Le nom et le chemin d'accès complet des fichiers générés,
+- La date et l'heure de la génération,
+- Toutes les erreurs qui se sont produites,
+- Tout problème de signature (par exemple, un plug-in non signé).
 
 La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application.
 
-> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal.
+> Use the `Get 4D file(Build application log file)` command to get the log file location.
 
 ## Nom de l'application et dossier de destination
 
 ![](../assets/en/Project/buidappstructureProj.png)
 
-Entrez le nom de l'application dans **Nom de l'application**.
+Enter the name of the application in **Application Name**.
 
-Spécifiez le dossier de l'application générée dans le**Dossier de destination**. Si le dossier spécifié n'existe pas déjà, 4D vous créera un dossier *Build*.
+Specify the folder for the built application in **Destination Folder**. If the specified folder does not already exist, 4D will create a _Build_ folder for you.
 
 ## Page de structure compilée
 
@@ -82,33 +81,34 @@ Cet onglet vous permet de générer un fichier de structure compilé standard et
 
 Génère une application contenant uniquement du code compilé.
 
-This feature creates a *.4dz* file within a `Compiled Database/<project name>` folder. Par exemple, si vous avez nommé votre application «MyProject», 4D créera :
+This feature creates a _.4dz_ file within a `Compiled Database/<project name>` folder. Par exemple, si vous avez nommé votre application «MyProject», 4D créera :
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
 Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, 4D Volume Desktop (applications fusionnées) et 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
-> Lors de la génération de fichiers .4dz, 4D utilise par défaut un format zip **standard**. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. Si vous ne souhaitez pas utiliser ce format standard, ajoutez la clé XML `UseStandardZipFormat` avec la valeur `False` dans votre fichier [`buildApp.4DSettings`](#build-application-settings) (pour plus d'informations, voir le manuel [4D XML Keys Backup](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> When generating .4dz files, 4D uses a **standard** zip format by default. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
 #### Inclure les dossiers associés
 
-Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopiés dans le dossier Build en tant que dossiers *Components* et *Resources*. Pour plus d'informations sur ces dossiers, veuillez vous reporter à la [description de l'architecture du projet](Project/architecture.md).
+When you check this option, any folders related to the project are copied into the Build folder as _Components_ and _Resources_ folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
 
 ### Générer un composant
 
 Génère un composant compilé à partir de la structure.
 
-Un composant est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Une fois le composant configuré et installé dans un autre projet 4D (le projet d'application hôte), ses fonctionnalités sont accessibles depuis le projet hôte.
+A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
 
-Si vous avez nommé votre application *MyComponent*, 4D créera un dossier *Component* contenant le dossier *MyComponent.4dbase* :
+If you have named your application, _MyComponent_, 4D will create a _Components_ folder containing _MyComponent.4dbase_ folder:
 
 `<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
-Le dossier *MyComponent.4dbase* contient :
+The _MyComponent.4dbase_ folder contains:
 
-* fichier *MyComponent.4DZ*
+- _MyComponent.4DZ_ file
+- A _Resources_ folder - any associated Resources are automatically copied into this folder. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
 
-* Un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
+The _MyComponent.4dbase_ folder is the [package folder of the compiled component](../Project/components.md).
 
 ## Page Application
 
@@ -118,29 +118,29 @@ Cet onglet vous permet de créer une version autonome et monoposte de votre appl
 
 ### Créer une application autonome
 
-Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
 Les éléments suivants sont requis pour la création :
 
-* 4D Volume Desktop (le moteur de base de données 4D),
-* une [licence appropriée](#licenses)
+- 4D Volume Desktop (le moteur de base de données 4D),
+- an [appropriate license](#licenses)
 
 Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOS, il gère la création de progiciels.
 
-Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
+Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
-Vous pouvez définir un fichier de données par défaut ou permettre à l'utilisateur de créer et d'utiliser son propre fichier de données (cf. section [Gestion du fichier de données dans les applications finales](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
+You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
 
-Il est possible d'automatiser la mise à jour des applications monopostes fusionnées moyennant l'utilisation d'une séquence de commandes du langage (cf. section [Mise à jour auto des applications serveur ou monopostes](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html)).
+It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
 
 #### Emplacement du 4D Volume Desktop
 
 Afin de créer une application autonome, il convient d'abord de désigner le dossier contenant le fichier 4D Volume Desktop :
 
-* *sous Windows*, le dossier contient notamment les fichiers 4D Volume Desktop.4DE, 4D Volume Desktop.RSR ainsi que différents fichiers et dossiers nécessaires à son fonctionnement. Ces éléments doivent être placés au premier niveau du dossier sélectionné.
-* *sous macOS*, 4D Volume Desktop est fourni sous la forme d’un progiciel structuré contenant divers fichiers et dossiers génériques.
+- _Windows_ - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, as well as various files and folders required for its operation. Ces éléments doivent être placés au premier niveau du dossier sélectionné.
+- _macOS_ - 4D Volume Desktop is provided in the form of a structured software package containing various generic files and folders.
 
-Pour sélectionner le dossier de 4D Volume Desktop, cliquez sur le bouton **[...]**. Une boîte de dialogue vous permettant de désigner le dossier (Windows) ou le progiciel (macOS) de 4D Volume Desktop apparaît.
+To select the 4D Volume Desktop folder, click on the **[...]** button. Une boîte de dialogue vous permettant de désigner le dossier (Windows) ou le progiciel (macOS) de 4D Volume Desktop apparaît.
 
 Une fois le dossier sélectionné, son chemin d’accès complet est affiché et, s’il contient effectivement 4D Volume Desktop, l’option de génération d’application exécutable est activée.
 
@@ -150,51 +150,53 @@ Une fois le dossier sélectionné, son chemin d’accès complet est affiché et
 
 Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
 
-* **Nom de l'application** (défaut) - Dans ce mode, l'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
+- **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
 
-* **Chemin de l'application** - Dans ce mode, l'application 4D fusionnée va lire le contenu du fichier *lastDataPath.xml* et tenter d'ouvrir le fichier de données dont l'attribut "executablePath" correspond au chemin d'accès de l'application. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert.
+- **By application path** - The merged 4D application will parse the application's _lastDataPath.xml_ file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert.
 
-Pour plus d'informations sur le mode de liaison des données, reportez-vous au paragraphe [Dernier fichier de données ouvert](#last-data-file-opened).
+For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 #### Fichiers générés
 
-Lorsque vous cliquez sur le bouton **Générer**, 4D crée automatiquement un dossier **Final Application** dans le **Dossier de destination** défini. Dans le dossier Final Application, se trouve un sous-dossier contenant le nom de l'application spécifiée.
+When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Dans le dossier Final Application, se trouve un sous-dossier contenant le nom de l'application spécifiée.
 
 Si vous avez nommé votre application "MyProject", vous trouverez les fichiers suivants dans ce sous-dossier (MyProject):
 
-* *Windows*
-  * MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
-  * Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
-  * Un dossier Database contenant notamment un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée du projet et son dossier Resources. **Note** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
-  * (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. Pour plus d’informations sur ce point, reportez-vous à la section [Plugins et composants](#plugins-and-components).
-  * Un dossier Licences contenant, sous forme de fichier XML, la liste des numéros de licence ayant été intégrés dans l’application. Pour plus d’informations sur ce point, reportez-vous à la section [Licences & Certificat](#licenses-and-certificate).
-  * Les éléments supplémentaires éventuellement ajoutés dans le dossier 4D Volume Desktop (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
+- _Windows_
+  - MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
+  - Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
+  - Un dossier Database contenant notamment un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée du projet et son dossier Resources.
+    **Note**: This folder also contains the _Default Data_ folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
+  - (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
+  - Un dossier Licences contenant, sous forme de fichier XML, la liste des numéros de licence ayant été intégrés dans l’application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+  - Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
 
- Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
+Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
 
-* *macOS*
-  * Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins-and-components). Pour plus d’informations sur l’intégration des licences, reportez-vous à la section [Page Licences & Certificat](#licenses-and-certificate). **Note**: Dans macOS, la commande [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) du langage 4D renvoie le chemin du fichier ApplicationName (situé dans le dossier Contents:macOS du progiciel) et non celui du fichier .comp (dossier Contents:Resources du progiciel).
+- _macOS_
+  - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### Personnaliser le dossier 4D Volume Desktop
 
-Lors de la construction de l’application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le dossier *Final Application*. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
+When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > _Final Application_ folder. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
 
-* Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
-* Ajouter un dossier *PlugIns* personnalisé ;
-* Personnaliser le contenu du dossier *Resources*.
-> Dans macOS, 4D Volume Desktop est fourni sous la forme d'un package. Pour le modifier, vous devez d'abord afficher son contenu (**Contrôle+clic** sur l'icône).
+- Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
+- Add a custom _PlugIns_ folder;
+- Customize the contents of the _Resources_ folder.
+
+> Dans macOS, 4D Volume Desktop est fourni sous la forme d'un package. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
 #### Emplacements des fichiers Web
 
 Si votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
 
-* fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont utilisés pour les connexions TLS ainsi que par les commandes de cryptage des données,
-* dossier racine Web par défaut.
+- _cert.pem_ and _key.pem_ files (optional): These files are used for TLS connections and by data encryption commands,
+- dossier racine Web par défaut.
 
 Des éléments doivent être installés :
 
-* **Sous Windows** : dans le sous-dossier *Final Application\MonAppli\Database*.
-* **Sous macOS** : à côté du progiciel *MonProjet.app*.
+- **on Windows**: in the _Final Application\MyProject\Database_ subfolder.
+- **on macOS**: next to the _MyProject.app_ software package.
 
 ## Page Client/Serveur
 
@@ -206,20 +208,21 @@ Des éléments doivent être installés :
 
 Une application client/serveur est issue de la combinaison de trois éléments :
 
-* Un projet 4D compilé,
-* L’application 4D Server,
-* L’application 4D Volume Desktop (macOS et/ou Windows).
+- Un projet 4D compilé,
+- L’application 4D Server,
+- L’application 4D Volume Desktop (macOS et/ou Windows).
 
 Une fois générée, une application client/serveur se compose de deux parties homogènes : la partie Serveur (unique), et la partie Cliente (à installer sur chaque poste client).
 
-> Si vous voulez déployer une application client/server dans un environnement hétérogène (applications clientes exécutées sur des machines Intel/AMD et Apple Silicon), il est recommandé de [compiler le projet pour tous les processeurs](Project/compiler.md#compilation-target) sur une machine macOS, afin que toutes les applications clientes s'exécutent en code natif.
+> If you want to deploy a client/server application in an heterogeneous environment (client applications running on Intel/AMD and Apple Silicon machines), it is recommended to [compile the project for all processors](Project/compiler.md#compilation-target) on a macOS machine, so that all client applications will run natively.
 
 En outre, l’application client/serveur est personnalisée et son maniement est simplifié :
 
-* Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur : il n’est pas nécessaire de sélectionner le fichier projet. il n’est pas nécessaire de sélectionner le fichier projet.
-* Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
-* Une application client/serveur peut être paramétrée de telle sorte que la partie cliente [puisse être mise à jour automatiquement via le réseau](#copy-of-client-applications-in-the-server-application). Il vous suffit de créer et de distribuer une version initiale de l'application cliente, les mises à jour ultérieures sont gérées à l'aide du mécanisme de mise à jour automatique.
-* Il est également possible d'automatiser la mise à jour de la partie serveur moyennant une séquence de commandes du langage ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) et [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html).
+- Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur : il n’est pas nécessaire de sélectionner le fichier projet. il n’est pas nécessaire de sélectionner le fichier projet.
+- Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application.
+  Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
+- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application). Il vous suffit de créer et de distribuer une version initiale de l'application cliente, les mises à jour ultérieures sont gérées à l'aide du mécanisme de mise à jour automatique.
+- It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html).
 
 ### Construire application serveur
 
@@ -227,28 +230,28 @@ Cochez cette option pour générer la partie serveur de votre application pendan
 
 #### Emplacement de 4D Server
 
-Cliquez sur le bouton **[...]** et utilisez la boîte de dialogue *Rechercher un dossier* pour localiser l'application 4D Server. Sous macOS, vous devez sélectionner directement le package 4D Server.
+Click on the **[...]** button and use the _Browse for folder_ dialog box to locate the 4D Server application. Sous macOS, vous devez sélectionner directement le package 4D Server.
 
 #### Version courante
 
-Utilisée pour indiquer le numéro de version courante de l'application générée. Vous pourrez par la suite accepter ou refuser les connexions des applications clientes en fonction de leur numéro de version. L'intervalle de compatibilité pour les applications client/serveur est défini à l'aide de [clés XML](#buildapp4dsettings) spécifiques).
+Utilisée pour indiquer le numéro de version courante de l'application générée. Vous pourrez par la suite accepter ou refuser les connexions des applications clientes en fonction de leur numéro de version. The interval of compatibility for client and server applications is set using specific [XML keys](#buildapp4dsettings)).
 
 #### Intégrer le projet Groupe et Utilisateurs dans une application serveur
 
-**Note préliminaire :** Les termes suivants sont utilisés dans cette section :
+**Preliminary Note:** The following terms are used in this section:
 
-| Nom                                    | Définition                                                                                                                                                           |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fichier de répertoire du projet        | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-1) du projet     |
-| Fichier de répertoire de l'application | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-1) du serveur 4D |
-| Fichier de répertoire des données      | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le dossier [Data > Settings](../Project/architecture.md#settings)          |
+| Nom                                    | Définition                                                                                                                                                                                 |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Fichier de répertoire du projet        | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project         |
+| Fichier de répertoire de l'application | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |
+| Fichier de répertoire des données      | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings)                           |
 
 Lorsque vous cochez cette option, le fichier du répertoire du projet est copié dans le fichier du répertoire de l'application au moment de la génération.
 
 Lorsque vous exécutez une application 4D Server générée :
 
-* Si le serveur possède un fichier de répertoire de données, il est chargé.
-* Si le serveur ne possède pas de fichier de répertoire de données, le fichier de répertoire de l'application est chargé.
+- Si le serveur possède un fichier de répertoire de données, il est chargé.
+- Si le serveur ne possède pas de fichier de répertoire de données, le fichier de répertoire de l'application est chargé.
 
 Le fichier du répertoire d'application est en lecture seule. Les modifications apportées aux utilisateurs, aux groupes et aux autorisations pendant l'exécution du serveur sont sauvegardées dans le fichier du répertoire des données. Si aucun fichier de répertoire de données n'existe déjà, il est automatiquement créé. Si le fichier de répertoire de l'application a été incorporé, il est dupliqué en tant que fichier de répertoire des données.
 
@@ -258,7 +261,7 @@ L'incorporation du fichier de répertoire du projet vous permet de déployer une
 
 Lorsque vous créez un serveur sous Windows, cochez cette option pour permettre aux clients Apple Silicon de se connecter à votre application serveur. Vous pouvez alors spécifier un chemin d'accès à la structure compilée pour Apple Silicon/Intel.
 
-Pour permettre aux clients Apple Silicon de se connecter à une application serveur créée sous Windows, vous devez d'abord créer une application cliente sous macOS, avec un projet compilé pour Apple Silicon et Intel. Cela crée automatiquement une structure compilée, identique à celle créée avec l'option **[Build compiled structure](#build-compiled-structure)** (sans les dossiers associés).
+Pour permettre aux clients Apple Silicon de se connecter à une application serveur créée sous Windows, vous devez d'abord créer une application cliente sous macOS, avec un projet compilé pour Apple Silicon et Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
 
 Vous pouvez ensuite copier cette structure sur votre machine Windows, et l'utiliser pour construire l'application serveur :
 
@@ -266,17 +269,17 @@ Vous pouvez ensuite copier cette structure sur votre machine Windows, et l'utili
 
 #### Emplacement de la structure compilée
 
-Chemin d'accès à la structure compilée de l'application cliente Apple Silicon/Intel utilisée pour créer un serveur Windows (voir [Autoriser la connexion des clients Silicon Mac](#allow-connection-of-silicon-mac-clients)).
+Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
 
 #### Mode de liaison des données
 
 Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
 
-* **Nom de l'application** (défaut) - Dans ce mode, l'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
+- **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
 
-* **Chemin de l'application** - Dans ce mode, l'application 4D fusionnée va lire le contenu du fichier *lastDataPath.xml* et tenter d'ouvrir le fichier de données dont l'attribut "executablePath" correspond au chemin d'accès de l'application. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert.
+- **By application path** - The merged 4D application will parse the application's _lastDataPath.xml_ file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert.
 
-Pour plus d'informations sur le mode de liaison des données, reportez-vous au paragraphe [Dernier fichier de données ouvert](#last-data-file-opened).
+For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 ### Construire application cliente
 
@@ -284,8 +287,8 @@ Cochez cette option pour générer la partie cliente de votre application lors d
 
 Vous pouvez cocher cette option :
 
-* avec l'option [**Build server application**](#build-server-application) pour créer des parties serveur et client correspondantes pour la plate-forme courante et (éventuellement) inclure les fichiers d'archive de mise à jour automatique,
-* sans sélectionner l'option [**Build server application**](#build-server-application), généralement pour créer le fichier d'archive de mise à jour à sélectionner à partir de la plate-forme "concurrente" lors de la génération de la partie serveur.
+- along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
+- without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part.
 
 #### Emplacement du 4D Volume Desktop
 
@@ -295,16 +298,16 @@ Désigne l'emplacement sur votre disque de l'application 4D Volume Desktop à ut
 
 Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme.
 
-Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. Les différents scénarios proposés sont décrits dans la section [Gestion de la connexion des applications clientes](#management-of-client-connections).
+If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
 #### Copie des applications clientes dans l'application serveur
 
-Les options de cette zone permettent de mettre en place le mécanisme de mise à jour des parties clientes de vos applications client/serveur via le réseau à chaque nouvelle version de l’application générée. Ces options sont actives uniquement lorsque l'option **Construire application cliente** est cochée.
+Les options de cette zone permettent de mettre en place le mécanisme de mise à jour des parties clientes de vos applications client/serveur via le réseau à chaque nouvelle version de l’application générée. These options are only enabled when the **Build client application** option is checked.
 
-* **Permettre la mise à jour automatique de l'application cliente Windows** - Cochez cette option pour construire un fichier `.4darchive` qui sera envoyé à vos applications clientes sur la plate-forme Windows en cas de mise à jour.
-* **Permettre la mise à jour automatique de l'application cliente Macintosh** - Cochez cette option pour construire un fichier `.4darchive` qui sera envoyé à vos applications clientes sur la plate-forme Macintosh en cas de mise à jour.
+- **Allow automatic update of Windows client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Windows platform in case of update.
+- **Allow automatic update of Macintosh client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Macintosh platform in case of update.
 
-Le fichier `.4darchive` est copié à l'emplacement suivant :
+The `.4darchive` is copied at the following location:
 
 ```
 <ApplicationName>_Build/Client Server executable/Upgrade4DClient/
@@ -312,32 +315,32 @@ Le fichier `.4darchive` est copié à l'emplacement suivant :
 
 #### Sélectionner l'archive cliente pour la plate-forme concurrente
 
-Vous pouvez cocher l'option **Permettre la mise à jour automatique...** pour les applications clientes exécutées sur la plate-forme concurrente. Cette option est disponible seulement si :
+You can check the **Allow automatic update...** option for client applications running on the concurrent platform. Cette option est disponible seulement si :
 
-* l'option **Construire application serveur** est cochée,
-* l'option **Permettre la mise à jour automatique...** pour les applications clientes exécutées sur la plate-forme actuelle est cochée.
+- the **Build server application** option is checked,
+- the **Allow automatic update...** option for client applications running on the current platform is checked.
 
-Pour cela, vous devez cliquer sur le bouton **[...]** et désigner l'emplacement sur votre disque du fichier à utiliser pour la mise à jour. Le fichier à sélectionner dépend de la plate-forme courante du serveur :
+This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. Le fichier à sélectionner dépend de la plate-forme courante du serveur :
 
-| Plateforme du serveur courant | Fichier requis                                               | Détails                                                                                                                                                                                                      |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Par défaut, sélectionnez l'application `4D Volume Desktop` pour Windows. Pour sélectionner un fichier `.4darchive` précédemment créé sur Windows, appuyez sur la touche **Shift** tout en cliquant sur [...] |
-| Windows                       | macOS client update archive                                  | Sélectionnez un fichier `.4darchive` signé, précédemment créé sur macOS                                                                                                                                      |
+| Plateforme du serveur courant | Fichier requis                                               | Détails                                                                                                                                                                                                                                                                                        |
+| ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| macOS                         | Windows 4D Volume Desktop _or_ Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
+| Windows                       | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                                                                                                                                    |
 
-Vous pouvez construire un fichier `.4darchive` spécifique pour la plate-forme concurrente en sélectionnant uniquement [**Construire application cliente**](#build-client-application) et l'option [**Permettre la mise à jour automatique...**](#copie-des-applications-clientes-dans-lapplication-serveur) adéquate.
+You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
 #### Comment proposer une mise à jour ?
 
 Dans la pratique, la proposition de mise à jour des applications clientes découle automatiquement de la mise à jour de l’application serveur.
 
-Le principe est le suivant : lors de la génération d’une nouvelle version de l’application client-serveur depuis le générateur d’applications, la nouvelle partie cliente est copiée sous forme compressée dans le sous-dossier **Upgrade4DClient** du dossier **NomApplication** Server (sous macOS, ces dossiers sont inclus dans le progiciel serveur). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
+It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a ._4darchive_ update file is available for each platform:
 
 Pour provoquer la mise à jour des applications clientes, il suffit de remplacer l’ancienne version de l’application serveur par la nouvelle puis de l’exécuter. Le reste du processus est automatique.
 
 Côté client, au moment où l’“ancienne” application cliente tente de se connecter à l’application serveur mise à jour, une boîte de dialogue s’affiche sur le poste client, lui indiquant qu’une nouvelle version est disponible. L’utilisateur peut mettre sa version à jour ou annuler la boîte de dialogue.
 
-* Si l’utilisateur clique sur **OK**, la nouvelle version est téléchargée sur le poste client via le réseau. A l’issue du téléchargement, l’ancienne application client quitte, la nouvelle est lancée et se connecte au serveur. A l’issue du téléchargement, l’ancienne application client quitte, la nouvelle est lancée et se connecte au serveur.
-* Si l’utilisateur clique sur **Annuler**, la mise à jour est annulée ; si l’ancienne version de l’application cliente n’appartient pas à l’intervalle des numéros de version acceptés par le serveur (cf. paragraphe suivant), l’application quitte et la connexion est impossible. Sinon (par défaut), la connexion est établie.
+- If the user clicks **OK**, the new version is downloaded to the client machine over the network. A l’issue du téléchargement, l’ancienne application client quitte, la nouvelle est lancée et se connecte au serveur. A l’issue du téléchargement, l’ancienne application client quitte, la nouvelle est lancée et se connecte au serveur.
+- If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Sinon (par défaut), la connexion est établie.
 
 #### Comment forcer la mise à jour ?
 
@@ -345,7 +348,7 @@ Dans certains cas, vous pourrez souhaiter que les applications clientes ne puiss
 
 Pour forcer la mise à jour, il vous suffit d’exclure les versions courantes des applications clientes (N-1 et précédentes) de l’intervalle des numéros de version compatibles avec l’application serveur. Dans ce cas, le mécanisme de mise à jour n’autorisera pas la connexion des applications clientes non mises à jour. Par exemple, si la nouvelle version de l’application client-serveur est 6, vous pouvez stipuler que toute application cliente ayant un numéro de version strictement inférieur à 6 ne sera pas autorisé à se connecter.
 
-Le [numéro de version courante](#current_version) est défini dans la page Client/Serveur du générateur d’application. Les intervalles de numéros autorisés sont définis dans le projet d’application via des [clés XML](#buildapp4dsettings) spécifiques.
+The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#buildapp4dsettings).
 
 #### En cas d’erreur
 
@@ -353,84 +356,85 @@ Si 4D ne peut pas effectuer la mise à jour de l’application cliente, le poste
 
 Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce message, il est conseillé de contrôler en premier lieu les paramètres suivants :
 
-* **Chemins d’accès** : vérifiez la validité des chemins d’accès définis dans le projet d’application via la boîte de dialogue du Générateur d’applications ou via des clés XML (par exemple *ClientMacFolderToWin*). Vérifiez en particulier les chemins d’accès aux versions de 4D Volume Desktop.
-* **Privilèges lecture/écriture** : sur la machine cliente, vérifiez que l’utilisateur courant dispose de droits d’accès en écriture pour l’application cliente mise à jour.
+- **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example _ClientMacFolderToWin_). Vérifiez en particulier les chemins d’accès aux versions de 4D Volume Desktop.
+- **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 ### Fichiers générés
 
-A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. Ce dossier contient deux sous-dossiers, `<ApplicationName>Client` et `<ApplicationName>Server`.
-> Ces dossiers ne sont pas générés si une erreur est survenue. Dans ce cas, ouvrez le [fichier d’historique](#log-file) pour connaître la cause de l’erreur.
+Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, `<ApplicationName>Client` and `<ApplicationName>Server`.
 
-Le dossier `<ApplicationName>Client` contient la partie cliente de l'application correspondant à la plate-forme d'exécution du générateur d'application. Ce dossier doit être installé sur chaque poste client. Le dossier `<ApplicationName>Server` contient la partie serveur de l'application.
+> Ces dossiers ne sont pas générés si une erreur est survenue. In this case, open the [log file](#log-file) in order to find out the cause of the error.
+
+The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The `<ApplicationName>Server` folder contains the server portion of the application.
 
 Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 
-* *Windows* - Chaque dossier contient le fichier exécutable de l'application, nommé `<ApplicationName>Client.exe` pour la partie client et `<ApplicationName>Server.exe` pour la partie serveur ainsi que les fichiers .rsr correspondants. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
-* *macOS* - Chaque dossier contient uniquement le paquet de l'application, nommé `<ApplicationName> Client` pour la partie client et `<ApplicationName> Server` pour la partie serveur. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
+- _Windows_ - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
+- _macOS_ - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
- > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. In order to modify it, you must first display its contents (**Control+click** on the icon).
+> Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier.
 
-Si vous avez coché l'option "Autoriser la mise à jour automatique de l'application cliente", un sous-dossier supplémentaire appelé *Upgrade4DClient* est ajouté dans le dossier/package `<ApplicationName>Server`. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called _Upgrade4DClient_ is added in the `<ApplicationName>Server` folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
 
 #### Emplacements des fichiers Web
 
 Si la partie serveur et/ou la partie cliente de votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
 
-* fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont utilisés pour les connexions TLS ainsi que par les commandes de cryptage des données,
-* Dossier racine Web (DossierWeb) par défaut.
+- _cert.pem_ and _key.pem_ files (optional): These files are used for TLS connections and by data encryption commands,
+- Dossier racine Web (DossierWeb) par défaut.
 
 Des éléments doivent être installés :
 
-* **Sous Windows**
-  * **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
-  * **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
+- **on Windows**
+  - **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
+  - **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
 
-* **sous macOS**
-  * **Server application** - next to the `<ApplicationName>Server` software package.
-  * **Client application** - next to the `<ApplicationName>Client` software package.
+- **on macOS**
+  - **Server application** - next to the `<ApplicationName>Server` software package.
+  - **Client application** - next to the `<ApplicationName>Client` software package.
 
 ### Intégrer une structure compilée dans la partie cliente
 
-4D permet d'intégrer une structure compilée dans une application cliente. Cette fonctionnalité peut être utilisée, par exemple, pour fournir aux utilisateurs une application "portail" donnant accès aux différentes applications serveur, via la commande `OPEN DATABASE` exécutant un fichier `.4dlink`.
+4D permet d'intégrer une structure compilée dans une application cliente. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
-Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Lorsque l'une de ces clés est présente, le processus de génération de l'application cliente génère une application monoposte : la structure compilée, au lieu du fichier *EnginedServer.4Dlink*, est placée dans le dossier "Database".
+To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the _buildApp_ settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the _EnginedServer.4Dlink_ file, is placed in the "Database" folder.
 
-* Si un dossier "Data" par défaut existe dans l'application monoposte, une licence est intégrée.
-* Si un dossier "Data" par défaut n'existe pas dans l'application monoposte, elle sera exécutée sans le fichier de données et sans licence.
+- Si un dossier "Data" par défaut existe dans l'application monoposte, une licence est intégrée.
+- Si un dossier "Data" par défaut n'existe pas dans l'application monoposte, elle sera exécutée sans le fichier de données et sans licence.
 
 Le scénario standard est le suivant :
 
 1. Dans la boîte de dialogue du Générateur d'application, sélectionnez l'option "Générer une structure compilée" pour produire un .4DC ou un .4DZ pour utiliser l'application en monoposte.
-2. Dans le fichier *buildApp.4DSettings* de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :
+2. In the _buildApp.4DSettings_ file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
 
-* `DatabaseToEmbedInClientWinFolder`
-* `DatabaseToEmbedInClientMacFolder`
+- `DatabaseToEmbedInClientWinFolder`
+- `DatabaseToEmbedInClientMacFolder`
 
 3. Générez l'application client-serveur. Cela produira les effets suivants :
 
-* le dossier de l'application monoposte est copié intégralement dans le dossier "Database" du client fusionné
-* le fichier *EnginedServer.4Dlink* du dossier "Database" n'est pas généré
-* les fichiers .4DC, .4DZ, .4DIndy de la copie de l'application monoposte sont renommés à l'aide du client fusionné
-* la clé `PublishName` n'est pas copiée dans le *info.plist* du client fusionné
-* si l'application monoposte ne possède pas de dossier "Data" par défaut, le client fusionné sera exécuté sans données.
+- le dossier de l'application monoposte est copié intégralement dans le dossier "Database" du client fusionné
+- the _EnginedServer.4Dlink_ file of the "Database" folder is not generated
+- les fichiers .4DC, .4DZ, .4DIndy de la copie de l'application monoposte sont renommés à l'aide du client fusionné
+- the `PublishName` key is not copied in the _info.plist_ of the merged client
+- si l'application monoposte ne possède pas de dossier "Data" par défaut, le client fusionné sera exécuté sans données.
 
-Les fonctionnalités de mise à jour automatique de 4D Server (clé [CurrentVers](#current-version), commande `SET UPDATE FOLDER`, etc.) fonctionnent avec une application monoposte, comme avec une application distante standard. Lors de la connexion, l'application monoposte compare sa clé `CurrentVers` à la plage de version 4D Server. Si elle se trouve en dehors de plage, l'application cliente monoposte mise à jour est téléchargée depuis le serveur et l'Updater lance le processus de mise à jour locale.
+Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. Si elle se trouve en dehors de plage, l'application cliente monoposte mise à jour est téléchargée depuis le serveur et l'Updater lance le processus de mise à jour locale.
 
 ### Personnalisation des noms de dossier de cache client et/ou serveur
 
 Les dossiers de cache client et serveur sont utilisés pour stocker des éléments partagés tels que des ressources ou des composants. Ils sont nécessaires pour gérer les échanges entre le serveur et les clients distants. Les applications client/serveur utilisent les chemins d'accès par défaut pour les dossiers de cache système client et serveur.
 
-Dans certains cas spécifiques, vous devrez personnaliser les noms de ces dossiers pour implémenter des architectures spécifiques (voir ci-dessous). 4D vous fournit les clés `ClientServerSystemFolderName` et `ServerStructureFolderName` à définir dans le fichier de paramètres *buildApp*.
+Dans certains cas spécifiques, vous devrez personnaliser les noms de ces dossiers pour implémenter des architectures spécifiques (voir ci-dessous). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the _buildApp_ settings file.
 
 #### Dossier de cache client
 
 La personnalisation du nom du dossier de cache côté client peut être utile lorsque votre application cliente est utilisée pour se connecter à plusieurs serveurs fusionnés qui sont similaires mais qui utilisent des ensembles de données différents. Dans ce cas, pour enregistrer plusieurs téléchargements inutiles de ressources locales identiques, vous pouvez utiliser le même dossier de cache local personnalisé.
 
-* Configuration par défaut (*pour chaque connexion à un serveur, un dossier cache spécifique est téléchargé/mis à jour*) :
+- Default configuration (_for each connection to a server, a specific cache folder is downloaded/updated_):
 
 ![](../assets/en/Admin/cachea.png)
 
-* À l'aide de la clé `ClientServerSystemFolderName` (*un seul dossier de cache est utilisé pour tous les serveurs*) :
+- Using the `ClientServerSystemFolderName` key (_a single cache folder is used for all servers_):
 
 ![](../assets/en/Admin/cacheb.png)
 
@@ -438,82 +442,84 @@ La personnalisation du nom du dossier de cache côté client peut être utile lo
 
 La personnalisation du nom du dossier de cache côté serveur est utile lorsque vous exécutez plusieurs applications serveur identiques créées avec différentes versions de 4D sur le même ordinateur. Si vous souhaitez que chaque serveur utilise son propre ensemble de ressources, vous devez personnaliser le dossier de cache du serveur.
 
-* Configuration par défaut (*les mêmes applications serveur partagent le même dossier de cache*) :
+- Default configuration (_same server applications share the same cache folder_):
 
 ![](../assets/en/Admin/cacheServera.png)
 
-* À l'aide de la clé `ServerStructureFolderName` (*un dossier de cache dédié est utilisé pour chaque application serveur*) :
+- Using the `ServerStructureFolderName` key (_a dedicated cache folder is used for each server application_):
 
 ![](../assets/en/Admin/cacheServerb.png)
 
-## Page Plugins et composants
+## Plugins & components page
 
-On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](Concepts/components.md), and [**module**](#deselecting-modules) that you will use in your stand-alone or client/server application.
+On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](../Project/components.md), and [**module**](#deselecting-modules) that you will use in your stand-alone or client/server application.
 
 La page liste les éléments chargés par l'application 4D courante :
 
 ![](../assets/en/Desktop/buildappcomps.png)
 
-* La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. To exclude a plug-in, a component, or a module, deselect the check box next to it.
+- **Active** column - Indicates that the items will be integrated into the application package built. Par défaut, tous les éléments sont inclus. To exclude a plug-in, a component, or a module, deselect the check box next to it.
 
-* **Plugins and components** column - Displays the name of the plug-in/component/module.
+- **Plugins and components** column - Displays the name of the plug-in/component/module.
 
-* **ID** column - Displays the element's identification number (if any).
+- **ID** column - Displays the element's identification number (if any).
 
-* **Type** column - Indicates the type of item: Plug-in, Component, or Module.
+- **Type** column - Indicates the type of item: Plug-in, Component, or Module.
 
 ### Adding plug-ins or components
 
-Si vous souhaitez intégrer d’autres plug-ins ou composants dans l’application exécutable, il vous suffit de les placer dans un dossier **PlugIns** ou **Components** à côté de l’application 4D Volume Desktop ou de l’application 4D Server. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
 
 En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. En revanche, la présence de deux instances d’un même composant empêchera l’ouverture de l’application.
+
 > L'utilisation de plug-ins et/ou de composants dans une version de déploiement peut nécessiter des numéros de licence.
 
 ### Désélectionner des modules
 
 Un module est une bibliothèque de code intégrée utilisée par 4D pour contrôler des fonctions spécifiques. Si vous savez que votre application construite n'utilise aucune des fonctionnalités couvertes par un module, vous pouvez le désélectionner dans la liste afin de réduire la taille de vos fichiers d'application.
 
-> **Attention :** La désélection d'un module peut empêcher votre application de fonctionner comme prévu. Si vous n'êtes pas certain à 100 % qu'un module ne sera jamais appelé par votre application, il est recommandé de le laisser sélectionné.
+> **Warning:** Deselecting a module could prevent your built application from working as expected. Si vous n'êtes pas certain à 100 % qu'un module ne sera jamais appelé par votre application, il est recommandé de le laisser sélectionné.
 
 Les modules optionnels suivants peuvent être désélectionnés :
 
-* **CEF**: Bibliothèque embarquée Chromium. Il est nécessaire pour exécuter les [zones Web](../FormObjects/webArea_overview.md) qui utilisent le moteur de rendu intégré et les [zones 4D View Pro](../FormObjects/viewProArea_overview.md). L'appel de ces zones lorsque le CEF est désélectionné affichera des zones vierges et/ou générera des erreurs.
-* **MeCab**: Bibliothèque utilisée pour l'indexation de textes en langue japonaise (voir [ce paragraphe](../settings/database.md#support-of-mecab-japanese-version)). Si vous désélectionnez ce module, les index de texte seront reconstruits en japonais.
+- **CEF**: Chromium embedded library. It is necessary to run [Web areas](../FormObjects/webArea_overview.md) that use the embedded rendering engine and [4D View Pro areas](../FormObjects/viewProArea_overview.md). L'appel de ces zones lorsque le CEF est désélectionné affichera des zones vierges et/ou générera des erreurs.
+- **MeCab**: Library used for text indexing in Japanese language (see this [settings paragraph](../settings/database.md#support-of-mecab-japanese-version)). Si vous désélectionnez ce module, les index de texte seront reconstruits en japonais.
 
-> Si vous désélectionnez MeCab pour une application en langue japonaise utilisée sur des plates-formes hétérogènes, assurez-vous de le désélectionner à la fois dans le build client/serveur et dans le build de l'[application cliente](#build-client-application) (pour la plate-forme concurrente), faute de quoi des dysfonctionnements majeurs se produiront dans l'application.
+> If you deselect MeCab for an application in Japanese language used on heterogeneous platforms, make sure to deselect it on both client/server build and [client application build](#build-client-application) (for the concurrent platform), otherwise major malfunctions will occur in the application.
 
-* **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
-* **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user-applications).
+- **SpellChecker**: Used for built-in [spellchecking features](../FormObjects/properties_Entry.md#auto-spellcheck) and commands available for input areas and 4D Write Pro areas.
+- **4D Updater**: Controls the [automatic update](#what-is-a-clientserver-application) of client parts and is used by the `SET UPDATE FOLDER` command for [automated server updates](#automatic-updating-of-server-or-single-user-applications).
 
-## Page Licences & Certificat
+## Licenses & Certificate page
 
-La page Licences & Certificat vous permet de :
+The Licences & Certificate page can be used to:
 
-* spécifier le ou les numéro(s) de licence que vous souhaitez intégrer dans votre application exécutable monoposte
-* signer l'application à l'aide d'un certificat sous macOS.
+- spécifier le ou les numéro(s) de licence que vous souhaitez intégrer dans votre application exécutable monoposte
+- signer l'application à l'aide d'un certificat sous macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licences
 
-Cet onglet affiche la liste des licences de déploiement disponibles que vous pouvez intégrer dans votre application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
+Cet onglet affiche la liste des licences de déploiement disponibles que vous pouvez intégrer dans votre application. Par défaut, la liste est vide. You must explicitly add your _4D Developer Professional_ license as well as each _4D Desktop Volume_ license to be used in the application built. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
 
-Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre.
+To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
-Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
+When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the _Licenses_ folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
-Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. Ces fichiers ont été générés ou mis à jour au moment de l’acquisition de la licence *4D Developer Professional* et des licences *4D Desktop Volume*.
+Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. These files were generated or updated when the _4D Developer Professional_ license and the _4D Desktop Volume_ licenses were purchased.
 
 Une fois que vous avez sélectionné un fichier, la liste indique les caractéristiques de la licence qu’il contient.
 
-* **N° Licence** : numéro de licence du produit
-* **Licence** : nom du produit
-* **Date d'expiration** : date d'expiration de la licence (le cas échéant)
-* **Chemin d'accès** : emplacement sur le disque
+- **License #** - Product license number
+- **License** - Name of the product
+- **Expiration date** - Expiration date of the license (if any)
+- **Path** -  Location on disk
 
 Si la licence est invalide, un message vous le signale.
 
 Vous pouvez désigner autant de fichiers valides que vous voulez. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
+
 > Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
 
 A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
@@ -522,20 +528,23 @@ A l’issue de la génération, un nouveau fichier de licence de déploiement es
 
 Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, composants, 4D Server et parties clientes sous macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper de macOS lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
 
-* Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS :
+- Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
 L'option est affichée sous Windows et macOS mais n’est prise en compte que pour les versions macOS.
 
-* **Nom du certificat** : saisissez dans cette zone le nom de votre certificat développeur validé par Apple. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès (la partie en rouge dans l'exemple suivant) :
+- **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès (la partie en rouge dans l'exemple suivant) :
 
 ![](../assets/en/Project/certificate.png)
 
-Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez utiliser les commandes du menu Trousseaux d’accès ou vous connecter à la page suivante : [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
+To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
+
 > Le certificat requiert la présence de l’utilitaire codesign d’Apple. Cet utilitaire est fourni par défaut et se trouve généralement dans le dossier "/usr/bin/". En cas d’erreur, vérifiez que cet utilitaire est présent sur votre disque.
 
-* **Générer un certificat auto-signé** - exécute le «Certificate Assistant» qui vous permet de générer un certificat auto-signé. Si vous ne disposez pas d'un certificat de développeur Apple, vous devez fournir un certificat auto-signé. Avec ce certificat, aucun message d'alerte ne s'affiche si l'application est déployée en interne. Si l'application est déployée en externe (c'est-à-dire via http ou e-mail), au lancement, macOS affiche un message d'alerte indiquant que le développeur de l'application n'est pas identifié. L'utilisateur peut "forcer" l'ouverture de l'application. Dans le «Certificate Assistant», veillez à sélectionner les options appropriées : ![](../assets/en/Admin/Cert1.png) ![](../assets/en/Admin/Cert2.png)
+- **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. Si vous ne disposez pas d'un certificat de développeur Apple, vous devez fournir un certificat auto-signé. Avec ce certificat, aucun message d'alerte ne s'affiche si l'application est déployée en interne. Si l'application est déployée en externe (c'est-à-dire via http ou e-mail), au lancement, macOS affiche un message d'alerte indiquant que le développeur de l'application n'est pas identifié. L'utilisateur peut "forcer" l'ouverture de l'application. In the "Certificate Assistant", be sure to select the appropriate options:
+  ![](../assets/en/Admin/Cert1.png)
+  ![](../assets/en/Admin/Cert2.png)
 
 > 4D recommande de souscrire au programme Apple Developer Program pour accéder aux "Developer Certificates" nécessaires à la notarisation des applications (voir ci-dessous).
 
@@ -543,41 +552,42 @@ Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez 
 
 Gatekeeper est une fonction de sécurité d’OS X permettant de contrôler l’exécution des applications téléchargées depuis Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
-> Sur les machines Apple Silicon, les [composants](#components) 4D doivent être signés. Un composant non signé générera une erreur au démarrage de l'application ("lib4d-arm64.dylib can't be opened...").
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. Un composant non signé générera une erreur au démarrage de l'application ("lib4d-arm64.dylib can't be opened...").
 
-L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications et des composants compatibles avec cette option par défaut.
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 #### À propos de la notarisation
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notariées déployées via Internet sont bloquées par défaut.
 
-Les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple et permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce post du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description, par étapes, du processus de notarisation.
+The 4D [built-in signing features](#os-x-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
 
-Pour plus d'informations sur le concept de notarisation, veuillez consulter [cette page sur le site Apple developer](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
 ## Personnaliser les icônes d’une application
 
 4D associe une icône par défaut aux applications exécutables (monopostes et client-serveur). Vous pouvez cependant la personnaliser pour chaque application.
 
-* **Sous macOS** - La personnalisation de l’icône de votre application est prise en charge par 4D lors de la construction de l’application exécutable. Pour cela, vous devez, avant la construction du fichier de l’application, créer un fichier d’icône (type icns) et le placer à côté du dossier de structure.
-> Apple, Inc. fournit un outil spécifique pour générer les fichiers d’icône *icns* (pour plus d'informations, veuillez consulter la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+- **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. Pour cela, vous devez, avant la construction du fichier de l’application, créer un fichier d’icône (type icns) et le placer à côté du dossier de structure.
 
- Votre fichier d’icône doit avoir le même nom que le fichier du projet et comporter l’extension *.icns*. 4D prend automatiquement ce fichier en compte lors de la génération de l’application double-cliquable (le fichier *.icns* est renommé *NomApplication.icns* et recopié dans le dossier Resources ; l’entrée *CFBundleFileIcon* du fichier *info.plist* est mise à jour).
+> Apple, Inc. provides a specific tool for building _icns_ icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
-* **Sous Windows** - La personnalisation de l’icône de votre application est prise en charge par 4D lors de la construction de l’application exécutable. Pour cela, vous devez, avant la construction du fichier de l’application, créer un fichier d’icône (extension *.ico*) et le placer à côté du fichier de structure interprété (fichier du projet).
+Your icon file must have the same name as the project file and include the _.icns_ extension. 4D automatically takes this file into account when building the double-clickable application (the _.icns_ file is renamed _ApplicationName.icns_ and copied into the Resources folder; the _CFBundleFileIcon_ entry of the _info.plist_ file is updated).
 
- Votre fichier d’icône doit avoir le même nom que le fichier de structure interprété et comporter l’extension *.ico*. 4D prend automatiquement ce fichier en compte lors de la génération de l’application exécutable.
+- **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (_.ico_ extension), prior to building the application file, and place it next to the project folder.
 
-Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) spécifiques dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
+Your icon file must have the same name as the project file and include the _.ico_ extension. 4D prend automatiquement ce fichier en compte lors de la génération de l’application exécutable.
 
-* RuntimeVLIconWinPath
-* RuntimeVLIconMacPath
-* ServerIconWinPath
-* ServerIconMacPath
-* ClientMacIconForMacPath
-* ClientWinIconForMacPath
-* ClientMacIconForWinPath
-* ClientWinIconForWinPath
+You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. Les clés suivantes sont disponibles :
+
+- RuntimeVLIconWinPath
+- RuntimeVLIconMacPath
+- ServerIconWinPath
+- ServerIconMacPath
+- ClientMacIconForMacPath
+- ClientWinIconForMacPath
+- ClientMacIconForWinPath
+- ClientWinIconForWinPath
 
 ## Gestion des fichiers de données
 
@@ -587,7 +597,7 @@ Lorsqu'un utilisateur lance une application fusionnée ou une mise à jour (appl
 
 La séquence de lancement d'une application fusionnée est la suivante :
 
-1. 4D tente d'ouvrir le Dernier fichier de données ouvert, [comme décrit ci-dessous](#last-data-file-opened) (non applicable lors du lancement initial).
+1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
 2. S'il n'est pas trouvé, 4D tente d'ouvrir en mode lecture seule le fichier de données situé dans le dossier de données par défaut au même niveau que le fichier .4DC.
 3. S'il n'est pas trouvé, 4D tente d'ouvrir le fichier de données par défaut standard (même nom et même emplacement que le fichier .4DZ).
 4. S'il n'est pas trouvé, 4D affiche une boîte de dialogue standard de sélection/création de fichier de données.
@@ -604,7 +614,7 @@ L'emplacement du dossier de préférences de l'utilisateur de l'application corr
 prefsUtilisateur:=Get 4D folder(Dossier 4D actif)
 ```
 
-Le chemin d'accès du fichier de données est stocké dans un fichier dédié, nommé *lastDataPath.xml*.
+The data file path is stored in a dedicated file, named _lastDataPath.xml_.
 
 Grâce à cette architecture, lorsque vous fournissez une mise à jour de votre application, le fichier de données de l'utilisateur local (le dernier fichier de données utilisé) est automatiquement ouvert dès le premier lancement.
 
@@ -612,36 +622,38 @@ Ce mécanisme est généralement adapté aux déploiements standard. Cependant, 
 
 #### Configurer le mode de liaison des données
 
-4D utilise automatiquement, avec vos applications compilées, le dernier fichier de données ouvert. Par défaut, le chemin d'accès du fichier de données est stocké dans le dossier de préférences de l'utilisateur de l'application et est lié au **nom de l'application**.
+4D utilise automatiquement, avec vos applications compilées, le dernier fichier de données ouvert. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
 
 Ce fonctionnement peut s'avérer inadapté si vous souhaitez dupliquer une application fusionnée destinée à utiliser différents fichiers de données. En effet, les applications dupliquées vont en fait partager le même dossier de préférences de l'utilisateur et donc, toujours utiliser le même fichier de données -- même si le fichier de données est renommé, car l'application utilisera toujours le dernier fichier de données ouvert par l'application.
 
-4D vous permet donc de lier votre chemin de fichier de données au chemin de l'application. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. 4D vous permet donc de lier votre chemin de fichier de données au **chemin de l'application**.
+4D vous permet donc de lier votre chemin de fichier de données au chemin de l'application. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. You therefore link your data **by application path**.
 
-Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lien vers le fichier de données. Cependant, avec cette option, si le package d'application est déplacé sur le disque, l'utilisateur sera invité à entrer un fichier de données, car le chemin de l'application ne correspondra plus à l'attribut "executablePath" (après qu'un utilisateur ait sélectionné un fichier de données, le fichier *lastDataPath.xml* est mis à jour en conséquence).
+Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lien vers le fichier de données. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the _lastDataPath.xml_ file is updated accordingly).
 
-*Duplication lorsque les données sont liées par le nom de l'application :* ![](../assets/en/Project/datalinking1.png)
+_Duplication when data linked by application name:_
+![](../assets/en/Project/datalinking1.png)
 
-*Duplication lorsque les données sont liées par le chemin de l'application :* ![](../assets/en/Project/datalinking2.png)
+_Duplication when data linked by application path:_
+![](../assets/en/Project/datalinking2.png)
 
 Vous sélectionnez le mode de liaison des données lors de la phase de génération de l'application. Vous pouvez soit :
 
-* Utiliser la [Page Application](#application) ou la [Page Client/Serveur](#client-server) de boîte de dialogue du Générateur d'applications.
-* Utiliser la clé XML **LastDataPathLookup** (application monoposte ou application serveur).
+- Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
+- Use the **LastDataPathLookup** XML key (single-user application or server application).
 
 ### Définir un dossier de données par défaut
 
-4D vous permet de définir un fichier de données par défaut lors de la phase de construction de l'application. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. Cela vous donne un meilleur contrôle sur la création et/ou l'ouverture des fichiers de données lors du premier lancement d'une application fusionnée.
+4D vous permet de définir un fichier de données par défaut lors de la phase de construction de l'application. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. Cela vous donne un meilleur contrôle sur la création et/ou l'ouverture des fichiers de données lors du premier lancement d'une application fusionnée.
 
 Plus particulièrement, il permet de répondre aux besoins suivants :
 
-* Eviter l'affichage de la boîte de dialogue d'ouverture de fichier de données de 4D au lancement d'une nouvelle application fusionnée ou d'une mise à jour. Vous pouvez détecter, par exemple dans la , que le fichier de données par défaut a été ouvert et donc, exécuter votre propre code et/ou boîtes de dialogue permettant de créer ou de sélectionner un fichier de données local.
-* Permettre la distribution d'applications fusionnées comportant des données en lecture seulement (par exemple des applications de démonstration).
+- Eviter l'affichage de la boîte de dialogue d'ouverture de fichier de données de 4D au lancement d'une nouvelle application fusionnée ou d'une mise à jour. Vous pouvez détecter, par exemple dans la , que le fichier de données par défaut a été ouvert et donc, exécuter votre propre code et/ou boîtes de dialogue permettant de créer ou de sélectionner un fichier de données local.
+- Permettre la distribution d'applications fusionnées comportant des données en lecture seulement (par exemple des applications de démonstration).
 
 Pour définir et utiliser un fichier de données par défaut :
 
-* Vous devez fournir un fichier de données par défaut (nommé "Default.4DD") et le stocker dans un dossier spécifique (nommé "Default Data") à l'intérieur du dossier du projet d'application. Ce fichier doit être accompagné de tous les fichiers nécessaires, en fonction de la configuration du projet : index (.4dIndx), blobs externes, journal, etc. Il est de votre responsabilité de livrer un fichier de données par défaut valide. A noter que, comme le fichier de données par défaut est ouvert en mode lecture seule, il est recommandé de désélectionner l'option "Utiliser le fichier d'historique" dans le fichier de structure original avant de créer le fichier de données.
-* Au moment de la génération de l'application, le dossier de données par défaut est intégré dans l'application fusionnée. Tous les fichiers présents dans ce dossier par défaut sont également embarqués.
+- Vous devez fournir un fichier de données par défaut (nommé "Default.4DD") et le stocker dans un dossier spécifique (nommé "Default Data") à l'intérieur du dossier du projet d'application. Ce fichier doit être accompagné de tous les fichiers nécessaires, en fonction de la configuration du projet : index (.4dIndx), blobs externes, journal, etc. Il est de votre responsabilité de livrer un fichier de données par défaut valide. A noter que, comme le fichier de données par défaut est ouvert en mode lecture seule, il est recommandé de désélectionner l'option "Utiliser le fichier d'historique" dans le fichier de structure original avant de créer le fichier de données.
+- Au moment de la génération de l'application, le dossier de données par défaut est intégré dans l'application fusionnée. Tous les fichiers présents dans ce dossier par défaut sont également embarqués.
 
 Le schéma suivant illustre cette fonctionnalité :
 
@@ -657,15 +669,16 @@ La gestion des connexions des applications clientes recouvre les mécanismes par
 
 Le processus de connexion des applications clientes fusionnées prend en charge les cas où le serveur dédié n'est pas disponible. Le scénario du démarrage d'une application cliente 4D est le suivant :
 
-1. If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application connects to the specified server address.  
-   OR  
+1. If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application connects to the specified server address.\
+   OR\
    The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).
 
 2. En cas d'échec, l'application cliente tente de se connecter au serveur à l'aide des informations présentes dans le dossier de préférences utilisateur de l'application (fichier "lastServer.xml", cf. dernière étape).
+
 3. En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
 
-* Si l'utilisateur clique sur le bouton **Sélectionner...** (lorsqu'il été autorisé par le développeur 4D au moment de la génération de l'application, voir ci-dessous), la boîte de dialogue standard "Connexion au serveur" est affichée.
-* Si l'utilisateur clique sur le bouton **Quitter**, l'application client quitte.
+- If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
+- If the user clicks on the **Quit** button, the client application quits.
 
 4. Si la connexion est établie avec succès, les paramètres de cette connexion sont sauvegardés dans le dossier de préférences utilisateur de l'application cliente, ce qui permettra de les réutiliser ultérieurement en cas de besoin.
 
@@ -683,17 +696,21 @@ prefsUtilisateur:=Get 4D folder(Dossier 4D actif)
 
 Ce mécanisme permet de prendre en charge le cas où le serveur cible primaire est temporairement indisponible pour une raison quelconque (par exemple pour une opération de maintenance). Lorsque ce cas se produit pour la première fois, la boîte de dialogue de sélection de serveur est affichée (si elle est autorisée, cf. ci-dessous) et l'utilisateur peut manuellement sélectionner un serveur alternatif, dont le chemin est alors sauvegardé si la connexion est établie et validée. Toute indisponibilité ultérieure sera alors automatiquement prise en charge à l'aide des paramètres de connexion présents dans le fichier "lastServer.xml".
 
-> * Lorsque les applications clientes ne peuvent pas bénéficier du service de découverte, par exemple à cause de la configuration réseau, il reste recommandé que le développeur indique un nom d'hôte au lors de la génération de l'application à l'aide de la clé [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) dans le fichier "BuildApp.xml". Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.  
-> * Dans tous les cas, il est possible de maintenir la touche **Alt/Option** au démarrage de l'application cliente afin d'afficher la boîte de dialogue de sélection du serveur.
+> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.
+> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
 
 ### Accès à la boîte de dialogue de sélection de serveur en cas d'erreur
 
-Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. La configuration dépend de la valeur de la clé XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) sur la machine où l'application a été créée :
+Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
 
-* **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. L'application peut uniquement quitter.  
-  Clé Xml `ServerSelectionAllowed` : valeur **False** ou clé omise ![](../assets/en/Project/connect1.png)
+- **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. The application can only quit.\
+  `ServerSelectionAllowed`: **False** or key omitted
+  ![](../assets/en/Project/connect1.png)
 
-* **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. The user can access the server selection window by clicking on the **Select...** button. `ServerSelectionAllowed`: **True** ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
+- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.
+  `ServerSelectionAllowed`: **True**
+  ![](../assets/en/Project/connect2.png)
+  ![](../assets/en/Project/connect3.png)
 
 ## Automatic updating of server or single-user applications
 

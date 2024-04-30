@@ -3,33 +3,28 @@ id: components
 title: Componentes
 ---
 
-Un componente 4D es un conjunto de código y de formularios 4D que representan una o varias funcionalidades que pueden instalarse y utilizarse en sus proyectos. Por ejemplo, el [componente 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para mostrar los archivos SVG.
-
-## ¿Dónde encontrar los componentes?
-
-Varios componentes están [preinstalados en el entorno de desarrollo 4D](Extensions/overview.md), pero muchos componentes 4D de la comunidad 4D [están disponibles en GitHub](https://github.com/search?q=4d-component&type=Repositories). Adicionalmente, puede [desarrollar sus propios componentes 4D](Extensions/develop-components.md).
-
+Un componente 4D es un conjunto de código y de formularios 4D que representan una o varias funcionalidades que pueden instalarse y utilizarse en sus proyectos. For example, the [4D SVG component](https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
 ## Instalación de los componentes
 
-Para instalar un componente, basta con copiar los archivos del componente en la carpeta [`Components` del proyecto](Project/architecture.md). Puede utilizar alias o atajos.
+Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories). Additionnally, you can [develop your own 4D components](Extensions/develop-components.md).
 
-Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
+Installation and loading of components in your 4D projects are handled through the [4D package manager](../Project/components.md).
 
 ## Utilización de los componentes
 
 El código expuesto de los componentes (métodos y funciones) así como los formularios pueden ser utilizados como elementos estándar en su desarrollo 4D.
 
-Cuando un componente instalado contiene métodos, clases y funciones, éstos aparecen en el tema **Métodos componente** de la página Métodos del Explorador:
+When an installed component contains methods, classes, and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
 
 ![alt-text](../assets/en/Concepts/components-explorer.png)
 
 :::note
 
-Si el componente está compilado, su [espacio de nombres](../Extensions/develop-components.md#declaring-the-component-namespace) se escribe entre paréntesis después de su nombre. Utilice este espacio de nombres para acceder a las funciones del componente.
+If the component is compiled, its [namespace](../Extensions/develop-components.md#declaring-the-component-namespace) is written between parentheses after its name. Utilice este espacio de nombres para acceder a las funciones del componente.
 
 :::
 
-Puede seleccionar un [método proyecto](methods.md) o [clase](classes.md) y hacer clic en el botón **Documentación** del Explorador para obtener información sobre el mismo, [si la hay](Project/documentation.md).
+You can select a component [project method](methods.md) or [class](classes.md) and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)

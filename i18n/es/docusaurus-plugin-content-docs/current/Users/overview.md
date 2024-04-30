@@ -8,45 +8,39 @@ Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arqu
 La estrategia de control de acceso 4D depende de la configuración de su despliegue:
 
 - en las aplicaciones multiusuario, puede confiar en los usuarios y grupos 4D,
-- en las aplicaciones monopuesto, el acceso de los usuarios se controla a través de la sesión del sistema, mediante comandos como [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
-> Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
-
-
-
+> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
 ## Control de acceso en las aplicaciones multiusuario
 
 Las aplicaciones multiusuario se despliegan con 4D Server. Incluyen aplicaciones cliente-servidor, web o REST.
 
-En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). Puede crear usuarios, asignar contraseñas, crear grupos de acceso con diferentes niveles de privilegios en la aplicación.
+In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). Puede crear usuarios, asignar contraseñas, crear grupos de acceso con diferentes niveles de privilegios en la aplicación.
 
-Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator). Hasta que no le asigne una contraseña al Diseñador, todos los accesos a la aplicación se hacen con los derechos de acceso del Diseñador, incluso si ha [configurado usuarios y grupos](handling_users_groups.md) (cuando se abre la aplicación, no se requiere ninguna identificación). Se puede abrir cualquier parte de la aplicación.
+You initiate the 4D password access control system with 4D Server by [assigning a password to the Designer user](handling_users_groups.md#designer-and-administrator). Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have [set up users and groups](handling_users_groups.md) (when the application opens, no ID is required). Se puede abrir cualquier parte de la aplicación.
 
-Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. Para conectarse a la aplicación o a un [servidor con acceso protegido](handling_users_groups.md#assigning-group-access), los usuarios remotos deben introducir un nombre de usuario/contraseña.
+Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. In order to connect to the application or to a [server with protected access](handling_users_groups.md#assigning-group-access), remote users must enter a login/password.
 
 Para desactivar el sistema de acceso por contraseña, basta con eliminar la contraseña del Diseñador.
 
-
 ## Control de acceso en las aplicaciones monopuesto
 
-
-
-Las aplicaciones monopuesto son aplicaciones de escritorio, desplegadas con 4D o fusionadas con 4D Volume License. En las aplicaciones monopuesto todos los usuarios que abren la aplicación son los [Diseñadores](handling_users_groups.md#designer-and-administrator), tienen todos los privilegios y su nombre es "Diseñador". El control de acceso no se basa en los usuarios y los grupos de 4D, sino en las **sesiones usuario**.
+Las aplicaciones monopuesto son aplicaciones de escritorio, desplegadas con 4D o fusionadas con 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
 ### Identificación del usuario
 
-Para identificar el usuario actual en una aplicación 4D monopuesto, puede confiar en el comando [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html), que devuelve el usuario que abrió la sesión sistema. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
 
 A continuación, puede permitir o denegar el acceso dentro de su aplicación utilizando un código como:
 
 ```4d
-If(Current system user = $user) //vous pouvez stocker les utilisateurs dans une table de base de données
-    // dar acceso a algunas funcionalidades
-Enf if
+If(Current system user = $user) //you can store users in a database table
+	// give access to some features
+End if
 ```
 
-Si desea utilizar el nombre de usuario del sistema en 4D en lugar de "Diseñador" (por ejemplo en los archivos de registro), puede llamar al comando [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), por ejemplo:
+If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
 
 ```4d
 SET USER ALIAS(Current system user)
@@ -60,4 +54,4 @@ En una máquina compartida por varios usuarios, puede instalar la aplicación 4D
 
 #### Cifrado de datos
 
-Si desea proteger el acceso a los datos de la aplicación, se recomienda [encriptar los datos](MSC/encrypt.md) y proveer la clave de encriptación al usuario o usuarios autorizados. 
+If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s).

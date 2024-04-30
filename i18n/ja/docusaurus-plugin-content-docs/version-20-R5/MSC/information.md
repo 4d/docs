@@ -8,45 +8,53 @@ sidebar_label: 情報ページ
 
 ## プログラム
 
-このページにはアプリケーションならびにアクティブな 4Dフォルダーの名前、バージョンおよび場所を表示します (アクティブ4Dフォルダーについては *4Dランゲージリファレンス* の `Get 4D folder` コマンドを参照ください)。
+This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the _4D Language Reference_ manual).
 
 ウィンドウの中央部は、プロジェクトならびにデータファイルとログファイル (あれば) の名前および場所を表示します。 ウィンドウの下部は、4Dライセンスフォルダーの名前、ライセンスのタイプ、および、カレント 4Dユーザーの名前を表示します。
 
-- **パス名の表示と選択**: **プログラム** タブでは、ディスク上の一連の親フォルダーを表示するポップアップメニューの形でパス名が示されます:  
-  ![](../assets/en/MSC/MSC_popup.png) メニュー項目 (ディスクまたはフォルダー) を選択すると、そのパスが新しいシステムウィンドウで開かれます。 **パスをコピー** コマンドは、システムのディレクトリ区切り文字を使用して、完全なパス名をクリップボードにテキストとしてコピーします。
+- **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:\
+  ![](../assets/en/MSC/MSC_popup.png)
+  If you select a menu item (disk or folder), it is displayed in a new system window.
+  The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
 
-- **ライセンスフォルダー**: **ライセンスフォルダー** ボタンをクリックすると、新しいシステムウィンドウを開き、アクティブなライセンスフォルダーの中身を表示します。 インストールされた 4D環境用のライセンスファイルはすべてこのフォルダーに格納されていなければなりません。 ファイルを Webブラウザーで開くと、ライセンスの情報が表示されます。 ライセンスフォルダーの場所はバージョンや OS により異なります。 このフォルダーの場所については `Get 4D folder` コマンドの説明を参照してください。 ***注**: 上部メニューの "ヘルプ ＞ ライセンスマネージャー..." からアクセスできるダイアログボックスにも同じボタンがあります。*
+- **"Licenses" Folder**
+  The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. インストールされた 4D環境用のライセンスファイルはすべてこのフォルダーに格納されていなければなりません。 ファイルを Webブラウザーで開くと、ライセンスの情報が表示されます。
+  ライセンスフォルダーの場所はバージョンや OS により異なります。 For more information about the location of this folder, refer to the `Get 4D folder` command.
+  _**Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu)._
 
 ## テーブル
 
 このページでは、データベース内のテーブルの概要を示します:
 
 ![](../assets/en/MSC/MSC_Tables.png)
+
 > このページの情報は、標準モードおよびメンテナンスモードの両方で利用可能です。
 
 このページにはデータベースのすべてのテーブル (非表示のテーブルも含む) とそれらの特徴が表示されます:
 
-- **ID**: テーブルの内部番号
-- **テーブル**: テーブル名。 削除されたテーブルの名前は括弧付きで表示されます (ゴミ箱の中に残っている場合)。
-- **レコード**: テーブル内の総レコード数。 レコードが破損していたり読み込めなかった場合には、数字の代わりに *Error* が表示されます。 この場合、検証と修復ツールの使用を検討してください。
-- **フィールド**: テーブル内のフィールド数。 非表示のフィールドはカウントされますが、削除されたフィールドはカウントされません。
-- **インデックス**: テーブル内のあらゆるインデックスの数
-- **暗号化可能**: チェックされていれば、ストラクチャーレベルにおいてこのテーブルは **暗号化可能** 属性が選択されています (デザインリファレンスマニュアルの [暗号化可能](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#4168557) の項目を参照ください)。
-- **暗号化済み**: チェックされていれば、テーブルのレコードはデータファイルにおいて暗号化されています。 ***注**: 暗号化可能と暗号化済みオプション間において整合性が取れていない場合、必ず MSC の 暗号化 ページにてデータファイルの暗号化状態を確認してください。*
-- **アドレステーブルサイズ**: 各テーブルのアドレステーブルのサイズ。 アドレステーブルとは、テーブル内で作成される各レコードにつき 1つの要素を保存する内部テーブルのことです。 これはレコードとその物理アドレスをつなげる働きをします。 パフォーマンス上の理由から、レコードが削除されてもリサイズはされず、そのためそのサイズはテーブル内のカレントレコード数とは異なる場合があります。 この差異が著しく大きい場合、"アドレステーブルを圧縮" オプションをチェックした状態でデータ圧縮を実行することで、アドレステーブルサイズを最適化することができます ([圧縮](compact.md) ページを参照してください)。 ***注**: アドレステーブルサイズとレコード数の差異は、キャッシュフラッシュの途中での事象によるものである可能性もあります。*
-
-
+- **ID**: Internal number of the table.
+- **Tables**: Name of the table. 削除されたテーブルの名前は括弧付きで表示されます (ゴミ箱の中に残っている場合)。
+- **Records**: Total number of records in the table. If a record is damaged or cannot be read, _Error_ is displayed instead of the number. この場合、検証と修復ツールの使用を検討してください。
+- **Fields**: Number of fields in the table. 非表示のフィールドはカウントされますが、削除されたフィールドはカウントされません。
+- **Indexes**: Number of indexes of any kind in the table
+- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
+- **Encrypted**: If checked, the records of the table are encrypted in the data file. _**Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC._
+- **Address Table Size**: Size of the address table for each table. アドレステーブルとは、テーブル内で作成される各レコードにつき 1つの要素を保存する内部テーブルのことです。 これはレコードとその物理アドレスをつなげる働きをします。 パフォーマンス上の理由から、レコードが削除されてもリサイズはされず、そのためそのサイズはテーブル内のカレントレコード数とは異なる場合があります。 If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
+  _**Note:** Differences between address table size and record number can also result from an incident during the cache flush._
 
 ## データ
 
-**データ** ページには、データファイルの空き/使用済み容量の情報が表示されます。
+The **Data** page provides information about the available and used storage space in the data file.
+
 > このページには、メンテナンスモードではアクセスできません。
 
 この情報はグラフ形式で提供されます:
 
 ![](../assets/en/MSC/MSC_Data.png)
-> このページに表示される情報には、データファイル外に格納されたデータは反映されません ([データをデータファイル外に保存](https://doc.4d.com/4Dv18/4D/18/External-data-storage.300-4575564.ja.html) 参照)。
 
-断片化があまりにも進んだファイルはディスク、そしてデータベースのパフォーマンスを低下させます。 使用率が低すぎる場合、4Dは警告アイコンを表示して (このアイコンは情報ページボタンと対応するファイルタイプのタブに表示されます)、圧縮が必要であることを警告します:![](../assets/en/MSC/MSC_infowarn.png)
+> このページに表示される情報には、データファイル外に格納されたデータは反映されません (<a href="https://doc.4d.com/4Dv18/4D/18/External-data-storage.300-4575564.ja.html">データをデータファイル外に保存</a> 参照)。
 
-警告アイコンは [圧縮](compact.md) ページボタンにも表示されます: ![](../assets/en/MSC/MSC_compactwarn.png)
+断片化があまりにも進んだファイルはディスク、そしてデータベースのパフォーマンスを低下させます。 If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+
+A warning icon is also displayed on the button of the [Compact](compact.md) page:
+![](../assets/en/MSC/MSC_compactwarn.png)

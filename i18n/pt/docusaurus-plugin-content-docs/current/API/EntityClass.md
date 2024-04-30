@@ -3,40 +3,41 @@ id: EntityClass
 title: Entity
 ---
 
-Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](ORDA/dsMapping.md#dataclass), como um registro da tabela que corresponde ao dataclass em seu datasture associado. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
+An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. Contém os mesmos atributos que o dataclass assim como os valores de dados e propriedades e funções específicas.
 
 ### Resumo
 
-|                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
-| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
-| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
-| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->|
-| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->|
-| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
-| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
-| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
-| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
-| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
-| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
-| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
-| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->|
-| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->|
-| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->|
-| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->|
-| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->|
-| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->|
-| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->|
-| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->|
-| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->|
-| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->|
-| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->|
+|                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->                                              |
+| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.first().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->                                                 |
+| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->                                           |
+| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->                                                             |
+| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary --> |
+| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->                                           |
+| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->                                                          |
+| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.last().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.next().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->                                                             |
+| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.save().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->                                                          |
+| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->                            |
+| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->                                                             |
 
 <!-- REF EntityClass.attributeName.Desc -->
-## .*attributeName*
 
-<details><summary>Histórico</summary>
+## ._attributeName_
+
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -44,18 +45,22 @@ Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](OR
 
 </details>
 
-<!-- REF EntityClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF EntityClass.attributeName.Syntax -->***.attributeName*** : any<!-- END REF -->
 
 #### Descrição
 
-Qualquer atributo de dataclass está disponível como uma propriedade de entidade, que <!-- REF EntityClass.attributeName.Summary -->armazena o valor de atributo para a entidade<!-- END REF -->.
+Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
 
-O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attributename) (relação ou armazenamento):
+The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
 
-* If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
-* If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".
-* If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+- If _attributeName_ kind is **storage**:
+  `.attributeName` returns a value of the same type as _attributeName_.
+- If _attributeName_ kind is **relatedEntity**:
+  `.attributeName` returns the related entity. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".
+- If _attributeName_ kind is **relatedEntities**:
+  `.attributeName` returns a new entity selection of related entities. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 #### Exemplo
 
@@ -70,9 +75,10 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 <!-- END REF -->
 
 <!-- REF EntityClass.clone().Desc -->
+
 ## .clone()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -80,27 +86,29 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 </details>
 
-<!-- REF #EntityClass.clone().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.clone().Syntax -->**.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| Parâmetro  | Tipo       |    | Descrição                              |
-| ---------- | ---------- |:--:| -------------------------------------- |
-| Resultados | 4D. Entity | <- | Nova entidade referenciando o registro |
+
+| Parâmetro  | Tipo                       |     | Descrição                              |
+| ---------- | -------------------------- | :-: | -------------------------------------- |
+| Resultados | 4D. Entity |  <- | Nova entidade referenciando o registro |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->. .
-> Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. .
 
-Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
+> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
+
+Esta função só pode ser usada com entidades já salvas no banco de dados. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
 
 #### Exemplo
 
 ```4d
- var $emp; $empCloned : cs. EmployeeEntity
- $emp:=ds. Employee.get(672)
+ var $emp; $empCloned : cs.EmployeeEntity
+ $emp:=ds.Employee.get(672)
  $empCloned:=$emp.clone()
 
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
@@ -110,9 +118,10 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 <!-- END REF -->
 
 <!-- REF EntityClass.diff().Desc -->
+
 ## .diff()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -120,38 +129,39 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 </details>
 
-<!-- REF #EntityClass.diff().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.diff().Syntax -->**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.diff().Params -->
-| Parâmetro           | Tipo       |    | Descrição                                        |
-| ------------------- | ---------- |:--:| ------------------------------------------------ |
-| entityToCompare     | 4D. Entity | -> | Entidade a ser comparada com a entidade original |
-| attributesToCompare | Collection | -> | Nome dos atributos a serem comparados            |
-| Resultados          | Collection | <- | Diferenças entre as entidades                    |
+
+| Parâmetro           | Tipo                       |     | Descrição                                        |
+| ------------------- | -------------------------- | :-: | ------------------------------------------------ |
+| entityToCompare     | 4D. Entity |  -> | Entidade a ser comparada com a entidade original |
+| attributesToCompare | Collection                 |  -> | Nome dos atributos a serem comparados            |
+| Resultados          | Collection                 |  <- | Diferenças entre as entidades                    |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara os conteúdos das duas entidades e retorna suas diferenças<!-- END REF -->.
+The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
-No *entityToCompare*, passe a entidade a ser comparada à entidade original.
+In _entityToCompare_, pass the entity to be compared to the original entity.
 
-Em *attributesToCompare*, pode designar atributos específicos para comparar. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
+In _attributesToCompare_, you can designate specific attributes to compare. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
 
 As diferenças são retornadas como uma coleção de objetos cujas propriedades são:
 
-| Nome da propriedade | Tipo                              | Descrição                              |
-| ------------------- | --------------------------------- | -------------------------------------- |
-| attributeName       | String                            | Nome do atributo                       |
-| value               | any - Depende do tipo de atributo | Valor do atributo na entidade          |
-| otherValue          | any - Depende do tipo de atributo | Valor do atributo em *entityToCompare* |
+| Nome da propriedade | Tipo                              | Descrição                                   |
+| ------------------- | --------------------------------- | ------------------------------------------- |
+| attributeName       | String                            | Nome do atributo                            |
+| value               | any - Depende do tipo de atributo | Valor do atributo na entidade               |
+| otherValue          | any - Depende do tipo de atributo | Value of the attribute in _entityToCompare_ |
 
-Apenas atributos com valores diferentes estão incluídos na coleção. Se nenhuma diferença for encontrada, `.diff()` retorna uma coleção vazia.
+Apenas atributos com valores diferentes estão incluídos na coleção. If no differences are found, `.diff()` returns an empty collection.
 
-A função se aplica para propriedades cujo [tipo](DataClassClass.md#attributename) é **de armazenamento** ou **relacionada a Entidade**. No caso de uma entidade relacionada ter sido atualizada (ou seja, a chave estrangeira), o nome da entidade relacionada e seu nome de chave primária são retornados como propriedades *attributeName* ( value** e *outroValue* estão vazios para o nome da entidade relacionada).
+The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as _attributeName_ properties (_value_ and _otherValue_ are empty for the related entity name).
 
-Se uma das entidades comparadas for **Null**, um erro é gerado.
+If one of the compared entities is **Null**, an error is raised.
 
 #### Exemplo 1
 
@@ -212,13 +222,13 @@ $diff2:
  vCompareResult3:=New collection
  $attributesToInspect:=New collection
 
- $e1:=ds. Employee.get(636)
- $e2:=ds. Employee.get(636)
+ $e1:=ds.Employee.get(636)
+ $e2:=ds.Employee.get(636)
 
  $e1.firstName:=$e1.firstName+" update"
  $e1.lastName:=$e1.lastName+" update"
 
- $c:=ds. Company.get(117)
+ $c:=ds.Company.get(117)
  $e1.employer:=$c
  $e2.salary:=100
 
@@ -310,9 +320,10 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 <!-- END REF -->
 
 <!-- REF EntityClass.drop().Desc -->
+
 ## .drop()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -322,68 +333,69 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 <!-- REF #EntityClass.drop().Syntax -->**.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.drop().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                                       |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
-| mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
-| Resultados | Object  | <- | Resultado da operação de exclusão                                               |
+
+| Parâmetro  | Tipo    |     | Descrição                                                                                       |
+| ---------- | ------- | :-: | ----------------------------------------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
+| Resultados | Object  |  <- | Resultado da operação de exclusão                                                               |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.drop()` <!-- REF #EntityClass.drop().Summary -->apaga os dados contidos na entidade da datastore<!-- END REF -->da tabela relacionada a dataclass. Note-se que a entidade permanece na memória.
+The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
 
-Numa aplicação multiusuário ou multiprocesso, a função `.drop()` é executada sob um mecanismo ["optimistic lock"](ORDA/entities.md#entity-locking) , no qual um selo de bloqueio interno é automaticamente incrementado cada vez que o registo for guardado.
+In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
-Por padrão, se o parâmetro *modo* for omitido, a função retornará um erro (veja abaixo) se a mesma entidade tiver sido modificada (ou seja, O selo mudou) por outro processo ou usuário nesse meio tempo.
+By default, if the _mode_ parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
-Caso contrário, pode passar a opção `dk force drop if stamp changed` no parâmetro *mode* : nesse caso, a entidade é abandonada mesmo que a estampa tenha sido alterada (e a chave primária continua a ser a mesma).
+Otherwise, you can pass the `dk force drop if stamp changed` option in the _mode_ parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).
 
-**Resultados**
+**Resultado**
 
-O objecto devolvido por `.drop( )` contém as seguintes propriedades:
+The object returned by `.drop( )` contains the following properties:
 
-| Propriedade   |                           | Tipo                   | Descrição                                                                                                               |
-| ------------- | ------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| success       |                           | boolean                | verdadeiro se a ação de queda for bem-sucedida, falso caso contrário.                                                   |
-|               |                           |                        | ***Disponível apenas em caso de erro:***                                                                                |
-| status(*)     |                           | number                 | Código de erro, ver abaixo                                                                                              |
-| statusText(*) |                           | text                   | Descrição do erro, ver abaixo                                                                                           |
-|               |                           |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                         |
-| LockKindText  |                           | text                   | "Bloqueado pelo registro"                                                                                               |
-| lockInfo      |                           | object                 | Informações sobre a origem do bloqueio                                                                                  |
-|               | task_id                   | number                 | Parâmetros                                                                                                              |
-|               | user_name                 | text                   | Nome de usuário de sessão na máquina                                                                                    |
-|               | user4d_alias              | text                   | Pseudônimo do usuário se definido por `SET USER ALIAS`, caso contrário, nome de usuário no diretório 4D                 |
-|               | host_name                 | text                   | Nome da máquina                                                                                                         |
-|               | task_name                 | text                   | Nome de processo                                                                                                        |
-|               | client_version            | text                   |                                                                                                                         |
-|               |                           |                        | ***Disponível apenas em caso de erro grave (erro grave pode ser tentar duplicar uma chave primária, disco cheio...):*** |
-| errors        |                           | uma coleção de objetos |                                                                                                                         |
-|               | message                   | text                   | Mensagem de erro                                                                                                        |
-|               | assinatura de componentes | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                    |
-|               | errCode                   | number                 | Código de erro                                                                                                          |
+| Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                |
+| --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                           |                                     | boolean                | verdadeiro se a ação de queda for bem-sucedida, falso caso contrário.                                                                                                                    |
+|                                   |                                     |                        | _**Available only in case of error:**_                                                                                                                                                   |
+| status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                               |
+| statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                            |
+|                                   |                                     |                        | _**Available only in case of pessimistic lock error:**_                                                                                                                                  |
+| LockKindText                      |                                     | text                   | "Bloqueado pelo registro"                                                                                                                                                                                |
+| lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio                                                                                                                                                                   |
+|                                   | task_id        | number                 | Parâmetros                                                                                                                                                                                               |
+|                                   | user_name      | text                   | Nome de usuário de sessão na máquina                                                                                                                                                                     |
+|                                   | user4d_alias   | text                   | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                                                                                                       |
+|                                   | host_name      | text                   | Nome da máquina                                                                                                                                                                                          |
+|                                   | task_name      | text                   | Nome de processo                                                                                                                                                                                         |
+|                                   | client_version | text                   |                                                                                                                                                                                                          |
+|                                   |                                     |                        | _**Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):**_ |
+| errors                            |                                     | uma coleção de objetos |                                                                                                                                                                                                          |
+|                                   | message                             | text                   | Mensagem de erro                                                                                                                                                                                         |
+|                                   | assinatura de componentes           | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                  |
+|                                   | errCode                             | number                 | Código de erro                                                                                                                                                                                           |
 
-(\*) Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objecto *Result* em caso de erro:
+(\*) The following values can be returned in the _status_ and _statusText_ properties of _Result_ object in case of error:
 
-| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                     |
-| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao utilizar entity.drop( ), este erro pode ser devolvido quando usar a opção dk force drop if stamp changed. Ao usar entity.lock( ), este erro pode ser retornado quando usar a opção dk if stamp changed</li> **statusText asociado**: "A entidade já não existe"                              |
-| `dk status locked`                        | 3     | Parâmetros                                                                                                                                                                                                                     |
-| `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>**Associado statusText**: "Outro erro"                                                            |
-| `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><li>**Associated statusText***: "O carimbo mudou"</li> |
-| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a queda da entidade. **Associated statusText**:                                                                                                                                            |
+| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao utilizar entity.drop( ), este erro pode ser devolvido quando usar a opção dk force drop if stamp changed. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li> **Associated statusText**: "Entity does not exist anymore" |
+| `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br/> **Associated statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>**Associated statusText**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br/><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><li>**Associated statusText**: "Stamp has changed"</li>                                                                                                                                                                                                                                                                   |
+| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a queda da entidade. **Associated statusText**: "Permission Error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Exemplo 1
 
-Exemplo sem a opção `dk force drop if stamp changed` :
+Example without `dk force drop if stamp changed` option:
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee : cs. EmployeeEntity
+ var $employees : cs.EmployeeSelection
+ var $employee : cs.EmployeeEntity
  var $status : Object
- $employees:=ds. Employee.query("lastName=:1";"Smith")
+ $employees:=ds.Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $status:=$employee.drop()
  Case of
@@ -396,13 +408,13 @@ Exemplo sem a opção `dk force drop if stamp changed` :
 
 #### Exemplo 2
 
-Exemplo com a opção`dk force drop if stamp changed`:
+Example with `dk force drop if stamp changed` option:
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee : cs. EmployeeEntity
+ var $employees : cs.EmployeeSelection
+ var $employee : cs.EmployeeEntity
  var $status : Object
- $employees:=ds. Employee.query("lastName=:1";"Smith")
+ $employees:=ds.Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
@@ -416,9 +428,10 @@ Exemplo com a opção`dk force drop if stamp changed`:
 <!-- END REF -->
 
 <!-- REF EntityClass.first().Desc -->
+
 ## .first()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -426,27 +439,28 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 </details>
 
-<!-- REF #EntityClass.first().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.first().Syntax -->**.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.first().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                            |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
-| Resultados | 4D. Entity | <- | Referencia à primeira entidade da entity selection (Null se a seleção estiver vazia) |
+
+| Parâmetro  | Tipo                       |     | Descrição                                                                                               |
+| ---------- | -------------------------- | :-: | ------------------------------------------------------------------------------------------------------- |
+| Resultados | 4D. Entity |  <- | Referencia à primeira entidade da entity selection (Null se a seleção estiver vazia) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.first()` <!-- REF #EntityClass.first().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
+The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
-Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
+If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
 #### Exemplo
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee; $firstEmployee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs.EmployeeSelection
+ var $employee; $firstEmployee : cs.EmployeeEntity
+ $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[2]
  $firstEmployee:=$employee.first() //$firstEmployee is the first entity of the $employees entity selection
 ```
@@ -454,9 +468,10 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 <!-- END REF -->
 
 <!-- REF EntityClass.fromObject().Desc -->
+
 ## .fromObject()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -466,29 +481,31 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 <!-- REF #EntityClass.fromObject().Syntax -->**.fromObject**( *filler* : Object )<!-- END REF -->
 
-
 <!-- REF #EntityClass.fromObject().Params -->
-| Parâmetro | Tipo   |    | Descrição                            |
-| --------- | ------ |:--:| ------------------------------------ |
-| filler    | Object | -> | Object from which to fill the entity |
+
+| Parâmetro | Tipo   |     | Descrição                            |
+| --------- | ------ | :-: | ------------------------------------ |
+| filler    | Object |  -> | Object from which to fill the entity |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->preenche uma entidade com o conteúdo *filler*<!-- END REF -->.
+The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the _filler_ content<!-- END REF -->.
+
 > Essa função modifica a entidade original.
 
 O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
-* Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
-* Os tipos de dados devem ser equivalentes. Se houver uma incompatibilidade de tipo entre o objeto e o dataclass, 4D tenta converter os dados sempre que possível (consulte [`Conversão de tipos de dados`](Concepts/data-types.md#converting-data-types)), caso contrário, o atributo fica intacto.
-* A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). Se ainda não existir no dataclass, a entidade é criada com o valor dado quando [.save()](#save) é chamado. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
+- Se uma propriedade do objeto não existe nos dados (dataclass), ela é ignorada.
+- Os tipos de dados devem ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
+- A chave primária pode ser dada como é ou com uma propriedade "__KEY" (preenchida com o valor da chave primária). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. Se a chave primária não for dada, a entidade é criada e o valor da chave primária é atribuído de acordo com as regras da base de dados. O auto-incremento só é calculado se a chave primária for nula.
 
-*filler* pode tratar de uma entidade relacionada sob as seguintes condições:
+_filler_ can handle a related entity under the following conditions:
 
-* *filler* contém a chave estrangeira em si, ou
-* *filler* contém um objeto de propriedade com o mesmo nome da entidade relacionada, contendo uma propriedade única chamada "\_\_KEY".
-* se a entidade relacionada não existir, ela é ignorada.
+- _filler_ contains the foreign key itself, or
+- _filler_ contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
+- se a entidade relacionada não existir, ela é ignorada.
 
 #### Exemplo
 
@@ -510,8 +527,8 @@ O código a seguir criará uma entidade com gerente e entidades relacionadas ao 
 
 ```4d
  var $o : Object
- var $entity : cs. EmpEntity
- $entity:=ds. Emp.new()
+ var $entity : cs.EmpEntity
+ $entity:=ds.Emp.new()
  $entity.fromObject($o)
  $entity.save()
 ```
@@ -526,10 +543,10 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
     "salary": 68400,
     "birthDate": "1971-09-03T00:00:00.000Z",
     "woman": false,
-    "employer": {// relatedEntity dada como um objeto
+    "employer": {// relatedEntity given as an object
         "__KEY": "21"
     },
-    "manager": {// relatedEntity dada como um objeto
+    "manager": {// relatedEntity given as an object
         "__KEY": "411"
     }
 }
@@ -538,9 +555,10 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 <!-- END REF -->
 
 <!-- REF EntityClass.getDataClass().Desc -->
+
 ## .getDataClass()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -548,18 +566,19 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 </details>
 
-<!-- REF #EntityClass.getDataClass().Syntax -->**.getDataClass()** : 4D. DataClass<!-- END REF -->
-
+<!-- REF #EntityClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parâmetro  | Tipo          |    | Descrição                                    |
-| ---------- | ------------- |:--:| -------------------------------------------- |
-| Resultados | 4D. DataClass | <- | Objeto DataClass ao qual a entidade pertence |
+
+| Parâmetro  | Tipo                          |     | Descrição                                    |
+| ---------- | ----------------------------- | :-: | -------------------------------------------- |
+| Resultados | 4D. DataClass |  <- | Objeto DataClass ao qual a entidade pertence |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->retorna a classe de dados da entidade<!-- END REF -->. Esta função é útil para configurar o código genérico.
+The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 #### Exemplo
 
@@ -569,8 +588,8 @@ O seguinte código genérico duplica qualquer entidade:
   //duplicate_entity method
   //duplicate_entity($entity)
 
- #DECLARE($entity : 4D. Entity)  
- var $entityNew : 4D. Entity
+ #DECLARE($entity : 4D.Entity)  
+ var $entityNew : 4D.Entity
  var $status : Object
 
  $entityNew:=$entity.getDataClass().new() //create a new entity in the parent dataclass
@@ -582,9 +601,10 @@ O seguinte código genérico duplica qualquer entidade:
 <!-- END REF -->
 
 <!-- REF EntityClass.getKey().Desc -->
+
 ## .getKey()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -594,28 +614,28 @@ O seguinte código genérico duplica qualquer entidade:
 
 <!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
-
 <!-- REF #EntityClass.getKey().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                                                              |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
-| mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                              |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                           |
+
+| Parâmetro  | Tipo    |     | Descrição                                                                                               |
+| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
+| Resultados | Text    |  <- | Valor do texto chave primária da entidade                                                               |
+| Resultados | Integer |  <- | Valor da chave primária numérica da entidade                                                            |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getKey()` <!-- REF #EntityClass.getKey().Summary -->retorna a chave primária da entidade<!-- END REF -->.
+The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
-As chaves primárias podem ser números (Inteiro) ou strings. Você pode "forçar" o valor da chave primária retornado para ser uma string, independentemente do tipo de chave primária real, passando a `dk key como string` opção no parâmetro *modo*.
+As chaves primárias podem ser números (Inteiro) ou strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the _mode_ parameter.
 
 #### Exemplo
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName=:1";"Smith")
+ var $employees : cs.EmployeeSelection
+ var $employee : cs.EmployeeEntity
+ $employees:=ds.Employee.query("lastName=:1";"Smith")
  $employee:=$employees[0]
  ALERT("The primary key is "+$employee.getKey(dk key as string))
 ```
@@ -623,9 +643,10 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 <!-- END REF -->
 
 <!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -635,20 +656,21 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
 
-
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+
 | Parâmetro | Tipo |    | Descrição                                                            |
 | --------- | ---- | -- | -------------------------------------------------------------------- |
 | result    | Text | <- | Atributos de contexto linkados à entidade, separados por uma vírgula |
+
 <!-- END REF -->
 
-> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
-A função `.touchedAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retorna os nomes dos atributos que foram modificados desde que a entidade foi carregada na memória <!-- END REF -->.
+The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
-Se não houver [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) para a entidade a função retorna um Texto vazio.
+If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
 
 #### Exemplo
 
@@ -678,9 +700,10 @@ $info:=$address.getRemoteContextAttributes()
 [EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
+
 ## .getSelection()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -688,30 +711,31 @@ $info:=$address.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntityClass.getSelection().Syntax -->**.getSelection()**: 4D. EntitySelection<!-- END REF -->
-
+<!-- REF #EntityClass.getSelection().Syntax -->**.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                                  |
-| ---------- | ------------------- |:--:| -------------------------------------------------------------------------- |
-| Resultados | 4D. EntitySelection | <- | Seleção de entidade a que pertence a entidade (null se não for encontrado) |
+
+| Parâmetro  | Tipo                                |     | Descrição                                                                                     |
+| ---------- | ----------------------------------- | :-: | --------------------------------------------------------------------------------------------- |
+| Resultados | 4D. EntitySelection |  <- | Seleção de entidade a que pertence a entidade (null se não for encontrado) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getSelection()` <!-- REF #EntityClass.getSelection().Summary -->retorna a seleção entidade à qual pertence a entidade<!-- END REF -->.
+The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertence à seleção de uma entidade, a função retorna Null.
 
 #### Exemplo
 
 ```4d
- var $emp : cs. EmployeeEntity
- var $employees; $employees2 : cs. EmployeeSelection
- $emp:=ds. Employee.get(672) // This entity does not belong to any entity selection
+ var $emp : cs.EmployeeEntity
+ var $employees; $employees2 : cs.EmployeeSelection
+ $emp:=ds.Employee.get(672) // This entity does not belong to any entity selection
  $employees:=$emp.getSelection() // $employees is Null
 
- $employees2:=ds. Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
+ $employees2:=ds.Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
  $emp:=$employees2[0]  // This entity belongs to an entity selection
 
  ALERT("The entity selection contains "+String($emp.getSelection().length)+" entities")
@@ -720,9 +744,10 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 <!-- END REF -->
 
 <!-- REF EntityClass.getStamp().Desc -->
+
 ## .getStamp()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -732,27 +757,29 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 <!-- REF #EntityClass.getStamp().Syntax -->**.getStamp()** : Integer<!-- END REF -->
 
-
 <!-- REF #EntityClass.getStamp().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                        |
-| ---------- | ------- |:--:| ------------------------------------------------ |
-| Resultados | Integer | <- | Estampa da entidade (0 se a entidade foi criada) |
+
+| Parâmetro  | Tipo    |     | Descrição                                                           |
+| ---------- | ------- | :-: | ------------------------------------------------------------------- |
+| Resultados | Integer |  <- | Estampa da entidade (0 se a entidade foi criada) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> retorna o valor atual da estampa da entidade<!-- END REF -->.
+The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
-O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. Gere o acesso de usuários simultâneos e modificações às mesmas entidades (ver [**bloqueio de entidades**](ORDA/entities.md#entity-locking)).
-> Para uma nova entidade (nunca salva), a função retorna 0. Para saber se uma entidade acabou de ser criada, recomenda-se a utilização de [.isNew()](#isnew).
+O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
+
+> Para uma nova entidade (nunca salva), a função retorna 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
 
 #### Exemplo
 
 ```4d
- var $entity : cs. EmployeeEntity
+ var $entity : cs.EmployeeEntity
  var $stamp : Integer
 
- $entity:=ds. Employee.new()
+ $entity:=ds.Employee.new()
  $entity.lastname:="Smith"
  $entity.save()
  $stamp:=$entity.getStamp() //$stamp=1
@@ -765,9 +792,10 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 <!-- END REF -->
 
 <!-- REF EntityClass.indexOf().Desc -->
+
 ## .indexOf()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -775,26 +803,27 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 </details>
 
-<!-- REF #EntityClass.indexOf().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.indexOf().Syntax -->**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parâmetro       | Tipo                |    | Descrição                                                            |
-| --------------- | ------------------- |:--:| -------------------------------------------------------------------- |
-| entitySelection | 4D. EntitySelection | -> | A posição da entidade é dada de acordo com a selecção desta entidade |
-| Resultados      | Integer             | <- | Posição da entidade numa selecção de entidade                        |
+
+| Parâmetro       | Tipo                                |     | Descrição                                                            |
+| --------------- | ----------------------------------- | :-: | -------------------------------------------------------------------- |
+| entitySelection | 4D. EntitySelection |  -> | A posição da entidade é dada de acordo com a selecção desta entidade |
+| Resultados      | Integer                             |  <- | Posição da entidade numa selecção de entidade                        |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.find()` <!-- REF #EntityClass.indexOf().Summary -->retorna a posição da entidade em uma seleção de entidade<!-- END REF -->.
+The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
-Por padrão, se o parâmetro *entitySelection* for omitido, a função retorna a posição da entidade dentro de sua própria seleção de entidade. Caso contrário, ele retorna a posição da entidade dentro da *entitySelection*.
+By default if the _entitySelection_ parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified _entitySelection_.
 
 O valor resultante é incluído entre 0 e o comprimento da selecção da entidade -1.
 
-* Se a entidade não tiver uma selecção de entidade ou não pertencer a *entitySelection*, a função retorna -1.
-* Se *entitySelection* for Null ou não pertencer ao mesmo dataclass que a entidade, é apresentado um erro.
+- If the entity does not have an entity selection or does not belong to _entitySelection_, the function returns -1.
+- If _entitySelection_ is Null or does not belong to the same dataclass as the entity, an error is raised.
 
 #### Exemplo
 
@@ -812,9 +841,10 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 <!-- END REF -->
 
 <!-- REF EntityClass.isNew().Desc -->
+
 ## .isNew()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -824,16 +854,17 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <!-- REF #EntityClass.isNew().Syntax -->**.isNew()** : Boolean<!-- END REF -->
 
-
 <!-- REF #EntityClass.isNew().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                  |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
-| Resultados | Parâmetros | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+
+| Parâmetro  | Tipo       |     | Descrição                                                                                                                  |
+| ---------- | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros |  <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore<!-- END REF -->. Caso contrário, devolve False.
+The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Caso contrário, devolve False.
 
 #### Exemplo
 
@@ -850,9 +881,10 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 <!-- END REF -->
 
 <!-- REF EntityClass.last().Desc -->
+
 ## .last()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -860,20 +892,21 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 </details>
 
-<!-- REF #EntityClass.last().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.last().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                 |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado) |
+
+| Parâmetro  | Tipo                       |     | Descrição                                                                                                    |
+| ---------- | -------------------------- | :-: | ------------------------------------------------------------------------------------------------------------ |
+| Resultados | 4D. Entity |  <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.last()` <!-- REF #EntityClass.last().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
+The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
-Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
+If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
 #### Exemplo
 
@@ -888,9 +921,10 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 <!-- END REF -->
 
 <!-- REF EntityClass.lock().Desc -->
+
 ## .lock()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -900,72 +934,73 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 <!-- REF #EntityClass.lock().Syntax -->**.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.lock().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                                            |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| mode       | Integer | -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o carimbo for alterado |
-| Resultados | Object  | <- | Resultado da operação de bloqueio                                                    |
+
+| Parâmetro  | Tipo    |     | Descrição                                                                            |
+| ---------- | ------- | :-: | ------------------------------------------------------------------------------------ |
+| mode       | Integer |  -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
+| Resultados | Object  |  <- | Resultado da operação de bloqueio                                                    |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.lock()` <!-- REF #EntityClass.lock().Summary -->põe uma fechadura pessimista no registro referenciado pela entidade<!-- END REF -->. O bloqueio de [é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
+The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
 
-Outros processos verão este registro como bloqueado (o resultado. `a propriedade` uccess conterá Falso se eles tentarem bloquear a mesma entidade usando esta função). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
+Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
-Um registro bloqueado está desbloqueado:
+A record locked by `.lock()` is unlocked:
 
-* quando a função [`desbloqueia()`](#unlock) é chamada a uma entidade correspondente no mesmo processo
-* automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
+- when the [`unlock()`](#unlock) function is called on a matching entity in the same process
+- automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
 
-> Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
+> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
 
-Por padrão, se o parâmetro *modo* for omitido, a função retornará um erro (veja abaixo) se a mesma entidade tiver sido modificada (ou seja, O selo mudou) por outro processo ou usuário nesse meio tempo.
+By default, if the _mode_ parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
-Caso contrário, você pode passar o parâmetro`dk reload if stamp changed` no parâmetro *mode* : neste caso, nenhum erro é retornado e a entidade é recarregada quando o selo mudou (se a entidade ainda existir e a chave primária ainda for a mesma).
+Otherwise, you can pass the `dk reload if stamp changed` option in the _mode_ parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).
 
-**Resultados**
+**Resultado**
 
-O objeto retornado por `.lock( )` contém as seguintes propriedades:
+The object returned by `.lock( )` contains the following properties:
 
-| Propriedade      |                           | Tipo                   | Descrição                                                                                                                                                   |
-| ---------------- | ------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          |                           | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                |
-|                  |                           |                        | ***Disponível apenas se a opção`dk reload if stamp changed` for usada:***                                                                                   |
-| **wasReloaded**  |                           | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                 |
-|                  |                           |                        | ***Disponível apenas em caso de erro:***                                                                                                                    |
-| status(\*)     |                           | number                 | Código de erro, ver abaixo                                                                                                                                  |
-| statusText(\*) |                           | text                   | Descrição do erro, ver abaixo                                                                                                                               |
-|                  |                           |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                                                             |
-| lockKindText     |                           | text                   | "Locked by record" se trancado por um processo 4D, "Locked by session" se trancado por uma sessão REST                                                      |
-| lockInfo         |                           | object                 | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                     |
-|                  |                           |                        | ***Disponível só para um processo trava 4D:***                                                                                                              |
-|                  | task_id                   | number                 | Process ID                                                                                                                                                  |
-|                  | user_name                 | text                   | Nome de usuário de sessão na máquina                                                                                                                        |
-|                  | user4d_alias              | text                   | Nome ou apelido do usuário 4D                                                                                                                               |
-|                  | user4d_id                 | number                 | Id do usuário no diretório do banco de dados 4D                                                                                                             |
-|                  | host_name                 | text                   | Nome da máquina                                                                                                                                             |
-|                  | task_name                 | text                   | Nome de processo                                                                                                                                            |
-|                  | client_version            | text                   | Versão do cliente                                                                                                                                           |
-|                  |                           |                        | ***Disponível só para um processo trava REST:***                                                                                                            |
-|                  | host                      | text                   | URL que trava a entidade (por exemplo "www.myserver.com")                                                                                                   |
-|                  | IPAddr                    | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |
-|                  | userAgent                 | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                  |                           |                        | ***Disponível apenas em caso de erro grave*** (a chave primária já existir, o disco estar cheio...):                                                        |
-| errors           |                           | uma coleção de objetos |                                                                                                                                                             |
-|                  | message                   | text                   | Mensagem de erro                                                                                                                                            |
-|                  | assinatura de componentes | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                        |
-|                  | errCode                   | number                 | Código de erro                                                                                                                                              |
+| Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                           |                                     | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                                                                                                                                                                                                              |
+|                                   |                                     |                        | _**Available only if `dk reload if stamp changed` option is used:**_                                                                                                                                                                                                                                                                                                         |
+| **wasReloaded**                   |                                     | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                                                                                                                                                                                                                                  |
+|                                   |                                     |                        | _**Available only in case of error:**_                                                                                                                                                                                                                                                                                                                                       |
+| status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                   |
+| statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                |
+|                                   |                                     |                        | _**Available only in case of pessimistic lock error:**_                                                                                                                                                                                                                                                                                                                      |
+| lockKindText                      |                                     | text                   | "Locked by record" se trancado por um processo 4D, "Locked by session" se trancado por uma sessão REST                                                                                                                                                                                                                                                                                       |
+| lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                                                                                                                                                                                                                   |
+|                                   |                                     |                        | _**Disponível só para um processo trava 4D:**_                                                                                                                                                                                                                                                                                                                               |
+|                                   | task_id        | number                 | Process ID                                                                                                                                                                                                                                                                                                                                                                                   |
+|                                   | user_name      | text                   | Nome de usuário de sessão na máquina                                                                                                                                                                                                                                                                                                                                                         |
+|                                   | user4d_alias   | text                   | Nome ou apelido do usuário 4D                                                                                                                                                                                                                                                                                                                                                                |
+|                                   | user4d_id      | number                 | Id do usuário no diretório do banco de dados 4D                                                                                                                                                                                                                                                                                                                                              |
+|                                   | host_name      | text                   | Nome da máquina                                                                                                                                                                                                                                                                                                                                                                              |
+|                                   | task_name      | text                   | Nome de processo                                                                                                                                                                                                                                                                                                                                                                             |
+|                                   | client_version | text                   | Versão do cliente                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   |                                     |                        | _**Disponível só para um processo trava REST:**_                                                                                                                                                                                                                                                                                                                             |
+|                                   | host                                | text                   | \|URL que trava a entidade (por exemplo "www.myserver.com")\|                                                                                                                                                                                                                                                                             |
+|                                   | IPAddr                              | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                                                                                                                                                                           |
+|                                   | userAgent                           | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|                                   |                                     |                        | _**Available only in case of serious error**_ (primary key already exists, disk full...):                                                                                                                                                                                                                 |
+| errors                            |                                     | uma coleção de objetos |                                                                                                                                                                                                                                                                                                                                                                                              |
+|                                   | message                             | text                   | Mensagem de erro                                                                                                                                                                                                                                                                                                                                                                             |
+|                                   | assinatura de componentes           | text                   | assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                                                                                                                                                                                                      |
+|                                   | errCode                             | number                 | Código de erro                                                                                                                                                                                                                                                                                                                                                                               |
 
-(\*) Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objecto *Result* em caso de erro:
+(\*) The following values can be returned in the _status_ and _statusText_ properties of the _Result_ object in case of error:
 
-| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                 |
-| ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, este erro pode ser retornado quando a opção "dk force drop if stamp changed" for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
-| `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                     |
-| `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                 |
-| `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**StatusText associado**: "O carimbo foi alterado" |
+| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao usar `.drop( )`, este erro pode ser retornado quando a opção "dk force drop if stamp changed" for usada. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity does not exist anymore" |
+| `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.**Associated statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.**Associated statusText**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"                                                                                                                                                                                                  |
 
 #### Exemplo 1
 
@@ -986,7 +1021,7 @@ Exemplo com erro:
 
 #### Exemplo 2
 
-Exemplo com `dk reload se o selo mudou a opção`:
+Example with `dk reload if stamp changed` option:
 
 ```4d
  var $employee : cs. EmployeeEntity
@@ -1004,9 +1039,10 @@ Exemplo com `dk reload se o selo mudou a opção`:
 <!-- END REF -->
 
 <!-- REF EntityClass.next().Desc -->
+
 ## .next()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1014,31 +1050,30 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 </details>
 
-<!-- REF #EntityClass.next().Syntax -->Parâmetros<!-- END REF -->
-
-
-
+<!-- REF #EntityClass.next().Syntax -->**.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.next().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                          |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado) |
+
+| Parâmetro  | Tipo                       |     | Descrição                                                                                             |
+| ---------- | -------------------------- | :-: | ----------------------------------------------------------------------------------------------------- |
+| Resultados | 4D. Entity |  <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.next()` <!-- REF #EntityClass.next().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
+The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
-Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
+If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
 Se não houver entidade seguinte válida na selecção da entidade (ou seja, se estiver na última entidade da selecção), a função devolve Null. Se a entidade seguinte tiver sido abandonada, a função devolve a entidade válida seguinte (e eventualmente Nula).
 
 #### Exemplo
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee; $nextEmployee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs.EmployeeSelection
+ var $employee; $nextEmployee : cs.EmployeeEntity
+ $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
 
@@ -1047,9 +1082,10 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 <!-- END REF -->
 
 <!-- REF EntityClass.previous().Desc -->
+
 ## .previous()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1057,20 +1093,21 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 </details>
 
-<!-- REF #EntityClass.previous().Syntax -->Parâmetros<!-- END REF -->
-
+<!-- REF #EntityClass.previous().Syntax -->**.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.previous().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                  |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
-| Resultados | 4D. Entity | <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado) |
+
+| Parâmetro  | Tipo                       |     | Descrição                                                                                                     |
+| ---------- | -------------------------- | :-: | ------------------------------------------------------------------------------------------------------------- |
+| Resultados | 4D. Entity |  <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado) |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.previous()` <!-- REF #EntityClass.previous().Summary --> retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
+The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
-Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
+If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
 Se não houver nenhuma entidade anterior válida na seleção da entidade (ou seja, você está na primeira entidade da seleção), a função retorna Null. Se a entidade anterior foi abandonada, a função retorna a entidade válida anterior (e eventualmente Null).
 
@@ -1087,9 +1124,10 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
+
 ## .reload()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1099,33 +1137,34 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 <!-- REF #EntityClass.reload().Syntax -->**.reload()** : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.reload().Params -->
-| Parâmetro  | Tipo   |    | Descrição        |
-| ---------- | ------ |:--:| ---------------- |
-| Resultados | Object | <- | Objeto de estado |
+
+| Parâmetro  | Tipo   |     | Descrição        |
+| ---------- | ------ | :-: | ---------------- |
+| Resultados | Object |  <- | Objeto de estado |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.reload()` <!-- REF #EntityClass.reload().Summary -->recarrega o conteúdo da entidade em memória<!-- END REF -->de acordo com a informação armazenada na tabela relacionada a dataclass da datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
+The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
-**Resultados**
+**Resultado**
 
-O objeto retornado por `.reload( )` contém as seguintes propriedades:
+The object returned by `.reload( )` contains the following properties:
 
-| Propriedade      | Tipo    | Descrição                                                                                    |
-| ---------------- | ------- | -------------------------------------------------------------------------------------------- |
-| success          | boolean | True se a ação de recarregar tiver sucesso, senão False.***Disponível só no caso de erro***: |
-| status(\*)     | number  | Código de erro, ver abaixo                                                                   |
-| statusText(\*) | text    | Descrição do erro, ver abaixo                                                                |
+| Propriedade                       | Tipo    | Descrição                                                                                                                       |
+| --------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| success                           | boolean | True if the reload action is successful, False otherwise._**Available only in case of error**_: |
+| status(\*)     | number  | Código de erro, ver abaixo                                                                                                      |
+| statusText(\*) | text    | Descrição do erro, ver abaixo                                                                                                   |
 
-(\*) Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objecto *Result* em caso de erro:
+(\*) The following values can be returned in the _status_ and _statusText_ properties of _Result_ object in case of error:
 
-| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                        |
-| ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>***statusText associado***: "a entidade já não existe" |
-| `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>***Texto status associado***: "Outro erro"                                           |
+| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>_**Associated statusText**_: "Entity does not exist anymore" |
+| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>_**Associated statusText**_: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Exemplo
 
@@ -1149,9 +1188,10 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 <!-- END REF -->
 
 <!-- REF EntityClass.save().Desc -->
+
 ## .save()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1161,66 +1201,68 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 <!-- REF #EntityClass.save().Syntax -->**.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.save().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                           |
-| ---------- | ------- |:--:| --------------------------------------------------- |
-| mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática |
-| Resultados | Object  | <- | Resultado da operação de salvamento                 |
+
+| Parâmetro  | Tipo    |     | Descrição                                                         |
+| ---------- | ------- | :-: | ----------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk auto merge`: Enables the automatic merge mode |
+| Resultados | Object  |  <- | Resultado da operação de salvamento                               |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as mudanças feitas na entidade<!-- END REF --> na tabela relacionada para a dataClass. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
+The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
 
-A operação de salvar é realizada só se ao menos um atributo de entidade foi "tocado" (ver [`.touched()`](#touched) e funções [`.touchedAttributes()`](#touchedattributes) ). Senão a função não faz nada (o trigger não é ativado)
+The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Senão a função não faz nada (o trigger não é ativado)
 
-Em uma aplicação multiusuário ou multiprocesso, a função `.save()` é executada com um mecanismo  ["optimistic lock"](ORDA/entities.md#entity-locking) onde uma estampa interna de tranca é automaticamente incrementada cada vez que o registro é salvado
+In a multi-user or multi-process application, the `.save()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
-Como padrão, se o parâmetro *mode* for omitido, o método retorna um erro (ver abaixo) sempre que a mesma entidade for modificada por outro processo ou u suário , sem importar os atributos modificados.
+By default, if the _mode_ parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
 
-Senão, pode passar a opção `dk auto merge` no parâmetro *mode*: quando o modo automatico fusionado estiver ativado, uma modificação feita ao mesmo tempo que outro processo ou usuário na mesma entidade, mas em um diferente atributo, não vai resultar em um erro. Os dados resultantes salvos na entidade serão a combinação ("merge"/fusão) de todas as modificações não simultâneas (se modificações forem aplicadas ao mesmo atributo, a operação de salvar falha e um erro é retornado, mesmo com o modo auto fusão)
-> O modo automático merge não está disponível para atributos de tipo Imagem, Objeto e Texto quando armazenado fora do registro. Mudanças simultâneas nesses atributos vão resultar em um erro `dk status stamp has changed` .
+Otherwise, you can pass the `dk auto merge` option in the _mode_ parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. Os dados resultantes salvos na entidade serão a combinação ("merge"/fusão) de todas as modificações não simultâneas (se modificações forem aplicadas ao mesmo atributo, a operação de salvar falha e um erro é retornado, mesmo com o modo auto fusão)
 
-**Resultados**
+> O modo automático merge não está disponível para atributos de tipo Imagem, Objeto e Texto quando armazenado fora do registro. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
 
-O objeto retornado por `.save()` contém as propriedades a seguir:
+**Resultado**
 
-| Propriedade  |                    | Tipo                   | Descrição                                                                                                                |
-| ------------ | ------------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| success      |                    | boolean                | True se a ação salvar tiver sucesso, senão False                                                                         |
-|              |                    |                        | ***Disponível só se utilizar a opção `dk auto merge`***:                                                                 |
-| autoMerged   |                    | boolean                | True se fizer uma auto merge, senão False                                                                                |
-|              |                    |                        | ***Disponível apenas em caso de erro***:                                                                                 |
-| status       |                    | number                 | Código de erro, [ver abaixo](#status-and-statustext)                                                                     |
-| statusText   |                    | text                   | Descrição do erro, [ver abaixo](#status-and-statustext)                                                                  |
-|              |                    |                        | ***Disponível só no caso de erro de tranca pessimista***:                                                                |
-| lockKindText |                    | text                   | "Bloqueado pelo registro"                                                                                                |
-| lockInfo     |                    | object                 | Informações sobre a origem do bloqueio                                                                                   |
-|              | task_id            | number                 | Parâmetros                                                                                                               |
-|              | user_name          | text                   | Nome de usuário de sessão na máquina                                                                                     |
-|              | user4d_alias       | text                   | Pseudônimo do usuário se definido por `SET USER ALIAS`, caso contrário, nome de usuário no diretório 4D                  |
-|              | host_name          | text                   | Nome da máquina                                                                                                          |
-|              | task_name          | text                   | Nome de processo                                                                                                         |
-|              | client_version     | text                   |                                                                                                                          |
-|              |                    |                        | ***Disponível só em caso de erro grave*** (erro sério - por exemplo tentar duplicar uma chave primária, disco cheio...): |
-| errors       |                    | uma coleção de objetos |                                                                                                                          |
-|              | message            | text                   | Mensagem de erro                                                                                                         |
-|              | componentSignature | text                   | Assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                     |
-|              | errCode            | number                 | Código de erro                                                                                                           |
+The object returned by `.save()` contains the following properties:
+
+| Propriedade  |                                     | Tipo                   | Descrição                                                                                                                                                                                                  |
+| ------------ | ----------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success      |                                     | boolean                | True se a ação salvar tiver sucesso, senão False                                                                                                                                                           |
+|              |                                     |                        | _**Available only if `dk auto merge` option is used**_:                                                                                                                                    |
+| autoMerged   |                                     | boolean                | True se fizer uma auto merge, senão False                                                                                                                                                                  |
+|              |                                     |                        | _**Disponível apenas em caso de erro**_:                                                                                                                                                   |
+| status       |                                     | number                 | Error code, [see below](#status-and-statustext)                                                                                                                                                            |
+| statusText   |                                     | text                   | Description of the error, [see below](#status-and-statustext)                                                                                                                                              |
+|              |                                     |                        | _**Disponível apenas em caso de erro de bloqueio pessimista**_:                                                                                                                            |
+| lockKindText |                                     | text                   | "Bloqueado pelo registro"                                                                                                                                                                                  |
+| lockInfo     |                                     | object                 | Informações sobre a origem do bloqueio                                                                                                                                                                     |
+|              | task_id        | number                 | Parâmetros                                                                                                                                                                                                 |
+|              | user_name      | text                   | Nome de usuário de sessão na máquina                                                                                                                                                                       |
+|              | user4d_alias   | text                   | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                                                                                                         |
+|              | host_name      | text                   | Nome da máquina                                                                                                                                                                                            |
+|              | task_name      | text                   | Nome de processo                                                                                                                                                                                           |
+|              | client_version | text                   |                                                                                                                                                                                                            |
+|              |                                     |                        | _**Available only in case of serious error**_ (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                                     | uma coleção de objetos |                                                                                                                                                                                                            |
+|              | message                             | text                   | Mensagem de erro                                                                                                                                                                                           |
+|              | componentSignature                  | text                   | Assinatura interna do componente (ex.: "dmbg" significa componente da base de dados)                                                                    |
+|              | errCode                             | number                 | Código de erro                                                                                                                                                                                             |
 
 ##### status e statusText
 
-Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` do objeto Result no caso de um erro:
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
-| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                            |
-| ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6     | Parâmetros                                                                                                                                                                                                                                                            |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
-| `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                                |
-| `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                            |
-| `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**StatusText associado**: "O carimbo foi alterado" |
-| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a salvaguarda da entidade. **Associated statusText**:                                                                                                                                                                             |
+| Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status automerge failed`              | 6     | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.**Associated statusText**: "Auto merge failed"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity doesnot exist anymore" |
+| `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.**Associated statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.**Associated statusText**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br/><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"                                                                                                                                                                                                                                           |
+| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a salvaguarda da entidade. **Associated statusText**: "Permission Error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Exemplo 1
 
@@ -1240,7 +1282,7 @@ Criar uma nova entidade:
 
 #### Exemplo 2
 
-Atualizar uma entidade sem a opção `dk auto merge`:
+Updating an entity without `dk auto merge` option:
 
 ```4d
  var $status : Object
@@ -1260,7 +1302,7 @@ Atualizar uma entidade sem a opção `dk auto merge`:
 
 #### Exemplo 3
 
-Atualizar uma entidade com a opção `dk auto merge` :
+Updating an entity with `dk auto merge` option:
 
 ```4d
  var $status : Object
@@ -1283,9 +1325,10 @@ Atualizar uma entidade com a opção `dk auto merge` :
 <!-- END REF -->
 
 <!-- REF EntityClass.toObject().Desc -->
+
 ## .toObject()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1295,50 +1338,50 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 <!-- REF #EntityClass.toObject().Syntax -->**.toObject**() : Object<br/>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br/>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.toObject().Params -->
-| Parâmetro    | Tipo       |    | Descrição                                                                                                          |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
-| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
-| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
-| Resultados   | Object     | <- | Objeto criado a partir da entidade                                                                                 |
+
+| Parâmetro    | Tipo       |     | Descrição                                                                                                                                                                                          |
+| ------------ | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       |  -> | Atributos a extrair (string separada por vírgulas)                                                                                                                              |
+| filterCol    | Collection |  -> | Coleção de atributos a extrair                                                                                                                                                                     |
+| options      | Integer    |  -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Resultados   | Object     |  <- | Objeto criado a partir da entidade                                                                                                                                                                 |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->retorna um objeto que foi feito a partir da entidade<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
+The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Os nomes das propriedades no objecto correspondem aos nomes dos atributos da entidade.
 
-Se nenhum filtro for especificado ou se o parâmetro *filterString* conter uma string vazia ou  "*", o objeto retornado vai conter:
+If no filter is specified, or if the _filterString_ parameter contains an empty string or "\*", the returned object will contain:
 
-* todos os atributos de entidade de armazenagem
-* atributos `relatedEntity` [kind](DataClassClass.md#attributename): obtém uma propriedade com o mesmo nome que a entidade relacionada (nome do link muitos para um). Atributo é extraido com um formulário simples.
-* atributos `relatedEntities` [kind](DataClassClass.md#attributename): atributo não é retornado.
+- todos os atributos de entidade de armazenagem
+- attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). Atributo é extraido com um formulário simples.
+- attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
 
 No primeiro par|âmetro, passa os atributos entidade a extrair. Pode passar:
 
-* *filterString*: uma string com rotas de propriedades separadas por vírgulas: "propertyPath1, propertyPath2, ...", ou
-* *filterCol*: uma coleção de strings: \["propertyPath1","propertyPath2";...]
+- _filterString_: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
+- _filterCol_: a collection of strings: \["propertyPath1","propertyPath2";...]
 
-Se um filtro for especificado para atributos de relatedEntity [kind](DataClassClass.md#attributename):
+If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
 
-* propertyPath = "relatedEntity" -> se extrai de forma simples: um objeto com a propriedade \_\_KEY (chave primária).
-* propertyPath = "relatedEntity.*" -> todas as propriedades foram extraídas
-* propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> só se extraem essas propriedades
+- propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
+- propertyPath = "relatedEntity.\*" -> all the properties are extracted
+- propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> só se extraem essas propriedades
 
-Se um filtro for especificado para atributos de relatedEntities [kind](DataClassClass.md#attributename):
+If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
 
-* propertyPath = "relatedEntities.*" -> se extraem todas as propriedades
-* propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> só se extraem essas propriedades
+- propertyPath = "relatedEntities.\*" -> all the properties are extracted
+- propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> só se extraem essas propriedades
 
-No parâmetro *options* pode passar o selector `ddk with primary key` ou`dk with stamp` para adicionar as chaves primárias da entidade ou os selos nos objetos extraídos.
+In the _options_ parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
-:::caution Alerta
+:::caution Aviso
 
-Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toObject()` e `.fromObject()`.
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
 
 :::
-
 
 #### Exemplo 1
 
@@ -1410,7 +1453,7 @@ Retorna:
 
 #### Exemplo 3
 
-Expande todas as propriedades de `relatedEntities`:
+Expanding all the properties of `relatedEntities`:
 
 ```4d
 employeeObject:=employeeSelected.toObject("directReports.*")
@@ -1479,7 +1522,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### Exemplo
 
-Extração de algumas propriedades de `relatedEntities`:
+Extracting some properties of `relatedEntities`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
@@ -1506,7 +1549,7 @@ Retorna:
 
 #### Exemplo 2
 
-Extrair `relatedEntity` com formulário simples:
+Extracting a `relatedEntity` with simple form:
 
 ```4d
  $coll:=New collection("firstName";"employer")
@@ -1526,7 +1569,7 @@ Retorna:
 
 #### Exemplo 6
 
-Expande todas as propriedades de `relatedEntity`:
+Extracting all the properties of a `relatedEntity`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("employer.*")
@@ -1548,7 +1591,7 @@ Retorna:
 
 #### Exemplo 3
 
-Extração de algumas propriedades de `relatedEntity`:
+Extracting some properties of a `relatedEntity`:
 
 ```4d
  $col:=New collection
@@ -1571,9 +1614,10 @@ Retorna:
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
+
 ## .touched( )
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1583,20 +1627,21 @@ Retorna:
 
 <!-- REF #EntityClass.touched().Syntax -->**.touched()** : Boolean<!-- END REF -->
 
-
 <!-- REF #EntityClass.touched().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                      |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True se tiver modificado ao menos um atributo da entidade e ainda não for salvo, se não, False |
+
+| Parâmetro  | Tipo       |     | Descrição                                                                                      |
+| ---------- | ---------- | :-: | ---------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros |  <- | True se tiver modificado ao menos um atributo da entidade e ainda não for salvo, se não, False |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.touched()` <!-- REF #EntityClass.touched().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
-Esta função retorna False para uma nova entidade que foi criada (com [`.new( )`](DataClassClass.md#new)). Note entretanto que se usar uma função que calcule um atributo da entidade, a função `.touched()` vai retornar True. Por exemplo se chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retorna True.
+This function returns False for a new entity that has just been created (with [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
 
 #### Exemplo
 
@@ -1615,9 +1660,10 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
+
 ## .touchedAttributes( )
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1627,20 +1673,21 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 <!-- REF #EntityClass.touchedAttributes().Syntax -->**.touchedAttributes()** : Collection<!-- END REF -->
 
-
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                   |
-| ---------- | ---------- |:--:| ------------------------------------------- |
-| Resultados | Collection | <- | Nomes de atributos touched ou coleção vazia |
+
+| Parâmetro  | Tipo       |     | Descrição                                   |
+| ---------- | ---------- | :-: | ------------------------------------------- |
+| Resultados | Collection |  <- | Nomes de atributos touched ou coleção vazia |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.indexOf()` <!-- REF #EntityClass.touchedAttributes().Summary -->retorna a posição da entidade em uma seleção de entidade<!-- END REF -->.
+The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
-Isso aplica para atributos do [tipo](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
+This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-No caso de uma entidade relacionada que foi tocada (touched) *ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
+No caso de uma entidade relacionada que foi tocada (touched) \*ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 
 Se nenhum atributo de entidade for tocado, o método retorna uma coleção vazia.
 
@@ -1681,16 +1728,17 @@ Se nenhum atributo de entidade for tocado, o método retorna uma coleção vazia
 
 Nesse modo:
 
-* firstName and lastName tem um tipo `storage`
-* employer tem um tipo `relatedEntity`
-* employerID é a chave estrangeira da entidade relacionada employer
+- firstName and lastName have a `storage` kind
+- employer has a `relatedEntity` kind
+- employerID é a chave estrangeira da entidade relacionada employer
 
 <!-- END REF -->
 
 <!-- REF EntityClass.unlock().Desc -->
+
 ## .unlock()
 
-<details><summary>Histórico</summary>
+<details><summary>História</summary>
 
 | Release | Mudanças   |
 | ------- | ---------- |
@@ -1700,20 +1748,22 @@ Nesse modo:
 
 <!-- REF #EntityClass.unlock().Syntax -->**.unlock()** : Object<!-- END REF -->
 
-
 <!-- REF #EntityClass.unlock().Params -->
-| Parâmetro  | Tipo   |    | Descrição        |
-| ---------- | ------ |:--:| ---------------- |
-| Resultados | Object | <- | Objeto de estado |
+
+| Parâmetro  | Tipo   |     | Descrição        |
+| ---------- | ------ | :-: | ---------------- |
+| Resultados | Object |  <- | Objeto de estado |
+
 <!-- END REF -->
 
 #### Descrição
 
-A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove a tranca pessimista no registro correspondente à entidade<!-- END REF --> na datastore e tabela relacionada a dataclasse.
+The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
-> Para saber mais veja [Entity locking](ORDA/entities.md#entity-locking).
+> For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
 Um registro é destrancado automaticamente quando não for mais referenciado por nenhuma entidade no processo de trancamento (por exemplo, se uma tranca for posta apenas na referência local da entidade, a entidade e o registro é destrancado quando o processo terminar).
+
 > Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
 
 ```4d
@@ -1724,12 +1774,12 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Resultados**
+**Resultado**
 
-O objeto retornado por `.unlock()` contém a propriedade abaixo:
+The object returned by `.unlock()` contains the following property:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                     |
-| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                     |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success     | Parâmetros | Verdadeiro se a ação de destrancar for bem-sucedida, Falso caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
 
 #### Exemplo

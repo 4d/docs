@@ -1,15 +1,16 @@
 ---
 id: info
-title: '$info'
+title: $info
 ---
 
 Devolve informação sobre os conjuntos de entidades armazenados atualmente na cache de 4D Server, bem como as sessões utilizador
 
 ## Descrição
+
 Ao chamar este pedido para o seu projeto, recupera informações nas seguintes propriedades:
 
-| Propriedade    | Tipo       | Descrição                                                                          |
-| -------------- | ---------- | ---------------------------------------------------------------------------------- |
+| Propriedade    | Tipo       | Descrição                                                                                          |
+| -------------- | ---------- | -------------------------------------------------------------------------------------------------- |
 | cacheSize      | Number     | Tamanho da cache do servidor 4D.                                                   |
 | usedCache      | Number     | Quanto do cache do 4D Server foi usado.                                            |
 | entitySetCount | Number     | Número de selecções de entidades.                                                  |
@@ -18,32 +19,35 @@ Ao chamar este pedido para o seu projeto, recupera informações nas seguintes p
 | sessionInfo    | Collection | Uma coleção em que cada objeto contém informações sobre cada sessão de usuário.    |
 
 ### entitySet
+
 Para cada seleção de entidades atualmente armazenada no cache do 4D Server, a seguinte informação é retornada:
 
+| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                               |
+| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String     | Um UUID que faz referência ao conjunto de entidades.                                                                                                                                                                                                                                                                                    |
+| dataClass     | String     | Nome da dataclass.                                                                                                                                                                                                                                                                                                                      |
+| selectionSize | Number     | Número de entidades na seleção de entidades.                                                                                                                                                                                                                                                                                            |
+| sorted        | Parâmetros | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                                                                   |
+| refreshed     | Date       | Quando o conjunto de entidades foi criado ou utilizado a última vez.                                                                                                                                                                                                                                                                    |
+| expires       | Date       | Quando o conjunto de entidades expirará (esta data/hora muda sempre que o conjunto de entidades é atualizado). A diferença entre refreshed e expires é o tempo limite para um conjunto de entidades. This value is either two hours by default or what you defined using `$timeout`. |
 
-| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                 |
-| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String     | Um UUID que faz referência ao conjunto de entidades.                                                                                                                                                                                                                                      |
-| dataClass     | String     | Nome da dataclass.                                                                                                                                                                                                                                                                        |
-| selectionSize | Number     | Número de entidades na seleção de entidades.                                                                                                                                                                                                                                              |
-| sorted        | Parâmetros | Devolve true se o conjunto foi ordenado (utilizando `$orderby`) ou false se não foi ordenado.                                                                                                                                                                                             |
-| refreshed     | Date       | Quando o conjunto de entidades foi criado ou utilizado a última vez.                                                                                                                                                                                                                      |
-| expires       | Date       | Quando o conjunto de entidades expirará (esta data/hora muda sempre que o conjunto de entidades é atualizado). A diferença entre refreshed e expires é o tempo limite para um conjunto de entidades. Este valor é de duas horas por defeito ou o valor que definiu utilizando `$timeout`. |
+For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 
-Para obter informações sobre como criar uma seleção de entidades, consultar `$method=entityset`. Se quiser remover a seleção de entidades da cache de 4D Server, use `$method=release`.
-> 4D também cria suas próprias seleções de entidades para fins de otimização, então as que você cria com `$method=entityset` não são as únicas retornadas.
-> **IMPORTANTE** Se o seu projeto estiver no **Modo Controlled Admin Access**, tem de iniciar sessão no projeto como usuário do grupo Admin.
+> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
+
+> **IMPORTANT**
+> If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
 
 ### sessionInfo
 
-Para cada sessão usuário, são devolvidas as seguintes informações na coleção *sessionInfo*:
+For each user session, the following information is returned in the _sessionInfo_ collection:
 
-| Propriedade | Tipo   | Descrição                                                                  |
-| ----------- | ------ | -------------------------------------------------------------------------- |
-| sessionID   | String | Um UUID que faz referência à sessão.                                       |
-| userName    | String | O nome do usuário que executa a sessão.                                    |
+| Propriedade | Tipo   | Descrição                                                                                                     |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
+| sessionID   | String | Um UUID que faz referência à sessão.                                                          |
+| userName    | String | O nome do usuário que executa a sessão.                                                       |
 | lifeTime    | Number | O tempo de vida de uma sessão usuário em segundos (3600 por predefinição). |
-| expiration  | Date   | A data e hora de expiração atuais da sessão do usuário.                    |
+| expiration  | Date   | A data e hora de expiração atuais da sessão do usuário.                                       |
 
 ## Exemplo
 
@@ -51,7 +55,7 @@ Recupera informação sobre os conjuntos de entidades atualmente armazenados na 
 
 `GET /rest/$info`
 
-**Resultadoi**:
+**Resultado**:
 
 ```
 {
@@ -113,4 +117,5 @@ sessionInfo: [
 ]
 }
 ```
+
 > A informação do indicador de progresso listada após as seleções de entidades é usada internamente por 4D.

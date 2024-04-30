@@ -1,10 +1,9 @@
 ---
 id: compute
-title: '$compute'
+title: $compute
 ---
 
-Cálculo de atributos específicos (*e.*, `Employee/salary/?$compute=sum)` o en el caso de un atributo Objeto (*por ejemplo*, Employee/objectAtt.property1/?$compute=sum)
-
+Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (_e.g._, Employee/objectAtt.property1/?$compute=sum)
 
 ## Descripción
 
@@ -12,34 +11,32 @@ Este parámetro le permite realizar cálculos sobre sus datos.
 
 Si desea realizar un cálculo sobre un atributo, escriba lo siguiente:
 
- `GET  /rest/Employee/salary/?$compute=$all`
+`GET  /rest/Employee/salary/?$compute=$all`
 
 Si desea pasar un atributo Objeto, debe pasar una de sus propiedades. Por ejemplo:
 
- `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
+`GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
 Puede utilizar cualquiera de las siguientes palabras claves:
 
-
-| Palabras clave | Descripción                                                                                                                                                                                        |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Palabras clave | Descripción                                                                                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all           | Un objeto JSON que define todas las funciones del atributo (promedio, recuento, mínimo, máximo y suma para los atributos de tipo Number y count, mínimo y máximo para los atributos de tipo String |
-| average        | Obtener la media de un atributo numérico                                                                                                                                                           |
+| average        | Obtener la media de un atributo numérico                                                                                                                                                                              |
 | count          | Obtener el número total en la colección o en la clase de datos (en ambos casos hay que especificar un atributo)                                                                                    |
-| min            | Obtener el valor mínimo de un atributo numérico o el valor más bajo en un atributo de tipo String                                                                                                  |
-| max            | Obtener el valor máximo de un atributo numérico o el valor más alto en un atributo de tipo String                                                                                                  |
-| sum            | Obtener la suma de un atributo numérico                                                                                                                                                            |
-
+| min            | Obtener el valor mínimo de un atributo numérico o el valor más bajo en un atributo de tipo String                                                                                                                     |
+| max            | Obtener el valor máximo de un atributo numérico o el valor más alto en un atributo de tipo String                                                                                                                     |
+| sum            | Obtener la suma de un atributo numérico                                                                                                                                                                               |
 
 ## Ejemplo
 
 Si desea obtener todos los cálculos de un atributo de tipo Número, puede escribir:
 
- `GET  /rest/Employee/salary/?$compute=$all`
+`GET  /rest/Employee/salary/?$compute=$all`
 
-**Respuesta**:
+**Response**:
 
-````
+```
 {
     "salary": {
         "count": 4,
@@ -49,15 +46,15 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
         "max": 99000
     }
 }
-````
+```
 
 Si desea obtener todos los cálculos de un atributo de tipo String, puede escribir:
 
- `GET  /rest/Employee/firstName/?$compute=$all`
+`GET  /rest/Employee/firstName/?$compute=$all`
 
-**Respuesta**:
+**Response**:
 
-````
+```
 {
     "salary": {
         "count": 4,
@@ -65,21 +62,20 @@ Si desea obtener todos los cálculos de un atributo de tipo String, puede escrib
         "max": Victor
     }
 }
-````
+```
 
 Si desea obtener un cálculo con un atributo, escriba lo siguiente:
 
- `GET  /rest/Employee/salary/?$compute=sum`
+`GET  /rest/Employee/salary/?$compute=sum`
 
-**Respuesta**:
+**Response**:
 
 `235000`
 
-
 Si desea realizar un cálculo con un atributo Objeto, escriba lo siguiente:
 
- `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
+`GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
 Respuesta:
 
-`45`  
+`45`

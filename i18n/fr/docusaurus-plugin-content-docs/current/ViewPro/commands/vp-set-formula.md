@@ -13,7 +13,7 @@ title: VP SET FORMULA
 | ------------- | ------ | -- | --------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage           |                  |
 | formula       | Text   | -> | Formule ou méthode 4D |                  |
-| formatPattern | Text   | -> | Format of field       | <!-- END REF --> |
+| formatPattern | Text   | -> | Format du champ       | <!-- END REF --> |
 
 #### Description
 

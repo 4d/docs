@@ -1,19 +1,18 @@
 ---
 id: skip
-title: '$skip'
+title: $skip
 ---
 
-エンティティセレクション内で、この数値によって指定されたエンティティから処理を開始します (*例*: `$skip=10`)
-
+Starts the entity defined by this number in the collection (_e.g._, `$skip=10`)
 
 ## 説明
 
-`$skip` はセレクション内のどのエンティティから処理を開始するかを指定します。 デフォルトでは、先頭エンティティから開始します。 10番目のエンティティから開始するには、10を渡します。
+`$skip` defines which entity in the collection to start with. デフォルトでは、先頭エンティティから開始します。 10番目のエンティティから開始するには、10を渡します。
 
-`$skip`  は通常、[`$top/$limit`]($top_$limit.md) との組み合わせで使用され、エンティティセレクション内をナビゲートするのに使います。
+`$skip`  is generally used in conjunction with [`$top/$limit`]($top_$limit.md) to navigate through an entity collection.
 
 ## 例題
 
 エンティティセットの20番目のエンティティ以降を取得します:
 
- `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`
+`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`
