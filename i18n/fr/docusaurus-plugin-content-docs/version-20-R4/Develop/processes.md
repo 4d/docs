@@ -104,7 +104,7 @@ Dans les applications Desktop, une méthode projet peut également être exécut
 
 Cette fonctionnalité répond aux besoins suivants en matière de communication interprocess de 4D :
 
-- Étant donné qu'ils sont pris en charge par les process coopératifs et préemptifs, ils constituent la solution idéale pour la communication interprocessus dans les [process préemptifs] (preemptive.md) ([les variables interprocess sont dépréciées] (https\://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) et ne sont pas autorisées dans les processus préemptifs).
+- Étant donné qu'ils sont pris en charge par les process coopératifs et préemptifs, ils constituent la solution idéale pour la communication interprocessus dans les [process préemptifs] (preemptive.md) ([les variables interprocess sont dépréciées] (https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) et ne sont pas autorisées dans les processus préemptifs).
 - Ils constituent une alternative simple aux sémaphores, qui peuvent être lourds à mettre en place et complexes à utiliser
 
 :::note
@@ -144,10 +144,10 @@ Le process principal créé par 4D lors de l'ouverture d'une base de données po
 
 ### Identifier les process worker
 
-Tous les process worker, à l'exception du processus principal, ont le type de process `Worker process` (5) renvoyé par la commande [`PROCESS PROPERTIES`] (https\://doc.4d.com/4dv20/help/command/en/page336.html).
+Tous les process worker, à l'exception du processus principal, ont le type de process `Worker process` (5) renvoyé par la commande [`PROCESS PROPERTIES`] (https://doc.4d.com/4dv20/help/command/en/page336.html).
 
 Des [icônes spécifiques](../ServerWindow/processes#process-type) identifient les process worker.
 
 ### Voir également
 
-Pour plus d'informations, veuillez consulter [cet article de blog] (https\://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.
+Pour plus d'informations, veuillez consulter [cet article de blog] (https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.

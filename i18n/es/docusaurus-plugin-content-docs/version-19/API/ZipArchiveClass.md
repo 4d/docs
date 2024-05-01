@@ -39,9 +39,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -176,9 +176,9 @@ Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zip
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 

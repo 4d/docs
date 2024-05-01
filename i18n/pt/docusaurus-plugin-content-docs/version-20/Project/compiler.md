@@ -142,9 +142,9 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 

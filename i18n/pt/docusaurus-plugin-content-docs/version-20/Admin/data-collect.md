@@ -34,7 +34,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | memory                  | Number                                | Volume de armazenamento de memória (em bytes) disponível na máquina                                   |
 | system                  | Text                                  | Versão do sistema operativo e número de construção                                                    |
 | headless                | Parâmetros                            | Verdadeiro se a aplicação estiver a correr em modo sem cabeça                                         |
-| version                 | Number                                | Número da versão da aplicação 4D                                                                      |
+| version                 | Number                                | Release number of the 4D application                                                                  |
 | buildNumber             | Number                                | Número da versão da aplicação 4D                                                                      |
 | licença                 | Object                                | Nome comercial e descrição das licenças do produto                                                    |
 | isRosetta               | Parâmetros                            | True se 4D for emulado através do Rosetta no macOS, False caso contrário (não emulado ou no Windows). |

@@ -67,13 +67,13 @@ Les fichiers de classe sont automatiquement stockés à l'emplacement approprié
 
 #### Menu Fichier et barre d'outils
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Vous pouvez créer un nouveau fichier de classe pour le projet en sélectionnant **Nouveau> Classe...** dans le menu **Fichier** de 4D ou dans la barre d'outils.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+Vous pouvez également utiliser le raccourci **Ctrl+Maj+Alt+k**.
 
 #### Explorateur
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+Dans la **page Méthodes** de l'Explorateur, les classes sont regroupées dans la catégorie **Classes**.
 
 Pour créer une nouvelle classe, vous pouvez :
 
@@ -107,7 +107,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
 | classStore | object | <- | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -137,7 +137,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Un objet classe possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
 - chaîne [`name`](API/ClassClass.md#name)
 - objet [`superclass`](API/ClassClass.md#superclass) (null si aucun)
@@ -176,7 +176,7 @@ Dans le fichier de définition de classe, les déclarations de fonction utilisen
 
 > **Astuce :** Si vous préfixez le nom d'une fonction par un trait de soulignement ("_"), elle ne sera pas proposée par les fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
+Immédiatement après le nom de la fonction, des [paramètres](#parameters) peuvent être déclarés pour la fonction avec un nom et un type de données, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer

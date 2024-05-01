@@ -283,7 +283,7 @@ return false
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 

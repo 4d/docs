@@ -167,7 +167,7 @@ Une dataclass peut avoir des attributs de relation récursifs.
 
 Dans une entité, la valeur d'un attribut de relation peut être une entité ou une sélection d'entité.
 
-## Related entities
+## Entités liées
 
 Une entité associée peut être considérée comme l'instance d'un attribut de relation dans une dataclass.
 

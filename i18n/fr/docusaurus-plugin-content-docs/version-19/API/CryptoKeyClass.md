@@ -44,9 +44,9 @@ ASSERT($status.success)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -82,9 +82,9 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
@@ -98,9 +98,9 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -146,9 +146,9 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -186,9 +186,9 @@ La valeur retournée est un message chiffré.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -216,9 +216,9 @@ La valeur retournée est la clé privée.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -245,9 +245,9 @@ La valeur retournée est la clé publique.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -262,9 +262,9 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
@@ -303,9 +303,9 @@ La représentation utf8 de la chaîne *message*.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -319,9 +319,9 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
@@ -340,9 +340,9 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->

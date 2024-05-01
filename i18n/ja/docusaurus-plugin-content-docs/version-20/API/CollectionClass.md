@@ -83,10 +83,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                                   |
-| ----- | ----------------------------------------------------------------------- |:--:| ------------------------------------ |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                             |
-| 戻り値   | Collection                                                              | <- | 新しいコレクション|<!-- END REF -->
+| 引数    | タイプ                                                                     |    | 説明                                            |
+| ----- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                                      |
+| 戻り値   | Collection                                                              | <- | The new collection|<!-- END REF -->
 
 
 |
@@ -161,7 +161,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -171,10 +171,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                                     |
-| ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
-| 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
+| 引数    | タイプ                                                                 |    | 説明                                                   |
+| ----- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                                           |
+| 戻り値   | Collection                                                          | <- | The new shared collection|<!-- END REF -->
 
 
 |
@@ -238,9 +238,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -286,7 +286,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -352,7 +352,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -395,7 +395,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -448,7 +448,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -496,9 +496,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                           |
+| リリース   | 内容                                           |
 | ------ | -------------------------------------------- |
-| v18 R3 | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
+| 18 R3  | *ck shared* オプションの追加。 *groupWith* パラメーターを追加。 |
 | v16 R6 | 追加                                           |
 
 </details>
@@ -630,7 +630,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -681,7 +681,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -765,9 +765,9 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                      |
+| リリース   | 内容                      |
 | ------ | ----------------------- |
-| v20    | `ck count values` をサポート |
+| 20     | `ck count values` をサポート |
 | v16 R6 | 追加                      |
 
 </details>
@@ -830,7 +830,7 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -890,9 +890,9 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -906,7 +906,7 @@ End use
 | startFrom  | Integer     | -> | テストを開始するインデックス                                   |
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                     |
 | methodName | Text        | -> | メソッド名                                            |
-| param      | Mixed       | -> | *formula* または *methodName* に渡す引数                 |
+| param      | 複合          | -> | *formula* または *methodName* に渡す引数                 |
 | 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
 
 
@@ -915,7 +915,7 @@ End use
 
 #### 説明
 
-`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、*formula* オブジェクトまたは *methodName* に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->。
+`.every()` 関数は、 <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->。
 
 次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
 
@@ -988,13 +988,13 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1021,7 +1021,7 @@ $b:=$c.every($f;Is real) //$b=false
     デフォルトでは、*propertyPath* のパスの要素が null あるいは undefined であった場合には、その要素は無視され、返されるコレクションに格納されません。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの要素は返されるコレクションに null 要素として格納されます。
 
 
-*   一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、対応する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
+*   一つ以上の *propertyPath* 引数に相当する、一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、合致する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 
 #### 例題 1
@@ -1066,7 +1066,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1126,9 +1126,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1216,9 +1216,9 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1308,9 +1308,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -1387,9 +1387,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1435,9 +1435,9 @@ $first:=$emptyCol.first() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1492,9 +1492,9 @@ $col.flat(MAXLONG)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1586,9 +1586,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1653,7 +1653,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1714,7 +1714,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1773,7 +1773,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1828,7 +1828,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1876,9 +1876,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1927,7 +1927,7 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -1990,7 +1990,7 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R5 | 追加 |
 
@@ -2026,9 +2026,9 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2094,7 +2094,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2148,7 +2148,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2202,7 +2202,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2346,9 +2346,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2455,7 +2455,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2507,7 +2507,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2519,7 +2519,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF #collection.push().Params -->
 | 引数      | タイプ        |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
-| element | Mixed      | -> | コレクションに追加する要素                               |
+| element | 複合         | -> | コレクションに追加する要素                               |
 | 戻り値     | Collection | <- | 要素の追加された元のコレクション|<!-- END REF -->
 
 
@@ -2569,9 +2569,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
+| リリース   | 内容                  |
 | ------ | ------------------- |
-| v17 R5 | querySettings をサポート |
+| 17 R5  | querySettings をサポート |
 | v16 R6 | 追加                  |
 
 </details>
@@ -2583,7 +2583,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 | 引数            | タイプ        |    | 説明                                                   |
 | ------------- | ---------- |:--:| ---------------------------------------------------- |
 | queryString   | Text       | -> | 検索条件                                                 |
-| value         | Mixed      | -> | プレースホルダー使用時: 比較する値                                   |
+| value         | 複合         | -> | プレースホルダー使用時: 比較する値                                   |
 | querySettings | Object     | -> | クエリオプション: parameters, attributes 他                   |
 | 戻り値           | Collection | <- | queryString に合致するコレクション要素|<!-- END REF -->
 
@@ -2679,9 +2679,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -2773,9 +2773,9 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -2869,7 +2869,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2933,7 +2933,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -2996,7 +2996,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3039,7 +3039,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3089,7 +3089,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3144,9 +3144,9 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -3160,7 +3160,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 | startFrom  | Integer     | -> | テストを開始するインデックス                                       |
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                         |
 | methodName | Text        | -> | メソッド名                                                |
-| param      | Mixed       | -> | 渡す引数                                                 |
+| param      | 複合          | -> | 渡す引数                                                 |
 | 戻り値        | Boolean     | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
 
 
@@ -3231,9 +3231,9 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容          |
+| リリース   | 内容          |
 | ------ | ----------- |
-| v19 R6 | フォーミュラをサポート |
+| 19 R6  | フォーミュラをサポート |
 | v16 R6 | 追加          |
 
 </details>
@@ -3320,7 +3320,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 
@@ -3386,7 +3386,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
+| リリース   | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
 

@@ -59,10 +59,10 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                    |
-| ------ | --------------------------- |
-| v19 R8 | Suporte de `fk home folder` |
-| v17 R5 | Adicionado                  |
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 19 R8   | Suporte de `fk home folder` |
+| 17 R5   | Adicionado                  |
 
 </details>
 
@@ -126,9 +126,9 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -148,9 +148,9 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
@@ -208,9 +208,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
@@ -264,9 +264,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
@@ -338,9 +338,9 @@ Quando `Apagar com conteúdo` for aprovado:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. Folder<!-- END REF -->
@@ -394,9 +394,9 @@ Quer mover-se e renomear uma pasta:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. Folder<!-- END REF -->

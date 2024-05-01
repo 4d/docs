@@ -1,6 +1,6 @@
 ---
 id: backup
-title: Backup Page
+title: Página backup
 ---
 
 Pode utilizar a página de cópia de segurança para ver alguns parâmetros de cópia de segurança do banco de dados e para iniciar uma cópia de segurança manual:

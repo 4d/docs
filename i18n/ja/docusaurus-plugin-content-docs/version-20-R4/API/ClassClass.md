@@ -23,9 +23,9 @@ title: Class
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 
@@ -45,9 +45,9 @@ title: Class
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 
@@ -108,9 +108,9 @@ $person:=cs.Person.new("John";"Doe";40)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 

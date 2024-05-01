@@ -27,7 +27,7 @@ Estes arquivos se armazenam na pasta "/SOURCES" do projeto.
 
 ### Declarações de folhas de estilo
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+Embora adaptadas para atender às necessidades específicas dos formulários 4D, as folhas de estilo para bancos de dados de projetos geralmente seguem a sintaxe e a gramática CSS2.
 
 Cada régua de estilo em uma folha de estilo contém duas partes:
 
@@ -186,7 +186,7 @@ A maioria dos atributos do objeto formulário podem ser definidos dentro de uma 
  - "event"
  - choiceList, excludedList, labels, list, requiredList (list type)
 
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+Os atributos de objeto de formulário podem ser declarados com seu nome JSON como atributos CSS (não incluindo tipos de objeto, métodos, eventos e listas). Para obter mais informações, consulte a página **Formulários Dinâmicos** na Referência de Design.
 
 ### Mapa de atributos
 
@@ -204,7 +204,7 @@ Os atributos listados a continuação podem aceitar o nome 4D ou o nome CSS.
 | textAlign      | text-align       |
 | textDecoration | text-decoration  |
 | verticalAlign  | vertical-align   |
-> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+> Valores específicos de 4D*(por* exemplo, "sunken") não são suportados ao usar nomes de atributos CSS.
 
 ### Valores de atributos específicos
 

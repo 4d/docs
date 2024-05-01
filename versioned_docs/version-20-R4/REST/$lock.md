@@ -63,7 +63,7 @@ The returned "__STATUS" object has the following properties:
 ||user4d_id	|number	|User id in the 4D database directory|
 ||host_name|	text|Machine name
 ||task_name	|text	|Process name|
-||client_version|text|Version of the client|
+||client_version|text|Release of the client|
 ||||***Available only for a REST session lock:***|
 ||host|text|URL that locked the entity (e.g. "127.0.0.1:8043")|
 ||IPAddr |text|IP address of the locker (e.g. "127.0.0.1")|

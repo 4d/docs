@@ -33,9 +33,9 @@ Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                 |
+| Release | Modifications                                 |
 | ------- | --------------------------------------------- |
-| v19 R7  | Prise en charge de la propriété Rayon d'angle |
+| 19 R7   | Prise en charge de la propriété Rayon d'angle |
 
 </details>
 

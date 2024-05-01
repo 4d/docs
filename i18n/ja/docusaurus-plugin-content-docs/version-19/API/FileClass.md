@@ -59,9 +59,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -133,9 +133,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -154,9 +154,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF file.create().Note -->
@@ -198,9 +198,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -254,9 +254,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
@@ -311,9 +311,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -400,9 +400,9 @@ ALERT($info.Copyright)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -454,9 +454,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -497,9 +497,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -581,9 +581,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -615,9 +615,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->

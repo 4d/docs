@@ -64,11 +64,11 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Alias attributes in the Entity Class
-|v19 R3|Computed attributes in the Entity Class
-|v18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
+|19 R4|Alias attributes in the Entity Class
+|19 R3|Computed attributes in the Entity Class
+|18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
 </details>
 
 

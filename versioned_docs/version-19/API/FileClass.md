@@ -59,9 +59,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -131,9 +131,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added
+|18 R6|Added
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -152,9 +152,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF file.create().Note -->
@@ -194,9 +194,9 @@ Creation of a preferences file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -248,9 +248,9 @@ You want to create an alias to a file in your database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
@@ -303,9 +303,9 @@ You want to delete a specific file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added
+|19|Added
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -395,9 +395,9 @@ ALERT($info.Copyright)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -446,9 +446,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -487,9 +487,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added
+|19|Added
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -569,9 +569,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -600,9 +600,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->

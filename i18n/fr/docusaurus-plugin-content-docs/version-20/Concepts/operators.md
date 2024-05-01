@@ -53,9 +53,9 @@ Les résultats des opérateurs dépendent des **types de données** auxquels ils
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 4D fournit des **opérateurs d'affectation composés** qui combinent l'affectation avec une autre opération. L'opérateur d'affectation d'addition (`+=`) en est un exemple :
@@ -145,9 +145,9 @@ La différence avec les opérateurs booléens simples [**&** et **|**](dt_boolea
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 La règle est la suivante :
@@ -209,9 +209,9 @@ Si $myObject est Null, le second argument n'est pas exécuté, donc aucune erreu
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 L'opérateur || retourne la valeur d'une des opérandes spécifiées. L'expression est évaluée de gauche à droite et testée pour une éventuelle évaluation en "court-circuit" en utilisant la règle suivante :
@@ -266,9 +266,9 @@ Cela signifie que `a || b && c` est évalué comme `(a || b) && c`.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 L'opérateur conditionnel ternaire vous permet d'écrire des expressions conditionnelles sur une seule ligne. Par exemple, il peut remplacer une séquence complète d'instructions [If…Else](flow-control.md#ifelseend-if) .
@@ -316,9 +316,9 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 En plus d'un type, chaque valeur possède également une valeur booléenne inhérente, généralement connue sous le nom de **truthy** ou **falsy**.

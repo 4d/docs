@@ -364,9 +364,9 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
@@ -449,10 +449,10 @@ $status:=$transporter.send($email)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
-| v17 R5  | Modifié       |
+| 17 R4   | Ajout         |
+| 17 R5   | Modifié       |
 
 </details>
 

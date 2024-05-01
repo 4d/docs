@@ -10,9 +10,9 @@ title: Transporter Class
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
@@ -45,9 +45,9 @@ Estão disponíveis portos seguros:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -77,9 +77,9 @@ Valores possíveis:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -110,9 +110,9 @@ Valores possíveis:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -142,10 +142,10 @@ Valores possíveis:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças               |
-| ------ | ---------------------- |
-| v18    | Suporte de UTF8 base64 |
-| v17 R5 | Adicionado             |
+| Release | Mudanças               |
+| ------- | ---------------------- |
+| 18      | Suporte de UTF8 base64 |
+| 17 R5   | Adicionado             |
 
 </details>
 
@@ -173,9 +173,9 @@ A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -194,9 +194,9 @@ A propriedade `.sendTimeOut` contém <!-- REF #transporter.connectionTimeOut.Sum
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -228,9 +228,9 @@ A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summa
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -249,9 +249,9 @@ A propriedade `.host` contém <!-- REF #transporter.host.Summary -->o nome ou o 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -276,9 +276,9 @@ Ao contrário dos arquivos de registo regulares (ativados através do comando `S
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -301,9 +301,9 @@ A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número d
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -321,9 +321,9 @@ A propriedade `.connectionTimeOut` contém <!-- REF #transporter.sendTimeOut.Sum
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -342,9 +342,9 @@ A propriedade `.user` contém <!-- REF #transporter.user.Summary --> o nome de u
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 

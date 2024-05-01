@@ -9,9 +9,9 @@ La clase `HTTPRequest` está disponible en el almacén de clases `4D`. Para crea
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Clase añadida  |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Clase añadida  |
 
 </details>
 
@@ -77,10 +77,10 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                |
-| ------- | ------------------------------------------------------------- |
-| v20     | Validación TLS por defecto                                    |
-| v19 R7  | Soporte de propiedades *automaticRedirections* y *decodeData* |
+| Lanzamiento | Modificaciones                                                |
+| ----------- | ------------------------------------------------------------- |
+| 20          | Validación TLS por defecto                                    |
+| 19 R7       | Soporte de propiedades *automaticRedirections* y *decodeData* |
 
 </details>
 
@@ -273,9 +273,9 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                               |
-| ------- | ---------------------------------------------------------------------------- |
-| v19 R8  | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
+| Lanzamiento | Modificaciones                                                               |
+| ----------- | ---------------------------------------------------------------------------- |
+| 19 R8       | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
 
 </details>
 

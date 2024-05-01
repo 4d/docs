@@ -42,7 +42,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- usando o comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html),
+- usando o comando [`New object`] (https://doc.4d.com/4dv19R/help/command/en/page1471.html),
 - usando o operador '{}'.
 
 :::info
@@ -53,7 +53,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 ### Comando `New object`
 
-O comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html) cria um objeto vazio ou pré-preenchido e retorna sua referência.
+O comando [`New object`] (https://doc.4d.com/4dv19R/help/command/en/page1471.html) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
@@ -67,7 +67,7 @@ Exemplos:
 
 ### `{}` operador
 
-The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
+The `{}` operator allows you to create an **object literal**. Um literal de objecto é uma lista separada por semicolunas de zero ou mais pares de nomes de propriedades e valores associados de um objecto, entre chaves (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
 
 Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
 
@@ -118,7 +118,7 @@ Pode criar dois tipos de objetos:
 
 Você acessa os valores de propriedade do objeto por meio de uma cadeia de tokens. As propriedades do objeto podem ser acessadas de duas maneiras:
 
-- using a "dot" symbol:
+- usando um símbolo de "ponto":
   > object.propertyName
 
 Exemplo:
@@ -152,11 +152,11 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
   Exemplos:
 
 ```4d
-     $age:=$myObjVar.employee.age //variable
-     $addr:=[Emp]data_obj.address //field
-     $city:=$addr.city //property of an object
-     $pop:=$aObjCountries{2}.population //object array
-     $val:=$myCollection[3].subvalue //collection element
+     $age:=$myObjVar.employee.age //variável
+     $addr:=[Emp]data_obj.address //campo
+     $city:=$addr.city //propriedade de um objeto
+     $pop:=$aObjCountries{2}.population //array objeto
+     $val:=$myCollection[3].subvalue //elemento coleção
 ```
 
 - **4D commands** that return objects.
@@ -178,8 +178,8 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $result:=MyMethod1.a //10
 ```
 
-- **Collections**
-  Example:
+- **Coleções**
+  Exemplo:
 
 ```4d
      myColl.length //tamanho da coleção

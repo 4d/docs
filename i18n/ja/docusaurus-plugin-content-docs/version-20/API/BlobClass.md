@@ -17,9 +17,9 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R2 | 追加 |
 
 </details>
 
@@ -52,9 +52,9 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R2 | 追加 |
 
 </details>
 

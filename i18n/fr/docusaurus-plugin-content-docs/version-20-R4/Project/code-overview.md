@@ -134,7 +134,7 @@ Dans l'Explorateur, les méthodes projet offertes comme Web Service et publiées
 
 #### Balises HTML et URLs 4D (4DACTION...)
 
-Cette option permet de renforcer la sécurité du serveur Web 4D : quand elle n'est pas cochée, la méthode projet ne peut pas être exécutée via une requête HTTP contenant l'URL spécial [4DACTION](../WebServer/httpRequests.md#4daction) utilisé pour appeler des méthodes 4D, ni les balises spéciales [4DSCRIPT, 4DTEXT et 4DHTML](../Tags/tags.md).
+This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/transformation-tags.md).
 
 Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png) indique une méthode projet bénéficiant de cet attribut.
 

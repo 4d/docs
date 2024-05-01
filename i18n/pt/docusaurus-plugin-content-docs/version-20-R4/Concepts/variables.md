@@ -63,23 +63,23 @@ Se `varType` for omitido, será criada uma variável do tipo **variant**.
 
 A tabela seguinte enumera todos os valores `varType` suportados:
 
-| varType                     | Conteúdos                                                |
-| --------------------------- | -------------------------------------------------------- |
-| `Text`                      | Valor texto                                              |
-| `Date`                      | Valor data                                               |
-| `Time`                      | Valor Hora                                               |
-| `Boolean`                   | Valor booleano                                           |
-| `Integer`                   | Valor inteiro longo                                      |
-| `Real`                      | Valor real                                               |
-| `Pointer`                   | Valor ponteiro                                           |
-| `Picture`                   | Valor imagem                                             |
-| `Blob`                      | Valor BLOB                                               |
-| `Collection`                | Valor colecção                                           |
-| `Variant`                   | Valor variant                                            |
+| varType                     | Conteúdos                                                                |
+| --------------------------- | ------------------------------------------------------------------------ |
+| `Text`                      | Valor texto                                                              |
+| `Date`                      | Valor data                                                               |
+| `Time`                      | Valor Hora                                                               |
+| `Boolean`                   | Valor booleano                                                           |
+| `Integer`                   | Valor inteiro longo                                                      |
+| `Real`                      | Valor real                                                               |
+| `Pointer`                   | Valor ponteiro                                                           |
+| `Picture`                   | Valor imagem                                                             |
+| `Blob`                      | Valor BLOB                                                               |
+| `Collection`                | Valor colecção                                                           |
+| `Variant`                   | Valor variant                                                            |
 | `Object`                    | Object with default class (4D.Object) |
-| `4D.<className>`            | Objecto do nome da classe 4D                             |
-| `cs.<className>`            | Objeto do nome da classe usuário                         |
-| `cs.<namespace><className>` | Objeto do nome da classe do componente `<namespace>`     |
+| `4D.<className>`            | Objecto do nome da classe 4D                                             |
+| `cs.<className>`            | Objeto do nome da classe usuário                                         |
+| `cs.<namespace><className>` | Objeto do nome da classe do componente `<namespace>`                     |
 
 ### Exemplos
 

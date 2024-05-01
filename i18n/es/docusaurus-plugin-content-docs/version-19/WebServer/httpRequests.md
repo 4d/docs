@@ -306,7 +306,7 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 

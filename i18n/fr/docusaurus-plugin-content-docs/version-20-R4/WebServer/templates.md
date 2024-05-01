@@ -3,7 +3,7 @@ id: templates
 title: Template pages
 ---
 
-Le serveur Web de 4D vous permet d'utiliser des pages de modèles HTML contenant des balises, c'est-à-dire un mélange de code HTML statique et de références 4D ajoutées via des [balises de transformation](Tags/tags.md) telles que 4DTEXT, 4DIF ou 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+Le serveur Web de 4D vous permet d'utiliser des pages de modèles HTML contenant des balises, c'est-à-dire un mélange de code HTML statique et de références 4D ajoutées via des [balises de transformation](../Tags/transformation-tags.md) telles que 4DTEXT, 4DIF ou 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
 
@@ -31,7 +31,7 @@ The following 4D tags are available:
 - 4DLOOP et 4DENDLOOP, pour faire des boucles dans le code HTML,
 - 4DEACH et 4DENDEACH, pour boucler des collections, des entity selections ou des propriétés d'objets.
 
-Ces balises sont décrites dans la page [Balises de transformation](Tags/tags.md).
+These tags are described in the [Transformation Tags](../Tags/transformation-tags.md) page.
 
 It is possible to mix tags. For example, the following HTML code is allowed:
 
@@ -93,4 +93,4 @@ L'exécution d'une méthode 4D avec `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4
 
 In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
 
-De plus, selon le [principe de la récursivité](Tags/tags.md#recursive-processing), le code malveillant peut lui-même inclure des balises de transformation. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. Pour se référer à l'exemple précédent, le champ "Name" contiendra, dans ce cas, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" qui ne sera pas transformé.
+De plus, selon le [principe de la récursivité](../Tags/transformation-tags.md#recursive-processing), le code malveillant peut lui-même inclure des balises de transformation. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. Pour se référer à l'exemple précédent, le champ "Name" contiendra, dans ce cas, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" qui ne sera pas transformé.

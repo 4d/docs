@@ -1,6 +1,6 @@
 ---
 id: inputOverview
-title: Input
+title: Entrada
 ---
 
 
@@ -33,9 +33,9 @@ Pode gerir os dados com objectos ou formulários [métodos](Concepts/methods.md)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                             |
-| ------ | ------------------------------------ |
-| v19 R7 | Suporte da propriedade Raio de canto |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 18 R6   | Suporte da propriedade Raio de canto |
 
 </details>
 

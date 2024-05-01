@@ -79,7 +79,7 @@ Pass the "WEBFOLDER" keyword to restore the default path (relative to the page).
 O código seguinte, que deve especificar um caminho relativo para cada chamada:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DINCLUDE folder/subpage1.html-->
 <!--#4DINCLUDE folder/subpage2.html-->
 <!--#4DINCLUDE folder/subpage3.html-->
@@ -89,7 +89,7 @@ O código seguinte, que deve especificar um caminho relativo para cada chamada:
 ... é equivalente a:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DBASE folder/-->
 <!--#4DINCLUDE subpage1.html-->
 <!--#4DINCLUDE subpage2.html-->
@@ -214,7 +214,7 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ```html
     <table class="table">    
-         <!--#4DCODE 
+         <!--#4DCODE
             $salePersons:=getSalesPersons
           -->          
        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
@@ -257,13 +257,14 @@ The number of loops is based on the number of entities of the entity selection. 
 #### Exemplo com `PROCESS 4D TAGS`
 
 ```4d
-var customers : cs. CustomersSelection
+var customers : cs.CustomersSelection
 var $input; $output : Text
 
-customers:=ds. Customers.all()
-$input:="<!--#4DEACH $cust in customers-->" 
+customers:=ds.Customers.all()
+$input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" PROCESS 4D TAGS($input; $output)
+$input:=$input+"<!--#4DENDEACH-->"
+PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
 
@@ -469,7 +470,7 @@ O seguinte código:
 
 ```4d
  FIRST RECORD([People])
- While(Not(End selec tion([People])))
+ While(Not(End selection([People])))
     ...
     NEXT RECORD([People])
  End while
@@ -510,7 +511,7 @@ O seguinte exemplo de código:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <br/>
 <!--#4DENDLOOP-->
 ```
 

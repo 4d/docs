@@ -396,9 +396,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -612,7 +612,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 | ---------- | ------ | -- | ------------------------------------------------ |
 | vpObject   | Object | -> | Objeto 4D View Pro que contém a área a converter |
 | rangeObj   | Object | -> | Objeto intervalo                                 |
-| Resultados | Object | <- | Imagem SVG da área|<!-- END REF -->
+| Resultados | Imagem | <- | Imagem SVG da área|<!-- END REF -->
 
 |
 
@@ -665,9 +665,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -732,11 +732,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                                                      |
-| ------ | ------------------------------------------------------------------------------------------------------------- |
-| v19 R8 | Suporte das opções de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | Suporte da opção `allowAutoExpand`                                                                            |
-| v19 R6 | Adicionado                                                                                                    |
+| Release | Mudanças                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------- |
+| 19 R8   | Suporte das opções de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 18 R6   | Suporte da opção `allowAutoExpand`                                                                            |
+| 19 R6   | Adicionado                                                                                                    |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -1210,9 +1210,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1386,9 +1386,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -1610,9 +1610,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -2496,9 +2496,9 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2558,9 +2558,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2613,9 +2613,9 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2680,9 +2680,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2727,9 +2727,9 @@ Se*tableName* não for encontrado, o comando retorna **null**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2780,9 +2780,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3188,9 +3188,9 @@ O resultado é:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3242,9 +3242,9 @@ Ver exemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) e [VP SET TABLE 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3320,11 +3320,12 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ### VP MOVE CELLS
 
+
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3519,9 +3520,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3817,9 +3818,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3871,9 +3872,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3919,9 +3920,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4008,9 +4009,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4422,9 +4423,9 @@ Depois que esse código é executado, as funções definidas podem ser usadas na
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -4494,6 +4495,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 
 O parâmetro *boolValue* permite-lhe passar o valor booleano (**True** ou **False**) que será atribuído ao *rangeObj*.
+
 
 #### Exemplo
 
@@ -4784,7 +4786,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 O comando `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
 
-The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when the first letter of their name is entered. Consulte a página [Fórmulas e funções](formulas.md).
+As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop-up quando a primeira letra de seu nome é inserida. Consulte a página [Fórmulas e funções](formulas.md).
 
 > Se `VP SET CUSTOM FUNCTIONS` for chamado várias vezes para a mesma área, na mesma sessão, apenas a última chamada é tida em conta.
 
@@ -4850,9 +4852,9 @@ Case of
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -5369,7 +5371,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 #### Descrição
 
-O comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
+O comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define os atributos a serem usados ao imprimir o *vpAreaName*<!-- END REF -->.
 
 Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
@@ -5800,9 +5802,9 @@ Com uma quebra de página:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5898,9 +5900,9 @@ $param.filterButtonVisible:=False VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6077,11 +6079,11 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 
 The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
 
-| Propriedade | Tipo                                     | Descrição                                                                                                                                                        |
-| ----------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                                     |
-| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                 |
-| format      | Text                                     | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propriedade | Tipo                                     | Descrição                                                                                                                                                            |
+| ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                                         |
+| time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                     |
+| format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
 #### Exemplo
 
@@ -6169,7 +6171,7 @@ define as opções do livro de trabalho em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *optionObj*, pass the workbook options to apply to *vpAreaName*.
+Em *optionObj*, passe as opções da pasta de trabalho a serem aplicadas a *vpAreaName*.
 
 Se *optionObj* estiver vazio, o comando não fará nada.
 

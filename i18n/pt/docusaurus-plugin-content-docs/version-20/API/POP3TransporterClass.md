@@ -34,9 +34,9 @@ Os objetos POP3 Transporter são instanciados com o comando [POP3 New transporte
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 
@@ -160,9 +160,9 @@ A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 
@@ -206,9 +206,9 @@ Executar esse método não remove de verdade qualquer email. O email marcado ser
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 
@@ -255,10 +255,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                          |
-| ------ | --------------------------------- |
-| v20    | Suporte de parâmetro *headerOnly* |
-| v18 R2 | Adicionado                        |
+| Release | Mudanças                          |
+| ------- | --------------------------------- |
+| 20      | Suporte de parâmetro *headerOnly* |
+| 18 R2   | Adicionado                        |
 
 </details>
 
@@ -323,9 +323,9 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 
@@ -385,9 +385,9 @@ O método retorna **Null** se:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 
@@ -450,9 +450,9 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -515,9 +515,9 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 

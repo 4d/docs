@@ -10,9 +10,9 @@ title: Clase Transporter
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection**: Boolean<!-- END REF -->
@@ -43,9 +43,9 @@ Los puertos seguros disponibles son:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -75,9 +75,9 @@ Los valores posibles son:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -108,9 +108,9 @@ Los valores posibles son:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -140,10 +140,10 @@ Los valores posibles son:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones         |
-| ------- | ---------------------- |
-| v18     | Soporte de UTF8 base64 |
-| v17 R5  | Añadidos               |
+| Lanzamiento | Modificaciones         |
+| ----------- | ---------------------- |
+| 18          | Soporte de UTF8 base64 |
+| 17 R5       | Añadidos               |
 
 </details>
 
@@ -172,9 +172,9 @@ La propiedad `.bodyCharset` contiene <!-- REF #transporter.bodyCharset.Summary -
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -193,9 +193,9 @@ La propiedad `.connectionTimeOut` contiene <!-- REF #transporter.connectionTimeO
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -227,9 +227,9 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -248,9 +248,9 @@ La propiedad `.host` contiene <!-- REF #transporter.host.Summary -->el nombre o 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -275,9 +275,9 @@ A diferencia de los archivos de registro clásicos (habilitados mediante el coma
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -300,9 +300,9 @@ La propiedad `.port` contiene <!-- REF #transporter.port.Summary --> el número 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -320,9 +320,9 @@ La propiedad `.sendTimeOut` contiene <!-- REF #transporter.sendTimeOut.Summary -
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -341,9 +341,9 @@ La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre d
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 

@@ -10,9 +10,9 @@ title: Document Class
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -31,9 +31,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -52,9 +52,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -74,9 +74,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -95,9 +95,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -116,9 +116,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -137,9 +137,9 @@ Esta propiedad es **lectura/escritura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -158,9 +158,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -179,9 +179,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -200,9 +200,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -232,9 +232,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -253,9 +253,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -274,9 +274,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -295,9 +295,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -321,9 +321,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -342,9 +342,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -363,9 +363,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -384,9 +384,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -405,9 +405,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -459,10 +459,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones   |
-| ------- | ---------------- |
-| v19 R2  | Devuelve 4D.Blob |
-| v17 R5  | Añadidos         |
+| Lanzamiento | Modificaciones   |
+| ----------- | ---------------- |
+| 19 R2       | Devuelve 4D.Blob |
+| 17 R5       | Añadidos         |
 </details>
 
 
@@ -503,9 +503,9 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 
@@ -538,9 +538,9 @@ Icono de archivo [picture](../Concepts/picture.html).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 

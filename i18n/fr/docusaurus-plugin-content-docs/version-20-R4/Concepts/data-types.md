@@ -14,8 +14,8 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Date](Concepts/dt_date.md)                             | Oui                                              | Oui                           | `Date`                                                  | `C_DATE`, `ARRAY DATE`                                           |
 | [Time](Concepts/dt_time.md)                             | Oui                                              | Oui                           | `Time`                                                  | `C_TIME`, `ARRAY TIME`                                           |
 | [Boolean](Concepts/dt_boolean.md)                       | Oui                                              | Oui                           | `Boolean`                                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
-| [Integer](Concepts/dt_number.md)                        | Oui                                              | Converti en entier long       | `Integer`                                               | `ARRAY INTEGER`                                                  |
-| [Longint](Concepts/dt_number.md)                        | Oui                                              | Oui                           | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                     |
+| [Integer](Concepts/dt_number.md)                        | Oui                                              | Converti en entier long       | `Entier`                                                | `ARRAY INTEGER`                                                  |
+| [Longint](Concepts/dt_number.md)                        | Oui                                              | Oui                           | `Entier`                                                | `C_LONGINT`, `ARRAY LONGINT`                                     |
 | [Longint 64 bits](Concepts/dt_number.md)                | Oui (SQL)                     | Converti en réel              | -                                                       | *                                                                |
 | [Real](Concepts/dt_number.md)                           | Oui                                              | Oui                           | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                           |
 | [Undefined](Concepts/dt_null_undefined.md)              | -                                                | Oui                           | *                                                       | -                                                                |
@@ -37,20 +37,20 @@ When [variables](variables.md) or [parameters](parameters.md) are typed by means
 
 La valeur par défaut dépend du type de variable :
 
-| Type       | La valeur par défaut |
-| ---------- | -------------------- |
-| Booléen    | False                |
-| Date       | 00-00-00             |
-| Longint    | 0                    |
-| Time       | 00:00:00             |
-| Picture    | picture size=0       |
-| Real       | 0                    |
-| Pointer    | Nil=true             |
-| Text       | ""                   |
-| Blob       | Blob size=0          |
-| Object     | Null                 |
-| Collection | Null                 |
-| Variant    | undefined            |
+| Type       | La valeur par défaut                     |
+| ---------- | ---------------------------------------- |
+| Booléen    | False                                    |
+| Date       | 00-00-00                                 |
+| Longint    | 0                                        |
+| Time       | 00:00:00 |
+| Picture    | picture size=0                           |
+| Real       | 0                                        |
+| Pointer    | Nil=true                                 |
+| Text       | ""                                       |
+| Blob       | Blob size=0                              |
+| Object     | Null                                     |
+| Collection | Null                                     |
+| Variant    | undefined                                |
 
 ### Null comme valeur par défaut
 
@@ -65,9 +65,9 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 | Types à convertir                | en Chaîne | en Numérique | en Date | en Heure | en Booléen |
 | -------------------------------- | --------- | ------------ | ------- | -------- | ---------- |
 | Chaîne (1)    |           | `Num`        | `Date`  | `Time`   | `Bool`     |
-| Numérique (2) | `String`  |              |         |          | `Bool`     |
-| Date                             | `String`  |              |         |          | `Bool`     |
-| Time                             | `String`  |              |         |          | `Bool`     |
+| Numérique (2) | `Chaîne`  |              |         |          | `Bool`     |
+| Date                             | `Chaîne`  |              |         |          | `Bool`     |
+| Time                             | `Chaîne`  |              |         |          | `Bool`     |
 | Boolean                          |           | `Num`        |         |          |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.

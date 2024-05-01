@@ -9,9 +9,9 @@ La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications  |
+| Release | Modifications  |
 | ------- | -------------- |
-| v19 R6  | Classe ajoutée |
+| 19 R6   | Classe ajoutée |
 
 </details>
 
@@ -77,10 +77,10 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                          |
+| Release | Modifications                                                          |
 | ------- | ---------------------------------------------------------------------- |
-| v20     | Validation TLS par défaut                                              |
-| v19 R7  | Prise en charge des propriétés *automaticRedirections* et *decodeData* |
+| 20      | Validation TLS par défaut                                              |
+| 19 R7   | Prise en charge des propriétés *automaticRedirections* et *decodeData* |
 
 </details>
 
@@ -197,9 +197,9 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R4  | Ajout         |
+| 20 R4   | Ajout         |
 
 </details>
 
@@ -354,9 +354,9 @@ La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                               |
+| Release | Modifications                                                               |
 | ------- | --------------------------------------------------------------------------- |
-| v19 R8  | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
+| 19 R8   | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
 
 </details>
 

@@ -5,39 +5,39 @@ title: リリースノート
 
 :::tip
 
-[**4D v19 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19/): 4D v19 LTS の新機能と拡張機能をすべてリストアップしたブログ記事です。
+[**4D 19 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19/): 4D 19 LTS の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 :::
 
 :::warning セキュリティに関する注記
 
-4Dアプリケーションが TLS接続を使用する場合は、4D v19.7 LTS build 288986以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
+4Dアプリケーションが TLS接続を使用する場合は、4D 19.7 LTS build 288986以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
 
 :::
 
 
-## 4D v19.7
+## 4D 19.7
 
 #### ハイライト
 
-- [**修正リスト**](https://4d-jp.github.io//2023/161/release-note-version-19/): 4D v19.7 で修正されたバグのリストです。
+- [**修正リスト**](https://4d-jp.github.io//2023/161/release-note-version-19/): 4D 19.7 で修正されたバグのリストです。
 
 
-## 4D v19.6
-
-#### ハイライト
-
-- [**修正リスト**](https://4d-jp.github.io//2023/41/release-note-version-19/): 4D v19.6 で修正されたバグのリストです。
-
-
-## 4D v19.5
+## 4D 19.6
 
 #### ハイライト
 
-- 4D v19.5 は Windows 11 22H2 対応です。
-- 4D v19.5 は macOS Ventura (macOS 13) 対応です。
+- [**修正リスト**](https://4d-jp.github.io//2023/41/release-note-version-19/): 4D 19.6 で修正されたバグのリストです。
+
+
+## 4D 19.5
+
+#### ハイライト
+
+- 4D 19.5 は Windows 11 22H2 対応です。
+- 4D 19.5 は macOS Ventura (macOS 13) 対応です。
 - SpreadJS のバージョンが更新されました (14.1.6)。
-- [**修正リスト**](https://4d-jp.github.io/293/release-note-version-19/): 4D v19.5 で修正されたバグのリストです。
+- [**修正リスト**](https://4d-jp.github.io/293/release-note-version-19/): 4D 19.5 で修正されたバグのリストです。
 
 
 ## 過去のリリース

@@ -38,10 +38,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Support of localID parameter|
-|v17|Added|
+|18|Support of localID parameter|
+|17|Added|
 
 </details>
 
@@ -106,9 +106,9 @@ Using the main datastore on the 4D database:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -212,9 +212,9 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -244,9 +244,9 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -277,9 +277,9 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -308,9 +308,9 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -380,9 +380,9 @@ You want to know the number of encrypted tables in the current data file:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -459,9 +459,9 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -535,9 +535,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -586,9 +586,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -653,9 +653,9 @@ On a remote datastore:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -702,9 +702,9 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Added|
+|17 R6|Added|
 
 </details>
 
@@ -739,9 +739,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -771,9 +771,9 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -810,9 +810,9 @@ The function will also return `True` if the datastore was locked by another admi
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -842,9 +842,9 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -916,9 +916,9 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -959,9 +959,9 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -1015,9 +1015,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1144,10 +1144,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Server side support, new `options` parameter|
-|v17 R6|Added|
+|20|Server side support, new `options` parameter|
+|17 R6|Added|
 
 </details>
 
@@ -1259,9 +1259,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -1322,10 +1322,10 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Server side support|
-|v17 R6|Added|
+|20|Server side support|
+|17 R6|Added|
 
 </details>
 
@@ -1357,9 +1357,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1393,9 +1393,9 @@ If the `.unlock()` function is called in an unlocked datastore, it does nothing.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 

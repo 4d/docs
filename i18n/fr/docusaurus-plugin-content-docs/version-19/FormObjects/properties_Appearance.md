@@ -10,13 +10,13 @@ La propriété de bouton par défaut désigne le bouton qui obtient le focus ini
 
 Il ne peut y avoir qu'un seul bouton par défaut par page de formulaire.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. Le bouton par défaut peut être différent du bouton sélectionné. Les boutons par défaut ont une apparence bleue spécifique sur macOS :
+En outre, sur macOS, la propriété de bouton par défaut modifie l'apparence du bouton afin d'indiquer un "choix recommandé" à l'utilisateur et est automatiquement liée à la touche **Entrée** , même si elle n'a pas le focus. Le bouton par défaut peut être différent du bouton sélectionné. Les boutons par défaut ont une apparence bleue spécifique sur macOS :
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > Le bouton doit avoir une hauteur standard pour obtenir l'apparence du bouton par défaut.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. Cependant, dans l'éditeur de formulaires 4D, le bouton par défaut est représenté par un contour bleu :
+Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul le bouton ayant le focus a une apparence différente au moment de l'exécution et la touche **Entrée** est liée au bouton ayant le focus. Cependant, dans l'éditeur de formulaires 4D, le bouton par défaut est représenté par un contour bleu :
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 

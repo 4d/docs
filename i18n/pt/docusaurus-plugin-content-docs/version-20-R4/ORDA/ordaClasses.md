@@ -64,11 +64,11 @@ Além disso, as instâncias de objetos das classes de usuárioes do modelo de da
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                                                                |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| v19 R4 | Atributos alias na Entity Class                                                                                         |
-| v19 R3 | Atributos calculados en la Entity Class                                                                                 |
-| v18 R5 | As funções de classe do modelo de dados não são expostas ao REST por defeito. Novas palavras-chave `exposed` e `local`. |
+| Release | Mudanças                                                                                                                |
+| ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 19 R4   | Atributos alias na Entity Class                                                                                         |
+| 19 R3   | Atributos calculados en la Entity Class                                                                                 |
+| 18 R5   | As funções de classe do modelo de dados não são expostas ao REST por defeito. Novas palavras-chave `exposed` e `local`. |
 </details>
 
 

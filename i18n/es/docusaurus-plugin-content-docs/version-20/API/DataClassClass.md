@@ -29,10 +29,10 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v19 R3  | Añadido el atributo .exposed |
-| v17     | Añadidos                     |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 19 R3       | Añadido el atributo .exposed |
+| 17          | Añadidos                     |
 
 </details>
 
@@ -125,10 +125,10 @@ Considerando las propiedades de tabla siguientes:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -175,9 +175,9 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -228,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -427,9 +427,9 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -503,9 +503,9 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -543,9 +543,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -596,10 +596,10 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                     |
-| ------- | ---------------------------------- |
-| v19 R3  | Se ha añadido la propiedad exposed |
-| v17 R5  | Añadidos                           |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 19 R3       | Se ha añadido la propiedad exposed |
+| 17 R5       | Añadidos                           |
 
 </details>
 
@@ -670,9 +670,9 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -762,9 +762,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -808,9 +808,9 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -850,11 +850,11 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                             |
-| ------- | ------------------------------------------ |
-| v17 R6  | Soporte de los parámetros Formula          |
-| v17 R5  | Soporte de los marcadores para los valores |
-| v17     | Añadidos                                   |
+| Lanzamiento | Modificaciones                             |
+| ----------- | ------------------------------------------ |
+| 17 R6       | Soporte de los parámetros Formula          |
+| 17 R5       | Soporte de los marcadores para los valores |
+| 17          | Añadidos                                   |
 
 </details>
 
@@ -1515,9 +1515,9 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 

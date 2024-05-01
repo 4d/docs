@@ -91,9 +91,9 @@ Método ***OpenForm***:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -162,9 +162,9 @@ El método ***doSomething*** puede ser:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -185,9 +185,9 @@ Esta propiedad es **lectura-escritura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -206,9 +206,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -235,9 +235,9 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 

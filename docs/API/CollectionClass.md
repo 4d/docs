@@ -87,7 +87,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|
+|Result|Collection|<-|The new collection|
 <!-- END REF -->
 
 
@@ -99,7 +99,7 @@ If you do not pass any parameters, `New collection` creates an empty collection 
 
 You must assign the returned reference to a 4D variable of the Collection type.
 
->Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+>Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
@@ -161,7 +161,7 @@ You create a new collection and then add a new element:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -174,7 +174,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|
+|Result|Collection|<-|The new shared collection|
 <!-- END REF -->
 
 
@@ -236,9 +236,9 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -285,7 +285,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -348,7 +348,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -390,7 +390,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -443,7 +443,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -490,9 +490,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|New *ck shared* option. New *groupWith* parameters|
+|18 R3|New *ck shared* option. New *groupWith* parameters|
 |v16 R6|Added|
 
 </details>
@@ -624,7 +624,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -673,7 +673,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -756,9 +756,9 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of `ck count values`|
+|20|Support of `ck count values`|
 |v16 R6|Added|
 
 </details>
@@ -820,7 +820,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -879,9 +879,9 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -895,14 +895,14 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 |startFrom|Integer|->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
+|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
 |Result|Boolean|<-|True if all elements successfully passed the test|
 <!-- END REF -->
 
 
 #### Description
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 You designate the callback to be executed to evaluate collection elements using either:
 
@@ -975,7 +975,7 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1052,7 +1052,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1111,9 +1111,9 @@ In case of inconsistency, the following rules apply:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1200,9 +1200,9 @@ You want to filter elements according to their value type:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1292,9 +1292,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1371,9 +1371,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1419,9 +1419,9 @@ $first:=$emptyCol.first() // returns Undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1475,9 +1475,9 @@ $col.flat(MAXLONG)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1569,9 +1569,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1638,7 +1638,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1700,7 +1700,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1758,7 +1758,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1813,7 +1813,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1860,9 +1860,9 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1911,7 +1911,7 @@ $last:=$emptyCol.last() // returns Undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1974,7 +1974,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R5|Added|
 
@@ -2010,9 +2010,9 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2077,7 +2077,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2101,6 +2101,7 @@ The `.max()` function <!-- REF #collection.max().Summary -->returns the element 
 >This function does not modify the original collection.
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
+
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
 
@@ -2130,7 +2131,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2181,9 +2182,9 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -2320,7 +2321,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2359,6 +2360,8 @@ You can also pass a criteria parameter to define how the collection elements mus
 ```4d
 {
     "propertyPath": string,
+
+
     "descending": boolean
 
 }
@@ -2465,9 +2468,9 @@ Ordering with a property path:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2574,7 +2577,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2625,7 +2628,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2637,7 +2640,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- REF #collection.push().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|element|Mixed|->|Element(s) to add to the collection|
+|element|any|->|Element(s) to add to the collection|
 |Result|Collection |<-|Original collection containing added elements|
 <!-- END REF -->
 
@@ -2686,9 +2689,9 @@ You want to sort the resulting collection:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of querySettings|
+|17 R5|Support of querySettings|
 |v16 R6|Added|
 
 </details>
@@ -2700,7 +2703,7 @@ You want to sort the resulting collection:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
-|value|Mixed|->|Value(s) to compare when using placeholder(s)|
+|value|any|->|Value(s) to compare when using placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes|
 |Result|Collection |<-|Element(s) matching queryString in the collection|
 <!-- END REF -->
@@ -2786,6 +2789,7 @@ This example returns persons hired more than 90 days ago:
 
 #### Example 3
 
+
 More examples of queries can be found in the `dataClass.query()` page.
 
 <!-- END REF -->
@@ -2799,9 +2803,9 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2892,9 +2896,9 @@ With the following ***Flatten*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -2986,7 +2990,7 @@ With the following ***Flatten*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3050,7 +3054,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3112,7 +3116,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3155,7 +3159,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3204,7 +3208,7 @@ If the collection is empty, this method does nothing.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3258,9 +3262,9 @@ The returned collection contains the element specified by *startFrom* and all su
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -3274,7 +3278,7 @@ The returned collection contains the element specified by *startFrom* and all su
 |startFrom |Integer |->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|param |Mixed |->|Parameter(s) to pass|
+|param |any |->|Parameter(s) to pass|
 |Result|Boolean|<-|True if at least one element successfully passed the test|
 <!-- END REF -->
 
@@ -3344,9 +3348,9 @@ You want to know if at least one collection value is >0.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -3431,7 +3435,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3495,7 +3499,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 

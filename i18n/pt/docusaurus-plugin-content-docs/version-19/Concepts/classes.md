@@ -64,13 +64,13 @@ Os arquivos de classe são automaticamente armazenados no local apropriado quand
 
 #### Menu Arquivo e barra de ferramentas
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Pode criar um novo arquivo de classe para o projecto seleccionando **Novo > Class...** no menu 4D Developer **File** ou a partir da barra de ferramentas.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+Também pode utilizar o atalho **Ctrl+Shift+Alt+k** .
 
 #### Explorador
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
 
 Para criar uma nova classe, pode:
 
@@ -265,7 +265,7 @@ $area:=$rect.getArea() //5000
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-// code
+// código
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.

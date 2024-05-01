@@ -38,10 +38,10 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容                  |
-| ----- | ------------------- |
-| v18   | localID パラメーターをサポート |
-| v17   | 追加                  |
+| リリース | 内容                  |
+| ---- | ------------------- |
+| 18   | localID パラメーターをサポート |
+| 17   | 追加                  |
 
 </details>
 
@@ -107,9 +107,9 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -215,9 +215,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -247,9 +247,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -282,9 +282,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -315,9 +315,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -388,9 +388,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -470,9 +470,9 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -548,9 +548,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R3 | 追加 |
 
 </details>
 
@@ -602,9 +602,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -671,9 +671,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -722,9 +722,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R6 | 追加 |
 
 </details>
 
@@ -761,9 +761,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -795,9 +795,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -837,9 +837,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -870,9 +870,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -945,9 +945,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 
 </details>
 
@@ -990,9 +990,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R3 | 追加 |
 
 </details>
 
@@ -1049,9 +1049,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -1180,10 +1180,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                          |
-| ------ | --------------------------- |
-| v20    | サーバー側のサポート、新しい `options` 引数 |
-| v17 R6 | 追加                          |
+| リリース  | 内容                          |
+| ----- | --------------------------- |
+| 20    | サーバー側のサポート、新しい `options` 引数 |
+| 17 R6 | 追加                          |
 
 </details>
 
@@ -1294,9 +1294,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 
@@ -1359,10 +1359,10 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容         |
-| ------ | ---------- |
-| v20    | サーバー側のサポート |
-| v17 R6 | 追加         |
+| リリース  | 内容         |
+| ----- | ---------- |
+| 20    | サーバー側のサポート |
+| 17 R6 | 追加         |
 
 </details>
 
@@ -1396,9 +1396,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -1435,9 +1435,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 18   | 追加 |
 
 </details>
 

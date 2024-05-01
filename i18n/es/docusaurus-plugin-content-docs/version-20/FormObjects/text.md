@@ -44,9 +44,9 @@ Una vez que un texto está rotado, puede seguir cambiando su tamaño o posición
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                           |
-| ------- | ---------------------------------------- |
-| v19 R7  | Soporte de la propiedad Radio de esquina |
+| Lanzamiento | Modificaciones                           |
+| ----------- | ---------------------------------------- |
+| 19 R7       | Soporte de la propiedad Radio de esquina |
 
 </details>
 

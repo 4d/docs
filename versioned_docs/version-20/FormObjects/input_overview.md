@@ -33,9 +33,9 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of Corner radius property |
+|19 R7|Support of Corner radius property |
 
 </details>
 

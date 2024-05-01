@@ -179,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. They are objects of the [4D.Function](API/FunctionClass.md) class.
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md).
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
@@ -497,20 +497,18 @@ Este ejemplo crea una clase llamada `Square` de una clase llamada `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm
+//path: Classes/Square. dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // Llama al constructor de la clase padre con las longitudes
+ // proporcionadas para el ancho y alto del polígono
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // En las clases derivadas, Super debe ser llamado antes de 
+ // utilizar 'This'
  This.name:="Square"
-
-
 
  Function getArea()
   C_LONGINT($0)

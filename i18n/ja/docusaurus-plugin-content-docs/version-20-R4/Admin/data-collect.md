@@ -34,7 +34,7 @@ title: Data Collection
 | memory                  | Number         | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
 | system                  | Text           | OS のバージョンとビルド番号                                                                          |
 | headless                | Boolean        | アプリケーションがヘッドレスモードで実行されている場合は true                                                        |
-| version                 | Number         | 4Dアプリケーションのバージョン番号                                                                       |
+| version                 | Number         | 4Dアプリケーションのリリース番号                                                                        |
 | buildNumber             | Number         | 4Dアプリケーションのビルド番号                                                                         |
 | license                 | Object         | 製品ライセンスの名称と説明                                                                            |
 | isRosetta               | Boolean        | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |

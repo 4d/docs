@@ -224,6 +224,7 @@ End if
 
 
 
+
 ## HTTPリクエストから値を取得する
 
 4D Web サーバーでは、Webフォームや URL を介して POST や GET リクエストで送信されたデータを復元することができます。
@@ -294,7 +295,7 @@ return false
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 

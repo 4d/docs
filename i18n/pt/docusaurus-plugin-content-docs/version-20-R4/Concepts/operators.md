@@ -1,6 +1,6 @@
 ---
 id: operators
-title: Operators
+title: Operadores
 ---
 
 Um operador é um símbolo ou um grupo de símbolos que é utilizado para verificar, modificar ou combinar valores. Já está familiarizado com muitos operadores. Por exemplo, `1 + 2` utiliza o operador de adição (ou sinal de mais) para adicionar dois números e o resultado é 3. Os operadores de comparação, como = ou >, permitem-lhe comparar dois ou mais valores.
@@ -53,9 +53,9 @@ Os resultados dos operadores dependem dos **tipos de dados** aos quais são apli
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 4D fornece **operadores de atribuição compostos** que combinam a atribuição com outra operação. Um exemplo é o operador de atribuição de adição (`+=`):
@@ -145,9 +145,9 @@ A diferença em relação aos operadores booleanos simples [**&** e **|**](dt_bo
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 A regra é a seguinte:
@@ -208,9 +208,9 @@ Se $myObject for nulo, o segundo argumento não é executado e, por conseguinte,
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 O operador || devolve o valor de um dos operandos especificados. A expressão é avaliada da esquerda para a direita e testada para uma possível avaliação de "curto-circuito" utilizando a seguinte regra:
@@ -265,9 +265,9 @@ Isto significa que `a || b && c` é avaliado como `(a || b) && c`.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. For example, it can replace a full sequence of [If… Else](flow-control.md#ifelseend-if) statements.
@@ -313,9 +313,9 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 </details>
 
 Para além de um tipo, cada valor tem também um valor booliano inerente, geralmente conhecido como **truthy** ou **falsy**.

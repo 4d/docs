@@ -60,10 +60,10 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                           |
-| ------ | ---------------------------- |
-| v18 R3 | 追加                           |
-| v19    | .sessionCookieSameSite をサポート |
+| リリース  | 内容                           |
+| ----- | ---------------------------- |
+| 18 R3 | 追加                           |
+| 19    | .sessionCookieSameSite をサポート |
 
 </details>
 
@@ -108,9 +108,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -625,9 +625,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 
 </details>
 
@@ -662,9 +662,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -724,9 +724,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->

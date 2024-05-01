@@ -815,9 +815,9 @@ End for
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 L'instruction `return` peut être appelée de n'importe où. Lorsqu'une instruction `return` est utilisée dans une fonction ou une méthode, l'exécution de la fonction ou de la méthode est arrêtée. Le code restant n'est pas exécuté et le contrôle est renvoyé à l'appelant.

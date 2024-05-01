@@ -10,9 +10,9 @@ title: Transporter Class
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
@@ -43,9 +43,9 @@ Available secured ports are:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -75,9 +75,9 @@ Possible values are:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -108,9 +108,9 @@ Possible values are:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -140,10 +140,10 @@ Possible values are:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Support for UTF8 base64|
-|v17 R5|Added|
+|18|Support for UTF8 base64|
+|17 R5|Added|
 
 </details>
 
@@ -172,9 +172,9 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -193,9 +193,9 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -227,9 +227,9 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -248,9 +248,9 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -275,9 +275,9 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -300,9 +300,9 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -320,9 +320,9 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -341,9 +341,9 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 

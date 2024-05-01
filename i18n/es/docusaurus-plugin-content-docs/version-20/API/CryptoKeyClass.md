@@ -44,9 +44,9 @@ ASSERT($status.success)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -81,9 +81,9 @@ El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un obje
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -98,9 +98,9 @@ Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -145,9 +145,9 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -184,9 +184,9 @@ El valor devuelto es un mensaje encriptado.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -213,9 +213,9 @@ El valor devuelto es la llave privada.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -240,9 +240,9 @@ El valor devuelto es la llave pública.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -257,9 +257,9 @@ El valor devuelto es la llave pública.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -299,9 +299,9 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representac
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -317,9 +317,9 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 
@@ -338,9 +338,9 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 </details>
 
 

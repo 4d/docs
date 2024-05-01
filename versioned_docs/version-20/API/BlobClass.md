@@ -17,9 +17,9 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R2|Added|
+|19 R2|Added|
 
 </details>
 
@@ -50,9 +50,9 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R2|Added|
+|19 R2|Added|
 
 </details>
 

@@ -38,9 +38,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -74,9 +74,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -115,9 +115,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -316,9 +316,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -423,9 +423,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -462,9 +462,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -547,9 +547,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -592,9 +592,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -633,9 +633,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19R5 | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19R5 | 追加 |
 
 </details>
 
@@ -691,9 +691,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -734,9 +734,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -780,9 +780,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -828,9 +828,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -867,9 +867,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -906,9 +906,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -962,7 +962,7 @@ $info:=$address.getRemoteContextAttributes()
 |                  | user4d_id           | number              | 4DデータベースディレクトリでのユーザーID                                                                                                                            |
 |                  | host_name           | text                | マシン名                                                                                                                                              |
 |                  | task_name           | text                | プロセス名                                                                                                                                             |
-|                  | client_version      | text                | クライアントのバージョン                                                                                                                                      |
+|                  | client_version      | text                | クライアントのリリース                                                                                                                                       |
 |                  |                     |                     | ***RESTセッションによるロックの場合:***                                                                                                                         |
 |                  | host                | text                | エンティティをロックした URL (例: "www.myserver.com")                                                                                                          |
 |                  | IPAddr              | text                | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
@@ -1023,9 +1023,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1066,9 +1066,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1107,9 +1107,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1170,9 +1170,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1305,9 +1305,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1594,9 +1594,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1639,9 +1639,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1713,9 +1713,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 

@@ -28,10 +28,10 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 - Atribuindo um valor indefinido para variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) com eles:
 
 ```4d
-     var $o : Object
-     var $val : Integer
+     C_OBJECT($o)
+     C_LONGINT($val)
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o. //$o.a é indefinido (sem erro), e atribuir este valor limpa a variável
       //$val=0
 ```
 
@@ -46,7 +46,7 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
   - Indefinido, Null: sem mudança
 
 ```4d
-     var $o : Object
+     C_OBJECT($o)
      $o:=New object("a";2)
      $o.a:=$o.b //$o.a=0
 ```
@@ -67,7 +67,7 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 - Uma expressão de condição é automaticamente convertida em falsa quando se avalia para indefinida com as palavras-chave If e Case:
 
 ```4d
-     var $o : Object
+     C_OBJECT($o)
      If($o.a) // false
      End if
      Case of
@@ -80,22 +80,22 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. Estes comandos devolvem um valor vazio de tipo especificado quando a expressão é avaliada como indefinida. Por exemplo:
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Caixa minúscula(String($o.a.b))) // certifique-se de obter um valor de string mesmo que não esteja definido
+  // para evitar erros no código
 ```
 
 :::
 
 ## Operadores Null
 
-| Operação     | Sintaxe                 | Retorna    | Expression                     | Valor |
-| ------------ | ----------------------- | ---------- | ------------------------------ | ----- |
+| Operação     | Sintaxe                 | Retorna    | Expression                                                     | Valor |
+| ------------ | ----------------------- | ---------- | -------------------------------------------------------------- | ----- |
 | Igual        | Null `=` Null           | Parâmetros | a.nullProp `=` b.nullProp      | True  |
 |              | Null `=` Undefined      | Parâmetros | a.nullProp `=` b.undefinedProp | True  |
-|              | Null `=` _scalar value_ | Parâmetros | a.nullProp `=` 42              | False |
+|              | Null `=` _scalar value_ | Parâmetros | a.nullProp `=` 42                              | False |
 | Desigualdade | Null `#` Null           | Parâmetros | a.nullProp `#` b.nullProp      | False |
 |              | Null `#` Undefined      | Parâmetros | a.nullProp `#` b.undefinedProp | False |
-|              | Null `#` _scalar value_ | Parâmetros | a.nullProp `#` 42              | True  |
+|              | Null `#` _scalar value_ | Parâmetros | a.nullProp `#` 42                              | True  |
 
 _scalar values_ are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
 
@@ -115,18 +115,18 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 ## Operadores indefinidos
 
-| Operação             | Sintaxe                                            | Retorna    | Expression                          | Valor |
-| -------------------- | -------------------------------------------------- | ---------- | ----------------------------------- | ----- |
+| Operação             | Sintaxe                                            | Retorna    | Expression                                                          | Valor |
+| -------------------- | -------------------------------------------------- | ---------- | ------------------------------------------------------------------- | ----- |
 | Igual                | Undefined `=` Undefined                            | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
 |                      | Undefined `=` Null                                 | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` _outros valores_                     | Parâmetros | a.undefinedProp `=` 42              | False |
+|                      | Undefined `=` _outros valores_                     | Parâmetros | a.undefinedProp `=` 42                              | False |
 | Desigualdade         | Undefined `#` Undefined                            | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                                 | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` _outros valores_                     | Parâmetros | a.undefinedProp `#` 42              | True  |
-| Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `>` "abc"           | False |
-| Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `<` "abc"           | False |
-| Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `>=` "abc"          | False |
-| Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `<=` "abc"          | False |
+|                      | Undefined `#` _outros valores_                     | Parâmetros | a.undefinedProp `#` 42                              | True  |
+| Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `>` "abc"                           | False |
+| Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `<` "abc"                           | False |
+| Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `>=` "abc"                          | False |
+| Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `<=` "abc"                          | False |
 
 _other values_ are expressions of any type with a value neither Undefined nor Null.
 

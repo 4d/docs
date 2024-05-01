@@ -1,6 +1,6 @@
 ---
 id: picture
-title: Picture
+title: Imagem
 ---
 
 Um campo, variável ou expressão pode ser qualquer imagem de Windows ou Macintoh. Em geral, isto inclui qualquer imagem que possa ser colocada na pasta ou lida a partir do disco utilizando comandos 4D, tais como `LEIA O ARQUIVO DE IMAGENS`.

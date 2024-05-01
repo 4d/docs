@@ -34,7 +34,7 @@ Certaines données sont également collectées à intervalles réguliers.
 | memory                  | Number                | Taille de la mémoire (en octets) disponible sur la machine                                                        |
 | system                  | Text                  | Version du système d'exploitation et numéro de version                                                            |
 | headless                | Boolean               | True si l'application fonctionne en mode headless                                                                 |
-| version                 | Number                | Numéro de version de l'application 4D                                                                             |
+| version                 | Number                | Release number of the 4D application                                                                              |
 | buildNumber             | Number                | Numéro de build de l'application 4D                                                                               |
 | license                 | Object                | Nom commercial et description des licences des produits                                                           |
 | isRosetta               | Boolean               | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).                             |

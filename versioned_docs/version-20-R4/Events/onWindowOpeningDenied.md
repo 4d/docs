@@ -9,9 +9,9 @@ title: On Window Opening Denied
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Triggered on drop
+|19 R5|Triggered on drop
 </details>
 
 ## Description

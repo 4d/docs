@@ -37,20 +37,20 @@ When [variables](variables.md) or [parameters](parameters.md) are typed by means
 
 O valor por defeito depende do tipo de variável:
 
-| Tipo         | Valor padrão        |
-| ------------ | ------------------- |
-| Booleano     | False               |
-| Date         | 00-00-00            |
-| Longint      | 0                   |
-| Hora         | 00:00:00            |
-| Imagem       | tamanho da imagem=0 |
-| Real         | 0                   |
-| Ponteiro     | Nil=true            |
-| Text         | ""                  |
-| Blob         | Tamanho do Blob =0  |
-| Object       | null                |
-| Collection   | null                |
-| Diferente de | indefinido          |
+| Tipo         | Valor padrão                             |
+| ------------ | ---------------------------------------- |
+| Booleano     | False                                    |
+| Date         | 00-00-00                                 |
+| Longint      | 0                                        |
+| Hora         | 00:00:00 |
+| Imagem       | tamanho da imagem=0                      |
+| Real         | 0                                        |
+| Ponteiro     | Nil=true                                 |
+| Text         | ""                                       |
+| Blob         | Tamanho do Blob =0                       |
+| Object       | null                                     |
+| Collection   | null                                     |
+| Diferente de | indefinido                               |
 
 ### Null como valor padrão
 

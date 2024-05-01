@@ -11,8 +11,8 @@ Null is a special data type with only one possible value: **null**. Cette valeur
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
-- object attributes
-- collection elements
+- attributs d'objets
+- éléments de collections
 - variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Undefined
@@ -80,22 +80,22 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie
+  //afin d'éviter des erreurs dans le code
 ```
 
 :::
 
 ## Opérateurs sur les Null
 
-| Opération | Syntaxe                 | Retourne | Expression                     | Valeur |
-| --------- | ----------------------- | -------- | ------------------------------ | ------ |
+| Opération | Syntaxe                 | Retourne | Expression                                                     | Valeur |
+| --------- | ----------------------- | -------- | -------------------------------------------------------------- | ------ |
 | Egalité   | Null `=` Null           | Boolean  | a.nullProp `=` b.nullProp      | True   |
 |           | Null `=` Undefined      | Boolean  | a.nullProp `=` b.undefinedProp | True   |
-|           | Null `=` _scalar value_ | Boolean  | a.nullProp `=` 42              | False  |
+|           | Null `=` _scalar value_ | Boolean  | a.nullProp `=` 42                              | False  |
 | Inégalité | Null `#` Null           | Boolean  | a.nullProp `#` b.nullProp      | False  |
 |           | Null `#` Undefined      | Boolean  | a.nullProp `#` b.undefinedProp | False  |
-|           | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42              | True   |
+|           | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42                              | True   |
 
 _scalar values_ are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Les autres types (Pointeur, Image, Objet, Collection) ont une valeur par défaut undefined ou null. Ex :
 
@@ -115,18 +115,18 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 ## Opérateurs sur les Undefined
 
-| Opération           | Syntaxe                                            | Retourne | Expression                          | Valeur |
-| ------------------- | -------------------------------------------------- | -------- | ----------------------------------- | ------ |
+| Opération           | Syntaxe                                            | Retourne | Expression                                                          | Valeur |
+| ------------------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------- | ------ |
 | Egalité             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
 |                     | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
-|                     | Undefined `=` _other values_                       | Boolean  | a.undefinedProp `=` 42              | False  |
+|                     | Undefined `=` _other values_                       | Boolean  | a.undefinedProp `=` 42                              | False  |
 | Inégalité           | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
 |                     | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
-|                     | Undefined `#` _other values_                       | Boolean  | a.undefinedProp `#` 42              | True   |
-| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"           | False  |
-| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"           | False  |
-| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"          | False  |
-| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"          | False  |
+|                     | Undefined `#` _other values_                       | Boolean  | a.undefinedProp `#` 42                              | True   |
+| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"                           | False  |
+| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"                           | False  |
+| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"                          | False  |
+| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"                          | False  |
 
 _other values_ are expressions of any type with a value neither Undefined nor Null.
 

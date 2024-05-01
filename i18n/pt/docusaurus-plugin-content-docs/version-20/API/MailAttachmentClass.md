@@ -27,9 +27,9 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
@@ -169,9 +169,9 @@ $transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                |
-| ------ | --------------------------------------- |
-| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
+| Release | Mudanças                                |
+| ------- | --------------------------------------- |
+| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D. MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
@@ -266,9 +266,9 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o ca
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->

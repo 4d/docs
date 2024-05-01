@@ -42,13 +42,13 @@ Todas as fórmulas têm operandos e operadores:
 
 4D View Pro suporta cinco tipos de dados. Para cada tipo de dados, há suporte para valores literais e operadores específicos.
 
-| Tipos de dados                    | Valores                             | Operadores                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Tipos de dados                    | Valores                                                                                             | Operadores                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (adição)<br/>- (subtração)<br/>\* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                          | * (data + número de dias -> data)<br/>+ (data + hora -> data + hora do dia)<br/>- (data - número de dias -> data)<br/>- (data - data -> número de dias entre as duas)                                                                                    |
-| [Time](Concepts/dt_time.md)       | 10:12:10                            | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>\* (duração \* número -> duração)<br/>/ (duração / número -> duração)                                                                                                                        |
-| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                | & (concatenação)                                                                                                                                                                                                                                                                                                  |
-| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                       | -                                                                                                                                                                                                                                                                                                                                    |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | * (data + número de dias -> data)<br/>+ (data + hora -> data + hora do dia)<br/>- (data - número de dias -> data)<br/>- (data - data -> número de dias entre as duas)                                                                                    |
+| [Time](Concepts/dt_time.md)       | 10:12:10                                                            | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>\* (duração \* número -> duração)<br/>/ (duração / número -> duração)                                                                                                        |
+| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concatenação)                                                                                                                                                                                                                                                                              |
+| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                                                                       | -                                                                                                                                                                                                                                                                                                                                    |
 
 ### Operadores de comparação
 
@@ -76,7 +76,7 @@ Lista dos operadores, do mais importante para o menos importante:
 | ^                           | Expoente                                         |
 | - e /                       | Multiplicar e dividir                            |
 | * e -                       | Adicionar e subtrair                             |
-| &                           | Concatenar                                       |
+| &       | Concatenar                                       |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                                         |
 
 ## Referências de células
@@ -105,12 +105,12 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
-| Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                     |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                                                        |
+| -------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                                     |
 | $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                         |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.             |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used              |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                             |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                                              |
 | Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 ## Funções incorporadas
@@ -135,7 +135,7 @@ See [**SpreadJS's extented list of functions**](https://developer.mescius.com/sp
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
+Você declara todas as suas funções usando o método [`VP SET CUSTOM FUNCTIONS`] (method-list.md#vp-set-custom-functions). Exemplos:
 
 ```4d
 o:=New object
@@ -182,7 +182,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
     :(Form event code=On Load)
        var $o : Object
        $o:=New object
-  // Define "vpHello" function from the "myMethod" method
+  // Definir a função "vpHello" a partir do método "myMethod"
        $o.vpHello:=New object
        $o.vpHello.formula:=Formula(myMethod)
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)
@@ -280,7 +280,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
 
-> **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
+> **ATENÇÃO:** Você não pode usar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requisitos
 
@@ -343,7 +343,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
 
-> A tabela [Employee] tem de ter um registo atual.
+> A tabela \[Employee] tem de ter um registo atual.
 
 ### Declaração dos métodos permitidos
 
@@ -353,7 +353,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
-- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+- **Allowed**: foi declarado explicitamente usando o método [VP SET ALLOWED METHODS] (method-list.md#vp-set-allowed-methods).
 - **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 

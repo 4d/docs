@@ -9,9 +9,9 @@ title: On Window Opening Denied
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容         |
-| ------ | ---------- |
-| v19 R5 | ドロップ時にトリガー |
+| リリース  | 内容         |
+| ----- | ---------- |
+| 19 R5 | ドロップ時にトリガー |
 </details>
 
 ## 説明

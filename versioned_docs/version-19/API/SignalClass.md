@@ -91,9 +91,9 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -160,9 +160,9 @@ The ***doSomething*** method could be like:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -183,9 +183,9 @@ This property is **read-write**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -204,9 +204,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 
@@ -231,9 +231,9 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added|
+|17 R4|Added|
 
 </details>
 

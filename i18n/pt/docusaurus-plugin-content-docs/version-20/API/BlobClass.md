@@ -17,9 +17,9 @@ A classe Blob permite-lhe criar e manipular [objectos blob](../Concepts/dt_blob.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R2   | Adicionado |
 
 </details>
 
@@ -52,9 +52,9 @@ Novo `4D. <!-- REF #Blob.size.Summary -->Blob`|<!-- END REF -->
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R2   | Adicionado |
 
 </details>
 

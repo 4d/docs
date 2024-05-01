@@ -10,9 +10,9 @@ title: Document Class
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -29,9 +29,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -47,9 +47,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -68,9 +68,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -88,9 +88,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -108,9 +108,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -128,9 +128,9 @@ This property is **read/write**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -148,9 +148,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -168,9 +168,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -188,9 +188,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->
@@ -219,9 +219,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -239,9 +239,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -259,9 +259,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -279,9 +279,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.original.Syntax -->**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
@@ -304,9 +304,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
@@ -324,9 +324,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -344,9 +344,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -364,9 +364,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->
@@ -384,9 +384,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
@@ -435,9 +435,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.getContent().Syntax -->**.getContent( )** : Blob<!-- END REF -->
@@ -475,9 +475,9 @@ To save a document's contents in a `BLOB` field:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
@@ -508,9 +508,9 @@ File icon [picture](../Concepts/picture.html).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->

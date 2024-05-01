@@ -10,9 +10,9 @@ title: Classe Transporter
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
@@ -43,9 +43,9 @@ Ports sécurisés disponibles :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -75,9 +75,9 @@ Valeurs possibles :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -108,9 +108,9 @@ Valeurs possibles :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -140,10 +140,10 @@ Valeurs possibles :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                  |
+| Release | Modifications                  |
 | ------- | ------------------------------ |
-| v18     | Prise en charge de UTF8 base64 |
-| v17 R5  | Ajout                          |
+| 18      | Prise en charge de UTF8 base64 |
+| 17 R5   | Ajout                          |
 
 </details>
 
@@ -172,9 +172,9 @@ La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -193,9 +193,9 @@ La propriété `.connectionTimeOut` contient <!-- REF #transporter.connectionTim
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -227,9 +227,9 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -248,9 +248,9 @@ La propriété `.host` contient <!-- REF #transporter.host.Summary -->le nom ou 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -275,9 +275,9 @@ Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -300,9 +300,9 @@ La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numér
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -320,9 +320,9 @@ La propriété `.sendTimeOut` contient <!-- REF #transporter.sendTimeOut.Summary
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 
@@ -341,9 +341,9 @@ La propriété `.user` contient <!-- REF #transporter.user.Summary --> le nom d'
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 
 </details>
 

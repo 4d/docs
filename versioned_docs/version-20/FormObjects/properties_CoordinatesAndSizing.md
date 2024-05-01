@@ -117,9 +117,9 @@ Top coordinate of the object in the form.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support for inputs and text areas|
+|19 R7|Support for inputs and text areas|
 
 </details>
 

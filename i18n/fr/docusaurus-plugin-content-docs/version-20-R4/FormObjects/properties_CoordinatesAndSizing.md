@@ -117,9 +117,9 @@ Coordonnées supérieures de l'objet dans le formulaire.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                        |
+| Release | Modifications                                        |
 | ------- | ---------------------------------------------------- |
-| v19 R7  | Prise en charge pour les zones de saisie et de texte |
+| 19 R7   | Prise en charge pour les zones de saisie et de texte |
 
 </details>
 

@@ -66,13 +66,13 @@ Les fichiers de classe sont automatiquement stockés à l'emplacement approprié
 
 #### Menu Fichier et barre d'outils
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Vous pouvez créer un nouveau fichier de classe pour le projet en sélectionnant **Nouveau> Classe...** dans le menu **Fichier** de 4D ou dans la barre d'outils.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+Vous pouvez également utiliser le raccourci **Ctrl+Maj+Alt+k**.
 
 #### Explorateur
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+Dans la **page Méthodes** de l'Explorateur, les classes sont regroupées dans la catégorie **Classes**.
 
 Pour créer une nouvelle classe, vous pouvez :
 
@@ -111,7 +111,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 
 |
 
-The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` <!-- REF #_command_.cs.Summary -->renvoie le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 
 #### Exemple
@@ -133,7 +133,7 @@ $instance:=cs.myClass.new()
 
 |
 
-The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
+La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemple
 
@@ -145,7 +145,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Un objet classe possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
 - chaîne [`name`](API/ClassClass.md#name)
 - objet [`superclass`](API/ClassClass.md#superclass) (null si aucun)
@@ -180,7 +180,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. They are objects of the [4D.Function](API/FunctionClass.md) class.
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md).
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -190,7 +190,7 @@ Si vous préfixez le nom d'une fonction par un trait de soulignement ("_"), elle
 
 :::
 
-Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
+Immédiatement après le nom de la fonction, des [paramètres](#parameters) peuvent être déclarés pour la fonction avec un nom et un type de données, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
@@ -342,7 +342,7 @@ Les propriétés sont déclarées pour les nouveaux objets lorsque vous appelez 
 Les noms des propriétés doivent être conformes aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
 
-Le type de propriété peut être l'un des types suivants :
+Le type de propriété peut être l'un des suivants :
 
 | propertyType                             | Contenu                                                        |
 | ---------------------------------------- | -------------------------------------------------------------- |
@@ -524,7 +524,7 @@ Class constructor ($side : Integer)
 
 |
 
-The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
+Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet d'appeler la `superclass`, c'est-à-dire la classe parente<!-- END REF -->.
 
 `Super` peut être utilisé de deux différentes manières :
 
@@ -633,7 +633,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 |
 
-The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
+Le mot-clé `This` <!-- REF #_command_.This.Summary -->retourne une référence vers l'objet en cours de traitement<!-- END REF -->.
 
 Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 

@@ -24,9 +24,9 @@ Quando uma classe de usuário for [definida](Concepts/classes.md#class-definitio
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -47,9 +47,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -112,9 +112,9 @@ $person:=cs. Person.new("John";"Doe";40)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 

@@ -33,9 +33,9 @@ Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o form
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                           |
-| ------- | ---------------------------------------- |
-| v19 R7  | Soporte de la propiedad Radio de esquina |
+| Lanzamiento | Modificaciones                           |
+| ----------- | ---------------------------------------- |
+| 19 R7       | Soporte de la propiedad Radio de esquina |
 
 </details>
 

@@ -27,9 +27,9 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                        |
+| Release | Modifications                        |
 | ------- | ------------------------------------ |
-| v19 R2  | Accepte 4D.File, 4D.ZipFile, 4D.Blob |
+| 19 R2   | Accepte 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -175,9 +175,9 @@ $transporter.send($email)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                        |
+| Release | Modifications                        |
 | ------- | ------------------------------------ |
-| v19 R2  | Accepte 4D.File, 4D.ZipFile, 4D.Blob |
+| 19 R2   | Accepte 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -272,9 +272,9 @@ La propriété `.path` contient <!-- REF #MailAttachmentClass.path.Summary -->le
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -292,7 +292,7 @@ La propriété `.platformPath` retourne <!-- REF #MailAttachmentClass.platformPa
 
 #### Description
 
-The `.size` property contains <!-- REF #MailAttachmentClass.size.Summary -->the value of the `size` header of the attachment file<!-- END REF -->. The `.size` property is returned when the MIME message defines a size header in the attachment part.
+La propriété `.size` contient <!-- REF #MailAttachmentClass.size.Summary -->la valeur de l'en-tête `size` du fichier joint<!-- END REF -->. La propriété `.size` est renvoyée lorsque le message MIME définit un en-tête de taille dans la partie pièce jointe.
 
 
 ## .type

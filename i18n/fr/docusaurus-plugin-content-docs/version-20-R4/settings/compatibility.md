@@ -15,7 +15,7 @@ La page Compatibilité regroupe les paramètres relatifs au maintien de la compa
 
   - le caractère "/" initial n'est pas seulement le noeud racine - l'utilisation du caractère / comme premier caractère d'une expression XPath ne déclare pas un chemin absolu à partir du noeud racine
   - pas de noeud courant implicite - le noeud courant doit être intégré dans l'expression XPath
-  - pas de requêtes récursives dans les structures répétées - seul le premier élément est parsé. \\
+  - pas de requêtes récursives dans les structures répétées - seul le premier élément est parsé. \
 
   Although not standard, you might want to keep using these features so that your code continues to work as before -- in this case, just set the option _unchecked_. On the other hand, if your code does not rely on the non-standard implementation and if you want to benefit from the extended XPath features in your databases (as described in the [`DOM Find XML element`](https://doc.4d.com/4dv20/help/command/en/page864.html) command), make sure the **Use standard XPath** option is _checked_.
 

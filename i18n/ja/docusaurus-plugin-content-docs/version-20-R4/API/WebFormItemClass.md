@@ -3,18 +3,18 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
-<details><summary>履歴</summary>
-
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R2 | 追加 |
-
-</details>
-
 
 `4D.WebFormItem` オブジェクトは、[`Web Form`](WebFormClass.md#web-form) コマンドによって返される [`4D.WebForm`](WebFormItemClass.md) オブジェクトのプロパティです。
 
 `WebFormItem` クラスについては、[Qodly ドキュメンテーション](https://developer.qodly.com/docs/language/WebFormItemClass) (英語) で詳しく説明しています。
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R2 | 追加 |
+
+</details>
 
 
 ### WebFormItem オブジェクト

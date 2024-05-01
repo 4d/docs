@@ -60,10 +60,10 @@ Eles oferecem as propriedades abaixo e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v18 R3 | Adicionado                          |
-| v19    | suporte para .sessionCookieSameSite |
+| Release | Mudanças                            |
+| ------- | ----------------------------------- |
+| 18 R3   | Adicionado                          |
+| 19      | suporte para .sessionCookieSameSite |
 
 </details>
 
@@ -108,9 +108,9 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -639,9 +639,9 @@ O <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "caminho" do cooki
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -679,9 +679,9 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -741,9 +741,9 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->

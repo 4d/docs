@@ -4,7 +4,7 @@ title: Formulários
 ---
 
 
-Os formulários constituem a interface através da qual a informação é introduzida, modificada e impressa numa aplicação de desktop. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
+Os formulários constituem a interface através da qual a informação é introduzida, modificada e impressa numa aplicação de desktop. Os usuários interagem com os dados em um banco de dados usando formulários e imprimem relatórios usando formulários. Formulários podem ser usados para criar caixas de diálogo personalizadas, paletas ou qualquer janela personalizada em destaque.
 
 ![](../assets/en/FormObjects/form1.png)
 
@@ -17,9 +17,9 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 É possível adicionar ou modificar formulários 4D usando os seguintes elementos:
 
-- **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor.
-- **Default display shield**: sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
-- **Código JSON:** Crie e conceba os seus formulários utilizando JSON e guarde os ficheiros de formulário na [localização adequada](Project/architecture.md#sources-folder). Exemplo:
+- **Interface do Desenvolvedor 4D:** Crie novos formulários no menu **Arquivo** ou na janela **Explorador**.
+- **Editor de Formulário**: Modifique seus formulários usando o **[Editor de Formulário](FormEditor/formEditor.md)**.
+- **Código JSON:** Crie e conceba os seus formulários utilizando JSON e guarde os arquivos de formulário na [localização adequada](Project/architecture.md#sources-folder). Exemplo:
 
 ```
 {
@@ -71,11 +71,11 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 Existem duas categorias de formulários:
 
-- **Formulários projecto** - Formulários independentes que não estão anexados a qualquer tabela. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
+- **Formulários projecto** - Formulários independentes que não estão anexados a qualquer tabela. Eles são destinados principalmente para criar caixas de diálogo de interface, bem como componentes. Os formulários do projeto podem ser usados para criar interfaces que estejam em conformidade com os padrões do sistema operacional.
 
-- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Normalmente, uma tabela tem formulários de entrada e saída separados.
+- **Formulários de tabela** - Anexados a tabelas específicas e, portanto, se beneficiam de funções automáticas úteis para o desenvolvimento de aplicativos baseados em bancos de dados. Normalmente, uma tabela tem formulários de entrada e saída separados.
 
-Typically, you select the form category when you create the form, but you can change it afterwards.
+Normalmente, você seleciona a categoria do formulário quando o cria, mas pode alterá-la posteriormente.
 
 ## Páginas formulário
 
@@ -84,46 +84,46 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - uma página 1: uma página principal, exibida por defeito
 - uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
 
-É possível criar várias páginas para um formulário de entrada. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. As páginas múltiplas permitem-lhe fazer o seguinte:
+É possível criar várias páginas para um formulário de entrada. Se você tiver mais campos ou variáveis do que cabem em uma tela, você pode querer criar páginas adicionais para exibi-los. As páginas múltiplas permitem-lhe fazer o seguinte:
 
-- Place the most important information on the first page and less important information on other pages.
+- Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
 - Organize cada tópico na sua própria página.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
+- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order).
 - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
 
-Não há restrições quanto ao número de páginas que um formulário pode ter. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
+Não há restrições quanto ao número de páginas que um formulário pode ter. O mesmo campo pode aparecer quantas vezes quiser em um formulário e em quantas páginas desejar. No entanto, quanto mais páginas você tiver em um formulário, mais tempo levará para exibi-lo.
 
-Um formulário de múltiplas páginas possui tanto uma página de fundo quanto várias páginas de exibição. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
+Um formulário de múltiplas páginas possui tanto uma página de fundo quanto várias páginas de exibição. Objetos que são colocados na página de fundo podem ser visíveis em todas as páginas de exibição, mas só podem ser selecionados e editados na página de fundo. Em formulários de várias páginas, você deve colocar sua paleta de botões na página de fundo. Você também precisa incluir um ou mais objetos na página de fundo que forneçam ferramentas de navegação de página para o usuário.
 
 ## Formulários herdados
 
-4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
+Formulários 4D podem usar e ser usados como "formulários herdados," o que significa que todos os objetos do *Formulário A* podem ser usados no *Formulário B*. Neste caso, *Formulário B* "herda" os objetos do *Formulário A*.
 
-References to an inherited form are always active: if an element of an inherited form is modified (button styles, for example), all forms using this element will automatically be modified.
+Referências a um formulário herdado estão sempre ativas: se um elemento de um formulário herdado for modificado (estilos de botão, por exemplo), todos os formulários que utilizam esse elemento serão automaticamente modificados.
 
-All forms (table forms and project forms) can be designated as an inherited form. However, the elements they contain must be compatible with use in different database tables.
+Todos os formulários (formulários de tabela e formulários de projeto) podem ser designados como um formulário herdado. No entanto, os elementos que eles contêm devem ser compatíveis com o uso em diferentes tabelas de banco de dados.
 
-When a form is executed, the objects are loaded and combined in the following order:
+Quando um formulário é executado, os objetos são carregados e combinados na seguinte ordem:
 
 1. Página zero do formulário herdado
 2. Página 1 do formulário herdado
 3. Página zero do formulário aberto
 4. Página actual do formulário aberto.
 
-This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
+Esta ordem determina a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order) padrão dos objetos no formulário.
 
 > Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 
-The properties and method of a form are not considered when that form is used as an inherited form. Por outro lado, são chamados os métodos dos objetos que contém.
+As propriedades e o método de um formulário não são considerados quando esse formulário é usado como um formulário herdado. Por outro lado, são chamados os métodos dos objetos que contém.
 
-To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
+Para definir um formulário herdado, as propriedades [Nome do Formulário Herdado](properties_FormProperties.md#inherited-form-name) e [Tabela do Formulário Herdado](properties_FormProperties.md#inherited-form-table) (para formulário de tabela) devem ser definidas no formulário que irá herdar algo de outro formulário.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+Um formulário pode herdar de um formulário de projeto, definindo a propriedade [Tabela de Formulário Herdado](properties_FormProperties.md#inherited-form-table) como `\&#060;None&#062;` na Lista de Propriedades (ou " " em JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
-> It is possible to define an inherited form in a form that will eventually be used as an inherited form for a third form. A combinação de objetos é feita de forma recursiva. 4D detects recursive loops (for example, if form [table1]form1 is defined as the inherited form of [table1]form1, in other words, itself) and interrupts the form chain.
+Para parar de herdar um formulário, selecione `\&#060;None&#062;` na Lista de Propriedades (ou " em JSON) para o [Nome do Formulário herdado](properties_FormProperties.md#inherited-form-name) propriedade.
+> É possível definir um formulário herdado em um formulário que eventualmente será usado como um formulário herdado para um terceiro formulário. A combinação de objetos é feita de forma recursiva. 4D detecta loops recursivos (por exemplo, se o formulário [table1]form1 é definido como o formulário herdado de [table1]form1, ou seja, ele mesmo) e interrompe a cadeia de formulários.
 
 ## Propriedades compatíveis
 
