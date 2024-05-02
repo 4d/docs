@@ -2862,7 +2862,7 @@ You can query a collection using an object reference or a collection reference a
 The following comparators are supported:
 
 |Comparison| Symbol(s)|
-|---|---|---|
+|---|---|
 |Equal to |=, == |
 |Not equal to| #, != |
  
