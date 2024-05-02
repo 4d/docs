@@ -70,10 +70,10 @@ Uma coleção se inicializa com:
 
 
 <!-- REF #_command_.New collection.Params -->
-| Parâmetro  | Tipo                                                                    |    | Descrição                                 |
-| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                   |
-| Resultados | Collection                                                              | <- | New collection|<!-- END REF -->
+| Parâmetro  | Tipo                                                                    |    | Descrição                                     |
+| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                       |
+| Resultados | Collection                                                              | <- | The new collection|<!-- END REF -->
 
 |
 
@@ -151,10 +151,10 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parâmetro  | Tipo                                                                |    | Descrição                                        |
-| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                 |
-| Resultados | Collection                                                          | <- | New shared collection|<!-- END REF -->
+| Parâmetro  | Tipo                                                                |    | Descrição                                            |
+| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                     |
+| Resultados | Collection                                                          | <- | The new shared collection|<!-- END REF -->
 
 |
 

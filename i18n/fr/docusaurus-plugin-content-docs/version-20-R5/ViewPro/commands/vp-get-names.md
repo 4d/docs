@@ -13,7 +13,7 @@ title: VP Get names
 | ---------- | ---------- | -- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                        |                  |
 | scope      | Number     | -> | "Scope" cible (par défaut=feuille courante) |                  |
-| Résultat   | Collection | <- | Existing names in the defined scope                            | <!-- END REF --> |
+| Résultat   | Collection | <- | Noms existant dans la zone définie                             | <!-- END REF --> |
 
 #### Description
 

@@ -19,27 +19,26 @@ Web sessions are used for:
 - [Web applications](gettingStarted.md) sending http requests,
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
-
 ## Enabling web sessions
 
 The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
 
-- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](../assets/en/WebServer/settingsSession.png)
+- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting):
+  ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 Esta opção é selecionada por defeito nos novos projetos. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
-- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the _settings_ parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> O comando `WEB SET OPTION` também pode definir o modo de sessão para o servidor Web principal.
+> The `WEB SET OPTION` command can also set the session mode for the main Web server.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
 > **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
 
-
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
@@ -47,13 +46,13 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie.
+1. In each web client request, the Web server checks for the presence and the value of the private "4DSID__AppName_" cookie.
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
-2. Se a solicitação do cliente não corresponder a uma sessão já aberta:
+3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
-- a new session with a private "4DSID_*AppName*" cookie is created on the web server
+- a new session with a private "4DSID__AppName_" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.
 
 :::note
@@ -85,7 +84,7 @@ Uma sessão Web escalável é encerrada quando:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
@@ -99,7 +98,6 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 :::
 
-
 ## Privilégios
 
 Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
@@ -110,8 +108,10 @@ Exemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing Else
- //Display an authentication page End if
+	//Access is granted, do nothing
+Else
+	//Display an authentication page
+End if
 ```
 
 :::info
@@ -119,7 +119,6 @@ If (Session.hasPrivilege("WebAdmin"))
 Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
 
 :::
-
 
 ## Exemplo
 
@@ -129,7 +128,6 @@ Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clien
 
 We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
 
-
 1. Executamos este URL para abrir uma sessão:
 
 ```
@@ -138,16 +136,15 @@ http://localhost:8044/authenticate.shtml
 
 > In a production environment, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.
 
-
-2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
+2. The `authenticate.shtml` page is a form containing _userId_ et _password_ input fields and sending a 4DACTION POST action:
 
 ```html
 <!DOCTYPE html>
 <html>
 <body bgcolor="#ffffff">
 <FORM ACTION="/4DACTION/authenticate" METHOD=POST>
- UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
- Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+	UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+	Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
 </FORM>
 </body>
@@ -156,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
+3. The authenticate project method looks for the _userID_ person and validates the password against the hashed value already stored in the _SalesPersons_ table:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

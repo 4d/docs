@@ -11,16 +11,15 @@ title: リモートマシンからの管理
 
 この画面には、次のいずれかの方法でアクセスできます:
 
-- **ヘルプ** メニューから **管理画面** コマンドを選択するか、4Dツールバーの対応するボタンをクリックします。
-- `OPEN ADMINISTRATION WINDOW` コマンドを実行します。
+- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
+- Execute the `OPEN ADMINISTRATION WINDOW` command.
 
-すると、[サーバー管理画面](monitor.md) がクライアントマシンに表示されます。
-
+A [server administration window](monitor.md) then appears on the client machine.
 
 ## リモート 4D マシンからの管理の特徴
 
 サーバー管理画面を表示しているクライアントマシンは、利用可能な情報すべてにアクセスでき、サーバーの起動/停止やプロセスの操作をおこなえます。 しかしながら、サーバー管理画面がリモートマシンに表示されている場合には、一定の制限と特有の機能に留意が必要です:
 
-- [プロセスページ](processes.md) では、ユーザープロセスをデバッグすることはできません (サーバーマシンにデバッグウィンドウが表示されるため)。
-- [メンテナンスページ](maintenance.md) では、すべてのクライアントを切断し、サーバーを再起動するアクション (データ圧縮およびサーバー再起動) を実行できます。 この場合、操作を実行したクライアントマシンは、再起動時に自動的に再接続されます。
-- [メンテナンスページ](maintenance.md) では、メンテナンス操作の実行後、**レポートの表示** ボタンが **レポートのダウンロード** という名前に変更されます。 これらのファイルは、クライアントマシンのローカルデータベースフォルダーにダウンロードされてから表示されます。
+- On the [Process page](processes.md), it is not possible to debug a user process (since the debug window appears on the server machine).
+- On the [Maintenance Page](maintenance.md), it is possible to execute actions that cause all the clients to be disconnected and the server to be restarted (compacting and restarting operations). この場合、操作を実行したクライアントマシンは、再起動時に自動的に再接続されます。
+- On the [Maintenance Page](maintenance.md), the **View Report** buttons are renamed **Download Report** after the execution of a maintenance operation. これらのファイルは、クライアントマシンのローカルデータベースフォルダーにダウンロードされてから表示されます。

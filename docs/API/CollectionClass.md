@@ -87,7 +87,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|
+|Result|Collection|<-|The new collection|
 <!-- END REF -->
 
 
@@ -174,7 +174,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|
+|Result|Collection|<-|The new shared collection|
 <!-- END REF -->
 
 
@@ -908,7 +908,7 @@ A recursive comparison of collections can be time-consuming if the collection is
 
 #### Description
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 You designate the callback to be executed to evaluate collection elements using either:
 
@@ -1719,7 +1719,6 @@ Optionally, you can pass the index of collection from which to start the search 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
-
 |value|any|->|Value(s) to compare when using placeholder(s)|
 |Result|Collection |<-|Element index(es) matching queryString in the collection|
 <!-- END REF -->
@@ -2109,6 +2108,7 @@ The `.max()` function <!-- REF #collection.max().Summary -->returns the element 
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
 
+
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
 
 If the collection is empty, `.max()` returns *Undefined*.
@@ -2366,6 +2366,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 ```4d
 {
     "propertyPath": string,
+
 
     "descending": boolean
 

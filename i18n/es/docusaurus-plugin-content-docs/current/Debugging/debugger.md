@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Depurador
+title: Debugger
 ---
 
 El depurador es útil cuando se necesita detectar errores o controlar la ejecución de métodos. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
@@ -11,29 +11,29 @@ El depurador es útil cuando se necesita detectar errores o controlar la ejecuci
 
 Hay varias formas de conseguir que el depurador se muestre:
 
-* Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-* Utilizando el comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
-* Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
-* Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
+- Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
+- Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
+- Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
+- Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
 ![open-debugger](../assets/en/Debugging/openDebugger.png)
 
-* Haciendo clic en el botón **Trace** cuando se selecciona un proceso en la página de procesos del Explorador de ejecución.
-* Añadiendo un punto de ruptura en la ventana del Editor de Código o en las páginas Break y Catch del explorador de ejecución.
+- Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
+- Añadiendo un punto de ruptura en la ventana del Editor de Código o en las páginas Break y Catch del explorador de ejecución.
 
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
-* *Clients_BuildLogo* es el método en que se hace seguimiento
-* La ventana del depurador apareció porque detectó una llamada al comando `C_PICTURE` y este comando fue uno de los a identificar
+- _Clients_BuildLogo_ is the method being traced
+- The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
 
 La ventana del depurador suele aparecer en la máquina donde se ejecuta el código. Con una aplicación mono usuario, siempre se muestra en la máquina que ejecuta la aplicación. Con una aplicación cliente/servidor se muestra:
 
-* en el 4D remoto para el código que se ejecuta localmente
-* en la máquina del servidor para el código que se ejecuta en el servidor (por ejemplo, un método con la opción **Ejecutar en el servidor**).
+- en el 4D remoto para el código que se ejecuta localmente
+- on the server machine for code running on the server (for example, a method with the **execute on server** option).
 
-> Si el servidor se ejecuta en modo sin interfaz, no se puede mostrar ninguna ventana de depuración en el servidor, es necesario utilizar el depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
+> Si el servidor se ejecuta en modo sin interfaz, no se puede mostrar ninguna ventana de depuración en el servidor, es necesario utilizar el depurador remoto. See [Debugging from remote machines](./debugging-remote.md).
 
 ## Botones barra de herramientas
 
@@ -47,35 +47,36 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
-> **Shift** + **F5** o **Shift** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
 
 #### Pasar por encima
 
 Ejecuta la línea de método actual, indicada por el contador del programa (la flecha amarilla). El depurador pasa a la siguiente línea.
 
-El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. Si desea también rastrear las llamadas a las subrutinas y a las funciones, utilice el botón **Paso a paso detallado**.
+El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. Si el método padre se ejecuta en el lado remoto, el botón **Step Over** tiene el mismo efecto que el botón **No Trace**.
+En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### Paso a paso detallado
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
 #### Abortar
 
 Detiene la ejecución del método y vuelve al estado anterior al inicio de la ejecución del método:
 
-* Cuando se rastrea un método formulario o un objeto que se ejecuta en respuesta a un evento: se detiene y vuelve al formulario.
-* Cuando se rastrea un método que se ejecuta desde el entorno de la aplicación: se detiene y vuelve al entorno.
+- Cuando se rastrea un método formulario o un objeto que se ejecuta en respuesta a un evento: se detiene y vuelve al formulario.
+- Cuando se rastrea un método que se ejecuta desde el entorno de la aplicación: se detiene y vuelve al entorno.
 
 #### Detener y editar
 
-Pausa la ejecución del método. El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
-> **Consejo**: utilice este botón cuando sepa qué cambios son necesarios en su código, y el momento en que deben ser efectuados para proseguir con las pruebas de sus métodos. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
+Pausa la ejecución del método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
 
 #### Acción de edición
 
@@ -83,32 +84,32 @@ Pausa la ejecución del método. El método que se está ejecutando en el moment
 
 Si utiliza este botón para modificar un método, las modificaciones sólo serán efectivas la próxima vez que se ejecute.
 
-> **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
 #### Parámetros Guardar
 
 Guarda la configuración actual de la ventana del depurador y la convierte en la configuración por defecto. Esto incluye:
 
-* el tamaño y la posición de la ventana
-* la posición de las líneas de división y el contenido del área que evalúa las expresiones
+- el tamaño y la posición de la ventana
+- la posición de las líneas de división y el contenido del área que evalúa las expresiones
 
 Estos parámetros se almacenan en el proyecto.
 
-Esta acción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](./debugging-remote)).
+This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
 
 ## Ventana de expresión
 
-El **panel de expresión** se muestra en la esquina superior izquierda de la ventana del depurador, debajo de la barra de herramientas de control de ejecución. Aquí un ejemplo:
+The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aquí un ejemplo:
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
 > Este panel no está disponible en el modo de depuración remota.
 
-El **panel de expresión** muestra información general útil sobre el sistema, el entorno 4D y el entorno de ejecución.
+The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
-La columna **Expression** muestra los nombres de los objetos y expresiones. La columna **Valor** muestra sus valores correspondientes actuales. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
+The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
 
-En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las hay) y elementos de temas en el panel de expresión personalizado [](#custom-watch-pane).
+At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
 ### Lista de expresiones
 
@@ -116,8 +117,8 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 Este tema le permite seguir los valores de los objetos o expresiones:
 
-* utilizado en la línea de código a ejecutar (la marcada con el contador de programa-la flecha amarilla en el [Panel de Código Fuente](#source-code-pane)),
-* utilizado en la línea de código anterior
+- used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
+- utilizado en la línea de código anterior
 
 Como la línea de código anterior es la que se acaba de ejecutar antes, este tema muestra por tanto los objetos o expresiones de la línea actual antes y después de que se ejecutara la línea.  Digamos que ejecuta el siguiente método:
 
@@ -128,30 +129,29 @@ $b:=a+1
 $c:=a+b
 ```
 
-1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
+1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
 
-    | $a | Indefinido |
-    | -- | ---------- |
-    |    |            |
+   | $a | Indefinido |
+   | -- | ---------- |
 
-    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, el tema muestra:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. En este punto, el tema muestra:
 
-    | $a | 1          |
-    | -- | ---------- |
-    | $b | Indefinido |
+   | $a | 1          |
+   | -- | ---------- |
+   | $b | Indefinido |
 
-    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con c:=a+b. En este punto aparece el tema Objetos Línea:
+3. You click the **Step Over** button again. El contador del programa ahora está en la línea con c:=a+b. En este punto aparece el tema Objetos Línea:
 
-    | $c | Indefinido |
-    | -- | ---------- |
-    | $a | 1          |
-    | $b | 2          |
+   | $c | Indefinido |
+   | -- | ---------- |
+   | $a | 1          |
+   | $b | 2          |
 
-    El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 #### Variables
 
@@ -165,9 +165,9 @@ Este tema se compone de los siguientes subtemas:
 | Parámetros   | Lista de parámetros recibidos por el método                              | Sí                                |
 | Self         | Puntero al objeto actual, cuando se rastrea un método Objeto             | No                                |
 
-Los arrays, al igual que otras variables, aparecen en los subtemas Interproceso, Proceso y Local, dependiendo de su alcance. El depurador muestra los primeros 100 elementos. Dentro de la columna **Valor**, puede modificar los valores de los elementos del array, pero no el tamaño de los arrays.
+Los arrays, al igual que otras variables, aparecen en los subtemas Interproceso, Proceso y Local, dependiendo de su alcance. El depurador muestra los primeros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
-Para mostrar los tipos de variables y sus nombres internos, haga clic derecho y marque la opción **Mostrar tipos** del menú contextual:
+To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
@@ -197,7 +197,7 @@ Este tema lista los procesos iniciados desde el comienzo de la sesión de trabaj
 
 #### Tablas y campos
 
-Este tema lista las tablas y los campos en la base 4D. Para cada elemento de la Tabla, la columna Valor muestra el tamaño de la selección actual para el proceso actual, así como el número de **registros bloqueados**.
+Este tema lista las tablas y los campos en la base 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
 Para cada elemento Campo, la columna Valor muestra el valor del campo para el registro actual (excepto imagen y BLOB). Puede modificar los valores de los campos pero no la información de las tablas.
 
@@ -217,11 +217,11 @@ Este tema contiene información general sobre el funcionamiento de la base de da
 
 Este tema muestra información relativa al servidor Web principal de la aplicación (sólo disponible si el servidor Web está activo):
 
-* Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
-* Uso de la caché web: número de páginas presentes en la caché web, así como su porcentaje de uso
-* Tiempo transcurrido del servidor web: duración del uso del servidor web en formato horas:minutos:segundos
-* Conteo de accesos a la Web: número total de peticiones HTTP recibidas desde la puesta en marcha del servidor Web, así como el número instantáneo de peticiones por segundo
-* Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos
+- Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
+- Uso de la caché web: número de páginas presentes en la caché web, así como su porcentaje de uso
+- Tiempo transcurrido del servidor web: duración del uso del servidor web en formato horas:minutos:segundos
+- Conteo de accesos a la Web: número total de peticiones HTTP recibidas desde la puesta en marcha del servidor Web, así como el número instantáneo de peticiones por segundo
+- Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos
 
 Las expresiones contenidas en este tema no pueden ser modificadas.
 
@@ -231,14 +231,14 @@ Hay opciones adicionales disponibles en el menú contextual de la ventana de exp
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
-* **Contraer**: contracta todos los niveles de la lista jerárquica.
-* **Desplegar todo**: despliega todos los niveles de la lista jerárquica.
-* **Mostrar los tipos**: muestra el tipo de cada elemento (cuando es apropiado).
-* **Mostrar números de campos y tablas**: muestra el número de cada tabla o campo. Es útil si trabaja con números de tabla o de campo, o con punteros utilizando comandos como `Table` o `Field`.
-* **Mostrar los iconos**: muestra un icono que denota el tipo de objeto para cada objeto. Puede desactivar esta opción para acelerar la visualización, o simplemente porque prefiere utilizar sólo la opción **Mostrar los tipos**.
-* **Tablas y campos ordenados**: ordena las tablas y campos por orden alfabético dentro de sus respectivas listas.
-* **Mostrar los enteros en hexadecimal**: los números se suelen mostrar en notación decimal. Esta opción los muestra en notación hexadecimal. Nota: para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
-* **Activar el seguimiento de la actividad**: activa el seguimiento de la actividad (control avanzado de la actividad interna de la aplicación) y muestra la información obtenida en los temas adicionales: **Programador**, **Web** y **Red**.
+- **Collapse All**: Collapses all levels of the hierarchical list.
+- **Expand All**: Expand all levels of the hierarchical list.
+- **Show Types**: Displays the type of each item (when appropriate).
+- **Show Field and Table Numbers**: Displays the number of each table or field. Useful if you work with table or field numbers, or with pointers using commands such as `Table` or `Field`.
+- **Show Icons**: Displays an icon denoting the object type for each object. You can turn this option off in order to speed up the display, or just because you prefer to use only the **Show Types** option.
+- **Sorted Tables and Fields**: Sorts the tables and fields in alphabetical order within their respective lists.
+- **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. Esta opción los muestra en notación hexadecimal. Nota: para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
+- **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
 
 ## Panel de la cadena de llamadas
 
@@ -250,55 +250,56 @@ Cada elemento del nivel principal es el nombre de un método o función clase. E
 
 En la imagen de arriba:
 
-* `thirdMethod` no ha recibido ningún parámetro
-* `$0` actualmente está indefinido, ya que el método no ha asignado ningún valor a `$0` (porque aún no ha ejecutado esta asignación o porque el método es una subrutina y no una función)
-* `secondMethod` ha recibido tres parámetros de `firstMethod`:
-  * $1 es un puntero a la tabla `[Employee]`
-  * $2 es un puntero al campo `ID` en la tabla  `[Employee]`
-  * $3 es un parámetro alfanumérico cuyo valor es "Z"
+- `thirdMethod` has not received any parameter
+- `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
+- `secondMethod` has received three parameters from `firstMethod`:
+  - $1 is a pointer to the `[Employee]` table
+  - $2 is a pointer to the `ID` field in the  `[Employee]` table
+  - $3 es un parámetro alfanumérico cuyo valor es "Z"
 
-Puede hacer doble clic en el nombre de cualquier método para mostrar su contenido en la [Ventana de código fuente](#source-code-pane).
+You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
 Al hacer clic en el icono que aparece junto al nombre de un método o función, se amplían o reducen los parámetros y el resultado (si lo hay). Los valores aparecen en el lado derecho del panel. Al hacer clic en cualquier valor del lado derecho, se puede cambiar el valor de cualquier parámetro o resultado de la función.
 
-Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el menú contextual:
+To display the parameter type, check the **Show types** option in the contextual menu:
 
 ![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
-Después de desplegar la lista de parámetros, puede arrastrar y soltar los parámetros y los resultados de las funciones en el [Custom Watch Pane](#custom-watch-pane).
+After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
-También puede utilizar el comando [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar la cadena de llamadas por programación.
+You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
 
 ## Panel de vigilancia personalizado
 
-El panel de control personalizado es útil para evaluar expresiones. Es similar al [panel de control](#watch-pane), excepto que aquí usted decide qué expresiones se muestran. Todo tipo de expresión puede ser evaluada:
+El panel de control personalizado es útil para evaluar expresiones. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Todo tipo de expresión puede ser evaluada:
 
-* campo
-* variable
-* pointer
-* cálculo
-* Comando 4D
-* method
-* y cualquier otra cosa que devuelva un valor
+- campo
+- variable
+- pointer
+- cálculo
+- Comando 4D
+- method
+- y cualquier otra cosa que devuelva un valor
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Gestión de expresiones
 
 Hay varias formas de añadir expresiones a la lista:
 
-* Arrastrar y soltar un objeto o expresión desde el Panel de Vigilancia o el Panel de Cadena de Llamadas
-* Seleccione una expresión en el [panel código fuente](#source-code-pane) y presione **ctrl+D**  (Windows) o **cmd+D** (macOS)
-* Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
+- Arrastrar y soltar un objeto o expresión desde el Panel de Vigilancia o el Panel de Cadena de Llamadas
+- Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
+- Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
 
 Puede introducir cualquier fórmula que devuelva un resultado.
 
-Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
+To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
-Para eliminar una expresión, haga clic en ella para seleccionarla y, a continuación, presione **Retroceso** o **Borrar** en su teclado.
-> **Atención:** tenga cuidado cuando evalúe una expresión 4D que modifique el valor de una de las Variables del Sistema (por ejemplo, la variable OK) porque la ejecución del resto del método puede verse alterada.
+To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
+
+> **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
 ### Menú contextual de la ventana de expresión
 
@@ -306,37 +307,37 @@ El menú contextual del panel de control personalizado permite acceder al editor
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**Nueva expresión**: inserta una nueva expresión y muestra el editor de fórmulas de 4D.
+**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-Para más información sobre el editor de fórmulas, consulte el <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">manual de Diseño de 4D.</a>
+For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
 
-* **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
-* **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
-* **Expresiones estándar**: copia la lista de expresiones del panel de control.
+- **Insert Command**: Shortcut for inserting a 4D command as a new expression.
+- **Delete All**: Removes all expressions from the Custom Watch Pane.
+- **Standard Expressions**: Copies the Watch Pane's list of expressions.
 
-> Esta opción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
 
-* **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
-* **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
-* **Mostrar números de campos y tablas**: muestra el número de las tabla o de los **campos**. Es útil si trabaja con números de tablas o de campos, o con punteros utilizando los comandos `Table` o `Field`.
-* **Mostrar iconos**: muestra un icono que denota el tipo de cada elemento.
-* **Tablas y campos ordenados**: muestra la tabla y los campos en orden alfabético.
-* **Mostrar números enteros en hexadecimal**: muestra los números en notación hexadecimal. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
+- **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
+- **Show Types**: Displays the type of each item in the list (when appropriate).
+- **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
+- **Show Icons**: Displays an icon denoting the type of each item.
+- **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
+- **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
 
 ## Panel de código fuente
 
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
-Esta área también le permite añadir o eliminar lod [** puntos de ruptura**](breakpoints.md).
+This area also allows you to add or remove [**break points**](breakpoints.md).
 
 ### Tips
 
 Al pasar el puntero sobre una expresión, para mostrr un mensaje de ayuda que indica:
 
-* el tipo declarado de la expresión
-* el valor actual de la expresión
+- el tipo declarado de la expresión
+- el valor actual de la expresión
 
 ![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
@@ -346,19 +347,19 @@ Esto también funciona con las selecciones:
 
 ### Añadir expresiones al panel de control personalizado
 
-Puede copiar toda expresión seleccionada del panel de código fuente en el [Custom Watch Pane](#custom-watch-pane).
+You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
-    * Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
-    * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
-    * Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
+   - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
+   - Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
+   - Right-click the selected text **>** **Copy to Expression Pane**
 
 ### Contador del programa
 
 La flecha amarilla en el margen izquierdo del panel del Código Fuente se llama el contador de programa. Marca la siguiente línea a ejecutar.
 
-Por defecto, la línea del contador de programa (también llamada línea de ejecución) aparece resaltada en el depurador. Puede personalizar el color de resaltado en la [página Métodos de las Preferencias](Preferences/methods.md).
+Por defecto, la línea del contador de programa (también llamada línea de ejecución) aparece resaltada en el depurador. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 
 #### Mover el contador del programa
 
@@ -378,7 +379,9 @@ Por ejemplo:
   // ...
 ```
 
-Digamos que el contador del programa se define en la línea `If (This condition)`. Al hacer clic en el botón **Step over**, el contador del programa se mueve directamente a la línea `DO_SOMETHING_ELSE`. Para examinar los resultados de la línea `DO_SOMETHING`, puede mover el contador del programa a esa línea y ejecutarla.
+Say the program counter is set to the line `If (This condition)`.
+When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line.
+To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
 ### Menú contextual
 
@@ -386,26 +389,26 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponible para:
-  * *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
-  * *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
-  * *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
-  * *Formularios:* muestra el formulario en el editor de formularios
-  * *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
-* **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
-* **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
-* **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
-* **Ejecutar hasta el cursor**: ejecuta las instrucciones encontradas entre el contador del programa y la línea seleccionada del método (donde se encuentra el cursor).
-* **Fijar siguiente instrucción**: mueve el contador del programa a la línea seleccionada sin ejecutar esta línea ni las intermedias. La línea designada sólo se ejecuta si el usuario hace clic en uno de los botones de ejecución.
-* **Alternar punto de interrupción** (también disponible en el Editor de código): inserta o elimina alternativamente el punto de interrupción correspondiente a la línea seleccionada. Esta función modifica el punto de interrupción de forma permanente: por ejemplo, si elimina un punto de interrupción en el depurador, ya no aparece en el método original.
-* **Editar punto de interrupción** (también disponible en el Editor de Código): muestra el diálogo Propiedades del punto de interrupción. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
+- **Goto Definition**: Goes to where the selected object is defined. Este comando está disponible para:
+  - _Project methods:_ displays method contents in a new window of the Code Editor
+  - _Fields:_ Displays field properties in the inspector of the Structure window
+  - _Tables:_ Displays table properties in the inspector of the Structure window
+  - _Forms:_ Displays form in the Form editor
+  - _Variables_ (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
+- **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
+- **Copy**: Standard copy of the selected expression to the pasteboard.
+- **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
+- **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
+- **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. La línea designada sólo se ejecuta si el usuario hace clic en uno de los botones de ejecución.
+- **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Esta función modifica el punto de interrupción de forma permanente: por ejemplo, si elimina un punto de interrupción en el depurador, ya no aparece en el método original.
+- **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
 
 ### Buscar siguiente/anterior
 
 Los atajos específicos permiten encontrar cadenas idénticas a la seleccionada:
 
-* Para buscar las siguientes cadenas idénticas, presione **Ctrl+E** (Windows) o **Cmd+E** (macOS)
-* Para buscar las cadenas idénticas anteriores, presione **Ctrl+Shift+E** (Windows) o **Cmd+E** (macOS)
+- To search for the next identical strings, press **Ctrl+E** (Windows) or **Cmd+E** (macOS)
+- To search for the previous identical strings, press **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS)
 
 La búsqueda se lleva a cabo sólo si se selecciona al menos un caracter en el panel de código fuente.
 
@@ -413,27 +416,27 @@ La búsqueda se lleva a cabo sólo si se selecciona al menos un caracter en el p
 
 Esta sección lista todos los atajos disponibles en la ventana del depurador.
 
-> La barra de herramientas también tiene [accesos directos](#tool-bar-buttons).
+> The tool bar also has [shortcuts](#tool-bar-buttons).
 
-#### Ventana de evaluación & Subventana de evaluación personalizada
+#### Watch Pane & Custom Watch Pane
 
-* Un **doble clic** en un elemento de la ventana de expresión para copiarlo en la ventana de evaluación
-* Un **doble clic** en la ventana de evaluación crea una nueva expresión
+- **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
+- **Double-Click** in the Custom Watch Pane to create a new expression
 
 #### Panel de código fuente
 
-* Haga clic en el margen izquierdo para definiir o eliminar puntos de ruptura.
-* **Alt+Mayús+clic** (Windows) o **Option+Mayús+clic** (macOS) define un punto de interrupción temporal.
-* **Alt-Clic** (Windows) u **Opción-Clic** muestra la ventana de las propiedades del punto de interrupción para un punto de ruptura nuevo o existente.
-* Una expresión u objeto seleccionado puede copiarse en la ventana de evaluación con sólo arrastrar y soltar.
-* **Ctrl+D** (Windows) o **Comando+D** (macOS) en un texto seleccionado lo copia en la ventana de evaluación.
-* **Ctrl+E** (Windows) o **Comando+E** (macOS) identifica los canales posteriores que son idénticos al canal seleccionado.
-* **Ctrl+Mayús+E** (Windows) o **Comando+Mayús+E** (macOS) identifica los canales posteriores que son idénticos al canal seleccionado.
+- Haga clic en el margen izquierdo para definiir o eliminar puntos de ruptura.
+- **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
+- **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
+- Una expresión u objeto seleccionado puede copiarse en la ventana de evaluación con sólo arrastrar y soltar.
+- **Ctrl+D** (Windows) or **Cmd+D** (macOS) key combinations copy the selected text to the Custom Watch Pane.
+- **Ctrl+E** (Windows) or **Cmd+E** (macOS) key combinations find the next strings identical to the one selected.
+- **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) key combinations find the previous strings identical to the one selected.
 
 #### Todas las ventanas
 
-* **Ctrl** + **+/-** (Windows) o **Comando** + **+/-** (macOS) aumenta o disminuye el tamaño de la fuente para una mejor legibilidad. El tamaño de fuente modificado también se aplica al Editor de código y se almacena en las Preferencias.
-* **Ctrl + \*** (Windows) o **Comando + \*** (macOS) fuerza la actualización del Panel de Control.
-* Si no hay ningún elemento seleccionado en las ventanas, presione **Intro** para avanzar.
-* Cuando se selecciona el valor de un elemento, utilice las teclas de flecha para navegar por la lista.
-* Al editar un elemento, utilice las teclas de flecha para mover el cursor. Utilice Ctrl-A/X/C/V (Windows) o Comando-A/X/C/V (macOS) como accesos directos a los comandos del menú Seleccionar todo/Cortar/Copiar/Pegar del menú Edición.
+- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. El tamaño de fuente modificado también se aplica al Editor de código y se almacena en las Preferencias.
+- **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
+- When no item is selected in any pane, press **Enter** to step over.
+- Cuando se selecciona el valor de un elemento, utilice las teclas de flecha para navegar por la lista.
+- Al editar un elemento, utilice las teclas de flecha para mover el cursor. Utilice Ctrl-A/X/C/V (Windows) o Comando-A/X/C/V (macOS) como accesos directos a los comandos del menú Seleccionar todo/Cortar/Copiar/Pegar del menú Edición.

@@ -1,10 +1,9 @@
 ---
 id: compute
-title: '$compute'
+title: $compute
 ---
 
-指定した属性を対象に計算をおこないます (*例*: `Employee/salary/?$compute=sum`。オブジェクト属性の例: `Employee/objectAtt.property1/?$compute=sum`)。
-
+Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (_e.g._, Employee/objectAtt.property1/?$compute=sum)
 
 ## 説明
 
@@ -12,34 +11,32 @@ title: '$compute'
 
 属性に対して計算をおこなうには、次のように書きます:
 
- `GET  /rest/Employee/salary/?$compute=$all`
+`GET  /rest/Employee/salary/?$compute=$all`
 
 オブジェクト属性の場合は、プロパティを指定します。 例:
 
- `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
+`GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
 次のキーワードが利用可能です:
 
-
-| キーワード   | 説明                                                                                                                                                                   |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| キーワード   | 説明                                                                                                                                                                                                                                                                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | 利用可能なすべての計算を属性に対しておこない、結果を格納した JSON オブジェクトを取得します。数値型の属性については平均 (average)、カウント (count)、最小 (min)、最大 (max)、合計 (sum)、文字列型の属性についてはカウント (count)、最小 (min)、最大 (max) が利用可能です。 |
-| average | 数値型属性の平均を取得します。                                                                                                                                                      |
-| count   | コレクション内の要素数またはデータクラス内のエンティティ数を取得します (どちらの場合も属性を指定する必要があります)                                                                                                          |
-| min     | 数値型属性あるいは文字列型属性の最小値を取得します。                                                                                                                                           |
-| max     | 数値型属性あるいは文字列型属性の最大値を取得します。                                                                                                                                           |
-| sum     | 数値型属性の合計を取得します。                                                                                                                                                      |
-
+| average | 数値型属性の平均を取得します。                                                                                                                                                                                                                                                                                                              |
+| count   | コレクション内の要素数またはデータクラス内のエンティティ数を取得します (どちらの場合も属性を指定する必要があります)                                                                                                                                                                                                                                               |
+| min     | 数値型属性あるいは文字列型属性の最小値を取得します。                                                                                                                                                                                                                                                                                                   |
+| max     | 数値型属性あるいは文字列型属性の最大値を取得します。                                                                                                                                                                                                                                                                                                   |
+| sum     | 数値型属性の合計を取得します。                                                                                                                                                                                                                                                                                                              |
 
 ## 例題
 
 数値型の属性を対象にすべての計算値を取得するには、次のように書きます:
 
- `GET  /rest/Employee/salary/?$compute=$all`
+`GET  /rest/Employee/salary/?$compute=$all`
 
-**レスポンス**:
+**Response**:
 
-````
+```
 {
     "salary": {
         "count": 4,
@@ -49,15 +46,15 @@ title: '$compute'
         "max": 99000
     }
 }
-````
+```
 
 文字列型の属性を対象にすべての計算値を取得するには、次のように書きます:
 
- `GET  /rest/Employee/firstName/?$compute=$all`
+`GET  /rest/Employee/firstName/?$compute=$all`
 
-**レスポンス**:
+**Response**:
 
-````
+```
 {
     "salary": {
         "count": 4,
@@ -65,21 +62,20 @@ title: '$compute'
         "max": Victor
     }
 }
-````
+```
 
 属性に対して特定の計算のみをおこなうには、次のように書きます:
 
- `GET  /rest/Employee/salary/?$compute=sum`
+`GET  /rest/Employee/salary/?$compute=sum`
 
-**レスポンス**:
+**Response**:
 
 `235000`
 
-
 オブジェクト属性に対して特定の計算のみをおこなうには、次のように書きます:
 
- `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
+`GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
 レスポンス:
 
-`45`  
+`45`

@@ -3,16 +3,13 @@ id: configuration
 title: Configuración del servidor
 ---
 
-Utilizando peticiones HTTP estándar, el servidor 4D REST permite a las aplicaciones externas acceder directamente a los datos de su aplicación, *es decir,* recuperar información sobre las clases de datos de su proyecto, manipular datos, entrar en su aplicación web, y mucho más.
+Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, _i.e._ to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
 
 Para comenzar a utilizar las funcionalidades REST, es necesario iniciar y configurar el servidor 4D REST.
 
-
-
-
 ## Iniciar el servidor REST
 
-Por razones de seguridad, por defecto, 4D no responde a las peticiones REST. Si desea iniciar el servidor REST, debe marcar la opción **Exponer como servidor REST** en la página **Web** > **Web Features** de la configuración de la estructura para que se procesen las peticiones REST.
+Por razones de seguridad, por defecto, 4D no responde a las peticiones REST. If you want to start the REST Server, you must check the **Expose as REST server** option in the **Web** > **Web Features** page of the structure settings in order for REST requests to be processed.
 
 ![alt-text](../assets/en/REST/Settings.png)
 
@@ -22,18 +19,17 @@ El mensaje de advertencia "Atención, verifique los privilegios de acceso" apare
 
 > Debe reiniciar la aplicación 4D para que los cambios surtan efecto.
 
-
 ## Controlando el acceso REST
 
 Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obviamente no es recomendable por razones de seguridad, y también para controlar el uso de las licencias de los clientes.
 
 Puede configurar los accesos REST de una de las siguientes maneras:
+
 - (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
 - assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - write an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-
-:::info Importante
+:::info Important
 
 - Se recomienda no habilitar simultáneamente diferentes características de control de acceso REST para evitar conflictos.
 - If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
@@ -44,23 +40,24 @@ Puede configurar los accesos REST de una de las siguientes maneras:
 
 The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
-Por defecto, el menú muestra `\&#060;Anyone&#062;`, lo que significa que los accesos REST están abiertos a todos los usuarios. Una vez que haya especificado un grupo, sólo una cuenta de usuario de 4D que pertenezca a este grupo podrá ser utilizada para [acceder a 4D mediante una petición REST](authUsers.md). Si se utiliza una cuenta que no pertenece a este grupo, 4D devuelve un error de autenticación al remitente de la petición.
+By default, the menu displays `\<Anyone>`, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). Si se utiliza una cuenta que no pertenece a este grupo, 4D devuelve un error de autenticación al remitente de la petición.
 
-> Para que esta configuración tenga efecto, el método base`On REST Authentication` no debe estar definido. Si existe, 4D ignora los parámetros de acceso definidos en las propiedades de la estructura.
+> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. Si existe, 4D ignora los parámetros de acceso definidos en las propiedades de la estructura.
 
 ### Método base On REST Authentication
-El método base `On REST Authentication` le ofrece una forma personalizada de controlar la apertura de sesiones REST en 4D. Este método base se llama automáticamente cuando se abre una nueva sesión a través de una solicitud REST. Cuando se recibe una [solicitud para abrir una sesión REST](authUsers.md), los identificadores de conexión se ofrecen en el encabezado de la solicitud. Se llama al método base `On REST Authentication` para poder evaluar estos identificadores. Puede utilizar la lista de usuarios de la aplicación 4D o puede utilizar su propia tabla de identificadores. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
-
+The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. Este método base se llama automáticamente cuando se abre una nueva sesión a través de una solicitud REST. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. Puede utilizar la lista de usuarios de la aplicación 4D o puede utilizar su propia tabla de identificadores.
+For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 ## Exponer tablas y campos
 
-Una vez activados los servicios REST en la aplicación 4D, por defecto una sesión REST puede acceder a todas las tablas y campos de la base de datos 4D a través de la [interfaz del datastore](ORDA/dsMapping.md#datastore). Así, puede utilizar sus datos. Por ejemplo, si su base de datos contiene una tabla [Employee], es posible escribir:
+Once REST services are enabled in the 4D application, by default a REST session can access all tables and fields of the 4D database through the [datastore interface](ORDA/dsMapping.md#datastore). Así, puede utilizar sus datos. Por ejemplo, si su base de datos contiene una tabla [Employee], es posible escribir:
 
 ```
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
 ```
+
 Esta petición devolverá todos los empleados cuyo campo de salario sea superior a 10000.
 
 > Las tablas y/o campos 4D que tienen el atributo "Invisible" también se exponen en REST por defecto.
@@ -77,8 +74,9 @@ Para eliminar la exposición REST de una tabla:
 
 1. Visualice el inspector de tablas en el editor de estructuras y seleccione la tabla que desea modificar.
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](../assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
-
+2. Uncheck the **Expose as REST resource** option:
+   ![alt-text](../assets/en/REST/table.png)
+   Do this for each table whose exposure needs to be modified.
 
 ### Exponer los campos
 
@@ -90,15 +88,16 @@ Para eliminar la exposición REST de un campo:
 
 1. Visualice el inspector de campo en el editor de estructuras y seleccione el campo a modificar.
 
-2. Desmarque la opción **Exponer como recurso REST** para el campo. ![alt-text](../assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. Uncheck the **Expose as REST resource** for the field.
+   ![alt-text](../assets/en/REST/field.png)
+   Repeat this for each field whose exposure needs to be modified.
 
 > Para que un campo sea accesible a través de REST, la tabla padre también debe serlo. Si la tabla padre no está expuesta, ninguno de sus campos lo estará, independientemente de su estado.
 
-
 ## Modo apropiativo
 
-En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.

@@ -545,19 +545,19 @@
     "message": "Release Notes"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
+    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.en.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
+    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.en.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
+    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
+    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
+    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -595,5 +595,8 @@
   },
   "Qodly Studio": {
     "message": "Qodly Studio"
+  },
+  "Handling Code": {
+    "message": "Gestion du code"
   }
 }

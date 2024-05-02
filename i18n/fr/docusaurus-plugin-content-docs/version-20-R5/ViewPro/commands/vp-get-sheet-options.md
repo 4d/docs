@@ -13,7 +13,7 @@ title: VP Get sheet options
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Sheet options object                                                        | <!-- END REF --> |
+| Résultat   | Object  | <- | Objet options de la feuille                                                 | <!-- END REF --> |
 
 #### Description
 

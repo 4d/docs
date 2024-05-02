@@ -3,14 +3,13 @@ id: arrays
 title: Tableaux
 ---
 
-Un **tableau** est une série ordonnée de **variables** de même type. Chaque variable est appelée un **élément** du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un [élément zéro](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu'il existe quelques différences spécifiques.
+An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. An array always has a special [element zero](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu'il existe quelques différences spécifiques.
 
-> Généralement, il est recommandé d'utiliser des **collections** plutôt que des **tableaux**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section [Collection](Concepts/dt_collection.md).
-
+> In most cases, it is recommended to use **collections** instead of **arrays**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
 
 ## Créer des tableaux
 
-Vous créez un tableau au moyen de l'une des commandes de déclaration du thème "Tableaux". Chaque commande de déclaration de tableau peut créer ou redimensionner des tableaux à une ou à deux dimensions. Pour plus d'informations sur les tableaux à deux dimensions, reportez-vous à la section [Tableaux à deux dimensions](#two-dimensional-arrays).
+Vous créez un tableau au moyen de l'une des commandes de déclaration du thème "Tableaux". Chaque commande de déclaration de tableau peut créer ou redimensionner des tableaux à une ou à deux dimensions. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
 
 Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 
@@ -19,11 +18,13 @@ Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 ```
 
 Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :
+
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Enfin, cette ligne de code redimensionne le même tableau à 0 élément :
+
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
@@ -43,42 +44,41 @@ Vous référencez les éléments d'un tableau en utilisant des accolades ({…} 
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (`For...End for`, `Repeat...Until` or `While...End while`), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.
 
-**Important :** Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.
+Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
 
+**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). L'affectation et la comparaison sont deux opérations totalement différentes.
 
 ### Affecter un tableau à un autre
-Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction `COPY ARRAY`.
 
+Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. To copy (assign) an array to another one, use `COPY ARRAY`.
 
 ## Utiliser l'élément zéro d'un tableau
 
-Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.
+Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(\*) dans le langage.
 
 Voici un autre exemple : vous souhaitez initialiser un objet de formulaire avec une valeur texte mais sans définir de valeur par défaut. Vous pouvez utiliser l'élément zéro du tableau :
 
 ```4d
-  // // méthode pour une combo box ou une liste déroulante  
-  // liée au tableau de variables atName
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
-    : Form event code=On Load)
-  // Initialise le tableau (comme indiqué ci-dessus)
-  // Mais utilise l'élément zéro
-        ARRAY TEXT(atName;5)
-        atName{0}:=Veuillez sélectionner un élément"
-        atName{1}:="Text1"
-        atName{2}:="Text2"
-        atName{3}:="Text3"
-        atName{4}:="Text4"
-        atName{5}:="Text5"
-    // Positionne le tableau sur l'élément 0
-        atName: = 0
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+		ARRAY TEXT(atName;5)
+		atName{0}:=Please select an item"
+		atName{1}:="Text1"
+		atName{2}:="Text2"
+		atName{3}:="Text3"
+		atName{4}:="Text4"
+		atName{5}:="Text5"
+	// Position the array to element 0
+  		atName:=0
  End case
 ```
 
-(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
-
+(\*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
 
 ## Tableaux à deux dimensions
 
@@ -93,31 +93,31 @@ Les tableaux à deux dimensions sont essentiellement des objets de langage ; vou
 Dans l'exemple prédédent :
 
 - atTopics est un tableau à deux dimensions
-- atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne
+- atTopics{8}{5} is the 5th element (5th column...) of the 8th row
 - atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension
-- `Size of array(atTopics)` retourne 100, qui est le nombre de lignes
-- `Size of array(atTopics{17})` retourne 50, qui est le nombre de colonnes de la 17e ligne
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
-  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
-  // Pour chaque table
+  // Create as many rows (empty and without columns) as there are tables
+ $vlLastTable:=Get last table number
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
+  // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Get last field number($vlTable)
-  // Donner la valeur des éléments
-             $vlColumnNumber:=0
+  // Give value of elements
+       $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  // Insérer une colonne dans la ligne de la table en cours
-              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  // Affecter la "celulle" avec le pointeur
+  //Insert a column in a row of the table underway
+             INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
+  //Assign the "cell" with the pointer
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -128,10 +128,10 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
 Dans la mesure où le tableau à deux dimensions a été initialisé, vous pouvez obtenir ainsi les pointeurs vers les champs d'une table de votre choix :
 
 ```4d
-  // Obtenir les pointeurs vers les champs pour la table affichée à l'écran:
+  // Get the pointers to the fields for the table currently displayed at the screen:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  // Initialiser les champs booléens et date
-For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
+  // Initialize Boolean and Date fields
+ For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
           $apTheFieldsIamWorkingOn{$vlElem}->:=Current date
@@ -141,7 +141,7 @@ For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
  End for
 ```
 
-**Note :** Comme le montre cet exemple, les lignes des tableaux à deux dimensions peuvent être ou non de la même taille.
+**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
 
 ## Tableaux et mémoire
 
@@ -155,26 +155,26 @@ Procéder de la même manière avec les tableaux serait laborieux, pour les rais
 - Comme un tableau réside en mémoire dans son intégralité, vous seriez obligé de garder tous les codes postaux en mémoire pendant toute la session de travail, même si les données n'étaient pas utilisées en permanence.
 - Toujours parce qu'un tableau réside en mémoire dans son intégralité, les quatre tableaux devraient être chargés ou sauvegardés sur le disque à chaque fois que vous démarreriez ou quitteriez l'application, quand bien même les données ne seraient d'aucune utilité pour la session de travail.
 
-**Conclusion :** Les tableaux ont pour rôle de manipuler une certaine quantité de données pendant une période brève. En contrepartie, comme ils résident en mémoire, ils sont d'une utilisation rapide et facile.
+**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. En contrepartie, comme ils résident en mémoire, ils sont d'une utilisation rapide et facile.
 
 Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux contenant des centaines ou des milliers d'éléments. Voici les formules à appliquer pour calculer la quantité de mémoire utilisée pour chaque type de tableau :
 
-| Type de Tableau | Calcul de la quantité de mémoire en octets                              |
-| --------------- | ----------------------------------------------------------------------- |
-| Blob            | (1+nombre d'éléments) * 12 + somme de la taille de chaque blob          |
-| Boolean         | (31+nombre d'éléments)/8                                                |
-| Date            | (1+nombre d'éléments) * 6                                               |
-| Integer         | (1+nombre d'éléments) * 2                                               |
-| Longint         | (1+nombre d'éléments) * 4                                               |
-| Object          | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
-| Picture         | (1+nombre d'éléments) * 8 + somme de la taille de chaque image          |
-| Pointer         | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
-| Real            | (1+nombre d'éléments) * 8                                               |
-| Text            | (1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2 |
-| Time            | (1+nombre d'éléments) * 4                                               |
-| Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
+| Type de Tableau | Calcul de la quantité de mémoire en octets                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------- |
+| Blob            | (1+nombre d'éléments) \* 12 + somme de la taille de chaque blob                            |
+| Boolean         | (31+nombre d'éléments)/8                                                                   |
+| Date            | (1+nombre d'éléments) \* 6                                                                 |
+| Integer         | (1+nombre d'éléments) \* 2                                                                 |
+| Longint         | (1+nombre d'éléments) \* 4                                                                 |
+| Object          | (1+nombre d'éléments) \* 8 + somme de la taille de chaque objet                            |
+| Picture         | (1+nombre d'éléments) \* 8 + somme de la taille de chaque image                            |
+| Pointer         | (1+nombre d'éléments) \* 8 + somme de la taille de chaque pointeur                         |
+| Real            | (1+nombre d'éléments) \* 8                                                                 |
+| Text            | (1+nombre d'éléments) \* 20 + (somme de la taille de chaque texte) \* 2 |
+| Time            | (1+nombre d'éléments) \* 4                                                                 |
+| Deux dimensions | (1+nombre d'éléments) \* 16 + somme de la taille de chaque tableau                         |
 
-**Notes :**
+**Notes:**
 
-- La taille d'un texte en mémoire se calcule par la formule ((Longueur + 1) * 2)
+- La taille d'un texte en mémoire se calcule par la formule ((Longueur + 1) \* 2)
 - Quelques octets supplémentaires sont requis pour le repérage de l'élément, le nombre d'éléments et le tableau lui-même.

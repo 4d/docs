@@ -358,10 +358,10 @@ El registro ORDA del lado del cliente registra cada petición ORDA enviada desde
 Como iniciar este historial:
 
 ```4d
-    //on a remote machine
+    //en una máquina remota
 SET DATABASE PARAMETER(Client Log Recording;1)  
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
-    //can be also sent to memory
+    //también se puede enviar a la memoria
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 

@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
-Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
-
+Allows to query the data in a dataclass or method _(e.g._, `$filter="firstName!='' AND salary>30000"`)
 
 ## Description
 
@@ -18,39 +15,40 @@ Un filtre est composé des éléments suivants :
 
 **{attribut} {comparateur} {valeur}**
 
-Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=` est le **comparateur** et `john` est la **valeur**.
+For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
 
 ### Utiliser un filtre complexe
 
 A more complex filter is composed of the following elements, which joins two queries:
 
-**{attribut} {comparateur} {valeur} {AND/OR/EXCEPT} {attribut} {comparateur} {valeur}**
+**{attribut} {comparateur} {value} {AND/OR/EXCEPT} {attribut} {comparateur} {value}**
 
-
-Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
+For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
 
 ### Utiliser la propriété params
 
 Vous pouvez également utiliser la propriété params de 4D.
 
-**{attribut} {comparateur} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
+**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
+For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
 
 For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+
 > Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
-> 
+>
 > <li>Quotes ('): \u0027</li>
-  <li>Guillemets doubles ("): \u0022</li>
-> 
-> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :  
+> <li>Guillemets doubles ("): \u0022</li>
+>
+> For example, you can write the following when passing a value with a quote when using the _params_ property:\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
-> 
-> If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+>
+> If you pass the value directly, you can write the following:
+> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Attribut
 
-Si l'attribut se trouve dans la même dataclass, vous pouvez simplement le passer directement (par exemple, `firstName`). Cependant, si vous souhaitez lancer une requête dans une autre dataclass, vous devez inclure le nom de l'attribut relationnel et le nom d'attribut, c'est-à-dire le chemin d'accès (par exemple, employeur.nom). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
+If the attribute is in the same dataclass, you can just pass it directly (_e.g._, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (_e.g._, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
 
 Vous pouvez également rechercher des attributs de type Objet en utilisant la notation par points. Par exemple, si vous avez un attribut dont le nom est "objAttribute" avec la structure suivante :
 
@@ -64,7 +62,7 @@ Vous pouvez également rechercher des attributs de type Objet en utilisant la no
 
 Vous pouvez rechercher dans l'objet en écrivant ce qui suit :
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## Comparateur
 
@@ -75,8 +73,8 @@ Le comparateur doit être l'une des valeurs suivantes :
 | =           | est égal à          |
 | !=          | différent de        |
 | >           | supérieur à         |
-| >=          | supérieur ou égal à |
-|             | inférieur à         |
+| > =         | supérieur ou égal à |
+| <           | inférieur à         |
 | <=          | inférieur ou égal à |
 | begin       | commence avec       |
 

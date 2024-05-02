@@ -7,11 +7,11 @@ title: Imágenes
 
 ## Formatos nativos soportados
 
-4D integra la gestión nativa de los formatos de imagen. Esto significa que las imágenes se mostrarán y almacenarán en su formato original, sin ninguna interpretación en 4D. Las especificidades de los diferentes formatos (sombreado, áreas transparentes, etc.) se mantendrán cuando se copien y peguen, y se mostrarán sin alteraciones. Este soporte nativo es válido para todas las imágenes almacenadas en los formularios de 4D: [imágenes estáticas](FormObjects/staticPicture.md) pegadas en el modo Diseño, imágenes pegadas en [objetos de entrada](FormObjects/input_overview.md) en ejecución, etc.
+4D integra la gestión nativa de los formatos de imagen. Esto significa que las imágenes se mostrarán y almacenarán en su formato original, sin ninguna interpretación en 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D forms: [static pictures](FormObjects/staticPicture.md) pasted in Design mode, pictures pasted into [inputs objects](FormObjects/input_overview.md) at runtime, etc.
 
 Los formatos de imagen más comunes son soportados en ambas plataformas: .jpeg, .gif, .png, .tiff, .bmp, etc. En macOS, el formato .pdf también está disponible para su codificación y descodificación.
 
-> La lista completa de formatos soportados varía según el sistema operativo y los códecs personalizados que estén instalados en las máquinas. Para saber qué códecs están disponibles, debe utilizar el comando `PICTURE CODEC LIST` (ver también la descripción de [tipo de datos imagen](Concepts/dt_picture.md)).
+> La lista completa de formatos soportados varía según el sistema operativo y los códecs personalizados que estén instalados en las máquinas. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command (see also the [picture data type](Concepts/dt_picture.md) description).
 
 ### Formato de imagen no disponible
 
@@ -31,55 +31,56 @@ Este icono indica que la imagen no puede ser visualizada o manipulada localmente
 
 ### Factor de escala
 
-Las pantallas de alta resolución tienen una mayor densidad de píxeles que las pantallas estándar tradicionales. Para que las imágenes se muestren correctamente en pantallas de alta resolución, el número de píxeles de la imagen debe multiplicarse por el *factor de escala* (*es decir*, dos veces más grande, tres veces más grande, etc.).
+Las pantallas de alta resolución tienen una mayor densidad de píxeles que las pantallas estándar tradicionales. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the _scale factor_ (_i.e._, two times larger, three times larger, etc.).
 
-Cuando se utilizan imágenes de alta resolución, se puede especificar el factor de escala añadiendo "@nx" en el nombre de la imagen (donde *n* designa el factor de escala). En la tabla siguiente, puede ver que el factor de escala se indica en los nombres de las imágenes de alta resolución, *circle@2x.png* y *circle@3x.png*.
+When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where _n_ designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, _circle@2x.png_ and _circle@3x.png_.
 
-| Tipo de visualización | Factor de escala                                     | Ejemplo                                                                      |
-| --------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------- |
-| Resolución estándar   | densidad de pixel 1:1.                               | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) *circle.png* |
-| Alta resolución       | La densidad de píxeles se ha multiplicado por 2 o 3. | <table><th>2x</th><th>3x</th><tr><td>![](../assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](../assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table>                                                    |
+| Tipo de visualización | Factor de escala                                                     | Ejemplo                                                                                                                                                                                         |
+| --------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Resolución estándar   | densidad de pixel 1:1.               | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) _circle.png_                                                                                                          |
+| Alta resolución       | La densidad de píxeles se ha multiplicado por 2 o 3. | <table><th>2x</th><th>3x</th><tr><td>![](../assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](../assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table> |
 
 Las imágenes de alta resolución con la convención @nx pueden utilizarse en los siguientes objetos:
 
-* [Imágenes estáticas](FormObjects/staticPicture.md)
-* [Botones](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[casillas de selección](FormObjects/checkbox_overview.md)
-* [Botones imagen](FormObjects/pictureButton_overview.md)/[imagen Pop-up](FormObjects/picturePopupMenu_overview.md)
-* [Pestañas](FormObjects/tabControl.md)
-* [Encabezados de list box](FormObjects/listbox_overview.md#list-box-headers)
-* [Iconos del menú](Menus/properties.md#item-icon)
+- [Static pictures](FormObjects/staticPicture.md)
+- [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
+- [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
+- [Tab controls](FormObjects/tabControl.md)
+- [List box headers](FormObjects/listbox_overview.md#list-box-headers)
+- [Menu icons](Menus/properties.md#item-icon)
 
-4D prioriza automáticamente las imágenes con mayor resolución. 4D prioriza automáticamente las imágenes con mayor resolución. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
+4D prioriza automáticamente las imágenes con mayor resolución. 4D prioriza automáticamente las imágenes con mayor resolución. Even if a command or property specifies _circle.png_, _circle@3x.png_ will be used (if it exists).
+
 > Tenga en cuenta que la priorización de la resolución sólo se produce para la visualización de imágenes en pantalla, no se realiza una priorización automática al imprimir.
 
 ### DPI
 
-Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embargo, algunas diferencias de comportamiento en función de los ppp de la pantalla y de la imagen*(\*)*, y del formato de la imagen:
+While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi\*(\*)\*, and picture format:
 
-| Operación                                                                                                                                                    | Comportamiento                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Soltar o pegar                                                                                                                                               | Si la imagen tiene:<ul><li>**72dpi o 96dpi** - La imagen tiene el formato "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" y el objeto que contiene la imagen tiene el mismo número de píxeles.</li><li>**Otro dpi** - La imagen tiene el formato "{Escalada para encajar](FormObjects/properties_Picture.md#scaled-to-fit)" y el objeto que contiene la imagen es igual a (número de píxeles de la imagen * dpi de la pantalla) / (dpi de la imagen)</li> <li>**Sin dpi** - La imagen tiene el formato "{Escala para ajustar](FormObjects/properties_Picture.md#scaled-to-fit)".</li></ul>                             |
-| [Tamaño automático](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (menú contextual del editor de formularios) | Si el formato de visualización de la imagen es:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - El objeto que contiene la imagen se redimensiona según (número de píxeles de la imagen * dpi de la pantalla) / (dpide la imagen) </li> <li>**Sin escalar** - El objeto que contiene la imagen tiene el mismo número de píxeles que la imagen.</li></ul> |
+| Operación                                                                                                                                                   | Comportamiento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Soltar o pegar                                                                                                                                              | If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels \* screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul> |
+| [Automatic Size](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Form Editor context menu) | If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels \* screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul>                                                                                                                                                                                                                                                    |
 
-*(\*) Generalmente, macOS = 72 dpi, Windows = 96 dpi*
+_(\*) Typically,  macOS = 72dpi, Windows = 96dpi_
 
 ## Imágenes en modo oscuro (sólo en macOS)
 
-Puede definir imágenes e iconos específicos que se utilizarán en lugar de las imágenes estándar cuando [los formularios utilicen el esquema oscuro](properties_FormProperties.md#color-scheme).
+You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
 
 Una imagen en modo oscuro se define de la siguiente manera:
 
-* la imagen en modo oscuro tiene el mismo nombre que la versión estándar (modo claro) con el sufijo "`_dark`"
-* la imagen en modo oscuro se almacena junto a la versión estándar.
+- dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
+- la imagen en modo oscuro se almacena junto a la versión estándar.
 
-En tiempo de ejecución, 4D cargará automáticamente la imagen clara u oscura según el [modo de colores de formulario actual](https://doc.4d.com/4dv19/help/command/en/1761.html).
+At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
 
 ![](../assets/en/FormEditor/darkicon.png)
 
 ## Coordenadas del ratón en una imagen
 
-4D permite recuperar las coordenadas locales del ratón en un [objeto de entrada](FormObjects/input_overview.md) asociado a una [expresión de imagen](FormObjects/properties_Object.md#expression-type), en caso de que se haga clic o se pase por encima, incluso si se ha aplicado un desplazamiento o zoom a la imagen. Este mecanismo, similar al de un mapa de imágenes, puede utilizarse, por ejemplo, para manejar barras de botones desplazables o la interfaz de un software de cartografía.
+4D lets you retrieve the local coordinates of the mouse in an [input object](FormObjects/input_overview.md) associated with a [picture expression](FormObjects/properties_Object.md#expression-type), in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Este mecanismo, similar al de un mapa de imágenes, puede utilizarse, por ejemplo, para manejar barras de botones desplazables o la interfaz de un software de cartografía.
 
-Las coordenadas se devuelven en las *MouseX* and *MouseY* [Variables Sistema](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). Las coordenadas se expresan en píxeles con respecto a la esquina superior izquierda de la imagen (0,0). Si el ratón está fuera del sistema de coordenadas de la imagen, se devuelve -1 en *MouseX* y *MouseY*.
+The coordinates are returned in the _MouseX_ and _MouseY_ [System Variables](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). Las coordenadas se expresan en píxeles con respecto a la esquina superior izquierda de la imagen (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in _MouseX_ and _MouseY_.
 
-Puede obtener el valor de estas variables como parte de los eventos formulario [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), o [`On Mouse Move`](Events/onMouseMove.md).
+You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.

@@ -88,7 +88,7 @@ Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Comp
 
 Le dossier *MyComponent.4dbase* contient :
 
-* fichier *MyComponent.4DZ*
+* *MyComponent.4DZ* file
 * Un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
 
 ## Page Application

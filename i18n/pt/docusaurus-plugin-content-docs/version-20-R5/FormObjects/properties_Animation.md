@@ -5,7 +5,7 @@ title: Animação
 
 ## Repetir a sequência
 
-As imagens são apresentadas num ciclo contínuo. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+As imagens são apresentadas num ciclo contínuo. Quando o usuário chega na última imagem e clica novamente, a primeira imagem aparece, e assim por diante.
 
 #### Gramática JSON
 
@@ -15,13 +15,13 @@ As imagens são apresentadas num ciclo contínuo. When the user reaches the last
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
 ## Mudar de volta quando liberado
 
-Displays the first picture all the time except when the user clicks the button. Apresenta a segunda imagem até que o botão do rato seja libertado. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+Exibe a primeira imagem o tempo todo, exceto quando o usuário clica no botão. Apresenta a segunda imagem até que o botão do rato seja libertado. Este modo permite que você crie um botão de ação com uma imagem diferente para cada estado (inativo e clicado). Você pode usar este modo para criar um efeito 3D ou exibir qualquer imagem que represente a ação do botão.
 
 #### Gramática JSON
 
@@ -31,13 +31,13 @@ Displays the first picture all the time except when the user clicks the button. 
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
 ## Alternar continuamente em cliques
 
-Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
+Permite ao usuário manter pressionado o botão do mouse para exibir as imagens continuamente (ou seja, como uma animação). Quando o usuário chega na última imagem, o objeto não volta para a primeira imagem.
 
 #### Gramática JSON
 
@@ -47,29 +47,29 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
 ## Mudar a cada x ticks
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). Neste modo, todas as outras opções são ignoradas.
+Permite percorrer o conteúdo do botão de imagem na velocidade especificada (em ticks). Neste modo, todas as outras opções são ignoradas.
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis |
-| ---------- | ------------- | ----------------- |
-| frameDelay | integer       | mínimo: 0         |
+| Nome       | Tipo de dados | Valores possíveis         |
+| ---------- | ------------- | ------------------------- |
+| frameDelay | integer       | mínimo: 0 |
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
 ## Alternar quando rolar sobre
 
-Modifies the contents of the picture button when the mouse cursor passes over it. A imagem inicial é exibida quando o cursor sai da área do botão.
+Modifica o conteúdo do botão de imagem quando o cursor do mouse passa sobre ele. A imagem inicial é exibida quando o cursor sai da área do botão.
 
 #### Gramática JSON
 
@@ -79,20 +79,20 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)
 
 ---
 
 ## Utilizar o último marco como desativado
 
-Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
+Habilita a configuração da última miniatura como a que será exibida quando o botão estiver desativado. A miniatura usada quando o botão está desativado é processada separadamente por 4D: quando você combina essa opção com "Switch Continuously" e "Loop Back to First Frame", a última imagem é excluída da sequência associada ao botão e só aparece quando ele está desativado.
 
 #### Gramática JSON
 
 | Nome                   | Tipo de dados | Valores possíveis |
-|:---------------------- | ------------- | ----------------- |
+| :--------------------- | ------------- | ----------------- |
 | useLastFrameAsDisabled | boolean       | true, false       |
 
 #### Objectos suportados
 
-[Botão imagem](pictureButton_overview.md)
+[Picture Button](pictureButton_overview.md)

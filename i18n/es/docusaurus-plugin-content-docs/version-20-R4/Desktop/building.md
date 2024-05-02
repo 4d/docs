@@ -106,7 +106,7 @@ Si ha llamado a su aplicación, *MiComponente*, 4D creará una carpeta *Componen
 
 La carpeta *MyComponent.4dbase* contiene:
 
-* archivo *MyComponent.4DZ*
+* *MyComponent.4DZ* file
 
 * Una carpeta *Resources*: todos los resources asociados se copian automáticamente en esta carpeta. Los otros componentes y/o carpetas de plugins no se copian (un componente no puede utilizar plugins u otros componentes).
 

@@ -12,11 +12,12 @@ title: On Before Keystroke
 | リリース  | 内容                                         |
 | ----- | ------------------------------------------ |
 | 18 R5 | - 入力不可リストボックスのサポート - イベントは IME確定後にトリガーされます |
+
 </details>
 
 ## 説明
 
-`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
+`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke event`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
 
 > これらのイベントは `POST KEY` のようなユーザーアクションをシミュレートするコマンドによっても生成されます。
 
