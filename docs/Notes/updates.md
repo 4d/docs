@@ -10,6 +10,8 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Highlights
 
+- Support of comparison operators on [object references](../Concepts/dt_object.md#object-operators) and [collection references](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value). 
+
 
 
 ## 4D 20 R5

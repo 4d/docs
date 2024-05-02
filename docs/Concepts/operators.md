@@ -45,6 +45,8 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 - [**Picture operators**](dt_picture.md#picture-operators)
 - [**Pointer operators**](dt_pointer.md#pointer-operators)
 - [**String operators**](dt_string.md#string-operators)
+- [**Object reference operators**](dt_object.md#object-operators)
+- [**Collection reference operators**](dt_collection.md#collection-operators)
 - [**Null operators**](dt_null_undefined.md#null-operators)
 - [**Undefined operators**](dt_null_undefined.md#undefined-operators)
 
