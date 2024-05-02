@@ -156,6 +156,8 @@ var $c2:=["a";42] //reference to a different instance
 var $c3:=$c1 //reference to the same instance
 ```
 
+Based upon the code above, the comparison table is: 
+
 |Operation |Syntax |Returns |Expression |Value|
 |---|---|---|---|---|
 |Equality |collectionRef = collectionRef |Boolean |$c1 = $c3 |True|

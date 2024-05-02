@@ -840,11 +840,17 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 #### Description
 
-The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+The `.equal()` function <!-- REF #collection.equal().Summary -->recursively compares the contents of the collection and *collection2* (deep comparison)<!-- END REF -->and returns **true** if they are identical.
 
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 
 >Elements with **Null** values are not equal to Undefined elements.
+
+:::note
+
+A recursive comparison of collections can be time-consuming if the collection is large and deep. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).  
+
+:::
 
 #### Example
 
@@ -3478,6 +3484,7 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- REF #collection.some().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
+
 |startFrom |Integer |->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
@@ -3516,6 +3523,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 *	If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 *	If *startFrom* < 0, it is considered as the offset from the end of the collection.
+
 *	If *startFrom* = 0, the whole collection is searched (default).
 
 
