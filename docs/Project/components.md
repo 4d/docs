@@ -85,13 +85,16 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### Priority
 
-Since components can be installed in different ways, an order of priority is applied when the same component is referenced at several locations:
+Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
 **Higest priority**
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Built-in 4D components (e.g. 4D NetKit)
-3. Components declared in the **dependencies.json** file. 
+2. Internal 4D components (e.g. 4D NetKit, 4D SVG...)
+3. Components declared in the **dependencies.json** file.
 **Lowest priority**
+
+![priority](../assets/en/Project/load-sequence.png)
+
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the *Overloaded* [status](#dependency-status). The loaded component has the *Overloading* [status](#dependency-status).
 
