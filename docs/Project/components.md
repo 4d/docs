@@ -57,6 +57,7 @@ The **/Sources/dependencies.json** file contents must have the following structu
 ... where "myComponent1" and "myComponent2" are the name of the components, located at the same level as your project's package folder, that you want to be loaded in your project.
 
 
+
 ### environment4d.json
 
 If you want to customize the location of the components that are [declared in the **dependencies.json** file](#dependenciesjson), you can use a **environment4d.json** file. This file allows you to declare the paths for the dependencies that are not stored at the same level as the project folder.
@@ -106,10 +107,10 @@ In an opened project, you can get information about dependencies and their curre
 
 To display the Dependencies panel:
 
-- with 4D, select the **Design/Project Dependencies** menu item (Development environment),
+- with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
 ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.
+- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
 ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:

@@ -84,10 +84,10 @@ Une collection est initialisée avec :
 
 
 <!-- REF #_command_.New collection.Params -->
-| Paramètres | Type                                                                    |    | Description                               |
-| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                   |
-| Résultat   | Collection                                                              | <- | New collection|<!-- END REF -->
+| Paramètres | Type                                                                    |    | Description                                   |
+| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                       |
+| Résultat   | Collection                                                              | <- | The new collection|<!-- END REF -->
 
 
 |
@@ -100,7 +100,7 @@ La commande `New collection` <!-- REF #_command_.New collection.Summary --> cré
 Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
-> Gardez à l'esprit que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable de type `Collection` mais ne créent aucune collection.
+> N'oubliez pas que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable du type `Collection` mais ne créent pas de collection.
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s).
 
@@ -172,10 +172,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                                      |
-| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée              |
-| Résultat   | Collection                                                          | <- | New shared collection|<!-- END REF -->
+| Paramètres | Type                                                                |    | Description                                          |
+| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                  |
+| Résultat   | Collection                                                          | <- | The new shared collection|<!-- END REF -->
 
 
 |
@@ -916,7 +916,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 #### Description
 
-La fonction `.every()` <!-- REF #collection.every().Summary -->retourne **true** si tous les éléments de la collection ont été évalués à vrai par le test implémenté dans l'objet *formula* ou la méthode *methodName*<!-- END REF -->.
+La fonction `.every()` <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
 
@@ -2809,6 +2809,7 @@ Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 #### Exemple 3
 
 Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
+
 
 <!-- END REF -->
 

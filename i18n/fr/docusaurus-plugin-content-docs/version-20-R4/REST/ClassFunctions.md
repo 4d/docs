@@ -58,7 +58,7 @@ Les règles suivantes s'appliquent :
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - La sélection d'entité et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#request-receiving-an-entity-selection-as-parameter).
+See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
 
 ### Paramètre de valeur scalaire
@@ -128,7 +128,7 @@ La classe de `DataStore` US_Cities fournit une API :
 Class extends DataStoreImplementation
 
 exposed Function getName()
-    $0:="US cities and zip codes manager" 
+    $0:="US cities and zip codes manager"
 ```
 
 Vous pouvez lancer cette requête :
@@ -139,7 +139,7 @@ Vous pouvez lancer cette requête :
 
 ```
 {
-"result": "US cities and zip codes manager" 
+"result": "US cities and zip codes manager"
 }
 ```
 
@@ -176,17 +176,17 @@ Le résultat est une entité :
     "__TIMESTAMP": "2020-03-09T08:03:19.923Z",
     "__STAMP": 1,
     "ID": 1,
-    "name": "Paris",
+    "name": "Aguada",
     "countyFIPS": 72003,
     "county": {
         "__deferred": {
             "uri": "/rest/County(72003)",
-            "__KEY": "72003" 
+            "__KEY": "72003"
         }
     },
     "zips": {
         "__deferred": {
-            "uri": "/rest/City(1)/zips?$expand=zips" 
+            "uri": "/rest/City(1)/zips?$expand=zips"
         }
     }
 }
@@ -259,7 +259,7 @@ exposed Function getAgeAverage
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
-    End for each 
+    End for each
     $0:=$sum/This.length
 ```
 
@@ -302,7 +302,7 @@ Vous pouvez lancer cette requête :
 
 ```
 {
-    "result": "Wilbert - Bull is ... 21" 
+    "result": "Wilbert - Bull is ... 21"
 }
 ```
 
@@ -322,7 +322,7 @@ exposed Function pushData
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status est un objet avec une propriété booléenne "success"
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     $0:=$status
 
@@ -330,7 +330,7 @@ exposed Function pushData
         $status:=$entity.save()
        If ($status.success)
            $0:=$entity
-      End if 
+      End if
     End if
 
 ```
@@ -346,7 +346,7 @@ Corps de la requête :
 "__DATACLASS":"Students",
 "__ENTITY":true,
 "firstname":"Ann",
-"lastname":"Brown" 
+"lastname":"Brown"
 }]
 ```
 
@@ -392,7 +392,7 @@ Si aucune `__KEY` n'est donnée, l'entité Students est chargée avec la clé pr
 
 #### Résultat
 
-``` 
+```
 {
     "__entityModel": "Students",
     "__DATACLASS": "Students",
@@ -403,7 +403,7 @@ Si aucune `__KEY` n'est donnée, l'entité Students est chargée avec la clé pr
     "firstname": "Ann",
     "lastname": "BROWNIE",
     "schoolID": null,
-    "school": null 
+    "school": null
 }
 ```
 
@@ -442,7 +442,7 @@ Corps de la requête :
        "school": {
         "__deferred": {
             "uri": "/rest/Schools(2)",
-            "__KEY": "2" 
+            "__KEY": "2"
         }
     }
 }
@@ -514,14 +514,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Boucle sur la sélection d'entité
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if 
-    End for each 
+        End if
+    End for each
 
     $0:=$keys
 ```
@@ -540,9 +540,9 @@ Corps de la requête :
 [
 {
 "__ENTITIES":true,
-"__DATASET":"9B9C053A111E4A288E9C1E48965FE671" 
+"__DATASET":"9B9C053A111E4A288E9C1E48965FE671"
 },
-"Passed" 
+"Passed"
 ]
 
 ```
@@ -573,10 +573,10 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 // $newStudent est une entité "student" à traiter
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// Nous avons ajouté une entité à la sélection d'entité $students sur le client
-$students.add($newStudent) 
+// We add an entity to the $students entity selection on the client
+$students.add($newStudent)
 
-// Nous appelons une fonction sur la classe StudentsSelection qui retourne l'âge moyen des étudiants de la sélection d'entité
-// La fonction est utilisée sur le serveur sur la sélection d'entité $students mise à jour, qui inclut l'étudiant ajouté par le client
+// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
+// The function is executed on the server on the updated $students entity selection which included the student added from the client
 $ageAverage:=$students.getAgeAverage()
 ```

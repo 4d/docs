@@ -4,6 +4,16 @@ title: Release Notes
 ---
 
 
+## 4D 20 R6
+
+Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R6/), the blog post that lists all new features and enhancements in 4D 20 R6.
+
+#### Highlights
+
+- Support of comparison operators on [object references](../Concepts/dt_object.md#object-operators) and [collection references](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value). 
+
+
+
 ## 4D 20 R5
 
 Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
@@ -25,11 +35,13 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Behavior changes
 
 - The plug-ins *4D Internet Commands* and *4D for OCI* are no longer included in 4D installers. To get these plug-ins, you need to connect to the [**4D Product Download portal**](https://product-download.4d.com/).
+- Changes made in the Structure editor regarding graphical appearance of tables and fields (color, position, order...) are now saved in a separate file named `catalog_editor.json` stored in the project's [`Sources`](../Project/architecture.md#sources) folder. 
 
 
 ## 4D 20 R4
 
 Read [**What’s new in 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D 20 R4.
+
 
 
 #### Highlights
@@ -405,7 +417,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|ICU|73.2|20.1|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
+|ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
@@ -416,5 +428,5 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Zlib|1.2.13|20||
 |webKit|WKWebView|19||
 |PHP|8.2.4|20||
-|libldap|2.6.4|20 R3||
+|libldap|**2.6.7**|**20 R6**||
 |libsasl|2.1.28|20||

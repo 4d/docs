@@ -88,7 +88,7 @@ Se você nomeou seu aplicativo, *MyComponent*, 4D irá criar uma pasta de compon
 
 A pasta *MyComponent.4dbase* contém:
 
-* ficheiro *MyComponent.4DZ*
+* *MyComponent.4DZ* file
 * Uma pasta *Resources* - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
 
 ## Página Aplicação

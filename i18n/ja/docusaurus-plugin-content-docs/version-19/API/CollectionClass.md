@@ -70,10 +70,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                                   |
-| ----- | ----------------------------------------------------------------------- |:--:| ------------------------------------ |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                             |
-| 戻り値   | Collection                                                              | <- | 新しいコレクション|<!-- END REF -->
+| 引数    | タイプ                                                                     |    | 説明                                            |
+| ----- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                                      |
+| 戻り値   | Collection                                                              | <- | The new collection|<!-- END REF -->
 
 |
 
@@ -151,10 +151,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                                     |
-| ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
-| 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
+| 引数    | タイプ                                                                 |    | 説明                                                   |
+| ----- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                                           |
+| 戻り値   | Collection                                                          | <- | The new shared collection|<!-- END REF -->
 
 |
 
@@ -752,7 +752,7 @@ End use
 | ---------- | ------- |:--:| ------------------------------------------------ |
 | startFrom  | Integer | -> | テストを開始するインデックス                                   |
 | methodName | Text    | -> | テストに呼び出すメソッド名                                    |
-| param      | Mixed   | -> | methodName に渡す引数                                 |
+| param      | 複合      | -> | methodName に渡す引数                                 |
 | 戻り値        | Boolean | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
 
 |
@@ -964,7 +964,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | 引数         | タイプ        |    | 説明                                                             |
 | ---------- | ---------- |:--:| -------------------------------------------------------------- |
 | methodName | Text       | -> | コレクションをフィルターするために呼び出すメソッド名                                     |
-| param      | Mixed      | -> | *methodName* に渡す引数                                             |
+| param      | 複合         | -> | *methodName* に渡す引数                                             |
 | 戻り値        | Collection | <- | フィルターされた要素を格納した新しいコレクション (シャロウ・コピー)|<!-- END REF -->
 
 |
@@ -1947,7 +1947,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF #collection.push().Params -->
 | 引数      | タイプ        |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
-| element | Mixed      | -> | コレクションに追加する要素                               |
+| element | 複合         | -> | コレクションに追加する要素                               |
 | 戻り値     | Collection | <- | 要素の追加された元のコレクション|<!-- END REF -->
 
 |
@@ -2002,7 +2002,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 | 引数            | タイプ        |    | 説明                                                   |
 | ------------- | ---------- |:--:| ---------------------------------------------------- |
 | queryString   | Text       | -> | 検索条件                                                 |
-| value         | Mixed      | -> | プレースホルダー使用時: 比較する値                                   |
+| value         | 複合         | -> | プレースホルダー使用時: 比較する値                                   |
 | querySettings | Object     | -> | クエリオプション: parameters, attributes 他                   |
 | 戻り値           | Collection | <- | queryString に合致するコレクション要素|<!-- END REF -->
 
@@ -2421,7 +2421,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 | ---------- | ------- |:--:| ---------------------------------------------------- |
 | startFrom  | Integer | -> | テストを開始するインデックス                                       |
 | methodName | Text    | -> | テストに呼び出すメソッド名                                        |
-| param      | Mixed   | -> | *methodName* に渡す引数                                   |
+| param      | 複合      | -> | *methodName* に渡す引数                                   |
 | 戻り値        | Boolean | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
 
 |

@@ -113,7 +113,7 @@
       "ziparchive": "API/ZipArchiveClass"
     }
   },
-  "20R4": {
+  "20R5": {
     "commands": {
       "new collection": "API/CollectionClass",
       "new shared collection": "API/CollectionClass",
@@ -179,7 +179,7 @@
       "ziparchive": "API/ZipArchiveClass"
     }
   },
-  "20R3": {
+  "20R4": {
     "commands": {
       "new collection": "API/CollectionClass",
       "new shared collection": "API/CollectionClass",
@@ -226,6 +226,7 @@
       "filehandle": "API/FileHandleClass",
       "folder": "API/FolderClass",
       "function": "API/FunctionClass",
+      "http parse message": "API/HTTPRequestClass",
       "httprequest": "API/HTTPRequestClass",
       "imaptransporter": "API/IMAPTransporterClass",
       "mailattachment": "API/MailAttachmentClass",

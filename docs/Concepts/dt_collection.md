@@ -146,6 +146,26 @@ Several functions accept a _propertyPath_ as parameter. This parameter stands fo
  $vmin:=$col.min(["My.special.property"]) //error
 ```
 
+## Collection operators
+
+You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection. 
+
+```4d
+var $c1:=["a";42] //reference to an instance
+var $c2:=["a";42] //reference to a different instance
+var $c3:=$c1 //reference to the same instance
+```
+
+Based upon the code above, the comparison table is: 
+
+|Operation |Syntax |Returns |Expression |Value|
+|---|---|---|---|---|
+|Equality |collectionRef = collectionRef |Boolean |$c1 = $c3 |True|
+|  | ||$c1 = $c2 |False|
+|Inequality |collectionRef # collectionRef |Boolean |$c1 # $c3 |False|
+|   |||$c1 # $c2 |True|
+
+
 ## Undefined
 
 Reading the **length** property of an undefined collection produces 0:
