@@ -549,7 +549,7 @@ Standard sort support depends on the list box type:
 
 |List box type|Support of standard sort|Comments|
 |---|---|---|
-|Collection of objects|Yes|<li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>|
+|Collection of objects|Yes|<ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>|
 |Collection of scalar values|No|Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function|
 |Entity selection|Yes|<li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li>|
 |Current selection|Yes|Only simple expressions are sortable (e.g. `[Table_1]Field_2`)|
@@ -1168,6 +1168,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 ````4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
+
  OB SET($ob;"value";"blue")
  OB SET($ob;"choiceListName";"colors")
 ````
