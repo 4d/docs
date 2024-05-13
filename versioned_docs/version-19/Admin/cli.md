@@ -21,13 +21,13 @@ You can execute command lines for 4D applications using the macOS Terminal or th
 
 Here is a description of command lines and the arguments supported to launch 4D applications.
 
-Syntax: 
+Syntax:
 ```
-<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
+<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]]
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]
 [--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]
 ```
-|Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
+|Argument|Value|Description|
 |-------------|---|---|
 |`applicationPath`|Path of the 4D, 4D Server or merged application|Launches the application. Identical to double-clicking the 4D application. When called without structure file argument, the application is executed and the 'select database' dialog box appears.|
 |`--version`||Displays application version and exits|
@@ -45,7 +45,7 @@ Syntax:
 |`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary|
 (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
-### Examples 
+### Examples
 
 > The current folder of the user is reached using the "~ " command under macOS and the "%HOMEPATH%" command under Windows.
 
