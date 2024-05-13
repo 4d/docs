@@ -20,7 +20,7 @@ WebSocket client connections are useful, for example, to receive financial data 
 </details>
 
 
-### Example 
+### Example
 
 In this example, we create a very basic WebSocket client.
 
@@ -30,7 +30,7 @@ In this example, we create a very basic WebSocket client.
 // WSConnectionHandler class
 
 Class constructor
-	
+
 Function onMessage($ws : 4D.WebSocket; $event : Object)
    ALERT($event.data)
 
@@ -100,21 +100,21 @@ In *url*, pass the URL to which the WebSocket server will respond. The following
 - `ws://host[:port]path[?query]` for standard connections
 - `wss://host[:port]path[?query]` for TLS secured connections
 
-If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`). 
+If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
 
 ### *connectionHandler* parameter
 
-In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle. 
+In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
-- Callbacks are automatically called in the context of the form or worker that initiates the connection. 
+- Callbacks are automatically called in the context of the form or worker that initiates the connection.
 - The WebSocket will be valid as long as the form or worker is not closed.
 
 |Property|Type|Description|
 |---|---|---|
 |onMessage|[Function](FunctionClass.md)|Callback function for WebSocket data. Called each time the WebSocket has received data. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul>|
 |onError|[Function](FunctionClass.md)|Callback function for execution errors. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>|
-|onTerminate|[Function](FunctionClass.md)|Callback function when the WebSocket is terminated. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>|
+|onTerminate|[Function](FunctionClass.md)|Callback function when the WebSocket is terminated. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li></ul>|
 |onOpen|[Function](FunctionClass.md)|Callback function when the websocket is open. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>|
 |dataType|Text|Type of the data received or sent. Available values: "text" (default), "blob", "object". "text" = utf-8|
 |headers|Object|Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>|
@@ -201,7 +201,7 @@ This property is read-only.
 
 #### Description
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->. 
+The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
 
 The following contents are sent depending on the *message* type:
 
@@ -254,7 +254,7 @@ In *code*, you can pass a status code explaining why the connection is being clo
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
 - If specified, the value of this code parameter overrides the automatic setting. The value must be an integer. Either 1000, or a custom code in the range 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
 
-In *reason*, you can pass a string describing why the connection is being closed. 
+In *reason*, you can pass a string describing why the connection is being closed.
 
 
 <!-- END REF -->
@@ -272,9 +272,3 @@ The `.url` property contains <!-- REF #WebSocketClass.url.Summary -->the URL to 
 This property is read-only.
 
 <!-- END REF -->
-
-
-
-
-
-
