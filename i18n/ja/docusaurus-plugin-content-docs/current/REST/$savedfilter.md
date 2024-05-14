@@ -3,23 +3,23 @@ id: savedfilter
 title: $savedfilter
 ---
 
-Saves the filter defined by $filter when creating an entity set (_e.g._, `$savedfilter="{filter}"`)
+エンティティセット作成時に、$filter に定義したフィルターを保存します (_例_: `$savedfilter="{filter}"`)
 
 ## 説明
 
-エンティティセットを作成する際に使用したフィルターを念のために保存しておくことができます。 If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
+エンティティセットを作成する際に使用したフィルターを念のために保存しておくことができます。 4D Server のキャッシュからエンティティセットが削除されてしまっても (たとえばタイムアウトや容量の問題、[`$method=release`]($method.md#methodrelease) 操作によって) 、同じエンティティセットを取り戻すことができます。
 
-You use `$savedfilter` to save the filter you defined when creating your entity set and then pass `$savedfilter` along with your call to retrieve the entity set each time.
+`$savedfilter` を使用してエンティティセット作成時に使ったフィルターを保存したあとは、エンティティセットを取得する度に `$savedfilter` も受け渡します。
 
 4D Server のキャッシュからエンティティセットが消えていた場合、10分のデフォルトタイムアウトで再作成されます。 エンティティセットが消えていた場合、再作成されるエンティティセットの内容は更新されたものです (新しくエンティティが追加されていたり、存在していたエンティティが削除されていたりする場合がありえます)。
 
-If you have used both `$savedfilter` and [`$savedorderby`]($savedorderby.md) in your call when creating an entity set and then you omit one of them, the new entity set, which will have the same reference number, will reflect that.
+エンティティセットの作成時に `$savedfilter` と [`$savedorderby`]($savedorderby.md) の両方を使用したにも関わらず、次の呼び出しでは片方を省略すると、返されるエンティティセットは同じ参照番号を持ちながら、この変更を反映します。
 
 ## 例題
 
 エンティティセットを作成する際に <code>$savedfilter</code> を使います:
 
-` GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
+`GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
 
 作成したエンティティセットにアクセスする際、そのエンティティセットが有効なのを確実にしたい場合には、次のように書きます:
 
