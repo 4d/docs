@@ -3,7 +3,7 @@ id: monitor
 title: Página Monitor
 ---
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+La página **Monitor** muestra información dinámica relativa al uso de la base de datos, así como información sobre el sistema y la aplicación 4D Server.
 
 ![](../assets/en/Admin/server-admin.png)
 
@@ -15,11 +15,11 @@ The graphic area lets you see the evolution in real time of several parameters: 
 
 ![](../assets/en/Admin/server-graphic.png)
 
-- **CPU Usage**: Overall CPU usage of the machine, for all applications taken together. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
-- **Network**: Number of bytes received per second by the machine (server or client). The number of bytes sent is provided in the "Network" information area.
-- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
-- **Virtual memory**: Quantity of virtual memory used by the 4D Server application. Esta memória é alocada pelo sistema conforme as necessidades de aplicação. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
-- **Cache**: Quantity of cache memory used by the 4D Server application. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the bottom right of the area indicates the quantity of memory currently being used.
+- **Uso de la CPU**: uso global de la CPU de la máquina, para todas las aplicaciones en conjunto. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
+- **Red**: número de bytes recibidos por segundo por la máquina (servidor o cliente). The number of bytes sent is provided in the "Network" information area.
+- **Memoria física**: cantidad de memoria RAM de la máquina utilizada por 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
+- **Memoria virtual**: cantidad de memoria virtual utilizada por la aplicación 4D Server. Esta memória é alocada pelo sistema conforme as necessidades de aplicação. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
+- **Caché**: cantidad de memoria caché utilizada por la aplicación 4D Server. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the bottom right of the area indicates the quantity of memory currently being used.
 
 Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
 
@@ -27,10 +27,10 @@ Note that when this option is selected, the graph area scrolling is slowed down 
 
 The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
 
-- **System Information**: Computer, system and IP address of server
-- **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
-- **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **License**: Description of license. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **Información sistema**: ordenador, sistema y dirección IP del servidor
+- **Información aplicación**: número de versión interna de 4D Server y estado de Volume Shadow Copy
+- **Conexiones máximas**: número de conexiones simultáneas permitidas por tipo de servidor
+- **Licencia**: descripción de la licencia. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
@@ -40,7 +40,7 @@ Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
 
 The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
 
-- **Hard drive**: Overall capacity of the hard disk and distribution of the space used by the database data (data file + data index), the space used by other files and the free space available.
-- **Memory**: RAM memory installed on the machine and amount of memory used by 4D Server, by other applications or that is free. The memory used by 4D Server can also be displayed dynamically in the graphic area.
-- **Processors**: Instant occupancy rate for processor(s) of the machine by 4D Server and by other applications. Esta taxa é constantemente recalculada. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
-- **Network**: Instantaneous number of bytes sent and received by the machine (server or client). Este valor é atualizado constantemente. The number of bytes received by can also be displayed dynamically in the graphic area.
+- **Disco duro**: capacidad global del disco duro y distribución del espacio utilizado por los datos de la base de datos (archivo de datos + índice de datos), el espacio utilizado por otros archivos y el espacio libre disponible.
+- **Memoria**: memoria RAM instalada en la máquina y cantidad de memoria utilizada por 4D Server, por otras aplicaciones o que está disponible. The memory used by 4D Server can also be displayed dynamically in the graphic area.
+- **Procesadores**: tasa instantánea de ocupación de procesador(es) de la máquina por 4D Server y por otras aplicaciones. Esta taxa é constantemente recalculada. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
+- **Red**: número instantáneo de bytes enviados y recibidos por la máquina (servidor o cliente). Este valor é atualizado constantemente. The number of bytes received by can also be displayed dynamically in the graphic area.
