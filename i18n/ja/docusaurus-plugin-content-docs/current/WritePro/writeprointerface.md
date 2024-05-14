@@ -7,7 +7,7 @@ title: 4D WritePro インターフェース
 
 4D のデベロッパーは、これらのパレットをアプリケーションに簡単に実装することができます。 それにより、エンドユーザーは、フォントやテキストの揃え方向、ブックマーク、表レイアウト、フレームなど、4D Write Pro のプロパティをすべて管理することができます。
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the _4D Design Reference manual_.
+インターフェースのマニュアルについては、_4D デザインリファレンス_ の [4D Write Pro エリアのドキュメント](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.ja.html) を参照ください。
 
 表ウィザードの設定に関するドキュメントは以下のとおりです。
 
@@ -39,7 +39,7 @@ The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/E
 
 ![](../assets/en/WritePro/rows.PNG)
 
-In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+表ウィザードでは、ヘッダー行と追加の行の数 (それぞれ 0～5) を定義したり、[ブレーク行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6233076) (小計行) を繰り返し行の上または下に設定したり、[キャリーオーバー行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6236686) の表示/非表示を選択したりすることもできます。
 
 ##### 表示について:
 
@@ -47,7 +47,7 @@ In the Table Wizard, the user can also define the number of header rows and extr
 
 ユーザーは、ドロップダウンリストから希望するオプションを選択することで、好みのズームレベルを調整し、ラジオボタンを使ってフォーミュラまたはデータを表示し、チェックボックスを使って水平ルーラーを表示するかどうかを選択します。
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+表の作成とカスタマイズが完了したら、**挿入** ボタンをクリックして、WPドキュメントに表組みを追加することができます。
 
 ドキュメントに表が統合されると、ユーザーはそのスタイルをカスタマイズできます。 ツールバーやサイドバーの書式設定ツールはすべて利用可能です。
 
@@ -55,9 +55,9 @@ After finalizing the table creation and customization, the user can click on the
 
 テンプレートの設定には以下が含まれます:
 
-- Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-- Translating table, field, and formula names from the [translation file](#translation-files).
-- Designing graphic styles and customized  themes from the [theme file](#theme-files).
+- [テンプレートファイル](#テンプレートファイル): テーブルとフィールドを定義し、アプリケーションに適合したフォーミュラを用意します。
+- [トランスレーションファイル](#トランスレーションファイル): テーブル、フィールド、フォーミュラの翻訳名を指定します。
+- [テーマファイル](#テーマファイル): グラフィックスタイルとテーマをデザインしカスタマイズします。
 
 表ウィザードを設定するにあたって、これら 3種類のファイルにはそれぞれ明確な役割がありますが、いずれも必須ではありません。
 
@@ -70,13 +70,13 @@ After finalizing the table creation and customization, the user can click on the
 - 表の列として使用できるデータクラス属性
 - ブレーク行、キャリーオーバー行、追加の行において、コンテキストメニューから選択可能なフォーミュラ
 
-:::info Limitation
+:::info 制限
 
 現在の実装 (4D v20 R2) では、ブレーク行、データソース、コンテキストメニューに使用されるフォーミュラは、ホストデータベースのメソッドの呼び出しをサポートしていません。 この制限は次のバージョンで外される予定です。
 
 :::
 
-The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
+テンプレートファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" フォルダーに保存する必要があります。
 
 JSON形式のテンプレートファイルには、以下の属性が含まれます:
 
@@ -100,9 +100,9 @@ JSON形式のテンプレートファイルには、以下の属性が含まれ�
 | extraFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
 | extraFormulas.source | Text       | ○  | Formula                                                                     |
 
-:::note French language
+:::note フランス語のランゲージについて
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+もし、4Dランゲージがフランス語に設定された環境で実行される可能性があるのであれば、ランゲージ設定に関わらず正しく解釈されるよう、フォーミュラに [トークン](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.ja.html) を使用するようにしてください。
 
 :::
 
@@ -135,7 +135,7 @@ JSONファイルの簡単な一例を以下に示します:
     "breakFormulas": [{
             "label": "Company",
             "source": "This.item.toCompany.name"
-	}, {
+    }, {
             "label": "Sum of salaries",
             "source": "String(This.breakItems.sum(\"salary\"); \"###,###.00\")"
         }
@@ -152,11 +152,12 @@ JSONファイルの簡単な一例を以下に示します:
     ]
 }
 
+
 ```
 
 #### トランスレーションファイル
 
-トランスレーションファイルは、テンプレート、テーマ、テーブル、フィールド、およびフォーミュラの翻訳名を指定します。 These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+トランスレーションファイルは、テンプレート、テーマ、テーブル、フィールド、およびフォーミュラの翻訳名を指定します。 これらのファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" フォルダーに追加します。
 
 各トランスレーションファイルには、対応する言語コード (英語なら "en"、日本語なら "ja" など) のファイル名を付けます。
 
@@ -180,7 +181,7 @@ JSON形式のトランスレーションファイルには、以下の属性が�
 
 テンプレート名やフォーミュラ名 (ブレーク行、キャリーオーバー行、追加の行) がトランスレーションファイルに存在する場合、表ウィザードではその翻訳が表示されます。 また、トランスレーションファイル内で定義されたテーブルだけが表ウィザードに (翻訳されて) 表示されます。
 
-ユーザーがインターフェースでテーブルを選択したときには、トランスレーションファイルは追加の役割を果たします。 具体的には、ユーザーに提案されるテーブルやフィールドをフィルターします。 For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+ユーザーがインターフェースでテーブルを選択したときには、トランスレーションファイルは追加の役割を果たします。 具体的には、ユーザーに提案されるテーブルやフィールドをフィルターします。 たとえば、テーブルID を非表示にするなど、この動作は `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに似ています。
 
 ##### 例題
 
@@ -188,60 +189,61 @@ JSON形式のトランスレーションファイルには、以下の属性が�
 {
     "tables": [{
             "original": "People",
-            "translation": "Personne"
+            "translation": "従業員"
         }
     ],
     "fields": [{
             "original": "lastname",
-            "translation": "Nom"
+            "translation": "名字"
         }, {
             "original": "firstname",
-            "translation": "Prénom"
+            "translation": "名前"
         }, {
             "original": "salary",
-            "translation": "Salaire"
+            "translation": "給与"
         }, {
             "original": "company",
-            "translation": "Société"
+            "translation": "会社"
         }
     ],
     "formulas": [{
             "original": "Sum of salary",
-            "translation": "Somme des salaires"
+            "translation": "給与の合計"
         }
     ]
 }
-    
+
+
 ```
 
 #### テーマファイル
 
-4D WritePro Interface コンポーネントには、"Arial"、"CourierNew"、"YuGothic" などのテーマがデフォルトで用意されており、"Blue" や "Green" など複数のバリエーションが用意されています。 However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
+4D WritePro Interface コンポーネントには、"Arial"、"CourierNew"、"YuGothic" などのテーマがデフォルトで用意されており、"Blue" や "Green" など複数のバリエーションが用意されています。 しかし、プロジェクト内の "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" フォルダーにテーマファイルを配置することで、独自のテーマを作成することができます。
 
 JSON形式のテーマファイルには、以下の属性が含まれます:
 
-| 属性      | タイプ    | 必須 | 説明                                                                                                                                                                                                                       |
-| :------ | :----- | :- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| default | Object |    | すべての行に適用されるデフォルトスタイルを格納したオブジェクト。                                                                                                                                                                                         |
-| table   | Object |    | 表組みに適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                              |
-| rows    | Object |    | すべての行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                            |
-| cells   | Object |    | すべてのセルに適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                           |
-| header1 | Object |    | 先頭のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                         |
-| header2 | Object |    | 2つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| header3 | Object |    | 3つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| header4 | Object |    | 4つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| header5 | Object |    | 5つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| headers | Object |    | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
-| data    | Object |    | 繰り返し行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                            |
-| break1  | Object |    | 1つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| break2  | Object |    | 2つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| break3  | Object |    | 3つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| break4  | Object |    | 4つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| break5  | Object |    | 5つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                        |
-| breaks  | Object |    | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
-| bcor    | Object |    | 下部キャリーオーバー行に適用されるスタイル定義を格納したオブジェクト。                                                                                                                                                                                      |
+| 属性      | タイプ    | 必須 | 説明                                                              |
+| :------ | :----- | :- | :-------------------------------------------------------------- |
+| default | Object |    | すべての行に適用されるデフォルトスタイルを格納したオブジェクト。                                |
+| table   | Object |    | 表組みに適用されるスタイル定義を格納したオブジェクト。                                     |
+| rows    | Object |    | すべての行に適用されるスタイル定義を格納したオブジェクト。                                   |
+| cells   | Object |    | すべてのセルに適用されるスタイル定義を格納したオブジェクト。                                  |
+| header1 | Object |    | 先頭のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                |
+| header2 | Object |    | 2つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
+| header3 | Object |    | 3つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
+| header4 | Object |    | 4つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
+| header5 | Object |    | 5つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
+| headers | Object |    | header1、header2など専用のスタイル定義がない場合に、ヘッダー行に 適用されるスタイル定義を格納したオブジェクト。 |
+| data    | Object |    | 繰り返し行に適用されるスタイル定義を格納したオブジェクト。                                   |
+| break1  | Object |    | 1つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
+| break2  | Object |    | 2つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
+| break3  | Object |    | 3つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
+| break4  | Object |    | 4つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
+| break5  | Object |    | 5つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
+| breaks  | Object |    | break1、break2など専用のスタイル定義がない場合に、ブレーク行に 適用されるスタイル定義を格納したオブジェクト。   |
+| bcor    | Object |    | 下部キャリーオーバー行に適用されるスタイル定義を格納したオブジェクト。                             |
 
-For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
+JSONファイルで設定する各属性に対して、以下の WP属性を定義することができます ([対応する WP定数](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.ja.html) を指定します):
 
 | WP 属性           | 対応する WP定数           |
 | :-------------- | :------------------ |
@@ -291,9 +293,10 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
            "fontSize": "15pt"
     }
 }
-    
+
+
 ```
 
 #### 参照
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - 表ウィザード (チュートリアル動画)](https://www.youtube.com/watch?v=2ChlTju-mtM)
