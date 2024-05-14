@@ -7,7 +7,7 @@ As variáveis, campos ou expressões de tipo data podem ter um intervalo entre 1
 
 Apesar do modo de representação de datas de C_DATE permitir trabalhar com datas até o ano 32 767, certas operações que passam pelo sistema impõe um limite inferior.
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**Nota:** en el manual de Referencia del Lenguaje 4D, los parámetros de tipo Fecha en las descripciones de los comandos se denominan Fecha, salvo que se indique lo contrario.
 
 ## Constantes literais de tipo hora
 
@@ -21,7 +21,7 @@ Uma constante literal de tipo data está cercada de sinais de exclamação (!...
 
 A null date is specified by _!00-00-00!_.
 
-**Tip:** The Code Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. To type a null date, enter the exclamation (!) character and press Enter.
 
 **Notas:**
 
