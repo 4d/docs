@@ -36,11 +36,11 @@ title: $method
 
  `POST  /rest/Employee(22)/?$method=delete`
 
-[`$filter`]($filter.md) を使ったクエリも可能です:
+$filter を使ったクエリも可能です:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-[`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid) で呼び出したエンティティセットを削除する場合は次のように書きます:
+$entityset/{entitySetID} で呼び出したエンティティセットを削除する場合は次のように書きます:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
