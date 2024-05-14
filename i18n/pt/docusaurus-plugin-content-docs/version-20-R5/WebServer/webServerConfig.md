@@ -12,7 +12,7 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 | Localização do parâmetro                                                         | Âmbito                                                                 | Servidor Web a ser usado                                       |
 | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
 | [webServer object](webServerObject.md)                                           | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
-| `WEB SET OPTION` or a `WEB XXX` command                                          | Temporário (sessão atual)                           | Servidor principal                                             |
+| `WEB SET OPTION` o comando `WEB XXX`                                             | Temporário (sessão atual)                           | Servidor principal                                             |
 | [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Alguns parâmetros não estão disponíveis em todos os locais.
@@ -26,11 +26,11 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 Ativa e configura a cache da página Web.
 
-The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. O uso do cache permite que você aumente significativamente o desempenho do servidor da Web ao enviar páginas estáticas. A cache é partilhada entre todos os processos Web. Quando a cache está ativada, o servidor da Web 4D procura primeiro qualquer página estática solicitada pelo navegador na cache. Se encontrar a página, envia-a imediatamente. Se não, 4D carrega a página do disco e a coloca no cache.
+El servidor web 4D dispone de una caché que permite cargar las páginas estáticas, las imágenes GIF, las imágenes JPEG (<512 kb) y las hojas de estilo (archivos.css) en memoria, a medida que se solicitan. O uso do cache permite que você aumente significativamente o desempenho do servidor da Web ao enviar páginas estáticas. A cache é partilhada entre todos os processos Web. Quando a cache está ativada, o servidor da Web 4D procura primeiro qualquer página estática solicitada pelo navegador na cache. Se encontrar a página, envia-a imediatamente. Se não, 4D carrega a página do disco e a coloca no cache.
 
-You can modify the size of the cache in the **Pages Cache Size** area. O valor que você define depende do número e do tamanho das páginas estáticas do seu site, bem como dos recursos que as máquinas hospedeiras têm à disposição.
+Puede modificar el tamaño de la caché en el área **Tamaño de la caché de las páginas**. O valor que você define depende do número e do tamanho das páginas estáticas do seu site, bem como dos recursos que as máquinas hospedeiras têm à disposição.
 
-> While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. Se, por exemplo, você notar que a taxa de utilização do cache está próxima a 100%, você pode querer considerar aumentar o tamanho que lhe foi atribuído. As URLs [/4DSTATS] e [/4DHTMLSTATS] permitem que você também obtenha informações sobre o estado do cache.
+> Mientras utiliza su base de datos web, puede verificar el rendimiento de la caché utilizando el comando `WEB GET STATISTICS`. Se, por exemplo, você notar que a taxa de utilização do cache está próxima a 100%, você pode querer considerar aumentar o tamanho que lhe foi atribuído. As URLs [/4DSTATS] e [/4DHTMLSTATS] permitem que você também obtenha informações sobre o estado do cache.
 
 ## Pasta de certificados
 
@@ -40,11 +40,11 @@ You can modify the size of the cache in the **Pages Cache Size** area. O valor q
 
 Pasta onde estão localizados os arquivos de certificado TLS para o servidor web.
 
-By default with 4D or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder).
+Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la [carpeta Project](Project/architecture.md#project-folder).
 
-With 4D in remote mode, these files must be located in the local resources folder of the database on the remote machine (see `4D Client Database Folder` paragraph of the `Get 4D folder` command). Deve copiar esses arquivos manualmente na máquina remota.
+Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recursos locales de la base de datos en la máquina remota (ver `Carpeta base 4D Client` del comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
-> TLS certificate files are _key.pem_ (document containing the private encryption key) and _cert.pem_ (document containing the certificate).
+> Los archivos de certificados TLS son _key.pem_ (documento que contiene la llave de cifrado privada) y _cert.pem_ (documento que contiene el certificado).
 
 ## Conjunto de caracteres
 
@@ -145,13 +145,13 @@ Por padrão, quando o servidor web é iniciado pela primeira vez, 4D cria uma p�
 
 Você pode designar outra página inicial padrão inserindo seu nome de caminho.
 
-- The path is relative to the [default HTML root folder](#root-folder).
+- La ruta es relativa a la [carpeta HTML raíz ](#root-folder),.
 - O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
 - O caminho não deve começar nem terminar com uma barra.
 
 Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e está localizado na pasta "Web" (ela própria localizada na pasta raiz padrão HTML), use "Web/MyHome.htm".
 
-If you do not specify any default home page, the `On Web Connection` database method is called. Cabe-lhe a si processar o pedido de forma processual.
+Si no se especifica ninguna página de inicio por defecto, se llama al método base `On Web Connection`. Cabe-lhe a si processar o pedido de forma processual.
 
 ## Activar CORS
 
@@ -165,7 +165,7 @@ O servidor web 4D implementa o compartilhamento de recursos entre origens (CORS)
 
 Quando desativado (padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas.
 
-For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
+Para más información sobre CORS, consulte la página [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) en Wikipedia.
 
 #### Veja também
 
@@ -189,7 +189,7 @@ Indica se o servidor da Web aceitará ou não conexões não seguras.
 | `WEB SET OPTION`                   | `Web HTTPS enabled`                                  |             |
 | Caixa de diálogos de configurações | Página configuração/Habilitar HTTPS                  |             |
 
-Estado da comunicação por HTTPS. This option is described in [this section](Admin/tls.md).
+Estado da comunicação por HTTPS. Esta opción se describe en [esta sección](Admin/tls.md).
 
 ## Ativar HSTS
 
@@ -200,13 +200,13 @@ Estado da comunicação por HTTPS. This option is described in [this section](Ad
 
 Estado do HTTP Strict Transport Security (HSTS).
 
-When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabled](#enable-http), the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
+Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está también activado](#enable-http), el navegador puede cambiar entre HTTPS y HTTP (por ejemplo, en la zona de la URL del navegador, el usuario puede sustituir "https" por "http"). Para prohibir las redirecciones http, puede [desactivar el HTTP](#enable-http), sin embargo en este caso se muestra un mensaje de error a las peticiones HTTP del cliente.
 
-O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
+O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con el parámetro web **HSTS max age**.
 
-> HSTS requires that [HTTPS is enabled](#enable-https) on the server. [HTTP](#enable-http) must also be enabled to allow client initial connections.
+> HSTS requiere que [HTTPS esté activado](#enable-https) en el servidor. [El HTTP](#enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
 
-> You can get the current connection mode using the `WEB Is secured connection` command.
+> Puede obtener el modo de conexión actual utilizando el comando `WEB Is secured connection`.
 
 ## HSTS Max Age
 
@@ -218,7 +218,7 @@ O HSTS permite que o servidor web 4D declare que os navegadores só devem intera
 Especifica o tempo máximo (em segundos) em que o HSTS fica ativo para cada nova conexão de cliente. Esta informação é armazenada no lado do Cliente durante a duração especificada.
 O valor padrão é 63072000 (2 anos)
 
-> **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. Quando estiver testando seus aplicativos, é recomendável definir uma curta duração para poder alternar entre os modos de conexão segura e não segura, se necessário.
+> **Atención:** una vez activado HSTS, las conexiones de los clientes seguirán utilizando este mecanismo durante el tiempo especificado. Quando estiver testando seus aplicativos, é recomendável definir uma curta duração para poder alternar entre os modos de conexão segura e não segura, se necessário.
 
 ## Web HTTP compression level
 
@@ -252,11 +252,11 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see [macOS HelperTool](#macos-helpertool)).
+> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 
-> **Warning**: If you use TCP port numbers other than the default numbers (80 for standard HTTP and 443 for HTTPS), be careful not to use port numbers that are defaults for other services that you might want to use simultaneously. Por exemplo, se você também planeja usar o protocolo FTP em seu servidor web, não use a porta TCP 20 e 21, que são as portas padrão para esse protocolo. Os números de portas abaixo de 256 são reservados para serviços conhecidos e números de portas de 256 a 1024 são reservados para serviços específicos originários das plataformas UNIX. Para segurança máxima, especifique o número de portas para além destes intervalos (por exemplo, nos anos 2000 ou 3000).
+> **Atención**: si utiliza números de puerto TCP distintos a los predeterminados (80 para HTTP estándar y 443 para HTTPS), tenga cuidado de no utilizar números de puerto que sean predeterminados para otros servicios que pueda querer utilizar simultáneamente Por exemplo, se você também planeja usar o protocolo FTP em seu servidor web, não use a porta TCP 20 e 21, que são as portas padrão para esse protocolo. Os números de portas abaixo de 256 são reservados para serviços conhecidos e números de portas de 256 a 1024 são reservados para serviços específicos originários das plataformas UNIX. Para segurança máxima, especifique o número de portas para além destes intervalos (por exemplo, nos anos 2000 ou 3000).
 
 Se especificar 0, 4D usará o número de porta HTTP 80 por padrão.
 
@@ -277,7 +277,7 @@ Ativação do método HTTP TRACE no servidor web 4D. Por motivos de segurança, 
 | `WEB SET OPTION`                   | `Web HTTPS port ID`                                            |             |
 | Caixa de diálogos de configurações | [Configuration page/HTTPS Port](../settings/web.md#https-port) |             |
 
-Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
+Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). Ver también [HTTP Port](#http-port) para obtener información sobre los números de puerto.
 
 ## Tempo limite do processo inativo
 
@@ -287,7 +287,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                                                              |             |
 | Caixa de diálogos de configurações | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Slider      |
 
-Duração da vida (em minutos) dos processos inativos associados às sessões. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+Duração da vida (em minutos) dos processos inativos associados às sessões. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base `On Web Close Process` y se destruye el contexto de sesión.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
@@ -312,22 +312,19 @@ Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 Sequências de endereços IP nas quais o servidor web 4D receberá solicitações HTTP (4D local e servidor 4D).
 
-By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. Quando você nomeia um endereço específico, o servidor responde apenas às solicitações enviadas para este endereço. Essa função é projetada para servidores web 4D localizados em máquinas com vários endereços TCP/IP. É, por exemplo, frequentemente o caso da maioria dos fornecedores de alojamento.
+Por defecto, no se define ninguna dirección específica (**valor ninguno** en la caja de diálogo Parámetros), lo que significa que el servidor responde a todas las direcciones IP. Quando você nomeia um endereço específico, o servidor responde apenas às solicitações enviadas para este endereço. Essa função é projetada para servidores web 4D localizados em máquinas com vários endereços TCP/IP. É, por exemplo, frequentemente o caso da maioria dos fornecedores de alojamento.
 
 Valores possíveis: Cadeia de endereços IP. Ambos os formatos de string IPv6 (por exemplo, "2001:0db8:0000:0000:ff00:0042:8329") e formatos de string IPv4 (por exemplo, "123.45.67.89") são suportados.
 
 #### Acerca do suporte IPv6
 
-- **No warning when TCP port is occupied**<br/>
-  When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
+- **No warning when TCP port is occupied**<br/> When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
-- **IPv4-mapped IPv6 addresses**<br/>
-  To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
+- **IPv4-mapped IPv6 addresses**<br/> To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
 
-- **Indication of port numbers**<br/>
-  Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
+- **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
@@ -360,19 +357,19 @@ Estado do gerenciamento de sessão antigo para o servidor Web 4D (obsoleto).
 | `WEB SET OPTION`                   | `Web log recording`                                                 |             |
 | Caixa de diálogos de configurações | [Log (type) page](../settings/web.md#log-format) | Menu pop-up |
 
-Starts or stops the recording of requests received by the 4D web server in the _logweb.txt_ file and sets its format. Por padrão, os pedidos não são registados (0/No Log File). When enabled, the _logweb.txt_ file is automatically placed in the Logs folder.
+Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Por padrão, os pedidos não são registados (0/No Log File). Cuando se activa, el archivo _logweb.txt_ se coloca automáticamente en la carpeta Logs.
 
 Esta configuração permite que você selecione o formato deste arquivo. Os valores disponíveis são:
 
-| Valor | Nome do formato            | Descrição                                                                                                                                                                                                                                                |
-| ----- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0     | Nenhum arquivo de registro | Por padrão                                                                                                                                                                                                                                               |
-| 1     | Registo em formato CLF     | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
-| 2     | Registo em formato DLF     | Formato de Log Combinado - Similar ao formato CLF, mas adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.                                                                          |
-| 3     | Registo em formato ELF     | Extended Log Format - A ser personalizado na caixa de diálogo das Propriedades                                                                                                                                                                           |
-| 4     | Registo em formato WLF     | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                                                             |
+| Valor | Nome do formato            | Descrição                                                                                                                                                                                                                                                                 |
+| ----- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0     | Nenhum arquivo de registro | Por padrão                                                                                                                                                                                                                                                                |
+| 1     | Registo em formato CLF     | Formato de historial común - Cada línea del archivo representa una petición, como:`host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF. |
+| 2     | Registo em formato DLF     | Formato de Log Combinado - Similar ao formato CLF, mas adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.                                                                                           |
+| 3     | Registo em formato ELF     | Extended Log Format - A ser personalizado na caixa de diálogo das Propriedades                                                                                                                                                                                            |
+| 4     | Registo em formato WLF     | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                                                                              |
 
-> Formats 3 and 4 are custom formats whose contents must be set beforehand in the [Settings dialog box](../settings/web.md#log-format). Se você usar um destes formatos sem que nenhum dos seus campos tenha sido selecionado nesta página, o arquivo de log não será gerado.
+> Los formatos 3 y 4 son formatos personalizados cuyo contenido debe establecerse previamente en la [caja de diálogo Parámetros](../settings/web.md#log-format). Se você usar um destes formatos sem que nenhum dos seus campos tenha sido selecionado nesta página, o arquivo de log não será gerado.
 
 ## Processos Web em simultâneo máximo
 
@@ -382,7 +379,7 @@ Esta configuração permite que você selecione o formato deste arquivo. Os valo
 | `WEB SET OPTION`                   | `Web max concurrent processes`                                                                                              |             |
 | Caixa de diálogos de configurações | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes) |             |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). Esse parâmetro permite evitar a saturação do servidor como resultado de um grande número de solicitações. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
+Límite estrictamente superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando **no sessions** o **legacy sessions** están siendo utilizados (**scalable sessions** soporta un [número ilimitado](sessions.md) de p Esse parâmetro permite evitar a saturação do servidor como resultado de um grande número de solicitações. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
 Por padrão, o valor é 100. Pode definir o número entre 10 e 32000.
 
@@ -406,7 +403,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions	`                                |             |
 
-Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Número máximo de sessões simultâneas. Cuando se alcanza el límite definido, se cierra la sesión más antigua (y se llama al método base `On Web Close Process`) si el servidor web necesita crear una nueva. El número de sesiones simultáneas no puede superar el [número máximo de procesos web](#maximum-concurrent-web-processes) (100 por defecto).
 
 Valor padrão: 100 (passe 0 para restaurar o valor padrão).
 
@@ -427,7 +424,7 @@ Valores possíveis:
 
 Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
-> The minimum TLS version used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.
+> La versión TLS mínima utilizada por 4D puede ser modificada para la sesión utilizando el comando `SET DATABASE PARAMETER`, en cuyo caso la modificación se aplica a toda la aplicación 4D, incluyendo el servidor web, el servidor SQL y las conexiones cliente
 
 ## Nome
 
@@ -451,7 +448,7 @@ Versão da biblioteca OpenSSL utilizada.
 | --------------------- | ---------------------------------------------------------------------- | ----------------------- |
 | objeto webServer      | [`perfectForwardSecrecy`](API/WebServerClass.md#perfectforwardsecrecy) | Booleano, só de leitura |
 
-True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
+Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admin/tls.md#perfect-forward-secrecy-pfs)).
 
 ## Reutilizar contextos temporários (em modo remoto)
 
@@ -459,11 +456,11 @@ True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forwa
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
 | Caixa de diálogos de configurações | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts) |             |
 
-> This option is only available when **No sessions** option is checked.
+> Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
 Permite otimizar a operação do 4D Web Server no modo remoto, reutilizando processos da Web criados para processar solicitações anteriores da Web. De fato, o servidor web em 4D precisa de um processo web específico para lidar com cada solicitação web; no modo remoto, quando necessário, esse processo se conecta à máquina 4D Server para acessar os dados e o mecanismo de banco de dados. Assim, ele gera um contexto temporário usando suas próprias variáveis, seleções, etc. Quando o pedido tiver sido tratado, este processo é encerrado.
 
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. Removendo o estágio de criação do processo, o desempenho do servidor web é melhorado.
+Cuando la opción **Reutilizar los contextos temporales** está seleccionada, en modo remoto, 4D mantiene los procesos web específicos y los reutiliza para las siguientes peticiones. Removendo o estágio de criação do processo, o desempenho do servidor web é melhorado.
 
 Em troca, você deve se certificar neste caso de inicializar sistematicamente as variáveis usadas em métodos 4D para evitar obter resultados incorretos. Da mesma forma, é necessário apagar quaisquer seleções ou registros atuais definidos durante a solicitação anterior.
 
@@ -515,14 +512,14 @@ Caminho da pasta raiz do servidor web, ou seja, a pasta na qual 4D procurará as
 
 Além disso, a pasta raiz do HTML define, no disco rígido do servidor da Web, o nível hierárquico acima do qual os arquivos não poderão ser acessados. Se um URL solicitado ou um comando 4D tentar acessar um arquivo localizado acima da pasta raiz HTML, será retornado um erro indicando que o arquivo não foi encontrado.
 
-By default, 4D defines a HTML Root folder named **WebFolder**. Se ela ainda não existir, a pasta raiz HTML será fisicamente criada no disco no momento em que o servidor Web for iniciado pela primeira vez. A pasta raiz é criada:
+Por defecto, 4D define una carpeta raíz HTML llamada **WebFolder**. Se ela ainda não existir, a pasta raiz HTML será fisicamente criada no disco no momento em que o servidor Web for iniciado pela primeira vez. A pasta raiz é criada:
 
-- with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder).
+- con 4D (local) y 4D Server, en el mismo nivel de la [carpeta del proyecto](Project/architecture.md#project-folder).
 - com 4D em modo remoto, na pasta de recursos locais.
 
 Você pode designar outra pasta raiz HTML padrão inserindo seu caminho.
 
-- The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
+- La ruta es relativa a la [carpeta del proyecto](Project/architecture.md#project-folder) (4D local y 4D Server) o a la carpeta que contiene la aplicación 4D o el paquete de software (4D en modo remoto).
 - O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
 - Para "subir" um nível na hierarquia de pastas, digite "..." (dois pontos) antes do nome da pasta
 - O caminho não deve começar com uma barra (exceto se você quiser que a pasta raiz HTML seja a pasta remota Project ou 4D, mas que o acesso às pastas acima seja proibido; nesse caso, você pode passar "/" como a pasta raiz).
@@ -539,7 +536,7 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 | `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                           |             |
 | Caixa de diálogos de configurações | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+Session management enabling status for the 4D web server. Las sesiones del servidor web se detallan en la página [Sesiones de usuario](sessions.md).
 
 ## Domínio do cookie de sessão
 
@@ -574,19 +571,19 @@ campo "caminho" do cookie da sessão. Utilizado para controlar o alcance dos coo
 | --------------------- | ---------------------------------------------------------------------- | ----------- |
 | objeto webServer      | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |             |
 
-Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
+Valor del atributo `SameSite` de la cookie de sesión. Este atributo le permite declarar si su cookie debe estar restringida a un contexto de primera parte o del mismo sitio, como una protección contra ciertos ataques CSRF ([cross-site request forgery](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)).
 
-> For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
+> Para una descripción detallada del atributo `SameSite`, consulte la [documentación de Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) o [esta página web.dev](https://web.dev/samesite-cookies-explained/).
 
 Há três valores disponíveis:
 
-- "Strict" (default `SameSite` attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.
+- "Estricto" (valor predeterminado del atributo `SameSite` para las cookies de sesión de 4D): las cookies sólo se enviarán en el contexto de primera parte, es decir, el contexto correspondiente al dominio del sitio y nunca a sitios web de terceros.
 - "Laxos": Os cookies não são enviados em solicitações entre sites (por exemplo, para carregar imagens ou quadros em um site de terceiros), mas são enviados quando um usuário está navegando para o site de origem (ou seja, ele segue um link).
-- "None": Cookies são enviados em todos os contextos, ou seja, nas respostas para solicitações de primeira e de cruzada de origem. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+- "None": Cookies são enviados em todos os contextos, ou seja, nas respostas para solicitações de primeira e de cruzada de origem. Cuando se utiliza el valor "None", el atributo cookie `Secure` también debe ser definido (o la cookie será bloqueada).
 
-The `Secure` attribute value of the session cookie is automatically set to "True" if the connection is HTTPS (whatever the `SameSite` attribute value).
+El valor del atributo `Secure` de la cookie de sesión se define automáticamente en "True" si la conexión es HTTPS (sea cual sea el valor del atributo `SameSite`).
 
-> It is not recommended to set `SameSite=None` on a HTTP server since the `Secure` attribute will be missing (used in HTTPS only) and cookies will be blocked.
+> No se recomienda definir `SameSite=None` en un servidor HTTP ya que faltará el atributo `Secure` (utilizado sólo en HTTPS) y se bloquearán las cookies.
 
 ## Utilizar processos preemptivos
 
@@ -594,7 +591,7 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
 | Caixa de diálogos de configurações | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes) |             |
 
-This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
 
 ## Parâmetros obsoletos
 
@@ -602,11 +599,11 @@ As configurações a seguir ainda são compatíveis, mas dependem de recursos ou
 
 #### Allow database Access through 4DSYNC URLs
 
-This option controls the support of HTTP synchronization requests containing deprecated _/4DSYNC_ URLs.
+Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas _/4DSYNC_.
 
 #### Validação do endereço IP da sessão
 
-> This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
+> Esta opción no está disponible en [modo sesiones evolutivas](WebServer/sessions.md) (no hay validación).
 
 Estado de validação de endereço IP para cookies de sessão. Por motivos de segurança por padrão o servidor web 4D verifica o endereço IP de cada solicitação contendo um cookie de sessão e rejeita-o se este endereço não corresponde ao endereço IP usado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes Wi-Fi e 4G/5G, seu endereço IP será alterado. Neste caso, você deve passar 0 nesta opção para permitir que os clientes possam continuar usando suas sessões da Web, mesmo quando o endereço IP mudar. Observe que essa configuração reduz o nível de segurança de seu aplicativo. Quando é modificado, essa configuração é eficaz imediatamente (não é necessário reiniciar o servidor HTTP).
 
@@ -618,7 +615,7 @@ Quando essa opção está marcada, o servidor da Web envia caracteres estendidos
 
 O servidor web 4D pode usar conexões persistentes. A opção keep-alive permite que você mantenha uma única conexão TCP aberta para o conjunto de trocas entre o navegador da Web e o servidor para economizar recursos do sistema e otimizar as transferências.
 
-The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
+La opción **Utilizar las conexiones persistentes** activa o desactiva las conexiones TCP persistentes para el servidor web. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
 
 A função keep-alive do 4D Web Server diz respeito a todas as conexões TCP/IP (HTTP, HTTPS). Observe, entretanto, que as conexões keep-alive nem sempre são usadas para todos os processos da Web 4D.
 
@@ -626,8 +623,8 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
-- **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
+- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
   If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.</p>
