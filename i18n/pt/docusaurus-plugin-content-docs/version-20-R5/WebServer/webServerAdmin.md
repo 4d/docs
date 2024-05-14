@@ -7,7 +7,7 @@ title: Administração
 
 ## Iniciando o servidor Web 4D
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
+> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. Para más información, consulte el [sitio web de 4D](https://www.4d.com).
 
 A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
 
@@ -29,15 +29,15 @@ The web server of any component can be launched by calling the [`webServer.start
 
 O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
-- Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
+- Utilizando el menú 4D **Ejecución\>Detener el servidor Web**, o vía el botón **Detener el servidor HTTP** de la página Servidor HTTP de 4D Server (ambos elementos muestran **Iniciar...** cuando el servidor no está ya iniciado).
 
 - Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
 
-The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
+El servidor web de cualquier componente puede detenerse llamando a la función `webServer.stop()` en el objeto servidor web del componente.
 
 ## Teste do Servidor Web 4D
 
-The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
+El comando **Test Web Server** puede utilizarse para asegurarse de que el servidor web integrado funciona correctamente (sólo en 4D). Este comando es accesible en el menú **Ejecutar** cuando se lanza el servidor web:
 
 ![](../assets/en/WebServer/test1.png)
 
@@ -45,7 +45,7 @@ When you select this command, the home page of the website published by the 4D a
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the _localhost_ URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+This command lets you verify that the web server, home page display, etc. work correctly. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
 
 ## Limpar a cache
 
@@ -53,32 +53,32 @@ At any moment, you can clear the cache of the pages and images that it contains 
 
 Para o fazer, pode:
 
-- 4D: click on the **Clear Cache** button in the [Web/Options (I) page](../settings/web.md) of the Settings dialog box.
-- 4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
+- 4D: haga clic en el botón **Borrar la caché** de la página [Web/Opciones (I)](../settings/web.md) de la caja de diálogo Parámetros.
+- 4D Server: haga clic en el botón **Borrar la caché** de la página HTTP de la ventana Administración de 4D Server.
 
 A cache é então imediatamente limpa.
 
-> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
+> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
 
 ## Explorador de execução
 
-The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
+La página **Watch** (sección **Web**) del Explorador de ejecución muestra la información del servidor web, en particular:
 
-- **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. This information is only available if the web server is active and if the cache size is greater than 0.
+- **Uso de la caché web**: indica el número de páginas presentes en la caché web así como su porcentaje de uso. This information is only available if the web server is active and if the cache size is greater than 0.
 
-- **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. Esta informação só está disponível se o servidor Web estiver ativo.
+- **Tiempo de actividad del servidor web**: indica la duración del uso (en formato horas:minutos:segundos) del servidor web. Esta informação só está disponível se o servidor Web estiver ativo.
 
-- **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). Esta informação só está disponível se o servidor Web estiver ativo.
+- **Conteo de visitas web**: indica el número total de peticiones HTTP recibidas desde el arranque del servidor web, así como un número instantáneo de peticiones por segundo (medida tomada entre dos actualizaciones del Explorador de ejecución). Esta informação só está disponível se o servidor Web estiver ativo.
 
 ## URLs de administração
 
-Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ and _/4DWEBTEST_.
+Website administration URLS allow you to control the website published on your server. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ and _/4DCACHECLEAR_ are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
+> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
 
 ### /4DSTATS
 
-The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
+La URL **/4DSTATS** devuelve varios elementos de información en una tabla HTML (visualizable en un navegador):
 
 | Elemento                | Descrição                                                            |
 | ----------------------- | -------------------------------------------------------------------- |
@@ -86,15 +86,15 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                |
 | Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes) |
 | Cache Use               | Porcentagem do cache usado                                           |
-| Cached Objects          | Number of objects found in the cache, **including pictures**         |
+| Cached Objects          | Número de objetos encontrados en la caché, **incluyendo imágenes**   |
 
 This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
 
-> The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
+> El comando `WEB GET STATISTICS` permite obtener también información sobre cómo se está utilizando la caché de las páginas estáticas.
 
 ### /4DHTMLSTATS
 
-The _/4DHTMLSTATS_ URL returns, also as an HTML table, the same information as the _/4DSTATS_ URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
+La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información que la URL _/4DSTATS_. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
 
 | Elemento                | Descrição                                                               |
 | ----------------------- | ----------------------------------------------------------------------- |
@@ -102,16 +102,16 @@ The _/4DHTMLSTATS_ URL returns, also as an HTML table, the same information as t
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                   |
 | Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)    |
 | Cache Use               | Porcentagem do cache usado                                              |
-| Cached Objects          | Number of objects found in the cache, **without pictures**              |
+| Cached Objects          | Número de objetos encontrados en la caché, **sin imágenes**             |
 | Objectos filtrados      | Número de objetos no cache não contados por URL, em particular, imagens |
 
 ### /4DCACHECLEAR
 
-The _/4DCACHECLEAR_ URL immediately clears the cache of the static pages and images. It allows you to therefore “force” the update of the pages that have been modified.
+La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. It allows you to therefore “force” the update of the pages that have been modified.
 
 ### /4DWEBTEST
 
-The _/4DWEBTEST_ URL is designed to check the web server status. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
+La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
 
 | Campo HTTP | Descrição                                           | Exemplo                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,10 +123,10 @@ The _/4DWEBTEST_ URL is designed to check the web server status. Quando esse URL
 
 4D permite gerar dois logs de pedidos web:
 
-- a debug log, useful in the web server development phase (_HTTPDebugLog.txt_),
-- a standardized web request log, rather used for statistic purposes (_logweb.txt_).
+- un historial de depuración, útil en la fase de desarrollo del servidor web (_HTTPDebugLog.txt_),
+- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (_logweb.txt_).
 
-Both log files are automatically created in the **Logs** folder of the application project.
+Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del proyecto de aplicación.
 
 ### HTTPDebugLog.txt
 
@@ -151,9 +151,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as:
-_host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_
-Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
@@ -211,29 +209,29 @@ The following table lists the fields available for each format (in alphabetical 
 
 #### Frequência do backup
 
-Since a _logweb.txt_ file can become considerably large, it is possible to set up an automatic archiving mechanism. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
+Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
 
-When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the _logweb.txt_ file.
+Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo _logweb.txt_.
 
 The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parâmetros de backup
 
-The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
+Los parámetros de copia de seguridad automáticadel logweb.txt se definen en la página **Web/Log (copia de seguridad)** de los parámetros:
 
 ![](../assets/en/WebServer/backup.png)
 
 First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
-- **No Backup**: The scheduled backup function is deactivated.
+- **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 
-- **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
-  - **starting at**: Used to set the time at which the first back up will begin.
+- **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
+  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 
-- **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
+- **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
 
-- **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
 
-- **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
+- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
 
-- **Every X MB**: This option is used to program backups based on the size of the current request log file. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
