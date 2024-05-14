@@ -22,8 +22,8 @@ La información histórica debe ser analizada para detectar y solucionar los pro
 
 Los archivos de historial comparten algunos campos para que pueda establecer una cronología y hacer conexiones entre las entradas mientras depura:
 
-- `sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
-- `connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. Permite identificar fácilmente el cliente remoto que lanzó cada proceso.
+- `sequence_number`: este número es único en todos los registros de depuración y se incrementa para cada nueva entrada cualquiera que sea el archivo de historial, para que pueda conocer la secuencia exacta de las operaciones.
+- `connection_uuid`: para cada proceso 4D creado en un cliente 4D que se conecte a un servidor, este UUID de conexión se registra tanto del lado del servidor como del cliente. Permite identificar fácilmente el cliente remoto que lanzó cada proceso.
 
 ## 4DRequestsLog.txt
 
@@ -45,7 +45,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 //del lado remoto
 ```
 
-> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
+> Esta instrucción también inicia el archivo de historial [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
 
 #### Encabezados
 
@@ -66,7 +66,7 @@ Para cada petición, se registran los siguientes campos:
 | systemid                                                                       | ID del sistema                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | component                                                                      | Firma del componente (por ejemplo, "4SQLS" o "dbmg")                                                                                                                                                                                                                                                                                                                                                                                                         |
 | process\_info\_index               | Corresponde al campo "index" en el archivo de historial 4DRequestsLog_ProcessInfo.txt, y permite vincular una petición a un proceso.                                                                                                                                                                                                                                                                                       |
-| request                                                                        | [C/S or ORDA request ID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) or message string for SQL requests or `LOG EVENT` messages                                                                                                                                                                                                                                                                                                                   |
+| request                                                                        | [ID de petición C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) o cadena de mensaje para peticiones SQL o mensajes `LOG EVENT`                                                                                                                                                                                                                                                                                                            |
 | bytes_in                                                  | Número de bytes recibidos                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | bytes_out                                                 | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | server\_duration \| exec\_duration | Depends on where the log is generated:<li>_server\_duration_ when generated on the client --Time taken in microseconds for the server to process the request and return a response. B to F in image below, OR</li><li>_exec\_duration_ when generated on the server --Time taken in microseconds for the server to process the request. B to E in image below.</li> |
@@ -97,7 +97,7 @@ SET DATABASE PARAMETER(4D Server log recording;1) //lado servidor
 SET DATABASE PARAMETER(Client Log Recording;1) //del lado remoto
 ```
 
-> This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
+> Esta instrucción también inicia el archivo de historial [4DRequestsLog.txt](#4drequestslogtxt).
 
 #### Encabezados
 
@@ -237,7 +237,7 @@ Los siguientes campos se registran para cada evento:
 
 ## 4DDiagnosticLog.txt
 
-Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. Puede incluir información personalizada en este archivo utilizando el comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html).
 
 Como iniciar este historial:
 
@@ -260,15 +260,15 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 ### Cómo activar el archivo
 
-The _4DDiagnosticLog.txt_ file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+El archivo _4DDiagnosticLog.txt_ puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
+Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
 | Constante   | Descripción                                                                                     | Cuando se selecciona, incluye                                 |
 | ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `Log error` | Una parte de la aplicación no funciona                                                          | `Log error`                                                   |
 | `Log warn`  | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | `Log error`, `Log warn`                                       |
-| `Log info`  | _Default level_ - Important application event                                                   | `Log error`, `Log warn`, `Log info`                           |
+| `Log info`  | _Nivel por defecto_ - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
 | `Log debug` | Detalle del flujo de aplicación (para los servicios técnicos 4D)             | `Log error`, `Log warn`, `Log info`, `Log debug`              |
 | `Log trace` | Otra información interna (para los servicios técnicos de 4D)                 | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
@@ -303,7 +303,7 @@ SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
 SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 ```
 
-> 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](ServerWindow/maintenance.md) of the 4D Server administration window.
+> 4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](ServerWindow/maintenance.md) ode la ventana de administración de 4D Server.
 
 Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
@@ -365,7 +365,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
+La activación del cliente [4DRequestsLog.txt](#4drequestslogtxt) utilianzdo `SET DATABASE PARAMETER` no es obligatoria. Sin embargo, es necesario si desea registrar el campo `sequenceNumber` único.
 
 :::
 
@@ -400,7 +400,7 @@ Este es un ejemplo de un registro de archivo de historial ORDA del lado del clie
 
 ### Del lado del servidor
 
-El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). Log information is saved in a .jsonl file on the server machine disk (by default, _ordaRequests.jsonl_).
+El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, _ordaRequests.jsonl_).
 
 Como iniciar este historial:
 
@@ -414,7 +414,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 :::note
 
-Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
+La activación del lado del servidor [4DRequestsLog.txt](#4drequestslogtxt) utilianzdo `SET DATABASE PARAMETER` no es obligatoria. Sin embargo, es necesario si desea registrar los campos exclusivos `sequenceNumber` y `duration`.
 
 :::
 
@@ -457,33 +457,33 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ## Utilización de un archivo de configuración de log
 
-You can use a **log configuration file** to easily manage log recording in a production environment. Este archivo está preconfigurado por el desarrollador. Normalmente, se puede enviar a los clientes para que sólo tengan que seleccionarlo o copiarlo en una carpeta local. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
+Puede utilizar un **archivo de configuración de log** para gestionar fácilmente el registro de los historiales en un entorno de producción. Este archivo está preconfigurado por el desarrollador. Normalmente, se puede enviar a los clientes para que sólo tengan que seleccionarlo o copiarlo en una carpeta local. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
 
 ### Cómo activar el archivo
 
 Hay varias maneras de activar el archivo de configuración de registro, dependiendo de su configuración:
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
+- **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+- **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
   - Windows: `Users\[userName]\AppData\Roaming\[application]`
   - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+- **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
   - Windows: `Users\[userName]\AppData\Roaming\4D`
   - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+- **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
   - Windows: `Users\[userName]\AppData\Roaming\4D Server`
   - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
-If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+Si se instala un archivo `logConfig.json` tanto en la carpeta Settings como en AppData/Library, el archivo de la carpeta Settings tendrá prioridad.
 
 :::
 
 ### Descripción del archivo JSON
 
-The log configuration file is a `.json` file that must comply with the following json schema:
+El archivo de configuración del registro es un archivo `.json` que debe cumplir con el siguiente esquema json:
 
 ```json
 {
