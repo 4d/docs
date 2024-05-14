@@ -3,11 +3,11 @@ id: orderby
 title: $orderby
 ---
 
-Sorts the data returned by the attribute and sorting order defined (_e.g._, `$orderby="lastName desc, salary asc"`)
+指定した属性と並べ替え順に基づいて、返されたデータを並べ替えます (_例_: `$orderby="lastName desc, salary asc"`)
 
 ## 説明
 
-`$orderby` orders the entities returned by the REST request. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. デフォルトでは、データは昇順に並べ替えられます。 If you want to specify multiple attributes, you can delimit them with a comma, _e.g._, `$orderby="lastName desc, firstName asc"`.
+`$orderby` は RESTリクエストによって返されるエンティティを並べ替えます。 並べ替えの基準とする各属性について、並べ替え順を指定します。`ASC` ( `asc`) が昇順、`DESC` (`desc`) が降順です。 デフォルトでは、データは昇順に並べ替えられます。 属性を複数指定するには、カンマ区切りにします。_例_: `$orderby="lastName desc, firstName asc"`。
 
 ## 例題
 
