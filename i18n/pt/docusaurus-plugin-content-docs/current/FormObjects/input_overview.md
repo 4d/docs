@@ -3,15 +3,15 @@ id: inputOverview
 title: Entrada
 ---
 
-Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+Las entradas le permiten añadir expresiones editables o no editables como [campos](Concepts/identifiers.md#fields) y [variables](Concepts/variables.md) de base de datos a sus formularios. Inputs can handle character-based data (text, dates, numbers...) or pictures:
 
 ![](../assets/en/FormObjects/input.png)
 
-Inputs can contain [assignable or non-assignable expressions](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+Las entradas pueden contener [expresiones asignables o no asignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
-In addition, inputs can be [enterable or non-enterable](properties_Entry.md#enterable). Uma entrada digitável aceita dados. Pode definir controles de entrada de dados para o objecto. Uma entrada não centralizável só pode exibir valores mas não pode ser editada pelo utilizador.
+Además, las entradas pueden ser [editables o no editables](properties_Entry.md#enterable). Uma entrada digitável aceita dados. Pode definir controles de entrada de dados para o objecto. Uma entrada não centralizável só pode exibir valores mas não pode ser editada pelo utilizador.
 
-You can manage the data with object or form [methods](Concepts/methods.md).
+Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
 
 ### JSON Exemplo
 
@@ -44,6 +44,6 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 Também pode representar expressões de campo e variáveis nos seus formulários utilizando objectos alternativos, mais particularmente:
 
-- You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-- You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](dropdownList_Overview.md) and [Combo Boxes](comboBox_overview.md) objects.
-- You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+- Puede mostrar e introducir datos de los campos de la base directamente en las columnas [de tipo List box](listbox_overview.md).
+- Puede representar un campo de lista o una variable directamente en un formulario utilizando los objetos [Menús desplegables/Listas desplegables](dropdownList_Overview.md) y [Combo Box](comboBox_overview.md).
+- Puede representar una expresión booleana como una [casilla de selección](checkbox_overview.md) o como un objeto [botón radio](radio_overview.md).
