@@ -7,7 +7,7 @@ Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.
 
 ## Funções booleanas
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Para obter mais informações, consulte as descrições desses comandos
+4D ofrece las funciones booleanas `True`, `False` y `Not` en el tema dedicado **Booleanos**. Para obter mais informações, consulte as descrições desses comandos
 
 ### Exemplo
 
@@ -31,14 +31,14 @@ myBoolean:=(myButton=1)
 
 4D suporta dois operadores lógicos que trabalham com expressões booleanas: conjunção (AND) e disjunção inclusiva (OR). Uma lógica E retorna VERDADEIRA se ambas as expressões forem VERDADEIRAS. Uma lógica OU retorna VERDADEIRA se pelo menos uma das expressões for VERDADEIRA. O quadro seguinte mostra os operadores lógicos:
 
-| Operação | Sintaxe                               | Retorna    | Expression                                                                       | Valor |
-| -------- | ------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ----- |
-| AND      | Boolean & Boolean | Parâmetros | ("A" = "A") & (15 # 3) | True  |
-|          |                                       |            | ("A" = "B") & (15 # 3) | False |
-|          |                                       |            | ("A" = "B") & (15 = 3) | False |
-| OU       | Boolean  \| Boolean                   | Parâmetros | ("A" = "A") \| (15 # 3)                    | True  |
-|          |                                       |            | ("A" = "B") \|  (15 # 3)                   | True  |
-|          |                                       |            | ("A" = "B") \|  (15 = 3)                   | False |
+| Operação | Sintaxe                                 | Retorna    | Expression                                                                       | Valor |
+| -------- | --------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ----- |
+| AND      | Booleano & Booleano | Parâmetros | ("A" = "A") & (15 # 3) | True  |
+|          |                                         |            | ("A" = "B") & (15 # 3) | False |
+|          |                                         |            | ("A" = "B") & (15 = 3) | False |
+| OU       | Boolean  \| Boolean                     | Parâmetros | ("A" = "A") \| (15 # 3)                    | True  |
+|          |                                         |            | ("A" = "B") \|  (15 # 3)                   | True  |
+|          |                                         |            | ("A" = "B") \|  (15 = 3)                   | False |
 
 A tabela seguinte é a tabela da verdade para o operador lógico AND:
 
@@ -58,10 +58,10 @@ A tabela seguinte é a tabela da verdade para o operador lógico OR:
 | False | True  | True           |
 | False | False | False          |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Consejo:** si necesita calcular la conjunción exclusiva entre Expr1 y Expr2, escriba:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept.
+> En contextos booleanos, el lenguaje 4D también soporta los operadores [cortocircuitos](operators.md#short-circuit-operators) (`&&` y `||`) y el concepto [truthy y falsy](operators.md#truthy-and-falsy).
