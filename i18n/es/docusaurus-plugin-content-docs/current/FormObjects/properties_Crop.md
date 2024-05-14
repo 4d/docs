@@ -15,7 +15,7 @@ Define el número de columnas de una tabla de miniaturas.
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
 
 ---
 
@@ -31,4 +31,4 @@ Define el número de líneas de una tabla de miniaturas.
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
