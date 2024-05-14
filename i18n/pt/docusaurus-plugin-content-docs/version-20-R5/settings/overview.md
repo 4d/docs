@@ -7,33 +7,33 @@ Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros po
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D ofrece otro conjunto de parámetros, llamados **Preferencias**, que se aplican a la aplicación 4D IDE. Para más información, consulte [Preferencias](../Preferences/general.md).
 
 ## Aceder os parâmetros
 
 Pode aceder à caixa de diálogo Parâmetros:
 
-- using the **Design > Settings...** menu option
-- by clicking **Settings** on the 4D toolbar
-- on 4D Server, using the **Edit > Settings...** menu option
+- utilizando la opción de menú **Diseño > Parámetros...**
+- haciendo clic en **Parámetros** en la barra de herramientas 4D
+- en 4D Server, utilizando la opción de menú **Edición > Parámetros...**
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
-- **User Settings...** gives you access to settings that can be stored externally in a user file. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
-- **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
+- **Parámetros usuario...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
+- **Parámetros usuario para el archivo de datos...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario adjunto al archivo de datos actual. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
 
 ### Informações de bloqueio
 
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
-- The _settings.4DSettings_ file is 'Read-only' (Projects only). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
+- El archivo _settings.4DSettings_ es de "sólo lectura" (sólo Proyectos). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
 - Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
 
 ## Personalização de parâmetros
 
-In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
+En las cajas de diálogo de las Propiedades, los parámetros cuyos valores se han modificado aparecen **en negrita**:
 
 ![](../assets/en/settings/customize-settings.png)
 
@@ -45,6 +45,6 @@ A maioria dos parâmetros é aplicada imediatamente. However, a few of them (suc
 
 ## Repor os parâmetros
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
+Para reiniciar los parámetros a sus valores por defecto y eliminar el estilo negrita que indica que han sido personalizados, haga clic en **Restablecer los valores de fábrica**.
 
 Este botão repõe todos os parâmetros da página atual. Fica ativo quando pelo menos um parâmetro tiver sido modificado na página atual.
