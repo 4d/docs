@@ -9,6 +9,6 @@ title: On Menu Selected
 
 ## Descripción
 
-The `On Menu Selected` event is sent to the form method when a command of a menu bar associated to the form is selected. You can then call the `Menu selected` language command to test the selected menu.
+El evento `On Menu Selected` se envía al método del formulario cuando se selecciona un comando de una barra de menú asociada al formulario. A continuación, puede llamar al comando `Menú seleccionado` para probar el menú seleccionado.
 
 > Puede asociar una barra de menú a un formulario en las propiedades del mismo. Los menús de una barra de menús de un formulario se añaden a la barra de menús actual cuando el formulario se muestra como un formulario de salida en el entorno Aplicación.
