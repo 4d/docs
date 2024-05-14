@@ -11,9 +11,9 @@ Abre una sesión REST en su aplicación 4D y conecta al usuario.
 
 ### Descripción
 
-Use `$directory/login` to open a session in your 4D application through REST and login a user. También puede modificar el tiempo de espera por defecto de la sesión 4D.
+Utilice `$directory/login` para abrir una sesión en su aplicación 4D a través de REST y conecte un usuario. También puede modificar el tiempo de espera por defecto de la sesión 4D.
 
-All parameters must be passed in **headers** of a POST method:
+Todos los parámetros deben pasarse en **encabezados**de un método POST:
 
 | Llave de encabezado | Valor del encabezado                                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
