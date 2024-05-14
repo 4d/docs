@@ -2740,8 +2740,8 @@ $c3:=$c1 //same collection and reference
 $col:=[{c: $c1}; {c: $c2}; {c: $c3}]
 $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 	//$col2.length=2
-	//$col2[0].o=$c1 is true
-	//$col2[1].o=$c1 is true
+	//$col2[0].c=$c1 is true
+	//$col2[1].c=$c1 is true
 
 ```
 
