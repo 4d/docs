@@ -145,7 +145,38 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 すべてのラジオボタンは次の基本プロパティを共有します:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[式の型](properties_Object.md#式の型) -
+[タイトル](properties_Object.md#タイトル) -
+[ラジオグループ](properties_Object.md#ラジオグループ) -
+[値を記憶](properties_Object.md#値を記憶) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) -
+[ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(2) -
+[状態の数](properties_TextAndPicture.md#状態の数)(2) -
+[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(2) -
+[表示状態](properties_Display.md#表示状態) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[フォーカス可](properties_Entry.md#フォーカス可) -
+[ショートカット](properties_Entry.md#ショートカット) -
+[表示状態](properties_Display.md#表示状態) -
+[フォント](properties_Text.md#フォント) -
+[太字](properties_Text.md#太字) -
+[イタリック](properties_Text.md#イタリック) -
+[下線](properties_Text.md#下線) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[横揃え](properties_Text.md#横揃え)(1) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[メソッド](properties_Action.md#メソッド)
 
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
