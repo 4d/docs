@@ -114,7 +114,7 @@ En *connectionHandler*, puede pasar un objeto que contenga funciones de retrolla
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Función de retrollamada para datos WebSocket. Llamada cada vez que el WebSocket ha recibido datos. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): siempre "message"</li><li>`$2.data` (texto, blob u objeto, ver `dataType`): Datos recibidos</li></ul> |
 | onError     | [Function](FunctionClass.md) | Función de retrollamada para errores de ejecución. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): siempre "error"</li><li>`$2.errors`: colección de la pila de errores 4D en caso de error de ejecución.<ul><li>`[].errCode` (number): Código de error 4D</li><li>`[].message` (text): descripción del error 4D</li><li>`[].componentSignature` (text): firma del componente interno que ha devuelto el error</li></ul></li></ul>                                                 |
-| onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li><li>`$2.wasClean` (boolean, sólo lectura): indica si la conexión se cerró limpiamente o no.</li></ul>                                           |
+| onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Función de retrollamada cuando el webSocket está abierto. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                       |
 | dataType    | Text                         | Tipo de datos recibidos o enviados. Valores disponibles: "text" (por defecto), "blob", "object". "text" = utf-8                                                                                                                 |
 | headers     | Object                       | Encabezados del WebSocket.<li>Sintaxis para la asignación estándar de las llaves: `headers.*key*:=*value*` (*value* puede ser una colección si la misma llave aparece varias veces)</li><li>Sintaxis para asignación de cookies (caso particular): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                  |
@@ -254,7 +254,7 @@ En *code*, puede pasar un código de estado que explique por qué se está cerra
 - Si no se especifica, el código de cierre de la conexión se establece automáticamente en 1000 para un cierre normal o, en caso contrario, en otro valor estándar del rango 1001-1015 que indique la razón real por la que se cerró la conexión.
 - Si se especifica, el valor de este parámetro de código anula el ajuste automático. El valor debe ser un número entero. O 1000, o un código personalizado en el rango 3000-4999. Si especifica un valor de *code*, también debe especificar un valor de *reason*.
 
-En *reason*, puede pasar una cadena que describa por qué se está cerrando la conexión. 
+En *reason*, puede pasar una cadena que describa por qué se está cerrando la conexión.
 
 
 <!-- END REF -->
@@ -272,9 +272,3 @@ La propiedad `.url` contiene <!-- REF #WebSocketClass.url.Summary -->la URL a la
 Esta propiedad es de sólo lectura.
 
 <!-- END REF -->
-
-
-
-
-
-
