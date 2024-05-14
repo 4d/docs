@@ -7,21 +7,21 @@ title: DataClass
 
 ### 概要
 
-|                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary -->                                  |
-| [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->                                                          |
-| [<!-- INCLUDE #DataClassClass.clearRemoteCache().Syntax -->](#clearremotecache)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.clearRemoteCache().Summary -->                   |
-| [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary -->                         |
-| [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.get().Summary -->                                                          |
-| [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.getCount().Summary -->                                           |
-| [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary -->                               |
-| [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.getInfo().Summary -->                                              |
-| [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.getRemoteCache().Summary -->                         |
-| [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.new().Summary -->                                                          |
-| [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.newSelection().Summary -->                               |
-| [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.query().Summary -->                                                    |
-| [<!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Syntax -->](#setremotecachesettings)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Summary --> |
+|                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<br/><!-- INCLUDE DataClassClass.attributeName.Summary -->                                  |
+| [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<br/><!-- INCLUDE #DataClassClass.all().Summary -->                                                          |
+| [<!-- INCLUDE #DataClassClass.clearRemoteCache().Syntax -->](#clearremotecache)<br/><!-- INCLUDE #DataClassClass.clearRemoteCache().Summary -->                   |
+| [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<br/><!-- INCLUDE #DataClassClass.fromCollection().Summary -->                         |
+| [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<br/><!-- INCLUDE #DataClassClass.get().Summary -->                                                          |
+| [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<br/><!-- INCLUDE #DataClassClass.getCount().Summary -->                                           |
+| [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<br/><!-- INCLUDE #DataClassClass.getDataStore().Summary -->                               |
+| [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataClassClass.getInfo().Summary -->                                              |
+| [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<br/><!-- INCLUDE #DataClassClass.getRemoteCache().Summary -->                         |
+| [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #DataClassClass.new().Summary -->                                                          |
+| [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)<br/><!-- INCLUDE #DataClassClass.newSelection().Summary -->                               |
+| [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)<br/><!-- INCLUDE #DataClassClass.query().Summary -->                                                    |
+| [<!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Syntax -->](#setremotecachesettings)<br/><!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Summary --> |
 
 <!-- REF DataClassClass.attributeName.Desc -->
 
@@ -582,6 +582,7 @@ _**SearchDuplicate**_ プロジェクトメソッドは、任意のデータク�
 
 ```4d
  var $pet : cs.CatsEntity
+
  $pet:=ds.Cats.all().first() // エンティティを取得します
  SearchDuplicate($pet;"Dogs")
 ```
@@ -905,7 +906,7 @@ attributePath|formula 比較演算子 値
 
 - **formula**: テキストまたはオブジェクト形式で渡された有効なフォーミュラ。 フォーミュラは処理されるエンティティごとに評価され、ブール値を返さなくてはなりません。 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 
-  - **テキスト**: フォーミュラ文字列の前に `eval( )` ステートメントが必要です。これにより、クエリが式を正しく解釈します。 例: _"eval(length(This.lastname) >=30)"_
+  - **テキスト**: フォーミュラ文字列の前に `eval()` ステートメントが必要です。これにより、クエリが式を正しく解釈します。 例: _"eval(length(This.lastname) >=30)"_
   - **オブジェクト**: [フォーミュラオブジェクト](FunctionClass.md) は **プレースホルダー** (後述参照) を使って受け渡します。 このフォーミュラは、[`Formula`](FunctionClass.md#formula) または [`Formula from string`](FunctionClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。
 
 > * 4Dフォーミュラは、`&` および `|` 記号のみを論理演算子としてサポートすることに留意が必要です。
@@ -932,7 +933,7 @@ attributePath|formula 比較演算子 値
 | 含まれる          | IN          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                              |
 | キーワードを含む      | %           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                     |
 
-- **値**: コレクションの各要素、あるいはエンティティセレクションの各エンティティのプロパティのカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。
+- **値** (value): エンティティコレクションの各エンティティの属性のカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。
   定数値を使用する場合、以下の原則に従う必要があります:
   - **テキスト** テキスト型の定数値の場合は単一引用符つき、あるいはなしでも渡すことができます(後述の **引用符を使用する** 参照)。 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
   - **ブール** 型の定数値: **true** または **false** (文字の大小を区別します)
@@ -1083,12 +1084,6 @@ ds.Class.query("info.coll[a].val != :1";0)
 
 #### コレクション要素とクエリ条件をリンクする
 
-:::info
-
-この機能は、データクラスおよび [エンティティセレクション](EntitySelectionClass.md#query) をクエリする場合にのみ利用可能です。 [コレクション](CollectionClass.md#query) をクエリする場合には利用できません。
-
-:::
-
 コレクションを含むデータクラス属性を対象に、AND 演算子で結合された複数のクエリ条件を使用して検索するにあたって、検索条件に合致するプロパティが複数のコレクション要素にバラけているのではなく、一つのコレクション要素がすべてまとまっているエンティティを探したいとします。 これには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
 
 たとえば、以下のような 2件のエンティティがあるとき:
@@ -1208,8 +1203,8 @@ _querySettings_ 引数は、追加のオプションを格納したオブジェ�
 | args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は _$1.property_ という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](../ORDA/client-server-optimization.md#最適化コンテキスト) の章を参照ください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 #### queryPlan と queryPath について
 
