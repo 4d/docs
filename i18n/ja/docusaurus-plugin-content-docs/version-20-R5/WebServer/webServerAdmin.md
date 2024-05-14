@@ -7,21 +7,21 @@ title: 管理
 
 ## 4D Webサーバーの開始
 
-> 4D や 4D Server の Webサーバーを起動するには、"4D Web Application" ライセンスが必要です。 For more information, please refer to the [4D Web site](https://www.4d.com).
+> 4D や 4D Server の Webサーバーを起動するには、"4D Web Application" ライセンスが必要です。 詳細については [4D Webサイト](https://www.4d.com) を参照ください。
 
 4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
 4D Webサーバーは複数の方法で起動できます:
 
 - ボタン/メニューコマンドの使用。
-  - 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
-  - 4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
+  - 4D: **実行 ＞ Webサーバー開始** メニュー<br/>![](../assets/en/WebServer/start1.png)
+  - 4D Server: HTTPサーバーページの **HTTPサーバー開始** ボタン<br/>![](../assets/en/WebServer/start2.png)
 
-- 4Dアプリケーション開始時に Webサーバーを自動起動。 To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+- 4Dアプリケーション開始時に Webサーバーを自動起動。 これには、ストラクチャー設定の **Web/設定**ページを表示し、**開始時にWebサーバーを起動** オプションを有効にします:<br/>![](../assets/en/WebServer/config.png)
 
-- Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
+- [`webServer.start()`](API/WebServerClass.md#start) 関数または `WEB START SERVER` コマンドを呼び出してプログラムで開始。
 
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して [`webServer.start()`](API/WebServerClass.md#start) 関数を呼び出すことで開始できます。
 
 > Webサーバーを開始したり停止したりするために、4Dアプリケーションを再起動する必要はありません。
 
@@ -29,15 +29,15 @@ The web server of any component can be launched by calling the [`webServer.start
 
 4D Webサーバーは複数の方法で停止できます:
 
-- Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
+- 4D の **実行 ＞ Webサーバー停止** メニューを使用するか、 4D Server にて HTTPサーバーページの **HTTPサーバー停止** ボタンを使用する (いずれも、サーバー開始前は **…開始** と表示されています)。
 
-- Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
+- [`webServer.stop()`](API/WebServerClass.md#stop) 関数または `WEB STOP SERVER` コマンドを呼び出してプログラムで停止。
 
-The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して `webServer.stop()` 関数を呼び出すことで停止できます。
 
 ## 4D Webサーバーのテスト
 
-The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
+**Webサーバーテスト** メニューコマンドを使用してビルトインの Webサーバーが正しく実行されているか確認できます (4Dのみ)。 このメニューは Webサーバーが実行されているときに **実行** メニューからアクセスできます:
 
 ![](../assets/en/WebServer/test1.png)
 
@@ -45,7 +45,7 @@ The **Test Web Server** command can be used to make sure the built-in web server
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 The page is called using the _localhost_ URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 ページは、Webブラウザーが実行されているマシンの IPアドレスを指定する標準のショートカットである、_ローカルホスト_ の URL を使用して呼び出されます。 コマンドはストラクチャー設定で指定された [TCP 公開ポート](webServerConfig.md#http-ポート) 番号を考慮に入れます。
 
 ## キャッシュクリア
 
@@ -53,48 +53,48 @@ The **Test Web Server** command can be used to make sure the built-in web server
 
 これをおこなうには:
 
-- 4D: click on the **Clear Cache** button in the [Web/Options (I) page](../settings/web.md) of the Settings dialog box.
-- 4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
+- 4D: ストラクチャー設定の [Web / オプション (I) ページ](../settings/web.md) の **キャッシュクリア** ボタンをクリックします。
+- 4D Server: 4D Server 管理ウィンドウ の HTTPサーバーページにて、**キャッシュクリア** ボタンをクリックします。
 
 キャッシュは即座にクリアされます。
 
-> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
+> 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
 
 ## ランタイムエクスプローラー
 
-The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
+Webサーバーに関連する情報は、ランタイムエクスプローラーにある **ウォッチ** ページ (**Web** 項目内) に表示されます。
 
-- **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. Webサーバーがアクティブでキャッシュサイズが 0 より大きい場合のみ、この情報が利用できます。
+- **Webキャッシュ使用**: Webキャッシュに存在するページ数とその使用率を示します。 Webサーバーがアクティブでキャッシュサイズが 0 より大きい場合のみ、この情報が利用できます。
 
-- **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. Webサーバーがアクティブである場合のみ、この情報が利用できます。
+- **Webサーバー経過時間**: Webサーバーの使用時間を (時間 : 分: 秒 フォーマットで) 示します。 Webサーバーがアクティブである場合のみ、この情報が利用できます。
 
-- **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). Webサーバーがアクティブである場合のみ、この情報が利用できます。
+- **Webヒット数**: Webサーバーが起動してから受け取った HTTPリクエストの総数と、毎秒のリクエスト数を示します (ランタイムエクスプローラーの更新の間で測定) 。 Webサーバーがアクティブである場合のみ、この情報が利用できます。
 
 ## 管理用 URL
 
-Webサイト管理用の URL を使用して、サーバー上に公開している Webサイトをコントロールできます。 4D Web Server accepts four particular URLs: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ and _/4DWEBTEST_.
+Webサイト管理用の URL を使用して、サーバー上に公開している Webサイトをコントロールできます。 4D Webサーバーは、_/4DSTATS_、_/4DHTMLSTATS_、_/4DCACHECLEAR_ と _/4DWEBTEST_ の 4つの URL を受け入れます。
 
-> _/4DSTATS_, _/4DHTMLSTATS_ and _/4DCACHECLEAR_ are only available to the Designer and Administrator of the database. 4D のパスワードシステムが起動されていないと、これらの URL はすべてのユーザーに対して利用可能となります。 <em x-id="3">/4DWEBTEST</em> は、常に利用可能です。
+> _/4DSTATS_、_/4DHTMLSTATS_ と _/4DCACHECLEAR_ はデータベースの設計者と管理者のみが利用可能です。 4D のパスワードシステムが起動されていないと、これらの URL はすべてのユーザーに対して利用可能となります。 <em x-id="3">/4DWEBTEST</em> は、常に利用可能です。
 
 ### /4DSTATS
 
-The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
+**/4DSTATS** URL は以下の情報を (ブラウザーで表示可能な) HTML の表形式で返します:
 
-| 項目                   | 説明                                                           |
-| -------------------- | ------------------------------------------------------------ |
-| 現在のキャッシュサイズ          | Webサーバーの現在のキャッシュサイズ (バイト単位)               |
-| 最大キャッシュサイズ           | キャッシュの最大サイズ (バイト単位)                       |
-| キャッシュされたオブジェクトの最大サイズ | キャッシュされたオブジェクト中で最も大きなもの (バイト単位)           |
-| 使用キャッシュ              | キャッシュ使用率                                                     |
-| キャッシュされているオブジェクト     | Number of objects found in the cache, **including pictures** |
+| 項目                   | 説明                                                   |
+| -------------------- | ---------------------------------------------------- |
+| 現在のキャッシュサイズ          | Webサーバーの現在のキャッシュサイズ (バイト単位)       |
+| 最大キャッシュサイズ           | キャッシュの最大サイズ (バイト単位)               |
+| キャッシュされたオブジェクトの最大サイズ | キャッシュされたオブジェクト中で最も大きなもの (バイト単位)   |
+| 使用キャッシュ              | キャッシュ使用率                                             |
+| キャッシュされているオブジェクト     | キャッシュされているオブジェクトの数 (**ピクチャー含む**)。 |
 
 この情報を用いて、サーバーの機能を確認することができ、最終的には対応するパラメーターを適合させます。
 
-> The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
+> `WEB GET STATISTICS` コマンドを使用して、スタティックページに対してキャッシュがどのように使用されているかに関する情報を入手することが可能です。
 
 ### /4DHTMLSTATS
 
-The _/4DHTMLSTATS_ URL returns, also as an HTML table, the same information as the _/4DSTATS_ URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
+_/4DHTMLSTATS_ URL は、_/4DSTATS_ URLと同じ情報を HTML表形式で返します。 その違いは **キャッシュされているオブジェクト** に HTMLページの情報のみが返され、ピクチャーファイルをカウントしないことです。 さらにこの URL は **フィルターされたオブジェクト** の情報を返します。
 
 | 項目                   | 説明                                                         |
 | -------------------- | ---------------------------------------------------------- |
@@ -102,35 +102,35 @@ The _/4DHTMLSTATS_ URL returns, also as an HTML table, the same information as t
 | 最大キャッシュサイズ           | キャッシュの最大サイズ (バイト単位)                     |
 | キャッシュされたオブジェクトの最大サイズ | キャッシュされたオブジェクト中で最も大きなもの (バイト単位)         |
 | 使用キャッシュ              | キャッシュ使用率                                                   |
-| キャッシュされているオブジェクト     | Number of objects found in the cache, **without pictures** |
+| キャッシュされているオブジェクト     | キャッシュされているオブジェクトの数 (**ピクチャーを除く**)。      |
 | フィルターされたオブジェクト       | URL でカウントされないキャッシュ中のオブジェクトの数 (特にピクチャー)。 |
 
 ### /4DCACHECLEAR
 
-The _/4DCACHECLEAR_ URL immediately clears the cache of the static pages and images. そのため、修正されたページを "強制的に" 更新することができます。
+_/4DCACHECLEAR_ URLは、スタティックページとイメージのキャッシュを即座に消去します。 そのため、修正されたページを "強制的に" 更新することができます。
 
 ### /4DWEBTEST
 
-The _/4DWEBTEST_ URL is designed to check the web server status. このURLが呼び出されると、4D は以下の HTTPフィールドを記したテキストファイルを返します。
+_/4DWEBTEST_ URLは、Webサーバーの状態を確認するために設計されています。 このURLが呼び出されると、4D は以下の HTTPフィールドを記したテキストファイルを返します。
 
 | HTTPフィールド  | 説明                                   | 例題                                                                                                                                                                                                                                                                                                                                                 |
 | ---------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 日付         | RFC 822 フォーマットでの現在の日付                | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                                                                                                                                                                                                       |
+| Date       | RFC 822 フォーマットでの現在の日付                | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                                                                                                                                                                                                       |
 | Server     | 4D/バージョン番号                           | 4D/18.5.0 (Build 18R5.257368)                                                                                                                                                                                                                                                   |
 | User-Agent | 名前とバージョン @ IPクライアントアドレス | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
-## Logs
+## ログ
 
 4Dでは、Webリクエストのログを2種類作成することができます:
 
-- a debug log, useful in the web server development phase (_HTTPDebugLog.txt_),
-- a standardized web request log, rather used for statistic purposes (_logweb.txt_).
+- Webサーバーの開発段階で有用なデバッグログ (_HTTPDebugLog.txt_)。
+- おもに統計目的で使用される、標準化された Webリクエストログ (_logweb.txt_)。
 
-Both log files are automatically created in the **Logs** folder of the application project.
+両方のログファイルは、アプリケーションプロジェクトの **Logs** フォルダーに自動的に作成されます。
 
 ### HTTPDebugLog.txt
 
-The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
+[`WebServer` オブジェクト](webServerObject.md) または `WEB SET OPTION` コマンドを使って、[http デバッグファイル](webServerConfig.md#デバッグログ) を有効化することができます。
 
 このログファイルは、各 HTTPリクエストとそれぞれのレスポンスを rawモードで記録します。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
@@ -147,13 +147,11 @@ The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`w
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. ログのフォーマットを選択する必要があります。
+[`WebServer` オブジェクト](webServerObject.md)、`WEB SET OPTION` コマンド、またはストラクチャー設定の **Web/ログ (タイプ)** ページを使って、[Webログファイル](webServerConfig.md#ログの記録) を有効化することができます。 ログのフォーマットを選択する必要があります。
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as:
-_host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_
-Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+それぞれのリクエストが行単位でファイル内に表示されます: _host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length_。各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終わります。
 
 DLF (Combined Log Format) フォーマットは CLF (Common Log Format) フォーマットと類似していて、まったく同じ構造を使用します。 さらに、各リクエストの最後に2つのHTTPフィールド、Referer と User-agent を追加します。 CLF/DLF フォーマット (カスタマイズ不可) についての説明です:
 
@@ -185,55 +183,55 @@ ELF または WLF を選択すると、選択されたフォーマットに対�
 
 | フィールド                                                  | ELF | WLF | 値                                                                                                                           |
 | ------------------------------------------------------ | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED                    |     | X   | サーバーが受け取ったバイト数                                                                                                              |
-| BYTES_SENT                        | X   | X   | サーバーがクライアントに送ったバイト数                                                                                                         |
-| C_DNS                             | X   | X   | DNS の IPアドレス (ELF: C_IP フィールドと同一のフィールド)                             |
-| C_IP                              | X   | X   | クライアントの IPアドレス (例: 192.100.100.10)       |
-| CONNECTION_ID                     |     | X   | 接続ID番号                                                                                                                      |
-| CS(COOKIE)                          | X   | X   | HTTPリクエストに格納されている cookie に関する情報                                                                                             |
-| CS(HOST)                            | X   | X   | HTTPリクエストの Hostフィールド                                                                                                        |
-| CS(REFERER)                         | X   | X   | リクエストされたドキュメントを指すページの URL                                                                                                   |
-| CS(USER_AGENT) | X   | X   | クライアントのソフトウェアとオペレーティングシステムに関する情報                                                                                            |
-| CS_SIP                            | X   | X   | サーバーの IPアドレス                                                                                                                |
-| CS_URI                            | X   | X   | リクエストが作成された URI                                                                                                             |
-| CS_URI_QUERY | X   | X   | リクエストのクエリ引数                                                                                                                 |
-| CS_URI_STEM  | X   | X   | クエリ引数のないリクエストのパート                                                                                                           |
-| DATE                                                   | X   | X   | DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年                |
-| METHOD                                                 | X   | X   | サーバーへ送られたリクエスト用の HTTPメソッド                                                                                                   |
-| PATH_ARGS                         |     | X   | CGI引数: "$" の後に続く文字列                                                                                         |
-| STATUS                                                 | X   | X   | サーバーの返答                                                                                                                     |
-| TIME                                                   | X   | X   | HH: 時間、MM: 分、SS: 秒                                                          |
-| TRANSFER_TIME                     | X   | X   | 返答を作成するためにサーバーが要求した時間                                                                                                       |
-| USER                                                   | X   | X   | 認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。 |
-| URL                                                    |     | X   | クライアントがリクエストした URL                                                                                                          |
+| BYTES_RECEIVED                    |     | ○   | サーバーが受け取ったバイト数                                                                                                              |
+| BYTES_SENT                        | ○   | ○   | サーバーがクライアントに送ったバイト数                                                                                                         |
+| C_DNS                             | ○   | ○   | DNS の IPアドレス (ELF: C_IP フィールドと同一のフィールド)                             |
+| C_IP                              | ○   | ○   | クライアントの IPアドレス (例: 192.100.100.10)       |
+| CONNECTION_ID                     |     | ○   | 接続ID番号                                                                                                                      |
+| CS(COOKIE)                          | ○   | ○   | HTTPリクエストに格納されている cookie に関する情報                                                                                             |
+| CS(HOST)                            | ○   | ○   | HTTPリクエストの Hostフィールド                                                                                                        |
+| CS(REFERER)                         | ○   | ○   | リクエストされたドキュメントを指すページの URL                                                                                                   |
+| CS(USER_AGENT) | ○   | ○   | クライアントのソフトウェアとオペレーティングシステムに関する情報                                                                                            |
+| CS_SIP                            | ○   | ○   | サーバーの IPアドレス                                                                                                                |
+| CS_URI                            | ○   | ○   | リクエストが作成された URI                                                                                                             |
+| CS_URI_QUERY | ○   | ○   | リクエストのクエリ引数                                                                                                                 |
+| CS_URI_STEM  | ○   | ○   | クエリ引数のないリクエストのパート                                                                                                           |
+| DATE                                                   | ○   | ○   | DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年                |
+| METHOD                                                 | ○   | ○   | サーバーへ送られたリクエスト用の HTTPメソッド                                                                                                   |
+| PATH_ARGS                         |     | ○   | CGI引数: "$" の後に続く文字列                                                                                         |
+| STATUS                                                 | ○   | ○   | サーバーの返答                                                                                                                     |
+| TIME                                                   | ○   | ○   | HH: 時間、MM: 分、SS: 秒                                                          |
+| TRANSFER_TIME                     | ○   | ○   | 返答を作成するためにサーバーが要求した時間                                                                                                       |
+| USER                                                   | ○   | ○   | 認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。 |
+| URL                                                    |     | ○   | クライアントがリクエストした URL                                                                                                          |
 
 > 日付と時間は GMTで表されます。
 
 #### 周期的なバックアップ
 
-Since a _logweb.txt_ file can become considerably large, it is possible to set up an automatic archiving mechanism. バックアップはある周期 (時間、日、週、月単位) または、ファイルのサイズに基づいて起動します。設定の期限 (またはファイルサイズ) に近づくと、4D は自動的にカレントのログファイルを閉じてアーカイブします。そして新たにファイルを作成します。
+_logweb.txt_ ファイルはかなり膨大になることがあるため、自動のアーカイブメカニズムを構築することが可能です。 バックアップはある周期 (時間、日、週、月単位) または、ファイルのサイズに基づいて起動します。設定の期限 (またはファイルサイズ) に近づくと、4D は自動的にカレントのログファイルを閉じてアーカイブします。そして新たにファイルを作成します。
 
-When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the _logweb.txt_ file.
+Web のログファイル用のバックアップが起動すると、ログファイルは "Logweb Archives" という名前のフォルダーにアーカイブされます。このフォルダーは、_logweb.txt_ ファイルと同じ階層に作成されます。
 
 アーカイブされたファイルは、以下の例に基づいて名称変更されます: "DYYYY_MM_DD_Thh_mm_ss.txt"。 たとえば、ファイルがアーカイブされた時間が September 4, 2020 at 3:50 p.m. and 7 seconds である場合、"D2020_09_04_T15_50_07.txt" になります。
 
 #### バックアップパラメーター
 
-The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
+logweb.txt の自動バックアップパラメーターは、ストラクチャー設定の **Web/ログ (バックアップ)** ページで設定します:
 
 ![](../assets/en/WebServer/backup.png)
 
-First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. 必要に応じて、バックアップする正確な時間を指定します。
+最初に、頻度 (日、週などの単位)  またはファイルサイズの上限に対応するラジオボタンをクリックして選択します。 必要に応じて、バックアップする正確な時間を指定します。
 
-- **No Backup**: The scheduled backup function is deactivated.
+- **バックアップしない**: 周期的なバックアップ機能が無効になっています。
 
-- **Every X hour(s)**: This option is used to program backups on an hourly basis. 1 から 24 の値を入力します。
-  - **starting at**: Used to set the time at which the first back up will begin.
+- **X 時間ごと**: 1時間単位でバックアップをプログラムする際、このオプションを使用します。 1 から 24 の値を入力します。
+  - **開始時刻**: 最初のバックアップ開始時間の設定に使用します。
 
-- **Every X day(s) at X**: This option is used to program backups on a daily basis. バックアップを毎日実行するには、1を入力します。 このオプションをチェックすると、バックアップの開始時間を指定しなければなりません。
+- **X 日ごと**: 1日単位でバックアップをプログラムする際、このオプションを使用します。 バックアップを毎日実行するには、1を入力します。 このオプションをチェックすると、バックアップの開始時間を指定しなければなりません。
 
-- **Every X week(s), day at X**: This option is used to program backups on a weekly basis. たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップを開始する曜日と時間を指定しなければなりません。 複数の曜日を選択することもできます。 たとえば、毎週水曜日と金曜日にバックアップをするようプログラムできます。
+- **X 週ごと**: 1週間単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップを開始する曜日と時間を指定しなければなりません。 複数の曜日を選択することもできます。 たとえば、毎週水曜日と金曜日にバックアップをするようプログラムできます。
 
-- **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップ開始月の日時を設定しなければなりません。
+- **X 月ごと**: 1ヶ月単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップ開始月の日時を設定しなければなりません。
 
-- **Every X MB**: This option is used to program backups based on the size of the current request log file. ファイルが指定サイズに達すると、バックアップが自動的に起動します。 サイズ制限は 1、10、100 または 1000MB ごとに設定可能です。
+- **X MB** (サイズ指定): カレントのリクエストログのファイルサイズに基づいてバックアップをプログラムする際、このオプションを使用します。 ファイルが指定サイズに達すると、バックアップが自動的に起動します。 サイズ制限は 1、10、100 または 1000MB ごとに設定可能です。
