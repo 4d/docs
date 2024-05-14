@@ -2736,14 +2736,14 @@ $colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
 ```4d
 
 $c1:=[1; 2; 3]
-$c2:=[1; 2; 3] // 同じコレクション、ただし別の参照
-$c3:=$c1 // 同じコレクション、かつ同じ参照
+$c2:=[1; 2; 3] //same collection but another reference
+$c3:=$c1 //same collection and reference
 
 $col:=[{c: $c1}; {c: $c2}; {c: $c3}]
 $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
-	// $col2.length=2
-	// $col2[0].o=$c1 は true
-	// $col2[1].o=$c1 は true
+	//$col2.length=2
+	//$col2[0].c=$c1 is true
+	//$col2[1].c=$c1 is true
 
 ```
 
