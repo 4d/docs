@@ -1,6 +1,7 @@
-- - -
-id: string title: Cadena
-- - -
+---
+id: string
+title: String
+---
 
 Cadena es un término genérico utilizado para:
 
