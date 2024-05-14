@@ -218,7 +218,7 @@ Por ejemplo:
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-## Force login
+## Forzar inicio de sesión
 
 With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
 
@@ -271,13 +271,13 @@ Else
 End if 
 ```
 
-This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.
+This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
 ### Logout
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly form. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde el formulario Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
