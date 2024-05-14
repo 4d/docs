@@ -40,9 +40,9 @@ A linguagem lhe dá controle total sobre o design e operação de seus banco de 
 
 A linguagem 4D lhe permite tomar o controle total de seus dados de uma maneira poderosa e elegante. A linguagem é fácil o suficiente para os iniciantes e sofisticada o bastante para os desenvolvedores com experiência. Fornece transições suavez desde as funções do banco de dados integradas até ter um banco de dados completamente personalizado.
 
-Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. For example, when you use the `QUERY` command, you are presented with the Query Editor (which can be accessed in the Design mode using the Query command in the Records menu. Pode dizer ao comando para pesquisar por dados descritos explicitamente. For example, `QUERY([People];[People]Last Name="Smith")` will find all the people named Smith in your database.
+Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. Puede indicar al comando que busque los datos descritos explícitamente. Pode dizer ao comando para pesquisar por dados descritos explicitamente. Por ejemplo, `QUERY([People];[People]Last Name="Smith")` encontrará todas las personas de apellido Smith en su base.
 
-A linguagem 4D é bem poderosa - um comando pode substituir centenas ou até milhares de linhas de códigos escritas nas linguagens tradicionais. Surpreendentemente, esse poder vem com bastante simplicidade - comandos com nomes em inglês comum. For example, to perform a query, you use the `QUERY` command; to add a new record, you use the `ADD RECORD` command.
+A linguagem 4D é bem poderosa - um comando pode substituir centenas ou até milhares de linhas de códigos escritas nas linguagens tradicionais. Surpreendentemente, esse poder vem com bastante simplicidade - comandos com nomes em inglês comum. Por ejemplo, para realizar una búsqueda, se utiliza el comando `QUERY`; para añadir un nuevo registro, se utiliza el comando `ADD RECORD`.
 
 A linguagem foi criada para você realizar facilmente qualquer tarefa. Adicionar um registro, ordenar registros, pequisar por dados e operações similares são especificadas com comandos simples e diretos. Mas a linguagem também pode controlar as portas seriais, ler documentos no disco, controlar o processamento de transações complexas e muito mais.
 
