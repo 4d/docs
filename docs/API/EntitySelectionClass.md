@@ -302,6 +302,7 @@ The resulting object is an entity selection of Employee with duplications remove
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
 |Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
+
 <!-- END REF -->
 
 
@@ -582,6 +583,11 @@ $sel2:=$sel.clean()
 ```
 
 ![](../assets/en/API/clean.png)
+
+
+#### See also
+
+[`.refresh()`](#refresh)
 
 <!-- END REF -->
 
@@ -2003,7 +2009,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 >This function only works with a remote datastore (client / server or `Open datastore` connection).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
@@ -2056,6 +2062,9 @@ A list box displays the Form.students entity selection and several clients work 
   // The list box content is refreshed from the database with update made by client #2
 ```
 
+#### See also
+
+[`.clean()`](#clean)
 
 <!-- END REF -->
 
