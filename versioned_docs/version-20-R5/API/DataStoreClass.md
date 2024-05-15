@@ -109,6 +109,7 @@ Using the main datastore on the 4D database:
 
 |Release|Changes|
 |---|---|
+|20 R4|New *passwordAlgorithm* property|
 |18|Added|
 
 </details>
@@ -159,9 +160,10 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 |---|---|---|
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|
 |user|Text|User name
-|password|Text|User password
+|password|Text|User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.|
 |idleTimeout|Longint|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|
 |tls|Boolean|Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.|
+|passwordAlgorithm |Text |Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.|
 |type |Text |Must be "4D Server"|
 
 (*) If tls is true, the HTTPS protocol is used if:
