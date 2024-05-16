@@ -96,9 +96,9 @@ _(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標�
 
 #### JSON 文法
 
-| 名称         | データタイプ | とりうる値                                                                                                                                                                                                                                                                               |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a [supported pattern](../Project/date-time-formats.md) + " blankIfNull"</li> |
+| 名称         | データタイプ | とりうる値                                                                                                                                                                                                                                                      |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | string | <li>既定のフォーマット: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + "blankIfNull"</li><li>カスタムフォーマット: [サポートされているパターン](../Project/date-time-formats.md) + "blankIfNull" を使用して作成されたフォーマット</li> |
 
 :::note blankIfNull
 
@@ -150,7 +150,7 @@ _(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標�
 > Windows 環境下で、テンキーの小数点キーを使用した際、4D はカーソルが位置しているフィールドの型に応じて挙動が変化します:
 >
 > - 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。
-> - in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> - それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.)  またはカンマ (,) です。
 
 ### 小数点とその他の表示文字
 
@@ -269,7 +269,12 @@ _(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標�
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[入力](input_overview.md) -
+[リストボックス列](listbox_overview.md#リストボックス列) -
+[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
+[進捗インジケーター](progressIndicator.md)
 
 ---
 
@@ -371,9 +376,9 @@ Customized time formats can be built using several patterns described in the [**
 
 #### JSON 文法
 
-| 名称         | データタイプ | とりうる値                                                                                                                                                                                                                                                                                            |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| timeFormat | string | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + " blankIfNull"</li><li>Custom formats: any format built using [a supported pattern](../Project/date-time-formats.md) + "blankIfNull"</li> |
+| 名称         | データタイプ | とりうる値                                                                                                                                                                                                                                                                    |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| timeFormat | string | <li>既定のフォーマット: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + "blankIfNull"</li><li>カスタムフォーマット: [サポートされているパターン](../Project/date-time-formats.md) + "blankIfNull" を使用して作成されたフォーマット</li> |
 
 :::note blankIfNull
 
@@ -399,9 +404,9 @@ Customized time formats can be built using several patterns described in the [**
 
 #### JSON 文法
 
-| 名称            | データタイプ | とりうる値                                                                                                            |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| booleanFormat | string | "\<_テキスト (true時)_\>;\<_テキスト (false時)_\>", 例: "済み;未処理"/ |
+| 名称            | データタイプ | とりうる値                                                                                                           |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| booleanFormat | string | "\<_テキスト (true時)_\>;\<_テキスト (false時)_\>", 例: "済み;未処理" |
 
 #### 対象オブジェクト
 
@@ -419,13 +424,13 @@ Customized time formats can be built using several patterns described in the [**
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                                                                                                         |
-| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| 名称          | データタイプ | とりうる値                                                                                                 |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| controlType | string | <li>**数値列**: "automatic" (デフォルト) または "checkbox"</li><li>**ブール列**: "checkbox" (デフォルト) または "popup"</li> |
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
@@ -494,7 +499,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
@@ -552,7 +557,7 @@ Customized time formats can be built using several patterns described in the [**
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
 
 #### JSON 文法
 
@@ -562,7 +567,32 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox_overview.md#リストボックス列) -
+[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
+[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ラジオボタン](radio_overview.md) -
+[スピナー](spinner.md) -
+[スプリッター](splitters.md) -
+[スタティックピクチャー](staticPicture.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[タブコントロール](tabControl.md) -
+[テキストエリア](text.md) -
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -574,7 +604,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### リストボックスにてチェック / 入力オブジェクトで "はい" に設定
 
-`JSON grammar: "normal"`
+`JSON 文法では: "normal"`
 
 このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
 
@@ -586,7 +616,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### リストボックスにてチェックなし / 入力オブジェクトで "いいえ" に設定
 
-`JSON grammar: "none"`
+`JSON 文法では: "none"`
 
 このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
 
@@ -602,7 +632,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 入力オブジェクトで "自動" に設定 (デフォルト)
 
-`JSON grammar: "automatic"`
+`JSON 文法では: "automatic"`
 
 - 一行のエリアの場合、行の最後に表示される単語は切り落とされ、改行はされません。
 - 複数行のエリアの場合、4Dは自動改行を実行します。

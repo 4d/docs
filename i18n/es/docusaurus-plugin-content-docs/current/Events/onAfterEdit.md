@@ -13,18 +13,18 @@ title: On After Edit
 
 Este evento se puede utilizar para filtrar la entrada de datos en los objetos editables por teclado en el nivel más bajo.
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, _i.e._:
+Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, _es decir_:
 
 - Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
 - Soltar un valor (acción similar a pegar);
 - Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
 
 Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.
 
 ### 4D View Pro
 
-The object returned by the `FORM Event` command contains:
+El objeto devuelto por el comando `FORM Event` contiene:
 
 | Propiedad   | Tipo         | Descripción                                                                                         |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ The object returned by the `FORM Event` command contains:
 | sheetName   | text         | Nombre de la hoja del evento                                                                        |
 | action      | text         | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
+En función del valor de la propiedad `action`, el [objeto evento](overview.md#event-object) contendrá propiedades adicionales.
 
 #### action = editChange
 
@@ -85,7 +85,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### Ejemplo
 
-Here is an example handling an `On After Edit` event:
+Aquí hay un ejemplo de manejo de un evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)

@@ -105,13 +105,13 @@ Una forma cómoda, rápida y precisa de especificar una referencia absoluta es n
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
-| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                                     |
-| ------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5                 | Relativo           | La referencia es a la ubicación relativa de la celda C5, dependiendo de la ubicación de la celda en la que se utiliza la referencia por primera vez                             |
-| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                     |
-| $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez. |
-| C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez                 |
-| Nombre de la celda | Absoluto           | La referencia es absoluta. Will always refer to the [named cell or range](commands/vp-add-range-name.md) no matter where the reference is used. |
+| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                                          |
+| ------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| C5                 | Relativo           | La referencia es a la ubicación relativa de la celda C5, dependiendo de la ubicación de la celda en la que se utiliza la referencia por primera vez                                  |
+| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                          |
+| $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez.      |
+| C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez                      |
+| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](commands/vp-add-range-name.md) sin importar donde se use la referencia. |
 
 ## Funciones integradas
 
@@ -232,7 +232,7 @@ Los parámetros Fecha y Objeto se tratan de la siguiente manera:
 
 | Propiedad | Tipo   | Descripción      |
 | --------- | ------ | ---------------- |
-| value     | Object | Object parameter |
+| value     | Object | Parámetro Objeto |
 
 ### Valores devueltos
 
@@ -357,7 +357,7 @@ Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D 
 
 Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 
-- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+- **Permitido**: se declaró explícitamente mediante el comando [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 - **Ejecutable**: pertenece al proyecto local o a un componente cargado con la opción "Compartido por los componentes y el proyecto local" activada (ver [Compartir los métodos proyecto](../Concepts/components.md#sharing-of-project-methods)).
 - **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
 

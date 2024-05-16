@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Allows to query the data in a dataclass or method _(e.g._, `$filter="firstName!='' AND salary>30000"`)
+Permite consultar los datos de una clase de datos o de un método _(p. ej._, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descrição
 
@@ -15,7 +15,7 @@ Um filtro é composto pelos seguintes elementos:
 
 **{attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=` es el **comparador** y `john` es el **valor**.
 
 ### Utilizar um filtro complexo
 
@@ -23,7 +23,7 @@ A more complex filter is composed of the following elements, which joins two que
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `salary` son atributos de la clase de datos Employee.
 
 ### Utilizar a propriedade params
 
@@ -31,9 +31,9 @@ Também pode usar a propriedade params de 4D.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+Para más información sobre cómo consultar datos en 4D, consulte la documentación de [dataClass.query()](../API/DataClassClass.md#query).
 
 > Ao inserir aspas (') ou aspas duplas ("), deve escapar-lhes utilizando o seu código de caracteres:
 >
@@ -48,7 +48,7 @@ For more information regarding how to query data in 4D, refer to the [dataClass.
 
 ## Atributo
 
-If the attribute is in the same dataclass, you can just pass it directly (_e.g._, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (_e.g._, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
+Si el atributo está en la misma clase de datos, puede pasarlo directamente (_p. ej._, `firstName`). Sin embargo, si quiere consultar otra clase de datos, debe incluir el nombre del atributo relacional y el nombre del atributo, es decir, la ruta de acceso (_por ejemplo_, nombre.empleador). El nombre del atributo distingue entre mayúsculas y minúsculas (`firstName` no es igual a `FirstName`).
 
 Também é possível consultar atributos do tipo Object utilizando a notação de ponto. Por exemplo, se tiver um atributo cujo nome é "objAttribute" com a seguinte estrutura:
 

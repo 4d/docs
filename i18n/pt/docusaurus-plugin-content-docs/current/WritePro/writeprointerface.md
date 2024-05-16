@@ -7,7 +7,7 @@ title: Interface 4D Write Pro
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the _4D Design Reference manual_.
+La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual _Diseño 4D_.
 
 Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 
@@ -47,7 +47,7 @@ In the Table Wizard, the user can also define the number of header rows and extr
 
 The user adjusts the zoom level according to their preference by selecting the desired option from a drop-down list, uses radio buttons to display formulas or data for clear presentation, and chooses to display a horizontal ruler using a checkbox.
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+Tras finalizar la creación y personalización de la tabla, el usuario puede hacer clic en el botón **Insertar** para añadir la tabla a su documento WP.
 
 Once the table has been integrated into the document, the user can customize its style. As ferramentas de formatação da barra de ferramentas e da barra lateral ainda estão disponíveis.
 
@@ -55,9 +55,9 @@ Once the table has been integrated into the document, the user can customize its
 
 A configuração dos modelos inclui:
 
-- Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-- Translating table, field, and formula names from the [translation file](#translation-files).
-- Designing graphic styles and customized  themes from the [theme file](#theme-files).
+- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
@@ -180,7 +180,7 @@ Defining these attributes within the translation object ensures proper organizat
 
 If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
 
-The translation file serves an additional role when a user selects a table in the interface. Ele pode filtrar as tabelas e os campos propostos ao usuário. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+The translation file serves an additional role when a user selects a table in the interface. Ele pode filtrar as tabelas e os campos propostos ao usuário. Por ejemplo, para ocultar los ID de tabla, este comportamiento es similar a los comandos `SET TABLE TITLES` y `SET FIELD TITLES`.
 
 ##### Exemplo
 

@@ -23,7 +23,7 @@ A null date is specified by _!00-00-00!_.
 
 **Tip:** The Code Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
 
-**Notes:**
+**Notes :**
 
 - Pour des raisons de compatibilité, 4D accepte que l'année soit saisie sur deux chiffres. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
 - Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le format de date défini dans votre système. Généralement dans un environnement français, une date est saisie sous la forme jour/mois/année, une barre oblique "/" séparant les valeurs.

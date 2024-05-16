@@ -11,15 +11,15 @@ Para abrir uma janela de administração do servidor a partir de uma máquina cl
 
 Esta janela pode ser acedida de duas maneiras:
 
-- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
-- Execute the `OPEN ADMINISTRATION WINDOW` command.
+- Seleccione el comando **Ventana de administración** del menú **Ayuda** o haga clic en el botón correspondiente de la barra de herramientas de 4D.
+- Ejecute el comando `OPEN ADMINISTRATION WINDOW`.
 
-A [server administration window](monitor.md) then appears on the client machine.
+A continuación, aparecerá una [ventana de administración del servidor](monitor.md) en el equipo cliente.
 
 ## Especificidades da administração via uma máquina 4D remota
 
 A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
 
-- On the [Process page](processes.md), it is not possible to debug a user process (since the debug window appears on the server machine).
-- On the [Maintenance Page](maintenance.md), it is possible to execute actions that cause all the clients to be disconnected and the server to be restarted (compacting and restarting operations). In this case, the client machine requesting the operation is automatically reconnected on restarting.
-- On the [Maintenance Page](maintenance.md), the **View Report** buttons are renamed **Download Report** after the execution of a maintenance operation. These files are downloaded into the local database folder on the client machine before being displayed.
+- En la página [Proceso](processes.md), no es posible depurar un proceso de usuario (ya que la ventana de depuración aparece en la máquina del servidor).
+- En la página de mantenimiento , es posible ejecutar acciones que provocan la desconexión de todos los clientes y el reinicio del servidor (operaciones de compactación y reinicio). In this case, the client machine requesting the operation is automatically reconnected on restarting.
+- En la [página Mantenimiento](maintenance.md), los botones **Ver informe** pasan a llamarse **Descargar informe** tras la ejecución de una operación de mantenimiento. These files are downloaded into the local database folder on the client machine before being displayed.

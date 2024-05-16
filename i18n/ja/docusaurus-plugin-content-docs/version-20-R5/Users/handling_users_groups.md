@@ -7,7 +7,7 @@ title: 4Dユーザー＆グループの管理
 
 ## プロジェクトにおけるユーザー＆グループ
 
-プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびマルチユーザー環境の両方でユーザーとグループを設定することができます。 However, **access control** is only effective with 4D Server. 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
+プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびマルチユーザー環境の両方でユーザーとグループを設定することができます。 ただし、**アクセスシステム** は 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
 |                              | 4D (シングルユーザー)        | 4D Server |
 | ---------------------------- | --------------------------------------- | --------- |
@@ -16,11 +16,11 @@ title: 4Dユーザー＆グループの管理
 | ユーザー認証                       | × (すべてのユーザーがデザイナーです) | ◯         |
 | デザイナーへのパスワード設定によるアクセスシステムの起動 | × (すべてのアクセスがデザイナーです) | ◯         |
 
-> For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
+> シングルユーザー環境でのユーザー認証とアクセスコントロールについては、[シングルユーザーアプリケーションのアクセスコントロール](overview.md#シングルユーザーアプリケーションのアクセスコントロール) を参照ください。
 
 ## デザイナーと管理者
 
-The most powerful user is named **Designer**. デザイナーは、アプリケーションに関するあらゆる操作をおこなうことができます。
+最も強力なユーザーは **デザイナー (Designer)** です。 デザイナーは、アプリケーションに関するあらゆる操作をおこなうことができます。
 デザイナーは次のことができます:
 
 - 制限なく、すべてのアプリケーションサーバーにアクセスする。
@@ -30,7 +30,7 @@ The most powerful user is named **Designer**. デザイナーは、アプリケ�
   シングルユーザー環境では、常にデザイナーアクセス権が使用されます。
   クライアント/サーバー環境においては、デザイナーにパスワードを割り当てることで、4Dユーザーログインダイアログが表示されるようになります。  この環境では、デザインモードは読み取り専用です。
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+デザイナーの次に強力なユーザーは \*\*管理者 (Administrator)\*\*であり、通常はパスワードアクセスシステムや管理機能を扱う役割を与えられています。
 
 管理者は次のことができます:
 
@@ -43,10 +43,10 @@ After the Designer, the next most powerful user is the **Administrator**, who is
 - デザイナーユーザーを編集する。
 - アプリケーションの保護された領域にアクセスする。 とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 管理者がアプリケーション内でアクセス権を得るには、1つ以上のグループに属さなければなりません。 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
 
-デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
-- Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- デザイナーアイコン: ![](../assets/en/Users/iconDesigner.png)
+- 管理者アイコン: ![](../assets/en/Users/iconAdmin.png)
 
 デザイナーと管理者の名前は変更することができます。 ランゲージにおいて、デザイナーと管理者の ID値は、常に 1 と 2 に設定されます。
 
@@ -58,8 +58,8 @@ After the Designer, the next most powerful user is the **Administrator**, who is
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command.
-> The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
+> ランタイムにおいてユーザーとグループのエディターを表示させるには [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/ja/page281.html) コマンドを使用します。
+> ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
 ### ユーザーの追加と変更
 
@@ -67,44 +67,44 @@ After the Designer, the next most powerful user is the **Administrator**, who is
 
 ユーザーを追加するには:
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar.
+1. **デザイン** メニューから **ツールボックス＞ユーザー** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックします。
    4Dはユーザーエディターを表示します。
 
-The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
+ユーザーリストには、[デザイナーと管理者](#デザイナーと管理者) を含むすべてのユーザーが表示されます:
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users.
-   OR
-   Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. ユーザーリストの下にある追加ボタン ![](../assets/en/Users/PlussNew.png) をクリックします。
+   または <br />
+   ユーザーリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択する。
 
-> The **Duplicate** command can be used to create several users having the same characteristics quickly.
+> **複製** コマンドを使用すると、同じ特性を持つ複数のユーザーを素早く作成することができます。
 
 4D は新規ユーザーをリストに追加し、デフォルトとして "新規ユーザーX" という名前を設定します。
 
 3. 新しいユーザー名を入力します。
-   この名前は、ユーザーがアプリケーションを開く際に使用されます。 You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+   この名前は、ユーザーがアプリケーションを開く際に使用されます。 ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box.
+4. ユーザーのパスワードを設定するには、プロパティエリアで **編集...** ボタンをクリックして、ダイアログボックスの 2つのパスワード欄に同じパスワードをそれぞれ入力します。
    パスワードには 15桁までの英数字を使用することができます。 パスワードでは文字の大小が区別されます。
 
-> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
+> ストラクチャー設定の "セキュリティ" ページで許可されていれば、ユーザーは自分のパスワードを変更できます。また、パスワードは `CHANGE PASSWORD` コマンドを使って変更することもできます。
 
 5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。
    メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+[グループページ](#グループの設定) を使用して、各グループの所属ユーザーを設定することもできます。
 
 ### ユーザーの削除
 
-To delete a user, select it then click the deletion button or use the **Delete** command of the context menu.
+ユーザーを削除するには、そのユーザーを選択してから削除ボタンをクリックするか、またはコンテキストメニューの **削除** コマンドを使用します。
 ![](../assets/en/Users/MinussNew.png)
 
 削除されたユーザー名は、その後ユーザーエディターには表示されません。 削除されたユーザーの ID番号は、新規アカウント作成の際に再度割り当てられるという点に注意してください。
 
 ### ユーザープロパティ
 
-- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
+- **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合にあ) "ユーザー"
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). このメソッドを使って、たとえばユーザー設定をロードできます。
+- **開始メソッド**: ユーザーがアプリケーションを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。
 
 ## グループエディター
 
@@ -118,12 +118,12 @@ To delete a user, select it then click the deletion button or use the **Delete**
 
 グループを作成するには:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button.
+1. **デザイン** メニューから **ツールボックス＞ユーザーグループ** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックし、**グループ** ページを開きます。
    4D はグループエディターウインドウを表示します: グループリストには、アプリケーションプロジェクトのすべてのグループが表示されます。
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.\
-   OR\
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+2. グループリストの下にある追加ボタン ![](../assets/en/Users/PlussNew.png) をクリックします。\
+   または\
+   グループリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択します。
 
 > 複製コマンドを使用すると、同じ特性を持つ複数のグループを素早く作成することができます。
 
@@ -131,7 +131,7 @@ To delete a user, select it then click the deletion button or use the **Delete**
 
 3. 新しいグループの名前を入力します。
    グループ名には 15桁までの文字を使用できます。
-   You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+   グループ名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
 ### ユーザーやグループをグループに入れる
 
@@ -144,7 +144,7 @@ To delete a user, select it then click the deletion button or use the **Delete**
 ユーザー名をチェックすると、そのユーザーがグループに追加されます。 グループ名をチェックした場合は、そのグループの全ユーザーがグループへ追加されます。
 メンバーの一員となったユーザーやグループには、そのグループに割り当てられたものと同じアクセス権が与えられます。
 
-グループを別のグループ内に入れることにより、ユーザーの階層構造が作成されます。 別のグループの配下に入れられたグループのユーザーは、両グループのアクセス権を保持します。 See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
+グループを別のグループ内に入れることにより、ユーザーの階層構造が作成されます。 別のグループの配下に入れられたグループのユーザーは、両グループのアクセス権を保持します。 後述の [アクセス権の階層構造](#アクセス権の階層構造) を参照してください。
 
 ユーザーやグループをグループから取り除くには、ユーザー/グループ一覧でチェックを解除します。
 
@@ -160,7 +160,7 @@ To delete a user, select it then click the deletion button or use the **Delete**
 
 ![](../assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
+**4D Client Web Server** や **4D Client SOAP Server** 項目を使用し、リモートモードの 4D がそれぞれ Web および SOAP (Webサービス) 公開をおこなえるかどうかを管理することができます。 これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 ### アクセス権の階層構造
 
@@ -196,15 +196,15 @@ The **4D Client Web Server** and **4D Client SOAP Server** items lets you contro
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). この割り当ては、グループエディターで定義します。
+また、グループを使って [利用可能なライセンスを割り当てる](#プラグインやサーバーにグループを割り当てる) こともできます。 この割り当ては、グループエディターで定義します。
 
 ## Directory.json ファイル
 
-Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+ユーザー、グループ、およびそれらのアクセス権は、**directory.json** という名称の専用のプロジェクトファイルに保存されます。
 
 必要に応じて、このフォルダーは次の場所に保存することができます:
 
-- If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
+- すべてのデータファイルについて同じディレクトリを使用する場合 (または 1つのデータファイルだけを使用する場合)、ユーザー設定フォルダー (["Project" フォルダーと同じ階層](Project/architecture.md#project-フォルダー) の "Settings" フォルダー) に **directory.json** ファイルをに保存します (デフォルトの場所)。
+- データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](Project/architecture.md#settings) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。

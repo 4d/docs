@@ -3,7 +3,7 @@ id: pictureButtonOverview
 title: Botón Imagen
 ---
 
-A picture button is similar to a [standard button](button_overview.md). Sin embargo, a diferencia de un botón estándar (que acepta tres estados: activado, desactivado y pulsado), un botón imagen tiene una imagen diferente para representar cada estado.
+Un botón imagen es similar a un [botón estándar](button_overview.md). Sin embargo, a diferencia de un botón estándar (que acepta tres estados: activado, desactivado y pulsado), un botón imagen tiene una imagen diferente para representar cada estado.
 
 Los botones imagen pueden utilizarse de dos maneras:
 
@@ -35,11 +35,11 @@ Puede implementar un botón imagen de la siguiente manera:
 
 Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. A continuación, asegúrese de que la imagen está en los recursos de su proyecto e introduzca la ruta en la propiedad [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname).
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Defina las propiedades de [líneas y columnas](properties_Crop.md) del gráfico.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Especifique cuándo cambian las imágenes seleccionando las propiedades de [animación](properties_Animation.md) apropiadas.
 
 ## Animación
 
@@ -56,7 +56,7 @@ Hay otros modos disponibles:
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
 
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numeración de las imágenes en la tabla empieza por 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

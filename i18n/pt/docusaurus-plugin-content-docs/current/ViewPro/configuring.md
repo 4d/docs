@@ -13,7 +13,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 ### Selecção de uma interface utilizador
 
-You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
+Puede seleccionar la interfaz a utilizar con sus áreas de formulario 4D View Pro en la **Lista de propiedades**, en **Apariencia**:
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
@@ -86,8 +86,8 @@ The 4D View Pro sheet options object allows you to control various options of yo
 |                      | showHorizontalGridline | boolean       | Especifica se a linha de grelha horizontal deve ser mostrada.                                                                                                                                                                                                                                                                       |
 | rowHeaderVisible     |                        | boolean       | Especifica se o cabeçalho da linha é visível.                                                                                                                                                                                                                                                                                       |
 | colHeaderVisible     |                        | boolean       | Especifica se o cabeçalho da coluna é visível.                                                                                                                                                                                                                                                                                      |
-| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                               |
-| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                            |
+| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Valores disponibles: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                            |
+| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Valores disponibles: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                         |
 | selectionBackColor   |                        | string        | A cor de fundo da seleção para a folha. (formato RGBA preferido)                                                                                                                                                                                                                                                 |
 | selectionBorderColor |                        | string        | A cor do contorno da seleção para a folha.                                                                                                                                                                                                                                                                                          |
 | sheetAreaOffset      |                        | object        | As opções de sheetAreaOffset.                                                                                                                                                                                                                                                                                                       |
@@ -98,7 +98,7 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 ### Protecção da folha
 
-To lock the whole sheet, you only need to set the _isProtected_ property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
+Para bloquear toda la hoja, basta con poner la propiedad _isProtected_ en **true**. A continuación, puede desbloquear las celdas individualmente colocando la propiedad de estilo de celda [bloqueada](#layout).
 
 | Propriedade       |                          | Tipo    | Descrição                                                                                                                                                           |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -288,17 +288,17 @@ The following special characters allow the automatic addition or formatting of i
 | Caracteres            | Descrição                                          | Exemplo                                                                                                                                               | Resultados                                                      |   |
 | --------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | - |
 | & | Carácter de escape                                 | (ver exemplos abaixo)                                                                                                              |                                                                 |   |
-| P                     | Página actual                                      | printInfo.headerLeft:="This is page &P."                                          | Esta é a página 5.                              |   |
-| N                     | Contagem de páginas                                | printInfo.headerLeft:="There are &N pages."                                       | Existem 10 páginas.                             |   |
-| D                     | Data atual (formato yyyy/mm/dd) | printInfo.headerLeft:="It is &D."                                                 | Estamos em 2015/6/19.                           |   |
-| T                     | Hora actual                                        | printInfo.headerLeft:="It is &T."                                                 | São 16:30:36.   |   |
+| P                     | Página actual                                      | printInfo.headerLeft:="Esta es la página &P."                                     | Esta é a página 5.                              |   |
+| N                     | Contagem de páginas                                | printInfo.headerLeft:="Hay &N páginas."                                           | Existem 10 páginas.                             |   |
+| D                     | Data atual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                                    | Estamos em 2015/6/19.                           |   |
+| T                     | Hora actual                                        | printInfo.headerLeft:="Es &T."                                                    | São 16:30:36.   |   |
 | G                     | Imagem                                             | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"  | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG)            |   |
-| S                     | Riscado                                            | printInfo.headerLeft:="&SThis is text."                                           | ~Isto é texto.~ |   |
-| U                     | Sublinhado                                         | printInfo.headerLeft:="&UThis is text."                                           | Isto é texto. (Sublinhado)   |   |
-| B                     | Negrito                                            | printInfo.headerLeft:="&BThis is text."                                           | **Isto é texto.**                               |   |
-| I                     | Itálico                                            | printInfo.headerLeft:="&IThis is text."                                           | _Isto é texto._                                 |   |
+| S                     | Riscado                                            | printInfo.headerLeft:="&SEsto es texto."                                          | ~Isto é texto.~ |   |
+| U                     | Sublinhado                                         | printInfo.headerLeft:="&UEsto es texto."                                          | Isto é texto. (Sublinhado)   |   |
+| B                     | Negrito                                            | printInfo.headerLeft:="&BEsto es texto."                                          | **Isto é texto.**                               |   |
+| I                     | Itálico                                            | printInfo.headerLeft:="&IEsto es texto."                                          | _Isto é texto._                                 |   |
 | "                     | Prefixo do tipo de letra                           | printInfo.headerLeft:="&\"Lucida Console\"&14This is text." | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG)            |   |
-| K                     | Prefixo da cor do texto                            | printInfo.headerLeft:="&KFF0000This is text."                                     | Este é o texto (a vermelho). |   |
+| K                     | Prefixo da cor do texto                            | printInfo.headerLeft:="&KFF0000Esto es texto."                                    | Este é o texto (a vermelho). |   |
 | F                     | Nome do Workbook                                   | printInfo.headerLeft:="&F"                                                                        | 2019 Monthly Revenue Forecasts                                  |   |
 | A                     | Nome da folha de cálculo                           | printInfo.headerLeft:="&A"                                                                        | June 2019 revenue forecast                                      |   |
 
@@ -322,24 +322,24 @@ Os atributos de orientação são utilizados para especificar a direcção da di
 
 > Este atributo define apenas as informações de renderização.
 
-| Propriedade | Tipo          | Descrição                                                                                                                                                                        |
-| ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| orientation | inteiro longo | Orientação da página. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
+| Propriedade | Tipo          | Descrição                                                                                                                                                                               |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| orientation | inteiro longo | Orientação da página. Valores disponibles: `vk print page orientation landscape`, `vk print page orientation portrait` (por defecto) |
 
 ### Página
 
 Os atributos de página são utilizados para especificar as definições gerais de impressão de documentos.
 
-| Propriedade     | Tipo          | Descrição                                                                                                                                                                                                                                                  |
-| --------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                           |
-| centering       | inteiro longo | A forma como o conteúdo é centrado na página impressa. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
-| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                                                              |
-| pageOrder       | inteiro longo | As páginas do pedido são impressas. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                 |
-| pageRange       | text          | O intervalo de páginas para impressão                                                                                                                                                                                                                      |
-| qualityFactor   | inteiro longo | O fator de qualidade para impressão (1 a 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                     |
-| useMax          | boolean       | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                                                                    |
-| zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                                                                  |
+| Propriedade     | Tipo          | Descrição                                                                                                                                                                                                                                                         |
+| --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                  |
+| centering       | inteiro longo | A forma como o conteúdo é centrado na página impressa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical` |
+| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                                                                     |
+| pageOrder       | inteiro longo | As páginas do pedido são impressas. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.                 |
+| pageRange       | text          | O intervalo de páginas para impressão                                                                                                                                                                                                                             |
+| qualityFactor   | inteiro longo | O fator de qualidade para impressão (1 a 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                            |
+| useMax          | boolean       | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                                                                           |
+| zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                                                                         |
 
 ### Tamanho de papel
 
@@ -357,8 +357,8 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 - If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
 
-- If you set the paper size using the `kind` property, you can use either:
-  - one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+- Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
+  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
   - one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
     In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
 
@@ -377,12 +377,12 @@ Os atributos de escala são usados para especificar a otimização e ajustes de 
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                                             |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                                                     |
-| showColumnHeader | inteiro longo | Parâmetros de impressão do cabeçalho da coluna. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean       | Imprime as linhas de grade. Valor padrão = "false"                                                                                                                                                                                    |
-| showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                                                    |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                                                            |
+| showColumnHeader | inteiro longo | Parâmetros de impressão do cabeçalho da coluna. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean       | Imprime as linhas de grade. Valor padrão = "false"                                                                                                                                                                                           |
+| showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
 
 ### Marca de água
 
@@ -404,11 +404,11 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.
 
-### Style objects & Style sheets
+### Objetos de estilo & Hojas de estilo
 
 Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](commands/vp-set-cell-style.md) and [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
 
-A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
+Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 
 Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) command.
 
@@ -427,7 +427,7 @@ Exemplo:
  VP SET DEFAULT STYLE("myDoc";$style)
 ```
 
-#### Background & Foreground
+#### Fondo & Primer plano
 
 | Propriedade           | Tipo          | Descrição                                                | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------------- | ------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -449,7 +449,7 @@ Exemplo:
 | Propriedade     |              | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Valores possíveis                                                                                                                                                                                                                                  |
 | --------------- | ------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | font            |              | text          | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Exemplo: "14pt Century Gothic". Os valores font-size e font-family são obrigatórios. Se um dos outros valores estiver faltando, seus valores padrão serão usados. Nota: se um nome de fonte conter um espaço, o nome deve estar entre aspas. | Uma abreviação de fonte CSS. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](commands/vp-font-to-object.md) and [`VP Object to font`](commands/vp-object-to-font.md) |
-| formatter       |              | text          | Padrão para propriedade valor/tempo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Formatos número/texto/data/hora, caracteres especiais. See [Cell Format](#cell-format).                                                                                                                            |
+| formatter       |              | text          | Padrão para propriedade valor/tempo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Formatos número/texto/data/hora, caracteres especiais. Ver [Formato de celda](#cell-format).                                                                                                                       |
 | isVerticalText  |              | boolean       | Especifica a direção do texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | True = texto vertical, False = texto horizontal.                                                                                                                                                                                   |
 | labelOptions    |              | object        | Define as opções de etiqueta de célula (opções de marca de água).                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                                    |
 |                 | alignment    | inteiro longo | Especifica a posição da etiqueta da célula. Propriedade opcional.                                                                                                                                                                                                                                                                                                                                                                                                                   | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`                                            |
@@ -464,14 +464,14 @@ Exemplo:
 
 #### Layout
 
-| Propriedade | Tipo          | Descrição                                                                                                                                                    | Valores possíveis                                                                                                    |
-| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| cellPadding | text          | Define o preenchimento da célula                                                                                                                             |                                                                                                                      |
-| hAlign      | inteiro longo | Define o alinhamento horizontal do conteúdo da célula.                                                                                       | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean       | Especifica o estado de proteção da célula. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = bloqueado, False = desbloqueado.                                                              |
-| shrinkToFit | boolean       | Especifica se o conteúdo da célula deve ser reduzido.                                                                                        | True = conteúdo reduzido, False = sem redução.                                                       |
-| tabStop     | boolean       | Especifica se o foco da célula pode ser definido utilizando a tecla Tab.                                                                     | True = a tecla Tab define o foco, False = a tecla Tab não define o foco.                             |
-| vAlign      | inteiro longo | Especifica o alinhamento vertical do conteúdo da célula.                                                                                     | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
+| Propriedade | Tipo          | Descrição                                                                                                                                                           | Valores possíveis                                                                                                    |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| cellPadding | text          | Define o preenchimento da célula                                                                                                                                    |                                                                                                                      |
+| hAlign      | inteiro longo | Define o alinhamento horizontal do conteúdo da célula.                                                                                              | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
+| locked      | boolean       | Especifica o estado de proteção da célula. Nota, sólo está disponible si está activada la [protección de hojas](#sheet-protection). | True = bloqueado, False = desbloqueado.                                                              |
+| shrinkToFit | boolean       | Especifica se o conteúdo da célula deve ser reduzido.                                                                                               | True = conteúdo reduzido, False = sem redução.                                                       |
+| tabStop     | boolean       | Especifica se o foco da célula pode ser definido utilizando a tecla Tab.                                                                            | True = a tecla Tab define o foco, False = a tecla Tab não define o foco.                             |
+| vAlign      | inteiro longo | Especifica o alinhamento vertical do conteúdo da célula.                                                                                            | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 #### Informações sobre o estilo
 
@@ -482,7 +482,7 @@ Exemplo:
 
 ## Objeto 4D View Pro
 
-The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. É tratado automaticamente pelo 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. É tratado automaticamente pelo 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
 
 Contém as seguintes propriedades:
 
@@ -496,7 +496,7 @@ Contém as seguintes propriedades:
 
 ## Variável de objeto do formulário 4D View Pro
 
-The 4D View Pro form object variable is the [object](Concepts/dt_object.md) variable associated to the 4D View Pro form area. Gere a informação utilizada pelo objeto 4D View Pro.
+La variable del objeto del formulario 4D View Pro es la variable del objeto  asociada al área del formulario 4D View Pro. Gere a informação utilizada pelo objeto 4D View Pro.
 
 > The 4D View Pro form object variable is for information purposes only (i.e., debugging). Não deve, em caso algum, ser modificado.
 
@@ -509,5 +509,5 @@ Contém as seguintes propriedades:
 | ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) when exiting the method, when a command returns a value, or when the [VP FLUSH COMMANDS](commands/vp-flush-commands.md) is called. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
 | ViewPro.events         | Object        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                                                      |
 | ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
-| ViewPro.inited         | Parâmetros    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                                            |
+| ViewPro.inited         | Parâmetros    | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                          |

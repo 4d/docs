@@ -5,7 +5,7 @@ title: はじめに
 
 4D は、4Dアプリケーションに格納されているデータへのダイレクトアクセスを可能にする強力な RESTサーバーを提供しています。
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+RESTサーバーは 4D および 4D Server に含まれており、[設定完了後は](configuration.md) 4Dアプリケーションにて自動的に利用可能となります。
 
 この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
 
@@ -31,9 +31,9 @@ The REST server is included in 4D and 4D Server, it is automatically available i
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. ストラクチャー設定の **Web** ＞ **Web機能** ページを開き、[RESTサーバーとして公開](configuration.md#restサーバーを開始する) オプションを選択します。
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. 上部の **実行** メニューから、必要に応じて **Webサーバー開始** を選択し、次に同メニューから **Webサーバーテスト** を選択します。
 
 規定のブラウザーが開かれ、4D Webサーバーのデフォルトホームページが表示されます。
 
@@ -41,7 +41,7 @@ The REST server is included in 4D and 4D Server, it is automatically available i
 
 これで、RESTリクエストを使った 4D のデータの読み込み・編集が可能になりました。
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. たとえば、4Dデータストアの内容を確認するには、次のように書けます:
+4D の REST URL リクエストは必ず、`address:port` エリアの後に入る `/rest` から始まります。 たとえば、4Dデータストアの内容を確認するには、次のように書けます:
 
 ```
 http://127.0.0.1/rest/$catalog
@@ -74,7 +74,7 @@ RESTサーバーの応答です:
 /rest/Employees
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -121,7 +121,7 @@ RESTサーバーの応答です:
 /rest/Employees(2)/Lastname
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -133,4 +133,4 @@ RESTサーバーの応答です:
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.
+4D の [REST API](REST_requests.md) は、4Dアプリケーションを操作するためのコマンドを多数提供しています。

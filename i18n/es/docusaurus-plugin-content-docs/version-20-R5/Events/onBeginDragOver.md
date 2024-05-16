@@ -9,17 +9,17 @@ title: On Begin Drag Over
 
 ## Descripción
 
-The `On Begin Drag Over` form event can be selected for any form objects that can be dragged. It is generated in every case where the object has the [Draggable](FormObjects/properties_Action.md#draggable) property. Se puede llamar desde el método del objeto fuente o desde el método formulario del objeto fuente.
+El evento de formulario `On Begin Drag Over` puede ser seleccionado para todos los objetos formulario que puedan ser arrastrados. Se genera en todos los casos en que el objeto tiene la propiedad [Draggable](FormObjects/properties_Action.md#draggable). Se puede llamar desde el método del objeto fuente o desde el método formulario del objeto fuente.
 
 > Unlike the [`On Drag Over`](onDragOver.md) form event, `On Begin Drag Over` is called within the context of the **source object** of the drag action.
 
-The `On Begin Drag Over` event is useful for preparing of the drag action. Puede utilizarse para:
+El evento `On Begin Drag Over` es útil para preparar la acción de arrastrar. Puede utilizarse para:
 
-- Add data and signatures to the pasteboard (via the `APPEND DATA TO PASTEBOARD` command).
-- Use a custom icon during the drag action (via the `SET DRAG ICON` command).
+- Añadir los datos y las firmas al portapapeles (vía el comando `APPEND DATA TO PASTEBOARD`).
+- Utilizar un icono personalizado durante la acción de arrastre (vía el comando `SET DRAG ICON`).
 - Aceptar o rechazar el arrastre vía $0 en el método del objeto arrastrado.
-  - To indicate that drag actions are accepted, the method of the source object must return 0 (zero); you must therefore execute `$0:=0`.
-  - To indicate that drag actions are refused, the method of the source object must return -1 (minus one); you must therefore execute `$0:=-1`.
+  - Para indicar que se aceptan las acciones de arrastre, el método del objeto fuente debe devolver 0 (cero); por tanto, debe ejecutar `$0:=0`.
+  - Para indicar que se rechazan las acciones de arrastre, el método del objeto fuente debe devolver -1 (menos uno); por tanto, debe ejecutar `$0:=-1`.
   - Si no se devuelve ningún resultado, 4D considera que las acciones de arrastre son aceptadas.
 
-Los datos 4D se colocan en el portapapeles antes de llamar al evento. For example, in the case of dragging without the **Automatic Drag** action, the dragged text is already in the pasteboard when the event is called.
+Los datos 4D se colocan en el portapapeles antes de llamar al evento. Por ejemplo, en el caso de arrastrar sin la acción **Arrastre automático**, el texto arrastrado ya está en portapapeles cuando se llama al evento.

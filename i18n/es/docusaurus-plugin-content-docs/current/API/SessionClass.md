@@ -24,18 +24,18 @@ The availability of properties and functions in the `Session` object depend on t
 
 ### Resumen
 
-|                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
-| [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
-| [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
-| [<!-- INCLUDE #SessionClass.id.Syntax -->](#id)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.id.Summary -->                                            |
-| [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
-| [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.info.Summary -->                                      |
-| [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
-| [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
-| [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->                             |
-| [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->                          |
+|                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
+| [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
+| [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
+| [<!-- INCLUDE #SessionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #SessionClass.id.Summary -->                                            |
+| [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
+| [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
+| [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
+| [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
+| [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
 
 ## Session
 
@@ -88,9 +88,9 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 
 The `Session` object of remote client sessions is available from:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
 For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
 
@@ -194,7 +194,7 @@ Esta propiedad sólo está disponible con sesiones de usuario web.
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Esta propiedad es de **solo lectura**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Ejemplo
 

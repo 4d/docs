@@ -13,13 +13,13 @@ Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede 
 
 Aparte de la memoria, no hay límite en el número de componentes y por lo tanto, de servidores web, que se pueden adjuntar a un solo proyecto de aplicación 4D.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> Los [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
 
 Cada servidor web (aplicación local o componente) puede ser utilizado en su propio contexto independiente, incluyendo:
 
-- `On Web Authentication` and `On Web Connection` database method calls
+- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
 - el procesamiento de las etiquetas 4D y las llamadas de métodos,
 - sesiones web y gestión del protocolo TLS.
 
@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funciones del servidor web
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
 
 | Funciones                                | Parámetros                          | Valor devuelto                     | Descripción             |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------- | ----------------------- |
@@ -86,12 +86,12 @@ $status:=webServer.stop()
 
 ## Propiedades del servidor web
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
 
 Estas propiedades son definidas:
 
 1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
+2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. si no se utiliza, en los parámetros de la aplicación local o del componente.
 
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
@@ -101,7 +101,7 @@ Estas propiedades son definidas:
 
 ## Alcance de los comandos 4D Web
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. Sin embargo, estos comandos están diseñados para trabajar con un único servidor web (por defecto). Cuando utilice estos comandos en el contexto de los objetos servidor web, asegúrese de que su alcance es el adecuado.
+El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. Sin embargo, estos comandos están diseñados para trabajar con un único servidor web (por defecto). Cuando utilice estos comandos en el contexto de los objetos servidor web, asegúrese de que su alcance es el adecuado.
 
 | Comando                         | Alcance                                  |
 | ------------------------------- | ---------------------------------------- |

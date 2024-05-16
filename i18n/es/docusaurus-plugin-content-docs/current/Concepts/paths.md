@@ -9,11 +9,11 @@ Las funciones, propiedades y comandos de las clases File y Folder le permiten ma
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
+Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen una ruta contextual a las carpetas principales de la aplicación.
 
 ## Rutas de los filesystem
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Las rutas de los filesystem son útiles por dos razones principales:
+4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Las rutas de los filesystem son útiles por dos razones principales:
 
 - Independencia: puede trasladar su solución de un lugar a otro independientemente del sistema operativo, sin tener que preocuparse por las rutas,
 - Seguridad: ningún código puede acceder a los elementos situados por encima de la raíz del sistema de los file system en el disco (sandboxing).
@@ -31,7 +31,7 @@ Se soportan los siguientes nombres de rutas de filesystem:
 
 ## Sintaxis POSIX
 
-La sintaxis POSIX es compatible con todas las plataformas. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+La sintaxis POSIX es compatible con todas las plataformas. **Se recomienda la sintaxis POSIX** ya que es la más flexible. Se utiliza por defecto (devuelto por las propiedades [file.path](../API/FileClass.md#path) y [folder.path](../API/FolderClass.md#path)).
 
 Con esta sintaxis:
 
@@ -48,7 +48,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 ## Sintaxis específica de la plataforma
 
-La sintaxis específica de la plataforma depende del sistema operativo en el que se ejecute el comando. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+La sintaxis específica de la plataforma depende del sistema operativo en el que se ejecute el comando. Tenga en cuenta que al crear un objeto archivo o carpeta con esta sintaxis, debe declararlo utilizando la constante `fk platform path` como parámetro.
 
 ### Windows
 
@@ -67,9 +67,9 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Rutas de acceso Windows y secuencias de escape
 
-The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+El lenguaje 4D permite utilizar [secuencias de escape](quick-tour.md#escape-sequences). Las secuencias de escape comienzan con una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
-Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
+Dado que el caracter `\` también se utiliza como separador en los nombres de rutas en Windows, es necesario introducir un doble `\\` en los nombres de rutas.
 
 ### macOS
 
@@ -87,7 +87,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ## Rutas absolutas y relativas
 
-### `File` and `Folder` constructors
+### Constructores `File` y `Folder`
 
 [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
@@ -96,14 +96,14 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 $ko:=Folder("myFolder").create() //relative pathname with constructor
 ```
 
-If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). Por ejemplo, puede escribir:
+Si quiere manejar los archivos o las carpetas en varias ubicaciones (carpeta de proyecto, carpetas sistema, etc.), puede utilizar `filesystems` (ver arriba). Por ejemplo, puede escribir:
 
 ```4d
 $okFolder:=Folder("/PACKAGE/myFolder").create() //carpeta creada a nivel de la estructura
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta de datos
 ```
 
-### `.file()` and `.folder()` folder functions
+### Funciones de carpeta `.file()` y `.folder()`
 
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por ejemplo:
 

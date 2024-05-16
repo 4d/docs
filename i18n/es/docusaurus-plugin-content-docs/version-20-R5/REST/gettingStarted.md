@@ -5,7 +5,7 @@ title: Comencemos
 
 4D le ofrece un servidor REST poderoso, que permite el acceso directo a los datos almacenados en sus aplicaciones 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+El servidor REST está incluido en 4D y 4D Server, está automáticamente disponible en sus aplicaciones 4D [una vez configurado](configuration.md).
 
 Esta sección pretende ayudar a familiarizarse con la funcionalidad de REST mediante un ejemplo sencillo. Vamos a:
 
@@ -31,9 +31,9 @@ Para simplificar el ejemplo, vamos a utilizar 4D y un navegador que se ejecutan 
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Abra la página **Web > Web Features** de la caja de diálogo de las Propiedades y [marque la opción Exponer como servidor REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. En el menú **Ejecutar**, seleccione **Iniciar el servidor Web** (si es necesario), luego seleccione **Probar el servidor Web**.
 
 4D muestra la página de inicio por defecto del servidor web de 4D.
 
@@ -41,7 +41,7 @@ Para simplificar el ejemplo, vamos a utilizar 4D y un navegador que se ejecutan 
 
 Ahora puede leer y editar datos dentro de 4D sólo a través de peticiones REST.
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. Por ejemplo, para ver lo que hay dentro del almacén de datos de 4D, puede escribir:
+Toda petición de URL 4D REST comienza por `/rest`, que se debe insertar después del área `address:port`. Por ejemplo, para ver lo que hay dentro del almacén de datos de 4D, puede escribir:
 
 ```
 http://127.0.0.1/rest/$catalog
@@ -133,4 +133,4 @@ Tiene muchas posibilidades para filtrar los datos a recibir. Por ejemplo, para o
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.
+La [API REST](REST_requests.md) ofrece varios comandos para interactuar con las aplicaciones 4D.

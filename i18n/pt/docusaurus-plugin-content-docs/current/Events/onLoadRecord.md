@@ -9,6 +9,6 @@ title: On Load Record
 
 ## Descrição
 
-The `On Load Record` event can only be used in the context of an **output form**. It is triggered during data entry in list, after a record is highlighted and a field changes to editing mode.
+El evento `On Load Record` sólo puede utilizarse en el contexto de un **formulario de salida**. It is triggered during data entry in list, after a record is highlighted and a field changes to editing mode.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.

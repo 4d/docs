@@ -3,13 +3,13 @@ id: classFunctions
 title: Llamar a las funciones de clase ORDA
 ---
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Puede llamar a [funciones de clase de modelos de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA a través de sus peticiones REST, para poder beneficiarse de la API expuesta de la aplicación 4D objetivo.
 
-Las funciones se llaman simplemente en peticiones POST en la interfaz ORDA apropiada, sin (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Las funciones se llaman simplemente en peticiones POST en la interfaz ORDA apropiada, sin (). Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
 `/rest/City/getCity`
 
-with data in the body of the POST request: `["Aguada"]`
+con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 En el lenguaje 4D, esta llamada equivale a:
 
@@ -17,11 +17,11 @@ En el lenguaje 4D, esta llamada equivale a:
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Sólo las funciones con la palabra clave `exposed` pueden ser llamadas directamente desde las peticiones REST. Ver la sección [Funciones expuestas vs. no expuestas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ## Llamadas de las funciones
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+Las funciones deben llamarse siempre utilizando peticiones **POST** (una petición GET recibirá un error).
 
 Las funciones son llamadas en el objeto correspondiente en el almacén de datos del servidor.
 
@@ -42,11 +42,11 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 ## Parámetros
 
-Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
+Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase.
 
 Se aplican las siguientes reglas:
 
-- Parameters must be passed in the **body of the POST request**
+- Los parámetros deben pasarse en el **cuerpo de la petición POST**
 - Los parámetros deben estar incluidos en una colección (formato JSON)
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
@@ -55,16 +55,15 @@ See [this example](#using-an-entity-to-be-created-on-the-server) and [this examp
 
 ### Parámetro de valor escalar
 
-El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. For example, with a  dataclass function `getCities()` receiving text parameters:
-`/rest/City/getCities`
+El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parámetros en el cuerpo:** ["Aguada","Paris"]
 
 Todos los tipos de datos JSON son soportados en los parámetros, incluidos los punteros JSON. Las fechas se pueden pasar como cadenas en formato de fecha ISO 8601 (por ejemplo, "2020-08-22T22:00:000Z").
 
 ### Parámetro de entidad
 
-Entities passed in parameters are referenced on the server through their key (_i.e._ __KEY property). Si el parámetro llave se omite en una petición, una nueva entidad se carga en memoria del servidor.
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). Si el parámetro llave se omite en una petición, una nueva entidad se carga en memoria del servidor.
 También puede pasar valores para todos los atributos de la entidad. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
 > Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
@@ -79,17 +78,17 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se proporciona __KEY, la entidad correspondiente a __KEY se carga en el servidor con los atributos dados
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
+Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
 #### Parámetro de entidad asociado
 
-Same properties as for an [entity parameter](#entity-parameter). Además, la entidad relacionada debe existir y ser referenciada por __KEY, que contiene su llave primaria.
+Las mismas propiedades que para un [parámetro de entidad](#entity-parameter). Además, la entidad relacionada debe existir y ser referenciada por __KEY, que contiene su llave primaria.
 
-See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
+Ver los ejemplos para [creación](#creating-an-entity-with-a-related-entity) o [actualización](#updating-an-entity-with-a-related-entity) de las entidades con las entidades relacionadas.
 
 ### Parámetro de selección de entidad
 
-The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
+La selección de entidades debe haber sido definida previamente utilizando [$method=entityset]($method.md#methodentityset).
 
 > Si la petición envía una selección de entidades modificada al servidor, la función del modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con la selección de entidades modificada.
 
@@ -99,7 +98,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 | __DATASET  | String  | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+Ver ejemplo para [recibir una selección de entidades](#receiving-an-entity-selection-as-parameter).
 
 ## Ejemplos de peticiones
 
@@ -109,7 +108,7 @@ Esta base de datos se expone como un almacén de datos remoto en localhost (puer
 
 ### Utilizar una función de clase de datastore
 
-The US_Cities `DataStore` class provides an API:
+La clase de `DataStore` US_Cities ofrece una API:
 
 ```
 // DataStore class
@@ -134,7 +133,7 @@ A continuación, puede ejecutar esta petición:
 
 ### Utilizar una función de clase de dataclass
 
-The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
+La clase de Dataclass `City` ofrece una PI que devuelve una entidad de ciudad a partir del nombre pasado en parámetro:
 
 ```
 // City class
@@ -181,7 +180,7 @@ El resultado es una entidad:
 
 ### Utilizar una función de clase de una entidad
 
-The Entity class `CityEntity` provides an API:
+La clase de entidad `CityEntity` ofrece una API:
 
 ```
 // CityEntity class
@@ -206,7 +205,7 @@ A continuación, puede ejecutar esta petición:
 
 ### Utilizar una función clase entitySelection
 
-The EntitySelection class `CitySelection` provides an API:
+La clase de selección de entidad `CityEntity` ofrece una API:
 
 ```
 // CitySelection class
@@ -231,7 +230,7 @@ A continuación, puede ejecutar esta petición:
 
 ### Utilizar una función de clase de selección de entidades y un conjunto de entidades
 
-The `StudentsSelection` class has a `getAgeAverage` function:
+La clase `StudentsSelection` tine una función `getAgeAverage`:
 
 ```
 // StudentsSelection Class
@@ -263,7 +262,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 
 ### Utilizar una función de clase de selección de entidades y unorderBy
 
-The `StudentsSelection` class has a `getLastSummary` function:
+La clase `StudentsSelection` tiene una función `getLastSummary`:
 
 ```
 // StudentsSelection Class
@@ -292,7 +291,7 @@ A continuación, puede ejecutar esta petición:
 
 ### Utilizar una entidad que se creará en el servidor
 
-The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. Si son válidos, la entidad se guarda y se devuelve.
+La clase de Dataclass `Students` tiene la función `pushData()` que recibe una entidad que contiene los datos del cliente. El método `checkData()` efectúa algunos controles. Si son válidos, la entidad se guarda y se devuelve.
 
 ```
 // Students Class
@@ -330,7 +329,7 @@ Cuerpo de la petición:
 }]
 ```
 
-Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
+Como ninguna `__KEY` es dada, una nueva entidad Students está cargada en el servidor **con los atributos del cliente**. Como la función `pushData()` ejecuta una acción `save()`, la nueva entidad es creada.
 
 #### Result
 
@@ -368,7 +367,7 @@ Cuerpo de la petición:
 }]
 ```
 
-Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
+Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **con el valor lastname recibido por el cliente**. Como la función ejecuta una acción `save()`, la nueva entidad es actualizada.
 
 #### Result
 
@@ -431,7 +430,7 @@ Cuerpo de la petición:
 
 ### Actualizar una entidad con una entidad relacionada
 
-En este ejemplo, asociamos una escuela existente a una entidad Students. The `StudentsEntity` class has an API:
+En este ejemplo, asociamos una escuela existente a una entidad Students. La clase `StudentsEntity` tiene una API:
 
 ```
 // StudentsEntity class
@@ -451,9 +450,7 @@ exposed Function putToSchool()
 	$0:=$status
 ```
 
-You run this request, called on a Students entity :
-**POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`
-Body of the request:
+You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
 
 ```
 [{
@@ -475,7 +472,7 @@ Body of the request:
 
 ### Recibir una selección de entidades como parámetro
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the _finalExam_ attribute with the received value ($2). Devuelve las llaves primarias de las entidades actualizadas.
+En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una selección de entidad recibida ($1). En realidad, actualiza el atributo _finalExam_ con el valor recibido ($2). Devuelve las llaves primarias de las entidades actualizadas.
 
 ```
 // Students class
@@ -544,7 +541,7 @@ Se han actualizado las entidades con llaves primarias 1 y 2.
 
 ### Utilizar una selección de entidades actualizada en el cliente
 
-Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).
+Utilizando la función `getAgeAverage()` [definida anteriormente](#using-an-entityselection-class-function-and-an-entityset).
 
 ```4d
 var $remoteDS, $newStudent, $students : Object

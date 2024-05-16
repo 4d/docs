@@ -32,7 +32,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | \\\\|\ (Barre oblique inversée) |                                        |
 | \\"                                                 | " (Guillemets)      |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
+**Note :** Le caractère \ (backslash) est utilisé comme séparateur dans les chemins d'accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
@@ -50,7 +50,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 |                     |                  |          | "abc" < "abc"                           | False                        |
 | Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"                          | True                         |
 |                     |                  |          | "abc" >= "abd"                          | False                        |
-| Inférieur ou égal à | String <= String | Boolean  | "abc" <= "abd"                          | True                         |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"                          | True                         |
 |                     |                  |          | "abd" <= "abc"                          | False                        |
 | Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo"                 | True                         |
 |                     |                  |          | "Alpha Bravo" % "ravo"                  | False                        |
@@ -60,14 +60,14 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Comparaisons de chaînes
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. For example, the following expression returns `FALSE`:
+- Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par [mot-clé](dt_string.md#mots-cles), cf. ci-dessous).
+- Lors d'une comparaison de chaînes, la casse des caractères est ignorée ; ainsi, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante renvoie `FALSE` :
 
 ```4d
-Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
+Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. For example, the following expressions return `TRUE`:
+- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
@@ -76,23 +76,23 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
       // etc
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Note :** Les comparaisons de chaîne tiennent compte des spécificités du langage **défini pour le fichier de données 4D** (qui n'est pas toujours identique au langage défini pour le système).
 
 ### Le joker (@)
 
-The 4D language supports **@** as a wildcard character. Ce caractère peut être utilisé dans toute comparaison de chaînes. For example, the following expression is `TRUE`:
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Par exemple, l'expression suivante est `TRUE` :
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est `FALSE`, car le @ est considéré comme un caractère dans le premier opérande :
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-Le joker signifie “un ou plusieurs caractères sinon rien”. The following expressions are `TRUE`:
+Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,7 +102,7 @@ Le joker signifie “un ou plusieurs caractères sinon rien”. The following ex
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera toujours évaluée à `FALSE`. L'expression suivante est `FALSE` :
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -111,27 +111,27 @@ On the other hand, whatever the case, a string comparison with two consecutive w
 Lorsque l'opérateur de comparaison est ou contient un symbole < ou >, seule la comparaison avec un seul joker situé en fin d'opérande est prise en charge :
 
 ```4d
-     "abcd"<="abc@" // Valid comparison
-     "abcd"<="abc@ef" //Not a valid comparison
+     "abcd"<="abc@" // Comparaison valide
+     "abcd"<="abc@ef" //Comparaison non valide
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. The following expression (if $vsValue is not empty) is always `TRUE`:
+Si vous souhaitez exécuter des comparaisons ou des requêtes en utilisant @ comme caractère (et non comme joker), vous devez utiliser l'instruction `Character code(At sign)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L'expression suivante (si $vsValue n'est pas vide) est toujours `TRUE` :
 
 ```4d
-($vaValeur[[Longueur($vaValeur)]]="@")
+($vsValue[[Length($vsValue)]]="@")
 ```
 
 L'expression suivante sera correctement évaluée :
 
 ```4d
-(Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
+(Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Note :** Une option 4D du mode Développement vous permet de définir comment le caractère @ est interprété lorsqu'il est inclus dans une chaîne de caractères.
 
 ### Mots-clés
 
-A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
+A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L'opérateur **%** retournera toujours `False` si la requête concerne plusieurs mots ou seulement une partie d'un mot (par exemple, une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Retourne Vrai
@@ -141,9 +141,9 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
 
-> **Notes:**
+> **Notes :**
 >
-> - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - Dans la version japonaise, au lieu de ICU, 4D utilise Mecab par défaut pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
@@ -163,14 +163,14 @@ End if
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//L'exemple suivant teste si le dernier caractère de vtText est un signe "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
  
-  //Using the character reference syntax, you would write in a simpler manner:
+  //En utilisant la syntaxe de référence des caractères, vous écririez d'une manière plus simple :
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -187,7 +187,7 @@ Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsa
 - Ne pas respecter cette condition en mode compilé est signalé lorsque le contrôle d'exécution est activé. Si, par exemple, vous exécutez le code suivant :
 
 ```
-//Very bad and nasty thing to do, boo!
+//Très mauvaise et vilaine chose à faire, bouh !
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```

@@ -5,7 +5,7 @@ title: 階層
 
 ## 階層リストボックス
 
-`Array type list boxes`
+`配列型リストボックス`
 
 このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [_dataSource_ プロパティの値が配列名のコレクションであるとき](properties_Object.md#階層リストボックス) に階層化します。
 
@@ -21,4 +21,4 @@ _階層リストボックス_ プロパティが選択されると、追加プ�
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

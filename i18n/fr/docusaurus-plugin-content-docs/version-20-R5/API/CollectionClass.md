@@ -7,10 +7,10 @@ La classe Collection gère les variables de type [Collection](Concepts/dt_collec
 
 Une collection est initialisée avec :
 
-|                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New collection.Summary -->                      |
-| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New shared collection.Summary --> |
+|                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<br/><!-- INCLUDE #_command_.New collection.Summary -->                      |
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<br/><!-- INCLUDE #_command_.New shared collection.Summary --> |
 
 ### Exemple
 
@@ -21,55 +21,55 @@ Une collection est initialisée avec :
 
 ### Sommaire
 
-|                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #collection.at().Syntax -->](#at)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.at().Summary -->                                  |
-| [<!-- INCLUDE #collection.average().Syntax -->](#average)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.average().Summary -->                   |
-| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.clear().Summary -->                         |
-| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.combine().Summary -->                   |
-| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.concat().Summary -->                      |
-| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.copy().Summary -->                            |
-| [<!-- INCLUDE #collection.count().Syntax -->](#count)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.count().Summary -->                         |
-| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.countValues().Summary -->       |
-| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.distinct().Summary -->                |
-| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.equal().Summary -->                         |
-| [<!-- INCLUDE #collection.every().Syntax -->](#every)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.every().Summary -->                         |
-| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.extract().Summary -->                   |
-| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.fill().Summary -->                            |
-| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.filter().Summary -->                      |
-| [<!-- INCLUDE #collection.find().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.find().Summary -->                            |
-| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.findIndex().Summary -->                  |
-| [<!-- INCLUDE #collection.first().Syntax -->](#first)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.first().Summary -->                         |
-| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flatMap().Summary -->                   |
-| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.includes().Summary -->                |
-| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indexOf().Summary -->                   |
-| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indices().Summary -->                   |
-| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.insert().Summary -->                      |
-| [<!-- INCLUDE #collection.join().Syntax -->](#join)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.join().Summary -->                            |
-| [<!-- INCLUDE #collection.last().Syntax -->](#last)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.last().Summary -->                            |
-| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->       |
-| [<!-- INCLUDE #collection.length.Syntax -->](#length)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.length.Summary -->                          |
-| [<!-- INCLUDE #collection.map().Syntax -->](#map)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.map().Summary -->                               |
-| [<!-- INCLUDE #collection.max().Syntax -->](#max)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.max().Summary -->                               |
-| [<!-- INCLUDE #collection.min().Syntax -->](#min)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.min().Summary -->                               |
-| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.multiSort().Summary -->             |
-| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderBy().Summary -->                   |
-| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderByMethod().Summary --> |
-| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.pop().Summary -->                               |
-| [<!-- INCLUDE #collection.push().Syntax -->](#push)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.push().Summary -->                            |
-| [<!-- INCLUDE #collection.query().Syntax -->](#query)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.query().Summary -->                         |
-| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->       |
-| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.remove().Summary -->                      |
-| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.resize().Summary -->                      |
-| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reverse().Summary -->                   |
-| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.shift().Summary -->                         |
-| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.slice().Summary -->                         |
-| [<!-- INCLUDE #collection.some().Syntax -->](#some)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.some().Summary -->                            |
-| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sort().Summary -->                            |
-| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
-| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
+|                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #collection.at().Syntax -->](#at)<br/><!-- INCLUDE #collection.at().Summary -->                                  |
+| [<!-- INCLUDE #collection.average().Syntax -->](#average)<br/><!-- INCLUDE #collection.average().Summary -->                   |
+| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<br/><!-- INCLUDE #collection.clear().Summary -->                         |
+| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<br/><!-- INCLUDE #collection.combine().Summary -->                   |
+| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)<br/><!-- INCLUDE #collection.concat().Summary -->                      |
+| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)<br/><!-- INCLUDE #collection.copy().Summary -->                            |
+| [<!-- INCLUDE #collection.count().Syntax -->](#count)<br/><!-- INCLUDE #collection.count().Summary -->                         |
+| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<br/><!-- INCLUDE #collection.countValues().Summary -->       |
+| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<br/><!-- INCLUDE #collection.distinct().Summary -->                |
+| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)<br/><!-- INCLUDE #collection.equal().Summary -->                         |
+| [<!-- INCLUDE #collection.every().Syntax -->](#every)<br/><!-- INCLUDE #collection.every().Summary -->                         |
+| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)<br/><!-- INCLUDE #collection.extract().Summary -->                   |
+| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)<br/><!-- INCLUDE #collection.fill().Summary -->                            |
+| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)<br/><!-- INCLUDE #collection.filter().Summary -->                      |
+| [<!-- INCLUDE #collection.find().Syntax -->](#find)<br/><!-- INCLUDE #collection.find().Summary -->                            |
+| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
+| [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
+| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
+| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
+| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
+| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)<br/><!-- INCLUDE #collection.insert().Summary -->                      |
+| [<!-- INCLUDE #collection.join().Syntax -->](#join)<br/><!-- INCLUDE #collection.join().Summary -->                            |
+| [<!-- INCLUDE #collection.last().Syntax -->](#last)<br/><!-- INCLUDE #collection.last().Summary -->                            |
+| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<br/><!-- INCLUDE #collection.lastIndexOf().Summary -->       |
+| [<!-- INCLUDE #collection.length.Syntax -->](#length)<br/><!-- INCLUDE #collection.length.Summary -->                          |
+| [<!-- INCLUDE #collection.map().Syntax -->](#map)<br/><!-- INCLUDE #collection.map().Summary -->                               |
+| [<!-- INCLUDE #collection.max().Syntax -->](#max)<br/><!-- INCLUDE #collection.max().Summary -->                               |
+| [<!-- INCLUDE #collection.min().Syntax -->](#min)<br/><!-- INCLUDE #collection.min().Summary -->                               |
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)<br/><!-- INCLUDE #collection.multiSort().Summary -->             |
+| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<br/><!-- INCLUDE #collection.orderBy().Summary -->                   |
+| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<br/><!-- INCLUDE #collection.orderByMethod().Summary --> |
+| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)<br/><!-- INCLUDE #collection.pop().Summary -->                               |
+| [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
+| [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
+| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
+| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
+| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
+| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<br/><!-- INCLUDE #collection.shift().Summary -->                         |
+| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<br/><!-- INCLUDE #collection.slice().Summary -->                         |
+| [<!-- INCLUDE #collection.some().Syntax -->](#some)<br/><!-- INCLUDE #collection.some().Summary -->                            |
+| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)<br/><!-- INCLUDE #collection.sort().Summary -->                            |
+| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<br/><!-- INCLUDE #collection.sum().Summary -->                               |
+| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<br/><!-- INCLUDE #collection.unshift().Summary -->                   |
 
 ## `New collection`
 
@@ -252,7 +252,7 @@ La fonction renvoie Undefined si _index_ est au-delà des limites de la collecti
 #### Exemple
 
 ```4d
-var $col : Collection 
+var $col : Collection
 $col:=New collection(10; 20; 30; 40; 50)
 $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
@@ -789,11 +789,17 @@ Dans le paramètre _options_, vous pouvez passer une ou une combinaison des cons
 
 #### Description
 
-La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **true** si elles sont identiques (deep comparison).
+The `.equal()` function <!-- REF #collection.equal().Summary -->recursively compares the contents of the collection and _collection2_ (deep comparison)<!-- END REF -->and returns **true** if they are identical.
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
 
 > Les éléments avec des valeurs **Null** ne sont pas égaux aux éléments Undefined.
+
+:::note
+
+A recursive comparison of collections can be time-consuming if the collection is large and deep. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).
+
+:::
 
 #### Exemple
 
@@ -842,7 +848,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | startFrom  | Integer                     |  -> | Elément à partir duquel débuter l'évaluation                         |
 | formula    | 4D.Function |  -> | Objet formule                                                        |
 | methodName | Text                        |  -> | Nom de méthode                                                       |
-| param      | Mixed                       |  -> | Paramètre(s) à passer à _formula_ ou _methodName_ |
+| param      | any                         |  -> | Paramètre(s) à passer à _formula_ ou _methodName_ |
 | Résultat   | Boolean                     |  <- | Vrai si tous les éléments sont évalués à vrai                        |
 
 <!-- END REF -->
@@ -2228,6 +2234,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 {
     "propertyPath": string,
 
+
     "descending": boolean
 
 }
@@ -2490,7 +2497,7 @@ When applied to an empty collection, `.pop()` returns _**undefined**_.
 
 | Paramètres | Type       |     | Description                                             |
 | ---------- | ---------- | :-: | ------------------------------------------------------- |
-| element    | Mixed      |  -> | Élément(s) à ajouter à la collection |
+| element    | any        |  -> | Élément(s) à ajouter à la collection |
 | Résultat   | Collection |  <- | Collection originale contenant des éléments ajoutés     |
 
 <!-- END REF -->
@@ -2531,21 +2538,22 @@ Vous souhaitez trier la collection obtenue :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 17 R5   | Prise en charge de querySettings |
-| v16 R6  | Ajout                            |
+| Release | Modifications                                            |
+| ------- | -------------------------------------------------------- |
+| 20 R6   | Support of queries using object or collection references |
+| 17 R5   | Prise en charge de querySettings                         |
+| v16 R6  | Ajout                                                    |
 
 </details>
 
-<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 <!-- REF #collection.query().Params -->
 
 | Paramètres    | Type       |     | Description                                                                                                     |
 | ------------- | ---------- | :-: | --------------------------------------------------------------------------------------------------------------- |
 | queryString   | Text       |  -> | Critère(s) de recherche                                                                      |
-| value         | Mixed      |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
+| value         | any        |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
 | querySettings | Object     |  -> | Options de requête : paramètres, attributs                                                      |
 | Résultat      | Collection |  <- | Élément(s) correspondant à queryString dans la collection                                    |
 
@@ -2555,7 +2563,11 @@ Vous souhaitez trier la collection obtenue :
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by _queryString_ and (optionally) _value_ or _querySettings_. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
+An empty collection is returned if the collection in which the query is executed does not contain the searched _value_.
+
 > Cette fonction ne modifie pas la collection d'origine.
+
+#### paramètre queryString
 
 The _queryString_ parameter uses the following syntax:
 
@@ -2563,9 +2575,186 @@ The _queryString_ parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using _queryString_, _value_ and _querySettings_ parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
+où :
 
-> Formulas are not supported by the `collection.query()` function, neither in the _queryString_ parameter nor as _formula_ object parameter.
+- **propertyPath**: path of property on which you want to execute the query. Ce paramètre peut contenir un nom simple (par exemple "pays") ou un chemin d'attribut valide (par exemple "pays.nom"). In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+
+- **comparator**: symbol that compares _propertyPath_ and _value_. Les symboles suivants sont pris en charge :
+
+| Comparaison                             | Symbole(s) | Commentaire                                                                                                                                                                                                                                  |
+| --------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Egal à                                  | =, ==                         | Retourne les données correspondantes, prend en charge le joker de recherche (@), ne tient pas compte de la casse et est non diacritique.                                                     |
+|                                         | ===, IS                       | Retourne les données correspondantes, considère le @ comme un caractère standard, ne tient pas compte de la casse et est non diacritique                                                                                        |
+| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).              |
+|                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                                                                      |
+| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
+| Inférieur à                             | <                             |                                                                                                                                                                                                                                              |
+| Supérieur à                             | >                             |                                                                                                                                                                                                                                              |
+| Inférieur ou égal à                     | <=                            |                                                                                                                                                                                                                                              |
+| Supérieur ou égal à                     | > =                           |                                                                                                                                                                                                                                              |
+| Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                               |
+
+- **value**: the value to compare to the current value of the property of each element in the collection. It can be any constant value expression matching the element's data type property or a [**placeholder**](#using-placeholders).
+  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+  - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+  - **boolean** type constants: **true** or **false** (case sensitive).
+  - **numeric** type constants: decimals are separated by a '.' (period).
+  - **date** type constants: "YYYY-MM-DD" format
+  - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
+  - in case of a query with an IN comparator, _value_ must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+
+- **logicalOperator**: used to join multiple conditions in the query (optional). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
+
+| Conjonction | Symbole(s)                                          |
+| ----------- | ---------------------------------------------------------------------- |
+| AND         | &, &&, and |
+| OU          | \|,\|\|, or                                                            |
+
+#### Utilisation de guillemets
+
+Lorsque vous utilisez des guillemets dans des recherches, vous devez utiliser des guillemets simples ' ' à l'intérieur de la requête et des guillemets doubles " " pour encadrer la requête, sinon une erreur est renvoyée. Par exemple :
+
+```4d
+"employee.name = 'smith' AND employee.firstname = 'john'"
+```
+
+> Les guillemets simples (') ne sont pas pris en charge dans les valeurs recherchées car ils casseraient la chaîne de recherche. Par exemple, "comp.name = 'John's pizza' " génèrera une erreur. Si vous devez rechercher des valeurs contenant des guillemets simples, il est nécessaire d'utiliser des placeholders (voir ci-dessous).
+
+#### Utilisation de parenthèses
+
+Vous pouvez utiliser des parenthèses dans la recherche afin de prioriser les calculs. Par exemple, vous pouvez organiser une recherche de la manière suivante :
+
+```4d
+"(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
+```
+
+#### Utilisation de placeholders
+
+4D allows you to use placeholders for _propertyPath_ and _value_ arguments within the _queryString_ parameter. Un placeholder est un paramètre que vous insérez dans des chaines de recherche et qui est remplacé par une autre valeur au moment où la chaîne de recherche est évaluée. La valeur des placeholders est évaluée une seule fois, au début de la requête ; elle n'est pas évaluée pour chaque élément.
+
+Two types of placeholders can be used: **indexed placeholders** and **named placeholders**.
+
+- **Indexed placeholders**: parameters are inserted as `:paramIndex` (for example ":1", ":2"...) in _queryString_ and their corresponding values are provided by the sequence of _value_ parameter(s). You can use up to 128 _value_ parameters.
+
+Voici un exemple :
+
+```4d
+$c:=$myCol.query(":1=:2";"city";"Chicago")
+```
+
+- **Named placeholders**: parameters are inserted as `:paramName` (for example ":myparam") and their values are provided in the "attributes" and/or "parameters" objects in the _querySettings_ parameter.
+
+Voici un exemple :
+
+```4d
+$o.attributes:={att:"city"}
+$o.parameters:={name:"Chicago")
+$c:=$myCol.query(":att=:name";$o)
+```
+
+You can mix all argument kinds in _queryString_. A _queryString_ can contain, for _propertyPath_ and _value_ parameters:
+
+- des valeurs directes (pas de placeholders)
+- des placeholders indexés et/ou nommés.
+
+Using placeholders in queries **is recommended** for the following reasons:
+
+1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
+
+```4d
+ $vquery:="status = 'public' & name = "+myname //user enters their name
+ $result:=$col.query($vquery)
+```
+
+Cette recherche semble sécurisée puisque les données non publiques sont filtrées. However, if the user enters in the _myname_ area something like _"smith OR status='private'_, the query string would be modified at the interpretation step and could return private data.
+
+Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
+
+```4d
+ $result:=$col.query("status='public' & name=:1";myname)
+```
+
+In this case if the user enters _smith OR status='private'_ in the _myname_ area, it will not be interpreted in the query string, but only passed as a value. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
+
+2. It prevents having to worry about formatting or character issues, especially when handling _propertyPath_ or _value_ parameters that might contain non-alphanumeric characters such as ".", "['...
+
+3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
+
+```4d
+$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+$result2:=$col.query("company.name = :1";"John's Pizzas")
+```
+
+> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the _value_ parameter is not supported with this syntax. You must use the [_querySettings_ parameter](#querysettings-parameter).
+
+#### Recherche de valeurs null
+
+Lorsque vous recherchez les valeurs null, vous ne pouvez pas utiliser la syntaxe placeholder car le moteur de recherche considère la valeur null comme une valeur de comparaison invalide. Par exemple, si vous exécutez la recherche suivante :
+
+```4d
+$vSingles:=$colPersons.query("spouse = :1";Null) // will NOT work
+```
+
+Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée par 4D comme une erreur résultant de l'évaluation du paramètre (pouvant être, par exemple, un attribut provenant d'une autre recherche). Pour ce type de recherche, vous devez utiliser la syntaxe de recherche directe :
+
+```4d
+$vSingles:=$colPersons.query("spouse = null") //correct syntax
+```
+
+#### Object or collection reference as value
+
+You can query a collection using an object reference or a collection reference as the _value_ parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
+
+The following comparators are supported:
+
+| Comparaison  | Symbole(s) |
+| ------------ | ----------------------------- |
+| Egal à       | =, ==                         |
+| Différent de | #, !=                         |
+
+To build a query with an object or a collection reference, you must use the _querySettings_ parameter syntax. Example with an object reference:
+
+```4d
+var $o1:={a: 1}
+var $o2:={a: 1} //same object but another reference
+var $o3:=$o1 //same object and reference
+
+var $col; $colResult : Collection
+
+$col:=[{o: $o1}; {o: $o2}; {o: $o3}]
+$colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
+	//$colResult.length=2
+	//$colResult[0].o=$o1 is true
+	//$colResult[1].o=$o1 is true
+
+```
+
+Example with a collection reference:
+
+```4d
+
+$c1:=[1; 2; 3]
+$c2:=[1; 2; 3] //same collection but another reference
+$c3:=$c1 //same collection and reference
+
+$col:=[{c: $c1}; {c: $c2}; {c: $c3}]
+$col2:=$col.query("c = :v"; {parameters: {v: $c3}})
+	//$col2.length=2
+	//$col2[0].c=$c1 is true
+	//$col2[1].c=$c1 is true
+
+```
+
+#### Paramètre querySettings
+
+In the _querySettings_ parameter, you can pass an object containing query placeholders as objects. Les propriétés suivantes sont prises en charge :
+
+| Propriété  | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| parameters | Object | **Named placeholders for values** used in the _queryString_. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the _queryString_ (":placeholder") and value is the value to compare. Vous pouvez combiner, dans une même recherche, des placeholders indexés (valeurs passées directement dans les paramètres <em x-id="3">value</em>) et les valeurs des placeholders nommés.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| attributes | Object | **Named placeholders for attribute paths** used in the _queryString_. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the _queryString_ (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in _value_ parameters) and named placeholder values in the same query. |
+
+> Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
 
 #### Exemple 1
 
@@ -2625,7 +2814,19 @@ Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 #### Exemple 3
 
+Recherche avec des dates :
+
+```4d
+
+$entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
+$entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
+```
+
+:::info
+
 More examples of queries can be found in the `dataClass.query()` page.
+
+:::
 
 <!-- END REF -->
 
@@ -3060,13 +3261,14 @@ The returned collection contains the element specified by _startFrom_ and all su
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type                        |     | Description                                  |
-| ---------- | --------------------------- | :-: | -------------------------------------------- |
-| startFrom  | Integer                     |  -> | Elément à partir duquel débuter l'évaluation |
-| formula    | 4D.Function |  -> | Objet formule                                |
-| methodName | Text                        |  -> | Nom de méthode                               |
-| param      | Mixed                       |  -> | Paramètre(s) à passer     |
-| Résultat   | Boolean                     |  <- | Vrai si au moins un élément a réussi le test |
+| Paramètres | Type |     | Description |
+| ---------- | ---- | :-: | ----------- |
+
+|startFrom |Integer |->|Index to start the test at|
+|formula|4D.Function|->|Formula object|
+|methodName|Text|->|Name of a method|
+|param |any |->|Parameter(s) to pass|
+|Result|Boolean|<-|True if at least one element successfully passed the test|
 
 <!-- END REF -->
 
@@ -3097,7 +3299,9 @@ In any case, at the point where `.some()` function encounters the first collecti
 By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in _startFrom_.
 
 - If _startFrom_ >= the collection's length, **False** is returned, which means the collection is not tested.
+
 - If _startFrom_ < 0, it is considered as the offset from the end of the collection.
+
 - Si _startFrom_ = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple

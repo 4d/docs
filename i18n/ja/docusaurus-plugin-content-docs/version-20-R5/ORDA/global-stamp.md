@@ -5,14 +5,14 @@ title: グローバルスタンプの使い方
 
 ## 概要
 
-4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.
+4D は内部的な **グローバル変更スタンプ** を自動的に管理します。これは、アクティビティの監視、バックアップ、増分同期の実行など、データ変更追跡の実装をするのに便利です。
 
-グローバル変更スタンプは、データベースの復元やインポートなどの場合も含め、4D が常に管理する番号です。 Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
+グローバル変更スタンプは、データベースの復元やインポートなどの場合も含め、4D が常に管理する番号です。 ただし、[`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) 関数を使用すればスタンプを変更できることに注意してください。
 
-Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
+[データ変更追跡を設定および有効化](#データ変更追跡の設定) すると、レコードの変更 (追加・変更・削除) ごとに、以下のアクションが 4D によって自動的に実行されます:
 
 1. グローバル変更スタンプのカレント値は、関連エンティティの特別な "__GlobalStamp" 属性に保存されます。
-   In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
+   削除処理の場合には、削除されたエンティティの情報を持つ新しいエンティティが `__DeletedRecords` テーブルに追加され、グローバル変更スタンプのカレント値が "__Stamp" 属性に保存されます。
 
 2. グローバル変更スタンプの値が増分されます。
 
@@ -20,22 +20,22 @@ Once the [data change tracking is configured and enabled](#configuring-data-chan
 
 :::info
 
-Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock).
+**グローバル変更スタンプ** と、[オプティミスティック・ロック機能](entities.md#自動オプティミスティックロック) に使用される内部的な **エンティティスタンプ** を混同しないでください。
 
 :::
 
 ## データ変更追跡の設定
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. データ変更追跡を有効にするには、特別なフィールドとテーブルをストラクチャーに追加する必要があります。 ストラクチャーエディターのコンテキストメニューを使用すると、必要な要素をすべて自動的に作成できます。
+デフォルトでは、グローバル変更スタンプは作成されません ([`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) 関数は 0 を返します)。 データ変更追跡を有効にするには、特別なフィールドとテーブルをストラクチャーに追加する必要があります。 ストラクチャーエディターのコンテキストメニューを使用すると、必要な要素をすべて自動的に作成できます。
 
 ### ストラクチャー要件
 
-To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
+データ変更追跡を有効にするには、`__GlobalStamp __01` フィールドを持つテーブルが少なくとも 1つ、アプリケーションストラクチャーに含まれていなければなりません。
 
 また、本機能を適切に動作させるためには、以下の条件が必要です:
 
-- The `__GlobalStamp` field must must be of type _Integer 64 bits_, with _automatic index_, _Expose as REST resource_, and _Invisible_ properties selected.
-- A `__DeletedRecords` table must be added, with the following fields:
+- `__GlobalStamp` フィールドは、_自動インデックス_、_RESTリソースとして公開_、および _非表示_ プロパティが選択された、_64ビット整数_ である必要があります。
+- 次のフィールドを含む `__DeletedRecords` テーブルを追加する必要があります:
 
 | フィールド                                                   | タイプ     | 説明                   |
 | ------------------------------------------------------- | ------- | -------------------- |
@@ -44,11 +44,11 @@ To enable data change tracking, the application structure must contain at least 
 | __TableName   | Text    | 削除されたエンティティのテーブル名    |
 | __TableNumber | 倍長整数    | 削除されたエンティティのテーブル番号   |
 
-You can only track changes for data in tables having the `__GlobalStamp` field.
+`__GlobalStamp` フィールドを持つテーブルのデータ変更のみ追跡できます。
 
 :::note
 
-In the 4D language, the `__GlobalStamp` field value should be handled through a `Real` type variable.
+4Dランゲージでは、`__GlobalStamp` フィールドの値は `Real` 型変数を介して処理される必要があります。
 
 :::
 
@@ -59,21 +59,21 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 データ変更追跡を有効化するには:
 
 1. データ変更追跡を有効にするテーブルを選択します。
-2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
+2. 選択したテーブルを右クリックし、コンテキストメニューから **データ変更トラッキングを有効化** を選択します。
 3. 確認用のダイアログボックスが表示されます。 **OK** をクリックします。
 
 すると、4D は次の変更をおこないます:
 
-- A preconfigured `__GlobalStamp` field is added to the table(s).
-- If not already existing, a `__DeletedRecords` table is added to the structure.
+- 設定済みの `__GlobalStamp __01` フィールドがテーブルに追加されます。
+- まだ存在していなければ、`__DeletedRecords` テーブルがストラクチャーに追加されます。
 
 データ変更追跡を無効化するには:
 
 1. データ変更追跡を無効にするテーブルを選択します。
-2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
+2. 選択したテーブルを右クリックし、コンテキストメニューから **データ変更トラッキングを無効化** を選択します。
 3. 確認用のダイアログボックスが表示されます。 **OK** をクリックします。
 
-4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
+すると、4D は `__GlobalStamp` フィールドを当該テーブルから削除します。 `__DeletedRecords` テーブルを削除したい場合には、手動でおこなう必要があることに注意してください。
 
 ## 例題
 
@@ -84,14 +84,17 @@ var $modifiedEmps : cs.EmployeeSelection
 var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
 $tableName:="Employee"
-$oldStamp:=... //load the previous stamp value  
-	//from which you want to compare the current stamp
+$oldStamp:=... //l 前のスタンプ値をロードして
+    // カレントスタンプと比較します
 
 If ($oldStamp # ds.getGlobalStamp())
-		//get all new or modified entities
-	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
-		//get all deleted entities
-	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-	$oldStamp; $tableName)
+        // 新規の、または変更されたエンティティをすべて取得します
+
+    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+        // 削除されたエンティティをすべて取得します
+
+    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+    $oldStamp; $tableName)
 End if
+
 ```

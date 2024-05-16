@@ -9,8 +9,8 @@ title: On Validate
 
 ## Descrição
 
-This event is triggered when the record data entry has been validated, for example after a `SAVE RECORD` command call or an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
+Este evento se dispara cuando la entrada de datos del registro ha sido validada, por ejemplo después de una llamada al comando `SAVE RECORD` o una [acción estándar](FormObjects/properties_Action.md#standard-action) `accept`.
 
 ### Subformulário
 
-The `On Validate` event is triggered when data entry is validated in the subform.
+El evento `On Validate` se activa cuando se valida la entrada de datos en el subformulario.

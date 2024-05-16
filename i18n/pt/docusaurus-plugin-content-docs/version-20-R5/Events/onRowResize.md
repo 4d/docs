@@ -9,7 +9,7 @@ title: On Row Resize
 
 ## Descrição
 
-This event is generated when the height of a row is modified by a user in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+This event is generated when the height of a row is modified by a user in a 4D View Pro document. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedade | Tipo          | Descrição                                                                                                  |
 | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------- |

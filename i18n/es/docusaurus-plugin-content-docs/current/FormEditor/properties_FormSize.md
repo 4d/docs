@@ -3,9 +3,9 @@ id: formSize
 title: Tamaño formulario
 ---
 
-4D lets you set the size of both the form and the [window](properties_WindowSize.md). Estas propiedades son interdependientes y su interfaz de aplicación es el resultado de su interacción.
+4D permite definir el tamaño tanto del formulario como de la [ventana](properties_WindowSize.md). Estas propiedades son interdependientes y su interfaz de aplicación es el resultado de su interacción.
 
-Size options depend on the value of the **Size based on** option.
+Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 ---
 
@@ -13,11 +13,11 @@ Size options depend on the value of the **Size based on** option.
 
 - **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields.
 
-  You can choose this option when you want to use active objects placed in an offscreen area (_i.e._, outside the bounding rectangle of the window) with an automatic size window. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.
+  Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (_es decir_, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.
 
 - **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
 
-- `<object name>`: The size of the form will be based on the position of the selected form object. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.
+- `<object name>`: el tamaño del formulario se basará en la posición del objeto formulario seleccionado. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.
 
 > For output forms, only the [**Hor margin**](#hor-margin) or [**Width**](#width) fields are available.
 
@@ -31,7 +31,7 @@ Size options depend on the value of the **Size based on** option.
 
 ## Altura
 
-Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Altura del formulario (en píxeles) cuando el [tamaño del formulario](#size-based-on) es definido en **Definir tamaño**.
 
 #### Gramática JSON
 
@@ -43,7 +43,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 ## Margen hor.
 
-Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\<object name>`
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`
 
 Este valor también determina los márgenes derechos de los formularios utilizados en el editor de etiquetas.
 
@@ -57,7 +57,7 @@ Este valor también determina los márgenes derechos de los formularios utilizad
 
 ## Margen hor.
 
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\<object name>`.
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`.
 
 Este valor también determina los márgenes superiores de los formularios utilizados en el editor de etiquetas.
 
@@ -71,7 +71,7 @@ Este valor también determina los márgenes superiores de los formularios utiliz
 
 ## Ancho
 
-Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Ancho del formulario (en píxeles) cuando el [tamaño del formulario](#size-based-on) está definido en **Definir tamaño**.
 
 #### Gramática JSON
 

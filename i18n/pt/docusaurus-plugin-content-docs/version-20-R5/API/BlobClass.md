@@ -7,11 +7,11 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 ### Resumo
 
-|                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#4dblobnew)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #4D.Blob.new().Summary --> |
-| [<!-- INCLUDE #Blob.size.Syntax -->](#size)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #Blob.size.Summary -->              |
-| [<!-- INCLUDE #Blob.slice().Syntax -->](#slice)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #Blob.slice().Summary -->       |
+|                                                                                                  |
+| ------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#4dblobnew)<br/><!-- INCLUDE #4D.Blob.new().Summary --> |
+| [<!-- INCLUDE #Blob.size.Syntax -->](#size)<br/><!-- INCLUDE #Blob.size.Summary -->              |
+| [<!-- INCLUDE #Blob.slice().Syntax -->](#slice)<br/><!-- INCLUDE #Blob.slice().Summary -->       |
 
 ## 4D. Blob.new()
 
