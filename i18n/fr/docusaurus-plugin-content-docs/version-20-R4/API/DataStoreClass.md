@@ -107,9 +107,10 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications |
-| ------- | ------------- |
-| 18      | Ajout         |
+| Release | Modifications                    |
+| ------- | -------------------------------- |
+| 20 R4   | New *passwordAlgorithm* property |
+| 18      | Ajout                            |
 
 </details>
 
@@ -151,14 +152,15 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
 
 Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
 
-| Propriété   | Type    | Description                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
-| user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                    |
-| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
-| tls         | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| type        | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
+| Propriété         | Type    | Description                                                                                                                                                                                                                                                                                                                                      |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
+| user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
+| password          | Text    | User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                                 |
+| idleTimeout       | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
+| tls               | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
+| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                             |
+| type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
 
@@ -858,6 +860,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
 Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités peuvent être partageables, selon la nature de leur "parent" ou la façon dont elles sont créées (voir la section [Entity selections partageables et non partageables](ORDA/entities.md#entity-selections-partageables-et-non-partageables)).
+
 
 > Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
