@@ -11,10 +11,8 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Highlights
 
 - Support of comparison operators on [object references](../Concepts/dt_object.md#object-operators) and [collection references](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
+- When a component has a declared namespace, its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`].
 
-#### Behavior changes
-
-- When a component has a declared namespace, its functions and classes are now automatically shared between all components in the host project via [`cs.<namespace>`].
 
 
 ## 4D 20 R5
@@ -23,7 +21,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Highlights
 
-- New [Component manager](../Project/components.md) to handle components through a `dependencies.json` file. 
+- New [Component manager](../Project/components.md) to handle components through a `dependencies.json` file.
 - Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
 - QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), and [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
