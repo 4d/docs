@@ -16,7 +16,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Pathnames
 
-`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page. 
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
 
 
 
@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Description
 
