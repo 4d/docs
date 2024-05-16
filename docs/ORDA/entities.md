@@ -261,7 +261,7 @@ You can simultaneously create and use as many different entity selections as you
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, unless you call the [`.clean()`](API/EntitySelectionClass.md#clean) function.
+When entities are deleted, their references remain in the entity selection with an *undefined* value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
 
 :::
 
