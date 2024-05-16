@@ -19,7 +19,7 @@ title: On Window Opening Denied
 
 This event is generated when the opening of a pop-up window is blocked by the Web area. As áreas Web de 4D não permitem a abertura de janelas pop-up.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
 This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Pode aceitar a entrega chamando:
 

@@ -17,4 +17,4 @@ title: プラグイン
 
 #### 対象オブジェクト
 
-[Plug-in Area](pluginArea_overview.md)
+[プラグインエリア](pluginArea_overview.md)

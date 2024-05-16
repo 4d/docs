@@ -9,20 +9,20 @@ title: 用語集
 
 ## 動作
 
-Every action that can be done on a [resource](#resource). 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、drop (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
+[リソース上](#リソース) に対しておこなえるアクションを指します。 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、drop (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
 
 ## 属性
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). データクラス属性とエンティティ属性を混同しないようにしてください:
+属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
 
 - データクラスオブジェクトにおける各プロパティは、対応するテーブルの対応するフィールドへとマップするデータクラス属性です (同じ名前と型)。
 - エンティティオブジェクトにおけるエンティティ属性は、対応するデータストア属性の値を格納するプロパティです。
 
-> _Attributes_ and _properties_ are similar concepts. "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
+> _属性_ と _プロパティ_ は似た概念です。 "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
 ## 属性パス
 
-属性パスとは、あるデータクラスあるいはエンティティ内の属性へのパスです。 See also [PropertyPath](#propertyPath).
+属性パスとは、あるデータクラスあるいはエンティティ内の属性へのパスです。 [プロパティパス](#プロパティパス) も参照してください。
 
 ## クラスコード
 
@@ -56,7 +56,7 @@ ORDA データモデルクラスの関数。
 
 ## データストア
 
-データストアとは、ORDA によって提供されるインターフェースオブジェクトです。データストアはストラクチャーを参照し、データへのアクセスを提供します。 The main database, returned by the `ds` command, is available as a datastore (the main datastore).
+データストアとは、ORDA によって提供されるインターフェースオブジェクトです。データストアはストラクチャーを参照し、データへのアクセスを提供します。 `ds` コマンドによって返されるメインデータベースは、データストア (メインデータストア) として利用可能です。
 
 データストアは以下のものを提供します:
 
@@ -73,7 +73,7 @@ ORDA データモデルクラスの関数。
 
 ## DataStoreImplementation
 
-Internal name of the generic DataStore class in the `4D` class store.
+`4D` クラスストア内の DataStore クラスの内部的な名称。
 
 ## ディープコピー
 
@@ -81,7 +81,7 @@ Internal name of the generic DataStore class in the `4D` class store.
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. この参照は 4D のメインデータベースが提供するデータストアに合致します。
+`ds` は、[データストア](dsMapping.md#データストア) のオブジェクト参照を返す 4Dランゲージコマンドです。 この参照は 4D のメインデータベースが提供するデータストアに合致します。
 
 ## Entity
 
@@ -105,7 +105,7 @@ Internal name of the generic DataStore class in the `4D` class store.
 
 ## 汎用クラス
 
-エンティティやデータクラスなどの ORDA オブジェクト用のビルトインクラス。 Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+エンティティやデータクラスなどの ORDA オブジェクト用のビルトインクラス。 汎用クラスのプロパティや関数は、ユーザー拡張クラス (例: `EmployeeEntity`) において自動で利用可能です。
 
 ## レイジーローディング
 
@@ -119,7 +119,7 @@ Internal name of the generic DataStore class in the `4D` class store.
 
 データストア、データクラス、エンティティセレクション、エンティティなどの ORDA オブジェクトは、オブジェクトのクラスを定義します。 これらのクラスには、オブジェクトを直接操作するための専用のメソッドが提供されています。 これらのメソッドはメンバー関数とも呼ばれます。 このメソッドを使用するには、オブジェクトのインスタンスに対して呼び出します。
 
-For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+たとえば、`query()` メソッドはデータクラスのメンバー関数です。 `$myClass` 変数にデータクラスオブジェクトを格納している場合、次のように書くことができます:
 
 ```code4d
 $myClass.query("name = smith")
@@ -138,7 +138,7 @@ $myClass.query("name = smith")
 - collection
 - ピクチャー (\*)
 
-_(\*) picture type is not supported by statistical methods such as_ `entitySelection.max( )`.
+_(\*) ピクチャー型は_ `entitySelection.max( )` _などの統計型メソッドではサポートされていません。_
 
 ## オプティミスティック・ロック
 
@@ -150,11 +150,11 @@ _(\*) picture type is not supported by statistical methods such as_ `entitySelec
 
 ## 権限
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+[リソース](#リソース) に対する実行が許可された [アクション](#アクション) の範囲のことです。 ビジネスロジックに応じて、複数の権限を [ロール](#ロール) としてまとめることができます。
 
 ## プロパティ
 
-See [Attribute](#attribute).
+[属性](#属性) を参照してください。
 
 > 属性とプロパティは似た概念です。 "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
@@ -193,11 +193,11 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 
 ## リソース
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). 利用可能なリソースは、データストア、データクラス、データクラス属性、ORDAデータモデル関数のいずれかです。
+[権限](#権限) における [アクション](#アクション) の許可・拒否の対象となる ORDA 要素。 利用可能なリソースは、データストア、データクラス、データクラス属性、ORDAデータモデル関数のいずれかです。
 
 ## ロール
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. ロールは 1つ以上の権限を持つことができます。
+ロールとは、管理者が使用することを目的とした、公開された [権限](#権限) のことです。 ロールは 1つ以上の権限を持つことができます。
 
 ## Session
 
@@ -205,7 +205,7 @@ A role is a published [privilege](#privilege) intended to be used by an administ
 
 新規セッションが開始されるごとに、ライセンスが消費されます。 セッションが閉じられると、ライセンスは解放されます。
 
-アクティビティのないセッションはタイムアウト後に自動的に終了します。 The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+アクティビティのないセッションはタイムアウト後に自動的に終了します。 デフォルトのタイムアウトは 48時間で、任意に設定することができます (最少時間は 60分)。
 
 ## シャロウコピー
 

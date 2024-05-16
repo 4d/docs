@@ -5,7 +5,7 @@ title: Sobre petições REST
 
 As estrutyuras abaixo são compatíveis com petições REST:
 
-| URI                                                              | Recurso                                                                                                   | /? or &{filter} (Output)                                                                                                                                       |
+| URI                                                              | Recurso                                                                                                   | /? /? or &{filter} (Output)                                                                                                                                    |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                               | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)                | [$method=...]($method.md)                                                                                                                             |
@@ -20,7 +20,7 @@ Como com todas as URIs, o primeiro parâmetro é definido por um “?” e todos
 
 > Pode colocar todos os valores entre aspas para evitar ambiguidades. Por exemplo, no exemplo anterior, poderíamos colocar o valor para o último nome em aspas simples: "lastName!='Jones'".
 
-Os parâmetros permitem que manipule dados em dataclasses em seu projeto 4D. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+Os parâmetros permitem que manipule dados em dataclasses em seu projeto 4D. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 

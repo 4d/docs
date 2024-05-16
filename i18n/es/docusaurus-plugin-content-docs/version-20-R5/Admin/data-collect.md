@@ -109,10 +109,10 @@ También se recogen algunos datos a intervalos regulares.
 
 ## ¿Dónde se almacena y envía?
 
-Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se guarda dentro de la [carpeta activa de 4D](https://doc.4d.com/4dv20/help/command/en/page485.html), es decir:
 
-- on Windows: `Users\[userName]\AppData\Roaming\4D Server`
-- on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+- en Windows: `Users\[userName]\AppData\Roaming\4D Server`
+- en macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 Una vez a la semana, el archivo se envía automáticamente por la red a 4D. A continuación, el archivo se elimina de la carpeta activa de 4D.
 
@@ -120,10 +120,10 @@ Una vez a la semana, el archivo se envía automáticamente por la red a 4D. A co
 
 > Si el archivo no ha podido ser enviado por alguna razón, no obstante se elimina y no se muestra ningún mensaje de error del lado de 4D Server.
 
-The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
+El archivo se envía a la siguiente dirección del servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 ## Desactivar la recopilación de datos en las aplicaciones cliente/servidor integradas
 
-You can disable the automatic data collection in [client/server built applications](../Desktop/building.md#clientserver-page).
+Puede desactivar la recolección automática de datos en [aplicaciones integradas cliente/servidor](../Desktop/building.md#clientserver-page).
 
-To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.
+Para desactivar la colección, pase el valor **False** a la llave [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) en el archivo `buildApp.4DSettings`, utilizado para crear la aplicación cliente/servidor.

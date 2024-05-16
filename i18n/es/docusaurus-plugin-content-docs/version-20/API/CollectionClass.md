@@ -86,7 +86,7 @@ Una colección se inicializa con:
 | Parámetros | Tipo                                                                    |    | Descripción                                   |
 | ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                       |
-| Result     | Collection                                                              | <- | The new collection|<!-- END REF -->
+| Result     | Collection                                                              | <- | La nueva colección|<!-- END REF -->
 
 
 |

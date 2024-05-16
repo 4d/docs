@@ -25,12 +25,12 @@ A janela tem as seguintes características principais:
 - You can filter the window contents by using the **Categories** menu:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
-  - right-click on an object and select **Copy** in the contextual menu
+  - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
   - or drag and drop the object from the library The object is then added to the form.
 
 Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+Todos los objetos propuestos en la librería de objetos estándar se describen en [esta sección en doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 ## Utilização da biblioteca de objetos padrão
 
@@ -42,7 +42,7 @@ Using libraries, you can build form object backgrounds grouped by graphic famili
 
 ### Criar uma biblioteca de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+Para crear una librería de objetos, seleccione **Nuevo>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
 
 Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
 
@@ -54,7 +54,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
+Para abrir una librería de objetos personalizada, seleccione el comando **Abrir>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 
 - **.4dproject**
 - **.4dz**
@@ -66,18 +66,18 @@ Na realidade, as bibliotecas de objectos personalizados são projectos 4D cláss
 
 ### Construir uma biblioteca de objectos
 
-Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Pueden provenir de un formulario o de otra librería de objetos (incluyendo la [librería estándar](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> Para poder arrastrar y soltar objetos de los formularios a las librerías de objetos, debe asegurarse de seleccionar la opción **Iniciar arrastrar y soltar** en las Preferencias de 4D.
 
 As operações básicas estão disponíveis no menu de contexto ou no menu de opções da janela:
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Cut** or **Copy** to the pasteboard
-- **Paste** an object from the pasteboard
-- **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
+- **Cortar** o **Copiar** al portapapeles
+- **Pegar** un objeto del tablero portapapeles
+- **Borrar** - elimina el objeto de la librería
+- **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
 
 Pode colocar objectos individuais (incluindo subformulários) ou conjuntos de objectos numa biblioteca de objectos. Cada objecto ou conjunto é agrupado num único item:
 

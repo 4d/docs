@@ -3,26 +3,26 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Puede ser llamado por                                                                                                                                                       | Definición                                     |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Se produce un clic en el encabezado de columna |
+| Code | Puede ser llamado por                                                                                                                                                            | Definición                                     |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 42   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | Se produce un clic en el encabezado de columna |
 
 ## Descripción
 
 ### List Box
 
-Este evento se genera cuando se hace clic en el encabezado de una columna de list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
+Este evento se genera cuando se hace clic en el encabezado de una columna de list box. En este caso, el comando `Self` permite identificar el encabezado de la columna sobre la que se ha hecho clic.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+Si se seleccionó la propiedad [Sortable](FormObjects/properties_Action.md#sortable) para el list box, se puede decidir si se autoriza o no una ordenación estándar de la columna pasando el valor 0 o -1 en la variable `$0`:
 
-- If `$0` equals 0, a standard sort is performed.
-- If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. El desarrollador puede seguir generando una ordenación de columnas basada en criterios de ordenación personalizados utilizando el lenguaje 4D.
+- Si `$0` es igual a 0, se realiza una ordenación estándar.
+- Si `$0` es igual a -1, no se realiza una ordenación estándar y el encabezado no muestra la flecha de ordenación. El desarrollador puede seguir generando una ordenación de columnas basada en criterios de ordenación personalizados utilizando el lenguaje 4D.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
+Si la propiedad [Sortable](FormObjects/properties_Action.md#sortable) no está seleccionada para el list box, la variable `$0` no se utiliza.
 
 ### 4D View Pro
 
-Este evento se genera cuando el usuario hace clic en el encabezado de una columna o línea en un documento 4D View Pro. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Este evento se genera cuando el usuario hace clic en el encabezado de una columna o línea en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -33,11 +33,11 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
 
 #### 参照
 
-[Transparent](#transparent)
+[透過](#透過)
 
 ---
 
@@ -75,7 +75,23 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[スピナー](spinner.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[テキストエリア](text.md) -
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -113,7 +129,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#概要)
 
 ---
 
@@ -160,7 +176,7 @@ title: 背景色と境界線
 
 ## 行背景色配列
 
-`Array type list boxes`
+`配列型リストボックス`
 
 リストボックスまたはリストボックス列の各行にカスタムの背景色を適用するのに使用する配列名です。
 
@@ -169,8 +185,8 @@ title: 背景色と境界線
 たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。 同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=0x00FFD0B0 // オレンジ
+ <>_BgndColors{$i}:=-255 // デフォルト値
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
@@ -178,7 +194,7 @@ title: 背景色と境界線
 次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
@@ -212,8 +228,8 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#概要)
 
 #### 参照
 
-[Background Color / Fill Color](#background-color-fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)

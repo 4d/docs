@@ -7,22 +7,25 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R2       | Añadidos       |
+| Lanzamiento | Modificaciones                                                               |
+| ----------- | ---------------------------------------------------------------------------- |
+| 20 R6       | Added enableState() and disableState() |
+| 20 R2       | Añadidos                                                                     |
 
 </details>
 
 ### Comandos y funciones
 
-|                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebFormClass.componentName.Syntax -->](#componentname)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.componentName.Summary --> |
-| [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setError().Summary -->            |
-| [<!-- INCLUDE #WebFormClass.setMessage().Syntax -->](#setmessage)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setMessage().Summary -->      |
-| [<!-- INCLUDE #WebFormClass.setWarning().Syntax -->](#setwarning)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setWarning().Summary -->      |
-| [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.Web Form.Summary -->                      |
-| [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.Web Event.Summary -->                   |
+|                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->  |
+| [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
+| [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
+| [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
+| [<!-- INCLUDE #WebFormClass.setMessage().Syntax -->](#setmessage)<br/><!-- INCLUDE #WebFormClass.setMessage().Summary -->       |
+| [<!-- INCLUDE #WebFormClass.setWarning().Syntax -->](#setwarning)<br/><!-- INCLUDE #WebFormClass.setWarning().Summary -->       |
+| [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
+| [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
 ### _.componentName_
 
@@ -33,6 +36,71 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these webforms.
 
 For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
+
+### .disableState()
+
+<!-- REF #WebFormClass.disableState().Syntax -->
+
+**.disableState**( _state_ : string)<!-- END REF -->
+
+<!-- REF #WebFormClass.disableState().Params -->
+
+| Parámetros | Tipo   |     | Descripción                                |
+| ---------- | ------ | :-: | ------------------------------------------ |
+| state      | string |  -> | Name of state to disable from the web form |
+
+<!-- END REF -->
+
+#### Descripción
+
+The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the _state_ in the current web form<!-- END REF -->.
+
+This function does nothing if:
+
+- the _state_ is currently not enabled in the web form,
+- the _state_ does not exist for the web form.
+
+If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
+
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+
+### .enableState()
+
+<!-- REF #WebFormClass.enableState().Syntax -->
+
+**.enableState**( _state_ : string )<!-- END REF -->
+
+<!-- REF #WebFormClass.enableState().Params -->
+
+| Parámetros | Tipo   |     | Descripción                             |
+| ---------- | ------ | :-: | --------------------------------------- |
+| state      | string |  -> | Name of state to enable on the web form |
+
+<!-- END REF -->
+
+#### Descripción
+
+The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the _state_ in the current web form<!-- END REF -->.
+
+This function does nothing if:
+
+- the _state_ has already been enabled on the web form,
+- the _state_ does not exist for the web form.
+
+If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
+
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+
+#### Ejemplo
+
+You enable a specific state named "wrongCredentials" in case of error in your login page:
+
+```4d
+Function authenticationError()
+	If (Session.info.type#"remote")
+		Web Form.enableState("wrongCredentials")
+	End if
+```
 
 ### .setError()
 

@@ -15,7 +15,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)
 
 ---
 
@@ -31,7 +31,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)
 
 ---
 
@@ -47,7 +47,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)
 
 ---
 
@@ -63,7 +63,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)
 
 ---
 
@@ -79,7 +79,7 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)
 
 ---
 
@@ -95,4 +95,4 @@ title: アニメーション
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md)
+[ピクチャーボタン](pictureButton_overview.md)

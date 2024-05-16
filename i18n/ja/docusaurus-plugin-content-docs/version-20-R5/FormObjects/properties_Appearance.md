@@ -56,7 +56,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 リストボックスのセレクションハイライトを非表示にします。
 
-このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 ハイライトが非表示になっていても選択行は引き続き機能的に有効です。しかしながら、画面上では選択状態が明示されなくなるため、[プログラムによって選択行を可視化](listbox_overview.md#選択行の見た目のカスタマイズ) する必要があります。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -68,7 +68,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
@@ -80,8 +80,8 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 | プロパティリスト | JSON 値      | 説明                                                                      |
 | -------- | ----------- | ----------------------------------------------------------------------- |
-| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
-| ×        | "hidden"    | スクロールバーは表示されません。                                                        |
+| あり       | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| なし       | "hidden"    | スクロールバーは表示されません。                                                        |
 | 自動       | "automatic" | スクロールバーは必要なときに表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 > ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
@@ -101,7 +101,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 参照
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[縦スクロールバー](#縦スクロールバー)
 
 ---
 
@@ -117,7 +117,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -133,7 +133,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -149,7 +149,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -167,7 +167,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md)
 
 ---
 
@@ -183,7 +183,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -199,7 +199,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -215,7 +215,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -231,7 +231,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -247,7 +247,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -273,7 +273,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -289,7 +289,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -307,7 +307,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[Tab Control](tabControl.md)
+[タブコントロール](tabControl.md)
 
 ---
 
@@ -323,11 +323,11 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md)
 
 #### 参照
 
-[4D View Pro reference guide](../ViewPro/getting-started.md)
+[4D View Pro リファレンスガイド](../ViewPro/getting-started.md)
 
 ---
 
@@ -339,8 +339,8 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | プロパティリスト | JSON 値      | 説明                                                                      |
 | -------- | ----------- | ----------------------------------------------------------------------- |
-| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
-| ×        | "hidden"    | スクロールバーは表示されません。                                                        |
+| あり       | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| なし       | "hidden"    | スクロールバーは表示されません。                                                        |
 | 自動       | "automatic" | スクロールバーは必要なときに表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 > ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
@@ -362,7 +362,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 参照
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[横スクロールバー](#横スクロールバー)
 
 ---
 
@@ -384,7 +384,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
@@ -400,4 +400,4 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)

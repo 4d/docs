@@ -7,22 +7,25 @@ title: WebForm
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R2 | 追加 |
+| リリース  | 内容                                                                       |
+| ----- | ------------------------------------------------------------------------ |
+| 20 R6 | enableState() と disableState() を追加 |
+| 20 R2 | 追加                                                                       |
 
 </details>
 
 ### コマンドと関数
 
-|                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebFormClass.componentName.Syntax -->](#componentname)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.componentName.Summary --> |
-| [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setError().Summary -->            |
-| [<!-- INCLUDE #WebFormClass.setMessage().Syntax -->](#setmessage)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setMessage().Summary -->      |
-| [<!-- INCLUDE #WebFormClass.setWarning().Syntax -->](#setwarning)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebFormClass.setWarning().Summary -->      |
-| [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.Web Form.Summary -->                      |
-| [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.Web Event.Summary -->                   |
+|                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->  |
+| [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
+| [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
+| [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
+| [<!-- INCLUDE #WebFormClass.setMessage().Syntax -->](#setmessage)<br/><!-- INCLUDE #WebFormClass.setMessage().Summary -->       |
+| [<!-- INCLUDE #WebFormClass.setWarning().Syntax -->](#setwarning)<br/><!-- INCLUDE #WebFormClass.setWarning().Summary -->       |
+| [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
+| [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
 ### _.componentName_
 
@@ -33,6 +36,73 @@ title: WebForm
 Webフォームのコンポーネント (構成要素) とは、これらの Webフォームの<!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.componentName` の説明](https://developer.qodly.com/docs/language/WebFormClass#componentname) を参照ください。
+
+### .disableState()
+
+<!-- REF #WebFormClass.disableState().Syntax -->
+
+**.disableState**( _state_ : string)<!-- END REF -->
+
+<!-- REF #WebFormClass.disableState().Params -->
+
+| 引数    | タイプ    |     | 説明                       |
+| ----- | ------ | :-: | ------------------------ |
+| state | string |  -> | Webフォーム上で無効化する state の名称 |
+
+<!-- END REF -->
+
+#### 説明
+
+`.disableState()` 関数は、<!-- REF #WebFormClass.disableState().Summary -->カレントWeb
+フォーム上の _state_ のレンダリングを無効化します<!-- END REF -->。
+
+この関数は、以下の場合には何もしません:
+
+- Webフォーム上で _state_ が現在有効ではない。
+- Webフォーム上で _state_ が存在しない。
+
+同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
+
+Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states) を参照ください。
+
+### .enableState()
+
+<!-- REF #WebFormClass.enableState().Syntax -->
+
+**.enableState**( _state_ : string )<!-- END REF -->
+
+<!-- REF #WebFormClass.enableState().Params -->
+
+| 引数    | タイプ    |     | 説明                       |
+| ----- | ------ | :-: | ------------------------ |
+| state | string |  -> | Webフォーム上で有効化する state の名称 |
+
+<!-- END REF -->
+
+#### 説明
+
+`.enableState()` 関数は、<!-- REF #WebFormClass.enableState().Summary -->カレントWeb
+フォーム上の _state_ のレンダリングを有効化します<!-- END REF -->。
+
+この関数は、以下の場合には何もしません:
+
+- Webフォーム上で _state_ がすでに有効である。
+- Webフォーム上で _state_ が存在しない。
+
+同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
+
+Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states) を参照ください。
+
+#### 例題
+
+ログインページでエラーが発生した場合に、"wrongCredentials" という専用の state を有効にします。
+
+```4d
+Function authenticationError()
+	If (Session.info.type#"remote")
+		Web Form.enableState("wrongCredentials")
+	End if
+```
 
 ### .setError()
 

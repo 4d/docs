@@ -3,7 +3,7 @@ id: entityset
 title: $entityset
 ---
 
-After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
+`$method=entityset` を使って [エンティティセットを作成]($method.md#methodentityset) すると、それを後で再利用することができます。
 
 ## 使用可能なシンタックス
 
@@ -14,15 +14,15 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 ## $entityset/{entitySetID}
 
-Retrieves an existing entity set (_e.g._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+既存のエンティティセットを取得します(_例_: `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### 説明
 
 このシンタックスを使って、定義されたエンティティセットに対してあらゆる操作を実行できます。
 
-Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
+エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
 ### 例題
 
@@ -41,9 +41,9 @@ When you retrieve an existing entity set stored in 4D Server's cache, you can al
 
 ### 説明
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator...  &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
-You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
+このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
 下記は、論理演算子の一覧です:
 

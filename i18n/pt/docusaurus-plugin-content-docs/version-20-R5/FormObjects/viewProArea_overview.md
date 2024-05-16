@@ -11,7 +11,7 @@ Once you use 4D View Pro areas in your forms, you can import and export spreadsh
 
 ## Usando as áreas 4D View Pro
 
-4D View Pro areas are documented in the [4D View Pro section](ViewPro/getting-started.md).
+Las áreas 4D View Pro están documentadas en [la sección 4D View Pro](ViewPro/getting-started.md).
 
 ## Propriedades compatíveis
 

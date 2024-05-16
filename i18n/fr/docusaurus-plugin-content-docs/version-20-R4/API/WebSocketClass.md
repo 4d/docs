@@ -114,7 +114,7 @@ Dans *connectionHandler*, vous pouvez transmettre un objet contenant des fonctio
 | ----------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Fonction de callback pour les données WebSocket. Appelée à chaque fois que le WebSocket a reçu des données. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.type` (texte) : toujours "message"</li><li>`$2.data` (texte, blob, ou objet, voir `dataType`) : Données reçues</li></ul> |
 | onError     | [Function](FunctionClass.md) | Fonction de callback pour les erreurs d'exécution. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.type` (texte) : toujours "error"</li><li>`$2.errors` : collection de piles d'erreurs 4D en cas d'erreur d'exécution.<ul><li>`[].errCode` (numérique) : Code d'erreur 4D</li><li>`[].message` (texte) : Description de l'erreur 4D</li><li>`[].componentSignature` (texte) : Signature du composant interne qui a renvoyé l'erreur</li></ul></li></ul>                                                          |
-| onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.code` (numérique, en lecture seule) : unsigned short contenant le code de fermeture envoyé par le serveur.</li><li>`$2.reason` (texte, en lecture seule) : Raison pour laquelle le serveur a fermé la connexion. Elle est spécifique au serveur et au sous-protocole.</li><li>`$2.wasClean` (booléen, en lecture seule) : Indique si la connexion a été fermée proprement ou non.</li></ul>                                                    |
+| onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.code` (numérique, en lecture seule) : unsigned short contenant le code de fermeture envoyé par le serveur.</li><li>`$2.reason` (texte, en lecture seule) : Raison pour laquelle le serveur a fermé la connexion. Elle est spécifique au serveur et au sous-protocole.</li></ul>                                                    |
 | onOpen      | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est ouverte. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.type` (texte) : toujours "open"</li></ul>                                                   |
 | dataType    | Text                         | Type de données reçues ou envoyées. Valeurs disponibles : "text" (par défaut), "blob", "object". "text" = utf-8                                                                                                                     |
 | headers     | Object                       | En-têtes de la WebSocket.<li>Syntaxe pour l'affectation standard des clés : `headers.*key*:=*value*` (*value* peut être une collection si la même clé apparaît plusieurs fois)</li><li>Syntaxe pour l'affectation des cookies (cas particulier) : `headers.Cookie:="*nom*=*valeur* { ; *nom2*=*valeur2*{ ; ... } }"`</li>                                                                                                                                                       |
@@ -254,7 +254,7 @@ Dans *code*, vous pouvez passer un code d'état expliquant pourquoi la connexion
 - S'il n'est pas spécifié, le code de fermeture de la connexion est automatiquement fixé à 1000 pour une fermeture normale, ou à une autre valeur standard dans la plage 1001-1015 qui indique la raison réelle de la fermeture de la connexion.
 - Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du *code * , vous devez également spécifier une *reason*.
 
-Dans *reason*, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée. 
+Dans *reason*, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée.
 
 
 <!-- END REF -->
@@ -272,9 +272,3 @@ La propriété `.url` contient <!-- REF #WebSocketClass.url.Summary -->l'URL à 
 Cette propriété est en lecture seule.
 
 <!-- END REF -->
-
-
-
-
-
-

@@ -38,7 +38,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | licença                 | Object                                                   | Nome comercial e descrição das licenças do produto                                                                                       |
 | isRosetta               | Parâmetros                                               | True se 4D for emulado através do Rosetta no macOS, False caso contrário (não emulado ou no Windows). |
 | uniqueID                | Text                                                     | ID único do 4D Server                                                                                                                    |
-| id                      | Texto (cadeia de caracteres com hash) | Unique id associated to the database (_Polynomial Rolling hash of the database name_)                                 |
+| id                      | Texto (cadeia de caracteres com hash) | Identificação única associada à base de dados (_Polinômio Rolling hash do nome da base de dados_)                     |
 | dataFileSize            | Number                                                   | Tamanho do arquivo de dados em bytes                                                                                                     |
 | indexesSize             | Number                                                   | Tamanho do índice em bytes                                                                                                               |
 | cacheSize               | Number                                                   | Tamanho da cache em bytes                                                                                                                |
@@ -95,10 +95,10 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ### Recolhido sempre que PHP execute é chamado
 
-| Dados       | Tipo       | Notas                                                                               |
-| ----------- | ---------- | ----------------------------------------------------------------------------------- |
-| phpCall     | Number     | Number of calls to `PHP execute`                                                    |
-| externalPHP | Parâmetros | True if the client performs a call to `PHP execute` and uses its own version of php |
+| Dados       | Tipo       | Notas                                                                                           |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------- |
+| phpCall     | Number     | Nùmero de llamadas a `PHP execute`                                                              |
+| externalPHP | Parâmetros | True se o cliente efetuar uma chamada para `PHP execute` e utilizar a sua própria versão de php |
 
 ### Recolhido na ligação do cliente
 
@@ -109,10 +109,11 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ## Onde é armazenado e enviado?
 
-Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](https://doc.4d.com/4dv20/help/command/en/page485.html), ou seja:
 
-- on Windows: `Users\[userName]\AppData\Roaming\4D Server`
-- on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+- en Windows:
+  `Users\[userName]\AppData\Roaming\4D Server`
+- em macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 Uma vez por semana, o ficheiro é automaticamente enviado através da rede para 4D. O arquivo é então apagado da pasta 4D activa.
 
@@ -120,10 +121,10 @@ Uma vez por semana, o ficheiro é automaticamente enviado através da rede para 
 
 > Se o arquivo não pôde ser enviado por algum motivo, é, no entanto, apagado e não é exibida nenhuma mensagem de erro no lado do Servidor 4D.
 
-The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
+O ficheiro é enviado para o seguinte endereço de servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 ## Desativar a coleção de dados em aplicações cliente/servidor geradas
 
-You can disable the automatic data collection in [client/server built applications](../Desktop/building.md#clientserver-page).
+Pode desactivar a recolha automática de dados em [aplicações construídas cliente/servidor](../Desktop/building.md#clientserver-page).
 
-To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.
+Para desativar a coleção, passe o valor **False** para a chave [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) no arquivo `buildApp.4DSettings`, utilizado para construir a aplicação cliente/servidor.

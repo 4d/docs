@@ -3,7 +3,7 @@ id: compute
 title: $compute
 ---
 
-Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (_e.g._, Employee/objectAtt.property1/?$compute=sum)
+指定した属性を対象に計算をおこないます (_例_: `Employee/salary/?$compute=sum`。オブジェクト属性の例: `Employee/objectAtt.property1/?$compute=sum`)。
 
 ## 説明
 
@@ -34,7 +34,7 @@ Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in
 
 `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ```
 {
@@ -52,7 +52,7 @@ Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in
 
 `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ```
 {
@@ -68,7 +68,7 @@ Calculate on specific attributes (_e.g._, `Employee/salary/?$compute=sum)` or in
 
 `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**レスポンス**:
 
 `235000`
 

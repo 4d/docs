@@ -42,6 +42,7 @@ If you execute the following code:
  $e1.name:="Hammer"
   //both variables $e1 and $e2 share the reference to the same entity
   //$e2.name contains "Hammer"
+ If($e1=$e2) //True
 ```
 
 This is illustrated by the following graphic:
@@ -58,6 +59,7 @@ Now if you execute:
   //variable $e1 contains a reference to an entity
   //variable $e2 contains another reference to another entity
   //$e2.name contains "smith"
+ If($e1=$e2) //False
 ```
 
 This is illustrated by the following graphic:
@@ -90,6 +92,7 @@ You can handle entities like any other object in 4D and pass their references di
 :::info
 
 With the entities, there is no concept of "current record" as in the 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+
 
 
 

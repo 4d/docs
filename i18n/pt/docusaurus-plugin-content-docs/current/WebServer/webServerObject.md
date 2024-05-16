@@ -13,13 +13,13 @@ For example, if you installed two components in your main application, you can s
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> Los [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
 
 Each web server (host application or component) can be used in its own separate context, including:
 
-- `On Web Authentication` and `On Web Connection` database method calls
+- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
 - o processamento das etiquetas 4D e das chamadas de métodos,
 - sessões Web e gestão do protocolo TLS.
 
@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funções do servidor Web
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
 
 | Funções                                  | Parâmetro                           | Valor retornado                     | Descrição             |
 | ---------------------------------------- | ----------------------------------- | ----------------------------------- | --------------------- |
@@ -86,12 +86,12 @@ $status:=webServer.stop()
 
 ## Propriedades do servidor web
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
 
 Estas propriedades são definidas:
 
 1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
+2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
 - If the web server is not started, the properties contain the values that will be used at the next web server startup.
@@ -101,7 +101,7 @@ Estas propriedades são definidas:
 
 ## Âmbito dos comandos 4D Web
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |

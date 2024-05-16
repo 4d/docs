@@ -5,7 +5,7 @@ title: Acerca de las peticiones REST
 
 Se soportan las siguientes estructuras para las peticiones REST:
 
-| URI                                                              | Resource (Input)                                                                       | /? or &{filter} (Output)                                                                                                                                       |
+| URI                                                              | Resource (Input)                                                                       | /? /? or &{filter} (Output)                                                                                                                                    |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                               | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)                | [$method=...]($method.md)                                                                                                                             |
@@ -14,13 +14,13 @@ Se soportan las siguientes estructuras para las peticiones REST:
 
 Mientras que todas las solicitudes REST deben contener los parámetros URI y Resource, los filtros de salida (que filtran los datos devueltos) son opcionales.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Por ejemplo:
+Como en todos los URI, el primer parámetro está delimitado por un "?" y todos los siguientes por un "&". Por ejemplo:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
 > Puede colocar todos los valores entre comillas en caso de ambigüedad. Por ejemplo, en nuestro ejemplo anterior, podríamos haber puesto el valor del apellido entre comillas simples: "lastName!='Jones'".
 
-Los parámetros le permiten manipular los datos de las clases de datos en su proyecto 4D. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+Los parámetros le permiten manipular los datos de las clases de datos en su proyecto 4D. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 
