@@ -117,7 +117,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) |                  | X                   | X                                       |
 | [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style)                  | X                | X                   | X                                       |
 | [Bas](properties_CoordinatesAndSizing.md#bottom)                                            | X                | X                   | X                                       |
-| [Classe](properties_Object.md#css-class)                                                    | X                | X                   | X                                       |
+| [Class](properties_Object.md#css-class)                                                     | X                | X                   | X                                       |
 | [Collection ou entity selection](properties_Object.md#collection-or-entity-selection)       |                  | X                   | X                                       |
 | [Redimensionnement colonnes auto](properties_ResizingOptions.md#column-auto-resizing)       | X                | X                   | X                                       |
 | [Élément courant](properties_DataSource.md#current-item)                                    |                  |                     | X                                       |
