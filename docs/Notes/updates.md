@@ -20,7 +20,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Highlights
 
-- New [Component manager](../Project/components.md) to handle components through a `dependencies.json` file. 
+- New [Component manager](../Project/components.md) to handle components through a `dependencies.json` file.
 - Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
 - QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), and [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
@@ -161,6 +161,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Highlights
 
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*.
 - 4D 20.2 is certified on macOS Sonoma (macOS 14).
 - (4D 20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
