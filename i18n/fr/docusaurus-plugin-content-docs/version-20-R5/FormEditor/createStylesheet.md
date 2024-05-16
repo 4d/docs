@@ -90,7 +90,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 }
 ```
 
-### Classe
+### Class
 
 Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
 
