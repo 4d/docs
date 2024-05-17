@@ -130,7 +130,7 @@ _folderConstant_ には、以下の定数のどれか一つを指定して 4Dビ
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer }{ ; \* } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer ) : 4D.Folder<!-- END REF -->
 
 #### 説明
 
