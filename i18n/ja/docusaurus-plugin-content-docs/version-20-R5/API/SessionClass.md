@@ -151,7 +151,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
 
 :::
 
@@ -160,12 +160,12 @@ This function does nothing and always returns **False** with remote client and s
 #### 例題
 
 ```4d
-//Invalidate a web user session
+// Webユーザーセッションを無効にします
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() // $isGuest は true
 ```
 
 <!-- END REF -->
@@ -230,13 +230,13 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 #### 説明
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the _privilege_ is associated to the session, and False otherwise<!-- END REF -->.
+`.hasPrivilege()` 関数は、<!-- REF #SessionClass.hasPrivilege().Summary -->対象セッションに _privilege_ のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
 
-With remote client and stored procedure sessions, this function always returns True, whatever the _privilege_.
+リモートクライアントとストアドプロシージャーセッションでは、この関数は _privilege_ に関係なく、常に True を返します。
 
 #### 例題
 
-You want to check if the "WebAdmin" privilege is associated to the web user session:
+"WebAdmin" アクセス権が Webユーザーセッションに紐づいているかを確認します:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -390,7 +390,7 @@ End if
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは常に **false** を返します。
 
 :::
 
@@ -438,7 +438,7 @@ End if
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
 
 :::
 
