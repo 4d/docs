@@ -47,6 +47,8 @@ Qodly Studio は、以下の Webブラウザーをサポートしています:
 - 開発: 4D v20 R2 以上
 - 運用: 4D Server v20 R2 以上
 - Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
+- Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
+- Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
 
 ### Qodly Studio へのアクセスを有効化する
 
@@ -247,6 +249,7 @@ Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#�
 ログイン/パスワード入力を含む単純な Qodlyフォームで、"Submit" ボタンは DataStore クラスに実装されている以下の `authentify()` 関数を呼び出します:
 
 ```4d
+
 exposed Function authentify($credentials : Object) : Text
 
 var $salesPersons : cs.SalesPersonsSelection
@@ -256,19 +259,18 @@ $salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
 $sp:=$salesPersons.first()
 
 If ($sp#Null)
-    If (Verify password hash($credentials.password; $sp.password))
+	If (Verify password hash($credentials.password; $sp.password))
 
-        Session.clearPrivileges()
-        Session.setPrivileges("") // ゲストセッション
+		Session.clearPrivileges()
+		Session.setPrivileges("") // ゲストセッション
 
-        return "認証に成功しました"
-    Else 
-        return "パスワードに誤りがあります"
-    End if
+		return "認証に成功しました"
+	Else 
+		return "パスワードに誤りがあります"
+	End if
 Else 
-    return "ユーザーは登録されていません"
-End if 
-
+	return "ユーザーは登録されていません"
+End if
 ```
 
 この呼び出しは許可されており、そして認証が成功しない限り `Session.setPrivileges()` は実行されないため、ライセンスは消費されません。 `Session.setPrivileges()` が呼び出されると、4Dクライアントライセンスが消費され、その後はすべての RESTリクエストが受け入れられます。

@@ -151,7 +151,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -160,12 +160,12 @@ The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summa
 #### Ejemplo
 
 ```4d
-//Invalidar una sesión
+//Invalidate a web user session
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest es True
+$isGuest:=Session.isGuest() //$isGuest is True
 ```
 
 <!-- END REF -->
@@ -230,17 +230,13 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 #### Descripción
 
-:::note
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the _privilege_ is associated to the session, and False otherwise<!-- END REF -->.
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
-
-:::
-
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+With remote client and stored procedure sessions, this function always returns True, whatever the _privilege_.
 
 #### Ejemplo
 
-Quiere comprobar si el privilegio "WebAdmin" está asociado a la sesión:
+You want to check if the "WebAdmin" privilege is associated to the web user session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -395,7 +391,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+This function always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -443,7 +439,7 @@ End if
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 

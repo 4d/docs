@@ -47,8 +47,8 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D v20 R2 ou superior
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
-- Web sessions (_aka_ **Scalable sessions**) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [**thread-safe**](preemptiveWeb.md).
+- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
