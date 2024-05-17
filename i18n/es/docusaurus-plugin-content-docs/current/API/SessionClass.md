@@ -223,7 +223,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 | Parámetros | Tipo    |     | Descripción                                      |
 | ---------- | ------- | :-: | ------------------------------------------------ |
-| privilege  | Text    |  <- | Nombre del privilegio a verificar                |
+| privilege  | Text    |  -> | Nombre del privilegio a verificar                |
 | Result     | Boolean |  <- | True if session has _privilege_, False otherwise |
 
 <!-- END REF -->
