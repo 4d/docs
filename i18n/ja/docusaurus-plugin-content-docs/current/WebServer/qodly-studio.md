@@ -47,8 +47,8 @@ Qodly Studio は、以下の Webブラウザーをサポートしています:
 - 開発: 4D v20 R2 以上
 - 運用: 4D Server v20 R2 以上
 - Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
-- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
+- Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
+- Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
 
 ### Qodly Studio へのアクセスを有効化する
 
