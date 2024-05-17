@@ -234,7 +234,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|privilege|Text|<-|Name of the privilege to verify|
+|privilege|Text|->|Name of the privilege to verify|
 |Result|Boolean|<-|True if session has *privilege*, False otherwise|
 <!-- END REF -->
 
