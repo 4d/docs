@@ -11,13 +11,13 @@ title: コンポーネントの開発
 
 - **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。
 - **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
-- **コンポーネント**: ホストアプリケーションによって使用される目的で、同アプリケーションの [`Components`](Project/architecture.md) フォルダーにコピーされたマトリクスプロジェクト (コンパイル済み または [ビルド済み](Desktop/building.md#コンポーネントをビルド))。
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
 
 ## 基本
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます:
 
-- コンポーネントをインストールするには、[プロジェクトの `Components` フォルダー](Project/architecture.md) にコンポーネントファイルをコピーします。 エイリアスまたはショートカットも使用できます。
+- To use a component, you simply need to [install it in your application](../Project/components.md#basics).
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 - コンポーネントは次の 4D の要素を呼び出すことができます: クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内でデータストアや標準のテーブル、データファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
@@ -66,7 +66,7 @@ title: コンポーネントの開発
 
 マトリクスプロジェクトのすべてのプロジェクトメソッドは 、コンポーネントに含まれます。 つまり、マトリクスプロジェクトをコンポーネント化した後、これらのプロジェクトメソッドは同コンポーネント内で呼び出して実行することができます。
 
-他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 マトリクスプロジェクトで、メソッドプロパティダイアログボックスの **コンポーネントとホストプロジェクト間で共有** ボックスをチェックすることで、ホストプロジェクトと共有したいメソッドを明示的に設定することができます。
+他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 In the matrix project, you must explicitly designate the methods that you want to share with the host project and its components by checking the **Shared by components and host project** box in the method properties dialog box:
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -92,22 +92,26 @@ EXECUTE METHOD($param)
 > インタープリターコンポーネントがインストールされたインタープリターホストデータベースは、それがインタープリターコンポーネントのメソッドを呼び出さなければ、コンパイル/シンタックスチェックができます。 そうでない場合、コンパイルまたはシンタックスチェックを実行しようとすると警告ダイアログが表示され、操作を実行することはできません。\
 > 一般的に、インタープリターメソッドはコンパイル済みメソッドを呼び出せますが、逆はできません。これをおこなうには `EXECUTE METHOD` や `EXECUTE FORMULA` コマンドを使用します。
 
-## クラスや関数の共有
+## Sharing of classes
 
-デフォルトでは、ホストプロジェクトの 4Dコードエディターからコンポーネントのクラスと関数を呼び出すことはできません。 コンポーネントのクラスと関数をホストプロジェクトに公開したい場合は、コンポーネント名前空間を宣言する必要があります。 また、コンポーネントのクラスや関数がホストコードエディターでどのように提案されるかをコントロールすることもできます。
+By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
 
 ### コンポーネント名前空間の宣言
 
-コンポーネントのクラスや関数をホストプロジェクトに公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 デフォルトでは、このエリアは空です。つまり、コンポーネントのクラスはコンポーネント外で利用できません。
+To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. デフォルトでは、このエリアは空です。つまり、コンポーネントのクラスはコンポーネント外で利用できません。
 
 ![](../assets/en/settings/namespace.png)
 
-> _名前空間_ は、同じ名前のクラスや関数を持つ異なるコンポーネントがホストプロジェクトで使用されている場合に、競合が発生しないようにします。 コンポーネント名前空間は、[プロパティの命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠する必要があります。
+:::Note
 
-値を入力すると、ホストプロジェクトのコードにおいてユーザークラスストア (cs) 内の cs.<値> 名前空間を介して、コンポーネントのクラスと関数が利用可能になることを宣言することになります。 たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
+_名前空間_ は、同じ名前のクラスや関数を持つ異なるコンポーネントがホストプロジェクトで使用されている場合に、競合が発生しないようにします。 コンポーネント名前空間は、[プロパティの命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠する必要があります。
+
+:::
+
+When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
 
 ```4d
-// ホストプロジェクトにて
+//in host project or one of its components
 var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
@@ -115,13 +119,13 @@ $area:=$rect.getArea()
 
 :::info
 
-[コンパイルされた](#コンポーネントの保護-コンパイル) コンポーネントの名前空間は、ホストプロジェクトの [コンポーネントメソッドページ](../Concepts/components.md#コンポーネントの使い方) にて、コンポーネント名の後に括弧で表示されます。
+The namespace of a [compiled](#protection-of-components-compilation) component is added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
 :::
 
-競合を避けるためには、優れた識別名の使用が推奨されます。 もし、コンポーネントと同じ名前のユーザークラスがすでにプロジェクトに存在していた場合、そのユーザークラスが考慮され、コンポーネントクラスは無視されます。
+競合を避けるためには、優れた識別名の使用が推奨されます。 If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
 
 コンポーネントの ORDAクラスは、ホストプロジェクトでは使用できません。 たとえば、コンポーネントに Employees というデータクラスがある場合、ホストプロジェクトで "cs.Mycomponent.Employee" クラスを使用することはできません。
 
