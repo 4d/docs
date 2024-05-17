@@ -130,7 +130,7 @@ If the command is called from a component, pass the optional _parameter to get t
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer }{ ; \* } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer ) : 4D.Folder<!-- END REF -->
 
 #### Description
 
