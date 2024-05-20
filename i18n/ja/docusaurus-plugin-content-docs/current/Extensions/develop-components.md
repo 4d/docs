@@ -11,13 +11,13 @@ title: コンポーネントの開発
 
 - **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。
 - **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
+- **コンポーネント**: [ホストアプリケーションにインストール](../Project/components.md#基本) され、同アプリケーションによって使用されるマトリクスプロジェクトのこと。マトリクスプロジェクトはコンパイルし、[ビルド](Desktop/building.md#コンポーネントをビルド) することができます。
 
 ## 基本
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます:
 
-- To use a component, you simply need to [install it in your application](../Project/components.md#basics).
+- コンポーネントを使用するには、[アプリケーションにインストール](../Project/components.md#基本) するだけです。
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 - コンポーネントは次の 4D の要素を呼び出すことができます: クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内でデータストアや標準のテーブル、データファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
@@ -66,7 +66,7 @@ title: コンポーネントの開発
 
 マトリクスプロジェクトのすべてのプロジェクトメソッドは 、コンポーネントに含まれます。 つまり、マトリクスプロジェクトをコンポーネント化した後、これらのプロジェクトメソッドは同コンポーネント内で呼び出して実行することができます。
 
-他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 In the matrix project, you must explicitly designate the methods that you want to share with the host project and its components by checking the **Shared by components and host project** box in the method properties dialog box:
+他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 マトリクスプロジェクトで、メソッドプロパティダイアログボックスの **コンポーネントとホストプロジェクト間で共有** ボックスをチェックすることで、ホストプロジェクトおよびそのコンポーネントと共有したいメソッドを明示的に設定することができます。
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -92,13 +92,13 @@ EXECUTE METHOD($param)
 > インタープリターコンポーネントがインストールされたインタープリターホストデータベースは、それがインタープリターコンポーネントのメソッドを呼び出さなければ、コンパイル/シンタックスチェックができます。 そうでない場合、コンパイルまたはシンタックスチェックを実行しようとすると警告ダイアログが表示され、操作を実行することはできません。\
 > 一般的に、インタープリターメソッドはコンパイル済みメソッドを呼び出せますが、逆はできません。これをおこなうには `EXECUTE METHOD` や `EXECUTE FORMULA` コマンドを使用します。
 
-## Sharing of classes
+## クラスの共有
 
-By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
+デフォルトでは、ホストプロジェクトの 4Dコードエディターからコンポーネントのクラスを呼び出すことはできません。 ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開したい場合は、**コンポーネント名前空間を宣言** する必要があります。 また、コンポーネントのクラスがホストコードエディターでどのように提案されるかをコントロールすることもできます。
 
 ### コンポーネント名前空間の宣言
 
-To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. デフォルトでは、このエリアは空です。つまり、コンポーネントのクラスはコンポーネント外で利用できません。
+ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 デフォルトでは、このエリアは空です。つまり、コンポーネントのクラスはコンポーネント外で利用できません。
 
 ![](../assets/en/settings/namespace.png)
 
