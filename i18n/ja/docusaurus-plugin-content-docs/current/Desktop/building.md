@@ -97,7 +97,7 @@ title: アプリケーションビルド
 
 ストラクチャーからコンパイル済みコンポーネントをビルドします。
 
-[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
+[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md#basics) すると、ホストプロジェクトはその機能を利用できるようになります。
 
 アプリケーション名を _MyComponent_ に指定した場合、4D は _Components_ フォルダーを作成し、その中に _MyComponent.4dbase_ フォルダーを生成します:
 
