@@ -108,10 +108,10 @@ _名前空間_ は、同じ名前のクラスや関数を持つ異なるコン�
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
+値を入力すると、ホストプロジェクトおよび読み込まれているコンポーネントのコードにおいて、ユーザークラスストア (cs) 内の cs.<値> 名前空間を介して、コンポーネントのクラスが利用可能になることを宣言することになります。 たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
 
 ```4d
-//in host project or one of its components
+// ホストプロジェクトまたは読み込まれているコンポーネントにて
 var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
@@ -119,13 +119,13 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component is added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+[コンパイルされた](#コンポーネントの保護-コンパイル) コンポーネントの名前空間は、ホストプロジェクトの [コンポーネントメソッドページ](../Concepts/components.md#コンポーネントの使い方) にて、コンポーネント名の後に括弧で表示されます。
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
 :::
 
-競合を避けるためには、優れた識別名の使用が推奨されます。 If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
+競合を避けるためには、優れた識別名の使用が推奨されます。 もし、コンポーネントの名前空間と同じ名前のユーザークラスがすでにプロジェクトに存在していた場合、そのユーザークラスが考慮され、コンポーネントクラスは無視されます。
 
 コンポーネントの ORDAクラスは、ホストプロジェクトでは使用できません。 たとえば、コンポーネントに Employees というデータクラスがある場合、ホストプロジェクトで "cs.Mycomponent.Employee" クラスを使用することはできません。
 
