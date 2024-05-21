@@ -80,7 +80,7 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                    |     | Description                                |
 | ---------- | ----------------------------------------------------------------------- | :-: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | Valeur(s) de collection |
-| Résultat   | Collection                                                              |  <- | The new collection                         |
+| Résultat   | Collection                                                              |  <- | La nouvelle collection                     |
 
 <!-- END REF -->
 
@@ -162,7 +162,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 | Paramètres | Type                                                                |     | Description                                            |
 | ---------- | ------------------------------------------------------------------- | :-: | ------------------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                                          |  <- | The new shared collection                              |
+| Résultat   | Collection                                                          |  <- | La nouvelle collection partagée                        |
 
 <!-- END REF -->
 
