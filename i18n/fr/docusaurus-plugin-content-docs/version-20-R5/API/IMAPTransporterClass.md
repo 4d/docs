@@ -3,11 +3,11 @@ id: IMAPTransporterClass
 title: IMAPTransporter
 ---
 
-The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
+La classe `IMAPTransporter` vous permet de récupérer des messages à partir d'un serveur de messagerie IMAP.
 
 ### Objet IMAP Transporter
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-new-transporter) command. Leurs propriétés et fonctions sont les suivantes :
+Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transporter](#imap-new-transporter). Leurs propriétés et fonctions sont les suivantes :
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,26 +67,26 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the _server_ parameter and returns a new _transporter_ object. L'objet transporteur retourné sera alors utilisé pour la réception d'emails.
 
-In the _server_ parameter, pass an object containing the following properties:
+Dans le paramètre _server_, passez un objet contenant les propriétés suivantes :
 
-| _server_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Valeur par défaut (si omise)                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                     | False                                                                            |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in _[IMAP transporter](#imap-transporter-object)_ object. | aucun                                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                       | le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                               | 300                                                                              |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                          | 30                                                                               |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | _obligatoire_                                                                    |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                        | aucun                                                                            |
-| .**password** : Text<br/>User password for authentication on the server. Not returned in _[IMAP transporter](#imap-transporter-object)_ object.                                                                                                                                                                                                                                                                                                                                   | aucun                                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 993                                                                              |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | aucun                                                                            |
+| _server_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Valeur par défaut (si omise)                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                          | False                                                                            |
+| .**accessTokenOAuth2** : Text<br/>.**accessTokenOAuth2** : Object<br/>Chaîne ou objet token représentant les informations d'autorisation OAuth2. Utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné en objet _[IMAP transporter](#imap-transporter-object)_. | aucun                                                                            |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                            | le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
+| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                    | 300                                                                              |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                               | 30                                                                               |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | _obligatoire_                                                                    |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                             | aucun                                                                            |
+| .**password** : Text<br/>Mot de passe utilisateur pour l'authentification sur le serveur. Non retourné en objet _[IMAP transporter](#imap-transporter-object)_.                                                                                                                                                                                                                                                                                                                                        | aucun                                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 993                                                                              |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | aucun                                                                            |
 
-> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
+> **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
 
 #### Résultat
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+The function returns an [**IMAP transporter object**](#imap-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
 > La connexion IMAP est automatiquement fermée lorsque l'objet transporteur est détruit.
 
@@ -157,17 +157,17 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
-- a _collection_ containing the unique IDs of specific messages or
-- the unique ID (_text_) of a single message or
-- the following constant (_longint_) for all messages in the selected mailbox:
+- une _collection_ contenant les IDs uniques de messages spécifiques, ou
+- l'ID unique (_texte_) d'un seul message ou
+- la constante suivante (_entier long_) pour tous les messages de la boîte sélectionnée :
 
 | Constante | Valeur | Commentaire                                             |
 | --------- | ------ | ------------------------------------------------------- |
 | IMAP all  | 1      | Sélectionner tous les messages de la boîte sélectionnée |
 
-The `keywords` parameter lets you define the flags to add to `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés (la prise en charge des flags personnalisés dépend de l'implémentation du serveur) :
+Le paramètre `keywords` permet de définir les flags à ajouter aux `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés (la prise en charge des flags personnalisés dépend de l'implémentation du serveur) :
 
 | Propriété       | Type    | Description                                         |
 | --------------- | ------- | --------------------------------------------------- |
@@ -250,11 +250,11 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
 
-In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+Dans le paramètre `mailObj`, passez un objet email. Pour une description détaillée des propriétés de mail, reportez-vous à [Objet Email](EmailObjectClass.md#objet-email). La fonction `.append()` prend en charge les marqueurs de mots-clés dans l'attribut `keywords` des objets email.
 
-The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. S'il est omis, la mailbox courante sera utilisée.
+Le paramètre optionnel `destinationBox` vous permet de passer le nom de la boîte de réception dans laquelle l'objet `mailObj` sera ajouté. S'il est omis, la mailbox courante sera utilisée.
 
-In the optional `options` parameter, you can pass an object to define the charset and encoding for specific parts of the email. Propriétés disponibles :
+Dans le paramètre optionnel `options`, vous pouvez passer un objet permettant de définir le charset et l'encodage des différentes parties de l'email. Propriétés disponibles :
 
 | Propriété     | Type | Description                                                                                                                                                                                                                           |
 | ------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -327,9 +327,9 @@ $status:=$imap.append($msg; "Drafts")
 
 #### Description
 
-The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si cette durée est dépassée entre deux appels de méthodes, la connexion au serveur sera vérifiée. By default, if the property has not been set in the _server_ object, the value is 300.
+The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si cette durée est dépassée entre deux appels de méthodes, la connexion au serveur sera vérifiée. Par défaut, si la propriété n'a pas été définie dans l'objet _server_, la valeur est de 300.
 
-> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
+> **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
 
 <!-- END REF -->
 
@@ -351,12 +351,12 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 
-| Paramètres     | Type       |     | Description                                                      |
-| -------------- | ---------- | :-: | ---------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Collection d'IDs uniques de messages (texte)  |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | Text       |  -> | Boîte de réception recevant les messages copiés                  |
-| Résultat       | Object     |  <- | Statut de l'opération de copie                                   |
+| Paramètres     | Type       |     | Description                                                                          |
+| -------------- | ---------- | :-: | ------------------------------------------------------------------------------------ |
+| msgsIDs        | Collection |  -> | Collection d'IDs uniques de messages (texte)                      |
+| allMsgs        | Integer    |  -> | `IMAP all` : tous les messages de la boîte de réception sélectionnée |
+| destinationBox | Text       |  -> | Boîte de réception recevant les messages copiés                                      |
+| Résultat       | Object     |  <- | Statut de l'opération de copie                                                       |
 
 <!-- END REF -->
 
@@ -366,10 +366,10 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies t
 
 Vous pouvez passer :
 
-- in the _msgsIDs_ parameter, a collection containing the unique IDs of the specific messages to copy, or
-- in the _allMsgs_ parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
+- dans le paramètre _msgsIDs_, une collection contenant les ID uniques des messages spécifiques à copier, ou
+- dans le paramètre _allMsgs_, la constante `IMAP all` (integer) pour copier tous les messages de la boîte de réception sélectionnée.
 
-The _destinationBox_ parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
+Le paramètre _destinationBox_ vous permet de passer une valeur texte avec le nom de la boîte de réception dans laquelle seront placés les messages copiés.
 
 **Returned object**
 
@@ -466,11 +466,11 @@ The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -
 
 Par exemple, si vous essayez de créer "Projects/IMAP/Doc" dans un serveur dont le "/" est le caractère séparateur de hiérarchie, les éléments suivants seront créés :
 
-- Only the "Doc" mailbox if "Projects" & "IMAP" already exist.
-- "IMAP" & "Doc" mailboxes if only “Projects” already exists.
-- "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
+- Uniquement la boîte "Doc" si "Projects" & "IMAP" existent déjà.
+- Les boîtes "IMAP" & "Doc" si seule “Projects” existe déjà.
+- Les boîtes "Projects" & “IMAP” & "Doc" si elles n'existent pas déjà.
 
-In the `name` parameter, pass the name of the new mailbox.
+Dans le paramètre `name`, passez le nom de la mailbox à créer.
 
 **Returned object**
 
@@ -531,11 +531,11 @@ End if
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 
-| Paramètres | Type       |     | Description                                                      |
-| ---------- | ---------- | :-: | ---------------------------------------------------------------- |
-| msgsIDs    | Collection |  -> | Collection d'IDs uniques de messages (texte)  |
-| allMsgs    | Integer    |  -> | `IMAP all`: All messages in the selected mailbox |
-| Résultat   | Object     |  <- | Statut de l'opération de suppression                             |
+| Paramètres | Type       |     | Description                                                                          |
+| ---------- | ---------- | :-: | ------------------------------------------------------------------------------------ |
+| msgsIDs    | Collection |  -> | Collection d'IDs uniques de messages (texte)                      |
+| allMsgs    | Integer    |  -> | `IMAP all` : tous les messages de la boîte de réception sélectionnée |
+| Résultat   | Object     |  <- | Statut de l'opération de suppression                                                 |
 
 <!-- END REF -->
 
@@ -545,10 +545,10 @@ The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets
 
 Vous pouvez passer :
 
-- in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
-- in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
+- dans le paramètre `msgsIDs`, une collection contenant les ID uniques des messages spécifiques à supprimer, ou
+- dans le paramètre `allMsgs`, la constante `IMAP all` (integer) pour supprimer tous les messages de la boîte de réception sélectionnée.
 
-L'exécution de cette fonction ne supprime pas réellement les messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
 
 **Returned object**
 
@@ -642,7 +642,7 @@ Pour supprimer tous les messages de la boîte de réception courante :
 
 The `.deleteBox()` function <!-- REF #IMAPTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->. Si vous tentez de supprimer la boîte INBOX ou une boîte de réception qui n'existe pas, une erreur sera générée.
 
-In the `name` parameter, pass the name of the mailbox to delete.
+Dans le paramètre `name`, passez le nom de la mailbox à supprimer.
 
 > - La fonction ne peut pas supprimer une boîte de réception contenant des boîtes "enfant" si la boîte "parente" dispose de l'attribute "\Noselect".
 > - Tous les messages présents dans la boîte seront également supprimés.
@@ -766,11 +766,11 @@ $status:=$transporter.expunge()
 
 <details><summary>Historique</summary>
 
-| Release | Modifications      |
-| ------- | ------------------ |
-| 20      | _id_ is returned   |
-| 18 R5   | _name_ is optional |
-| 18 R4   | Ajout              |
+| Release | Modifications        |
+| ------- | -------------------- |
+| 20      | _id_ est renvoyé     |
+| 18 R5   | _name_ est optionnel |
+| 18 R4   | Ajout                |
 
 </details>
 
@@ -789,13 +789,13 @@ $status:=$transporter.expunge()
 
 The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox _name_<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
-In the optional _name_ parameter, pass the name of the mailbox to access. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+Dans le paramètre _name_ passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-If the mailbox _name_ is not selectable or does not exist, the function generates an error and returns **null**.
+Si la boîte de réception nommée _name_ n'est pas sélectionnable ou n'existe pas, la fonction génère une erreur et retourne **null**.
 
 **Returned object**
 
-The `boxInfo` object returned contains the following properties:
+L'objet `boxInfo` contient les propriété suivantes :
 
 | Propriété  | Type   | Description                                                                                          |
 | ---------- | ------ | ---------------------------------------------------------------------------------------------------- |
@@ -822,10 +822,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                |
-| ------- | ---------------------------- |
-| 18 R4   | Ajout                        |
-| 19      | Add `isSubscribed` parameter |
+| Release | Modifications                  |
+| ------- | ------------------------------ |
+| 18 R4   | Ajout                          |
+| 19      | Ajout paramètre `isSubscribed` |
 
 </details>
 
@@ -844,7 +844,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. Cette fonction vous permet de gérer localement les listes de messages situés sur le serveur de messagerie IMAP.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Vous pouvez passer :
+Dans le paramètre optionnel `parameters`, passez un objet contenant des valeurs de filtrage des boîtes de réception retournées. Vous pouvez passer :
 
 | Propriété    | Type    | Description                                                                                                |
 | ------------ | ------- | ---------------------------------------------------------------------------------------------------------- |
@@ -863,8 +863,8 @@ Chaque objet de la collection retournée contient les propriétés suivantes :
 
 Si le compte ne contient pas de boites de réception, une collection vide est retournée.
 
-> - If there is no open connection, `.getBoxList()` will open a connection.
-> - If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
+> - Si aucune connexion n'est ouverte, `.getBoxList()` ouvrira une connexion.
+> - Si la connexion n'a pas été utilisée depuis le délai de connexion (voir `IMAP New transporter`), la fonction `.checkConnection( )` est automatiquement appelée.
 
 #### Exemple
 
@@ -919,7 +919,7 @@ Le délimiteur est un caractère pouvant être utilisé pour :
 
 Caractère de délimitation des noms de boites de réception.
 
-> - If there is no open connection, `.getDelimiter()` will open a connection.
+> - Si aucune connexion n'est ouverte, `.getDelimiter()` ouvrira une connexion.
 > - If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
 #### Exemple
@@ -971,17 +971,17 @@ The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->re
 
 Dans le premier paramètre, vous pouvez passer soit :
 
-- _msgNumber_, an _integer_ value indicating the sequence number of the message to retrieve or
-- _msgID_, a _text_ value indicating the unique ID of the message to retrieve.
+- _msgNumber_, une valeur _integer_ indiquant le numéro de séquence du message à récupérer ou
+- _msgID_, une valeur _text_ indiquant l'ID unique du message à récupérer.
 
-The optional _options_ parameter allows you pass an object defining additional instructions for handling the message. Les propriétés suivantes sont disponibles :
+Le paramètre facultatif _options_ vous permet de passer un objet définissant des instructions supplémentaires pour la gestion de votre message. Les propriétés suivantes sont disponibles :
 
 | Propriété  | Type    | Description                                                                                                                                                                                                                 |
 | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | boolean | Si Vrai, le message est marqué comme "seen" (lu) dans la boite de réception. Si Faux, le message n'est pas marqué comme "seen". Valeur par défaut : Vrai |
 | withBody   | boolean | Passez Vrai pour retourner le corps du message. Si Faux, seul l'en-tête du message est retourné. Valeur par défaut : Vrai                                                   |
 
-> - The function generates an error and returns **Null** if _msgID_ designates a non-existing message,
+> - La fonction génère une erreur et retourne **Null** si _msgID_ désigne un message non existant,
 > - If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
 > - If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)\`.
 
@@ -1052,9 +1052,9 @@ _**.getMails( ids { ; options } ) -> result**_
 
 La première syntaxe vous permet de récupérer des messages en fonction de leurs identifiants.
 
-In the _ids_ parameter, pass a collection of IDs for the messages to return. You can get the IDs with [`.getMail()`](#getmail).
+Dans le paramètre _ids_, passez une collection d'identifiants des messages à retourner. You can get the IDs with [`.getMail()`](#getmail).
 
-The optional _options_ parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
+Le paramètre optionnel _options_ vous permet de définir les parties de messages à retourner. Pour une description détaillée des propriétés disponibles, reportez-vous au tableau **Options** ci-dessous.
 
 **Second syntax:**
 
@@ -1062,11 +1062,11 @@ _**.getMails( startMsg ; endMsg { ; options } ) -> result**_
 
 La deuxième syntaxe vous permet de récupérer des messages en fonction d'une plage séquentielle. Les valeurs passées représentent la position des messages dans la boite de réception.
 
-In the _startMsg_ parameter, pass an _integer_ value corresponding to the number of the first message in a sequential range. If you pass a negative number (_startMsg_ <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+Dans le paramètre _startMsg_, passez une valeur integer correspondant au numéro du premier message dans la plage séquentielle. Si vous passez un nombre négatif (_startMsg_ <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
 
-In the _endMsg_ parameter, pass an _integer_ value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (_endMsg_ <= 0), the last message of the mailbox will be used as the end of the sequence.
+Dans le paramètre _endMsg_, passez une valeur integer correspondant au numéro du dernier message dans la plage séquentielle. Si vous passez un nombre négatif (_endMsg_ <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
 
-The optional _options_ parameter allows you to define the parts of the messages to be returned.
+Le paramètre optionnel _options_ vous permet de définir les parties de messages à retourner.
 
 **Options**
 
@@ -1080,7 +1080,7 @@ The optional _options_ parameter allows you to define the parts of the messages 
 
 #### Résultat
 
-`.getMails()` returns an object containing the following collections:
+`.getMails()` retourne un objet contenant les collections suivantes :
 
 | Propriété | Type       | Description                                                                                                                                                                                                                                                                                      |
 | --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1150,17 +1150,20 @@ The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().S
 
 Dans le premier paramètre, vous pouvez passer soit :
 
-- _msgNumber_, an _integer_ value indicating the sequence number of the message to retrieve or
-- _msgID_, a _text_ value indicating the unique ID of the message to retrieve.
+- _msgNumber_, une valeur _integer_ indiquant le numéro de séquence du message à récupérer ou
+- _msgID_, une valeur _text_ indiquant l'ID unique du message à récupérer.
 
-The optional _updateSeen_ parameter allows you to specify if the message is marked as "seen" in the mailbox. Vous pouvez passer :
+Le paramètre optionnel _updateSeen_ vous permet d'indiquer si le message est marqué comme "seen" (lu) dans la boîte de réception. Vous pouvez passer :
 
-- **True** - to mark the message as "seen" (indicating the message has been read)
-- **False** - to leave the message's "seen" status untouched
+- **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
+- **Faux** - pour ne pas modifier le statut "seen" du message
 
-> * The function returns an empty BLOB if _msgNumber_ or msgID\* designates a non-existing message,
+> * La fonction retourne un BLOB vide si _msgNumber_ ou msgID désigne un message inexistant,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
-> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+> * var $pw; $name : text
+>   var $options; $transporter; $status : object$options:=New object$pw:=Request("Please enter your password:")If(OK=1) $options.host:="imap.gmail.com"
+>   $options.user:="test@gmail.com"
+>   $options.password:=$pw$transporter:=IMAP New
 
 #### Résultat
 
@@ -1212,12 +1215,12 @@ The optional _updateSeen_ parameter allows you to specify if the message is mark
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 
-| Paramètres     | Type       |     | Description                                                      |
-| -------------- | ---------- | :-: | ---------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Collection d'IDs uniques de messages (texte)  |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | Text       |  -> | Boîte de réception recevant les messages déplacés                |
-| Résultat       | Object     |  <- | Statut de l'opération de déplacement                             |
+| Paramètres     | Type       |     | Description                                                                          |
+| -------------- | ---------- | :-: | ------------------------------------------------------------------------------------ |
+| msgsIDs        | Collection |  -> | Collection d'IDs uniques de messages (texte)                      |
+| allMsgs        | Integer    |  -> | `IMAP all` : tous les messages de la boîte de réception sélectionnée |
+| destinationBox | Text       |  -> | Boîte de réception recevant les messages déplacés                                    |
+| Résultat       | Object     |  <- | Statut de l'opération de déplacement                                                 |
 
 <!-- END REF -->
 
@@ -1227,12 +1230,12 @@ The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves th
 
 Vous pouvez passer :
 
-- in the _msgsIDs_ parameter, a collection containing the unique IDs of the specific messages to move, or
-- in the _allMsgs_ parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
+- dans le paramètre _msgsIDs_, une collection contenant les ID uniques des messages spécifiques à déplacer, ou
+- dans le paramètre _allMsgs_, la constante `IMAP all` (integer) pour déplacer tous les messages de la boîte de réception sélectionnée.
 
-The _destinationBox_ parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.
+Le paramètre _destinationBox_ vous permet de passer une valeur texte avec le nom de la boîte de réception dans laquelle seront placés les messages déplacés.
 
-> This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
+> Cette fonction est uniquement prise en charge par les serveurs IMAP compatibles avec RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 **Returned object**
 
@@ -1327,9 +1330,9 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by _startMsg_ and _endMsg_<!-- END REF --> in the currently selected mailbox.
 
-In the _startMsg_ parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (_startMsg_ <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+Dans le paramètre _startMsg_ passez une valeur _entier_ correspondant au numéro du premier message dans une plage séquentielle. Si vous passez un nombre négatif (_startMsg_ <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
 
-In the _endMsg_ parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (_endMsg_ <= 0), the last message of the mailbox will be used as the end of the sequence.
+Dans le paramètre _endMsg_ passez une valeur _entier long_ correspondant au numéro du dernier message à inclure dans une plage séquentielle. Si vous passez un nombre négatif (_endMsg_ <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
 
 #### Résultat
 
@@ -1391,17 +1394,17 @@ La fonction retourne une collection de chaînes (IDs uniques).
 
 The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
-- a _collection_ containing the unique IDs of specific messages or
-- the unique ID (_text_) of a single message or
-- the following constant (_longint_) for all messages in the selected mailbox:
+- une _collection_ contenant les IDs uniques de messages spécifiques, ou
+- l'ID unique (_texte_) d'un seul message ou
+- la constante suivante (_entier long_) pour tous les messages de la boîte sélectionnée :
 
 | Constante | Valeur | Commentaire                                             |
 | --------- | ------ | ------------------------------------------------------- |
 | IMAP all  | 1      | Sélectionner tous les messages de la boîte sélectionnée |
 
-The `keywords` parameter lets you define the flags to remove from `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés :
+Le paramètre `keywords` vous permet de définir les flags à supprimer des `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés :
 
 | Paramètres      | Type    | Description                                           |
 | --------------- | ------- | ----------------------------------------------------- |
@@ -1412,7 +1415,7 @@ The `keywords` parameter lets you define the flags to remove from `msgIDs`. Vous
 | $deleted        | Boolean | True pour supprimer le marqueur "deleted" du message  |
 | `<custom flag>` | Boolean | True pour supprimer le flag personnalisé du message   |
 
-Please refer to [.addFlags()](#addflags) for more information on custom flags.
+Reportez-vous à [.addFlags()](#addflags) pour plus d'informations sur les flags personnalisés.
 
 > - Pour qu'un mot-clé soit pris en compte, il doit être à vrai.
 
@@ -1486,9 +1489,9 @@ End if
 
 The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Essayer de renommer une mailbox qui n'existe pas ou de renommer une mailbox avec un nom qui est déjà utilisé génère une erreur.
 
-In the `currentName` parameter, pass the name of the mailbox to be renamed.
+Dans le paramètre `currentName`, passez le nom de la mailbox à renommer.
 
-Pass the new name for the mailbox in the `newName` parameter.
+Passez le nouveau nom de la mailbox dans e paramètre `newName`.
 
 **Returned object**
 
@@ -1562,11 +1565,11 @@ End if
 
 #### Description
 
-> This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+> Cette fonction est basée sur la spécification du [protocole IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given _searchCriteria_ in the current mailbox<!-- END REF -->. _searchCriteria_ consists of one or more search keys.
+The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given _searchCriteria_ in the current mailbox<!-- END REF -->. .
 
-_searchCriteria_ is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
+_searchCriteria_ est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
 
 ```
 SearchKey1 = FLAGGED
@@ -1576,8 +1579,8 @@ SearchKey3 = FLAGGED DRAFT
 
 > La correspondance n'est généralement pas sensible à la casse
 
-- If the _searchCriteria_ is a null string, the search will be equivalent to a “select all”.
-- If the _searchCriteria_ includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+- Si _searchCriteria_ est une chaîne vide, la recherche sera équivalente à un "tout sélectionner".
+- Si _searchCriteria_ contient plusieurs mots-clés de recherche, le résultat est l'intersection (fonction ET) de tous les messages qui correspondent à ces critères.
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
@@ -1585,7 +1588,7 @@ searchCriteria = FLAGGED FROM "SMITH"
 
 ... returns all messages with \Flagged flag set AND sent by Smith.
 
-- You can use the **OR** or **NOT** operators as follows:
+- Vous pouvez utiliser les opérateurs **OR** ou **NOT** comme suit :
 
 ```
 searchCriteria = OR SEEN FLAGGED
@@ -1613,7 +1616,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
-- The _searchCriteria_ may include the optional \[CHARSET] specification. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the _searchCriteria_ string. Therefore, you must convert the _searchCriteria_ string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands).
+- Le paramètre _searchCriteria_ peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine _searchCriteria_. Par conséquent, vous devez convertir la chaîne _searchCriteria_ dans le jeu de caractères spécifié si vous utilisez l'instruction \[CHARSET] (voir les commandes `CONVERT FROM TEXT` ou `Convert to text`).
   Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
@@ -1627,23 +1630,22 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 - **Search-keys with a date value**: the date is a string that must be formatted as follows: _date-day+"-"+date-month+"-"+date-year_ where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters).
-  Example: `searchCriteria = SENTBEFORE 1-Feb-2020` (a date does not usually need to be quoted since it does not contain any special characters)
+  Exemple : `searchCriteria = SENTBEFORE 1-Feb-2020` (il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)
 
-- **Search-keys with a string value**: the string may contain any character and must be quoted. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
-  Example: `searchCriteria = FROM "SMITH"`
-  For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
+- \*\*Valeurs de type chaîne
+  \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
+  Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
 
-- **Search-keys with a field-name value**: the field-name is the name of a header field.
-  Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+- **Noms de champs** : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête.
+  Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces.
-  Example: `searchCriteria = KEYWORD \Flagged \Draft`
+- **Marqueurs** : Les valeurs de type marqueur (flags) acceptent un ou plusieurs mots-clés (y compris des marqueurs standard) séparés par des espaces.
+  Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Search-keys with a message set value**: Identifies a set of messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros.
-  Examples:
-  `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
-  `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set.
-  `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+- **Ensemble de messages** : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros.
+  Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
+  `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered.
+  `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
 
 #### Mots-clés de recherche autorisés
 
@@ -1691,10 +1693,10 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                |
-| ------- | -------------------------------------------- |
-| 20      | _id_, _flags_, _permanentFlags_ are returned |
-| 18 R4   | Ajout                                        |
+| Release | Modifications                                 |
+| ------- | --------------------------------------------- |
+| 20      | _id_, _flags_, _permanentFlags_ sont renvoyés |
+| 18 R4   | Ajout                                         |
 
 </details>
 
@@ -1716,22 +1718,22 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the _name_ parameter, pass the name of the mailbox to access. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+Dans le paramètre optionnel _name_ passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional _state_ parameter defines the type of access to the mailbox. Les valeurs possibles sont les suivantes :
+Le paramètre optionnel _state_ définit le type d'accès à la mailbox. Les valeurs possibles sont les suivantes :
 
 | Constante             | Valeur | Commentaire                                                                                                                                                                                                                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1      | La mailbox sélectionnée est accessible avec les privilèges de lecture seule. Les messages contenant un marqueur "recent" (indication de nouveaux messages) restent inchangés.                                                       |
 | IMAP read write state | 0      | La mailbox sélectionnée est accessible avec des privilèges de lecture et d'écriture. Les messages sont considérés "seen" et perdent le marqueur "recent" (indication des nouveaux messages). (Valeur par défaut) |
 
-> - The function generates an error and returns **Null** if _name_ designates a non-existing mailbox.
-> - If there is no open connection, `.selectBox()` will open a connection.
+> - La fonction génère une erreur et retourne **Null** si _name_ désigne une mailbox inexistante.
+> - Si aucune connexion n'est ouverte, `.selectBox()` ouvrira une connexion.
 > - If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
 **Returned object**
 
-The `boxInfo` object returned contains the following properties:
+L'objet `boxInfo` contient les propriété suivantes :
 
 | Propriété      | Type   | Description                                                                                                                                                                     |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1744,7 +1746,7 @@ The `boxInfo` object returned contains the following properties:
 
 :::info
 
-If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+Si la chaîne `permanentFlags` comprend le flag spécial \*, cela signifie que le serveur prend en charge [les flags personnalisés](#addflags).
 
 :::
 
@@ -1791,7 +1793,7 @@ If `permanentFlags` string includes the special flag \*, it means that the serve
 
 The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. Ainsi, vous pouvez contrôler la taille de la liste des boîtes de réception disponibles en souscrivant uniquement à celles que vous souhaitez généralement consulter.
 
-In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
+Dans le paramètre `name`, passez le nom de la mailbox à ajouter (subscribe) à la liste de mailboxes auxquelles vous avez "souscrit".
 
 **Returned object**
 
@@ -1864,7 +1866,7 @@ End if
 
 The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->. Elle vous permet de réduire le nombre de mailboxes que vous consultez régulièrement.
 
-In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
+Dans le paramètre `name`, passez le nom de la mailbox à supprimer (unsubscribe) de la liste de mailboxes auxquelles vous avez "souscrit".
 
 **Returned object**
 
