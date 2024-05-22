@@ -235,7 +235,7 @@ Les valeurs d'attributs qui doivent être calculées par 4D (ID, attributs calcu
 
 ### Rechargement des valeurs
 
-Le bouton **reload** ![reload](../assets/fr/Admin/data-explorer-reload.png) recharge les valeurs des attributs de l'entité à partir du fichier de données. Ce bouton est utile par exemple lorsque vous voulez vous assurer que les valeurs affichées sont les valeurs enregistrées les plus récentes.
+Le bouton **reload** ![reload](../assets/en/Admin/data-explorer-reload.png) recharge les valeurs des attributs de l'entité à partir du fichier de données. Ce bouton est utile par exemple lorsque vous voulez vous assurer que les valeurs affichées sont les valeurs enregistrées les plus récentes.
 
 ### Enregistrer les modifications
 
