@@ -133,7 +133,7 @@ Cette propriété est en **lecture seule**.
 
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-This property is **read/write**.
+Cette propriété est en **lecture/écriture**.
 
 <!-- END REF -->
 
@@ -221,7 +221,7 @@ Cette propriété est en **lecture seule**.
 
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the _writable_ attribute of the file.
+> Cette propriété vérifie la capacité de l'application 4D à écrire sur le disque (droits d'accès). elle ne se base pas uniquement sur l'attribut _writable_ du fichier.
 
 Cette propriété est en **lecture seule**.
 
@@ -433,12 +433,12 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Paramètres         | Type                      |     | Description                                 |
-| ------------------ | ------------------------- | :-: | ------------------------------------------- |
-| dossierDestination | 4D.Folder |  -> | Dossier de destination                      |
-| nouveauNom         | Text                      |  -> | Nom de la copie                             |
-| overwrite          | Integer                   |  -> | `fk overwrite` to replace existing elements |
-| Résultat           | 4D.File   |  <- | Fichier copié                               |
+| Paramètres         | Type                      |     | Description                                        |
+| ------------------ | ------------------------- | :-: | -------------------------------------------------- |
+| dossierDestination | 4D.Folder |  -> | Dossier de destination                             |
+| nouveauNom         | Text                      |  -> | Nom de la copie                                    |
+| overwrite          | Integer                   |  -> | `fk overwrite` pour écraser les éléments existants |
+| Résultat           | 4D.File   |  <- | Fichier copié                                      |
 
 <!-- END REF -->
 
@@ -446,11 +446,11 @@ Cette propriété est en **lecture seule**.
 
 The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified _destinationFolder_ <!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le fichier est copié avec le nom du fichier original. If you want to rename the copy, pass the new name in the _newName_ parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le fichier est copié avec le nom du fichier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-If a file with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+S'il existe déjà un fichier portant le même nom dans _destinationFolder_, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre _overwrite_ pour ignorer et écraser le dossier existant :
 
 | Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
@@ -458,11 +458,11 @@ If a file with the same name already exists in the _destinationFolder_, by defau
 
 **Valeur retournée**
 
-The copied `File` object.
+L'objet `File` copié.
 
 #### Exemple
 
-You want to copy a picture _file_ from the user's document folder to the application folder:
+Vous souhaitez copier un _file_ image, à partir du dossier Documents de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $source; $copy : Object
@@ -497,15 +497,15 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Description
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 **Valeur retournée**
 
-A `4D.Blob` object.
+Un objet `4D.Blob`.
 
 #### Exemple
 
-To save a document's contents in a `BLOB` field:
+Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 
 ```4d
  var $vPath : Text
@@ -544,13 +544,13 @@ To save a document's contents in a `BLOB` field:
 
 The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
+Le paramètre optionnel _size_ spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
 Si le fichier n'existe pas sur disque, une icône par défaut vide est retournée.
 
 **Valeur retournée**
 
-File icon [picture](../Concepts/picture.html).
+[Image](../Concepts/picture.html) de l'icône du fichier.
 
 <!-- END REF -->
 
@@ -585,15 +585,15 @@ The `.getText()` function <!-- REF #document.getText().Summary -->returns the co
 
 Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour la lecture du contenu. Vous pouvez passer soit :
 
-- in _charSetName_, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in _charSetNum_, the MIBEnum ID (number) of the standard set name.
+- dans _charSetName_, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
+- ou dans _charSetNum_, l'ID MIBEnum (numéro) du nom du jeu standard.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in _charSetName_ or _charSetNum_ (this parameter is then ignored).
-If the document does not contain a BOM and if _charSetName_ or _charSetNum_ is omitted, by default 4D uses the "UTF-8" character set.
+Si le document contient un BOM (Byte Order Mark), 4D utilise le jeu de caractères inséré au lieu de celui qui est indiqué dans _charSetName_ or _charSetNum_ (ce paramètre est alors ignoré).
+Si le document ne contient pas de BOM et si le paramètre _charSetName_ ou _charSetNum_ est omis, 4D utilise par défaut le jeu de caractères "UTF-8".
 
-In _breakMode_, you can pass a number indicating the processing to apply to end-of-line characters in the document. Les constantes suivantes du thème "Documents système" sont disponibles :
+Dans le paramètre _breakMode_, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne du document. Les constantes suivantes du thème "Documents système" sont disponibles :
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                                                                                                        |
 | ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -603,7 +603,7 @@ In _breakMode_, you can pass a number indicating the processing to apply to end-
 | `Document with CR`            | 3      | Les fins de ligne sont convertis au format OS X : CR (carriage return)                                                                                                                                          |
 | `Document with LF`            | 4      | Les fins de ligne sont convertis au format Unix : LF (line feed)                                                                                                                                                |
 
-By default, when you omit the _breakMode_ parameter, line breaks are processed in native mode (1).
+Par défaut, lorsque vous omettez le paramètre _breakMode_ les retours à la ligne sont traités en mode natif (1).
 
 **Valeur retournée**
 
@@ -630,7 +630,7 @@ Lorsque vous exécutez ce code :
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+avec `\t` (tab) comme séparateur et `\r\n` (CRLF) comme délimiteur de ligne.
 
 Voici un autre exemple avec le même fichier, mais un délimiteur de ligne différent :
 
@@ -638,10 +638,10 @@ Voici un autre exemple avec le même fichier, mais un délimiteur de ligne diff�
  $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
-In this case, the contents of `$txt` are as follows:
+Dans ce cas, le contenu de `$txt` est :
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\n` (LF) is used as line delimiter.
+Cette fois-ci `\n` (LF) est utilisé comme délimiteur de ligne.
 
 <!-- END REF -->
