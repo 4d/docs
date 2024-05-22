@@ -128,7 +128,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 | Nom               | Type de données | Valeurs possibles |
 | ----------------- | --------------- | ----------------- |
-| lockedColumnCount | entier          | minimum : 0       |
+| lockedColumnCount | integer         | minimum : 0       |
 
 #### Objets pris en charge
 
@@ -143,7 +143,7 @@ Number of columns that cannot be moved during execution.
 
 | Nom               | Type de données | Valeurs possibles |
 | ----------------- | --------------- | ----------------- |
-| staticColumnCount | entier          | minimum : 0       |
+| staticColumnCount | integer         | minimum : 0       |
 
 #### Objets pris en charge
 
@@ -164,7 +164,7 @@ Sets the number of columns of the list box.
 
 | Nom         | Type de données | Valeurs possibles |
 | ----------- | --------------- | ----------------- |
-| columnCount | entier          | minimum: 1        |
+| columnCount | integer         | minimum: 1        |
 
 #### Objets pris en charge
 
