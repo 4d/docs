@@ -1198,7 +1198,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 |           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descrição
