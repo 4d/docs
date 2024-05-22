@@ -237,7 +237,7 @@ Cette propriété est en **lecture seule**.
 
 The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. Sinon, elle retourne false.
 
-On Windows, `.isPackage` always returns **false**.
+Sous Windows, `.isPackage` retourne toujours **false**.
 
 Cette propriété est en **lecture seule**.
 
@@ -433,12 +433,12 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #directory.copyTo().Params -->
 
-| Paramètres         | Type                      |     | Description                                 |
-| ------------------ | ------------------------- | :-: | ------------------------------------------- |
-| dossierDestination | 4D.Folder |  -> | Dossier de destination                      |
-| nouveauNom         | Text                      |  -> | Nom de la copie                             |
-| overwrite          | Integer                   |  -> | `fk overwrite` to replace existing elements |
-| Résultat           | 4D.Folder |  <- | Dossier copié                               |
+| Paramètres         | Type                      |     | Description                                        |
+| ------------------ | ------------------------- | :-: | -------------------------------------------------- |
+| dossierDestination | 4D.Folder |  -> | Dossier de destination                             |
+| nouveauNom         | Text                      |  -> | Nom de la copie                                    |
+| overwrite          | Integer                   |  -> | `fk overwrite` pour écraser les éléments existants |
+| Résultat           | 4D.Folder |  <- | Dossier copié                                      |
 
 <!-- END REF -->
 
@@ -446,11 +446,11 @@ Cette propriété est en **lecture seule**.
 
 The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified _destinationFolder_<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier est copié avec le nom du dossier original. If you want to rename the copy, pass the new name in the _newName_ parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier est copié avec le nom du dossier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-If a folder with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+S'il existe déjà un dossier portant le même nom dans _destinationFolder_, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre _overwrite_ pour ignorer et écraser le dossier existant :
 
 | Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
@@ -458,11 +458,11 @@ If a folder with the same name already exists in the _destinationFolder_, by def
 
 **Valeur retournée**
 
-The copied `Folder` object.
+L'objet `Folder` copié.
 
 #### Exemple
 
-You want to copy a Pictures _folder_ from the user's Document folder to the Database folder:
+Vous souhaitez copier un _dossier_ Pictures, à partir du dossier Document de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -490,10 +490,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
-| Paramètres | Type                    |    | Description                                             |
-| ---------- | ----------------------- | -- | ------------------------------------------------------- |
-| path       | Text                    | -> | Chemin POSIX relatif                                    |
-| Résultat   | 4D.File | <- | `File` object (null if invalid path) |
+| Paramètres | Type                    |    | Description                                               |
+| ---------- | ----------------------- | -- | --------------------------------------------------------- |
+| path       | Text                    | -> | Chemin POSIX relatif                                      |
+| Résultat   | 4D.File | <- | Objet `File` (null si chemin invalide) |
 
 <!-- END REF -->
 
@@ -501,11 +501,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the file to return. Le chemin sera évalué à partir du dossier parent en tant que racine.
+Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-A `File` object or null if _path_ is invalid.
+Un objet `File` ou null si _path_ n'est pas valide.
 
 #### Exemple
 
@@ -547,7 +547,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 > Les alias ou les liens symboliques ne sont pas résolus.
 
-By default, if you omit the _options_ parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+Par défaut, si vous omettez le paramètre _options_, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre _options_ parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
@@ -556,7 +556,7 @@ By default, if you omit the _options_ parameter, only the files at the first lev
 
 **Valeur retournée**
 
-Collection of `File` objects.
+Collection d'objets `File`.
 
 #### Exemple 1
 
@@ -600,10 +600,10 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 
 <!-- REF #directory.folder().Params -->
 
-| Paramètres | Type                      |    | Description                                                       |
-| ---------- | ------------------------- | -- | ----------------------------------------------------------------- |
-| path       | Text                      | -> | Chemin POSIX relatif                                              |
-| Résultat   | 4D.Folder | <- | Created folder object (null if invalid _path_) |
+| Paramètres | Type                      |    | Description                                                |
+| ---------- | ------------------------- | -- | ---------------------------------------------------------- |
+| path       | Text                      | -> | Chemin POSIX relatif                                       |
+| Résultat   | 4D.Folder | <- | Objet dossier (null si _path_ invalide) |
 
 <!-- END REF -->
 
@@ -611,11 +611,11 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the folder to return. Le chemin sera évalué à partir du dossier parent en tant que racine.
+Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-A `Folder` object or null if _path_ is invalid.
+Un objet `Folder` object ou null si _path_ est invalide.
 
 #### Exemple
 
@@ -655,7 +655,7 @@ A `Folder` object or null if _path_ is invalid.
 
 The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
-By default, if you omit the _options_ parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+Par défaut, si vous omettez le paramète _options_, seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre _options_ parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
@@ -664,7 +664,7 @@ By default, if you omit the _options_ parameter, only the folders at the first l
 
 **Valeur retournée**
 
-Collection of `Folder` objects.
+Collection d'objets `Folder`.
 
 #### Exemple
 
@@ -706,12 +706,12 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 
 The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
+Le paramètre optionnel _size_ spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
 Si le dossier n'existe pas sur disque, une icône vide est retournée par défaut.
 
 **Valeur retournée**
 
-Folder icon [picture](Concepts/dt_picture.md).
+[Image](Concepts/dt_picture.md) de l'icône du dossier.
 
 <!-- END REF -->
