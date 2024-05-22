@@ -117,6 +117,7 @@ Using the main datastore on the 4D database:
 <!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 
+
 <!-- REF #_command_.Open datastore.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -1219,7 +1220,7 @@ To create a server-side ORDA request log, call this function on the server machi
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
 
 |Constant|Description|
-|----|----|---|
+|----|----|
 |srl log all|Log the response entirely (default value)|
 |srl log no response|Disable the logging of the response|
 |srl log response without body|Log the response without the body|
