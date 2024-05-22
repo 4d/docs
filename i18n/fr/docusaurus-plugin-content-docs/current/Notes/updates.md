@@ -296,7 +296,7 @@ $value:=($size>1000) ? a:b // Ici, 'a:b' est considéré comme un opérateur ter
 - Extension de la [prise en charge du mode sombre](../Preferences/general.md#appearance-macos-only) sur macOS.
 - Support de **OAuth2 token object** dans [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter), et [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter).
 - Les utilisateurs peuvent maintenant charger un [fichier de configuration des journaux](../Debugging/debugLogFiles.md#using-a-log-configuration-file) en utilisant un bouton dans la [fenêtre d'administration du serveur](../ServerWindow/maintenance.md#load-logs-configuration-file).
-- La gestion des [paramètres optionnels](../Concepts/paramètres.md#optional-parameters) est plus souple dans le langage 4D lorsqu'il s'agit d'accéder à des paramètres déclarés mais non transmis. Par exemple, le code suivant ne provoque plus d'erreur :
+- La gestion des [paramètres optionnels](../Concepts/parameters.md#optional-parameters) est plus souple dans le langage 4D lorsqu'il s'agit d'accéder à des paramètres déclarés mais non transmis. Par exemple, le code suivant ne provoque plus d'erreur :
 
 ```4d
 // Fonction "concate" de myClass
@@ -354,7 +354,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Serveur Web : nouveau paramètre [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Prise en charge des couleurs foncées et claires pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
 - Nouveaux thèmes sombres et clairs par défaut dans les [préférences de l'éditeur de code](../Preferences/methods.md#theme-list).
-- [Compilation native](../Projet/compiler.md#compiler-methods-for) pour les processeurs Silicon.
+- [Compilation native](../Project/compiler.md#compiler-methods-for) pour les processeurs Silicon.
 - La propriété [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) est désormais prise en charge par les colonnes de listbox entity selection.
 - Nouvelle page complète [CLI](../Admin/cli.md).
 
