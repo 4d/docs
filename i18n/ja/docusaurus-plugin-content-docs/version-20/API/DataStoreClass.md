@@ -1192,7 +1192,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
