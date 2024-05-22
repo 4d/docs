@@ -672,6 +672,7 @@ En un almacén de datos remoto:
 <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
