@@ -669,6 +669,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>履歴</summary>
