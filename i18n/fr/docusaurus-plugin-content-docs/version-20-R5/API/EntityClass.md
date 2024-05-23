@@ -349,7 +349,7 @@ Par défaut, si le paramètre _mode_ est omis, la fonction retournera systémati
 
 Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le paramètre _mode_ : dans ce cas, l'entité est supprimée même si la valeur du marqueur interne est différente (si la clé primaire est identique).
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.drop( )` contient les propriétés suivantes :
 
@@ -959,7 +959,7 @@ Par défaut, si le paramètre _mode_ est omis, la fonction retournera systémati
 
 Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramètre _mode_ : dans ce cas, aucune erreur n'est générée et l'entité est simplement rechargée si le stamp a changé (si l'entité existe toujours et si la clé primaire est toujours l
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.lock( )` contient les propriétés suivantes :
 
@@ -1148,7 +1148,7 @@ If the entity does not belong to any existing entity selection (i.e. <a href="#g
 
 The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. Le rechargement est effectué uniquement si l'entité existe toujours avec la même clé primaire.
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
@@ -1223,7 +1223,7 @@ Sinon, vous pouvez passer l'option `dk auto merge` dans le paramètre _mode_ afi
 
 > Le mode de fusion automatique n'est pas disponible pour les attributs de type Image, Objet et Texte lorsqu'ils sont stockés en dehors de l'enregistrement. Des modifications simultanées de ces attributs entraîneront une erreur "`dk status stamp has changed`".
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.save()` contient les propriétés suivantes :
 
@@ -1773,7 +1773,7 @@ Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus réfé
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.unlock()` contient la propriété suivante :
 
