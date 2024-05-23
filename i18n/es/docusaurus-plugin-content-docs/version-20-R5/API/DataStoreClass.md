@@ -156,7 +156,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
   //$myds y $myds2 son equivalentes
 ```
 
-Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except _hostname_):
+Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. All properties are optional except _hostname_ :
 
 | Propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1234,11 +1234,11 @@ Para crear un registro de peticiones ORDA del lado del servidor, llame a esta fu
 - If you passed the _file_ parameter, the log data is written in this file, at the requested location. - If you omit the _file_ parameter or if it is null, the log data is written in a file named _ordaRequests.jsonl_ and stored in the "/LOGS" folder.
 - The _options_ parameter can be used to specify if the server response has to be logged, and if it should include the body. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
 
-|Constant|Description|
-\|----|----|---|
-|srl log all|Log the response entirely (default value)|
-|srl log no response|Disable the logging of the response|
-|srl log response without body|Log the response without the body|
+| Constante                     | Descripción                                                                |
+| ----------------------------- | -------------------------------------------------------------------------- |
+| srl log all                   | Registrar la respuesta por completo (valor por defecto) |
+| srl log no response           | Desactivar el registro de la respuesta                                     |
+| srl log response without body | Registrar la respuesta sin el cuerpo                                       |
 
 #### Ejemplo 1
 
