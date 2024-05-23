@@ -19,7 +19,7 @@ title: Classe Directory
 
 #### Description
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+La propriété `.creationDate` retourne <!-- REF #directory.creationDate.Summary -->la date de création du dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -43,7 +43,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propriété `.creationTime` renvoie <!-- REF #directory.creationTime.Summary -->l'heure de création du dossier<!-- END REF --> (exprimée en nombre de secondes commençant à 00:00).
 
 Cette propriété est en **lecture seule**.
 
@@ -67,7 +67,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+La propriété `.exists` renvoie <!-- REF #directory.exists.Summary -->true si le dossier existe sur le disque<!-- END REF -->, et false sinon.
 
 Cette propriété est en **lecture seule**.
 
@@ -91,7 +91,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaîne vide si le nom du dossier n'a pas d'extension.
+La propriété `.extension` <!-- REF #directory.extension.Summary -->renvoie l'extension du nom du dossier (s'il y en a une)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaîne vide si le nom du dossier n'a pas d'extension.
 
 Cette propriété est en **lecture seule**.
 
@@ -115,7 +115,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+La propriété `.fullName` <!-- REF #directory.fullName.Summary -->retourne le nom complet du dossier, extension comprise (le cas échéant)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -139,7 +139,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propriété `.hidden` renvoie <!-- REF #directory.hidden.Summary --> true si le dossier est défini comme "hidden" au niveau du système<!-- END REF -->, et false dans le cas contraire.
 
 Cette propriété est en **lecture seule**.
 
@@ -163,7 +163,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+La propriété `.isAlias` retourne<!-- REF #directory.isAlias.Summary -->toujours **false** pour un objet `Dossier`<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -187,7 +187,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+La propriété `.isFile` retourne <!-- REF #directory.isFile.Summary -->toujours **false** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -211,7 +211,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+La propriété `.isFolder` renvoie <!-- REF #directory.isFolder.Summary -->toujours **true** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -235,7 +235,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. Sinon, elle retourne false.
+La propriété `.isPackage` renvoie <!-- REF #directory.isPackage.Summary -->true si le dossier est un paquet sous macOS (et existe sur le disque)<!-- END REF -->. Sinon, elle retourne false.
 
 Sous Windows, `.isPackage` retourne toujours **false**.
 
@@ -261,7 +261,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+La propriété `.modificationDate` renvoie <!-- REF #directory.modificationDate.Summary --> la date de la dernière modification du dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -285,7 +285,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propriété `.modificationTime` retourne <!-- REF #directory.modificationTime.Summary -->l'heure de la dernière modification du dossier<!-- END REF --> (exprimée en nombre de secondes depuis 00:00).
 
 Cette propriété est en **lecture seule**.
 
@@ -309,7 +309,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+La propriété `.name` renvoie <!-- REF #directory.name.Summary --> le nom du dossier, sans l'extension (s'il y en a une)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -333,7 +333,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+La propriété `.original` retourne <!-- REF #directory.original.Summary -->le même objet Dossier que le dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -359,7 +359,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
+La propriété `.parent` retourne <!-- REF #directory.parent.Summary -->l'objet dossier parent du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Si le dossier n'a pas de parent (racine), la valeur nulle est retournée.
 
@@ -385,7 +385,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
+La propriété `.path` retourne <!-- REF #directory.path.Summary -->le chemin POSIX du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Cette propriété est en **lecture seule**.
 
@@ -409,7 +409,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+La propriété `.platformPath` retourne <!-- REF #directory.platformPath.Summary -->le chemin du dossier exprimé dans la syntaxe de la plate-forme courante<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -444,7 +444,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified _destinationFolder_<!-- END REF -->.
+La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` dans le _destinationFolder_ spécifié<!-- END REF -->.
 
 Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
@@ -499,7 +499,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Description
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+La fonction `.file()` crée <!-- REF #directory.file().Summary -->un objet `File` à l'intérieur de l'objet `Folder` et retourne sa référence<!-- END REF -->.
 
 Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
@@ -543,7 +543,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Description
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+La fonction `.files()` <!-- REF #directory.files().Summary -->retourne une collection d'objets `File` contenus dans le dossier<!-- END REF -->.
 
 > Les alias ou les liens symboliques ne sont pas résolus.
 
@@ -609,7 +609,7 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 
 #### Description
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+La fonction `.folder()` <!-- REF #directory.folder().Summary -->crée un objet `Folder` à l'intérieur de l'objet parent `Folder` et retourne sa référence<!-- END REF -->.
 
 Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
@@ -653,7 +653,7 @@ Un objet `Folder` object ou null si _path_ est invalide.
 
 #### Description
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+La fonction `.folders()` <!-- REF #directory.folders().Summary -->retourne une collection d'objets `Folder` contenus dans le dossier parent<!-- END REF -->.
 
 Par défaut, si vous omettez le paramète _options_, seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre _options_ parameter, une ou plusieurs des constantes suivantes :
 
@@ -704,7 +704,7 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 
 #### Description
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+La fonction `.getIcon()` <!-- REF #directory.getIcon().Summary -->retourne l'icône du dossier<!-- END REF -->.
 
 Le paramètre optionnel _size_ spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
