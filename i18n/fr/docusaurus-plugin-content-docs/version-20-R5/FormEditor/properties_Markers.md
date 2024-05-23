@@ -37,7 +37,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 | Nom        | Type de données | Valeurs possibles                                                          |
 | ---------- | --------------- | -------------------------------------------------------------------------- |
-| markerBody | entier          | Position du marqueur de détail. Minimum: 0 |
+| markerBody | integer         | Position du marqueur de détail. Minimum: 0 |
 
 ---
 
@@ -53,7 +53,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 | Nom          | Type de données | Valeurs possibles           |
 | ------------ | --------------- | --------------------------- |
-| markerFooter | entier          | minimum : 0 |
+| markerFooter | integer         | minimum : 0 |
 
 ---
 
