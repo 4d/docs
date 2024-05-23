@@ -143,7 +143,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 <!-- REF #4D.File.new().Syntax -->
 
-**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer }{ ; \* } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer { ; \* } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer ) : 4D.File<!-- END REF -->
 
 #### Descripción
 

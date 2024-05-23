@@ -146,7 +146,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 | Nom          | Type de données | Valeurs possibles           |
 | ------------ | --------------- | --------------------------- |
-| borderRadius | entier          | minimum : 0 |
+| borderRadius | integer         | minimum : 0 |
 
 #### Objets pris en charge
 

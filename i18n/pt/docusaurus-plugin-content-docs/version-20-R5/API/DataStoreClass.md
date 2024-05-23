@@ -156,7 +156,7 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
   //$myds e $myds2 são equivalentes
 ```
 
-Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except _hostname_):
+Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. All properties are optional except _hostname_ :
 
 | Propriedade       | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ----------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1226,11 +1226,11 @@ Para criar um registro de pedidos ORDA no lado do servidor, chame essa função 
 - If you passed the _file_ parameter, the log data is written in this file, at the requested location. - If you omit the _file_ parameter or if it is null, the log data is written in a file named _ordaRequests.jsonl_ and stored in the "/LOGS" folder.
 - The _options_ parameter can be used to specify if the server response has to be logged, and if it should include the body. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
 
-|Constant|Description|
-\|----|----|---|
-|srl log all|Log the response entirely (default value)|
-|srl log no response|Disable the logging of the response|
-|srl log response without body|Log the response without the body|
+| Parâmetros                    | Descrição                                                             |
+| ----------------------------- | --------------------------------------------------------------------- |
+| srl log all                   | Registar a resposta na íntegra (valor predefinido) |
+| srl log no response           | Desativar o registo da resposta                                       |
+| srl log response without body | Registar a resposta sem o corpo                                       |
 
 #### Exemplo 1
 

@@ -3,7 +3,7 @@ id: WebSocketClass
 title: WebSocket
 ---
 
-The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
+La classe `WebSocket` permet d'ouvrir une connexion cliente WebSocket avec un serveur, d'envoyer et de recevoir des données et de fermer la connexion.
 
 Les connexions clientes WebSocket sont utiles, par exemple, pour recevoir des données financières en temps réel ou pour envoyer et recevoir des messages à partir d'une messagerie instantanée.
 
@@ -19,7 +19,7 @@ Les connexions clientes WebSocket sont utiles, par exemple, pour recevoir des do
 
 Dans cet exemple, nous créons un client WebSocket très basique.
 
-1. Create the `WSConnectionHandler` user class containing callback function(s) used to handle WebSocket event callbacks:
+1. Créez la classe utilisateur `WSConnectionHandler` contenant la ou les fonction(s) de callback utilisée(s) pour gérer les callbacks d'événements WebSocket :
 
 ```4d
 // WSConnectionHandler class
@@ -64,9 +64,9 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                        |
-| ------- | ---------------------------------------------------- |
-| 20 R3   | Support of `headers` property in _connectionHandler_ |
+| Release | Modifications                                                      |
+| ------- | ------------------------------------------------------------------ |
+| 20 R3   | Prise en charge de la propriété `headers` dans _connectionHandler_ |
 
 </details>
 
@@ -74,26 +74,26 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.WebSocket.new().Params -->
 
-| Paramètres                                        | Type                         |     | Description                               |
-| ------------------------------------------------- | ---------------------------- | :-: | ----------------------------------------- |
-| url                                               | Text                         |  -> | URL à laquelle se connecter               |
-| [connectionHandler](#connectionHandler-parameter) | Object                       |  -> | Objet déclarant les callbacks WebSocket   |
-| Résultat                                          | 4D.WebSocket |  <- | New [WebSocket object](#websocket-object) |
+| Paramètres                                        | Type                         |     | Description                                 |
+| ------------------------------------------------- | ---------------------------- | :-: | ------------------------------------------- |
+| url                                               | Text                         |  -> | URL à laquelle se connecter                 |
+| [connectionHandler](#connectionHandler-parameter) | Object                       |  -> | Objet déclarant les callbacks WebSocket     |
+| Résultat                                          | 4D.WebSocket |  <- | Nouvel [objet WebSocket](#websocket-object) |
 
 <!-- END REF -->
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in _url_<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in _url_<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
 
-In _url_, pass the URL to which the WebSocket server will respond. Les modèles d'URL suivants peuvent être utilisés :
+Dans _url_, indiquez l'URL à laquelle le serveur WebSocket répondra. Les modèles d'URL suivants peuvent être utilisés :
 
-- `ws://host[:port]path[?query]` for standard connections
-- `wss://host[:port]path[?query]` for TLS secured connections
+- `ws://host[:port]path[?query]` pour les connexions standard
+- `wss://host[:port]path[?query]` pour les connexions TLS sécurisées
 
-If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
+Si la connexion n'est pas possible, un objet `null` est renvoyé et une erreur est générée (que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`).
 
-### _connectionHandler_ parameter
+### Paramètre _connectionHandler_
 
-In _connectionHandler_, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
+Dans _connectionHandler_, vous pouvez transmettre un objet contenant des fonctions de callback à appeler selon les événements de connexion, ainsi que le type de données et les en-têtes à gérer.
 
 - Les callbacks sont automatiquement appelées dans le contexte du formulaire ou du worker qui initie la connexion.
 - La WebSocket reste valide tant que le formulaire ou le worker n'est pas fermé.
@@ -109,14 +109,14 @@ In _connectionHandler_, you can pass an object containing callback functions to 
 
 Voici la séquence des appels de callbacks :
 
-1. `onOpen` is executed once
-2. Zero or several `onMessage` are executed
-3. Zero or one `onError` is executed (stops the processing)
-4. `onTerminate` is always executed
+1. `onOpen` est exécuté une fois
+2. Zéro ou plusieurs `onMessage` sont exécutés
+3. Zéro ou un `onError` est exécuté (stoppe le traitement)
+4. `onTerminate` est toujours exécuté
 
 #### Exemple
 
-You want to set headers in the `WSConnectionHandler` user class:
+Vous souhaitez définir des en-têtes dans la classe utilisateur `WSConnectionHandler` :
 
 ```4d
 // WSConnectionHandler class
@@ -191,7 +191,7 @@ Cette propriété est en lecture seule.
 
 The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends _message_ to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
 
-The following contents are sent depending on the _message_ type:
+Les contenus suivants sont envoyés en fonction du type de \*message \* :
 
 | Type   | Contenu                                                                                                                                |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -234,12 +234,12 @@ Cette propriété est en lecture seule.
 
 The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional _code_ and _reason_ parameters<!-- END REF -->.
 
-In _code_, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
+Dans _code_, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
 
 - S'il n'est pas spécifié, le code de fermeture de la connexion est automatiquement fixé à 1000 pour une fermeture normale, ou à une autre valeur standard dans la plage 1001-1015 qui indique la raison réelle de la fermeture de la connexion.
-- Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. If you specify a _code_ value, you should also specify a _reason_ value.
+- Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du \*code \* , vous devez également spécifier une _reason_.
 
-In _reason_, you can pass a string describing why the connection is being closed.
+Dans _reason_, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée.
 
 <!-- END REF -->
 

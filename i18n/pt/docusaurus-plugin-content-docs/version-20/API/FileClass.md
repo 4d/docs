@@ -143,7 +143,7 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Descrição
 

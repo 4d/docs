@@ -23,7 +23,7 @@ title: Classe Transporter
 
 The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
-It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
+Elle contient **False** si les connexions non chiffrées ne sont pas autorisées, auquel cas une erreur est retournée lorsque la connexion chiffrée n'est pas possible.
 
 Ports sécurisés disponibles :
 
@@ -92,7 +92,7 @@ Valeurs possibles :
 
 #### Description
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+La propriété `.authenticationMode` contient le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
@@ -126,7 +126,7 @@ Valeurs possibles :
 
 #### Description
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+La propriété `.authenticationMode` contient le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
@@ -168,8 +168,8 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 | ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)                                                                                       |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & base64                                                                                                                                        |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_ : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)                                                                                      |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &_bodyCharset_ : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                            |
 
 <!-- END REF -->
 
@@ -191,7 +191,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 #### Description
 
-The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
+The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. Par défaut, si la propriété n'a pas été définie dans l'objet server (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), la valeur utilisée est 30.
 
 <!-- END REF -->
 
@@ -225,8 +225,8 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 | ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)                                                                                           |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ & _bodyCharset_: US-ASCII if possible, otherwise UTF-8 & base64                                                                                                                                        |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_ : US-ASCII si possible, sinon UTF-8 & Quoted-printable (valeur par défaut)                                                                                          |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &_bodyCharset_ : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                            |
 
 <!-- END REF -->
 
@@ -272,11 +272,11 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. Le chemin peut être relatif (au dossier Logs courant) ou absolu.
 
-Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
+Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE PARAMETER`), les fichiers log étendus stockent le contenu MIME de tous les emails envoyés et n'ont pas de limite de taille. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
 
-- **SMTP connections** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **POP3 connections** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **IMAP connections** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Connexions SMTP** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Connexions POP3** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Connexions IMAP** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### Description
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the _port_ property has not been set in the _server_ object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. Par défaut, si la propriété _port_ n'a pas été définie dans l'objet _server_ (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -324,7 +324,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 #### Description
 
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. Par défaut, si la propriété `.sendTimeOut` n'a pas été définie dans l'objet `server`, la valeur 100 est utilisée.
 
 <!-- END REF -->
 

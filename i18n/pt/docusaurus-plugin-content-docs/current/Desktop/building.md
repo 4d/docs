@@ -97,7 +97,7 @@ Cuando se marca esta opción, todas las carpetas relacionadas con el proyecto se
 
 Constrói um componente compilado a partir da estrutura.
 
-A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
+A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
 
 Si ha llamado a su aplicación, _MiComponente_, 4D creará una carpeta _Components_ que contiene la carpeta _MiComponente.4dbase_:
 

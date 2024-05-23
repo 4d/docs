@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+La classe `WebForm` contient des fonctions et des propriétés permettant de gérer vos composants de webforms Qodly. Cette classe est décrite en détail dans la [documentation de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 <details><summary>Historique</summary>
 
@@ -168,9 +168,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Paramètres | Type                       |     | Description                |
-| ---------- | -------------------------- | :-: | -------------------------- |
-| Résultat   | 4D.WebForm |  <- | New `WebForm` proxy object |
+| Paramètres | Type                       |     | Description                  |
+| ---------- | -------------------------- | :-: | ---------------------------- |
+| Résultat   | 4D.WebForm |  <- | Nouvel objet proxy `WebForm` |
 
 <!-- END REF -->
 

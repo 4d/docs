@@ -10,6 +10,7 @@ title: リリースノート
 #### ハイライト
 
 - [オブジェクト参照](../Concepts/dt_object.md#オブジェクト演算子) と [コレクション参照](../Concepts/dt_collection.md#コレクション演算子) を対象とした比較演算子をサポート。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。
+- 宣言された名前空間をコンポーネントが持つ場合、そのクラスは [`cs.<namespace>`] を介して、ホストプロジェクトに読み込まれているすべてのコンポーネント間で自動的に共有されるようになりました。
 
 ## 4D 20 R5
 
@@ -57,7 +58,7 @@ title: リリースノート
 - 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
 - セレクション内レコードの削除後に、別レコードが新規作成された場合でも、セレクションの一貫性が保持されるようになりました ([このブログ記事](https://blog.4d.com/ja/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/) を参照ください)。
 - 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
-- [4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/) 場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンドの _connectionInfo_ パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
+- [4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/) 場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンドの _connectionInfo_ パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
 
 ## 4D 20 R3
 
@@ -138,6 +139,7 @@ title: リリースノート
 
 #### ハイライト
 
+- 4D 20.3 では、[4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/) 場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンドの _connectionInfo_ パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
 - 4D 20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D 20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの _options_ パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。

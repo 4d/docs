@@ -66,7 +66,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -143,7 +143,7 @@ _fileConstant_ 引数で指定したファイルが存在しない場合、null 
 
 <!-- REF #4D.File.new().Syntax -->
 
-**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer }{ ; \* } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer { ; \* } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer ) : 4D.File<!-- END REF -->
 
 #### 説明
 
