@@ -237,7 +237,7 @@ Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez égaleme
 
 Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre _aliasType_ est ignoré).
 
-**Returned object**
+**Objet retourné**
 
 Un objet `4D.File` avec la propriété `isAlias` mise à **true**.
 
@@ -366,7 +366,7 @@ Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
 Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `Folder` déplacé.
 
@@ -422,7 +422,7 @@ The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the f
 
 Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `Folder` renommé.
 
