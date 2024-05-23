@@ -241,7 +241,7 @@ Le bouton **reload** ![reload](../assets/en/Admin/data-explorer-reload.png) rech
 
 À l'exception de la [suppression](#deleting-entities) (voir ci-dessous), les modifications de l'entité sont effectuées localement et doivent être sauvegardées afin d'être enregistrées dans le fichier de données.
 
-Pour sauvegarder les modifications ou pour sauvegarder une entité que vous avez créée dans l'Explorateur de données, cliquez sur le bouton **Save** ![save](../assets/fr/Admin/data-explorer-save.png).
+Pour sauvegarder les modifications ou pour sauvegarder une entité que vous avez créée dans l'Explorateur de données, cliquez sur le bouton **Save** ![save](../assets/en/Admin/data-explorer-save.png).
 
 :::info
 
@@ -253,7 +253,7 @@ En cas de conflit (par ex. un autre utilisateur a modifié la même valeur d'att
 
 ### Suppression d'entités
 
-Vous pouvez supprimer des entités en cliquant sur le bouton **supprimer** ![supprimer](../assets/fr/Admin/data-explorer-delete.png).
+Vous pouvez supprimer des entités en cliquant sur le bouton **supprimer** ![supprimer](../assets/en/Admin/data-explorer-delete.png).
 
 Pour supprimer un ensemble d'entités, sélectionnez deux entités ou plus dans la zone de liste en utilisant **Maj+clic** (sélection continue) ou **Ctrl/Command+clic** (sélection discontinue) et cliquez sur le bouton de **suppression**.
 
