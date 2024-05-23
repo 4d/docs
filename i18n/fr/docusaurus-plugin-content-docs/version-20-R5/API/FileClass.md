@@ -241,7 +241,7 @@ Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez égaleme
 
 Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre _aliasType_ est ignoré).
 
-**Returned object**
+**Objet retourné**
 
 Un objet `4D.File` avec la propriété `isAlias` mise à **true**.
 
@@ -446,7 +446,7 @@ Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
 Par défaut, le fichier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le fichier déplacé, passez le nom complet dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `File` déplacé.
 
@@ -574,7 +574,7 @@ Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne d
 
 A noter que la fonction modifie le nom complet du fichier, c'est-à-dire que si vous ne passez pas une extension dans le paramètre _newName_, le fichier aura un nom sans extension.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `File` renommé.
 
