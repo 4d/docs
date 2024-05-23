@@ -183,7 +183,7 @@ Les noms des flags personnalisés doivent respecter cette règle : le mot-clé d
 > - Pour qu'un mot-clé soit pris en compte, il doit être à vrai.
 > - L'interprétation des indicateurs de mots-clés peut varier selon le client de messagerie.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -270,7 +270,7 @@ Charsets possibles :
 | mail mode UTF8           | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)                                                                                      |
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | headerCharset &bodyCharset : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                            |
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -371,7 +371,7 @@ Vous pouvez passer :
 
 Le paramètre _destinationBox_ vous permet de passer une valeur texte avec le nom de la boîte de réception dans laquelle seront placés les messages copiés.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -472,7 +472,7 @@ Par exemple, si vous essayez de créer "Projects/IMAP/Doc" dans un serveur dont 
 
 Dans le paramètre `name`, passez le nom de la mailbox à créer.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -550,7 +550,7 @@ Vous pouvez passer :
 
 L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -648,7 +648,7 @@ Dans le paramètre `name`, passez le nom de la mailbox à supprimer.
 > - Tous les messages présents dans la boîte seront également supprimés.
 > - La possibilité de supprimer une boîte de réception dépend du serveur de messagerie.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -719,7 +719,7 @@ End if
 
 The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -793,7 +793,7 @@ Dans le paramètre _name_ passez le nom de la mailbox à laquelle vous souhaitez
 
 Si la boîte de réception nommée _name_ n'est pas sélectionnable ou n'existe pas, la fonction génère une erreur et retourne **null**.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `boxInfo` contient les propriété suivantes :
 
@@ -1237,7 +1237,7 @@ Le paramètre _destinationBox_ vous permet de passer une valeur texte avec le no
 
 > Cette fonction est uniquement prise en charge par les serveurs IMAP compatibles avec RFC [8474](https://tools.ietf.org/html/rfc8474).
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1419,7 +1419,7 @@ Reportez-vous à [.addFlags()](#addflags) pour plus d'informations sur les flags
 
 > - Pour qu'un mot-clé soit pris en compte, il doit être à vrai.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1493,7 +1493,7 @@ Dans le paramètre `currentName`, passez le nom de la mailbox à renommer.
 
 Passez le nouveau nom de la mailbox dans e paramètre `newName`.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1731,7 +1731,7 @@ Le paramètre optionnel _state_ définit le type d'accès à la mailbox. Les val
 > - Si aucune connexion n'est ouverte, `.selectBox()` ouvrira une connexion.
 > - If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `boxInfo` contient les propriété suivantes :
 
@@ -1795,7 +1795,7 @@ The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -
 
 Dans le paramètre `name`, passez le nom de la mailbox à ajouter (subscribe) à la liste de mailboxes auxquelles vous avez "souscrit".
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1868,7 +1868,7 @@ The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summa
 
 Dans le paramètre `name`, passez le nom de la mailbox à supprimer (unsubscribe) de la liste de mailboxes auxquelles vous avez "souscrit".
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
