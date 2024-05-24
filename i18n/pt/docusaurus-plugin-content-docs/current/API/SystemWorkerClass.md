@@ -320,7 +320,7 @@ $output:=$worker.response
 
 The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -350,7 +350,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Valores possíveis: "text" ou "blob".
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -366,7 +366,7 @@ This property is **read-only**.
 
 The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -406,7 +406,7 @@ If no error occured, `.errors` is undefined.
 
 The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is _undefined_.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -438,7 +438,7 @@ This property is **read-write**.
 
 The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -483,7 +483,7 @@ The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contain
 
 The type of the message is defined according to the [`dataType`](#datatype) attribute.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -537,7 +537,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -553,7 +553,7 @@ This property is **read-only**.
 
 The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
