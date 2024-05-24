@@ -391,7 +391,7 @@ L'objet `.info` contient les propriétés suivantes:
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+Cette fonction retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
 
 :::
 
