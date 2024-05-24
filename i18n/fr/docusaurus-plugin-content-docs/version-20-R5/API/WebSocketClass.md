@@ -82,7 +82,7 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <!-- END REF -->
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in _url_<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
+La fonction `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crée et renvoie un nouvel objet [`4D.WebSocket`](#websocket-object) connecté au serveur WebSocket à l'adresse que vous avez spécifiée dans _url_<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
 
 Dans _url_, indiquez l'URL à laquelle le serveur WebSocket répondra. Les modèles d'URL suivants peuvent être utilisés :
 
@@ -98,14 +98,14 @@ Dans _connectionHandler_, vous pouvez transmettre un objet contenant des fonctio
 - Les callbacks sont automatiquement appelées dans le contexte du formulaire ou du worker qui initie la connexion.
 - La WebSocket reste valide tant que le formulaire ou le worker n'est pas fermé.
 
-| Propriété   | Type                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onMessage   | [Function](FunctionClass.md) | Fonction de callback pour les données WebSocket. Appelée à chaque fois que le WebSocket a reçu des données. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul>                                                                                                                                                                                                                                                      |
-| onError     | [Function](FunctionClass.md) | Fonction de callback pour les erreurs d'exécution. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul> |
-| onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li></ul>                                                                                                                                          |
-| onOpen      | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est ouverte. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| dataType    | Text                         | Type de données reçues ou envoyées. Valeurs disponibles : "text" (par défaut), "blob", "object". "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (_value_ can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                      |
+| Propriété   | Type                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onMessage   | [Function](FunctionClass.md) | Fonction de callback pour les données WebSocket. Appelée à chaque fois que le WebSocket a reçu des données. La callback reçoit les paramètres suivants :<li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.type` (texte) : toujours "message"</li><li>`$2.data` (texte, blob ou objet, voir `dataType`) : Données reçues</li></ul>                                                                                                                                                                                                                                                       |
+| onError     | [Function](FunctionClass.md) | Fonction de callback pour les erreurs d'exécution. La callback reçoit les paramètres suivants:<li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.type` (texte) : toujours "error"</li><li>`$2.errors`: collection de piles d'erreurs 4D en cas d'erreur d'exécution.<ul><li>`[].errCode` (nombre) : Code d'erreur 4D</li><li>`[].message` (texte) : Description de l'erreur 4D</li><li>`[].componentSignature` (texte) : Signature du composant interne qui a renvoyé l'erreur</li></ul></li></ul> |
+| onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. La callback reçoit les paramètres suivants : <li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.code` (nombre, lecture seule) : unsigned short contenant le code de fermeture envoyé par le serveur.</li><li>`$2.reason` (texte, lecture seule) : Raison pour laquelle le serveur a fermé la connexion. Elle est spécifique au serveur et au sous-protocole particulier.</li></ul>                                                                                                               |
+| onOpen      | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est ouverte. La callback reçoit les paramètres suivants:<li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.type` (texte): toujours "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| dataType    | Text                         | Type de données reçues ou envoyées. Valeurs disponibles : "text" (par défaut), "blob", "object". "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| headers     | Object                       | En-têtes du WebSocket.<li>Syntaxe pour l'assignation de clé standard : `headers.*clé*:=*valeur*` (_valeur_ peut être une Collection si la même clé apparaît plusieurs fois)</li><li>Syntaxe pour l'assignation de Cookie (cas particulier) : `headers.Cookie:="*nom*=*valeur* {; *nom2*=*valeur2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                  |
 
 Voici la séquence des appels de callbacks :
 
@@ -119,14 +119,14 @@ Voici la séquence des appels de callbacks :
 Vous souhaitez définir des en-têtes dans la classe utilisateur `WSConnectionHandler` :
 
 ```4d
-// WSConnectionHandler class
+// Classe WSConnectionHandler
 
 Class constructor($myToken:Text)
 
-// Creation of the headers sent to the server
-This.headers:=New object("x-authorization";$myToken)
-// We define two cookies
-This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+// Création des en-têtes envoyés au serveur
+This.headers:=New object("x-authorization" ;$myToken)
+// Nous définissons deux cookies
+This.headers.Cookie:="yummy_cookie=choco ; tasty_cookie=strawberry"
 ...
 
 ```
@@ -139,7 +139,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### Description
 
-The `.dataType` property contains <!-- REF #WebSocketClass.dataType.Summary -->the type of the response body content<!-- END REF -->. Peut être "text", "blob" ou "object".
+La propriété `.dataType` contient <!-- REF #WebSocketClass.dataType.Summary -->le type de contenu du body de la réponse<!-- END REF -->. Peut être "text", "blob" ou "object".
 
 Cette propriété est en lecture seule.
 
@@ -153,7 +153,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.handler` property contains <!-- REF #WebSocketClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketClass.handler.Summary -->l'accesseur qui récupère l'objet `connectionHandler` utilisé pour initier la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -167,7 +167,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.id` property contains <!-- REF #WebSocketClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+La propriété `.id` contient <!-- REF #WebSocketClass.id.Summary -->l'identifiant unique de la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -189,15 +189,15 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends _message_ to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie _message_ au serveur WebSocket dans le type de données défini (Text, Blob ou Object)<!-- END REF -->.
 
-Les contenus suivants sont envoyés en fonction du type de \*message \* :
+Les contenus suivants sont envoyés en fonction du type de _message_ :
 
-| Type   | Contenu                                                                                                                                |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texte en UTF-8                                                                                                                         |
-| Blob   | Données binaires                                                                                                                       |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
+| Type   | Contenu                                                                                                                                   |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                                            |
+| Blob   | Données binaires                                                                                                                          |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 <!-- END REF -->
 
@@ -209,7 +209,7 @@ Les contenus suivants sont envoyés en fonction du type de \*message \* :
 
 #### Description
 
-The `.status` property contains <!-- REF #WebSocketClass.status.Summary -->the current connection status (can be "Connecting", "Closing", "Closed", or "Connected")<!-- END REF -->.
+La propriété `.status` contient <!-- REF #WebSocketClass.status.Summary -->le statut courant de la connexion (peut être "Connecting", "Closing", "Closed" ou "Connected")<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -232,7 +232,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional _code_ and _reason_ parameters<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->referme la connexion WebSocket, avec les paramètres optionnels _code_ et _reason_<!-- END REF -->.
 
 Dans _code_, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
 
@@ -251,7 +251,7 @@ Dans _reason_, vous pouvez passer une chaîne de caractères décrivant la raiso
 
 #### Description
 
-The `.url` property contains <!-- REF #WebSocketClass.url.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
+La propriété `.url` contient <!-- REF #WebSocketClass.url.Summary -->l'URL auquel le WebSocket s'est connecté<!-- END REF -->. Il s'agit de l'URL que vous avez passé à la fonction [`new()`](#4dwebsocketnew).
 
 Cette propriété est en lecture seule.
 
