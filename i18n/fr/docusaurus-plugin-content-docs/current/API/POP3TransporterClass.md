@@ -261,7 +261,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 | ---------- | ------- | :-: | ----------------------------------------------------------------------------------------------- |
 | msgNumber  | Integer |  -> | Numéro du message dans la liste                                                                 |
 | headerOnly | Boolean |  -> | True pour télécharger uniquement les en-têtes de l'email (par défaut, False) |
-| Résultat   | Object  |  <- | [Email object](EmailObjectClass.md#email-object)                                                |
+| Résultat   | Object  |  <- | [Objet Email](EmailObjectClass.md#objet-email)                                                  |
 
 <!-- END REF -->
 
@@ -469,7 +469,7 @@ La fonction retourne un Blob vide si :
 
 **BLOB retourné**
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` renvoie un `BLOB` qui peut être archivé dans une base de données ou converti en un objet [`Email`](EmailObjectClass.md#objet-email) avec la commande `MAIL Convert from MIME`.
 
 ##### Exemple
 

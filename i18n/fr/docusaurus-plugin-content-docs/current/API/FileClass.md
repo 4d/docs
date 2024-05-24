@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-Les objets `File` sont créés avec la commande [`File`](#file). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Les objets `File` sont créés avec la commande [`File`](#file). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `File` pour créer un nouveau fichier, un objet `File` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`file.create( )`](#create).
 
 ### Exemple
 
@@ -16,7 +16,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Chemins d'accès
 
-Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris les syntaxes `filesystems` et `posix`. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris les syntaxes `filesystems` et `posix`. Les chemins d'accès pris en charge sont détaillés dans la page [**Chemins d'accès**](../Concepts/paths.md).
 
 ### Objet File
 
@@ -82,7 +82,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 #### Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. La commande accepte deux syntaxes :
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -147,9 +147,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 #### Description
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](#file) (raccourci).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> Il est recommandé d'utiliser la commande raccourci [`File`](#file) au lieu de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -167,7 +167,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF file.create().Note -->
 
-**Not available for ZIP archives**<!-- END REF -->
+**Non disponible pour les archives ZIP**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
@@ -181,7 +181,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 #### Description
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+La fonction `.create()` <!-- REF #FileClass.create().Summary -->crée un fichier sur disque en fonction des propriétés de l'objet `File`<!-- END REF -->.
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le fichier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
@@ -228,7 +228,7 @@ Création d'un fichier de préférences dans le dossier principal :
 
 #### Description
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified _aliasName_ name in the folder designated by the _destinationFolder_ object.
+La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> vers le fichier avec le nom _aliasName_ spécifié dans le dossier désigné par l'objet _destinationFolder_.
 
 Passez le nom de l'alias ou du raccourci à créer dans le paramètre _aliasName_.
 
@@ -284,7 +284,7 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 #### Description
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+La fonction `.delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
@@ -343,7 +343,7 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 #### Description
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retourne le contenu d'un fichier d'information **.exe**, **.dll** ou **.plist** sous forme d'objet<!-- END REF -->.
 
 La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction renvoie un objet vide (aucune erreur n'est générée).
 
@@ -440,7 +440,7 @@ ALERT($info.Copyright)
 
 #### Description
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified _destinationFolder_<!-- END REF -->.
+La fonction `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `File` dans le dossier _destinationFolder_ spécifié<!-- END REF -->.
 
 Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
@@ -488,7 +488,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified _mode_ or with the specified _options_<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
+La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le _mode_ spécifié ou avec les _options_ spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
 Si vous utilisez le paramètre _mode_ (texte), passez le mode d'ouverture pour le file handle :
 
@@ -568,7 +568,7 @@ $fhandle:=$f.open("read")
 
 #### Description
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in _newName_ and returns the renamed `File` object<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans _newName_ et retourne l'objet `File` renommé<!-- END REF -->.
 
 Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
@@ -614,15 +614,15 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the _info_ properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés _info_ en tant que contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
 La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
-**_info_ parameter object with a .exe or .dll file**
+**Paramètre _info_ avec un fichier .exe or .dll**
 
-> Ecrire les informations de fichiers .exe ou .dll est possible uniquement sous Windows.
+> La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
 Chaque propriété valide définie dans le paramètre objet _info_ est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
@@ -642,7 +642,7 @@ Pour toutes les propriétés à l'exception de `WinIcon`, si vous passez un text
 
 Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un format incorrect, une erreur est générée.
 
-**_info_ parameter object with a .plist file**
+**Paramètre _info_ avec un fichier .plist**
 
 Chaque propriété valide définie dans le paramètre objet _info_ est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
 
@@ -706,7 +706,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Description
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the _content_ BLOB<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit l'intégralité du contenu du fichier en utilisant les données stockées dans le BLOB _content_<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
@@ -745,7 +745,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Description
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes _text_ as the new contents of the file<!-- END REF -->.
+La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit _text_ comme nouveau contenu du fichier<!-- END REF -->.
 
 Si le fichier référencé dans l'objet `File` n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
 

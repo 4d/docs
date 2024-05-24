@@ -448,7 +448,7 @@ The function returns Null if _index_ is beyond entity selection limits.
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
 $employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
 $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 	//of the $employees entity selection
 ```
@@ -1835,7 +1835,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the _querySettings_ parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
 
 <!-- END REF -->
 

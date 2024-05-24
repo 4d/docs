@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](#folder) command. Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+Les objets `Folder` sont créés avec la commande [`Folder`](#folder). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create()`](#create).
 
 ### Exemple
 
@@ -16,7 +16,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Chemins d'accès
 
-Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y compris les syntaxes `filesystems` ou `posix`. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y compris les syntaxes `filesystems` ou `posix`. Les chemins d'accès pris en charge sont détaillés dans la page [**Chemins d'accès**](../Concepts/paths.md).
 
 ### Objet Folder
 
@@ -78,7 +78,7 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 
 #### Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type `4D.Folder`<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -134,9 +134,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 #### Description
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+La fonction `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et retourne un nouvel objet de type `4D.Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
+> Il est recommandé d'utiliser la commande raccourci [`Folder`](#folder) au lieu de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
@@ -164,7 +164,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### Description
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+La fonction `.create()` <!-- REF #FolderClass.create().Summary -->crée un dossier sur disque en fonction des propriétés de l'objet `Folder`<!-- END REF -->.
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le dossier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
@@ -224,7 +224,7 @@ End if
 
 #### Description
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified _aliasName_ name in the folder designated by the _destinationFolder_ object.
+La fonction `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> du dossier avec le nom _aliasName_ dans le dossier désigné par l'objet _destinationFolder_.
 
 Passez le nom de l'alias ou du raccourci à créer dans le paramètre _aliasName_.
 
@@ -280,7 +280,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### Description
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+La fonction `.delete()` <!-- REF #FolderClass.delete().Summary -->supprime le dossier<!-- END REF -->.
 
 Par défaut, pour des raisons de sécurité, si vous omettez le paramètre option, `.delete()` permet uniquement de supprimer les dossiers vides. Si vous souhaitez que la commande supprime des dossiers qui ne sont pas vides, vous devez utiliser le paramètre option avec l'une des constantes suivantes :
 
@@ -360,7 +360,7 @@ Lorsque la constante `Delete with contents` est passée :
 
 #### Description
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified _destinationFolder_<!-- END REF -->.
+La fonction `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `Folder` (dossier source) dans le dossier _destinationFolder_ spécifié<!-- END REF -->.
 
 Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
 
@@ -418,7 +418,7 @@ Vous souhaitez déplacer et renommer un dossier :
 
 #### Description
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in _newName_ and returns the renamed `Folder` object<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans _newName_ et retourne l'objet `Folder` renommé<!-- END REF -->.
 
 Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 

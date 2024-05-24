@@ -3,7 +3,7 @@ id: FunctionClass
 title: Function
 ---
 
-A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D propose trois types d'objets `Function` :
+Un objet **`4D.Function`** contient un morceau de code qui peut être exécuté à partir d'un objet, soit en utilisant l'opérateur `()`, soit en utilisant les fonctions [`apply()`](#apply) et [`call()`](#call). 4D propose trois types d'objets `Function` :
 
 - **les fonctions natives**, c'est-à-dire les fonctions intégrées des diverses classes 4D telles que `collection.sort()` ou `file.copyTo()`.
 - **les fonctions utilisateur**, créées dans les [classes utilisateur](Concepts/classes.md) à l'aide du mot-clé [Function](Concepts/classes.md#function).
@@ -11,7 +11,7 @@ A **`4D.Function`** object contains a piece of code that can be executed from an
 
 ### Objets Formula
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
+Les commandes [Formula](#formula) et [Formula from string](#formula-from-string) vous permettent de créer des [objets `4D.Function`](#about-4dfunction-objects) pour exécuter tout(e) expression ou code 4D exprimé sous forme de texte.
 
 Les objets Formula peuvent être encapsulés dans des propriétés d'objet :
 
@@ -39,7 +39,7 @@ A noter que, même si elle n'a pas de paramètres (voir ci-dessous), une fonctio
  $o:=$f.message //retourne l'objet formule en $o
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
+Vous pouvez également exécuter une fonction en utilisant les fonctions [`apply()`](#apply) et [`call()`](#call) :
 
 ```4d
  $f.message.apply() //affiche "Hello world"
@@ -73,9 +73,9 @@ Pour plus de commodité, lorsque la formule est constituée d'une seule méthode
  var $f : 4D.Function
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
+  //Ecrire Formula(myMethod($1;$2)) n'est pas nécessaire
+ $text:=$f.call(Null;"Hello";"World") //retourne "Hello World"
+ $text:=$f.call() //retourne "How are you?"
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -120,13 +120,13 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 #### Description
 
-The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the _formulaExp_ expression<!-- END REF -->. .
+La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression _formulaExp_<!-- END REF -->. .
 
 Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que paramètre (champ calculé) à des commandes ou à des méthodes ou de l'exécuter à partir de divers composants sans avoir à les déclarer comme "partagés par les composants et la base de données hôte". Lorsqu'il est appelé, l'objet formula est évalué dans le contexte de la base de données ou du composant qui l'a créé.
 
 La formule retournée peut être appelée avec :
 
-- [`.call()`](#call) or [`.apply()`](#apply) methods, or
+- les méthodes [`call()`](#call) ou [`apply()`](#apply), ou
 - la syntaxe de la notation objet (voir [objet formula](#formula-object)).
 
 ```4d
@@ -217,11 +217,11 @@ Appeler une formule à l'aide de la notation objet :
 
  $calc:=Formula(This.total:=This.price*This.quantity)
 
-  //sets the formula to object properties
+  //affecte la formule aux propriétés d'objet
  $feta.calc:=$calc
  $robot.calc:=$calc
 
-  //call the formula
+  //appel de la formule
  $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
@@ -252,9 +252,9 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the _formulaString_ and, optionnally, a _context_<!-- END REF -->.  crée un objet `4D.Function` sur la base de _formulaString_ et, éventuellement, d'un \*contexte \*
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur _formulaString_ et, éventuellement, _context_<!-- END REF -->.  _formulaString_ peut être aussi simple qu'une valeur unique ou complexe, comme une méthode projet avec des paramètres.
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
+Cette commande est similaire à [`Formula`](#formula), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula`, sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 
 > Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la _formulaString_. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
 
@@ -311,13 +311,13 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 #### Description
 
-The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
+La fonction `.apply()` <!-- REF #FunctionClass.apply().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
 Dans le paramètre _thisObj_, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
 
 Vous pouvez également passer une collection à utiliser comme paramètres $1...$n dans la formule à l'aide du paramètre facultatif _formulaParams_.
 
-Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. Cela peut être utile pour passer des résultats calculés.
+Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
 
 #### Exemple 1
 
@@ -326,7 +326,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // retourne 60
 ```
 
 #### Exemple 2
@@ -371,20 +371,20 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 #### Description
 
-The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
+La fonction `.call()` <!-- REF #FunctionClass.call().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
 Dans le paramètre _thisObj_, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
 
 Vous pouvez également passer des valeurs à utiliser comme paramètres _$1...$n_ dans la formule à l'aide du paramètre facultatif _params_.
 
-Note that `.call()` is similar to [`.apply()`](#apply) except that parameters are passed directly.
+Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètres sont passés directement.
 
 #### Exemple 1
 
 ```4d
  var $f : 4D.Function
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // retourne "HELLO"
 ```
 
 #### Exemple 2
@@ -392,7 +392,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  $o:=New object("value";50)
  $f:=Formula(This.value*2)
- $result:=$f.call($o) // returns 100
+ $result:=$f.call($o) // retourne 100
 ```
 
 <!-- END REF -->
@@ -413,7 +413,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 #### Description
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+La propriété `.source` <!-- REF #FunctionClass.source.Summary -->contient l'expression source de `formula` sous forme de texte<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 

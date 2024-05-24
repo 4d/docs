@@ -612,7 +612,7 @@ La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. 
 
 **Paramètre *info* avec un fichier .exe or .dll**
 
-> Ecrire les informations de fichiers .exe ou .dll est possible uniquement sous Windows.
+> La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
 Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
