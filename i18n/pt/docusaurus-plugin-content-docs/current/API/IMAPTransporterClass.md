@@ -1783,7 +1783,7 @@ If `permanentFlags` string includes the special flag \*, it means that the serve
 
 #### Descrição
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. Como tal, pode optar por restringir uma grande lista de caixas de correio disponíveis, subscrevendo as que normalmente deseja ver.
+The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding the specified mailbox to the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. Como tal, pode optar por restringir uma grande lista de caixas de correio disponíveis, subscrevendo as que normalmente deseja ver.
 
 In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 
