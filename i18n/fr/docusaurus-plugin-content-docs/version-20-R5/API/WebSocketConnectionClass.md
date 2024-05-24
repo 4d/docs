@@ -3,11 +3,11 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md).
+L'API de la classe `WebSocketConnection` vous permet de gérer les connexions WebSocket, une fois qu'elles ont été établies à l'aide de la classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::info
 
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+Pour une vue d'ensemble et quelques exemples de la mise en œuvre du serveur WebSocket dans 4D, veuillez vous référer à la classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::
 
@@ -21,7 +21,7 @@ For an overview and some examples of the WebSocket server implementation in 4D, 
 
 ### Objet WebSocketConnection
 
-A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
+Un objet `WebSocketConnection` est automatiquement créé lorsque la fonction de callback [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) de l'objet [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) renvoie un objet [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
 Les objets WebSocketConnection offrent les propriétés et fonctions suivantes :
 
@@ -42,7 +42,7 @@ Les objets WebSocketConnection offrent les propriétés et fonctions suivantes :
 
 #### Description
 
-The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketConnectionClass.handler.Summary -->l'accesseur qui récupère l'objet `connectionHandler` utilisé pour initier la connexion<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -54,7 +54,7 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 #### Description
 
-The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+La propriété `.id` contient <!-- REF #WebSocketConnectionClass.id.Summary -->l'identifiant unique de la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -76,15 +76,15 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.send()` function <!-- REF #WebSocketConnectionClass.send().Summary -->sends a _message_ to the client<!-- END REF -->.
+La fonction `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envoie _message_ au client<!-- END REF -->.
 
-Les contenus suivants sont envoyés en fonction du type de \*message \* :
+Les contenus suivants sont envoyés en fonction du type de _message_ :
 
-| Type   | Contenu                                                                                                                                 |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texte en UTF-8                                                                                                                          |
-| Blob   | Données binaires                                                                                                                        |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Type   | Contenu                                                                                                                                   |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                                            |
+| Blob   | Données binaires                                                                                                                          |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 <!-- END REF -->
 
@@ -96,7 +96,7 @@ Les contenus suivants sont envoyés en fonction du type de \*message \* :
 
 #### Description
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
+La propriété `.status` contient <!-- REF #WebSocketConnectionClass.status.Summary -->le statut de la connexion (peut être "Closing", "Closed" ou "Connected")<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -119,9 +119,9 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.terminate()` function <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->force la fermeture de la connexion<!-- END REF -->.
 
-Un \*code \* et un \*message \* peuvent être envoyés au client pendant la fermeture pour indiquer la raison de la résiliation.
+Un _code_ et un _message_ peuvent être envoyés au client pendant la fermeture pour indiquer la raison de la fermeture.
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ Un \*code \* et un \*message \* peuvent être envoyés au client pendant la ferm
 
 #### Description
 
-The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
+La propriété `.wss` contient <!-- REF #WebSocketConnectionClass.wss.Summary -->l'objet parent [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) de la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
