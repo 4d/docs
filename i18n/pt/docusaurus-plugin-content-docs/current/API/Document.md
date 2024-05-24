@@ -23,7 +23,7 @@ title: Document Class
 
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -45,7 +45,7 @@ This property is **read-only**.
 
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -67,7 +67,7 @@ This property is **read-only**.
 
 The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -89,7 +89,7 @@ This property is **read-only**.
 
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -111,7 +111,7 @@ This property is **read-only**.
 
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -155,7 +155,7 @@ This property is **read/write**.
 
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -177,7 +177,7 @@ This property is **read-only**.
 
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -199,7 +199,7 @@ This property is **read-only**.
 
 The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -223,7 +223,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the _writable_ attribute of the file.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 **Exemplo**
 
@@ -254,7 +254,7 @@ This property is **read-only**.
 
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -276,7 +276,7 @@ This property is **read-only**.
 
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ This property is **read-only**.
 
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -325,7 +325,7 @@ The `.original` property returns <!-- REF #document.original.Summary -->the targ
 
 Para arquivos não-alias, a propriedade retorna o mesmo objeto de arquivo que o arquivo.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -347,7 +347,7 @@ This property is **read-only**.
 
 The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. .
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -369,7 +369,7 @@ This property is **read-only**.
 
 The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. .
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -391,7 +391,7 @@ This property is **read-only**.
 
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -413,7 +413,7 @@ This property is **read-only**.
 
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
