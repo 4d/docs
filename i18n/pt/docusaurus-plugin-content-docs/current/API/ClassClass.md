@@ -208,6 +208,6 @@ $sup:=cs.MyFile.superclass //File
 
 ```
 
-**See also:** [Super](Concepts/classes.md#super)
+**Veja também:** [Super](Concepts/classes.md#super)
 
 <!-- END REF -->
