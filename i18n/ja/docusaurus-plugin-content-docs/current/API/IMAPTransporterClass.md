@@ -1790,7 +1790,7 @@ _name_ には、アクセスするメールボックスの名前を渡します�
 
 #### 説明
 
-`.subscribe()` 関数は、<!-- REF #IMAPTransporterClass.subscribe().Summary -->IMAPサーバーの購読メールボックスとして任意のメールボックスを追加・削除します<!-- END REF -->。 利用可能なメールボックスが大量にある場合、すべてを取得するのを避けるため、確認したいメールボックスだけを購読することができます。
+The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding the specified mailbox to the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. 利用可能なメールボックスが大量にある場合、すべてを取得するのを避けるため、確認したいメールボックスだけを購読することができます。
 
 `name` には、購読するメールボックスの名前を渡します。
 
