@@ -108,10 +108,10 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 20 R4   | New _passwordAlgorithm_ property |
-| 18      | Ajout                            |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20 R4   | Nouvelle propriété _passwordAlgorithm_ |
+| 18      | Ajout                                  |
 
 </details>
 
@@ -156,7 +156,7 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
   //$myds et $myds2 sont équivalents
 ```
 
-Passez dans _connectionInfo_ un objet décrivant le datastore distant auquel vous souhaitez vous connecter. All properties are optional except _hostname_ :
+Passez dans _connectionInfo_ un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Toutes les propriétés sont optionnelles excepté _hostname_ :
 
 | Propriété         | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
