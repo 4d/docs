@@ -143,12 +143,12 @@ Vous pouvez stocker des images dans les attributs image ; de même, vous pouvez 
 
 ORDA vous permet d'assigner à l'attribut soit les données elles-mêmes, c'est-à-dire une image ou un objet blob, soit une référence **à un fichier** contenant les données. Seul le chemin d'accès au fichier est sauvegardé dans l'entité.
 
-Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+Grâce à cette fonctionnalité, vous pouvez réutiliser la même image dans plusieurs entités sans la dupliquer, organiser les fichiers comme vous le souhaitez ou les utiliser en dehors de 4D. De plus, vous pouvez contrôler la taille du fichier de données.
 
-The file reference can be:
+La référence du fichier peut être :
 
-- a 4D.File object
-- a path in POSIX format
+- un objet 4D.File
+- un chemin au format POSIX
 
 Voici un exemple :
 
@@ -166,9 +166,9 @@ Function createCompany($name : Text; $logo : 4D.File)
     $company.save() 
 ```
 
-Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
+Indépendamment de la façon dont l'attribut est assigné (données elles-mêmes ou référence à un fichier), l'accès en lecture à l'attribut est transparent du point de vue de l'utilisateur.
 
-The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned.
+Le fichier n'a pas besoin d'exister sur le disque au moment de l'assignation (aucune erreur n'est renvoyée dans ce cas). Si le fichier référencé n'est pas trouvé lors de la lecture de l'attribut, une valeur nulle est renvoyée.
 
 :::tip
 
@@ -228,7 +228,7 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1"
   //l'entité associée est mise à jour
 ```
 
-## Créer une sélection d'entité (entity selection)
+## Créer une entity selection (sélection d'entités)
 
 Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
@@ -237,7 +237,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 *   Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) pour créer une sélection d'entités vide;
 *   Utilisez la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
 *   Utilisez l'une des diverses fonctions de [Entity selection class](API/EntitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/EntitySelectionClass.md#or);
-*   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
+*   En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
@@ -382,7 +382,7 @@ The `sendMails` method:
 ```
 
 
-### Sélections d'entités et attributs de stockage
+### Entity selections et attributs de stockage
 
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
