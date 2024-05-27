@@ -1788,7 +1788,7 @@ Si la chaîne `permanentFlags` comprend le flag spécial \*, cela signifie que l
 
 #### Description
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding the specified mailbox to the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. Ainsi, vous pouvez contrôler la taille de la liste des boîtes de réception disponibles en souscrivant uniquement à celles que vous souhaitez généralement consulter.
+La fonction `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permet d'ajouter la boîte spécifiée à l'ensemble des boîtes auxquelles vous avez "souscrit" sur le serveur IMAP<!-- END REF -->. Ainsi, vous pouvez contrôler la taille de la liste des boîtes de réception disponibles en souscrivant uniquement à celles que vous souhaitez généralement consulter.
 
 Dans le paramètre `name`, passez le nom de la mailbox à ajouter (subscribe) à la liste de mailboxes auxquelles vous avez "souscrit".
 

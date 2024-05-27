@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+A classe Collection gerencia variáveis do tipo [Collection] (Concepts/dt_collection.md).
 
 Uma coleção se inicializa com:
 
@@ -80,21 +80,21 @@ Uma coleção se inicializa com:
 | Parâmetro  | Tipo                                                                    |     | Descrição                                  |
 | ---------- | ----------------------------------------------------------------------- | :-: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | Valor(es) de collection |
-| Resultados | Collection                                                              |  <- | The new collection                         |
+| Resultados | Collection                                                              |  <- | Nova coleção                               |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+O comando `New collection` <!-- REF #_command_.New collection.Summary --> cria uma nova coleção vazia ou pré-preenchida<!-- END REF --> e retorna sua referência.
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
+Se não passar nenhum parâmetro, New collection cria uma coleção vazia e retorna sua referência.
 
 Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
 
 > Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
-Optionally, you can prefill the new collection by passing one or several _value_(s) as parameter(s).
+Opcionalmente pode pré-preencher a nova coleção passando um ou mais parâmetros value.
 
 Pode também adicionar ou modificar elementos subsequentemente através de assignação. Por exemplo:
 
@@ -102,14 +102,14 @@ Pode também adicionar ou modificar elementos subsequentemente através de assig
  myCol[10]:="My new element"
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Se o  índice do novo elemento estiver além do último elemento existente da coleção, a coleção será redimensionada automaticamente e todos os novos elementos intermediários receberão um valor **nulo**.
 
 Pode passar qualquer número de valores de qualquer tipo compatível (número, texto, data, imagem, ponteiro, objeto, coleção....). Diferente de arrays, coleções podem misturar dados de tipos diferentes.
 
 Pode prestar atenção aos problemas de conversão abaixo:
 
-- If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-- Datas são armazenadas no formato "aaaa-mm-dd" ou strings com o formato "AAAA-MM-DDTHH:mm:ss.SSSZ", de acordo com a configuração atual "dates inside objects"/datas dentro de objetos. Quando converter datas 4D em texto antes de armazená-las em uma coleção, como padrão o programa considera a zona horária local. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
+- Se você passar um ponteiro, ele será mantido "como está"; ele será avaliado usando o comando `JSON Stringify`
+- Datas são armazenadas no formato "aaaa-mm-dd" ou strings com o formato "AAAA-MM-DDTHH:mm:ss.SSSZ", de acordo com a configuração atual "dates inside objects"/datas dentro de objetos. Quando converter datas 4D em texto antes de armazená-las em uma coleção, como padrão o programa considera a zona horária local. Pode modificar esse valor usando o seletor `Dates inside objects` do comando `SET DATABASE PARAMETER`.
 - Se passar a hora, é armazenada como um número de milissegundos (Real).
 
 #### Exemplo 1
@@ -162,13 +162,13 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 | Parâmetro  | Tipo                                                                |     | Descrição                        |
 | ---------- | ------------------------------------------------------------------- | :-: | -------------------------------- |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | Valores da collection compartida |
-| Resultados | Collection                                                          |  <- | The new shared collection        |
+| Resultados | Collection                                                          |  <- | A nova coleção compartilhada     |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência.
 
 Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal _Use...End use_). Reading an element without a _Use...End use_ structure is, however, possible.
 

@@ -6,15 +6,15 @@ title: Session
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Les objets de session sont retournés par la commande [`Session`](#session). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](.../ORDA/privileges.md).
 
 ### Types de sessions
 
 Trois types de sessions sont pris en charge par cette classe :
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-- [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
+- [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
+- [**Session des procédures stockées**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
 
 :::note
 
@@ -60,7 +60,7 @@ La disponibilité des propriétés et des fonctions dans l'objet `Session` dépe
 
 #### Description
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
+La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `Session` correspondant à la session utilisateur courante<!-- END REF -->.
 
 Selon le process à partir duquel la commande est appelée, la session utilisateur courante peut être :
 
@@ -79,7 +79,7 @@ L'objet `Session` des sessions web est disponible depuis n'importe quel process 
 - Méthodes base `On Web Authentication`, `On Web Connection`, et `On REST Authentication`,
 - code traité par les balises 4D dans les pages semi-dynamiques (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - méthodes projet avec l'attribut "Disponible via balises HTML et URLs 4D (4DACTION...)" et appelées via les urls 4DACTION/
-- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
+- méthodes base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) pour les requêtes mobiles,
 - Fonctions ORDA [appelées via des requêtes REST](../REST/ClassFunctions.md).
 
 Pour plus d'informations sur les sessions utilisateur web, veuillez consulter la section [Sessions web](WebServer/sessions.md).
@@ -92,13 +92,13 @@ L'objet `Session` des sessions client distants est disponible depuis :
 - Les Triggers,
 - Les méthodes base `On Server Open Connection` et `On Server Shutdown Connection`.
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+Pour plus d'informations sur les sessions utilisateur distantes, veuillez vous référer au paragraphe [**Sessions utilisateur client distants**](../Desktop/clientServer.md#remote-user-sessions).
 
 #### Session des procédures stockées
 
 Tous les process des procédures stockées partagent la même session d'utilisateur virtuel. L'objet `Session` des procédures stockées est disponible depuis :
 
-- methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
+- Les méthodes appelées avec la commande [`Execute on server`](https://doc.4d.com/4dv20/help/command/fr/page373.html),
 - Les méthodes base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, et `On System event`.
 
 Pour des informations sur la session d'utilisateur virtuel des procédures stockées, veuillez vous référer à la page [4D Server et langage 4D](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
@@ -112,16 +112,16 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //méthode action_Session
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
-          WEB SEND TEXT("4DACTION --> Session is WebAdmin")
+       If(Session.hasPrivilege("WebAdmin")) //appel de la fonction hasPrivilege
+          WEB SEND TEXT("4DACTION -- Session is WebAdmin")
        Else
-          WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
+          WEB SEND TEXT("4DACTION -- Session is not WebAdmin")
        End if
     Else
-       WEB SEND TEXT("4DACTION --> Session is null")
+       WEB SEND TEXT("4DACTION -- Sesion is null")
  End case
 ```
 
@@ -151,21 +151,21 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+Cette fonction ne fait rien et retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
+La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session et retourne **True** si l'exécution a réussi<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
 
 #### Exemple
 
 ```4d
-//Invalidate a web user session
+//Invalider une session utilisateur web
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() //$isGuest est True
 ```
 
 <!-- END REF -->
@@ -192,9 +192,9 @@ Cette propriété est uniquement disponible avec les sessions web.
 
 :::
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. La valeur est exprimée sous forme de texte au format ISO 8601 : `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+La propriété `.expirationDate` contient <!-- REF #SessionClass.expirationDate.Summary -->la date et l'heure d'expiration du cookie de session<!-- END REF -->. La valeur est exprimée sous forme de texte au format ISO 8601 : `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-Cette propriété est en **lecture seule**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Cette propriété est en **lecture seule**. Elle est automatiquement recalculée si la valeur de la propriété [`.idleTimeout`](#idletimeout) est modifiée.
 
 #### Exemple
 
@@ -230,19 +230,19 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 #### Description
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the _privilege_ is associated to the session, and False otherwise<!-- END REF -->.
+La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le _privilege_ est associé à la session, et False sinon<!-- END REF -->.
 
-With remote client and stored procedure sessions, this function always returns True, whatever the _privilege_.
+Avec des sessions de client distant et de procédure stockée, cette fonction renvoie toujours True, quel que soit le _privilege_.
 
 #### Exemple
 
-You want to check if the "WebAdmin" privilege is associated to the web user session:
+Vous voulez vérifier si le privilège "WebAdmin" est associé à la session utilisateur web :
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-	//Access is granted, do nothing
+	//Accès accordé, ne rien faire
 Else
-	//Display an authentication page
+	//Afficher une page d'authentification
 
 End if
 ```
@@ -265,7 +265,7 @@ End if
 
 #### Description
 
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. Cette chaîne unique est automatiquement attribuée par le serveur à chaque session et vous permet d'identifier ses process.
+La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant unique (UUID) de la session sur le serveur<!-- END REF -->. Cette chaîne unique est automatiquement attribuée par le serveur à chaque session et vous permet d'identifier ses process.
 
 <!-- END REF -->
 
@@ -291,11 +291,11 @@ Cette propriété est uniquement disponible avec les sessions web.
 
 :::
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
+La propriété `.idleTimeout` contient <!-- REF #SessionClass.idleTimeout.Summary -->le délai maximal d'inactivité de session (en minutes), au-delà duquel la session est automatiquement fermée par 4D<!-- END REF -->.
 
 Si cette propriété n'est pas définie, sa valeur par défaut est 60 (1h).
 
-When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly.
+Lorsque cette propriété est définie, la propriété [`.expirationDate`](#expirationdate) est mise à jour en conséquence.
 
 > La valeur ne peut pas être < 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
 
@@ -305,10 +305,10 @@ Cette propriété est en **lecture-écriture**.
 
 ```4d
 If (Session.isGuest())
-		// A Guest session will close after 60 minutes of inactivity
+		// La session Guest se ferme après 60 minutes d'inactivité
 	Session.idleTimeout:=60
 Else
-		// Other sessions will close after 120 minutes of inactivity
+		// Les autres sessions se ferment après 120 minutes d'inactivité
 	Session.idleTimeout:=120
 End if
 
@@ -338,23 +338,23 @@ Cette propriété est uniquement disponible avec les sessions des procédures st
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
+La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session du client distant ou de la procédure stockée sur le serveur<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
+L'objet `.info` est le même objet que celui renvoyé par la [commande `Get process activity`](https://doc.4d.com/4dv20/help/command/fr/page1495.html) pour les sessions des clients distants et des procédures stockées.
 
 L'objet `.info` contient les propriétés suivantes:
 
 | Propriété        | Type          | Description                                                                                                                                                  |
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | type             | Text          | Type de session : "remote" ou "storedProcedure"                                                                                              |
-| userName         | Text          | 4D user name (same value as [`.userName`](#username))                                                                                     |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                           |
 | machineName      | Text          | Sessions distantes : nom de la machine distante. Session des procédures stockées : nom de la machine serveur |
 | systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                              |
 | IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                            |
 | hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                             |
 | creationDateTime | Date ISO 8601 | Date et heure de création de la session                                                                                                                      |
 | state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                       |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                                                                 |
+| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                            |
 | persistentID     | Text          | ID persistant de la session                                                                                                                                  |
 
 :::note
@@ -391,11 +391,11 @@ L'objet `.info` contient les propriétés suivantes:
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+Cette fonction retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
 
 :::
 
-The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+La fonction `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->renvoie True si la session est une session Guest (c'est-à-dire qu'elle n'a aucun privilège)<!-- END REF -->.
 
 #### Exemple
 
@@ -403,7 +403,7 @@ Dans la méthode base `On Web Connection` :
 
 ```4d
 If (Session.isGuest())
-	//Do something for Guest user
+ //Faire quelque chose pour l'utilisateur invité
 End if
 ```
 
@@ -439,11 +439,11 @@ End if
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+Cette fonction ne fait rien et retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
 
 :::
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
+La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe le ou les privilège(s) et/ou rôle(s) défini(s) en paramètre à la session et renvoie **True** si l'exécution a réussi<!-- END REF -->.
 
 - Dans le paramètre _privilege_, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
@@ -451,23 +451,23 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 - Dans le paramètre _settings_, passez un objet contenant les propriétés suivantes :
 
-| Propriété  | Type               | Description                                                                                              |
-| ---------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
-| privileges | Text ou Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
-| roles      | Text ou Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li>                     |
-| userName   | Text               | Nom d'utilisateur à associer à la session (optionnel)                                 |
+| Propriété  | Type               | Description                                                                                                      |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| privileges | Text ou Collection | <li>Chaîne contenant un nom de privilège, ou</li><li>Collection de chaînes contenant des noms de privilèges</li> |
+| roles      | Text ou Collection | <li>Chaîne contenant un rôle, ou</li><li>Collection de chaînes contenant des rôles</li>                          |
+| userName   | Text               | Nom d'utilisateur à associer à la session (optionnel)                                         |
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+Les privilèges et les rôles sont définis dans le fichier [`roles.json`](../ORDA/privileges.md#rolesjson-file) du projet. Pour plus d'informations, veuillez vous reporter à la section [**Privileges**](../ORDA/privileges.md).
 
 :::
 
-If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+Si la propriété `privileges` ou `roles` contient un nom qui n'est pas déclaré dans le fichier [`roles.json`](../ORDA/privileges.md#rolesjson-file), il est ignoré.
 
 Par défaut lorsqu'aucun privilège ou rôle n'est associé à la session, la session est une [session Guest](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only).
+La propriété [`userName`](#username) est accessible au niveau de l'objet session (lecture seulement).
 
 #### Exemple
 
@@ -476,9 +476,9 @@ Dans une méthode d'authentification personnalisée, vous assignez le privilège
 ```4d
 var $userOK : Boolean
 
-... //Authenticate the user
+... //Authentifier l'utilisateur
 
-If ($userOK) //The user has been approved
+If ($userOK) //L'utilisateur a été approuvé
   var $info : Object
   $info:=New object()
   $info.privileges:=New collection("WebAdmin")
@@ -506,7 +506,7 @@ End if
 
 #### Description
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all processes of the session<!-- END REF -->.
+La propriété `.storage` contient <!-- REF #SessionClass.storage.Summary -->un objet partagé qui peut être utilisé pour stocker des informations disponibles pour tous les process de la session<!-- END REF -->.
 
 Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Puisqu'il s'agit d'un objet partagé, cette propriété sera disponible dans l'objet `Storage` du serveur.
 
@@ -518,7 +518,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 <TabItem value="Web session example">
 
-Vous voulez stocker l'adresse IP du client dans la propriété `.storage`. You can write in the `On Web Authentication` database method:
+Vous voulez stocker l'adresse IP du client dans la propriété `.storage`. Vous pouvez écrire dans la méthode base `On Web Authentication` :
 
 ```4d
 If (Session.storage.clientIP=Null) //first access
@@ -532,7 +532,7 @@ End if
 
 <TabItem value="Remote session example">
 
-You want to share data between processes in the same session:
+Vous voulez partager des données entre les process de la même session :
 
 ```4d
 Use (Session.storage)
@@ -563,10 +563,10 @@ End use
 
 #### Description
 
-The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
+La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
-- Avec les sessions web, cette propriété est une chaîne vide par défaut. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
+- Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
+- Avec les sessions distantes et des procédures stockées, cette propriété renvoie le même nom d'utilisateur que la [commande `Current user`](https://doc.4d.com/4dv20/help/command/fr/page182.html).
 
 Cette propriété est en **lecture seule**.
 

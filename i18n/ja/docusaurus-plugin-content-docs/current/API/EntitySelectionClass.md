@@ -449,9 +449,9 @@ _index_ がエンティティセレクションの範囲を超える場合、こ
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
 $employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-	//of the $employees entity selection
+$emp1:=$employees.at(2)  // $employees エンティティセレクションの 3番目のエンティティ 
+$emp2:=$employees.at(-3) // $employees エンティティセレクションの
+    // 終わりから 3番目のエンティティ
 ```
 
 <!-- END REF -->
@@ -1840,7 +1840,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 `.queryPath` プロパティは、<!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4Dで実行されたクエリの詳細な情報<!-- END REF -->を格納します。 このプロパティは、[`.query()`](#query) 関数の _querySettings_ 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
+詳細については、DataClass[`.query()`](DataClassClass.md#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 

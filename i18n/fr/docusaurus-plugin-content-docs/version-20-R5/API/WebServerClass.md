@@ -7,7 +7,7 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Objet Web Server
 
-Web server objects are instantiated with the [`WEB Server`](#web-server) command.
+Les objets serveur Web sont instanciés avec la commande [`WEB Server`](#web-server).
 
 Leurs propriétés et fonctions sont les suivantes :
 
@@ -77,7 +77,7 @@ Leurs propriétés et fonctions sont les suivantes :
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the _option_ parameter<!-- END REF -->.
+La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre _option_<!-- END REF -->.
 
 Par défaut, si le paramètre _option_ est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre _option_ :
 
@@ -94,7 +94,7 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
 
 ```4d
-  // Method of a component
+  // Méthode d'un composant
  var $hostWS : 4D.WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
@@ -122,7 +122,7 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+La commande `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->renvoie une collection de tous les objets serveur Web disponibles dans l'application 4D<!-- END REF -->.
 
 Une application 4D peut contenir de un à plusieurs serveurs Web :
 
@@ -131,7 +131,7 @@ Une application 4D peut contenir de un à plusieurs serveurs Web :
 
 Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server list` , qu'ils soient en cours d'exécution ou non.
 
-> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
+> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. En revanche, chaque serveur Web de composant que vous souhaitez utiliser doit être instancié à l'aide de la commande [`WEB Server`](#web-server).
 
 Vous pouvez utiliser la propriété [.name](#name) de l'objet Web server pour identifier le projet ou le composant auquel chaque objet Web server de la liste est rattaché.
 
@@ -153,7 +153,7 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Cette propriété est utilisée par le serveur web WebAdmin pour valider la configuration de sécurité de l'interface d'administration.
+La propriété **.accessKeyDefined** contient <!-- REF #WebServerClass.accessKeyDefined.Summary -->vrai si une access key est définie dans les settings du serveur Web<!-- END REF -->. Cette propriété est utilisée par le serveur web WebAdmin pour valider la configuration de sécurité de l'interface d'administration.
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -161,7 +161,7 @@ The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDe
 
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
-Chemin du <!-- REF #WebServerClass.certificateFolder.Summary -->dossier contenant les fichiers des certificats<!-- END REF -->. Chemin d'accès complet au format POSIX utilisant des filesystems. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
+Chemin du <!-- REF #WebServerClass.certificateFolder.Summary -->dossier contenant les fichiers des certificats<!-- END REF -->. Chemin d'accès complet au format POSIX utilisant des filesystems. Lorsque cette propriété est utilisée dans le paramètre `settings` de la [fonction `.start()`](#start), elle peut être un [objet `Folder`](FolderClass.md).
 
 <!-- END REF -->
 
@@ -205,7 +205,7 @@ Liste de chiffrement utilisée pour le protocole sécurisé<!-- END REF -->. Dé
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (_Cross-origin resource sharing_) service status for the web server<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir \`COR Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
+Le <!-- REF #WebServerClass.CORSEnabled.Summary -->statut du service CORS (_Cross-origin resource sharing_) pour le serveur Web<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir \`COR Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
 
 Par défaut : False (désactivé)
 
@@ -219,7 +219,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
-Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
+Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et de méthodes autorisées pour le service CORS<!-- END REF --> (voir la propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
 - **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si _host_ n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
   - 192.168.5.17:8081
@@ -342,7 +342,7 @@ Par défaut = 80
 
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. Pour des raisons de sécurité, le serveur Web rejette par défaut les requêtes `HTTP TRACE` avec une erreur 405. Lorsque le `HTTP TRACE` est activé, le serveur Web répond aux requêtes `HTTP TRACE` avec la ligne, l'en-tête et le corps de la requête.
+L'<!-- REF #WebServerClass.HTTPTrace.Summary -->activation de `HTTP TRACE`<!-- END REF -->. Pour des raisons de sécurité, le serveur Web rejette par défaut les requêtes `HTTP TRACE` avec une erreur 405. Lorsque le `HTTP TRACE` est activé, le serveur Web répond aux requêtes `HTTP TRACE` avec la ligne, l'en-tête et le corps de la requête.
 
 <!-- END REF -->
 
@@ -412,9 +412,9 @@ Adresse IP sur laquelle le serveur Web recevra les requêtes HTTP<!-- END REF --
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-_Read-only property_
+_Propriété en lecture seulement._
 
-Vrai si les sessions legacy sont activées dans le serveur Web, sinon Faux<!-- END REF -->.
+Le <!-- REF #WebServerClass.isRunning.Summary -->statut d'exécution du serveur web<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -424,7 +424,7 @@ Vrai si les sessions legacy sont activées dans le serveur Web, sinon Faux<!-- E
 
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
+Contient <!-- REF #WebServerClass.keepSession.Summary -->`True` si les anciennes sessions sont activées dans le serveur web, `False` sinon<!-- END REF -->.
 
 ##### Voir également
 
@@ -468,7 +468,7 @@ Par défaut = 80
 
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
-Contains the <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
+Contient la <!-- REF #WebServerClass.maxRequestSize.Summary -->taille maximum (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
 
 Valeurs possibles : 500000 - 2147483647
 
@@ -482,7 +482,7 @@ Valeurs possibles : 500000 - 2147483647
 
 > Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
-Contains the <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
+Contient le <!-- REF #WebServerClass.maxSessions.Summary -->nombre maximum de sessions legacy simultanées<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
 
 <!-- END REF -->
 
@@ -511,7 +511,7 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-_Read-only property_
+_Propriété en lecture seulement._
 
 <em x-id="3">Propriété en lecture seulement.</em> <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->Disponibilité du PFS sur le serveur<!-- END REF -->.
 
@@ -523,7 +523,7 @@ _Read-only property_
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-_Read-only property_
+_Propriété en lecture seulement._
 
 <em x-id="3">Propriété en lecture seulement.</em> <!-- REF #WebServerClass.openSSLVersion.Summary -->Version de la librairie OpenSSL utilisée<!-- END REF -->.
 
@@ -535,7 +535,7 @@ _Read-only property_
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-_Read-only property_
+_Propriété en lecture seulement._
 
 La fonction <code>.start()</code> function <!-- REF #WebServerClass.start().Summary -->démarre le serveur Web server auquel elle est appliquée<!-- END REF -->, en utilisant les propriétés définies dans le paramètre optionnel <em x-id="3">settings</em>.
 
@@ -557,7 +557,7 @@ Chemin du dossier racine du serveur Web<!-- END REF -->. Chemin d'accès complet
 
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contient <!-- REF #WebServerClass.scalableSession.Summary -->`True` si les sessions évolutives sont utilisées dans le serveur web, et `False` sinon<!-- END REF -->.
 
 ##### Voir également
 
@@ -583,7 +583,7 @@ Champ "domain" du cookie de session<!-- END REF -->. Utilisé pour contrôler la
 
 Nom du cookie utilisé pour stocker l'ID de session<!-- END REF -->.
 
-_Read-only property_
+_Propriété en lecture seulement._
 
 <!-- END REF -->
 
@@ -660,13 +660,13 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional _settings_ object parameter.
+La fonction `.start()` <!-- REF #WebServerClass.start().Summary -->démarre le serveur web sur lequel elle est appliquée<!-- END REF -->, en utilisant les propriétés définies dans le paramètre facultatif _settings_.
 
 Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre _settings_, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+Tous les paramètres des [objets Serveur Web](#objet-serveur-web) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
+Les paramètres de session personnalisés seront réinitialisés lorsque la fonction [`.stop()`](#stop) sera appelée.
 
 #### Objet retourné
 
@@ -721,11 +721,11 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serveur web sur lequel elle est appliquée<!-- END REF -->.
 
 Si le serveur Web était lancé, toutes les connexions Web et tous les process Web sont fermés une fois que les requêtes actuellement traitées sont terminées. Si le serveur Web n'était pas démarré, la fonction ne fait rien.
 
-> This function resets the customized web settings defined for the session using the _settings_ parameter of the [`.start()`](#start) function, if any.
+> Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre _settings_ de la fonction [`.start()`](#start), le cas échéant.
 
 #### Exemple
 
