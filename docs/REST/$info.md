@@ -16,7 +16,7 @@ When you call this request for your project, you retrieve information in the fol
 |entitySet	|Collection|A collection in which each object contains information about each entity selection.|
 |ProgressInfo|	Collection	|A collection containing information about progress indicator information.|
 |sessionInfo|	Collection	|A collection in which each object contains information about each user session.|
-|privileges|	Object	|An object with a `privileges` property (collection of objects), providing the privileges of the user session.|
+|privileges|	Object	|An object with a "privileges" property (collection of objects). Each object of the collection has a "privilege" property with a privilege name of the user session as value.|
 
 
 ### entitySet  

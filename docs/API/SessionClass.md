@@ -240,11 +240,8 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
 
-:::note
+With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
 
-This function returns a collection containing "WebAdmin" in remote client and stored procedure sessions.
-
-:::
 
 :::info
 
