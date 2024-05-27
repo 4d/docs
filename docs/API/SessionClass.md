@@ -286,7 +286,8 @@ The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defi
 
       ]
    }
-}```
+}
+```
 
 
 The session role is assigned in an `authentify()` datastore function:
