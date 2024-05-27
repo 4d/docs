@@ -13,7 +13,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 :::note
 
-4D View Pro areas behavior can be impacted by custom web areas configuration file [4DCEFParameters.json](../formobjects/webarea_overview#4dcefparameters.json).
+4D View Pro areas behavior can be impacted by custom web areas configuration file [4DCEFParameters.json](../formobjects/webarea_overview.md#4dcefparameters.json).
 
 :::
 
