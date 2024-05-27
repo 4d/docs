@@ -233,7 +233,7 @@ You can override the default switches by creating a custom 4DCEFParameters.json 
 
 :::note
 
-Creating a custom 4DCEFParameters.json file can impact [4D View Pro areas]()
+Creating a custom 4DCEFParameters.json file can impact [4D View Pro areas](../viewpro/configuring#form-area-properties)
 
 :::
 
