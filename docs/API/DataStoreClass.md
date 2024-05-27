@@ -131,15 +131,10 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 
 The following remote datastores are supported by the command:
 
-- a remote 4D application
-- a [Qodly cloud](https://developer.qodly.com/docs/cloud/getStarted) instance
-
-**Remote 4D application**
-
-A 4D application described in *connectionInfo*  must be available as a remote datastore, i.e.:
-
-* its web server must be launched with http and/or https enabled,
-* the datastore must be exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).
+|datastore kind|Description|
+|---|---|
+|Remote 4D application|A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can required (see note)|
+|[Qodly application](https://developer.qodly.com/docs/cloud/getStarted)|A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.|
 
 :::note
 
@@ -148,14 +143,9 @@ A 4D application described in *connectionInfo*  must be available as a remote da
 :::
 
 
-**Qodly cloud instance**
-
-A Qodly cloud instance described in *connectionInfo* must have provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.
-
-
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-|Property| Type|Remote 4D application |Qodly cloud instance|
+|Property| Type|Remote 4D application |Qodly application|
 |---|---|---|---|
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|API Endpoint of the Qodly cloud instance|
 |user|Text|User name|- (ignored)|
@@ -229,11 +219,9 @@ Working with several remote datastores:
 
 #### Example 4
 
-Connection to a Qodly cloud instance:
+Connection to a Qodly application:
 
 ```4d
-	//Dashboard QA
-	
 var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
 
 var $remoteDS : 4D.DataStoreImplementation
@@ -244,7 +232,7 @@ $connect["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0"
 $remoteDS:=Open datastore($connect; "remoteId")
 $data:=$remoteDS.item.all()
 
-ALERT(String($data.length)+" have been read")
+ALERT(String($data.length)+" items have been read")
 
 ```
 
