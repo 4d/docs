@@ -231,9 +231,10 @@ You can override the default switches by creating a custom 4DCEFParameters.json 
 * Windows: `Users\[userName]\AppData\Roaming\4D\4DCEFParameters.json`
 * macOS: `$HOME/Library/Application Support/4D/4DCEFParameters.json`
 
+
 :::note
 
-Creating a custom 4DCEFParameters.json file can impact [4D View Pro areas](../viewpro/configuring.md#form-area-properties)
+Creating a custom 4DCEFParameters.json file can impact [4D View Pro areas](../ViewPro/configuring.md#form-area-properties)
 
 :::
 
