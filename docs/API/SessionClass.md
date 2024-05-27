@@ -248,26 +248,70 @@ This function returns a collection containing "WebAdmin" in remote client and st
 
 :::info
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project, and are assigned to the Session using the [`setPrivileges()`](#setprivileges) function.
+Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
 
 :::
 
 
 #### Example
 
-The "admin" privilege, containing the "simple" privilege, has been [assigned](#setprivileges) to the Session.
+The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+
+```json
+{
+   "privileges":[
+      {
+         "privilege":"simple",
+         "includes":[
+
+         ]
+      },
+      {
+         "privilege":"medium",
+         "includes":[
+            "simple"
+         ]
+      }
+   ],
+   "roles":[
+      {
+         "role":"Medium",
+         "privileges":[
+            "medium"
+         ]
+      }
+   ],
+   "permissions":{
+      "allowed":[
+
+      ]
+   }
+}```
+
+
+The session role is assigned in an `authentify()` datastore function:
+
+```4d
+  //Datastore Class
+
+exposed Function authentify($role : Text) : Text
+	Session.clearPrivileges()
+	Session.setPrivileges({roles: $role})
+```
+
+Assuming the `authentify()` function is called with the "Medium" role:
 
 ```4d
 var $privileges : Collection
-
 $privileges := Session.getPrivileges()
-//$privileges: ["simple","admin"]
+//$privileges: ["simple","medium"]
 ```
 
 
 #### See also
 
-[.setPrivileges()](#setprivileges)
+[.setPrivileges()](#setprivileges)<br/>
+[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 
