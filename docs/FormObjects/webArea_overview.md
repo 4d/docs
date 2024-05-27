@@ -260,7 +260,7 @@ The 4DCEFParameters.json file format is as the following:
 
 The 4DCEFParameters.json file structure contains:
 
-- **Switches**: a list of CEF switches and their corresponding values. 
+- **switches**: a list of CEF switches and their corresponding values applied for both macOS and Windows. 
 - **macOS.switches**: macOS-specific CEF switches. 
 - **windows.switches**: Windows-specific CEF switches.
 
@@ -268,7 +268,7 @@ The switches in the custom file take precedence. In case of duplication of switc
 
 :::note
 
-In a built application, the custom 4DCEFParameters.json file is added to the Resources folder of the project.
+In a built application, the custom 4DCEFParameters.json file is to be added to the Resources folder of the project.
 
 :::
 
@@ -303,14 +303,8 @@ A default 4DCEFParameters.json file is provided in the Resources folder of the 4
 ```json
 {
   "Switches": {
-    "disable-gpu": true,
-    "disable-javascript": false,
+    "disable-javascript": true,
     "disable-web-security": true
-  },
-  "macOS": {
-    "switches": {
-      "disable-gpu": false
-    }
   }
 }
 ```
