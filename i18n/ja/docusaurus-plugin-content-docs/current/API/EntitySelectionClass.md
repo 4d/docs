@@ -17,6 +17,7 @@ title: EntitySelection
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)<br/><!-- INCLUDE #EntitySelectionClass.at().Summary -->                                                                |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<br/><!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.clean().Syntax -->](#clean)<br/><!-- INCLUDE #EntitySelectionClass.clean().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
@@ -507,6 +508,58 @@ _attributePath_ 引数として、評価する属性パスを渡します。
  $averageSalary:=ds.Employee.all().average("salary")
  $moreThanAv:=ds.Employee.query("salary > :1";$averageSalary)
 ```
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.clean().Desc -->
+
+## .clean()
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R6 | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.clean().Syntax -->**.clean**() : 4D.EntitySelection<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.clean().Params -->
+
+| 引数  | タイプ                                |     | 説明                                            |
+| --- | ---------------------------------- | :-: | --------------------------------------------- |
+| 戻り値 | 4D.EntitySelection |  <- | New entity selection without deleted entities |
+
+<!-- END REF -->
+
+#### 説明
+
+The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
+
+By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become _undefined_ but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing _undefined_ entity references.
+
+The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+
+#### 例題
+
+```4d
+var $sel; $sel2 : cs.SpecialitySelection
+var $status : Object
+
+$sel:=ds.Speciality.query("ID <= 4")
+$status:=ds.Speciality.get(2).drop() //delete the entity from the dataclass
+  //$sel.length = 4
+
+$sel2:=$sel.clean()
+  //$sel2.length = 3
+```
+
+![](../assets/en/API/clean.png)
+
+#### 参照
+
+[`.refresh()`](#refresh)
 
 <!-- END REF -->
 
@@ -1892,7 +1945,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 > このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
-`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。
 
@@ -1943,6 +1996,10 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
  Form.students.refresh() // Form.students エンティティセレクションの ORDAキャッシュを無効化します
   // リストボックスの中身はデータベースの内容で更新され、クライアント#2 がおこなった変更も反映します
 ```
+
+#### 参照
+
+[`.clean()`](#clean)
 
 <!-- END REF -->
 
