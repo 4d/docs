@@ -556,16 +556,16 @@ We want to obtain a list of employees whose salary is higher than the average sa
 <!-- REF #EntitySelectionClass.clean().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.EntitySelection|<-|New entity selection without deleted entities, if any|
+|Result|4D.EntitySelection|<-|New entity selection without deleted entities|
 <!-- END REF -->
 
 #### Description
 
 The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
 
-By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become *undefined* but are not removed from the object. Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing *undefined* entity references.
+By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become *undefined* but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing *undefined* entity references.
 
-The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../docs/ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
 
 
 #### Example   

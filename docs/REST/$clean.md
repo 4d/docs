@@ -8,11 +8,11 @@ Creates a new entity set from an existing entity set but without its deleted ent
 
 ## Description
 
-`$clean` a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any). 
+`$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references. 
+By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references.
 
-`$clean` must be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set:
+`$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
 
 `/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$clean=true&$method=entityset`
 
