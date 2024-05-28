@@ -4,9 +4,9 @@ title: Página de reparação
 sidebar_label: Página de reparação
 ---
 
-Esta página é utilizada para reparar o ficheiro de dados quando este foi danificado. Generally, you will only use these functions under the supervision of 4D technical teams, when anomalies have been detected while opening the application or following a [verification](verify.md).
+Esta página é utilizada para reparar o ficheiro de dados quando este foi danificado. Generalmente, sólo utilizará estas funciones bajo la supervisión de los equipos técnicos de 4D, cuando se hayan detectado anomalías al abrir la aplicación o tras una [verificación](verify.md).
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. É importante ter isto em conta (especialmente em macOS onde as aplicações 4D aparecem como pacotes) para que o tamanho da aplicação não aumente excessivamente. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
+**Atención:** cada operación de reparación implica la duplicación del archivo original, lo que aumenta el tamaño de la carpeta de la aplicación. É importante ter isto em conta (especialmente em macOS onde as aplicações 4D aparecem como pacotes) para que o tamanho da aplicação não aumente excessivamente. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
 
 > Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). Se tentar fazer essa operação em modo padrão, um aviso informará que o banco de dados será fechado e reiniciado em modo manutenção.
 
@@ -16,11 +16,11 @@ Esta página é utilizada para reparar o ficheiro de dados quando este foi danif
 
 ### Ficheiro de dados a reparar
 
-Nome do caminho do ficheiro de dados atual. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. If you perform a [standard repair](#standard-repair), you must select a data file that is compatible with the open project file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+Nome do caminho do ficheiro de dados atual. El botón **[...]** puede utilizarse para especificar otro archivo de datos. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Si realiza una [reparación estándar](#standard-repair), debe seleccionar un archivo de datos que sea compatible con el archivo proyecto abierto. Si realiza una reparación [reparación por encabezados de registros](#recover-by-record-headers), puede seleccionar todo archivo de datos. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
 
 ### Pasta de cópia de segurança dos ficheiros originais
 
-By default, the original data file will be duplicated before the repair operation. By default, the original data file will be duplicated before the repair operation. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+By default, the original data file will be duplicated before the repair operation. By default, the original data file will be duplicated before the repair operation. El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de iniciar la reparación. This option can be used more particularly when repairing voluminous files while using different disks.
 
 ### Ficheiros reparados
 
@@ -39,11 +39,11 @@ Use this low-level repair option only when the data file is severely damaged and
 
 4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear.
+> Si ha desmarcado la opción **Registros eliminados definitivamente** en las propiedades de una tabla en la estructura, la reparación por marcadores de encabezados puede hacer que vuelvan a aparecer los registros que se eliminaron anteriormente.
 >
-> A recuperação por cabeçalhos não tem em conta as restrições de integridade. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> A recuperação por cabeçalhos não tem em conta as restrições de integridade. Más concretamente, tras esta operación puede obtener valores duplicados con campos únicos o valores NULL con campos declarados **Nunca Null**.
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. Quando a verificação estiver concluída, os resultados aparecem na janela seguinte:
+Al hacer clic en **Escanear y reparar...**, 4D realiza un análisis completo del archivo de datos. Quando a verificação estiver concluída, os resultados aparecem na janela seguinte:
 
 ![](../assets/en/MSC/mscrepair2.png)
 
@@ -52,10 +52,10 @@ When you click on **Scan and repair...**, 4D performs a complete scan of the dat
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 
 - A primeira tabela lista as informações provenientes da verificação do ficheiro de dados. Cada linha mostra um grupo de registos recuperáveis no ficheiro de dados:
-  - The **Order** column indicates the recovery order for the group of records.
-  - The **Count** column indicates the number of the records in the table.
-  - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
-  - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
+  - La columna **Orden** indica el orden de recuperación del grupo de registros.
+  - La columna **Número** indica el número de los registros de la tabla.
+  - La columna **Tabla de destino** indica los nombres de las tablas que se asignaron automáticamente a los grupos de registros identificados. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
+  - La columna **Recuperar** le permite indicar, para cada grupo, si quiere recuperar los registros. By default, this option is checked for every group with records that can be associated with a table.
 
 - A segunda tabela lista as tabelas do ficheiro de projeto.
 
@@ -66,15 +66,15 @@ Para fazer isso, primeiro selecione um grupo de registros não atribuído na pri
 
 ![](../assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar.
+A continuación, seleccione la tabla que desea asignar al grupo en la tabla "Tablas no asignadas" y haga clic en el botón **Identificar tabla**. Também pode atribuir uma tabela utilizando a função arrastar e largar.
 The group of records is then associated with the table and it will be recovered in this table. Os nomes das tabelas atribuídas manualmente aparecem a preto.
-Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+Utilice el botón **Ignorar registros** para eliminar la asociación realizada manualmente entre la tabla y el grupo de registros.
 
 ## Abrir arquivo de registo
 
 Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este arquivo permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: _DatabaseName\*\*_Repair_Log_yyyy-mm-dd hh-mm-ss.xml_" onde:
 
-- _ApplicationName_ is the name of the project file without any extension, for example "Invoices",
-- _yyyy-mm-dd hh-mm-ss_ is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- _ApplicationName_ es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- _yyyy-mm-dd hh-mm-ss_ es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.

@@ -5,7 +5,7 @@ title: RESTリクエストについて
 
 RESTリクエストでは次の構文がサポートされています:
 
-| URI                                                              | リソース (入力)                                                                              | /? or &{filter} (Output)                                                                                                                                       |
+| URI                                                              | リソース (入力)                                                                              | /? または &{filter} (出力)                                                                                                                                          |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                               | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)                | [$method=...]($method.md)                                                                                                                             |
@@ -14,15 +14,15 @@ RESTリクエストでは次の構文がサポートされています:
 
 RESTリクエストには、URI とリソースが必ず含まれていなければなりませんが、返されるデータをフィルダーする出力パラメーターの使用は任意です。
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. 例:
+すべての URI と同様に、先頭パラメーターは "?" に続けて指定し、それ以降のパラメーターは "&" で区切ります。 例:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
 > 曖昧さ回避のため、値は引用符内に書くことができます。 たとえば、上の例では名字 (lastName) の値を単一引用符内に書けます: "lastName!='Jones'"。
 
-パラメーターを利用することで、4Dプロジェクトのデータクラスのデータを操作できます。 Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+パラメーターを利用することで、4Dプロジェクトのデータクラスのデータを操作できます。 `GET` HTTPメソッドを使ってデータを取得する以外にも、`POST` HTTPメソッドを使ってデータクラスのエンティティを追加・更新・削除することが可能です。
 
-If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
+JSON の代わりに配列形式でデータを取得するには [`$asArray`]($asArray.md) パラメーターを使います。
 
 ## RESTステータスとレスポンス
 

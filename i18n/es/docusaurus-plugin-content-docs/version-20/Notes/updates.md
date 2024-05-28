@@ -67,7 +67,8 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 #### Cambios de comportamiento
 
-- A partir de v20.2, 4D 20 LTS ya no es compatible con Windows Server 2012 R2.
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
 - **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) se ha definido incorrectamente en 1 en lugar de 0. Se ha realizado una corrección en 4D a partir de las versiones **20.1 HF1** y **20 R2** y el valor es ahora 0.
 - Para el cumplimiento con la RFC HTTP, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) devuelve ahora todos los nombres de encabezados **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Los certificados TLS son ahora validados automáticamente por 4D al enviar peticiones HTTP con [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) y rechazados con un error si no son válidos. Una nueva propiedad *option* le permite controlar esta validación.
@@ -307,4 +308,3 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 | PHP       | 8.2.4          | 20                |                                                                                                               |
 | libldap   | 2.6.4          | 20                |                                                                                                               |
 | libsasl   | 2.1.28         | 20                |                                                                                                               |
-

@@ -3,21 +3,21 @@ id: onColumnResize
 title: On Column Resize
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                 | Definição                                                                                                                                |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 33   | [4D View Pro Area](../FormObjects/viewProArea_overview.md) - [List Box](../FormObjects/listbox_overview.md) - [List Box Column](../FormObjects/listbox_overview.md#list-box-columns) | A largura de uma coluna é modificada directamente pelo utilizador ou, consequentemente, por um redimensionamento da janela do formulário |
+| Code | Pode ser chamado por                                                                                                                                                                      | Definição                                                                                                                                |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 33   | [Área 4D View Pro](../FormObjects/viewProArea_overview.md) - [List Box](../FormObjects/listbox_overview.md) - [Columna de List Box ](../FormObjects/listbox_overview.md#list-box-columns) | A largura de uma coluna é modificada directamente pelo utilizador ou, consequentemente, por um redimensionamento da janela do formulário |
 
 ## Descrição
 
 ### List Box
 
-Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. The event is triggered "live", _i.e._, sent continuously during the event, for as long as the list box or column concerned is being resized. This resizing is performed manually by a user, or may occur as a result of the list box and its column(s) being resized along with the form window itself (whether the form is resized manually or using the `RESIZE FORM WINDOW` command).
+Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. El evento se activa "en directo", _es decir_, se envía continuamente durante el evento, mientras se redimensiona el list box o la columna en cuestión. Este redimensionamiento es realizado manualmente por un usuario, o puede ocurrir como resultado de que el list box y su(s) columna(s) sean redimensionados junto con la propia ventana del formulario (ya sea que el formulario sea redimensionado manualmente
 
-> The `On Column Resize` event is not triggered when a [fake column](../FormObjects/properties_ResizingOptions.md#about-the-fake-blank-column) is resized.
+> El evento `On Column Resize` no se activa cuando se redimensiona una [falsa columna](../FormObjects/properties_ResizingOptions.md#about-the-fake-blank-column).
 
 ### 4D View Pro
 
-This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+This event is generated when the width of a column is modified by a user. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedade | Tipo          | Descrição                                                                                                   |
 | ----------- | ------------- | ----------------------------------------------------------------------------------------------------------- |

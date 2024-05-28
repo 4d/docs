@@ -47,6 +47,8 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
+- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
 
@@ -218,7 +220,7 @@ Por ejemplo:
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-## Force login
+## Forzar inicio de sesión
 
 With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
 
@@ -249,35 +251,35 @@ In a simple Qodly form with login/password inputs, a "Submit" button calls the f
 ```4d
 
 exposed Function authentify($credentials : Object) : Text
-	
+
 var $salesPersons : cs.SalesPersonsSelection
 var $sp : cs.SalesPersonsEntity
-	
+
 $salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
 $sp:=$salesPersons.first()
-	
+
 If ($sp#Null)
 	If (Verify password hash($credentials.password; $sp.password))
-			
+
 		Session.clearPrivileges()
 		Session.setPrivileges("") //guest session
-			
+
 		return "Authentication successful"
-	Else 
+	Else
 		return "Wrong password"
 	End if
-Else 
+Else
 	return "Wrong user"
-End if 
+End if
 ```
 
-This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.
+This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
 ### Logout
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly form. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde el formulario Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 

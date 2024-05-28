@@ -3,9 +3,9 @@ id: ZipFileClass
 title: ZIPFile
 ---
 
-The following properties and functions from the [File](FileClass.md) class are available to `ZIPFile` objects:
+Les propriétés et fonctions suivantes de la classe [File](FileClass.md) sont disponibles pour les objets `ZIPFile` :
 
-| Available [File](FileClass.md) APIs for ZIPFile                                     | Commentaire                            |
+| API disponibles de [File](FileClass.md) API des ZIPFile                             | Commentaire                            |
 | ----------------------------------------------------------------------------------- | -------------------------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](FileClass.md#copyto)                   |                                        |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](FileClass.md#creationdate)         |                                        |

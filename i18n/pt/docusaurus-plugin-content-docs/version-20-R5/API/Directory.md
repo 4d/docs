@@ -21,7 +21,7 @@ title: Directory Class
 
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -45,7 +45,7 @@ This property is **read-only**.
 
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -69,7 +69,7 @@ This property is **read-only**.
 
 The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -93,7 +93,7 @@ This property is **read-only**.
 
 The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -117,7 +117,7 @@ This property is **read-only**.
 
 The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -141,7 +141,7 @@ This property is **read-only**.
 
 The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -165,7 +165,7 @@ This property is **read-only**.
 
 The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ This property is **read-only**.
 
 The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -213,7 +213,7 @@ This property is **read-only**.
 
 The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -239,7 +239,7 @@ The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true 
 
 On Windows, `.isPackage` always returns **false**.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -263,7 +263,7 @@ This property is **read-only**.
 
 The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ This property is **read-only**.
 
 The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -311,7 +311,7 @@ This property is **read-only**.
 
 The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -335,7 +335,7 @@ This property is **read-only**.
 
 The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 > Esta propriedade está disponible nas pastas para permitir que o código genérico processe pastas ou arquivos.
 
@@ -363,7 +363,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 
 Se a pasta não tiver um pai (raiz), é devolvido o valor nulo.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -387,7 +387,7 @@ This property is **read-only**.
 
 The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -411,7 +411,7 @@ This property is **read-only**.
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 

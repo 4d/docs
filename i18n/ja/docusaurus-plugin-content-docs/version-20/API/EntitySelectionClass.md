@@ -1907,7 +1907,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 `.queryPath` プロパティは、 <!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4D で実行されたクエリの詳細な情報を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
+詳細については、DataClass[`.query()`](DataClassClass.md#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 

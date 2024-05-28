@@ -10,29 +10,29 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 ### Resumo
 
-|                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->                   |
-| [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
-| [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
-| [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
-| [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
-| [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary -->                            |
-| [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
-| [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary -->          |
-| [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary -->                               |
-| [<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.locked().Summary -->                                                    |
-| [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
-| [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary -->                            |
-| [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary -->                |
-| [<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary -->                            |
-| [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary -->          |
-| [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary -->                         |
-| [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary -->                      |
-| [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
-| [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
-| [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
+|                                                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)<br/><!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->                   |
+| [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
+| [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
+| [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
+| [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
+| [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary -->                            |
+| [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
+| [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)<br/><!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary -->          |
+| [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<br/><!-- INCLUDE #DataStoreClass.getRequestLog().Summary -->                               |
+| [<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)<br/><!-- INCLUDE #DataStoreClass.locked().Summary -->                                                    |
+| [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<br/><!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<br/><!-- INCLUDE #DataStoreClass.provideDataKey().Summary -->                            |
+| [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<br/><!-- INCLUDE #DataStoreClass.setAdminProtection().Summary -->                |
+| [<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)<br/><!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary -->                            |
+| [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)<br/><!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary -->          |
+| [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)<br/><!-- INCLUDE #DataStoreClass.startRequestLog().Summary -->                         |
+| [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)<br/><!-- INCLUDE #DataStoreClass.startTransaction().Summary -->                      |
+| [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<br/><!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
+| [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
+| [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
 
 ## ds
 
@@ -108,9 +108,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18      | Adicionado |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 20 R4   | New _passwordAlgorithm_ property |
+| 18      | Adicionado                       |
 
 </details>
 
@@ -155,16 +156,17 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
   //$myds e $myds2 são equivalentes
 ```
 
-Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except _hostname_):
+Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. All properties are optional except _hostname_ :
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                  |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                      |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                     |
-| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Parâmetros | Utilize uma conexão segura(\*). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                        |
-| type        | Text       | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Propriedade       | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname          | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                  |
+| user              | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                      |
+| senha             | Text       | User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                                                                     |
+| idleTimeout       | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
+| tls               | Parâmetros | Utilize uma conexão segura(\*). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                        |
+| passwordAlgorithm | Text       | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the _digest_ parameter set to `true`.                                                                                                                                                                                                 |
+| type              | Text       | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 (\*) Se tls for true, se utiliza o protocolo HTTPS se:
 
@@ -1224,11 +1226,11 @@ Para criar um registro de pedidos ORDA no lado do servidor, chame essa função 
 - If you passed the _file_ parameter, the log data is written in this file, at the requested location. - If you omit the _file_ parameter or if it is null, the log data is written in a file named _ordaRequests.jsonl_ and stored in the "/LOGS" folder.
 - The _options_ parameter can be used to specify if the server response has to be logged, and if it should include the body. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
 
-|Constant|Description|
-\|----|----|---|
-|srl log all|Log the response entirely (default value)|
-|srl log no response|Disable the logging of the response|
-|srl log response without body|Log the response without the body|
+| Parâmetros                    | Descrição                                                             |
+| ----------------------------- | --------------------------------------------------------------------- |
+| srl log all                   | Registar a resposta na íntegra (valor predefinido) |
+| srl log no response           | Desativar o registo da resposta                                       |
+| srl log response without body | Registar a resposta sem o corpo                                       |
 
 #### Exemplo 1
 

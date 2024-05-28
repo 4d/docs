@@ -132,7 +132,7 @@ Si el comando se llama desde un componente, pase el *parámetro opcional para ob
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
 
 
 #### Descripción

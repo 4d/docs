@@ -7,7 +7,7 @@ Puede crear barras de menús y menús para sus aplicaciones 4D. Dado que los men
 
 ![](../assets/en/Menus/menubar.png)
 
-A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). Cuando el usuario elige un comando de menú o submenú, llama a un método proyecto o a una acción estándar que realiza una operación.
+Una **barra de menús** es un grupo de menús que pueden aparecer juntos en una misma pantalla. Cada **menú** de una barra de menús puede tener varios comandos de menú en ella, incluyendo algunos que llaman a submenús en cascada (o submenús jerárquicos). Cuando el usuario elige un comando de menú o submenú, llama a un método proyecto o a una acción estándar que realiza una operación.
 
 Puede tener varias barras de menús separadas para cada aplicación. Por ejemplo, puede utilizar una barra de menús que contenga menús para las operaciones estándar de la base de datos y otra que se active sólo para los informes. Una barra de menús puede contener un menú con comandos de menú para introducir registros. La barra de menús que aparece con el formulario de entrada puede contener el mismo menú, pero los comandos del menú están desactivados porque el usuario no los necesita durante la entrada de datos.
 
@@ -26,7 +26,7 @@ Para crear menús y barras de menús, puede utilizar:
 
 ## Editor de menús
 
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+Se accede al editor de menús mediante el botón **Menús** de la caja de herramientas.
 
 ![](../assets/en/Menus/editor1.png)
 

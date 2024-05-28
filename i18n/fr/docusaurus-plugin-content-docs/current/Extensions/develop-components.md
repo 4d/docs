@@ -11,13 +11,13 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 - **Matrix Project**: 4D project used for developing the component. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
 
 ## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- To install a component, you simply need to copy the component files into the [`Components` folder of the project](Project/architecture.md). Vous pouvez utiliser des alias ou des raccourcis.
+- To use a component, you simply need to [install it in your application](../Project/components.md#basics).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -57,7 +57,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notes :**
 
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Par conséquent, elle ne peut pas être utilisée dans un composant.
 - SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
@@ -66,7 +66,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées dans le composant.
 
-En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. In the matrix project, you must explicitly designate the methods that you want to share with the host project by checking the **Shared by components and host project** box in the method properties dialog box:
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. In the matrix project, you must explicitly designate the methods that you want to share with the host project and its components by checking the **Shared by components and host project** box in the method properties dialog box:
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -92,22 +92,26 @@ EXECUTE METHOD($param)
 > Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération.\
 > Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
 
-## Partage des classes et des fonctions
+## Sharing of classes
 
-Par défaut, les classes et fonctions des composants ne peuvent pas être appelées depuis l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes et fonctions de composants soient exposées dans les projets hôtes, vous devez déclarer un espace de nom (namespace) du composant. De plus, vous pouvez contrôler comment les classes de composants et les fonctions sont suggérées dans l'éditeur de code hôte.
+By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
 
 ### Déclaration du namespace
 
-To allow classes and functions of your component to be exposed in the host projects, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
+To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
 
 ![](../assets/en/settings/namespace.png)
 
-> A _namespace_ ensures that no conflict emerges when a host project uses different components that have classes or functions with identical names. A component namespace must be compliant with [property naming rules](../Concepts/identifiers.md#object-properties).
+:::Note
 
-When you enter a value, you declare that component classes and functions will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project's code, through the `cs.<value>` namespace. For example, if you enter "eGeometry" as component namespace, assuming that you have created a `Rectangle` class containing a `getArea()` function, once your project is installed as a component, the developer of the host project can write:
+A _namespace_ ensures that no conflict emerges when a host project uses different components that have classes or functions with identical names. A component namespace must be compliant with [property naming rules](../Concepts/identifiers.md#object-properties).
+
+:::
+
+When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. For example, if you enter "eGeometry" as component namespace, assuming that you have created a `Rectangle` class containing a `getArea()` function, once your project is installed as a component, the developer of the host project can write:
 
 ```4d
-//in host project
+//in host project or one of its components
 var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
@@ -115,13 +119,13 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+The namespace of a [compiled](#protection-of-components-compilation) component is added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
 :::
 
-Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. Si une classe utilisateur portant le même nom qu'un composant existe déjà dans le projet, la classe utilisateur est prise en compte et les classes du composant sont ignorées.
+Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
 

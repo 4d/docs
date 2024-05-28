@@ -9,36 +9,36 @@ El Explorador de datos ofrece una interfaz web para ver, consultar y editar los 
 
 ## Configuración
 
-The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
+El Explorador de datos se basa en el componente servidor web [`WebAdmin`](webAdmin.md) para la configuración y los parámetros de autenticación.
 
-- **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
-- **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
+- **configuración**: la configuración del Explorador de datos reutiliza los parámetros del servidor web [`WebAdmin`](webAdmin.md#webadmin-settings),
+- **autenticación**: el acceso al Explorador de datos se concede cuando el [usuario de la sesión está autenticado](webAdmin.md#autenticación-y-sesión) y tiene el privilegio "WebAdmin". Cuando se accede al Explorador de datos a través del elemento de menú **Explorador de datos** (ver más adelante), se proporciona una autenticación automática.
 
-> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) function.
+> El acceso al Explorador de Datos puede desactivarse mediante la función [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 
 ## Apertura del Explorador de datos
 
-[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically if necessary when the Data Explorer is clicked on.
+[El servidor web `WebAdmin`](webAdmin.md#starting-the-webadmin-web-server) se inicia automáticamente si es necesario al hacer clic en el Explorador de datos.
 
 Para conectarse a la página web del Explorador de datos:
 
 - De una aplicación 4D (con interfaz):
-  - To open a new 4D window with the Data Explorer page displayed in a web area, select **Data Explorer** in the **Records** menu or click on the **Data** button in the main toolbar.
-  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu or press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+  - Para abrir una nueva ventana 4D con la página Explorador de datos mostrada en un área web, seleccione **Explorador de datos** en el menú **Registros** o haga clic en el botón **Datos** en la barra de herramientas principal.
+  - Para abrir el Explorador de datos en una pestaña externa del navegador, seleccione **Explorador de datos en el navegador** en el menú **Registros** o presione la tecla **Alt** (Windows)/**Opción** (macOS) y haga clic en el botón **Datos** en la barra de herramientas principal.
 
-- From 4D Server, select **Data Explorer In Browser** in the **Window** menu (the Data Explorer can only be opened on an external browser).
+- Desde 4D Server, seleccione **Explorador de datos en el navegador** en el menú **Ventana** (el Explorador de Datos sólo puede abrirse en un navegador externo).
 
 - Tanto si utiliza una aplicación 4D sin interfaz como si no, puede abrir su navegador web e introducir la siguiente dirección:
 
 `IPaddress:HTTPPort/dataexplorer`
-or
+o
 `IPaddress:HTTPSPort/dataexplorer`
 
-In this context, you will be prompted to enter the [access key](webAdmin.md#access-key) to open a `WebAdmin` session on the server:
+En este contexto, se le pedirá que introduzca la [llave de acceso](webAdmin.md#access-key) para abrir una sesión de `WebAdmin` en el servidor:
 
 ![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
-> [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) values are configured in the `WebAdmin` settings.
+> Los valores de [HTTPPort](webAdmin.md#http-port) y [HTTPSPort](webAdmin.md#https-port) se configuran en la configuración de `WebAdmin`.
 
 ## Requisitos
 
@@ -57,7 +57,7 @@ Además de una vista completa y personalizable de sus datos, el Explorador de da
 
 ### Básicos
 
-The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
+El Explorador de Datos ofrece un acceso general al modelo de datos ORDA con respecto a las [reglas de mapeo de ORDA](ORDA/dsMapping.md#general-rules).
 
 :::info
 
@@ -65,7 +65,7 @@ Cuando el modelo ORDA o los datos se modifican del lado de la base de datos (se 
 
 :::
 
-You can switch to the **dark mode** display theme using the selector at the bottom of the page:
+Puede pasar al tema de visualización **modo oscuro** utilizando el selector en la parte inferior de la página:
 
 ![alt-text](../assets/en/Admin/dark.png)
 
@@ -73,33 +73,33 @@ You can switch to the **dark mode** display theme using the selector at the bott
 
 La página contiene varias áreas:
 
-- On the left side are the **Dataclasses area** and **Attributes area**, allowing you can select the dataclasses and attributes to display. Los atributos se ordenan según el orden de creación de la estructura subyacente. Las llaves primarias y los atributos indexados tienen un icono específico. Puede filtrar la lista de nombres de clases de datos y de atributos propuestos utilizando las áreas de búsqueda respectivas.
+- En el lado izquierdo se encuentran el área de las **Clases de datos** y el área de los **atributos**, lo que permite seleccionar las clases de datos y los atributos a mostrar. Los atributos se ordenan según el orden de creación de la estructura subyacente. Las llaves primarias y los atributos indexados tienen un icono específico. Puede filtrar la lista de nombres de clases de datos y de atributos propuestos utilizando las áreas de búsqueda respectivas.
   ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
-- The central part contains the **Search area** and the **Data grid** (list of entities of the selected dataclass). Cada columna de la cuadrícula representa un atributo del almacén de datos.
-  - Por defecto, se muestran todas las entidades. Puede filtrar las entidades mostradas utilizando el área de búsqueda. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced query with expression](#advanced-query-with-expression). You select the query mode by clicking on the corresponding button (the **X** button allows you to reset the query area and thus stop filtering):
-    ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+- La parte central contiene el **área de búsqueda** y la **rejilla de datos** (lista de entidades de la clase de datos seleccionada). Cada columna de la cuadrícula representa un atributo del almacén de datos.
+  - Por defecto, se muestran todas las entidades. Puede filtrar las entidades mostradas utilizando el área de búsqueda. Hay dos modos de consulta disponibles: [Consulta sobre atributos](#query-on-attributes) (seleccionada por defecto), y la [Consulta avanzada con expresión](#advanced-query-with-expression). Usted selecciona el modo de consulta haciendo clic en el botón correspondiente (el botón **X** le permite restablecer el área de consulta y así dejar de filtrar):
+    ![alt-text](. /assets/en/Admin/dataExplorer4b.png)
   - El nombre de la clase de datos seleccionada se añade como una pestaña encima de la cuadrícula de datos. Utilizando estas pestañas, puede cambiar entre las clases de datos que ya han sido seleccionadas. Puede eliminar una clase de datos referenciada haciendo clic en el icono "eliminar" situado a la derecha del nombre de la clase de datos.
-  - Puede reducir el número de columnas desmarcando los atributos en la parte izquierda. También puede cambiar las columnas de la cuadrícula de datos utilizando arrastrar y soltar. You can click on a column header to [sort entities](#ordering-entities) according to its values (when possible).
-  - Si una operación requiere mucho tiempo, se muestra una barra de progreso. You can stop the running operation at any moment by clicking on the red button:<br/>
+  - Puede reducir el número de columnas desmarcando los atributos en la parte izquierda. También puede cambiar las columnas de la cuadrícula de datos utilizando arrastrar y soltar. Puede hacer clic en el encabezado de una columna para [ordenar entidades](#ordering-entities) de acuerdo a sus valores (cuando sea posible).
+  - Si una operación requiere mucho tiempo, se muestra una barra de progreso. Puedes detener la operación en curso en cualquier momento haciendo clic en el botón rojo:<br/>
     ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
-- On the right side is the **Details area**: it displays the attribute values of the currently selected entity as well as **related data**, if any. You can browse between the entities of the dataclass by clicking the **First** / **Previous** / **Next** / **Last** links at the bottom of the area.
-  - All attribute types are displayed, including pictures, objects (expressed in json) as well as [computed](../ORDA/ordaClasses.md#computed-attributes-1) and [alias](../ORDA/ordaClasses.md#alias-attributes-1) attributes.
-  - Related data (many-to-one and one-to-many relations) can be displayed through expandable/collapsable areas:<br/>
+- En el lado derecho está el **área de Detalles**: muestra los valores de los atributos de la entidad seleccionada actualmente, así como **datos relacionados**, si los hay. Puede navegar entre las entidades de la clase de datos haciendo clic en los enlaces **First** / **Previous** / **Next** / **Last** en la parte inferior del área.
+  - Se muestran todos los tipos de atributos, incluyendo imágenes, objetos (expresados en json), así como atributos [calculados](../ORDA/ordaClasses.md#computed-attributes-1) y atributos [alias](../ORDA/ordaClasses.md#alias-attributes-1).
+  - Los datos relacionados (relaciones uno a uno y uno a muchos) pueden mostrarse a través de áreas expandibles/colapsables:<br/>
     ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - **Ctrl+Click** (Windows) or **Command+Click** (macOS) on a related attribute name in the right side area displays the values of the attribute in an independant, floating area:<br/>
+  - **Ctrl+Clic** (Windows) o **Comando+Clic** (macOS) en un nombre de atributo relacionado en el área de la derecha muestra los valores del atributo en un área flotante independiente:<br/>
     ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
 ### Ordenar las entidades
 
 Puede reordenar la lista de entidades mostrada según los valores de los atributos. Todos los tipos de atributos pueden utilizarse para una ordenación, excepto la imagen y el objeto.
 
-- Haga clic en el encabezado de una columna para ordenar entidades de acuerdo a los valores de atributo correspondientes. Por defecto, la ordenación es ascendente. Haga clic dos veces para una ordenación descendente. A column used to sort entities is displayed with a small icon and its name is in _italics_.
+- Haga clic en el encabezado de una columna para ordenar entidades de acuerdo a los valores de atributo correspondientes. Por defecto, la ordenación es ascendente. Haga clic dos veces para una ordenación descendente. Una columna utilizada para ordenar las entidades se muestra con un pequeño icono y su nombre está en _itálica_.
 
 ![alt-text](../assets/en/Admin/dataExplorer7.png)
 
-- Puede ordenar los atributos en varios niveles. Por ejemplo, puede ordenar a los empleados por ciudad y luego por salario. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
+- Puede ordenar los atributos en varios niveles. Por ejemplo, puede ordenar a los empleados por ciudad y luego por salario. Para ello, manténga presionada la tecla **Shift** y haga clic sucesivamente en el encabezado de cada columna a incluir en el orden de clasificación.
 
 ### Consultas basadas en atributos
 
@@ -107,11 +107,11 @@ En este modo, puede filtrar las entidades introduciendo los valores que desea en
 
 ![alt-text](../assets/en/Admin/dataExplorer6.png)
 
-Si introduce varios atributos, se aplica automáticamente un AND. For example, the following filter displays entities with _firstname_ attribute starting with "flo" AND _salary_ attribute value > 50000:
+Si introduce varios atributos, se aplica automáticamente un AND. Por ejemplo, el siguiente filtro muestra las entidades con el atributo _firstname_ que empieza por "flo" AND el valor del atributo _salary_ > 50000:
 
 ![alt-text](../assets/en/Admin/dataExplorer9.png)
 
-The **X** button allows you to remove entered attributes and thus stop filtering.
+El botón **X** le permite eliminar los atributos ingresados y así detener el filtrado.
 
 Existen diferentes operadores y opciones de consulta, según el tipo de datos del atributo.
 
@@ -131,12 +131,12 @@ Con los atributos de fecha, puede introducir la fecha a utilizar a través de un
 
 #### Booleanos
 
-When you click on a boolean attribute area, you can filter on **true**/**false** values but also on **null**/**not null** values:
+Cuando hace clic en un área de atributo booleano, puede filtrar por valores **true**/**false** pero también por valores **null**/**not null**:
 
 ![alt-text](../assets/en/Admin/DEFilter3.png)
 
-- **null** indicates that the attribute value was not defined
-- **not null** indicates that the attribute value is defined (thus true or false).
+- **null** indica que el valor del atributo no fue definido
+- **not null** indica que el valor del atributo está definido (por tanto, true o false).
 
 #### Text
 
@@ -160,16 +160,16 @@ Cuando se selecciona esta opción, aparece un área de consulta sobre la lista d
 
 ![alt-text](../assets/en/Admin/dataExplorer8.png)
 
-Puede introducir consultas avanzadas que no están disponibles como consultas de atributos. For example, if you want to find entities with _firstname_ attribute containing "Jim" but not "Jimmy", you can write:
+Puede introducir consultas avanzadas que no están disponibles como consultas de atributos. Por ejemplo, si quiere encontrar entidades con el atributo _firstname_ que contenga "Jim" pero no "Jimmy", puede escribir:
 
 ```
 firstname=="Jim"
 ```
 
-You can use any ORDA query expression as [documented with the `query()` function](API/DataClassClass.md#query), with the following limitations or differences:
+Puede utilizar toda expresión de consulta ORDA como [se documenta con la función `query()`](API/DataClassClass.md#query), con las siguientes limitaciones o diferencias:
 
-- For security, you cannot execute formulas using `eval()`.
-- Placeholders cannot be used; you have to write a _queryString_ with values.
+- Por seguridad, no se pueden ejecutar fórmulas utilizando `eval()`.
+- No se pueden utilizar marcadores de posición; hay que escribir un _queryString_ con valores.
 - Los valores de las cadenas que contienen caracteres de espacio deben ir entre comillas dobles ("").
 
 Por ejemplo, con la clase de datos Employee, puede escribir:
@@ -178,7 +178,7 @@ Por ejemplo, con la clase de datos Employee, puede escribir:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/DataClassClass.md#queryplan) and [`queryPath`](API/DataClassClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
+Puede hacer clic en el icono `v` para mostrar tanto [`queryPlan`](API/DataClass.md#queryplan) como [`queryPath`](API/DataClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
@@ -190,13 +190,13 @@ Haga clic derecho en el área de consulta para mostrar las anteriores consultas 
 
 El Explorador de datos permite modificar los valores de los atributos y añadir o eliminar entidades. Esta función está destinada a los administradores, por ejemplo para probar implementaciones o solucionar problemas con datos inválidos.
 
-### Allow editing
+### Permitir edición
 
-For security reasons, to be able to edit data through the Data Explorer, you first need to enable the editing mode using the **Allow editing** selector. Cuando está activado, los botones de acción de edición se muestran a la derecha:
+Por motivos de seguridad, para poder editar datos a través del Explorador de datos, primero debe habilitar el modo de edición mediante el selector **Allow editing**. Cuando está activado, los botones de acción de edición se muestran a la derecha:
 
 ![allow-editing](../assets/en/Admin/editing.png)
 
-This selector is enabled **per dataclass** and **per browser session**.
+Este selector está habilitado **por clase de datos** y **por sesión del navegador**.
 
 :::info
 
@@ -206,7 +206,7 @@ El selector está pensado para evitar modificaciones accidentales, ya que no se 
 
 ### Ingresar valores
 
-When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
+Cuando el selector **Allow editing** está habilitado para una base de datos, puede ingresar valores para una entidad nueva o seleccionada a través de widgets de entrada dedicados en el área de **Detalles** para la base de datos seleccionada.
 
 Se pueden editar los siguientes valores de atributos escalares:
 
@@ -220,13 +220,13 @@ Se pueden editar los siguientes valores de atributos escalares:
 
 Los atributos de los blobs no pueden modificarse.
 
-New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
+Los valores nuevos o modificados se almacenan en la caché local, es necesario [guardarlos explícitamente](#saving-modifications) para almacenarlos en los datos.
 
 ### Creación de entidades
 
-You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
+Puede crear una nueva entidad vacía en la tabla seleccionada haciendo clic en el botón de creación ![new-entity](../assets/en/Admin/data-explorer-new.png). A continuación, puede [introducir valores](#entering-values) para esta entidad.
 
-The new entity is is kept in the local cache, you need to [save it explicitely](#saving-modifications) to store it in the data.
+La nueva entidad se mantiene en la caché local, es necesario [guardarla explícitamente](#saving-modifications) para almacenarla en los datos.
 
 :::info
 
@@ -236,13 +236,13 @@ Los valores de los atributos que necesitan ser calculados por 4D (IDs, atributos
 
 ### Valores de recarga
 
-The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. Este botón es útil, por ejemplo, cuando desea asegurarse de que los valores mostrados son los valores guardados más recientes.
+¡El botón **recargar**![reload](../assets/en/Admin/data-explorer-reload.png) recarga los valores de atributo de entidad desde el archivo de datos. Este botón es útil, por ejemplo, cuando desea asegurarse de que los valores mostrados son los valores guardados más recientes.
 
 ### Guardar modificaciones
 
-Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
+Excepto en el caso de [eliminación](#deleting-entities) (ver más adelante), las modificaciones de las entidades se realizan localmente y deben guardarse para que queden almacenadas en el archivo de datos.
 
-To save modifications or to save an entity you created in the Data Explorer, click on the **Save** button ![save](../assets/en/Admin/data-explorer-save.png).
+Para guardar las modificaciones o guardar una entidad que haya creado en el Explorador de datos, haga clic en el botón **Guardar** ![save](../assets/en/Admin/data-explorer-save.png).
 
 :::info
 
@@ -250,13 +250,13 @@ Las modificaciones en una entidad existente se guardan automáticamente cuando s
 
 :::
 
-En caso de conflicto (por ejemplo, si otro usuario ha modificado el mismo valor de atributo en la misma entidad), aparecerá un mensaje de error en la parte inferior del Explorador de datos. You can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications.
+En caso de conflicto (por ejemplo, si otro usuario ha modificado el mismo valor de atributo en la misma entidad), aparecerá un mensaje de error en la parte inferior del Explorador de datos. Puede hacer clic en el [**botón Recargar**](#reloading-values) para obtener el nuevo valor de los datos y, a continuación, aplicar y guardar sus modificaciones.
 
 ### Eliminación de entidades
 
-You can delete entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png).
+Puede eliminar entidades haciendo clic en el botón **eliminar** ![eliminar](../assets/en/Admin/data-explorer-delete.png).
 
-To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button.
+Para eliminar un conjunto de entidades, selecciona dos o más entidades en el área de la lista usando **Mayús+clic** (selección continua) o **Ctrl/Comando+clic** (selección discontinua) y haz clic en el botón **eliminar**.
 
 :::note
 

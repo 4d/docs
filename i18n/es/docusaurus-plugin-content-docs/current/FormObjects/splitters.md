@@ -13,10 +13,10 @@ Algunas de las características generales del separador:
 
 - Puede colocar tantos separadores como desee en todo tipo de formulario y utilizar una mezcla de separadores horizontales y verticales en el mismo formulario.
 - Un separador puede cruzar (superponer) un objeto. Este objeto cambiará de tamaño cuando se mueva el separador.
-- Los topes de los separadores se calculan para que los objetos desplazados permanezcan totalmente visibles en el formulario o no pasen por debajo/al lado de otro separador. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
+- Los topes de los separadores se calculan para que los objetos desplazados permanezcan totalmente visibles en el formulario o no pasen por debajo/al lado de otro separador. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 - Si se redimensiona un formulario mediante un separador, las nuevas dimensiones del formulario se guardan sólo mientras se muestra el formulario. Una vez que se cierra un formulario, se restablecen las dimensiones iniciales.
 
-Una vez insertado, el separador aparece como una línea. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
+Una vez insertado, el separador aparece como una línea. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md##font-color-line-color).
 
 #### Ejemplo JSON:
 
@@ -39,7 +39,7 @@ Una vez insertado, el separador aparece como una línea. You can modify its [bor
 
 En un formulario, los separadores interactúan con los objetos que están a su alrededor según las opciones de cambio de tamaño de estos objetos:
 
-| Opciones de redimensionamiento de los objetos | Objeto(s) por encima de un separador horizontal o a la izquierda de un separador vertical (1)                             | Object(s) below an horizontal _non-Pusher_ splitter or to the right of a vertical _non-Pusher_ splitter                                                                                                                                         | Object(s) below an horizontal _Pusher_ splitter or to the right of a vertical _Pusher_ splitter                                                                                              |
+| Opciones de redimensionamiento de los objetos | Objeto(s) por encima de un separador horizontal o a la izquierda de un separador vertical (1)                             | Objeto(s) debajo de un separador horizontal _no empujador_ o a la derecha de un separador vertical _no empujador_                                                                                                                               | Objeto(s) debajo de un separador horizontal _Empujador_ o a la derecha de un separador vertical _Empujador_                                                                                  |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ninguno                                       | Permanece como está                                                                                                                                             | Se desplazan con el separador (la posición respecto al separador no se modifica) hasta la siguiente parada. El tope cuando se mueve hacia abajo o hacia la derecha es el borde de la ventana, u otro separador. | Se desplazan con el separador (la posición respecto al separador no se modifica) indefinidamente. No se aplica ninguna parada ( ver el siguiente párrafo) |
 | Redimensionamiento                            | Conservan la(s) posición(es) original(es), pero se redimensionan según la nueva posición del separador |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                 |
@@ -51,12 +51,12 @@ _(1) You cannot drag the splitter past the right (horizontal) or bottom (vertica
 
 ## Gestión programada de los separadores
 
-You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
+Puede asociar un método objeto a un separador y será llamado con el evento `On Clicked` durante todo el movimiento.
 
-A [variable](properties_Object.md#variable-or-expression) of the _Longint_ type is associated with each splitter. Esta variable se puede utilizar en su objeto y/o métodos de formulario. Su valor indica la posición actual del separador, en píxeles, en relación con su posición inicial.
+A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo _Longint_. Esta variable se puede utilizar en su objeto y/o métodos de formulario. Su valor indica la posición actual del separador, en píxeles, en relación con su posición inicial.
 
 - Si el valor es negativo: el separador se ha movido hacia arriba o hacia la izquierda,
 - Si el valor es positivo: el separador se ha movido hacia el fondo o hacia la derecha,
 - Si el valor es 0: el separador se ha movido a su posición original.
 
-También puede mover el separador por programación: sólo tiene que definir el valor de la variable asociada. For example, if a vertical splitter is associated with a variable named `split1`, and if you execute the following statement: `split1:=-10`, the splitter will be moved 10 pixels to the left — as if the user did it manually. El movimiento se realiza realmente al final de la ejecución del método del formulario u objeto que contiene la instrucción.
+También puede mover el separador por programación: sólo tiene que definir el valor de la variable asociada. Por ejemplo, si un separador vertical está asociado a una variable llamada `split1`, y si se ejecuta la siguiente sentencia:`split1:=-10`, el separador se moverá 10 píxeles a la izquierda - como si el usuario lo hiciera manualmente. El movimiento se realiza realmente al final de la ejecución del método del formulario u objeto que contiene la instrucción.

@@ -64,7 +64,7 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #_command_.Folder.Params -->
@@ -129,7 +129,7 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
-**4D. Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**4D. Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
 
 
 #### Descrição

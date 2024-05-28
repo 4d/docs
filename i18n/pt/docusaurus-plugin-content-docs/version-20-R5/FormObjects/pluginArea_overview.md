@@ -5,7 +5,7 @@ title: Área Plug-in
 
 A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications. A plug-in can perform a simple task such as displaying a digital clock on a form, or a complex task such as providing full-featured word processing, spreadsheet, or graphics capabilities.
 
-When opening an application, 4D creates an internal list of the plug-ins [installed in your application](#installing-plug-ins). Once you have inserted a Plug-in Area in a form, you can assign a plug-in to the area directly in the **Type** list in the Property List:
+Al abrir una aplicación, 4D crea una lista interna de los plug-ins [instalados en la aplicación](#installing-plug-ins). Una vez que haya insertado un área de plug-in en un formulario, puede asignar un plug-in al área directamente en la lista **Tipo** en la lista de propiedades:
 
 ![](../assets/en/FormObjects/pluginArea.png)
 
@@ -19,11 +19,11 @@ If advanced options are provided by the author of the plug-in, a **Plug-in** the
 
 ## Instalação de plug-ins
 
-Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. For more information about the installation of plug-ins, refer to [Installing plugins or components](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
+Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. Para más información sobre la instalación de plug-ins, consulte [Instalación de plug-ins o componentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
 
 ## Criação de plug-ins
 
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D provides a [complete kit (on github)](https://github.com/4d/4D-Plugin-SDK) to help you write custom plug-ins.
+If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D ofrece un [kit completo (en github)](https://github.com/4d/4D-Plugin-SDK) para ayudarle a escribir plug-ins personalizados.
 
 ## Propriedades compatíveis
 

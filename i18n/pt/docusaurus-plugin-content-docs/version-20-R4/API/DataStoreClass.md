@@ -107,9 +107,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18      | Adicionado |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 20 R4   | New *passwordAlgorithm* property |
+| 18      | Adicionado                       |
 
 </details>
 
@@ -151,14 +152,15 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
 
 Passe em *connectionInfo* um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                     |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                      |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                     |
-| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
-| tls         | Parâmetros | Utilize uma conexão segura(*). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                            |
-| type        | Text       | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                 |
+| Propriedade       | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hostname          | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                     |
+| user              | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                      |
+| senha             | Text       | User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                                                                     |
+| idleTimeout       | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
+| tls               | Parâmetros | Utilize uma conexão segura(*). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                            |
+| passwordAlgorithm | Text       | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                                                                 |
+| type              | Text       | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                 |
 
 (*) Se tls for true, se utiliza o protocolo HTTPS se:
 
@@ -677,6 +679,7 @@ Em um armazém de dados remoto:
 <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -868,6 +871,7 @@ A função também retornará `True` se a datastore foi bloqueada por outra func
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->estabelece todas as seleções de entidade como editável como padrão nas datastore de aplicação atuais.<!-- END REF --> (incluindo [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
 
 quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
 
 > Esta função não modifica as seleções de entidades criadas por [`.copy()`](#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
 

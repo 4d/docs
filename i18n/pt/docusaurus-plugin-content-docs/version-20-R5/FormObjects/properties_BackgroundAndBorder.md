@@ -5,7 +5,7 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. By default, _Automatic_ is selected: the column uses the alternate background color set at the list box level.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por defecto, _Automático_ está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
 
 #### Gramática JSON
 
@@ -15,7 +15,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -23,7 +23,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 Define a cor de fundo de um objeto.
 
-In the case of a list box, by default _Automatic_ is selected: the column uses the background color set at the list box level.
+En el caso de un list box, por defecto se selecciona _Automático_: la columna utiliza el color de fondo definido al nivel del list box.
 
 #### Gramática JSON
 
@@ -49,7 +49,7 @@ Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) par
 
 You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
 
-> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+> Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
@@ -59,7 +59,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -91,7 +91,7 @@ Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e branc
 
 #### Objectos suportados
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Rectángulo](shapes_overview.md#rectangle) - [Óvalo](shapes_overview.md#oval) - [Línea](shapes_overview.md#line)
 
 ---
 
@@ -134,11 +134,11 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 | ------ | ------------- | ---------------------------------------- |
 | stroke | string        | um valor css, "transparent", "automatic" |
 
-> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+> Esta propiedad también está disponible para los objetos basados en texto, en cuyo caso designa tanto el color de la fuente como las líneas del objeto, ver [Color de la fuente](properties_Text.md#font-color).
 
 #### Objectos suportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Línea](shapes_overview.md#line) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle)
 
 ---
 
@@ -148,13 +148,13 @@ Designa a espessura de uma linha.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                 |
-| ----------- | ------------- | ----------------------------------------------------------------- |
-| strokeWidth | number        | 0 for smallest width on a printed form, or any integer value < 20 |
+| Nome        | Tipo de dados | Valores possíveis                                                                      |
+| ----------- | ------------- | -------------------------------------------------------------------------------------- |
+| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, o cualquier valor de entero < 20 |
 
 #### Objectos suportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Línea](shapes_overview.md#line) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle)
 
 ---
 
@@ -164,7 +164,7 @@ Designa a espessura de uma linha.
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
-Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html) theme. Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
+Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
 
 Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada de cinza/cinza claro, definida nas propriedades da caixa de listagem. Um array de cor de fundo também foi definida para a caixa de listagem, a fim de mudar a cor das linhas em que pelo menos um valor é negativo para laranja claro:
 
@@ -175,7 +175,7 @@ Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada 
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-De seguida, deve colorir as células com valores negativos a laranja-escuro. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. Os valores dessas arrays têm prioridade sobre os valores definidos nas propriedades da caixa de listagem, bem como sobre os valores do array geral de cores de fundo:
+De seguida, deve colorir as células com valores negativos a laranja-escuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Os valores dessas arrays têm prioridade sobre os valores definidos nas propriedades da caixa de listagem, bem como sobre os valores do array geral de cores de fundo:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
@@ -196,13 +196,13 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Define o fundo do list box como "Transparent". Cuando se define, se ignora cualquier [color de fondo alternativo](#alternate-background-color) o [color de fondo](#background-color-fill-color) definido para la columna.
 
 #### Gramática JSON
 

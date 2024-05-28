@@ -67,7 +67,8 @@ title: リリースノート
 
 #### 動作の変更
 
-- v20.2 以降、4D 20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
+- 4D 20.3では、[4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/)場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す *connectionInfo* で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
+- 4D 20.2 以降、4D 20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
 - **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
@@ -307,4 +308,3 @@ ALERT($param1+" "+$param2)
 | PHP       | 8.2.4     | 20             |                                                       |
 | libldap   | 2.6.4     | 20             |                                                       |
 | libsasl   | 2.1.28    | 20             |                                                       |
-

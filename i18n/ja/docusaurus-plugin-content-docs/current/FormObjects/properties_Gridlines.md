@@ -15,7 +15,7 @@ title: グリッド線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
@@ -31,4 +31,4 @@ title: グリッド線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

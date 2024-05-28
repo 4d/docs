@@ -22,4 +22,17 @@ title: スタティックピクチャー
 
 ## プロパティ一覧
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Display](properties_Picture.md#display) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility)  - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[パス名](properties_Picture.md#パス名) -
+[表示](properties_Picture.md#表示) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態)

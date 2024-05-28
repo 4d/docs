@@ -25,7 +25,7 @@ Uma data nula é especificada por _!00-00-00!_.
 
 **Notas:**
 
-- Por razões de compatibilidade, 4D aceita que coloque anos como datas com apenas dois dígitos. Se pressupõe que um ano com apenas dois digitos esteja no século XX ou XXI, dependendo se for maior ou menor de 30, a menos que mude essa configuração com o comando `SET DEFAULT CENTURY`.
+- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. Se pressupõe que um ano com apenas dois digitos esteja no século XX ou XXI, dependendo se for maior ou menor de 30, a menos que mude essa configuração com o comando `SET DEFAULT CENTURY`.
 - Se marcou a opção "Utilizar a configuração regional del sistema" ( ver Página Métodos), deve utilizar o formato de data definido em seu sistema. Para sistemas dos Estados Unidos, datas são digitadas no formato mês/dia/ano, com uma barra "/" separando os valores.
 
 ## Operadores de data

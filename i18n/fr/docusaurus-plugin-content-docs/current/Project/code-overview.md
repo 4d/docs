@@ -140,7 +140,7 @@ Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode p
 
 This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
 
-**Notes:**
+**Notes :**
 
 - Même si une méthode dispose de l’attribut “SQL”, les accès définis au niveau des propriétés de la base et des propriétés de la méthode sont pris en compte pour l’exécution de la méthode.
 - The ODBC **SQLProcedure** function only returns project methods with the "SQL" attribute.
@@ -169,7 +169,7 @@ Utilisez le caractère générique @ pour vous aider à définir des groupes de 
 - pour désigner les méthodes dont le nom se termine par..., saisissez @ en début de chaîne. For example: `@write`
 - Pour désigner toutes les méthodes, il suffit de taper @ dans la zone.
 
-**Notes:**
+**Notes :**
 
 - La recherche ne tient pas compte des majuscules et des minuscules.
 - You can enter several @ characters in the string, for example `dtro_@web@pro.@`

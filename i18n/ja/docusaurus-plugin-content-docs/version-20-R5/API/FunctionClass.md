@@ -90,11 +90,11 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 ### 概要
 
-|                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FunctionClass.apply().Summary --> |
-| [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FunctionClass.call().Summary -->    |
-| [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FunctionClass.source.Summary -->  |
+|                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)<br/><!-- INCLUDE #FunctionClass.apply().Summary --> |
+| [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)<br/><!-- INCLUDE #FunctionClass.call().Summary -->    |
+| [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)<br/><!-- INCLUDE #FunctionClass.source.Summary -->  |
 
 ## Formula
 

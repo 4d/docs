@@ -5,7 +5,7 @@ title: Qodly Studio for 4D
 
 :::caution デベロッパー・プレビュー
 
-Qodly Studio for 4D is currently in the **Developer Preview** phase. 本番環境で使用すべきではありません。
+Qodly Studio for 4D は現在、**デベロッパー・プレビュー** の段階です。 本番環境で使用すべきではありません。
 
 :::
 
@@ -24,7 +24,7 @@ Qodly Studio では、全く新しい WebUI を使い、データソースの概
 
 :::info
 
-The development with Qodly Studio for 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
+Qodly Studio for 4D を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
 
 :::
 
@@ -47,6 +47,8 @@ Qodly Studio は、以下の Webブラウザーをサポートしています:
 - 開発: 4D v20 R2 以上
 - 運用: 4D Server v20 R2 以上
 - Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
+- Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
+- Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
 
 ### Qodly Studio へのアクセスを有効化する
 
@@ -220,72 +222,72 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## 強制ログイン
 
-With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
+Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を使用して、4Dクライアントライセンスを必要とする Webセッションが開かれる数を制御できます。 いつでもユーザーを [ログアウト](#ログアウト)して、消費ライセンス数を減らすこともできます。
 
 ### 強制ログインモードの設定
 
-You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を [Roles and Privileges ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) で設定することができます。設定は **Force login** オプションを使用しておこないます:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
 :::note
 
-You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
+このオプションは、[**roles.json** ファイル](../ORDA/privileges.md#rolesjson-ファイル) で直接設定することもできます。
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. この場合、ユーザーが実際にログインした場合にのみライセンスが消費されます。
+"強制ログイン" モードが **無効** になっている場合 (デフォルトモード)、認証用の Qodlyフォームのレンダリングを含むすべての RESTリクエストは、サーバー上で Webセッションを作成し、認証の結果に関係なく 4D クライアントライセンスを消費します。 "強制ログイン" モードが **有効** になっている場合、ライセンスを消費せずに認証用の簡単な Qodlyフォームを表示することができます。 この Qodlyフォームから、データストアクラスに実装した [`authentify()`](../REST/authUsers.md#function-authentify) 関数を呼び出すだけです。 この場合、ユーザーが実際にログインした場合にのみライセンスが消費されます。
 
 :::info
 
-For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
+詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
 
 :::
 
 #### 例題
 
-In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+ログイン/パスワード入力を含む単純な Qodlyフォームで、"Submit" ボタンは DataStore クラスに実装されている以下の `authentify()` 関数を呼び出します:
 
 ```4d
 
 exposed Function authentify($credentials : Object) : Text
-	
+
 var $salesPersons : cs.SalesPersonsSelection
 var $sp : cs.SalesPersonsEntity
-	
+
 $salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
 $sp:=$salesPersons.first()
-	
+
 If ($sp#Null)
 	If (Verify password hash($credentials.password; $sp.password))
-			
+
 		Session.clearPrivileges()
-		Session.setPrivileges("") //guest session
-			
-		return "Authentication successful"
+		Session.setPrivileges("") // ゲストセッション
+
+		return "認証に成功しました"
 	Else 
-		return "Wrong password"
+		return "パスワードに誤りがあります"
 	End if
 Else 
-	return "Wrong user"
-End if 
+	return "ユーザーは登録されていません"
+End if
 ```
 
-This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.
+この呼び出しは許可されており、そして認証が成功しない限り `Session.setPrivileges()` は実行されないため、ライセンスは消費されません。 `Session.setPrivileges()` が呼び出されると、4Dクライアントライセンスが消費され、その後はすべての RESTリクエストが受け入れられます。
 
 ### ログアウト
 
-When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
+["強制ログイン" モードが有効](#強制ログインモードの設定) な場合、Qodly Studio for 4D を使って、アプリケーションにログアウト機能を実装できます。
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly form. Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
+ユーザーをログアウトするには、Qodlyフォームから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
 Webユーザーセッションからログアウトアクションをトリガーすると、次のような効果があります:
 
-- the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
+- カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的restリクエスト) のみが許可されます。
 - 関連する 4Dライセンスが解放されます。
-- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
+- `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
 
 ## レンダリングのためのライセンス消費について
 

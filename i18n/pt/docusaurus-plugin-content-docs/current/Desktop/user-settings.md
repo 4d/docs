@@ -7,14 +7,14 @@ title: Propriedades usuário
 
 - **Standard** mode: all [settings](../settings/overview.md) are stored in the [_settings.4DSettings_ file at the project level](../Project/architecture.md#sources) and are applied in all cases. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
 
-- **User settings** mode: part of the custom settings are stored in a _settings.4DSettings_ file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. You enable this mode using an option located on the [Security page](../settings/security.md) of the Settings.
+- **User settings** mode: part of the custom settings are stored in a _settings.4DSettings_ file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
 
 Ao definir as definições do utilizador, pode manter as definições personalizadas entre actualizações das suas aplicações 4D, ou gerir diferentes definições para a mesma aplicação 4D implementada em vários sites diferentes. Permite igualmente utilizar a programação para gerir os arquivos de configuração através de XML.
 
 4D pode gerar e usar dois tipos de propriedades usuário:
 
-- **User Settings**: They are used instead of structure settings for any data file opened with the application.
-- **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
+- Los **parámetros usuario**: se utilizan en lugar de los parámetros de estructura para todo archivo de datos abierto con la aplicación.
+- **Propiedades usuario para el archivo de datos**: se pueden definir específicamente para cada archivo de datos utilizado con su aplicación, configurando por ejemplo el ID del puerto o la caché del servidor.
 
 Com esta opção, pode facilmente implementar e atualizar várias cópias da mesma aplicação de ambiente de trabalho com vários arquivos de dados, cada um contendo definições diferentes.
 
@@ -24,7 +24,7 @@ Considere, por exemplo, a seguinte configuração, em que uma aplicação é dup
 
 ## Ativar as definições do utilizador
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+Para activar los parámetros usuario, debe seleccionar la opción **Settings** > **Seguridad** > **Autorizar las propiedades usuario**:
 
 ![](../assets/en/settings/user-settings-enable.png)
 
@@ -34,21 +34,21 @@ To enable user settings, you need to check the **Settings** > **Security** > **E
 - **Propriedades usuário**
 - **Propriedades usuário para o arquivo de dados**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propiedades...** o el botón **Propiedades** de la barra de herramientas:
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate _settingsType_ selector.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector _settingsType_ apropiado.
 
 A caixa de diálogo Configurações da estrutura é idêntica às Configurações standard e dá acesso a todas as suas propriedades (que podem ser substituídas por configurações do utilizador).
 
 ## Propriedades usuário e definições do usuário para o ficheiro de dados
 
-The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
+Las cajas de diálogo **Propiedades usuario** y **Propiedades usuario para el archivo de datos**contienen una selección de propiedades relevantes que pueden definirse para todos los archivos de datos o para un solo archivo de datos:
 
 ![](../assets/en/settings/user-settings-2.png)
 
-The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
+La siguiente tabla lista las páginas de parámetros que se encuentran en las cajas de diálogo **Parámetros usuario** y **Parámetros usuario para el archivo de datos** y describe sus principales diferencias con respecto a los parámetros estándar:
 
 | **Página de definições de estrutura**                                                    | **Página das definições do usuário**         | **Página de Propriedades usuário para ficheiro de dados** |
 | ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------- |
@@ -73,15 +73,15 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Security page](../settings/security.md)                                                 | N/a                                          | N/a                                                       |
 | [Compatibility page](../settings/compatibility.md)                                       | N/a                                          | N/a                                                       |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding _settings.4DSettings_ file (see below) or the _Backup.4DSettings_ file (check the [Backup settings](../Backup/settings.md) page for more information).
+Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo _settings.4DSettings_ correspondiente (ver más abajo) o en el archivo _Backup.4DSettings_ (consulte la página [Parámetros de backup](../Backup/settings.md) para o
 
-## `SET DATABASE PARAMETER` and user settings
+## `SET DATABASE PARAMETER` y parámetros de usuario
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
+Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) se guardan automáticamente en las Propiedades usuario para el a
 
-> `Table sequence number` is an exception; this setting value is always saved in the data file itself.
+> `Table sequence number` es una excepción; este valor de ajuste siempre se guarda en el propio archivo de datos.
 
 ## Arquivos settings.4DSettings
 
@@ -108,7 +108,7 @@ O arquivo de definições do usuário ligado ao arquivo de dados é automaticame
 
 ... where _Data_ is the name of the folder containing the current data file of the application.
 
-> Quando o arquivo de dados estiver localizado ao mesmo nível que o arquivo da estrutura do projeto, os arquivos de definições do utilizador baseados na estrutura e nos dados partilham a mesma localização e o mesmo arquivo. The **User Settings for Data File...** menu command is not proposed.
+> Quando o arquivo de dados estiver localizado ao mesmo nível que o arquivo da estrutura do projeto, os arquivos de definições do utilizador baseados na estrutura e nos dados partilham a mesma localização e o mesmo arquivo. El comando de menú **Propiedades usuario para el archivo de datos...** no se propone.
 
 :::note
 
@@ -120,10 +120,10 @@ Os arquivos de definições são arquivos XML; podem ser lidos e modificados uti
 
 As definições podem ser guardadas em três níveis. Cada configuração definida num nível substitui a mesma configuração definida num nível anterior, caso exista:
 
-| **Nível de prioridade**           | **Name**                                                                                                                  | **Location**                                                                                                                                                                                                        | **Comments**                                                                                                                                                                       |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | _**settings.4DSettings**_ file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
-| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | _**settings.4DSettings**_ file in the Settings folder at the same level as the Project folder                                                                                                       | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
-| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | _**settings.4DSettings**_ file in the Settings folder at the same level as the data file                                                                                                            | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
+| **Nível de prioridade**           | **Name**                                                                                                                  | **Location**                                                                                                                                                                                                 | **Comments**                                                                                                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | _**settings.4DSettings**_ en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
+| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | Archivo _**settings.4DSettings**_ en la carpeta Settings en el mismo nivel que la carpeta Project                                                                                            | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
+| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | Archivo _**settings.4DSettings**_ en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
 
 Lembre que os arquivo de definições do utilizador contêm apenas um subconjunto de definições relevantes, enquanto o arquivo de estrutura contém todas as definições personalizadas, incluindo as definições principais.

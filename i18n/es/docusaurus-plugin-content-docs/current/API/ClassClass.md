@@ -3,18 +3,18 @@ id: ClassClass
 title: Class
 ---
 
-When a user class is [defined](Concepts/classes.md#class-definition) in the project, it is loaded in the 4D language environment. Una clase es un objeto en sí mismo, de la clase "Class", que tiene propiedades y una función.
+Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto en sí mismo, de la clase "Class", que tiene propiedades y una función.
 
 ### Resumen
 
-|                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->          |
-| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.isSingleton.Summary --> |
-| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.me.Summary -->                            |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.name.Summary -->                      |
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.new().Summary -->                     |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ClassClass.superclass.Summary -->    |
+|                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->          |
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary --> |
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                            |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                      |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                     |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->    |
 
 <!-- REF ClassClass.isShared.Desc -->
 
@@ -32,9 +32,9 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 #### Descripción
 
-The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
+La propiedad `.isShared` <!-- REF #ClassClass.isShared.Summary -->devuelve `true` si la clase de usuario ha sido definida como [clase compartida](../Concepts/classes.md#shared-classes)<!-- END REF -->, y `false` en caso contrario.
 
-This property is **read-only**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -54,9 +54,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isSingleton` property <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+La propiedad `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->devuelve `true` si la clase usuario ha sido definida como una [clase singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->, y `false` en caso contrario.
 
-This property is **read-only**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -76,11 +76,11 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.me` property <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. Si la clase singleton nunca fue instanciada de antemano, esta propiedad llama al constructor de la clase sin parámetros y crea la instancia. En caso contrario, devuelve la instancia singleton existente.
+La propiedad `.me` <!-- REF #ClassClass.me.Summary -->devuelve la instancia única de la clase singleton `cs.className`<!-- END REF -->. Si la clase singleton nunca fue instanciada de antemano, esta propiedad llama al constructor de la clase sin parámetros y crea la instancia. En caso contrario, devuelve la instancia singleton existente.
 
-If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
+Si `cs.className` no es una [clase singleton](../Concepts/classes.md#singleton-classes), `.me` es **undefined** por defecto.
 
-This property is **read-only**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -100,9 +100,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. .
+La propiedad `.name` <!-- REF #ClassClass.name.Summary -->contiene el nombre del objeto `4D.Class`<!-- END REF -->. .
 
-This property is **read-only**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -131,14 +131,14 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
+La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases a partir del [class store `cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional _param_ parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the _className_ class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
+Puede pasar uno o más parámetros opcionales _param_, que se pasarán a la [función class constructor](Concepts/classes.md#class-constructor) (si existe) en la definición de la clase _className_. Dentro de la función constructor, el [`This`](Concepts/classes.md#this) está vinculado al nuevo objeto que se está construyendo.
 
 :::note Notas
 
-- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
-- If `.new()` is called on a non-existing class, an error is returned.
+- Si se llama a `.new()` en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, se devuelve la instancia singleton, no una nueva instancia.
+- Si se llama a `.new()` en una clase inexistente, se devuelve un error.
 
 :::
 
@@ -189,11 +189,11 @@ $person:=cs.Person.new("John";"Doe";40)
 
 #### Descripción
 
-The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
+La propiedad `.superclass` <!-- REF #ClassClass.superclass.Summary -->devuelve la clase padre de la clase<!-- END REF -->. Una superclase puede ser un objeto `4D.Class`, o un objeto `cs.className`. Si la clase no tiene una clase padre, la propiedad devuelve **null**.
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+Una superclase de una clase usuario se declara en una clase utilizando la palabra clave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 
-This property is **read-only**.
+Esta propiedad es de **solo lectura**.
 
 #### Ejemplos
 
@@ -202,12 +202,12 @@ $sup:=4D.File.superclass //Document
 $sup:=4D.Document.superclass //Object
 $sup:=4D.Object.superclass //null
 
-// If you created a MyFile class  
+// Si creó una clase MyFile
 // with `Class extends File`
 $sup:=cs.MyFile.superclass //File
 
 ```
 
-**See also:** [Super](Concepts/classes.md#super)
+**Ver también:** [Super](Concepts/classes.md#super)
 
 <!-- END REF -->

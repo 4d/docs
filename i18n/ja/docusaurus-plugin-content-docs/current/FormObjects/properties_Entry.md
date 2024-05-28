@@ -25,7 +25,7 @@ title: 入力
 
 このプロパティを有効にすると、フォームの実行中にオブジェクトに対して標準のコンテキストメニューが使用できるようになります。
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
+ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
 
 [マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
 
@@ -65,7 +65,14 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro エリア](writeProArea_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス列](listbox_overview.md#リストボックス列) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[ステッパー](stepper.md)
 
 ---
 
@@ -116,9 +123,9 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                                                                      |
-| ----------- | ------ | ------------------------------------------------------------------------------------------ |
-| entryFilter | string | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| 名称          | データタイプ | とりうる値                                     |
+| ----------- | ------ | ----------------------------------------- |
+| entryFilter | string | <li>入力フィルターコード</li> または <li>入力フィルター名</li> |
 
 #### 対象オブジェクト
 
@@ -149,7 +156,16 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[ラジオボタン](radio_overview.md) -
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -180,13 +196,13 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 #### 自動
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
-- In multiline inputs, 4D carries out automatic line returns:\
+- 複数行の入力オブジェクトの場合、4D は自動で改行します:\
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### ×
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
-- 改行はおこなわれません。テキストは常に一行で表示されます。 If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
+- 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:\
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### ◯
@@ -201,7 +217,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 #### 対象オブジェクト
 
-[Input](input_overview.md)
+[入力](input_overview.md)
 
 ---
 
@@ -226,7 +242,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
 
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+> プレースホルダーのテキストは、[OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-PLACEHOLDER.301-4505467.ja.html) と [OBJECT Get placeholder](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-placeholder.301-4505473.ja.html) コマンドを使って、プログラミングによって設定・取得することができます。
 
 #### JSON 文法
 
@@ -240,7 +256,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### 参照
 
-[Help tip](properties_Help.md)
+[ヘルプTips](properties_Help.md)
 
 ---
 
@@ -264,7 +280,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 [ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...]  ボタンをクリックします。
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
@@ -274,15 +290,15 @@ You can configure this option by clicking the [...] button in the Shortcuts prop
 
 #### JSON 文法
 
-| 名称              | データタイプ  | とりうる値                                                                                                                                                                                                                                                     |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                             |
-| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                               |
-| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                               |
-| shortcutControl | boolean | true, false (macOS: Control)                                                                                                                                                                                           |
-| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                               |
-|                 |         |                                                                                                                                                                                                                                                           |
-| shortcutKey     | string  | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| 名称              | データタイプ  | とりうる値                                                                                                                                                                                                                                           |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                   |
+| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                     |
+| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                     |
+| shortcutControl | boolean | true, false (macOS: Control)                                                                                                                                                                                 |
+| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                     |
+|                 |         |                                                                                                                                                                                                                                                 |
+| shortcutKey     | string  | <li>任意の文字キー: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### 対象オブジェクト
 
@@ -307,4 +323,4 @@ You can configure this option by clicking the [...] button in the Shortcuts prop
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

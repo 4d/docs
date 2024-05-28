@@ -5,7 +5,7 @@ title: データモデルクラス
 
 ORDA を使用して、データモデル上に高レベルクラス関数を作成することができます。 これによってビジネス指向のコードを書き、APIのように "公開" することができます。 データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. この関数は簡単に呼び出すことができます:
+たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 この関数は簡単に呼び出すことができます:
 
 ```4d
 $nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
@@ -24,56 +24,56 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 - 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- デフォルトでは、データモデルクラス関数 ([計算属性関数](#計算属性-1) 含む) および [エイリアス属性](エイリアス属性-1) はすべて、リモートアプリケーションに対して **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数やエイリアスは [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
 
 ![](../assets/en/ORDA/api.png)
 
-In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object.
+各データモデルオブジェクトに関わるクラスは、4D によって [あらかじめ自動的に作成](#クラスの作成) されます。
 
 ## アーキテクチャー
 
-ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+ORDA では、**`4D`** [クラスストア](Concepts/classes.md#クラスストア) を介して公開される **汎用クラス** と、**`cs`** [クラスストア](Concepts/classes.md#クラスストア) で公開される **ユーザークラス** が提供されています:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. 次の ORDA クラスが提供されています:
+ORDA データモデルクラスはすべて **`cs`** クラスストアのプロパティとして公開されます。 次の ORDA クラスが提供されています:
 
 | Class                                       | 例                                    | 次によってインスタンス化されます                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | [`ds`](API/DataStoreClass.md#ds) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| cs.DataStore                | cs.DataStore         | [`ds`](API/DataStoreClass.md#ds) コマンド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | cs._DataClassName_          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).
+> ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます [(後述参照)](#クラスファイル)。
 
 ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます:
 
-- a Datastore class object can call functions from the [ORDA Datastore generic class](API/DataStoreClass.md).
-- a Dataclass class object can call functions from the [ORDA Dataclass generic class](API/DataClassClass.md).
-- an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/EntitySelectionClass.md).
-- an Entity class object can call functions from the [ORDA Entity generic class](API/EntityClass.md).
+- Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/DataStoreClass.md) の関数を呼び出すことができます。
+- DataClass クラスオブジェクトは、[ORDA DataClass 汎用クラス](API/DataClassClass.md) の関数を呼び出すことができます。
+- EntitySelection クラスオブジェクトは [ORDA EntitySelection 汎用クラス](API/EntitySelectionClass.md) の関数を呼び出すことができます。
+- Entity クラスオブジェクトは [ORDA Entity 汎用クラス](API/EntityClass.md) の関数を呼び出すことができます。
 
 ## クラスの説明
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                                      |
-| ----- | --------------------------------------------------------------------------------------- |
-| 19 R4 | Entity クラスのエイリアス属性                                                                      |
-| 19 R3 | Entity クラスの計算属性                                                                         |
-| 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 New `exposed` and `local` keywords. |
+| リリース  | 内容                                                                   |
+| ----- | -------------------------------------------------------------------- |
+| 19 R4 | Entity クラスのエイリアス属性                                                   |
+| 19 R3 | Entity クラスの計算属性                                                      |
+| 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 
 </details>
 
 ### DataStore クラス
 
-A 4D database exposes its own DataStore class in the `cs` class store.
+4D のデータベースは、自身の DataStore クラスを `cs` クラスストアに公開します。
 
-- **Extends**: 4D.DataStoreImplementation
-- **Class name**: cs.DataStore
+- **親クラス**: 4D.DataStoreImplementation
+- **クラス名**: cs.DataStore
 
-You can create functions in the DataStore class that will be available through the `ds` object.
+DataStore クラス内には、`ds` オブジェクトを介して使用する関数を作成することができます。
 
 #### 例題
 
@@ -94,66 +94,69 @@ $desc:=ds.getDesc() //"社員と会社を..."
 
 ### DataClass クラス
 
-Each table exposed with ORDA offers a DataClass class in the `cs` class store.
+ORDA で公開されるテーブル毎に、DataClass クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.DataClass
-- **Class name**: cs._DataClassName_ (where _DataClassName_ is the table name)
-- **Example name**: cs.Employee
+- **親クラス**: 4D.DataClass
+- **クラス名**: cs._DataClassName_ (_DataClassName_ はテーブル名です)
+- **例**: cs.Employee
 
 #### 例題
 
 ```4D
-// cs.Company class
+// cs.Company クラス
 
 
 Class extends DataClass
 
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
+// 収益が平均以上の会社を返します
+// Company DataClass にリレートしているエンティティセレクションを返します 
 
 Function GetBestOnes()
-	$sel:=This.query("revenues >= :1";This.all().average("revenues"));
-	$0:=$sel
+    $sel:=This.query("revenues >= :1";This.all().average("revenues"));
+    $0:=$sel
+
 ```
 
 全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
 ```4d
-	var $best : cs.CompanySelection
-	$best:=ds.Company.GetBestOnes()
+    var $best : cs.CompanySelection
+    $best:=ds.Company.GetBestOnes()
+
 ```
 
 :::info
 
-[Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class).
+[計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
 
 :::
 
 #### リモートデータストアの例
 
-The following _City_ catalog is exposed in a remote datastore (partial view):
+次の _City_ カタログをリモートデータストアとして公開しています:
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+`City クラス` は API を提供しています:
 
 ```4d
-// cs.City class
+// cs.City クラス
 
 Class extends DataClass
 
 Function getCityName()
-	var $1; $zipcode : Integer
-	var $zip : 4D.Entity
-	var $0 : Text
+    var $1; $zipcode : Integer
+    var $zip : 4D.Entity
+    var $0 : Text
 
-	$zipcode:=$1
-	$zip:=ds.ZipCode.get($zipcode)
-	$0:="" 
+    $zipcode:=$1
+    $zip:=ds.ZipCode.get($zipcode)
+    $0:="" 
 
-	If ($zip#Null)
-		$0:=$zip.city.name
-	End if
+    If ($zip#Null)
+        $0:=$zip.city.name
+    End if
+
 ```
 
 クライアントはまず、リモートデータストアのセッションを開始します:
@@ -167,28 +170,30 @@ $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManage
 ```4d
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
+
 ```
 
 ### EntitySelection クラス
 
-Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
+ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.EntitySelection
-- **Class name**: _DataClassName_Selection (where _DataClassName_ is the table name)
-- **Example name**: cs.EmployeeSelection
+- **親クラス**: 4D.EntitySelection
+- **クラス名**: _DataClassName_Selection (_DataClassName_ はテーブル名です)
+- **例**: cs.EmployeeSelection
 
 #### 例題
 
 ```4d
-// cs.EmployeeSelection class
+// cs.EmployeeSelection クラス
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+// 給与が平均超えの社員を当該エンティティセレクションから抽出します
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
-	return This.query("salary > :1";This.average("salary")).orderBy("salary")
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
+
 
 ```
 
@@ -200,41 +205,41 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 :::info
 
-[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+[エンティティセレクションを制限する](entities.md#制限付エンティティセレクション) フィルターは [DataClass クラス](#dataclass-クラス) 内で定義されます。
 
 :::
 
 ### Entity クラス
 
-Each table exposed with ORDA offers an Entity class in the `cs` class store.
+ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.Entity
-- **Class name**: _DataClassName_Entity (where _DataClassName_ is the table name)
-- **Example name**: cs.CityEntity
+- **親クラス**: 4D.Entity
+- **クラス名**: _DataClassName_Entity (_DataClassName_ はテーブル名です)
+- **例**: cs.CityEntity
 
 #### 計算属性
 
-Entity classes allow you to define **computed attributes** using specific keywords:
+Entity クラスでは、専用のキーワードを使用して **計算属性** を定義することができます:
 
 - `Function get` _attributeName_
 - `Function set` _attributeName_
 - `Function query` _attributeName_
 - `Function orderBy` _attributeName_
 
-For information, please refer to the [Computed attributes](#computed-attributes-1) section.
+詳細については、[計算属性](#計算属性-1) を参照してください。
 
 #### エイリアス属性
 
-Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+Entity クラスでは、`Alias` キーワードを使用して **エイリアス属性** を定義することができます (通常はリレート属性を対象に定義します):
 
 `Alias` _attributeName_ _targetPath_
 
-For information, please refer to the [Alias attributes](#alias-attributes-1) section.
+詳細については、[エイリアス属性](#エイリアス属性-1) を参照してください。
 
 #### 例題
 
 ```4d
-// cs.CityEntity class
+// cs.CityEntity クラス
 
 Class extends Entity
 
@@ -243,8 +248,9 @@ Function getPopulation() : Integer
 
 
 Function isBigCity(): Boolean
-// The getPopulation() function is usable inside the class
-	return This.getPopulation()>50000
+// 関数 getPopulation() をクラス内で使用することができます
+    return This.getPopulation()>50000
+
 ```
 
 次のように関数を呼び出すことができます:
@@ -256,30 +262,31 @@ $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManage
 $city:=$cityManager.City.getCity("Caguas")
 
 If ($city.isBigCity())
-	ALERT($city.name + " is a big city")
+    ALERT($city.name + " は大きな町です。")
 End if
+
 ```
 
 ### 定義規則
 
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
-- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. 特に:
-  - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+- 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
+  - 4D テーブルと [ユーザークラス名](Concepts/classes.md#クラス名) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
   - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
-- When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.
+- クラス定義の際、[`Class extends`](Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
-- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
+- データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
-- You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+- **`4D`** [クラスストア](Concepts/classes.md#クラスストア) のネイティブな ORDA クラス関数を、データモデルユーザークラス関数でオーバーライドすることはできません。
 
 ### プリエンプティブ実行
 
 コンパイル済みの状態では、データモデルクラス関数は次のように実行されます:
 
-- in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
-- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+- シングルユーザーアプリケーションでは、**プリエンプティブまたはコオペラティブプロセス** で実行されます (呼び出し元のプロセスに依存します)。
+- クライアント/サーバーアプリケーションでは、**プリエンプティブプロセス** で実行されます (ただし、[`local`](#ローカル関数) キーワードが使用されている場合は、シングルユーザーの場合と同様に、呼び出し元プロセスに依存します)。
 
 クライアント/サーバーで動作するように設計されているプロジェクトでは、データモデルクラス関数のコードがスレッドセーフであることを確認してください。 スレッドセーフでないコードが呼び出された場合、実行時にエラーが発生します (シングルユーザーアプリケーションではコオペラティブ実行がサポートされているため、コンパイル時にはエラーが発生しません)。
 
@@ -287,27 +294,27 @@ End if
 
 ### 概要
 
-計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 [Standard 4D classes](Concepts/classes.md) implement the concept of computed properties with `get` (_getter_) and `set` (_setter_) [accessor functions](Concepts/classes.md#function-get-and-function-set). ORDA dataclass attributes benefit from this feature and extend it with two additional functions: `query` and `orderBy`.
+計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 [標準的な 4Dクラス](Concepts/classes.md)は、`get` (_ゲッター_) および `set` (_セッター_) [アクセサー関数](Concepts/classes.md#function-get-と-function-set) を用いて、計算プロパティの概念を実装しています。 ORDA のデータクラス属性はこれを利用し、さらに `query` と `orderBy` の 2つの関数で機能を拡張しています。
 
-At the very minimum, a computed attribute requires a `get` function that describes how its value will be calculated. When a _getter_ function is supplied for an attribute, 4D does not create the underlying storage space in the datastore but instead substitutes the function's code each time the attribute is accessed. 属性がアクセスされなければ、コードも実行されません。
+計算属性には最低限、その値がどのように算出されるかを記述した `get` 関数が必要です。 属性に_ゲッター_関数が定義されている場合、4D は対応するストレージスペースをデータストアに作成せず、代わりに属性がアクセスされるたびに関数のコードを実行します。 属性がアクセスされなければ、コードも実行されません。
 
-A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The _setter_ function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
+計算属性は、その属性に値が割り当てられたときに実行される `set` 関数を実装することもできます。 _セッター_関数は、割り当てられた値をどのように処理するかを記述します。通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。
 
-Just like storage attributes, computed attributes may be included in **queries**. デフォルトでは、ORDA のクエリで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 場合によっては、これで十分です。 However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
+ストレージ属性と同様に、計算属性も **クエリ** に含めることができます。 デフォルトでは、ORDA のクエリで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 場合によっては、これで十分です。 しかし、特にクライアント/サーバーにおいてはパフォーマンスを向上させるため、実際のデータクラス属性に基づいた `query` 関数を計算属性に実装することで、それらのインデックスの恩恵を受けることができます。
 
-Similarly, computed attributes can be included in **sorts**. デフォルトでは、ORDA の並べ替えで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
+同様に、計算属性を **並べ替え** に含めることもできます。 デフォルトでは、ORDA の並べ替えで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 クエリと同様に、実際のデータクラス属性に基づいた `orderBy` 関数を計算属性に実装することで、パフォーマンスを向上させることができます。
 
 ### 計算属性の定義
 
-You create a computed attribute by defining a `get` accessor in the [**entity class**](#entity-class) of the dataclass. 計算属性は、データクラス属性およびエンティティ属性として自動的に利用可能になります。
+計算属性を作成するには、データクラスの [**Entity クラス**](#entity-クラス) に `get` アクセサー関数を定義します。 計算属性は、データクラス属性およびエンティティ属性として自動的に利用可能になります。
 
-Other computed attribute functions (`set`, `query`, and `orderBy`) can also be defined in the entity class. これらの関数の定義は任意です。
+その他の計算属性の関数 (`set`、`query`、`orderBy`) も、Entityクラスに定義することができます。 これらの関数の定義は任意です。
 
-Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions.
+計算属性の関数内において、[`This`](Concepts/classes.md#this) はエンティティを指します。 計算属性は、他のデータクラス属性と同様に使用することができます。つまり、[Entity クラス](API/EntityClass.md) や [EntitySelection クラス](API/EntitySelectionClass.md) の関数によっても同様に処理されます。
 
-> ORDA computed attributes are not [**exposed**](#exposed-vs-non-exposed-functions) by default. You expose a computed attribute by adding the `exposed` keyword to the **get function** definition.
+> ORDA の計算属性は、デフォルトでは [**公開**](#公開vs非公開関数) されません。 計算属性を公開するには、**get 関数** の定義に `exposed` キーワードを追加します。
 
-> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing.
+> **get および set関数**は、クライアント/サーバー処理を最適化するために、[**local**](#ローカル関数) プロパティを持つこともできます。
 
 ### `Function get <attributeName>`
 
@@ -315,14 +322,14 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 
 ```4d
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
-// code
+// コード
 ```
 
-The _getter_ function is mandatory to declare the _attributeName_ computed attribute. Whenever the _attributeName_ is accessed, 4D evaluates the `Function get` code and returns the _$result_ value.
+_ゲッター_ 関数は、_attributeName_ 計算属性を宣言するために必須です。 _attributeName_ がアクセスされるたびに、4D は `Function get` のコードを評価し、_$result_ 値を返します。
 
 > 計算属性は、他の計算属性の値を使用することができます。 再帰的な呼び出しはエラーになります。
 
-The _getter_ function defines the data type of the computed attribute thanks to the _$result_ parameter. 以下の結果の型が可能です:
+_ゲッター_ 関数は、_$result_ パラメーターに基づいて、計算属性のデータ型を定義します。 以下の結果の型が可能です:
 
 - スカラー (テキスト、ブール、日付、時間、数値)
 - Object
@@ -331,7 +338,7 @@ The _getter_ function defines the data type of the computed attribute thanks to 
 - エンティティ (例: cs.EmployeeEntity)
 - エンティティセレクション (例: cs.EmployeeSelection)
 
-The _$event_ parameter contains the following properties:
+_$event_ パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | タイプ     | 説明                                                |
 | ------------- | ------- | ------------------------------------------------- |
@@ -342,29 +349,31 @@ The _$event_ parameter contains the following properties:
 
 #### 例題
 
-- _fullName_ computed attribute:
+- _fullName_ 計算属性:
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
-  Case of 	
-	: (This.firstName=Null) & (This.lastName=Null)
-		$event.result:=Null //use result to return Null
-	: (This.firstName=Null)
-		$fullName:=This.lastName
-	: (This.lastName=Null)
-		$fullName:=This.firstName
-	Else 
-		$fullName:=This.firstName+" "+This.lastName
-	End case 
+  Case of   
+    : (This.firstName=Null) & (This.lastName=Null)
+        $event.result:=Null // Null値を返すには result を使用します
+    : (This.firstName=Null)
+        $fullName:=This.lastName
+    : (This.lastName=Null)
+        $fullName:=This.firstName
+    Else 
+        $fullName:=This.firstName+" "+This.lastName
+    End case 
+
 ```
 
 - 計算属性は、エンティティにリレートされた属性に基づいて定義することができます。
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
-	$result:=This.manager.manager
-    
+    $result:=This.manager.manager
+
+
 ```
 
 - 計算属性は、エンティティセレクションにリレートされた属性に基づいて定義することができます。
@@ -385,14 +394,15 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 ```4d
 
 {local} Function set <attributeName>($value : type {; $event : Object})
-// code
+// コード
+
 ```
 
-The _setter_ function executes whenever a value is assigned to the attribute. この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
+_セッター_ 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
 
-The _$value_ parameter receives the value assigned to the attribute.
+_$value_ パラメーターは、属性に割り当てられた値を受け取ります。
 
-The _$event_ parameter contains the following properties:
+_$event_ パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | タイプ     | 説明               |
 | ------------- | ------- | ---------------- |
@@ -405,10 +415,11 @@ The _$event_ parameter contains the following properties:
 
 ```4d
 Function set fullName($value : Text; $event : Object)
-	var $p : Integer
-    $p:=Position(" "; $value) 		
-	This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
-	This.lastname:=Substring($value; $p+1)
+    var $p : Integer
+    $p:=Position(" "; $value)       
+    This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
+    This.lastname:=Substring($value; $p+1)
+
 ```
 
 ### `Function query <attributeName>`
@@ -419,84 +430,85 @@ Function set fullName($value : Text; $event : Object)
 Function query <attributeName>($event : Object)
 Function query <attributeName>($event : Object) -> $result : Text
 Function query <attributeName>($event : Object) -> $result : Object
-// code
+// コード
 ```
 
 このメソッドは 3種類のシンタックスを受け入れます:
 
-- With the first syntax, you handle the whole query through the `$event.result` object property.
-- With the second and third syntaxes, the function returns a value in _$result_:
-  - If _$result_ is a Text, it must be a valid query string
-  - If _$result_ is an Object, it must contain two properties:
+- 最初のシンタックスでは、`$event.result` オブジェクトプロパティを通じてクエリ全体を処理します。
+- 2番目と 3番目のシンタックスでは、関数は _$result_ に値を返します:
+  - _$result_ がテキストの場合、それは有効なクエリ文字列でなければなりません。
+  - _$result_ がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
   | プロパティ                              | タイプ        | 説明                                                                                     |
   | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
   | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
   | $result.parameters | Collection | プレースホルダーに渡す値                                                                           |
 
-The `query` function executes whenever a query using the computed attribute is launched. インデックス付きの属性を利用することで、クエリをカスタマイズしたり最適化したりすることができます。 When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+`query` 関数は、計算属性を使用するクエリが開始されるたびに実行されます。 インデックス付きの属性を利用することで、クエリをカスタマイズしたり最適化したりすることができます。 計算属性に対して `query` 関数が実装されていない場合、検索は常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
 
-> The following features are not supported:
+> 以下の機能はサポートされていません:
 >
-> - calling a `query` function on computed attributes of type Entity or Entity selection,
-> - using the `order by` keyword in the resulting query string.
+> - エンティティ、またはエンティティセレクション型の計算属性に対する `query` 関数の呼び出し
+> - 結果のクエリ文字列における `order by` キーワードの使用
 
-The _$event_ parameter contains the following properties:
+_$event_ パラメーターは、以下のプロパティが含みます:
 
-| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | 計算属性の名称                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| dataClassName | Text    | データクラスの名称                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| value         | Variant | 計算属性によって処理されるべき値                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Possible values:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li> |
-| result        | Variant | 計算属性によって処理されるべき値。 Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Text    | 計算属性の名称                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| dataClassName | Text    | データクラスの名称                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| value         | Variant | 計算属性によって処理されるべき値                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| operator      | Text    | クエリ演算子 ([`query` クラス関数も参照ください](API/DataClassClass.md#query))。 とりうる値:<li>== (と等しい; @ はワイルドカード)</li><li>=== (と等しい; @ はワイルドカードでない)</li><li>!= (と等しくない; @ はワイルドカード)</li><li>!== (と等しくない; @ はワイルドカードでない)</li><li>&lt; (小さい)</li><li><= (less than or equal to)</li><li>&gt; (大きい)</li><li>&gt;= (以上)</li><li>IN (含まれる)</li><li>% (キーワードを含む)</li> |
+| result        | Variant | 計算属性によって処理されるべき値。 4D がデフォルトクエリ (計算属性では常にシーケンシャル) を実行するようにしたい場合は、このプロパティに `Null` を渡します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-> If the function returns a value in _$result_ and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+> 関数が _$result_ に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
 
 #### 例題
 
-- Query on the _fullName_ computed attribute.
+- _fullName_ 計算属性のクエリ:
 
 ```4d
 Function query fullName($event : Object)->$result : Object
 
-	var $fullname; $firstname; $lastname; $query : Text
-	var $operator : Text
-	var $p : Integer
-	var $parameters : Collection
+    var $fullname; $firstname; $lastname; $query : Text
+    var $operator : Text
+    var $p : Integer
+    var $parameters : Collection
 
-	$operator:=$event.operator
-	$fullname:=$event.value
+    $operator:=$event.operator
+    $fullname:=$event.value
 
-	$p:=Position(" "; $fullname) 
-	If ($p>0)
-		$firstname:=Substring($fullname; 1; $p-1)+"@"
-		$lastname:=Substring($fullname; $p+1)+"@"
-		$parameters:=New collection($firstname; $lastname) // two items collection
-	Else 
-		$fullname:=$fullname+"@"
-		$parameters:=New collection($fullname) // single item collection
-	End if 
+    $p:=Position(" "; $fullname) 
+    If ($p>0)
+        $firstname:=Substring($fullname; 1; $p-1)+"@"
+        $lastname:=Substring($fullname; $p+1)+"@"
+        $parameters:=New collection($firstname; $lastname) // 2要素のコレクション
+    Else 
+        $fullname:=$fullname+"@"
+        $parameters:=New collection($fullname) // 1要素のコレクション
+    End if 
 
-	Case of 
-	: ($operator="==") | ($operator="===")
-		If ($p>0)
-			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-		Else 
-			$query:="firstName = :1 or lastName = :1"
-		End if 
-	: ($operator="!=")
-		If ($p>0)
-			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-		Else 
-			$query:="firstName != :1 and lastName != :1"
-		End if 
-	End case 
+    Case of 
+    : ($operator="==") | ($operator="===")
+        If ($p>0)
+            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+        Else 
+            $query:="firstName = :1 or lastName = :1"
+        End if 
+    : ($operator="!=")
+        If ($p>0)
+            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+        Else 
+            $query:="firstName != :1 and lastName != :1"
+        End if 
+    End case 
 
-	$result:=New object("query"; $query; "parameters"; $parameters)
+    $result:=New object("query"; $query; "parameters"; $parameters)
+
 ```
 
-> Keep in mind that using placeholders in queries based upon user text input is recommended for security reasons (see [`query()` description](API/DataClassClass.md#query)).
+> ユーザーのテキスト入力に基づくクエリでは、セキュリティ上の理由からプレースホルダーを使用することが推奨されています ([`query()` の説明](API/DataClassClass.md#query) 参照)。
 
 呼び出しコードの例:
 
@@ -504,56 +516,58 @@ Function query fullName($event : Object)->$result : Object
 $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 ```
 
-- This function handles queries on the _age_ computed attribute and returns an object with parameters:
+- この関数は _age (年齢)_ 計算属性に対するクエリを処理し、パラメーターを含むオブジェクトを返します:
 
 ```4d
 Function query age($event : Object)->$result : Object
-	
-	var $operator : Text
-	var $age : Integer
-	var $_ages : Collection
-	
-	$operator:=$event.operator
-			
-	$age:=Num($event.value)  // integer
-	$d1:=Add to date(Current date; -$age-1; 0; 0)
-	$d2:=Add to date($d1; 1; 0; 0)
-	$parameters:=New collection($d1; $d2)
-	
-	Case of 
-			
-		: ($operator="==")
-			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
-			
-		: ($operator="===") 
 
-			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+    var $operator : Text
+    var $age : Integer
+    var $_ages : Collection
 
-		: ($operator=">=")
-			$query:="birthday <= :2"
-			
-			//... other operators			
-			
-			
-	End case 
-	
-	
-	If (Undefined($event.result))
-		$result:=New object
-		$result.query:=$query
-		$result.parameters:=$parameters
-	End if
+    $operator:=$event.operator
+
+    $age:=Num($event.value)  // 整数
+    $d1:=Add to date(Current date; -$age-1; 0; 0)
+    $d2:=Add to date($d1; 1; 0; 0)
+    $parameters:=New collection($d1; $d2)
+
+    Case of 
+
+        : ($operator="==")
+            $query:="birthday > :1 and birthday <= :2"  // d1 より大きい、かつ d2 以下
+
+        : ($operator="===") 
+
+            $query:="birthday = :2"  // d2 = 2つ目の算出値 (= 誕生日)
+
+        : ($operator=">=")
+            $query:="birthday <= :2"
+
+            //... その他の演算子           
+
+
+    End case 
+
+
+    If (Undefined($event.result))
+        $result:=New object
+        $result.query:=$query
+        $result.parameters:=$parameters
+    End if
+
 
 ```
 
 呼び出しコードの例:
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// 20歳以上で 21歳未満の人
+$twenty:=people.query("age = 20")  // "==" のケースを呼び出します
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+// 本日満 20歳になった人
+$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ 
+
 
 ```
 
@@ -565,29 +579,29 @@ $twentyToday:=people.query("age === 20") // equivalent to people.query("age is 2
 Function orderBy <attributeName>($event : Object)
 Function orderBy <attributeName>($event : Object)-> $result : Text
 
-// code
+// コード
 ```
 
-The `orderBy` function executes whenever the computed attribute needs to be ordered. これにより、計算属性で並べ替えることができます。 For example, you can sort _fullName_ on first names then last names, or conversely.
-When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+`orderBy` 関数は、計算属性で並べ替えされるたびに実行されます。 これにより、計算属性で並べ替えることができます。 たとえば、_fullName_ を名字、名前の順にソートしたり、逆に名字、名前の順にソートすることができます。
+計算属性に対して `orderBy` 関数が実装されていない場合、並べ替えは常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
 
-> Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
+> Entity クラス、または EntitySelection クラス型の計算属性に対する `orderBy` 関数の呼び出しは **サポートされていません**。
 
-The _$event_ parameter contains the following properties:
+_$event_ パラメーターは、以下のプロパティが含みます:
 
-| プロパティ         | タイプ     | 説明                                                                                            |
-| ------------- | ------- | --------------------------------------------------------------------------------------------- |
-| attributeName | Text    | 計算属性の名称                                                                                       |
-| dataClassName | Text    | データクラスの名称                                                                                     |
-| kind          | Text    | "orderBy"                                                                                     |
-| value         | Variant | 計算属性によって処理されるべき値                                                                              |
-| operator      | Text    | "desc" または "asc" (デフォルト)                                                   |
-| descending    | Boolean | `true` for descending order, `false` for ascending order                                      |
-| result        | Variant | 計算属性によって処理されるべき値。 Pass `Null` if you want to let 4D execute the default sort. |
+| プロパティ         | タイプ     | 説明                                                   |
+| ------------- | ------- | ---------------------------------------------------- |
+| attributeName | Text    | 計算属性の名称                                              |
+| dataClassName | Text    | データクラスの名称                                            |
+| kind          | Text    | "orderBy"                                            |
+| value         | Variant | 計算属性によって処理されるべき値                                     |
+| operator      | Text    | "desc" または "asc" (デフォルト)          |
+| descending    | Boolean | 降順の場合は `true`, 昇順の場合は `false`                        |
+| result        | Variant | 計算属性によって処理されるべき値。 4D にデフォルトソートを実行させるには、`Null` を渡します。 |
 
-> You can use either the `operator` or the `descending` property. これは、基本的にプログラミングのスタイルの問題です (例題参照)。
+> `operator` と `descending` プロパティのどちらを使っても構いません。 これは、基本的にプログラミングのスタイルの問題です (例題参照)。
 
-You can return the `orderBy` string either in the `$event.result` object property or in the _$result_ function result. If the function returns a value in _$result_ and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+`orderBy` 文字列は、`$event.result` オブジェクトプロパティまたは関数の戻り値である _$result_ のどちらでにも返すことができます。 関数が _$result_ に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
 
 #### 例題
 
@@ -606,7 +620,8 @@ Function orderBy fullName($event : Object)-> $result : Text
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
-	$result:="firstName "+$event.operator+", "lastName "+$event.operator
+    $result:="firstName "+$event.operator+", "lastName "+$event.operator
+
 
 ```
 
@@ -621,19 +636,20 @@ Function orderBy age($event : Object)-> $result : Text
         $result:="birthday desc" 
     End if
 
+
 ```
 
 ## エイリアス属性
 
 ### 概要
 
-An **alias** attribute is built above another attribute of the data model, named **target** attribute. ターゲット属性には、リレートデータクラス (リレートレベルは無制限) または同じデータクラスのものを使用できます。 エイリアス属性はデータではなく、ターゲット属性へのパスを格納します。 データクラスには、必要な数だけエイリアス属性を定義することができます。
+**エイリアス** 属性は、**ターゲット** 属性と呼ばれるデータモデルの別の属性を元に定義されます。 ターゲット属性には、リレートデータクラス (リレートレベルは無制限) または同じデータクラスのものを使用できます。 エイリアス属性はデータではなく、ターゲット属性へのパスを格納します。 データクラスには、必要な数だけエイリアス属性を定義することができます。
 
 エイリアス属性は、N対Nリレーションを扱うのに便利です。 実装の詳細ではなくビジネスの概念を扱ってコードやクエリを作成できるため、これらの可読性が向上します。
 
 ### エイリアス属性の定義
 
-You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+データクラス内にエイリアス属性を作成するには、データクラスの [**Entityクラス**](#entity-クラス) において `Alias` キーワードを使用します。
 
 ### `Alias <attributeName> <targetPath>`
 
@@ -643,15 +659,15 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-_attributeName_ must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties).
+_attributeName_ は、[プロパティ名の命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
-_targetPath_ is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, _targetPath_ is the attribute name.
+_targetPath_ は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、_targetPath_ は属性名となります。
 
 エイリアスは、他のエイリアスのパスに使用することができます。
 
-A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. たとえば、"fullName" 計算属性がある場合、"employee.fullName" というエイリアスパスは有効です。
+[計算属性](#計算属性-1) もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。そうでない場合は、エラーが返されます。 たとえば、"fullName" 計算属性がある場合、"employee.fullName" というエイリアスパスは有効です。
 
-> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> ORDA のエイリアス属性は、デフォルトでは **公開されません**。 リモートリクエストでエイリアスを利用するには、`Alias` キーワードの前に [`exposed`](#公開vs非公開関数) キーワードを追加する必要があります。
 
 ### エイリアス属性の使用
 
@@ -678,14 +694,14 @@ A [computed attribute](#computed-attributes-1) can be used in an alias path, but
 
 ### エイリアスのプロパティ
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+エイリアス属性の [`kind`](../API/DataClassClass.md#attributename) プロパティ (属性の種類) は "alias" です。
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+エイリアス属性は、ターゲット属性の [`type`](../API/DataClassClass.md#attributename) プロパティを継承します。
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("_classname_Entity" or "_classname_Selection").
+- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
+- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("_classname_Entity" または "_classname_Selection") になります。
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassClass.md#attributename) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
 
 ### 例題
 
@@ -696,21 +712,23 @@ Alias attributes based upon relations have a specific [`path`](../API/DataClassC
 Teacher データクラスに、教師の生徒をすべて返すエイリアス属性を定義します:
 
 ```4d
-// cs.TeacherEntity class
+// cs.TeacherEntity クラス
 
 Class extends Entity
 
 Alias students courses.student //relatedEntities 
+
 ```
 
 Student データクラスには、生徒の教師をすべて返すエイリアス属性を定義します:
 
 ```4d
-// cs.StudentEntity class
+// cs.StudentEntity クラス
 
 Class extends Entity
 
 Alias teachers courses.teacher //relatedEntities 
+
 ```
 
 Course データクラスには次を定義します:
@@ -720,13 +738,14 @@ Course データクラスには次を定義します:
 - 生徒の名前を返すエイリアス属性
 
 ```4d
-// cs.CourseEntity class
+// cs.CourseEntity クラス
 
 Class extends Entity
 
-Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias courseName name //スカラー値
+Exposed Alias teacherName teacher.name //スカラー値
+Exposed Alias studentName student.name //スカラー値
+
 
 ```
 
@@ -754,7 +773,7 @@ ds.Teacher.query("students.name = :1";"Martin")
 //  subquery:[ Student.name === Martin]]"
 ```
 
-You can also edit the value of the _courseName_ alias:
+_courseName_ エイリアスの値は編集することができます:
 
 ```4d
 // エイリアス属性を使って、授業の名称を変更します
@@ -765,25 +784,26 @@ $arch.save() //courseName と name は "Archaeology II" に変更されます
 
 ## 公開vs非公開関数
 
-For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests.
+セキュリティ上の理由により、データモデルクラス関数およびエイリアス属性はデフォルトですべて、リモートリクエストに対し **非公開** (つまりプライベート) に設定されています。
 
 リモートリクエストには次のものが含まれます:
 
-- Requests sent by remote 4D applications connected through `Open datastore`
+- `Open datastore` によって接続されたリモートの 4Dアプリケーションが送信するリクエスト
 - RESTリクエスト
 
 > 通常の 4Dクライアント/サーバーリクエストは影響されません。 このアーキテクチャーにおいては、データモデルクラス関数は常に利用可能です。
 
 公開されていない関数はリモートアプリケーションで利用することができず、RESTリクエストによるオブジェクトインスタンスに対して呼び出すこともできません。 リモートアプリケーションが非公開関数をアクセスしようとすると、"-10729 (未知のメンバー機能です)" エラーが返されます。
 
-To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. シンタックスは次の通りです:
+リモートリクエストによる呼び出しを許可するには、`exposed` キーワードを使ってデータモデルクラス関数を明示的に宣言する必要があります。 シンタックスは次の通りです:
 
 ```4d
-// declare an exposed function
+// 公開関数の宣言
 exposed Function <functionName>   
+
 ```
 
-> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> `exposed` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
 ### 例題
 
@@ -792,7 +812,7 @@ exposed Function <functionName>
 ```4d
 Class extends DataClass
 
-//Public function
+// 公開関数
 exposed Function registerNewStudent($student : Object) -> $status : Object
 
 var $entity : cs.StudentsEntity
@@ -803,10 +823,11 @@ $entity.school:=This.query("name=:1"; $student.schoolName).first()
 $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
-//Not exposed (private) function
+// 非公開 (プライベート) 関数
 Function computeIDNumber()-> $id : Integer
-//compute a new ID number
+// 新規ID番号を算出します
 $id:=...
+
 
 ```
 
@@ -820,44 +841,47 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です) 
+
 ```
 
 ## ローカル関数
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。
+クライアント/サーバーアーキテクチャーではデフォルトで、ORDA データモデル関数は **サーバー上で** 実行されます。 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。
 
-しかしながら、状況によってはその関数はクライアント側で完結するものかもしれません (たとえば、すでにローカルキャッシュにあるデータを処理する場合など)。 In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. シンタックスは次の通りです:
+しかしながら、状況によってはその関数はクライアント側で完結するものかもしれません (たとえば、すでにローカルキャッシュにあるデータを処理する場合など)。 そのような場合には、`local` キーワードを使ってサーバーへのリクエストをおこなわないようにし、アプリケーションのパフォーマンスを向上させることができます。 シンタックスは次の通りです:
 
 ```4d
-// declare a function to execute locally in client/server
+// クライアント/サーバーにおいてローカル実行する関数の宣言
 local Function <functionName>   
+
 ```
 
 このキーワードを使うと、関数は常にクライアントサイドで実行されます。
 
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> `local` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
 最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 たとえば、Schools Entityクラスの次の関数を考えます:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// 2000年以降の生まれの生徒を検索します  
+// local キーワードを適切に使用していない例です
 local Function getYoungest
 	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+
 ```
 
-- **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
+- `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
+- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
 
 ### 例題
 
 #### 年齢の計算
 
-Given an entity with a _birthDate_ attribute, we want to define an `age()` function that would be called in a list box. この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
+_birthDate_ (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
 
-On the _StudentsEntity_ class:
+_StudentsEntity_ クラス:
 
 ```4d
 Class extends Entity
@@ -869,13 +893,14 @@ If (This.birthDate#!00-00-00!)
 Else 
     $age:=Null
 End if
+
 ```
 
 #### 属性のチェック
 
 クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
 
-On the _StudentsEntity_ class, the local `checkData()` function checks the Student's age:
+_StudentsEntity_ クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
 
 ```4d
 Class extends Entity
@@ -886,12 +911,13 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="生年月日が入力されていません。" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。この生徒の年齢は "+String(This.age()+"です。")
 End case
+
 ```
 
 呼び出し元のコード:
@@ -910,7 +936,7 @@ End if
 
 ### クラスファイル
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (_i.e._ in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
+ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを [通常のクラスファイルと同じ場所](Concepts/classes.md#クラスファイル) (つまり、Project フォルダー内の `/Sources/Classes` フォルダー) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
 
 ### クラスの作成
 
@@ -918,14 +944,13 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 
 ![](../assets/en/ORDA/ORDA_Classes-3.png)
 
-> 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 To show them you need to select **Show all data classes** from the Explorer's options menu:
-> ![](../assets/en/ORDA/showClass.png)
+> 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
 
 ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D creates the class file and add the `extends` code. たとえば、Entity クラスを継承するクラスの場合は:
+ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D はクラスファイルを作成し、`extends` ステートメントを自動で追加します。 たとえば、Entity クラスを継承するクラスの場合は:
 
 ```
 Class extends Entity
@@ -935,11 +960,11 @@ Class extends Entity
 
 ### クラスの編集
 
-To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+定義された ORDA クラスファイルを 4Dコードエディターで開くには、ORDA クラス名を選択してエクスプローラーのオブションメニュー、またはコンテキストメニューの **編集...** を使用するか、ORDA クラス名をダブルクリックします:
 
 ![](../assets/en/ORDA/classORDA4.png)
 
-For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
+ローカルデータストア (`ds`) に基づいた ORDA クラスの場合には、4D ストラクチャーウィンドウからも直接クラスコードにアクセスできます:
 
 ![](../assets/en/ORDA/classORDA5.png)
 

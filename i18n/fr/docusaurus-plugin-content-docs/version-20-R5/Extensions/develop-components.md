@@ -57,7 +57,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notes :**
 
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Par conséquent, elle ne peut pas être utilisée dans un composant.
 - SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. However, they are supported with external databases (see `CREATE DATABASE` SQL command).

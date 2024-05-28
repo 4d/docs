@@ -59,7 +59,7 @@ Permet de parcourir le contenu du bouton d'image à la vitesse spécifiée (en g
 
 | Nom        | Type de données | Valeurs possibles           |
 | ---------- | --------------- | --------------------------- |
-| frameDelay | entier          | minimum : 0 |
+| frameDelay | integer         | minimum : 0 |
 
 #### Objets pris en charge
 

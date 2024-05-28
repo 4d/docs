@@ -9,6 +9,6 @@ Esta página lista todos os atalhos usados no modo Desenho de 4D (exceto os atal
 
 Para modificar um atalho, pode selecionar/desmarcar o item a modificar (Shift, Alt ou tecla de letra) na lista. Também é possível fazer duplo clique num atalho para o configurar através de uma caixa de diálogo específica.
 
-Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
+Tenga en cuenta que cada acceso directo incluye implícitamente la tecla **Ctrl** (Windows) o **Comando** (macOS).
 
-If you edit this list, your custom shortcuts settings are stored in a _4DShortcutsvXX.xml_ file, created at the same level as the [user preferences file](overview.md#storage). Assim, cada vez que 4D é atualizado, as suas preferências de atalhos de teclado permanecem.
+Si edita esta lista, la configuración de sus accesos directos personalizados se almacena en un archivo _4DShortcutsvXX.xml_, creado en el mismo nivel que [el archivo de preferencias usuario](overview.md#storage). Assim, cada vez que 4D é atualizado, as suas preferências de atalhos de teclado permanecem.

@@ -312,7 +312,7 @@ The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the s
 
 :::info warning
 
-The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section. 
+The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
 :::
 
@@ -462,11 +462,11 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 #### Description
 
-The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->. 
+The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
 
 If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
 
-The function returns Null if *index* is beyond entity selection limits. 
+The function returns Null if *index* is beyond entity selection limits.
 
 #### Example
 
@@ -474,7 +474,7 @@ The function returns Null if *index* is beyond entity selection limits.
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
 $employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
 $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 	//of the $employees entity selection
 ```
@@ -745,7 +745,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date. 
+The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
 
 :::
 
@@ -839,7 +839,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties. 
+*length* is automatically added as path for nested collection properties.
 
 :::
 
@@ -1496,7 +1496,7 @@ In this example, we want to find the lowest salary among all the female employee
 The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 *	If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-*	If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 
+*	If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
 
@@ -1667,7 +1667,7 @@ You can add as many objects in the criteria collection as necessary.
 
 >Null values are evaluated as less than other values.
 
-If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection. 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
 
 
 #### Example
@@ -1899,7 +1899,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
 
 <!-- END REF -->
 
@@ -2255,7 +2255,7 @@ In the *options* parameter, you can pass the `dk with primary key` and/or `dk wi
 
 :::caution Warning
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions. 
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
 
 :::
 

@@ -201,7 +201,7 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="WebServer/">
+        <Link to="WebServer/overview">
           <Translate>Web Server</Translate>
         </Link>
         <Link to="WebServer/gettingStarted">

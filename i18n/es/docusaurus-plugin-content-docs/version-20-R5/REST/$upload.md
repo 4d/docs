@@ -7,15 +7,15 @@ Devuelve un ID del archivo subido al servidor
 
 ## Descripción
 
-Publique esta petición cuando tenga un archivo que quiera subir al Servidor. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+Publique esta petición cuando tenga un archivo que quiera subir al Servidor. Si tiene una imagen, pase `$rawPict=true`. Para todos los demás archivos, se pasa `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
+Puede modificar el tiempo de espera, que por defecto es de 120 segundos, pasando un valor al parámetro `$timeout`.
 
 ## Escenario de carga
 
 Imagine que quiere subir una imagen para actualizar el atributo imagen de una entidad.
 
-Para cargar una imagen (o cualquier archivo binario), primero debe seleccionar el archivo desde la aplicación cliente. The file itlself must be passed in the **body** of the request.
+Para cargar una imagen (o cualquier archivo binario), primero debe seleccionar el archivo desde la aplicación cliente. El archivo en sí debe pasarse en el **cuerpo** de la petición.
 
 A continuación, se sube la imagen seleccionada a 4D Server mediante una petición como:
 
@@ -31,7 +31,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 
 `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Datos POST**:
 
 ```
 {
@@ -65,7 +65,7 @@ Se devuelve la entidad modificada:
 
 ## Ejemplo con un cliente 4D HTTP
 
-The following example shows how to upload a _.pdf_ file to the server using the 4D HTTP client.
+El siguiente ejemplo muestra cómo subir un archivo _.pdf_ al servidor utilizando el cliente 4D HTTP.
 
 ```4d
 var $params : Text

@@ -1,15 +1,15 @@
 ---
 id: date-time-formats
-title: Date and Time Formats
+title: 日付と時間のフォーマット
 ---
 
 アプリケーション、プラットフォーム、またはインターフェースの要件に従って、4Dプロジェクトにおける日付や時間の表示形式を管理しなくてはならない場合があります。
 
 4Dには、デフォルトの形式に加えて、カスタマイズされた日付と時間のフォーマットを作成および適用するために使用できる包括的なパターンのリストが含まれています。 カスタマイズされたフォーマットパターンは、以下の機能でサポートされています:
 
-- the [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html) command,
-- the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html) commands,
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
+- [`String`](https://doc.4d.com/4dv20R/help/command/ja/page10.html) コマンド
+- [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/ja/page236.html) および [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/ja/page894.html) コマンド
+- プロパティリストまたは [`dateFormat`](../FormObjects/properties_Display.md/#日付フォーマット) および [`timeFormat`](../FormObjects/properties_Display.md/#時間フォーマット) のJSONプロパティから利用可能な、フォームオブジェクトの "日付/時間フォーマット" プロパティ
 
 ## パターンリスト
 
@@ -19,7 +19,7 @@ title: Date and Time Formats
 | --- | ------------------------------------------------------------------ | ---------- | ----------------------------------------------------------------------------------------- |
 | G   | 元号                                                                 | G, GG, GGG | 西暦                                                                                        |
 |     |                                                                    | GGGG       | 西暦                                                                                        |
-|     |                                                                    | GGGGG      | A                                                                                         |
+|     |                                                                    | GGGGG      | AD                                                                                        |
 | y   | 年                                                                  | yy         | 96                                                                                        |
 |     |                                                                    | y または yyyy | 1996                                                                                      |
 | Y   | ウィークカレンダーの年                                                        | Y          | 1997                                                                                      |
@@ -38,35 +38,35 @@ title: Date and Time Formats
 |     |                                                                    | MM         | 09                                                                                        |
 |     |                                                                    | MMM        | 9月                                                                                        |
 |     |                                                                    | MMMM       | 9月                                                                                        |
-|     |                                                                    | MMMMM      | S                                                                                         |
+|     |                                                                    | MMMMM      | 9                                                                                         |
 | L   | 月 (単独)                                          | L          | 9                                                                                         |
 |     |                                                                    | LL         | 09                                                                                        |
 |     |                                                                    | LLL        | 9月                                                                                        |
 |     |                                                                    | LLLL       | 9月                                                                                        |
-|     |                                                                    | LLLLL      | S                                                                                         |
+|     |                                                                    | LLLLL      | 9                                                                                         |
 | w   | 週番号                                                                | w          | 27                                                                                        |
 |     |                                                                    | ww         | 27                                                                                        |
 | d   | 日                                                                  | d          | 2                                                                                         |
 |     |                                                                    | dd         | 2                                                                                         |
 | D   | 日 (年始からの日数)                                     | D          | 189                                                                                       |
-| E   | 曜日                                                                 | E, EE, EEE | Tue                                                                                       |
-|     |                                                                    | EEEE       | Tuesday                                                                                   |
-|     |                                                                    | EEEEE      | T                                                                                         |
+| E   | 曜日                                                                 | E, EE, EEE | 火                                                                                         |
+|     |                                                                    | EEEE       | 火曜日                                                                                       |
+|     |                                                                    | EEEEE      | 火                                                                                         |
 |     |                                                                    | EEEEEE     | 火                                                                                         |
-| e   | ローカル曜日                                                             | e          | 2                                                                                         |
-|     |                                                                    | ee         | 02                                                                                        |
-|     |                                                                    | eee        | Tue                                                                                       |
-|     |                                                                    | eeee       | Tuesday                                                                                   |
-|     |                                                                    | eeeee      | T                                                                                         |
+| e   | ローカル曜日                                                             | e          | 3                                                                                         |
+|     |                                                                    | ee         | 03                                                                                        |
+|     |                                                                    | eee        | 火                                                                                         |
+|     |                                                                    | eeee       | 火曜日                                                                                       |
+|     |                                                                    | eeeee      | 火                                                                                         |
 |     |                                                                    | eeeeee     | 火                                                                                         |
-| c   | ローカル曜日 (単独)                                     | c, cc      | 2                                                                                         |
-|     |                                                                    | ccc        | Tue                                                                                       |
-|     |                                                                    | cccc       | Tuesday                                                                                   |
-|     |                                                                    | ccccc      | T                                                                                         |
+| c   | ローカル曜日 (単独)                                     | c, cc      | 3                                                                                         |
+|     |                                                                    | ccc        | 火                                                                                         |
+|     |                                                                    | cccc       | 火曜日                                                                                       |
+|     |                                                                    | ccccc      | 火                                                                                         |
 |     |                                                                    | cccccc     | 火                                                                                         |
 | a   | 午前、午後                                                              | a, aa, aaa | 午後                                                                                        |
 |     |                                                                    | aaaa       | 午後                                                                                        |
-|     |                                                                    | aaaaa      | p                                                                                         |
+|     |                                                                    | aaaaa      | 午後                                                                                        |
 | b   | 午前、午後、正午                                                           | b, bb, bbb | 正午                                                                                        |
 |     |                                                                    | bbbb       | 正午                                                                                        |
 |     |                                                                    | bbbbb      | 正午                                                                                        |
@@ -90,7 +90,7 @@ title: Date and Time Formats
 |     | タイムゾーン: ISO8601 拡張 hm, 0 の場合は Z 表示                 | XXX        | -08:00, Z                                                                 |
 |     | タイムゾーン: ISO8601 基本 hms?, 0 の場合は Z 表示               | XXXX       | -0800, -075258, Z                                                                         |
 |     | タイムゾーン: ISO8601 拡張 hms?, 0 の場合は Z 表示               | XXXXX      | -08:00, -07:52:58, Z                      |
-| ○   | タイムゾーン: ISO8601 基本 hm?, Z 表示なし                     | ○          | -08, +0530, +00                                                                           |
+| x   | タイムゾーン: ISO8601 基本 hm?, Z 表示なし                     | x          | -08, +0530, +00                                                                           |
 |     | タイムゾーン: ISO8601 基本 hm, Z 表示なし                      | xx         | -0800, +0000                                                                              |
 |     | タイムゾーン: ISO8601 拡張 hm, Z 表示なし                      | xxx        | -08:00, +00:00                                            |
 |     | タイムゾーン: ISO8601 基本 hms?, Z 表示なし                    | xxxx       | -0800, -075258, +0000                                                                     |
@@ -98,8 +98,8 @@ title: Date and Time Formats
 | O   | タイムゾーン: 短いローカライズされた GMT                            | O          | GMT+9                                                                                     |
 |     | タイムゾーン: 長いローカライズされた GMT (=ZZZZ) | OOOO       | GMT+09:00                                                                 |
 | z   | タイムゾーン: 共通形式                                       | z, zz, zzz | JST                                                                                       |
-|     |                                                                    | zzzz       | GMT+09:00                                                                 |
-|     |                                                                    | zzzzz      | -08:00, -07:52:58, Z                      |
+|     |                                                                    | zzzz       | 日本標準時                                                                                     |
+|     |                                                                    | zzzzz      | 日本標準時                                                                                     |
 |     |                                                                    |            |                                                                                           |
 | '   | テキスト用エスケープ                                                         | '          | '                                                                                         |
 | ' ' | 2つの一重引用符は 1つの一重引用符として解釈されます                                        | ' '        | ' '                                                                                       |
@@ -108,19 +108,19 @@ title: Date and Time Formats
 
 ### `y` vs `Y`
 
-`y` is the calendar year, while `Y` is the year based on the week number. たとえば、2010年の1月の最初の日が週番号1ではない場合、y = 2010 かつ Y = 2009 となりえます (2010年の最初の週が始まる日まで)。(週番号の数え方にはいくつかの方式があります)
+`y` は暦年、`Y` は週番号に基づく年です。 たとえば、2010年の1月の最初の日が週番号1ではない場合、y = 2010 かつ Y = 2009 となりえます (2010年の最初の週が始まる日まで)。(週番号の数え方にはいくつかの方式があります)
 
-### `L` (stand-alone) vs `M`
+### `L` (単独) vs `M`
 
-ロシア語、スロバキア語など一部の言語では、単独で使用される月名と日付内の月名が異なります。 In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
+ロシア語、スロバキア語など一部の言語では、単独で使用される月名と日付内の月名が異なります。 たとえば、"2010年1月10日" と "1月の約束" の "1月" が同じ綴りで表現されません。
 
 ### `e` vs `c`
 
-Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
+`L` と `M` の場合と同様に、`c` は単独で使用される曜日 ("毎週火曜日") に使用するのに対し、`e` は日付内の曜日 ("1951年1月15日火曜日") に使われます。
 
 ### `E` vs `e`
 
-`e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
+`e` はシステムの設定に基づいています。もし週が水曜日から始まるとシステムで定義されている場合、水曜日は数値の "1" (または "0") を持つことになりますが、`E` は常に同じ値を返します (1〜7 または 0〜6)。
 
 ### 先頭のゼロ
 
@@ -130,7 +130,7 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 一部の出力 ("正午"、"火曜日" など) は、地域設定に応じてローカライズされます。
 
-For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an US system, and _après-midi_ on a French system.
+たとえば、時間 `13:25:34` の場合、米国のシステムでは _in the afternoon_、フランスのシステムでは _après-midi_、日本のシステムでは _昼_ と表示されます。
 
 ### 追加の文字
 
@@ -146,7 +146,7 @@ For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an 
 
 例:
 
-" HH : mm : ss " ---> "09 : 10 : 25"
+" HH : mm : ss " ---> "09 : 10 : 25" <br/>
 "' 'HH : mm : ss' '" ---> " 09 : 10 : 25 "
 
 ## 例題
@@ -163,4 +163,4 @@ For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an 
 
 ## 参照
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.
+カスタムの日付と時刻のフォーマットに関する詳細については、[このブログ記事](https://blog.4d.com/ja/tailored-customization-for-dates-and-times) を参照ください。

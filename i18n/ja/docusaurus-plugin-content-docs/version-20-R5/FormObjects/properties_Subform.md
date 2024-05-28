@@ -17,7 +17,7 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -25,8 +25,8 @@ title: サブフォーム
 
 このプロパティを使用して、サブフォームで使用する詳細フォームを割り当てます。 以下のものを使用できます:
 
-- ウィジェット (ページタイプのサブフォームで、特定の機能を実現するために作成されています)。 In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.
+- ウィジェット (ページタイプのサブフォームで、特定の機能を実現するために作成されています)。 この場合、[リストフォーム](#リストフォーム) および [ソース](#ソース) プロパティは存在しないか、空でなくてはいけません。\
+  コンポーネントで公開されていれば、コンポーネントフォーム名を選べます。
 
 > サブフォームを介して追加の機能を提供する [コンポーネント](Concepts/components.md) を作成することが可能です。
 
@@ -40,7 +40,7 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -59,11 +59,11 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 #### 参照
 
-[Double click on row](#double-click-on-row)
+[行をダブルクリック](#行をダブルクリック)
 
 ---
 
@@ -89,11 +89,11 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 #### 参照
 
-[Double click on empty row](#double-click-on-empty-row)
+[空行をダブルクリック](#空行をダブルクリック)
 
 ---
 
@@ -111,7 +111,7 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -129,7 +129,7 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -145,7 +145,7 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 
@@ -154,8 +154,8 @@ title: サブフォーム
 リストボックス行の選択モードを指定します:
 
 - **なし**: 行を選択することはできません。 [リスト更新可](properties_Entry.md#リスト更新可) オプションがチェックされている場合を除き、リストをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
-- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list. その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
+- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります。\
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
 - **複数**: 標準のショートカットを使用して複数行を同時に選択できます。
   - 選択されたサブレコードは `GET HIGHLIGHTED RECORDS` で取得できます。
   - レコードはクリックにより選択されますが、カレントレコードは変更されません。
@@ -169,4 +169,4 @@ title: サブフォーム
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)

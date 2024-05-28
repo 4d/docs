@@ -5,38 +5,43 @@ title: コンポーネント
 
 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\&type=Repositories) ダウンロードすることもできます。
 
-## Interpreted and compiled components
+## インタープリターとコンパイル済みコンポーネント
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+コンポーネントは、インタープリターまたは [コンパイル済み](../Desktop/building.md) のものが使えます。 コンポーネントのパッケージフォルダーには以下のいずれかが含まれます:
 
-- either a Project folder (interpreted component)
-- or a .4DZ file (compiled component)
+- プロジェクトフォルダー (インタープリターのコンポーネント)
+- または .4DZ ファイル (コンパイル済みコンポーネント)
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. この場合、コンパイル済みコンポーネントのみが利用可能です。
+インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
-## Loading components
+## コンポーネントの読み込み
 
 ### 基本
 
-To load a component in your 4D project, you just need to:
+4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
-1. Reference the component name in the **dependencies.json** file of your 4D project. This manifest file must be saved in the **Sources** folder of the 4D project folder, e.g.:
+- **dependencies.json**ファイル (および任意で **environment4d.json** ファイル) でコンポーネントを参照します。
+- または、[プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
+
+同じコンポーネントが異なる場所にインストールされている場合、[優先順位](#優先順位) が適用されます。
+
+### dependencies.json
+
+1. 4Dプロジェクトの **dependencies.json** ファイルで、コンポーネント名を参照します。 このマニフェストファイルは、4Dプロジェクトフォルダの **Sources** フォルダーに保存する必要があります。例:
    ```
    /MyProjectRoot/Project/Sources/dependencies.json
    ```
-2. By default, copy the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project, e.g.:
+2. デフォルトの場合、コンポーネントのパッケージフォルダー (コンポーネントプロジェクトのルートフォルダー) を 4Dプロジェクトのパッケージフォルダーと同じ階層にコピーします。例:
    ```
    /MyProjectRoot/
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can easily copy all your components at the same level as your projects and reference them in your **dependencies.json** files. However, you can customize the path of your components, see below.
+このアーキテクチャーにより、プロジェクトと同じレベルにすべてのコンポーネントを簡単にコピーし、必要であれば **dependencies.json** ファイルで参照することができます。 さらに、コンポーネントのパスをカスタマイズすることもできます (後述参照)。
 
-### dependencies.json
-
-The **/Sources/dependencies.json** file contents must be like:
+**/Sources/dependencies.json** ファイルの内容は次の構造で記述する必要があります:
 
 ```json
 {
@@ -47,13 +52,13 @@ The **/Sources/dependencies.json** file contents must be like:
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components located at the same level as you project that you want to be loaded in your project.
+... ここでの "myComponent1" と "myComponent2" は、プロジェクトパッケージフォルダーと同じレベルにあるコンポーネントの名前であり、プロジェクトに読み込まれるコンポーネントです。
 
-### Defining component path
+### environment4d.json
 
-If you want to customize the location of your components, you can use a **environment4d.json** file. This file allows you to declare the paths for the components that are not stored at the same level as the project folder.
+[**dependencies.json** ファイル](#dependenciesjson) で宣言されたコンポーネントの場所をカスタマイズしたい場合は、**environment4d.json** ファイルを使用できます。 このファイルは、プロジェクトフォルダーと同じレベルに格納されていない依存関係のパスを宣言するためのものです。
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file.
+パスには、[POSIXシンタックス](../Concepts/paths#posix-シンタックス) で表現された、絶対パスまたは相対パスを使用できます。 相対パスは、environment4d.json ファイルを基準として相対パスです。
 
 例:
 
@@ -67,75 +72,95 @@ You can use absolute or relative paths, expressed in POSIX syntax as described i
 }
 ```
 
-The **environment4d.json** file can be stored in your project package folder or in one of its parent folders, at any level (up to the root). The benefit of this architecture is that you can store this environment file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
+**environment4d.json** ファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。 このアーキテクチャーの利点は、この環境ファイルをプロジェクトの親フォルダーに保存することで、コミットしないように選択できることです。これにより、ローカルでのコンポーネントの管理が可能になります。
 
-### Loading sequence
+:::note
 
-In the absence of **environment4d.json** for a given dependency, or if this file lacks information on a dependency listed in **dependencies.json**, the package manager then utilizes the name mentioned in **dependencies.json** to retrieve the dependency next to the project package folder.
-
-![package-manager](../assets/en/Project/package-manager.png)
-
-:::info 互換性
-
-Components located in the legacy [**Components** folder of your project](architecture.md#components) are loaded after the above sequence if there is no conflict with existing dependencies.
+**environment4d.json** ファイルで宣言されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、_Not found_ [ステータス](#依存関係のステータス) が表示されます。
 
 :::
 
-## Monitoring Project Dependencies
+### 優先順位
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+コンポーネントはさまざまな方法でインストールできるため、同じコンポーネントが複数の場所で参照される場合、優先順位が適用されます:
 
-To display the Dependencies panel:
+**優先度高**
 
-- with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
+1. [プロジェクトの **Components** フォルダー](architecture.md#components) に置かれているコンポーネント
+2. **dependencies.json** ファイルで宣言されているコンポーネント
+3. 内部のユーザー4Dコンポーネント (4D NetKit、4D SVG など)
+
+**優先度低**
+
+![priority](../assets/en/Project/load-sequence.png)
+
+同じコンポーネントの別のインスタンスがより高い優先度レベルにあるためにコンポーネントを読み込めない場合、そのコンポーネントには _Overloaded_ [ステータス](#依存関係のステータス) が与えられます。 この場合、読み込まれている方のコンポーネントには _Overloading_ [ステータス](#依存関係のステータス) が与えられます。
+
+## プロジェクトの依存関係の監視
+
+開かれているプロジェクトでは、**依存関係** パネルで依存関係と現在の読み込み状態に関する情報を取得することができます。
+
+依存関係パネルを表示するには:
+
+- 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
+- 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### Dependency Origin
+### 依存関係のオリジン
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+依存関係パネルには、各依存関係のオリジン (由来) にかかわらず、プロジェクトの依存関係すべてがリストされます。 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are supported:
+以下のオリジンがサポートされています:
 
-| Origin tag        | 説明                                                                                |
-| ----------------- | --------------------------------------------------------------------------------- |
-| 4D Component      | Built-in 4D component, stored in the `Components` folder of the 4D application    |
-| ソース               | Component declared in the [`dependencies.json`](#dependenciesjson) file           |
-| Environment       | Component declared in the [`environnement4d.json`](#environment4djson) file       |
-| Project Component | Component located in the [`Components`](architecture.md#components) legacy folder |
+| オリジンタグ        | 説明                                                              |
+| ------------- | --------------------------------------------------------------- |
+| 4Dコンポーネント     | 4Dアプリケーションの `Components` フォルダーに保存されているビルトインの 4Dコンポーネント          |
+| ソース           | [`dependencies.json`](#dependenciesjson) ファイルで宣言されているコンポーネント    |
+| 環境            | [`environment4d.json`](#environment4djson) ファイルで宣言されているコンポーネント  |
+| プロジェクトコンポーネント | [`Components`](architecture.md#components) フォルダー内に置かれているコンポーネント |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+依存関係の行で **右クリック** し、**ディスク上に表示** を選択すると、依存関係の保管場所が表示されます:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
 :::note
 
-This item is not displayed if the dependency is inactive because its files are not found.
+依存関係が非アクティブの場合は、ファイルが見つからないためこの項目は表示されません。
 
 :::
 
-### Dependency Status
+### 依存関係のフィルタリング
 
-A project dependency can have different status in the current configuration. You can filter dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+デフォルトでは、依存関係マネージャーによって識別されたすべての依存関係は、それらの [ステータス](#依存関係のステータス) に関係なくリストされます。 依存関係パネル上部のタブを選択することで、依存関係のステータスに応じてリストの表示をフィルタリングできます:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: the dependency is correctly loaded and can be used in the project.
-- **Inactive**: the dependency is not loaded in the project and is not available. There are many possible reasons for this status: conflict with another component (see below), missing files, version incompatibility...
-- **Conflict**: the dependency is loaded but is in conflict with at least one other dependency (same name at another location). Dependencies in conflict are grouped so that you can check the origin of the conflict and take appropriate actions.
+- **アクティブ**: プロジェクトに読み込まれ、使用できる依存関係。 実際にロードされた _Overloading_ な依存関係が含まれます。 _Overloaded_ である方の依存関係は、その他の競合している依存関係とともに **コンフリクト** パネルに表示されます。
+- **非アクティブ**: プロジェクトに読み込まれておらず、利用できない依存関係。 このステータスには様々な理由が考えられます: ファイルの欠落、バージョンの非互換性など…
+- **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 _Overloaded_ な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
 
-Dependencies requiring the developer's attention (**Inactive** and **Conflict**) are indicated by a label at the right side of the line and a specific background color:
+### 依存関係のステータス
+
+デベロッパーの注意を必要とする依存関係は、行の右側の **ステータスラベル** と背景色で示されます。
 
 ![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
-In case of inactive or conflict status, a tooltip is displayed when you hover over the dependency line, detailing the reason for this status:
+使用されるステータスラベルは次のとおりです:
+
+- **Overloaded**: 依存関係は読み込まれていません。より上位の [優先順位](#優先順位) において、同じ名前の依存関係がすでに読み込まれています。
+- **Overloading**: 依存関係は読み込まれていますが、下位の [優先順位](#優先順位) において読み込まれなかった同じ名前の依存関係が存在します。
+- **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
+- **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
+- **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
+
+依存関係の行にマウスオーバーするとツールチップが表示され、ステータスに関する追加の情報を提供します:
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)

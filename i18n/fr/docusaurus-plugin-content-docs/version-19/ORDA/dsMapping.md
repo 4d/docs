@@ -25,11 +25,11 @@ Les règles suivantes s'appliquent à toutes les conversions :
   * Tables avec clés primaires composites.
 * Les attributs de type [BLOB](Concepts/dt_blob.md) ne sont pas gérés dans le datastore. Les attributs de type BLOB sont retournés comme Null dans les entités et ne peuvent pas être affectés.
 
-> ORDA mapping does not take into account:  
+> La correspondance ORDA ne prend pas en compte :  
 > 
-> * the "Invisible" option for tables or fields,
+> * l'option "Invisible" pour les tables ou les champs,
 > * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
-> * the "Manual" or "Automatic" property of relations.
+> * la propriété "manuelle" ou "automatique" des relations.
 
 ### Règles de contrôle d'accès à distance
 

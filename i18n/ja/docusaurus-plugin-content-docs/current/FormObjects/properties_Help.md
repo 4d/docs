@@ -9,13 +9,13 @@ title: ヘルプ
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
+> - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips delay` および `Tips duration` セレクターを使用することで、Tips の表示遅延や最大表示時間を指定することができます。
 > - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips enabled` セレクターを使用することで、アプリケーション全体に対してヘルプTipsを有効化あるいは無効化することができます。
 
 これには、次の二つの方法があります:
 
 - 4D の [ヘルプTipエディター](https://doc.4d.com/4Dv18/4D/18/Help-tips.200-4575424.ja.html) であらかじめ作成したヘルプTip を指定します。
-- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) 参照)。
+- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 XLIFF参照を指定することで、アプリケーションの言語に応じたメッセージを表示させることができます (XLIFF についての詳細は [付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) を参照ください)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) 参照)。
 
 > macOS においては、Pop up window (32) 型のウィンドウはヘルプTips の表示ができません。
 
@@ -27,7 +27,17 @@ title: ヘルプ
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[階層リスト](list_overview.md) -
+[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
+[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[ラジオボタン](radio_overview.md)
 
 #### 追加のヘルプ機能
 
@@ -45,4 +55,4 @@ title: ヘルプ
 
 #### 参照
 
-[Placeholder](properties_Entry.md#placeholder)
+[プレースホルダー](properties_Entry.md#プレースホルダー)

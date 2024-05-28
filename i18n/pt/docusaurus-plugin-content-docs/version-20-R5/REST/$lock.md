@@ -3,7 +3,7 @@ id: lock
 title: $lock
 ---
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+Bloquea y desbloquea una entidad utilizando el [mecanismo pesimista](../ORDA/entities.md#pessimistic-lock).
 
 ## Sintaxe
 
@@ -23,21 +23,21 @@ The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session"
 
 ### Descrição
 
-The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
+Los bloqueos activados por la API REST se colocan al nivel de la [sesión](authUsers.md#opening-sessions).
 
-A locked entity is seen as _locked_ (i.e. lock / unlock / update / delete actions are not possible) by:
+Una entidad bloqueada se ve como _bloqueada_ (es decir, las acciones de bloqueo / desbloqueo / actualización / eliminación no son posibles) por:
 
 - outras sessões REST
 - Processos 4D (cliente/servidor, datastore remoto, autónomo) em execução no servidor REST.
 
 Uma entidade bloqueada pela API REST só pode ser desbloqueada:
 
-- by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
-- or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
+- por su bloqueador, es decir un `/?$lock=false` en la sesión REST que define `/?$lock=true`
+- o si el [timeout de inactividad]($directory.md) de la sesión se alcanza (la sesión se cierra).
 
 ### Resposta
 
-A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
+Una petición `?$lock` devuelve un objeto JSON con `"result"=true` si la operación de bloqueo se reutiliza y `"result"=false` si falla.
 
 O objeto "__STATUS" devolvido tem as seguintes propriedades:
 
@@ -65,7 +65,7 @@ O objeto "__STATUS" devolvido tem as seguintes propriedades:
 |              | recordNumber                        | number  | Número de registo do registo bloqueado                                                                                                                                                                                                                                                                                                                                                       |
 |              | userAgent                           | text    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
-The following values can be returned in the _status_ and _statusText_ properties of the ___STATUS_ object in case of error:
+Los siguientes valores pueden ser devueltos en las propiedade _status_ y _statusText_ del objeto ___STATUS_ en caso de error:
 
 | status | statusText                      | Comentário                                                                                                                                            |
 | ------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -41,11 +41,11 @@ In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifi�
 
 Each _dirty row_ object in the returned collection contains the following properties:
 
-| Propriété    | Type   | Description                        |
-| ------------ | ------ | ---------------------------------- |
-| item         | object | Objet modifié de la ligne modifiée |
-| originalItem | object | Objet avant modification           |
-| row          | entier | Index de la ligne modifiée         |
+| Propriété    | Type    | Description                        |
+| ------------ | ------- | ---------------------------------- |
+| item         | object  | Objet modifié de la ligne modifiée |
+| originalItem | object  | Objet avant modification           |
+| row          | integer | Index de la ligne modifiée         |
 
 If _tableName_ is not found or if it does not contain a modified column, the command returns an empty collection.
 

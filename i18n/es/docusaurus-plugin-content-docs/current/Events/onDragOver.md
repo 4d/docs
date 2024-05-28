@@ -9,22 +9,22 @@ title: On Drag Over
 
 ## Descripción
 
-The `On Drag Over` event is repeatedly sent to the destination object when the mouse pointer is moved over the object. Normalmente, en respuesta a este evento:
+El evento `On Drag Over` se envía repetidamente al objeto de destino cuando el puntero del ratón se mueve sobre el objeto. Normalmente, en respuesta a este evento:
 
-- Get the data and signatures found in the pasteboard (via the `GET PASTEBOARD DATA` command).
-- Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
+- Obtenga los datos y las firmas que se encuentran en portapapeles (mediante el comando `GET PASTEBOARD DATA`).
+- Según la naturaleza y el tipo de datos en el portapapeles, se **acepta** o **rechaza** el arrastrar y soltar.
 
-To **accept** the drag, the destination object method must return 0 (zero), so you write `$0:=0`.
-To **reject** the drag, the object method must return -1 (minus one), so you write `$0:=-1`.
-During an `On Drag Over` event, 4D treats the object method as a function. Si no se devuelve ningún resultado, 4D asume que el arrastre es aceptado.
+Para **aceptar** el arrastre, el método del objeto destino debe devolver 0 (cero), por lo que se escribe `$0:=0`.
+Para **rechazar** el arrastre, el método del objeto debe devolver -1 (menos uno), por lo que se escribe `$0:=-1`.
+Durante un evento `On Drag Over`, 4D trata el método objeto como una función. Si no se devuelve ningún resultado, 4D asume que el arrastre es aceptado.
 
 Si acepta el arrastre, el objeto de destino se resalta. Si rechaza el arrastre, el destino no se resalta. Aceptar el arrastre no significa que los datos arrastrados vayan a ser insertados en el objeto de destino. It only means that if the mouse button was released at this point, the destination object would accept the dragged data and the [`On Drop`](onDrop.md) event would be fired.
 
-If you do not process the `On Drag Over` event for a droppable object, that object will be highlighted for all drag over operations, no matter what the nature and type of the dragged data.
+Si no se procesa el evento `On Drag Over` para un objeto soltable, ese objeto será resaltado para todas las operaciones de arrastre, sin importar la naturaleza y el tipo de los datos arrastrados.
 
-The `On Drag Over` event is the means by which you control the first phase of a drag-and-drop operation. No sólo puede probar si los datos arrastrados son de un tipo compatible con el objeto de destino, y luego aceptar o rechazar el arrastre; puede notificar simultáneamente al usuario de este hecho, porque 4D resalta (o no) el objeto de destino, basándose en su decisión.
+El evento `On Drag Over` es el medio por el que se controla la primera fase de una operación de arrastrar y soltar. No sólo puede probar si los datos arrastrados son de un tipo compatible con el objeto de destino, y luego aceptar o rechazar el arrastre; puede notificar simultáneamente al usuario de este hecho, porque 4D resalta (o no) el objeto de destino, basándose en su decisión.
 
-The code handling an `On Drag Over` event should be short and execute quickly, because that event is sent repeatedly to the current destination object, due to the movements of the mouse.
+El código que maneja un evento `On Drag Over` debe ser corto y ejecutarse rápidamente, porque ese evento se envía repetidamente al objeto de destino actual, debido a los movimientos del ratón.
 
 #### Ver también
 
