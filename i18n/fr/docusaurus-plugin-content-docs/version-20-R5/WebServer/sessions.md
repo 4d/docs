@@ -98,7 +98,7 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 :::
 
-## Privileges
+## Privilèges
 
 Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
