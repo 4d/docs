@@ -7,7 +7,7 @@ title: Clases
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
+Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una clase puede [`extend`](#class-extends-classname) otra clase, y luego hereda sus [funciones](#function) y propiedades ([declaradas](#property) y [calculadas](#function-get-and-function-set)).
 
 > El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
@@ -60,7 +60,7 @@ Project folder Project Sources Classes Polygon.4dm
 Para eliminar una clase existente, puede:
 
 - en su disco, elimine el archivo de clase .4dm de la carpeta "Classes",
-- in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- en el Explorador 4D, seleccione la clase y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
 ### Utilizar la interfaz 4D
 
@@ -78,7 +78,7 @@ En la página **Métodos** del Explorador, las clases se agrupan en la categorí
 
 Para crear una nueva clase, puede:
 
-- select the **Classes** category and click on the ![](../assets/en/Users/PlussNew.png) button.
+- seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
 - seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
   ![](../assets/en/Concepts/newClass.png)
 - seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
@@ -111,7 +111,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 | ---------- | ------ | -- | ------------------------------------------------- | ---------------- |
 | classStore | Object | <- | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
-The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
+El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
 #### Ejemplo
 
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- | ---------------- |
 | classStore | Object | <- | Class store 4D | <!-- END REF --> |
 
-The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
+El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Ejemplo
 
@@ -257,7 +257,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
  $result:=$x+$y
 ```
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). Por ejemplo:
+También puedes declarar el parámetro de retorno añadiendo sólo `: type` y utilizar la [`expresión return`](parameters.md#return-expression) (también terminará la ejecución de la función). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -271,13 +271,13 @@ Function add($x : Variant; $y : Integer): Integer
 property name : Text
 property height; width : Integer
 
-// Class: Rectangle
+// Clase: Rectangle
 Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Definición de función
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -294,7 +294,7 @@ $area:=$rect.getArea() //5000
 
 #### Ejemplo 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Este ejemplo utiliza la [`expresión return`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -317,11 +317,11 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 
-When you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Cuando llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
-Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). A constructor can use the [`Super`](#super) keyword to call the constructor of the super class.
+Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). Un constructor puede utilizar la palabra clave [`Super`](#super) para llamar al constructor de la superclase.
 
-Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
+Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de las propiedades de instancia no dependen de los parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
 
 Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
@@ -355,7 +355,7 @@ La palabra clave`property` se puede utilizar para declarar una propiedad dentro 
 
 La declaración de propiedades de clase mejora las sugerencias del editor de código, las funciones de tecleo predictivo y la detección de errores.
 
-Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value).
+Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass. d#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
 
 :::note
 
@@ -419,11 +419,11 @@ Puede omitir el tipo en la línea de declaración, en cuyo caso el tipo se deduc
 property name : Text := "Smith"
 property age : Integer := 42
 
-property birthDate := !1988-09-29! //date is inferred
+property birthDate := !1988-09-29! //se deduce la fecha
 property fuzzy //variant
 ```
 
-When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+Cuando inicializa una propiedad en su línea de declaración, se agrega al objeto de la clase después de su instanciación con la función [`new()`](API/ClassClass.md#new) pero antes de llamar al constructor.
 
 Si una clase [extiende a](#class-extends-classname) otra, las propiedades de la clase padre se instancian antes que las propiedades de la clase hija.
 
@@ -484,7 +484,7 @@ El tipo de la propiedad calculada es definido por la declaración de tipo `$retu
 #### Ejemplo 1
 
 ```4d
-//Class: Person.4dm
+//Clase: Person.4dm
 property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
@@ -612,7 +612,7 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-// Class: Rectangle
+// Clase: Rectangle
 Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
@@ -622,7 +622,7 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// Definición de función
 Function getArea()
  var $0 : Integer
 
@@ -802,12 +802,12 @@ If a function defined inside a shared class modifies objects of the class, it sh
 Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
 ```4d
-	//shared class Foo
+//clase compartida Foo
 shared Class Constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no need to call use/end use
+  This.variable:=$value //no es necesario llamar use/end use
 ```
 
 :::note
