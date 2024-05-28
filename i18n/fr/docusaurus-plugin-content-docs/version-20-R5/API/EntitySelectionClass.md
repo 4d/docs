@@ -776,7 +776,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 | Paramètres | Type       |     | Description                                                             |
 | ---------- | ---------- | :-: | ----------------------------------------------------------------------- |
-| attribute  | Text       |  -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
+| attribut   | Text       |  -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
 | Résultat   | Collection |  <- | Nouvelle collection avec chemins distincts                              |
 
 <!-- END REF -->
