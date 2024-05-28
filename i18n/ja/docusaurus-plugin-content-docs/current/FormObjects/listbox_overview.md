@@ -102,6 +102,12 @@ LIST TO ARRAY("ListName";varCol)
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
+:::note
+
+When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+
+:::
+
 データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば [Collectionクラス](../API/CollectionClass.md) の様々な関数を使用して変更をおこなった場合、コレクション変数を自らに再代入することにより明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 例:
 
 ```4d
@@ -579,7 +585,7 @@ _UI_SetColor_ メソッドに次のように書けます:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // 背景色を緑にします
+    $color:=0x0080C080 // green background
  Else
     $color:=lk inherited
  End if
@@ -690,7 +696,7 @@ End if
 - 行属性について: 列の属性値を受け継ぎます
 - 列属性について: リストボックスの属性値を受け継ぎます
 
-このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます:
+このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 For example, given an array list box containing a standard font style with alternating colors:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 以下の変更を加えます:
@@ -1042,11 +1048,11 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
- ARRAY OBJECT(obColumn;0) // カラム配列
+ ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、 編集された値は$entry に格納されます
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -1165,7 +1171,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
-	OB SET($ob;"requiredListName";"colors")	
+	OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
