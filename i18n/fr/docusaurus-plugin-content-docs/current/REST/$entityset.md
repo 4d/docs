@@ -7,10 +7,10 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 ## Syntaxe
 
-| Syntaxe                                                                                                                                                                        | Exemple                                                                        | Description                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                                                                                          | `/People/$entityset/0ANUMBER`                                                  | Récupère un ensemble d'entités existant                                                      |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel ensemble d'entités à partir de la comparaison d'ensembles d'entités existants |
+| Syntaxe                                                                                                                                                                                  | Exemple                                                                      | Description                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un ensemble d'entités existant                                                      |
+| [**$entityset/{entitySetID}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crée un nouvel ensemble d'entités à partir de la comparaison d'ensembles d'entités existants |
 
 ## $entityset/{entitySetID}
 
@@ -22,7 +22,7 @@ Cette syntaxe vos permet d'exécuter toute opération sur un ensemble d'entités
 
 Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
+When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), or [`$top/$limit`]($top_$limit.md).
 
 ### Exemple
 
@@ -30,18 +30,18 @@ Après avoir créé un ensemble d'entités, l'ID de l'ensemble d'entités est re
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
-## $entityset/{entitySetID}?$operator...&$otherCollection
+## $entityset/{entitySetID}?$logicOperator...&$otherCollection
 
 Créez un autre ensemble d'entités basé sur des ensembles d'entités préalablement créés
 
 | Paramètres       | Type   | Description                                                           |
 | ---------------- | ------ | --------------------------------------------------------------------- |
-| $operator        | String | L'un des opérateurs logiques à tester avec l'autre ensemble d'entités |
+| $logicOperator   | String | L'un des opérateurs logiques à tester avec l'autre ensemble d'entités |
 | $otherCollection | String | ID de l'ensemble d'entités                                            |
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
 
 You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
 
