@@ -60,12 +60,12 @@ Un array siempre tiene un elemento cero. Aunque el elemento cero no se muestra c
 He aquí otro ejemplo: quiere inicializar un objeto de formulario con un valor texto pero sin definir un valor por defecto. Puede utilizar el elemento cero del array:
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // método para un combo box o una lista desplegable  
+  // vinculado al array de variables atName
  Case of
     :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+  // Inicializar el array (como se muestra más arriba)   
+  // Pero utiliza el elemento cero
 		ARRAY TEXT(atName;5)
 		atName{0}:=Please select an item"
 		atName{1}:="Text1"
@@ -73,7 +73,7 @@ He aquí otro ejemplo: quiere inicializar un objeto de formulario con un valor t
 		atName{3}:="Text3"
 		atName{4}:="Text4"
 		atName{5}:="Text5"
-	// Position the array to element 0
+	// Posicionar el array en el elemento 0
   		atName:=0
  End case
 ```
@@ -93,7 +93,7 @@ Los arrays de dos dimensiones son esencialmente objetos de lenguaje; no se puede
 En el ejemplo anterior:
 
 - atTopics es una array de dos dimensiones
-- atTopics{8}{5} is the 5th element (5th column...) de la 8ª fila
+- atTopics{8}{5} es el quinto elemento (quinta columna..) de la 8ª fila
 - atTopics{20} es la vigésima fila y es a su vez un array de una dimensión
 - `Tamaño del array(atTopics)` devuelve 100, que es el número de filas
 - `Tamaño de array(atTopics{17})` devuelve 50, que es el número de columnas de la línea 17
@@ -103,21 +103,21 @@ En el siguiente ejemplo, un puntero a cada campo de cada tabla de la base se alm
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Create as many rows (empty and without columns) as there are tables
+  // Crear tantas líneas (vacías y sin columnas) como tablas haya
  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
-  // For each table
+  ARRAY POINTER(<>apFields;$vlLastTable;0) //Array 2D con X líneas y cero columnas
+  // Para cada tabla
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
-  // Give value of elements
+       $vlLastField:=Obtener el número del último campo($vlTable)
+  // Dar valor a los elementos
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insert a column in a row of the table underway
-             INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Assign the "cell" with the pointer
+  //Inserta una columna en una línea de la tabla en curso
+                          INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
+  //Asignar la "celda" con el puntero
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -128,9 +128,9 @@ En el siguiente ejemplo, un puntero a cada campo de cada tabla de la base se alm
 Siempre que se haya inicializado este array de dos dimensiones, se pueden obtener los punteros a los campos de una tabla concreta de la siguiente manera:
 
 ```4d
-  // Get the pointers to the fields for the table currently displayed at the screen:
+  // Obtener los punteros a los campos para la tabla que se muestra actualmente en la pantalla:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  // Initialize Boolean and Date fields
+  // Inicializar los campos booleanos y de fecha
  For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
