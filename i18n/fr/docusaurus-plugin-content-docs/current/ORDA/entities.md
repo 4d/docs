@@ -164,9 +164,9 @@ Function createCompany($name : Text; $logo : 4D.File)
 	$company:=ds.Company.new()
 
 	$company.name:=$name
-		//assignment using a file object
+		//affectation en utilisant un objet file
 	$company.logo:=$logo
-		//assignment using a path
+		//affectation en utilisant un chemin
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
 	$company.save()
 ```
@@ -244,11 +244,17 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 - En utilisant l'une des différentes fonctions de la [classe Entity selection](API/EntitySelectionClass.md) qui retourne une nouvelle entity selection, comme [`.or()`](API/EntitySelectionClass.md#or) ;
 - En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
 
+:::note
+
+Vous pouvez filtrer les entités qui doivent être incluses dans les entity selections pour une dataclass en fonction de règles métier, grâce à la fonction d'[entity selection restreinte](#restricting-entity-selections).
+
+:::
+
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
 :::note
 
-Vous pouvez filtrer les entités qui doivent être incluses dans les entity selections pour une dataclass en fonction de règles métier, grâce à la fonction d'[entity selection restreinte](#restricting-entity-selections).
+When entities are deleted, their references remain in the entity selection with an _undefined_ value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
 
 :::
 
@@ -462,7 +468,7 @@ Pour des raisons de performances, nous recommandons d'utiliser les **attributs i
 The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
 
 - la fonction retourne **null**,
-- the function returns **undefined**,
+- la fonction retourne **undefined**,
 - the function does not return a valid entity selection.
 
 #### Exemple

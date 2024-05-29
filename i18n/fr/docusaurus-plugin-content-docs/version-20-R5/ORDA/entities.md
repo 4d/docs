@@ -162,9 +162,9 @@ Function createCompany($name : Text; $logo : 4D.File)
 	$company:=ds.Company.new()
 
 	$company.name:=$name
-		//assignment using a file object
+		//affectation en utilisant un objet file
 	$company.logo:=$logo
-		//assignment using a path
+		//affectation en utilisant un chemin
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
 	$company.save()
 ```
@@ -460,7 +460,7 @@ Pour des raisons de performances, nous recommandons d'utiliser les **attributs i
 The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
 
 - la fonction retourne **null**,
-- the function returns **undefined**,
+- la fonction retourne **undefined**,
 - the function does not return a valid entity selection.
 
 #### Exemple
