@@ -146,21 +146,21 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Un objeto clase tiene las siguientes propiedades y funciones:
 
 - cadena [`name`](API/ClassClass.md#name)
-- [`superclass`](API/ClassClass.md#superclass) objeto (null si no hay)
+- objeto [`superclass`](API/ClassClass.md#superclass) (null si no hay)
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase
-- [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
-- [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
-- [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
+- propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#clases-compartidas)
+- propiedad [`isSingleton`](API/ClassClass.md#issingleton), verdadero si la clase define una [clase singleton](#singleton-classes).
+- Propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
 
 Un objeto de clase en sí mismo es un [objeto compartido](shared.md) y, por tanto, se puede acceder a él desde diferentes procesos de 4D simultáneamente.
 
 ### Herencia
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass).
+Si una clase hereda de otra clase (es decir, se utiliza la palabra clave [Class extends](classes.md#class-extends-classname) en su definición), la clase padre es su [`superclass`](API/ClassClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Cuando 4D no encuentra una función o una propiedad en una clase, la busca en su [`superclass`](API/ClassClass.md#superclass); si no la encuentra, 4D sigue buscando en la superclase de la superclase, y así sucesivamente hasta que no haya más superclase (todos los objetos heredan de la superclase "Object").
 
 ## Palabras clave de clase
 
@@ -183,7 +183,7 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 
 Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md). En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function` seguida del nombre de la función.
 
-If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+Si la función se declara en una [clase compartida](#clases-compartidas), puede utilizar la palabra clave `shared` para que la función pueda ser llamada sin la estructura `Use...End use`. Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
 El nombre de la función debe ser compatible con las [reglas de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -473,9 +473,9 @@ En el archivo de definición de la clase, las declaraciones de propiedades calcu
 
 `Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
 
-Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. If only a `Function set` is defined, 4D returns _undefined_ when the property is read.
+Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. Si solo se define una `Función set`, 4D devuelve _undefined_ cuando se lee la propiedad.
 
-If the functions are declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin la estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
@@ -542,31 +542,31 @@ La extensión de clase debe respetar las siguientes reglas:
 
 La ruptura de tal regla no es detectada por el editor de código o el intérprete, solo el compilador y `comprobar sintaxis` arrojará un error en este caso.
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+Una clase extendida puede llamar al constructor de su clase padre utilizando el comando [`Super`](#super).
 
 #### Ejemplo
 
 Este ejemplo crea una clase llamada `Square` de una clase llamada `Polygon`.
 
 ```4d
-//Class: Square
+//Clase: Square
 
-//path: Classes/Square.4dm
+//ruta: Classes/Square.4dm
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+Llama al constructor de la clase padre con las longitudes
+ // suministradas para el ancho y alto del polígono
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // En las clases derivadas, Super debe ser llamado antes de 
+ // utilizar 'This'
  This.name:="Square"
 
 
 
- Function getArea() -> $area : Integer
+  Function getArea() -> $area : Integer
   $area:=This.height*This.width
 ```
 
@@ -583,7 +583,7 @@ Class constructor ($side : Integer)
 
 <!-- END REF -->
 
-The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
+La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a la `superclass`, es decir, la clase padre<!-- END REF -->.
 
 `Super` tiene dos propósitos diferentes:
 
@@ -693,7 +693,7 @@ $message:=$square.description() //tengo 4 lados iguales
 
 <!-- END REF -->
 
-The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
+La palabra clave `This` <!-- REF #_command_.This.Summary -->devuelve una referencia al objeto que se está procesando actualmente<!-- END REF -->.
 
 En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
@@ -704,7 +704,7 @@ $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Cuando se utiliza una [función constructora de clase](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` está vinculado al nuevo objeto que se está construyendo.
 
 ```4d
 //Class: ob
@@ -763,11 +763,11 @@ Varios comandos del lenguaje 4D permiten manejar las funcionalidades de las clas
 
 ## Clases compartidas
 
-Puede crear **clases compartidas**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. Una clase compartida sólo puede crear objetos compartidos.
+Puede crear **clases compartidas**. Una clase compartida es una clase usuario que instancia un [objeto compartido](shared.md) cuando se llama a la función [`new()`](../API/ClassClass.md#new) en la clase. Una clase compartida sólo puede crear objetos compartidos.
 
-Shared classes also support **shared functions** that can be called without [`Use...End use`](shared.md#useend-use) structures.
+Las clases compartidas también admiten **funciones compartidas** que pueden llamarse sin estructuras [`Use...End use`](shared.md#useend-use).
 
-The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allows to know if the class is shared.
+La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la Clase permite saber si la clase está compartida.
 
 :::info
 
@@ -797,7 +797,7 @@ cs.Person.isShared //true
 
 ### Funciones compartidas
 
-If a function defined inside a shared class modifies objects of the class, it should call [`Use...End use`](shared.md#useend-use) structure to protect access to the shared objects. Sin embargo, para simplificar el código, puede definir la función como **compartida**, de modo que active automáticamente un `Use...End use` interno cuando se ejecute.
+Si una función definida al interior de una clase compartida modifica objetos de la clase, debería llamar a la estructura [`Use...End use`](shared.md#useend-use) para proteger el acceso a los objetos compartidos. Sin embargo, para simplificar el código, puede definir la función como **compartida**, de modo que active automáticamente un `Use...End use` interno cuando se ejecute.
 
 Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
@@ -820,13 +820,13 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. The instantiated class singleton is then always returned when the [`me`](../API/ClassClass.md#me) property is used.
+La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
-If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
+Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
 El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. Un singleton _process_ tiene un valor único para el proceso en el que se instancia, mientras que un singleton _interprocess_ tiene un valor único para todos los procesos de la aplicación. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
 
-The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
+La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
 
 :::info
 
@@ -836,7 +836,7 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 ### Creación de un singleton process
 
-To create a process singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
+Para crear una clase singleton de proceso, añada la palabra clave `singleton` antes del [`Constructor de Clase`](#class-constructor). Por ejemplo:
 
 ```4d
 	//class: ProcessTag
@@ -847,9 +847,9 @@ singleton Class Constructor()
 Para utilizar el singleton process:
 
 ```4d
-	//in a process
-var $mySingleton := cs.ProcessTag.me //First instantiation
-	//$mySingleton.tag = 5425 for example  
+	//en otro proceso
+var $mySingleton := cs.ProcessTag.me //Primera instanciación
+	//$mySingleton.tag = 5425 por ejemplo  
 ...  
 var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 5425
@@ -857,9 +857,9 @@ var $myOtherSingleton := cs.ProcessTag.me
 ```
 
 ```4d
-	//in another process
-var $mySingleton := cs.ProcessTag.me //First instantiation
-	//$mySingleton.tag = 14856 for example  
+	//en otro proceso
+var $mySingleton := cs.ProcessTag.me //Primera instanciación
+	//$mySingleton.tag = 14856 por ejemplo  
 ...  
 var $myOtherSingleton := cs.ProcessTag.me  
 	//$myOtherSingleton.tag = 14856
@@ -875,7 +875,7 @@ Para crear un singleton interprocess, añada las palabras claves `shared singlet
 property vehicleBuilt : Integer
 
 shared singleton Class constructor()
-  This.vehicleBuilt := 0 //Number of vehicles built by the factory
+  This.vehicleBuilt := 0 //Número de vehículos construidos por la fábrica
 
 shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
 
