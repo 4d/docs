@@ -11,11 +11,6 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
-:::note
-
-4D View Pro areas behavior can be impacted by custom web areas configuration file [4DCEFParameters.json](../FormObjects/webAreaOverview#4dcefparametersjson).
-
-:::
 
 ### Selecting a user interface
 

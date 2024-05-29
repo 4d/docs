@@ -224,17 +224,18 @@ When you have done the settings as described above, you then have new options su
 
 The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications. 
 
-A [default 4DCEFParameters.json file](#default-file) is provided in the Resources folder of the 4D application. 
+[Default switches](#default-file) are provided, but you can override them by using a custom 4DCEFParameters.json file.
 
-You can override the default switches by creating a custom 4DCEFParameters.json file at the following location:
+In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
 
 * Windows: `Users\[userName]\AppData\Roaming\4D\4DCEFParameters.json`
 * macOS: `$HOME/Library/Application Support/4D/4DCEFParameters.json`
 
+Before building a final application, add the custom 4DCEFParameters.json file to the Resources folder of the project.
 
-:::note
+:::warning
 
-Creating a custom 4DCEFParameters.json file can impact [4D View Pro areas](../ViewPro/configuring.md#form-area-properties)
+Adding a custom 4DCEFParameters.json file can fundamentally impact all 4D embedded web areas, including [4D View Pro areas](../ViewPro/configuring.md#form-area-properties). It is the developer's responsibility to ensure that the custom switches do not destabilize the 4D application.
 
 :::
 
@@ -267,9 +268,9 @@ The 4DCEFParameters.json file structure contains:
 
 The switches in the custom file take precedence. In case of duplication of switches within the same file, the switches defined in the platform-specific subsection ("macOS.switches" or "windows.switches") are given priority and used for configuration.
 
-:::note
+:::note 
 
-In a built application, the custom 4DCEFParameters.json file is to be added to the Resources folder of the project.
+The list of supported switches is constantly evolving and is managed by the CEF development team. For information about available switches, you need to refer to the CEF developer community.
 
 :::
 
@@ -277,7 +278,7 @@ In a built application, the custom 4DCEFParameters.json file is to be added to t
 
 #### Default file
 
-A default 4DCEFParameters.json file is provided in the Resources folder of the 4D application and contains the following:
+The default 4DCEFParameters.json file contains the following switches:
 
 ```json
 {
@@ -303,7 +304,7 @@ A default 4DCEFParameters.json file is provided in the Resources folder of the 4
 
 ```json
 {
-  "Switches": {
+  "switches": {
     "disable-javascript": true,
     "disable-web-security": true
   }
@@ -320,6 +321,9 @@ A default 4DCEFParameters.json file is provided in the Resources folder of the 4
 }
 ```
 
+### See also
+
+[Specify your own parameters to initialize the embedded web area (blog post)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area) 
 
 
 
