@@ -48,7 +48,7 @@ SET USER ALIAS(Current system user)
 
 ### Protection des accès
 
-#### Privileges
+#### Privilèges
 
 Sur une machine partagée par plusieurs utilisateurs, vous pouvez installer l'application 4D dans un dossier et octroyer les privilèges d'accès utilisateur appropriés au dossier au niveau de l'OS.
 

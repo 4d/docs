@@ -17,6 +17,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)<br/><!-- INCLUDE #EntitySelectionClass.at().Summary -->                                                                |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<br/><!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.clean().Syntax -->](#clean)<br/><!-- INCLUDE #EntitySelectionClass.clean().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
@@ -507,6 +508,58 @@ Nous voulons obtenir la liste des employés dont le salaire est supérieur au sa
 
 <!-- END REF -->
 
+<!-- REF EntitySelectionClass.clean().Desc -->
+
+## .clean()
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R6   | Ajout         |
+
+</details>
+
+<!-- REF #EntitySelectionClass.clean().Syntax -->**.clean**() : 4D.EntitySelection<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.clean().Params -->
+
+| Paramètres | Type                               |     | Description                                   |
+| ---------- | ---------------------------------- | :-: | --------------------------------------------- |
+| Résultat   | 4D.EntitySelection |  <- | New entity selection without deleted entities |
+
+<!-- END REF -->
+
+#### Description
+
+The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
+
+By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become _undefined_ but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing _undefined_ entity references.
+
+The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+
+#### Exemple
+
+```4d
+var $sel; $sel2 : cs.SpecialitySelection
+var $status : Object
+
+$sel:=ds.Speciality.query("ID <= 4")
+$status:=ds.Speciality.get(2).drop() //delete the entity from the dataclass
+  //$sel.length = 4
+
+$sel2:=$sel.clean()
+  //$sel2.length = 3
+```
+
+![](../assets/en/API/clean.png)
+
+#### Voir également
+
+[`.refresh()`](#refresh)
+
+<!-- END REF -->
+
 <!-- REF EntitySelectionClass.contains().Desc -->
 
 ## .contains()
@@ -776,7 +829,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 | Paramètres | Type       |     | Description                                                             |
 | ---------- | ---------- | :-: | ----------------------------------------------------------------------- |
-| attribute  | Text       |  -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
+| attribut   | Text       |  -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
 | Résultat   | Collection |  <- | Nouvelle collection avec chemins distincts                              |
 
 <!-- END REF -->
@@ -1889,7 +1942,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings p
 
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
-La fonction `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->"invalide" immédiatement les données de l'entity selection dans le cache local d'ORDA<!-- END REF --> de sorte que, la prochaine fois que 4D accède à l'entity selection, elle soit rechargée à partir de la base.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 Par défaut, le cache local d'ORDA est invalidé après 30 secondes. Dans le contexte des applications client/serveur à l'aide d'ORDA et du langage classique, cette fonction vous permet d'être certain que l'application distante fonctionne toujours avec les données les plus récentes.
 
@@ -1940,6 +1993,10 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
  Form.students.refresh() // Invalide le cache ORDA pour l'entity selection Form.students
   // Le contenu de la list box est rafraîchi à partir de la base avec les mises à jour effectuées par le client #2
 ```
+
+#### Voir également
+
+[`.clean()`](#clean)
 
 <!-- END REF -->
 

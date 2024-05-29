@@ -9,14 +9,15 @@ Devolve informação sobre os conjuntos de entidades armazenados atualmente na c
 
 Ao chamar este pedido para o seu projeto, recupera informações nas seguintes propriedades:
 
-| Propriedade    | Tipo       | Descrição                                                                                          |
-| -------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| cacheSize      | Number     | Tamanho da cache do servidor 4D.                                                   |
-| usedCache      | Number     | Quanto do cache do 4D Server foi usado.                                            |
-| entitySetCount | Number     | Número de selecções de entidades.                                                  |
-| entitySet      | Collection | Uma coleção em que cada objeto contém informações sobre cada seleção de entidades. |
-| ProgressInfo   | Collection | Uma coleção que contém informações sobre os indicadores de progresso.              |
-| sessionInfo    | Collection | Uma coleção em que cada objeto contém informações sobre cada sessão de usuário.    |
+| Propriedade    | Tipo       | Descrição                                                                                                                                                                                                                       |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | Tamanho da cache do servidor 4D.                                                                                                                                                                                |
+| usedCache      | Number     | Quanto do cache do 4D Server foi usado.                                                                                                                                                                         |
+| entitySetCount | Number     | Número de selecções de entidades.                                                                                                                                                                               |
+| entitySet      | Collection | Uma coleção em que cada objeto contém informações sobre cada seleção de entidades.                                                                                                                              |
+| ProgressInfo   | Collection | Uma coleção que contém informações sobre os indicadores de progresso.                                                                                                                                           |
+| sessionInfo    | Collection | Uma coleção em que cada objeto contém informações sobre cada sessão de usuário.                                                                                                                                 |
+| privileges     | Object     | An object with a "privileges" property (collection of objects). Each object of the collection has a "privilege" property with a privilege name of the user session as value. |
 
 ### entitySet
 
@@ -87,7 +88,8 @@ entitySet: [
         refreshed: "2011-11-18T10:24:24Z",
         expires: "2011-11-18T12:24:24Z"
     }
-], ProgressInfo: [
+],
+ProgressInfo: [
     {
         UserInfo: "flushProgressIndicator",
         sessions: 0,
@@ -99,7 +101,7 @@ entitySet: [
         percent: 0
     }
 ],
-sessionInfo: [ 
+sessionInfo: [
     {
         sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
         userID: "36713176D42DB045B01B8E650E8FA9C6",

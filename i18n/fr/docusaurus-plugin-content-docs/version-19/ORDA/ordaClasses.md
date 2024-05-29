@@ -5,7 +5,7 @@ title: Classes du modèle de données
 
 
 
-ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les sélections d'entités et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
+ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
 Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
@@ -61,9 +61,9 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                                      |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| 18 R5   | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| Release | Modifications                                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 18 R5   | Les fonctions des classes du modèle de données ne sont pas exposées par défaut en REST. Nouveaux mots-clés `exposed` et `local`. |
 </details>
 
 ### Classe DataStore
@@ -193,7 +193,7 @@ Vous pouvez alors obtenir les employés dont le salaire est supérieur à la moy
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
-### Entity Class
+### Classe Entity
 
 Chaque table exposée avec ORDA affiche une classe Entity dans le class store `cs`.
 

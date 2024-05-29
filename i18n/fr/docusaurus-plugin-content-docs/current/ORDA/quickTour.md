@@ -7,7 +7,7 @@ title: Tour d'horizon d'ORDA
 
 ## Explorer le datastore
 
-The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
+Le datastore ORDA est automatiquement basé sur une structure de base de données 4D, à condition qu'elle soit conforme aux [prérequis d'ORDA](overview.md#orda-prerequisites).
 
 Cet exemple utilisera la structure de base de données 4D simple suivante :
 
@@ -20,8 +20,8 @@ TRACE
 ```
 
 Exécutez la méthode - elle appelle simplement la fenêtre du débogueur.
-In the Expression area, double-click to insert an expression and enter `ds`. Elle retourne l'objet du datastore.
-Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Dans la zone d'Expression, double-cliquez pour insérer une expression et entrez `ds`. Elle retourne l'objet du datastore.
+Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet `ds` :
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -31,11 +31,11 @@ Cela signifie par exemple que, chaque fois que vous avez besoin de vous référe
 ds.Company.city // retourne le nom de la ville
 ```
 
-> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
+> Dans le monde d'ORDA, ds.Company est une **dataclass**. ds.Company.city est un **attribut**.
 
-> ORDA est sensible à la casse. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA est sensible à la casse. `ds.company.city` ne fera pas référence à l'attribut ds.Company.city.
 
-You have also noticed the extra `hires` property in the ds.Company dataclass. Cela ne correspond pas à un champ. `hires` is actually the name of the _One to many_ relation between Company and Employee:
+Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation _1 vers N_ entre Company et Employee :
 
 ![](../assets/en/ORDA/struc2s.png)
 _Name of the relation as defined in the Inspector_
@@ -50,9 +50,9 @@ Mais n'allez pas trop vite. Voyons maintenant comment enregistrer des données d
 
 ## Ajouter des données
 
-In ORDA, you can add a record to a dataclass using the `new()` command.
+Avec ORDA, vous pouvez ajouter un enregistrement à une dataclass à l'aide de la commande `new()`.
 
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+> Dans le monde d'ORDA, un enregistrement est une **entité** (entity) - une entité est elle-même un objet. Une commande attachée à un objet spécifique est appelée une **méthode membre**.
 
 ```code4d
 $entity:=ds.Company.new() //créer une nouvelle référence d'entité
@@ -68,7 +68,7 @@ $entity.city:="London"
 //$entity.ID is automatically filled
 ```
 
-Pour le moment, l'entité n'existe qu'en mémoire. To store it in the data file, you need to save it using the `save()` member method:
+Pour le moment, l'entité n'existe qu'en mémoire. Pour la stocker dans le fichier de données, vous devez l'enregistrer à l'aide de la méthode membre `save()` :
 
 ```code4d
 $status:=$entity.save()

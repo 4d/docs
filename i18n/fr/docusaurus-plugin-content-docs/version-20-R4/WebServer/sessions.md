@@ -76,7 +76,7 @@ Lorsqu'une session Web évolutive est fermée, si la commande [`Session`](API/Se
 - a new session cookie is associated to the session
 
 
-## Privileges
+## Privilèges
 
 Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 

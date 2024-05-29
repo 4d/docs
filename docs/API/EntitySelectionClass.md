@@ -18,6 +18,7 @@ Entity selections can be created from existing selections using various function
 |[<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)<br/><!-- INCLUDE #EntitySelectionClass.at().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<br/><!-- INCLUDE #EntitySelectionClass.average().Summary -->|
+|[<!-- INCLUDE #EntitySelectionClass.clean().Syntax -->](#clean)<br/><!-- INCLUDE #EntitySelectionClass.clean().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->|
@@ -301,6 +302,7 @@ The resulting object is an entity selection of Employee with duplications remove
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
 |Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
+
 <!-- END REF -->
 
 
@@ -535,6 +537,60 @@ We want to obtain a list of employees whose salary is higher than the average sa
 ```
 
 <!-- END REF -->
+
+
+<!-- REF EntitySelectionClass.clean().Desc -->
+## .clean()   
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R6|Added|
+
+</details>
+
+<!-- REF #EntitySelectionClass.clean().Syntax -->**.clean**() : 4D.EntitySelection<!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.clean().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.EntitySelection|<-|New entity selection without deleted entities|
+<!-- END REF -->
+
+#### Description
+
+The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
+
+By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become *undefined* but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing *undefined* entity references.
+
+The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+
+
+#### Example   
+
+```4d
+var $sel; $sel2 : cs.SpecialitySelection
+var $status : Object
+
+$sel:=ds.Speciality.query("ID <= 4")
+$status:=ds.Speciality.get(2).drop() //delete the entity from the dataclass
+  //$sel.length = 4
+
+$sel2:=$sel.clean()
+  //$sel2.length = 3
+```
+
+![](../assets/en/API/clean.png)
+
+
+#### See also
+
+[`.refresh()`](#refresh)
+
+<!-- END REF -->
+
 
 
 
@@ -1953,7 +2009,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 >This function only works with a remote datastore (client / server or `Open datastore` connection).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
@@ -2006,6 +2062,9 @@ A list box displays the Form.students entity selection and several clients work 
   // The list box content is refreshed from the database with update made by client #2
 ```
 
+#### See also
+
+[`.clean()`](#clean)
 
 <!-- END REF -->
 
