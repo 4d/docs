@@ -48,14 +48,14 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant can be used to declare method parameters ($0, $1,...) that can be of various types. Neste caso, pode construir o seu código testando, por exemplo, o tipo de valor do parâmetro:
+Variant can be used to declare [method parameters](parameters.md) that can be of various types. Neste caso, pode construir o seu código testando, por exemplo, o tipo de valor do parâmetro:
 
 ```4d
-C_VARIANT($1)
+#DECLARE ($param : Variant)
 Case of
-: (Value type($1)=Is longint)
+: (Value type($param)=Is longint)
 ...
-: (Value type($1)=Is text)
+: (Value type($param)=Is text)
 ...
 End case
 ```
