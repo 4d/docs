@@ -57,7 +57,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 | Lanzamiento | Modificaciones              |
 | ----------- | --------------------------- |
-| 19 R8       | Support of `fk home folder` |
+| 19 R8       | Soporte de `fk home folder` |
 | 17 R5       | Añadidos                    |
 
 </details>
@@ -294,7 +294,7 @@ When `Delete only if empty` is passed or if you omit the option parameter:
 - La carpeta sólo se elimina si está vacía; en caso contrario, el comando no hace nada y se genera un error -47.
 - Si la carpeta no existe, se genera el error -120.
 
-When `Delete with contents` is passed:
+Cuando se pasa `Delete with contents`:
 
 - La carpeta, junto con todo su contenido, se elimina.
   **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
@@ -424,7 +424,7 @@ The _newName_ parameter must comply with naming rules (e.g., it must not contain
 
 **Objeto devuelto**
 
-The renamed `Folder` object.
+El objeto `Folder` renombrado.
 
 #### Ejemplo
 
