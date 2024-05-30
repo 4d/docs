@@ -13,9 +13,9 @@ Cadena es un término genérico utilizado para:
 Una constante literal de tipo cadena se encierra entre comillas dobles y rectas ("..."). Estos son algunos ejemplos:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Añadir Registros"
+"No se han encontrado registros."
+"Factura"
 ```
 
 Una cadena vacía se especifica con dos comillas sin nada entre ellas ("").
@@ -111,8 +111,8 @@ Por otro lado, sea cual sea el caso, una comparación de cadenas con dos comodin
 Cuando el operador de comparación es o contiene un símbolo < o >, sólo se soporta la comparación con un único comodín situado al final del operando:
 
 ```4d
-     "abcd"<="abc@" // Valid comparison
-     "abcd"<="abc@ef" //Not a valid comparison
+     "abcd"<="abc@" // Comparación válida
+     "abcd"<="abc@ef" //No es una comparación válida
 ```
 
 Si desea ejecutar comparaciones o consultas utilizando @ como carácter (y no como comodín), debe utilizar la instrucción `Character code(At sign)`. Imagine, por ejemplo, que quiere saber si una cadena termina con el carácter @. La siguiente expresión (si $vsValue no está vacío) es siempre `TRUE`:
@@ -143,7 +143,7 @@ A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave 
 
 > **Notas:**
 >
-> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas implementadas, por favor consulte la siguiente dirección: http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - En la versión japonesa, en lugar de ICU, 4D utiliza por defecto Mecab para detectar las palabras claves.
 
 ## Símbolos de indice de cadena
@@ -163,14 +163,14 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//El siguiente ejemplo prueba si el último carácter de vtText es una arroba "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
  
-  //Using the character reference syntax, you would write in a simpler manner:
+  //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -187,7 +187,7 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 - Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. Por ejemplo, ejecutando el siguiente código:
 
 ```
-//Very bad and nasty thing to do, boo!
+//Muy mala y desagradable cosa que hacer, ¡buu!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
@@ -201,7 +201,7 @@ provocará el error de tiempo de ejecución que se muestra aquí:
 El siguiente método proyecto pone en mayúsculas el primer carácter de cada palabra del texto recibido como parámetro y devuelve el texto resultante en mayúsculas:
 
 ```4d
-  //Capitalize_text project method
+  //Método proyecto Capitalize_text
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
  
