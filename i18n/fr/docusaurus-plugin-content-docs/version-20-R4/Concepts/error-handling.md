@@ -10,7 +10,7 @@ La gestion des erreurs répond à deux besoins principaux :
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
 
-Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error.
+Fondamentalement, il y a deux façons de gérer les erreurs en 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error.
 
 :::tip Bonne pratique
 
@@ -122,7 +122,7 @@ ON ERR CALL("errorMethod")
 
 ### Utiliser une méthode de gestion des erreurs vide
 
-Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
+Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide
@@ -161,7 +161,7 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 
 ### Exemples
 
-1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. Vous pouvez écrire :
+1. Vous voulez afficher le contenu d'un fichier si le fichier peut être ouvert sans erreur, et si son contenu peut être lu. Vous pouvez écrire :
 
 ```4d
 var $text : Text
@@ -173,7 +173,7 @@ End if
 ```
 
 
-2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+2. Vous voulez gérer la division par zéro. Dans ce cas, vous voulez retourner 0 et générer une erreur:
 
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
