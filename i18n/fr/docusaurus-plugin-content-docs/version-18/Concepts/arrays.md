@@ -76,7 +76,7 @@ Voici un autre exemple : vous souhaitez initialiser un objet de formulaire avec 
  End case
 ```
 
-(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
+(*) Cependant, il y a une exception : dans un tableau de type List Box, l'élément zéro est utilisé en interne pour stocker la valeur précédente d'un élément en cours d'édition, il n'est donc pas possible de l'utiliser dans ce contexte particulier.
 
 
 ## Tableaux à deux dimensions
