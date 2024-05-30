@@ -290,7 +290,7 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 
 |                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
 | ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
-| Type Elément_courant                      | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
+| Type Current_Item                         | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
 | Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Object                        |
 | Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
 | Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
@@ -310,7 +310,7 @@ La collection doit contenir uniquement des éléments du même type. Dans le cas
 
 A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- If the _Current_Item_ variable is of the object type or collection type (i.e. Si la variable est de type scalaire, seule la variable sera modifiée.
 - If the _Current_Item_ variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable _Elément_courant_ ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
@@ -390,9 +390,9 @@ Vous pouvez écrire :
     "age": 20
 }
 ```
-### Paramètres début / fin
+### Paramètres begin / end
 
-Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.
+Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels begin et end.
 
 **Note :** Les paramètres *début* et *fin* sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).
 
