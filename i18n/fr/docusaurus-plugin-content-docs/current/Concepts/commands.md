@@ -7,8 +7,8 @@ Le langage 4D contient un grand nombre de commandes intégrées, permettant au d
 
 Les commandes 4D sont divisées en deux catégories :
 
-- **class functions**, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
-- **stand-alone commands**, grouped by themes. These commands are described in the _4D Language Reference_ on [doc.4d.com](https://doc.4d.com). Pour référence, elles sont énumérées ci-dessous :
+- **les fonctions de classe**, qui sont des API des classes intégrées 4D. Ces fonctions sont décrites dans la section [Class API Reference](../API/overview).
+- **des commandes autonomes**, regroupées par thèmes. Ces commandes sont décrites dans le manuel _4D Language Reference_ sur [doc.4d.com](https://doc.4d.com). Pour référence, elles sont énumérées ci-dessous :
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -558,8 +558,7 @@ Nom (numéro)
 
 <a name="K"><b>K</b></a>
 
-[Keystroke](https://doc.4d.com/4dv20/help/command/en/page390.html) (390) -
-[KILL WORKER](https://doc.4d.com/4dv20/help/command/en/page1390.html) (1390) -
+[Keystroke](https://doc.4d.com/4dv20/help/command/en/page390.html) (390) - [KILL WORKER](https://doc.4d.com/4dv20/help/command/en/page1390.html) (1390) -
 
 <a name="L"><b>L</b></a>
 
@@ -1425,5 +1424,4 @@ Nom (numéro)
 
 <a name="Z"><b>Z</b></a>
 
-[ZIP Create archive](https://doc.4d.com/4dv20/help/command/en/page1640.html) (1640) -
-[ZIP Read archive](https://doc.4d.com/4dv20/help/command/en/page1637.html) (1637) -
+[ZIP Create archive](https://doc.4d.com/4dv20/help/command/en/page1640.html) (1640) - [ZIP Read archive](https://doc.4d.com/4dv20/help/command/en/page1637.html) (1637) -
