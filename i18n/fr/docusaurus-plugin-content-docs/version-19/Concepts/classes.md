@@ -10,7 +10,7 @@ Le langage 4D prend en charge le concept de **classes**. Dans un langage de prog
 
 Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses fonctions.
 
-> Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
+> Les modèles de classe 4D et JavaScript sont similaires, et basés sur une chaîne de prototypes.
 
 Par exemple, vous pouvez créer une classe `Person` avec la définition suivante :
 
@@ -94,7 +94,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 ## Class stores
 
-Les classes disponibles sont accessibles depuis leurs class stores. Deux class stores sont disponibles :
+Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
 - `cs` pour le class store utilisateur
 - `4D` pour le class store intégré
