@@ -108,10 +108,10 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20 R4       | New _passwordAlgorithm_ property |
-| 18          | Añadidos                         |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 20 R4       | Nueva propiedad _passwordAlgorithm_ |
+| 18          | Añadidos                            |
 
 </details>
 
@@ -898,7 +898,7 @@ When this function is not called, new entity selections can be shareable, depend
 
 The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
 
-> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
+> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) es devuelto. Use the `Data file encryption status` command to determine if the database is encrypted.
 > - The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
 
 If you use the _curPassPhrase_ parameter, pass the string used to generate the data encryption key. Cuando se utiliza este parámetro, se genera una llave de encriptación.
