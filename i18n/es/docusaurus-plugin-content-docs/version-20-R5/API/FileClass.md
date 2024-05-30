@@ -59,10 +59,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                      |
-| ----------- | ----------------------------------- |
-| 19 R4       | New `HTTP Client log file` constant |
-| 17 R5       | Añadidos                            |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 19 R4       | Nueva constante `HTTP Client log file` |
+| 17 R5       | Añadidos                               |
 
 </details>
 
@@ -498,13 +498,13 @@ If you use the _mode_ (text) parameter, pass the opening mode for the file handl
 | "write"  | Crea un file handle para escribir valores en el archivo (empezando por el inicio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "write" en el mismo objeto File.     |
 | "append" | Crea un file handle para escribir los valores en el archivo (empezando por el final del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "append" en el mismo objeto File. |
 
-> The _mode_ value is case sensitive.
+> El valor de _mode_ es sensible a las mayúsculas y minúsculas.
 
 If you use the _options_ (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
 | _opciones_        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `.mode`           | Text           | Opening mode (see _mode_ above)                                                                                                                                  | "read"       |
+| `.mode`           | Text           | Modo de apertura (ver _mode_ arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
 | `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                                           | "native" o 1 |
 | `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                                    | "native" o 1 |
