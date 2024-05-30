@@ -94,7 +94,7 @@ Une sélection d'entités contient :
 
 Une sélection d'entités peut également être vide.
 
-## Generic class
+## Classe générique
 
 Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
 
