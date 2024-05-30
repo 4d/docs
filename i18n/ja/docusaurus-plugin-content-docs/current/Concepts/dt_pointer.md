@@ -85,16 +85,12 @@ $MyVar:="Goodbye"
  vPtrC:=->anotherObject
 ```
 
-| 演算  | シンタックス            | 戻り値     | 式             | 値    |
-| --- | ----------------- | ------- | ------------- | ---- |
-| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | true |
-
-```
-	|	|||vPtrA = vPtrC	|False|
-```
-
-|異なる	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
-||||			vPtrA # vPtrB	|False|
+| 演算  | シンタックス            | 戻り値     | 式             | 値     |
+| --- | ----------------- | ------- | ------------- | ----- |
+| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | true  |
+|     |                   |         | vPtrA = vPtrC | false |
+| 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
+|     |                   |         | vPtrA # vPtrB | false |
 
 ## ポインターの使用例
 
