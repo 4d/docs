@@ -1,6 +1,6 @@
 ---
 id: date-time-formats
-title: Date and Time Formats
+title: Formatos fecha y hora
 ---
 
 A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valores de fecha y/u hora en función de las especificidades de la aplicación, la plataforma o la interfaz.
@@ -95,7 +95,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         | Zona horaria: ISO8601 hm extendido, sin Z                | xxx          | -08:00                                                |
 |         | Zona horaria: ISO8601 hms básico, sin Z                  | xxxx         | -0800, -075258                                                        |
 |         | Time Zone: ISO8601 extended hms?, without Z              | xxxxx        | -08:00, -07:52:58     |
-| O       | Time Zone: short localized GMT                           | O            | GMT-8                                                                 |
+| O       | Zona horaria: GMT localizada abreviada                   | O            | GMT-8                                                                 |
 |         | Time Zone: long localized GMT (=ZZZZ) | OOOO         | GMT-08:00                                             |
 | z       | Zona horaria: no específica                              | z, zz, o zzz | -0800                                                                 |
 |         |                                                                          | zzzz         | GMT-08:00                                             |
