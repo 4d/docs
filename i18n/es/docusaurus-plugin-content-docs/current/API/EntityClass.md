@@ -359,7 +359,7 @@ The object returned by `.drop( )` contains the following properties:
 | Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                              |
 | --------------------------------- | ----------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success                           |                                     | boolean               | true si la acción de soltar tiene éxito, false en caso contrario.                                                                                                                        |
-|                                   |                                     |                       | _**Available only in case of error:**_                                                                                                                                                   |
+|                                   |                                     |                       | _**Disponible sólo en caso de error:**_                                                                                                                                                  |
 | status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                               |
 | statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                         |
 |                                   |                                     |                       | _**Available only in case of pessimistic lock error:**_                                                                                                                                  |
@@ -971,7 +971,7 @@ The object returned by `.lock()` contains the following properties:
 | success                           |                                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                                                                                                                                                                                                        |
 |                                   |                                     |                       | _**Available only if `dk reload if stamp changed` option is used:**_                                                                                                                                                                                                                                                                                                  |
 | **wasReloaded**                   |                                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                                                                                                                                                                                                                                  |
-|                                   |                                     |                       | _**Available only in case of error:**_                                                                                                                                                                                                                                                                                                                                |
+|                                   |                                     |                       | _**Disponible sólo en caso de error:**_                                                                                                                                                                                                                                                                                                                               |
 | status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                                                                                                                                                                                                            |
 | statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                                                                                                                                                                                                      |
 |                                   |                                     |                       | _**Available only in case of pessimistic lock error:**_                                                                                                                                                                                                                                                                                                               |
@@ -1235,7 +1235,7 @@ The object returned by `.save()` contains the following properties:
 | success      |                                     | boolean               | True si la acción guardar tiene éxito, false en caso contrario.                                                                                                                            |
 |              |                                     |                       | _**Available only if `dk auto merge` option is used**_:                                                                                                                                    |
 | autoMerged   |                                     | boolean               | True si se ha realizado una fusión automática, False en caso contrario.                                                                                                                    |
-|              |                                     |                       | _**Available only in case of error**_:                                                                                                                                                     |
+|              |                                     |                       | _**Disponible sólo en caso de error**_:                                                                                                                                                    |
 | status       |                                     | number                | Error code, [see below](#status-and-statustext)                                                                                                                                                            |
 | statusText   |                                     | text                  | Description of the error, [see below](#status-and-statustext)                                                                                                                                              |
 |              |                                     |                       | _**Available only in case of pessimistic lock error**_:                                                                                                                                    |
@@ -1370,12 +1370,12 @@ If a filter is specified for attributes of the relatedEntity [kind](DataClassCla
 
 - propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 - propertyPath = "relatedEntity.\*" -> all the properties are extracted
-- propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted
+- propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> sólo se extraen esas propiedades
 
 If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
 
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
-- propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted
+- propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> sólo se extraen esas propiedades
 
 In the _options_ parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
@@ -1731,7 +1731,7 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
 En este caso:
 
 - firstName and lastName have a `storage` kind
-- employer has a `relatedEntity` kind
+- el empleador tiene un tipo `relatedEntity`
 - employerID es la llave extranjera de la entidad relacionada con el empleador
 
 <!-- END REF -->
