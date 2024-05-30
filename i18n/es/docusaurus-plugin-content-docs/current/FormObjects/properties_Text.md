@@ -312,7 +312,7 @@ La propiedad especial "cell" permite aplicar un conjunto de propiedades a una so
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Examples**
+**Ejemplos**
 
 En un método proyecto _Color_, escriba el siguiente código:
 
