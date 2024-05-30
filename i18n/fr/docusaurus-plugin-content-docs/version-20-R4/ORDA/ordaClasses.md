@@ -713,11 +713,11 @@ Alias attributes based upon relations have a specific [`path`](../API/DataClassC
 
 ### Exemples
 
-Considering the following model:
+Considérant le modèle suivant :
 
 ![](../assets/en/ORDA/alias1.png)
 
-In the Teacher dataclass, an alias attribute returns all students of a teacher:
+Dans la dataclasse Teacher, un attribut alias renvoie tous les élèves d'un enseignant :
 
 ```4d
 // cs.TeacherEntity class
@@ -727,7 +727,7 @@ Class extends Entity
 Alias students courses.student //relatedEntities 
 ```
 
-In the Student dataclass, an alias attribute returns all teachers of a student:
+Dans la dataclass Student, un attribut alias renvoie tous les enseignants d'un élève:
 
 
 ```4d
@@ -738,11 +738,11 @@ Class extends Entity
 Alias teachers courses.teacher //relatedEntities 
 ```
 
-In the Course dataclass:
+Dans la dataclass Course :
 
-- an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- un attribut alias renvoie une autre libellé pour l'attribut "name"
+- un attribut alias renvoie le nom de l'enseignant
+- un attribut alias renvoie le nom de l'étudiant
 
 
 ```4d
@@ -756,38 +756,38 @@ Exposed Alias studentName student.name //scalar value
 
 ```
 
-You can then execute the following queries:
+Vous pouvez alors exécuter les recherches suivantes :
 
 ```4d
-// Find course named "Archaeology"
+// Trouver le cours nommé "Archaeology"
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Find courses given by the professor Smith
+// Trouver les cours donnés par le professeur Smith
 ds.Course.query("teacherName = :1";"Smith")
 
-// Find courses where Student "Martin" assists
+// Trouver des cours auxquels l'étudiant "Martin" assiste
 ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher 
+// Trouver des étudiants qui ont M. Smith en tant qu'enseignant 
 ds.Student.query("teachers.name = :1";"Smith")
 
-// Find teachers who have M. Martin as Student
-ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex 
-// query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
-//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
-//  subquery:[ Student.name === Martin]]"
+// Trouver des enseignants qui ont M. Martin comme étudiant
+ds.Teacher.query("students.name = :1"; Martin")
+// Notez que cette chaîne de recherche très simple traite une requête complexe 
+// incluant une double jointure, comme vous pouvez le voir dans le queryPlan:   
+// "Join on Table: Course : Teacher.ID = Course.teacherID,    
+// subquery:[ Join on Table : Student: Course.studentID = Student.ID,
+// subquery:[ Student.name === Martin]]"
 ```
 
 
-You can also edit the value of the *courseName* alias:
+Vous pouvez également modifier la valeur de l'alias *courseName*:
 
 ```4d
-// Rename a course using its alias attribute
+// Renommer un cours en utilisant son attribut alias
 $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
-$arch.save() //courseName and name are "Archaeology II"
+$arch.save() //courseName et name sont "Archaeology II"
 ```
 
 
@@ -856,9 +856,9 @@ $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 
 ## Fonctions locales
 
-Par défaut dans l'architecture client/serveur, les fonctions de modèle de données ORDA sont exécutées **sur le serveur**. Il garantit généralement les meilleures performances puisque seuls la requête de fonction et le résultat sont envoyés sur le réseau.
+Par défaut dans l'architecture client/serveur, les fonctions de modèle de données ORDA sont exécutées **sur le serveur**. Cela garantit généralement les meilleures performances puisque seuls la requête de fonction et le résultat sont envoyés sur le réseau.
 
-Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez enregistrer les requêtes sur le serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
+Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
 
 ```4d  
 // déclarer une fonction à exécuter localement en client/serveur 
@@ -869,7 +869,7 @@ Avec ce mot-clé, la fonction sera toujours exécutée côté client.
 
 > Le mot-clé `local` ne peut être utilisé qu'avec les fonctions de classe du modèle de données. S'il est utilisé avec une fonction de [classe utilisateur standard](Concepts/classes.md), il est ignoré et une erreur est retournée par le compilateur.
 
-A noter que la fonction fonctionnera même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
+A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
 // Obtenir les élèves les plus jeunes  
@@ -939,7 +939,7 @@ End if
 
 
 
-## Prise en charge en IDE 4D
+## Prise en charge dans l'IDE 4D
 
 
 ### Fichiers de classe (class files)
@@ -956,7 +956,7 @@ Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au 
 
 > Par défaut, les classes ORDA vides ne sont pas affichées dans l'Explorateur. Vous devez les afficher en sélectionnant **Afficher toutes les dataclasses** dans le menu d'options de l'Explorateur : ![](../assets/en/ORDA/showClass.png)
 
-Les classes d'utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
+Les classes utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
 
 
 ![](../assets/en/ORDA/classORDA2.png)
@@ -983,7 +983,7 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 
 ### Éditeur de code
 
-In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemple avec une variable de classe Entity :
+Dans l'éditeur de code 4D, les variables typées en tant que classe ORDA bénéficient automatiquement des fonctions d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
