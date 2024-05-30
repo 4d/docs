@@ -126,7 +126,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Par exemple :
+Les paramètres, y compris la valeur retournée, doivent être déclarés une seule fois. En particulier, vous ne pouvez pas déclarer le même paramètre en tant qu'entrée et sortie, même avec le même type. Par exemple :
 
 ```qs
     //invalid declaration
@@ -314,12 +314,12 @@ Even if it is not mandatory in [interpreted mode](interpreted.md), you must make
 
 :::note
 
-You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). Cependant cette option augmente considérablement le temps de compilation.
 
 :::
 
 
-### Parameters declared in prototypes
+### Paramètres déclarés dans les prototypes
 
 When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Exemples :
 
@@ -346,9 +346,9 @@ Declaring parameters in prototypes is a good practice, even in non-compiled proj
 
 :::
 
-### Method parameters declared outside prototypes
+### Paramètres de méthode déclarés en dehors des prototypes
 
-It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+It can happen that method parameters are not declared in `#DECLARE` prototypes. De telles déclarations peuvent être trouvées notamment dans du code 4D plus ancien. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
 
 #### `Compiler_Methods` method
 
@@ -375,9 +375,9 @@ You can create and fill automatically a `Compiler_Methods` method containing all
 
 :::info
 
-#### Particular cases
+#### Cas particuliers
 
-Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
+Certains contextes ne prennent pas en charge la déclaration dans une méthode "Compiler_", ils sont donc gérés de manière spécifique :
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
@@ -397,7 +397,7 @@ Some contexts do not support declaration in a "Compiler_" method, thus they are 
 
 :::
 
-### Conflicts between declarations
+### Conflit entre les déclarations
 
 - If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
 - If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
@@ -593,7 +593,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph. Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
 
 
 ### Cas particuliers : objets et collections
