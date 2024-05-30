@@ -265,7 +265,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 | Lanzamiento | Modificaciones                                |
 | ----------- | --------------------------------------------- |
-| 19 R7       | Support of _entitySelection_ parameter        |
+| 19 R7       | Soporte del parámetro _entitySelection_       |
 | 18 R5       | Sólo soporta las entity selections alterables |
 | 17          | Añadidos                                      |
 
@@ -2222,12 +2222,12 @@ If a filter is specified for an attribute of the `relatedEntity` kind:
 
 - propertyPath = "relatedEntity" -> it is extracted with simple form
 - propertyPath = "relatedEntity.\*" -> all the properties are extracted
-- propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted
+- propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> sólo se extraen esas propiedades
 
 If a filter is specified for an attribute of the `relatedEntities` kind:
 
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
-- propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+- propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> sólo se extraen esas propiedades
 
 In the _options_ parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
@@ -2444,7 +2444,7 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Ejemplo 5
 
-Example with _filterCol_ parameter:
+Ejemplo con el parámetro _filterCol_:
 
 ```4d
 var $employeesCollection; $coll : Collection
