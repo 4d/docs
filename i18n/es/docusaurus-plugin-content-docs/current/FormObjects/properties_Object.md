@@ -53,12 +53,12 @@ Esta funcionalidad sólo es soportada con los objetos que contribuyen a la geome
 
 Esta es la lista de objetos cuyo valor se puede guardar:
 
-| Object                                     | Valor guardado                                                                                              |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Valor de la variable asociada (0, 1, 2)                                                  |
-| [Drop-down List](dropdownList_Overview.md) | Número de línea seleccionada                                                                                |
-| [Radio Button](radio_overview.md)          | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
-| [Tab control](tabControl.md)               | Número de pestaña seleccionada                                                                              |
+| Object                                          | Valor guardado                                                                                              |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Casilla de verificación](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
+| [Drop-down List](dropdownList_Overview.md)      | Número de línea seleccionada                                                                                |
+| [Botón de radio](radio_overview.md)             | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
+| [Tab control](tabControl.md)                    | Número de pestaña seleccionada                                                                              |
 
 #### Gramática JSON
 
@@ -255,7 +255,7 @@ Permite utilizar los botones de radio en conjuntos coordinados: sólo se puede s
 
 #### Objetos soportados
 
-[Radio Button](radio_overview.md)
+[Botón de radio](radio_overview.md)
 
 ---
 
