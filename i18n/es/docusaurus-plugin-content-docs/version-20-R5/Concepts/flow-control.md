@@ -6,7 +6,7 @@ title: Flujo de control
 Independientemente de la simplicidad o la complejidad de un método o de una función, siempre utilizará uno o varios de los tres tipos de estructuras de programación. Las estructuras de programación determinan el flujo de ejecución, si se ejecutan y el orden de las líneas de instrucciones dentro de un método. Hay tres tipos de estructuras:
 
 - **Secuencial**: una estructura secuencial es una estructura simple y lineal. Una secuencia es una serie de sentencias que 4D ejecuta una tras otra, de la primera a la última. Una instrucción de una línea, utilizada frecuentemente para los métodos de los objetos, es el caso más simple de una estructura secuencial. Por ejemplo: `[People]lastName:=Uppercase([People]lastName)`
-- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
+- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de rama es la estructura [`Case of...Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
 - **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para hacer frente a esta necesidad, el lenguaje 4D ofrece las siguientes estructuras de bucle:
 
   - [`While...End while`](#whileend-while)
@@ -48,7 +48,7 @@ Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Con
  End if
 ```
 
-La expresión es TRUE sólo si los dos métodos son TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. En este caso, es más interesante utilizar una estructura como:
+La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)
@@ -58,19 +58,19 @@ La expresión es TRUE sólo si los dos métodos son TRUE. However, even if _Meth
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
 
-> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..
+> **Nota:** el [operador ternario](operators.md#ternary-operator) permite escribir expresiones condicionales de una sola línea y puede reemplazar una secuencia completa de declaraciones If..Else.
 
 #### Ejemplo
 
 ```4d
-  // Ask the user to enter a name
+  // Pedir al usuario que introduzca un nombre
  $Find:=Request(Type a name)
- If(OK=1)
+ Si(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("You did not enter a name.")
+    ALERT("No ha introducido un nombre.")
  End if 
 ```
 
@@ -94,7 +94,7 @@ o:
 
 ## Case of... Else...End case
 
-The formal syntax of the `Case of... Else...End case` control flow structure is:
+La sintaxis formal de la estructura de control de flujo `Case of...Else...End case` es:
 
 ```4d
  Case of
@@ -130,7 +130,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
  End case
 ```
 
-As with the `If...Else...End if` structure, the `Case of... Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of... Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+Al igual que la estructura `If...Else...End if`, la estructura `Case of...Else...End case` también permite a su método elegir entre acciones alternativas. A diferencia de la estructura `If...Else...End if`, la estructura `Case of...Else...End case` puede probar un número razonable ilimitado de expresiones booleanas y tomar acción dependiendo de cuál sea TRUE.
 
 Cada expresión booleana va precedida de dos puntos (`:`). Esta combinación de los dos puntos y la expresión booleana se llama un caso. Por ejemplo, la siguiente línea es un caso:
 
@@ -148,36 +148,36 @@ Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con 
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
+    :(vResult=1) //Prueba si el número es 1
+       ALERT("Uno.") //Si es 1, muestra una alerta
+    :(vResult=2) //Prueba si el número es 2
+       ALERT("Dos.") //Si es 2, muestra una alerta
+    :(vResult=3) //Prueba si el número es 3
+       ALERT("Tres.") //Si es 3, muestra una alerta
+    Else //Si no es 1, 2 o 3, muestra una alerta
+       ALERT("No fue uno, dos o tres.")
  End case
 ```
 
 Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) //Evalúa si el número es 1
+    ALERT("Uno.) ///Si es 1, mostrar una alerta
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Evalúa si el número es 2
+       ALERT("dos.) ///Si es 2, mostrar una alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
-       End if
+       If(vResult=3) //Evalúa si el número es 3
+          ALERT("Tres.) //Si es 3, mostrar una alerta
+       Si no es 1, 2 o 3, mostrar una alerta
+          ALERT("No fueron uno, dos o tres.)
+        End if
     End if
  End if
 ```
 
-Remember that with a `Case of... Else...End case` structure, only the first TRUE case is executed. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
+Recuerde que con una estructura `Case of...Else...End case`, solo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
 
 En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse de que las declaraciones de condición que están más abajo en el esquema jerárquico aparezcan primero en la secuencia de pruebas. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por ejemplo, el siguiente código nunca verá detectada su última condición:
 
@@ -185,8 +185,8 @@ En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse
  Case of
     :(vResult=1)
        ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //este caso nunca será detectado
+       ... //declaración(es)
  End case
 ```
 
@@ -194,10 +194,10 @@ En el código anterior, la presencia de la segunda condición no se detecta, ya 
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //este caso se detectará primero
+       ... //declaración(es)
     :(vResult=1)
-       ... //statement(s)
+       ... //declaración(es)
  End case
 ```
 
@@ -260,7 +260,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
 
-El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. The following loop continues forever because _NeverStop_ is always TRUE:
+El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. El siguiente bucle continúa para siempre porque _TextStop_ es siempre TRUE:
 
 ```4d
  NeverStop:=True
@@ -273,10 +273,10 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 #### Ejemplo
 
 ```4d
- CONFIRM("Add a new record?") //The user wants to add a record?
- While(OK=1) //Loop as long as the user wants to
-    ADD RECORD([aTable]) //Add a new record
- End while //The loop always ends with End while
+ CONFIRM("¿Agregar un nuevo registro?") //¿El usuario quiere agregar un registro?
+  While(OK=1) //Bucle mientras el usuario quiera
+     ADD RECORD([aTable]) //Agregar un nuevo registro
+ End while //El bucle siempre termina con End while
 ```
 
 En este ejemplo, el valor de la variable sistema `OK` es definido por el comando `CONFIRM` antes de que se inicie el bucle. Si el usuario hace clic en el botón **OK** de la caja de diálogo de confirmación, la variable del sistema `OK` toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema `OK` toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando `ADD RECORD` permite continuar la ejecución del bucle porque se define la variable sistema `OK` en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema `OK` toma el valor 0 y el bucle se detiene.
@@ -351,7 +351,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ```4d
  For($vlElem;1;Size of array(anArray))
-  //Do something with the element
+  //Hacer algo con el elemento
     anArray{$vlElem}:=...
  End for
 ```
@@ -360,7 +360,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ```4d
  For($vlChar;1;Length(vtSomeText))
-  //Do something with the character if it is a TAB
+  //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
@@ -372,10 +372,10 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 ```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
-  //Do something with the record
+  //Hacer algo con el registro
     SEND RECORD([aTable])
   //...
-  //Go to the next record
+  //Ir al siguiente registro
     NEXT RECORD([aTable])
  End for
 ```
@@ -400,7 +400,7 @@ En algunos casos, puede querer tener un bucle cuya variable de contador sea decr
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  //Do something with the element
+  //Hacer algo con el elemento
     anArray{$vlElem}:=...
  End for
 ```
@@ -409,7 +409,7 @@ En algunos casos, puede querer tener un bucle cuya variable de contador sea decr
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
-  //Do something with the character if it is a TAB
+  //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
@@ -421,10 +421,10 @@ En algunos casos, puede querer tener un bucle cuya variable de contador sea decr
 ```4d
  LAST RECORD([aTable])
  For($vlRecord;Records in selection([aTable]);1;-1)
-  //Do something with the record
+  //Hacer algo con el registro
     SEND RECORD([aTable])
   //...
-  //Go to the previous record
+  //Ir al registro anterior
     PREVIOUS RECORD([aTable])
  End for
 ```
@@ -437,7 +437,7 @@ Si lo requiere, puede utilizar una _Increment_Expression_ (positiva o negativa) 
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
-  //Do something with the element #2,#4...#2n
+  //Hacer algo con el elemento #2,#4...#2n
     anArray{$vlElem}:=...
  End for
 ```
@@ -468,10 +468,10 @@ Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 
 Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 
 ```4d
- $i:=1 //Initialize the counter
- While($i<=100) //Loop 100 times
-  //Do something
-    $i:=$i+1 //Need to increment the counter
+ $i:=1 //Inicializar el contador
+  While($i<=100) //Bucle 100 veces
+  //Hacer algo
+    $i:=$i+1 //Necesita incrementar el contador
  End while
 ```
 
@@ -502,10 +502,10 @@ He aquí dos ejemplos:
 ```4d
  For($vlElem;1;Size of array(anArray))
   //...
-  //Do something with the row
+  //Hacer algo con la fila
   //...
     For($vlSubElem;1;Size of array(anArray{$vlElem}))
-  //Do something with the element
+  //Hacer algo con el elemento
        anArray{$vlElem}{$vlSubElem}:=...
     End for
  End for
@@ -560,7 +560,7 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 | Soporte de parámetros begin / end                 | Sí                                                          | Sí                                    | No                               |
 
 - El número de bucles se evalúa al inicio y no cambiará durante el proceso. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
-- By default, the enclosed _statement(s)_ are executed for each value in _Expression_. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
+- Por defecto, los _statement(s)_ adjuntos se ejecutan para cada valor de _Expression_. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
 - Los parámetros opcionales _begin_ y _end_ pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
 - El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
   - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
@@ -570,15 +570,15 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ### Bucle en las colecciones
 
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. El número de bucles se basa en el número de elementos de la colección.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
+La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
-At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. Hay que tener en cuenta los siguientes puntos:
+En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable es de tipo escalar, sólo se modificará la variable.
-- The _Current_Item_ variable must be of the same type as the collection elements. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
-- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
+- Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expression_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
+- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables longint).
 
 #### Ejemplo
 
@@ -703,7 +703,7 @@ Por ejemplo:
 
 ### Condiciones Until y While
 
-Puede controlar la ejecución de `For each... End for each` añadiendo una condición `Until` o una condición `While` al bucle. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+Puede controlar la ejecución de `For each... End for each` añadiendo una condición `Until` o una condición `While` al bucle. Cuando una instrucción `Until(condition)` está asociada al bucle, la iteración se detendrá tan pronto como la condición se evalúe como `True`, mientras que cuando se trata de una instrucción `While(condition)`, la iteración se detendrá cuando la condición se evalúe por primera vez como `False`.
 
 Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
 
@@ -722,7 +722,7 @@ Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
  
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ For each($num;$colNum)Until($total>30) //probada al final
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
@@ -742,8 +742,8 @@ Si la instrucción `break` está dentro de un bucle al interior de un [bucle ani
 
 ```4d
 For (vCounter;1;100)
-	If ($tab{vCounter}="") //if a condition becomes true
-		break //end of the for loop
+	If ($tab{vCounter}="") //si una condición es true
+		break //fin del bucle for
 	End if
 End for
 ```
@@ -756,7 +756,7 @@ La instrucción `continue` termina la ejecución de las instrucciones en la iter
 var $text : Text
 For ($i; 0; 9)
 	If ($i=3)
-		continue //go directly to the next iteration
+		continue //ir directamente a la siguiente iteración
 	End if
 	$text:=$text+String($i)
 End for
@@ -784,17 +784,17 @@ La instrucción `return` puede utilizarse para [devolver un valor](parameters.md
 var $message : Text
 var $i : Integer
 
-While (True) //infinite loop
+While (True) //bucle infinito
 	$i:=$i+1
-	$message+=String($i)+"A\r"  // until 5
+	$message+=String($i)+"A\r"  // hasta 5
 	logConsole($message)
 	If ($i=5)
 		return //stops the loop
 	End if 
-	$message+=String($i)+"B\r"  // until 4
+	$message+=String($i)+"B\r"  // hasta 4
 	logConsole($message)
 End while 
-$message+=String($i)+"C\r"  //never executed 
+$message+=String($i)+"C\r"  //nunca se ejecuta
 logConsole($message)
 
 // 1A
