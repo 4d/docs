@@ -626,7 +626,7 @@ Cuando se ejecuta este código:
  $txt:=$myFile.getText()
 ```
 
-... you get the following for `$txt`:
+... obtiene lo siguiente para `$txt`:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
