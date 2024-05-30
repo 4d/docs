@@ -21,12 +21,12 @@ O bien, podría adjuntar este código a un botón de formulario y ejecutarlo, en
 Los datos pueden introducirse y copiarse en variables, campos, elementos de arrays... Poner datos en una variable se llama asignar los datos a la variable y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos o elementos de arrays.
 
 ```4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 //asigna 3 a la variable MyNumber 
+[Products]Size:=$MyNumber //asigna la variable MyNumber al campo [Products]Size
+arrDays{2}:="Tuesday" //asigna la cadena "Tuesday" al segundo elemento de arrDays
+MyVar:=Length("Acme") //asigna el resultado de la función (4) a MyVar
+$myDate:=!2018/01/21! //asigna una fecha literal
+$myHour:=?08:12:55? //asigna una hora literal
 ```
 
 Debe distinguir el operador de asignación := de los demás operadores. En lugar de combinar expresiones en una nueva expresión, el operador de asignación copia el valor de la expresión a la derecha del operador de asignación en la variable o campo a la izquierda del operador.
@@ -120,7 +120,7 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-	//Do something with the character if it is a TAB
+	//Hacer algo con el carácter si es un TAB
 
 
 	If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -155,7 +155,7 @@ Hay casos en los que es necesario almacenar datos como un tipo y utilizarlos com
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Si _Number_ es 17, entonces _[Products]Part Number_ obtendrá el valor “17abc”.
 
 Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
 
@@ -184,7 +184,7 @@ Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que enca
 ```
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message() //muestra "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
@@ -210,7 +210,7 @@ En el método clase `myClass`, utilice la instrucción `Function<methodName>` pa
 
 ```4d
 
-//in the myClass.4dm file
+//en el archivo myClass.4dm
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
@@ -378,7 +378,7 @@ End for
 
 #### Comentarios en línea o multilínea (`/*comment*/`)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
+Rodea el contenido con los caracteres `/*` ... `*/` para para crear bloques de comentarios en línea o multilíneas. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
 - Las **líneas de comentarios en línea** se pueden insertar en cualquier parte del código. Ejemplo:
 
@@ -393,13 +393,11 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
-	/*
-	other comments
-	*/
+comentarios  
+    /* 
+    otros comentarios
+    */
 */
-...
-End for
 ```
 
 ## Secuencias de escape
