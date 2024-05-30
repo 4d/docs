@@ -11,7 +11,7 @@ title: Glossaire
 
 ## Action
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
+Every action that can be done on a [resource](#resource). Les actions disponibles sont : create, read, update, drop, execute, promote, et describe.
 
 ## Attribut
 
@@ -110,7 +110,7 @@ Une sélection d'entités contient :
 Une sélection d'entités peut également être vide.
 
 
-## Generic class
+## Classe générique
 
 Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
 
@@ -157,7 +157,7 @@ En mode "verrouillage optimiste", les entités ne sont pas verrouillées explici
 Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que l'on y accède, en utilisant la méthode entity.lock( ). Les autres process ne peuvent ni mettre à jour ni supprimer l'entité tant qu'elle n'est pas déverrouillée. Le langage 4D classique n'autorise que les verrouillages pessimistes. Voir "Verrouillage optimiste".
 
 
-## Privilege
+## Privilège
 
 The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
@@ -202,12 +202,12 @@ Une base de données 4D ouverte sur 4D ou 4D Server (disponible via HTTP) et exp
 
 ## Ressource
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Les ressources disponibles sont : le datastore, une dataclass, un attribut de dataclass, une fonction de modèle de données ORDA, ou une méthode projet.
 
 
-## Role
+## Rôle
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+A role is a published [privilege](#privilege) intended to be used by an administrator. Il peut contenir un ou plusieurs privilèges.
 
 
 ## Session
