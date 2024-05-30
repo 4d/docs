@@ -88,6 +88,12 @@ The Blink engine has the following limitations:
 - [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
 - When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
 
+:::note
+
+You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview#4dcefparametersjson).
+
+:::
+
 #### Gramática JSON
 
 | Nome      | Tipo de dados | Valores possíveis    |
