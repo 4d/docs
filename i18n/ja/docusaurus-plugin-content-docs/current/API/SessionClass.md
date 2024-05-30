@@ -222,27 +222,27 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| 引数  | タイプ        |     | 説明                                                         |
-| --- | ---------- | :-: | ---------------------------------------------------------- |
-| 戻り値 | Collection |  <- | Collection of privilege names (strings) |
+| 引数  | タイプ        |     | 説明                                        |
+| --- | ---------- | :-: | ----------------------------------------- |
+| 戻り値 | Collection |  <- | アクセス権の名称 (文字列) のコレクション |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
+`.getPrivileges()` 関数は、<!-- REF #SessionClass.getPrivileges().Summary -->対象セッションに紐づいている全アクセス権の名称のコレクションを返します<!-- END REF -->。
 
-With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
+リモートクライアントおよびストアドプロシージャーセッションでは、この関数は "WebAdmin" のみを含むコレクションを返します。
 
 :::info
 
-Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+権限は、[`setPrivileges()`](#setprivileges) 関数によって、セッションに割り当てられます。
 
 :::
 
 #### 例題
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+以下の [`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) が定義されています:
 
 ```json
 {
@@ -276,22 +276,22 @@ The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defi
 }
 ```
 
-The session role is assigned in an `authentify()` datastore function:
+セッションのロールは、DaraStore クラスの `authentify()` 関数内で割り当てられます:
 
 ```4d
-  //Datastore Class
+  // DataStore クラス
 
 exposed Function authentify($role : Text) : Text
 	Session.clearPrivileges()
 	Session.setPrivileges({roles: $role})
 ```
 
-Assuming the `authentify()` function is called with the "Medium" role:
+"medium" ロールを指定して `authentify()` 関数が呼び出された場合:
 
 ```4d
 var $privileges : Collection
 $privileges := Session.getPrivileges()
-//$privileges: ["simple","medium"]
+// $privileges: ["simple","medium"]
 ```
 
 #### 参照
