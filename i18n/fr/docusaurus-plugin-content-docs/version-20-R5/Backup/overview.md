@@ -11,12 +11,12 @@ Les sauvegardes peuvent être déclenchées manuellement ou automatiquement, à 
 
 La restitution d’une application après incident peut s’effectuer automatiquement lors de l’ouverture d’une application endommagée.
 
-Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. Vous pouvez visualiser à tout moment le contenu du fichier d’historique. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
+En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d’historique](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. Vous pouvez visualiser à tout moment le contenu du fichier d’historique. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
 
-> Vous pouvez également mettre en place des solutions alternatives de réplication et de synchronisation des données permettant de maintenir des versions identiques des applications à des fins de sauvegarde. These solutions can be based on the following mechanisms and technologies:
+> Vous pouvez également mettre en place des solutions alternatives de réplication et de synchronisation des données permettant de maintenir des versions identiques des applications à des fins de sauvegarde. Ces solutions peuvent être basées sur les mécanismes et les technologies suivants :
 >
-> - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)
-> - Synchronization using SQL
-> - Synchronization using HTTP (/rest/url)
+> - Mise en place d'un miroir logique avec 4D Server (en utilisant les mécanismes du module de sauvegarde intégré)
+> - Synchronisation en utilisant SQL
+> - Synchronisation en utilisant HTTP (/rest/url)
 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
