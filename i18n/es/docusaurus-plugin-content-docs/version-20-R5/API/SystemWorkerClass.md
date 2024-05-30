@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-System workers allow the 4D code to call any external process (a shell command, PHP, etc.) on the same machine. Los trabajadores del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
+System workers allow the 4D code to call any external process (a shell command, PHP, etc.) en la misma máquina. Los trabajadores del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
 
 The `SystemWorker` class is available from the `4D` class store.
 
@@ -587,7 +587,7 @@ Esta propiedad es de **solo lectura**.
 
 The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified _timeout_<!-- END REF -->.
 
-In _timeout_, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the _timeout_ parameter. If you omit the _timeout_ parameter, the script execution will wait indefinitely.
+En _timeout_, pase un valor en segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the _timeout_ parameter. If you omit the _timeout_ parameter, the script execution will wait indefinitely.
 
 Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the _timeout_ is reached. If _timeout_ is reached, the `SystemWorker` is not killed.
 
