@@ -15,7 +15,7 @@ Las arquitecturas de cliente/servidor ORDA que soportan la optimización son:
 - Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
 - [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
 
-## Optimization context
+## Contexto de optimización
 
 El contexto de optimización se basa en las siguientes implementaciones:
 
@@ -60,7 +60,7 @@ Dado el siguiente código:
 
 Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in _$sel_ from the second iteration of the loop.
 
-### Reusing the `context` property
+### Reutilizando la propiedad `context`
 
 Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a las funciones ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y sin pasar por la fase de aprendizaje.
 
