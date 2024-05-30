@@ -37,7 +37,7 @@ C_POINTER($MyPointer)
 $MyPointer:=->$MyVar
 ```
 
-The -> symbol means “get a pointer to.” The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
+Le symbole -> signifie "pointer vers". The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
 
 $MyPointer est désormais une variable qui contient un pointeur vers $MyVar. $MyPointer ne contient pas "Hello", la valeur de $MyVar, mais vous pouvez utiliser $MyPointer pour obtenir cette valeur. L’expression suivante retourne la valeur de $MyVar :
 
@@ -78,23 +78,19 @@ $MyVar:="Goodbye"
 Avec :
 
 ```4d
-  ` vPtrA and vPtrB point to the same object
- vPtrA:=->anObject
- vPtrB:=->anObject
-  ` vPtrC points to another object
- vPtrC:=->anotherObject
+  // vPtrA et vPtrB pointent sur le même objet
+ vPtrA:=->unObjet
+ vPtrB:=->unObjet
+  // vPtrC pointe sur un autre objet
+ vPtrC:=->autreObjet
 ```
 
 | Opération | Syntaxe             | Retourne | Expression    | Valeur |
 | --------- | ------------------- | -------- | ------------- | ------ |
 | Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | True   |
-
-```
-	|	|||vPtrA = vPtrC	|False|
-```
-
-|Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
-||||			vPtrA # vPtrB	|False|
+|           |                     |          | vPtrA = vPtrC | False  |
+| Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
+|           |                     |          | vPtrA # vPtrB | False  |
 
 ## Principales utilisations
 
@@ -103,10 +99,10 @@ Avec :
 Partout où le langage requiert un nom de table, vous pouvez utiliser un pointeur dépointé vers une table. Pour créer un pointeur vers une table, écrivez une instruction du type :
 
 ```4d
-$TablePtr:=->[anyTable]
+$TablePtr:=->[touteTable]
 ```
 
-You can also get a pointer to a table by using the `Table` command:
+Vous pouvez également récupérer un pointeur vers une table à l’aide de la commande `Table`. Par exemple :
 
 ```4d
 $TablePtr:=Table(20)
@@ -123,10 +119,10 @@ DEFAULT TABLE($TablePtr->)
 Partout où le langage requiert un nom de champ, vous pouvez utiliser un pointeur dépointé vers un champ. Pour créer un pointeur vers un champ, écrivez une ligne d'instruction du type :
 
 ```4d
-$FieldPtr:=->[aTable]ThisField
+$ChampPtr:=->[uneTable]CeChamp
 ```
 
-You can also get a pointer to a field by using the `Field` command, for example:
+Vous pouvez également récupérer un pointeur vers un champ à l’aide de la fonction `Champ`. Par exemple :
 
 ```4d
 $FieldPtr:=Field(1;2)
@@ -164,14 +160,14 @@ La valeur de $1 sera :
 Vous pouvez créer un pointeur vers un élément de tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à une variable appelée $ElémPtr un pointeur vers le premier élément :
 
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ElemPtr:=->$anArray{1} //Create a pointer to the array element
+ARRAY REAL($unTableau;10) // Créer un tableau
+$ElémPtr:=->$unTableau{1} // Créer un pointeur vers l’élément de tableau
 ```
 
 Vous pouvez alors utiliser le pointeur dépointé pour assigner une valeur à l’élément, comme ceci :
 
 ```4d
-$ElemPtr->:=8
+$ElémPtr->:=8
 ```
 
 ### Utiliser des pointeurs vers des tableaux
@@ -179,14 +175,14 @@ $ElemPtr->:=8
 Vous pouvez créer un pointeur vers un tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à la variable nommée $TabPtr un pointeur vers le tableau :
 
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ArrPtr:=->$anArray //Create a pointer to the array
+ARRAY REAL($unTableau;10) // Créer un tableau
+$TabPtr:=->$unTableau // Créer un pointeur vers le tableau
 ```
 
 Il est important de comprendre que ce pointeur pointe vers le tableau, et non vers un élément du tableau. Par exemple, vous pourriez utiliser le pointeur dépointé de la manière suivante :
 
 ```4d
-SORT ARRAY($ArrPtr->;>) //Sort the array
+SORT ARRAY($TabPtr->;>) // Tri du tableau
 ```
 
 Si vous devez vous référer au quatrième élément du tableau à l’aide du pointeur, vous pouvez écrire :
@@ -197,20 +193,20 @@ Si vous devez vous référer au quatrième élément du tableau à l’aide du p
 
 ### Passer des pointeurs aux méthodes
 
-Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. For example, the following method, `takeTwo`, takes two parameters that are pointers. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
+Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `takeTwo`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
 
 ```4d
-  //takeTwo project method
-  //$1 – Pointer to a string field or variable. Change this to uppercase.
-  //$2 – Pointer to a string field or variable. Change this to lowercase.
+  //méthode projet takeTwo
+  //$1 - Pointeur vers un champ ou une variable de type chaîne. Changez en majuscules.
+  //$2 - Pointeur vers un champ ou une variable de type chaîne. Changez en minuscules.
  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 
-The following line uses the `takeTwo` method to change a field to uppercase characters and to change a variable to lowercase characters:
+L'instruction suivante emploie la méthode `takeTwo` pour passer un champ en caractères majuscules et une variable en caractères minuscules :
 
 ```
-takeTwo(->[myTable]myField;->$MyVar)
+takeTwo(->[MaTable]MonChamp;->$MaVar)
 ```
 
 Si le champ, [MaTable]MonChamp, contenait la chaîne "dupont", celle-ci deviendrait "DUPONT". Si la variable $MaVar contenait la chaîne "BONJOUR", celle-ci deviendrait "bonjour".
@@ -234,15 +230,15 @@ Cet exemple affiche une boîte de dialogue d’alerte contenant “Goodbye”.
 Voici la description de chaque ligne de l’exemple :
 
 - $MyVar:="Hello"
-  \--> This line puts the string "Hello" into the variable $MyVar.
+  \--> Cette ligne place la chaîne "Hello" dans la variable $MyVar.
 - $PointerOne:=->$MyVar
-  \--> $PointerOne now contains a pointer to $MyVar.
+  \--> $PointerOne contient maintenant un pointeur vers $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
+  \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
-- ALERT (($PointerTwo->)->)
-  \--> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
+  \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
+- ALERTE (($PointerTwo->)->)
+  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
@@ -256,4 +252,4 @@ La ligne suivante récupère "Hello" à partir de $MyVar et la place dans $NewVa
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.
