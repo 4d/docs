@@ -568,6 +568,6 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 - Con las sesiones web, esta propiedad es una cadena vacía por defecto. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
 
-This property is **read only**.
+Esta propiedad es **solo lectura**.
 
 <!-- END REF -->
