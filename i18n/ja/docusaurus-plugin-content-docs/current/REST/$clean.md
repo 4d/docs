@@ -3,25 +3,25 @@ id: clean
 title: $clean
 ---
 
-Creates a new entity set from an existing entity set but without its deleted entities, if any (*e.g.* `$clean=true`)
+既存のエンティティセットに基づいて、削除されたエンティティを除いたエンティティセットを新規作成します (例: `$clean=true`)
 
 ## 説明
 
-`$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
+`$clean`は、`entitySetID` と同じエンティティを含む新しいエンティティセットを作成しますが、その際に削除されたエンティティへの参照があれば取り除きます。
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references.
+デフォルトでは、あるエンティティが [削除]($method.md#methoddelete) された場合、既存のエンティティセレクション内のこのエンティティへの参照は *undefined* になりますが、参照そのものは削除されません。 また、エンティティセットの "count" プロパティにも含まれたままです。 エンティティセットに対して `$clean` を呼び出すと、*undefined* なエンティティ参照が含まれない、最新のエンティティセットを新規に取得できます。
 
-`$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
+`$clean` の後に、[`$method=entityset`]($method.md#methodentityset) を追加すると、サーバー上に新しいエンティティセットを作成できます。
 
 `/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$clean=true&$method=entityset`
 
 ## 例題
 
-1. We create an entity set:
+1. エンティティセットを作成します:
 
 `GET /rest/Speciality?$filter="ID<=3"&$method=entityset`
 
-Three entities are received and we get the entity set `DF6903FB5879404A9A818884CFC6F62A`
+3つのエンティティを含む、エンティティセット `DF6903FB5879404A9A818884CFC6F62A` を取得します:
 
 ```json
 {
@@ -73,11 +73,11 @@ Three entities are received and we get the entity set `DF6903FB5879404A9A818884C
 }
 ```
 
-2. We delete the entity with `KEY=2` (see [how to delete an entity]($method.md#methoddelete)), then this request is sent:
+2. `KEY=2` のエンティティを削除し ([エンティティの削除]($method.md#methoddelete) 参照)、次に下のリクエストを送信します:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 
-The entity set is returned and still contains 3 entities. There is an undefined entity for the deleted entity (with stamp = 0):
+返されるエンティティセットには、まだ 3つのエンティティが含まれています。 削除されたエンティティに対応する、未定義のエンティティが 1つあります (__STAMP = 0):
 
 ```json
 {
@@ -119,11 +119,11 @@ The entity set is returned and still contains 3 entities. There is an undefined 
 }
 ```
 
-3. If this request is sent:
+3. 次のリクエストを送信すると:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A?$clean=true&$method=entityset`
 
-We clean the entity set DF6903FB5879404A9A818884CFC6F62A and receive a new entity set (entity set D7BFBC49375B4FE5A94CDD17AA535F73) that does not contain the dropped entity:
+エンティティセット DF6903FB5879404A9A818884CFC6F62A が "掃除" され、削除されたエンティティを含まない新しいエンティティセット (エンティティセットD7BFBC49375B4FE5A94CDD17AA535F73) を受け取ります:
 
 ```json
 {
