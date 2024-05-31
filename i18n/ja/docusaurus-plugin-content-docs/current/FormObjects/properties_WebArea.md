@@ -90,7 +90,7 @@ CEFエンジンには以下のような制約があります:
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview#4dcefparametersjson).
+ローカルで [4DCEFParameters.json 設定ファイル](webAreaOverview#4dcefparametersjson) を作成することで、CEFエリアのパラメーターをカスタマイズできます。
 
 :::
 
