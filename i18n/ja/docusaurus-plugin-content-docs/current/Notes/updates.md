@@ -13,6 +13,7 @@ title: リリースノート
 - 宣言された名前空間をコンポーネントが持つ場合、そのクラスは [`cs.<namespace>`] を介して、ホストプロジェクトに読み込まれているすべてのコンポーネント間で自動的に共有されるようになりました。
 - New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
 - New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
+- New [4DCEFParameters.json file](../FormObjects/webArea_overview.md#4dcefparametersjson) to customize 4D embedded web areas.
 
 ## 4D 20 R5
 

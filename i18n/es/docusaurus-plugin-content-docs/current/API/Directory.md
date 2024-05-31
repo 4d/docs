@@ -458,7 +458,7 @@ If a folder with the same name already exists in the _destinationFolder_, by def
 
 **Valor devuelto**
 
-The copied `Folder` object.
+El objeto `Folder` copiado.
 
 #### Ejemplo
 
@@ -664,7 +664,7 @@ By default, if you omit the _options_ parameter, only the folders at the first l
 
 **Valor devuelto**
 
-Collection of `Folder` objects.
+Colección de objetos `Folder`.
 
 #### Ejemplo
 

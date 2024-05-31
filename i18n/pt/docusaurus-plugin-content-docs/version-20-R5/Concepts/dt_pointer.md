@@ -78,11 +78,11 @@ $MyVar:="Goodbye"
 Con:
 
 ```4d
-  ` vPtrA and vPtrB point to the same object
+  ` vPtrA e vPtrB apontam para o mesmo objecto
  vPtrA:=->anObject
  vPtrB:=->anObject
-  ` vPtrC points to another object
- vPtrC:=->anotherObject
+  ` vPtrC aponta para outro objecto
+ vPtrC:=-outroObject
 ```
 
 | Operação | Sintaxe             | Retorna    | Expression    | Valor |
@@ -93,7 +93,7 @@ Con:
 	|	|||vPtrA = vPtrC	|False|
 ```
 
-|Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
+|Desigualdade	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
 ||||			vPtrA # vPtrB	|False|
 
 ## Principais usos
@@ -200,9 +200,9 @@ Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça d
 Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
 
 ```4d
-  //takeTwo project method
-  //$1 – Pointer to a string field or variable. Change this to uppercase.
-  //$2 – Pointer to a string field or variable. Change this to lowercase.
+  //método projeto takeTwo
+  //$1 - Ponteiro para um campo ou variável do tipo string. Altere para maiúsculas.
+  //$2 - Ponteiro para um campo ou variável do tipo string. Altere para minúsculas.
  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
@@ -235,14 +235,14 @@ Aqui está uma explicação de cada linha do exemplo:
 
 - $MyVar:="Hello"
   \--> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar
-  \--> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
+- $PointerOne:=-$MyVar
+  \-- $PointerOne agora contém um ponteiro para $MyVar.
+- $PointerTwo:=-$PointerOne
+  \-- $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que por sua vez aponta para $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
+  \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
 - ALERT (($PointerTwo->)->)
-  \--> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
+  \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
 
 A seguinte linha coloca "Olá" em $MyVar:
 

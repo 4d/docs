@@ -20,14 +20,14 @@ Una constante hora se ordena hora:minuto:segundo, con dos puntos (:) para separa
 Estos son algunos ejemplos de constantes de tipo hora:
 
 ```4d
-?00:00:00? ` midnight
+?00:00:00? ` medianoche
 ?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?13:01:59? ` 1 pm, 1 minuto y 59 segundos
 ```
 
 Una hora nula se escribe ?00:00:00?
 
-**Consejo:** el Editor de código incluye un acceso directo para introducir una hora null. To type a null time, enter the question mark (?) character and press Enter.
+**Consejo:** el Editor de código incluye un acceso directo para introducir una hora null. Para escribir una hora nula, introduzca el carácter de interrogante (?) y presione Intro.
 
 ## Operadores de horas
 
@@ -48,7 +48,7 @@ Una hora nula se escribe ?00:00:00?
 		||||?01:02:03? = ?01:02:04?	|False|
 ```
 
-|Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
+|Desigualdad	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
 ||||?01:02:03? # ?01:02:03?	|False|
 |Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
 ||||		?01:02:03? > ?01:02:03?	|False|

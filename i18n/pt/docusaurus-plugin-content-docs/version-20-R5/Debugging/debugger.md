@@ -12,7 +12,7 @@ O depurador é útil quando é necessário detetar erros ou monitorizar a execu�
 Há várias formas de exibir o depurador:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
+- Usando o comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -64,6 +64,16 @@ Quando uma linha que chama outro método (sub-rotina ou função) é executada, 
 El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
 
 Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
+
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Abortar
 

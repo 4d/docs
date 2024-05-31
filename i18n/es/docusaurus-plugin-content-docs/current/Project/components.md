@@ -7,12 +7,12 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
-## Interpreted and compiled components
+## Componentes interpretados y compilados
 
 Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
 
 - either a Project folder (interpreted component)
-- or a .4DZ file (compiled component)
+- o un archivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. En este caso, sólo se pueden utilizar componentes compilados.
 
@@ -84,13 +84,13 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
-**Higest priority**
+**Máxima prioridad**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
 2. Components declared in the **dependencies.json** file.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
-**Lowest priority**
+**Prioridad más baja**
 
 ![priority](../assets/en/Project/load-sequence.png)
 
@@ -122,9 +122,9 @@ The following origins are supported:
 
 | Etiqueta de origen | Descripción                                                                    |
 | ------------------ | ------------------------------------------------------------------------------ |
-| 4D Component       | Built-in 4D component, stored in the `Components` folder of the 4D application |
+| Componente 4D      | Built-in 4D component, stored in the `Components` folder of the 4D application |
 | Source             | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment        | Component declared in the [`environnement4d.json`](#environment4djson) file    |
+| Entorno            | Component declared in the [`environnement4d.json`](#environment4djson) file    |
 | Project Component  | Component located in the [`Components`](architecture.md#components) folder     |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:

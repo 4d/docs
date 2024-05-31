@@ -22,7 +22,7 @@ title: $entityset
 
 エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), or [`$top/$limit`]($top_$limit.md).
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
 ### 例題
 
@@ -41,7 +41,7 @@ When you retrieve an existing entity set stored in 4D Server's cache, you can al
 
 ### 説明
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$logicOperator...  &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 

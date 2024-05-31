@@ -253,7 +253,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 | Parámetros | Tipo    |    | Descripción                                     |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | timeout    | Real    | -> | Tiempo máximo de espera de la señal en segundos |
-| Result     | Boolean | <- | State of the `.signaled` property               |
+| Result     | Boolean | <- | Estado de la propiedad `.signaled`              |
 
 <!-- END REF -->
 

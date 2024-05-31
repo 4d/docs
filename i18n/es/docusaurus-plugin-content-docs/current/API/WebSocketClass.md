@@ -91,7 +91,7 @@ In _url_, pass the URL to which the WebSocket server will respond. Se pueden uti
 
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
-### _connectionHandler_ parameter
+### Parámetro _connectionHandler_
 
 In _connectionHandler_, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 

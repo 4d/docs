@@ -7,7 +7,7 @@ Les variables, champs ou expressions de type Date peuvent être compris entre 1/
 
 Bien que le mode de représentation des dates puisse fonctionner avec des dates jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite inférieure.
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**Note :** Dans le manuel de référence du langage 4D, les paramètres de type Date dans les descriptions des commandes sont appelés Date, sauf spécification explicite.
 
 ## Constantes littérales de type date
 
@@ -19,13 +19,13 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 !2015-12-31!
 ```
 
-A null date is specified by _!00-00-00!_.
+Une date nulle s’écrit _!00-00-00!_.
 
-**Tip:** The Code Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Astuce :** L'éditeur de code comprend un raccourci pour saisir une date nulle. Pour entrer une date nulle, tapez un point d’exclamation (!) et appuyez sur Entrée.
 
 **Notes :**
 
-- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
+- Pour des raisons de compatibilité, 4D accepte la saisie de dates en utilisant le format du système avec des années sur deux chiffres, telles que !12/04/98!. Une année sur deux chiffres est supposée appartenir au XXe ou au XXIe siècle si elle est respectivement supérieure ou inférieure à 30, sauf si ce paramètre par défaut a été modifié à l'aide de la commande `SET DEFAULT CENTURY`.
 - Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le format de date défini dans votre système. Généralement dans un environnement français, une date est saisie sous la forme jour/mois/année, une barre oblique "/" séparant les valeurs.
 
 ## Opérateurs sur les dates

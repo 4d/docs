@@ -10,7 +10,7 @@ Le langage 4D prend en charge le concept de **classes**. Dans un langage de prog
 
 Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`étendre`](#class-extends-classname) (extend) une autre classe, et hérite alors de ses [fonctions](#function) et de ses propriétés ([déclarées](#property) et [calculées](#function-get-and-function-set)).
 
-> Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
+> Les modèles de classe 4D et JavaScript sont similaires, et basés sur une chaîne de prototypes.
 
 Par exemple, vous pouvez créer une classe `Person` avec la définition suivante :
 
@@ -93,7 +93,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 ## Class stores
 
-Les classes disponibles sont accessibles depuis leurs class stores. Deux class stores sont disponibles :
+Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
 
 
@@ -301,7 +301,7 @@ Une fonction class constructor accepte des [paramètres](#parameters) facultatif
 
 Lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new) , le constructeur de la classe est appelé avec les paramètres facultatifs passés à la fonction `new()` .
 
-Il ne peut y avoir qu'une seule fonction de construction dans une classe (sinon une erreur est renvoyée). Un constructeur peut utiliser le mot-clé [`Super`](#super) pour appeler le constructeur de la super-classe.
+Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée). Un constructeur peut utiliser le mot-clé [`Super`](#super) pour appeler le constructeur de la super-classe.
 
 Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (voir exemple). Alternativement, si les valeurs de vos propriétés d'instance ne dépendent pas des paramètres passés au constructeur, vous pouvez les définir en utilisant le mot-clé [`property`](#property).
 

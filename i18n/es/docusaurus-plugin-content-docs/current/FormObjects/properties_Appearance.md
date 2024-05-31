@@ -387,7 +387,7 @@ Define el porcentaje de zoom para mostrar el contenido del área 4D Write Pro.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| zoom   | number         | minimum = 0      |
+| zoom   | number         | mínimo = 0       |
 
 #### Objetos soportados
 

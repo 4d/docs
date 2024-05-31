@@ -39,7 +39,7 @@ Con esta sintaxis:
 - los nombres de ruta absolutos empiezan por "/"
 - para subir una carpeta en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir en el sistema de archivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesystem` con los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder), por ejemplo:
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")
@@ -58,7 +58,7 @@ Se soportan los siguientes modelos:
 - el texto contiene ":" y "\" como segundo y tercer caracter,
 - el texto comienza con "\\".
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -78,7 +78,7 @@ Se soportan los siguientes modelos (sintaxis HFS+):
 - los separadores de carpetas son ":"
 - la ruta no debe comenzar con un ":"
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -89,11 +89,11 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
+Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas de acceso absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
 ```4d
-	//ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+//ERROR
+$ko:=Folder("myFolder").create() //nombre de ruta relativo con constructor
 ```
 
 Si quiere manejar los archivos o las carpetas en varias ubicaciones (carpeta de proyecto, carpetas sistema, etc.), puede utilizar `filesystems` (ver arriba). Por ejemplo, puede escribir:
@@ -105,7 +105,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta d
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por ejemplo:
+Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan rutas POSIX relativas. Por ejemplo:
 
 ```4d
   //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
@@ -122,13 +122,13 @@ La flexibilidad de las funciones de archivos y de carpetas le ofrecen varias pos
 
 ```4d
 $f:=Folder(fk desktop folder).folder("archive/jan2019")
- 
+
 $f2:=Folder("/DATA/archive/jan2019").file("total.txt")
- 
+
 $f3:=Folder("/DATA/archive/jan2019")
- 
+
 $f4:=File("/DATA/info.txt")
- 
+
 $f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
  
 $f6:=File(fk backup log file)

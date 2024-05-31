@@ -157,11 +157,11 @@ Todas las funciones de retrollamada reciben dos parámetros objeto:
 | Parámetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
 | $param1    | [`HTTPRequest` object](#httprequest-object) |
-| $param2    | [`Event` object](#event-object)             |
+| $param2    | [`Objeto Event`](#event-object)             |
 
 Esta es la secuencia de llamadas de retorno:
 
-1. `onHeaders` is always called once
+1. `onHeaders` se llama siempre una vez
 
 2. `onData` is called zero or several times (not called if the request does not have a body)
 
@@ -360,9 +360,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                                 |
-| ----------- | ------------------------------------------------------------------------------ |
-| 19 R8       | `.headers` returns lowercase names. New `.rawHeaders` property |
+| Lanzamiento | Modificaciones                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| 19 R8       | `.headers` devuelve los nombres en minúsculas. New `.rawHeaders` property |
 
 </details>
 

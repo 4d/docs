@@ -43,13 +43,13 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 > Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
-#### Bouton 'Reprendre exécution'
+#### Reprendre exécution
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
 > La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
-#### Bouton 'Exécuter pas à pas'
+#### Exécuter pas à pas
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
 
@@ -57,13 +57,25 @@ Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les foncti
 
 Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
 
-#### Bouton 'Exécuter pas à pas détaillé'
+#### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
 La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtre Fenêtre de [chaîne d'appel](#call-chain-pane) de la fenêtre du débogueur.
 
 Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
+
+
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+
 
 #### Bouton 'Exécuter et sortir'
 

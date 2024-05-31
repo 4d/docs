@@ -190,7 +190,7 @@ La collection ne doit contenir que des **éléments de même type**, sinon une e
 
 Le nombre de boucles est basé sur le nombre d'éléments de la collection. À chaque itération, la variable de l'élément correspond automatiquement à l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- The *item* variable gets the same type as the first collection element. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- The *item* variable gets the same type as the first collection element. Si la variable est de type scalaire, seule la variable sera modifiée.
 - If the *item* variable is of the object type or collection type (i.e. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - Si la collection contient des éléments de valeur Null, une erreur sera générée si le type de la variable ne prend pas en charge la valeur *Null* (comme par exemple les variables entier long).
 

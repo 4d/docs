@@ -33,7 +33,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 - **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
 ## Sessions Utilisateur
 

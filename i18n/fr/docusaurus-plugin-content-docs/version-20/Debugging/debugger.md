@@ -43,13 +43,13 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 > Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
-#### Bouton 'Reprendre exécution'
+#### Reprendre exécution
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
 > La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
-#### Bouton 'Exécuter pas à pas'
+#### Exécuter pas à pas
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
 
@@ -57,7 +57,7 @@ Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les foncti
 
 Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
 
-#### Bouton 'Exécuter pas à pas détaillé'
+#### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 

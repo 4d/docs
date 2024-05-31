@@ -104,7 +104,7 @@ LIST TO ARRAY("ListName";varCol)
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+エンティティが削除されると、その参照は _undefined_ の値とともにエンティティセレクションに 残り、リストボックスには空白の行が表示されます。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
 
 :::
 
@@ -585,7 +585,7 @@ _UI_SetColor_ メソッドに次のように書けます:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 //  背景色を緑にします
  Else
     $color:=lk inherited
  End if
@@ -696,7 +696,7 @@ End if
 - 行属性について: 列の属性値を受け継ぎます
 - 列属性について: リストボックスの属性値を受け継ぎます
 
-このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 For example, given an array list box containing a standard font style with alternating colors:
+このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 以下の変更を加えます:
@@ -1048,11 +1048,11 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) // カラム配列
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、 編集された値は$entry に格納されます
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)

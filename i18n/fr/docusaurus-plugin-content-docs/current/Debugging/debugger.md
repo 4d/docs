@@ -11,29 +11,29 @@ Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'
 
 Il existe plusieurs façons d'afficher le débogueur :
 
-- Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-- Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
-- Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
-- Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
+- En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
+- En utilisant la commande [`TRACE`](https://doc.4d.com/4dv19/help/command/fr/page157.html)
+- En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
+- En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
 ![open-debugger](../assets/en/Debugging/openDebugger.png)
 
-- Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
+- En cliquant sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
 - En ajoutant un point d'arrêt dans la fenêtre de l'éditeur de code ou dans les pages Break et Catch de l'explorateur d'exécution.
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
-- _Clients_BuildLogo_ is the method being traced
-- The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
+- _Clients_BuildLogo_ est la méthode en cours de traçage
+- La fenêtre du débogueur s'est affichée parce qu'elle a détecté un appel à la commande `C_PICTURE`, qui faisait partie des commandes à identifier
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
 La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. Avec une application mono-utilisateur, elle est toujours affichée sur la machine qui exécute l'application. Avec une application client/serveur, elle est affichée :
 
 - sur le 4D distant pour le code s'exécutant localement
-- on the server machine for code running on the server (for example, a method with the **execute on server** option).
+- sur la machine du serveur pour le code exécuté sur le serveur (par exemple, une méthode avec l'option **Exécuter sur serveur**).
 
-> Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. See [Debugging from remote machines](./debugging-remote.md).
+> Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. Voir [Débogage depuis des machines distantes](./debugging-remote.md).
 
 ## Boutons de la barre d'outils
 
@@ -43,27 +43,37 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 > Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
-#### Bouton 'Reprendre exécution'
+#### Reprendre exécution
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. avec désactivation de tous les appels à TRACE suivants dans le process courant.
+> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
-#### Bouton 'Exécuter pas à pas'
+#### Exécuter pas à pas
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
 
-Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
-Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
 
-#### Bouton 'Exécuter pas à pas détaillé'
+#### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtre Fenêtre de [chaîne d'appel](#call-chain-pane) de la fenêtre du débogueur.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
+
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Bouton 'Exécuter et sortir'
 
@@ -74,9 +84,9 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 
 #### Bouton 'Exécuter et sortir'
 
-La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. La méthode qui s'exécute lorsque vous cliquez sur le bouton **Exécuter et sortir** s'ouvre dans l'éditeur de code.
 
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Une fois vos modifications effectuées, ré-exécutez la méthode.
+> **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Editer
 
@@ -95,7 +105,7 @@ Ce bouton permet de sauvegarder la configuration courante de la fenêtre du déb
 
 Ces paramétrages sont stockés dans le projet.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
+Cette action n'est pas disponible en mode débogueur distant (voir [Débogage depuis des machines distantes](./debugging-remote)).
 
 ## Fenêtre d'expression
 
@@ -231,14 +241,14 @@ Le menu contextuel de la fenêtre d’expression vous propose des options suppl�
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
-- **Collapse All**: Collapses all levels of the hierarchical list.
-- **Expand All**: Expand all levels of the hierarchical list.
-- **Show Types**: Displays the type of each item (when appropriate).
-- **Show Field and Table Numbers**: Displays the number of each table or field. Useful if you work with table or field numbers, or with pointers using commands such as `Table` or `Field`.
-- **Show Icons**: Displays an icon denoting the object type for each object. You can turn this option off in order to speed up the display, or just because you prefer to use only the **Show Types** option.
-- **Sorted Tables and Fields**: Sorts the tables and fields in alphabetical order within their respective lists.
-- **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
-- **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
+- **Contracter** : Contracte tous les niveaux de la liste hiérarchique des expressions.
+- **Déployer** : Déploie tous les niveaux de la liste hiérarchique des expressions.
+- **Montrer les types** : Lorsque vous sélectionnez cette option, le type de l’objet s’affiche (lorsque cela est pertinent).
+- **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
+- **Montrer les icônes** : Chaque objet est précédé d'une icône qui indique son type. Vous pouvez désactiver cette option pour accélérer l’affichage, ou tout simplement parce que l’option **Montrer les types** vous convient.
+- **Tables et champs triés** : Cette option force les tables et les champs à s’afficher par ordre alphabétique (dans leurs listes respectives).
+- **Afficher les entiers en hexadécimal** : Les nombres s’affichent en notation décimale. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
+- **Activer le suivi d'activité** : Active le suivi d'activité (contrôle avancé de l'activité interne de l'application) et affiche les informations collectées dans des thèmes supplémentaires : **Séquenceur**, **Web** et **Réseau**.
 
 ## Call Chain Pane
 
@@ -321,7 +331,7 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 - **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 - **Show Types**: Displays the type of each item in the list (when appropriate).
-- **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
+- **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec des numéros de table ou de champs, ou avec des pointeurs utilisant les commandes `Table` ou `Champ`.
 - **Show Icons**: Displays an icon denoting the type of each item.
 - **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 - **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
@@ -347,7 +357,7 @@ Cela fonctionne également avec les sélections :
 
 ### Adding expressions to the Custom Watch Pane
 
-You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
+Vous pouvez copier n'importe quelle expression sélectionnée de la palette de code source dans le [Custom Watch Pane](#custom-watch-pane).
 
 1. In the Source code pane, select the expression to evaluate
 2. Effectuez l'une des opérations suivantes :
@@ -359,7 +369,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 
 La flèche jaune située dans la marge gauche du Code Source s'appelle le compteur de programme. Elle marque la prochaine ligne à exécuter.
 
-Par défaut, la ligne du compteur de programme (également appelée ligne d'exécution) est mise en évidence dans le débogueur. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
+Par défaut, la ligne du compteur de programme (également appelée ligne d'exécution) est mise en évidence dans le débogueur. Vous pouvez personnaliser la couleur de surbrillance dans la [page Méthodes des Préférences](Preferences/methods.md).
 
 #### Moving the program counter
 
@@ -379,9 +389,9 @@ Par exemple :
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`.
-When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line.
-To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+Considérons que le compteur de programme est défini sur la ligne `Si (condition This)`.
+Lorsque vous cliquez sur le bouton **Step over** , le compteur du programme passe directement à la ligne `DO_SOMETHING_ELSE` .
+Pour examiner les résultats de la ligne `DO_SOMETHING` , vous pouvez déplacer le compteur de programme sur cette ligne et l'exécuter.
 
 ### Menu contexuel de la fenêtre d'évaluation des méthodes
 
@@ -389,17 +399,17 @@ Le menu contextuel de la Fenêtre d'évaluation des méthodes donne accès à pl
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Goto Definition**: Goes to where the selected object is defined. Cette commande est disponible avec les objets suivants :
+- **Aller à définition** : permet d’accéder à la définition de l’objet sélectionné. Cette commande est disponible avec les objets suivants :
   - _Project methods:_ displays method contents in a new window of the Code Editor
-  - _Fields:_ Displays field properties in the inspector of the Structure window
-  - _Tables:_ Displays table properties in the inspector of the Structure window
-  - _Forms:_ Displays form in the Form editor
-  - _Variables_ (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
+  - _Champ_ : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
+  - _table_ : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
+  - _formulaire_ : affiche le formulaire dans l’éditeur de formulaires
+  - _variable_ (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
 - **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
-- **Copy**: Standard copy of the selected expression to the pasteboard.
-- **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
-- **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
-- **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. La ligne désignée ne sera exécutée que si l’utilisateur clique sur l’un des boutons d’exécution.
+- **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
+- **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.
+- **Exécuter jusqu’au curseur** : provoque l’exécution des instructions situées entre le compteur de programme (flèche jaune) et la ligne sélectionnée de la méthode (dans laquelle se trouve le curseur).
+- **Fixer prochaine instruction** : déplace le compteur de programme jusqu’à la ligne sélectionnée sans l’exécuter et sans exécuter les lignes intermédiaires. La ligne désignée ne sera exécutée que si l’utilisateur clique sur l’un des boutons d’exécution.
 - **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Cette fonction modifie le point d’arrêt de façon permanente : par exemple, un point d’arrêt supprimé dans le débogueur n’apparaît plus dans la méthode d’origine.
 - **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cette fonction modifie le point d’arrêt de façon permanente.
 
@@ -416,27 +426,27 @@ La recherche s'effectue uniquement si vous sélectionnez au moins un caractère 
 
 Cette section répertorie tous les raccourcis disponibles dans la fenêtre du débogueur.
 
-> The tool bar also has [shortcuts](#tool-bar-buttons).
+> La barre d'outils comporte également des [raccourcis](#tool-bar-buttons).
 
-#### Watch Pane & Custom Watch Pane
+#### Fenêtre d'évaluation & Sous-fenêtre d’évaluation
 
-- **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
-- **Double-Click** in the Custom Watch Pane to create a new expression
+- Un **double-clic** sur un article de la fenêtre d’expression copie cet article dans la fenêtre d’évaluation
+- Un **double-clic** dans la sous-fenêtre d’évaluation crée une nouvelle expression
 
 #### Source Code Pane
 
 - Un clic dans la marge gauche place ou supprime un point d’arrêt.
-- **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
-- **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
+- **Alt+Majuscule+clic** (Windows) ou **Option+Majuscule+clic** (macOS) pose un point d’arrêt provisoire.
+- **Alt+clic** (Windows) ou **Option+clic** (macOS) affiche la fenêtre des propriétés du point d’arrêt pour un point d’arrêt nouveau ou existant.
 - Une expression ou un objet sélectionné(e) peut être copié(e) dans la Fenêtre d'évaluation par glisser-déposer.
-- **Ctrl+D** (Windows) or **Cmd+D** (macOS) key combinations copy the selected text to the Custom Watch Pane.
-- **Ctrl+E** (Windows) or **Cmd+E** (macOS) key combinations find the next strings identical to the one selected.
-- **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) key combinations find the previous strings identical to the one selected.
+- **Ctrl+D** (Windows) ou **Commande+D** (macOS) sur un texte sélectionné le copie dans la Fenêtre d'évaluation.
+- **Ctrl+E** (Windows) ou **Commande+E** (macOS) identifie les chaînes suivantes qui sont identiques à la chaîne sélectionnée.
+- **Ctrl+Majuscule+E** (Windows) ou **Commande+Majuscule+E** (macOS) identifie les chaînes précédentes qui sont identiques à la chaîne sélectionnée.
 
 #### Toutes les fenêtres
 
-- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
-- **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
-- When no item is selected in any pane, press **Enter** to step over.
+- **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. The modified font size is also applied to the Code Editor and is stored in the Preferences.
+- **Ctrl+**_(Windows) ou **Commande+**_ (macOS) force la réactualisation de la Fenêtre d'expression.
+- Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 - Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.
 - Lorsque vous êtes en train d’éditer un élément, utilisez les touches directionnelles pour déplacer le curseur. Utilisez Ctrl+A/X/C/V (Windows) ou Commande+A/X/C/V (macOS) en raccourci des commandes du menu Edition : Tout Sélectionner/Couper/Copier/Coller.

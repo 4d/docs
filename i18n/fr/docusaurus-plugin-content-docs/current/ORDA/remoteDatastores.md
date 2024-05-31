@@ -1,25 +1,25 @@
 ---
 id: datastores
-title: Remote datastores
+title: Datastores distants
 ---
 
-A **remote datastore** is a reference, on a local 4D application (4D or 4D Server), to a [datastore](dsMapping.md#datastore) stored in another 4D application.
+Un **datastore distant** est une référence, dans une application 4D locale (4D ou 4D Server), à un [datastore](dsMapping.md#datastore) stocké dans une autre application 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+L'application 4D locale se connecte et référence le datastore distant à l'aide de la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they might require [available licenses](../REST/authUsers.md).
+Sur la machine distante, 4D ouvre une [session](../WebServer/sessions.md) pour gérer les requêtes de l'application qui a appelé `Open datastore`. Les requêtes utilisent en interne [l'API REST](../REST/gettingStarted.md), ce qui signifie qu'elles peuvent avoir besoin de [licences disponibles](../REST/authUsers.md).
 
-## Using web sessions
+## Utiliser des sessions web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore), la connexion avec les process de requête est gérée via des [sessions web](../WebServer/sessions.md) sur la machine distante.
 
-The web session created on the remote datastore is identified using a internal session ID which is associated to the `localID` on the 4D application side. Cette session gère automatiquement l'accès aux données, aux sélections d'entités ou aux entités.
+La session web créée sur le datastore distant est identifiée à l'aide d'un ID de session interne, associé au `localID` du côté de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
-Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie :
+Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie que :
 
-- Que si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
-- Que si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
-- Que si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
+- Si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
+- Si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
+- Si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
 
 Ces principes sont illustrés dans les graphiques suivants :
 
@@ -39,9 +39,9 @@ Dans l'exemple suivant, deux process sont en cours d'exécution pour la même se
 
 ## Fermeture des sessions
 
-As described in the [session lifetime](../WebServer/sessions.md#session-lifetime) paragraph, a web session is automatically closed by 4D when there has been no activity during its timeout period. Le timeout par défaut est de 60 mn mais cette valeur peut être paramétrée à l'aide du paramètre _connectionInfo_ de la commande `Open datastore`.
+Comme décrit dans le paragraphe [durée de vie de la session](../WebServer/sessions.md#session-lifetime), une session web est automatiquement fermée par 4D lorsqu'il n'y a pas eu d'activité pendant une durée déterminée par son timeout. Le timeout par défaut est de 60 mn mais cette valeur peut être paramétrée à l'aide du paramètre _connectionInfo_ de la commande `Open datastore`.
 
-Si une demande est envoyée au datastore distant après la fermeture de la session, elle est automatiquement recréée si possible (licence disponible, serveur non arrêté, etc.). However, keep in mind that the context of the session regarding locks and transactions is lost (see below).
+Si une demande est envoyée au datastore distant après la fermeture de la session, elle est automatiquement recréée si possible (licence disponible, serveur non arrêté, etc.). Cependant, gardez à l'esprit que le contexte de la session concernant les verrous et les transactions est perdu (voir ci-dessous).
 
 ## Verrouillage et transactions
 

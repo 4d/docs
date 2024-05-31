@@ -1,6 +1,6 @@
 ---
 id: propertiesCrop
-title: Crop
+title: Recortar
 ---
 
 

@@ -22,8 +22,8 @@ Les informations des journaux doivent être analysées pour détecter et corrige
 
 Les fichiers journaux partagent certains champs, ce qui vous permet d'établir une chronologie et de faire des connexions entre les entrées lors du débogage :
 
-- `sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
-- `connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. Il vous permet d'identifier facilement le client distant qui a lancé le process.
+- `sequence_number` : ce numéro est unique parmi tous les fichiers journaux de débogage et est incrémenté à chaque nouvelle entrée, quel que soit le fichier journal, de manière à ce que vous puissiez connaître la séquence exacte des opérations.
+- `connection_uuid` : pour chaque process 4D créé sur un client 4D qui se connecte au serveur, cet UUID de connexion est stocké à la fois côté serveur et client. Il vous permet d'identifier facilement le client distant qui a lancé le process.
 
 ## 4DRequestsLog.txt
 
@@ -45,7 +45,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
 
-> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
+> Cette instruction démarre également le fichier [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
 
 #### En-têtes
 
@@ -66,7 +66,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | systemid                                                                       | ID système                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | component                                                                      | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                       |
 | process\_info\_index               | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                                                                                                                                                                                        |
-| request                                                                        | [C/S or ORDA request ID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) or message string for SQL requests or `LOG EVENT` messages                                                                                                                                                                                                                                                                                                                   |
+| request                                                                        | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                                                                                                                                                                               |
 | bytes_in                                                  | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_out                                                 | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | server\_duration \| exec\_duration | Depends on where the log is generated:<li>_server\_duration_ when generated on the client --Time taken in microseconds for the server to process the request and return a response. B to F in image below, OR</li><li>_exec\_duration_ when generated on the server --Time taken in microseconds for the server to process the request. B to E in image below.</li> |
@@ -97,7 +97,7 @@ SET DATABASE PARAMETER(4D Server log recording;1) //côté serveur
 SET DATABASE PARAMETER(Client Log Recording;1) //côté distant
 ```
 
-> This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
+> Cette déclaration démarre également l'historique du fichier [4DRequestsLog.txt](#4drequestslogtxt).
 
 #### En-têtes
 
@@ -237,7 +237,7 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 ## 4DDiagnosticLog.txt
 
-Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier à l'aide de la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html).
 
 Pour lancer ce journal :
 
@@ -260,15 +260,15 @@ En fonction de l'événement, d'autres champs peuvent également être enregistr
 
 ### Niveaux du journal de diagnostic
 
-The _4DDiagnosticLog.txt_ file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+Le fichier _4DDiagnosticLog.txt_ peut enregistrer différents niveaux de messages, de `ERROR` (le plus important) à `TRACE` (le moins important). Par défaut, le niveau `INFO` est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
+Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur `Diagnostic log level` de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en fonction de vos besoins. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
 
 | Constante   | Description                                                                                                                 | Lorsque sélectionné, inclut                                   |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `Log error` | Numéro d'opération séquentiel et unique dans la session d'historique                                                        | `Log error`                                                   |
 | `Log warn`  | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms) | `Log error`, `Log warn`                                       |
-| `Log info`  | _Default level_ - Important application event                                                                               | `Log error`, `Log warn`, `Log info`                           |
+| `Log info`  | ID du Process 4D                                                                                                            | `Log error`, `Log warn`, `Log info`                           |
 | `Log debug` | ID unique du process                                                                                                        | `Log error`, `Log warn`, `Log info`, `Log debug`              |
 | `Log trace` | Autres informations internes (pour les services techniques de 4D)                                        | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
@@ -303,7 +303,7 @@ SET DATABASE PARAMETER(POP3 Log;1) //démarrer le journal POP3
 SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 ```
 
-> 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](ServerWindow/maintenance.md) of the 4D Server administration window.
+> 4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](ServerWindow/maintenance.md) de la fenêtre d'administration de 4D Server.
 
 Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
@@ -366,7 +366,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
+Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté client à l'aide de `SET DATABASE PARAMETER`. Il est toutefois nécessaire si vous souhaitez enregistrer le champ unique `sequenceNumber`.
 
 :::
 
@@ -401,7 +401,7 @@ Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :
 
 ### Côté serveur
 
-Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Log information is saved in a .jsonl file on the server machine disk (by default, _ordaRequests.jsonl_).
+Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Les informations du journal sont enregistrées dans un fichier .jsonl sur le disque de la machine serveur (par défaut, _ordaRequests.jsonl_).
 
 Pour lancer ce journal :
 
@@ -415,7 +415,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 :::note
 
-Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
+Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté serveur à l'aide de `SET DATABASE PARAMETER`. Toutefois, il est nécessaire si vous souhaitez enregistrer les champs uniques `sequenceNumber` et `duration`.
 
 :::
 
@@ -458,33 +458,33 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ## Utilisation d'un fichier de configuration de log
 
-You can use a **log configuration file** to easily manage log recording in a production environment. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
+Vous pouvez utiliser un **fichier de configuration de log** pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
 
 ### Activation du fichier
 
 Il existe plusieurs façons d'activer le fichier de configuration du journal, en fonction de votre configuration :
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
+- **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+- **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
+  - Windows : `Users\[userName]\AppData\Roaming\[application]`
+  - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
   - Windows: `Users\[userName]\AppData\Roaming\4D`
   - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+- **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
   - Windows: `Users\[userName]\AppData\Roaming\4D Server`
   - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
-If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settings et AppData/Library, le fichier du dossier Settings aura la priorité.
 
 :::
 
 ### Description du fichier JSON
 
-The log configuration file is a `.json` file that must comply with the following json schema:
+Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
 
 ```json
 {

@@ -527,19 +527,19 @@ _attributePath_ 引数として、評価する属性パスを渡します。
 
 <!-- REF #EntitySelectionClass.clean().Params -->
 
-| 引数  | タイプ                                |     | 説明                                            |
-| --- | ---------------------------------- | :-: | --------------------------------------------- |
-| 戻り値 | 4D.EntitySelection |  <- | New entity selection without deleted entities |
+| 引数  | タイプ                                |     | 説明                             |
+| --- | ---------------------------------- | :-: | ------------------------------ |
+| 戻り値 | 4D.EntitySelection |  <- | 削除されたエンティティを含まない新規エンティティセレクション |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
+`.clean()` 関数は、<!-- REF #EntitySelectionClass.clean().Summary -->元のエンティティセレクションに基づいた、削除済エンティティを含まない新しいエンティティセレクションを返します<!-- END REF -->。
 
-By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become _undefined_ but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing _undefined_ entity references.
+デフォルトでは、あるエンティティが削除 ([drop](EntitySelectionClass.md#drop)) された場合、既存のエンティティセレクション内のこのエンティティへの参照は _undefined_ になりますが、エンティティセレクションオブジェクトから参照そのものは削除されません。 削除されたエンティティは、[`.length`](#length) プロパティの数にまだ含まれており、リストなどのインターフェースオブジェクトにエンティティセレクションがバインドされている場合、空白の行として表示されます。 この場合、エンティティセレクションに対して `.clean()` 関数を呼び出すことで、_undefined_ なエンティティ参照が含まれない、最新のエンティティセレクションを新規に取得することができます。
 
-The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+結果のエンティティセレクションは、元のエンティティセレクションと種別になります ([順序あり/順序なし](../ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)、[変更可能/共有可能](../ORDA/entities.md#共有可能追加可能なエンティティセレクション) の種別が保持されます)。
 
 #### 例題
 
@@ -548,11 +548,11 @@ var $sel; $sel2 : cs.SpecialitySelection
 var $status : Object
 
 $sel:=ds.Speciality.query("ID <= 4")
-$status:=ds.Speciality.get(2).drop() //delete the entity from the dataclass
-  //$sel.length = 4
+$status:=ds.Speciality.get(2).drop() // データクラスからエンティティを削除する
+// $sel.length = 4
 
 $sel2:=$sel.clean()
-  //$sel2.length = 3
+// $sel2.length = 3
 ```
 
 ![](../assets/en/API/clean.png)
@@ -1945,7 +1945,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 > このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->[ローカルの ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) にあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
 
 デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。
 

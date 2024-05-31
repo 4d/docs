@@ -822,10 +822,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones               |
-| ----------- | ---------------------------- |
-| 18 R4       | Añadidos                     |
-| 19          | Add `isSubscribed` parameter |
+| Lanzamiento | Modificaciones                  |
+| ----------- | ------------------------------- |
+| 18 R4       | Añadidos                        |
+| 19          | Añadir parámetro `isSubscribed` |
 
 </details>
 
