@@ -86,13 +86,13 @@ Stops method execution, and returns to the state before the method started execu
 
 #### Abort and Edit
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
 >**Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Edit
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -148,7 +148,7 @@ $c:=a+b
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the **Line Objects** theme displays:
 
     |$a|1|
     |---|---|
@@ -156,7 +156,7 @@ $c:=a+b
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. You click the **Step Over** button again. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
 
     |$c|Undefined|
     |---|---|
