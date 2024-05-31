@@ -104,7 +104,7 @@ LIST TO ARRAY("ListName";varCol)
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+エンティティが削除されると、その参照は _undefined_ の値とともにエンティティセレクションに 残り、リストボックスには空白の行が表示されます。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
 
 :::
 
