@@ -124,13 +124,13 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
 
-> In the case of an automatic restore, only the following elements are restored:
+> En cas de restitution automatique, seuls les éléments suivants sont restitués :
 > 
-> - .4DD file
-> - .4DIndx file
-> - .4DSyncData file
-> - .4DSyncHeader file
-> - External Data folder
+> - Fichier .4DD
+> - Fichier .4DIndx
+> - Fichier .4DSyncData
+> - Fichier .4DSyncHeader
+> - Dossier External Data
 > 
 > Si vous souhaitez obtenir les fichiers joints ou les fichiers de projet, vous devez effectuer une [restauration manuelle](restore.md#manually-restoring-a-backup-standard-dialog).
 
