@@ -19,7 +19,7 @@ En el siguiente ejemplo, se ha definido un punto de ruptura (la viñeta roja), e
 
 ![break-point](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. Esa línea no se ejecuta por sí misma, sino que se vuelve al modo de rastreo. Definir un punto de interrupción más allá del contador del programa y hacer clic en el botón **No Trace** le permite saltar las partes del método que se está rastreando.
+En el ejemplo anterior, al hacer clic en el botón [**No Trace**](./debugger.md/#no-trace), se reanuda la ejecución normal hasta la línea marcada con el punto de interrupción. Esa línea no se ejecuta por sí misma, sino que se vuelve al modo de rastreo. Definir un punto de interrupción más allá del contador del programa y hacer clic en el botón **No Trace** le permite saltar las partes del método que se está rastreando.
 
 Para eliminar un punto de ruptura, haga clic en la viñeta correspondiente.
 
@@ -113,6 +113,6 @@ Para eliminar un punto de interrupción en el comando:
 
 > Para eliminar una condición, borre su fórmula.
 
-La adición de condiciones le permite detener la ejecución cuando el comando es invocado sólo si la condición se cumple. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
+La adición de condiciones le permite detener la ejecución cuando el comando es invocado sólo si la condición se cumple. Por ejemplo, si asocia la condición `Records in selection(\[Emp]>10)` con el punto de interrupción del comando `DELETE SELECTION`, el código no se detendrá durante la ejecución del comando `DELETE SELECTION` si la selección actual de la tabla \[Emp] sólo contiene 9 registros (o menos).
 
 La adición de condiciones a los puntos de interrupción de los comandos ralentiza la ejecución, porque la condición tiene que ser evaluada cada vez que se produce una excepción. Por otra parte, añadir condiciones acelera el proceso de depuración, ya que 4D omite automáticamente las ocurrencias que no coinciden con las condiciones.
