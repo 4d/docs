@@ -235,7 +235,7 @@ No es obligatorio declarar parámetros variables. Los parámetros variables no d
 Sin embargo, para evitar errores de correspondencia de tipos durante la ejecución del código, puede declarar un número variable de parámetros utilizando la notación "..." en los prototipos de sus funciones, constructores de clases y métodos (parámetros variables). Especifique el tipo del parámetro siguiendo la notación "..." con el tipo deseado.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+#DECLARE ( ... : Text ) // Número indefinido de parámetros 'Text'
 
 ```
 
@@ -353,7 +353,7 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Puede crear y llenar automáticamente un método `Compiler_Methods` que contenga todos sus parámetros declarados fuera de los prototipos utilizando el botón [**Métodos Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** en la caja de diálogo de Propiedades del compilador.
 
 :::info
 
@@ -530,11 +530,11 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Por ejemplo:
 
 ```4d
-	//Here is some code from the method MY_METHOD
+//Esta es una parte del código del método MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
- 
-	//Here is the code of the method DO_SOMETHING
+
+	//Este es el código del método DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
@@ -546,11 +546,10 @@ Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 1. En lugar de pasar el campo al método, se pasa un puntero al mismo, por lo que se escribiría:
 
 ```4d
-  //Here is some code from the method MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+  //Esta es una parte del código del método MY_METHOD
+  DO_SOMETHING(->[People]Name) //Supongamos que el valor de [People]Name es "williams"
  ALERT([People]Last Name)
- 
-  //Here the code of the method DO_SOMETHING
+  //Este es el código del método DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
@@ -560,11 +559,11 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dent
 2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Por lo tanto, escribiría:
 
 ```4d
-	//Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+//Esta es una parte del código del método MY_METHO
+ [People]Name:=DO_SOMETHING([People]Name) //Supongamos que el valor de [People]Name es "williams"
  ALERT([People]Name)
 
-	//Here the code of the method DO SOMETHING
+	//Este es el código del método DO_SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
