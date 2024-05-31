@@ -48,7 +48,7 @@ $t:=Type($v) // 12 (Is variant) 代入元の変数はバリアント型ですが
 $t2:=Type($v2) // 2 (Is text) 代入先の変数はテキスト型です
 ```
 
-Variant can be used to declare [method parameters](parameters.md) that can be of various types. この場合、引数の値の型の確認作業が必要になります:
+バリアント型は、様々なタイプになりうる [メソッドの引数](parameters.md) ($0, $1,...) を宣言するのに使用できます。 この場合、引数の値の型の確認作業が必要になります:
 
 ```4d
 #DECLARE ($param : Variant)
