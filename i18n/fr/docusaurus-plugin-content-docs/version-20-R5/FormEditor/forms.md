@@ -16,9 +16,9 @@ Les formulaires peuvent également contenir d'autres formulaires grâce aux fonc
 
 Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suivants :
 
-- **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
-- **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
-- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Voici un exemple :
+- **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
+- **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
+- **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture.md#sources-folder). Voici un exemple :
 
 ```
 {
@@ -70,9 +70,9 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 
 Il existe deux catégories de formulaires :
 
-- **Project forms** - Independent forms that are not attached to any table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
+- **Les formulaires projet** - Formulaires indépendants qui ne sont rattachés à aucune table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
 
-- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
+- **Les formulaires table** - Rattachés à des tables spécifiques et bénéficient ainsi de fonctions automatiques utiles pour développer des applications basées sur des bases de données. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
 
 En règle générale, vous sélectionnez la catégorie de formulaire lorsque vous créez le formulaire, mais vous pouvez la modifier par la suite.
 
@@ -87,7 +87,7 @@ Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de
 
 - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
 - Organisez chaque sujet sur sa propre page.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
+- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order).
 - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
@@ -98,7 +98,7 @@ Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusie
 
 ## Formulaires hérités
 
-4D forms can use and be used as "inherited forms," meaning that all of the objects from _Form A_ can be used in _Form B_. In this case, _Form B_ "inherits" the objects from _Form A_.
+Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du _Formulaire A_ peuvent être utilisés dans le _Formulaire B_. Dans ce cas, _Formulaire B_ "hérite" des objets du _Formulaire A_.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
@@ -111,7 +111,7 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3. Page zéro du formulaire ouvert
 4. Page courante du formulaire ouvert.
 
-This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
+Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order) par défaut des objets dans le formulaire.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 
