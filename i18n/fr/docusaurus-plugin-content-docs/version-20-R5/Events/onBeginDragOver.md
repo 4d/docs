@@ -9,17 +9,17 @@ title: On Begin Drag Over
 
 ## Description
 
-The `On Begin Drag Over` form event can be selected for any form objects that can be dragged. It is generated in every case where the object has the [Draggable](FormObjects/properties_Action.md#draggable) property. Il peut être appelé à partir de la méthode de l'objet source ou de la méthode formulaire de l'objet source.
+L'événement de formulaire `On Begin Drag Over` peut être sélectionné pour tous les objets formulaire pouvant être déplacés. Il est généré dans tous les cas où l'objet a la propriété [Draggable](FormObjects/properties_Action.md#draggable). Il peut être appelé à partir de la méthode de l'objet source ou de la méthode formulaire de l'objet source.
 
 > Unlike the [`On Drag Over`](onDragOver.md) form event, `On Begin Drag Over` is called within the context of the **source object** of the drag action.
 
-The `On Begin Drag Over` event is useful for preparing of the drag action. Il peut être utilisé pour :
+L'événement `On Begin Drag Over` est utile pour préparer l'action de glisser. Il peut être utilisé pour :
 
-- Add data and signatures to the pasteboard (via the `APPEND DATA TO PASTEBOARD` command).
-- Use a custom icon during the drag action (via the `SET DRAG ICON` command).
+- Ajouter des données et des signatures au conteneur (via la commande `APPEND DATA TO PASTEBOARD`).
+- Utiliser une icône personnalisée pendant l'action de glissement (via la commande `SET DRAG ICON`).
 - Accepter ou refuser le glissement via $0 dans la méthode de l'objet glissé.
-  - To indicate that drag actions are accepted, the method of the source object must return 0 (zero); you must therefore execute `$0:=0`.
-  - To indicate that drag actions are refused, the method of the source object must return -1 (minus one); you must therefore execute `$0:=-1`.
+  - Pour indiquer que les actions de glissement sont acceptées, la méthode de l'objet source doit retourner 0 (zéro); vous devez donc exécuter `$0:=0`.
+  - Pour indiquer que les actions de glissement sont refusées, la méthode de l'objet source doit retourner -1 (moins un); vous devez donc exécuter `$0:=-1`.
   - Si aucun résultat n'est retourné, 4D considère que les actions de glissement sont acceptées.
 
-Les données 4D sont placées dans le presse-papiers avant d'appeler l'événement. For example, in the case of dragging without the **Automatic Drag** action, the dragged text is already in the pasteboard when the event is called.
+Les données 4D sont placées dans le presse-papiers avant d'appeler l'événement. Par exemple, dans le cas d'un glissement sans l'action de **glissement automatique**, le texte glissé se trouve déjà dans le conteneur lorsque l'événement est appelé.
