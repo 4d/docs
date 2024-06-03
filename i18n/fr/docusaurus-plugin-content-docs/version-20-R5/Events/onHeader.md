@@ -9,16 +9,16 @@ title: Sur entête
 
 ## Description
 
-The `On Header` event is called when a record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
+L'événement `On Header` est appelé lorsqu'un enregistrement est sur le point d'être affiché dans un formulaire liste affiché via `DISPLAY SELECTION` et `MODIFY SELECTION`.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
 
 Dans ce contexte, la séquence d'appels de méthodes et d'événements de formulaire suivante est déclenchée :
 
 - Pour chaque objet de la zone d'en-tête :
-  - Object method with `On Header` event
-  - Form method with `On Header` event
+  - Méthode objet avec l'événement `On Header`
+  - Méthode formulaire avec l'événement `On Header`
 
 > Printed records are handled using the [`On Display Detail`](onDisplayDetail.md) event.
 
-Calling a 4D command that displays a dialog box from the `On Header` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
+L'appel d'une commande 4D qui affiche une boîte de dialogue à partir de l'événement `On Header` n'est pas autorisé et générera une erreur de syntaxe. Plus particulièrement, les commandes concernées sont : `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, et `MODIFY SELECTION`.
