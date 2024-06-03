@@ -9,7 +9,7 @@ title: On Close Box
 
 ## Description
 
-The `On Close Box` event is generated when the user clicks on the clos box of the window.
+L'événement `On Close Box` est généré lorsque l'utilisateur clique sur la case fermeture de la fenêtre.
 
 ### Exemple
 
