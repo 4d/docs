@@ -223,7 +223,7 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | indexed     | String  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                     |
 | type        | String  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la dataclasse pour un attribut de relation N-> 1. |
 | identifying | Boolean | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                                               |
-| path        | String  | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                           |
+| path        | String  | Nom de la dataclass pour un attribut relatedEntity, ou nom de la relation pour un attribut relatedEntities.                                                             |
 | foreignKey  | String  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                                              |
 | inverseName | String  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                                           |
 
