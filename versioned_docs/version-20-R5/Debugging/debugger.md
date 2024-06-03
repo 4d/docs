@@ -323,7 +323,7 @@ The Custom Watch Pane’s context menu gives you access the 4D formula editor an
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
 
 * **Insert Command**: Shortcut for inserting a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
