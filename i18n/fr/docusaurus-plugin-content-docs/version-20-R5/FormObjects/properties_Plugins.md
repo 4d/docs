@@ -5,7 +5,7 @@ title: Plug-ins
 
 ## Propriétés avancées
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
+Si des options avancées sont fournies par l'auteur du plug-in, un bouton **Propriétés avancées** peut être activé dans la liste de propriétés. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
 
 Étant donné que la fonction Propriétés avancées est sous le contrôle de l'auteur du plug-in, les informations sur ces options avancées relèvent de la responsabilité du distributeur du plug-in.
 
