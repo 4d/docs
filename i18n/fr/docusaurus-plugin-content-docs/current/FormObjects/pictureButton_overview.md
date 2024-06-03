@@ -3,7 +3,7 @@ id: pictureButtonOverview
 title: Bouton image
 ---
 
-A picture button is similar to a [standard button](button_overview.md). Cependant, contrairement à un bouton standard (qui accepte trois états : activé, désactivé et cliqué), un bouton image contient une image différente pour représenter chaque état.
+Un bouton image est similaire à un [bouton standard](button_overview.md). Cependant, contrairement à un bouton standard (qui accepte trois états : activé, désactivé et cliqué), un bouton image contient une image différente pour représenter chaque état.
 
 Les boutons image peuvent être utilisés de deux manières :
 
@@ -35,11 +35,11 @@ Un bouton image est créé de la manière suivante :
 
 Vous pouvez organiser les images sous la forme de colonnes, de lignes ou de tableaux. Dans ce dernier cas, les images sont alors numérotées de gauche à droite, ligne par ligne, en débutant par 0. Par exemple, la deuxième image de la deuxième ligne d’un tableau de 2 lignes et de 3 colonnes a pour numéro 4.
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. Puis, assurez-vous que l'image se trouve dans les ressources de votre projet et saisissez le chemin dans la propriété [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname).
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Définissez les propriétés de [lignes et colonnes](properties_Crop.md) du graphique.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Spécifiez quand les images changent en sélectionnant les propriétés d'[animation](properties_Animation.md) appropriées.
 
 ## Animation
 
@@ -56,7 +56,7 @@ Les autres modes disponibles sont les suivants :
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
 
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
+> La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge
 
