@@ -12,17 +12,17 @@ title: On Mouse Move
 Cet événement est généré :
 
 - lorsque le curseur de la souris se déplace d'au moins un pixel
-- OR when a modifier key (**Shift**, **Alt/Option**, **Shift Lock**) was pressed. Cela permet de gérer les opérations de glisser-déposer de type copier ou déplacer.
+- OU lorsque l'on presse sur une touche de modification (**Ctrl**, **Alt/Option**, **Verr Maj**). Cela permet de gérer les opérations de glisser-déposer de type copier ou déplacer.
 
 Si l'événement est coché pour un objet uniquement, il est généré uniquement lorsque le curseur se trouve dans la zone graphique de l'objet.
 
-The `On Mouse Move` event updates the _MouseX_ and _MouseY_ system variables.
+L'événement `On Mouse Move` met à jour les variables système _MouseX_ et _MouseY_.
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+Les objets rendus invisibles à l'aide de la commande `OBJECT SET VISIBLE` ou de la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
 
 ### Appeler la pile
 
-If the `On Mouse Move` event has been checked for the form, it is generated for each form object. S'il est vérifié pour un objet, il n'est généré que pour cet objet. Lorsqu'il existe des objets superposés, l'événement est généré par le premier objet capable de le gérer qui se trouve en allant de haut en bas.
+Si l'événement `On Mouse Move` a été coché pour le formulaire, il est généré pour chaque objet de formulaire. S'il est vérifié pour un objet, il n'est généré que pour cet objet. Lorsqu'il existe des objets superposés, l'événement est généré par le premier objet capable de le gérer qui se trouve en allant de haut en bas.
 
 ### Voir également
 
