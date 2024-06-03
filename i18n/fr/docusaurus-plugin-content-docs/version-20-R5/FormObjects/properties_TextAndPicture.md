@@ -5,9 +5,9 @@ title: Texte et Image
 
 ## Chemin d'accès arrière-plan
 
-Définit le chemin d'accès de l'image qui sera dessinée en arrière-plan de l'objet. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+Définit le chemin d'accès de l'image qui sera dessinée en arrière-plan de l'objet. Si l'objet utilise une [icône](#picture-pathname) avec [différents états](#number-of-states), l'image de fond prendra automatiquement en charge le même nombre d'états.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
 #### Grammaire JSON
 
@@ -17,7 +17,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 ---
 
@@ -33,7 +33,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) - [Bouton radio](radio_overview.md) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 ---
 
@@ -48,7 +48,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 | Sans marge           | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | Avec marge 13 pixels | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
 
-> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
+> Cette propriété fonctionne avec la propriété [Marge verticale](#vertical-margin).
 
 #### Grammaire JSON
 
@@ -58,7 +58,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 ---
 
@@ -92,7 +92,7 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 ---
 
@@ -127,7 +127,7 @@ Chaque état est représenté par une image différente. Dans l'image source, le
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 ---
 
@@ -135,9 +135,9 @@ Chaque état est représenté par une image différente. Dans l'image source, le
 
 Définit le chemin d'accès de l'image qui sera utilisée comme icône de l'objet.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Lorsqu'elle est utilisée comme icône pour les objets actifs, l'image doit être conçue pour prendre en charge [un nombre d'états](#number-of-states) variable.
 
 #### Grammaire JSON
 
@@ -147,7 +147,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [En-tête List box](listbox_overview.md#list-box-headers)[Bouton radio](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -173,7 +173,7 @@ Voici le résultat des différentes options de cette propriété :
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 ---
 
@@ -205,7 +205,7 @@ Cette propriété permet de définir la taille (en pixels) des marges verticales
 
 Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordures.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Cette propriété fonctionne avec la propriété [Marge horizontale](#horizontal-margin).
 
 #### Grammaire JSON
 
@@ -215,7 +215,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 ---
 
