@@ -9,6 +9,6 @@ title: Sur chargement ligne
 
 ## Description
 
-The `On Load Record` event can only be used in the context of an **output form**. Il est déclenché lors de la saisie des données dans la liste, après la mise en surbrillance d'un enregistrement et le passage d'un champ en mode d'édition.
+L'événement `On Load Record` ne peut être utilisé que dans le contexte d'un **formulaire de sortie**. Il est déclenché lors de la saisie des données dans la liste, après la mise en surbrillance d'un enregistrement et le passage d'un champ en mode d'édition.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
