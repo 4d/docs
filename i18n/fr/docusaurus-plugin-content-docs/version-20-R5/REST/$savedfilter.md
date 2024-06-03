@@ -3,13 +3,13 @@ id: savedfilter
 title: $savedfilter
 ---
 
-Saves the filter defined by $filter when creating an entity set (_e.g._, `$savedfilter="{filter}"`)
+Enregistre le filtre défini par $filter lors de la création d'un ensemble d'entités (par exemple, `$savedfilter="{filter}"`)
 
 ## Description
 
 Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregistrer le filtre utilisé pour sa création. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
 
-You use `$savedfilter` to save the filter you defined when creating your entity set and then pass `$savedfilter` along with your call to retrieve the entity set each time.
+Utilisez `$savedfilter` pour enregistrer le filtre que vous avez défini lors de la création de votre ensemble d'entités, puis passez `$savedfilter` avec votre appel, pour récupérer à chaque fois l'ensemble d'entités.
 
 Si l'ensemble d'entités n'est plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
