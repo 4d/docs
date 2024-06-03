@@ -445,6 +445,22 @@ When you initialize a property in its declaration line, it is added to the class
 
 If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
 
+:::note
+
+If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+
+```4d
+// in a shared class
+property myCollection := ["something"]
+// myCollection will be a shared collection
+// equivalent to:
+myCollection := New shared collection("something")
+```
+
+:::
+
+
+
 #### Example
 
 ```4d
@@ -850,6 +866,8 @@ The class singleton is instantiated at the first call of the [`cs.<class>.me`](.
 If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.  
 
 The scope of a singleton instance can be the current process or all processes. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application. Singletons are useful to define values that need to be available from anywhere in an application or process.
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application. 
 
 
 The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.

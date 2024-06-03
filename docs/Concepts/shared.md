@@ -10,11 +10,9 @@ Shared objects and shared collections are stored in standard [`Object`](dt_objec
 - to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
 - to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
-:::note
 
-Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
-:::
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
@@ -30,6 +28,12 @@ Modifications can be applied to shared objects and shared collections:
 
 - adding or removing object properties,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
+
+:::note
+
+Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+
+:::
 
 All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
 
@@ -112,9 +116,9 @@ Shared objects and shared collections are designed to allow communication betwee
 :::note
 
 The following functions automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when the function is executed:
-   
-- [collection functions](../API/CollectionClass.md) that modify shared collections 
-- [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)). 
+
+- [collection functions](../API/CollectionClass.md) that modify shared collections
+- [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)).
 
 :::
 
