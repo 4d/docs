@@ -1,7 +1,6 @@
----
-id: onCloseDetail
-title: On Close Detail
----
+- - -
+id: onCloseDetail title: On Close Detail
+- - -
 
 | Code | Puede ser llamado por                                    | Definición                                                                 |
 | ---- | -------------------------------------------------------- | -------------------------------------------------------------------------- |
