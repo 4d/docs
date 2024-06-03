@@ -7,7 +7,7 @@ title: Window Size
 
 Si vous cochez cette option, la hauteur de la fenêtre sera verrouillée et l'utilisateur ne pourra plus la redimensionner.
 
-Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. In this case, the [Minimum Height and Maximum Height](#maximum-height-minimum-height) properties can be used to determine the resizing limits.
+Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. Dans ce cas, les propriétés [Hauteur mini et Hauteur maxi](#maximum-height-minimum-height) peuvent être utilisées pour déterminer les limites de redimensionnement.
 
 #### Grammaire JSON
 
@@ -21,7 +21,7 @@ Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut 
 
 Si vous cochez cette option, la largeur de la fenêtre sera verrouillée et l'utilisateur ne pourra plus la redimensionner.
 
-Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. In this case, the [Minimum Width and Maximum Width](#maximum-width-minimum-width) properties can be used to determine the resizing limits.
+Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. Dans ce cas, les propriétés [Largeur mini et Largeur maxi](#maximum-width-minimum-width) peuvent être utilisées pour déterminer les limites de redimensionnement.
 
 #### Grammaire JSON
 
@@ -33,7 +33,7 @@ Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut 
 
 ## Hauteur maxi, Hauteur mini
 
-Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed Height](#fixed-height) option is not set.
+Hauteur maximale et minimale (en pixels) d'une fenêtre de formulaire redimensionnable si l'option [Hauteur fixe](#fixed-height) n'est pas définie.
 
 ##### Grammaire JSON
 
@@ -44,7 +44,7 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 ## Largeur maxi, Largeur mini
 
-Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed Width](#fixed-width) option is not set.
+Largeur maximale et minimale (en pixels) d'une fenêtre de formulaire redimensionnable si l'option [Largeur fixe](#fixed-width) n'est pas définie.
 
 #### Grammaire JSON
 
