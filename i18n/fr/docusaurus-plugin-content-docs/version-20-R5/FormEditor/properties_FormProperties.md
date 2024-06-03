@@ -9,7 +9,7 @@ title: Propriétés des formulaires
 
 > La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-Cette propriété définit la palette de couleurs du formulaire. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -45,7 +45,7 @@ Chaque formulaire est composé d'au moins deux pages :
 - une page 0 (page de fond)
 - une page 1 (page principale)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.md#form-pages).
 
 #### Grammaire JSON
 
@@ -127,7 +127,7 @@ Set to `\<None>` in the Property List (or " " in JSON) to inherited from a proje
 
 ## Publié en tant que sous-formulaire
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans le projet hôte.
+Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans le projet hôte.
 
 Seuls les projets formulaire peuvent être indiqués comme étant des sous-formulaires publiés.
 
@@ -141,14 +141,14 @@ Seuls les projets formulaire peuvent être indiqués comme étant des sous-formu
 
 ## Mémoriser géométrie
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Creer fenetre` formulaire avec le paramètre `*`, plusieurs paramètres du formulaire seront automatiquement mémorisés par 4D au moment de la fermeture de la fenêtre, quelle que soi
 
 - la page courante,
 - la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
 
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
+> Cette option ne prend pas en compte les objets générés via la commande `OBJECT DUPLICATE`. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
+Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
 
 #### Grammaire JSON
 
@@ -164,13 +164,13 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 ## Nom de la fenêtre
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. Le nom de la fenêtre apparaît dans la barre de titre de la fenêtre.
+Le nom de la fenêtre est utilisé lorsque le formulaire est ouvert à l'aide des commandes `Open form window` et `Open window` dans l'environnement d'application. Le nom de la fenêtre apparaît dans la barre de titre de la fenêtre.
 
-You can use dynamic references to set the window titles for forms, _i.e._:
+Vous pouvez utiliser des références dynamiques pour définir les noms de fenêtre des formulaires, c'est-à-dire :
 
 - Une référence XLIFF standard stockée dans le dossier Resources.
-- A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-- A variable or a field: The syntax to apply is `\<VariableName>` or `<[TableName]FieldName>`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
+- Un libellé de table ou de champ : La syntaxe à appliquer est la suivante : `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
+- Une variable ou un champ : La syntaxe à appliquer est la suivante : `\N-<VariableName&#062 ;` ou `&#060 ;[TableName]FieldName&#062 ;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
 > Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
