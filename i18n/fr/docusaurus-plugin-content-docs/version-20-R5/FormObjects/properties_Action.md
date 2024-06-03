@@ -11,14 +11,14 @@ Contrôlez si l'utilisateur peut faire glisser l'objet et comment il peut le fai
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. <strong x-id="1">Custom</strong>: In this mode, any drag operation performed on the object triggers the <code>On Begin Drag</code> form event in the context of the object.\
-  You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
-- **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:\
+- Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. <strong x-id="1">Custom</strong>: In this mode, any drag operation performed on the object triggers the <code>On Begin Drag</code> form event in the context of the object.\
+  You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
+- Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:\
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)\
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
-  In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. Cette option n'est pas disponible pour les images.
+  In this mode, the `On Begin Drag` form event is NOT generated. Si vous souhaitez "forcer" l'utilisation du glissement personnalisé alors que le glissement automatique est activé, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée pendant l'action. Cette option n'est pas disponible pour les images.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the _4D Language Reference_ manual.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel _Langage 4D_.
 
 #### Grammaire JSON
 
@@ -28,7 +28,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objets pris en charge
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Zones 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md) - [Liste hiérarchique](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de plug-in](pluginArea_overview.md#overview)
 
 #### Voir également
 
@@ -42,11 +42,11 @@ Contrôlez si et comment l'objet peut être la destination d'une opération de g
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. Un mode <strong x-id="1">personnalisé</strong>, dans lequel le déposer déclenche les événements formulaire <code>Sur glisser</code> et <code>Sur déposer</code> dans le contexte de l'objet.\
-  You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- Un mode **personnalisé**, dans lequel le déposer déclenche les événements formulaire `Sur glisser` et `Sur déposer` dans le contexte de l'objet. Un mode <strong x-id="1">personnalisé</strong>, dans lequel le déposer déclenche les événements formulaire <code>Sur glisser</code> et <code>Sur déposer</code> dans le contexte de l'objet.\
+  You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
+- Un mode **automatique**, dans lequel 4D gère automatiquement — si possible — l’insertion des données glissées de type texte ou image et déposées sur l’objet (les données sont collées dans l’objet). Les événements `Sur glisser` et `Sur déposer` ne sont pas générés. En revanche, les événements `Sur après modification` (lors du déposer) et `Sur données modifiées` (lorsque l'objet perd le focus) sont générés.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the _4D Language Reference_ manual.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel _Langage 4D_.
 
 #### Grammaire JSON
 
@@ -56,7 +56,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objets pris en charge
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Zones 4D Write Pro](writeProArea_overview.md) - [Bouton](button_overview.md) - [Zone de saisie](input_overview.md) - [Liste hiérarchique](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de plug-in](pluginArea_overview.md#ove
 
 #### Voir également
 
@@ -66,7 +66,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 ## Exécuter méthode objet
 
-When this option is enabled, the object method is executed with the `On Data Change` event _at the same moment_ the user changes the value of the indicator. When the option is disabled, the method is executed _after_ the modification.
+Lorsque cette option est activée, la méthode objet est exécutée avec l'événement `Sur données modifiées` _au même moment_ où l'utilisateur change la valeur de l'indicateur. Lorsque l'option est désactivée, la méthode est exécutée _après_ la modification.
 
 #### Grammaire JSON
 
@@ -76,7 +76,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### Objets pris en charge
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Indicateur de progression](progressIndicator.md) - [Règle](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -88,11 +88,9 @@ Plusieurs types de références de méthode sont pris en charge :
 
 - a standard object method file path, i.e. that uses the following pattern:\
   `ObjectMethods/objectName.4dm`\
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/_formName_/ObjectMethods/"). Dans ce cas, 4D gère automatiquement la méthode objet lorsque des opérations sont exécutées sur l'objet formulaire (renommage, duplication, copier/coller, etc.)
+  ... where `objectName` is the actual [object name](properties_Object.md#object-name). Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/forms/_formName_/ObjectMethods/"). Dans ce cas, 4D gère automatiquement la méthode objet lorsque des opérations sont exécutées sur l'objet formulaire (renommage, duplication, copier/coller, etc.)
 
-- a project method name: name of an existing project method without file extension, i.e.:
-  `myMethod`
-  In this case, 4D does not provide automatic support for object operations.
+- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
 - a custom method file path including the .4dm extension, e.g.:\
   `../../CustomMethods/myMethod.4dm`
@@ -116,7 +114,7 @@ Plusieurs types de références de méthode sont pris en charge :
 
 `Array type list boxes`
 
-Autorise le déplacement des lignes pendant l'exécution. Cette option est sélectionnée par défaut. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+Autorise le déplacement des lignes pendant l'exécution. Cette option est sélectionnée par défaut. Il n'est pas disponible pour les [list box de type sélection](listbox_overview.md#selection-list-boxes) ni pour les [list box en mode hiérarchique](properties_Hierarchy.md#hierarchical-list-box).
 
 #### Grammaire JSON
 
@@ -148,11 +146,11 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Triable
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Cette option est sélectionnée par défaut. Les tableaux de types d'image (colonnes) ne peuvent pas être triés à l'aide de cette fonction.
+Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Les tableaux de types d'image (colonnes) ne peuvent pas être triés à l'aide de cette fonction.
 
 Dans les list box basées sur une sélection d'enregistrements, la fonction de tri standard est disponible uniquement :
 
-- When the data source is _Current Selection_,
+- Lorsque la source de données est _Sélection courante_,
 - Avec des colonnes associées à des champs (de type Alpha, Numérique, Date, Heure ou Booléen).
 
 Dans d'autres cas (list box basées sur des sélections nommées, colonnes associées à des expressions), la fonction de tri standard n'est pas disponible. Un tri de list box standard modifie l'ordre de la sélection courante dans la base de données. Cependant, les enregistrements en surbrillance et l'enregistrement courant ne sont pas modifiés. Un tri standard synchronise toutes les colonnes de la list box, y compris les colonnes calculées.
@@ -171,17 +169,17 @@ Dans d'autres cas (list box basées sur des sélections nommées, colonnes assoc
 
 ## Action standard
 
-Typical activities to be performed by active objects (_e.g._, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the _Design Reference_.
+Typical activities to be performed by active objects (_e.g._, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) du _manuel de développement_.
 
 Vous pouvez associer à la fois une action standard et la méthode projet d'un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
 
-You can also set this property using the `OBJECT SET ACTION` command.
+Vous pouvez également définir cette propriété à l'aide de la commande `OBJECT SET ACTION`.
 
 #### Grammaire JSON
 
 | Nom    | Type de données | Valeurs possibles                                                                                                                |
 | ------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| action | string          | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| action | string          | Le nom d'une [action standard valide](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objets pris en charge
 
