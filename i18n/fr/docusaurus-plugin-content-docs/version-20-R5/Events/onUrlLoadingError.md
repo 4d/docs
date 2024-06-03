@@ -11,7 +11,7 @@ title: On URL Loading Error
 
 Cet événement est généré lorsqu'une erreur est détectée lors du chargement d'une URL.
 
-You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
+Vous pouvez appeler la commande `WA GET LAST URL ERROR` afin d'obtenir des informations sur l'erreur.
 
 ### Voir également
 
