@@ -13,10 +13,10 @@ Les caractéristiques générales des séparateurs sont les suivantes :
 
 - Vous pouvez placer autant de séparateurs que vous voulez dans tout type de formulaire. De même, il est possible de mêler des séparateurs horizontaux et verticaux dans un même formulaire.
 - Un séparateur peut traverser un objet. Celui-ci sera redimensionné lors du déplacement du séparateur.
-- Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
+- Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. Lorsque la propriété [Pousseur](properties_ResizingOptions.md#pusher) est associée à un séparateur, son déplacement vers la droite ou vers le bas ne rencontre pas de butée.
 - Les redimensionnements effectués dans les formulaires à l’aide des séparateurs ne sont conservés que durant l’affichage du formulaire. Une fois le formulaire refermé, les dimensions initiales sont restaurées.
 
-Une fois inséré, un séparateur se présente sous la forme d’un trait. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
+Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous pouvez modifier son [style de bordure](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) afin d’obtenir un trait plus ou moins épais, ou [modifier sa couleur](properties_BackgroundAndBorder.md##font-color-line-color).
 
 #### Exemple JSON :
 
@@ -39,7 +39,7 @@ Une fois inséré, un séparateur se présente sous la forme d’un trait. You c
 
 Dans un formulaire, les séparateurs interagissent sur les objets qui les entourent suivant les options de redimensionnement de ces objets :
 
-| Options de redimensionnement du ou des objet(s) | Objet(s) au-dessus du séparateur horizontal ou à gauche du séparateur vertical (1) | Object(s) below an horizontal _non-Pusher_ splitter or to the right of a vertical _non-Pusher_ splitter                                                                                                                                         | Object(s) below an horizontal _Pusher_ splitter or to the right of a vertical _Pusher_ splitter                                                                                             |
+| Options de redimensionnement du ou des objet(s) | Objet(s) au-dessus du séparateur horizontal ou à gauche du séparateur vertical (1) | Objet(s) au-dessous du séparateur horizontal _non Pousseur_ ou à droite d'un séparateur vertical _non Pousseur_                                                                                                                                 | Objet(s) au-dessous du séparateur horizontal _Pousseur_ ou à droite d'un séparateur vertical _Pousseur_                                                                                     |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Aucun                                                              | Restent tel que                                                                                                          | Sont déplacés avec le séparateur (conservent leur position relative) jusqu’à la butée suivante. La butée du déplacement vers le bas ou vers la droite est soit le bord de la fenêtre, soit un autre séparateur. | Sont déplacés sans limites avec le séparateur (conservent leur position relative). Aucune butée n’est appliquée (cf. paragraphe suivant) |
 | Redimensionnement                                                  | Gardent leur position d’origine mais sont redimensionnés en fonction de la nouvelle position du séparateur               |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                |
@@ -51,12 +51,12 @@ _(1) You cannot drag the splitter past the right (horizontal) or bottom (vertica
 
 ## Gestion programmée des séparateurs
 
-You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
+Vous pouvez associer une méthode objet à un séparateur. Cette méthode sera appelée avec l’événement `On Clicked` durant tout le déplacement.
 
-A [variable](properties_Object.md#variable-or-expression) of the _Longint_ type is associated with each splitter. Cette variable peut être utilisée dans vos méthodes objet et/ou formulaire. Elle prend pour valeur le déplacement courant, en pixels, du séparateur.
+Une [variable](properties_Object.md#variable-or-expression) de type _Entier long_ est associée à chaque objet séparateur. Cette variable peut être utilisée dans vos méthodes objet et/ou formulaire. Elle prend pour valeur le déplacement courant, en pixels, du séparateur.
 
 - Si elle est négative : le déplacement a été effectué vers le haut ou vers la gauche,
 - Si elle est positive : le déplacement a été effectué vers le bas ou vers la droite,
 - Si elle est égale à 0 : le séparateur a été relâché à son emplacement d’origine.
 
-Vous pouvez également déplacer le séparateur par programmation : il suffit de modifier la valeur de la variable associée. For example, if a vertical splitter is associated with a variable named `split1`, and if you execute the following statement: `split1:=-10`, the splitter will be moved 10 pixels to the left — as if the user did it manually. Le déplacement s’effectue au terme de l’exécution de la méthode objet ou formulaire contenant l’instruction.
+Vous pouvez également déplacer le séparateur par programmation : il suffit de modifier la valeur de la variable associée. Imaginons par exemple qu’un séparateur vertical soit associé à la variable `sépara1`. Si vous écrivez `sépara1:=-10`, le séparateur sera déplacé de 10 pixels vers la gauche — comme si l’utilisateur l’avait fait manuellement. Le déplacement s’effectue au terme de l’exécution de la méthode objet ou formulaire contenant l’instruction.
