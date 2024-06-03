@@ -66,11 +66,10 @@ Vous pouvez combiner des expressions de type heure et de type numérique à l'ai
 Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Time` ou `Current time`:
 
 ```4d
-	//The following line assigns to $vlSeconds the number of seconds   
-	//that will be elapsed between midnight and one hour from now
-$vlSeconds:=Current time+3600
-	//The following line assigns to $vHSoon the time it will be in one hour
-$vhSoon:=Time(Current time+3600)
+// La ligne suivante assigne à la variable $vlSeconds le nombre de secondes qui, dans une heure à partir de maintenant, se seront écoulées depuis minuit
+ $vlSeconds:=Current time+3600
+  // La ligne suivante assigne à la variable $vhSoon l'heure qu'il sera dans une heure
+ $vhSoon:=Time(Current time+3600)
 ```
 
 La seconde ligne peut également être écrite de la façon suivante :
