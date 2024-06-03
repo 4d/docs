@@ -9,6 +9,6 @@ title: On Bound Variable Change
 
 ## Descripción
 
-This event is generated in the context of the form method of a [subform](FormObjects/subform_overview.md) as soon as a value is assigned to the variable bound with the subform in the parent form (even if the same value is reassigned) and if the subform belongs to the current form page or to page 0.
+Este evento se genera en el contexto del método formulario de un [subformulario](FormObjects/subform_overview.md) tan pronto como se asigna un valor a la variable vinculada con el subformulario en el formulario padre (incluso si se reasigna el mismo valor) y si el subformulario pertenece a la página actual del formulario o a la página 0.
 
 Para más información, consulte la sección [Gestión de la variable vinculada](FormObjects/subform_overview.md#managing-the-bound-variable).
