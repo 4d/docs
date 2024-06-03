@@ -5,7 +5,7 @@ title: On Begin URL Loading
 
 | Code | Puede ser llamado por                       | Definición                            |
 | ---- | ------------------------------------------- | ------------------------------------- |
-| 47   | [Web Area](FormObjects/webArea_overview.md) | Se carga una nueva URL en el área web |
+| 47   | [Área Web](FormObjects/webArea_overview.md) | Se carga una nueva URL en el área web |
 
 ## Descripción
 
