@@ -11,7 +11,7 @@ Une fois que vous utilisez les zones 4D View Pro dans vos formulaires, vous pouv
 
 ## Utiliser des zones 4D View Pro
 
-4D View Pro areas are documented in the [4D View Pro section](ViewPro/getting-started.md).
+Les zones 4D View Pro sont documentées dans [la section 4D View Pro](ViewPro/getting-started.md).
 
 ## Propriétés prises en charge
 
