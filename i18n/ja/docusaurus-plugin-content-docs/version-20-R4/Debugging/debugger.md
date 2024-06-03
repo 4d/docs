@@ -66,15 +66,15 @@ title: デバッガー
 別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
 
 
-#### Step Out
+#### 呼び出し元に進む
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 トレース中のメソッドがコールチェーンの最後のメソッドである場合には、デバッガーウィン ドウが閉じられます。
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+リモートデバッグにおいては、メソッドの最後の行の実行時に、サーバー上でメソッドが実行されている場合には、親メソッドが呼び出されます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは トレース終了 ボタンと同じように振る舞います。
 
-#### Step Into Process
+#### 別プロセスもトレース
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+新しいプロセスを作成する (New process コマンドを呼び出す) 行を実行する際にこのボタンを使用すると新しいデバッガーウィンドウが表示され、作成されたプロセスでトレースを続行することができます。 新しいプロセスを作成しない行を実行する際には、このボタンは 次行に進む ボタンと同等に動作します。
 
 
 #### 中断
