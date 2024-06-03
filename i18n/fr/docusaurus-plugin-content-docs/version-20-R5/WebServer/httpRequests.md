@@ -72,7 +72,7 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 | http://123.4.567.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "_/Customers/Add_" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "_/Customers/Add_" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcut By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Header and Body of the HTTP request
 
@@ -90,7 +90,7 @@ The $3 parameter receives the IP address of the browser’s machine. This inform
 
 ### $4 - Server IP address
 
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
 ### $5 and $6 - User Name and Password
 
@@ -100,8 +100,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-\*\*/4DACTION/\*\*_MethodName_<br/>
-\*\*/4DACTION/\*\*_MethodName/Param_
+\*\*\*/4DACTION/_**MethodName**_<br/> \*\*/4DACTION/\*\*\*\*\*_MethodName/Param_
 
 | Paramètres | Type |     | Description                                  |
 | ---------- | ---- | :-: | -------------------------------------------- |
