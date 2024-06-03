@@ -9,7 +9,7 @@ title: Objets
 
 `PARAMETRAGE OBLIGATOIRE`
 
-This property designates the type of the [active or inactive form object](formObjects_overview.md).
+Cette propriété désigne le type [objet de formulaire actif ou inactif](formObjects_overview.md).
 
 #### Grammaire JSON
 
@@ -74,7 +74,7 @@ Here is the list of objects whose value can be saved:
 
 ## Variable ou expression
 
-> See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
+> Voir également **[Expression](properties_DataSource.md#expression)** pour les colonnes de list box de type sélection et collection.
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 
@@ -92,7 +92,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 ### Expressions
 
-You can use an [expression](Concepts/quick-tour.md#expressions) as data source for an object. Any valid 4D expression is allowed: simple expression, object property, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
+Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
@@ -142,7 +142,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 > This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must [declare the variable](Concepts/variables.md#declaring-variables).
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vue d'une compilation de projet, vous devez [déclarer la variable](Concepts/variables.md#declaring-variables).
 
 However, this property has a typing function in the following specific cases:
 
@@ -190,7 +190,7 @@ The collection or the entity selection must be available to the form when it is 
 - if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.<propertyPath>`.
 - if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.<attributePath>`.
 
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current object (see below).
+> Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. However in this case you will not be able to modify values or to access the current object (see below).
 
 #### Grammaire JSON
 
@@ -307,7 +307,7 @@ There are several types of calculations available. The following table shows whi
 
 (\*) Only for array type list boxes.
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
+> Seules les [variables](Concepts/variables.md) déclarées ou dynamiques peuvent être utilisées pour afficher les calculs des pieds de listbox. Les autres types d'[expressions](Concepts/quick-tour.md#expressions) telles que `Form.sortValue` ne sont pas pris en charge.
 
 Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
