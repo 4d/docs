@@ -17,7 +17,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
 
 ---
 
@@ -72,7 +72,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. You can even control the particular letters and numbers.
 
-Un filtre de saisie n’est effectif que pendant la saisie. Il n’a aucun effet sur l’affichage des données une fois que l'objet est désélectionné. In general, you use entry filters and [display formats](properties_Display.md) together. Le filtre agit pendant la saisie et le format d’affichage assure un affichage approprié de la valeur après sa saisie.
+Un filtre de saisie n’est effectif que pendant la saisie. Il n’a aucun effet sur l’affichage des données une fois que l'objet est désélectionné. En général, les filtres de saisie sont utilisés conjointement avec les [formats d'affichage](properties_Display.md). Le filtre agit pendant la saisie et le format d’affichage assure un affichage approprié de la valeur après sa saisie.
 
 Pendant la saisie de données, un filtre de saisie évalue chaque caractère au moment où il est saisi. Si l’utilisateur tente de taper un caractère invalide (un chiffre à la place d’une lettre, par exemple), 4D refuse la saisie du caractère. The null character remains unchanged until the user types a valid character.
 
@@ -80,7 +80,7 @@ Les filtres de saisie peuvent aussi être utilisés pour afficher des caractère
 
 ### Définition d'un filtre de saisie
 
-Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
+La plupart du temps, les [filtres intégrés](#default-entry-filters) de 4D répondront à vos besoins. Toutefois, vous pouvez créer des filtres personnalisés:
 
 - you can directly enter a filter definition string
 - or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
@@ -96,8 +96,8 @@ Ce tableau décrit les filtres de saisie du menu de sélection :
 | ~A                                                                                  | Permet la saisie de toute lettre, mais les transforme en caractères majuscules.                                                                                                                             |
 | &9                                                                              | Permet tout chiffre.                                                                                                                                                                                        |
 | &A                                                                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                                              |
-| &a                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                           |
-| &@                                                                 | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                          |
+| &A                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                           |
+| &3                                                                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                          |
 | ~a##                                                                                | State name abbreviation (e.g., CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                      |
 | !0&9##/##/##                                                                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                        |
 | !0&9 Day: ## Month: ## Year: ## | Time entry format. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Limited to hours and minutes.                            |
@@ -120,7 +120,7 @@ Ce tableau décrit les filtres de saisie du menu de sélection :
 
 #### Objets pris en charge
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -170,7 +170,7 @@ By default, the object uses the current keyboard layout.
 
 ## Multilignes
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. Elle peut prendre trois valeurs : Oui, Non, Automatique (par défaut).
+Cette propriété est disponible pour les [objets de zone de saisie](input_overview.md) contenant les expressions de type texte et les champs de type alpha et texte. Elle peut prendre trois valeurs : Oui, Non, Automatique (par défaut).
 
 #### Automatique
 
@@ -186,7 +186,7 @@ This property is available for [inputs objects](input_overview.md) containing ex
 
 #### Oui
 
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option [Retour à la ligne](properties_Display.md#wordwrap).
 
 #### Grammaire JSON
 
@@ -231,7 +231,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Zone de saisie](input_overview.md)
 
 #### Voir également
 
@@ -281,8 +281,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) -
-[Radio Button](radio_overview.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
