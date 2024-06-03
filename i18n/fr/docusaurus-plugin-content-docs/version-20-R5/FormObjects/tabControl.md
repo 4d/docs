@@ -48,17 +48,17 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 
 ### Utilisation d'un objet
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. Cet objet doit avoir les propriétés suivantes :
+Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](../Concepts/dt_collection.md) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type       | Description                                                                                                                                                                                          |
 | -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valeurs`      | Collection | Obligatoire - Collection de valeurs scalaires. Seules les valeurs de type chaîne sont prises en charge. Si elle est invalide, vide ou non définie, l'onglet est vide |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                                               |
+| `index`        | number     | Indice de la page de l'onglet en cours (valeur comprise entre 0 et `collection.length-1`)                                                                                         |
 | `currentValue` | Text       | Valeur courante sélectionnée                                                                                                                                                                         |
 
 Le code d'initialisation doit être exécuté avant que le formulaire ne soit présenté à l'utilisateur.
 
-In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+Dans l'exemple suivant, `Form.tabControl` a été défini comme [expression](properties_Object.md#variable-or-expression) de l'onglet. You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
 
 ```4d
 Form.tabControl:=New object
@@ -68,11 +68,11 @@ Form.tabControl.index:=2 //démarrage à la page 3
 
 ### Utiliser une énumération
 
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Les icônes associées à des éléments de liste dans l'éditeur de listes seront affichées dans l'onglet.
+Vous pouvez associer à l’onglet [une liste de valeurs](properties_DataSource.md#choice-list-static-list), accessible via une collection (liste statique) ou un pointeur JSON vers une liste json ("$ref"). Les icônes associées à des éléments de liste dans l'éditeur de listes seront affichées dans l'onglet.
 
 ### Utiliser un tableau texte
 
-Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. Par exemple, vous pouvez placer ce code dans l’événement formulaire `Sur chargement`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -81,7 +81,7 @@ Vous pouvez créer un tableau Texte qui contient les noms de chaque page du form
  arrPages{3}:="Notes"  
 ```
 
-> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
+> Vous pouvez également stocker les noms des pages dans une liste hiérarchique et utiliser la commande [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) pour charger les valeurs dans le tableau.
 
 ## Fonctionnalités de Goto page
 
@@ -110,7 +110,7 @@ Vous pouvez, par exemple, écrire le code suivant :
 
 ### Action Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Lorsque vous associez l’[action standard](properties_Action.md#standard-action) `gotoPage` à un objet de type Onglet, 4D affiche automatiquement la page du formulaire correspondant au numéro de l’onglet sélectionné.
 
 Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 du formulaire courant (si elle existe).
 
