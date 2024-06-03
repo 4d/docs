@@ -13,7 +13,7 @@ Cet événement peut être généré dans différents contextes.
 
 ### 4D View Pro
 
-La sélection courante de lignes ou de colonnes est modifiée. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+La sélection courante de lignes ou de colonnes est modifiée. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
 | Propriété     | Type        | Description                        |
 | ------------- | ----------- | ---------------------------------- |
@@ -41,7 +41,7 @@ L'enregistrement courant ou la sélection courante de lignes est modifié(e) sou
 
 Cet événement est généré à chaque fois que la sélection faite dans la liste hiérarchique est modifiée après un clic de souris ou une frappe.
 
-### Input & 4D Write Pro
+### Zone de saisie et 4D Write Pro
 
 La sélection de texte ou la position du curseur dans la zone est modifiée suite à un clic ou une frappe.
 
