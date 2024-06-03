@@ -125,7 +125,7 @@ Le stockage du fichier de clés de chiffrement des données au premier niveau de
 
 :::
 
-## Fichier d'historique
+## Fichier journal
 
 Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de l'application. Il est créé au format XML et nommé "_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" ou "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_".
 
