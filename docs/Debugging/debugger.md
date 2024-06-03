@@ -323,13 +323,13 @@ The Custom Watch Pane’s context menu gives you access the 4D formula editor an
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 * **Insert Command**: Shortcut for inserting a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in [remote debugging mode](debugging-remote.md).
 
 * **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 * **Show Types**: Displays the type of each item in the list (when appropriate).
