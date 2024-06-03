@@ -11,7 +11,7 @@ title: On Deactivate
 
 Si la fenêtre d'un formulaire était la fenêtre de premier plan, cet événement est appelé lorsque la fenêtre est envoyée en arrière-plan.
 
-Cet événement s'applique au formulaire dans son ensemble et non à un objet particulier. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
+Cet événement s'applique au formulaire dans son ensemble et non à un objet particulier. Par conséquent, si la propriété de l'événement formulaire `On Deactivate` est sélectionnée, seul le formulaire verra sa méthode formulaire appelée.
 
 ### Voir également
 
