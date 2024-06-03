@@ -3,7 +3,7 @@ id: shapesOverview
 title: Formes
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+Les formes sont des [objets statiques](formObjects_overview.md#active-and-static-objects) qui peuvent être ajoutées à des formes 4D.
 
 Les formes 4D prennent en charge les formes basiques suivantes :
 
@@ -15,7 +15,7 @@ Les formes 4D prennent en charge les formes basiques suivantes :
 
 Un rectangle statique est un objet décoratif contenu dans les formulaires. Les rectangles sont limités à des formes carrées.
 
-Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épaisseur de ligne, motif, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épaisseur de ligne, motif, etc.). L'[arrondi](properties_CoordinatesAndSizing.md#corner-radius), en particulier, des coins du rectangle peuvent être définis.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
@@ -44,9 +44,9 @@ Les lignes sont créées à l'aide de plusieurs propriétés (couleur, épaisseu
 
 ### propriété startPoint
 
-The `startPoint` JSON property defines from which coordinate to draw the line (see example).
+La propriété JSON `startPoint` définit à partir de quelle coordonnée la ligne peut être dessinée (voir l'exemple).
 
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+> la propriété `startPoint` n'est pas exposée dans la liste des propriétés, où la direction du dessin de ligne est visible.
 
 #### Exemple JSON :
 
@@ -86,7 +86,7 @@ Result:
 
 ## Ovale
 
-Un ovale statique est un objet décoratif contenu dans les formulaires. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Un ovale statique est un objet décoratif contenu dans les formulaires. Les objets de forme ovale peuvent être utilisés pour dessiner des formes circulaires (lorsque les propriétés [largeur](properties_CoordinatesAndSizing.md#width) et [hauteur](properties_CoordinatesAndSizing.md#height) sont identiques).
 
 ![](../assets/en/FormObjects/shape_oval.png)
 
