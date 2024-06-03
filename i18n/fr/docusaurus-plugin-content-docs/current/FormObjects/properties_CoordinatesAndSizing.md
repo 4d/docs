@@ -5,7 +5,7 @@ title: Coordonnées et dimensions
 
 ## Hauteur de ligne automatique
 
-This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
+Cette propriété n'est disponible que pour les listbox avec les [sources de données](properties_Object.md#data-source) suivantes :
 
 - collection ou entity selection,
 - tableau (non hiérarchique).
@@ -14,21 +14,21 @@ Par défaut, cette option n'est pas sélectionnée. Lorsqu'elle est utilisée po
 
 :::note
 
-When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 :::
 
-When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
+Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiquement calculée afin d'ajuster entièrement le contenu de la cellule ajusté sans être tronqué (sauf si l'option [Wordwrap](properties_Display.md#wordwrap) est désactivée.
 
 - Le calcul de la hauteur de ligne prend en compte :
   - tout type de contenu (texte, numérique, dates, heures, images (le calcul dépend du format de l'image), objets),
   - tout types de contrôle (zones de saisie, cases à cocher, listes, listes déroulantes),
   - polices, styles de polices et tailles de polices,
-  - the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
+  - l'option [Retour à la ligne](properties_Display.md#wordwrap) : si elle est désactivée, la hauteur est basée sur le nombre de paragraphes (les lignes sont tronquées); si elle est activée, la hauteur est basée sur le nombre de lignes (non tronquées).
 
 - Le calcul de la hauteur de ligne ne tient pas compte de :
   - du contenu de colonne masqué
-  - [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
+  - des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
 
 :::caution
 
@@ -131,16 +131,16 @@ La valeur maximale dépend de la taille du rectangle (elle ne peut pas dépasser
 
 :::note
 
-With [text areas](text.md) and [inputs](input_overview.md):
+Avec les [zones de texte](text.md) et les [zones de saisie](input_overview.md) :
 
-- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style),
-- the corner roundness is drawn outside the area of the object (the object appears larger in the form but its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are not extended).
+- la propriété de rayon d'angle n'est disponible qu'avec les [styles de ligne de bordure](properties_BackgroundAndBorder.md#border-line-style) "none", "solid" ou "dotted",
+- l'arrondi du coin est dessiné en dehors de la zone de l'objet (l'objet apparaît plus grand dans le formulaire mais sa [largeur](properties_CoordinatesAndSizing.md#width) et sa [hauteur](properties_CoordinatesAndSizing.md#height) ne sont pas étendues).
 
 ![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
+Vous pouvez également définir cette propriété à l'aide des commandes [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) et [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) .
 
 #### Grammaire JSON
 
@@ -150,7 +150,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### Objets pris en charge
 
-[Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Entrée](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Zone de texte](text.md)
 
 ---
 
@@ -177,8 +177,8 @@ Cette propriété désigne la taille verticale d'un objet.
 Cette propriété désigne la taille horizontale d'un objet.
 
 > - Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
-> - If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
-> - When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> - Si la propriété [Resizable](properties_ResizingOptions.md#resizable) est utilisée pour une [colonne de list box](listbox_overview.md#list-box-columns), l'utilisateur peut également redimensionner manuellement la colonne.
+> - Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
@@ -196,7 +196,7 @@ Cette propriété désigne la taille horizontale d'un objet.
 
 La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut pas être augmentée au-delà de cette valeur lors du redimensionnement de la colonne ou du formulaire.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
@@ -214,7 +214,7 @@ La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut pas être réduite en dessous de cette valeur lors du redimensionnement de la colonne ou du formulaire.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
@@ -264,7 +264,7 @@ RowHeights{5}:=3
 En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne de la list box aura une hauteur de trois lignes, tandis que chaque autre ligne conservera sa hauteur par défaut.
 
 > - La propriété Row Height Array n'est pas prise en compte pour les list box hiérarchiques.
-> - For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+> - Pour les list box de type tableau et collection/entity selection, cette propriété n'est disponible que si l'option [Hauteur de ligne automatique](#automatic-row-height) n'est pas sélectionnée.
 
 #### Grammaire JSON
 
@@ -290,9 +290,9 @@ Définit une marge horizontale pour les cellules. La valeur est définie en pixe
 
 #### Grammaire JSON
 
-| Nom               | Type de données | Valeurs possibles                                 |
-| ----------------- | --------------- | ------------------------------------------------- |
-| horizontalPadding | number          | Number of pixels (must be >=0) |
+| Nom               | Type de données | Valeurs possibles                                   |
+| ----------------- | --------------- | --------------------------------------------------- |
+| horizontalPadding | number          | Nombre de pixels (doit être >=0) |
 
 #### Objets pris en charge
 
@@ -310,9 +310,9 @@ Définit une marge verticale pour les cellules. La valeur est définie en pixels
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                 |
-| --------------- | --------------- | ------------------------------------------------- |
-| verticalPadding | number          | Number of pixels (must be >=0) |
+| Nom             | Type de données | Valeurs possibles                                   |
+| --------------- | --------------- | --------------------------------------------------- |
+| verticalPadding | number          | Nombre de pixels (doit être >=0) |
 
 #### Objets pris en charge
 
