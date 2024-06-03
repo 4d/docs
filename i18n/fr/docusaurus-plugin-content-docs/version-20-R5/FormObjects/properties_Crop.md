@@ -15,7 +15,7 @@ Définit le nombre de colonnes dans un tableau d'imagettes.
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
 
 ---
 
@@ -31,4 +31,4 @@ Définit le nombre de lignes dans un tableau d'imagettes.
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
