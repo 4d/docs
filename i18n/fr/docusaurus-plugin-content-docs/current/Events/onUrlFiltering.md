@@ -9,9 +9,9 @@ title: On URL Filtering
 
 ## Description
 
-This event is generated when the loading of a URL is blocked by the Web area because of a filter set up using the `WA SET URL FILTERS` command.
+Cet événement est généré lorsque le chargement d'une URL est bloqué par la zone Web en raison d'un filtre configuré à l'aide de la commande `WA SET URL FILTERS`.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 ### Voir également
 
