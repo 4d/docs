@@ -9,22 +9,22 @@ title: On Drag Over
 
 ## Description
 
-The `On Drag Over` event is repeatedly sent to the destination object when the mouse pointer is moved over the object. Généralement, en réponse à cet événement :
+L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de destination lorsque le pointeur de la souris est déplacé sur l'objet. Généralement, en réponse à cet événement :
 
-- Get the data and signatures found in the pasteboard (via the `GET PASTEBOARD DATA` command).
-- Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
+- Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
+- En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
 
-To **accept** the drag, the destination object method must return 0 (zero), so you write `$0:=0`.
-To **reject** the drag, the object method must return -1 (minus one), so you write `$0:=-1`.
-During an `On Drag Over` event, 4D treats the object method as a function. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
+Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`.
+Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner -1 (moins un), vous devez donc écrire `$0:=-1`.
+Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
 
 Si vous acceptez le glissement, l'objet de destination est mis en surbrillance. Si vous refusez le glissement, la destination n'est pas mise en surbrillance. Accepter le glissement ne signifie pas que les données déplacées vont être insérées dans l'objet de destination. It only means that if the mouse button was released at this point, the destination object would accept the dragged data and the [`On Drop`](onDrop.md) event would be fired.
 
-If you do not process the `On Drag Over` event for a droppable object, that object will be highlighted for all drag over operations, no matter what the nature and type of the dragged data.
+Si vous ne traitez pas l'événement `On Drag Over` pour un objet déposable, cet objet sera mis en surbrillance pour toutes les opérations de glissement, quels que soient la nature et le type des données déplacées.
 
-The `On Drag Over` event is the means by which you control the first phase of a drag-and-drop operation. Vous pouvez non seulement tester si les données déplacées sont d'un type compatible avec l'objet de destination, puis accepter ou rejeter le glissement; vous pouvez simultanément avertir l'utilisateur de ce fait, car 4D met en évidence (ou non) l'objet de destination, en fonction de votre décision.
+L'événement `On Drag Over` est le moyen par lequel vous contrôlez la première phase d'une opération de glisser-déposer. Vous pouvez non seulement tester si les données déplacées sont d'un type compatible avec l'objet de destination, puis accepter ou rejeter le glissement; vous pouvez simultanément avertir l'utilisateur de ce fait, car 4D met en évidence (ou non) l'objet de destination, en fonction de votre décision.
 
-The code handling an `On Drag Over` event should be short and execute quickly, because that event is sent repeatedly to the current destination object, due to the movements of the mouse.
+Le code gérant un événement `On Drag Over` doit être court et s'exécuter rapidement, car cet événement est envoyé à plusieurs reprises à l'objet de destination courant, en raison des mouvements de la souris.
 
 #### Voir également
 
