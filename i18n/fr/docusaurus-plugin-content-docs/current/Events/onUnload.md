@@ -11,14 +11,14 @@ title: On Unload
 
 Cet événement est déclenché lorsque le formulaire est généré.
 
-All the objects of the form (from any page) whose `On Unload` object event property is selected will have their object method called.
-Then, if the `On Unload` form event property is selected, the form will have its form method called.
+Tous les objets du formulaire (de n'importe quelle page) dont la propriété d'événement `On Unload` est sélectionnée verront leur méthode objet appelée.
+Ensuite, si la propriété d'événement formulaire `On Unload` est sélectionnée, la méthode formulaire sera appelée.
 
 > The [`On Load`](onLoad.md) and [`On Unload`] events are generated for objects if they are enabled for both the objects and the form to which the objects belong. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
 
 ### Sous-formulaire
 
-The `On Unload` event is generated when the subform is closing (this event must also have been activated at the parent form level in order to be taken into account). L'événement est généré avant ceux du formulaire parent. Notez également que, conformément aux principes de fonctionnement des événements de formulaire, si le sous-formulaire est placé sur une page autre que la page 0 ou 1, cet événement ne sera généré que lorsque cette page sera fermée (et non lorsque le formulaire sera fermé).
+L'événement `On Unload` est généré à la fermeture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. Notez également que, conformément aux principes de fonctionnement des événements de formulaire, si le sous-formulaire est placé sur une page autre que la page 0 ou 1, cet événement ne sera généré que lorsque cette page sera fermée (et non lorsque le formulaire sera fermé).
 
 ### Voir également
 
