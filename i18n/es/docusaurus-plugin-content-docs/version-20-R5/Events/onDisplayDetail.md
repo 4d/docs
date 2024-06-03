@@ -24,13 +24,13 @@ En este contexto, se desencadena la siguiente secuencia de llamadas a métodos y
     - Método objeto con el evento `On Display Detail`
   - Método formulario con el evento `On Display Detail`
 
-> The header area is handled using the [`On Header`](onHeader.md) event.
+> El área del encabezado se maneja utilizando el evento [`On Header`](onHeader.md).
 
 Llamar a un comando 4D que muestra una caja de diálogo desde el evento `On Display Detail` no está permitido y provocará un error de sintaxis. Más concretamente, los comandos en cuestión son: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION` y `MODIFY SELECTION`.
 
 ### List box selección
 
-This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
+Este evento se genera cuando se muestra una fila de un list box de [**tipo selección**](FormObjects/listbox_overview.md#selección-list-boxes).
 
 ### Número de línea mostrado
 
