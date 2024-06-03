@@ -3,13 +3,13 @@ id: spinner
 title: Spinner
 ---
 
-The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
+Le spinner est un indicateur circulaire qui affiche une animation continue, telle que le [Barber shop](progressIndicator.md#barber-shop).
 
 ![](../assets/en/FormObjects/spinner.gif)
 
-Ce type d'objet vous permet d'indiquer une opération telle que la recherche de connexion réseau ou le calcul est en cours. When this indicator is selected, [graphical Scale properties](properties_Scale.md) are not available.
+Ce type d'objet vous permet d'indiquer une opération telle que la recherche de connexion réseau ou le calcul est en cours. Lorsque cet indicateur est sélectionné, [les propriétés "Graduations"](properties_Scale.md) ne sont pas disponibles.
 
-A l’exécution du formulaire, l'objet n’est pas animé. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l’animation en passant une valeur à [la variable ou expression qui lui est associée](properties_Object.md#variable-or-expression) :
 
 - 1 (ou toute valeur différente de 0) = Démarrer l’animation,
 - 0 = Stopper l’animation
