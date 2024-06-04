@@ -133,7 +133,7 @@ Esta propiedad es de **solo lectura**.
 
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-This property is **read/write**.
+Esta propiedad es **lectura-escritura**.
 
 <!-- END REF -->
 
