@@ -5,7 +5,7 @@ title: VP SET SHEET COUNT
 
 <!-- REF #_method_.VP SET SHEET COUNT.Syntax -->
 
-**VP SET SHEET COUNT** ( _vpAreaName_ : Text ; _number_ : Integer  ) <!-- END REF -->
+**VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
@@ -16,7 +16,7 @@ title: VP SET SHEET COUNT
 
 #### Descripción
 
-El comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->establece el número de hojas en _vpAreaName_<!-- END REF -->.
+El comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->establece el número de hojas en *vpAreaName*<!-- END REF -->.
 
 En `number`, pase un número correspondiente a cuántas hojas contendrá el documento tras la ejecución del comando.
 
