@@ -490,10 +490,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                             |
-| ---------- | ----------------------- | -- | ------------------------------------------------------- |
-| path       | Text                    | -> | Ruta POSIX relativa                                     |
-| Result     | 4D.File | <- | `File` object (null if invalid path) |
+| Parámetros | Tipo                    |    | Descripción                                                    |
+| ---------- | ----------------------- | -- | -------------------------------------------------------------- |
+| path       | Text                    | -> | Ruta POSIX relativa                                            |
+| Result     | 4D.File | <- | Objeto `File` (null si la ruta es inválida) |
 
 <!-- END REF -->
 
