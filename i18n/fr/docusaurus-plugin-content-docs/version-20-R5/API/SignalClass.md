@@ -56,7 +56,7 @@ Etant donné qu'un objet signal est un [objet partagé](Concepts/shared.md), vou
  $calc:=$signal.result+...
 ```
 
-Méthode _**OpenForm**_ :
+Méthode ***OpenForm*** :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)  
@@ -118,7 +118,7 @@ Un signal est un objet partagé qui peut être passé en paramètre depuis un wo
 - le worker/process appelé puisse mettre à jour l'objet signal après qu'un traitement spécifique soit terminé
 - le worker/process appelant puisse stopper son exécution et attende jusqu'à ce que le signal soit mis à jour, sans consommer aucune ressource CPU.
 
-Optionnellement, dans le paramètre _description_, vous pouvez passer un texte personnalisé décrivant le signal. Ce texte peut également être défini après la création du signal.
+Optionnellement, dans le paramètre *description*, vous pouvez passer un texte personnalisé décrivant le signal. Ce texte peut également être défini après la création du signal.
 
 Comme l'objet signal est un objet partagé, il peut aussi être utilisé pour maintenir des propriétés utilisateur, y compris la propriété [`.description`](#description), via l'appel de la structure `Use...End use`.
 
@@ -144,7 +144,7 @@ Voici un exemple type de worker qui définit un signal :
  End if
 ```
 
-La méthode _**doSomething**_ est par exemple :
+La méthode ***doSomething*** est par exemple :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
@@ -259,15 +259,15 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 #### Description
 
-La fonction `.wait()` <!-- REF #SignalClass.wait().Summary -->place le process courant en attente jusqu'à ce que la propriété `.signaled` de l'objet signal devienne **true** ou que le _timeout_ optionnel expire<!-- END REF -->.
+La fonction `.wait()` <!-- REF #SignalClass.wait().Summary -->place le process courant en attente jusqu'à ce que la propriété `.signaled` de l'objet signal devienne **true** ou que le *timeout* optionnel expire<!-- END REF -->.
 
-Pour prévenir tout code bloquant, vous pouvez passez un temps d'attente maximum en secondes dans le paramètre _timeout_ (les décimales sont acceptées).
+Pour prévenir tout code bloquant, vous pouvez passez un temps d'attente maximum en secondes dans le paramètre *timeout* (les décimales sont acceptées).
 
-> **Attention** : L'appel de `.wait( )` sans _timeout_ dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
+> **Attention** : L'appel de `.wait( )` sans *timeout* dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
 
 |
 
-La fonction retourne la valeur de la propriété `.signaled`. Evaluer cette valeur permet de savoir si la fonction a retourné à cause de l'appel de `.trigger( )` (`.signaled` est **true**) ou si le _timeout_ a expiré (`.signaled` est **false**).
+La fonction retourne la valeur de la propriété `.signaled`. Evaluer cette valeur permet de savoir si la fonction a retourné à cause de l'appel de `.trigger( )` (`.signaled` est **true**) ou si le *timeout* a expiré (`.signaled` est **false**).
 
 > L'état d'un process qui attend un signal est `En attente d'un marqueur interne`.
 
