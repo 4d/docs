@@ -221,7 +221,7 @@ Esta propiedad es de **solo lectura**.
 
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the _writable_ attribute of the file.
+> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
 Esta propiedad es de **solo lectura**.
 
@@ -444,13 +444,13 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified _destinationFolder_ <!-- END REF -->.
+The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por defecto, el archivo se copia con el nombre del archivo original. If you want to rename the copy, pass the new name in the _newName_ parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, el archivo se copia con el nombre del archivo original. If you want to rename the copy, pass the new name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-If a file with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 | Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
@@ -462,7 +462,7 @@ El objeto `File` copiado.
 
 #### Ejemplo
 
-You want to copy a picture _file_ from the user's document folder to the application folder:
+You want to copy a picture *file* from the user's document folder to the application folder:
 
 ```4d
 var $source; $copy : Object
@@ -544,7 +544,7 @@ To save a document's contents in a `BLOB` field:
 
 The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
 Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 
@@ -585,15 +585,15 @@ The `.getText()` function <!-- REF #document.getText().Summary -->returns the co
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:
 
-- in _charSetName_, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in _charSetNum_, the MIBEnum ID (number) of the standard set name.
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in _charSetName_ or _charSetNum_ (this parameter is then ignored).
-If the document does not contain a BOM and if _charSetName_ or _charSetNum_ is omitted, by default 4D uses the "UTF-8" character set.
+If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored).
+If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
 
-In _breakMode_, you can pass a number indicating the processing to apply to end-of-line characters in the document. Las siguientes constantes del tema "Documentos del sistema" están disponibles:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. Las siguientes constantes del tema "Documentos del sistema" están disponibles:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                                                                                           |
 | ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -603,7 +603,7 @@ In _breakMode_, you can pass a number indicating the processing to apply to end-
 | `Document with CR`            | 3     | Los saltos de línea se convierten al formato OS X: CR (retorno de carro)                                                                                                                                          |
 | `Document with LF`            | 4     | Los saltos de línea se convierten al formato Unix: LF (salto de línea)                                                                                                                                            |
 
-By default, when you omit the _breakMode_ parameter, line breaks are processed in native mode (1).
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
 **Valor devuelto**
 
