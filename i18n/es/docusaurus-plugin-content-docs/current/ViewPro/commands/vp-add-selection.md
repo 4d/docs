@@ -5,7 +5,7 @@ title: VP ADD SELECTION
 
 <!-- REF #_method_.VP ADD SELECTION.Syntax -->
 
-**VP ADD SELECTION** ( _rangeObj_ : Object )<!-- END REF -->
+**VP ADD SELECTION** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
@@ -17,7 +17,7 @@ title: VP ADD SELECTION
 
 El comando `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->añade las celdas especificadas a las celdas actualmente seleccionadas<!-- END REF -->.
 
-En _rangeObj_, pase un objeto rango de varias celdas para añadir a la selección actual.
+En *rangeObj*, pase un objeto rango de varias celdas para añadir a la selección actual.
 
 > La celda activa no se modifica.
 
