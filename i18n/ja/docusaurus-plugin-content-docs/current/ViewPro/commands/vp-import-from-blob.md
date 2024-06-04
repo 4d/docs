@@ -5,7 +5,7 @@ title: VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
 
-**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
@@ -17,9 +17,9 @@ title: VP IMPORT FROM BLOB
 
 #### 説明
 
-`VP IMPORT FROM BLOB` コマンドは、<!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->_vpAreaName_ の 4D View Pro エリアの中身を、読み込んだ _vpBlob_ で置換します<!-- END REF -->。 _vpBlob_ には、[VP EXPORT TO BLOB](vp-export-to-blob.md) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
+`VP IMPORT FROM BLOB` コマンドは、<!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](vp-export-to-blob.md) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
 
-_paramObj_ には、複数のプロパティを渡せます:
+*paramObj* には、複数のプロパティを渡せます:
 
 | プロパティ               | タイプ                         | 説明                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ _paramObj_ には、複数のプロパティを渡せます:
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
 | param1 |                               | text                    | 4D View Pro エリアのオブジェクト名           |
 | param2 |                               | 4D.Blob | インポートされた Blob                     |
-| param3 |                               | object                  | コマンドの _paramObj_ 引数への参照           |
+| param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
 |        | .success      | boolean                 | 読み込みに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
