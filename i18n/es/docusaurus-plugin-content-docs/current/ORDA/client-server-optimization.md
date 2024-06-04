@@ -1,11 +1,11 @@
 ---
 id: client-server-optimization
-title: Client/Server Optimization
+title: Optimización cliente/servidor
 ---
 
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server architectures. Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
 
-- the **optimization context**
+- el **contexto de optimización**
 - la **caché ORDA**
 
 ## Arquitecturas soportadas
