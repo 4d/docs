@@ -450,7 +450,7 @@ The `.info` object contains the following properties:
 | hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                 |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión                                                                                                                           |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                          |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                                                                    |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                             |
 | persistentID     | Text          | ID persistente de la sesión                                                                                                                                     |
 
 :::note
