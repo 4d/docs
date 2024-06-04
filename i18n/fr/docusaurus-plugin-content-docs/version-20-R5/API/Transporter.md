@@ -168,8 +168,8 @@ La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary
 | ------------------------ | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII si possible, Japanese (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII si possible, Japanese (ISO-2022-JP) & 7-bit si possible, sinon UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                            |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_ : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)                                                                              |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &_bodyCharset_ : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                    |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | *headerCharset* & *bodyCharset* : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)                                                                              |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | *headerCharset* &*bodyCharset* : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                    |
 
 <!-- END REF -->
 
@@ -225,8 +225,8 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 | ------------------------ | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII si possible, Japanese (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII si possible, Japanese (ISO-2022-JP) & 7-bit si possible, sinon UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                            |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_ : US-ASCII si possible, sinon UTF-8 & Quoted-printable (valeur par défaut)                                                                                  |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &_bodyCharset_ : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                    |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | *headerCharset* & *bodyCharset* : US-ASCII si possible, sinon UTF-8 & Quoted-printable (valeur par défaut)                                                                                  |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | *headerCharset* &*bodyCharset* : US-ASCII si possible, sinon UTF-8 & base64                                                                                                                                    |
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE
 
 #### Description
 
-La propriété `.port` contient <!-- REF #transporter.port.Summary -->le numéro de port utilisé pour les transactions de courrier<!-- END REF -->. Par défaut, si la propriété _port_ n'a pas été définie dans l'objet _server_ (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
+La propriété `.port` contient <!-- REF #transporter.port.Summary -->le numéro de port utilisé pour les transactions de courrier<!-- END REF -->. Par défaut, si la propriété *port* n'a pas été définie dans l'objet *server* (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
 
 - **SMTP** - 587
 - **POP3** - 995
