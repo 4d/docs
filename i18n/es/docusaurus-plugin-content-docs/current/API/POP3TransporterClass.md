@@ -384,9 +384,9 @@ El método devuelve **Null** si:
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 
-| Parámetros | Tipo       |     | Descripción                      |
-| ---------- | ---------- | :-: | -------------------------------- |
-| Result     | Collection |  <- | Collection of `mailInfo` objects |
+| Parámetros | Tipo       |     | Descripción                     |
+| ---------- | ---------- | :-: | ------------------------------- |
+| Result     | Collection |  <- | Colección de objetos `mailInfo` |
 
 <!-- END REF -->
 
