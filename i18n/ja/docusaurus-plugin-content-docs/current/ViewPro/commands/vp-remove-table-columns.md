@@ -13,7 +13,7 @@ title: VP REMOVE TABLE COLUMNS
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
 
-**VP REMOVE TABLE COLUMNS** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer {; _count_ : Integer {; _sheet_ : Integer }}} )<!-- END REF -->
+**VP REMOVE TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Params -->
 
@@ -27,11 +27,11 @@ title: VP REMOVE TABLE COLUMNS
 
 #### 説明
 
-`VP REMOVE TABLE COLUMNS` コマンドは、<!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->_tableName_ で指定した表組みの _column_ で指定した列インデックスから、1つまたは _count_ で指定した数の列を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
+`VP REMOVE TABLE COLUMNS` コマンドは、<!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスから、1つまたは *count* で指定した数の列を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
-このコマンドは、シートではなく、_tableName_ の表組みから列を削除します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、削除された列の数に応じて自動的に左に移動します。
+このコマンドは、シートではなく、*tableName* の表組みから列を削除します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、削除された列の数に応じて自動的に左に移動します。
 
-_tableName_ の表組みが存在しない場合には、何も起こりません。
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 #### 例題
 
