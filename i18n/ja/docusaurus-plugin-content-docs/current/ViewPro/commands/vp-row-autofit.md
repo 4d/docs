@@ -5,7 +5,7 @@ title: VP ROW AUTOFIT
 
 <!-- REF #_method_.VP ROW AUTOFIT.Syntax -->
 
-**VP ROW AUTOFIT** ( _rangeObj_ : Object) <!-- END REF -->
+**VP ROW AUTOFIT** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
 
@@ -15,9 +15,9 @@ title: VP ROW AUTOFIT
 
 #### 説明
 
-`VP ROW AUTOFIT` コマンドは、<!-- REF #_method_.VP ROW AUTOFIT.Summary -->_rangeObj_ 引数のレンジ内にある行を、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
+`VP ROW AUTOFIT` コマンドは、<!-- REF #_method_.VP ROW AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にある行を、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
-_rangeObj_ 引数として、サイズを自動調整したい行を格納しているレンジオブジェクトを渡します。
+*rangeObj* 引数として、サイズを自動調整したい行を格納しているレンジオブジェクトを渡します。
 
 #### 例題
 
