@@ -1,7 +1,6 @@
----
-id: gettingStarted
-title: はじめに
----
+- - -
+id: gettingStarted title: はじめに
+- - -
 
 4D は、4Dアプリケーションに格納されているデータへのダイレクトアクセスを可能にする強力な RESTサーバーを提供しています。
 
