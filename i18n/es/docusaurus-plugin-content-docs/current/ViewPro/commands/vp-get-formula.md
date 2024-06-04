@@ -5,7 +5,7 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Syntax -->
 
-**VP Get formula** ( _rangeObj_ : Object) : Text<!-- END REF -->
+**VP Get formula** ( *rangeObj* : Object) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula.Params -->
 
@@ -18,7 +18,7 @@ title: VP Get formula
 
 El comando `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->recupera la fórmula de un rango de celdas designado<!-- END REF -->.
 
-En _rangeObj_, pase un rango cuya fórmula desea recuperar. Si _rangeObj_ designa varias celdas o varios rangos, se devuelve la fórmula de la primera celda. Si _rangeObj_ es una celda que no contiene una fórmula, el método devuelve una cadena vacía.
+En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* designa varias celdas o varios rangos, se devuelve la fórmula de la primera celda. Si *rangeObj* es una celda que no contiene una fórmula, el método devuelve una cadena vacía.
 
 #### Ejemplo
 
