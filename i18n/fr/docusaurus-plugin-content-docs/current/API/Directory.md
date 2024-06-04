@@ -444,13 +444,13 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` dans le _destinationFolder_ spécifié<!-- END REF -->.
+La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` dans le *destinationFolder* spécifié<!-- END REF -->.
 
-Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier est copié avec le nom du dossier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier est copié avec le nom du dossier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-S'il existe déjà un dossier portant le même nom dans _destinationFolder_, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre _overwrite_ pour ignorer et écraser le dossier existant :
+S'il existe déjà un dossier portant le même nom dans *destinationFolder*, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre *overwrite* pour ignorer et écraser le dossier existant :
 
 | Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
@@ -462,7 +462,7 @@ L'objet `Folder` copié.
 
 #### Exemple
 
-Vous souhaitez copier un _dossier_ Pictures, à partir du dossier Document de l'utilisateur vers le dossier de la base :
+Vous souhaitez copier un *dossier* Pictures, à partir du dossier Document de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -501,11 +501,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 La fonction `.file()` crée <!-- REF #directory.file().Summary -->un objet `File` à l'intérieur de l'objet `Folder` et retourne sa référence<!-- END REF -->.
 
-Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
+Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-Un objet `File` ou null si _path_ n'est pas valide.
+Un objet `File` ou null si *path* n'est pas valide.
 
 #### Exemple
 
@@ -547,7 +547,7 @@ La fonction `.files()` <!-- REF #directory.files().Summary -->retourne une colle
 
 > Les alias ou les liens symboliques ne sont pas résolus.
 
-Par défaut, si vous omettez le paramètre _options_, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre _options_ parameter, une ou plusieurs des constantes suivantes :
+Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
@@ -603,7 +603,7 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 | Paramètres | Type                      |    | Description                                                |
 | ---------- | ------------------------- | -- | ---------------------------------------------------------- |
 | path       | Text                      | -> | Chemin POSIX relatif                                       |
-| Résultat   | 4D.Folder | <- | Objet dossier (null si _path_ invalide) |
+| Résultat   | 4D.Folder | <- | Objet dossier (null si *path* invalide) |
 
 <!-- END REF -->
 
@@ -611,11 +611,11 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 
 La fonction `.folder()` <!-- REF #directory.folder().Summary -->crée un objet `Folder` à l'intérieur de l'objet parent `Folder` et retourne sa référence<!-- END REF -->.
 
-Dans le paramètre _path_, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
+Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-Un objet `Folder` object ou null si _path_ est invalide.
+Un objet `Folder` object ou null si *path* est invalide.
 
 #### Exemple
 
@@ -655,7 +655,7 @@ Un objet `Folder` object ou null si _path_ est invalide.
 
 La fonction `.folders()` <!-- REF #directory.folders().Summary -->retourne une collection d'objets `Folder` contenus dans le dossier parent<!-- END REF -->.
 
-Par défaut, si vous omettez le paramète _options_, seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre _options_ parameter, une ou plusieurs des constantes suivantes :
+Par défaut, si vous omettez le paramète *options*, seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
@@ -706,7 +706,7 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 
 La fonction `.getIcon()` <!-- REF #directory.getIcon().Summary -->retourne l'icône du dossier<!-- END REF -->.
 
-Le paramètre optionnel _size_ spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
+Le paramètre optionnel *size* spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
 Si le dossier n'existe pas sur disque, une icône vide est retournée par défaut.
 
