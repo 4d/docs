@@ -7,15 +7,15 @@ Retourne un ID du fichier téléchargé sur le serveur
 
 ## Description
 
-Publiez cette requête lorsque vous vous souhaitez télécharger un fichier sur le serveur. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+Publiez cette requête lorsque vous vous souhaitez télécharger un fichier sur le serveur. S'il s'agit d'une image, passez `$rawPict=true`. Pour tous les autres fichiers, passez `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
+Vous pouvez modifier le timeout, qui est par défaut de 120 secondes, en passant une valeur au paramètre `$timeout`.
 
 ## Scénario de téléchargement
 
 Supposons que vous souhaitiez télécharger une image pour mettre à jour l'attribut image d'une entité.
 
-Pour télécharger une image (ou tout autre fichier binaire), sélectionnez d'abord le fichier dans l'application cliente. The file itlself must be passed in the **body** of the request.
+Pour télécharger une image (ou tout autre fichier binaire), sélectionnez d'abord le fichier dans l'application cliente. Le fichier lui-même doit être transmis dans le **corps** de la requête.
 
 Téléchargez ensuite l'image sélectionnée vers le serveur 4D à l'aide d'une requête telle que :
 
@@ -23,7 +23,7 @@ Téléchargez ensuite l'image sélectionnée vers le serveur 4D à l'aide d'une 
 
 Par conséquent, le serveur retourne un ID qui identifie le fichier :
 
-**Response**:
+**Réponse** :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
@@ -31,7 +31,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 
 `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Données POST** :
 
 ```
 {
@@ -41,7 +41,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Response**:
+**Réponse** :
 
 L'entité modifiée est retournée :
 
@@ -65,7 +65,7 @@ L'entité modifiée est retournée :
 
 ## Exemple avec un client 4D HTTP
 
-The following example shows how to upload a _.pdf_ file to the server using the 4D HTTP client.
+L'exemple suivant montre comment télécharger un fichier _.pdf_ vers le serveur à l'aide du client 4D HTTP.
 
 ```4d
 var $params : Text

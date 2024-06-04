@@ -13,7 +13,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 ### Sélection d'une interface utilisateur
 
-You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
+Vous pouvez sélectionner l'interface à utiliser avec vos zones de formulaire 4D View Pro dans la **Liste de propriétés**, dans **Apparence** :
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
@@ -86,8 +86,8 @@ L'objet options feuille 4D View Pro vous permet de contrôler plusieurs options 
 |                      | showHorizontalGridline | boolean     | Indique s'il affiche le quadrillage horizontal.                                                                                                                                                                                                                                                                            |
 | rowHeaderVisible     |                        | boolean     | Indique si l'en-tête de la ligne est visible.                                                                                                                                                                                                                                                                              |
 | colHeaderVisible     |                        | boolean     | Indique si l'en-tête de la colonne est visible.                                                                                                                                                                                                                                                                            |
-| rowHeaderAutoText    |                        | entier long | Indique si l'en-tête de la ligne affiche des lettres ou des chiffres ou s'il n'affiche rien. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                   |
-| colHeaderAutoText    |                        | entier long | Indique si l'en-tête de la colonne affiche des lettres ou des chiffres ou s'il n'affiche rien. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                 |
+| rowHeaderAutoText    |                        | entier long | Indique si l'en-tête de la ligne affiche des lettres ou des chiffres ou s'il n'affiche rien. Valeurs disponibles : `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                               |
+| colHeaderAutoText    |                        | entier long | Indique si l'en-tête de la colonne affiche des lettres ou des chiffres ou s'il n'affiche rien. Valeurs disponibles : `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                             |
 | selectionBackColor   |                        | string      | La couleur d'arrière-plan de la sélection dans la feuille (de préférence au format Rgba).                                                                                                                                                                                                               |
 | selectionBorderColor |                        | string      | La couleur de bordure de la sélection dans la feuille.                                                                                                                                                                                                                                                                     |
 | sheetAreaOffset      |                        | object      | Les options de sheetAreaOffset.                                                                                                                                                                                                                                                                                            |
@@ -98,7 +98,7 @@ L'objet options feuille 4D View Pro vous permet de contrôler plusieurs options 
 
 ### Protection de la feuille
 
-To lock the whole sheet, you only need to set the _isProtected_ property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
+Pour verrouiller l'intégralité de la feuille, il suffit de mettre la propriété _isProtected_ à **vrai**. Vous pouvez alors déverrouiller les cellules individuellement en définissant la propriété de style de la cellule [verrouillée](#layout).
 
 | Propriété         |                          | Type    | Description                                                                                                                                                                           |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

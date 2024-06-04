@@ -5,7 +5,7 @@ title: On URL Resource Loading
 
 | Code | Puede ser llamado por                       | Definición                               |
 | ---- | ------------------------------------------- | ---------------------------------------- |
-| 48   | [Web Area](FormObjects/webArea_overview.md) | Se carga un nuevo recurso en el área web |
+| 48   | [Área Web](FormObjects/webArea_overview.md) | Se carga un nuevo recurso en el área web |
 
 ## Descripción
 

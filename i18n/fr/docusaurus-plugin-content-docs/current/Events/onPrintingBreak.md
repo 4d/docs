@@ -9,8 +9,8 @@ title: On Printing Break
 
 ## Description
 
-The `On Printing Break` event can only be used in the context of an **output form**. Il est déclenché chaque fois qu'une zone de rupture du formulaire de sortie est sur le point d'être imprimée, afin que vous puissiez évaluer les valeurs de rupture, par exemple.
+L'événement `On Printing Break` ne peut être utilisé que dans le contexte d'un **formulaire de sortie**. Il est déclenché chaque fois qu'une zone de rupture du formulaire de sortie est sur le point d'être imprimée, afin que vous puissiez évaluer les valeurs de rupture, par exemple.
 
-This event usually follows a call to the `Subtotal` command.
+Cet événement fait généralement suite à un appel à la commande `Subtotal`.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.

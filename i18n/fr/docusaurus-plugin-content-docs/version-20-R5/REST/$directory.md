@@ -11,9 +11,9 @@ Ouvre une session REST sur votre application 4D et connecte l'utilisateur.
 
 ### Description
 
-Use `$directory/login` to open a session in your 4D application through REST and login a user. Vous pouvez également modifier le timeout par défaut de la session 4D.
+Utilisez `$directory/login` pour ouvrir une session dans votre application 4D via REST et connectez un utilisateur. Vous pouvez également modifier le timeout par défaut de la session 4D.
 
-All parameters must be passed in **headers** of a POST method:
+Tous les paramètres doivent être passés dans les **en-têtes** d'une méthode POST :
 
 | Clé de l'en-tête  | Valeur de l'en-tête                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**Résultat** :
 
 Si la connexion a réussi, le résultat sera le suivant :
 

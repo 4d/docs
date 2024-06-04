@@ -704,7 +704,7 @@ Este mecanismo aborda el caso en el que el servidor objetivo primario esté disp
 Puede elegir si mostrar o no la caja de diálogo estándar de selección de servidor en las aplicaciones cliente fusionadas cuando no se puede acceder al servidor. La configuración depende del valor de la [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) La llave XML en la máquina donde se generó la aplicación:
 
 - **Visualización de un mensaje de error sin poder acceder a la caja de diálogo de selección del servidor**. Funcionamiento por defecto. La aplicación solo puede cerrarse.\
-  `ServerSelectionAllowed`: **False** or key omitted
+  `ServerSelectionAllowed`: **False** o llave omitida
   ![](../assets/en/Project/connect1.png)
 
 - **Visualización de un mensaje de error con acceso posible a la caja de diálogo de selección del servidor**. El usuario puede acceder a la ventana de selección del servidor haciendo clic en el botón **Seleccionar...**.
@@ -716,7 +716,7 @@ Puede elegir si mostrar o no la caja de diálogo estándar de selección de serv
 
 En principio, la actualización de las aplicaciones servidor o de las aplicaciones monopuesto fusionadas requiere la intervención del usuario (o la programación de rutinas de sistema personalizadas): cada vez que esté disponible una nueva versión de la aplicación fusionada, hay que salir de la aplicación en producción y sustituir manualmente los archivos antiguos por los nuevos; a continuación, reiniciar la aplicación y seleccionar el archivo de datos actual.
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) for monitoring operations. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
+Puede automatizar este procedimiento en gran medida utilizando los siguientes comandos del lenguaje: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), y también [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para operaciones de monitoreo. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
 
 > También dispone de llaves XML para elevar los privilegios de instalación y poder utilizar archivos protegidos en Windows (consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
@@ -724,7 +724,7 @@ Este es el escenario para actualizar un servidor o una aplicación unipersonal f
 
 1. Se transfiere, por ejemplo utilizando un servidor HTTP, la nueva versión de la aplicación servidor o la aplicación monopuesto fusionada a la máquina en producción.
 2. En la aplicación en producción, se llama al comando `SET UPDATE FOLDER`: este comando designa la ubicación de la carpeta donde se encuentra la actualización "pendiente" de la aplicación actual. Opcionalmente, puede copiar en esta carpeta los elementos personalizados de la versión en producción (archivos usuario).
-3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. La versión anterior ha sido renombrada.
+3. En la aplicación en producción, llame al comando `RESTART 4D`: este comando desencadena automáticamente la ejecución de un programa utilitario llamado "updater" que sale de la aplicación actual, la reemplaza utilizando la actualización "pendiente" si se especifica una y reinicia la aplicación con el archivo de datos actual. La versión anterior ha sido renombrada.
 
 > Esta secuencia es compatible con las aplicaciones servidor de Windows que se ejecutan como servicio.
 
@@ -734,4 +734,4 @@ El procedimiento de instalación genera un archivo de registro en el que se deta
 
 El historial de actualización se denomina `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por ejemplo, `2021-08-25_14-23-00_log_1.txt` para un archivo creado el 25 de agosto de 2021 a las 14:23.
 
-Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. You can find out the location of this file at any time using the [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) command.
+Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede encontrar la ubicación de este archivo en cualquier momento utilizando el comando [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html).

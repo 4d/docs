@@ -69,7 +69,7 @@ Form.myDrop.index //3
 
 ### Utiliser un tableau
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list can display an array as a list of values when you click on it.
+Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. A drop-down list can display an array as a list of values when you click on it.
 
 To initialize the array associated to the drop-down list, you can:
 
@@ -87,9 +87,9 @@ To initialize the array associated to the drop-down list, you can:
   aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
+In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-- Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. Par exemple :
+- Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Par exemple :
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -125,7 +125,7 @@ If you want to use a drop-down list to manage the values of an input area (liste
 
 For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. If you use a hierarchical list, only the first level is displayed and can be selected.
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 

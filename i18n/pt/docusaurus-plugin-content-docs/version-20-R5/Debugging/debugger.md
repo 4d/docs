@@ -321,13 +321,13 @@ O menu de contexto do Custom Watch Pane lhe dá acesso ao editor de fórmulas 4D
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
 
 - **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> Esta opción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).

@@ -10,11 +10,7 @@ Les objets partagés et les collections partagées sont stockés dans des variab
 - pour créer un objet partagé, utilisez la commande [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](classes.md#classes-partagées),
 - pour créer une collection partagée, utilisez la commande [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
 
-:::note
-
-Les objets et collections partagés peuvent être définis comme des propriétés d'objets ou de collections standard (non partagés).
-
-:::
+Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
@@ -30,6 +26,12 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
+
+:::note
+
+Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+
+:::
 
 Toute instruction de modification dans un objet partagé ou une collection partagée doit être protégée à l'intérieur d'un bloc [`Use...End use`](#use-end-use), sinon une erreur est générée.
 

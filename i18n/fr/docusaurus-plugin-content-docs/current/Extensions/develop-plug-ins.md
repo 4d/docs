@@ -23,13 +23,13 @@ Habituellement, un plug-in fait des choses :
 
 Un plug-in contient généralement un ensemble de routines données au développeur 4D. Il peut gérer une zone externe et exécuter un processus externe.
 
-- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action.
-- An **external area** is a part of a form that can display almost everything and interact with the user when necessary.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
+- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action.
+- Une **zone externe** est une partie d'un formulaire pouvant presque tout afficher et interagir avec l'utilisateur si nécessaire.
+- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
 
 ### Note importante
 
-Un plug-in peut être très simple, avec une seule routine effectuant une très petite tâche, ou très complexe, impliquant une centaine de routines et de domaines. Cependant, chaque développeur de plug-in doit se rappeler qu'un plug-in est un "échantillon" de code. C'est le plug-in qui s'exécute dans 4D, et non l'inverse. En tant que morceau de code, c'est l'hôte de 4D; ce n'est pas une application autonome. Il partage le temps CPU et la mémoire avec 4D et d'autres plug-ins. Il doit donc s'agir d'un code poli, qui utilise exactement ce qui est nécessaire à son fonctionnement. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the application.
+Un plug-in peut être très simple, avec une seule routine effectuant une très petite tâche, ou très complexe, impliquant une centaine de routines et de domaines. Cependant, chaque développeur de plug-in doit se rappeler qu'un plug-in est un "échantillon" de code. C'est le plug-in qui s'exécute dans 4D, et non l'inverse. En tant que morceau de code, c'est l'hôte de 4D; ce n'est pas une application autonome. Il partage le temps CPU et la mémoire avec 4D et d'autres plug-ins. Il doit donc s'agir d'un code poli, qui utilise exactement ce qui est nécessaire à son fonctionnement. Par exemple, dans les longues boucles, un plug-in doit appeler `PA_Yield ()` pour donner du temps au planificateur 4D, à moins que sa tâche ne soit critique aussi bien pour lui que pour l'application.
 
 ## Comment créer un plug-in ?
 
@@ -40,4 +40,4 @@ Un plug-in peut être très simple, avec une seule routine effectuant une très 
 
 ## Partager des plug-ins
 
-We encourage you to support the 4D developer community by sharing your plug-ins, preferably on the [GitHub platform](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.
+Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos plug-ins, notamment sur la [plateforme GitHub](https://github.com/topics/4d-plugin). Afin d'être correctement référencé, nous vous recommandons d'utiliser la rubrique **`4d-plugin`**.

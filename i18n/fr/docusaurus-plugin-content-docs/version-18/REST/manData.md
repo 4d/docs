@@ -233,9 +233,9 @@ Once you have [created an entity set](#creating-and-managing-entity-set), you ca
 
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
 
-## Affichage d'un attribut d'image
+## Affichage d'un attribut image
 
-Si vous souhaitez afficher intégralement un attribut d'image, saisissez ce qui suit :
+Si vous souhaitez afficher intégralement un attribut image, saisissez :
 
  `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 

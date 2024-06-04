@@ -36,7 +36,7 @@ A noter que :
 
 ## Associer le débogueur
 
-By default when you start an interpreted application:
+Par défaut, lorsque vous démarrez une application interprétée:
 
 * si 4D Server ne fonctionne pas en mode "headless", le débogueur est associé au serveur,
 * si 4D Server fonctionne en mode "headless", aucun débogueur n'est associé.
@@ -56,18 +56,18 @@ Le débogueur est alors attaché au client 4D distant :
 * jusqu'à la fin de la session utilisateur
 * jusqu'à ce que vous sélectionniez `Detach Remote Debugger`
 
-To attach the debugger back to the server:
+Pour rattacher le débogueur au serveur :
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
 2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
 
-> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+> Lorsque le débogueur est attaché au serveur (par défaut), tous les process du serveur sont automatiquement exécutés en mode coopératif pour permettre le débogage. Cela peut avoir un impact significatif sur les performances. Lorsque vous n'avez pas besoin de déboguer sur la machine du serveur, il est recommandé de détacher le débogueur et de l'attacher à une machine distante si nécessaire.
 
 
 
-## Attaching debugger at startup
+## Attacher le débogueur au démarrage
 
-4D vous permet d'associer automatiquement le débogueur à un client 4D distant ou au serveur au démarrage :
+4D vous permet d'associer le débogueur à un client 4D distant ou au serveur automatiquement au démarrage :
 
 * Sur le serveur (s'il n'est pas headless), cette option s'appelle **Attach Debugger At Startup**. Lorsque le serveur est démarré, il associe automatiquement le débogueur (par défaut).
 
@@ -79,7 +79,7 @@ To attach the debugger back to the server:
 
 ## Demandes d'association rejetées
 
-While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
+Si le débogueur est déjà attaché à un client 4D distant ou à 4D Server, aucune autre machine ne peut s'associer au débogueur.
 
 Si une machine tente d'attacher le débogueur alors qu'il est déjà attaché, l'attachement est rejeté et une boîte de dialogue apparaît :
 

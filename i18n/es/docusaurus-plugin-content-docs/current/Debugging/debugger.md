@@ -84,13 +84,13 @@ Detiene la ejecución del método y vuelve al estado anterior al inicio de la ej
 
 #### Detener y editar
 
-Pausa la ejecución del método. El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
+El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
 
 > **Consejo**: utilice este botón cuando sepa qué cambios son necesarios en su código, y el momento en que deben ser efectuados para proseguir con las pruebas de sus métodos. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
 
 #### Acción de edición
 
-Pausa la ejecución del método. El método que se está ejecutando en el momento de presionar el botón Editar se abre en el Editor de código.
+El método que se está ejecutando en el momento de presionar el botón Editar se abre en el Editor de código.
 
 Si utiliza este botón para modificar un método, las modificaciones sólo serán efectivas la próxima vez que se ejecute.
 
@@ -146,7 +146,7 @@ $c:=a+b
 
    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, el tema muestra:
+2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. At this point, the **Line Objects** theme displays:
 
    | $a | 1          |
    | -- | ---------- |
@@ -154,7 +154,7 @@ $c:=a+b
 
    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con c:=a+b. En este punto aparece el tema Objetos Línea:
+3. Haga clic en el botón **Step Over** nuevamente. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
 
    | $c | Indefinido |
    | -- | ---------- |
@@ -321,13 +321,13 @@ El menú contextual del panel de control personalizado permite acceder al editor
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-Para obtener más información sobre el Editor de Fórmulas, consulte el <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">manual de Diseño 4D.</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 - **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> Esta opción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in [remote debugging mode](debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).

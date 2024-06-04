@@ -19,7 +19,7 @@ title: On Window Opening Denied
 
 Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloquée par la zone Web. Les zones Web de 4D ne permettent pas l'ouverture de fenêtres contextuelles.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Vous pouvez accepter l'action de déposer en appelant :
 
