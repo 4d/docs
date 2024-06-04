@@ -321,13 +321,13 @@ $c:=$a+$b
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
+フォーミュラエディターの詳細については、[4Dデザインリファレンスマニュアル](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.ja.html) を参照ください。
 
 - **コマンド挿入...**: 4Dコマンドを新しい式として挿入するためのショートカット。
 - **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
 - **標準式**: ウォッチエリアの式リストをコピーします。
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
+> このオプションはリモートデバッグモードでは利用できません ([リモートマシンからのデバッグ](debugging-remote.md) 参照)。
 
 - **すべて閉じる/すべて拡げる**: 階層リストの全レベルを縮小/展開します。
 - **型を表示**: リストの各項目のデータ型を (適切な場合に) 表示します。
