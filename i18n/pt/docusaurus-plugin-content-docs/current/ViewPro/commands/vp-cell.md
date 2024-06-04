@@ -5,7 +5,7 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Syntax -->
 
-**VP Cell** ( _vpAreaName_ ; _column_ : Integer ; _row_ : Integer ; Text { ; _sheet_ : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -25,13 +25,13 @@ O comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retorna um novo objeto
 
 > Este comando destina-se a intervalos de uma única célula. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro _column_ define a coluna da posição do intervalo de células. Passe o índice da coluna neste parâmetro.
+O parâmetro *column* define a coluna da posição do intervalo de células. Passe o índice da coluna neste parâmetro.
 
-O parâmetro _row_ define a linha da posição do intervalo de células. Passar o índice da linha neste parâmetro.
+O parâmetro *row* define a linha da posição do intervalo de células. Passar o índice da linha neste parâmetro.
 
-No parâmetro opcional _sheet_, você pode indicar o índice da planilha em que o intervalo será definido. Se for omitido ou se passar vk current sheet, é utilizada a folha de cálculo atual.
+No parâmetro opcional *sheet*, você pode indicar o índice da planilha em que o intervalo será definido. Se for omitido ou se passar vk current sheet, é utilizada a folha de cálculo atual.
 
 > a indexação começa em 0.
 
