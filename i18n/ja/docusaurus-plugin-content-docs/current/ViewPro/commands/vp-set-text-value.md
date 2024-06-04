@@ -5,7 +5,7 @@ title: VP SET TEXT VALUE
 
 <!-- REF #_method_.VP SET TEXT VALUE.Syntax -->
 
-**VP SET TEXT VALUE** ( _rangeObj_ : Object ; _textValue_ : Text { ; _formatPattern_ : Text }  ) <!-- END REF -->
+**VP SET TEXT VALUE** ( *rangeObj* : Object ; *textValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET TEXT VALUE
 
 `VP SET TEXT VALUE` コマンドは、<!-- REF #_method_.VP SET TEXT VALUE.Summary -->指定されたセルレンジにテキスト値を割り当てます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-_textValue_ 引数には、_rangeObj_ 引数のレンジに割り当てたいテキスト値を指定します。
+*textValue* 引数には、*rangeObj* 引数のレンジに割り当てたいテキスト値を指定します。
 
-任意の _formatPattern_ 引数は、_textValue_ に対する [パターン](../configuring.md#セルフォーマット) を定義します。
+任意の *formatPattern* 引数は、*textValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
 #### 例題
 
