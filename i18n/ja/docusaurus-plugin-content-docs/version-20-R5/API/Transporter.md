@@ -168,8 +168,8 @@ title: Transporter クラス
 | ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) & Quoted-printable 、それも不可なら UTF-8 & Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) & 7-bit、それも不可なら UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                       |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ &amp; _bodyCharset_: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)                                                                  |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &amp; _bodyCharset_: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64                                                                                                            |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | *headerCharset* &amp; *bodyCharset*: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)                                                                  |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | *headerCharset* &amp; *bodyCharset*: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64                                                                                                            |
 
 <!-- END REF -->
 
@@ -225,8 +225,8 @@ title: Transporter クラス
 | ------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) & Quoted-printable 、それも不可なら UTF-8 & Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) & 7-bit、それも不可なら UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                       |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | _headerCharset_ & _bodyCharset_: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (デフォルト値)                                                                              |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | _headerCharset_ &amp; _bodyCharset_: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64                                                                                                            |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | *headerCharset* & *bodyCharset*: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (デフォルト値)                                                                              |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | *headerCharset* &amp; *bodyCharset*: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64                                                                                                            |
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.port` プロパティは、 <!-- REF #transporter.port.Summary -->メール通信に使用されるポート番号<!-- END REF -->を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される _server_ オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
+`.port` プロパティは、 <!-- REF #transporter.port.Summary -->メール通信に使用されるポート番号<!-- END REF -->を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
 
 - **SMTP** - 587
 - **POP3** - 995
