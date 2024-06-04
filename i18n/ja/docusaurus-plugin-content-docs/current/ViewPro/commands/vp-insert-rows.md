@@ -5,7 +5,7 @@ title: VP INSERT ROWS
 
 <!-- REF #_method_.VP INSERT ROWS.Syntax -->
 
-**VP INSERT ROWS** ( _rangeObj_ : Object ) <!-- END REF -->
+**VP INSERT ROWS** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP INSERT ROWS.Params -->
 
@@ -15,11 +15,11 @@ title: VP INSERT ROWS
 
 #### 説明
 
-`VP INSERT ROWS` コマンドは、<!-- REF #_method_.VP INSERT ROWS.Summary -->_rangeObj_ 引数で指定したレンジに行を挿入します<!-- END REF -->。
+`VP INSERT ROWS` コマンドは、<!-- REF #_method_.VP INSERT ROWS.Summary -->*rangeObj* 引数で指定したレンジに行を挿入します<!-- END REF -->。
 
-_rangeObj_ には、開始行 (新しい行が挿入される場所を指定する行) と挿入する行数を格納したオブジェクトを渡します。 挿入する行数が省略された場合 (定義されていない場合) には、1行だけ挿入されます。
+*rangeObj* には、開始行 (新しい行が挿入される場所を指定する行) と挿入する行数を格納したオブジェクトを渡します。 挿入する行数が省略された場合 (定義されていない場合) には、1行だけ挿入されます。
 
-新しい行は、_rangeObj_ 引数で指定した開始行の直前 (すぐ上) に挿入されます。
+新しい行は、*rangeObj* 引数で指定した開始行の直前 (すぐ上) に挿入されます。
 
 #### 例題
 
