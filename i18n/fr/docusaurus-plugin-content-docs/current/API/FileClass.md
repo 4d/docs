@@ -86,11 +86,11 @@ La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouv
 
 **File ( path { ; pathType } { ; \* })**
 
-Dans le paramètre _path_, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA/myfile.txt").
+Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA/myfile.txt").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
-Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre _pathType_. Les constantes suivantes sont disponibles :
+Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre *pathType*. Les constantes suivantes sont disponibles :
 
 | Constante        | Valeur | Commentaire                                                                                                                  |
 | ---------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -99,7 +99,7 @@ Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travail
 
 **File ( fileConstant { ; \* } )**
 
-Dans le paramètre _fileConstant_, passez un fichier 4D interne ou un fichier système, à l'aide d'une des constantes suivantes :
+Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier système, à l'aide d'une des constantes suivantes :
 
 | Constante                         | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,7 +127,7 @@ Dans le paramètre _fileConstant_, passez un fichier 4D interne ou un fichier sy
 | User settings file for data       | 4      | Fichier settings.4DSettings file pour le fichier de données courant, stocké dans le dossier Preferences à côté du fichier de données.                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Verification log file             | 5      | Fichier d'historique de vérification le plus récent de la base, créé par les commandes `VERIFY CURRENT DATA FILE` et `VERIFY DATA FILE` ou via le Centre de sécurité et de maintenance de la base (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                 |
 
-Si le fichier _fileConstant_ cible n'existe pas, un objet null est retourné. Aucune erreur n'est générée.
+Si le fichier *fileConstant* cible n'existe pas, un objet null est retourné. Aucune erreur n'est générée.
 
 Si la commande est appelée à partir d'un composant, passez le paramètre optionnel `*` pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre `*`, un objet null est systématiquement retourné.
 
@@ -143,7 +143,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <!-- REF #4D.File.new().Syntax -->
 
-**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Description
 
@@ -228,18 +228,18 @@ Création d'un fichier de préférences dans le dossier principal :
 
 #### Description
 
-La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> vers le fichier avec le nom _aliasName_ spécifié dans le dossier désigné par l'objet _destinationFolder_.
+La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> vers le fichier avec le nom *aliasName* spécifié dans le dossier désigné par l'objet *destinationFolder*.
 
-Passez le nom de l'alias ou du raccourci à créer dans le paramètre _aliasName_.
+Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName*.
 
-Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre _aliasType_. Les constantes suivantes sont disponibles :
+Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre *aliasType*. Les constantes suivantes sont disponibles :
 
 | Constante          | Valeur | Commentaire                                                                     |
 | ------------------ | ------ | ------------------------------------------------------------------------------- |
 | `fk alias link`    | 0      | Lien alias (macOS uniquement)(par défaut) |
 | `fk symbolic link` | 1      | Lien symbolique (macOS uniquement)                           |
 
-Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre _aliasType_ est ignoré).
+Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre *aliasType* est ignoré).
 
 **Objet retourné**
 
@@ -440,11 +440,11 @@ ALERT($info.Copyright)
 
 #### Description
 
-La fonction `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `File` dans le dossier _destinationFolder_ spécifié<!-- END REF -->.
+La fonction `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `File` dans le dossier *destinationFolder* spécifié<!-- END REF -->.
 
-Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le fichier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le fichier déplacé, passez le nom complet dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le fichier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le fichier déplacé, passez le nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 
@@ -488,23 +488,23 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le _mode_ spécifié ou avec les _options_ spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
+La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
-Si vous utilisez le paramètre _mode_ (texte), passez le mode d'ouverture pour le file handle :
+Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
-| _mode_   | Description                                                                                                                                                                                                                                                                                                                    |
+| *mode*   | Description                                                                                                                                                                                                                                                                                                                    |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Par défaut) Crée un file handle pour lire les valeurs dans le fichier. Si le fichier n'existe pas sur disque, une erreur est renvoyée. Vous pouvez ouvrir autant de file handles que vous voulez en mode "read" sur le même objet File.                    |
 | "write"  | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par le début du contenu du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "write" sur le même objet File. |
 | "append" | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par la fin du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "append" sur le même objet File.             |
 
-> La valeur du paramètre _mode_ est sensible à la casse.
+> La valeur du paramètre *mode* est sensible à la casse.
 
-Si vous utilisez le paramètre _options_ (objet), vous pouvez passer d'autres options pour le file handle par le biais des propriétés suivantes (ces propriétés peuvent être lues ultérieurement à partir de l'[objet file handle](FileHandleClass) ouvert) :
+Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres options pour le file handle par le biais des propriétés suivantes (ces propriétés peuvent être lues ultérieurement à partir de l'[objet file handle](FileHandleClass) ouvert) :
 
-| _options_         | Type              | Description                                                                                                                                                                             | Par défaut    |
+| *options*         | Type              | Description                                                                                                                                                                             | Par défaut    |
 | ----------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text              | Mode d'ouverture (voir _mode_ ci-dessus)                                                                                                                             | "read"        |
+| `.mode`           | Text              | Mode d'ouverture (voir *mode* ci-dessus)                                                                                                                             | "read"        |
 | `.charset`        | Text              | Jeu de caractères utilisé lors de la lecture ou de l'écriture dans le fichier. Utilisez le nom standard du jeu (par exemple "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
 | `.breakModeRead`  | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                                       | "native" ou 1 |
 | `.breakModeWrite` | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                                  | "native" ou 1 |
@@ -518,7 +518,7 @@ La fonction remplace tous les délimiteurs de fin de ligne d'origine. Par défau
 | "cr"                     | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                                                                             |
 | "lf"                     | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                                                                                    |
 
-> La valeur du paramètre _break mode en texte_ est sensible à la casse.
+> La valeur du paramètre *break mode en texte* est sensible à la casse.
 
 #### Exemple
 
@@ -568,11 +568,11 @@ $fhandle:=$f.open("read")
 
 #### Description
 
-La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans _newName_ et retourne l'objet `File` renommé<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans *newName* et retourne l'objet `File` renommé<!-- END REF -->.
 
-Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
+Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
-A noter que la fonction modifie le nom complet du fichier, c'est-à-dire que si vous ne passez pas une extension dans le paramètre _newName_, le fichier aura un nom sans extension.
+A noter que la fonction modifie le nom complet du fichier, c'est-à-dire que si vous ne passez pas une extension dans le paramètre *newName*, le fichier aura un nom sans extension.
 
 **Objet retourné**
 
@@ -614,17 +614,17 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 #### Description
 
-La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés _info_ en tant que contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
+La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
 La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
-**Paramètre _info_ avec un fichier .exe or .dll**
+**Paramètre *info* avec un fichier .exe or .dll**
 
 > La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
-Chaque propriété valide définie dans le paramètre objet _info_ est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
 | Propriété        | Type | Commentaire                                                                                                                                             |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -642,11 +642,11 @@ Pour toutes les propriétés à l'exception de `WinIcon`, si vous passez un text
 
 Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un format incorrect, une erreur est générée.
 
-**Paramètre _info_ avec un fichier .plist**
+**Paramètre *info* avec un fichier .plist**
 
-Chaque propriété valide définie dans le paramètre objet _info_ est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
 
-Si une clé définie dans le paramètre _info_ est déjà définie dans le fichier .plist, sa valeur est mise à jour tout en conservant son type d'origine. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
+Si une clé définie dans le paramètre *info* est déjà définie dans le fichier .plist, sa valeur est mise à jour tout en conservant son type d'origine. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
 
 > Pour définir une valeur de type Date, le format à utiliser est chaîne de timestamp json formatée en ISO UTC sans les millisecondes ("2003-02-01T01:02:03Z") comme dans l'éditeur de plist Xcode.
 
@@ -706,7 +706,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Description
 
-La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit l'intégralité du contenu du fichier en utilisant les données stockées dans le BLOB _content_<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit l'intégralité du contenu du fichier en utilisant les données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
@@ -745,22 +745,22 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 #### Description
 
-La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit _text_ comme nouveau contenu du fichier<!-- END REF -->.
+La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit *text* comme nouveau contenu du fichier<!-- END REF -->.
 
 Si le fichier référencé dans l'objet `File` n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
 
-Dans le paramètre _text_, passez le texte à écrire dans le fichier. Cela peut être un texte littéral ("my text"), ou un champ / variable texte 4D.
+Dans le paramètre *text*, passez le texte à écrire dans le fichier. Cela peut être un texte littéral ("my text"), ou un champ / variable texte 4D.
 
 Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'écriture du contenu. Vous pouvez passer soit :
 
-- dans _charSetName_, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
-- ou dans _charSetNum_, l'ID MIBEnum (numéro) du nom du jeu standard.
+- dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
+- ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
 > Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
 Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). Si vous n'indiquez pas un jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" sans BOM.
 
-Dans le paramètre _breakMode_, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne avant de les stocker dans le fichier. Les constantes suivantes du thème **Documents système** sont disponibles :
+Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne avant de les stocker dans le fichier. Les constantes suivantes du thème **Documents système** sont disponibles :
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                                                                                                   |
 | ----------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -770,7 +770,7 @@ Dans le paramètre _breakMode_, vous pouvez passer une valeur numérique indiqua
 | `Document with CR`            | 3      | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                                                                             |
 | `Document with LF`            | 4      | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                                                                                    |
 
-Par défaut, lorsque vous omettez le paramètre _breakMode_ les retours à la ligne sont traités en mode natif (1).
+Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
 > **Note de compatibilité** : Des options de compatibilité sont disponibles pour la gestion des fins de ligne et des BOM. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
 
