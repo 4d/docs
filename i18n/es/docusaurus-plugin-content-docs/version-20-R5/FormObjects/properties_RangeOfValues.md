@@ -35,7 +35,7 @@ Puede utilizar un número de secuencia para crear un número único para cada re
 
 #### Objetos soportados
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 
