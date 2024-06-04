@@ -5,7 +5,7 @@ title: VP SET SELECTION
 
 <!-- REF #_method_.VP SET SELECTION.Syntax -->
 
-**VP SET SELECTION** ( _rangeObj_ : Object  ) <!-- END REF -->
+**VP SET SELECTION** ( *rangeObj* : Object  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
@@ -17,7 +17,7 @@ title: VP SET SELECTION
 
 `VP SET SELECTION` コマンドは、<!-- REF #_method_.VP SET SELECTION.Summary -->指定のセルレンジを選択し、その先頭セルをアクティブセルに設定します<!-- END REF -->。
 
-_rangeObj_ には、カレントセレクションとして定義するセルのレンジオブジェクトを渡します。
+*rangeObj* には、カレントセレクションとして定義するセルのレンジオブジェクトを渡します。
 
 #### 例題
 
