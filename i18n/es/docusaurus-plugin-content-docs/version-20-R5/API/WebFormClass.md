@@ -7,10 +7,10 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                               |
-| ----------- | ---------------------------------------------------------------------------- |
-| 20 R6       | Added enableState() and disableState() |
-| 20 R2       | Añadidos                                                                     |
+| Lanzamiento | Modificaciones                                                                  |
+| ----------- | ------------------------------------------------------------------------------- |
+| 20 R6       | Adición de enableState() y disableState() |
+| 20 R2       | Añadidos                                                                        |
 
 </details>
 
@@ -27,7 +27,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 | [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
 | [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
-### _.componentName_
+### *.componentName*
 
 <!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
@@ -41,7 +41,7 @@ For more information, please refer to the [`.componentName` description in the Q
 
 <!-- REF #WebFormClass.disableState().Syntax -->
 
-**.disableState**( _state_ : string)<!-- END REF -->
+**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -53,12 +53,12 @@ For more information, please refer to the [`.componentName` description in the Q
 
 #### Descripción
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the _state_ in the current web form<!-- END REF -->.
+The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web form<!-- END REF -->.
 
 This function does nothing if:
 
-- the _state_ is currently not enabled in the web form,
-- the _state_ does not exist for the web form.
+- the *state* is currently not enabled in the web form,
+- the *state* does not exist for the web form.
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
@@ -68,7 +68,7 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 <!-- REF #WebFormClass.enableState().Syntax -->
 
-**.enableState**( _state_ : string )<!-- END REF -->
+**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -80,12 +80,12 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 #### Descripción
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the _state_ in the current web form<!-- END REF -->.
+The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web form<!-- END REF -->.
 
 This function does nothing if:
 
-- the _state_ has already been enabled on the web form,
-- the _state_ does not exist for the web form.
+- the *state* has already been enabled on the web form,
+- the *state* does not exist for the web form.
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 
@@ -106,7 +106,7 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Syntax -->
 
-**.setError**( _msg_ : string)<!-- END REF -->
+**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -118,7 +118,7 @@ Function authenticationError()
 
 #### Descripción
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends _msg_ as an error message to the web form<!-- END REF -->.
+The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
@@ -126,7 +126,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 <!-- REF #WebFormClass.setMessage().Syntax -->
 
-**.setMessage**( _msg_ : string)<!-- END REF -->
+**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -138,7 +138,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 #### Descripción
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends _msg_ as an information message to the web form<!-- END REF -->.
+The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
@@ -146,7 +146,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 <!-- REF #WebFormClass.setWarning().Syntax -->
 
-**.setWarning**( _msg_ : string)<!-- END REF -->
+**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
@@ -158,7 +158,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 #### Descripción
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends _msg_ as a warning message to the web form<!-- END REF -->.
+The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
