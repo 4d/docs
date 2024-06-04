@@ -13,7 +13,7 @@ title: VP Get tables
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 
-**VP Get tables** ( _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Collection<!-- END REF -->
+**VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get tables.Params -->
 
@@ -25,11 +25,11 @@ title: VP Get tables
 
 #### 説明
 
-`VP Get tables` コマンドは、<!-- REF #_method_.VP Get tables.Summary -->_sheet_ で指定されたスコープにおいて定義されている表組み名のコレクションを返します<!-- END REF -->。
+`VP Get tables` コマンドは、<!-- REF #_method_.VP Get tables.Summary -->*sheet* で指定されたスコープにおいて定義されている表組み名のコレクションを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
