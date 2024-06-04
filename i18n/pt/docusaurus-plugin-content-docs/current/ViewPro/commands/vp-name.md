@@ -5,7 +5,7 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Syntax -->
 
-**VP Name** ( _vpAreaName_ : Text ; _rangeName_ : Text { ; _sheet_ : Integer }  ) : Object <!-- END REF -->
+**VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
 
 <!-- REF #_method_.VP Name.Params -->
 
@@ -20,11 +20,11 @@ title: VP Name
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The _rangeName_ parameter specifies an existing named cell range.
+The *rangeName* parameter specifies an existing named cell range.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where _rangeName_ is defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
+In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
 
 - `vk current sheet`
 - `vk workbook`
