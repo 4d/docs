@@ -5,7 +5,7 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( _vpAreaName_ : Text ; _name_ : Text { ; _scope_ : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
@@ -18,13 +18,13 @@ title: VP Get formula by name
 
 #### Descripción
 
-El comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> devuelve la fórmula y el comentario correspondientes al rango con nombre o a la fórmula con nombre pasada en el parámetro _name_, o **null** si no existe en el ámbito definido<!-- END REF -->.
+El comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> devuelve la fórmula y el comentario correspondientes al rango con nombre o a la fórmula con nombre pasada en el parámetro *name*, o **null** si no existe en el ámbito definido<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase el rango con nombre o la fórmula con nombre que desea obtener en _name_. Tenga en cuenta que los rangos con nombre se devuelven como fórmulas que contienen referencias absolutas de celdas.
+Pase el rango con nombre o la fórmula con nombre que desea obtener en *name*. Tenga en cuenta que los rangos con nombre se devuelven como fórmulas que contienen referencias absolutas de celdas.
 
-Puede definir dónde obtener la fórmula en _scope_ utilizando el índice de la hoja (la numeración comienza en 0) o una de las siguientes constantes:
+Puede definir dónde obtener la fórmula en *scope* utilizando el índice de la hoja (la numeración comienza en 0) o una de las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
