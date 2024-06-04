@@ -54,21 +54,21 @@ The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summar
 
 Para definir el adjunto, puede utilizar:
 
-- a _file_, pass a `4D.File` object containing the attachment file.
-- a _zipfile_, pass a `4D.ZipFile` object containing the attachment file.
-- a _blob_, pass a `4D.Blob` object containing the attachment itself.
-- a _path_, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Puede pasar un nombre de ruta completo o un simple nombre de archivo (en cuyo caso 4D buscará el archivo en el mismo directorio que el archivo del proyecto).
+- a *file*, pass a `4D.File` object containing the attachment file.
+- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
+- a *blob*, pass a `4D.Blob` object containing the attachment itself.
+- a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Puede pasar un nombre de ruta completo o un simple nombre de archivo (en cuyo caso 4D buscará el archivo en el mismo directorio que el archivo del proyecto).
 
-The optional _name_ parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Si se omite _name_ y:
+The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Si se omite *name* y:
 
 - pasó una ruta de archivo, se utiliza el nombre y la extensión del archivo,
 - pasó un BLOB, se genera automáticamente un nombre aleatorio sin extensión.
 
-The optional _cid_ parameter lets you pass an internal ID for the attachment. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. You can pass an empty string in _cid_ if you do not want to use this parameter.
+The optional *cid* parameter lets you pass an internal ID for the attachment. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. You can pass an empty string in *cid* if you do not want to use this parameter.
 
-You can use the optional _type_ parameter to explicitly set the `content-type` of the attachment file. Por ejemplo, puede pasar una cadena que defina un tipo MIME ("video/mpeg"). Este valor de content-type se definirá para el archivo adjunto, independientemente de su extensión. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
+You can use the optional *type* parameter to explicitly set the `content-type` of the attachment file. Por ejemplo, puede pasar una cadena que defina un tipo MIME ("video/mpeg"). Este valor de content-type se definirá para el archivo adjunto, independientemente de su extensión. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
-By default, if the _type_ parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. Se aplican las siguientes reglas para los principales tipos MIME:
+By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. Se aplican las siguientes reglas para los principales tipos MIME:
 
 | Extensión | Content Type                                  |
 | --------- | --------------------------------------------- |
@@ -87,19 +87,19 @@ By default, if the _type_ parameter is omitted or contains an empty string, the 
 | xml       | application/xml                               |
 | htm, html | text/html                                     |
 | mp3       | audio/mpeg                                    |
-| _otro_    | application/octet-stream                      |
+| *otro*    | application/octet-stream                      |
 
-The optional _disposition_ parameter lets you pass the `content-disposition` header of the attachment. Puede pasar una de las siguientes constantes del tema constante "Mail":
+The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. Puede pasar una de las siguientes constantes del tema constante "Mail":
 
 | Constante                   | Valor        | Comentario                                                                                                                                                                                                                                                       |
 | --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Define el valor del encabezado Content-disposition como "attachment", lo que significa que el archivo adjunto debe proporcionarse como un enlace en el mensaje.                                                                                  |
 | mail disposition inline     | "inline"     | Define el valor del encabezado Content-disposition como "inline", lo que significa que el archivo adjunto debe aparecer dentro del contenido del mensaje, en la ubicación "cid". La renderización depende del cliente de correo. |
 
-By default, if the _disposition_ parameter is omitted:
+By default, if the *disposition* parameter is omitted:
 
-- if the _cid_ parameter is used, the `Content-disposition` header is set to "inline",
-- if the _cid_ parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
+- if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
+- if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
 #### Ejemplo 1
 
