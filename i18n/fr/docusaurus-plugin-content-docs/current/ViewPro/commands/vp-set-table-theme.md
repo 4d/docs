@@ -13,7 +13,7 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
 
-**VP SET TABLE THEME** ( _vpAreaName_ : Text ; _tableName_ : Text ; _options_ : cs.ViewPro.TableTheme )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
@@ -25,11 +25,11 @@ title: VP SET TABLE THEME
 
 #### Description
 
-The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the _tableName_<!-- END REF -->.
+The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area and in _tableName_, the name of the table to modify.
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify.
 
-In the _options_ parameter, pass an object of the [`cs.ViewPro.TableTheme` class](../classes.md#tabletheme) that contains the theme properties to modify.
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](../classes.md#tabletheme) that contains the theme properties to modify.
 
 #### Exemple 1
 
