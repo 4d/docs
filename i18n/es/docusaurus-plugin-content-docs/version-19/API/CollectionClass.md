@@ -151,10 +151,10 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parámetros | Tipo                                                                |    | Descripción                                          |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida                |
-| Result     | Collection                                                          | <- | The new shared collection|<!-- END REF -->
+| Parámetros | Tipo                                                                |    | Descripción                                              |
+| ---------- | ------------------------------------------------------------------- |:--:| -------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida                    |
+| Result     | Collection                                                          | <- | La nueva colección compartida|<!-- END REF -->
 
 |
 
