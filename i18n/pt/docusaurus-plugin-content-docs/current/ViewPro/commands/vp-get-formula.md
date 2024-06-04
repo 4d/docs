@@ -5,7 +5,7 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Syntax -->
 
-**VP Get formula** ( _rangeObj_ : Object) : Text<!-- END REF -->
+**VP Get formula** ( *rangeObj* : Object) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula.Params -->
 
@@ -18,7 +18,7 @@ title: VP Get formula
 
 The `VP Get formula` command <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range whose formula you want to retrieve. If _rangeObj_ designates multiple cells or multiple ranges, the formula of the first cell is returned. If _rangeObj_ is a cell that does not contain a formula, the method returns an empty string.
+In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
 
 #### Exemplo
 
