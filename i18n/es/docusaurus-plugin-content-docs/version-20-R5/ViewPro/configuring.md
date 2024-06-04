@@ -350,12 +350,12 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 - Tamaño personalizado - atributos de alto y ancho
 - Tamaño estándar - atributo kind
 
-| Propiedad |        | Tipo         | Descripción                                                                                                                                                                                                            |
-| --------- | ------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| paperSize |        | object       | Dimensiones del papel (alto, ancho) o formato específico (tipo) para la impresión.                                                                               |
-|           | height | entero largo | La altura del papel, en centésimas del pulgada.                                                                                                                                                        |
-|           | ancho  | entero largo | Ancho del papel, en centésimas de pulgada.                                                                                                                                                             |
-|           | kind   | text         | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Valor por defecto: "letter" |
+| Propiedad |        | Tipo         | Descripción                                                                                                                                                                                                             |
+| --------- | ------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| paperSize |        | object       | Dimensiones del papel (alto, ancho) o formato específico (tipo) para la impresión.                                                                                |
+|           | height | entero largo | La altura del papel, en centésimas del pulgada.                                                                                                                                                         |
+|           | ancho  | entero largo | Ancho del papel, en centésimas de pulgada.                                                                                                                                                              |
+|           | kind   | text         | Name of standard paper size (e.g., A2, A4, legal, etc.) devuelto por `Get Print Option`. Valor por defecto: "letter" |
 
 - If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
 
