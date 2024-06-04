@@ -7,10 +7,10 @@ Après avoir [créé un ensemble d'entités]($method.md#methodentityset) à l'ai
 
 ## Syntaxe
 
-| Syntaxe                                                                                                    | Exemple                                                                            | Description                                                                                  |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un ensemble d'entités existant                                                      |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel ensemble d'entités à partir de la comparaison d'ensembles d'entités existants |
+| Syntaxe                                                                                                    | Exemple                                                                            | Description                                                                  |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un entity set existant                                              |
+| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
 
 ## $entityset/{entitySetID}
 
@@ -18,7 +18,7 @@ Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5
 
 ### Description
 
-Cette syntaxe vos permet d'exécuter toute opération sur un ensemble d'entités défini.
+Cette syntaxe vos permet d'exécuter toute opération sur un entity set défini.
 
 Étant donné que les ensembles d'entités sont limités par le temps (par défaut ou bien après avoir appelé `$timeout` pour définir la limite souhaitée), vous pouvez appeler `$savedfilter` et `$savedorderby` pour sauvegarder le filtre et trier par instructions lorsque vous créez un ensemble d'entités.
 
@@ -26,7 +26,7 @@ Lorsque vous récupérez un ensemble d'entités existant stocké dans le cache d
 
 ### Exemple
 
-Après avoir créé un ensemble d'entités, l'ID de l'ensemble d'entités est retourné avec les données. Vous appelez cet ID de la manière suivante :
+Après que vous ayez créé un entity set, l'ID de l'entity set est retourné avec les données. Vous appelez cet ID de la manière suivante :
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
@@ -47,15 +47,15 @@ Vous pouvez ensuite créer un autre ensemble d'entités contenant les résultats
 
 Voici les opérateurs logiques :
 
-| Opérateur | Description                                                                                                                                                                         |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Retourne les entités communes aux deux ensembles d'entités                                                                                                                          |
-| OU        | Retourne les entités contenues dans les deux ensembles d'entités                                                                                                                    |
-| EXCEPT    | Retourne les entités de l'ensemble d'entités #1 moins celles de l'ensemble d'entités #2                                                                                             |
-| INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux ensembles d'entités (ce qui signifie qu'au moins une entité est commune aux deux ensembles d'entités) |
+| Opérateur | Description                                                                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AND       | Retourne les entités communes aux deux ensembles d'entités                                                                                                          |
+| OU        | Retourne les entités contenues dans les deux entity sets                                                                                                            |
+| EXCEPT    | Retourne les entités de l'entity set #1 moins celles de l'entity set #2                                                                                             |
+| INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux entity sets (ce qui signifie qu'au moins une entité est commune aux deux entity sets) |
 > Les opérateurs logiques ne sont pas sensibles à la casse, vous pouvez donc écrire "AND" ou "and".
 
-Vous trouverez ci-dessous une représentation des opérateurs logiques basés sur deux ensembles d'entités. La section rouge correspond à ce qui est retourné.
+Vous trouverez ci-dessous une représentation des opérateurs logiques basés sur deux entity sets. La section rouge correspond à ce qui est retourné.
 
 **AND**
 
@@ -75,16 +75,16 @@ La syntaxe est la suivante :
 
 ### Exemple
 
-Dans l'exemple ci-dessous, nous retournons les entités qui se trouvent dans les deux ensembles d'entités puisque nous utilisons l'opérateur logique AND :
+Dans l'exemple ci-dessous, nous retournons les entités qui se trouvent dans les deux entity sets puisque nous utilisons l'opérateur logique AND :
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-Si nous souhaitons savoir si les deux ensembles d'entités se croisent, nous pouvons écrire ce qui suit :
+Si nous souhaitons savoir si les deux entity sets se croisent, nous pouvons écrire ce qui suit :
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
 S'il existe une intersection, cette requête retourne true. Sinon, elle retourne false.
 
-Dans l'exemple suivant, nous créons un nouvel ensemble d'entités qui combine toutes les entités des deux ensembles d'entités :
+Dans l'exemple suivant, nous créons un nouvel entity set qui combine toutes les entités des deux entity sets :
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
