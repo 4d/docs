@@ -13,7 +13,7 @@ title: VP Find table
 
 <!-- REF #_method_.VP Find table.Syntax -->
 
-**VP Find table** ( _rangeObj_ : Object ) : Text<!-- END REF -->
+**VP Find table** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Find table.Params -->
 
@@ -24,11 +24,11 @@ title: VP Find table
 
 #### 説明
 
-`VP Find table` コマンドは、<!-- REF #_method_.VP Find table.Summary -->_rangeObj_ で指定したセルが所属する表組みの名称を返します<!-- END REF -->。
+`VP Find table` コマンドは、<!-- REF #_method_.VP Find table.Summary -->*rangeObj* で指定したセルが所属する表組みの名称を返します<!-- END REF -->。
 
-_rangeObj_ には、セルのレンジオブジェクトを渡します。 指定したセルが表組みの一部でない場合、コマンドは空の文字列を返します。
+*rangeObj* には、セルのレンジオブジェクトを渡します。 指定したセルが表組みの一部でない場合、コマンドは空の文字列を返します。
 
-_rangeObj_ 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
+*rangeObj* 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
 
 #### 例題
 
