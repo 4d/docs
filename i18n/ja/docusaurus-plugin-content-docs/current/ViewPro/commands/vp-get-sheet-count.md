@@ -5,7 +5,7 @@ title: VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Syntax -->
 
-**VP Get sheet count** ( _vpAreaName_ : Text ) : Integer<!-- END REF -->
+**VP Get sheet count** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get sheet count
 
 #### 説明
 
-`VP Get sheet count` コマンドは、 <!-- REF #_method_.VP Get sheet count.Summary -->_vpAreaName_ で指定したエリアにロードされているドキュメント内にあるシート数を返します<!-- END REF -->。
+`VP Get sheet count` コマンドは、 <!-- REF #_method_.VP Get sheet count.Summary -->*vpAreaName* で指定したエリアにロードされているドキュメント内にあるシート数を返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 #### 例題
 
