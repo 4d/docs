@@ -5,7 +5,7 @@ title: VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
 
-**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
@@ -17,9 +17,9 @@ title: VP IMPORT FROM BLOB
 
 #### Descripción
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](vp-export-to-blob.md) command or via the 4D View Pro interface.
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](vp-export-to-blob.md) command or via the 4D View Pro interface.
 
-En _paramObj_, puede pasar varias propiedades:
+En *paramObj*, puede pasar varias propiedades:
 
 | Propiedad           | Tipo                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 | :--------- | :---------------------------- | :---------------------- | :---------------------------------------------------------------------------------------- |
 | param1     |                               | text                    | El nombre del objeto de área 4D View Pro                                                  |
 | param2     |                               | 4D.Blob | El blob importado                                                                         |
-| param3     |                               | object                  | Referencia al parámetro _paramObj_ del comando                                            |
+| param3     |                               | object                  | Referencia al parámetro *paramObj* del comando                                            |
 | param4     |                               | object                  | Un objeto devuelto por el método con un mensaje de estado                                 |
 |            | .success      | boolean                 | True si la importación se realiza correctamente, False en caso contrario. |
 |            | .errorCode    | integer                 | Código de error.                                                          |
