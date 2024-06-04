@@ -5,7 +5,7 @@ title: VP SET BOOLEAN VALUE
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Syntax -->
 
-**VP SET BOOLEAN VALUE** ( _rangeObj_ : Object  ; _boolValue_ : Boolean) <!-- END REF -->
+**VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
@@ -18,9 +18,9 @@ title: VP SET BOOLEAN VALUE
 
 The `VP SET BOOLEAN VALUE` command <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
 
-Em _rangeObj_, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If _rangeObj_ includes multiple cells, the value specified will be repeated in each cell.
+Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The _boolValue_ parameter allows you to pass the boolean value (**True** or **False**) that will be assigned to the _rangeObj_.
+The *boolValue* parameter allows you to pass the boolean value (**True** or **False**) that will be assigned to the *rangeObj*.
 
 #### Exemplo
 
