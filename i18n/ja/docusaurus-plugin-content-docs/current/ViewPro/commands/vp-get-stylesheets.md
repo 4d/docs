@@ -5,7 +5,7 @@ title: VP Get stylesheets
 
 <!-- REF #_method_.VP Get stylesheets.Syntax -->
 
-**VP Get stylesheets** ( _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Collection<!-- END REF -->
+**VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get stylesheets
 
 #### 説明
 
-`VP Get stylesheets` コマンドは、<!-- REF #_method_.VP Get stylesheets.Summary -->_sheet_ で指定されたスコープにおいて定義されているスタイルシートのコレクションを返します<!-- END REF -->。
+`VP Get stylesheets` コマンドは、<!-- REF #_method_.VP Get stylesheets.Summary -->*sheet* で指定されたスコープにおいて定義されているスタイルシートのコレクションを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-任意の _sheet_ 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
+任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
 - `vk current sheet`
 - `vk workbook`
