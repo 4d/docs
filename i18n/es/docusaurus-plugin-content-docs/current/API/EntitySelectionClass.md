@@ -309,7 +309,7 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 
 La entity selection modificada es devuelta por la función, de modo que las llamadas a la función pueden encadenarse.
 
-An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
+An error occurs if *entity* and the entity selection are not related to the same Dataclass. Si *entity* es Null, no se produce ningún error.
 
 #### Ejemplo 1
 
@@ -1475,10 +1475,10 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 19 R7       | Support of *keepOrder* parameter |
-| 17          | Añadidos                         |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 19 R7       | Soporte del parámetro *keepOrder* |
+| 17          | Añadidos                          |
 
 </details>
 
