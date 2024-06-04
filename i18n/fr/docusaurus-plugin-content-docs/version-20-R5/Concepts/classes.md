@@ -427,6 +427,20 @@ Lorsque vous initialisez une propriété dans sa ligne de déclaration, elle est
 
 Si une classe [étend](#class-extends-classname) une autre classe, les propriétés de la classe parente sont instanciées avant les propriétés de la classe enfant.
 
+:::note
+
+If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+
+```4d
+// in a shared class
+property myCollection := ["something"]
+// myCollection will be a shared collection
+// equivalent to:
+myCollection := New shared collection("something")
+```
+
+:::
+
 #### Exemple
 
 ```4d
@@ -825,6 +839,8 @@ Le singleton de la classe est instancié lors du premier appel de la propriété
 Si vous avez besoin d'instancier un singleton avec des paramètres, vous pouvez également appeler la fonction [`new()`](../API/ClassClass.md#new). Dans ce cas, il est recommandé d'instancier le singleton dans du code exécuté au démarrage de l'application.
 
 La portée d'une instance de singleton peut être le process courant ou tous les process. Un singleton _process_ a une valeur unique pour le process dans lequel il est instancié, alors qu'un singleton _interprocess_ a une valeur unique pour tous les process de l'application. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
 
 La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Class permet de savoir si la classe est un singleton.
 
