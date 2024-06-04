@@ -5,7 +5,7 @@ title: VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
 
-**VP SET TIME VALUE** ( _rangeObj_ : Object ; _timeValue_ : Text { ; _formatPattern_ : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET TIME VALUE
 
 `VP SET TIME VALUE` コマンドは、<!-- REF #_method_.VP SET TIME VALUE.Summary -->指定されたセルレンジに時間値を割り当てます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-_timeValue_ 引数には、_rangeObj_ 引数のレンジに割り当てる時間 (秒単位) を指定します。
+*timeValue* 引数には、*rangeObj* 引数のレンジに割り当てる時間 (秒単位) を指定します。
 
-任意の _formatPattern_ 引数は、_timeValue_ に対する [パターン](../configuring.md#セルフォーマット) を定義します。
+任意の *formatPattern* 引数は、*timeValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
 #### 例題
 
