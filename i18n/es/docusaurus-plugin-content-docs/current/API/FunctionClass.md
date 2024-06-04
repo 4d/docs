@@ -100,10 +100,10 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                      |
-| ----------- | --------------------------------------------------- |
-| 17 R6       | Renamed (New formula -> Formula) |
-| 17 R3       | Añadidos                                            |
+| Lanzamiento | Modificaciones                                         |
+| ----------- | ------------------------------------------------------ |
+| 17 R6       | Renombrado (New formula -> Formula) |
+| 17 R3       | Añadidos                                               |
 
 </details>
 
