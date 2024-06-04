@@ -5,7 +5,7 @@ title: VP COLUMN AUTOFIT
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Syntax -->
 
-**VP COLUMN AUTOFIT** ( _rangeObj_ : Object )<!-- END REF -->
+**VP COLUMN AUTOFIT** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 
@@ -15,9 +15,9 @@ title: VP COLUMN AUTOFIT
 
 #### 説明
 
-`VP COLUMN AUTOFIT` コマンドは、<!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->_rangeObj_ 引数のレンジ内にあるカラムを、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
+`VP COLUMN AUTOFIT` コマンドは、<!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にあるカラムを、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
-_rangeObj_ 引数として、サイズを自動調整したいカラムを格納しているレンジオブジェクトを渡します。
+*rangeObj* 引数として、サイズを自動調整したいカラムを格納しているレンジオブジェクトを渡します。
 
 #### 例題
 
