@@ -68,7 +68,7 @@ Pour plus d'informations, veuillez vous référer à la [description de `.show()
 
 <!-- REF #WebFormItemClass.addCSSClass().Syntax -->
 
-**.addCSSClass**(_className_ : string)<!-- END REF -->
+**.addCSSClass**(*className* : string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
@@ -80,7 +80,7 @@ Pour plus d'informations, veuillez vous référer à la [description de `.show()
 
 #### Description
 
-La fonction `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->ajoute la classe _className_ au composant<!-- END REF -->.
+La fonction `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->ajoute la classe *className* au composant<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de `.addCSSClass` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
 
@@ -88,7 +88,7 @@ Pour plus d'informations, veuillez vous référer à la [description de `.addCSS
 
 <!-- REF #WebFormItemClass.removeCSSClass().Syntax -->
 
-**.removeCSSClass**(_className_: string)<!-- END REF -->
+**.removeCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
@@ -100,6 +100,6 @@ Pour plus d'informations, veuillez vous référer à la [description de `.addCSS
 
 #### Description
 
-La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->supprime la classe _className_ du composant<!-- END REF -->.
+La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->supprime la classe *className* du composant<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de `.removeCSSClass()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).
