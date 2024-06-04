@@ -133,7 +133,7 @@ The following remote datastores are supported by the command:
 
 |datastore kind|Description|
 |---|---|
-|Remote 4D application|A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can required (see note)|
+|Remote 4D application|A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note)|
 |[Qodly application](https://developer.qodly.com/docs/cloud/getStarted)|A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.|
 
 :::note
@@ -229,7 +229,7 @@ var $data : 4D.EntitySelection
 
 $connect["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0"
 
-$remoteDS:=Open datastore($connect; "remoteId")
+$remoteDS:=Open datastore($connectTo; "remoteId")
 $data:=$remoteDS.item.all()
 
 ALERT(String($data.length)+" items have been read")
