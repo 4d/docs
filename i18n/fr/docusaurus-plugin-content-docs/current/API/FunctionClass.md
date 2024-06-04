@@ -120,7 +120,7 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 #### Description
 
-La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression _formulaExp_<!-- END REF -->. .
+La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression *formulaExp*<!-- END REF -->. .
 
 Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que paramètre (champ calculé) à des commandes ou à des méthodes ou de l'exécuter à partir de divers composants sans avoir à les déclarer comme "partagés par les composants et la base de données hôte". Lorsqu'il est appelé, l'objet formula est évalué dans le contexte de la base de données ou du composant qui l'a créé.
 
@@ -144,7 +144,7 @@ Vous pouvez passer des [paramètres](#passing-parameters) à `Formula`, comme le
 
 Vous pouvez indiquer l'objet sur lequel la formule est exécutée, comme le montre l'[exemple 5](#example-5). Les propriétés de l'objet sont alors accessibles via la commande `This`.
 
-Si _formuleExp_ utilise des variables locales, leurs valeurs sont copiées et stockées dans l'objet formule retourné lors de sa création. Lors de son exécution, la formule utilise ces valeurs copiées plutôt que la valeur courante des variables locales. A noter que l'utilisation de tableaux comme variables locales n'est pas prise en charge.
+Si *formuleExp* utilise des variables locales, leurs valeurs sont copiées et stockées dans l'objet formule retourné lors de sa création. Lors de son exécution, la formule utilise ces valeurs copiées plutôt que la valeur courante des variables locales. A noter que l'utilisation de tableaux comme variables locales n'est pas prise en charge.
 
 L'objet créé par `Formula` peut être enregistré, par exemple, dans un champ de base de données ou dans un document blob.
 
@@ -232,7 +232,7 @@ Appeler une formule à l'aide de la notation objet :
 
 | Release | Modifications                                                             |
 | ------- | ------------------------------------------------------------------------- |
-| 20 R3   | Prise en charge du paramètre _context_                                    |
+| 20 R3   | Prise en charge du paramètre *context*                                    |
 | 17 R6   | Renommée : New formula from string -> Formula from string |
 | 17 R3   | Ajout                                                                     |
 
@@ -252,13 +252,13 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur _formulaString_ et, éventuellement, _context_<!-- END REF -->.  _formulaString_ peut être aussi simple qu'une valeur unique ou complexe, comme une méthode projet avec des paramètres.
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être aussi simple qu'une valeur unique ou complexe, comme une méthode projet avec des paramètres.
 
 Cette commande est similaire à [`Formula`](#formula), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula`, sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 
-> Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la _formulaString_. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
+> Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
 
-Si la formule est créée dans un composant, vous pouvez envisager d'utiliser le paramètre _context_ . Par défaut, les formules étant exécutées dans le contexte dans lequel elles ont été créées, elles ne pourront pas appeler une variable, une fonction ou une méthode non partagée de la base de données hôte. Dans ce cas, vous pouvez passer la constante `sk execute in host database` au paramètre _context_ pour exécuter l'objet `4D.Function` dans le contexte de la base de données hôte. Les constantes suivantes sont disponibles :
+Si la formule est créée dans un composant, vous pouvez envisager d'utiliser le paramètre *context* . Par défaut, les formules étant exécutées dans le contexte dans lequel elles ont été créées, elles ne pourront pas appeler une variable, une fonction ou une méthode non partagée de la base de données hôte. Dans ce cas, vous pouvez passer la constante `sk execute in host database` au paramètre *context* pour exécuter l'objet `4D.Function` dans le contexte de la base de données hôte. Les constantes suivantes sont disponibles :
 
 | Constante                        | Type    | Description                                                                                   |
 | -------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
@@ -313,9 +313,9 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 La fonction `.apply()` <!-- REF #FunctionClass.apply().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
-Dans le paramètre _thisObj_, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
+Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
 
-Vous pouvez également passer une collection à utiliser comme paramètres $1...$n dans la formule à l'aide du paramètre facultatif _formulaParams_.
+Vous pouvez également passer une collection à utiliser comme paramètres $1...$n dans la formule à l'aide du paramètre facultatif *formulaParams*.
 
 Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
 
@@ -373,9 +373,9 @@ Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètre
 
 La fonction `.call()` <!-- REF #FunctionClass.call().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
-Dans le paramètre _thisObj_, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
+Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
 
-Vous pouvez également passer des valeurs à utiliser comme paramètres _$1...$n_ dans la formule à l'aide du paramètre facultatif _params_.
+Vous pouvez également passer des valeurs à utiliser comme paramètres *$1...$n* dans la formule à l'aide du paramètre facultatif *params*.
 
 Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètres sont passés directement.
 
