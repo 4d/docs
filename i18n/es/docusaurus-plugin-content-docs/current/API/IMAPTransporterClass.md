@@ -1643,7 +1643,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 #### Teclas de búsqueda disponibles
 
-**ALL**: All messages in the mailbox.\
+**ALL**: todos los mensajes en el buzón.\
 **ANSWERED**: Messages with the \Answered flag set.\
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
 **DELETED**: Messages with the \Deleted flag set.\
