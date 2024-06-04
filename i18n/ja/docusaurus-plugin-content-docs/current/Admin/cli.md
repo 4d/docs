@@ -205,7 +205,7 @@ tool4d は自動的に **ヘッドレスモード** で実行され ([引数一�
 - ODBC と SQL パススルー
 - 4D View Pro、4D SVG、4D NetKit など、すべてのコンポーネント
 - hunspell スペルチェッカー
-- 日本語のスペルチェッカー (_mecab_ ライブラリ)
+- 日本語のスペルチェッカー (*mecab* ライブラリ)
 - WebAdmin
 - CEF (Chromium Embedded Framework)
 - PHP
