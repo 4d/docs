@@ -146,7 +146,7 @@ $c:=$a+$b
 
    まだ初期化されていない変数 `$a` が表示されているのは、実行の対象となっている行で使用されているためです。
 
-2. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$b:=$a+1` の行に設定されます。 At this point, the **Line Objects** theme displays:
+2. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$b:=$a+1` の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
 
    | $a | 1   |
    | -- | --- |
@@ -154,7 +154,7 @@ $c:=$a+$b
 
    変数 `$a` の値は 1 になりました。 まだ初期化されていない変数 `$b` が表示されているのは、実行の対象となっている行で使用されているためです。
 
-3. **次行に進む** ボタンをクリックします。 The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
+3. **次行に進む** ボタンをクリックします。 プログラムカウンターは $c:=$a+$b の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
 
    | $c | 未定義 |
    | -- | --- |
@@ -285,10 +285,10 @@ $c:=$a+$b
 
 - フィールド
 - 変数
-- pointer
+- ポインター
 - 演算
 - 4Dコマンド
-- method
+- メソッド
 - ほか値を返すものなら何でも
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
@@ -321,13 +321,13 @@ $c:=$a+$b
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
+フォーミュラエディターの詳細については、[4Dデザインリファレンスマニュアル](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.ja.html) を参照ください。
 
 - **コマンド挿入...**: 4Dコマンドを新しい式として挿入するためのショートカット。
 - **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
 - **標準式**: ウォッチエリアの式リストをコピーします。
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> このオプションは [リモートデバッグモード](debugging-remote.md)では利用できません。
 
 - **すべて閉じる/すべて拡げる**: 階層リストの全レベルを縮小/展開します。
 - **型を表示**: リストの各項目のデータ型を (適切な場合に) 表示します。
