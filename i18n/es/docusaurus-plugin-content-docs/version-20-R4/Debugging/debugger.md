@@ -66,7 +66,7 @@ El nuevo método se convierte en el método actual (superior) en la [Ventana cad
 Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
 
 
-#### Step Out
+#### Ejecutar y salir
 
 If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
