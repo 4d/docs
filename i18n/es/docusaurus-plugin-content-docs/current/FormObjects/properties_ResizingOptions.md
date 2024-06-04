@@ -114,7 +114,7 @@ Cuando esta propiedad no se aplica al splitter, el resultado es el siguiente:
 
 #### Objetos soportados
 
-[Splitter](splitters.md)
+[Separadores](splitters.md)
 
 ---
 
