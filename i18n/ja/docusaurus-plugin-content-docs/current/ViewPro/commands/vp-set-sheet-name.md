@@ -5,7 +5,7 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Syntax -->
 
-**VP SET SHEET NAME** ( _vpAreaName_ : Text ; _name_ : Text {; _sheet_: Integer} )<!-- END REF -->
+**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
@@ -17,17 +17,17 @@ title: VP SET SHEET NAME
 
 #### 説明
 
-`VP SET SHEET NAME` コマンドは、<!-- REF #_method_.VP SET SHEET NAME.Summary -->_vpAreaName_ 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します<!-- END REF -->。
+`VP SET SHEET NAME` コマンドは、<!-- REF #_method_.VP SET SHEET NAME.Summary -->*vpAreaName* 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_name_ 引数として、シートの新しい名前を渡します。
+*name* 引数として、シートの新しい名前を渡します。
 
-_sheet_ 引数には、名称変更するシートのインデックスを渡します。
+*sheet* 引数には、名称変更するシートのインデックスを渡します。
 
 > インデックスは 0 起点です。
 
-_sheet_ が省略された場合、コマンドはカレントシートを名称変更します。
+*sheet* が省略された場合、コマンドはカレントシートを名称変更します。
 
 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
 
@@ -36,7 +36,7 @@ _sheet_ が省略された場合、コマンドはカレントシートを名称
 - 新しい名前に禁止文字が含まれている
 - 新しい名前が空の文字列である
 - 新しい名前が既に存在している
-- _sheet_ に渡したインデックスが存在しない
+- *sheet* に渡したインデックスが存在しない
 
 #### 例題
 
