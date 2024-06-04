@@ -13,7 +13,7 @@ title: VP RESIZE TABLE
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
 
-**VP RESIZE TABLE** ( _rangeObj_ : Object; _tableName_ : Text )<!-- END REF -->
+**VP RESIZE TABLE** ( *rangeObj* : Object; *tableName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
@@ -24,7 +24,7 @@ title: VP RESIZE TABLE
 
 #### 説明
 
-`VP RESIZE TABLE` コマンドは、<!-- REF #_method_.VP RESIZE TABLE.Summary -->_rangeObj_ で指定したレンジの大きさに _tableName_ で指定した表組みをリサイズします<!-- END REF -->。
+`VP RESIZE TABLE` コマンドは、<!-- REF #_method_.VP RESIZE TABLE.Summary -->*rangeObj* で指定したレンジの大きさに *tableName* で指定した表組みをリサイズします<!-- END REF -->。
 
 次のルールが適用されます:
 
@@ -34,7 +34,7 @@ title: VP RESIZE TABLE
   - 行が追加された場合、データは削除されます。
   - 列が追加された場合、データは保持され、新しい列に表示されます。
 
-_tableName_ の表組みが存在しない場合には、何も起こりません。
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 #### 例題
 
