@@ -133,7 +133,7 @@ Essa propriedade é **somente leitura**.
 
 A função `.new()` <!-- REF #ClassClass.new().Summary -->cria e retorna um objeto `cs.className` que é uma nova instância da classe na qual ela é chamada<!-- END REF -->. Essa função está automaticamente disponível em todas as classes do armazenamento de classes [`cs`] (Concepts/classes.md#cs).
 
-Você pode passar um ou mais parâmetros _param_ opcionais, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor) (se houver) na definição da classe _className_. Na função do construtor, o [`This`] (Concepts/classes.md#this) é vinculado ao novo objeto que está sendo construído.
+Você pode passar um ou mais parâmetros *param* opcionais, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor) (se houver) na definição da classe *className*. Na função do construtor, o [`This`] (Concepts/classes.md#this) é vinculado ao novo objeto que está sendo construído.
 
 :::note Notas
 
