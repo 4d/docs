@@ -205,7 +205,7 @@ Tenha em mente que tool4d roda automaticamente em **modo headless** (veja `--hea
 - ODBC e SQL pass-through,
 - todos os componentes tais como 4D View Pro, 4D SVG, 4D NetKit...,
 - corrector ortográfico hunspell,
-- corrector ortográfico japonés (librería _mecab_),
+- corrector ortográfico japonés (librería *mecab*),
 - WebAdmin,
 - CEF,
 - PHP,
