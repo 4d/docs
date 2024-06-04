@@ -15,7 +15,7 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
 
-**VP CREATE TABLE** ( _rangeObj_ : Object ; _tableName_ : Text {; _source_ : Text} {; _options_ : cs.ViewPro.TableOptions} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -32,27 +32,27 @@ title: VP CREATE TABLE
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-_rangeObj_ 引数には、表の作成場所としたいセルのレンジを渡します。
+*rangeObj* 引数には、表の作成場所としたいセルのレンジを渡します。
 
-_tableName_ には、表組みの名称を渡します。 名称は次の条件を満たさなくてはなりません:
+*tableName* には、表組みの名称を渡します。 名称は次の条件を満たさなくてはなりません:
 
 - シートにおいて固有のものである
 - 5文字以上である
 - 先頭が数字でなく、スペースを含まない
 
-_source_ には、表組みにデータを提供する [データコンテキスト](vp-set-data-context.md) のプロパティ名を渡します。 これにより、表をデータコンテキストにバインドします。 データコンテキストが更新されると、表に表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。
+*source* には、表組みにデータを提供する [データコンテキスト](vp-set-data-context.md) のプロパティ名を渡します。 これにより、表をデータコンテキストにバインドします。 データコンテキストが更新されると、表に表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。
 
-- _source_ を指定しない場合、コマンドは _rangeObj_ が定義するサイズの空の表を作成します。
-- 指定された _source_ をドキュメント内に完全に表示できない場合、表は作成されません。
+- *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空の表を作成します。
+- 指定された *source* をドキュメント内に完全に表示できない場合、表は作成されません。
 
-_options_ には、設定する表プロパティを格納する [`cs.ViewPro.TableOptions` クラス](../classes.md#tableoptions) のオブジェクトを渡します。
+*options* には、設定する表プロパティを格納する [`cs.ViewPro.TableOptions` クラス](../classes.md#tableoptions) のオブジェクトを渡します。
 
-_options_ オブジェクトの中で、_tableColumns_ コレクションが、表の列のデータ構造を決定します。 _tableColumns_ コレクションの長さは、レンジの列数と等しくなければなりません:
+*options* オブジェクトの中で、*tableColumns* コレクションが、表の列のデータ構造を決定します。 *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
-- _rangeObj_ の列数が _tableColumns_ の列数より多い場合、表は追加の空列で埋められます。
-- _rangeObj_ の列数が _tableColumns_ の列数より少ない場合、表はレンジの列数のみを表示します。
+- *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
+- *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
 
-_source_ を渡しながら、_tableColumn_ オプションは渡さなかった場合、コマンドは自動的に列を生成します。 この場合、_rangeObj_ はセルレンジでなければなりません。 そうでなければ、レンジの先頭セルが使用されます。 列を自動生成する場合、次のルールが適用されます:
+*source* を渡しながら、*tableColumn* オプションは渡さなかった場合、コマンドは自動的に列を生成します。 この場合、*rangeObj* はセルレンジでなければなりません。 そうでなければ、レンジの先頭セルが使用されます。 列を自動生成する場合、次のルールが適用されます:
 
 - コマンドに渡されるデータがオブジェクトのコレクションである場合、列のタイトルとしてプロパティ名が使用されます。 例:
 
@@ -68,7 +68,7 @@ _source_ を渡しながら、_tableColumn_ オプションは渡さなかった
   - 列のタイトルとして、サブコレクションのインデックスが使用されます。
   - それぞれのサブコレクションは行におけるセルの値を定義します。 `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` または `Picture` の値が可能です。 `Time` の値は、[VP SET VALUE](vp-set-value.md) でも記述されているように、time 属性を含むオブジェクトでなければなりません。
 
-> これは列を自動生成するときにのみ機能します。 _tableColumns_ オプションを使用する場合、スカラーデータのコレクションは使用できません。
+> これは列を自動生成するときにのみ機能します。 *tableColumns* オプションを使用する場合、スカラーデータのコレクションは使用できません。
 
 #### 例題
 
