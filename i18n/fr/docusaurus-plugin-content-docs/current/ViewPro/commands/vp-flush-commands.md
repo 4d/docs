@@ -5,7 +5,7 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Syntax -->
 
-**VP FLUSH COMMANDS** (  _vpAreaName_ : Text )<!-- END REF -->
+**VP FLUSH COMMANDS** (  *vpAreaName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
@@ -17,7 +17,7 @@ title: VP FLUSH COMMANDS
 
 The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
 Afin d'améliorer la performance et de réduire le nombre de requêtes envoyées, les commandes 4D View Pro appelées par le développeur sont stockées temporairement dans un buffer de commandes. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
 
