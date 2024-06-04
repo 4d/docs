@@ -5,7 +5,7 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->
 
-**VP SET WORKBOOK OPTIONS** ( _vpAreaName_ : Text ; _optionObj_ : Object)<!-- END REF -->
+**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET WORKBOOK OPTIONS
 #### Description
 
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
-sets the workbook options in _vpAreaName_<!-- END REF -->.
+sets the workbook options in *vpAreaName*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _optionObj_, pass the workbook options to apply to _vpAreaName_.
+In *optionObj*, pass the workbook options to apply to *vpAreaName*.
 
-If _optionObj_ is empty, the command does nothing.
+If *optionObj* is empty, the command does nothing.
 
 Les options modifiées du classeur sont enregistrées avec le document.
 
