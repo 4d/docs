@@ -5,7 +5,7 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Syntax -->
 
-**VP Get spans** ( _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get spans** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get spans.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get spans
 
 #### 説明
 
-`VP Get spans` コマンドは、<!-- REF #_method_.VP Get spans.Summary -->_rangeObj_ で指定したレンジ内にあるセル結合を取得します<!-- END REF -->。
+`VP Get spans` コマンドは、<!-- REF #_method_.VP Get spans.Summary -->*rangeObj* で指定したレンジ内にあるセル結合を取得します<!-- END REF -->。
 
-_rangeObj_ 引数で、セル結合を取得したいレンジを指定します。 _rangeObj_ にセル結合が含まれない場合には、空のレンジが返されます。
+*rangeObj* 引数で、セル結合を取得したいレンジを指定します。 *rangeObj* にセル結合が含まれない場合には、空のレンジが返されます。
 
 #### 例題
 
