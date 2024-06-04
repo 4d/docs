@@ -5,7 +5,7 @@ title: VP Get sheet name
 
 <!-- REF #_method_.VP Get sheet name.Syntax -->
 
-**VP Get sheet name** ( _vpAreaName_ : Text ; _sheet_ : Integer ) : Text<!-- END REF -->
+**VP Get sheet name** ( *vpAreaName* : Text ; *sheet* : Integer ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get sheet name
 
 #### 説明
 
-`VP Get sheet name` コマンドは、<!-- REF #_method_.VP Get sheet name.Summary -->_vpAreaName_ 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF -->
+`VP Get sheet name` コマンドは、<!-- REF #_method_.VP Get sheet name.Summary -->*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF -->
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_sheet_ には、名前を返して欲しいシートのインデックスを渡します。
+*sheet* には、名前を返して欲しいシートのインデックスを渡します。
 
 渡したシートインデックスが存在しない場合、コマンドは空の文字列を返します。
 
