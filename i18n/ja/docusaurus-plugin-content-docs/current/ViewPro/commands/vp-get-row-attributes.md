@@ -16,9 +16,9 @@ title: VP Get row attributes
 
 #### 説明
 
-`VP Get row attributes` コマンドは、<!-- REF #_method_.VP Get row attributes.Summary -->_rangeObj_ 引数で指定したレンジ内にある行のプロパティのコレクションを返します<!-- END REF -->。
+`VP Get row attributes` コマンドは、<!-- REF #_method_.VP Get row attributes.Summary -->*rangeObj* 引数で指定したレンジ内にある行のプロパティのコレクションを返します<!-- END REF -->。
 
-_rangeObj_ 引数には、属性を取得したい行のレンジを格納しているオブジェクトを渡します。
+*rangeObj* 引数には、属性を取得したい行のレンジを格納しているオブジェクトを渡します。
 
 [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションには行の属性がすべて返されます。
 
