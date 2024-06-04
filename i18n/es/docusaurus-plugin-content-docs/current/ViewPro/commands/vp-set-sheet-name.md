@@ -5,7 +5,7 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Syntax -->
 
-**VP SET SHEET NAME** ( _vpAreaName_ : Text ; _name_ : Text {; _sheet_: Integer} )<!-- END REF -->
+**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
@@ -17,17 +17,17 @@ title: VP SET SHEET NAME
 
 #### Descripción
 
-El comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->cambia el nombre de una hoja del documento cargado en _vpAreaName_<!-- END REF -->.
+El comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->cambia el nombre de una hoja del documento cargado en *vpAreaName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _name_, pase un nuevo nombre para la hoja.
+En *name*, pase un nuevo nombre para la hoja.
 
-En _sheet_, pase el índice de la hoja a renombrar.
+En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-Si no se pasa _sheet_, el comando renombra la hoja actual.
+Si no se pasa *sheet*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -36,7 +36,7 @@ El comando no hace nada si:
 - el nuevo nombre contiene caracteres prohibidos
 - el nuevo valor del nombre está en blanco
 - el nuevo nombre ya existe
-- el índice _sheet_ pasado no existe
+- el índice *sheet* pasado no existe
 
 #### Ejemplo
 
