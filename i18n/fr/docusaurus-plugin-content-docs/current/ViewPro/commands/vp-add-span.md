@@ -5,7 +5,7 @@ title: VP ADD SPAN
 
 <!-- REF #_method_.VP ADD SPAN.Syntax -->
 
-**VP ADD SPAN** ( _rangeObj_ : Object )<!-- END REF -->
+**VP ADD SPAN** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
 
@@ -15,9 +15,9 @@ title: VP ADD SPAN
 
 #### Description
 
-The `VP ADD SPAN` command combines the cells in _rangeObj_ as a single span of cells.
+The `VP ADD SPAN` command combines the cells in *rangeObj* as a single span of cells.
 
-In _rangeObj_, pass a range object of cells. Les cellules de la plage sont jointes, afin de créer une cellule plus large qui s'étend sur plusieurs colonnes et/ou lignes. Vous pouvez passer plusieurs plages de cellules pour créer plusieurs fusions de cellules en même temps. A noter que si les plages de cellules se chevauchent, seule la première plage est utilisée.
+In *rangeObj*, pass a range object of cells. Les cellules de la plage sont jointes, afin de créer une cellule plus large qui s'étend sur plusieurs colonnes et/ou lignes. Vous pouvez passer plusieurs plages de cellules pour créer plusieurs fusions de cellules en même temps. A noter que si les plages de cellules se chevauchent, seule la première plage est utilisée.
 
 > - Seules les données contenues dans la cellule supérieure gauche sont affichées. Les données des autres cellules combinées sont cachées jusqu'à ce que la fusion soit retirée.
 > - Les données masquées, contenues dans les cellules fusionnées, sont accessibles via des formules (commençant par la cellule supérieure gauche).
