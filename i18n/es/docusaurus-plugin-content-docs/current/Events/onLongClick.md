@@ -3,9 +3,9 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Puede ser llamado por                    | Definición                                                                                   |
-| ---- | ---------------------------------------- | -------------------------------------------------------------------------------------------- |
-| 39   | [Button](FormObjects/button_overview.md) | Se presiona un botón y el botón del ratón permanece presionado durante un tiempo determinado |
+| Code | Puede ser llamado por                   | Definición                                                                                   |
+| ---- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 39   | [Botón](FormObjects/button_overview.md) | Se presiona un botón y el botón del ratón permanece presionado durante un tiempo determinado |
 
 ## Descripción
 
