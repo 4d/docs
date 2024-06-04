@@ -5,7 +5,7 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Syntax -->
 
-**VP Combine ranges** ( _rangeObj_ : Object ; _otherRangeObj_ : Object {;..._otherRangeObjN_ : Object }  ) : Object<!-- END REF -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
@@ -19,11 +19,11 @@ title: VP Combine ranges
 
 `VP Combine Ranges` コマンドは、<!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
 
-_rangeObj_ には、1つ目のレンジオブジェクトを渡します。
+*rangeObj* には、1つ目のレンジオブジェクトを渡します。
 
-_otherRangeObj_ には、_rangeObj_ のレンジオブジェクトと統合させる他のレンジオブジェクトを渡します。
+*otherRangeObj* には、*rangeObj* のレンジオブジェクトと統合させる他のレンジオブジェクトを渡します。
 
-> このコマンドは _rangeObj_ および _otherRangeObj_ のオブジェクトを参照によって組み合わせます。
+> このコマンドは *rangeObj* および *otherRangeObj* のオブジェクトを参照によって組み合わせます。
 
 #### 例題
 
