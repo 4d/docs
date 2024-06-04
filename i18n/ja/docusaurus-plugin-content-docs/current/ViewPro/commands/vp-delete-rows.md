@@ -5,7 +5,7 @@ title: VP DELETE ROWS
 
 <!-- REF #_method_.VP DELETE ROWS.Syntax -->
 
-**VP DELETE ROWS** ( _rangeObj_ : Object )<!-- END REF -->
+**VP DELETE ROWS** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 
@@ -15,9 +15,9 @@ title: VP DELETE ROWS
 
 #### 説明
 
-`VP DELETE ROWS` コマンドは、<!-- REF #_method_.VP DELETE ROWS.Summary -->_rangeObj_ 引数で指定した行を削除します<!-- END REF -->。
+`VP DELETE ROWS` コマンドは、<!-- REF #_method_.VP DELETE ROWS.Summary -->*rangeObj* 引数で指定した行を削除します<!-- END REF -->。
 
-_rangeObj_ 引数には、削除する行を指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:
+*rangeObj* 引数には、削除する行を指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:
 
 - レンジにカラムと行の両方が含まれる場合、行のみが削除されます。
 - レンジにカラムしか含まれていない場合、コマンドは何もしません。
