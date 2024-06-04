@@ -5,7 +5,7 @@ title: VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
 
-**VP SET SHOW PRINT LINES** ( _vpAreaName_ : Text {; visible : Boolean}{; _sheet_ : Integer} )<!-- END REF -->
+**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET SHOW PRINT LINES
 
 The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` é passado por padrão.
+In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` é passado por padrão.
 
-In _sheet_, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
+In *sheet*, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
 > A indexação começa em 0.
 
