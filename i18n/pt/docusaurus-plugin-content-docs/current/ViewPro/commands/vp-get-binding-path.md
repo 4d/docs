@@ -13,7 +13,7 @@ title: VP Get binding path
 
 <!-- REF #_method_.VP Get binding path.Syntax -->
 
-**VP Get binding path** ( _rangeObj_ : Object ) : Text<!-- END REF -->
+**VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get binding path.Params -->
 
@@ -24,12 +24,12 @@ title: VP Get binding path
 
 #### Descrição
 
-The `VP Get binding path` command <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in _rangeObj_<!-- END REF -->.
+The `VP Get binding path` command <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass an object that is either a cell range or a combined range of cells. Note que:
+In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note que:
 
-- If _rangeObj_ is a range with several cells, the command returns the attribute name linked to the first cell in the range.
-- If _rangeObj_ contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
+- If *rangeObj* is a range with several cells, the command returns the attribute name linked to the first cell in the range.
+- If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
 
 #### Exemplo
 
