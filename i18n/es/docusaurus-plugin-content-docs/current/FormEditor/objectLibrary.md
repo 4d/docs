@@ -12,7 +12,7 @@ Puede utilizar librerías de objetos en sus formularios. Una librería de objeto
 
 ## Utilización de la librería de objetos estándar
 
-The standard object library is available from the Form editor: click on the last button of the toolbar:\
+La librería de objetos estándar está disponible en el editor de formularios: haga clic en el último botón de la barra de herramientas:\
 ![](../assets/en/FormEditor/library1.png)
 
 La librería se muestra en una ventana aparte:
@@ -22,7 +22,7 @@ La librería se muestra en una ventana aparte:
 La ventana tiene las siguientes características principales:
 
 - Área de vista previa con mensajes de ayuda: el área central muestra una vista previa de cada objeto. Puede pasar el ratón por encima de un objeto para obtener información sobre el mismo en un mensaje de ayuda.
-- You can filter the window contents by using the **Categories** menu:
+- Puede filtrar el contenido de la ventana utilizando el menú **Categorías**:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar un objeto de la librería en su formulario, puede:
   - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
