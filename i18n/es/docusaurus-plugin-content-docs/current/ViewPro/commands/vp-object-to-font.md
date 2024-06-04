@@ -5,7 +5,7 @@ title: VP Object to font
 
 <!-- REF #_method_.VP Object to font.Syntax -->
 
-**VP Object to font** ( _fontObj_ : Object ) : Text <!-- END REF -->
+**VP Object to font** ( *fontObj* : Object ) : Text <!-- END REF -->
 
 <!-- REF #_method_.VP Object to font.Params -->
 
@@ -16,9 +16,9 @@ title: VP Object to font
 
 #### Descripción
 
-The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from _fontObj_<!-- END REF -->.
+The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
 
-En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se soportan las siguientes propiedades:
+En *fontObj*, pase un objeto que contenga las propiedades de la fuente. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción                                                                                                                                                                         | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                                                             | Obligatorio |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
