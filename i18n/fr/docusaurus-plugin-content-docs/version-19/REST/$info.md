@@ -3,7 +3,7 @@ id: info
 title: '$info'
 ---
 
-Renvoie des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur
+Renvoie des informations sur les entity sets actuellement stockés dans le cache de 4D Server ainsi que sur les sessions utilisateur
 
 ## Description
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
@@ -12,8 +12,8 @@ En appelant cette requête pour votre projet, vous récupérez des informations 
 | -------------- | ---------- | --------------------------------------------------------------------------------------------------- |
 | cacheSize      | Number     | Taille du cache du serveur 4D.                                                                      |
 | usedCache      | Number     | La quantité de cache du serveur 4D utilisée.                                                        |
-| entitySetCount | Number     | Nombre de sélections d'entités.                                                                     |
-| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque sélection d'entités. |
+| entitySetCount | Number     | Nombre d'entity sets.                                                                               |
+| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque entity set.          |
 | ProgressInfo   | Collection | Une collection contenant des informations sur les indicateurs de progression.                       |
 | sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
 
@@ -47,7 +47,7 @@ Pour chaque session utilisateur, les informations suivantes sont retournées dan
 
 ## Exemple
 
-Retourne des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur:
+Retourne des informations sur les entity sets stockés dans le cache de 4D Server ainsi que sur les sessions utilisateur:
 
 `GET /rest/$info`
 
