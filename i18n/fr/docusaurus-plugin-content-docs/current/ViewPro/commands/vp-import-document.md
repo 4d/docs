@@ -13,7 +13,7 @@ title: VP IMPORT DOCUMENT
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
 
-**VP IMPORT DOCUMENT** ( _vpAreaName_ : Text ; _filePath_ : Text { ; _paramObj_ : Object} ) <!-- END REF -->
+**VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
@@ -25,11 +25,11 @@ title: VP IMPORT DOCUMENT
 
 #### Description
 
-The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by _filePath_ in the 4D View Pro area _vpAreaName_<!-- END REF -->. Le document importé remplace toutes les données déjà présentes dans la zone.
+The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. Le document importé remplace toutes les données déjà présentes dans la zone.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-In _filePath_, pass the path and name of the document to be imported. Les formats suivants sont pris en charge :
+In *filePath*, pass the path and name of the document to be imported. Les formats suivants sont pris en charge :
 
 - Les documents 4D View Pro (extension ".4vp")
 - Microsoft Excel (extension ".xlsx")
@@ -40,7 +40,7 @@ If the document extension is not a recognized extension, such as `.4vp` or `.xls
 
 An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
 
-The optional _paramObj_ parameter allows you to define properties for the imported document:
+The optional *paramObj* parameter allows you to define properties for the imported document:
 
 | Paramètres |                     | Type                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
