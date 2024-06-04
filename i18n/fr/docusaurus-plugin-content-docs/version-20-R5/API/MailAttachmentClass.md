@@ -54,21 +54,21 @@ La commande `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summar
 
 Pour définir l'objet attachment, vous pouvez utiliser :
 
-- un _file_, en passant un objet `4D.File` contenant le fichier joint.
-- un _zipfile_, en passant un objet `4D.ZipFile` contenant le fichier joint.
-- un _blob_, en passant un objet `4D.Blob` contenant la pièce jointe elle-même.
-- un _path_, en passant une valeur de type **text** contenant le chemin d'accès du fichier joint, exprimé avec la syntaxe du système. Vous pouvez passer un nom de chemin complet ou un simple nom de fichier (auquel cas 4D recherchera le fichier dans le même répertoire que le fichier du projet).
+- un *file*, en passant un objet `4D.File` contenant le fichier joint.
+- un *zipfile*, en passant un objet `4D.ZipFile` contenant le fichier joint.
+- un *blob*, en passant un objet `4D.Blob` contenant la pièce jointe elle-même.
+- un *path*, en passant une valeur de type **text** contenant le chemin d'accès du fichier joint, exprimé avec la syntaxe du système. Vous pouvez passer un nom de chemin complet ou un simple nom de fichier (auquel cas 4D recherchera le fichier dans le même répertoire que le fichier du projet).
 
-Le paramètre facultatif _name_ vous permet de passer le nom et l'extension à utiliser par le client de messagerie pour désigner la pièce jointe. Si le paramètre _name_ est omis et que :
+Le paramètre facultatif *name* vous permet de passer le nom et l'extension à utiliser par le client de messagerie pour désigner la pièce jointe. Si le paramètre *name* est omis et que :
 
 - vous avez passé un chemin d'accès au fichier, le nom et l'extension du fichier sont utilisés,
 - vous avez passé un BLOB, un nom aléatoire sans extension est automatiquement généré.
 
-Le paramètre facultatif _cid_ vous permet de passer un ID interne pour la pièce jointe. Cet ID est la valeur de l'en-tête `Content-Id` et sera utilisé dans les messages HTML uniquement. Le cid associe la pièce jointe à une référence définie dans le corps du message à l'aide d'une balise HTML telle que `\<img src="cid:ID">`. Cela signifie que le contenu de la pièce jointe (par exemple, une image) doit être affiché dans le message sur le client de messagerie. Le résultat final peut varier en fonction du client de messagerie. Vous pouvez passer une chaîne vide dans _cid_ si vous ne souhaitez pas utiliser ce paramètre.
+Le paramètre facultatif *cid* vous permet de passer un ID interne pour la pièce jointe. Cet ID est la valeur de l'en-tête `Content-Id` et sera utilisé dans les messages HTML uniquement. Le cid associe la pièce jointe à une référence définie dans le corps du message à l'aide d'une balise HTML telle que `\<img src="cid:ID">`. Cela signifie que le contenu de la pièce jointe (par exemple, une image) doit être affiché dans le message sur le client de messagerie. Le résultat final peut varier en fonction du client de messagerie. Vous pouvez passer une chaîne vide dans *cid* si vous ne souhaitez pas utiliser ce paramètre.
 
-Vous pouvez utiliser le paramètre optionnel _type_ pour définir explicitement le `content-type` du fichier joint. Par exemple, vous pouvez passer une chaîne définissant un type MIME ("video/mpeg"). Cette valeur de content-type sera définie pour la pièce jointe, quelle que soit son extension. Pour plus d'informations sur les types MIME, veuillez vous référer à [la page type MIME sur Wikipedia](https://en.wikipedia.org/wiki/MIME).
+Vous pouvez utiliser le paramètre optionnel *type* pour définir explicitement le `content-type` du fichier joint. Par exemple, vous pouvez passer une chaîne définissant un type MIME ("video/mpeg"). Cette valeur de content-type sera définie pour la pièce jointe, quelle que soit son extension. Pour plus d'informations sur les types MIME, veuillez vous référer à [la page type MIME sur Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
-Par défaut, si le paramètre _type_ est omis ou contient une chaîne vide, le `content-type` du fichier joint est basé sur son extension. Les règles suivantes sont appliquées pour les principaux types MIME :
+Par défaut, si le paramètre *type* est omis ou contient une chaîne vide, le `content-type` du fichier joint est basé sur son extension. Les règles suivantes sont appliquées pour les principaux types MIME :
 
 | Extension | Content Type                                  |
 | --------- | --------------------------------------------- |
@@ -87,19 +87,19 @@ Par défaut, si le paramètre _type_ est omis ou contient une chaîne vide, le `
 | xml       | application/xml                               |
 | htm, html | text/html                                     |
 | mp3       | audio/mpeg                                    |
-| _other_   | application/octet-stream                      |
+| *other*   | application/octet-stream                      |
 
-Le paramètre facultatif _disposition_ vous permet de passer l'en-tête `content-disposition` de la pièce jointe. Vous pouvez passer l'une des constantes suivantes du thème de constantes "Mail" :
+Le paramètre facultatif *disposition* vous permet de passer l'en-tête `content-disposition` de la pièce jointe. Vous pouvez passer l'une des constantes suivantes du thème de constantes "Mail" :
 
 | Constante                   | Valeur       | Commentaire                                                                                                                                                                                                                                             |
 | --------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Définissez la valeur de l'en-tête Content-disposition sur "attachment", ce qui signifie que le fichier joint doit être fourni sous forme de lien dans le message.                                                                       |
 | mail disposition inline     | "inline"     | Définissez la valeur de l'en-tête Content-disposition sur "inline", ce qui signifie que la pièce jointe doit être rendue dans le contenu du message, à l'emplacement du "cid". Le rendu dépend du client de messagerie. |
 
-Par défaut, si le paramètre _disposition_ est omis :
+Par défaut, si le paramètre *disposition* est omis :
 
-- si le paramètre _cid_ est utilisé, l'en-tête `Content-disposition` est défini sur "inline",
-- si le paramètre _cid_ n'est pas passé ou est vide, l'en-tête `Content-disposition` est fixé à "attachment".
+- si le paramètre *cid* est utilisé, l'en-tête `Content-disposition` est défini sur "inline",
+- si le paramètre *cid* n'est pas passé ou est vide, l'en-tête `Content-disposition` est fixé à "attachment".
 
 #### Exemple 1
 
