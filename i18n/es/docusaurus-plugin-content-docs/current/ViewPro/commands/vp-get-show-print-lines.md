@@ -5,7 +5,7 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Syntax -->
 
-**VP Get show print lines** ( _vpAreaName_ : Text {; _sheet_ : Integer } ) : Boolean<!-- END REF -->
+**VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
@@ -19,9 +19,9 @@ title: VP Get show print lines
 
 The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _sheet_, pase el índice de la hoja objetivo. Si se omite _sheet_, el comando se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja objetivo. Si se omite *sheet*, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
