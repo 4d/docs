@@ -295,7 +295,7 @@ Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran 
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
 
-`.average()` returns `undefined` if:
+`.average()` devuelve `undefined` si:
 
 - la colección está vacía,
 - la colección no contiene elementos numéricos,
@@ -2423,7 +2423,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-The ***sortCollection*** method:
+El método ***sortCollection***:
 
 ```4d
 var $1 : Object
@@ -2730,7 +2730,7 @@ $colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
 
 ```
 
-Example with a collection reference:
+Ejemplo con una referencia de colección:
 
 ```4d
 
