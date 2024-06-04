@@ -5,7 +5,7 @@ title: VP Convert from 4D View
 
 <!-- REF #_method_.VP Convert from 4D View.Syntax -->
 
-**VP Convert from 4D View** ( _4DViewDocument_ : Blob ) : Object<!-- END REF -->
+**VP Convert from 4D View** ( *4DViewDocument* : Blob ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 
@@ -20,7 +20,7 @@ title: VP Convert from 4D View
 
 > 旧式の 4D View プラグインが現環境にインストールされていなくても、このコマンドは使用可能です。
 
-_4DViewDocument_ には変換する 4D View ドキュメントを格納する BLOB変数やフィールドを渡します。 コマンドは、4D View ドキュメントに保存されていた情報をすべて 4D View Pro 属性へと変換した 4D View Pro オブジェクトを返します。
+*4DViewDocument* には変換する 4D View ドキュメントを格納する BLOB変数やフィールドを渡します。 コマンドは、4D View ドキュメントに保存されていた情報をすべて 4D View Pro 属性へと変換した 4D View Pro オブジェクトを返します。
 
 #### 例題
 
