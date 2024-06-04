@@ -60,7 +60,7 @@ Los siguientes comandos no son compatibles para su uso dentro de un componente p
 **Notas:**
 
 - El comando `Current form table` devuelve `Nil` cuando se llama en el contexto de un formulario proyecto. Por consiguiente, no puede utilizarse en un componente.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) no se puede utilizar en el proyecto del componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
 
 ## Compartir métodos proyecto
 
