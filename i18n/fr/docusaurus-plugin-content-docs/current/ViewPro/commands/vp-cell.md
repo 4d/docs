@@ -5,7 +5,7 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Syntax -->
 
-**VP Cell** ( _vpAreaName_ ; _column_ : Integer ; _row_ : Integer ; Text { ; _sheet_ : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -25,13 +25,13 @@ The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range 
 
 > Cette commande s'applique aux plages d'une seule cellule. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _column_ parameter defines the column of the cell range's position. Passez l'indice de la colonne dans ce paramètre.
+The *column* parameter defines the column of the cell range's position. Passez l'indice de la colonne dans ce paramètre.
 
-The _row_ parameter defines the row of the cell range's position. Passez l'indice de la ligne dans ce paramètre.
+The *row* parameter defines the row of the cell range's position. Passez l'indice de la ligne dans ce paramètre.
 
-In the optional _sheet_ parameter, you can indicate the index of the sheet where the range will be defined. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+In the optional *sheet* parameter, you can indicate the index of the sheet where the range will be defined. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
 > l'indexation démarre à 0.
 
