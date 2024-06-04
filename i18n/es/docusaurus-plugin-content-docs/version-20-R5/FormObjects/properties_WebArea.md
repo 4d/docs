@@ -21,7 +21,7 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -39,7 +39,7 @@ Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -69,7 +69,7 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -96,4 +96,4 @@ El motor CEF tiene las siguientes limitaciones:
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
