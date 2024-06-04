@@ -56,7 +56,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $calc:=$signal.result+...
 ```
 
-Método _**OpenForm**_ :
+Método ***OpenForm*** :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)  
@@ -118,7 +118,7 @@ Una señal es un objeto compartido que puede ser pasado como parámetro de un wo
 - el worker/proceso llamado puede actualizar el objeto de la señal después de que se haya completado el procesamiento específico
 - el worker/proceso que llama puede detener su ejecución y esperar hasta que se actualice la señal, sin consumir recursos de la CPU.
 
-Optionally, in the _description_ parameter you can pass a custom text describing the signal. Este texto también puede definirse después de la creación de la señal.
+Optionally, in the *description* parameter you can pass a custom text describing the signal. Este texto también puede definirse después de la creación de la señal.
 
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
 
@@ -144,7 +144,7 @@ Este es un ejemplo típico de un worker que fija una señal:
  End if
 ```
 
-The _**doSomething**_ method could be like:
+The ***doSomething*** method could be like:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
@@ -259,15 +259,15 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 #### Descripción
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional _timeout_ to expire<!-- END REF -->.
+The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the _timeout_ parameter (decimals are accepted).
+To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 
-> **Warning**: Calling `.wait( )` without a _timeout_ in the 4D main process is not recommended because it could freeze the whole 4D application.
+> **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the _timeout_ expired (`.signaled` is **false**).
+The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
 
 > The state of a process that waits for a signal is `Waiting for internal flag`.
 
