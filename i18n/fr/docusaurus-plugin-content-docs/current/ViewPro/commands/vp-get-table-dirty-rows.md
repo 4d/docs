@@ -13,7 +13,7 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
 
-**VP Get table dirty rows** ( _vpAreaName_ : Text ; _tableName_ : Text { ; _reset_ : Boolean {; _sheet_ : Integer }} ) : Collection<!-- END REF -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
@@ -27,19 +27,19 @@ title: VP Get table dirty rows
 
 #### Description
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of _dirty row_ objects, containing items that were modified since the last reset in the specified _tableName_<!-- END REF -->.
+The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _tableName_, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](vp-set-data-context.md) will be taken into account.
+In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](vp-set-data-context.md) will be taken into account.
 
-By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
+By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-Each _dirty row_ object in the returned collection contains the following properties:
+Each *dirty row* object in the returned collection contains the following properties:
 
 | Propriété    | Type    | Description                        |
 | ------------ | ------- | ---------------------------------- |
@@ -47,7 +47,7 @@ Each _dirty row_ object in the returned collection contains the following proper
 | originalItem | object  | Objet avant modification           |
 | row          | integer | Index de la ligne modifiée         |
 
-If _tableName_ is not found or if it does not contain a modified column, the command returns an empty collection.
+If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
 
 #### Exemple
 
