@@ -5,7 +5,7 @@ title: VP INSERT COLUMNS
 
 <!-- REF #_method_.VP INSERT COLUMNS.Syntax -->
 
-**VP INSERT COLUMNS** ( _rangeObj_ : Object ) <!-- END REF -->
+**VP INSERT COLUMNS** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 
@@ -15,11 +15,11 @@ title: VP INSERT COLUMNS
 
 #### 説明
 
-`VP INSERT COLUMNS` コマンドは、<!-- REF #_method_.VP INSERT COLUMNS.Summary -->_rangeObj_ 引数で指定したレンジにカラムを挿入します<!-- END REF -->。
+`VP INSERT COLUMNS` コマンドは、<!-- REF #_method_.VP INSERT COLUMNS.Summary -->*rangeObj* 引数で指定したレンジにカラムを挿入します<!-- END REF -->。
 
-_rangeObj_ には、開始カラム (新しいカラムが挿入される場所を指定するカラム) と挿入するカラムの数を格納したオブジェクトを渡します。 挿入するカラムの数が省略された場合 (定義されていない場合)、カラムは 1列だけ挿入されます。
+*rangeObj* には、開始カラム (新しいカラムが挿入される場所を指定するカラム) と挿入するカラムの数を格納したオブジェクトを渡します。 挿入するカラムの数が省略された場合 (定義されていない場合)、カラムは 1列だけ挿入されます。
 
-新しいカラムは、_rangeObj_ 引数で指定した開始カラムの直前 (すぐ左側) に挿入されます。
+新しいカラムは、*rangeObj* 引数で指定した開始カラムの直前 (すぐ左側) に挿入されます。
 
 #### 例題
 
