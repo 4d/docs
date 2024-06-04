@@ -33,7 +33,7 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
    This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
    \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
-3. Click on the Encrypt picture button.\
+3. Haga clic en el botón imagen Cifrar.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
