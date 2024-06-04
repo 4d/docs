@@ -5,7 +5,7 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Syntax -->
 
-**VP Get sheet index** ( _vpAreaName_ : Text ; _name_ : Text ) : Integer<!-- END REF -->
+**VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get sheet index
 
 #### Descripción
 
-El comando `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->devuelve el índice de una hoja basándose en su nombre en _vpAreaName_.<!-- END REF -->
+El comando `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->devuelve el índice de una hoja basándose en su nombre en *vpAreaName*.<!-- END REF -->
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _name_, pase el nombre de la hoja cuyo índice se devolverá. Si no se encuentra ninguna hoja llamada _name_ en el documento, el método devuelve -1.
+En *name*, pase el nombre de la hoja cuyo índice se devolverá. Si no se encuentra ninguna hoja llamada *name* en el documento, el método devuelve -1.
 
 > La indexación comienza en 0.
 
