@@ -3,13 +3,13 @@ id: querypath
 title: $querypath
 ---
 
-Returns the query as it was executed by 4D Server (_e.g._, `$querypath=true`)
+4D Server によって実際に実行されたクエリを返します (_例_: `$querypath=true`)
 
 ## 説明
 
-`$querypath` returns the query as it was executed by 4D Server. たとえば、クエリの一部がエンティティを返さなかった場合、残りのクエリは実行されません。 The query requested is optimized as you can see in this `$querypath`.
+`$querypath` は、4D Server によって実際に実行されたクエリを返します。 たとえば、クエリの一部がエンティティを返さなかった場合、残りのクエリは実行されません。 `$querypath` で確認されるとおり、クエリリクエストは最適化されます。
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+クエリパスについての詳細は [queryPlan と queryPath](genInfo.md#querypath-と-queryplan) を参照ください。
 
 実行されたクエリを定義する次のプロパティを格納した steps コレクションが返されます:
 
@@ -30,7 +30,7 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 ` GET  /rest/$querypath`
 
-**Response**:
+**レスポンス**:
 
 ```
 __queryPath: {
@@ -72,7 +72,7 @@ __queryPath: {
 
 `GET  /rest/$querypath`
 
-**Respose**:
+**レスポンス**:
 
 ```
 "__queryPath": {

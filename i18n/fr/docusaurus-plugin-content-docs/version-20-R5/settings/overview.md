@@ -7,33 +7,33 @@ Les Paramètres configurent le fonctionnement du projet en cours. Ces paramètre
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D fournit un autre ensemble de paramètres, appelés **Préférences**, qui s'appliquent à l'application 4D IDE. Pour plus d'informations, reportez-vous à la section [Préférences](../Preferences/general.md).
 
 ## Accès aux paramètres
 
 Vous pouvez accéder à la boîte de dialogue Paramètres :
 
-- using the **Design > Settings...** menu option
-- by clicking **Settings** on the 4D toolbar
-- on 4D Server, using the **Edit > Settings...** menu option
+- en utilisant l'option de menu **Développement > Paramètres...**
+- en cliquant sur **Paramètres** dans la barre d'outils 4D
+- sur 4D Server, via l'option de menu **Edition > Paramètres...**
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
-- **User Settings...** gives you access to settings that can be stored externally in a user file. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
-- **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
+- **Paramètres utilisateur...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
+- **Paramètres utilisateur pour le fichier de données...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur rattaché au fichier de données courant. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
 
 ### Informations sur le verrouillage
 
 Le verrouillage peut se produire dans les modes Projet et Client/serveur lorsque :
 
-- The _settings.4DSettings_ file is 'Read-only' (Projects only). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
+- Le fichier _settings.4DSettings_ est en 'Lecture seule' (Projets uniquement). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
 - Deux utilisateurs ou plus tentent de modifier les mêmes paramètres en même temps. Les paramètres ne peuvent pas être utilisés jusqu'à ce que le premier utilisateur les libère en fermant la fenêtre. (Client/serveur uniquement)
 
 Dans les deux cas, les paramètres peuvent être ouverts en 'Lecture seule', mais ne peuvent pas être utilisés tant qu'ils sont verrouillés.
 
 ## Personnalisation des paramètres
 
-In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
+Dans les boîtes de dialogue des Propriétés, les paramètres dont les valeurs ont été modifiées apparaissent **en gras** :
 
 ![](../assets/en/settings/customize-settings.png)
 
@@ -45,6 +45,6 @@ La plupart des paramètres sont appliqués immédiatement. Toutefois, certains d
 
 ## Réinitialisation des paramètres
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
+Pour rétablir les paramètres à leurs valeurs par défaut et supprimer le style gras indiquant qu'ils ont été personnalisés, cliquez sur **Rétablir les paramètres d'usine**.
 
 Ce bouton réinitialise tous les paramètres de la page courante. Il devient actif lorsqu'au moins un paramètre a été modifié sur la page courante.

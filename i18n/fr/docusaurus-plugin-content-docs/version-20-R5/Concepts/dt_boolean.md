@@ -7,7 +7,7 @@ Un champ, une variable ou une expression de type booléen peut être soit VRAI s
 
 ## Fonctions booléennes
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
+Les fonctions booléennes de 4D traitent des valeurs telles que `Vrai`, `Faux` et `Non` dans le thème **Booléens** consacré. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
 
 ### Exemple
 
@@ -33,7 +33,7 @@ monBooléen:=(monBouton=1)
 
 | Opération | Syntaxe                                   | Retourne | Expression                                                                       | Valeur |
 | --------- | ----------------------------------------- | -------- | -------------------------------------------------------------------------------- | ------ |
-| AND       | Boolean & Boolean     | Boolean  | ("A" = "A") & (15 # 3) | True   |
+| AND       | Booléen & Booléen     | Boolean  | ("A" = "A") & (15 # 3) | True   |
 |           |                                           |          | ("A" = "B") & (15 # 3) | False  |
 |           |                                           |          | ("A" = "B") & (15 = 3) | False  |
 | OU        | Booléen &amp; Booléen | Boolean  | ("A" = "A") \| (15 # 3)                    | True   |
@@ -58,10 +58,10 @@ Voici la "table de vérité" pour l'opérateur logique "OR" :
 | False | True  | True           |
 | False | False | False          |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Astuce :** Si vous devez calculer une réunion exclusive (le "Ou" exclusif) entre Expr1 et Expr2, écrivez :
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept.
+> Dans les contextes booléens, le langage 4D prend également en charge les [opérateurs de court-circuit](operators.md#short-circuit-operators) (`&&` et `||`) et le concept de [truthy et falsy](operators.md#truthy-and-falsy).

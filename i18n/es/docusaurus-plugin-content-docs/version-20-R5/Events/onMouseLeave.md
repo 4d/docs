@@ -11,13 +11,13 @@ title: On Mouse Leave
 
 Este evento se genera una vez cuando el cursor del ratón abandona el área gráfica de un objeto.
 
-The `On Mouse Leave` event updates the _MouseX_ and _MouseY_ system variables.
+El evento `On Mouse Leave` actualiza las variables sistema _MouseX_ y _MouseY_.
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+Los objetos que se hacen invisibles utilizando el comando `OBJECT SET VISIBLE` o la propiedad [Visibilidad](FormObjects/properties_Display.md#visibility) no generan este evento.
 
 ### Llamar la pila
 
-If the `On Mouse Leave` event has been checked for the form, it is generated for each form object. Si se verifica para un objeto, se genera sólo para ese objeto. Cuando hay objetos superpuestos, el evento es generado por el primer objeto capaz de gestionarlo que se encuentra yendo en orden del nivel superior al inferior.
+Si se ha marcado el evento `On Mouse Leave` para el formulario, se genera para cada objeto de formulario. Si se verifica para un objeto, se genera sólo para ese objeto. Cuando hay objetos superpuestos, el evento es generado por el primer objeto capaz de gestionarlo que se encuentra yendo en orden del nivel superior al inferior.
 
 ### Ver también
 

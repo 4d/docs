@@ -32,7 +32,7 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 | \\\\|\ (Barra invertida) |                                         |
 | \\"                                          | " (aspas)            |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Portanto, deve usar uma barra invertida dupla \\\ em caminhos quando quiser ter uma barra invertida à frente de um carácter usado numa das sequências de escape reconhecidas pelo 4D (por exemplo, "C:\\\MyDocuments\\\New.txt").
+**Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Portanto, deve usar uma barra invertida dupla \\\ em caminhos quando quiser ter uma barra invertida à frente de um carácter usado numa das sequências de escape reconhecidas pelo 4D (por exemplo, "C:\\\MyDocuments\\\New.txt").
 
 ## Operadores de string
 
@@ -44,13 +44,13 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 |                      |                  |            | "abc" = "abd"                             | False                        |
 | Desigualdade         | String # String  | Parâmetros | "abc" # "abd"                             | True                         |
 |                      |                  |            | "abc" # "abc"                             | False                        |
-| Maior que            | String > String  | Parâmetros | "abd" > "abc"                             | True                         |
+| Maior que            | Cadena > Cadena  | Parâmetros | "abd" > "abc"                             | True                         |
 |                      |                  |            | "abc" > "abc"                             | False                        |
-| Menor que            | String < String  | Parâmetros | "abc" < "abd"                             | True                         |
+| Menor que            | Cadena < Cadena  | Parâmetros | "abc" < "abd"                             | True                         |
 |                      |                  |            | "abc" < "abc"                             | False                        |
-| Maior ou igual a     | String >= String | Parâmetros | "abd" >= "abc"                            | True                         |
+| Maior ou igual a     | Cadena >= Cadena | Parâmetros | "abd" >= "abc"                            | True                         |
 |                      |                  |            | "abc" >= "abd"                            | False                        |
-| Menor que ou igual a | String <= String | Parâmetros | "abc" <= "abd"                            | True                         |
+| Menor que ou igual a | Cadena <= Cadena | Parâmetros | "abc" <= "abd"                            | True                         |
 |                      |                  |            | "abd" <= "abc"                            | False                        |
 | Contém palavra chave | String % String  | Parâmetros | "Alpha Bravo" % "Bravo"                   | True                         |
 |                      |                  |            | "Alpha Bravo" % "ravo"                    | False                        |
@@ -60,14 +60,14 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 ## Comparações de cadeias
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. Para testar se o caso de dois caracteres é diferente, compare os seus códigos de caracteres. For example, the following expression returns `FALSE`:
+- Las cadenas se comparan caracter por caracter (excepto en el caso de la búsqueda por [palabras clave](dt_string.md#keywords), ver más abajo).
+- Cuando se comparan cadenas, se ignoran las mayúsculas y minúsculas de los caracteres; así, "a"="A" devuelve `TRUE`. Para testar se o caso de dois caracteres é diferente, compare os seus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // porque 65 não é igual a 97
 ```
 
-- Quando as cadeias de caracteres são comparadas, os caracteres diacríticos são tidos em conta. For example, the following expressions return `TRUE`:
+- Quando as cadeias de caracteres são comparadas, os caracteres diacríticos são tidos em conta. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -76,23 +76,23 @@ Character code("A")=Character code("a") // porque 65 não é igual a 97
       // and so on
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Nota:** la comparación de cadenas tiene en cuenta las especificidades del lenguaje **definido para el archivo de datos 4D** (que no siempre es el mismo que el lenguaje definido para el sistema).
 
 ### Caractere coringa(@)
 
-The 4D language supports **@** as a wildcard character. Este carácter pode ser utilizado em qualquer comparação de cadeia para corresponder a qualquer número de caracteres. For example, the following expression is `TRUE`:
+El lenguaje 4D soporta **@** como carácter comodín. Este carácter pode ser utilizado em qualquer comparação de cadeia para corresponder a qualquer número de caracteres. Por ejemplo, la siguiente expresión es `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-O carácter wildcard deve ser utilizado dentro do segundo operando (a cadeia do lado direito) para corresponder a qualquer número de caracteres. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+O carácter wildcard deve ser utilizado dentro do segundo operando (a cadeia do lado direito) para corresponder a qualquer número de caracteres. La siguiente expresión es `FALSE`, porque la @ se considera sólo como un carácter en el primer operando:
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-O wildcard significa "um ou mais caracteres ou nada". The following expressions are `TRUE`:
+O wildcard significa "um ou mais caracteres ou nada". Las expresiones siguientes son `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,7 +102,7 @@ O wildcard significa "um ou mais caracteres ou nada". The following expressions 
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+Por otro lado, sea cual sea el caso, una comparación de cadenas con dos comodines consecutivos siempre devolverá `FALSE`. La siguiente expresión es `FALSE`:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -115,7 +115,7 @@ Quando o operador de comparação é ou contém um símbolo < or >, só é supor
      "abcd"<="abc@ef" //Not a valid comparison
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, por exemplo, que quer saber se uma cadeia de caracteres termina com o carácter @. The following expression (if $vsValue is not empty) is always `TRUE`:
+Si desea ejecutar comparaciones o consultas utilizando @ como carácter (y no como comodín), debe utilizar la instrucción `Character code(At sign)`. Imagine, por exemplo, que quer saber se uma cadeia de caracteres termina com o carácter @. La siguiente expresión (si $vsValue no está vacío) es siempre `TRUE`:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
@@ -127,11 +127,11 @@ A seguinte expressão será avaliada correctamente:
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Nota:** una opción 4D del modo Diseño permite definir cómo se interpreta el carácter @ cuando se incluye en una cadena de caracteres.
 
 ### Palavras-chave
 
-Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave procura "palavras" em "textos": as palavras são consideradas individualmente e como um todo. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). As "palavras" são cadeias de caracteres rodeadas por "separadores", que são espaços e caracteres de pontuação e traços. Um apóstrofo, como em "Today's", é normalmente considerado como parte da palavra, mas será ignorado em certos casos (ver as regras abaixo). Os números podem ser pesquisados porque são avaliados como um todo (incluindo símbolos decimais). Outros símbolos (moeda, temperatura, etc.) serão ignorados.
+Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave procura "palavras" em "textos": as palavras são consideradas individualmente e como um todo. El operador **%** siempre devuelve `False` si la consulta se refiere a varias palabras o sólo a una parte de ellas (por ejemplo, una sílaba). As "palavras" são cadeias de caracteres rodeadas por "separadores", que são espaços e caracteres de pontuação e traços. Um apóstrofo, como em "Today's", é normalmente considerado como parte da palavra, mas será ignorado em certos casos (ver as regras abaixo). Os números podem ser pesquisados porque são avaliados como um todo (incluindo símbolos decimais). Outros símbolos (moeda, temperatura, etc.) serão ignorados.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo"// Retorna True
@@ -143,7 +143,7 @@ Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave 
 
 > **Notas:**
 >
-> - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - Na versão japonesa, em vez de ICU, 4D usa Mecab por defeito para detectar palavras-chave.
 
 ## Símbolos de referência de caracteres

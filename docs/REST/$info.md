@@ -3,7 +3,7 @@ id: info
 title: $info
 ---
 
-Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions	
+Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions
 
 ## Description   
 When you call this request for your project, you retrieve information in the following properties:
@@ -16,6 +16,8 @@ When you call this request for your project, you retrieve information in the fol
 |entitySet	|Collection|A collection in which each object contains information about each entity selection.|
 |ProgressInfo|	Collection	|A collection containing information about progress indicator information.|
 |sessionInfo|	Collection	|A collection in which each object contains information about each user session.|
+|privileges|	Object	|An object with a "privileges" property (collection of objects). Each object of the collection has a "privilege" property with a privilege name of the user session as value.|
+
 
 ### entitySet  
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
@@ -99,7 +101,7 @@ ProgressInfo: [
         percent: 0
     }
 ],
-sessionInfo: [ 
+sessionInfo: [
     {
         sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
         userID: "36713176D42DB045B01B8E650E8FA9C6",

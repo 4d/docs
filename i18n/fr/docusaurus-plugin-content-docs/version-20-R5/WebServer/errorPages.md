@@ -9,7 +9,7 @@ title: Pages d'erreur HTTP personnalisées
 
 - les codes d'état commençant par 5 (erreurs du serveur), par exemple 501.
 
-For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+Pour une description complète des codes d'état d'erreur HTTP, vous pouvez vous reporter à la [liste des codes d'état HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
 
 ## Remplacement des pages par défaut
 

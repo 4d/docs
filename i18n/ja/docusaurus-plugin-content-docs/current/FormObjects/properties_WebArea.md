@@ -21,7 +21,7 @@ Webエリアで実行される JavaScripe コードから 4Dメソッドを呼�
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -39,7 +39,7 @@ Webエリアで実行される JavaScripe コードから 4Dメソッドを呼�
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -59,7 +59,7 @@ URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-450484
 - ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドは両方の記法を受け付けます。
 - URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドはこの場合にエラーを生成します。
 - URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加します。[WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドはこれを付加しません。
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを実行しても効果はありません。一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 
@@ -69,7 +69,7 @@ URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-450484
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -85,8 +85,14 @@ URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-450484
 
 CEFエンジンには以下のような制約があります:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/ja/page1037.html): このコマンドを使用する場合、([`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1041.html) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。
+
+:::note
+
+ローカルで [4DCEFParameters.json 設定ファイル](webAreaOverview#4dcefparametersjson) を作成することで、CEFエリアのパラメーターをカスタマイズできます。
+
+:::
 
 #### JSON 文法
 
@@ -96,4 +102,4 @@ CEFエンジンには以下のような制約があります:
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Web エリア](webArea_overview.md)

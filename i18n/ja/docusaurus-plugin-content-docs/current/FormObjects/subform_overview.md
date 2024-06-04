@@ -41,9 +41,9 @@ title: サブフォーム
 
 サブフォームコンテナーオブジェクトには、[変数あるいは式](properties_Object.md#変数あるいは式) をバインドすることができます。 これは、親フォームとサブフォーム間で値を同期するのに便利です。
 
-By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-subform-bound-object)). However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
+デフォルトで、4D はサブフォームコンテナーに [オブジェクト型](properties_Object.md#式の型式タイプ) の変数あるいは式をバインドし、`Form` コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。 しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など)  の変数や式を使用することもできます。
 
-- Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. この方法は、単一の値を同期させるのに推奨されます。
+- バインドするスカラー型の変数あるいは式を定義し、[On Bound Variable Change](../Events/onBoundVariableChange.md) や [On Data Change](../Events/onDataChange.md) フォームイベントが発生したときに、`OBJECT Get subform container value` や `OBJECT SET SUBFORM CONTAINER VALUE` コマンドを呼び出して値を共有します。 この方法は、単一の値を同期させるのに推奨されます。
 - または、バインドされた **オブジェクト** 型の変数あるいは式を定義し、`Form` コマンドを使用してサブフォームからそのプロパティにアクセスします。 この方法は、複数の値を同期させるのに推奨されます。
 
 ### 親フォームとサブフォームの同期 (単一値)
@@ -76,10 +76,13 @@ By default, 4D creates a variable or expression of [object type](properties_Obje
 以下のコードが実行されます:
 
 ```4d
-// Subform form method
-If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
-	Form.clockValue:=OBJECT Get subform container value //synchonize the local value
+// サブフォームのフォームメソッド
+If (Form event code=On Bound Variable Change) 
+// 親フォーム内でバインドされた変数あるいは式が変更されました
+    Form.clockValue:=OBJECT Get subform container value 
+    // 親フォームのサブフォームコンテナー値を取得し、ローカルの値を同期させます
 End if
+
 ```
 
 上のコードは、サブフォームの `Form.clockValue` の値を更新します:
@@ -91,7 +94,7 @@ End if
 - 親フォームの変数/式に値が割り当てられたとき (同じ値が再代入された場合でも) で、
 - サブフォームが 0ページまたはカレントフォームページに置かれているとき。
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get subform container value` command which returns the value of the expression in the subform container rather than the expression itself because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks).
+先の例のとおり、式を直接使用するのではなく、親フォームのサブフォームコンテナーの式の値を取得する `OBJECT Get subform container value` コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。
 
 バインドされた変数あるいは式を変更すると、フォームイベントが発生し、親フォームとサブフォームの値を同期させることができます:
 
@@ -107,10 +110,13 @@ Note that, as in the above example, it is preferable to use the `OBJECT Get subf
 以下のコードが実行されます:
 
 ```4d
-// subform clock object method
-If (Form event code=On Data Change) //whatever the way the value is changed
-	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
+// サブフォームの時計オブジェクトのメソッド
+If (Form event code=On Data Change) 
+// 値が変化したときに
+    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) 
+    // 親フォームのサブフォームコンテナーに値をプッシュします
 End if
+
 ```
 
 ![](../assets/en/FormObjects/update-main-form.png)
@@ -155,14 +161,15 @@ Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 4D v19 R5 以前のバージョンでは、親フォームとサブフォーム間の同期は **ポインター** を使っておこなわれていました。 たとえば、サブフォームオブジェクトを更新するには、以下のコードを呼び出しておこえます:
 
 ```4d
-// Subform form method
+// サブフォームメソッド
 If (Form event code=On Bound Variable Change) 
-	ptr:=OBJECT Get pointer(Object subform container) 
-	clockValue:=ptr-> 
+    ptr:=OBJECT Get pointer(Object subform container) 
+    clockValue:=ptr-> 
 End if
+
 ```
 
-\*\*この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。\*\*今後の開発では、この原則は使うべきではありません。 In any cases, we recommend to use the [`Form` command](#synchronizing-parent-form-and-subform-multiple-values) or the [`OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands](#synchronizing-parent-form-and-subform-single-value) to synchronize form and subform values.
+\*\*この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。\*\*今後の開発では、この原則は使うべきではありません。 すべての場合において、フォームとサブフォームの値を同期させるには、[`Form` コマンド](#親フォームとサブフォームの同期-複数値) か [`OBJECT Get subform container value` と `OBJECT SET SUBFORM CONTAINER VALUE` コマンド](#親フォームとサブフォームの同期-単一値) を使用することが推奨されます。
 
 ### 高度なフォーム間通信プログラム
 
@@ -195,6 +202,4 @@ End if
 
 ## プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) -
-[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) -
-[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム ](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド)

@@ -7,10 +7,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 コレクションは次のように初期化します:
 
-|                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New collection.Summary -->                      |
-| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New shared collection.Summary --> |
+|                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<br/><!-- INCLUDE #_command_.New collection.Summary -->                      |
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<br/><!-- INCLUDE #_command_.New shared collection.Summary --> |
 
 ### 例題
 
@@ -21,55 +21,55 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 ### 概要
 
-|                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #collection.at().Syntax -->](#at)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.at().Summary -->                                  |
-| [<!-- INCLUDE #collection.average().Syntax -->](#average)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.average().Summary -->                   |
-| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.clear().Summary -->                         |
-| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.combine().Summary -->                   |
-| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.concat().Summary -->                      |
-| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.copy().Summary -->                            |
-| [<!-- INCLUDE #collection.count().Syntax -->](#count)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.count().Summary -->                         |
-| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.countValues().Summary -->       |
-| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.distinct().Summary -->                |
-| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.equal().Summary -->                         |
-| [<!-- INCLUDE #collection.every().Syntax -->](#every)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.every().Summary -->                         |
-| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.extract().Summary -->                   |
-| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.fill().Summary -->                            |
-| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.filter().Summary -->                      |
-| [<!-- INCLUDE #collection.find().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.find().Summary -->                            |
-| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.findIndex().Summary -->                  |
-| [<!-- INCLUDE #collection.first().Syntax -->](#first)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.first().Summary -->                         |
-| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flatMap().Summary -->                   |
-| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.includes().Summary -->                |
-| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indexOf().Summary -->                   |
-| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indices().Summary -->                   |
-| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.insert().Summary -->                      |
-| [<!-- INCLUDE #collection.join().Syntax -->](#join)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.join().Summary -->                            |
-| [<!-- INCLUDE #collection.last().Syntax -->](#last)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.last().Summary -->                            |
-| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->       |
-| [<!-- INCLUDE #collection.length.Syntax -->](#length)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.length.Summary -->                          |
-| [<!-- INCLUDE #collection.map().Syntax -->](#map)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.map().Summary -->                               |
-| [<!-- INCLUDE #collection.max().Syntax -->](#max)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.max().Summary -->                               |
-| [<!-- INCLUDE #collection.min().Syntax -->](#min)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.min().Summary -->                               |
-| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.multiSort().Summary -->             |
-| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderBy().Summary -->                   |
-| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderByMethod().Summary --> |
-| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.pop().Summary -->                               |
-| [<!-- INCLUDE #collection.push().Syntax -->](#push)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.push().Summary -->                            |
-| [<!-- INCLUDE #collection.query().Syntax -->](#query)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.query().Summary -->                         |
-| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->       |
-| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.remove().Summary -->                      |
-| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.resize().Summary -->                      |
-| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reverse().Summary -->                   |
-| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.shift().Summary -->                         |
-| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.slice().Summary -->                         |
-| [<!-- INCLUDE #collection.some().Syntax -->](#some)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.some().Summary -->                            |
-| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sort().Summary -->                            |
-| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
-| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
+|                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #collection.at().Syntax -->](#at)<br/><!-- INCLUDE #collection.at().Summary -->                                  |
+| [<!-- INCLUDE #collection.average().Syntax -->](#average)<br/><!-- INCLUDE #collection.average().Summary -->                   |
+| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<br/><!-- INCLUDE #collection.clear().Summary -->                         |
+| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<br/><!-- INCLUDE #collection.combine().Summary -->                   |
+| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)<br/><!-- INCLUDE #collection.concat().Summary -->                      |
+| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)<br/><!-- INCLUDE #collection.copy().Summary -->                            |
+| [<!-- INCLUDE #collection.count().Syntax -->](#count)<br/><!-- INCLUDE #collection.count().Summary -->                         |
+| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<br/><!-- INCLUDE #collection.countValues().Summary -->       |
+| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<br/><!-- INCLUDE #collection.distinct().Summary -->                |
+| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)<br/><!-- INCLUDE #collection.equal().Summary -->                         |
+| [<!-- INCLUDE #collection.every().Syntax -->](#every)<br/><!-- INCLUDE #collection.every().Summary -->                         |
+| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)<br/><!-- INCLUDE #collection.extract().Summary -->                   |
+| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)<br/><!-- INCLUDE #collection.fill().Summary -->                            |
+| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)<br/><!-- INCLUDE #collection.filter().Summary -->                      |
+| [<!-- INCLUDE #collection.find().Syntax -->](#find)<br/><!-- INCLUDE #collection.find().Summary -->                            |
+| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
+| [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
+| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
+| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
+| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
+| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)<br/><!-- INCLUDE #collection.insert().Summary -->                      |
+| [<!-- INCLUDE #collection.join().Syntax -->](#join)<br/><!-- INCLUDE #collection.join().Summary -->                            |
+| [<!-- INCLUDE #collection.last().Syntax -->](#last)<br/><!-- INCLUDE #collection.last().Summary -->                            |
+| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<br/><!-- INCLUDE #collection.lastIndexOf().Summary -->       |
+| [<!-- INCLUDE #collection.length.Syntax -->](#length)<br/><!-- INCLUDE #collection.length.Summary -->                          |
+| [<!-- INCLUDE #collection.map().Syntax -->](#map)<br/><!-- INCLUDE #collection.map().Summary -->                               |
+| [<!-- INCLUDE #collection.max().Syntax -->](#max)<br/><!-- INCLUDE #collection.max().Summary -->                               |
+| [<!-- INCLUDE #collection.min().Syntax -->](#min)<br/><!-- INCLUDE #collection.min().Summary -->                               |
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)<br/><!-- INCLUDE #collection.multiSort().Summary -->             |
+| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<br/><!-- INCLUDE #collection.orderBy().Summary -->                   |
+| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<br/><!-- INCLUDE #collection.orderByMethod().Summary --> |
+| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)<br/><!-- INCLUDE #collection.pop().Summary -->                               |
+| [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
+| [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
+| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
+| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
+| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
+| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<br/><!-- INCLUDE #collection.shift().Summary -->                         |
+| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<br/><!-- INCLUDE #collection.slice().Summary -->                         |
+| [<!-- INCLUDE #collection.some().Syntax -->](#some)<br/><!-- INCLUDE #collection.some().Summary -->                            |
+| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)<br/><!-- INCLUDE #collection.sort().Summary -->                            |
+| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<br/><!-- INCLUDE #collection.sum().Summary -->                               |
+| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<br/><!-- INCLUDE #collection.unshift().Summary -->                   |
 
 ## `New collection`
 
@@ -77,10 +77,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <!-- REF #_command_.New collection.Params -->
 
-| 引数    | タイプ                                                                     |     | 説明                 |
-| ----- | ----------------------------------------------------------------------- | :-: | ------------------ |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | コレクションの値           |
-| 戻り値   | Collection                                                              |  <- | The new collection |
+| 引数    | タイプ                                                                     |     | 説明        |
+| ----- | ----------------------------------------------------------------------- | :-: | --------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | コレクションの値  |
+| 戻り値   | Collection                                                              |  <- | 新規のコレクション |
 
 <!-- END REF -->
 
@@ -159,10 +159,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <!-- REF #_command_.New shared collection.Params -->
 
-| 引数    | タイプ                                                                 |     | 説明                        |
-| ----- | ------------------------------------------------------------------- | :-: | ------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | 共有コレクションの値                |
-| 戻り値   | Collection                                                          |  <- | The new shared collection |
+| 引数    | タイプ                                                                 |     | 説明          |
+| ----- | ------------------------------------------------------------------- | :-: | ----------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | 共有コレクションの値  |
+| 戻り値   | Collection                                                          |  <- | 新規の共有コレクション |
 
 <!-- END REF -->
 
@@ -791,12 +791,17 @@ _options_ 引数として、以下の定数を 1つ、または組み合わせ�
 
 #### 説明
 
-`.equal()` 関数は、<!-- REF #collection.equal().Summary -->
-コレクションを <em x-id="3">collection2</em> とディープ比較し、同一の場合には **true** を返します<!-- END REF -->。
+`.equal()` 関数は、<!-- REF #collection.equal().Summary -->コレクションの内容と _collection2_ を再帰的に比較し (ディープ比較)、同一であれば **true** を返します<!-- END REF -->。
 
 デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に `ck diacritical` 定数を渡します。
 
 > **Null**値の要素は undefined要素と同じとはみなされません。
+
+:::note
+
+コレクションが大きく深い場合には、コレクションの再帰的な比較は時間がかかる場合があります。 2つのコレクション参照を比較するだけの場合は、[コレクション参照の `=`比較演算子](../Concepts/dt_collection.md#コレクション演算子) の使用を検討してください。
+
+:::
 
 #### 例題
 
@@ -852,7 +857,7 @@ _options_ 引数として、以下の定数を 1つ、または組み合わせ�
 
 #### 説明
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ method<!-- END REF -->.
+`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、_formula_ オブジェクトまたは _methodName_ に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->。
 
 次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
 
@@ -1617,11 +1622,11 @@ _toSearch_ 引数は検出すべき要素と完全に一致している必要が
 
 <!-- REF #collection.indices().Params -->
 
-| 引数          | タイプ        |     | 説明                                                                          |
-| ----------- | ---------- | :-: | --------------------------------------------------------------------------- |
-| queryString | Text       |  -> | 検索条件                                                                        |
-| value       | any        |  -> | プレースホルダー使用時: 比較する値                                          |
-| 戻り値         | Collection |  <- | Element index(es) matching queryString in the collection |
+| 引数          | タイプ        |     | 説明                                 |
+| ----------- | ---------- | :-: | ---------------------------------- |
+| queryString | Text       |  -> | 検索条件                               |
+| value       | any        |  -> | プレースホルダー使用時: 比較する値 |
+| 戻り値         | Collection |  <- | queryString に合致するコレクション要素のインデックス   |
 
 <!-- END REF -->
 
@@ -2535,14 +2540,15 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容                  |
-| ------ | ------------------- |
-| 17 R5  | querySettings をサポート |
-| v16 R6 | 追加                  |
+| リリース   | 内容                               |
+| ------ | -------------------------------- |
+| 20 R6  | オブジェクト参照またはコレクション参照を使用したクエリのサポート |
+| 17 R5  | querySettings をサポート              |
+| v16 R6 | 追加                               |
 
 </details>
 
-<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 <!-- REF #collection.query().Params -->
 
@@ -2559,7 +2565,11 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 `.query()` 関数は、_queryString_ および、任意の _value_ や _querySettings_ パラメーターによって定義された<!-- REF #collection.query().Summary -->検索条件に合致するオブジェクトコレクションの要素をすべて返します<!-- END REF -->。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 
+クエリの実行対象であるコレクションが検索値 _value_ を含まない場合、空のコレクションが返されます。
+
 > このコマンドは、元のコレクションを変更しません。
+
+#### queryString 引数
 
 _queryString_ 引数には、以下のシンタックスを使用します:
 
@@ -2567,9 +2577,186 @@ _queryString_ 引数には、以下のシンタックスを使用します:
 propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 ```
 
-_queryString_ および _value_ や _querySettings_ パラメーターを使ってクエリをビルドする方法の詳細については、[`DataClass.query()`](DataClassClass.md#query) 関数を参照ください。
+詳細は以下の通りです:
 
-> _queryString_ 引数および _formula_ オブジェクト引数の使用に関わらず、フォーミュラは `collection.query()` 関数でサポートされていません。
+- **propertyPath**: クエリの実行対象となるプロパティのパス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 属性パスが `Collection` 型である場合、すべてのオカレンスを管理するには `[]` 記法を使用してください (例: `children[].age` など)。
+
+- **比較演算子**: _propertyPath_ 引数と _value_ 引数の比較に使用する記号 以下の記号がサポートされます:
+
+| 比較            | 記号          | 説明                                                                                                                         |
+| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| 等しい           | =, ==       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                    |
+|               | ===, IS     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                           |
+| 等しくない         | #, !=       | ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |
+|               | !==, IS NOT | ワイルドカード (@) は標準の文字として認識されます                                                                |
+| 宣言に Not 条件を適用 | NOT         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                 |
+| 小さい           | <           |                                                                                                                            |
+| 大きい           | >           |                                                                                                                            |
+| 以下            | <=          |                                                                                                                            |
+| 以上            | > =         |                                                                                                                            |
+| 含まれる          | IN          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                              |
+
+- **値** (value): コレクションの各要素のプロパティのカレント値に対して比較する値。 要素のデータ型に合致する任意の定数値の式または[**プレースホルダー**](#プレースホルダーを仕様する)であることができます。
+  定数値を使用する場合、以下の原則に従う必要があります:
+  - **テキスト** テキスト型の定数値の場合は単一引用符つき、あるいはなしでも渡すことができます(後述の **引用符を使用する** 参照)。 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
+  - **ブール** 型の定数値: **true** または **false** (文字の大小を区別します)
+  - **数値** 型の定数値: 浮動小数点は '.' (ピリオド) で区切られます。
+  - **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
+  - **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
+  - IN 記号を使用したクエリの場合、_値_ はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
+
+- **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
+
+| 結合  | 記号                                                                     |
+| --- | ---------------------------------------------------------------------- |
+| AND | &, &&, and |
+| OR  | \|,\|\|, or                                                            |
+
+#### 引用符を使用する
+
+クエリ内で引用符を使用する場合、クエリ内においては単一引用符 ' ' を使用し、クエリ全体をくくるには二重引用符 " " を使用します。クオートを混同するとエラーが返されます。 例:
+
+```4d
+"employee.name = 'smith' AND employee.firstname = 'john'"
+```
+
+> 単一引用符 (') は、クエリ文字列を分解してしまうため、検索値としてはサポートされていません。 たとえば、"comp.name = 'John's pizza' " はエラーを生成します。 単一引用符を含む値を検索するには、プレースホルダーを使用します (後述参照)。
+
+#### カッコを使用する
+
+クエリ内でカッコを使用すると、計算に優先順位をつけることができます。 たとえば、以下のようにクエリを整理することができます:
+
+```4d
+"(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
+```
+
+#### プレースホルダーを使用する
+
+4D では、_queryString_ 引数内の _propertyPath_ および _値 (value)_ にプレースホルダーを使用することができます。 プレースホルダーとは、クエリ文字列に挿入するパラメーターで、クエリ文字列が評価される際に他の値で置き換えられるものです。 プレースホルダーの値はクエリ開始時に一度だけ評価されます。 各要素に対して毎回評価されるわけではありません。
+
+プレースホルダーには二つの種類があります。**インデックスプレースホルダー** および **命名プレースホルダー** です。
+
+- **インデックスプレースホルダー**: _queryString_ に `:paramIndex` (例 :1, :2...)  という形式でパラメーターが挿入され、それに対応する値は後に続く _value_ 引数が提供します。 最大で 128個の _value_ 引数を渡すことができます。
+
+例:
+
+```4d
+$c:=$myCol.query(":1=:2";"city";"Chicago")
+```
+
+- **命名プレースホルダー**: パラメーターは `:paramName` (例: myparam など) という形で挿入され、その値は _querySettings_ 引数の "attributes" または "parameters" オブジェクトで提供されます。
+
+例:
+
+```4d
+$o.attributes:={att:"city"}
+$o.parameters:={name:"Chicago")
+$c:=$myCol.query(":att=:name";$o)
+```
+
+_queryString_ には、すべての種類の引数を混ぜて渡すことができます。 _queryString_ 引数は、_propertyPath_ と _値_ に以下のものを含めることができます:
+
+- 定数値 (プレースホルダーを使用しない)
+- インデックスプレースホルダーや命名プレースホルダー
+
+以下の理由から、クエリでのプレースホルダーの使用が **推奨されます**:
+
+1. 悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。 たとえば、以下のようなクエリ文字列を考えます:
+
+```4d
+ $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
+ $result:=$col.query($vquery)
+```
+
+非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが _myname_ に _smith OR status='private'_ のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
+
+プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
+
+```4d
+ $result:=$col.query("status='public' & name=:1";myname)
+```
+
+この場合、ユーザーが _myname_ エリアに _smith OR status='private'_ と入力した場合でも、それはクエリ文字列とはみなされず、値として渡されるだけです。 "smith OR status='private' " という名前の人物を検索したところで、結果は失敗に終わるだけです。
+
+2. フォーマットや文字の問題を心配する必要がありません。これは、_propertyPath_ や _値_ がたとえば "."、"[' ...などの英数字でない文字を格納している可能性がある場合にとくに有用です。
+
+3. クエリに変数や式を使用することができます。 例:
+
+```4d
+$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+$result2:=$col.query("company.name = :1";"John's Pizzas")
+```
+
+> _値 (value)_ 引数内での [**コレクション参照** または **オブジェクト参照**](#オブジェクト参照やコレクション参照で検索する) の使用は、このシンタックスではサポートされていません。 [_querySettings_ 引数](#querysettings-引数)を使用する必要があります。
+
+#### null値を検索する
+
+null値を検索する場合、プレースホルダーシンタックスは使用できません。 なぜならクエリエンジンは null を予期せぬ比較値としてみなすからです。 たとえば、以下のクエリを実行した場合:
+
+```4d
+$vSingles:=$colPersons.query("spouse = :1";Null) // 機能しません
+```
+
+この場合 4D は null値を、引数の評価 (別のクエリから渡された属性など) に起因するエラーと解釈するため、期待した結果は得られません。 このようなクエリをおこなうには、直接的なシンタックスを使用する必要があります:
+
+```4d
+$vSingles:=$colPersons.query("spouse = null") // 正しいシンタックス
+```
+
+#### オブジェクト参照やコレクション参照で検索する
+
+_値 (value)_ 引数にオブジェクト参照またはコレクション参照を渡して、コレクションをクエリすることができます。 クエリは、そのオブジェクトまたはコレクションの **インスタンス** と同じ参照先を持つオブジェクト要素を検索対象のコレクションにおいて探します。
+
+次の比較演算子がサポートされています:
+
+| 比較    | 記号    |
+| ----- | ----- |
+| 等しい   | =, == |
+| 等しくない | #, != |
+
+オブジェクトまたはコレクション参照を使用してクエリをビルドするには、_querySettings_ 引数のシンタックスを使用する必要があります。 オブジェクト参照と比較する例:
+
+```4d
+var $o1:={a: 1}
+var $o2:={a: 1} // 同じオブジェクト、ただし別の参照
+var $o3:=$o1 // 同じオブジェクト、かつ同じ参照
+
+var $col; $colResult : Collection
+
+$col:=[{o: $o1}; {o: $o2}; {o: $o3}]
+$colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
+	// $colResult.length=2
+	// $colResult[0].o=$o1 は true
+	// $colResult[1].o=$o1 は true
+
+```
+
+コレクション参照と比較する例:
+
+```4d
+
+$c1:=[1; 2; 3]
+$c2:=[1; 2; 3] // 同じコレクション、ただし別の参照
+$c3:=$c1 // 同じコレクション、かつ同じ参照
+
+$col:=[{c: $c1}; {c: $c2}; {c: $c3}]
+$col2:=$col.query("c = :v"; {parameters: {v: $c3}})
+	// $col2.length=2
+	// $col2[0].c=$c1 は true
+	// $col2[1].c=$c1 は true
+
+```
+
+#### querySettings 引数
+
+_querySettings_ 引数には、クエリのプレースホルダーをオブジェクトとして格納するオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
+
+| プロパティ      | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| parameters | Object | _queryString_ に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、_queryString_ に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| attributes | Object | _queryString_ に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、_queryString_ に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、コレクションのオブジェクト要素のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: ["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (_value_ 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+
+> [**コレクション参照**または**オブジェクト参照**](#オブジェクト参照やコレクション参照で検索する) を使用してコレクションをクエリする場合には、この引数を使用する必要があります。
 
 #### 例題 1
 
@@ -2629,7 +2816,19 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 #### 例題 3
 
+日付のクエリ:
+
+```4d
+
+$entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
+$entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
+```
+
+:::info
+
 追加のクエリ例については、[`dataClass.query()`](dataclassClass.md#query) を参照してください。
+
+:::
 
 <!-- END REF -->
 
@@ -3065,13 +3264,14 @@ _howMany_ には、_index_ の位置から削除する要素の数を渡しま�
 
 <!-- REF #collection.some().Params -->
 
-| 引数         | タイプ                         |     | 説明                        |
-| ---------- | --------------------------- | :-: | ------------------------- |
-| startFrom  | Integer                     |  -> | テストを開始するインデックス            |
-| formula    | 4D.Function |  -> | フォーミュラオブジェクト              |
-| methodName | Text                        |  -> | メソッド名                     |
-| param      | any                         |  -> | 渡す引数                      |
-| 戻り値        | Boolean                     |  <- | 少なくとも一つの要素がテストをパスすれば true |
+| 引数 | タイプ |     | 説明 |
+| -- | --- | :-: | -- |
+
+\| startFrom | Integer | -> | テストを開始するインデックス |
+\| formula | 4D.Function | -> | フォーミュラオブジェクト |
+\| methodName | Text | -> | メソッド名 |
+\| param | any | -> | 渡す引数 |
+\| 戻り値 | Boolean | <- | 少なくとも一つの要素がテストをパスすれば true |
 
 <!-- END REF -->
 
@@ -3103,7 +3303,9 @@ _howMany_ には、_index_ の位置から削除する要素の数を渡しま�
 デフォルトでは、`.some()` はコレクション全体をテストします。 オプションとして、_startFrom_ 引数を渡すことで、テストを開始するコレクション要素のインデックスを指定することができます。
 
 - _startFrom_ がコレクションの length 以上だった場合、**false** が返されます。これはコレクションがテストされていないことを意味します。
+
 - _startFrom_ < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます。
+
 - _startFrom_ = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題

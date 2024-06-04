@@ -5,7 +5,7 @@ title: A propos des requêtes REST
 
 Les structures suivantes sont prises en charge par les requêtes REST :
 
-| URI                                                              | Resource (Input)                                                                       | /? or &{filter} (Output)                                                                                                                                       |
+| URI                                                              | Resource (Input)                                                                       | /? ou &{filter} (Output)                                                                                                                                       |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                               | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)                | [$method=...]($method.md)                                                                                                                             |
@@ -14,13 +14,13 @@ Les structures suivantes sont prises en charge par les requêtes REST :
 
 Alors que toutes les requêtes REST doivent contenir les paramètres URI et Resource, les filtres d'Output (qui filtrent les données retournées) sont facultatifs.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Par exemple :
+Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple :
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
 > Vous pouvez placer toutes les valeurs entre guillemets en cas de doute. Par exemple, dans notre exemple ci-dessus, nous aurions pu saisir la valeur du nom de famille entre guillemets simples "lastName!='Jones'".
 
-Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Outre la récupération de données à l'aide des méthodes HTTP `GET`, vous pouvez également ajouter, mettre à jour et supprimer des entités d'une dataclass à l'aide des méthodes HTTP `POST`.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 

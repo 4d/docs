@@ -8,19 +8,18 @@ La página Información proporciona información sobre los entornos 4D y sistema
 
 ## Programa
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the _4D Language Reference_ manual).
+Esta página indica el nombre, la versión y la ubicación de la aplicación, así como la carpeta 4D activa (para más información sobre la carpeta 4D activa, consulte la descripción del comando `Get 4D folder` en el manual _Lenguaje 4D_).
 
 La parte central de la ventana indica el nombre y la ubicación del proyecto y de los os archivos de datos, así como también el archivo de historial (si lo hay). La parte inferior de la ventana indica el nombre del titular de la licencia 4D, el tipo de licencia y el nombre del usuario 4D actual.
 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:\
   ![](../assets/en/MSC/MSC_popup.png)
   If you select a menu item (disk or folder), it is displayed in a new system window.
-  The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
+  El comando **Copiar la ruta** copia el nombre completo de la ruta en el portapapeles como texto, utilizando los separadores de la plataforma actual.
 
-- **"Licenses" Folder**
-  The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Todos los archivos de licencia instalados en su entorno 4D están agrupados en esta carpeta, en su disco duro. Cuando se abren con un navegador web, estos archivos muestran información sobre las licencias que contienen y sus características.
+- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Todos los archivos de licencia instalados en su entorno 4D están agrupados en esta carpeta, en su disco duro. Cuando se abren con un navegador web, estos archivos muestran información sobre las licencias que contienen y sus características.
   La ubicación de la carpeta "Licenses" puede variar en función de la versión de su sistema operativo. For more information about the location of this folder, refer to the `Get 4D folder` command.
-  _**Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu)._
+  _**Nota:** también puede acceder a esta carpeta desde la caja de diálogo "Actualizar licencias" (disponible en el menú Ayuda)._
 
 ## Tablas
 
@@ -32,19 +31,19 @@ Esta página ofrece una visión general de las tablas de su base:
 
 La página lista todas las tablas de la base (incluidas las tablas invisibles), así como sus características:
 
-- **ID**: Internal number of the table.
-- **Tables**: Name of the table. Los nombres de las tablas borradas se muestran entre paréntesis (si todavía están en la papelera).
-- **Records**: Total number of records in the table. If a record is damaged or cannot be read, _Error_ is displayed instead of the number. En este caso, puede considerar el uso de las herramientas de verificación y de reparación.
-- **Fields**: Number of fields in the table. Los campos invisibles se cuentan, sin embargo, los campos borrados no se cuentan.
-- **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. _**Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC._
-- **Address Table Size**: Size of the address table for each table. La tabla de direcciones es una tabla interna que almacena un elemento por cada registro creado en la tabla. De hecho, vincula los registros a su dirección física. Por razones de rendimiento, no se redimensiona cuando se eliminan registros, por lo que su tamaño puede ser diferente del número de registros actual de la tabla. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
-  _**Note:** Differences between address table size and record number can also result from an incident during the cache flush._
+- **ID**: número internos de la tabla.
+- **Tablas**: nombres de las tablas. Los nombres de las tablas borradas se muestran entre paréntesis (si todavía están en la papelera).
+- **Registros**: número total de registros en la tabla. Si un registro está dañado o no se puede leer, se muestra _Error_ en lugar del número. En este caso, puede considerar el uso de las herramientas de verificación y de reparación.
+- **Campos**: número de campos en la tabla. Los campos invisibles se cuentan, sin embargo, los campos borrados no se cuentan.
+- **Índices**: número de índices de todo tipo en la tabla
+- **Encriptable**: si el atributo **Encriptable** se marca para la tabla al nivel de la estructura (ver el párrafo "Encriptable" en el Manual de Diseño).
+- **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos. **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos.
+- **Tamaño tabla direcciones**: tamaño de la tabla de direcciones para cada tabla. La tabla de direcciones es una tabla interna que almacena un elemento por cada registro creado en la tabla. De hecho, vincula los registros a su dirección física. Por razones de rendimiento, no se redimensiona cuando se eliminan registros, por lo que su tamaño puede ser diferente del número de registros actual de la tabla. Si esta diferencia es significativa, se puede ejecutar una operación de compactación de datos con la opción "Compactar la tabla de direcciones" marcada para optimizar el tamaño de la tabla de direcciones (ver la página [Compactar](compact.md)).
+  _**Nota:** las diferencias entre el tamaño de la tabla de direcciones y el número de registros también pueden ser el resultado de un incidente durante la escritura de la caché en el disco._
 
 ## Datos
 
-The **Data** page provides information about the available and used storage space in the data file.
+La página **Datos** ofrece información sobre el espacio de almacenamiento disponible y utilizado en el archivo de datos.
 
 > No se puede acceder a esta página en modo mantenimiento
 

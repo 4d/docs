@@ -11,4 +11,4 @@ title: On Losing focus
 
 The `On Losing Focus` event, along with the [`On Getting Focus`](onGettingFocus.md) event, are used to detect and handle the change of focus for [focusable](FormObjects/properties_Entry.md#focusable) objects.
 
-With [subform objects](FormObjects/subform_overview.md), this event is generated in the method of the subform object when they it is checked. It is sent to the form method of the subform, which means, for example, that you can manage the display of navigation buttons in the subform according to the focus. Note-se que os objetos de subformulário podem ter eles próprios o foco.
+Con los [objetos subformulario](FormObjects/subform_overview.md), este evento se genera en el método del objeto subformulario cuando se verifica. It is sent to the form method of the subform, which means, for example, that you can manage the display of navigation buttons in the subform according to the focus. Note-se que os objetos de subformulário podem ter eles próprios o foco.

@@ -2720,7 +2720,7 @@ You want to sort the resulting collection:
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 
-An empty collection is returned if the collection in which the query is executed does not contain the searched *value*. 
+An empty collection is returned if the collection in which the query is executed does not contain the searched *value*.
 
 >This function does not modify the original collection.
 
@@ -2872,8 +2872,8 @@ The following comparators are supported:
 |---|---|
 |Equal to |=, == |
 |Not equal to| #, != |
- 
- 
+
+
 To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Example with an object reference:
 
 ```4d
@@ -2889,7 +2889,7 @@ $colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
 	//$colResult[0].o=$o1 is true
 	//$colResult[1].o=$o1 is true
 
-``` 
+```
 
 Example with a collection reference:
 
@@ -2902,10 +2902,10 @@ $c3:=$c1 //same collection and reference
 $col:=[{c: $c1}; {c: $c2}; {c: $c3}]
 $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 	//$col2.length=2
-	//$col2[0].o=$c1 is true
-	//$col2[1].o=$c1 is true
+	//$col2[0].c=$c1 is true
+	//$col2[1].c=$c1 is true
 
-``` 
+```
 
 
 

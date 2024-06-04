@@ -5,22 +5,22 @@ title: Fluxo de controlo
 
 Independentemente da simplicidade ou da complexidade de um método, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções dentro do método. Há três tipos de estruturas:
 
-- **Sequential**: a sequential structure is a simple, linear structure. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
+- \*\*Sequencial: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: [People]lastName:=Uppercase([People]lastName)\`
+- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
+- **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
   - [`While...End while`](#whileend-while)
   - [`Repeat...Until`](#repeatuntil)
   - [`For...End for`](#forend-for)
   - [`For each...End for each`](#for-eachend-for-each)
 
-Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each...End for each` allows mixing both ways and is designed to loop within objects and collections.
+Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
 
-**Note:** 4D allows you to embed programming structures up to a "depth" of 512 levels.
+**Nota:** 4D permite anidar estructuras de programación hasta una "profundidad" de 512 niveles.
 
 ## If... Else... End if
 
-The formal syntax of the `If...Else...End if` control flow structure is:
+La sintaxis de la estructura condicional `If...Else...End if` es:
 
 ```4d
  If(Boolean_Expression)
@@ -30,7 +30,7 @@ The formal syntax of the `If...Else...End if` control flow structure is:
  End if
 ```
 
-Note that the `Else` part is optional; you can write:
+Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 
 ```4d
  If(Boolean_Expression)
@@ -38,7 +38,7 @@ Note that the `Else` part is optional; you can write:
  End if
 ```
 
-The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
+La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. El `Else` es opcional; si se omite Else, la ejecución continúa con la primera instrucción (si la hay) que sigue al `End if`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -60,7 +60,7 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. However, even if _M
 
 The result is similar and _MethodB_ is evaluated only if necessary.
 
-> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..Else statements.
+> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..
 
 #### Exemplo
 
@@ -74,7 +74,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  End if 
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  If(Boolean_Expression)
@@ -94,7 +94,7 @@ ou :
 
 ## Case of... Else... End case
 
-The formal syntax of the `Case of...Else...End case` control flow structure is:
+The formal syntax of the `Case of... Else...End case` control flow structure is:
 
 ```4d
  Case of
@@ -113,7 +113,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
  End case
 ```
 
-Note that the `Else` part is optional; you can write:
+Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 
 ```4d
  Case of
@@ -130,7 +130,7 @@ Note that the `Else` part is optional; you can write:
  End case
 ```
 
-As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+As with the `If...Else...End if` structure, the `Case of... Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of... Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -138,9 +138,9 @@ Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos d
 :(bValidate=1)
 ```
 
-Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
+Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Si ninguno de los casos es TRUE, no se ejecutará ninguna de las instrucciones (si no se incluye la parte `Else`).
 
-Pode incluir uma instrução Else depois do último caso. If all of the cases are FALSE, the statements following the `Else` will be executed.
+Pode incluir uma instrução Else depois do último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al `Else`.
 
 #### Exemplo
 
@@ -159,7 +159,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
  End case
 ```
 
-For comparison, here is the `If...Else...End if` version of the same method:
+Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
  If(vResult=1) //Test if the number is 1
@@ -177,9 +177,9 @@ For comparison, here is the `If...Else...End if` version of the same method:
  End if
 ```
 
-Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Remember that with a `Case of... Else...End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
-Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. Por exemplo, o código abaixo nunca terá sua última condição detectada:
+Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
@@ -203,7 +203,7 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  Case of
@@ -244,7 +244,7 @@ ou :
 
 ## While... End while
 
-The formal syntax of the `While...End while` control flow structure is:
+La sintaxis de la estructura condicional `While...End while` es:
 
 ```4d
  While(Boolean_Expression)
@@ -254,11 +254,11 @@ The formal syntax of the `While...End while` control flow structure is:
  End while
 ```
 
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+Un bucle `While...End while` ejecuta las instrucciones dentro del bucle mientras la expresión booleana sea TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
+Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
 
 O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. The following loop continues forever because _NeverStop_ is always TRUE:
 
@@ -268,7 +268,7 @@ O valor da expressão booleana deve poder ser modificado por um elemento dentro 
  End while
 ```
 
-Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. For more information about tracing a method, see the [Error handling](error-handling.md) page.
+Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. Para más información sobre el seguimiento de un método, consulte la página [Gestión de errores](error-handling.md).
 
 #### Exemplo
 
@@ -279,11 +279,11 @@ Se você se encontrar em uma situação desse tipo, na qual um método fica exec
  End while //The loop always ends with End while
 ```
 
-In this example, the `OK` system variable is set by the `CONFIRM` command before the loop starts. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Otherwise, the `OK` system variable is set to 0 and the loop is skipped. Once the loop starts, the `ADD RECORD` command keeps the loop going because it sets the `OK` system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the `OK` system variable is set to 0 and the loop stops.
+En este ejemplo, el valor de la variable sistema `OK` es definido por el comando `CONFIRM` antes de que se inicie el bucle. Si el usuario hace clic en el botón **OK** de la caja de diálogo de confirmación, la variable del sistema `OK` toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema `OK` toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando `ADD RECORD` permite continuar la ejecución del bucle porque se define la variable sistema `OK` en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema `OK` toma el valor 0 y el bucle se detiene.
 
 ## Repeat... Until
 
-The formal syntax of the `Repeat...Until` control flow structure is:
+La sintaxis de la estructura condicional `Repeat...Until` es:
 
 ```4d
 Repeat
@@ -293,15 +293,15 @@ Repeat
 Until(Boolean_Expression)
 ```
 
-A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 #### Exemplo
 
-Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
+Compara el siguiente ejemplo con el ejemplo del bucle `While...End while`. Tenga en cuenta que la expresión booleana no necesita ser inicializada-no hay un comando `CONFIRM` para inicializar la variable `OK`.
 
 ```4d
  Repeat
@@ -311,7 +311,7 @@ Compare the following example with the example for the `While...End while` loop.
 
 ## For...End for
 
-The formal syntax of the `For...End for` control flow structure is:
+La sintaxis de la estructura condicional `For...End for` es:
 
 ```4d
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -321,21 +321,21 @@ For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 End for
 ```
 
-The `For...End for` loop is a loop controlled by a counter variable:
+El bucle `For...End for` es un bucle controlado por un contador:
 
-- The counter variable _Counter_Variable_ is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by _Start_Expression_.
-- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value _Increment_Expression_. If you do not specify _Increment_Expression_, the counter variable is incremented by one (1), which is the default.
-- When the counter variable passes the _End_Expression_ value, the loop stops.
+- La variable contador _Counter_Variable_ es una variable numérica (Real o Entero largo) inicializada por `For...End for` con el valor especificado por _Start_Expression_.
+- Cada vez que se ejecuta el bucle, la variable del contador se incrementa en el valor especificado en el valor opcional _Increment_Expression_. Si no se especifica _Increment_Expression_, la variable del contador se incrementa en uno (1), que es el valor predeterminado.
+- Cuando la variable del contador pasa el valor _End_Expression_, el bucle se detiene.
 
-**Important:** The numeric expressions _Start_Expression_, _End_Expression_ and _Increment_Expression_ are evaluated once at the beginning of the loop. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.
+**Importante:** las expresiones numéricas _Start_Expression_, _End_Expression_ y _Increment_Expression_ se evalúan una vez al principio del bucle. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable _Counter_Variable_ within the loop; this will affect the loop.
+**Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable _Counter_Variable_ dentro del bucle; esto afectará al bucle.
 
-- Usually _Start_Expression_ is less than _End_Expression_.
-- If _Start_Expression_ and _End_Expression_ are equal, the loop will execute only once.
-- If _Start_Expression_ is greater than _End_Expression_, the loop will not execute at all unless you specify a negative _Increment_Expression_. Ver os exemplos.
+- Normalmente _Start_Expression_ es menor que _End_Expression_.
+- Si _Start_Expression_ y _End_Expression_ son iguales, el bucle se ejecutará sólo una vez.
+- Si _Start_Expression_ es mayor que _End_Expression_, el bucle no se ejecutará en absoluto a menos que se especifique una _Increment_Expression_ negativa. Ver os exemplos.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 #### Exemplos básicos
 
@@ -380,13 +380,13 @@ The `break` and `continue` statements are [described below](#break-and-continue)
  End for
 ```
 
-Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
+La mayoría de los bucles `For...End for` que escribirá en sus proyectos se parecerán a los que se presentan en estos ejemplos.
 
 ### Variável contador
 
 #### Variável contador decrescente
 
-Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. To do so, you must specify _Start_Expression_ greater than _End_Expression_ and a negative _Increment_Expression_. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
+Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para ello, debe especificar _Start_Expression_ mayor que _End_Expression_ y _Increment_Expression_ debe ser negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
 
 5. O seguinte exemplo executa 100 iterações:
 
@@ -431,7 +431,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
 
 #### Incrementar a variável do contador em mais de um
 
-If you need to, you can use an _Increment_Expression_ (positive or negative) whose absolute value is greater than one.
+Si lo requiere, puede utilizar una _Increment_Expression_ (positiva o negativa) cuyo valor absoluto sea mayor que uno.
 
 9. O loop a seguir aborda só os elementos pares do array anArray:
 
@@ -457,7 +457,7 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
 
 ### Comparação de estruturas de loop
 
-Let's go back to the first `For...End for` example. O seguinte exemplo executa 100 iterações:
+Volvamos al primer ejemplo de `For...End for`. O seguinte exemplo executa 100 iterações:
 
 ```4d
  For(vCounter;1;100)
@@ -465,7 +465,7 @@ Let's go back to the first `For...End for` example. O seguinte exemplo executa 1
  End for
 ```
 
-It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 
 ```4d
  $i:=1 //Initialize the counter
@@ -475,7 +475,7 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
  End while
 ```
 
-Here is the equivalent `Repeat...Until` loop:
+Aquí está el bucle equivalente `Repeat...Until`:
 
 ```4d
  $i:=1 //Initializa o contador
@@ -487,13 +487,13 @@ Here is the equivalent `Repeat...Until` loop:
 
 :::tip
 
-The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
+El bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
 :::
 
 ### Nested For... End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For...End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Esto incluye la anidación de bucles `For...End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -534,7 +534,7 @@ Aqui são dois exemplos:
 
 ## For each... End for each
 
-The formal syntax of the `For each...End for each` control flow structure is:
+La sintaxis de la estructura condicional `For each... End for each` es:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -544,13 +544,13 @@ The formal syntax of the `For each...End for each` control flow structure is:
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified _Current_item_ over all values of the _Expression_. The _Current_item_ type depends on the _Expression_ type. The `For each...End for each` loop can iterate through three _Expression_ types:
+La estructura `For each... End for each` ejecuta un _Current_item_ especificado sobre todos los valores de _Expression_. El tipo _Current_item_ depende del tipo _Expression_. El bucle `For each... End for each` puede iterar a través de tres tipos de _Expression_:
 
 - collections: loop por cada elemento da coleção,
 - seleções de entidades: loop em cada entidade,
 - objetos: loop em cada propriedade do objeto.
 
-The following table compares the three types of `For each...End for each`:
+La siguiente tabla compara los tres tipos de `For each... End for each`:
 
 |                                                 | Loop através da coleção                                  | Loop nas seleções de entidades | Loop nos objetos                 |
 | ----------------------------------------------- | -------------------------------------------------------- | ------------------------------ | -------------------------------- |
@@ -560,13 +560,13 @@ The following table compares the three types of `For each...End for each`:
 | Compatibilidade de parâmetros begin / end       | Sim                                                      | Sim                            | Não                              |
 
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
-- By default, the enclosed _statement(s)_ are executed for each value in _Expression_. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The _begin_ and _end_ optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
+- By default, the enclosed _statement(s)_ are executed for each value in _Expression_. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
+- Los parámetros opcionales _begin_ y _end_ pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
+- El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
   - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
   - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 ### Loop através da coleção
 
@@ -607,13 +607,13 @@ Se quiser computar algumas estatísticas para uma coleção de números:
 
 ### Loop nas seleções de entidades
 
-When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
+Cuando `For each... End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección.
 
-O número de loops é baseado no número de entidades da seleção de entidades. On each loop iteration, the _Current_Item_ parameter is automatically filled with the entity of the entity selection that is currently processed.
+O número de loops é baseado no número de entidades da seleção de entidades. En cada iteración del bucle, el parámetro _Current_Item_ se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
+Tenga en cuenta que cualquier modificación aplicada en la entidad actual debe ser guardada explícitamente utilizando `entity.save()`.
 
 #### Exemplo
 
@@ -629,7 +629,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ### Loops nas propriedades de objetos
 
-When `For each...End for each` is used with an _Expression_ of the Object type, the _Current_Item_ parameter is a text variable automatically filled with the name of the currently processed property.
+Cuando se utiliza `For each... End for each` con una _Expression_ de tipo Object, el parámetro _Current_Item_ es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
@@ -667,22 +667,22 @@ Você pode escrever:
 
 Pode definir limites para a iteração usando os parâmetros opcionais inicio e fim.
 
-**Note:** The _begin_ and _end_ parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+\*\*Nota:\*\*los parámetros _inicio_ y _fin_ sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).
 
-- In the _begin_ parameter, pass the element position in _Expression_ at which to start the iteration (_begin_ is included).
-- In the _end_ parameter, you can also pass the element position in _Expression_ at which to stop the iteration (_end_ is excluded).
+- En el parámetro _begin_, pase la posición del elemento en _Expression_ en la que se iniciará la iteración (se incluye _begin_).
+- En el parámetro _end_, también se puede pasar la posición del elemento en _Expression_ en la que se debe detener la iteración (se excluye _end_).
 
-If _end_ is omitted or if _end_ is greater than the number of elements in _Expression_, elements are iterated from _begin_ until the last one (included).
-If the _begin_ and _end_ parameters are positive values, they represent actual positions of elements in _Expression_.
-If _begin_ is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of _Expression_). If the calculated value is negative, _begin_ is set to 0.
-**Note:** Even if begin is negative, the iteration is still performed in the standard order.
-If _end_ is a negative value, it is recalculed as `end:=end+Expression size`
+Si se omite _fin_ o si _fin_es mayor que el número de elementos de _Expression_, se iteran los elementos desde _inicio_ hasta el último (incluido).
+Si los parámetros _inicio_ y _fin_ son valores positivos, representan posiciones reales de elementos en _Expression_.
+Si _comienzo_ es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de _Expression_). Si el valor calculado es negativo, _inicio_ toma el valor 0.
+**Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar.
+Si _fin_ es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
 
 Por exemplo:
 
 - uma coleção contém 10 elementos (numerada de 0 a 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- begin=-4 > -> begin=-4+10=6 >-> la iteración comienza en el sexto elemento (#5)
+- end=-2 -> end=-2+10=8 -> la iteración se detiene antes del 8º elemento (#7), es decir, en el 7º elemento.
 
 #### Exemplo
 
@@ -703,12 +703,12 @@ Por exemplo:
 
 ### Condições Until e While
 
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+Puede controlar la ejecución de `For each... End for each` añadiendo una condición `Until` o una condición `While` al bucle. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
-- The `Until` condition is tested at the end of each iteration, so if the _Expression_ is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- La condición `Until` se comprueba al final de cada iteración, por lo que si _Expression_ no está vacía o es nula, el bucle se ejecutará al menos una vez.
+- La condición `While` se prueba al principio de cada iteración, por lo que según el resultado de la condición, el bucle puede no ejecutarse en absoluto.
 
 #### Exemplo
 
@@ -730,13 +730,13 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
 
 ## break e continue
 
-All looping structures above support both `break` and `continue` statements. Estas instruções dão-lhe mais controlo sobre os loops, permitindo-lhe sair do ‘loop’ e ignorar a iteração atual a qualquer momento.
+Todas las estructuras de bucle anteriores soportan las instrucciones `break` y `continue`. Estas instruções dão-lhe mais controlo sobre os loops, permitindo-lhe sair do ‘loop’ e ignorar a iteração atual a qualquer momento.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+La instrucción `break` termina el bucle que la contiene. Control of the program flows to the statement immediately after the body of the loop.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Si la instrucción `break` está dentro de un bucle al interior de un [bucle anidado](#nested-forend-for-looping-structures) (bucle dentro de otro bucle), la instrucción `break` terminará el bucle más interno.
 
 #### Exemplo
 
@@ -750,7 +750,7 @@ End for
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+La instrucción `continue` termina la ejecución de las instrucciones en la iteración actual del bucle actual, y continúa la ejecución del bucle con la siguiente iteración.
 
 ```4d
 var $text : Text
@@ -774,9 +774,9 @@ End for
 
 </details>
 
-The `return` statement can be called from anywhere. When a `return` statement is used in a function or method, the execution of the function or method is stopped. O código restante não é executado e o controlo é devolvido ao autor da chamada.
+La instrucción `return` puede ser llamada desde cualquier lugar. Cuando se utiliza una instrucción `return` en una función o un método, se detiene la ejecución de la función o del método. O código restante não é executado e o controlo é devolvido ao autor da chamada.
 
-The `return` statement can be used to [return a value](parameters.md#return-expression) to the caller.
+La instrucción `return` puede utilizarse para [devolver un valor](parameters.md#return-expression) al llamante.
 
 #### Exemplo
 

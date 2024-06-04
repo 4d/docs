@@ -22,7 +22,7 @@ Use the [`$info`]($info.md) parameter to get information about the entity select
 
 ## queryPath y queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+Las selecciones de entidades generadas a través de búsquedas pueden tener las dos propiedades siguientes: `queryPlan` y `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
 
 Por ejemplo:
 
@@ -30,7 +30,7 @@ Por ejemplo:
 
 Estas propiedades son objetos que contienen información sobre cómo el servidor realiza consultas compuestas internamente a través de clases de datos y relaciones:
 
-- **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
-- **queryPath**: object containing the detailed description of the query as it was actually performed.
+- **queryPlan**: objeto que contiene la descripción detallada de la petición justo antes de ser ejecutada (es decir, la consulta planificada).
+- **queryPath**: objeto que contiene la descripción detallada de la consulta tal y como se ha realizado realmente.
 
 La información registrada incluye el tipo de consulta (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Query paths also contain the number of entities found and the time required to execute each search criterion. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.

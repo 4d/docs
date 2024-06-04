@@ -3,22 +3,22 @@ id: operators
 title: Operadores
 ---
 
-Um operador é um símbolo ou um grupo de símbolos que é utilizado para verificar, modificar ou combinar valores. Já está familiarizado com muitos operadores. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.
+Um operador é um símbolo ou um grupo de símbolos que é utilizado para verificar, modificar ou combinar valores. Já está familiarizado com muitos operadores. Por ejemplo, `1 + 2` utiliza el operador de adición (o signo más) para sumar dos números, y el resultado es 3. Los operadores de comparación, como = o >, le permiten comparar dos o más valores.
 
-A linguagem 4D suporta os operadores que talvez já conheça de outras linguagens como C ou JavaScript. However, the assignment operator is `:=` to prevent it from being mistakenly used when the equal to operator (`=`) is intended. [Basic operators](#basic-operators) such as arithmetic operators (+, -, \*, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of [truthy and falsy values](#truthy-and-falsy), which in use in [short-cicrcuit operators](#short-circuit-operators).
+A linguagem 4D suporta os operadores que talvez já conheça de outras linguagens como C ou JavaScript. Sin embargo, el operador de asignación es `:=` para evitar que se utilice de forma errónea cuando el operador "igual a" (`=`) está planeado. [Basic operators](#basic-operators) such as arithmetic operators (+, -, \*, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Al igual que JavaScript, el lenguaje 4D soporta el concepto de valores [truthy y falsy](#truthy-and-falsy), que se utilizan en [los operadores de corto-cicrcuit](#short-circuit-operators).
 
 ## Terminologia
 
-The 4D language supports **binary** and **ternary** operators:
+El lenguaje 4D soporta los operadores **binarios** y **ternarios**:
 
-- binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
+- los operadores binarios operan en dos objetivos (como `2 + 3`) y aparecen entre sus dos objetivos.
 - os operadores ternários operam em três objectivos. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
 
-Os valores que os operadores afectam são os operandos. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
+Os valores que os operadores afectam são os operandos. En la expresión `1 + 2`, el símbolo + es un operador binario y sus dos operandos son los valores 1 y 2.
 
 ## Operador de atribuição
 
-The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
+El **operador de asignación** (`a:=b`) inicializa o actualiza el valor de `a` con el valor de `b`:
 
 ```4d
 $myNumber:=3 //assigns 3 to MyNumber variable  
@@ -27,11 +27,11 @@ $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
 ```
 
-> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
+> NO confunda el operador de asignación `:=` con el operador de comparación de igualdad `=`. Se ha elegido deliberadamente un operador de asignación diferente (y no `=`) para evitar los problemas y la confusión que suelen producirse con == o === en otros lenguajes de programación. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 ## Operadores básicos
 
-Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. São descritos com os tipos de dados, nas secções seguintes:
+Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. São descritos com os tipos de dados, nas secções seguintes:
 
 - [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
 - [**Date operators**](dt_date.md#date-operators)
@@ -41,6 +41,8 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 - [**Picture operators**](dt_picture.md#picture-operators)
 - [**Pointer operators**](dt_pointer.md#pointer-operators)
 - [**String operators**](dt_string.md#string-operators)
+- [**Object reference operators**](dt_object.md#object-operators)
+- [**Collection reference operators**](dt_collection.md#collection-operators)
 - [**Null operators**](dt_null_undefined.md#null-operators)
 - [**Undefined operators**](dt_null_undefined.md#undefined-operators)
 
@@ -54,7 +56,7 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 
 </details>
 
-4D provides **compound assignment operators** that combine assignment with another operation. Um exemplo é o operador de atribuição de adição (`+=`):
+4D ofrece **operadores de asignación compuestos** que combinan la asignación con otra operación. Um exemplo é o operador de atribuição de adição (`+=`):
 
 ```4d
 $a:=1 
@@ -88,11 +90,11 @@ São suportados os seguintes operadores de atribuição compostos:
 |               | Time \*= Number    | Number      | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture \*= Number | Imagem      | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
+Estos operadores se aplican a todas las [expresiones asignables](quick-tour.md#assignable-vs-non-assignable-expressions) (excepto de las imágenes como propiedades de objeto o elementos de colección).
 
-The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
+La operación "source `operator` value" no es estrictamente equivalente a "source := source `operator` value" porque la expresión que designa la fuente (variable, campo, propiedad del objeto, elemento de colección) sólo se evalúa una vez. Por ejemplo, en una expresión tal como `getPointer()->+=1` el método `getPointer` es llamado sólo una vez.
 
-> [Character indexing in text](dt_string.md#character-reference-symbols) and [byte indexing in blob](dt_blob.md#accessing-a-scalar-blobs-bytes) do not support these operators.
+> [La indexación de caracteres en el texto](dt_string.md#character-reference-symbols) y [la indexación de bytes en el blob](dt_blob.md#accessing-a-scalar-blobs-bytes) no soporta a estos operadores.
 
 #### Exemplos
 
@@ -130,9 +132,9 @@ $t2*=2 // $t2="HelloHello"
 
 ## Operadores curto-circuito
 
-The **&&** and **||** operators are **short circuit operators**. Um operador de curto-circuito é aquele que não avalia necessariamente todos os seus operandos.
+Los operadores **&&** y **||** son los **operadores en cortocircuito**. Um operador de curto-circuito é aquele que não avalia necessariamente todos os seus operandos.
 
-The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
+The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. Evalúan las expresiones como [truthy o falsy](#truthy-and-falsy), y luego devuelven una de las expresiones.
 
 ### Operador em curto-circuito AND (&&)
 
@@ -146,11 +148,11 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 A regra é a seguinte:
 
-Given `Expr1 && Expr2`:
+Dado `Expr1 && Expr2`:
 
-The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
+El operador en cortocircuito AND evalúa los operandos de izquierda a derecha, devolviendo inmediatamente el valor del primer operando falso que encuentra; si todos los valores son [truthy](#truthy-and-falsy), se devuelve el valor del último operando.
 
-The following table summarizes the different cases for the **&&** operator:
+La siguiente tabla resume los diferentes casos para el operador **&&**:
 
 | Expr1  | Expr2  | Valor devolvido |
 | ------ | ------ | --------------- |
@@ -185,7 +187,7 @@ var $tax : Variant
 $tax:=$item.taxRate && ($item.price*$item.taxRate)
 ```
 
-`$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
+`$tax` sera NULL si taxRate es NULL (o indefinido), de lo contrario almacenará el resultado del cálculo.
 
 #### Exemplo 3
 
@@ -211,13 +213,13 @@ Se $myObject for nulo, o segundo argumento não é executado e, por conseguinte,
 
 O operador || devolve o valor de um dos operandos especificados. A expressão é avaliada da esquerda para a direita e testada para uma possível avaliação de "curto-circuito" utilizando a seguinte regra:
 
-Given `Expr1 || Expr2`:
+Dado `Expr1 || Expr2`:
 
-If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
+Si Expr1 es [truthy](#truthy-and-falsy), Expr2 no se evalúa y el cálculo devuelve Expr1.
 
-If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
+Si Expr1 es [falsy](#truthy-and-falsy), el cálculo devuelve Expr2.
 
-The following table summarizes the different cases and the value returned for the **||** operator:
+La siguiente tabla resume los diferentes casos y el valor devuelto por el operador **||**:
 
 | Expr1  | Expr2  | Valor devolvido |
 | ------ | ------ | --------------- |
@@ -228,7 +230,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Exemplo 1
 
-Digamos que tem uma tabela chamada Employee. Alguns empregados introduziram um número de telefone e outros não. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Mas pode escrever o seguinte:
+Digamos que tem uma tabela chamada Employee. Alguns empregados introduziram um número de telefone e outros não. Esto significa que `$emp.phone` podría ser NULL, y no se puede asignar NULL a una variable texto. Mas pode escrever o seguinte:
 
 ```4d
 var $phone : Text
@@ -236,11 +238,11 @@ var $phone : Text
 $phone:=$emp.phone || "n/a"
 ```
 
-In which case `$phone` will store either a phone number or the "n/a" string.
+En este caso, `$phone` almacenará un número de teléfono o la cadena "n/a".
 
 #### Exemplo 2
 
-Given a table called Person with a _name_ field, as well as a _maiden name_ field for married women.
+Dada una tabla llamada Person con un campo _name_, así como un campo _maiden name_ para las mujeres casadas.
 
 O exemplo seguinte verifica se existe um nome de solteira e armazena-o numa variável; caso contrário, armazena simplesmente o nome da pessoa:
 
@@ -252,9 +254,9 @@ $name:=$person.maidenName || $person.name
 
 ### Precedência
 
-The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
+Los operadores `&&` y `||` tienen la misma prioridad que los operadores lógicos `&` y `|`, y se evalúan de izquierda a derecha.
 
-This means that `a || b && c` is evaluated as `(a || b) && c`.
+Esto significa que `a || b && c` se evalúa como `(a || b) && c`.
 
 ## Operador ternário
 
@@ -266,13 +268,13 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 </details>
 
-O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
+O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. Por ejemplo, puede reemplazar una secuencia completa de instrucciones [If…Else](flow-control.md#ifelseend-if).
 
 Aceita três operandos na seguinte ordem:
 
 - uma condição seguida de um ponto de interrogação (?)
-- an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
-- an expression to execute if the condition is [falsy](#truthy-and-falsy)
+- una expresión a ejecutar si la condición es [truthy](#truthy-and-falsy), seguida de dos puntos (:)
+- una expresión a ejecutar si la condición es [falsy](#truthy-and-falsy)
 
 ### Sintaxe
 
@@ -280,7 +282,7 @@ A sintaxe é a seguinte:
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
-> Since the [token syntax](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+> Dado que la [sintaxis con tokens](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.en.html) utiliza dos puntos, se recomienda insertar un espacio después de los dos puntos `:` o encerrar los tokens utilizando paréntesis para evitar cu
 
 ### Exemplos
 
@@ -317,11 +319,11 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 </details>
 
-As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**.
+Además de un tipo, cada valor también tiene un valor booleano inherente, conocido generalmente como **truthy** o **falsy<**.
 
-> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
+> Los valores **truthy** y **falsy** sólo son evaluados por los operadores [en cortocircuito](#short-circuit-operators) y [ternarios](#ternary-operator).
 
-The following values are **falsy**:
+Los siguientes valores son **falsy**:
 
 - false
 - Null
@@ -335,21 +337,21 @@ The following values are **falsy**:
 - [] - Colecções vazias
 - {} - Objectos vazios
 
-All other values are considered **truthy**, including:
+Todos los demás valores se consideran **truthy**, incluyendo:
 
 - 0 - zero numérico (inteiro ou não)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle _undefined_ and _null_ values in objects and collections, so that a reduced number of [If…Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
+En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores _undefined_ y _null_ en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
 
-For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-or-operator-):
 
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever _$object_ does not contain the `value` property OR when it is _null_. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+... you get the default value whenever _$object_ does not contain the `value` property OR when it is _null_. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
 
-Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. É útil quando se pretende atribuir um valor por defeito sempre que se encontra um valor vazio.
+En cuanto a los valores que representan las colecciones, los objetos o las cadenas, los valores "vacíos" se consideran como **falsy**. É útil quando se pretende atribuir um valor por defeito sempre que se encontra um valor vazio.
 
 ```4d
 $phone:=$emp.phone || "n/a"

@@ -4,26 +4,26 @@ title: 復元ページ
 sidebar_label: 復元ページ
 ---
 
-You can manually restore an archive of the current application using the **Restore** page. このページでは、復元処理を制御するためのオプションをいくつか提供します:
+**復元**ページから、カレントアプリケーションのアーカイブを手動で復元できます。 このページでは、復元処理を制御するためのオプションをいくつか提供します:
 
 ![](../assets/en/MSC/MSC_restore.png)
 
 > 4D の自動復元機能は、アプリケーション復元後に場合に応じてデータログファイルを統合します。
 
-ウィンドウの左側には、アプリケーションの既存のバックアップが表示されます。 You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. 選択したアーカイブはリストに追加されます。
+ウィンドウの左側には、アプリケーションの既存のバックアップが表示されます。 **ブラウズ...** ボタンをクリックして、他の場所にあるアーカイブファイルを選択することもできます。 選択したアーカイブはリストに追加されます。
 
 このリストからバックアップファイルを選択すると、ウィンドウの右側にはそのバックアップについての説明が表示されます:
 
-- **Path**: Complete pathname of the selected backup file. <strong x-id="1">表示</strong> ボタンをクリックすると、システムウィンドウでバックアップファイルが表示されます。
-- **Date and Time**: Date and time of backup.
-- **Content**: Contents of the backup file. 各項目の右側にはチェックボックスがあり、復元をおこなうかどうか、ファイルごとに選択できます。 You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. デフォルトで 4D は Projectフォルダーと同階層にアーカイブ名 (拡張子なし) のフォルダーを作成し、そこにファイルを復元します。 To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **パス**: 選択されたバックアップファイルの完全パス名。 <strong x-id="1">表示</strong> ボタンをクリックすると、システムウィンドウでバックアップファイルが表示されます。
+- **日付と時刻**: バックアップの日付と時刻
+- **内容**: バックアップファイルの内容。 各項目の右側にはチェックボックスがあり、復元をおこなうかどうか、ファイルごとに選択できます。 **すべてを選択する** や **すべての選択をはずす** ボタンを利用して、復元するファイルの設定をおこなうこともできます。
+- **復元されたファイルの保存先フォルダー**: 復元されたファイルが配置されるフォルダー。 デフォルトで 4D は Projectフォルダーと同階層にアーカイブ名 (拡張子なし) のフォルダーを作成し、そこにファイルを復元します。 この場所を変更するには **[...]** をクリックして復元ファイルの配置場所を指定します。
 
-The **Restore** button launches the manual restoration of the selected element(s).
+**復元** ボタンをクリックすると、選択した項目の復元処理が実行されます。
 
 ## 複数のログファイルを連続して統合する
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. たとえば、4つのバックアップに対応する 4つのログファイルアーカイブがある場合、最初のバックアップを復元して、ログアーカイブを一つずつ統合することが可能です。 これにより、たとえば最新のバックアップファイルを失った場合でも、データファイルを復旧することができます。
+**復元後にひとつ以上のログファイルを統合** オプションを使用して、アプリケーションに複数のログファイルを統合することができます。 たとえば、4つのバックアップに対応する 4つのログファイルアーカイブがある場合、最初のバックアップを復元して、ログアーカイブを一つずつ統合することが可能です。 これにより、たとえば最新のバックアップファイルを失った場合でも、データファイルを復旧することができます。
 
 このオプションが選択されていると、4Dは復元後に標準のファイルを開くダイアログを表示します。ここで統合するログファイルを選択できます。 ファイルを開くダイアログは、キャンセルされるまで統合の都度表示されます。
 

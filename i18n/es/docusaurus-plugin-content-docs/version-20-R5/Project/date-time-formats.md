@@ -1,6 +1,6 @@
 ---
 id: date-time-formats
-title: Date and Time Formats
+title: Formatos fecha y hora
 ---
 
 A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valores de fecha y/u hora en función de las especificidades de la aplicación, la plataforma o la interfaz.
@@ -95,7 +95,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         | Zona horaria: ISO8601 hm extendido, sin Z                | xxx          | -08:00                                                |
 |         | Zona horaria: ISO8601 hms básico, sin Z                  | xxxx         | -0800, -075258                                                        |
 |         | Time Zone: ISO8601 extended hms?, without Z              | xxxxx        | -08:00, -07:52:58     |
-| O       | Time Zone: short localized GMT                           | O            | GMT-8                                                                 |
+| O       | Zona horaria: GMT localizada abreviada                   | O            | GMT-8                                                                 |
 |         | Time Zone: long localized GMT (=ZZZZ) | OOOO         | GMT-08:00                                             |
 | z       | Zona horaria: no específica                              | z, zz, o zzz | -0800                                                                 |
 |         |                                                                          | zzzz         | GMT-08:00                                             |
@@ -108,9 +108,9 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 
 ### `y` vs `Y`
 
-`y` is the calendar year, while `Y` is the year based on the week number. Por ejemplo, si los primeros días de enero de 2010 no son la semana #1, entonces y = 2010 pero Y = 2009 (hasta la fecha en la que comienza la primera semana de 2010).
+`y` es el año calendario, mientras que `Y` es el año basado en el número de semana. Por ejemplo, si los primeros días de enero de 2010 no son la semana #1, entonces y = 2010 pero Y = 2009 (hasta la fecha en la que comienza la primera semana de 2010).
 
-### `L` (stand-alone) vs `M`
+### `L` (monopuesto) vs `M`
 
 En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
 
@@ -120,7 +120,7 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### `E` vs `e`
 
-`e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
+`e` se basa en la configuración del sistema: si la semana está definida en el sistema como que comienza un miércoles, entonces el miércoles tendrá el valor numérico "1" (o cero) mientras que "E" siempre devuelve el mismo valor (de 1 a 7 o de 0 a 6).
 
 ### Ceros a la izquierda
 
@@ -130,7 +130,7 @@ En general, cuando el número de letras de la cadena de formato es superior al e
 
 Algunas partes de las salidas, como "medianoche" o "martes" están localizadas, según la configuración regional.
 
-For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an US system, and _après-midi_ on a French system.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá _in the afternoon_ en un sistema estadounidense, y _après-midi_ en un sistema francés.
 
 ### Letras adicionales
 
@@ -163,4 +163,4 @@ Por ejemplo:
 
 ## Ver también
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.
+Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.

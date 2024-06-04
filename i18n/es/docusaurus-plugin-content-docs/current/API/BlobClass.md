@@ -3,15 +3,15 @@ id: BlobClass
 title: Blob
 ---
 
-The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
+La clase Blob permite crear y manipular [objetos blob](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
 ### Resumen
 
-|                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#4dblobnew)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #4D.Blob.new().Summary --> |
-| [<!-- INCLUDE #Blob.size.Syntax -->](#size)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #Blob.size.Summary -->              |
-| [<!-- INCLUDE #Blob.slice().Syntax -->](#slice)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #Blob.slice().Summary -->       |
+|                                                                                                  |
+| ------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#4dblobnew)<br/><!-- INCLUDE #4D.Blob.new().Summary --> |
+| [<!-- INCLUDE #Blob.size.Syntax -->](#size)<br/><!-- INCLUDE #Blob.size.Summary -->              |
+| [<!-- INCLUDE #Blob.slice().Syntax -->](#slice)<br/><!-- INCLUDE #Blob.slice().Summary -->       |
 
 ## 4D.Blob.new()
 
@@ -36,9 +36,9 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 #### Descripción
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->.
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->crea un nuevo objeto `4D.Blob` opcionalmente encapsulando una copia de los datos de otro blob (blob escalar o `4D.Blob`)<!-- END REF -->.
 
-If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
+Si el parámetro `blob` se omite, el método devuelve un 4D.Blob vacío.
 
 ## .size
 
@@ -46,7 +46,7 @@ If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 
 #### Descripción
 
-The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
+La propiedad `.size` <!-- REF #Blob.size.Summary -->devuelve el tamaño de un `4D.Blob`, expresado en bytes.<!-- END REF -->
 
 ## .slice()
 
@@ -62,37 +62,37 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 <!-- REF #Blob.slice().Params -->
 
-| Parámetros | Tipo                    |     | Descripción                                                              |
-| ---------- | ----------------------- | :-: | ------------------------------------------------------------------------ |
-| start      | Real                    |  -> | index of the first byte to include in the new `4D.Blob`. |
-| end        | Real                    |  -> | index of the first byte that will not be included in the new `4D.Blob`   |
-| Result     | 4D.Blob |  <- | Nuevo `4D.Blob`                                                          |
+| Parámetros | Tipo                    |     | Descripción                                                             |
+| ---------- | ----------------------- | :-: | ----------------------------------------------------------------------- |
+| start      | Real                    |  -> | índice del primer byte a incluir en el nuevo `4D.Blob`. |
+| end        | Real                    |  -> | índice del primer byte que no se incluirá en el nuevo `4D.Blob`         |
+| Result     | 4D.Blob |  <- | Nuevo `4D.Blob`                                                         |
 
 <!-- END REF -->
 
 #### Descripción
 
-`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob ` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF -->
+`.slice()` <!-- REF #Blob.slice().Summary --> crea y devuelve un `4D.Blob` que hace referencia a los datos de un subconjunto del blob en el que se llama. El blob original no se altera.<!-- END REF -->
 
-The `start` parameter is an index into the blob indicating the first byte to include in the new `4D.Blob`. Si indica un valor negativo, 4D lo trata como un desplazamiento desde el final del blob hacia el inicio. Por ejemplo, -10 sería el décimo desde el último byte del blob. El valor por defecto es 0. If you specify a value for start that is larger than the size of the source blob, the returned `4D.Blob`'s size is 0, and it contains no data.
+El parámetro `start` es un índice en el blob que indica el primer byte a incluir en el nuevo `4D.Blob`. Si indica un valor negativo, 4D lo trata como un desplazamiento desde el final del blob hacia el inicio. Por ejemplo, -10 sería el décimo desde el último byte del blob. El valor por defecto es 0. Si indica un valor de inicio mayor al tamaño del blob fuente, el tamaño del `4D.Blob` devuelto es 0, y no contiene datos.
 
-The `end` parameter is an index into the blob indicating the first byte that will not be included in the new `4D.Blob` (i.e. the byte exactly at this index is not included). Si indica un valor negativo, 4D lo trata como un desplazamiento desde el final del blob hacia el inicio. Por ejemplo, -10 sería el décimo desde el último byte del blob. El valor por defecto es el tamaño del blob.
+El parámetro `end` es un índice en el blob que indica el primer byte que no se incluirá en el nuevo `4D.Blob` (es decir, el byte situado exactamente en este índice no se incluye). Si indica un valor negativo, 4D lo trata como un desplazamiento desde el final del blob hacia el inicio. Por ejemplo, -10 sería el décimo desde el último byte del blob. El valor por defecto es el tamaño del blob.
 
 #### Ejemplo
 
 ```4d
 var $myBlob : 4D.Blob
 
-// Store text in a 4D.Blob
+// Almacenar texto en un 4D.Blob
 CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
 $is4DBlob:=OB Instance of($myBlob; 4D.Blob);   //True
 
 $myString:=Convert to text($myBlob; "UTF-8")
-// $myString contains "Hello, World!"
+// $myString contiene "Hello, World!"
 
-// Create a new 4D.Blob from $myBlob
+// Crear un nuevo 4D.Blob a partir de $myBlob
 $myNewBlob:=$myBlob.slice(0; 5)
 
 $myString:=Convert to text($myNewBlob; "UTF-8")
-// $myString contains "Hello"
+// $myString contiene "Hello"
 ```

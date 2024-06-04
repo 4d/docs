@@ -60,23 +60,23 @@ End while
 
 FileHandle オブジェクトは共有できません。
 
-|                                                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->    |
-| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary --> |
-| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->                      |
-| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->                                  |
-| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.file.Summary -->                               |
-| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->                  |
-| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->                               |
-| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->                         |
-| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.readBlob().Summary -->               |
-| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.readLine().Summary -->               |
-| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.readText().Summary -->               |
-| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.setSize().Summary -->                  |
-| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.writeBlob().Summary -->            |
-| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.writeLine().Summary -->            |
-| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #FileHandleClass.writeText().Summary -->            |
+|                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)<br/><!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->    |
+| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)<br/><!-- INCLUDE #FileHandleClass.breakModeWrite.Summary --> |
+| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)<br/><!-- INCLUDE #FileHandleClass.charset.Summary -->                      |
+| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)<br/><!-- INCLUDE #FileHandleClass.eof.Summary -->                                  |
+| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)<br/><!-- INCLUDE #FileHandleClass.file.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)<br/><!-- INCLUDE #FileHandleClass.getSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)<br/><!-- INCLUDE #FileHandleClass.mode.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)<br/><!-- INCLUDE #FileHandleClass.offset.Summary -->                         |
+| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)<br/><!-- INCLUDE #FileHandleClass.readBlob().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)<br/><!-- INCLUDE #FileHandleClass.readLine().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)<br/><!-- INCLUDE #FileHandleClass.readText().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)<br/><!-- INCLUDE #FileHandleClass.setSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)<br/><!-- INCLUDE #FileHandleClass.writeBlob().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)<br/><!-- INCLUDE #FileHandleClass.writeLine().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)<br/><!-- INCLUDE #FileHandleClass.writeText().Summary -->            |
 
 <!-- REF FileHandleClass.breakModeRead.Desc -->
 

@@ -19,7 +19,7 @@ title: On Window Opening Denied
 
 Este evento se genera cuando la apertura de una ventana emergente es bloqueada por el área web. Los áreas web de 4D no permiten la apertura de ventanas emergentes.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
 This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
 

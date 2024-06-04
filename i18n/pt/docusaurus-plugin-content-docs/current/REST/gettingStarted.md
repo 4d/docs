@@ -5,7 +5,7 @@ title: Começando
 
 4D oferece um servidor REST poderoso que permite acesso direto aos dados armazenadas em seus bancos 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+El servidor REST está incluido en 4D y 4D Server, está automáticamente disponible en sus aplicaciones 4D [una vez configurado](configuration.md).
 
 Esta seção tem o objetivo de familiarizar com as funcionalidades REST com um exemplo simples. Nós vamos:
 
@@ -31,9 +31,9 @@ Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que sã
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Abra la página **Web > Web Features** de la caja de diálogo de las Propiedades y [marque la opción Exponer como servidor REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. En el menú **Ejecutar**, seleccione **Iniciar el servidor Web** (si es necesario), luego seleccione **Probar el servidor Web**.
 
 The default home page is displayed:
 
@@ -41,7 +41,7 @@ The default home page is displayed:
 
 Pode ler e editar dados com 4D apenas através de petições REST.
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. Por exemplo, para ver o que está dentro da 4D Datastore, pode escrever:
+Toda petición de URL 4D REST comienza por `/rest`, que se debe insertar después del área `address:port`. Por exemplo, para ver o que está dentro da 4D Datastore, pode escrever:
 
 ```
 http://localhost/rest/$catalog
@@ -133,4 +133,4 @@ Tem muitas possibilidades para filtrar dados a receber. Por exemplo, para obter 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.
+La [API REST](REST_requests.md) ofrece varios comandos para interactuar con las aplicaciones 4D.

@@ -5,9 +5,9 @@ title: Rango de valores
 
 ## Valor por defecto
 
-Puede asignar un valor por defecto para ser introducido en un objeto de entrada. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
+Puede asignar un valor por defecto para ser introducido en un objeto de entrada. Esta propiedad es útil, por ejemplo, cuando la entrada [fuente de datos](properties_Object.md#variable-or-expression) es un campo: el valor por defecto se introduce cuando se muestra un nuevo registro por primera vez. Puede cambiar el valor a menos que el área de entrada se haya definido como [no editable](properties_Entry.md#enterable).
 
-The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+El valor por defecto sólo puede utilizarse si el [tipo de fuente de datos](properties_Object.md#expression-type) es:
 
 - texto/cadena
 - number/integer
@@ -23,9 +23,9 @@ The default value can only be used if the [data source type](properties_Object.m
 | #H    | Hora actual         |
 | #N    | Número de secuencia |
 
-Puede utilizar un número de secuencia para crear un número único para cada registro de la tabla para el archivo de datos actual. Un número de secuencia es un longint que se genera para cada nuevo registro. Los números comienzan en uno (1) y van aumentando de uno en uno. Un número de secuencia no se repite nunca, incluso si el registro al que se asigna se elimina de la tabla. Cada tabla tiene su propio contador interno de números de secuencia. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
+Puede utilizar un número de secuencia para crear un número único para cada registro de la tabla para el archivo de datos actual. Un número de secuencia es un longint que se genera para cada nuevo registro. Los números comienzan en uno (1) y van aumentando de uno en uno. Un número de secuencia no se repite nunca, incluso si el registro al que se asigna se elimina de la tabla. Cada tabla tiene su propio contador interno de números de secuencia. Para más información, consulte el párrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 
-> Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
+> No hay que confundir esta propiedad con la propiedad "valores por defecto" que permite llenar una columna list box con valores estáticos.
 
 #### Gramática JSON
 
@@ -53,7 +53,7 @@ Permite definir una lista cuyos valores no pueden introducirse en el objeto. Si 
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
 ---
 
@@ -61,8 +61,8 @@ Permite definir una lista cuyos valores no pueden introducirse en el objeto. Si 
 
 Restringe las entradas válidas a los elementos de la lista. Por ejemplo, es posible que desee utilizar una lista obligatoria para los títulos de los puestos de trabajo, de modo que las entradas válidas se limiten a los títulos que han sido aprobados por la dirección.
 
-La creación de una lista obligatoria no muestra automáticamente la lista cuando se selecciona el campo. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property.
-However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+La creación de una lista obligatoria no muestra automáticamente la lista cuando se selecciona el campo. Si desea mostrar la lista requerida, asigne la misma lista a la propiedad [Lista de opciones](properties_DataSource.md#choice-list).
+Sin embargo, a diferencia de la propiedad [Lista de selección](properties_DataSource.md#choice-list), cuando se define una lista requerida, ya no es posible la introducción mediante el teclado, sólo se permite la selección de un valor de la lista mediante Si se definen diferentes listas utilizando las propiedades [Lista de selección](properties_DataSource.md#choice-list) y Lista requerida, la propiedad Lista requerida tiene prioridad.
 
 > Si una lista especificada es jerárquica, sólo se tienen en cuenta los elementos del primer nivel.
 
@@ -74,4 +74,4 @@ However, unlike the [Choice List](properties_DataSource.md#choice-list) property
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)

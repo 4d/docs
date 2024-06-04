@@ -3,7 +3,7 @@ id: queryplan
 title: $queryplan
 ---
 
-Returns the query as it was passed to 4D Server (_e.g._, `$queryplan=true`)
+Devuelve la petición tal y como se pasó a 4D Server (\*por ejemplo, \*, `$queryplan=true`)
 
 ## Descripción
 
@@ -14,7 +14,7 @@ $queryplan devuelve el plan de la petición tal y como se pasó a 4D Server.
 | item      | String | Petición ejecutada                                                                                                       |
 | subquery  | Array  | Si hay una subconsulta, un objeto adicional que contiene una propiedad de elemento (como la anterior) |
 
-For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Para más información sobre los planes de petición, consulte [queryPlan y queryPath](genInfo.md#querypath-and-queryplan).
 
 ## Ejemplo
 

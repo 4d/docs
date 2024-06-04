@@ -4,9 +4,9 @@ title: 修復ページ
 sidebar_label: 修復ページ
 ---
 
-このページは、データファイルが損傷を受けたとき、それを修復するために使用します。 Generally, you will only use these functions under the supervision of 4D technical teams, when anomalies have been detected while opening the application or following a [verification](verify.md).
+このページは、データファイルが損傷を受けたとき、それを修復するために使用します。 一般的にこれらの機能は、4Dの起動時や MSC による [検査](verify.md) の結果アプリケーションに損傷を見つけたときに、4D技術者の監督下で実行します。
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
+**警告**: 修復操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
 
 > 修復はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。
 
@@ -16,11 +16,11 @@ sidebar_label: 修復ページ
 
 ### 修復するデータ
 
-カレントデータファイルのパス名。 The **[...]** button can be used to specify another data file. このボタンをクリックすると標準のファイルを開くダイアログが表示され、修復するデータファイルを選択することができます。 If you perform a [standard repair](#standard-repair), you must select a data file that is compatible with the open project file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. このダイアログを受け入れると、ウィンドウには修復対象のファイルのパス名が表示されます。
+カレントデータファイルのパス名。 **[...]** ボタンを使って、他のデータファイルを指定することができます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、修復するデータファイルを選択することができます。 [標準の修復](#標準の修復) を実行する場合、開かれたストラクチャーに対応するデータファイルを選択しなければなりません。 [レコードヘッダーによる再生](#レコードヘッダーによる再生) を実行する場合、どのデータファイルでも選択できます。 このダイアログを受け入れると、ウィンドウには修復対象のファイルのパス名が表示されます。
 
 ### オリジナルをここに移動
 
-デフォルトで修復処理の前に元のデータファイルが複製されます。 このファイルは、アプリケーションフォルダーの "Replaced files (repairing)" サブフォルダーに配置されます。 The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. とくに大きなデータファイルを修復する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
+デフォルトで修復処理の前に元のデータファイルが複製されます。 このファイルは、アプリケーションフォルダーの "Replaced files (repairing)" サブフォルダーに配置されます。 二つ目の **[...]** ボタンを使用して、複製ファイルの保存先を変更できます。 とくに大きなデータファイルを修復する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
 
 ### 修復済ファイル
 
@@ -39,11 +39,11 @@ sidebar_label: 修復ページ
 
 4Dのレコードはサイズが可変です。故に、そのレコードをロードするには、ディスク上のどこに格納されているか、その場所を "アドレステーブル" という専用テーブルに記録しておく必要があります。 プログラムは、インデックスやアドレステーブルを経由して、レコードのアドレスにアクセスします。 レコードやインデックスのみが損傷を受けている場合、標準の修復を使用すれば通常は問題が解決されます。 しかし、アドレステーブル自身が損傷を受けている場合には、これを再構築しなくてはならないため、より高度な修復作業が必要となります。 これをおこなうために、MSC は各レコードのヘッダーに位置するマーカーを使用します。 マーカーがレコード情報のサマリーと比較されることにより、アドレステーブルが再構築可能となります。
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear.
+> ストラクチャーのテーブルプロパティで **レコードを完全に削除** オプションを解除していると、ヘッダーマーカーを使用した復旧によって削除したはずのレコードが復活する原因となります。
 >
-> ヘッダーによる再生において、整合性の制約は考慮されません。 More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> ヘッダーによる再生において、整合性の制約は考慮されません。 この処理をおこなった後、重複不可フィールドに重複する値が現れたり、**NULL値を許可しない** に定義したフィールドに NULL値が現れたりするかもしれません。
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. スキャンを完了すると、結果が以下のウィンドウに表示されます:
+**スキャンおよび修復...** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 スキャンを完了すると、結果が以下のウィンドウに表示されます:
 
 ![](../assets/en/MSC/mscrepair2.png)
 
@@ -52,10 +52,10 @@ When you click on **Scan and repair...**, 4D performs a complete scan of the dat
 "データファイル中で見つかったレコード" エリアには 2つのリストがあり、データスキャン結果の概要が表示されます。
 
 - 左のリストには、データファイルスキャンの情報が表示されます。 各行には、データファイル中の再生可能なレコードのグループが表示されます:
-  - The **Order** column indicates the recovery order for the group of records.
-  - The **Count** column indicates the number of the records in the table.
-  - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. 割り当てられたテーブルの名前は自動で緑色で表示されます。 割り当てされなかったグループ、つまりどのレコードにも関連づけることができなかったテーブルは赤色で表示されます。
-  - The **Recover** column lets you indicate, for each group, whether you want to recover the records. デフォルトで、テーブルに割り当てられるすべてのグループが選択されています。
+  - **順番** の列には、レコードグループの再生順が表示されます。
+  - **カウント** 列には、グループに含まれるレコード数が表示されます。
+  - **割当先テーブル** 列には、識別されたレコードのグループに割り当てられたテーブルの名前が表示されます。 割り当てられたテーブルの名前は自動で緑色で表示されます。 割り当てされなかったグループ、つまりどのレコードにも関連づけることができなかったテーブルは赤色で表示されます。
+  - **再生** 列では、レコードを再生するかどうかを各グループごとに指定できます。 デフォルトで、テーブルに割り当てられるすべてのグループが選択されています。
 
 - 右側のリストには、プロジェクトファイルのテーブルが表示されます。
 
@@ -66,15 +66,15 @@ When you click on **Scan and repair...**, 4D performs a complete scan of the dat
 
 ![](../assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. 割り当てのためにドラッグ＆ドロップを使用することもできます。
+次に "割り当てられていないテーブル" リストから、グループを割り当てるテーブルを選択し、**テーブルを識別** ボタンをクリックします。 割り当てのためにドラッグ＆ドロップを使用することもできます。
 結果そのレコードグループは選択したテーブルに割り当てられ、そのテーブルのレコードとして再生されます。 手動で割り当てられたテーブルはリスト中黒色で表示されます。
-Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+**レコードを無視する** ボタンをクリックすると、レコードグループに対するテーブルの割り当てを手動で解除できます。
 
 ## ログファイルを開く
 
 修復が完了すると、4D はプロジェクトの Logsフォルダーにログファイルを生成します。 このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 このファイルは XML形式で作成され、<em x-id="3">ApplicationName_Repair_Log_yyyy-mm-dd hh-mm-ss.xml</em> というファイル名がつけられます。
 
-- _ApplicationName_ is the name of the project file without any extension, for example "Invoices",
-- _yyyy-mm-dd hh-mm-ss_ is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- _ApplicationName_ は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
+- _yyyy-mm-dd hh-mm-ss_ はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+**ログファイルを開く** ボタンをクリックすると、4Dはマシンのデフォルトブラウザーを使用して直近のログファイルを開きます。

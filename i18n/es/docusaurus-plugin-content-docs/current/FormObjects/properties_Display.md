@@ -46,7 +46,7 @@ El campo contiene realmente "proportion". 4D acepta y almacena la entrada comple
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -63,25 +63,25 @@ Se pueden definir formatos de visualización para las fechas:
 
 La siguiente tabla muestra las opciones disponibles:
 
-| Nombre del formato                                 | Cadena JSON                                  | Ejemplo (sistema USA)                      |
-| -------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------- |
-| System date short                                  | systemShort (por defecto) | 03/25/20                                                      |
-| System date abbreviated _(1)_   | systemMedium                                 | Wed, Mar 25, 2020                                             |
-| System date long                                   | systemLong                                   | Wednesday, March 25, 2020                                     |
-| RFC 822                                            | rfc822                                       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                                      | shortCentury                                 | 03/25/20 but 04/25/2032 _(2)_              |
-| Internal date long                                 | largo                                        | March 25, 2020                                                |
-| Internal date abbreviated _(1)_ | abbreviated                                  | Mar 25, 2020                                                  |
-| Internal date short                                | short                                        | 03/25/2020                                                    |
-| ISO Date Time _(3)_             | iso8601                                      | 2020-03-25T00:00:00           |
+| Nombre del formato                               | Cadena JSON                                  | Ejemplo (sistema USA)                      |
+| ------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------- |
+| System date short                                | systemShort (por defecto) | 03/25/20                                                      |
+| System date abbreviated _(1)_ | systemMedium                                 | Wed, Mar 25, 2020                                             |
+| System date long                                 | systemLong                                   | Wednesday, March 25, 2020                                     |
+| RFC 822                                          | rfc822                                       | Tue, 25 Mar 2020 22:00:00 GMT |
+| Short Century                                    | shortCentury                                 | 03/25/20 pero 04/25/2032 _(2)_             |
+| Internal date long                               | largo                                        | March 25, 2020                                                |
+| Fecha interna abreviada _(1)_ | abbreviated                                  | Mar 25, 2020                                                  |
+| Internal date short                              | short                                        | 03/25/2020                                                    |
+| ISO Date Time _(3)_           | iso8601                                      | 2020-03-25T00:00:00           |
 
-_(1)_ To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidad sólo se aplica a las versiones francesas de 4D.
+_(1)_ Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidad sólo se aplica a las versiones francesas de 4D.
 
-_(2)_ The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
+_(2)_ El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
-_(3)_ The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
+_(3)_ El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
 
-> Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
+> Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
 ### Formatos personalizados
 
@@ -131,9 +131,9 @@ En cada uno de los formatos de visualización de números, el signo número (#),
 
 (1) El signo de intercalación (^) genera un caracter de espacio que ocupa el mismo ancho que un dígito en la mayoría de los tipos de fuente.
 
-Por ejemplo, si desea mostrar números de tres digitos, puede utilizar el formato ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+Por ejemplo, si desea mostrar números de tres digitos, puede utilizar el formato ###. Si el usuario introduce más dígitos de los que permite el formato, 4D muestra <<< en el campo para indicar que se han introducido más dígitos de los especificados en el formato de visualización.
 
-Si el usuario introduce un número negativo, el caracter situado más a la izquierda se muestra como un signo menos (a menos que se haya especificado un formato de visualización negativo). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
+Si el usuario introduce un número negativo, el caracter situado más a la izquierda se muestra como un signo menos (a menos que se haya especificado un formato de visualización negativo). Si ##0 es el formato, menos 26 se muestra como -26 y menos 260 se muestra como <<< porque el signo menos ocupa un marcador de posición y sólo hay tres marcadores de posición.
 
 > Sea cual sea el formato de visualización, 4D acepta y almacena el número introducido en el campo. No se pierde ninguna información.
 
@@ -178,7 +178,7 @@ No es necesario especificar las tres partes del formato. Si utiliza sólo una pa
 
 Si utiliza dos partes, 4D utiliza la primera parte para los números positivos y el cero y la segunda parte para los números negativos. Si utiliza tres partes, la primera es para los números positivos, la segunda para los negativos y la tercera para el cero.
 
-> La tercera parte (cero) no se interpreta y no acepta caracteres de sustitución. If you enter `###;###;#`, the zero value will be displayed “#”. En otras palabras, lo que realmente introduzca es lo que se mostrará para el valor cero.
+> La tercera parte (cero) no se interpreta y no acepta caracteres de sustitución. Si introduce `###;###;#`, el valor cero se mostrará "#". En otras palabras, lo que realmente introduzca es lo que se mostrará para el valor cero.
 
 A continuación se muestra un ejemplo de formato de visualización de números que muestra signos de dólar y comas, coloca los valores negativos entre paréntesis y no muestra ceros:
 
@@ -192,7 +192,7 @@ En este caso, la visualización del cero sería $0.00.
 
 ### Notación científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por ejemplo, el formato:
+Si desea mostrar números en notación científica, utilice el **ampersand** (&) seguido de un número para especificar el número de dígitos que desea mostrar. Por ejemplo, el formato:
 
 &3
 
@@ -206,16 +206,16 @@ El formato de notación científica es el único que redondea automáticamente e
 
 Puede visualizar un número en hexadecimal utilizando los siguientes formatos de visualización:
 
-- `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-- `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+- `&x`: este formato muestra números hexadecimales utilizando el formato “0xFFFF”.
+- `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
 
 ### Notación XML
 
-The `&xml` format will make a number compliant with XML standard rules. En particular, el caracter separador decimal será un punto "." en todos los casos, independientemente de la configuración del sistema.
+El formato `&xml` hará que un número cumpla las normas estándar XML. En particular, el caracter separador decimal será un punto "." en todos los casos, independientemente de la configuración del sistema.
 
 ### Mostrar un número como una hora
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. La hora se determina calculando el número de segundos desde medianoche que representa el valor. El dígito en el formato corresponde al orden en que aparece el formato de hora en el menú desplegable Formato.
+Puede visualizar un número como una hora (con un formato de hora) utilizando `&/` seguido de un dígito. La hora se determina calculando el número de segundos desde medianoche que representa el valor. El dígito en el formato corresponde al orden en que aparece el formato de hora en el menú desplegable Formato.
 
 Por ejemplo, el formato:
 
@@ -281,7 +281,7 @@ Las opciones de truncamiento y escalado no afectan a la imagen en sí. El conten
 
 `Gramática JSON: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -289,11 +289,11 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
+El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D corta desde la derecha y desde abajo.
+El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta desde la derecha y desde abajo.
 
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -301,11 +301,11 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 `Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
-When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
+Si utiliza **Escala de ajuste (proporcional)**, la imagen se reduce proporcionalmente en todos sus lados para ajustarse al área creada para la imagen. La opción **Escalado para ajustar centrado (proporcional)** hace lo mismo, pero centra la imagen en el área imagen.
 
 Si la imagen es más pequeña que el área definida en el formulario, no se modificará. Si la imagen es mayor que el área definida en el formulario, se reduce proporcionalmente. Como se reduce proporcionalmente, la imagen no aparecerá distorsionada.
 
-If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
+Si ha aplicado el formato **Escalado para ajustar centrado (proporcional)**, la imagen también se centra en el área:
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
@@ -313,7 +313,7 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 `Gramática JSON: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
@@ -327,7 +327,7 @@ Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -385,25 +385,25 @@ Por defecto, una hora null se muestra con ceros, por ejemplo "00:00:00". Con la 
 
 ## Texto cuando False/Texto cuando True
 
-When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
-- a text in an [input object](input_overview.md)
-- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+- un texto en un [objeto de entrada](input_overview.md)
+- un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
+- **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
+- **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                                                                         |
-| ------------- | -------------- | -------------------------------------------------------------------------------------------------------- |
-| booleanFormat | string         | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", e.g. "Assigned;Unassigned" |
+| Nombre        | Tipos de datos | Valores posibles                                                                |
+| ------------- | -------------- | ------------------------------------------------------------------------------- |
+| booleanFormat | string         | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
 ---
 
@@ -411,9 +411,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 Utilizado para asociar un formato de visualización con los datos de la columna. Los formatos suministrados dependen del tipo de variable (list box de tipo array) o del tipo dato/campo (list boxes de tipo selección y colección).
 
-Las columnas booleanas y numéricas (números o enteros) pueden mostrarse como casillas de verificación. In this case, the [Title](#title) property can be defined.
+Las columnas booleanas y numéricas (números o enteros) pueden mostrarse como casillas de verificación. En este caso, se puede definir la propiedad [Título](#title).
 
-Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+Las columnas booleanas también pueden mostrarse como menús emergentes. En este caso, deben definirse las propiedades [Text cuando False y Text cuando True](#text-when-false-text-when-true).
 
 #### Gramática JSON
 
@@ -441,7 +441,7 @@ En particular, esta propiedad permite implementar botones "invisibles".  Los bot
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+[Botón](button_overview.md) - [Lista desplegable](dropdownList_Overview.md)
 
 ---
 
@@ -451,17 +451,17 @@ Permite que un objeto casilla de selección acepte un tercer estado. La variable
 
 #### Casillas de verificación de tres estados en columnas list box
 
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. Si se elige, se muestran los siguientes valores:
+Las columnas de list box con un [tipo de datos](properties_Object.md#expression-type) numérico pueden mostrarse como casillas de verificación de tres estados. Si se elige, se muestran los siguientes valores:
 
 - 0 = casilla no seleccionada,
 - 1 = casilla seleccionada,
-- 2 (or any value >0) = semi-checked box (third state). Para la entrada de datos, este estado devuelve el valor 2.
+- 2 (o cualquier valor >0) = caja semi-marcada (tercer estado). Para la entrada de datos, este estado devuelve el valor 2.
 - -1 = casilla de verificación invisible,
 - -2 = casilla desmarcada, no editable,
 - -3 = casilla marcada, no editable,
 - -4 = casilla semi-marcada, no editable
 
-In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
+También en este caso, la propiedad [Título](#title) está disponible para que se pueda introducir el título de la casilla de verificación.
 
 #### Gramática JSON
 
@@ -471,7 +471,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Objetos soportados
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -479,8 +479,8 @@ In this case as well, the [Title](#title) property is also available so that the
 
 Esta propiedad está disponible para una columna de list box si:
 
-- the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-- the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+- el [tipo de columna](properties_Object.md#expression-type) es **boolean** y su [tipo de visualización](properties_Display.md#display-type) es "Casilla de selección"
+- el [tipo de columna](properties_Object.md#expression-type) es **número** (numérico o entero) y su [tipo de visualización](properties_Display.md#display-type) es "Casilla de verificación de tres estados".
 
 En ese caso, el título de la casilla de verificación puede introducirse utilizando esta propiedad.
 
@@ -514,9 +514,9 @@ Esta opción está disponible para columnas con cualquier tipo de contenido, exc
 
 La opción Truncar con elipsis está activada por defecto y puede especificarse con list boxes de tipo Array, Selección o Colección.
 
-> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
+> Cuando se aplica a columnas de tipo Texto, la opción Truncar con elipsis sólo está disponible si la opción [Ajustar texto](#wordwrap) no está seleccionada. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
 
-The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; sin embargo, el resultado difiere en función del [formato de celda](#display-type):
 
 - En los formatos booleanos de tipo emergente, las etiquetas se truncan con una elipsis,
 - Para los formatos booleanos de tipo casilla de verificación, las etiquetas siempre se recortan.
@@ -529,7 +529,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -537,14 +537,14 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 Esta propiedad permite ocultar el objeto en el entorno Aplicación.
 
-Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the <code>On load</code> event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
+Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. In this context, it is often necessary to hide objects programatically during the <code>On load</code> event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
 
 #### Visibilidad automática en los formularios lista
 
-In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+En el contexto de los [formularios "lista"](FormEditor/properties_FormProperties.md#form-type), la propiedad Visibilidad soporta dos valores específicos:
 
-- **If record selected** (JSON name: "selectedRows")
-- **If record not selected** (JSON name: "unselectedRows")
+- **Si registro seleccionado** (nombre JSON: "selectedRows")
+- **Si el registro no está seleccionado** (nombre JSON: "unselectedRows")
 
 Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo de un formulario listado. Indica a 4D si debe o no dibujar el objeto dependiendo de si el registro que se está procesando está seleccionado/no seleccionado. Permite representar una selección de registros utilizando atributos visuales distintos de los colores de resaltado:
 
@@ -566,7 +566,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 ## Ajuste de texto
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
+> Para los objetos [entrada](input_overview.md), disponibles cuando la propiedad [Multilínea](properties_Entry.md#multiline) está definida como "yes".
 
 Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
@@ -590,7 +590,7 @@ Cuando se selecciona esta opción, 4D no realiza ningún retorno de línea autom
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
-En los list boxes, el texto demasiado largo se trunca y se muestra con una elipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+En los list boxes, el texto demasiado largo se trunca y se muestra con una elipse (...). En el siguiente ejemplo, la opción Wordwrap está **marcada para la columna izquierda** y **desmarcada para la columna derecha**:
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
@@ -615,4 +615,4 @@ Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto,
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)

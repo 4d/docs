@@ -16,7 +16,7 @@ Web sessions allow to:
 
 Web sessions are used for:
 
-- [Web applications](gettingStarted.md) sending http requests,
+- [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
 ## Enabling web sessions
@@ -26,19 +26,19 @@ The session management feature can be enabled and disabled on your 4D web server
 - Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting):
   ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-Esta opção é selecionada por defeito nos novos projetos. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
+Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se puede desactivar seleccionando la opción **Sin sesiones**, en cuyo caso las funcionalidades de la sesión web se desactivan (no hay ningún objeto `Session` disponible).
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the _settings_ parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The `WEB SET OPTION` command can also set the session mode for the main Web server.
+> El comando `WEB SET OPTION` también puede establecer el modo de sesión para el servidor web principal.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
-> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
+> **Compatibilidad**: una opción **Sesiones legacy** está disponible en proyectos creados con una versión de 4D anterior a 4D v18 R6 (para más información, consulte el sitio web [doc.4d.com](https://doc.4d.com)).
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
+Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID__AppName_", donde _AppName_ es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
@@ -46,18 +46,18 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID__AppName_" cookie.
+1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
-- a new session with a private "4DSID__AppName_" cookie is created on the web server
-- a new Guest `Session` object is created and is dedicated to the scalable web session.
+- se crea una nueva sesión con una cookie privada "4DSID__AppName_" en el servidor web
+- se crea un nuevo objeto Guest `Session` dedicado a la sesión web escalable.
 
 :::note
 
-Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
+La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
 
 :::
 
@@ -67,7 +67,7 @@ The `Session` object of the current session can then be accessed through the [`S
 
 :::info
 
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
+Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
 :::
 
@@ -88,7 +88,7 @@ This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeo
 
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
-- the `Session` object does not contain privileges (it is a Guest session)
+- el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - the [`.storage`](API/SessionClass.md#storage) property is empty
 - um novo cookie de sessão é associado à sessão
 
@@ -134,9 +134,9 @@ We want a salesperson to authenticate, open a session on the web server, and hav
 http://localhost:8044/authenticate.shtml
 ```
 
-> In a production environment, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.
+> En un entorno de producción, es necesario utilizar una conexión [HTTPS](API/WebServerClass.md#httpsenabled) para evitar que cualquier información no cifrada circule por la red.
 
-2. The `authenticate.shtml` page is a form containing _userId_ et _password_ input fields and sending a 4DACTION POST action:
+2. La página `authenticate.shtml` es un formulario que contiene los campos de entrada _userId_ y _password_ y envía una acción 4DACTION POST:
 
 ```html
 <!DOCTYPE html>
@@ -153,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. The authenticate project method looks for the _userID_ person and validates the password against the hashed value already stored in the _SalesPersons_ table:
+3. El método authenticate project busca la persona _userID_ y valida la contraseña contra el valor hash ya almacenado en la tabla _SalesPersons_:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

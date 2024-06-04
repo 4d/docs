@@ -15,7 +15,7 @@ title: ヘッダー
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
@@ -58,7 +58,7 @@ title: ヘッダー
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 #### 参照
 

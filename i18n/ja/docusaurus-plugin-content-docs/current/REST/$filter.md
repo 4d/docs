@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Allows to query the data in a dataclass or method _(e.g._, `$filter="firstName!='' AND salary>30000"`)
+データクラスまたはメソッドが返すデータをフィルターします _(例_: `$filter="firstName!='' AND salary>30000"`)
 
 ## 説明
 
@@ -15,7 +15,7 @@ Allows to query the data in a dataclass or method _(e.g._, `$filter="firstName!=
 
 **{attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+たとえば `$filter="firstName=john"` の場合、`firstName` は **属性 (attribute)**、`=` は **比較演算子 (comparator)**、`john` は **値 (value)** にあたります。
 
 ### 複雑なフィルターの利用
 
@@ -23,7 +23,7 @@ For example: `$filter="firstName=john"` where `firstName` is the **attribute**, 
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
 
 ### paramsプロパティの使用
 
@@ -31,24 +31,23 @@ For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+4D においてデータをクエリする方法についての詳細は、[dataClass.query()](../API/DataClassClass.md#query) ドキュメンテーションを参照ください。
 
 > 単一引用符 (') または二重引用符 (") を挿入するには、対応する文字コードを使ってそれらをエスケープする必要があります:
 >
 > <li>単一引用符 ('): \u0027</li>
 > <li>二重引用符 ("): \u0022</li>
 >
-> For example, you can write the following when passing a value with a quote when using the _params_ property:\
+> たとえば、単一引用符が含まれる値を _params_ プロパティに渡すには、次のように書きます:\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
-> If you pass the value directly, you can write the following:
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+> 値を直接渡す場合は、次のように書けます: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## 属性
 
-If the attribute is in the same dataclass, you can just pass it directly (_e.g._, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (_e.g._, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
+同じデータクラスに属している属性はそのまま受け渡せます (_例_: `firstName`)。 別のデータクラスをクエリする場合は、リレーション名と属性、つまりパスを渡さなくてはなりません (_例_: employer.name)。 属性名の文字の大小は区別されます (`firstName` と `FirstName` は異なります)。
 
 オブジェクト型属性もドット記法によってクエリできます。 たとえば、"objAttribute" という名称のオブジェクト属性が次の構造を持っていた場合:
 

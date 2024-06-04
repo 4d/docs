@@ -41,8 +41,8 @@ Pour identifier l'utilisateur courant dans une application 4D monoposte, vous po
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 
 ```4d
-If(Current system user = $user) //you can store users in a database table
-    // give access to some features
+If(Current system user = $user) //les utilisateurs sont stockés dans une table
+    // accorder les accès à certaines fonctionnalités
 End if
 ```
 
@@ -54,7 +54,7 @@ SET USER ALIAS(Current system user)
 
 ### Protection des accès
 
-#### Privileges
+#### Privilèges
 
 Sur une machine partagée par plusieurs utilisateurs, vous pouvez installer l'application 4D dans un dossier et octroyer les privilèges d'accès utilisateur appropriés au dossier au niveau de l'OS.
 

@@ -20,7 +20,7 @@ Devuelve una lista de las clases de datos de su proyecto junto con dos URI: una 
 
 ### Descripción
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
 En esta lista sólo se muestran las clases de datos expuestas para el almacén de datos de su proyecto. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
 
@@ -61,7 +61,7 @@ Devuelve información sobre todas las clases de datos del proyecto y sus atribut
 
 ### Descripción
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
+Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
 For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
@@ -180,7 +180,7 @@ Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+La llamada de `$catalog/{dataClass}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 La información que recupera se refiere a lo siguiente:
 
@@ -193,34 +193,34 @@ La información que recupera se refiere a lo siguiente:
 
 Las siguientes propiedades se devuelven para una clase de datos expuesta:
 
-| Propiedad      | Tipo   | Descripción                                                                                                     |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| name           | String | Nombre de la dataclass                                                                                          |
-| collectionName | String | Nombre de una selección de entidades en la clase de datos                                                       |
-| tableNumber    | Number | Número de tabla en la base 4D                                                                                   |
-| scope          | String | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | String | Un URI a los datos de la clase de datos                                                                         |
+| Propiedad      | Tipo   | Descripción                                                                                                                            |
+| -------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | String | Nombre de la dataclass                                                                                                                 |
+| collectionName | String | Nombre de una selección de entidades en la clase de datos                                                                              |
+| tableNumber    | Number | Número de tabla en la base 4D                                                                                                          |
+| scope          | String | Alcance de la clase de datos (tenga en cuenta que sólo se muestran las clases de datos cuyo **Alcance** es público) |
+| dataURI        | String | Un URI a los datos de la clase de datos                                                                                                |
 
 ### Atributo(s)
 
 Aquí están las propiedades de cada atributo expuesto que se devuelven:
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                              |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | El nombre del atributo.                                                                                                                                                  |
-| kind        | String  | Tipo de atributo (almacenamiento o entidad relacionada).                                                                                              |
-| fieldPos    | Number  | Posición del campo en la tabla de la base).                                                                                                                              |
-| scope       | String  | Alcance del atributo (sólo aparecerán los atributos cuyo alcance sea Público).                                                                        |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. En caso contrario, esta propiedad no aparece.                                        |
-| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | Boolean | Esta propiedad devuelve True si el atributo es la llave primaria. En caso contrario, esta propiedad no aparece.                                          |
-| path        | String  | Nombre de la clase de datos para un atributo relatedEntity, o nombre de la relación para un atributo relatedEntities.                                                    |
-| foreignKey  | String  | Para un atributo relatedEntity, nombre del atributo relacionado.                                                                                                         |
-| inverseName | String  | Nombre de la relación opuesta para un atributo relatedEntity o relateEntities.                                                                                           |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                                              |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | String  | El nombre del atributo.                                                                                                                                                                  |
+| kind        | String  | Tipo de atributo (almacenamiento o entidad relacionada).                                                                                                              |
+| fieldPos    | Number  | Posición del campo en la tabla de la base).                                                                                                                                              |
+| scope       | String  | Alcance del atributo (sólo aparecerán los atributos cuyo alcance sea Público).                                                                                        |
+| indexed     | String  | Si se seleccionó algún **tipo de índice**, esta propiedad devolverá true. En caso contrario, esta propiedad no aparece.                                                  |
+| type        | String  | Tipo de atributo (booleano, blob, byte, fecha, duración, imagen, long, long64, número, cadena, uuid o palabra) o la clase de datos para un atributo de relación N->1. |
+| identifying | Boolean | Esta propiedad devuelve True si el atributo es la llave primaria. En caso contrario, esta propiedad no aparece.                                                          |
+| path        | String  | Nombre de la clase de datos para un atributo relatedEntity, o nombre de la relación para un atributo relatedEntities.                                                                    |
+| foreignKey  | String  | Para un atributo relatedEntity, nombre del atributo relacionado.                                                                                                                         |
+| inverseName | String  | Nombre de la relación opuesta para un atributo relatedEntity o relateEntities.                                                                                                           |
 
 ### Llave primaria
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
+El objeto llave devuelve el nombre del atributo **name** definido como **llave primaria** para la clase de datos.
 
 ### Ejemplo
 

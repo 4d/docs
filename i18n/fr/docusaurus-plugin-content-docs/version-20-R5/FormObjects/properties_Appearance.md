@@ -5,17 +5,17 @@ title: Apparence
 
 ## Bouton par défaut
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+La propriété de bouton par défaut désigne le bouton qui obtient le focus initial à l'exécution lorsqu'aucun bouton du formulaire ne possède la propriété [Focusable](properties_Entry.md#focusable).
 
 Il ne peut y avoir qu'un seul bouton par défaut par page de formulaire.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. Le bouton par défaut peut être différent du bouton sélectionné. Les boutons par défaut ont une apparence bleue spécifique sur macOS :
+En outre, sur macOS, la propriété de bouton par défaut modifie l'apparence du bouton afin d'indiquer un "choix recommandé" à l'utilisateur et est automatiquement liée à la touche **Entrée** , même si elle n'a pas le focus. Le bouton par défaut peut être différent du bouton sélectionné. Les boutons par défaut ont une apparence bleue spécifique sur macOS :
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > Le bouton doit avoir une hauteur standard pour obtenir l'apparence du bouton par défaut.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. Cependant, dans l'éditeur de formulaires 4D, le bouton par défaut est représenté par un contour bleu :
+Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul le bouton ayant le focus a une apparence différente au moment de l'exécution et la touche **Entrée** est liée au bouton ayant le focus. Cependant, dans l'éditeur de formulaires 4D, le bouton par défaut est représenté par un contour bleu :
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -27,7 +27,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 #### Objets pris en charge
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Bouton](button_overview.md#regular) - [Bouton plat](button_overview.md#regular)
 
 ---
 
@@ -43,7 +43,7 @@ A l'exécution, un champ ou toute zone saisissable est délimité par un rectang
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[Zones 4D Write Pro](writeProArea_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md) - [Sous-formulaire](subform_overview.md)
 
 ---
 
@@ -91,7 +91,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -101,7 +101,7 @@ Valeurs disponibles :
 
 ## Resolution
 
-Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par défaut, elle est définie sur 72 dpi (macOS), qui est la résolution standard des formulaires 4D sur toutes les plateformes. La définition de cette propriété sur 96 dpi définira un rendu Windows/Web sur les plateformes macOS et Windows. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par défaut, elle est définie sur 72 dpi (macOS), qui est la résolution standard des formulaires 4D sur toutes les plateformes. La définition de cette propriété sur 96 dpi définira un rendu Windows/Web sur les plateformes macOS et Windows. La définition de cette propriété sur **automatique** signifie que le rendu du document sera différent entre les plates-formes macOS et Windows.
 
 #### Grammaire JSON
 
@@ -133,7 +133,7 @@ Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
 ## Afficher les pieds de page
 
-Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
+Affiche/masque les pieds de page lorsque le [mode d'affichage de la page](#view-mode) est défini sur "Page".
 
 #### Grammaire JSON
 
@@ -151,7 +151,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 Lorsqu'elle est activée, la barre de formule est visible sous l'interface de la barre d'outils dans la zone 4D View Pro. Si elle n'est pas sélectionnée, la barre de formule est masquée.
 
-> This property is available only for the [Toolbar](#user-interface) interface.
+> Cette propriété est disponible uniquement pour l'interface de la [barre d'outils](#user-interface).
 
 #### Grammaire JSON
 
@@ -167,7 +167,7 @@ Lorsqu'elle est activée, la barre de formule est visible sous l'interface de la
 
 ## Montrer les entêtes
 
-Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
+Affiche/masque les en-têtes de la page lorsque le [mode d'affichage de la page](#view-mode) est défini sur "Page".
 
 #### Grammaire JSON
 
@@ -199,7 +199,7 @@ Affiche/masque les caractères visibles
 
 ## Montrer la règle horizontale
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
+Affiche/masque la règle horizontale lorsque la vue du document est en mode [Page](#view-mode).
 
 #### Grammaire JSON
 
@@ -231,7 +231,7 @@ Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés
 
 ## Afficher le cadre de la page
 
-Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+Affiche/masque le cadre de la page lorsque le [mode d'affichage de la page](#view-mode) est défini sur "Page".
 
 #### Grammaire JSON
 
@@ -247,7 +247,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 ## Afficher les références
 
-Displays all 4D expressions inserted in the 4D Write Pro document as _references_. When this option is disabled, 4D expressions are displayed as _values_. Par défaut, lorsque vous insérez un champ ou une expression 4D, 4D Write Pro calcule et affiche sa valeur actuelle. Sélectionnez cette propriété si vous souhaitez savoir quel champ ou quelle expression est affiché(e). Les références de champ ou d'expression apparaissent alors dans votre document, sur fond gris.
+Affiche toutes les expressions 4D insérées dans le document 4D Write Pro comme _références_. Lorsque cette option est désactivée, les expressions 4D sont affichées sous forme de _valeurs_. Par défaut, lorsque vous insérez un champ ou une expression 4D, 4D Write Pro calcule et affiche sa valeur actuelle. Sélectionnez cette propriété si vous souhaitez savoir quel champ ou quelle expression est affiché(e). Les références de champ ou d'expression apparaissent alors dans votre document, sur fond gris.
 
 Par exemple, vous avez inséré la date courante avec un format, la date s'affiche :
 
@@ -257,7 +257,7 @@ Lorsque la propriété Afficher les références est activée, la référence s'
 
 ![](../assets/en/FormObjects/writeProExpr.png)
 
-> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+> Les expressions 4D peuvent être insérées à l'aide de la commande `ST INSERT EXPRESSION`.
 
 #### Grammaire JSON
 
@@ -273,7 +273,7 @@ Lorsque la propriété Afficher les références est activée, la référence s'
 
 ## Afficher règle verticale
 
-Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
+Affiche/masque la règle verticale lorsque la vue du document est en mode [Page](#view-mode).
 
 #### Grammaire JSON
 
@@ -307,7 +307,7 @@ Lorsque des onglets sont affichés avec une direction personnalisée sous Window
 
 ## Interface utilisateur
 
-Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utilisateurs finaux d'effectuer des modifications de base et des manipulations de données. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utilisateurs finaux d'effectuer des modifications de base et des manipulations de données. 4D View Pro propose deux interfaces en option, le **ruban** et **la barre d'outils**.
 
 #### Grammaire JSON
 
@@ -349,7 +349,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -361,9 +361,9 @@ Valeurs disponibles :
 
 Définit le mode d'affichage du document 4D Write Pro dans la zone de formulaire. Trois valeurs sont disponibles :
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
-- **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Page** : le mode d'affichage le plus complet, qui comprend les contours de page, l'orientation, les marges, les sauts de page, les en-têtes et pieds de page, etc.
+- **Brouillon** : mode brouillon avec propriétés de base du document
+- **Embedded** : mode d'affichage adapté aux zones intégrées; il n'affiche pas les marges, les pieds de page, les en-têtes, les cadres, etc. Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également la [résolution de 96 dpi](#resolution) et les propriétés [Afficher HTML WYSIWYG](#show-html-wysiwyg)).
 
 > La propriété Mode d'affichage est utilisée uniquement pour le rendu à l'écran. Concernant les paramètres d'impression, des règles de rendu spécifiques sont automatiquement utilisées.
 

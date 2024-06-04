@@ -11,6 +11,6 @@ title: On Activate
 
 Se a janela de um formulário foi enviada para segundo plano, este evento é chamado quando a janela se torna a janela mais à frente.
 
-Este evento aplica-se ao formulário como um todo e não a um objecto específico. Consequently, if the `On Activate` form event property is selected, only the form will have its form method called.
+Este evento aplica-se ao formulário como um todo e não a um objecto específico. Por lo tanto, si se selecciona la propiedad de evento formulario `On Activate`, sólo se llamará al método formulario.
 
-In the case of a subform, this event is passed to the subform when the container gets the focus (if it has the [focusable](FormObjects/properties_Entry.md#focusable) property).
+En el caso de un subformulario, este evento se pasa al subformulario cuando el contenedor obtiene el foco (si tiene la propiedad [focusable](FormObjects/properties_Entry.md#focusable)).

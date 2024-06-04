@@ -27,13 +27,30 @@ title: スプリッター
 	"top": 160,   
 	"width": 100,  
 	"height": 20,  
-	"splitterMode": "move"  //pusher
+	"splitterMode": "move"  // プッシャー
 	}
 ```
 
 ### プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) -
+[表示状態](properties_Display.md#表示状態) -
+[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[線カラー](properties_BackgroundAndBorder.md#線カラー) -
+[表示状態](properties_Display.md#表示状態)
 
 ## 隣接するオブジェクトのプロパティとの相互作用
 
@@ -45,7 +62,7 @@ title: スプリッター
 | 拡大               | 元の位置のままだが、スプリッターの新しい位置に基づいてサイズが調整される                    |                                                                                                       |                                                                                                |
 | 移動               | スプリッターとともに移動する                                          |                                                                                                       |                                                                                                |
 
-_(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position._
+_(1) この位置にあるオブジェクトを超えて、右側 (水平)、または下側 (垂直) へスプリッターをドラッグすることはできません。_
 
 > スプリッターが定義される矩形内にすべて納まるオブジェクトは、スプリッターと一緒に移動します。
 

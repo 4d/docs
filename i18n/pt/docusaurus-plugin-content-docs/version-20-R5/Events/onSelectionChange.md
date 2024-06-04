@@ -13,7 +13,7 @@ Este evento pode ser gerado em diferentes contextos.
 
 ### 4D View Pro
 
-A seleção atual de linhas ou de colunas é modificada. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+A seleção atual de linhas ou de colunas é modificada. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedade   | Tipo          | Descrição                               |
 | ------------- | ------------- | --------------------------------------- |
@@ -41,7 +41,7 @@ O registo atual ou a seleção atual de linhas é modificado num formulário lis
 
 This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
 
-### Input & 4D Write Pro
+### Área de entrada y 4D Write Pro
 
 The text selection or the position of the cursor in the area is modified following a click or a keystroke.
 

@@ -9,15 +9,15 @@ title: On Double Clicked
 
 ## Description
 
-The `On Double Clicked` event is generated when the user double-clicks on an object. La durée maximale séparant un double-clic est définie dans les préférences système.
+L'événement `On Double Clicked` est généré lorsque l'utilisateur double-clique sur un objet. La durée maximale séparant un double-clic est définie dans les préférences système.
 
 If the [`On Clicked`](onClicked.md) or `On Double Clicked` object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns [`On Clicked`](onClicked.md) or `On Double Clicked`, depending on the case.
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+Si les deux événements sont sélectionnés pour un objet, les événements `On Clicked` puis `On Double Clicked` seront générés lorsque l'utilisateur double-clique sur l'objet.
 
 ### 4D View Pro
 
-This event is generated when the user double-clicks anywhere on a 4D View Pro document. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+This event is generated when the user double-clicks anywhere on a 4D View Pro document. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
 | Propriété   | Type        | Description                      |
 | ----------- | ----------- | -------------------------------- |

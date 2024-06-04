@@ -9,8 +9,8 @@ title: On Printing Detail
 
 ## Description
 
-The `On Printing Detail` event can only be used in the context of an **output form**. It is triggered when the detail area the output form is about to be printed, for example following a call to the `Print form` command.
+L'événement `On Printing Detail` ne peut être utilisé que dans le contexte d'un **formulaire de sortie**. Il est déclenché lorsque la zone de détail du formulaire de sortie est sur le point d'être imprimée, par exemple suite à un appel à la commande `Print form`.
 
-The `Print form` command generates only one `On Printing Detail` event for the form method.
+La commande `Print form` génère un seul événement `On Printing Detail` pour la méthode formulaire.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.

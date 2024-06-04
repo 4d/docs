@@ -7,15 +7,15 @@ title: $upload
 
 ## 説明
 
-サーバーにアップロードしたいファイルがある場合にこのリクエストを POST します。 If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+サーバーにアップロードしたいファイルがある場合にこのリクエストを POST します。 画像の場合には `$rawPict=true` を渡します。 その他のファイルの場合は `$binary=true` を渡します。
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
+デフォルトのタイムアウトは 120秒ですが、`$timeout` パラメーターに任意の数値を渡してタイムアウトを変更できます。
 
 ## アップロードシナリオ
 
 エンティティのピクチャー属性を更新するために、画像をアップロードしたい場合を考えます。
 
-画像 (または任意のバイナリファイル) をアップロードするには、まずクライアントアプリケーションにてファイルを選択する必要があります。 The file itlself must be passed in the **body** of the request.
+画像 (または任意のバイナリファイル) をアップロードするには、まずクライアントアプリケーションにてファイルを選択する必要があります。 ファイル自体はリクエストの **ボディ** に渡す必要があります。
 
 次に、下のようなリクエストを使用して、選択した画像を 4D Server にアップロードします:
 
@@ -23,15 +23,15 @@ You can modify the timeout, which by default is 120 seconds, by passing a value 
 
 その結果、サーバーからはファイルを識別する ID が返されます。
 
-**Response**:
+**レスポンス**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. リクエストは次のようになります:
+この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します。 リクエストは次のようになります:
 
 `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**POST データ**:
 
 ```
 {
@@ -41,7 +41,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Response**:
+**レスポンス**:
 
 更新後のエンティティが返されます:
 
@@ -65,7 +65,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 
 ## 4D HTTPクライアントを使った例
 
-The following example shows how to upload a _.pdf_ file to the server using the 4D HTTP client.
+次の例では、4D HTTPクライアントを使用して、_.pdf_ ファイルをサーバーにアップロードする方法を示します。
 
 ```4d
 var $params : Text
@@ -77,30 +77,30 @@ var $blob : Blob
 ARRAY TEXT($headerNames; 1)
 ARRAY TEXT($headerValues; 1)
 
-$url:="localhost:80/rest/$upload?$binary=true" //prepare the REST request
+$url:="localhost:80/rest/$upload?$binary=true" // RESTリクエストの準備
 
 $headerNames{1}:="Content-Type"
 $headerValues{1}:="application/octet-stream"
 
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリの読み込み
 
- //Execute the first POST request to upload the file
+ // ファイルをアップロードするための 1つ目の POSTリクエスト
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
 
 If ($result=200) 
-	var $data : Object
+    var $data : Object
     $data:=New object
     $data.__KEY:="3"
     $data.__STAMP:="3"
     $data.pdf:=New object("ID"; String($response.ID)) 
 
-    $url:="localhost:80/rest/Invoices?$method=update" //second request to update the entity
+    $url:="localhost:80/rest/Invoices?$method=update" // エンティティを更新するための 2つ目のリクエスト
 
     $headerNames{1}:="Content-Type"
     $headerValues{1}:="application/json"
 
     $result:=HTTP Request(HTTP POST method; $url; $data; $response; $headerNames; $headerValues)
 Else
-	ALERT(String($result)+" Error")
+    ALERT(String($result)+" Error")
 End if
 ```

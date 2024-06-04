@@ -11,7 +11,7 @@ title: On Deactivate
 
 Se a janela de um formulário for a janela mais à frente, esse evento será chamado quando a janela for enviada para o segundo plano.
 
-Este evento aplica-se ao formulário como um todo e não a um objecto específico. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
+Este evento aplica-se ao formulário como um todo e não a um objecto específico. Por lo tanto, si se selecciona la propiedad de evento formulario `On Deactivate`, sólo se llamará al método formulario.
 
 ### Veja também
 

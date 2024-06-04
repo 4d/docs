@@ -11,7 +11,7 @@ Cópias de segurança ou backups podem ser começadas de forma manual ou de form
 
 Aplicações podem ser restauradas automaticamente quando uma aplicação danificada for aberta.
 
-Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com uma aplicação em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que a aplicação for aberta. Pode ver os conteúdos do arquivo journal a qualquer momento.
+Además, el módulo de copia de seguridad integrado puede aprovechar el archivo .journal ([de historial](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com uma aplicação em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que a aplicação for aberta. Pode ver os conteúdos do arquivo journal a qualquer momento.
 
 > Pode implementar também soluções alternativas para replicar e sincronizar dados para manter versões idênticas de aplicações por razões de backup. These solutions can be based on the following mechanisms and technologies:
 >
@@ -19,4 +19,4 @@ Also, the integrated backup module can take advantage of the .journal file ([dat
 > - Synchronization using SQL
 > - Synchronization using HTTP (/rest/url)
 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Para una visión general de las funciones de seguridad de 4D, consulte la [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/).

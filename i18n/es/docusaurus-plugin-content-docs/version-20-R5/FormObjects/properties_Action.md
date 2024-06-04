@@ -11,14 +11,14 @@ Controle si el usuario puede arrastrar el objeto y cómo. Por defecto, no se per
 
 Hay dos modos de arrastrar disponibles:
 
-- **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. A continuación, gestiona la acción arrastrar utilizando un método.\
-  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
-- **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:\
+- **Personalizado**: en este modo, toda operación de arrastrar realizada en el objeto dispara el evento formulario `On Begin Drag` en el contexto del objeto. A continuación, gestiona la acción arrastrar utilizando un método.\
+  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
+- **Automático**: en este modo, 4D **copia** el texto o las imágenes directamente desde el objeto formulario. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:\
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)\
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
-  In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. Esta opción no está disponible para las imágenes.
+  In this mode, the `On Begin Drag` form event is NOT generated. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the _4D Language Reference_ manual.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
 
 #### Gramática JSON
 
@@ -28,7 +28,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
 
 #### Ver también
 
@@ -42,11 +42,11 @@ Controla si el objeto puede ser el destino de una operación de arrastrar y solt
 
 Hay dos modos de soltar disponibles:
 
-- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. A continuación, gestiona la acción soltar utilizando un método.\
-  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- **Personalizado**: en este modo, cualquier operación de soltar realizada en el objeto activa los eventos formulario `On Drag Over` y `On Drop` en el contexto del objeto. A continuación, gestiona la acción soltar utilizando un método.\
+  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
+- **Automático**: en este modo, 4D gestiona automáticamente, si es posible, la inserción de los datos arrastrados de tipo texto o imagen que se sueltan sobre el objeto (los datos se pegan en el objeto). Los eventos `On Drag Over` y `On Drop` NO se generan. Por otra parte, se generan los eventos `On After Edit` (durante el soltar) y `On Data Change` (cuando el objeto pierde el foco).
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the _4D Language Reference_ manual.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
 
 #### Gramática JSON
 
@@ -56,7 +56,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
 
 #### Ver también
 
@@ -66,7 +66,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 ## Ejecutar método objeto
 
-When this option is enabled, the object method is executed with the `On Data Change` event _at the same moment_ the user changes the value of the indicator. When the option is disabled, the method is executed _after_ the modification.
+Cuando esta opción está activada, el método objeto se ejecuta con el evento `On Data Change` _en el mismo momento_ en que el usuario cambia el valor del indicador. Cuando la opción está desactivada, el método se ejecuta _tras_ la modificación.
 
 #### Gramática JSON
 
@@ -76,7 +76,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### Objetos soportados
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -88,11 +88,9 @@ Se soportan varios tipos de referencias de métodos:
 
 - a standard object method file path, i.e. that uses the following pattern:\
   `ObjectMethods/objectName.4dm`\
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/_formName_/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
+  ... where `objectName` is the actual [object name](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
-- a project method name: name of an existing project method without file extension, i.e.:
-  `myMethod`
-  In this case, 4D does not provide automatic support for object operations.
+- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
 - a custom method file path including the .4dm extension, e.g.:\
   `../../CustomMethods/myMethod.4dm`
@@ -116,7 +114,7 @@ Se soportan varios tipos de referencias de métodos:
 
 `Array type list boxes`
 
-Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está seleccionada por defecto. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está seleccionada por defecto. No está disponible para los [list box de tipo selección](listbox_overview.md#selection-list-boxes) ni para los [list box en modo jerárquico](properties_Hierarchy.md#hierarchical-list-box).
 
 #### Gramática JSON
 
@@ -132,7 +130,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 
 ## Multi-seleccionable
 
-Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
+Permite la selección de múltiples registros/opciones en una [lista jerárquica](list_overview.md).
 
 #### Gramática JSON
 
@@ -148,11 +146,11 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Ordenable
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opción está seleccionada por defecto. Los arrays de tipo imagen (columnas) no pueden ordenarse utilizando esta función.
+Permite ordenar los datos de las columnas haciendo clic en un encabezado [listbox](listbox_overview.md). Esta opción está seleccionada por defecto. Los arrays de tipo imagen (columnas) no pueden ordenarse utilizando esta función.
 
 En los list box basados en una selección de registros, sólo está disponible la función de ordenación estándar:
 
-- When the data source is _Current Selection_,
+- Cuando la fuente de datos es _Selección actual_,
 - Con columnas asociadas a campos (de tipo Alfa, Número, Fecha, Hora o Booleano).
 
 En otros casos (list box basados en selecciones temporales, columnas asociadas a expresiones), la función de ordenación estándar no está disponible. Una ordenación estándar del list box cambia el orden de la selección actual en la base de datos. Sin embargo, los registros resaltados y el registro actual no se modifican. Una ordenación estándar sincroniza todas las columnas del list box, incluidas las columnas calculadas.
@@ -171,17 +169,17 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Typical activities to be performed by active objects (_e.g._, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the _Design Reference_.
+Typical activities to be performed by active objects (_e.g._, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) de la _manual de Diseño_.
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 
-You can also set this property using the `OBJECT SET ACTION` command.
+También puede definir esta propiedad utilizando el comando `OBJECT SET ACTION`.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                                                                                                 |
-| ------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| action | string         | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Nombre | Tipos de datos | Valores posibles                                                                                                                     |
+| ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| action | string         | El nombre de una [acción estándar válida](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objetos soportados
 

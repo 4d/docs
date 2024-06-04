@@ -7,7 +7,7 @@ Permite que as ações no pedido REST estejam numa transação. Se não houver e
 
 ## Descrição
 
-When you have multiple actions together, you can use `$atomic/$atOnce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atOnce`.
+Cuando tiene varias acciones juntas, puede utilizar `$atomic/$atOnce` para asegurarse de que ninguna de las acciones se complete si una de ellas falla. Puede utilizar `$atomic` o `$atOnce`.
 
 ## Exemplo
 
@@ -15,7 +15,7 @@ Chamamos o seguinte pedido REST numa transação.
 
 `POST  /rest/Employee?$method=update&$atomic=true`
 
-**POST data**:
+**Datos POST**:
 
 ```json
 [

@@ -11,14 +11,14 @@ title: On Load
 
 Este evento se activa cuando el formulario se está cargando o imprimiendo.
 
-All the objects of the form (from any page) whose `On Load` object event property is selected will have their object method called.
-Then, if the `On Load` form event property is selected, the form will have its form method called.
+Todos los objetos del formulario (de cualquier página) cuya propiedad de evento `On Load` esté seleccionada tendrán su método objeto llamado.
+Entonces, si se selecciona la propiedad de evento formulario `On Load`, se llamará al método formulario.
 
 > The `On Load` and [`On Unload`](onUnload.md) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.
 
 ### Subformulario
 
-The `On Load` event is generated when opening the subform (this event must also have been activated at the parent form level in order to be taken into account). El evento se genera antes que los del formulario padre. Tenga en cuenta también que, de acuerdo con los principios de funcionamiento de los eventos de formulario, si el subformulario se coloca en una página distinta de la página 0 o 1, este evento sólo se generará cuando se muestre esa página (y no cuando se muestre el formulario).
+El evento `On Load` se genera al abrir el subformulario (este evento debe haberse activado también a nivel del formulario padre para que se tenga en cuenta). El evento se genera antes que los del formulario padre. Tenga en cuenta también que, de acuerdo con los principios de funcionamiento de los eventos de formulario, si el subformulario se coloca en una página distinta de la página 0 o 1, este evento sólo se generará cuando se muestre esa página (y no cuando se muestre el formulario).
 
 ### Ver también
 

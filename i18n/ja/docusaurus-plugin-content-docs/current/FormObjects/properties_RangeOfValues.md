@@ -36,7 +36,7 @@ title: 値の範囲
 
 #### 対象オブジェクト
 
-[Input](input_overview.md)
+[入力](input_overview.md)
 
 ---
 

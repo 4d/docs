@@ -1,11 +1,11 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordenadas y dimensiones
 ---
 
 ## Altura automática da linha
 
-This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
+Esta propiedad sólo está disponible para los list boxes con las siguientes [fuentes de datos](properties_Object.md#data-source):
 
 - collection ou entity selection,
 - array (não hierárquico).
@@ -14,21 +14,21 @@ A propriedade não está selecionada por padrão. When used, the height of every
 
 :::note
 
-When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
 :::
 
-When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
+Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
 
 - O cálculo da altura da linha tem em conta:
   - any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   - quaisquer tipos de controlo (entradas, caixas de verificação, listas, listas suspensas),
   - tipos, estilos e tamanhos de letra,
-  - the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
+  - la opción [Wordwrap](properties_Display.md#wordwrap): si está desactivada, la altura se basa en el número de párrafos (las líneas se truncan); si está activada, la altura se basa en el número de líneas (no se trunca).
 
 - O cálculo da altura da linha ignora:
   - conteúdo da coluna oculta
-  - [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
+  - Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
 
 :::caution
 
@@ -131,16 +131,16 @@ Maximum value depends on the rectangle size (it cannot exceed half the size of t
 
 :::note
 
-With [text areas](text.md) and [inputs](input_overview.md):
+Con [áreas de texto](text.md) y [entradas](input_overview.md):
 
-- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style),
-- the corner roundness is drawn outside the area of the object (the object appears larger in the form but its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are not extended).
+- la propiedad de radio de la esquina sólo está disponible con los [estilos de línea de borde](properties_BackgroundAndBorder.md#border-line-style) "ninguno", "sólido" o "punteado",
+- la redondez de la esquina se dibuja fuera del área del objeto (el objeto aparece más grande en el formulario pero su [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) no se amplían).
 
 ![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
+También se puede definir esta propiedad utilizando los comandos [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) y [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html).
 
 #### Gramática JSON
 
@@ -150,7 +150,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Entrada](input_overview.md) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 ---
 
@@ -177,8 +177,8 @@ Esta propriedade designa o tamanho vertical de um objeto.
 Esta propriedade designa o tamanho horizontal de um objeto.
 
 > - Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
-> - If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
-> - When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> - Si la propiedad [Redimensionable](properties_ResizingOptions.md#resizable) se utiliza para una [columna de list box](listbox_overview.md#list-box-columns), el usuario también puede cambiar manualmente el tamaño de la columna.
+> - Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
 #### Gramática JSON
 
@@ -196,7 +196,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 A largura máxima da coluna (em píxeis). The width of the column cannot be increased beyond this value when resizing the column or form.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
 #### Gramática JSON
 
@@ -214,7 +214,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 A largura mínima da coluna (em píxeis). A largura da coluna não pode ser reduzida abaixo deste valor quando se redimensiona a coluna ou o formulário.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
 #### Gramática JSON
 
@@ -264,7 +264,7 @@ RowHeights{5}:=3
 Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
 
 > - The Row Height Array property is not taken into account for hierarchical list boxes.
-> - For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+> - Para los array y list boxes colecciones/selección de entidades, esta propiedad sólo está disponible si la opción [Alto de línea automático](#automatic-row-height) no está seleccionada.
 
 #### Gramática JSON
 
@@ -290,13 +290,13 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Gramática JSON
 
-| Nome              | Tipo de dados | Valores possíveis                                 |
-| ----------------- | ------------- | ------------------------------------------------- |
-| horizontalPadding | number        | Number of pixels (must be >=0) |
+| Nome              | Tipo de dados | Valores possíveis                                   |
+| ----------------- | ------------- | --------------------------------------------------- |
+| horizontalPadding | number        | Número de píxeles (debe ser >=0) |
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Veja também
 
@@ -310,13 +310,13 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis                                 |
-| --------------- | ------------- | ------------------------------------------------- |
-| verticalPadding | number        | Number of pixels (must be >=0) |
+| Nome            | Tipo de dados | Valores possíveis                                   |
+| --------------- | ------------- | --------------------------------------------------- |
+| verticalPadding | number        | Número de píxeles (debe ser >=0) |
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Veja também
 

@@ -3,7 +3,7 @@ id: queryplan
 title: $queryplan
 ---
 
-Returns the query as it was passed to 4D Server (_e.g._, `$queryplan=true`)
+4D Server に渡したクエリを返します (_例_: `$queryplan=true`)
 
 ## 説明
 
@@ -14,7 +14,7 @@ $queryplan は、4D Server に渡したクエリプランを返します。
 | item     | String | 渡された実際のクエリ                                                 |
 | subquery | 配列     | (サブクエリが存在する場合) item プロパティを格納する追加のオブジェクト |
 
-For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+クエリプランについての詳細は [queryPlan と queryPath](genInfo.md#querypath-と-queryplan) を参照ください。
 
 ## 例題
 

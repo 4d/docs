@@ -90,7 +90,7 @@ ON ERR CALL("errorMethod")
 
 ### Utiliser une méthode de gestion des erreurs vide
 
-Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
+Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide

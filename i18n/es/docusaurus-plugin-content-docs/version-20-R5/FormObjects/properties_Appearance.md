@@ -5,17 +5,17 @@ title: Apariencia
 
 ## Botón por defecto
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+La propiedad del botón por defecto designa el botón que obtiene el foco inicial en ejecución cuando ningún botón del formulario tiene la propiedad [Focusable](properties_Entry.md#focusable).
 
 Sólo puede haber un botón por defecto por página de formulario.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. El botón por defecto puede ser diferente del botón enfocado. Los botones por defecto tienen un aspecto azul específico en macOS:
+Además, en macOS, la propiedad del botón por defecto modifica la apariencia del botón para indicar una "opción recomendada" al usuario y se vincula automáticamente a la tecla **Intro**, aunque no tenga el foco. El botón por defecto puede ser diferente del botón enfocado. Los botones por defecto tienen un aspecto azul específico en macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > El botón debe tener una altura estándar para obtener la apariencia de botón por defecto.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. Sin embargo, en el editor de formularios de 4D, el botón por defecto se representa con un contorno azul:
+En Windows, el concepto de "opción recomendada" no está soportado: sólo el botón enfocado tiene una apariencia diferente en tiempo de ejecución y la tecla **Intro** está vinculada al botón enfocado. Sin embargo, en el editor de formularios de 4D, el botón por defecto se representa con un contorno azul:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -27,7 +27,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 #### Objetos soportados
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Botón regular ](button_overview.md#regular) - [Botón plano](button_overview.md#regular)
 
 ---
 
@@ -43,7 +43,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md) - [Sub formulario](subform_overview.md)
 
 ---
 
@@ -91,7 +91,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
 
@@ -101,7 +101,7 @@ Valores disponibles:
 
 ## Resolution
 
-Define la resolución de la pantalla para el contenido del área 4D Write Pro. Por defecto, se define a 72 ppp (macOS), que es la resolución estándar para los formularios 4D en todas las plataformas. Si se define esta propiedad en 96 ppp, se establecerá un renderizado Windows/Web tanto en plataformas macOS como Windows. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+Define la resolución de la pantalla para el contenido del área 4D Write Pro. Por defecto, se define a 72 ppp (macOS), que es la resolución estándar para los formularios 4D en todas las plataformas. Si se define esta propiedad en 96 ppp, se establecerá un renderizado Windows/Web tanto en plataformas macOS como Windows. Si se define esta propiedad como **automática** significa que la representación del documento diferirá entre las plataformas macOS y Windows.
 
 #### Gramática JSON
 
@@ -133,7 +133,7 @@ Muestra/oculta tanto las imágenes de fondo como el color de fondo.
 
 ## Mostrar los pies de página
 
-Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
+Muestra/oculta los pies de página cuando el [modo visualización de la página ](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -151,7 +151,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 Cuando está activada, la barra de fórmulas es visible debajo de la interfaz de la barra de herramientas en el área 4D View Pro. Si no se selecciona, la barra de fórmulas se oculta.
 
-> This property is available only for the [Toolbar](#user-interface) interface.
+> Esta propiedad sólo está disponible para la interfaz de la [Barra de herramientas](#user-interface).
 
 #### Gramática JSON
 
@@ -167,7 +167,7 @@ Cuando está activada, la barra de fórmulas es visible debajo de la interfaz de
 
 ## Mostrar los encabezados
 
-Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
+Muestra/oculta los encabezados cuando el [modo visualización de la página ](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -199,7 +199,7 @@ Muestra/oculta los caracteres invisibles
 
 ## Mostrar la regla horizontal
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
+Muestra/oculta la regla horizontal cuando la vista del documento está en modo [Página](#modo-de-vista).
 
 #### Gramática JSON
 
@@ -231,7 +231,7 @@ Activa/desactiva la vista HTML WYSIWYG, en la que se eliminan los atributos avan
 
 ## Mostrar el marco de la página
 
-Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+Muestra/oculta el marco de la página cuando [modo visualización de página ](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -247,7 +247,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 ## Mostrar las referencias
 
-Displays all 4D expressions inserted in the 4D Write Pro document as _references_. When this option is disabled, 4D expressions are displayed as _values_. Por defecto, cuando se inserta un campo o expresión 4D, 4D Write Pro calcula y muestra su valor actual. Seleccione esta propiedad si desea saber qué campo o expresión se muestra. Las referencias de campo o de expresión aparecen entonces en su documento, con un fondo gris.
+Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como _referencias_. Cuando esta opción está desactivada, las expresiones 4D se muestran como _valores_. Por defecto, cuando se inserta un campo o expresión 4D, 4D Write Pro calcula y muestra su valor actual. Seleccione esta propiedad si desea saber qué campo o expresión se muestra. Las referencias de campo o de expresión aparecen entonces en su documento, con un fondo gris.
 
 Por ejemplo, ha insertado la fecha actual junto con un formato, la fecha se muestra:
 
@@ -257,7 +257,7 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 ![](../assets/en/FormObjects/writeProExpr.png)
 
-> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+> Las expresiones 4D se pueden insertar con el comando `ST INSERT EXPRESSION`.
 
 #### Gramática JSON
 
@@ -273,7 +273,7 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 ## Mostrar regla vertical
 
-Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
+Muestra/oculta la regla vertical cuando la vista del documento está en modo [Página](#view-mode).
 
 #### Gramática JSON
 
@@ -307,7 +307,7 @@ Cuando los controles de pestañas con una dirección personalizada se muestran e
 
 ## Interfaz de usuario
 
-Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios finales realizar modificaciones básicas y manipulaciones de datos. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios finales realizar modificaciones básicas y manipulaciones de datos. 4D View Pro ofrece dos interfaces opcionales a elegir, **Cinta** y **Barra de herramientas**.
 
 #### Gramática JSON
 
@@ -349,7 +349,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
 
@@ -361,9 +361,9 @@ Valores disponibles:
 
 Establece el modo de visualización del documento de 4D Write Pro en el área del formulario. Hay tres valores disponibles:
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
-- **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Página**: el modo de vista más completo, que incluye contornos de página, orientación, márgenes, saltos de página, encabezados y pies de página, etc.
+- **Borrador**: modo borrador con propiedades básicas del documento
+- **Embedded**: modo de vista adecuado para zonas integradas; no muestra márgenes, pies de página, encabezados, marcos de página, etc. Este modo también se puede utilizar para producir una salida de vista similar a la de la web (si también selecciona la [resolución de 96 dpi ](#resolution) y las propiedades [Mostrar HTML WYSIWYG](#show-html-wysiwyg)).
 
 > La propiedad Modo vista sólo se utiliza para la renderización en pantalla. En cuanto a la configuración de la impresión, se utilizan automáticamente reglas de renderización específicas.
 
@@ -387,7 +387,7 @@ Define el porcentaje de zoom para mostrar el contenido del área 4D Write Pro.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| zoom   | number         | minimum = 0      |
+| zoom   | number         | mínimo = 0       |
 
 #### Objetos soportados
 

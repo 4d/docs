@@ -108,9 +108,9 @@ The following table lists all supported patterns for date and time formats.
 
 ### `y` vs `Y`
 
-`y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
+`y` es el año calendario, mientras que `Y` es el año basado en el número de semana. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
 
-### `L` (stand-alone) vs `M`
+### `L` (monopuesto) vs `M`
 
 In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
 
@@ -120,7 +120,7 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### `E` vs `e`
 
-`e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
+`e` se basa en la configuración del sistema: si la semana está definida en el sistema como que comienza un miércoles, entonces el miércoles tendrá el valor numérico "1" (o cero) mientras que "E" siempre devuelve el mismo valor (de 1 a 7 o de 0 a 6).
 
 ### Zeros à esquerda
 
@@ -130,7 +130,7 @@ In general, when the number of letters in the formatting string is higher than t
 
 Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-For example, for the time `13:25:34`, "B" will display _in the afternoon_ on an US system, and _après-midi_ on a French system.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá _in the afternoon_ en un sistema estadounidense, y _après-midi_ en un sistema francés.
 
 ### Letras extras
 
@@ -163,4 +163,4 @@ Por exemplo:
 
 ## Veja também
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.
+Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.

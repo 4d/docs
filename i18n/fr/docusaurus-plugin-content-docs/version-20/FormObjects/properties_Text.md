@@ -139,7 +139,7 @@ Permet de définir en points la taille de police de l'objet.
 
 | Nom      | Type de données | Valeurs possibles                                  |
 | -------- | --------------- | -------------------------------------------------- |
-| fontSize | entier          | Taille de la police en points. Valeur minimale : 0 |
+| fontSize | integer         | Taille de la police en points. Valeur minimale : 0 |
 
 #### Objets pris en charge
 

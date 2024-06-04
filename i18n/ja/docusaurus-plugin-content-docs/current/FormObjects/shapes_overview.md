@@ -22,19 +22,35 @@ title: 図形
 #### JSON 例:
 
 ```4d
-	"myRectangle": {
-		"type": "rectangle",	//define the type of object
-		"left": 60,				//left position on the form  
-		"top": 160,				//top position on the form 
-		"width": 100,			//width of the object
-		"height": 20,			//height of the object
-		"borderRadius": 20		//define the roundness of the corners
+"myRectangle": {
+        "type": "rectangle",    // オブジェクトタイプ
+        "left": 60,             // フォーム上の座標 (左)
+        "top": 160,             // フォーム上の座標 (上)
+        "width": 100,           // 幅
+        "height": 20,           // 高さ
+        "borderRadius": 20      // 角の半径 (丸み)
                 }
 ```
 
 #### プロパティ一覧
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[角の半径](properties_CoordinatesAndSizing.md#角の半径) -
+[表示状態](properties_Display.md#表示状態) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[線カラー](properties_BackgroundAndBorder.md#線カラー) -
+[線幅](properties_BackgroundAndBorder.md#線幅) -
+[点線タイプ](properties_BackgroundAndBorder.md#点線タイプ)
 
 ## 線
 
@@ -57,12 +73,12 @@ title: 図形
 		"top": 40,
 		"width": 100,
 		"height": 80,
-		"startPoint": "topLeft", //first direction
-		"strokeDashArray": "6 2" //dashed
+		"startPoint": "topLeft",  // 第一の方向
+		"strokeDashArray": "6 2" // 破線
 		}
 ```
 
-Result:
+結果:
 ![](../assets/en/FormObjects/shape_line1.png)
 
 ```
@@ -72,17 +88,33 @@ Result:
 		"top": 40,
 		"width": 100,
 		"height": 80,
-		"startPoint": "bottomLeft", //2nd direction
-		"strokeDashArray": "6 2" //dashed
+		"startPoint": "bottomLeft", // 第二の方向
+		"strokeDashArray": "6 2" // 破線
+  }
 		}
 ```
 
-Result:
+結果:
 ![](../assets/en/FormObjects/shape_line2.png)
 
 #### プロパティ一覧
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[表示状態](properties_Display.md#表示状態) -
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[線カラー](properties_BackgroundAndBorder.md#線カラー) -
+[線幅](properties_BackgroundAndBorder.md#線幅) -
+[点線タイプ](properties_BackgroundAndBorder.md#点線タイプ)
 
 ## 楕円
 
@@ -93,16 +125,31 @@ Result:
 #### JSON 例:
 
 ```4d
-	"myOval": {
-		"type": "oval",		//define the type of object
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20,		//height of the object
-		"fill": "blue"		//define the background color
+"myOval": {
+        "type": "oval",     // オブジェクトタイプ
+        "left": 60,         // フォーム上の座標 (左)
+        "top": 160,         // フォーム上の座標 (上)
+        "width": 100,       // 幅
+        "height": 20,       // 高さ
+        "fill": "blue"      // 塗りカラー
                 }
 ```
 
 #### プロパティ一覧
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[表示状態](properties_Display.md#表示状態) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[線カラー](properties_BackgroundAndBorder.md#線カラー) -
+[線幅](properties_BackgroundAndBorder.md#線幅) -
+[点線タイプ](properties_BackgroundAndBorder.md#点線タイプ)

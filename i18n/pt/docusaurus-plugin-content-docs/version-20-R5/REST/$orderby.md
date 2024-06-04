@@ -3,11 +3,11 @@ id: orderby
 title: $orderby
 ---
 
-Sorts the data returned by the attribute and sorting order defined (_e.g._, `$orderby="lastName desc, salary asc"`)
+Ordena los datos devueltos por el atributo y el orden de clasificación definidos (_por ejemplo_, `$orderby="lastName desc, salary asc"`)
 
 ## Descrição
 
-`$orderby` orders the entities returned by the REST request. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. Por defeito, os dados são ordenados por ordem ascendente. If you want to specify multiple attributes, you can delimit them with a comma, _e.g._, `$orderby="lastName desc, firstName asc"`.
+`$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defeito, os dados são ordenados por ordem ascendente. By default, the data is sorted in ascending order.
 
 ## Exemplo
 

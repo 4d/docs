@@ -20,9 +20,9 @@ title: $catalog
 
 ### 説明
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+`$catalog` を呼び出すと、プロジェクトのデータストア内のデータクラスのリストを、データクラス毎に 2つの URI とともに返します。
 
-プロジェクトのデータストア内の、公開されているデータクラスのみがリストされます。 For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+プロジェクトのデータストア内の、公開されているデータクラスのみがリストされます。 詳細については、[**テーブルやフィールドの公開**](configuration.md#テーブルやフィールドの公開) を参照してください。
 
 データクラス毎に返されるプロパティの説明です:
 
@@ -61,9 +61,9 @@ When you call `$catalog`, a list of the dataclasses is returned along with two U
 
 ### 説明
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
+`$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+各データクラスと属性について取得される情報についての詳細は [`$catalog/{dataClass}`](#catalogdataClass) を参照ください。
 
 ### 例題
 
@@ -180,7 +180,7 @@ For more information about what is returned for each dataclass and its attribute
 
 ### 説明
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+`$catalog/{dataClass}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
 
 返される情報は次の通りです:
 
@@ -193,34 +193,34 @@ Calling `$catalog/{dataClass}` for a specific dataclass will return the followin
 
 公開されているデータクラスについて、次のプロパティが返されます:
 
-| プロパティ          | タイプ    | 説明                                                                                                              |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| name           | String | データクラスの名称                                                                                                       |
-| collectionName | String | データクラスにおいて作成されるエンティティセレクションの名称                                                                                  |
-| tableNumber    | Number | 4Dデータベース内のテーブル番号                                                                                                |
-| scope          | String | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | String | データクラスのデータを取得するための URI                                                                                          |
+| プロパティ          | タイプ    | 説明                                                                                        |
+| -------------- | ------ | ----------------------------------------------------------------------------------------- |
+| name           | String | データクラスの名称                                                                                 |
+| collectionName | String | データクラスにおいて作成されるエンティティセレクションの名称                                                            |
+| tableNumber    | Number | 4Dデータベース内のテーブル番号                                                                          |
+| scope          | String | データクラスのスコープ (**公開 (public)** に設定されているデータクラスのみ返されます) |
+| dataURI        | String | データクラスのデータを取得するための URI                                                                    |
 
 ### 属性
 
 公開されている各属性について、次のプロパティが返されます:
 
-| プロパティ       | タイプ     | 説明                                                                                                                                                                                       |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | 属性の名称                                                                                                                                                                                    |
-| kind        | String  | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                           |
-| fieldPos    | Number  | データベーステーブルのフィールド番号                                                                                                                                                                       |
-| scope       | String  | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                                            |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. それ以外の場合には、このプロパティは表示されません。                                                                           |
-| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                                                                             |
-| path        | String  | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                                                                                |
-| foreignKey  | String  | relatedEntity 属性の場合、リレート先の属性名                                                                                                                                                            |
-| inverseName | String  | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                                                                                          |
+| プロパティ       | タイプ     | 説明                                                                                                                                               |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| name        | String  | 属性の名称                                                                                                                                            |
+| kind        | String  | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                   |
+| fieldPos    | Number  | データベーステーブルのフィールド番号                                                                                                                               |
+| scope       | String  | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                    |
+| indexed     | String  | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                         |
+| type        | String  | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
+| identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                                     |
+| path        | String  | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                                        |
+| foreignKey  | String  | relatedEntity 属性の場合、リレート先の属性名                                                                                                                    |
+| inverseName | String  | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                                                  |
 
 ### プライマリーキー
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
+key オブジェクトには、データクラスの **プライマリーキー** として定義された属性の **名称 (name プロパティ)** が返されます。
 
 ### 例題
 

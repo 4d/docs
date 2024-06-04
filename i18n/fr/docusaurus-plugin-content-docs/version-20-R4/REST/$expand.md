@@ -10,9 +10,9 @@ Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$image
 
 
 
-## Affichage d'un attribut d'image
+## Affichage d'un attribut image
 
-Si vous souhaitez afficher intégralement un attribut d'image, saisissez ce qui suit :
+Si vous souhaitez afficher intégralement un attribut image, saisissez :
 
  `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 

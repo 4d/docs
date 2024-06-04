@@ -9,6 +9,6 @@ title: On Begin URL Loading
 
 ## Descrição
 
-Esse evento é gerado no início do carregamento de um novo URL na área da Web. The `URL` variable associated with the Web area can be used to find out the URL being loaded.
+Esse evento é gerado no início do carregamento de um novo URL na área da Web. La variable `URL` asociada al área web puede utilizarse para conocer la URL que se está cargando.
 
-> The URL being loaded is different from the [current URL](FormObjects/properties_WebArea.md#url-variable-and-wa-open-url-command) (refer to the description of the `WA Get current URL` command).
+> La URL que se está cargando es diferente de la [ URL actual](FormObjects/properties_WebArea.md#url-variable-and-wa-open-url-command) (consulte la descripción del comando `WA Get current URL`).

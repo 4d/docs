@@ -3,7 +3,7 @@ id: shapesOverview
 title: Formas
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+Las formas son [objetos estáticos](formObjects_overview.md#active-and-static-objects) que pueden añadirse a los formularios 4D.
 
 Se ofrecen las siguientes formas básicas:
 
@@ -15,7 +15,7 @@ Se ofrecen las siguientes formas básicas:
 
 Un rectángulo estático es un objeto decorativo para los formularios. Los rectángulos se limitan a formas cuadradas.
 
-El diseño de los rectángulos se controla a través de muchas propiedades (color, grosor de línea, patrón, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+El diseño de los rectángulos se controla a través de muchas propiedades (color, grosor de línea, patrón, etc.). En concreto, se puede definir la [redondez](properties_CoordinatesAndSizing.md#corner-radius) de sus esquinas.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
@@ -44,9 +44,9 @@ El diseño de las líneas se controla a través de muchas propiedades (color, gr
 
 ### propiedad startPoint
 
-The `startPoint` JSON property defines from which coordinate to draw the line (see example).
+La propiedad JSON `startPoint` define a partir de qué coordenada dibujar la línea (ver ejemplo).
 
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+> la propiedad `startPoint` no está expuesta en la lista de propiedades, donde la dirección de dibujo de la línea es visible.
 
 #### Ejemplos JSON:
 
@@ -86,7 +86,7 @@ Result:
 
 ## Óvalo
 
-Un óvalo estático es un objeto decorativo para los formularios. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Un óvalo estático es un objeto decorativo para los formularios. Los objetos ovalados pueden utilizarse para dibujar formas circulares (cuando las propiedades [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) son iguales).
 
 ![](../assets/en/FormObjects/shape_oval.png)
 

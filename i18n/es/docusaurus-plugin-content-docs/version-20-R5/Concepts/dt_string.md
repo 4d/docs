@@ -1,6 +1,6 @@
 ---
 id: string
-title: String
+title: Cadena
 ---
 
 Cadena es un término genérico utilizado para:
@@ -13,9 +13,9 @@ Cadena es un término genérico utilizado para:
 Una constante literal de tipo cadena se encierra entre comillas dobles y rectas ("..."). Estos son algunos ejemplos:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Añadir Registros"
+"No se han encontrado registros."
+"Factura"
 ```
 
 Una cadena vacía se especifica con dos comillas sin nada entre ellas ("").
@@ -32,7 +32,7 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 | \\\\|\ (Barra invertida) |                                       |
 | \\"                                          | " (Comillas)       |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
+**Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
 
 ## Operadores de cadenas
 
@@ -60,14 +60,14 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 ## Comparaciones de cadenas
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. For example, the following expression returns `FALSE`:
+- Las cadenas se comparan caracter por caracter (excepto en el caso de la búsqueda por [palabras clave](dt_string.md#keywords), ver más abajo).
+- Cuando se comparan cadenas, se ignoran las mayúsculas y minúsculas de los caracteres; así, "a"="A" devuelve `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // porque 65 no es igual a 97
 ```
 
-- Cuando se comparan las cadenas, se tienen en cuenta los caracteres diacríticos. For example, the following expressions return `TRUE`:
+- Cuando se comparan las cadenas, se tienen en cuenta los caracteres diacríticos. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -76,23 +76,23 @@ Character code("A")=Character code("a") // porque 65 no es igual a 97
       // etc
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Nota:** la comparación de cadenas tiene en cuenta las especificidades del lenguaje **definido para el archivo de datos 4D** (que no siempre es el mismo que el lenguaje definido para el sistema).
 
 ### Arroba (@)
 
-The 4D language supports **@** as a wildcard character. Este carácter se puede utilizar en cualquier comparación de cadenas para que coincida con cualquier número de caracteres. For example, the following expression is `TRUE`:
+El lenguaje 4D soporta **@** como carácter comodín. Este carácter se puede utilizar en cualquier comparación de cadenas para que coincida con cualquier número de caracteres. Por ejemplo, la siguiente expresión es `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-El carácter comodín debe utilizarse dentro del segundo operando (la cadena de la derecha) para que coincida con cualquier número de caracteres. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+El carácter comodín debe utilizarse dentro del segundo operando (la cadena de la derecha) para que coincida con cualquier número de caracteres. La siguiente expresión es `FALSE`, porque la @ se considera sólo como un carácter en el primer operando:
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-El comodín significa "uno o más caracteres o nada". The following expressions are `TRUE`:
+El comodín significa "uno o más caracteres o nada". Las expresiones siguientes son `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,7 +102,7 @@ El comodín significa "uno o más caracteres o nada". The following expressions 
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+Por otro lado, sea cual sea el caso, una comparación de cadenas con dos comodines consecutivos siempre devolverá `FALSE`. La siguiente expresión es `FALSE`:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -111,11 +111,11 @@ On the other hand, whatever the case, a string comparison with two consecutive w
 Cuando el operador de comparación es o contiene un símbolo < o >, sólo se soporta la comparación con un único comodín situado al final del operando:
 
 ```4d
-     "abcd"<="abc@" // Valid comparison
-     "abcd"<="abc@ef" //Not a valid comparison
+     "abcd"<="abc@" // Comparación válida
+     "abcd"<="abc@ef" //No es una comparación válida
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, por ejemplo, que quiere saber si una cadena termina con el carácter @. The following expression (if $vsValue is not empty) is always `TRUE`:
+Si desea ejecutar comparaciones o consultas utilizando @ como carácter (y no como comodín), debe utilizar la instrucción `Character code(At sign)`. Imagine, por ejemplo, que quiere saber si una cadena termina con el carácter @. La siguiente expresión (si $vsValue no está vacío) es siempre `TRUE`:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
@@ -127,11 +127,11 @@ La siguiente expresión se evaluará correctamente:
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Nota:** una opción 4D del modo Diseño permite definir cómo se interpreta el carácter @ cuando se incluye en una cadena de caracteres.
 
 ### Palabras claves
 
-A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave busca "palabras" en los "textos": las palabras se consideran tanto individualmente como en su conjunto. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). Las "palabras" son cadenas de caracteres rodeadas de "separadores", que son espacios y caracteres de puntuación y guiones. Un apóstrofe, como en "Today's", se considera normalmente como parte de la palabra, pero se ignorará en ciertos casos (ver las reglas más abajo). Los números se pueden buscar porque se evalúan como un todo (incluidos los símbolos decimales). Los demás símbolos (moneda, temperatura, etc.) serán ignorados.
+A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave busca "palabras" en los "textos": las palabras se consideran tanto individualmente como en su conjunto. El operador **%** siempre devuelve `False` si la consulta se refiere a varias palabras o sólo a una parte de ellas (por ejemplo, una sílaba). Las "palabras" son cadenas de caracteres rodeadas de "separadores", que son espacios y caracteres de puntuación y guiones. Un apóstrofe, como en "Today's", se considera normalmente como parte de la palabra, pero se ignorará en ciertos casos (ver las reglas más abajo). Los números se pueden buscar porque se evalúan como un todo (incluidos los símbolos decimales). Los demás símbolos (moneda, temperatura, etc.) serán ignorados.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // DevuelveTrue
@@ -143,7 +143,7 @@ A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave 
 
 > **Notas:**
 >
-> - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas implementadas, por favor consulte la siguiente dirección: http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - En la versión japonesa, en lugar de ICU, 4D utiliza por defecto Mecab para detectar las palabras claves.
 
 ## Símbolos de indice de cadena
@@ -163,14 +163,14 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//El siguiente ejemplo prueba si el último carácter de vtText es una arroba "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
  
-  //Using the character reference syntax, you would write in a simpler manner:
+  //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -187,7 +187,7 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 - Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. Por ejemplo, ejecutando el siguiente código:
 
 ```
-//Very bad and nasty thing to do, boo!
+//Muy mala y desagradable cosa que hacer, ¡buu!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
@@ -201,7 +201,7 @@ provocará el error de tiempo de ejecución que se muestra aquí:
 El siguiente método proyecto pone en mayúsculas el primer carácter de cada palabra del texto recibido como parámetro y devuelve el texto resultante en mayúsculas:
 
 ```4d
-  //Capitalize_text project method
+  //Método proyecto Capitalize_text
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
  

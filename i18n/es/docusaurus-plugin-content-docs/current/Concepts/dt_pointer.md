@@ -37,7 +37,7 @@ C_POINTER($MyPointer)
 $MyPointer:=->$MyVar
 ```
 
-The -> symbol means “get a pointer to.” Este símbolo está formado por un guión seguido de un signo "mayor que". En este caso, obtiene el puntero que hace referencia o "apunta" a $MyVar. Este puntero se asigna a MyPointer con el operador de asignación.
+El símbolo -> significa "obtener un puntero a." Este símbolo está formado por un guión seguido de un signo "mayor que". En este caso, obtiene el puntero que hace referencia o "apunta" a $MyVar. Este puntero se asigna a MyPointer con el operador de asignación.
 
 $MyPointer es ahora una variable que contiene un puntero a $MyVar. $MyPointer no contiene " Hello ", que es el valor en $MyVar, pero se puede utilizar $MyPointer para obtener este valor. La siguiente expresión devuelve el valor de $MyVar:
 
@@ -45,9 +45,9 @@ $MyPointer es ahora una variable que contiene un puntero a $MyVar. $MyPointer no
 $MyPointer->
 ```
 
-En este caso, devuelve la cadena "Hello". The -> symbol, when it follows a pointer, references the object pointed to. Esto se llama desreferenciación.
+En este caso, devuelve la cadena "Hello". El símbolo ->, cuando sigue a un puntero, hace referencia al objeto apuntado. Esto se llama desreferenciación.
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Por ejemplo, la siguiente línea muestra un cuadro de alerta con la palabra Hello:
+Es importante entender que se puede utilizar un puntero seguido del símbolo -> en cualquier lugar donde se podría haber utilizado el objeto al que apunta el puntero. Esto significa que podría utilizar la expresión $MyPointer-> en cualquier lugar en el que pudiera utilizar la variable original $MyVar. Por ejemplo, la siguiente línea muestra un cuadro de alerta con la palabra Hello:
 
 ```4d
 ALERT($MyPointer->)
@@ -59,7 +59,7 @@ También puede utilizar $MyPointer para cambiar los datos en $MyVar. Por ejemplo
 $MyPointer->:="Goodbye"
 ```
 
-If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. En resumen, las dos líneas siguientes realizan la misma acción: ambas muestran un cuadro de alerta con el valor actual de la variable $MyVar:
+Si examina los dos usos de la expresión $MyPointer->, verá que actúa igual que si hubiera utilizado $MyVar en su lugar. En resumen, las dos líneas siguientes realizan la misma acción: ambas muestran un cuadro de alerta con el valor actual de la variable $MyVar:
 
 ```4d
 ALERT($MyPointer->)
@@ -78,23 +78,19 @@ $MyVar:="Goodbye"
 Con:
 
 ```4d
-  ` vPtrA and vPtrB point to the same object
+  ` vPtrA y vPtrB apuntan al mismo objeto
  vPtrA:=->anObject
  vPtrB:=->anObject
-  ` vPtrC points to another object
- vPtrC:=->anotherObject
+  ` vPtrC apunta a otro objeto
+ vPtrC:=-anotherObject
 ```
 
-| Operación | Sintaxis          | Devuelve | Expression    | Valor |
-| --------- | ----------------- | -------- | ------------- | ----- |
-| Igual     | Puntero = Puntero | Boolean  | vPtrA = vPtrB | True  |
-
-```
-	|	|||vPtrA = vPtrC	|False|
-```
-
-|Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
-||||			vPtrA # vPtrB	|False|
+| Operación   | Sintaxis          | Devuelve | Expression    | Valor |
+| ----------- | ----------------- | -------- | ------------- | ----- |
+| Igual       | Puntero = Puntero | Boolean  | vPtrA = vPtrB | True  |
+|             |                   |          | vPtrA = vPtrC | False |
+| Desigualdad | Puntero # Puntero | Boolean  | vPtrA # vPtrC | True  |
+|             |                   |          | vPtrA # vPtrB | False |
 
 ## Principales usos
 
@@ -106,7 +102,7 @@ En cualquier lugar en el que el lenguaje espere ver una tabla, se puede utilizar
 $TablePtr:=->[anyTable]
 ```
 
-You can also get a pointer to a table by using the `Table` command:
+También puede obtener un puntero a una tabla utilizando el comando `Table`:
 
 ```4d
 $TablePtr:=Table(20)
@@ -126,7 +122,7 @@ En cualquier lugar en el que el lenguaje espere ver un campo, se puede utilizar 
 $FieldPtr:=->[aTable]ThisField
 ```
 
-You can also get a pointer to a field by using the `Field` command, for example:
+También puede obtener un puntero a un campo utilizando el comando `Campo`, por ejemplo:
 
 ```4d
 $FieldPtr:=Field(1;2)
@@ -164,8 +160,8 @@ El valor de 1 dólar será:
 Puede crear un puntero a un elemento del array. Por ejemplo, las siguientes líneas crean un array y asignan un puntero al primer elemento del array a una variable llamada $ElemPtr:
 
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ElemPtr:=->$anArray{1} //Create a pointer to the array element
+ARRAY REAL($anArray;10) //Crear un array
+$ElemPtr:=->$anArray{1} //Crear un puntero al elemento de array
 ```
 
 Puede utilizar el puntero desreferenciado para asignar un valor al elemento, así:
@@ -179,14 +175,14 @@ $ElemPtr->:=8
 Puede crear un puntero a un array. Por ejemplo, las siguientes líneas crean un array y asignan un puntero al array a una variable llamada $ArrPtr:
 
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ArrPtr:=->$anArray //Create a pointer to the array
+ARRAY REAL($anArray;10) //Crear un array
+$ArrPtr:=->$anArray //Crear un puntero al array
 ```
 
 Es importante entender que el puntero apunta al array; no apunta a un elemento del array. Por ejemplo, puede utilizar el puntero desreferenciado de las líneas anteriores de esta manera:
 
 ```4d
-SORT ARRAY($ArrPtr->;>) //Sort the array
+SORT ARRAY($ArrPtr->;>) //Ordenar el array
 ```
 
 Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo siguiente:
@@ -197,17 +193,17 @@ Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo si
 
 ### Punteros como parámetros a los métodos
 
-Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. For example, the following method, `takeTwo`, takes two parameters that are pointers. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
+Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 
 ```4d
-  //takeTwo project method
-  //$1 – Pointer to a string field or variable. Change this to uppercase.
-  //$2 – Pointer to a string field or variable. Change this to lowercase.
+  //Método proyecto takeTwo 
+  //$1 - Puntero a un campo de cadena o variable. Cambie esto a mayúsculas.
+  //$2 – Puntero a un campo de cadena o variable. Cambia esto a minúsculas.
  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 
-The following line uses the `takeTwo` method to change a field to uppercase characters and to change a variable to lowercase characters:
+La siguiente línea utiliza el método `takeTwo` para cambiar un campo a mayúsculas y para cambiar una variable a minúsculas:
 
 ```
 takeTwo(->[myTable]myField;->$MyVar)
@@ -234,15 +230,15 @@ Muestra un cuadro de alerta con la palabra "Goodbye".
 A continuación se explica cada línea del ejemplo:
 
 - $MyVar:="Hello"
-  \--> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar
-  \--> $PointerOne now contains a pointer to $MyVar.
+  \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
+- $PointerOne:=-$MyVar
+  \--> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
+  \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+  \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
 - ALERT (($PointerTwo->)->)
-  \--> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
+  \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 
@@ -256,4 +252,4 @@ La siguiente línea obtiene "Hello de $MyVar y lo pone en $NewVar:
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Importante:** la desreferenciación múltiple requiere paréntesis.

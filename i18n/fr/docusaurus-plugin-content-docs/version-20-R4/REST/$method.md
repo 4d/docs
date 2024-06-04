@@ -7,13 +7,13 @@ Ce paramètre vous permet de définir l'opération à exécuter avec l'entité o
 
 ## Syntaxe
 
-| Syntaxe                                         | Exemple                                                                                         | Description                                                                                                          |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Supprime l'entité, collection d'entités ou sélection d'entité courante                                               |
-| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Crée un ensemble d'entités dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Affiche un ensemble d'entités existant stocké dans le cache de 4D Server                                             |
-| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un ensemble d'entités basé sur la collection d'entités relatives définies dans la requête REST                  |
-| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Met à jour et/ou crée une ou plusieurs entités                                                                       |
+| Syntaxe                                         | Exemple                                                                                         | Description                                                                                                  |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Supprime l'entité, la collection d'entités ou la sélection d'entité courante                                 |
+| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Crée un entity set dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Affiche un entity set existant stocké dans le cache de 4D Server                                             |
+| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un entity set basé sur la collection d'entités liées définies dans la requête REST                      |
+| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Met à jour et/ou crée une ou plusieurs entités                                                               |
 
 
 
@@ -21,7 +21,7 @@ Ce paramètre vous permet de définir l'opération à exécuter avec l'entité o
 
 ## $method=delete
 
-Supprime l'entité, collection d'entités ou sélection d'entité courante (créée via REST)
+Supprime l'entité, la collection d'entités ou l'entity selection courante (créée via REST)
 
 
 ### Description
@@ -56,11 +56,11 @@ Réponse :
 
 ## $method=entityset
 
-Crée un ensemble d'entités dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST
+Crée un entity set dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST
 
 ### Description
 
-Lorsque vous créez une collection d'entités dans REST, vous pouvez également créer un ensemble d'entités qui sera enregistré dans le cache de 4D Server. L'ensemble d'entités aura un numéro de référence que vous pouvez passer à `$entityset/{entitySetID}` pour y accéder. Par défaut, il est valable deux heures; vous pouvez toutefois modifier cette durée en passant une valeur (en secondes) à $timeout.
+Lorsque vous créez une collection d'entités en REST, vous pouvez également créer un entity set qui sera enregistré dans le cache de 4D Server. L'ensemble d'entités aura un numéro de référence que vous pouvez passer à `$entityset/{entitySetID}` pour y accéder. Par défaut, il est valable deux heures; vous pouvez toutefois modifier cette durée en passant une valeur (en secondes) à $timeout.
 
 Si vous avez utilisé `$savedfilter` et/ou `$savedorderby` (avec `$filter` et/ou `$orderby`) lors de la création de votre ensemble d'entités, vous pouvez le recréer avec le même ID de référence même s'il a été supprimé du cache de 4D Server.
 
@@ -87,7 +87,7 @@ __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C7963
 
 ## $method=release
 
-Affiche un ensemble d'entités existant stocké dans le cache de 4D Server.
+Affiche un entity set existant stocké dans le cache de 4D Server.
 
 ### Description
 

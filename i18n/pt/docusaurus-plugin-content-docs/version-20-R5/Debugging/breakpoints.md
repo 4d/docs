@@ -15,11 +15,11 @@ A captura de um comando permite começar a rastrear a execução de qualquer pro
 
 Para criar um ponto de interrupção, clique na margem esquerda do painel Código-fonte no depurador ou no Editor de código.
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
+En el siguiente ejemplo, se ha definido un punto de ruptura (la viñeta roja), en el depurador, en la línea `If ($in.dataClass#Null)`:
 
 ![break-point](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. Essa linha não é executada - o usuário é levado de volta ao modo de rastreio. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
+In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. Essa linha não é executada - o usuário é levado de volta ao modo de rastreio. Definir un punto de interrupción más allá del contador del programa y hacer clic en el botón **No Trace** le permite saltar las partes del método que se está rastreando.
 
 Para remover um ponto de interrupção, clique no marcador correspondente.
 
@@ -29,19 +29,19 @@ Pode editar o comportamento de um ponto de interrupção utilizando a janela Pro
 
 ![breakpoint-properties](../assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Pode:
+Esta ventana está disponible en el Editor de Código o en la [ventana de código fuente](debugger.md#source-code-pane). Pode:
 
-- right-click a line and select **Edit Breakpoint** in the contextual menu, or
-- `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
+- haga clic derecho en una línea y seleccione **Modificar el punto de interrupción** en el menú contextual, o
+- `Alt+clic` (Windows) o `Opción+clic` (macOS) en el margen izquierdo.
 
 Se já existir um ponto de paragem, a janela é apresentada para esse ponto de paragem. Caso contrário, é criado um ponto de paragem e a janela é apresentada para o novo ponto de paragem criado.
 
 Segue-se uma descrição das propriedades:
 
-- **Location**: indicates the name of the method and the line number attached to the breakpoint.
-- **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
-- **Number of times to skip before breaking**: You can attach a breakpoint to a line located in a loop structure (While, Repeat, or For) or located in subroutine or function called from within a loop.
-- **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. Um ponto de interrupção desativado aparece como um traço (-) em vez de um marcador (-)|.
+- **Ubicación**: indica el nombre del método y el número de línea que se adjunta al punto de interrupción.
+- **Interrumpir cuando la siguiente expresión es true**: puede crear los **puntos de interrupción condicionales** introduciendo una fórmula 4D que devuelva `True` o `False`. Por ejemplo, inserte `Records in selection(\[aTable])=0` para asegurarse de que la ruptura se produce sólo si no hay ningún registro seleccionado para la tabla \[aTable]. Las condiciones de los puntos de interrupción están disponibles en la columna **Condición** de la [lista de interrupciones](#break-list).
+- **Número de veces que hay que saltar antes de romper**: puede asociar un punto de ruptura a una línea situada en una estructura de bucle (While, Repeat o For) o situada en una subrutina o función llamada desde dentro de un bucle.
+- **Punto de ruptura desactivado**: si actualmente no necesita un punto de ruptura, pero podría necesitarlo más adelante, puede desactivarlo temporalmente. Um ponto de interrupção desativado aparece como um traço (-) em vez de um marcador (-)|.
 
 ### Pontos de interrupção na depuração remota
 
@@ -51,38 +51,38 @@ A lista de pontos de paragem do servidor é automaticamente restaurada se voltar
 
 ### Lista de pausas
 
-A lista de interrupções é uma página do explorador do tempo de execução que lhe permite gerir os pontos de interrupção criados na janela do depurador ou no editor de código. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+A lista de interrupções é uma página do explorador do tempo de execução que lhe permite gerir os pontos de interrupção criados na janela do depurador ou no editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 Para abrir a página da lista de pontos de interrupção:
 
-1. From the **Run menu**, click **Runtime Explorer...**
+1. En el **menú Ejecutar**, haga clic en el **Explorador de ejecución...**
 
-2. Click the **Break** tab to display the Break list:
+2. Haga clic en la pestaña **Break** para mostrar la lista de pausas:
 
 ![break-list-runtime-explorer](../assets/en/Debugging/break-list.png)
 
 Usando esta janela, pode:
 
-- Set conditions for breakpoints in the **Conditions** column
+- Definir las condiciones para los puntos de interrupción en la columna **Condiciones**
 - Ative ou desative os pontos de interrupção clicando nos marcadores na margem. Os pontos de interrupção desactivados apresentam marcadores transparentes
-- Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
+- Elimine los puntos de interrupción presionando la tecla `Delete` o `Backspace`, o haciendo clic en el botón **Delete** bajo la lista.
 - Abrir os métodos onde se encontram os pontos de interrupção fazendo duplo clique em qualquer linha da lista
 
 Não é possível adicionar novos pontos de paragem a partir desta janela. Os pontos de paragem só podem ser criados a partir da janela do depurador ou do editor de código.
 
 ## Comandos de captura
 
-The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Ao contrário de um ponto de interrupção, que está localizado em um método particular do projeto (e, portanto, desencadeia uma exceção de rastreamento apenas quando é alcançado), o escopo de captura de um comando inclui todos os processos que executam o código 4D e chamam esse comando.
+La pestaña **Catch** del Explorador de ejecución le permite añadir pausas adicionales a su código mediante la captura de llamadas a comandos 4D. Ao contrário de um ponto de interrupção, que está localizado em um método particular do projeto (e, portanto, desencadeia uma exceção de rastreamento apenas quando é alcançado), o escopo de captura de um comando inclui todos os processos que executam o código 4D e chamam esse comando.
 
-A captura de um comando é uma forma conveniente de rastrear grandes porções de código sem definir pontos de interrupção em locais arbitrários. For example, if a record that should not be deleted is deleted after you've executed one or several processes, you can try to reduce the field of your investigation by catching commands such as `DELETE RECORD` and `DELETE SELECTION`. Cada vez que estes comandos forem chamados, é possível verificar se o registo em questão foi eliminado e, assim, isolar a parte defeituosa do código.
+A captura de um comando é uma forma conveniente de rastrear grandes porções de código sem definir pontos de interrupção em locais arbitrários. Por ejemplo, si un registro que no debería ser eliminado se borra después de haber ejecutado uno o varios procesos, puede intentar reducir el campo de su investigación vía puntos de interrupción en los comandos como `DELETE RECORD` and `DELETE SELECTION`. Cada vez que estes comandos forem chamados, é possível verificar se o registo em questão foi eliminado e, assim, isolar a parte defeituosa do código.
 
 Pode combinar pontos de interrupção e captura de comandos.
 
 Para abrir a página Comandos apanhados:
 
-1. Choose **Run** > **Runtime explorer...** to open the Runtime Explorer.
+1. Elija **Ejecutar** > **Explorador de ejecución...** para abrir el Explorador de ejecución.
 
-2. Click **Catch** to display the Caught Commands List:
+2. Haga clic en **Catch** para mostrar la lista de puntos de interrupción en los comandos:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
@@ -93,8 +93,8 @@ Esta página lista os comandos que devem ser capturados durante a execução. É
 
 Para adicionar um ponto de interrupção personalizado:
 
-1. Click on the **Add New Catch** button (in the shape of a +) located below the list. A new entry is added to the list with the `ALERT` command as default
-2. Click the **ALERT** label, type the name of the command you want to catch, then press **Enter**.
+1. Haga clic en el botón **Add New Catch** (en forma de +) situado debajo de la lista. Se añade una nueva entrada a la lista con el comando `ALERT` por defecto
+2. Haga clic en la etiqueta **ALERT**, escriba el nombre del comando en el cual desea poner un punto de interrupción y pulse **Enter**.
 
 Para ativar ou desativar um ponto de interrupção de ordem, clique no ponto (-) na frente da etiqueta do comando.
 A bala é transparente quando o controle é desativado.
@@ -104,7 +104,7 @@ A bala é transparente quando o controle é desativado.
 Para remover um ponto de interrupção no comando:
 
 1. Seleccione um comando na lista.
-2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
+2. Presione la tecla **Backspace** o **Delete** en su teclado o haga clic en el botón **Delete** bajo la lista (**Delete All** elimina todos los comandos en la lista).
 
 ### Definir uma condição para um ponto de interrupção no comando
 

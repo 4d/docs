@@ -105,9 +105,10 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications |
-| ------- | ------------- |
-| 18      | Ajout         |
+| Release | Modifications                    |
+| ------- | -------------------------------- |
+| 20.3    | New *passwordAlgorithm* property |
+| 18      | Ajout                            |
 
 </details>
 
@@ -149,14 +150,15 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
 
 Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
 
-| Propriété   | Type    | Description                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
-| user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                    |
-| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
-| tls         | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| type        | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
+| Propriété         | Type    | Description                                                                                                                                                                                                                                                                                                                                      |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
+| user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
+| password          | Text    | Mot de passe de l'utilisateur. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                 |
+| idleTimeout       | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
+| tls               | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
+| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                             |
+| type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
 
@@ -449,11 +451,11 @@ $destination.create()
 ds.flushAndLock() //Bloque les opérations d'écriture des autres process
 
 $dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copier le dossier de données
+$dataFolder.copyTo($destination) //Copie le dossier de données
 
-$oldJournalPath:=New log file //Fermer le journal et en créer un nouveau
+$oldJournalPath:=New log file //Ferme le journal et en créer un nouveau
 $oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Sauvegarder l'ancien journal avec les données
+$oldJournal.moveTo($destination) //Sauvegarde l'ancien journal avec les données
 
 ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller le datastore
 ```
@@ -1191,7 +1193,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -1262,9 +1266,9 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
 
-It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped.
+Cela ferme en fait le document ouvert sur le disque. Côté client, si le journal a été démarré en mémoire, il est arrêté.
 
-This function does nothing if logging of ORDA requests was not started on the machine.
+Cette fonction ne fait rien si la journalisation des requêtes ORDA n'a pas été démarrée sur la machine.
 
 #### Exemple
 

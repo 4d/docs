@@ -106,6 +106,7 @@ Using the main datastore on the 4D database:
 
 |Release|Changes|
 |---|---|
+|20.3|New *passwordAlgorithm* property|
 |18|Added|
 
 </details>
@@ -149,10 +150,11 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 |Property| Type| Description|
 |---|---|---|
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|
-|user|Text|User name
-|password|Text|User password
+|user|Text|User name|
+|password|Text|User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.|
 |idleTimeout|Longint|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|
 |tls|Boolean|Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.|
+|passwordAlgorithm |Text |Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.|
 |type |Text |Must be "4D Server"|
 
 (*) If tls is true, the HTTPS protocol is used if:
@@ -395,18 +397,18 @@ You want to know the number of encrypted tables in the current data file:
 
 #### Description
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
+The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
 
 :::info
 
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked. 
+Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
 
 When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
 
@@ -416,14 +418,14 @@ The datastore is unlocked when:
 - the process that called the `.flushAndLock()` function is killed.
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
 
 An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
 
 :::
 
@@ -432,16 +434,16 @@ Other 4D features and services including [backup](../Backup/backup.md), [vss](ht
 You want to create a copy of the data folder along with its current journal file:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
 ds.flushAndLock() //Block write operations from other processes
 
-$dataFolder:=Folder(fk data folder) 
+$dataFolder:=Folder(fk data folder)
 $dataFolder.copyTo($destination) //Copy the data folder
 
 $oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal:=File($oldJournalPath; fk platform path)
 $oldJournal.moveTo($destination) //Save the old journal with data
 
 ds.unlock() //Our copy is over, we can now unlock the datastore
@@ -734,7 +736,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 #### Description
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->. 
+The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
 
 You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
 
@@ -1079,7 +1081,7 @@ To create a server-side ORDA request log, call this function on the server machi
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
 
 |Constant|Description|
-|----|----|---|
+|----|----|
 |srl log all|Log the response entirely (default value)|
 |srl log no response|Disable the logging of the response|
 |srl log response without body|Log the response without the body|
@@ -1161,6 +1163,7 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 ||||Does not require any parameters|<!-- END REF -->
 
 
+
 #### Description
 
 The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.
@@ -1226,11 +1229,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 #### Description
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->. 
+The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
 
-It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped. 
+It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped.
 
-This function does nothing if logging of ORDA requests was not started on the machine. 
+This function does nothing if logging of ORDA requests was not started on the machine.
 
 #### Example
 
@@ -1261,9 +1264,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 #### Description
 
-The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
+The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
+If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
 
 The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
 

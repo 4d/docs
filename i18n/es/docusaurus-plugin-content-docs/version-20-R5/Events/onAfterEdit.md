@@ -3,9 +3,9 @@ id: onAfterEdit
 title: On After Edit
 ---
 
-| Code | Puede ser llamado por                                                                                                                                                                                                                                                                                                                                                                             | Definición                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 45   | [4D View Pro area](../FormObjects/viewProArea_overview.md) - [4D Write Pro area](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | El contenido del objeto introducible que tiene el foco acaba de ser modificado |
+| Code | Puede ser llamado por                                                                                                                                                                                                                                                                                                                                                                                                            | Definición                                                                     |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 45   | [Área 4D View Pro](../FormObjects/viewProArea_overview.md) - [Área 4D Write Pro](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulario - [Entrada](FormObjects/input_overview.md) - [Lista Jerárquica](FormObjects/list_overview.md) - [Lista de selección](FormObjects/listbox_overview.md) - [Columna de lista de selección](FormObjects/listbox_overview.md#list-box-columns) | El contenido del objeto introducible que tiene el foco acaba de ser modificado |
 
 ## Descripción
 
@@ -13,18 +13,18 @@ title: On After Edit
 
 Este evento se puede utilizar para filtrar la entrada de datos en los objetos editables por teclado en el nivel más bajo.
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, _i.e._:
+Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, _es decir_:
 
 - Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
 - Soltar un valor (acción similar a pegar);
-- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- Toda entrada de teclado realizada por el usuario; en este caso, el evento `On After Edit` se genera después de los eventos [`On Before Keystroke`](onBeforeKeystroke. d) y [`On After Keystroke`](onAfterKeystroke.md), si se utilizan.
+- Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
 
-Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.
+Dentro del evento `On After Edit`, los datos de texto que se ingresan son devueltos por el comando [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html).
 
 ### 4D View Pro
 
-The object returned by the `FORM Event` command contains:
+El objeto devuelto por el comando `FORM Event` contiene:
 
 | Propiedad   | Tipo         | Descripción                                                                                         |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ The object returned by the `FORM Event` command contains:
 | sheetName   | text         | Nombre de la hoja del evento                                                                        |
 | action      | text         | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
+En función del valor de la propiedad `action`, el [objeto evento](overview.md#event-object) contendrá propiedades adicionales.
 
 #### action = editChange
 
@@ -62,11 +62,11 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| Propiedad     | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fillRange     | object       | Gama utilizada para el relleno                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| autoFillType  | entero largo | Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li> |
-| fillDirection | entero largo | Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>                                                                                                                                                                                                                                |
+| Propiedad     | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fillRange     | object       | Gama utilizada para el relleno                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| autoFillType  | entero largo | Valor utilizado para el llenado.<li>0: las celdas se llenan con todos los datos (valores, formato y fórmulas)</li><li>1: las celdas se llenan con datos secuenciales automáticamente</li><li>2: las celdas se llenan solo con formato</li><li>3: las celdas se llenan con valores pero no con formato</li><li>4: los valores se eliminan de las celdas</li><li>5: las celdas se llenan automáticamente</li> |
+| fillDirection | entero largo | Dirección del llenado.<li>0: se llenan las celdas a la izquierda</li><li>1: se llenan las celdas a la derecha</li><li>2: se llenan las celdas de arriba</li><li>3: se llenan las celdas de abajo</li>                                                                                                                                                                                                                                                          |
 
 #### action = formulaChanged
 
@@ -77,15 +77,15 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = clipboardPasted
 
-| Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ----------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object       | Rango de celdas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| pasteOption | entero largo | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
-| pasteData   | object       | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>                                                                                                                                                                                                                                                                                                          |
+| Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object       | Rango de celdas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| pasteOption | entero largo | Especifica lo que se pega en el portapapeles:<li>0: todo es pegado (valores, formato y fórmulas)</li><li>1: solo los valores se pegan</li><li>2: solo el formato se pega</li><li>3: solo las fórmulas se pegan</li><li>4: los valores y el formato se pegan (no las fórmulas)</li><li>5: las fórmulas y el formato se pegan (no los valores)</li> |
+| pasteData   | object       | Los datos del portapapeles a pegar<li>"text" (texto): el texto del portapapeles</li><li>"html" (texto): el HTML del portapapeles</li>                                                                                                                                                                                                                                                                                                                |
 
 #### Ejemplo
 
-Here is an example handling an `On After Edit` event:
+Aquí hay un ejemplo de manejo de un evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)

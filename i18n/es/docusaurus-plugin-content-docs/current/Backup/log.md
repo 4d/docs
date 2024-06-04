@@ -7,11 +7,11 @@ Una aplicación de uso continuo siempre está registrando cambios, adiciones o s
 
 Además, 4D trabaja continuamente con una caché de datos en la memoria. Esto acelera el funcionamiento de las aplicaciones; de hecho, el acceso a la memoria es más rápido que el acceso al disco duro. Todos los cambios realizados en los datos de la aplicación se almacenan temporalmente en la caché antes de escribirse en el disco duro. Si se produce un incidente en la aplicación antes de que los datos almacenados en la caché puedan escribirse en el disco, deberá incluir el archivo de historial actual para poder recuperar la aplicación por completo.
 
-Por último, 4D dispone de funciones que analizan el contenido del archivo de historial, permitiendo revertir las operaciones realizadas sobre los datos de la aplicación. These functions area available in the MSC: refer to the [Activity analysis](MSC/analysis.md) page and the [Rollback](MSC/rollback.md) page.
+Por último, 4D dispone de funciones que analizan el contenido del archivo de historial, permitiendo revertir las operaciones realizadas sobre los datos de la aplicación. Estas funciones están disponibles en el CSM: consulte la página [Análisis de actividades](MSC/analysis.md) y la página [Retroceder](MSC/rollback.md).
 
 ## Funcionamiento del archivo de historial
 
-El archivo de historial generado por 4D contiene una descripción de todas las operaciones realizadas en los datos de las tablas registradas en el diario, que se registran de forma secuencial. By default, all the tables are journaled, i.e. included in the log file, but you can deselect individual tables using the **Include in Log File** table property.
+El archivo de historial generado por 4D contiene una descripción de todas las operaciones realizadas en los datos de las tablas registradas en el diario, que se registran de forma secuencial. Por defecto, todas las tablas se registran en el diario, es decir, se incluyen en el archivo de historial, pero puede anular la selección de tablas individuales mediante la propiedad **Incluir en el archivo de historial**.
 
 Así, cada operación realizada por un usuario provoca dos acciones simultáneas: la primera en el archivo de datos (la instrucción se ejecuta normalmente) y la segunda en el archivo de historial (se registra la descripción de la operación). El archivo de historial se crea de forma independiente, sin perturbar ni ralentizar el trabajo del usuario. El archivo de historial se crea de forma independiente, sin perturbar ni ralentizar el trabajo del usuario. El archivo de historial registra los siguientes tipos de acciones:
 
@@ -22,7 +22,7 @@ Así, cada operación realizada por un usuario provoca dos acciones simultáneas
 - Eliminación de registros,
 - Creación y cierre de transacciones.
 
-For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page of the MSC.
+Para más información sobre estas acciones, consulte la página [Análisis de actividades](MSC/analysis.md) del CSM.
 
 4D gestiona el archivo de historial. Tiene en cuenta todas las operaciones que afectan al archivo de datos por igual, independientemente de las manipulaciones realizadas por un usuario, métodos 4D, el motor SQL, los plug-ins, o un navegador web o una aplicación móvil.
 
@@ -37,20 +37,20 @@ El archivo de historial actual se guarda automáticamente con el archivo de dato
 
 ## Crear el archivo de historial
 
-By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named _data.journal_ and is placed in the Data folder.
+Por defecto, toda aplicación creada con 4D utiliza un archivo de historial (opción definida en la página **General** de las Preferencias). El archivo de historial se llama _data.journal_ y se coloca en la carpeta Data.
 
-You can find out if your application uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Settings. Si deselecciona esta opción, o si utiliza una aplicación sin archivo de historial y desea configurar una estrategia de copia de seguridad con un archivo de historial, tendrá que crear uno.
+Puede averiguar si su aplicación utiliza un archivo de historial en cualquier momento: sólo tiene que comprobar si la opción **Utilizar el archivo de historial** está seleccionada en la página **Backup/Configuración** de las Propiedades. Si deselecciona esta opción, o si utiliza una aplicación sin archivo de historial y desea configurar una estrategia de copia de seguridad con un archivo de historial, tendrá que crear uno.
 
 Para crear un archivo de historial:
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option.
-   El programa muestra una caja de diálogo estándar de abrir/nuevo archivo. By default, the log file is named _data.journal_.
+1. En la página **Copia de seguridad/Configuración** de las Propiedades de estructura, marque la opción **Utilizar el archivo de historial**.
+   El programa muestra una caja de diálogo estándar de abrir/nuevo archivo. Por defecto, el archivo de historial se llama _data.journal_.
 
 2. Mantenga el nombre por defecto o cambie el nombre, y luego seleccione la ubicación del archivo.
    Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene el proyecto de aplicación. Si se pierde el disco duro de la aplicación, aún puede recuperar su archivo de historial.
 
 3. Presione **Guardar**.
-   The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. Puede hacer clic en esta área para que aparezca un menú emergente con la ruta del historial en el disco.
+   El disco y el nombre del archivo de historial abierto se muestran ahora en el área **Utilizar historial** de la caja de diálogo. Puede hacer clic en esta área para que aparezca un menú emergente con la ruta del historial en el disco.
 
 4. Valide la caja de diálogo de las Propiedades.
 
@@ -59,7 +59,7 @@ Para poder crear directamente un archivo de historial, los datos deben estar en 
 - El archivo de datos está en blanco,
 - Acaba de realizar una copia de seguridad y aún no se han realizado cambios en los datos.
 
-Si hace clic en <strong x-id="1">Aceptar</strong>, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the application. Esta precaución es indispensable porque, para restaurar una aplicación después de algún incidente, necesitará una copia de la aplicación en la que se integrarán las operaciones registradas en el archivo de historial.
+Si hace clic en <strong x-id="1">Aceptar</strong>, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Cancelar**, la solicitud se guarda pero la creación del archivo de historial se pospone y en realidad sólo se creará después de la siguiente copia de seguridad de la aplicación. Esta precaución es indispensable porque, para restaurar una aplicación después de algún incidente, necesitará una copia de la aplicación en la que se integrarán las operaciones registradas en el archivo de historial.
 
 Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos se registran en este archivo y se utilizarán en el futuro cuando se abra la aplicación.
 
@@ -67,23 +67,23 @@ Debe crear otro archivo de historial si crea un nuevo archivo de datos. Debe est
 
 ## Parámetros del archivo de historial
 
-The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
+Los [parámetros del archivo de historial](settings.md#log-file-management) se basa en dos datos: un valor booleano y una ruta.
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in _catalog.4DCatalog_. However, when the [user settings](../Desktop/user-settings.md) are activated, the _catalog.4DCatalog_ file configuration is overriden, and the boolean value can then be set either in the _Backup.4DSettings_ file [next to the data file](../Project/architecture.md#settings-user-data) or the _Backup.4DSettings_ file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **Valor booleano**: indica si la funcionalidad "Utilizar archivo de registro" está activada o desactivada en la aplicación. Por defecto, el valor booleano se almacena en _catalog.4DCatalog_. Sin embargo, cuando se activan los [parámetros usuario](../Desktop/user-settings.md), la configuración del archivo _catalog.4DCatalog_ se anula, y el valor booleano puede definirse tanto en el archivo _Backup.4DSettings_ [junto al archivo de datos](../Project/architecture.md#settings-user-data) como en el archivo _Backup.4DSettings_ [en la carpeta del proyecto](../Project/architecture.md#settings-user) (ver también la documentación de la llave de backup xml `JournalFileEnabled` en [doc.4d.com](https://doc.4d.com)).
 
-2. **Path**: a string pointing to where the log file is located. La ruta del archivo de registro siempre se almacena en el archivo de datos vinculados.
+2. **Ruta**: una cadena que indica dónde se encuentra el archivo de registro. La ruta del archivo de registro siempre se almacena en el archivo de datos vinculados.
 
 ## Cerrar el historial
 
-If you would like to stop logging operations to the current log file, simply deselect the **Use Log** option on the **Backup/Configuration** page of the Settings.
+Si desea dejar de registrar las operaciones en el archivo de historial actual, sólo tiene que anular la selección de la opción **Utilizar el archivo de historial** en la página **Copia de seguridad/Configuración** de las Propiedades.
 
 4D muestra entonces un mensaje de alerta para recordarle que esta acción le impide aprovechar la seguridad que ofrece el archivo de historial:
 
 ![](../assets/en/Backup/backup06.png)
 
-If you click **Stop**, the current log file is immediately closed (the Settings dialog box does not need to be validated afterwards).
+Si hace clic en el botón **Parar**, el archivo de historial actual se cierra inmediatamente (la caja de dialogo de las Propiedades no necesita ser validada después).
 
 Si desea cerrar el archivo de historial actual porque es demasiado grande, puede considerar la posibilidad de realizar una copia de seguridad del archivo de datos, lo que hará que el archivo de historial se copie también.
 
-> **4D Server:** The `New log file` command automatically closes the current log file and starts a new one.
+> **4D Server:** el comando `New log file` cierra automáticamente el archivo de historial actual e inicia uno nuevo.
 > Si por alguna razón el archivo de historial no está disponible durante una sesión de trabajo, se genera el error 1274 y 4D Server no permite a los usuarios escribir más datos. Cuando el archivo de historial está disponible de nuevo, es necesario hacer una copia de seguridad.

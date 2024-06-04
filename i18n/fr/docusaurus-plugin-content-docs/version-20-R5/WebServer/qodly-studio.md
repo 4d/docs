@@ -47,6 +47,8 @@ The recommended resolution is 1920x1080.
 - Development: 4D v20 R2 or higher
 - Deployment: 4D Server v20 R2 or higher
 - Qodly Studio only works with 4D projects (binary databases are not supported).
+- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
 
 ### Enabling access to Qodly Studio
 
@@ -249,26 +251,26 @@ In a simple Qodly form with login/password inputs, a "Submit" button calls the f
 ```4d
 
 exposed Function authentify($credentials : Object) : Text
-	
+
 var $salesPersons : cs.SalesPersonsSelection
 var $sp : cs.SalesPersonsEntity
-	
+
 $salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
 $sp:=$salesPersons.first()
-	
+
 If ($sp#Null)
 	If (Verify password hash($credentials.password; $sp.password))
-			
+
 		Session.clearPrivileges()
 		Session.setPrivileges("") //guest session
-			
+
 		return "Authentication successful"
-	Else 
+	Else
 		return "Wrong password"
 	End if
-Else 
+Else
 	return "Wrong user"
-End if 
+End if
 ```
 
 This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.

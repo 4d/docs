@@ -220,6 +220,110 @@ When you have done the settings as described above, you then have new options su
 
 [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
+## 4DCEFParameters.json
+
+The 4DCEFParameters.json is a configuration file that allows customization of CEF parameters to manage the behavior of web areas within 4D applications. 
+
+[Default switches](#default-file) are provided, but you can override them by using a custom 4DCEFParameters.json file.
+
+In the development phase (using 4D application), create a 4DCEFParameters.json file at the following location:
+
+* Windows: `Users\[userName]\AppData\Roaming\4D\4DCEFParameters.json`
+* macOS: `$HOME/Library/Application Support/4D/4DCEFParameters.json`
+
+Before building a final application, add the custom 4DCEFParameters.json file to the Resources folder of the project.
+
+:::warning
+
+Adding a custom 4DCEFParameters.json file can fundamentally impact all 4D embedded web areas, including [4D View Pro areas](../ViewPro/configuring.md#form-area-properties). It is the developer's responsibility to ensure that the custom switches do not destabilize the 4D application.
+
+:::
+
+The 4DCEFParameters.json file format is as the following:
+
+```json
+
+{
+  "switches":{
+     "key":value
+  },
+  "macOS":{
+    "switches": {
+     "key":value
+    }
+  },
+  "windows": {
+    "switches": {
+     "key":value
+    }
+  }
+}
+```
+
+The 4DCEFParameters.json file structure contains:
+
+- **switches**: a list of CEF switches and their corresponding values applied for both macOS and Windows. 
+- **macOS.switches**: macOS-specific CEF switches. 
+- **windows.switches**: Windows-specific CEF switches.
+
+The switches in the custom file take precedence. In case of duplication of switches within the same file, the switches defined in the platform-specific subsection ("macOS.switches" or "windows.switches") are given priority and used for configuration.
+
+:::note 
+
+The list of supported switches is constantly evolving and is managed by the CEF development team. For information about available switches, you need to refer to the CEF developer community.
+
+:::
+
+### Examples 
+
+#### Default file
+
+The default 4DCEFParameters.json file contains the following switches:
+
+```json
+{
+  "switches":{
+     "enable-media-stream":true,
+     "enable-print-preview":true
+  },
+  "macOS":{
+    "switches": {
+      "use-mock-keychain": true
+    }
+  },
+  "windows": {
+    "switches": {
+      "disable-features": "WinUseBrowserSpellChecker"
+    }
+  }
+}
+
+```
+
+#### Example of disabling default Switch
+
+```json
+{
+  "switches": {
+    "disable-javascript": true,
+    "disable-web-security": true
+  }
+}
+```
+
+#### Example for Autoplay
+
+```json
+{
+  "switches":{
+     "autoplay-policy": "no-user-gesture-required"
+  }
+}
+```
+
+### See also
+
+[Specify your own parameters to initialize the embedded web area (blog post)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area) 
 
 
 

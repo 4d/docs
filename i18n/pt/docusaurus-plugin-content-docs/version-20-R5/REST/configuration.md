@@ -9,7 +9,7 @@ Para iniciar usando as funcionalidades REST, precisa iniciar e configurar o serv
 
 ## Iniciar o servidor REST
 
-Por razões de segurança, o padrão de 4D é não responder a petições REST. If you want to start the REST Server, you must check the **Expose as REST server** option in the **Web** > **Web Features** page of the structure settings in order for REST requests to be processed.
+Por razões de segurança, o padrão de 4D é não responder a petições REST. Si desea iniciar el servidor REST, debe marcar la opción **Exponer como servidor REST** en la página **Web** > **Web Features** de la configuración de la estructura para que se procesen las peticiones REST.
 
 ![alt-text](../assets/en/REST/Settings.png)
 
@@ -40,18 +40,18 @@ You can configure REST accesses with one of the following means:
 
 The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
-By default, the menu displays `\<Anyone>`, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). Se uma conta for usada que não pertença a esse grupo, 4D retorna um erro de autenticação para o emissor da petição.
+Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST están abiertos a todos los usuarios. Una vez que haya especificado un grupo, sólo una cuenta de usuario de 4D que pertenezca a este grupo podrá ser utilizada para [acceder a 4D mediante una petición REST](authUsers.md). Se uma conta for usada que não pertença a esse grupo, 4D retorna um erro de autenticação para o emissor da petição.
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. Se existir, 4D ignora os parâmetros de aceso definidos nas propriedades do banco de dados.
+> Para que esta configuración tenga efecto, el método base`On REST Authentication` no debe estar definido. Se existir, 4D ignora os parâmetros de aceso definidos nas propriedades do banco de dados.
 
 ### Método base On REST Authentication
 
-The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores.
+El método base `On REST Authentication` le ofrece una forma personalizada de controlar la apertura de sesiones REST en 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Cuando se recibe una [solicitud para abrir una sesión REST](authUsers.md), los identificadores de conexión se ofrecen en el encabezado de la solicitud. Se llama al método base `On REST Authentication` para poder evaluar estos identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores.
 For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 ## Expor tabelas e campos
 
-Once REST services are enabled in the 4D application, by default a REST session can access all tables and fields of the 4D database through the [datastore interface](ORDA/dsMapping.md#datastore). Assim, pode utilizar os seus dados. Por exemplo, se seu banco de dados conter uma tabela [Employee], é possível escrever:
+Una vez activados los servicios REST en la aplicación 4D, por defecto una sesión REST puede acceder a todas las tablas y campos de la base de datos 4D a través de la [interfaz del datastore](ORDA/dsMapping.md#datastore). Assim, pode utilizar os seus dados. Por exemplo, se seu banco de dados conter uma tabela [Employee], é possível escrever:
 
 ```
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
@@ -88,7 +88,7 @@ Para eliminar a exposição REST de um campo:
 
 1. Exibar o inspetor de Campo no editor de Estruturas e selecione o campo a modificar.
 
-2. Uncheck the **Expose as REST resource** for the field.
+2. Desmarque la opción **Exponer como recurso REST** para el campo.
    ![alt-text](../assets/en/REST/field.png)
    Repeat this for each field whose exposure needs to be modified.
 
@@ -96,8 +96,8 @@ Para eliminar a exposição REST de um campo:
 
 ## Modo preventivo
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4 With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
 
 With 4D single-user, interpreted code is always run in cooperative mode.

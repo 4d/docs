@@ -20,17 +20,17 @@ En esta lista, se selecciona el tema que se aplicará al editor de código. Se m
 
 > Los temas por defecto no pueden ser modificados ni eliminados.
 
-A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
+Un tema **myTheme** se añade automáticamente si ya ha personalizado los estilos del Editor de Código en versiones anteriores de 4D.
 
 ### Creación de temas personalizados
 
-Puede crear temas totalmente personalizables. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Puede crear temas totalmente personalizables. Para crear un tema, seleccione un tema existente y haga clic en el **+** en la parte inferior de la lista de temas. También puede añadir temas personalizados copiando los archivos de temas en la carpeta `4D Editor Themes` (ver más abajo).
 
 ### Archivos de temas personalizados
 
-Each custom theme is stored in a single JSON file named _themeName.json_ The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+Cada tema personalizado se almacena en un único archivo JSON llamado _themeName.json_. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#stora
 
-If key values are not defined in a custom theme, they default to the values from the _Default Light Theme_. If a JSON theme file is invalid, the _Default Light Theme_ is loaded and an error is generated.
+Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema _Default Light Theme_. Si un archivo de tema JSON es inválido, se carga el tema _Default Light Theme_ y se genera un error.
 
 > Cuando un archivo de tema es modificado por un editor externo, 4D debe ser reiniciado para tener en cuenta las modificaciones.
 
@@ -45,7 +45,7 @@ La combinación de colores y de estilos diferentes es especialmente útil para e
 
 ### Fuentes y tamaños de fuente
 
-The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
+Los menús **fuente** y **tamaño de fuente** le permiten seleccionar el nombre y el tamaño de la fuente utilizada en el área de entrada del Editor de código para todas las categorías.
 
 ### Lenguaje 4D y lenguaje SQL
 
@@ -57,19 +57,19 @@ Estas opciones configuran los distintos colores utilizados en las interfaces del
 
 ![](../assets/en/Preferences/categories.png)
 
-|                                                        | Descripción                                                                                                                                                                              |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                       |
-| **Borde de la línea en ejecución en el depurador**     | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                       |
-| **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                       |
-| **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                          |
-| **Destacar los paréntesis**                            | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                  |
-| **Resaltado de los bloques**                           | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Resaltar la misma variable o campo**                 | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Resaltado de la línea en ejecución en el depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                          |
-| **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                       |
+|                                                        | Descripción                                                                                                                                                                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                                           |
+| **Borde de la línea en ejecución en el depurador**     | Color del borde que rodea la línea que se está ejecutando en el depurador cuando la opción "Resaltar la línea en ejecución" está activada en la página [Opciones](#options).                 |
+| **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                                           |
+| **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                                           |
+| **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                                              |
+| **Destacar los paréntesis**                            | Color de resaltado de los paréntesis correspondientes (se utiliza cuando los pares de paréntesis se señalan mediante resaltado, ver [Opciones](#options)).                |
+| **Resaltado de los bloques**                           | Color de resaltado de los bloques lógicos seleccionados cuando la opción "Resaltar bloques lógicos" está activada en las [Opciones](#options).                                               |
+| **Resaltar la misma variable o campo**                 | Color de resaltado para las otras ocurrencias de la misma variable o del mismo texto de campo cuando una de las opciones "Resaltar variables y texto" está activada en [Opciones](#options). |
+| **Resaltado de la línea en ejecución en el depurador** | Color de resaltado de la línea que se está ejecutando en el depurador cuando la opción "Resaltar línea en ejecución" está activada en [Opciones](#options).                                  |
+| **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                                              |
+| **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                                           |
 
 ## Opciones
 
@@ -83,8 +83,8 @@ Esta página configura las opciones de visualización del Editor de Código.
 
 Permite desactivar/activar los parámetros del código "internacional" para la aplicación 4D local.
 
-- **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-- **checked**: Regional settings are used in 4D methods.
+- **no seleccionado** (por defecto): los parámetros English-US y el lenguaje de programación inglés se utilizan en los métodos 4D.
+- **seleccionado**: los parámetros regionales se utilizan en los métodos 4D.
 
 > Si modifica esta opción, deberá reiniciar la aplicación 4D para que se tenga en cuenta el cambio.
 
@@ -112,7 +112,7 @@ Le permite elegir si mostrar o no los múltiples portapapeles en el editor de c�
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-The corresponding [clipboard shorcuts](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) are still active when these clipboards are hidden.
+Los correspondientes [atajos al portapapeles](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) siguen activos cuando estos portapapeles están ocultos.
 
 #### Resaltado de los bloques lógicos
 
@@ -120,7 +120,7 @@ Cuando está seleccionada, todo el código perteneciente a un bloque lógico (If
 
 ![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+El color de resaltado se puede definir en la página [Tema](#theme-definition).
 
 #### Mostrar siempre las líneas de bloques
 
@@ -138,9 +138,9 @@ Permite ocultar todos los iconos expandir/desplegar por defecto al mostrar el c�
 
 Activa la inserción automática de () y de llaves de cierre mientras se escribe el código. Esta opción controla dos funcionalidades automáticas:
 
-- **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. Por ejemplo, si escribe "C_OB" y presionaa Tab, 4D escribe "C_OBJECT()" y fija el punto de inserción dentro del ().
+- **par de paréntesis ()<**: se añade después de un comando 4D, una palabra clave o un método proyecto insertado desde una lista de sugerencias o de finalización, si el elemento insertado requiere uno o más argumentos obligatorios. Por ejemplo, si escribe "C_OB" y presionaa Tab, 4D escribe "C_OBJECT()" y fija el punto de inserción dentro del ().
 
-- **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". Esta función permite insertar pares de símbolos coincidentes en el punto de inserción o alrededor de un texto seleccionado. Por ejemplo, si resalta una cadena de caracteres y escribe un simple caracter ", toda la cadena seleccionada quedará encerrada en "":
+- **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta función permite insertar pares de símbolos coincidentes en el punto de inserción o alrededor de un texto seleccionado. Por ejemplo, si resalta una cadena de caracteres y escribe un simple caracter ", toda la cadena seleccionada quedará encerrada en "":
 
 ![](../assets/en/Preferences/optionsClosing.png)\
 ![](../assets/en/Preferences/optionsClosing2.png)
@@ -150,11 +150,11 @@ Activa la inserción automática de () y de llaves de cierre mientras se escribe
 Define la señalización gráfica de las llaves correspondientes en el código. Esta señalización aparece siempre que se selecciona un corchete, un paréntesis o una llave.
 Las siguientes opciones están disponibles:
 
-- **None**: No signaling
+- **Ninguno**: sin señales
 - **Rectangle** (default): Braces surrounded by a black line\
   ![](../assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces displayed in bold.
+- **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
+- **Negrita**: las llaves aparecen en negrita.
 
 #### Resaltado de las variables y campos
 
@@ -162,11 +162,11 @@ Permite resaltar todas las ocurrencias de la misma variable o campo en una venta
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
-- **On cursor**: All occurrences are highlighted when the text is clicked
-- **On selection**: All occurrences are highlighted when the text is selected
+- **No**(por defecto): no resaltado
+- **Con cursor**: todas las ocurrencias se destacan cuando se hace clic en el texto
+- **Al seleccionar**: se resaltan todas las ocurrencias cuando se selecciona el texto
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+El color de resaltado se puede definir en la página [Tema](#theme-definition).
 
 #### Depurar (Resaltar la línea en ejecución)
 

@@ -3,25 +3,25 @@ id: attributes
 title: $attributes
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (_e.g._, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+データクラスから取得するリレート属性を選択するのに使います (_例:_ `Company(1)?$attributes=employees.lastname`、 `Employee?$attributes=employer.name`)。
 
 ## 説明
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+データクラスにリレーション属性が含まれていて、リレート先のエンティティまたはエンティティセレクションの属性のうち値を取得するものを選択したい場合、そのパスを指定するのに `$attributes` を使用します。
 
-You can apply `$attributes` to an entity (_e.g._, People(1)) or an entity selection (_e.g._, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+`$attributes` はエンティティ (_例:_ People(1)) またはエンティティセレクション (_例:_ People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
-- If `$attributes` is not specified in a query, or if the "\*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- クエリに `$attributes` が指定されていない場合、または "\*" が渡された場合、すべての取得可能な属性が取得されます。 **リレートエンティティ** 属性は、`__KEY` (プライマリーキー) と `URI` プロパティを持つオブジェクトという簡単な形で抽出されます。 **リレートエンティティズ** 属性は抽出されません。
 
-- If `$attributes` is specified for **related entity** attributes:
-  - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-  - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
-  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
+- **リレートエンティティ** 属性を対象に `$attributes` が指定された場合:
+  - `$attributes=relatedEntity`: リレートエンティティは簡単な形で返されます (`__KEY` (プライマリーキー) と `URI` プロパティを持つ deferred オブジェクト)
+  - `$attributes=relatedEntity.*`: リレートエンティティの属性がすべて返されます。
+  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: リレートエンティティの指定された属性だけが返されます。
 
-- If `$attributes` is specified for **related entities** attributes:
-  - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
+- **リレートエンティティズ** 属性を対象に `$attributes` が指定された場合:
+  - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
 
-  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
 
 ## リレートエンティティズの例
 
@@ -29,7 +29,7 @@ You can apply `$attributes` to an entity (_e.g._, People(1)) or an entity select
 
 `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**レスポンス**:
 
 ```
 {
@@ -74,7 +74,7 @@ employees の属性をすべて取得するには:
 
 `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**レスポンス**:
 
 ```
 {

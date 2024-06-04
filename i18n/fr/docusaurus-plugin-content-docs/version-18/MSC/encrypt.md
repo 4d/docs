@@ -91,7 +91,7 @@ Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phras
 
 Les clés de chiffrement successives peuvent être sauvegardées sur le même appareil.
 
-## Fichier d'historique
+## Fichier journal
 
 Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de la base. Il est créé au format XML et nommé "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss>.xml*".
 

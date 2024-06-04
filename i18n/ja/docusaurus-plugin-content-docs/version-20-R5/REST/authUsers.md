@@ -3,21 +3,21 @@ id: authUsers
 title: ユーザーとセッション
 ---
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
+[スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
 
-When a web user session is opened, you can handle it through the `Session` object and the [Session API](API/SessionClass.md). 後続の RESTリクエストは同じセッションcookie を再使用します。
+開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
 
-> - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
+> - 4D Server上では、[ユーザーログインモード](#ユーザーログインモード) によっては、RESTセッションを開く際に 4Dクライアントライセンスが必要になる場合があります。<br/>
 > - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
 
 ## ユーザーログインモード
 
 RESTリクエストが 4Dクライアントライセンスを取得する方法をユーザーログインモードによって制御することができます。 "デフォルト" または "強制ログイン" の 2つのユーザーログインモードから選択できます。
 
-You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
+ユーザーのログインモードは、[`roles.json`ファイル](../ORDA/privileges.md#rolesjson-ファイル) で `forceLogin` プロパティを使って設定します:
 
-- the **default mode** is used if the "forceLogin" property is missing or set to "false",
-- the **force login** mode is used if the "forceLogin" property is set to "true".
+- "forceLogin" プロパティが存在しないか "false" に設定されている場合、**デフォルトモード** が使用されます。
+- "forceLogin" プロパティが "true" に設定されている場合、**強制ログイン** モードが使用されます。
 
 :::caution
 
@@ -27,28 +27,28 @@ You set the user login mode through the `forceLogin` property in the [`roles.jso
 
 :::note
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
 
 :::
 
 ### デフォルトモード
 
 デフォルトモードでは、RESTリクエストは Webユーザーセッションで処理され、自動的にライセンスが消費されます (Webユーザーセッションが存在しない場合は作成されます)。 サーバー上で保持されるライセンス数を制御する必要がない場合は、このシンプルモードを使用できます。
-When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
+デフォルトモードが有効になっている場合、`On REST Authentication` データベースメソッドを使用してユーザーを認証することができます (後述参照)。
 
 ### 強制ログインモード
 
-"強制ログイン" モードでは、ライセンスの消費は Webユーザーセッションから切り離されます。 A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
+"強制ログイン" モードでは、ライセンスの消費は Webユーザーセッションから切り離されます。 ライセンスは、[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) が実行された時にのみ必要なため、使用されるライセンスの数を制御することができます。
 
-[Descriptive REST requests](#descriptive-rest-requests) are always processed by the server, even if no web user session using a license is opened. この場合、それらは "ゲスト" セッションを介して処理されます。
+[記述的RESTリクエスト](#記述的restリクエスト) は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
-他のすべての RESTリクエスト (データ処理や関数の実行) は、適切な権限を持つ Webセッション内で実行された場合にのみ処理されます。それ以外の場合はエラーを返します To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. この関数を実行すると、4Dライセンスの消費が発生します。
+他のすべての RESTリクエスト (データ処理や関数の実行) は、適切な権限を持つ Webセッション内で実行された場合にのみ処理されます。それ以外の場合はエラーを返します Webセッションに権限を割り当てるには、セッションに対して [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を実行する必要があります。 この関数を実行すると、4Dライセンスの消費が発生します。
 
 このモードでは、以下のログインシーケンスを実装できます:
 
 1. 最初の RESTコール (たとえば Webフォームコール) では、"ゲスト" Webユーザーセッションが作成されます。 記述的リクエスト以外のリクエストを実行する権限も、ライセンスの消費もありません。
-2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
-3. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
+2. 事前に用意した [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) `authentify()` を呼び出し、ユーザーの資格情報をチェックして、適切な権限で`Session.setPrivileges()` を呼び出します。
+3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される Qodlyフォームを利用できます。
 4. ユーザーが正常に認証された場合、4Dライセンスがサーバー上で消費され、すべての RESTリクエストが受け入れられます。
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
@@ -57,9 +57,9 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 記述的RESTリクエストは、ライセンスを必要としない Webユーザーセッション ("ゲスト" セッション) で処理することができます。 記述的RESTリクエストとは以下のものを指します:
 
-- [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
-- `/rest/$catalog/authentify` - the datastore function used to login the user
-- `/rest/$getWebForm` - the rendering of a Qodly form
+- [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
+- `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
+- `/rest/$getWebForm` - Qodlyフォームのレンダリング
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -69,48 +69,49 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 ```4d
 exposed Function authentify({params : type}) {-> result : type}
-	// code
+    // コード
+
 ```
 
-The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request.
+`authentify()` 関数は、プロジェクトの [DataStore クラス](../ORDA/ordaClasses.md#datastore-クラス) に実装されている必要があり、RESTリクエストを介して呼び出される必要があります。
 
 "強制ログイン" モードが有効な場合、この関数は、RESTゲストセッションから唯一の利用可能なエントリーポイントです。セッションが適切な権限を取得するまで、他の関数の呼び出しやデータアクセスは拒否されます。
 
-The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. この関数は RESTリクエストからのみ呼び出すことができるため、引数は POSTリクエストの本文で渡されなければなりません。
+この関数は、任意の認証またはコンテキスト情報を [引数](ClassFunctions.md#引数) として受け取り、任意の値を返すことができます。 この関数は RESTリクエストからのみ呼び出すことができるため、引数は POSTリクエストの本文で渡されなければなりません。
 
 この関数は 2部構成で書かれる必要があります:
 
 - RESTリクエストの送信元を識別し、認証するためのコード
-- if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that assigns appropriate privileges to the session.
+- 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
 
-If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent non-descriptive REST requests are rejected.
+関数が [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出さない場合、権限が割り当てられないため、ライセンスも消費されず、後続の記述的でない RESTリクエストは拒否されます。
 
 #### 例題
 
-サーバー上で Webセッションを開くためにユーザー情報を確認します。 You created the following `authentify()` function in the datastore class:
+サーバー上で Webセッションを開くためにユーザー情報を確認します。 DataStore クラスに次の `authentify()` 関数を作成しました:
 
 ```4d
 exposed Function authentify($credentials : Object) : Text
 
 var $users : cs.UsersSelection
 var $user : cs.UsersEntity
-	
+
 $users:=ds.Users.query("name = :1"; $credentials.name)
 $user:=$users.first()
 
-If ($user#Null) //the user is known
-	If (Verify password hash($credentials.password; $user.password))
-		Session.setPrivileges("vip")
-	Else 
-
-		return "Wrong password"
-	End if 
+If ($user#Null) // 登録されているユーザーの場合
+    If (Verify password hash($credentials.password; $user.password))
+        Session.setPrivileges("vip")
+    Else 
+        return "パスワードに誤りがあります"
+    End if 
 Else 
-        return "Wrong user"
+        return "登録されていないユーザーです"
 End if 
+
 ```
 
-To call the `authentify()` function:
+`authentify()` 関数を呼び出すには:
 
 **POST** `127.0.0.1:8111/rest/$catalog/authentify`
 
@@ -121,15 +122,15 @@ To call the `authentify()` function:
 "password":"123"}]
 ```
 
-## Using `On REST Authentication`
+## `On REST Authentication` の使用
 
-In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+デフォルトのログインモードの (つまり、"強制ログイン" モードが無効化されている) 場合に、アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。 このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。このメソッド内でユーザーの認証をおこなうことができます (後述参照)。
 
-If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
+`On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
 
 ### 例題
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。 これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
 
 htmlログインページ:
 
@@ -139,20 +140,20 @@ htmlログインページ:
 <html><body bgcolor="#ffffff">
 
 <div id="demo">
-	<FORM name="myForm">
-Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
-Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+    <FORM name="myForm">
+メールアドレス: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+パスワード: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <button type="button" onclick="onClick()">
-Login
+ログイン
 </button>
-<div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
+<div id="authenticationFailed" style="visibility:hidden;">ログインに失敗しました</div>
 </FORM>
 </div>
 
 <script>
 function sendData(data) {
   var XHR = new XMLHttpRequest();
-  
+
   XHR.onreadystatechange = function() {
     if (this.status == 200) {      
       window.location = "authenticationOK.shtml"; 
@@ -161,13 +162,13 @@ function sendData(data) {
       document.getElementById("authenticationFailed").style.visibility = "visible";
       }
   };
-  
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
-  
+
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); // RESTサーバーアドレス
+
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
   XHR.setRequestHeader('session-4D-length', data.timeout);
-  
+
   XHR.send();
 };
 function onClick()
@@ -176,19 +177,20 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 }
 </script></body></html>
 
+
 ```
 
-When the login page is sent to the server, the `On REST Authentication` database method is called:
+サーバーにログイン情報が送信されると、`On REST Authentication` データベースメソッドが呼び出されます:
 
 ```4d
-	//On REST Authentication
+// On REST Authentication データベースメソッド
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-	//A '/rest' URL has been called with headers username-4D and password-4D
+    // ヘッダーに username-4D と password-4D を含めて '/rest' URL が呼び出されました
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
@@ -198,11 +200,12 @@ If ($userId#"")
         End if 
     End if 
 End if 
+
 ```
 
-> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+> 一旦呼び出されて `True` を返すと、同セッションにおいて `On REST Authentication` データベースメソッドはそれ以上呼び出されません。
 
-The `fillSession` project method initializes the user session, for example:
+`fillSession` プロジェクトメソッドは、たとえば次のようにユーザーセッションを初期化します:
 
 ```4d
 #DECLARE($sales : cs.SalesPersonsEntity)

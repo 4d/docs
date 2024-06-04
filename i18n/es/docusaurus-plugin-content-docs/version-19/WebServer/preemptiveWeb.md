@@ -14,14 +14,14 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 
 | 4D Server             | Interpretado, proyecto ([cliente conectado localmente](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, proyecto (sin cliente conectado localmente) o binario | Compilado       |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
-| Servidor REST         | cooperativo                                                                                                                    | preemptive                                                          | preemptive      |
+| Servidor REST         | cooperativo                                                                                                                    | apropiativo                                                         | apropiativo     |
 | Servidor Web          | cooperativo                                                                                                                    | cooperativo                                                         | *parámetro web* |
 | Servidor Web Services | cooperativo                                                                                                                    | cooperativo                                                         | *parámetro web* |
 | Legado REST           | cooperativo                                                                                                                    | *parámetro web*                                                     | *parámetro web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |
-| Servidor REST         | cooperativo  | preemptive      |
+| Servidor REST         | cooperativo  | apropiativo     |
 | Servidor Web          | cooperativo  | *parámetro web* |
 | Servidor Web Services | cooperativo  | *parámetro web* |
 | Legado REST           | cooperativo  | *parámetro web* |

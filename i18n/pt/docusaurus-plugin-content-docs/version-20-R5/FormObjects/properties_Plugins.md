@@ -5,7 +5,7 @@ title: Plug-ins
 
 ## Propriedades avançadas
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+Si las opciones avanzadas son proporcionadas por el autor del plug-in, un botón **Propiedades avanzadas** puede ser activado en la lista de propiedades. In this case, you can click this button to set these options, usually through a custom dialog box.
 
 Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
 

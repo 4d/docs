@@ -3,11 +3,11 @@ id: binary
 title: $binary
 ---
 
-Pass "true" to save the BLOB as a document (must also pass `$expand={blobAttributeName}`)
+Pase "true" para guardar el BLOB como documento (también debe pasar `$expand={blobAttributeName}`)
 
 ## Descripción
 
-`$binary` allows you to save the BLOB as a document.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
+`$binary` permite guardar el BLOB como un documento.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
 
 Cuando haga la siguiente petición:
 

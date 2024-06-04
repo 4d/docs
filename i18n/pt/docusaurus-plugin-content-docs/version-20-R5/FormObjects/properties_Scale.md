@@ -31,7 +31,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
@@ -47,7 +47,7 @@ Medição do visor da escala.
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
@@ -67,7 +67,7 @@ Especifica a localização do texto de um objeto.
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
@@ -76,7 +76,7 @@ Especifica a localização do texto de um objeto.
 Valor máximo de um indicador.
 
 - For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+- Para activar los [termómetros del Barber Shop](progressIndicator.md#barber-shop), esta propiedad debe omitirse.
 
 #### Gramática JSON
 
@@ -86,7 +86,7 @@ Valor máximo de um indicador.
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 ---
 
@@ -102,7 +102,7 @@ Valor mínimo de um indicador. For numeric steppers, this property represent sec
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 ---
 
@@ -118,4 +118,4 @@ Intervalo mínimo aceite entre valores durante a utilização. For numeric stepp
 
 #### Objectos suportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)

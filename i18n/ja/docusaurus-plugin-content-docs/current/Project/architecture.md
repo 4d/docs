@@ -5,66 +5,66 @@ title: プロジェクトのアーキテクチャー
 
 4D プロジェクトは、一つのプロジェクトルートフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 例:
 
-- MyPackage (_project root folder_)
+- MyPackage (_プロジェクトルートフォルダー_)
   - `Components`
   - `Data`
-    - `ログ`
+    - `Logs`
     - `Settings`
-  - `ドキュメント`
+  - `Documentation`
   - `Plugins`
   - `Project`
     - `DerivedData`
     - `Sources`
     - `Trash`
-  - `リソース`
+  - `Resources`
   - `Settings`
   - `userPreferences.username`
   - `WebFolder`
 
-> バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
+> バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
-## `Project` folder
+## `Project` フォルダー
 
 典型的な Project フォルダーの構造です:
 
-- `<applicationName>.4DProject` file
+- `<applicationName>.4DProject` ファイル
 - `Sources`
   - `Classes`
   - `DatabaseMethods`
   - `Methods`
-  - `フォーム`
+  - `Forms`
   - `TableForms`
-  - `トリガー`
+  - `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (あれば)
 
-### `<applicationName>.4DProject` file
+### `<applicationName>.4DProject` ファイル
 
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
 - 4D
-- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
+- 4D Server (読み取り専用；[リモートプロジェクトを開く](Desktop/clientServer.md#リモートプロジェクトを開く) 参照)
 
 > 4D プロジェクトの開発は 4D によっておこない、マルチユーザー開発はソース管理ツールによって管理します。 4D Server は .4DProject ファイルを開くことができますが、クライアントからの開発はおこなえません。
 
-This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
+このテキストファイルには設定キー (具体的には [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects)) が含まれる場合があります。
 
 ### `Sources`
 
-| 内容                                                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | 形式   |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
-| catalog.4DCatalog                            | テーブルおよびフィールド定義                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | XML  |
-| catalog_editor.json     | ストラクチャーエディターでのテーブル、フィールド、およびリンクのカスタム位置と色。 Depends on a [Compatibility setting](../settings/compatibility.md) in converted projects                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | JSON |
-| folders.json                                 | 　エクスプローラーフォルダー定義                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | JSON |
-| menus.json                                   | メニュー定義                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | JSON |
-| settings.4DSettings                          | _Structure_ database settings. They are not taken into account if _[user settings](#settings-user)_ or _[user settings for data](#settings-user-data)_ are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use _user settings_ or _user settings for data_ to define custom settings. | XML  |
-| tips.json                                    | 定義されたヘルプTips                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | JSON |
-| lists.json                                   | 定義されたリスト                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | JSON |
-| filters.json                                 | 定義されたフィルター                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | JSON |
-| dependencies.json                            | Names of [components to load](components.md) in the project                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | JSON |
-| styleSheets.css                              | CSS スタイルシート                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | CSS  |
-| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | CSS  |
-| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | CSS  |
+| 内容                                                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                 | 形式   |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
+| catalog.4DCatalog                            | テーブルおよびフィールド定義                                                                                                                                                                                                                                                                                                                                                                                                     | XML  |
+| catalog_editor.json     | ストラクチャーエディターでのテーブル、フィールド、およびリンクのカスタム位置と色。 変換されたプロジェクトでは [互換性設定](../settings/compatibility.md) に依存します。                                                                                                                                                                                                                                                                                                              | JSON |
+| folders.json                                 | 　エクスプローラーフォルダー定義                                                                                                                                                                                                                                                                                                                                                                                                   | JSON |
+| menus.json                                   | メニュー定義                                                                                                                                                                                                                                                                                                                                                                                                             | JSON |
+| settings.4DSettings                          | _ストラクチャー_データベース設定。 _[ユーザー設定](#settings-ユーザー)_ または _[データファイル用のユーザー設定](#settings-ユーザーデータ)_ が定義されている場合は、そちらの設定が優先されます ([設定の優先順位](../Desktop/user-settings.md#設定の優先順位) も参照ください)。 **警告**: コンパイル済みアプリケーションの場合、ストラクチャー設定は読み取り専用の .4dz ファイルに格納されます。 運用時にカスタム設定を定義するには、[ユーザー設定を有効化](../Desktop/user-settings.md#ユーザー設定の有効化) し、_ユーザー設定_ または _データファイル用のユーザー設定_ を使う必要があります。 | XML  |
+| tips.json                                    | 定義されたヘルプTips                                                                                                                                                                                                                                                                                                                                                                                                       | JSON |
+| lists.json                                   | 定義されたリスト                                                                                                                                                                                                                                                                                                                                                                                                           | JSON |
+| filters.json                                 | 定義されたフィルター                                                                                                                                                                                                                                                                                                                                                                                                         | JSON |
+| dependencies.json                            | プロジェクトに [ロードするコンポーネント](components.md) の名前                                                                                                                                                                                                                                                                                                                                                                          | JSON |
+| styleSheets.css                              | CSS スタイルシート                                                                                                                                                                                                                                                                                                                                                                                                        | CSS  |
+| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                                                            | CSS  |
+| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                                                        | CSS  |
 
 #### `DatabaseMethods`
 
@@ -84,7 +84,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | ------------------------------- | --------------------------------------------------------------------- | ---- |
 | _className_.4dm | 特定のオブジェクトをインスタンス化するための、ユーザークラス用の定義メソッド。 1クラスにつき1ファイル。ファイル名がクラス名になります。 | text |
 
-#### `フォーム`
+#### `Forms`
 
 | 内容                                                        | 説明                                                     | 形式      |
 | --------------------------------------------------------- | ------------------------------------------------------ | ------- |
@@ -106,24 +106,24 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | _n_/Output/_formName_/method.4dm                     | 出力テーブルフォームのフォームメソッド                                               | text    |
 | _n_/Output/_formName_/ObjectMethods/_objectName_.4dm | 出力テーブルフォームのオブジェクトメソッド  (1つのオブジェクトメソッドにつき1ファイル) | text    |
 
-#### `トリガー`
+#### `Triggers`
 
 | 内容                                                 | 説明                                                                                       | 形式   |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---- |
 | table__n_.4dm | プロジェクト内で定義されているトリガーメソッド  ( 1つのテーブルにつき1ファイル；n: テーブル番号) | text |
 
-**Note:**
-The .4dm file extension is a text-based file format, containing the code of a 4D method. ソース管理ツールに対応しています。
+**注:**
+拡張子 .4dm のファイルは、4Dメソッドのコードをテキスト形式で格納しており、 ソース管理ツールに対応しています。
 
 ### `Trash`
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
 - `Methods`
-- `フォーム`
+- `Forms`
 - `TableForms`
 
-削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 The folder organization is identical to the [Sources](#sources) folder.
+削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
 
 ### `DerivedData`
 
@@ -133,11 +133,11 @@ DerivedData フォルダーには、処理を最適化するため 4D が内部�
 
 > このフォルダーは macOS でのみ使用されます。
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+Libraries フォルダーには、macOS 上で [Apple Silicon用にコンパイル](compiler.md#siliconコンパイラ) された結果のファイルが格納されます。
 
-## `リソース`
+## `Resources`
 
-Resources フォルダーには、追加のカスタムプロジェクトリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です See the _4D Server Reference Manual_.
+Resources フォルダーには、追加のカスタムプロジェクトリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です  (_4D Server リファレンスマニュアル_ の [リソースフォルダの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。
 
 | 内容                    | 説明                                                                                            | 形式      |
 | --------------------- | --------------------------------------------------------------------------------------------- | ------- |
@@ -152,49 +152,49 @@ Data フォルダーには、データファイルのほか、データに関わ
 
 | 内容                                              | 説明                                                                                                                                                                                                                                                                                                                                                                                           | 形式     |
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| data.4dd(\*) | レコードとして入力されたデータと、レコードに属するデータが格納されたデータファイルです。 4D プロジェクトを開くと、アプリケーションはカレントデータファイルをデフォルトで開きます。 If you change the name or location of this file, the _Open data file_ dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                | binary |
+| data.4dd(\*) | レコードとして入力されたデータと、レコードに属するデータが格納されたデータファイルです。 4D プロジェクトを開くと、アプリケーションはカレントデータファイルをデフォルトで開きます。 このファイルの場所や名称を変更した場合は、_データファイルを開く_ ダイアログボックスが表示され、使用するデータファイルを選択するか、新しいデータファイルを作成できます。                                                                                                                                                                                                            | binary |
 | data.journal                    | データベースがログファイルを使用する場合のみ作成されます。 ログファイルは2つのバックアップ間のデータ保護を確実なものにするために使用されます。 データに対して実行されたすべての処理が、このファイルに順番に記録されます。 つまりデータに対して操作がおこなわれるたびに、データ上の処理 (操作の実行) とログファイル上の処理 (操作の記録) という 2つの処理が同時に発生します。 ログファイルはユーザーの処理を妨げたり遅くしたりすることなく、独立して構築されます。 データベースは 1つのログファイルしか同時に使用できません。 ログファイルにはレコードの追加・更新・削除やトランザクションなどの処理が記録されます。 ログファイルはデータベースが作成される際にデフォルトで生成されます。 | binary |
 | data.match                      | (内部用) テーブル番号に対応する UUID                                                                                                                                                                                                                                                                                                                                                    | XML    |
 
 (\*) .4db バイナリデータベースからプロジェクトに変換した場合、データファイルは変換による影響を受けません。 このデータファイルの名称を変更して移動させることができます。
 
-### `Settings` (user data)
+### `Settings` (ユーザーデータ)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
+この設定は [ユーザー設定](#settings-ユーザー) や [ストラクチャー設定](#sources) より優先されます。
 
-> These settings take priority over [user settings](#settings-user) and [structure settings](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
+> この設定は [ユーザー設定](#settings-ユーザー) や [ストラクチャー設定](#sources) より優先されます。 [設定の優先順位](../Desktop/user-settings.md#設定の優先順位) も参照ください。
 
-| 内容                                  | 説明                                                                                                                                                                                                                                                  | 形式   |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| directory.json      | このデータファイルを使ってアプリケーションが実行されている場合に使用する 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                                                       | JSON |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the _4D XML Keys Backup_ manual. | XML  |
-| settings.4DSettings | データファイル用のカスタムデータベース設定。                                                                                                                                                                                                                              | XML  |
+| 内容                                  | 説明                                                                                                                                                                                                                      | 形式   |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| directory.json      | このデータファイルを使ってアプリケーションが実行されている場合に使用する 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                           | JSON |
+| Backup.4DSettings   | このデータファイルを使ってデータベースが実行されている場合に使用する [バックアップオプション](Backup/settings.md) を定義したデータベースバックアップ設定です。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
+| settings.4DSettings | データファイル用のカスタムデータベース設定。                                                                                                                                                                                                  | XML  |
 
-### `ログ`
+### `Logs`
 
 Logs フォルダーには、プロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:
 
 - データベース変換
 - Webサーバーリクエスト
-- backup/restore activities journal (_Backup Journal\[xxx].txt_, see [Backup journal](Backup/backup.md#backup-journal))
+- バックアップ/復元アクションのジャーナル (_Backup Journal\[xxx].txt_、[バックアップジャーナル](Backup/backup.md#backup-journal) 参照)
 - コマンドデバッグ
 - 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html) command) for maintenance log files and in cases where data folder is read-only.
+> データフォルダーが読み取り専用モードの場合やメンテナンスログファイルの保存には、システムのユーザー設定フォルダー (Active 4D Folder のこと、詳しくは [Get 4D folder](https://doc.4d.com/4dv19R/help/command/ja/page485.html) コマンド参照) 内にある Logs フォルダーが利用されます。
 
-## `Settings` (user)
+## `Settings` (ユーザー)
 
-This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration.
+この設定は [ストラクチャー設定](#sources) より優先されます。
 
-> These settings take priority over [structure settings](#sources) file. However, if [user settings for data](#settings-user-data) exist, they take priority over the user settings. See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
+> この設定は [ストラクチャー設定](#sources) より優先されます。 しかしながら、[データファイル用のユーザー設定](#settings-ユーザーデータ) が存在する場合は、そちらが優先されます。 [設定の優先順位](../Desktop/user-settings.md#設定の優先順位) も参照ください。
 
-| 内容                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                   | 形式   |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
-| directory.json      | 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                                                                                                                                                                                                                             | JSON |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the _backup journal_. Keys concerning backup configuration are described in the _4D XML Keys Backup_ manual. | XML  |
-| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                                                                          | XML  |
-| settings.4DSettings | プロジェクト用のカスタム設定 (すべてのデータファイル)                                                                                                                                                                                                                                                                                                                                      | XML  |
-| logConfig.json      | Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)                                                                                                                                                                                                                                                                                        | json |
+| 内容                                  | 説明                                                                                                                                                                                                                                                              | 形式   |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| directory.json      | 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                                                                                                        | JSON |
+| Backup.4DSettings   | バックアップ開始時に [バックアップオプション](Backup/settings.md) を指定するためのデータベースバックアップ設定です。 このファイルは、_バックアップジャーナル_ に保存する情報量などの追加オプションの確認や設定にも使用することができます。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
+| BuildApp.4DSettings | アプリケーションビルダーのダイアログボックス、または `BUILD APPLICATION` コマンドを使ったときに自動的に作成されるビルド設定ファイル                                                                                                                                                                                    | XML  |
+| settings.4DSettings | プロジェクト用のカスタム設定 (すべてのデータファイル)                                                                                                                                                                                                                 | XML  |
+| logConfig.json      | カスタムの [ログ設定ファイル](../Debugging/debugLogFiles.md#ログ設定ファイルを使用する)                                                                                                                                                                                                   | json |
 
 ## `userPreferences.<userName>`
 
@@ -213,11 +213,11 @@ This folder contains [**user settings**](../Desktop/user-settings.md#user-settin
 
 ## `Components`
 
-コンポーネントを格納する従来のフォルダー (Projectフォルダーと同じ階層に保存する必要があります)。
+プロジェクトに埋め込まれたコンポーネントを格納するフォルダー (Projectフォルダーと同じ階層に保存する必要があります)。 これらのコンポーネントは、他のどの場所よりも優先されます。
 
 :::info
 
-It is now recommended to [use the **dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare your components instead of the Components folder.
+[**dependencies.json**ファイルと **environment4d.json**ファイル (任意)](components.md) を使用して、コンポーネントを宣言することもできます。
 
 :::
 
@@ -225,16 +225,16 @@ It is now recommended to [use the **dependencies.json** and (optionnally) **envi
 
 アプリケーションプロジェクトが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-## `ドキュメント`
+## `Documentation`
 
 このフォルダーには、クラス・メソッド・フォームなどのプロジェクト要素について作成されたドキュメンテーションファイル (.md) がすべて格納されます。 ドキュメンテーションファイルは、4D エクスプローラーにて表示・管理されます。
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+詳細については [プロジェクトのドキュメンテーション](Project/documentation.md) を参照ください。
 
 ## `WebFolder`
 
 ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。
 
-## `.gitignore` file (optional)
+## `.gitignore` ファイル (任意)
 
-git が無視するファイルを指定します。 You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+git が無視するファイルを指定します。 プロジェクトに gitignore ファイルを含めるには、環境設定 ＞ **一般** ページの **.gitignore ファイルを作成する** オプションを使用します。 このファイルの内容を設定するには、[.gitignore ファイルを作成する](Preferences/general.md#gitignore-ファイルを作成する) を参照ください。

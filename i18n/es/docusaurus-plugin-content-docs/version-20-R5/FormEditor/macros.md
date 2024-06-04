@@ -13,7 +13,7 @@ Por ejemplo, si tiene un informe recurrente con un formato específico (por ejem
 - Añadir / eliminar / modificar los formularios, los objetos de formulario así como sus propiedades
 - Modificar los archivos del proyecto (actualizar, eliminar)
 
-Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
+El código de las macros soporta [funciones de clase](Concepts/classes.md) y las [propiedades de objeto de formulario en JSON](FormObjects/properties_Reference.md) para permitir definir toda funcionalidad personalizada en el editor de formularios.
 
 Las macros pueden definirse para el proyecto local o para componentes dentro del proyecto. Por lo general, se crea una macro y se instala dentro de los componentes que se utilizan para el desarrollo.
 
@@ -23,7 +23,7 @@ Cuando se llama, una macro anula todo comportamiento especificado previamente.
 
 En este breve ejemplo, verá cómo crear y llamar a una macro que añade un botón de alerta "Hello World" en la esquina superior izquierda de su formulario.
 
-1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
+1. En un archivo `formMacros.json` dentro de la carpeta `Sources` de su proyecto, escriba:
 
 ```js
 {
@@ -35,9 +35,9 @@ En este breve ejemplo, verá cómo crear y llamar a una macro que añade un bot�
 }
 ```
 
-2. Create a 4D class named `AddButton`.
+2. Cree una clase 4D llamada `AddButton`.
 
-3. Within the `AddButton` class, write the following function:
+3. En la clase `AddButton`, escriba la siguiente función:
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
@@ -76,23 +76,23 @@ Cuando las macros están definidas en su proyecto 4D, puede llamar una macro uti
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Los elementos de la macro se clasifican en orden alfabético.
+Este menú se crea sobre el [archivo de definición de macros](#location-of-macros) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
 
 Este menú puede ser llamado en un área vacía o en una selección en el formulario. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
 
-Una sola macro puede ejecutar varias operaciones. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+Una sola macro puede ejecutar varias operaciones. Si se selecciona, la función **Deshacer** del editor de formularios puede utilizarse para revertir las operaciones de las macros de forma global.
 
 ## Ubicación del archivo de macro
 
-All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
+Todas las macros del editor de formularios 4D se definen en un único archivo JSON por proyecto o componente: `FormMacros.json`.
 
-This file must be located in the host or component's **Project** > **Sources** folder:
+Este archivo debe estar ubicado en la carpeta **Project** > **Sources** local o del componente:
 
 ![](../assets/en/FormEditor/macroStructure.png)
 
 ## Declaración de macros
 
-The structure of the `formMacros.json` file is the following:
+La estructura del archivo `formMacros.json` es la siguiente:
 
 ```js
 {
@@ -114,7 +114,7 @@ Esta es la descripción del contenido del archivo JSON:
 |          |               | class              | string | nombre de clase de la macro                                                     |
 |          |               | `<customProperty>` | any    | (opcional) valor personalizado a recuperar en el constructor |
 
-Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
+Las propiedades personalizadas, cuando se utilizan, se pasan a la función [constructor](#class-constructor) de la macro.
 
 ### Ejemplo
 
@@ -138,33 +138,33 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 ## Instanciar las macros en 4D
 
-Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
+Cada macro que quiera instanciar en su proyecto o componente debe ser declarada como una [clase 4D](Concepts/classes.md).
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
+El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#creating-macros) del archivo `formMacros.json`.
 
 Las macros se instancian al iniciar la aplicación. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 
 ## Funciones macro
 
-Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+Cada clase de macro puede contener un `Class constructor` y dos funciones: `onInvoke()` y `onError()`.
 
 ### Class constructor
 
 #### Class constructor($macro : Object)
 
-| Parámetros | Tipo   | Descripción                                                                 |
-| ---------- | ------ | --------------------------------------------------------------------------- |
-| $macro     | Object | Macro declaration object (in the `formMacros.json` file) |
+| Parámetros | Tipo   | Descripción                                                                          |
+| ---------- | ------ | ------------------------------------------------------------------------------------ |
+| $macro     | Object | Objeto de declaración de macros (en el archivo `formMacros.json`) |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+Las macros se instancian utilizando una función [class constructor](Concepts/classes.md#class-constructor), si existe.
 
 El class constructor se llama una vez durante la instanciación de clase, que se produce al inicio de la aplicación.
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+Las propiedades personalizadas añadidas a la [declaración macro](#declaring-macros) se devuelven en el parámetro de la función class contructor.
 
 #### Ejemplo
 
-In the `formMacros.json` file:
+En el archivo `formMacros.json`:
 
 ```js
 {
@@ -195,13 +195,13 @@ Class constructor($macro : Object)
 | $editor    | Object | Objeto Form Editor Macro Proxy que contiene las propiedades del formulario                                         |
 | $result    | Object | Objeto Form Editor Macro Proxy que devuelve las propiedades modificadas por la macro (opcional) |
 
-The `onInvoke` function is automatically executed each time the macro is called.
+La función `onInvoke` se ejecuta automáticamente cada vez que se llama a la macro.
 
-When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. Luego puede ejecutar cualquier operación en estas propiedades.
+Cuando la función es llamada, recibe en la propiedad `$editor.editor` una copia de todos los elementos del formulario con sus valores actuales. Luego puede ejecutar cualquier operación en estas propiedades.
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. El procesador de macros analizará las propiedades devueltas y aplicará las operaciones necesarias en el formulario. Obviamente, cuanto menos propiedades devuelva, menos tiempo requerirá el procesamiento.
+Una vez completadas las operaciones, si la macro resulta en la modificación, adición o eliminación de objetos, puede pasar las propiedades editadas resultantes en `$result`. El procesador de macros analizará las propiedades devueltas y aplicará las operaciones necesarias en el formulario. Obviamente, cuanto menos propiedades devuelva, menos tiempo requerirá el procesamiento.
 
-Here are the properties returned in the _$editor_ parameter:
+Estas son las propiedades devueltas en el parámetro _$editor_:
 
 | Propiedad                                                        | Tipo       | Descripción                                                                                       |
 | ---------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
@@ -215,7 +215,7 @@ Here are the properties returned in the _$editor_ parameter:
 | $editor.editor.formProperties    | Object     | Propiedades del formulario actual                                                                 |
 | $editor.editor.target            | string     | Nombre del objeto bajo el ratón cuando se hace clic en una macro                                  |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas las propiedades son opcionales:
+Estas son las propiedades que puede pasar en el objeto `$result` si quiere que el macro procesador ejecute una modificación. Todas las propiedades son opcionales:
 
 | Propiedad                         | Tipo       | Descripción                                                             |
 | --------------------------------- | ---------- | ----------------------------------------------------------------------- |
@@ -234,27 +234,27 @@ Por ejemplo, si los objetos de la página actual y de los grupos han sido modifi
 
 ```
 
-#### `method` attribute
+#### atributo `method`
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
+Cuando se maneja el atributo `method` de los objetos de formulario, se puede definir el valor del atributo de dos maneras en las macros:
 
-- Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+- Utilizando una [cadena que contiene el nombre/ruta del archivo del método](FormObjects/properties_Action.md#method).
 
 - Utilizando un objeto con la siguiente estructura:
 
-| Propiedad | Tipo   | Descripción |
-| --------- | ------ | ----------- |
-| source    | String | method code |
+| Propiedad | Tipo   | Descripción       |
+| --------- | ------ | ----------------- |
+| source    | String | código del método |
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. Esta función solo está disponible para el código macro.
+4D creará un archivo con el nombre del objeto en la carpeta "objectMethods" con el contenido del atributo `source`. Esta función solo está disponible para el código macro.
 
-#### `$4dId` property in `currentPage.objects`
+#### Propiedad `$4dId` en `currentPage.objects`
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+La propiedad `$4dId` define un ID único para cada objeto de la página actual. Esta clave es utilizada por el procesador de macros para controlar los cambios en `$result.currentPage`:
 
-- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
-- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+- si la llave `$4dId` falta tanto en el formulario y en un objeto en `$result`, el objeto se crea.
+- si la llave `$4dId` existe en el formulario pero falta en `$result`, el objeto se elimina.
+- si la llave `$4dId` existe tanto en el formulario y en un objeto en `$result`, el objeto se modifica.
 
 #### Ejemplo
 
@@ -284,16 +284,16 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parámetros   |                                                                                           | Tipo       | Descripción                              |
-| ------------ | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------- |
-| $editor      |                                                                                           | Object     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                                                                                           | Object     | Object returned by [onInvoke](#oninvoke) |
-| $error       |                                                                                           | Collection | Pila de errores                          |
-|              | [].errCode            | Number     | Código de error                          |
-|              | [].message            | Text       | Descripción del error                    |
-|              | [].componentSignature | Text       | Firma del componente interno             |
+| Parámetros   |                                                                                           | Tipo       | Descripción                               |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------- |
+| $editor      |                                                                                           | Object     | Objeto enviado a [onInvoke](#oninvoke)    |
+| $resultMacro |                                                                                           | Object     | Objeto devuelto por [onInvoke](#oninvoke) |
+| $error       |                                                                                           | Collection | Pila de errores                           |
+|              | [].errCode            | Number     | Código de error                           |
+|              | [].message            | Text       | Descripción del error                     |
+|              | [].componentSignature | Text       | Firma del componente interno              |
 
-The `onError` function is executed when the macros processor encounters an error.
+La función `onError` se ejecuta cuando el procesador de macros encuentra un error.
 
 Cuando se ejecuta una macro, si 4D encuentra un error que impide la cancelación de la macro, no la ejecuta. Es el caso, por ejemplo, de que la ejecución de una macro resulte en:
 

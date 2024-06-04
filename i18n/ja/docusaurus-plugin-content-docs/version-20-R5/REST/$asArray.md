@@ -7,7 +7,7 @@ title: $asArray
 
 ## 説明
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request (_e.g._, `$asArray=true`).
+レスポンスを配列として取得するには、RESTリクエストに `$asArray` を追加します (_例:_ `$asArray=true`)。
 
 ## 例題
 
@@ -15,7 +15,7 @@ If you want to receive the response in an array, you just have to add `$asArray`
 
 `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
-**Response**:
+**レスポンス**:
 
 ```
 [

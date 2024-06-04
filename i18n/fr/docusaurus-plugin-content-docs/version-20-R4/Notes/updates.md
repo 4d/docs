@@ -26,6 +26,7 @@ Read [**What’s new in 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 - L'utilisation d'une ancienne syntaxe pour la déclaration des paramètres (par exemple `C_TEXT($1)` ou `var $1 : Text`) est maintenant dépréciée et génère des warnings lors du typage du code, de la vérification syntaxique et de la compilation.
 - Dans la mise à jour de la [bibliothèque OpenSSL](#library-table), le niveau de sécurité SSL/TLS par défaut a été modifié de 1 à 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
+- In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in _connectionInfo_. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
 
 ## 4D 20 R3
 
@@ -134,7 +135,8 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 #### Changements de comportement
 
-- À partir de la version 20.2, 4D 20 LTS n'est plus compatible avec Windows Server 2012 R2.
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in _connectionInfo_. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
 - **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 - Pour la conformité RFC de HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) retourne maintenant tous les noms d'en-têtes **en minuscules**. Si vous voulez que votre code continue à fonctionner comme avant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils sont invalides. Une nouvelle propriété _option_ vous permet de contrôler cette validation.
@@ -263,7 +265,7 @@ $value:=($size>1000) ? a:b // Ici, 'a:b' est considéré comme un opérateur ter
 - Extension de la [prise en charge du mode sombre](../Preferences/general.md#appearance-macos-only) sur macOS.
 - Support de **OAuth2 token object** dans [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter), et [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter).
 - Les utilisateurs peuvent maintenant charger un [fichier de configuration des journaux](../Debugging/debugLogFiles.md#using-a-log-configuration-file) en utilisant un bouton dans la [fenêtre d'administration du serveur](../ServerWindow/maintenance.md#load-logs-configuration-file).
-- La gestion des [paramètres optionnels](../Concepts/paramètres.md#optional-parameters) est plus souple dans le langage 4D lorsqu'il s'agit d'accéder à des paramètres déclarés mais non transmis. Par exemple, le code suivant ne provoque plus d'erreur :
+- La gestion des [paramètres optionnels](../Concepts/parameters.md#optional-parameters) est plus souple dans le langage 4D lorsqu'il s'agit d'accéder à des paramètres déclarés mais non transmis. Par exemple, le code suivant ne provoque plus d'erreur :
 
 ```4d
 // Fonction "concate" de myClass
@@ -321,7 +323,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Serveur Web : nouveau paramètre [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Prise en charge des couleurs foncées et claires pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
 - Nouveaux thèmes sombres et clairs par défaut dans les [préférences de l'éditeur de code](../Preferences/methods.md#theme-list).
-- [Compilation native](../Projet/compiler.md#compiler-methods-for) pour les processeurs Silicon.
+- [Compilation native](../Project/compiler.md#compiler-methods-for) pour les processeurs Silicon.
 - La propriété [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) est désormais prise en charge par les colonnes de listbox entity selection.
 - Nouvelle page complète [CLI](../Admin/cli.md).
 

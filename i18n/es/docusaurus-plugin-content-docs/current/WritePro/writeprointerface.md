@@ -7,7 +7,7 @@ title: Interfaz 4D Write Pro
 
 Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the _4D Design Reference manual_.
+La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual _Diseño 4D_.
 
 A continuación encontrará la documentación de configuración del Asistente para tablas.
 
@@ -47,7 +47,7 @@ In the Table Wizard, the user can also define the number of header rows and extr
 
 El usuario ajusta el nivel de zoom según sus preferencias seleccionando la opción deseada de una lista desplegable, utiliza botones de opción para mostrar fórmulas o datos para una presentación clara y elige mostrar una regla horizontal utilizando una casilla de verificación.
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+Tras finalizar la creación y personalización de la tabla, el usuario puede hacer clic en el botón **Insertar** para añadir la tabla a su documento WP.
 
 Una vez integrada la tabla en el documento, el usuario puede personalizar su estilo. Las herramientas de formato de la barra de herramientas y la barra lateral siguen estando disponibles.
 
@@ -55,9 +55,9 @@ Una vez integrada la tabla en el documento, el usuario puede personalizar su est
 
 La configuración de las plantillas incluye:
 
-- Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-- Translating table, field, and formula names from the [translation file](#translation-files).
-- Designing graphic styles and customized  themes from the [theme file](#theme-files).
+- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 Estos tres tipos de archivos contribuyen a la configuración del Asistente para tablas y, aunque cada uno de ellos tiene una finalidad distinta, ninguno de ellos se considera un componente esencial.
 
@@ -180,7 +180,7 @@ La definición de estos atributos dentro del objeto de traducción garantiza una
 
 Si el nombre de la plantilla o la fórmula (ruptura, línea de arrastre o extra) existe en el archivo traducido, su traducción se aplica en el Asistente de tablas. Además, solo se visualiza y traduce la tabla definida en el archivo de traducción.
 
-El archivo de traducción cumple una función adicional cuando un usuario selecciona una tabla en la interfaz. Puede filtrar las tablas y los campos propuestos al usuario. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+El archivo de traducción cumple una función adicional cuando un usuario selecciona una tabla en la interfaz. Puede filtrar las tablas y los campos propuestos al usuario. Por ejemplo, para ocultar los ID de tabla, este comportamiento es similar a los comandos `SET TABLE TITLES` y `SET FIELD TITLES`.
 
 ##### Ejemplo
 

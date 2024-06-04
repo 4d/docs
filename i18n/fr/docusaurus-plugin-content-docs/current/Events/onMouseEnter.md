@@ -11,13 +11,13 @@ title: On Mouse Enter
 
 Cet événement est généré une fois, lorsque le curseur de la souris entre dans la zone graphique d'un objet du formulaire.
 
-The `On Mouse Enter` event updates the _MouseX_ and _MouseY_ system variables.
+L'événement `On Mouse Enter` met à jour les variables système _MouseX_ et _MouseY_.
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+Les objets rendus invisibles à l'aide de la commande `OBJECT SET VISIBLE` ou de la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
 
 ### Appeler la pile
 
-If the `On Mouse Enter` event has been checked for the form, it is generated for each form object. S'il est vérifié pour un objet, il n'est généré que pour cet objet. Lorsqu'il existe des objets superposés, l'événement est généré par le premier objet capable de le gérer qui se trouve en allant de haut en bas.
+Si l'événement `On Mouse Enter` a été coché pour le formulaire, il est généré pour chaque objet de formulaire. S'il est vérifié pour un objet, il n'est généré que pour cet objet. Lorsqu'il existe des objets superposés, l'événement est généré par le premier objet capable de le gérer qui se trouve en allant de haut en bas.
 
 ### Voir également
 

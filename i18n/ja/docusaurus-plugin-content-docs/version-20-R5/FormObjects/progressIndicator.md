@@ -39,7 +39,38 @@ title: 進捗インジケーター
 
 ### プロパティ一覧
 
-[Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Display graduation](properties_Scale.md#display-graduation) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Italic](properties_Text.md#italic) - [Graduation step](properties_Scale.md#graduation-step) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Label Location](properties_Scale.md#label-location) - [Left](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[最小](properties_Scale.md#最小) -
+[最大](properties_Scale.md#最大) -
+[目盛りのステップ](properties_Scale.md#目盛りのステップ) -
+[ステップ](properties_Scale.md#ステップ) -
+[ラベル位置](properties_Scale.md#ラベル位置) -
+[目盛りを表示](properties_Scale.md#目盛りを表示) -
+[バーバーショップ](properties_Scale.md#バーバーショップ) -
+[表示状態](properties_Display.md#表示状態) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[入力可](properties_Entry.md#入力可) -
+[数値フォーマット](properties_Display.md#数値フォーマット) -
+[表示状態](properties_Display.md#表示状態) -
+[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[フォント](properties_Text.md#フォント) -
+[フォントサイズ](properties_Text.md#フォントサイズ) -
+[太字](properties_Text.md#太字) -
+[イタリック](properties_Text.md#イタリック) -
+[下線](properties_Text.md#下線) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
 ## バーバーショップ
 
@@ -58,9 +89,33 @@ title: 進捗インジケーター
 
 ### プロパティ一覧
 
-[Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[バーバーショップ](properties_Scale.md#バーバーショップ) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[表示状態](properties_Display.md#表示状態) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[入力可](properties_Entry.md#入力可) -
+[表示状態](properties_Display.md#表示状態) -
+[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[フォント](properties_Text.md#フォント) -
+[フォントサイズ](properties_Text.md#フォントサイズ) -
+[太字](properties_Text.md#太字) -
+[イタリック](properties_Text.md#イタリック) -
+[下線](properties_Text.md#下線) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
 ## 参照
 
 - [ルーラー](ruler.md)
-- [steppers](stepper.md)
+- [ステッパー](stepper.md)

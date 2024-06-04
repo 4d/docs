@@ -7,17 +7,17 @@ title: 4D View Pro エリアの設定
 
 ## フォームエリアプロパティ
 
-Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
+**オブジェクト名**、[**変数あるいは式**](#4d-view-pro-フォームオブジェクト変数)、**アピアランス**、**アクション**、**イベント** などの [4D View Pro オブジェクトプロパティ](FormObjects/viewProArea_overview.md#プロパティ一覧) は、エリアのプロパティリストを使って設定できます。
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
 ### ユーザーインターフェースの選択
 
-You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
+4D View Pro のフォームエリアで使用するインターフェースは、**プロパティリスト** の **アピアランス** から選択できます:
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
-> You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.
+> また、[`userInterface`](FormObjects/properties_Appearance.md#ユーザーインターフェース) および [`withFormulaBar`](FormObjects/properties_Appearance.md#フォーミュラバーを表示) ("ツールバー" インターフェースのみ) の JSONプロパティを使用することもできます。
 
 インターフェースにより、基本的な編集とデータ操作がおこなえます。 ユーザーによる編集は、ユーザーによってドキュメントが保存されたときに 4D View Pro オブジェクトに保存されます。
 
@@ -27,7 +27,7 @@ You can select the interface to use with your 4D View Pro form areas in the **Pr
 
 #### ツールバー
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. これを選択すると、ツールバーのすぐ下にフォーミュラバーが表示されます。
+ツールバー型インターフェースを有効化すると [**フォーミュラバーを表示**](FormObjects/properties_Appearance.md#フォーミュラバーを表示) オプションが表示されます。 これを選択すると、ツールバーのすぐ下にフォーミュラバーが表示されます。
 
 フォーミュラバーが表示された状態:
 
@@ -39,19 +39,19 @@ Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/p
 
 | タブ     | アクション           | リボン型インターフェース | ツールバー型インターフェース |
 | ------ | --------------- | :----------: | :------------: |
-| File   | ファイル操作          |       X      |                |
-| ホーム    | テキストの書式など       |       X      |        X       |
-| 挿入     | アイテムの追加         |       X      |        X       |
-| フォーミュラ | フォーミュラの計算とライブラリ |       X      |        X       |
-| データ    | データ操作           |       X      |        X       |
-| 表示     | 表示の設定           |       X      |        X       |
-| 設定     | スプレッドシートの設定     |       X      |                |
+| ファイル   | ファイル操作          |       ○      |                |
+| ホーム    | テキストの書式など       |       ○      |        ○       |
+| 挿入     | アイテムの追加         |       ○      |        ○       |
+| フォーミュラ | フォーミュラの計算とライブラリ |       ○      |        ○       |
+| データ    | データ操作           |       ○      |        ○       |
+| 表示     | 表示の設定           |       ○      |        ○       |
+| 設定     | スプレッドシートの設定     |       ○      |                |
 
 ## フォームイベント
 
 4D View Pro エリアのプロパティリスト内では、以下のフォームイベントが利用可能です。
 
-一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
+一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](https://doc.4d.com/4dv19/help/command/ja/page1606.html) コマンドが返すオブジェクトに追加の情報を提供します。 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
 
 | 標準の 4Dイベント                                      | 4D View Pro 専用、または追加情報を返すイベント                         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -74,31 +74,31 @@ Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/p
 
 ### シートのアピアランス
 
-| プロパティ                |                        | タイプ     | 説明                                                                                                                                                                                                                                                                                                              |
-| -------------------- | ---------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| allowCellOverflow    |                        | boolean | セルに収まらないデータを隣の空のセルにはみ出し表示するかどうかを指定します                                                                                                                                                                                                                                                                           |
-| sheetTabColor        |                        | string  | シートタブの色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                                         |
-| frozenlineColor      |                        | string  | 固定化された線の色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                                       |
-| clipBoardOptions     |                        | longint | クリップボードオプション。 Available values: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
-| gridline             |                        | object  | 枠線のオプション                                                                                                                                                                                                                                                                                                        |
-|                      | color                  | string  | 枠線の色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                                              |
-|                      | showVerticalGridline   | boolean | 垂直の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                           |
-|                      | showHorizontalGridline | boolean | 水平の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                           |
-| rowHeaderVisible     |                        | boolean | 行ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                           |
-| colHeaderVisible     |                        | boolean | 列ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                           |
-| rowHeaderAutoText    |                        | longint | 行ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
-| colHeaderAutoText    |                        | longint | 列ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
-| selectionBackColor   |                        | string  | シートにおける選択範囲の背景色。 (RGBAフォーマット推奨)                                                                                                                                                                                                                                                              |
-| selectionBorderColor |                        | string  | シートにおける選択範囲の枠線の色。                                                                                                                                                                                                                                                                                               |
-| sheetAreaOffset      |                        | object  | シートエリアのオフセットオプション                                                                                                                                                                                                                                                                                               |
-|                      | left                   | longint | シートの、ホストからの左オフセット                                                                                                                                                                                                                                                                                               |
-|                      | top                    | longint | シートの、ホストからの上オフセット                                                                                                                                                                                                                                                                                               |
+| プロパティ                |                        | タイプ     | 説明                                                                                                                                                                                                                                                                                                    |
+| -------------------- | ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| allowCellOverflow    |                        | boolean | セルに収まらないデータを隣の空のセルにはみ出し表示するかどうかを指定します                                                                                                                                                                                                                                                                 |
+| sheetTabColor        |                        | string  | シートタブの色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                               |
+| frozenlineColor      |                        | string  | 固定化された線の色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                             |
+| clipBoardOptions     |                        | longint | クリップボードオプション。 利用可能な値: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
+| gridline             |                        | object  | 枠線のオプション                                                                                                                                                                                                                                                                                              |
+|                      | color                  | string  | 枠線の色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                                    |
+|                      | showVerticalGridline   | boolean | 垂直の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+|                      | showHorizontalGridline | boolean | 水平の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+| rowHeaderVisible     |                        | boolean | 行ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+| colHeaderVisible     |                        | boolean | 列ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+| rowHeaderAutoText    |                        | longint | 行ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 利用可能な値: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
+| colHeaderAutoText    |                        | longint | 列ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 利用可能な値: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
+| selectionBackColor   |                        | string  | シートにおける選択範囲の背景色。 (RGBAフォーマット推奨)                                                                                                                                                                                                                                                    |
+| selectionBorderColor |                        | string  | シートにおける選択範囲の枠線の色。                                                                                                                                                                                                                                                                                     |
+| sheetAreaOffset      |                        | object  | シートエリアのオフセットオプション                                                                                                                                                                                                                                                                                     |
+|                      | left                   | longint | シートの、ホストからの左オフセット                                                                                                                                                                                                                                                                                     |
+|                      | top                    | longint | シートの、ホストからの上オフセット                                                                                                                                                                                                                                                                                     |
 
 > いずれのプロパティも任意です。
 
 ### シートの保護
 
-To lock the whole sheet, you only need to set the _isProtected_ property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
+シート全体をロック (保護) するには、_isProtected_ プロパティを **true** に設定するだけです。 その上で、[locked](#レイアウト) セルスタイルプロパティを個別に設定することで、特定のセルをロック解除することができます。
 
 | プロパティ             |                          | タイプ     | 説明                                                                        |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------- |
@@ -122,11 +122,11 @@ To lock the whole sheet, you only need to set the _isProtected_ property to **tr
 
 ## セルフォーマット
 
-フォーマットパターン (表示形式) を定義することで、4D View Pro ドキュメントのコンテンツを想定通りに表示することができます。 Formats can be set using the selected 4D View Pro [interface](#selecting-a-user-interface), or using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands.
+フォーマットパターン (表示形式) を定義することで、4D View Pro ドキュメントのコンテンツを想定通りに表示することができます。 フォーマットは、選択された 4D View Pro の [インターフェース](#ユーザーインターフェースの選択) を使用するか、[VP SET VALUE](commands/vp-set-value.md) または [VP SET NUM VALUE](commands/vp-set-num-value.md) コマンドを使用して設定します。
 
 4D View Pro には数値、日付、時間、そしてテキスト用のビルトインのフォーマットがありますが、カスタムパターンを作成することで、特殊文字やコードを使ったフォーマットでセルのコンテンツを表示することができます。
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern _($\* #,##0.00_) which would display amounts as shown:
+たとえば、請求書において [VP SET VALUE](commands/vp-set-value.md) あるいは [VP SET NUM VALUE](commands/vp-set-num-value.md) コマンドを使用して金額を入力している場合、数値の桁数とは関係なく (つまり金額が $5.00 だろうと $5,000.00 だろうと) 通貨記号 ($, €, ¥, など)を同じ位置に整列させたい場合があるかもしれません。 この場合、フォーマット文字を使用してパターン _($\* #,##0.00)_ を指定することで、以下のように表示させることができます:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -139,7 +139,7 @@ For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET 
 | 文字                                                            | 説明                                                                                                             | 例題                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0                                                             | ゼロを表示する桁のプレースホルダー                                                                                              | #.00 は 1.1 を 1.10 と表示します。                                                                                                                                                                                                                                                            |
-| 。                                                             | 小数点を表示します                                                                                                      | 0.00 は 1999 を 1999.00 と表示します。                                                                                                                                                                                                                                                                        |
+| .                                             | 小数点を表示します                                                                                                      | 0.00 は 1999 を 1999.00 と表示します。                                                                                                                                                                                                                                                                        |
 | ,                                                             | 数値内に千区切りのカンマを表示します。 数値記号 "#" あるいはゼロに挟まれたカンマがフォーマットに含まれる場合、3桁ごとにカンマで区切られます。 桁のプレースホルダーの後にくるカンマは、数値を 1000 で割ります。 | #,0 は 12200000 を 12,200,000 と表示します。                                                                                                                                                                                                                                                                                                  |
 | \_                                      | アンダーバーに続く文字の幅をスキップします。                                                                                         | \_( のようにカッコなどと組み合わせることで、左や右にスペースを追加します。                                                                                                                                                                                                                                                     |
 | @                                                | テキストのフォーマット文字。 セル内のすべてのテキストにフォーマットを適用します。                                                                      | "\[Red]@" はテキスト値に対して赤のフォントカラーを適用します。                                                                                                                                                                                                                               |
@@ -281,7 +281,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | headerRight       | text              | 印刷ページの右ヘッダーのテキストとフォーマット    |
 | headerRightImage  | picture \| text\* | ヘッダーの右セクションの画像             |
 
-\* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
+\* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 画像指定に使用するデータ型にかかわらず、4D View Pro エリアには (参照ではなく) 画像そのものが保存され、[VP Get print info](commands/vp-get-print-info.md) によって返されます。
 
 ### 特殊文字
 
@@ -290,17 +290,17 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | 文字                    | 説明                                            | 例題                                                                                                                                                    | 戻り値                                                  |   |
 | --------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | - |
 | & | エスケープ文字                                       | (以下の例を参照)                                                                                                                          |                                                      |   |
-| P                     | カレントページ                                       | printInfo.headerLeft:="This is page &P."                                          | This is page 5.                      |   |
-| N                     | ページ数                                          | printInfo.headerLeft:="There are &N pages."                                       | 10 ページあります                                           |   |
-| D                     | カレント日付 (yyyy/mm/dd フォーマット) | printInfo.headerLeft:="It is &D."                                                 | 日付は 2015/6/19 です                                     |   |
-| T                     | 現在の時刻                                         | printInfo.headerLeft:="It is &T."                                                 | 時刻は 16:30:36 です      |   |
+| P                     | カレントページ                                       | printInfo.headerLeft:="これは &P ページ目です"                                                             | これは 5 ページ目です                                         |   |
+| N                     | ページ数                                          | printInfo.headerLeft:="&N ページあります"                                                                | 10 ページあります                                           |   |
+| D                     | カレント日付 (yyyy/mm/dd フォーマット) | printInfo.headerLeft:="日付は &D です"                                                                 | 日付は 2015/6/19 です                                     |   |
+| T                     | 現在の時刻                                         | printInfo.headerLeft:="時刻は &T です"                                                                 | 時刻は 16:30:36 です      |   |
 | G                     | ピクチャー                                         | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"  | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |   |
-| S                     | 打ち消し線                                         | printInfo.headerLeft:="&SThis is text."                                           | ~~これはテキストです~~                                        |   |
-| U                     | 下線                                            | printInfo.headerLeft:="&UThis is text."                                           | これはテキストです (下線)                    |   |
-| B                     | 太字                                            | printInfo.headerLeft:="&BThis is text."                                           | **This is text.**                    |   |
-| I                     | イタリック                                         | printInfo.headerLeft:="&IThis is text."                                           | _This is text._                      |   |
+| S                     | 打ち消し線                                         | printInfo.headerLeft:="&Sこれはテキストです"                                                               | ~~これはテキストです~~                                        |   |
+| U                     | 下線                                            | printInfo.headerLeft:="&Uこれはテキストです"                                                               | これはテキストです (下線)                    |   |
+| B                     | 太字                                            | printInfo.headerLeft:="&Bこれはテキストです"                                                               | **これはテキストです**                                        |   |
+| I                     | イタリック                                         | printInfo.headerLeft:="&Iこれはテキストです"                                                               | _これはテキストです_                                          |   |
 | "                     | フォント指定                                        | printInfo.headerLeft:="&\"Lucida Console\"&14This is text." | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |   |
-| K                     | 文字カラー指定                                       | printInfo.headerLeft:="&KFF0000This is text."                                     | これはテキストです (赤字)。                   |   |
+| K                     | 文字カラー指定                                       | printInfo.headerLeft:="&KFF0000これはテキストです"                                                         | これはテキストです (赤字)。                   |   |
 | F                     | ワークブック名                                       | printInfo.headerLeft:="&F"                                                                        | 2019 Monthly Revenue Forecasts                       |   |
 | A                     | スプレッドシート名                                     | printInfo.headerLeft:="&A"                                                                        | June 2019 revenue forecast                           |   |
 
@@ -324,24 +324,24 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 > この属性はレンダリング情報のみを定義します。
 
-| プロパティ       | タイプ     | 説明                                                                                                                                                 |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| orientation | longint | ページの向き。 Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
+| プロパティ       | タイプ     | 説明                                                                                                                                    |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| orientation | longint | ページの向き。 とりうる値: `vk print page orientation landscape`, `vk print page orientation portrait` (デフォルト) |
 
 ### ページ
 
 ページ属性は、一般的なドキュメント印刷設定を指定するのに使用されます。
 
-| プロパティ           | タイプ     | 説明                                                                                                                                                                                                                   |
-| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean | 白黒で印刷します。 <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                               |
-| centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。 Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
-| firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                                                                          |
-| pageOrder       | longint | ページの印刷順。 Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                      |
-| pageRange       | text    | 印刷されるページの範囲                                                                                                                                                                                                          |
-| qualityFactor   | longint | 印刷の品質指定 (1 - 8)。  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                           |
-| useMax          | boolean | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                              |
-| zoomFactor      | 実数      | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                            |
+| プロパティ           | タイプ     | 説明                                                                                                                                                                                                      |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean | 白黒で印刷します。 <p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                        |
+| centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。 とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
+| firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                                                             |
+| pageOrder       | longint | ページの印刷順。 とりうる値: `vk print page order auto` (デフォルト), `vk print page order down then over`, `vk print page order over then down`.                      |
+| pageRange       | text    | 印刷されるページの範囲                                                                                                                                                                                             |
+| qualityFactor   | longint | 印刷の品質指定 (1 - 8)。  高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                                         |
+| useMax          | boolean | データのあるカラムと行のみが印刷されます。<p>デフォルト値 = true</p>                                                                                                                                                               |
+| zoomFactor      | real    | 印刷ページの拡大/縮小率。<p>デフォルト値 = 1</p>                                                                                                                                                                          |
 
 ### 用紙サイズ
 
@@ -350,19 +350,19 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 - カスタムサイズ - height と width 属性を使用
 - 規格サイズ - kind 属性を使用
 
-| プロパティ     |        | タイプ     | 説明                                                                                                                                                                                           |
-| --------- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| paperSize |        | object  | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                                                                                               |
-|           | height | longint | 用紙の高さ、100分の1インチ単位                                                                                                                                                                            |
-|           | width  | longint | 用紙の幅、100分の1インチ単位                                                                                                                                                                             |
-|           | kind   | text    | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. デフォルト値 = "letter" |
+| プロパティ     |        | タイプ     | 説明                                                                                                                  |
+| --------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| paperSize |        | object  | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                      |
+|           | height | longint | 用紙の高さ、100分の1インチ単位                                                                                                   |
+|           | width  | longint | 用紙の幅、100分の1インチ単位                                                                                                    |
+|           | kind   | text    | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。 `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
 
-- If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
+- `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](./commands/vp-get-print-info.md) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
 
-- If you set the paper size using the `kind` property, you can use either:
-  - one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
-    In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+- `kind` プロパティで用紙サイズを設定する場合、以下のいずれかを使用することができます:
+  - [ SpreadJS のフォーマットリスト](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind) のフォーマット
+  - [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/ja/page785.html) コマンドで返されるフォーマット。
+    この場合、[`VP Get print info`](./commands/vp-get-print-info.md) は対応するフォーマットを高さと幅とともに返します。
 
 ### スケール
 
@@ -379,12 +379,12 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 表示 / 非表示属性は 4D View Pro エリア要素の表示 (印刷) 状態を指定するのに使用されます。
 
-| プロパティ            | タイプ     | 説明                                                                                                                                                                                                  |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                                                                          |
-| showColumnHeader | longint | カラムヘッダーの印刷設定。 Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                                                                            |
-| showRowHeader    | longint | 行ヘッダーの印刷設定。 Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| プロパティ            | タイプ     | 説明                                                                                                                                                                                     |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                                                             |
+| showColumnHeader | longint | カラムヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                                                               |
+| showRowHeader    | longint | 行ヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once`   |
 
 ### ウォーターマーク
 
@@ -400,21 +400,21 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 |           | \[ ].x        | longint           | ウォーターマークのテキスト/画像の左上端の水平方向の座標                                                                                                      |
 |           | \[ ].y        | longint           | ウォーターマークのテキスト/画像の左上端の垂直方向の座標                                                                                                      |
 
-\* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
+\* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 画像指定に使用するデータ型にかかわらず、4D View Pro エリアには (参照ではなく) 画像そのものが保存され、[VP Get print info](commands/vp-get-print-info.md) によって返されます。
 
 ## スタイルオブジェクト
 
 4D View Pro スタイルオブジェクトとスタイルシートを使用すると、4D View Pro ドキュメントのグラフィカル要素や見た目を管理することができるようになります。
 
-### Style objects & Style sheets
+### スタイルオブジェクトとスタイルシート
 
-スタイルオブジェクトには、スタイル設定が格納されます。 これらはスタイルシートで使用するか、あるいはそのまま使用することができます。 スタイルオブジェクトはスタイルシートと組み合わせて使用することもでき、ドキュメントの他の部分に影響を及ぼすことなく個別のセルレンジに異なる設定を指定することもできます。 You can use style objects directly with the [VP SET CELL STYLE](commands/vp-set-cell-style.md) and [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
+スタイルオブジェクトには、スタイル設定が格納されます。 これらはスタイルシートで使用するか、あるいはそのまま使用することができます。 スタイルオブジェクトはスタイルシートと組み合わせて使用することもでき、ドキュメントの他の部分に影響を及ぼすことなく個別のセルレンジに異なる設定を指定することもできます。 [VP SET CELL STYLE](commands/vp-set-cell-style.md) および [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) コマンドでは、スタイルオブジェクトを直接使用することができます。 [VP SET TABLE THEME](commands/vp-set-table-theme.md) または [VP CREATE TABLE](commands/vp-create-table.md) コマンドを使用してカスタムテーブルテーマを定義する場合にも、スタイル オブジェクトが使用できます。
 
-A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. ドキュメントとともに保存されたスタイルシートを使用して、単一のシート、複数のシート、あるいはワークブック全体に対してプロパティを設定することができます。 4D View Pro スタイルシートは作成時に名前が与えられ、この名前はスタイルシートの "name" プロパティに保存されます。 これによりスタイルシートの使用が容易になり、また注意深く命名することで、その定義と目的を分かりやすくすることもできます (例: Letterhead_internal、Letterhead_external、など)。
+**スタイルシート** は、プロパティの組み合わせをスタイルオブジェクトにまとめたもので、それによって 4D View Pro ドキュメントのすべてのセルの見た目を指定します。 ドキュメントとともに保存されたスタイルシートを使用して、単一のシート、複数のシート、あるいはワークブック全体に対してプロパティを設定することができます。 4D View Pro スタイルシートは作成時に名前が与えられ、この名前はスタイルシートの "name" プロパティに保存されます。 これによりスタイルシートの使用が容易になり、また注意深く命名することで、その定義と目的を分かりやすくすることもできます (例: Letterhead_internal、Letterhead_external、など)。
 
-Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) command.
+スタイルシートは [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) コマンドで作成され、[VP SET DEFAULT STYLE](commands/vp-set-default-style.md) あるいは [VP SET CELL STYLE](commands/vp-set-cell-style.md) コマンドで適用されます。 スタイルシートは [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) コマンドで削除できます。
 
-The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](commands/vp-get-stylesheets.md) command to retrieve a collection of style objects for multiple style sheets.
+[VP Get stylesheet](commands/vp-get-stylesheet.md) コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。また、[VP Get stylesheets](commands/vp-get-stylesheets.md) コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。
 
 ### スタイルオブジェクトプロパティ
 
@@ -424,12 +424,13 @@ The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to re
  $style:=New object
  $style.hAlign:=vk horizontal align left
  $style.font:="12pt papyrus"
- $style.backColor:="#E6E6FA" //light purple color
+ $style.backColor:="#E6E6FA" // 薄紫色
  
- VP SET DEFAULT STYLE("myDoc";$style)
+VP SET DEFAULT STYLE("myDoc";$style)
+
 ```
 
-#### Background & Foreground
+#### 背景色と文字色
 
 | プロパティ                 | タイプ           | 説明                | とりうる値                                                                                                                                                                                                                                                                                      |
 | --------------------- | ------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -448,32 +449,32 @@ The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to re
 
 #### フォントとテキスト
 
-| プロパティ           |            | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                        | とりうる値                                                                                                                                                                                                                  |
-| --------------- | ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| font            |            | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 例: "14pt Century Gothic"。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 ("") で括られる必要があります。 | CSS fontショートハンド。 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](commands/vp-font-to-object.md) and [`VP Object to font`](commands/vp-object-to-font.md) |
-| formatter       |            | text    | 値や日時に対するパターン                                                                                                                                                                                                                                                                                                                                                                              | 数値/テキスト/日付/時間フォーマット、特殊文字など。 See [Cell Format](#cell-format).                                                                                                                                           |
-| isVerticalText  |            | boolean | テキストの向きを指定します。                                                                                                                                                                                                                                                                                                                                                                            | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                                      |
-| labelOptions    |            | object  | セルラベルのオプションを定義します (ウォーターマークオプション)                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                        |
-|                 | alignment  | longint | セルラベルの位置を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                                | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`                |
-|                 | visibility | longint | セルラベルの表示状態を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                              | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                                |
-|                 | foreColor  | text    | 文字のカラーを定義します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                                  | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                              |
-|                 | font       | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。                                                                                                                                                                |                                                                                                                                                                                                                        |
-| textDecoration  |            | longint | テキストに追加する装飾を指定します。                                                                                                                                                                                                                                                                                                                                                                        | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                     |
-| textIndent      |            | longint | テキストのインデントを定義します。 1 = 8ピクセル                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                        |
-| textOrientation |            | longint | セル内のテキストの回転角度を定義します。 -90 から 90 の数値                                                                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                                        |
-| watermark       |            | text    | ウォーターマーク (セルラベル) のコンテンツを定義します。                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                        |
-| wordWrap        |            | boolean | テキストを折り返すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                      | true = テキストを折り返す、false = テキストを折り返さない                                                                                                                                                                                   |
+| プロパティ           |            | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                        | とりうる値                                                                                                                                                                                                   |
+| --------------- | ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| font            |            | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 例: "14pt Century Gothic"。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 ("") で括られる必要があります。 | CSS fontショートハンド。 4D ではフォントの特徴をオブジェクトとして管理するためのユーティリティコマンドを提供しています: [`VP Font to object`](commands/vp-font-to-object.md) および [`VP Object to font`](commands/vp-object-to-font.md)        |
+| formatter       |            | text    | 値や日時に対するパターン                                                                                                                                                                                                                                                                                                                                                                              | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                   |
+| isVerticalText  |            | boolean | テキストの向きを指定します。                                                                                                                                                                                                                                                                                                                                                                            | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                       |
+| labelOptions    |            | object  | セルラベルのオプションを定義します (ウォーターマークオプション)                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                         |
+|                 | alignment  | longint | セルラベルの位置を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                                | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right` |
+|                 | visibility | longint | セルラベルの表示状態を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                              | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                 |
+|                 | foreColor  | text    | 文字のカラーを定義します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                                  | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                               |
+|                 | font       | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。                                                                                                                                                                |                                                                                                                                                                                                         |
+| textDecoration  |            | longint | テキストに追加する装飾を指定します。                                                                                                                                                                                                                                                                                                                                                                        | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                      |
+| textIndent      |            | longint | テキストのインデントを定義します。 1 = 8ピクセル                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                         |
+| textOrientation |            | longint | セル内のテキストの回転角度を定義します。 -90 から 90 の数値                                                                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                         |
+| watermark       |            | text    | ウォーターマーク (セルラベル) のコンテンツを定義します。                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                         |
+| wordWrap        |            | boolean | テキストを折り返すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                      | true = テキストを折り返す、false = テキストを折り返さない                                                                                                                                                                    |
 
 #### レイアウト
 
-| プロパティ       | タイプ     | 説明                                                                                                               | とりうる値                                                                                                                |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| cellPadding | text    | セルのパッディングを定義します                                                                                                  |                                                                                                                      |
-| hAlign      | longint | セルコンテンツの水平方向の揃え方を定義します                                                                                           | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean | セルの保護状態を指定します。 Note, this is only available if [sheet protection](#sheet-protection) is enabled. | true = ロックされている、false = ロック解除                                                                                        |
-| shrinkToFit | boolean | セルのコンテンツが縮小されるかどうかを指定します。                                                                                        | true = コンテンツ縮小、false = 縮小なし                                                                                          |
-| tabStop     | boolean | Tabキーを使用してセルにフォーカスできるかどうかを指定します。                                                                                 | true = Tabキーでフォーカス可、false = Tabキーでフォーカス不可                                                                            |
-| vAlign      | longint | セルコンテンツの垂直方向の揃え方を定義します                                                                                           | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
+| プロパティ       | タイプ     | 説明                                                                    | とりうる値                                                                                                                |
+| ----------- | ------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| cellPadding | text    | セルのパッディングを定義します                                                       |                                                                                                                      |
+| hAlign      | longint | セルコンテンツの水平方向の揃え方を定義します                                                | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
+| locked      | boolean | セルの保護状態を指定します。 ただし、[シートの保護](#シートの保護) が有効化されている場合にのみ利用可能である点に注意してください。 | true = ロックされている、false = ロック解除                                                                                        |
+| shrinkToFit | boolean | セルのコンテンツが縮小されるかどうかを指定します。                                             | true = コンテンツ縮小、false = 縮小なし                                                                                          |
+| tabStop     | boolean | Tabキーを使用してセルにフォーカスできるかどうかを指定します。                                      | true = Tabキーでフォーカス可、false = Tabキーでフォーカス不可                                                                            |
+| vAlign      | longint | セルコンテンツの垂直方向の揃え方を定義します                                                | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 #### スタイル情報
 
@@ -484,7 +485,7 @@ The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to re
 
 ## 4D View Pro オブジェクト
 
-The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. このオブジェクトは 4D View Pro によって自動的に管理されます。 You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+4D View Pro [オブジェクト](Concepts/dt_object.md) はスプレッドシートの中身をすべて保存します。 このオブジェクトは 4D View Pro によって自動的に管理されます。 [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) および [VP Export to object](commands/vp-export-to-object.md) コマンドによって、このオブジェクトを設定したり取得したりできます。
 
 このオブジェクトには次のプロパティが含まれます:
 
@@ -498,18 +499,18 @@ The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet con
 
 ## 4D View Pro フォームオブジェクト変数
 
-The 4D View Pro form object variable is the [object](Concepts/dt_object.md) variable associated to the 4D View Pro form area. この変数は、4D View Pro オブジェクトが使用する情報を管理します。
+The 4D View Pro フォームオブジェクト変数は、4D View Pro フォームエリアに紐づけられた [オブジェクト](Concepts/dt_object.md) 変数のことです。 この変数は、4D View Pro オブジェクトが使用する情報を管理します。
 
 > 4D View Pro フォームオブジェクト変数は、情報目的 (例: デバッグなど) のためだけに存在します。 どのような状況においてもこれを編集してはいけません。
 
 このオブジェクトには次のプロパティが含まれます:
 
-| プロパティ                                  | 値の型        | 説明                                                                                                                                                                                                                                                                                                                           |
-| -------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ViewPro.area           | Text       | 4D View Pro エリア名                                                                                                                                                                                                                                                                                                             |
-| ViewPro.callbacks      | Object     | インポートやエクスポートなど、コールバックを必要とするコマンドが使用するための一時的な情報を保存します。                                                                                                                                                                                                                                                                         |
-| ViewPro.commandBuffers | Collection | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) when exiting the method, when a command returns a value, or when the [VP FLUSH COMMANDS](commands/vp-flush-commands.md) is called. この機構によって、送信されるリクエスト数が抑えられ、パフォーマンスが向上します。 |
-| ViewPro.events         | Object     | [Event](#form-events) list.                                                                                                                                                                                                                                                                                  |
-| ViewPro.formulaBar     | Boolean    | フォーミュラバーが表示されているかどうかを示します。 "toolbar" インターフェースにおいてのみ利用可能です。                                                                                                                                                                                                                                                                   |
-| ViewPro.inited         | Boolean    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                        |
-| ViewPro.interface      | Text       | ユーザーインターフェースのタイプを指定します: "ribbon"、"toolbar"、"none"。                                                                                                                                                                                                                                                           |
+| プロパティ                                  | 値の型        | 説明                                                                                                                                                                                                               |
+| -------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ViewPro.area           | Text       | 4D View Pro エリア名                                                                                                                                                                                                 |
+| ViewPro.callbacks      | Object     | インポートやエクスポートなど、コールバックを必要とするコマンドが使用するための一時的な情報を保存します。                                                                                                                                                             |
+| ViewPro.commandBuffers | Collection | メソッドによって呼び出されるコマンドを順番に保存し、メソッド終了時、あるいはコマンドが値を返した時、あるいは [VP FLUSH COMMANDS](commands/vp-flush-commands.md) が呼び出された時に、それらのコマンドを (個別にではなく) バッチとして実行します。 この機構によって、送信されるリクエスト数が抑えられ、パフォーマンスが向上します。 |
+| ViewPro.events         | Object     | [イベント](Events/overview.md) リスト。                                                                                                                                                                                  |
+| ViewPro.formulaBar     | Boolean    | フォーミュラバーが表示されているかどうかを示します。 "toolbar" インターフェースにおいてのみ利用可能です。                                                                                                                                                       |
+| ViewPro.inited         | Boolean    | 4D View Pro エリアが初期化されたかどうかを示します([On VP Ready](Events/onVpReady.md) 参照)。                                                                                                                       |
+| ViewPro.interface      | Text       | ユーザーインターフェースのタイプを指定します: "ribbon"、"toolbar"、"none"。                                                                                                                                               |

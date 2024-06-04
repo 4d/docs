@@ -56,7 +56,7 @@ To declare your method eligible for use in preemptive mode, you need to use the 
 
 ![](../assets/en/Develop/preemptif.png)
 
-Les options suivantes sont prises en charge :
+Les options suivantes sont prises en charge :
 
 - **Can be run in preemptive processes**: By checking this option, you declare that the method is able of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. La propriété "preemptive" de la méthode prend pour valeur "capable".
 
@@ -263,10 +263,10 @@ To do this, you must surround the code to be excluded from command thread safety
 
 ```4d
   // %T- to disable thread safety checking
-
+ 
   // Place the code containing commands to be excluded from thread safety checking here
  $w:=Open window(10;10;100;100) //for example
-
+ 
   // %T+ to enable thread safety checking again for the rest of the method
 ```
 

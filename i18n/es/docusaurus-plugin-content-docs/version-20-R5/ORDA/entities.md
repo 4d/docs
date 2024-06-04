@@ -3,7 +3,7 @@ id: entities
 title: Trabajar con los datos
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). Estos objetos permiten crear, actualizar, buscar u ordenar los datos del datastore.
+En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [selecciones de entidades](dsMapping.md#entity-selection). Estos objetos permiten crear, actualizar, buscar u ordenar los datos del datastore.
 
 ## Crear una entidad
 
@@ -14,7 +14,7 @@ Hay dos maneras de crear una nueva entidad en una dataclass:
 
 Tenga en cuenta que la entidad sólo se crea en la memoria. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
 
-Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
 
 Por ejemplo, queremos crear una nueva entidad en la dataclass "Employee" en el datastore actual con "John" y "Dupont" asignados a los atributos firstname y name:
 
@@ -63,9 +63,9 @@ Esto es ilustrado por el siguiente gráfico:
 
 ![](../assets/en/ORDA/entityRef2.png)
 
-Sin embargo, hay que tener en cuenta que las entidades se refieren al mismo registro. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+Sin embargo, hay que tener en cuenta que las entidades se refieren al mismo registro. En todos los casos, si se llama al método `entity.save( )`, el registro se actualizará (excepto en caso de conflicto, ver [Entity locking](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. Significa que puede pasarlos directamente a cualquier función o método, y actuará como un puntero, y más rápido que un puntero 4D. Por ejemplo:
+De hecho, `$e1` y `$e2` no son la entidad misma, sino referencias a la entidad. Significa que puede pasarlos directamente a cualquier función o método, y actuará como un puntero, y más rápido que un puntero 4D. Por ejemplo:
 
 ```4d
  For each($entity;$selection)
@@ -84,11 +84,11 @@ Y el método es:
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
+Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referencias directamente como [parámetros](Concepts/parameters.md).
 
 :::info
 
-Con las entidades, no existe el concepto de "registro actual" como en el lenguaje 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
+Con las entidades, no existe el concepto de "registro actual" como en el lenguaje 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
 
 :::
 
@@ -96,14 +96,14 @@ Con las entidades, no existe el concepto de "registro actual" como en el lenguaj
 
 Los atributos de entidad almacenan los datos y mapean los campos correspondientes en la tabla correspondiente.
 
-- attributes of the **storage** kind can be set or get as simple properties of the entity object,
-- attributes of the **relatedEntity** kind will return an entity,
-- attributes of the **relatedEntities** kind will return an entity selection,
-- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
+- los atributos de tipo **storage** pueden definirse u obtenerse como propiedades simples del objeto de la entidad,
+- los atributos del tipo **RelatedEntity** devolverán una entidad,
+- los atributos de tipo **relatedEntities** devolverán una selección de entidad,
+- los atributos de tipo **computed** y **alias** pueden devolver todo tipo de datos, dependiendo de cómo estén configurados.
 
 :::info
 
-For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Para más información sobre el tipo de atributo, consulte el párrafo [Atributos de almacenamiento y de relación](dsMapping.md#storage-and-relation-attributes).
 
 :::
 
@@ -129,7 +129,7 @@ Puede acceder a los datos a través del objeto(s) relacionado(s):
  $EntitySel:=ds.Company.all().first().companyProjects //obtener la selección de proyectos de la empresa
 ```
 
-Note that both _theClient_ and _companyProjects_ in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. Sin embargo, los atributos de relación también pueden crearse a partir de rutas vía las relaciones de varios niveles, incluidas las referencias circulares. Por ejemplo, consideremos la siguiente estructura:
+Observe que tanto _theClient_ como _companyProjects_ en el ejemplo anterior son atributos de relación primaria y representan una relación directa entre las dos dataclasses. Sin embargo, los atributos de relación también pueden crearse a partir de rutas vía las relaciones de varios niveles, incluidas las referencias circulares. Por ejemplo, consideremos la siguiente estructura:
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
@@ -144,7 +144,7 @@ Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerent
 
 Puede almacenar imágenes en atributos imagen; de forma similar, puede almacenar cualquier dato binario en atributos blob.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Sólo se guarda la ruta del archivo dentro de la entidad.
+ORDA permite asignar al atributo los datos en sí, es decir, una imagen o un objeto blob, o una **referencia a un archivo** que contenga los datos. Sólo se guarda la ruta del archivo dentro de la entidad.
 
 Gracias a esta funcionalidad, puede reutilizar la misma imagen en varias entidades sin duplicarla, organizar los archivos como desee o utilizarlos fuera de 4D. Además, puede controlar el tamaño del archivo de datos.
 
@@ -189,8 +189,8 @@ La asignación de referencia de archivos solo se admite en modo local (4D Server
 
 En la arquitectura ORDA, los atributos de relación contienen directamente los datos relacionados con las entidades:
 
-- An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-- A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+- Un atributo de relación de tipo N->1 (**relatedEntity** kind) contiene una entidad
+- Un atributo de relación de tipo 1->N (**relatedEntities** kind) contiene una selección de entidades
 
 Veamos la siguiente estructura (simplificada):
 
@@ -233,9 +233,9 @@ Puede asignar o modificar el valor de un atributo de entidad asociado "1" a part
 
 ## Crear una entity selection
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
 
-- Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
+- Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
 - Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
 - Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
@@ -246,7 +246,7 @@ Puede crear y utilizar simultáneamente tantas selecciones de entidades diferent
 
 :::note
 
-You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
+Puede filtrar qué entidades deben incluirse en las selecciones de entidades para una clase de datos en función de toda regla de negocio, gracias a la funcionalidad [selección de entidad restringida](#restricting-entity-selections).
 
 :::
 
@@ -256,28 +256,28 @@ An entity selection can be **shareable** (readable by multiple processes, but no
 
 #### Propiedades
 
-A **shareable** entity selection has the following characteristics:
+Una entity selection **compartible** tiene las siguientes características:
 
 - puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a _locking identifier_);
+- puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un \* identificador de bloqueo\*);
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
 
 > Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
 
-An **alterable** entity selection has the following characteristics:
+Una entity selection **modificable** tiene las siguientes características:
 
 - no puede compartirse entre los procesos, ni almacenarse en un objeto o colección compartido. Si se intenta almacenar una entity selection no compartible en un objeto o colección compartido, se producirá un error (-10721 - Tipo de valor no soportado en un objeto o colección compartido);
 - it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
 
 #### ¿Cómo se definen?
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
+La naturaleza **compartible** o **modificable** de una entity selection se define cuando se crea (no puede modificarse posteriormente). Puede conocer la naturaleza de una entity selection utilizando la función [.isAlterable()](API/EntitySelectionClass.md#isalterable) o el comando `OB Is shared`.
 
-A new entity selection is **shareable** in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-- the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
+- la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
 - the new entity selection is based upon a relation [entity._attributeName_](API/EntityClass.md#attributename) (e.g. "company.employees") when _attributeName_ is a one-to-many related attribute but the entity does not belong to an entity selection.
-- the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
+- la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
 
@@ -288,10 +288,10 @@ $myComp:=ds.Company.get(2) //$myComp no pertenece a una selección de entidades
 $employees:=$myComp.employees //$employees es compartible
 ```
 
-A new entity selection is **alterable** in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-- the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
-- the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+- la nueva entity selection creada en un espacio vacío utilizando la función [dataClass.newSelection()](API/DataClassClass.md#newselection) o el comando `Create entity selection`,
+- la nueva entity selection se copia explícitamente como modificable con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, sin la opción `ck shared`).
 
 Ejemplo:
 
@@ -300,13 +300,13 @@ var $toModify : cs.CompanySelection
 $toModify:=ds.Company.all().copy() //$toModify es alterable
 ```
 
-A new entity selection **inherits** from the original entity selection nature in the following cases:
+Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
 
-- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+- la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
   - [entity._attributeName_](API/EntityClass.md#attributename) (e.g. "company.employees") when _attributeName_ is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
   - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when _attributeName_ is a related attribute (same nature as the entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
 
@@ -405,7 +405,7 @@ $locals:=ds.Person.query("city = :1"; "San Jose") //selección de entidades de p
 $localEmails:=$locals.emailAddress //colección de direcciones de correo electrónico (cadenas)
 ```
 
-This code returns in _$localEmails_ a collection of email addresses as strings.
+Este código devuelve en _$localEmails_ una colección de direcciones de correo electrónico como cadenas.
 
 ### Selecciones de entidades y atributos de relación
 
@@ -421,7 +421,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-The last line will return in _$myInvoices_ an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
+La última línea devolverá en _$myInvoices_ una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
 ## Restringir la selección de entidades
 
@@ -431,7 +431,7 @@ Un filtro crea una vista restringida de los datos, basada en cualquier regla de 
 
 :::info
 
-Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](privileges.md) which are more appropriate in this case.
+Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una **clase de datos** o a uno o varios de sus **atributos**, puede utilizar los [privilegios de sesión](privileges.md), que son más apropiados en este caso.
 
 :::
 
@@ -445,28 +445,28 @@ You create a filter for a dataclass by defining an `event restrict` function in 
 
 ```4d
 Function event restrict() -> $result : cs.*DataClassName*Selection
-// code
+// código
 ```
 
 Esta función se llama cada vez que se solicita una selección de entidades o una entidad de la dataclass. El filtro se ejecuta una vez, cuando se crea la selección de entidades.
 
-El filtro debe devolver una selección de entidades de la clase de datos. It can be an entity selection built upon a query, stored in the [`Storage`], etc.
+El filtro debe devolver una selección de entidades de la clase de datos. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
 :::note
 
-For performance reasons, we recommend to use **indexed attributes** in the definition of the filter.
+Por razones de rendimiento, recomendamos utilizar **atributos indexados** en la definición del filtro.
 
 :::
 
 La función debe devolver una selección de entidades válida de la dataclass. No se aplica ningún filtro (se devuelven todas las entidades correspondientes de la solicitud inicial) si:
 
-- the function returns **null**,
-- the function returns **undefined**,
+- la función devuelve **null**,
+- la función devuelve **indefinido**,
 - la función no devuelve una selección de entidades válida.
 
 #### Ejemplo
 
-Cuando se accede desde una petición web o REST, queremos que la clase de datos Customers sólo exponga los clientes que pertenecen a la persona de ventas identificada. During the authentication phase, the sales person is stored in the `Session` object. También se gestionan otros tipos de solicitudes.
+Cuando se accede desde una petición web o REST, queremos que la clase de datos Customers sólo exponga los clientes que pertenecen a la persona de ventas identificada. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. También se gestionan otros tipos de solicitudes.
 
 ```4d
 Class extends DataClass
@@ -499,17 +499,17 @@ Function event restrict() : cs.CustomersSelection
 
 ### Detalles de activación del filtro
 
-Los filtros se aplican a todas las peticiones ORDA o REST ejecutadas en sus proyectos 4D (arquitecturas autónomas y cliente/servidor). A filter is activated as soon as the project is opened, i.e. it can be triggered in the `On Startup` database method.
+Los filtros se aplican a todas las peticiones ORDA o REST ejecutadas en sus proyectos 4D (arquitecturas autónomas y cliente/servidor). Un filtro se activa en cuanto se abre el proyecto, es decir, puede activarse en el método de base de datos `On Startup`.
 
 :::info
 
-Filters do not apply to legacy selections of records handled through the 4D interface or the 4D language (for example when calling `ALL RECORDS`).
+Los filtros no se aplican a las selecciones heredadas de registros manejadas a través de la interfaz 4D o el lenguaje 4D (por ejemplo cuando se llama a `ALL RECORDS`).
 
 :::
 
 | Funciones                                                                                                | Comentario                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [dataclass.get()](../API/DataClassClass.md#get)                       | If the entity does not match the filter, `null` is returned                                                                                                                                                                                                                                                           |
+| [dataclass.get()](../API/DataClassClass.md#get)                       | Si la entidad no coincide con el filtro, se devuelve `null`                                                                                                                                                                                                                                                           |
 | [entity.reload()](../API/EntityClass.md#reload)                       | Sólo en almacenes de datos cliente/servidor y remotos                                                                                                                                                                                                                                                                 |
 | [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                       |
 | [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li> |
@@ -518,8 +518,8 @@ Filters do not apply to legacy selections of records handled through the 4D inte
 | [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Sólo se devuelven las entidades que coinciden con el filtro                                                                                                                                                                                                                                                           |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                       |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                       |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filter applied if _attributeName_ is a related entity or related entities of a filtered dataclass (including alias or computed attribute)                                                                                                                                                          |
-| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filter applied if _attributeName_ corresponds to related entities of a filtered dataclass (including alias or computed attribute)                                                                                                                                                                  |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si _attributeName_ es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                      |
+| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si _attributeName_ corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                     |
 | [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                                                                                                                                                                       |
 
 Otras funciones ORDA que acceden a los datos no activan directamente el filtro, pero sin embargo se benefician de él. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
@@ -532,7 +532,7 @@ Si hay un error en el filtro en tiempo de ejecución, se lanza como si el error 
 
 ## Bloqueo de una entidad
 
-A menudo es necesario gestionar los posibles conflictos que pueden surgir cuando varios usuarios o procesos cargan e intentan modificar las mismas entidades al mismo tiempo. El bloqueo de registros es una metodología utilizada en las bases de datos relacionales para evitar actualizaciones incoherentes de los datos. El concepto consiste en bloquear un registro al leerlo para que ningún otro proceso pueda actualizarlo o, alternativamente, comprobar al guardar un registro que ningún otro proceso lo ha modificado desde que se leyó. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. En el bloqueo de registros pesimista, el registro se bloquea aunque no haya necesidad de actualizarlo. En el bloqueo optimista de registros, la validez de la modificación de un registro se decide en el momento de la actualización.
+A menudo es necesario gestionar los posibles conflictos que pueden surgir cuando varios usuarios o procesos cargan e intentan modificar las mismas entidades al mismo tiempo. El bloqueo de registros es una metodología utilizada en las bases de datos relacionales para evitar actualizaciones incoherentes de los datos. El concepto consiste en bloquear un registro al leerlo para que ningún otro proceso pueda actualizarlo o, alternativamente, comprobar al guardar un registro que ningún otro proceso lo ha modificado desde que se leyó. El primero se denomina **bloqueo de registro pesimista** y garantiza que un registro modificado pueda escribirse a expensas de bloquear los registros a otros usuarios. Este último se conoce como **bloqueo de registro optimista** y cambia la garantía de los privilegios de escritura en el registro por la flexibilidad de decidir privilegios de escritura sólo si el registro necesita ser actualizado. En el bloqueo de registros pesimista, el registro se bloquea aunque no haya necesidad de actualizarlo. En el bloqueo optimista de registros, la validez de la modificación de un registro se decide en el momento de la actualización.
 
 ORDA le ofrece dos modos de bloqueo de entidad:
 
@@ -543,9 +543,9 @@ ORDA le ofrece dos modos de bloqueo de entidad:
 
 Este mecanismo automático se basa en el concepto de "bloqueo optimista", especialmente adaptado a los problemas de las aplicaciones web. Este concepto se caracteriza por los siguientes principios de funcionamiento:
 
-- All entities can always be loaded in read-write; there is no _a priori_ "locking" of entities.
+- Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" _a priori_ de las entidades.
 - Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
-- When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
+- Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
   - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
 
   - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
@@ -554,9 +554,9 @@ El siguiente diagrama ilustra el bloqueo optimista:
 
 1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. El primer proceso modifica la entidad y valida el cambio. The `entity.save( )` method is called. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. El segundo proceso también modifica la entidad cargada y valida sus cambios. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Esto también puede ilustrarse con el siguiente código:
 
@@ -571,22 +571,22 @@ Esto también puede ilustrarse con el siguiente código:
 
 En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. A continuación, asignamos otra referencia de la misma entidad a la variable $person2. Con $person1, cambiamos el nombre de la persona y guardamos la entidad. Cuando intentamos hacer lo mismo con $person2, 4D verifica que la entidad en el disco es la misma que cuando se asignó por primera vez la referencia en $person1. Como no es lo mismo, devuelve false en la propiedad success y no guarda la segunda modificación.
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entidad desde el disco utilizando el método `entity.reload()` para poder intentar realizar de nuevo la modificación. El método `entity.save()` también propone una opción "automerge" para guardar la entidad en caso de que los procesos modificaran atributos que no fueran los mismos.
 
-> Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
+> Los mardadores de registro no se utilizan en las de **transacciones** porque en este contexto sólo existe una única copia de un registro. Sea cual sea el número de entidades que hacen referencia a un registro, se modifica la misma copia, por lo que las operaciones `entity.save()` nunca generarán errores de marcador.
 
 ### Bloqueo pesimista
 
 Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos. Cuando una entidad es bloqueada por un proceso, es cargada en lectura/escritura en este proceso pero es bloqueada para todos los otros procesos. La entidad sólo puede cargarse en modo de sólo lectura en estos procesos; sus valores no pueden editarse ni guardarse.
 
-This feature is based upon two functions of the `Entity` class:
+Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 
 - [`entity.lock()`](../API/EntityClass.md#lock)
 - [`entity.unlock()`](../API/EntityClass.md#unlock)
 
 Para más información, consulte las descripciones de estas funciones.
 
-> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+> Los bloqueos pesimistas también pueden gestionarse a través de la [REST API](../REST/$lock.md).
 
 ### Utilización simultánea de los bloqueos clásicos 4D y de los bloqueos pesimistas ORDA
 
@@ -599,7 +599,7 @@ Estos principios se muestran en el siguiente diagrama:
 
 ![](../assets/en/ORDA/concurrent1.png)
 
-**Transaction locks** also apply to both classic and ORDA commands. En una aplicación multiproceso o multiusuario, un bloqueo definido en una transacción en un registro por un comando clásico tendrá como resultado impedir que cualquier otro proceso bloquee las entidades relacionadas con este registro (o a la inversa), hasta que la transacción sea validada o cancelada.
+Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. En una aplicación multiproceso o multiusuario, un bloqueo definido en una transacción en un registro por un comando clásico tendrá como resultado impedir que cualquier otro proceso bloquee las entidades relacionadas con este registro (o a la inversa), hasta que la transacción sea validada o cancelada.
 
 - Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 - Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

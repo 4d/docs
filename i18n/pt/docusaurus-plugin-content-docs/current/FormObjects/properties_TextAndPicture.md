@@ -5,9 +5,9 @@ title: Texto e imagem
 
 ## Rota de acesso ao Fundo
 
-Define o caminho da imagem que será desenhada no fundo do objeto. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+Define o caminho da imagem que será desenhada no fundo do objeto. Si el objeto utiliza un [icono](#picture-pathname) con [diferentes estados](#number-of-states), la imagen de fondo soportará automáticamente el mismo número de estados.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
@@ -17,7 +17,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
 ---
 
@@ -33,7 +33,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
 
 ---
 
@@ -48,7 +48,7 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 | Sem margem              | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | Com margem de 13 píxeis | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
 
-> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
+> Esta propiedad funciona junto con la propiedad [Margen vertical](#vertical-margin).
 
 #### Gramática JSON
 
@@ -58,7 +58,7 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
 ---
 
@@ -92,13 +92,13 @@ O título do botão será deslocado para a direita e para baixo em função do n
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
 ---
 
 ## Número de estados
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
+Esta propiedad define el número exacto de estados presentes en la imagen utilizada como icono para un [botón con icono](button_overview.md), una [casilla de selección](checkbox_overview.md) o un [botón radio](radio_overview.md) personalizado.
 
 A imagem pode conter de 2 a 6 estados.
 
@@ -127,7 +127,7 @@ Cada estado é representado por uma imagem diferente. Na imagem de origem, os es
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Botón radio](radio_overview.md)
 
 ---
 
@@ -135,9 +135,9 @@ Cada estado é representado por uma imagem diferente. Na imagem de origem, os es
 
 Define o caminho da imagem que será utilizada como ícone para o objeto.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Cuando se utiliza como icono de objetos activos, la imagen debe estar diseñada para soportar un [número de estados](#number-of-states) variable.
 
 #### Gramática JSON
 
@@ -147,7 +147,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md)
 
 ---
 
@@ -173,17 +173,17 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Botón radio](radio_overview.md)
 
 ---
 
 ## Image hugs title
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+Esta propiedad permite definir si el título y la imagen del botón deben estar visualmente contiguos o separados, según las propiedades [Posición del título/imagen](#titlepicture-position) y [Alineación horizontal](#horizontal-alignment).
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
-By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
+By default, when a button contains a title and a picture, the elements are joined. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -205,7 +205,7 @@ This property allows setting the size (in pixels) of the vertical margins of the
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Esta propiedad funciona junto con la propiedad [Margen horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -215,7 +215,7 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
 ---
 

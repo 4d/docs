@@ -11,9 +11,9 @@ title: $directory
 
 ### 説明
 
-Use `$directory/login` to open a session in your 4D application through REST and login a user. デフォルトの 4Dセッションタイムアウトを変更することもできます。
+RESTを介して 4Dアプリケーション上でセッションを開き、ユーザーをログインするには、`$directory/login` を使います。 デフォルトの 4Dセッションタイムアウトを変更することもできます。
 
-All parameters must be passed in **headers** of a POST method:
+パラメーターはすべて、POST の **ヘッダー** に渡す必要があります:
 
 | ヘッダーキー            | ヘッダー値                                                                       |
 | ----------------- | --------------------------------------------------------------------------- |

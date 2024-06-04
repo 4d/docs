@@ -3,13 +3,13 @@ id: querypath
 title: $querypath
 ---
 
-Returns the query as it was executed by 4D Server (_e.g._, `$querypath=true`)
+Devuelve la petición tal y como se ejecutó por 4D Server (\*por ejemplo, \*, `$querypath=true`)
 
 ## Descrição
 
-`$querypath` returns the query as it was executed by 4D Server. Se, por exemplo, uma parte da consulta passada não devolver nenhuma entidade, o resto da consulta não é executada. The query requested is optimized as you can see in this `$querypath`.
+`$querypath` devuelve la petición tal y como fue ejecutada por 4D Server. Se, por exemplo, uma parte da consulta passada não devolver nenhuma entidade, o resto da consulta não é executada. La petición de consulta está optimizada como se puede ver en este `$querypath`.
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Para más información sobre las rutas de petición, consulte [queryPlan y queryPath](genInfo.md#querypath-and-queryplan).
 
 Na coleção de etapas, existe um objeto com as seguintes propriedades que definem a consulta executada:
 
@@ -72,7 +72,7 @@ Se pelo menos uma entidade for encontrada, será devolvido o seguinte caminho de
 
 `GET  /rest/$querypath`
 
-**Respose**:
+**Respuesta**:
 
 ```
 "__queryPath": {

@@ -70,10 +70,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                                            |
-| ----- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                                      |
-| 戻り値   | Collection                                                              | <- | The new collection|<!-- END REF -->
+| 引数    | タイプ                                                                     |    | 説明                                   |
+| ----- | ----------------------------------------------------------------------- |:--:| ------------------------------------ |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                             |
+| 戻り値   | Collection                                                              | <- | 新規のコレクション|<!-- END REF -->
 
 |
 
@@ -151,10 +151,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                                                   |
-| ----- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                                           |
-| 戻り値   | Collection                                                          | <- | The new shared collection|<!-- END REF -->
+| 引数    | タイプ                                                                 |    | 説明                                     |
+| ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
+| 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
 
 |
 

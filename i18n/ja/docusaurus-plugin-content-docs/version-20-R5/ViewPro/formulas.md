@@ -1,6 +1,6 @@
 ---
 id: formulas
-title: 式と関数
+title: フォーミュラとファンクション
 ---
 
 ## フォーミュラの使い方
@@ -25,7 +25,7 @@ title: 式と関数
 
 ![](../assets/en/ViewPro/formula2.png)
 
-また、命名フォーミュラを作成すると、その名前で呼び出すことが可能です。 To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+また、命名フォーミュラを作成すると、その名前で呼び出すことが可能です。 この場合、[VP ADD FORMULA NAME](commands/vp-add-formula-name.md) コマンドを使用して命名フォーミュラを入力します。
 
 ### 演算子とオペランド
 
@@ -101,17 +101,17 @@ title: 式と関数
 
 ドル記号を文字あるいは数字の前だけに入れることで相対参照と絶対参照を組み合わせることができます (例: `$C5`、`C$5`)。 複合参照を使用すると、行かカラムを絶対参照として指定しながら、もう片方については相対的に参照させることが可能になります。
 
-素早くかつ正確に絶対参照を指定するには、セルを命名し、その名前をセルアドレス代わりに使用する方法があります。 命名セルへの参照は常に絶対参照です。 You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](commands/vp-add-range-name.md) command.
+素早くかつ正確に絶対参照を指定するには、セルを命名し、その名前をセルアドレス代わりに使用する方法があります。 命名セルへの参照は常に絶対参照です。 命名セルまたは命名セルレンジを作成・編集するには、[`VP ADD RANGE NAME`](commands/vp-add-range-name.md) メソッドを使用します。
 
 以下の表は異なる記法による効果をまとめたものです:
 
-| 例題   | 参照タイプ | 説明                                                                                                                                              |
-| ---- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5   | 相対    | 参照は相対的にセル C5 を指しており、参照が最初に使用されたセルが位置の基準となります。                                                                                                   |
-| $C$5 | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常にセル C5 を参照します。                                                                                                      |
-| $C5  | 複合    | 常にカラム C を参照しますが、行の参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                                                                               |
-| C$5  | 複合    | 常に 5行目を参照しますが、カラムの参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                                                                               |
-| セル名  | 絶対    | 参照は絶対参照です。 Will always refer to the [named cell or range](commands/vp-add-range-name.md) no matter where the reference is used. |
+| 例題   | 参照タイプ | 説明                                                                                   |
+| ---- | ----- | ------------------------------------------------------------------------------------ |
+| C5   | 相対    | 参照は相対的にセル C5 を指しており、参照が最初に使用されたセルが位置の基準となります。                                        |
+| $C$5 | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常にセル C5 を参照します。                                           |
+| $C5  | 複合    | 常にカラム C を参照しますが、行の参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                    |
+| C$5  | 複合    | 常に 5行目を参照しますが、カラムの参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                    |
+| セル名  | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常に [命名されたセルまたはレンジ](commands/vp-add-range-name.md) を参照します。 |
 
 ## ビルトインファンクション
 
@@ -135,7 +135,7 @@ title: 式と関数
 
 4Dカスタムファンクションは、4D View Pro エリアから [引数](#引数) を受け取り、値を返すことができます。
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. 例:
+これらのカスタムファンクションは [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) メソッドを使って宣言します。 例:
 
 ```4d
 $o:=New object
@@ -213,9 +213,9 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the _parameters_ collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. オプションとして、_minParams_ および _maxParams_ プロパティにより、ユーザーから渡される引数の数を制御することができます。
+[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) コマンドを使用して宣言したファンクションの _parameters_ コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、_minParams_ および _maxParams_ プロパティにより、ユーザーから渡される引数の数を制御することができます。
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
+サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) コマンドの説明を参照ください。
 
 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、 それらの型は自動的に変換されます。
 
@@ -225,10 +225,10 @@ For more information on supported incoming parameter types, please refer to the 
 
 | プロパティ | タイプ  | 説明                          |
 | ----- | ---- | --------------------------- |
-| value | 日付   | 日付値                         |
+| value | Date | 日付値                         |
 | time  | Real | 数値 (秒単位) |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- オブジェクト引数は、`オブジェクト` 内の [.value](Concepts/dt_object.md) プロパティに格納されて渡されます:
 
 | プロパティ | タイプ    | 説明       |
 | ----- | ------ | -------- |
@@ -248,7 +248,7 @@ For more information on supported incoming parameter types, please refer to the 
 
   | プロパティ | タイプ  | 説明                          |
   | ----- | ---- | --------------------------- |
-  | value | 日付   | 日付値                         |
+  | value | Date | 日付値                         |
   | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
@@ -278,7 +278,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ## 互換性
 
-4D View Pro エリアでフィールドやメソッドをファンクションとして宣言する場合、代わりの方法も利用可能です。 これらの方法は、互換性のために維持されており、特定のケースで使用することができます。 However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+4D View Pro エリアでフィールドやメソッドをファンクションとして宣言する場合、代わりの方法も利用可能です。 これらの方法は、互換性のために維持されており、特定のケースで使用することができます。 しかしながら、[`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) の使用が推奨されます。
 
 ### 仮想ストラクチャーを使ったフィールド参照
 
@@ -309,7 +309,7 @@ TABLENAME_FIELDNAME()
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
+> フィールドが [4Dメソッド](../Concepts/methods.md) と同名の場合は、フィールド名が優先されます。
 
 #### 例題
 
@@ -351,14 +351,14 @@ TABLENAME_FIELDNAME()
 
 ### 許可されたメソッドの宣言
 
-4D View Pro のフォーミュラ内にて 4Dプロジェクトメソッドを直接呼び出すことができます。 For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+4D View Pro のフォーミュラ内にて 4Dプロジェクトメソッドを直接呼び出すことができます。 セキュリティ上の理由から、ユーザーによって呼び出し可能なメソッドは [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) によって明示的に宣言されなくてはなりません。
 
 #### 要件
 
 4D View Pro フォーミュラ内で呼び出すには、プロジェクトメソッドは以下の条件を満たしている必要があります:
 
-- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+- **許可されている**: [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) によって明示的に宣言されていること。
 - **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
 - 既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
 
-> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
+> [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) および [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。

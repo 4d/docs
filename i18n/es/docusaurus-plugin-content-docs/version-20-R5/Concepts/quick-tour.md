@@ -21,27 +21,27 @@ O bien, podría adjuntar este código a un botón de formulario y ejecutarlo, en
 Los datos pueden introducirse y copiarse en variables, campos, elementos de arrays... Poner datos en una variable se llama asignar los datos a la variable y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos o elementos de arrays.
 
 ```4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 //asigna 3 a la variable MyNumber 
+[Products]Size:=$MyNumber //asigna la variable MyNumber al campo [Products]Size
+arrDays{2}:="Tuesday" //asigna la cadena "Tuesday" al segundo elemento de arrDays
+MyVar:=Length("Acme") //asigna el resultado de la función (4) a MyVar
+$myDate:=!2018/01/21! //asigna una fecha literal
+$myHour:=?08:12:55? //asigna una hora literal
 ```
 
 Debe distinguir el operador de asignación := de los demás operadores. En lugar de combinar expresiones en una nueva expresión, el operador de asignación copia el valor de la expresión a la derecha del operador de asignación en la variable o campo a la izquierda del operador.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. Se ha elegido deliberadamente un operador de asignación diferente (y no =) para evitar los problemas y la confusión que suelen producirse con == o === en otros lenguajes de programación. Estos errores son a menudo difíciles de reconocer por el compilador y conducen a una solución de problemas que requiere mucho tiempo.
+**Importante:** no confunda el operador de asignación (:=) con el signo igual (=). Se ha elegido deliberadamente un operador de asignación diferente (y no =) para evitar los problemas y la confusión que suelen producirse con == o === en otros lenguajes de programación. Estos errores son a menudo difíciles de reconocer por el compilador y conducen a una solución de problemas que requiere mucho tiempo.
 
 ## Variables
 
-El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. You create a typed variable using the `var` keyword. Se crea una variable digitada utilizando la palabra clave <code>var</code>.
+El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave <code>var</code>.
 
 ```4d
 var MyDate : Date
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+La palabra clave `var` permite declarar variables objeto de un tipo de clase definido, por ejemplo:
 
 ```4d
 var myPerson : cs.Person
@@ -54,7 +54,7 @@ Aunque no se suele recomendar, se pueden declarar variables simplemente utilizá
 MyOtherDate:=Current date+30
 ```
 
-La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable declarada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y entonces cambia el tipo dinámicamente. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable declarada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y entonces cambia el tipo dinámicamente. Una variable digitada con `var` no puede cambiar de tipo. Sin embargo, en [modo compilado](interpreted.md), el tipo nunca puede cambiarse, independientemente de cómo se haya declarado la variable.
 
 ## Comandos
 
@@ -75,7 +75,7 @@ $lastEmployee:=$employee.last()
 
 Puede utilizar los plug-ins o los componentes 4D que añaden nuevos comandos a su entorno de desarrollo 4D.
 
-Hay muchos plug-ins propuestos por la comunidad de usuarios de 4D o por desarrolladores terceros. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
+Hay muchos plug-ins propuestos por la comunidad de usuarios de 4D o por desarrolladores terceros. Por ejemplo, utilizando el [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) en macOS:
 
 ```4d
 PDF REMOVE PAGE(path;page)
@@ -93,7 +93,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constantes
 
-4D ofrece un conjunto extensivo de constantes predefinidas, cuyos valores son accesibles por nombre. Permiten escribir un código más legible. For example, `Read Mode` is a constant (value 2).
+4D ofrece un conjunto extensivo de constantes predefinidas, cuyos valores son accesibles por nombre. Permiten escribir un código más legible. Por ejemplo, `Read Mode` es una constante (valor 2).
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
@@ -103,7 +103,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo d
 
 ## Métodos
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje.
+4D ofrece un gran número de métodos (o comandos) integrados, pero también le permite crear sus propios **métodos de proyecto**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje.
 Los métodos proyecto son métodos genéricos, pero hay otros tipos de métodos: métodos objeto, métodos formulario, métodos tabla (Triggers) y métodos base.
 
 Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja.
@@ -114,13 +114,13 @@ Por ejemplo, la siguiente línea es una sentencia que mostrará una caja de diá
 CONFIRM("¿Realmente quiere cerrar esta cuenta?"; "Sí"; "No")
 ```
 
-Un método también contiene pruebas y bucles que controlan el flujo de ejecución. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+Un método también contiene pruebas y bucles que controlan el flujo de ejecución. 4D methods support `If...Else...End if` and `Case of... Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each... End for each`:
 
 El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-	//Do something with the character if it is a TAB
+	//Hacer algo con el carácter si es un TAB
 
 
 	If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -133,10 +133,10 @@ Un método proyecto puede llamar a otro método proyecto con o sin parámetros (
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Hacer_algo($myText) //Llamar al método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something  
+  //Aquí el código del método Do_Something
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 ```
@@ -155,9 +155,9 @@ Hay casos en los que es necesario almacenar datos como un tipo y utilizarlos com
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Si _Number_ es 17, entonces _[Products]Part Number_ obtendrá el valor “17abc”.
 
-The data types are fully defined in the section [Data Types](Concepts/data-types.md).
+Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
 
 ## Objetos y colecciones
 
@@ -184,7 +184,7 @@ Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que enca
 ```
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message() //muestra "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
@@ -197,25 +197,25 @@ myColl[3]  //acceso al 4º elemento de la colección
 
 ## Clases
 
-El lenguaje 4D soporta las clases de objetos. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+El lenguaje 4D soporta las clases de objetos. Añade un archivo `myClass.4dm` en la carpeta Project/Sources/Classes de un proyecto para crear una clase llamada "myClass".
 
-To instantiate an object of the class in a method, call the user class from the _class store_ (`cs`) and use the `new()` member function. Se pueden pasar parámetros.
+Para instanciar un objeto de la clase en un método, llame la clase usuario desde el _class store_ (`cs`) y utilice la función miembro `new()`. Se pueden pasar parámetros.
 
 ```4d
 // en un método 4D
 $o:=cs.myClass.new()
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the _methodName_ class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
+En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase _methodName_. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
 
 ```4d
 
-//in the myClass.4dm file
+//en el archivo myClass.4dm
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
-To execute a class member function, just use the `()` operator on the member function of the object instance.
+Para ejecutar una función miembro de clase, basta con utilizar el operador `()` en la función miembro de la instancia del objeto.
 
 ```4d
 $o:=cs.myClass.new()
@@ -224,7 +224,7 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d
 //en el archivo Rectangle.4dm
@@ -234,7 +234,7 @@ This.width:=$width
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por ejemplo:
+Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d
 //en el archivo Square.4dm
@@ -278,7 +278,7 @@ Las expresiones se componen de casi todas las demás partes del lenguaje: comand
 Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una expresión puede ser utilizada por sí misma. Incluye:
 
 - Editor de fórmulas (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
+- El comando `EXECUTE FORMULA`
 - La lista de propiedades, donde se puede utilizar una expresión como fuente de datos para la mayoría de los widgets
 - Depurador donde se puede comprobar el valor de las expresiones
 - En el editor de informes rápidos como fórmula para una columna
@@ -292,12 +292,12 @@ Se hace referencia a una expresión por el tipo de datos que devuelve. Hay vario
 | “Hello”                                                                                                                                                                                                                                                                                                                                                                                             | String                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                                                                                           |
 | “Hello ” + “there”                                                                                                                                                                                                                                                                                                                                                                                  | String                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                          |
 | “Sr. ” + [People]Name                                                                                                                                                                                                                                                                                                           | String                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
-| Uppercase("smith")                                                                                                                                                                                                                                                                                                                                                               | String                 | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Devuelve “SMITH”.                                                                                         |
+| Uppercase("smith")                                                                                                                                                                                                                                                                                                                                                               | String                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                                                                        |
 | 4                                                                                                                                                                                                                                                                                                                                                                                                   | Number                 | Se trata de una constante numérica, 4.                                                                                                                                                                                               |
 | 4 \* 2                                                                                                                                                                                                                                                                                                                                                                                              | Number                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (\*). El resultado es el número 8.                                                                                    |
 | myButton                                                                                                                                                                                                                                                                                                                                                                                            | Number                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                                                             |
 | !1997-01-25!                                                                                                                                                                                                                                                                                                                                                                                        | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                                                                          |
-| Current date+ 30                                                                                                                                                                                                                                                                                                                                                                                    | Fecha                  | This is a date expression that uses the `Current date` command to get today’s date. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.                                                                       |
+| Current date+ 30                                                                                                                                                                                                                                                                                                                                                                                    | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.                                                   |
 | ?8:05:30?                                                                                                                                                                                                                                                                                                                                                           | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                                                                                               |
 | ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? + ?1:02:03? | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                                                            |
 | True                                                                                                                                                                                                                                                                                                                                                                                                | Boolean                | Este comando devuelve el valor booleano TRUE.                                                                                                                                                                                        |
@@ -310,12 +310,12 @@ Se hace referencia a una expresión por el tipo de datos que devuelve. Hay vario
 | JSON Parse (MyJSONArray)                                                                                                                                                                                                                                                                                                                                                         | Collection             | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                                                                                  |
 | Form.pageNumber                                                                                                                                                                                                                                                                                                                                                                     | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                                                                                                           |
 | Col[5]                                                                                                                                                                                                                                                                                                                                          | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                                                                                                       |
-| $entitySel[0]                                                                                                                                                                                                                                                                                                                                   | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. This kind of expression is **non-assignable**                                                                                                       |
+| $entitySel[0]                                                                                                                                                                                                                                                                                                                                   | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                                                                                          |
 
 ### Expresiones asignables y no asignables
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them.
-In 4D, expressions can be **assignable**. Una expresión es asignable cuando puede utilizarse a la izquierda del operador de asignación. Por ejemplo:
+Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor.
+En 4D, las expresiones pueden ser **asignables**. Una expresión es asignable cuando puede utilizarse a la izquierda del operador de asignación. Por ejemplo:
 
 ```4d
 //$myVar variable is assignable, you can write:  
@@ -324,13 +324,13 @@ $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageTotal-Form.pageNumber is not assignable: Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
 
-En general, las expresiones que utilizan un operador no son asignables. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+En general, las expresiones que utilizan un operador no son asignables. Por ejemplo, `[Person]FirstName+" "+[Person]LastName` no es asignable.
 
 ## Punteros
 
 El lenguaje 4D ofrece una implementación avanzada de punteros, que permite escribir código poderoso y modular. Puede utilizar punteros para referenciar tablas, campos, variables, arrays y elementos de arrays.
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+Un puntero a un elemento se crea añadiendo un símbolo "->" antes del nombre del elemento, y se puede desreferenciar añadiendo el símbolo "->" después del nombre del puntero.
 
 ```4d
 MyVar:="Hello"
@@ -340,7 +340,7 @@ ALERT(MyPointer->)
 
 ## Código en varias líneas
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. El lenguaje 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
+Puede escribir una única instrucción en varias líneas terminando cada línea de la instrucción con un caracter barra invertida final `\`. El lenguaje 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
 
 ```4d
 $str:=String("hello world!")
@@ -358,14 +358,14 @@ Los comentarios son líneas de instrucciones inactivas. Estas líneas no son int
 
 Hay dos maneras de crear comentarios:
 
-- `//` for single line comments
+- `//` para crear una línea de comentario
 - `/*...*/` para los bloques de comentarios en línea o multilínea.
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 
-#### Single line comments (`//comment`)
+#### Comentarios de una línea (`//comentario`)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Ejemplo:
+Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
 ```4d
 //Este es un comentario
@@ -376,11 +376,11 @@ For($vCounter;1;100) //Bucle inicial
 End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Comentarios en línea o multilínea (`/*comment*/`)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+Rodea el contenido con los caracteres `/*` ... `*/` para para crear bloques de comentarios en línea o multilíneas. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Ejemplo:
+- Las **líneas de comentarios en línea** se pueden insertar en cualquier parte del código. Ejemplo:
 
 ```4d
 For /* inline comment */ ($vCounter;1;100)
@@ -388,25 +388,23 @@ For /* inline comment */ ($vCounter;1;100)
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Los bloques de comentarios pueden anidarse (útil desde que el editor de código 4D soporta los bloques contraídos). Ejemplo:
+- Los **bloques de comentarios multilíneas** permiten comentar un número ilimitado de líneas. Los bloques de comentarios pueden anidarse (útil desde que el editor de código 4D soporta los bloques contraídos). Ejemplo:
 
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
-	/*
-	other comments
-	*/
+comentarios  
+    /* 
+    otros comentarios
+    */
 */
-...
-End for
 ```
 
 ## Secuencias de escape
 
 El lenguaje 4D permite utilizar secuencias de escape (también llamadas caracteres de escape). Una secuencia de escape es una secuencia de caracteres que puede utilizarse para sustituir a un caracter "especial".
 
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+La secuencia consiste en una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es una secuencia de escape para el caracter **Tab**. Las secuencias de escape facilitan la introducción de caracteres especiales: el ejemplo anterior (`\t`) sustituye a la entrada "Caracter(Tab)".
 
 En 4D, se pueden utilizar las siguientes secuencias de escape:
 
@@ -420,6 +418,6 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 
 > Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
 
-In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`

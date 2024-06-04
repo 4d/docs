@@ -9,27 +9,27 @@ Esta sección describe las convenciones y reglas para nombrar los distintos elem
 
 ## Arrays
 
-Array names follow the same rules as [variables](#variables).
+Los nombres de los arrays siguen las mismas reglas que las [variables](#variables).
 
 ## Clases
 
 El nombre de una clase puede contener hasta 31 caracteres.
 
-A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
+Un nombre de clase debe cumplir con el estándar [reglas de nomenclatura de propiedades](#object-properties) para la notación de puntos.
 
-> Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+> No se recomienda dar el mismo nombre a una clase y a una [tabla de la base](#tables), para evitar conflictos.
 
 ## Funciones
 
-Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
+Los nombres de función deben cumplir con el estándar [reglas de nomenclatura de propiedades](#object-properties) para la notación de puntos.
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> **Consejo:** comenzar el nombre de la función con un carácter de subrayado ("_") excluirá la función de las funcionalidades de autocompletado en el editor de código 4D.
 
 ## Propiedades de los objetos
 
-The name of an object property (also called object _attribute_) can contain up to 255 characters.
+El nombre de una propiedad objeto (también llamado objeto _atributo_) puede contener hasta 255 caracteres.
 
-Las propiedades de los objetos pueden hacer referencia a valores escalares, elementos ORDA, funciones de clase, otros objetos, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+Las propiedades de los objetos pueden hacer referencia a valores escalares, elementos ORDA, funciones de clase, otros objetos, etc. Sea cual sea su naturaleza, los nombres de las propiedades de los objetos deben seguir las siguientes reglas **si se quiere utilizar la [notación de punto](dt_object.md#object-properties)**:
 
 - El nombre de una propiedad debe comenzar con una letra, un guión bajo o un dólar "$".
 - A partir de ahí, el nombre puede incluir cualquier letra, dígito, el caracter de subrayado ("_"), o el caracter de dólar ("$").
@@ -44,21 +44,21 @@ $value:=$clientObj.data.address.city
 
 :::tip
 
-Comenzar el nombre de una propiedad objeto con un carácter de subrayado ("_") excluirá la propiedad de las características de autocompletado en el editor de código de 4D. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+Comenzar el nombre de una propiedad objeto con un carácter de subrayado ("_") excluirá la propiedad de las características de autocompletado en el editor de código de 4D. Por ejemplo, si declara `$o._myPrivateProperty`, no se propondrá en el editor de código cuando escriba `"$o. "`.
 
 :::
 
-See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+Ver también [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
 
 :::note
 
-If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
+Si utiliza **notación de cadena** entre corchetes, los nombres de las propiedades pueden contener cualquier caracter (ej.: `miObjeto["1. First property"]`).
 
 :::
 
 ## Parámetros
 
-Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
+Los nombres de los parámetros deben comenzar con un caracter `$` y seguir las mismas reglas que los [nombres de variables](#variables).
 
 Ejemplos:
 
@@ -74,7 +74,7 @@ El nombre de un método proyecto puede contener hasta 31 caracteres.
 
 - Un nombre de método proyecto debe comenzar por una letra, un dígito o un guión bajo
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, el caracter de subrayado ("_"), o el caracter de espacio.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de métodos proyecto son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
@@ -85,9 +85,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método devuelve un valor, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir un proyecto para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
+**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método devuelve un valor, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir un proyecto para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
 
-> Cuando se llama a un método, sólo hay que escribir su nombre. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
+> Cuando se llama a un método, sólo hay que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como también todos los comandos del plug-in, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método.
 
 Ejemplos:
 
@@ -108,7 +108,7 @@ Un nombre de tabla y un nombre de campo pueden contener hasta 31 caracteres.
 
 - Un nombre de tabla o campo debe comenzar con una letra, un guión bajo o un signo dólar ("$")
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Deben respetarse reglas adicionales cuando la base deba manejarse vía SQL: sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz, y el nombre no debe incluir ninguna palabra clave SQL (comando, atributo, etc.).
 
 Ejemplos:
@@ -122,34 +122,34 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ```
 
-> Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
+> No se recomienda dar el mismo nombre a una tabla y a una [clase](#classes), para evitar conflictos.
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols (`$` or `<>`).
+El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables de interproceso](variables.md#interprocess-variables).
+- Se permite un dígito como primer caracter pero no se recomienda, y no es compatible con la [sintaxis de declaración `var`](variables.md#usando-la-palabra-clave-var).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- Se permite el carácter de espacio pero no se recomienda, y no es compatible con la [`sintaxis de declaración var`](variables.md#usando-la-palabra-clave-var).
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales 
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) //variable local
+$vsMyString:="Hello there" //variable local
+var $vName; $vJob : Text //variables locales 
+If(bValidate=1) //variable proceso 
+<>vlProcessID:=Current process() //variable interproceso
 ```
 
 ## Otros nombres
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+En el lenguaje 4D, varios elementos tienen sus nombres manejados como cadenas: **formularios**, **objetos de formulario**, **selecciones temporales**, **procesos**, **conjuntos**, **barras de menú**, etc.
 
-Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
+Estos nombres de cadena pueden contener hasta 255 caracteres, sin incluir los caracteres `$` or `<>` (si los hay).
 
 - Los nombres de las cadenas pueden contener cualquier carácter.
 - Los nombres de las cadenas son sensibles a las mayúsculas y minúsculas.
@@ -159,14 +159,14 @@ Ejemplos:
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
- //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")//Selección temporal process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Selección temporal interproceso
+ //Iniciar el proceso global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ //Iniciar el proceso local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")//Conjunto process
+USE SET("<>Deleted Records") //Conjunto interprocess
+If(Records in set("$Selection"+String($i))>0) //Conjunto Client
 
 ```

@@ -13,17 +13,17 @@ Une list box contient une ou plusieurs colonnes dont le contenu est automatiquem
 
 ### Principes d'utilisation basiques
 
-En exécution, les list box permettent d’afficher et de saisir des données sous forme de listes. To make a cell editable ([if entry is allowed for the column](#managing-entry)), simply click twice on the value that it contains:
+En exécution, les list box permettent d’afficher et de saisir des données sous forme de listes. Pour passer une cellule en mode édition ([si la saisie est autorisée pour la colonne associée](#managing-entry)), il suffit de cliquer deux fois sur la valeur qu’elle contient :
 
 ![](../assets/en/FormObjects/listbox_edit.png)
 
-Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sein d’une cellule de list box. To add a line break, press **Ctrl+Carriage return** on Windows or **Option+Carriage return** on macOS.
+Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sein d’une cellule de list box. Pour ajouter un retour à la ligne, appuyez sur les touches **Ctrl+Retour chariot** sous Windows, ou appuyez sur les touches **Option+Retour chariot** sous macOS.
 
-Les booléens et les images peuvent être affichés dans des cellules, ainsi que des dates, des heures ou des nombres. It is possible to sort column values by clicking on a header ([standard sort](#managing-sorts)). Toutes les colonnes sont automatiquement synchronisées.
+Les booléens et les images peuvent être affichés dans des cellules, ainsi que des dates, des heures ou des nombres. Il est possible de trier les valeurs de colonne en cliquant sur un en-tête ([tri standard](#managing-sorts)). Toutes les colonnes sont automatiquement synchronisées.
 
-It is also possible to resize each column, and the user can modify the order of [columns](properties_ListBox.md#locked-columns-and-static-columns) and [rows](properties_Action.md#movable-rows) by moving them using the mouse, if this action is authorized. Note that list boxes can be used in [hierarchical mode](#hierarchical-list-boxes).
+Il est également possible de redimensionner chaque colonne, et l'utilisateur peut modifier l'ordre des [colonnes](properties_ListBox.md#locked-columns-and-static-columns) et des [lignes](properties_Action.md#movable-rows) en les déplaçant à l'aide de la s Notez que les list box peuvent être utilisées [en mode hiérarchique](#hierarchical-list-boxes).
 
-The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
+L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourcis standard : **Maj + clic** pour une sélection adjacente et **Ctrl + clic** (Windows) ou **Commande + clic** (macOS) pour une sélection non adjacente.
 
 ### Parties de list box
 
@@ -43,15 +43,15 @@ Il est possible d'ajouter une méthode objet à l'objet list box et/ou à chaque
 1. Méthode objet de chaque colonne
 2. Méthode objet de la list box
 
-The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
+La méthode objet de colonne obtient les événements qui se produisent dans son [en-tête](#list-box-headers) et son [pied](#list-box-footers).
 
 ### Types de list box
 
-Il existe différents types de list box avec leurs propres comportements et propriétés spécifiques. The list box type depends on its [Data Source property](properties_Object.md#data-source):
+Il existe différents types de list box avec leurs propres comportements et propriétés spécifiques. Le type de list box dépend de sa propriété [Data Source](properties_Object.md#data-source) :
 
-- **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
-- **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
-- **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
+- **Tableaux**: chaque colonne est liée à un tableau 4D. Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques).
+- **Sélection** (**Sélection courante** ou **Sélection temporaire**) : chaque colonne est liée à une expression (par exemple un champ) qui est évaluée pour chaque enregistrement de la sélection.
+- **Collection ou Entity selection** : chaque colonne est liée à une expression qui est évaluée pour chaque élément de la collection ou chaque entité de l'entity selection.
 
 > Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
 
@@ -59,7 +59,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or `EDIT ITEM`, `Displayed line number` commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) page of the _4D Language reference_ for more information.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Pour plus d'informations, consultez la page [List Box Commands Summary](https://doc.4d.com/4Dv19R6/4D/19-R6/List-Box-Commands-Summary.300-5911039.en.html) du manuel _4D Language_.
 
 ## Objets List box
 
@@ -67,12 +67,12 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. Le nombre de lignes est basé sur le nombre d’éléments du tableau.
 
-Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
+Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. Vous pouvez le modifier, ainsi que les autres [propriétés des colonnes](listbox_overview.md#proprietes-specifiques-des-colonnes). Le format d'affichage de chaque colonne peut également être défini à l'aide de la commande `OBJECT SET FORMAT`.
 
-> Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
+> Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
-Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
-The values of columns are managed using high-level List box commands (such as `LISTBOX INSERT ROWS` or `LISTBOX DELETE ROWS`) as well as array manipulation commands. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#énumération) à une colonne afin de contrôler la saisie.
+Les valeurs des colonnes sont gérées à l’aide des commandes de haut niveau du thème List box (telles que `LISTBOX INSERT ROWS` ou `LISTBOX INSERT COLUMN`) ainsi que des commandes de manipulation des tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -84,13 +84,13 @@ Vous pouvez également utiliser une énumération :
 LIST TO ARRAY("ListName";varCol)
 ```
 
-> **Warning**: When a list box contains several columns of different sizes, only the number of items of the smallest array (column) will be displayed. Il est donc conseillé de veiller à ce que chaque tableau ait le même nombre d’éléments que les autres. A noter également que si une colonne de la list box est “vide” (c'est le cas lorsque le tableau associé n'a pas été correctement déclaré ou dimensionné via le langage), la list box n'affiche aucun contenu.
+> **Attention :** Lorsqu’un objet List box contient plusieurs colonnes de tailles différentes, seul le nombre d’éléments correspondant au plus petit tableau est affiché. Il est donc conseillé de veiller à ce que chaque tableau ait le même nombre d’éléments que les autres. A noter également que si une colonne de la list box est “vide” (c'est le cas lorsque le tableau associé n'a pas été correctement déclaré ou dimensionné via le langage), la list box n'affiche aucun contenu.
 
 ### List box de type sélection
 
-In this type of list box, each column can be associated with a field (for example `[Employees]LastName)` or an expression. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation.
 
-The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
+Le contenu de chaque ligne est ensuite évalué en fonction d'une sélection d'enregistrements : la **sélection courante** d'une table ou une **sélection temporaire**.
 
 Dans le cas d’une list box basée sur la sélection courante, toute modification effectuée côté base de données est automatiquement reportée dans la list box et inversement. La sélection courante est donc toujours identique aux deux emplacements.
 
@@ -98,9 +98,15 @@ Dans le cas d’une list box basée sur la sélection courante, toute modificati
 
 Dans ce type de list box, chaque colonne doit être associée à une expression. Le contenu de chaque ligne est ensuite évalué par élément de la collection ou par entité de l'entity selection.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](../Concepts/classes.md#this) keyword. A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Chaque élément de la collection ou chaque entité est disponible en tant qu'objet auquel on peut accéder via le mot-clé [This](../Concepts/classes.md#this). Une expression de colonne peut être un chemin de propriété, une méthode de projet, une variable ou n'importe quelle formule, accédant à chaque entité ou objet élément de collection via `This`, par exemple `This.<propertyPath>` (ou `This.value` dans le cas Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation.
 
 Lorsque la source de données est une entity selection, les modifications apportées du côté de la list box sont automatiquement enregistrées dans la base de données. En revanche, les modifications apportées du côté de la base de données sont visibles dans la list box après le rechargement des entités modifiées.
+
+:::note
+
+When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+
+:::
 
 Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Par exemple :
 
@@ -191,7 +197,7 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ### Événements formulaire pris en charge
 
-| Evénement formulaire | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                                        | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires retournées (voir [Evénement formulaire](https://doc.4d.com/4Dv18/4D/18/FORM-Evenement.301-4522191.fr.html) pour les propriétés principales)                      | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -257,7 +263,7 @@ Une list box est composée d'un ou plusieurs objets colonnes qui ont des propri�
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
 
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object).
+> Vous pouvez définir le [Type d'expression](properties_Object.md#expression-type) pour les colonnes de list box de type tableau (Alpha, Texte, Numérique, Date, Heure, Image, Booléen ou Objet).
 
 ### Propriétés spécifiques des colonnes
 
@@ -265,7 +271,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ### Événements formulaire pris en charge
 
-| Evénement formulaire | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                                        | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires retournées (voir [Evénement formulaire](https://doc.4d.com/4Dv18/4D/18/FORM-Evenement.301-4522191.fr.html) pour les propriétés principales)                      | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -292,7 +298,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ## En-têtes de list box
 
-> To be able to access the header properties of a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option of the list box.
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans l'éditeur de formulaires en cliquant dessus lorsque l'objet List box est sélectionné :
 
@@ -300,13 +306,13 @@ Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans
 
 Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
 
-Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
+Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. En particulier, une icône peut être affichée dans l’en-tête à côté ou à la place du libellé de la colonne, notamment dans le cadre des [tris personnalisés](#gestion-des-tris).
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the [list box column object method](#object-methods).
+Au moment de l'exécution, les événements qui se produisent dans un en-tête sont générés dans la [méthode objet de la colonne de list box](#object-methods).
 
-When the `OBJECT SET VISIBLE` command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which _header3_ belongs and not simply this header.
+Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel _header3_ appartient et pas simplement cet en-tête.
 
 ### Propriétés spécifiques des en-têtes
 
@@ -314,7 +320,7 @@ When the `OBJECT SET VISIBLE` command is used with a header, it is applied to al
 
 ## Pieds de list box
 
-> To be able to access footer properties for a list box, you must enable the [Display Footers](properties_Footers.md#display-footers) option.
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Les List box peuvent contenir des zones de "pied de page" non saisissables, affichant des informations supplémentaires. Dans les données présentées sous forme de tableaux, les pieds sont généralement utilisés pour afficher des calculs, tels que des sommes ou des moyennes.
 
@@ -322,11 +328,11 @@ Lorsque les pieds sont affichés, vous pouvez sélectionner un pied de list box 
 
 ![](../assets/en/FormObjects/listbox_footers.png)
 
-Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. Vous pouvez également accéder à des propriétés spécifiques pour les pieds de page. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
+Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. Vous pouvez également accéder à des propriétés spécifiques pour les pieds de page. En particulier, vous pouvez insérer un [calcul personnalisé ou automatique](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
+Au moment de l'exécution, les événements qui se produisent dans un pied de page sont générés dans la [méthode objet de la colonne de list box](#object-methods).
 
-When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which _footer3_ belongs and not simply this footer.
+Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un pied de page, elle est appliquée à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel _footer3_ appartient et pas simplement ce pied de page.
 
 ### Propriétés spécifiques des pieds de page
 
@@ -336,14 +342,14 @@ When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to al
 
 Pour qu’une cellule de list box soit saisissable, il est nécessaire que les conditions suivantes soient réunies :
 
-- The cell’s column must have been set as [Enterable](properties_Entry.md#enterable) (otherwise, the cells of the column can never be enterable).
-- In the `On Before Data Entry` event, $0 does not return -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively. Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
+- La colonne de la cellule a été définie comme [Saisissable](properties_Entry.md#enterable)(dans le cas contraire, les cellules de la colonne ne seront jamais saisissables).
+- Dans l’événement formulaire `On Before Data Entry`, $0 ne retourne pas -1. Lorsque le curseur arrive dans la cellule, l'événement `On Before Data Entry` est généré dans la méthode de la colonne. Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. Si l'événement a été généré après avoir appuyé sur **Tab** ou **Maj+Tab**, le focus va respectivement à la cellule suivante ou à la précédente. Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
 
 Imaginons par exemple une list box contenant deux tableaux, de type date et texte. Le tableau date n’est pas saisissable mais le tableau texte est saisissable si la date n’est pas déjà passée.
 
 ![](../assets/en/FormObjects/listbox_entry.png)
 
-Here is the method of the _arrText_ column:
+Voici la méthode de la colonne \*tText \* :
 
 ```4d
  Case of
@@ -358,7 +364,7 @@ Here is the method of the _arrText_ column:
  End case
 ```
 
-The `On Before Data Entry` event is returned before `On Getting Focus`.
+L’événement `On Before Data Entry` est retourné avant `On Getting Focus`.
 
 Afin de préserver la cohérence des données pour les list box de type de sélection et entity sélection, tout enregistrement/entité modifié(e) est automatiquement sauvegardé(e) dès que la cellule est validée, c'est-à-dire :
 
@@ -368,23 +374,23 @@ Afin de préserver la cohérence des données pour les list box de type de séle
 
 La séquence typique d'événements générés pendant la saisie ou la modification des données est la suivante :
 
-| Action                                                                                             | Type(s) de Listbox        | Séquence d'événements                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Tous                                         | On Before Data Entry                                                                                                                                                                                                                                                                                                                                 |
-|                                                                                                    | Tous                                         | On Getting Focus                                                                                                                                                                                                                                                                                                                                     |
-| Sa valeur est modifiée                                                                             | Tous                                         | On Before Keystroke                                                                                                                                                                                                                                                                                                                                  |
-|                                                                                                    | Tous                                         | On After Keystroke                                                                                                                                                                                                                                                                                                                                   |
-|                                                                                                    | Tous                                         | On After Edit                                                                                                                                                                                                                                                                                                                                        |
-| Un utilisateur valide et quitte la cellule                                                         | List box de type sélection                   | Sauvegarde                                                                                                                                                                                                                                                                                                                                           |
-|                                                                                                    | List box de type sélection d'enregistrements | Trigger On saving an existing record (si défini)                                                                                                                                                                                                                                                                                  |
-|                                                                                                    | List box de type sélection                   | On Data Change(\*)                                                                                                                                                                                                                                                                                                                |
-|                                                                                                    | List box de type entity selection            | L'entité est sauvegardée avec l'option automerge, verrouillage optimiste (voir entity.save()). En cas de sauvegarde réussie, l'entité est rafraîchie avec la dernière mise à jour effectuée. Si la sauvegarde échoue, une erreur est affichée. |
-|                                                                                                    | Tous                                         | On Losing Focus                                                                                                                                                                                                                                                                                                                                      |
+| Action                                                                                                             | Type(s) de Listbox        | Séquence d'événements                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Une cellule passe en mode édition (action de l'utilisateur ou appel de la commande `EDIT ITEM`) | Tous                                         | On Before Data Entry                                                                                                                                                                                                                                                                                                                                 |
+|                                                                                                                    | Tous                                         | On Getting Focus                                                                                                                                                                                                                                                                                                                                     |
+| Sa valeur est modifiée                                                                                             | Tous                                         | On Before Keystroke                                                                                                                                                                                                                                                                                                                                  |
+|                                                                                                                    | Tous                                         | On After Keystroke                                                                                                                                                                                                                                                                                                                                   |
+|                                                                                                                    | Tous                                         | On After Edit                                                                                                                                                                                                                                                                                                                                        |
+| Un utilisateur valide et quitte la cellule                                                                         | List box de type sélection                   | Sauvegarde                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                                                    | List box de type sélection d'enregistrements | Trigger On saving an existing record (si défini)                                                                                                                                                                                                                                                                                  |
+|                                                                                                                    | List box de type sélection                   | On Data Change(\*)                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                    | List box de type entity selection            | L'entité est sauvegardée avec l'option automerge, verrouillage optimiste (voir entity.save()). En cas de sauvegarde réussie, l'entité est rafraîchie avec la dernière mise à jour effectuée. Si la sauvegarde échoue, une erreur est affichée. |
+|                                                                                                                    | Tous                                         | On Losing Focus                                                                                                                                                                                                                                                                                                                                      |
 
 (\*) Avec les list box de type entity selection, dans l'événement "On Data Change" :
 
-- the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
-- the `This` object contains the modified value.
+- l'objet [élément courant](properties_DataSource.md#element-courant) contient la valeur avant modification.
+- l'objet `This` contient la valeur modifiée.
 
 > La saisie de données dans les list box de type collection/entity selection présente une limitation lorsque l'expression est évaluée comme nulle. Dans ce cas, il n'est pas possible de modifier ou de supprimer la valeur nulle dans la cellule.
 
@@ -392,17 +398,17 @@ La séquence typique d'événements générés pendant la saisie ou la modificat
 
 La gestion des sélections s'effectue différemment selon que la list box de type tableau, sélection d'enregistrements, ou collection/entity selection :
 
-- **Selection list box**: Selections are managed by a set, which you can modify if necessary, called `$ListboxSetX` by default (where X starts at 0 and is incremented based on the number of list boxes in the form). This set is [defined in the properties](properties_ListBox.md#highlight-set) of the list box. Il est maintenu automatiquement par 4D : si l'utilisateur sélectionne une ou plusieurs ligne(s) dans la list box, l'ensemble est immédiatement mis à jour. A l'inverse, il est possible d'utiliser les commandes du thème "Ensembles" afin de modifier par programmation la sélection dans la list box.
+- **List box de type sélection :** les sélections sont gérées par l'intermédiaire d'un ensemble appelé par défaut `$ListboxSetN` (N débute à 0 et est incrémenté en fonction du nombre de list box dans le formulaire), que vous pouvez modifier si nécessaire. Cet ensemble est [défini dans les propriétés](properties_ListBox.md#highlight-set) de la list box. Il est maintenu automatiquement par 4D : si l'utilisateur sélectionne une ou plusieurs ligne(s) dans la list box, l'ensemble est immédiatement mis à jour. A l'inverse, il est possible d'utiliser les commandes du thème "Ensembles" afin de modifier par programmation la sélection dans la list box.
 
-- **Collection/Entity selection list box**: Selections are managed through dedicated list box properties:
-  - [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
-  - [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
-  - [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
+- **List box de type collection/entity selection** : les sélections sont gérées via des propriétés de list box dédiées :
+  - [Elément courant](properties_DataSource.md#current-item) est un objet qui reçoit l'élément/l'entité sélectionné(e),
+  - [Eléments sélectionnés](properties_DataSource.md#selected-items) retourne la collection des éléments sélectionnés,
+  - [Position élément courant](properties_DataSource.md#current-item-position) retourne la position de l'élément ou de l'entité sélectionné(e).
 
-- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
-  The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. Cette variable correspond à un tableau de booléens automatiquement créé et maintenu par 4D. La taille de ce tableau est déterminée par celle de la list box : il contient le même nombre d’éléments que le plus petit tableau associé aux colonnes.
-  Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D met à jour le contenu de ce tableau en fonction des actions utilisateur. A l’inverse, vous pouvez modifier la valeur des éléments de ce tableau afin de modifier la sélection dans la list box.
-  En revanche, vous ne pouvez ni insérer ni supprimer de ligne dans ce tableau ; il n’est pas possible non plus de le retyper. The `Count in array` command can be used to find out the number of selected lines.
+- **List box de type tableau :** la commande `LISTBOX SELECT ROW` permet de sélectionner par programmation une ou plusieurs lignes de list box.
+  En outre, [la variable associée à l’objet List box](properties_Object.md#variable-or-expression) peut être utilisée pour lire, fixer ou stocker les sélections de lignes dans l’objet. Cette variable correspond à un tableau de booléens automatiquement créé et maintenu par 4D. La taille de ce tableau est déterminée par celle de la list box : il contient le même nombre d’éléments que le plus petit tableau associé aux colonnes.
+  Chaque élément de ce tableau contient `Vrai` si la ligne correspondante est sélectionnée et `Faux` sinon. 4D met à jour le contenu de ce tableau en fonction des actions utilisateur. A l’inverse, vous pouvez modifier la valeur des éléments de ce tableau afin de modifier la sélection dans la list box.
+  En revanche, vous ne pouvez ni insérer ni supprimer de ligne dans ce tableau ; il n’est pas possible non plus de le retyper. La commande `Count in array` est utile dans ce cas pour connaître le nombre de lignes sélectionnées.
   Par exemple, cette méthode permet d’inverser la sélection de la première ligne de la list box (type tableau) :
 
 ```4d
@@ -415,22 +421,22 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
  End if
 ```
 
-> The `OBJECT SET SCROLL POSITION` command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> La commande `OBJECT SET SCROLL POSITION` fait défiler les lignes de la list box de façon à afficher la première ligne sélectionnée ou une ligne spécifiée.
 
 ### Personnaliser la représentation des sélections de lignes
 
-When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Comme les sélections elles-mêmes sont gérées par 4D, cela signifie que :
+Lorsque l'option [Cacher surlignage sélection](properties_Appearance.md#cacher-surlignage-selection) est sélectionnée, vous devez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Comme les sélections elles-mêmes sont gérées par 4D, cela signifie que :
 
 - Pour les list box de type tableau, vous devez parcourir le tableau booléen associé à la list box afin de déterminer quelles lignes sont sélectionnées.
-- For selection type list boxes, you have to check whether the current record (row) belongs to the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box.
+- Propriétés spécifiques des list box
 
 Vous pouvez alors définir par programmation des couleurs d'arrière-plan, des couleurs ou des styles de polices spécifiques permettant de visualiser l'apparence des lignes sélectionnées. Pour cela, vous pouvez utiliser des tableaux ou des expressions en fonction du type de list box affiché (cf. sections suivantes).
 
-> You can use the `lk inherited` constant to mimic the current appearance of the list box (e.g., font color, background color, font style, etc.).
+> Utilisez la constante `lk inherited` pour appliquer l'apparence courante de la list box (couleur d'arrière-plan, style de police, etc.).
 
 #### List box de type sélection
 
-To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
+Pour déterminer quelles lignes sont sélectionnées, vous devez tester si elles sont incluses dans l'ensemble désigné par la propriété [Ensemble surlignage](properties_ListBox.md#ensemble-surlignage) de la list box. Vous pouvez alors personnaliser l'apparence des lignes sélectionnées à l'aide d'une ou plusieurs [expressions de couleur et de style](#using-arrays-and-expressions).
 
 N'oubliez pas que les expressions sont automatiquement réévaluées à chaque fois que :
 
@@ -440,17 +446,16 @@ N'oubliez pas que les expressions sont automatiquement réévaluées à chaque f
 
 #### List box de type tableau
 
-You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected.
+Pour déterminer quelles lignes sont sélectionnées, vous devez parcourir le tableau booléen [Variable ou Expression](properties_Object.md#variable-or-expression) associé à la list box.
 
-You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
+Vous pouvez alors personnaliser l'apparence des lignes sélectionnées à l'aide d'un ou plusieurs [tableaux de couleur et de style](#using-arrays-and-expressions).
 
-Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
+Notez que les tableaux de list box utilisés pour définir l'apparence des lignes sélectionnées doivent être recalculés dans l'événement formulaire `On Selection Change` ; cependant, vous pouvez également modifier ces tableaux dans les événements formulaire
 
-- `On Getting Focus` (list box property)
-- `On Losing Focus` (list box property)
-- `On Activate` (form property)
-- `On Deactivate` (form property)
-  ...depending on whether and how you want to visually represent changes of focus in selections.
+- `On Getting Focus` (propriété de list box)
+- `On Losing Focus` (propriété de list box)
+- `On Activate` (propriété de formulaire)
+- `On Deactivate` (propriété de formulaire) ...en fonction du moment et de la manière dont vous souhaitez représenter visuellement le changement de focus des sélections.
 
 ##### Exemple
 
@@ -458,7 +463,7 @@ Vous avez choisi de cacher le surlignage système et souhaitez représenter les 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. Dans le formulaire JSON, vous avez défini le Tableau couleurs de fond suivant pour la list box :
+Avec une list box de type tableau, vous devez mettre à jour le [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) par programmation. Dans le formulaire JSON, vous avez défini le Tableau couleurs de fond suivant pour la list box :
 
 ```
 	"rowFillSource": "_ListboxBackground",
@@ -490,7 +495,7 @@ Par exemple, dans le formulaire JSON, vous avez défini l'ensemble surlignage et
 	"rowFillSource": "UI_SetColor",
 ```
 
-You can write in the _UI_SetColor_ method:
+Dans la méthode _UI_SetColor_, vous pouvez écrire :
 
 ```4d
  If(Is in set("$SampleSet"))
@@ -498,11 +503,11 @@ You can write in the _UI_SetColor_ method:
  Else
     $color:=lk inherited
  End if
- 
+
  $0:=$color
 ```
 
-> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Comme il n'est pas possible d'avoir des couleurs distinctes pour les en-têtes de même niveau, il n'y a aucun moyen de surligner une ligne de rupture spécifique par programmation.
+> Dans les list box hiérarchiques, les lignes de rupture ne peuvent pas être surlignées lorsque l'option [Cacher surlignage sélection](properties_Appearance.md#cacher-surlignage-selection) est sélectionnée. Comme il n'est pas possible d'avoir des couleurs distinctes pour les en-têtes de même niveau, il n'y a aucun moyen de surligner une ligne de rupture spécifique par programmation.
 
 ## Gestion des tris
 
@@ -512,16 +517,16 @@ Le tri dans une list box peut être standard ou personnalisé. Lorsqu'une colonn
 
 Par défaut, une list box gère automatiquement les tris standard des colonnes en cas de clic sur l’en-tête. Un tri standard est un tri alphanumérique des valeurs de la colonne, alternativement croissant / décroissant lors de clics successifs.
 
-You can enable or disable standard user sorts by disabling the [Sortable](properties_Action.md#sortable) property of the list box (enabled by default).
+Il est possible d'activer ou d'inactiver le tri utilisateur standard via la propriété [Triable](properties_Action.md#triable)” de la list box (sélectionnée par défaut).
 
 La prise en charge du tri standard dépend du type de list box :
 
 | Type de list box                | Prise en charge du tri standard | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Collection d'objets             | Oui                             | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Collection d'objets             | Oui                             | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Collection de valeurs scalaires | Non                             | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Entity selection                | Oui                             | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Sélection courante              | Oui                             | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Sélection courante              | Oui                             | Seules les expressions simples sont triables (par exemple `[Table_1]Champ_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Sélection temporaire            | Non                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Tableaux                        | Oui                             | Les colonnes liées à des tableaux d'images et de pointeurs ne sont pas triables                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
@@ -540,7 +545,7 @@ Vous souhaitez trier une list box en utilisant les valeurs d'une propriété sto
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+Vous concevez une list box de type entity selection liée à l'expression `Form.child`. Dans l'événement formulaire `On Load`, vous exécutez `Form.child:=ds.Child.all()`.
 
 Vous affichez deux colonnes :
 
@@ -558,7 +563,7 @@ End if
 
 ### Variable d'en-tête de colonne
 
-The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
+La valeur de la variable [variable associée à l’en-tête d’une colonne](properties_Object.md#variable-or-expression) permet de gérer une information supplémentaire : le tri courant de la colonne (lecture) et l’affichage de la flèche de tri.
 
 - Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.\
   ![](../assets/en/FormObjects/sorticon0.png)
@@ -569,7 +574,7 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 - If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
   ![](../assets/en/FormObjects/sorticon2.png)
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
+> Seules les [variables](Concepts/variables.md) déclarées ou dynamiques peuvent être utilisées comme variables d'en-tête de colonne. Les autres types d'[expressions](Concepts/quick-tour.md#expressions) telles que `Form.sortValue` ne sont pas pris en charge.
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
@@ -579,12 +584,12 @@ Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de 
 
 Vous disposez de plusieurs possibilités pour définir des couleurs de fond, des couleurs de police et des styles de police dans les list box :
 
-- at the level of the [list box object properties](#list-box-objects),
-- at the level of the [column properties](#list-box-columns),
-- using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
-- at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
+- au niveau des [propriétés de l’objet list box](#list-box-objects),
+- au niveau des [propriétés de la colonne,](#list-box-columns),
+- en utilisant des [tableaux ou expressions](#using-arrays-and-expressions) pour la list box et/ou pour chaque colonne,
+- au niveau du texte de chaque cellule (si [texte multistyle](properties_Text.md#multi-style)).
 
-### Priority & inheritance
+### Priorité & héritage
 
 Des principes de priorité et d'héritage sont observés lorsqu’une même propriété est définie à plusieurs niveaux.
 
@@ -599,66 +604,66 @@ Des principes de priorité et d'héritage sont observés lorsqu’une même prop
 
 Par exemple, si vous définissez un style de caractères dans les propriétés de la list box et un autre via un tableau de styles pour la colonne, ce dernier sera pris en compte.
 
-For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
+Pour chaque attribut (style, couleur et couleur de fond), un **héritage** est mis en oeuvre lorsque la valeur par défaut est utilisée :
 
 - pour les attributs des cellules : valeurs d’attributs des lignes
 - pour les attributs des lignes : valeurs d’attributs des colonnes
 - pour les attributs des colonnes : valeurs d’attributs de la list box
 
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors:
+Ainsi, si vous souhaitez qu’un objet hérite de la valeur d’attribut du niveau supérieur, il vous suffit de passer `lk inherited` (valeur par défaut) à la commande de définition ou directement dans l’élément de tableau de style/couleur correspondant. For example, given an array list box containing a standard font style with alternating colors:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Vous effectuez les modifications suivantes :
 
-- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
-- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
-- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
-- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+- fond de la ligne 2 est passé en rouge via la propriété [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) de l’objet list box,
+- le style de la ligne 4 est passé en italique via la propriété [Tableau de styles](properties_Text.md#row-style-array) de l’objet list box,
+- deux élements de la colonne 5 sont passés en gras via la propriété [Tableau de styles](properties_Text.md#row-style-array) de l’objet colonne 5,
+- les éléments 2 de la colonne 1 et 2 sont passés en fond bleu via la propriété [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) des objets colonne 1 et 2 :
 
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Pour restaurer l’apparence initiale de la list box, il suffit de :
 
-- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
-- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
-- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
-- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
+- passer la constante `lk inherited` dans les éléments 2 des tableaux de fond des colonnes 1 et 2 : ils héritont alors de la couleur de fond rouge de la ligne.
+- passer la constante `lk inherited` dans les éléments 3 et 4 des tableaux de style de la colonne 5 : ils héritont alors du style standard, hormis l’élément 4, qui passera en italique comme défini dans le tableau de style de la list box.
+- passer la constante `lk inherited` dans l’élément 4 du tableau de style de la list box afin de supprimer le style italique.
+- passer la constante `lk inherited` dans l’élément 2 du tableau de couleurs de fond de la list box afin de restaurer la couleur alternée d’origine de la list box.
 
 ### Utiliser des tableaux et des expressions
 
 Selon le type de list box, vous pouvez utiliser différentes propriétés pour personnaliser les couleurs, les styles et l'affichage des lignes :
 
-| Propriété            | List box tableau                                                                           | Liste box sélection                                                                          | List box collection ou entity selection                                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Couleur de fond      | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Couleur de la police | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
-| Style de police      | [Row Style Array](properties_Text.md#row-style-array)                                      | [Style Expression](properties_Text.md#style-expression)                                      | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                      |
-| Affichage            | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                            | *                                                                                                                                                               |
+| Propriété            | List box tableau                                                                           | Liste box sélection                                                                          | List box collection ou entity selection                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Couleur de fond      | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Expression couleur de fond](properties_BackgroundAndBorder.md#expression-couleur-de-fond) ou [Meta info expression](properties_Text.md#meta-info-expression) |
+| Couleur de la police | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Expression couleur police](properties_Text.md#expression-couleur-police) or [Meta info expression](properties_Text.md#meta-info-expression)                  |
+| Style de police      | [Row Style Array](properties_Text.md#row-style-array)                                      | [Style Expression](properties_Text.md#style-expression)                                      | [Expression style](properties_Text.md#expression-style) ou [Meta info expression](properties_Text.md#meta-info-expression)                                    |
+| Affichage            | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                            | *                                                                                                                                                             |
 
 ## Gestion des impressions
 
-Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. A noter que l'apparence "Impression" est proposée pour les list box dans l'éditeur de formulaires.
+Deux modes d’impression sont proposés : le **mode prévisualisation**, permettant d’imprimer une list box comme un objet de formulaire et le **mode avancé**, permettant de contrôler l’impression de l’objet list box lui-même au sein du formulaire. A noter que l'apparence "Impression" est proposée pour les list box dans l'éditeur de formulaires.
 
 ### Mode prévisualisation
 
-Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. La list box est imprimée dans l’état où elle se trouve dans le formulaire. Ce mode ne permet pas de contrôler précisément l’impression de l’objet ; en particulier, il ne permet pas d’imprimer toutes les lignes d’une list box contenant plus de lignes qu’elle ne peut en afficher.
+L’impression d’une list box en mode prévisualisation consiste à imprimer directement la list box avec le formulaire qui la contient via les commandes d’impression standard ou la commande de menu **Imprimer**. La list box est imprimée dans l’état où elle se trouve dans le formulaire. Ce mode ne permet pas de contrôler précisément l’impression de l’objet ; en particulier, il ne permet pas d’imprimer toutes les lignes d’une list box contenant plus de lignes qu’elle ne peut en afficher.
 
 ### Mode avancé
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
+Dans ce mode, l’impression des list box s’effectue par programmation, via la commande `Print object` (les formulaires projet et les formulaires table sont pris en charge). La commande `LISTBOX GET PRINT INFORMATION` permet de contrôler l’impression de l’objet.
 
 Dans ce mode :
 
-- La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
+- La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l’objet effectivement imprimé peut être obtenue via la commande `LISTBOX GET PRINT INFORMATION`.
 - L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
-  These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
-- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
+  Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande `OBJECT SET SCROLL POSITION` avant de lancer l’impression, la première ligne imprimée dans la list box sera celle désignée par la commande.
+- Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande `LISTBOX GET PRINT INFORMATION` permet de contrôler le statut de l’impression durant l'opération.
 
 ## List box hiérarchiques
 
 Une list box hiérarchique est une list box dans laquelle le contenu de la première colonne apparaît sous forme hiérarchique. Ce type de représentation est adapté à la présentation d’informations comportant des valeurs répétées et/ou hiérarchiquement dépendantes (pays/région/ville...).
 
-> Only [array type list boxes](#array-list-boxes) can be hierarchical.
+> Seules les [list box de type tableau](#array-list-boxes) peuvent être hiérarchiques.
 
 Les list box hiérarchiques constituent un mode de représentation particulier des données, mais ne modifient pas la structure de ces données (les tableaux). Les list box hiérarchiques sont gérées exactement de la même manière que les list box non hiérarchiques.
 
@@ -674,7 +679,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 Cette propriété permet de définir que la list box doit être affichée sous forme hiérarchique. In the JSON form, this feature is triggered [when the column _dataSource_ property value is an array](properties_Object.md#array-list-box), i.e. a collection.
 
-Additional options (**Variable 1...10**) are available when the _Hierarchical List Box_ option is selected, corresponding to each element of the _dataSource_ array to use as break column. A chaque saisie d’une valeur dans un champ, une nouvelle ligne est ajoutée. Jusqu’à 10 variables peuvent être définies. Ces variables définissent les niveaux hiérarchiques à afficher dans la première colonne.
+Des options supplémentaires (**Variable 1...10**) sont disponibles lorsqu'une _List box hiérarchique_ est définie, correspondant à chaque élément du tableau _dataSource_ à utiliser comme colonne de rupture. A chaque saisie d’une valeur dans un champ, une nouvelle ligne est ajoutée. Jusqu’à 10 variables peuvent être définies. Ces variables définissent les niveaux hiérarchiques à afficher dans la première colonne.
 
 La première variable correspond toujours au nom de variable de la première colonne de la list box (les deux valeurs sont automatiquement liées). Cette première variable est toujours visible et saisissable. Par exemple : pays.
 La seconde variable est également toujours visible et saisissable, elle définit le deuxième niveau hiérarchique. Par exemple : régions.
@@ -690,25 +695,25 @@ Ce principe n’est pas appliqué lorsqu’une seule variable est définie dans 
 
 #### Créer une hiérarchie via le menu contextuel
 
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
+Lorsque vous sélectionnez au moins une colonne en plus de la première dans un objet list box (de type tableau) dans l’éditeur de formulaires, la commande **Créer hiérarchie** est disponible dans le menu contextuel :
 
 ![](../assets/en/FormObjects/listbox_hierarchy1.png)
 
 Cette commande est un raccourci pour définir une hiérarchie. Lorsque vous la choisissez, les actions suivantes sont effectuées :
 
-- The **Hierarchical list box** option is checked for the object in the Property List.
+- L'option **List box hiérarchique** est cochée pour l’objet dans la Liste des propriétés.
 - Les variables des colonnes sont utilisées pour définir la hiérarchie. Elles remplacent les variables éventuellement déjà définies.
 - Les colonnes sélectionnées n’apparaissent plus dans la list box (à l’exception du titre de la première).
 
-Exemple : soit une list box dont les premières colonnes contiennent Pays, Région, Ville et Population. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+Exemple : soit une list box dont les premières colonnes contiennent Pays, Région, Ville et Population. Lorsque Pays, Région et Ville sont sélectionnées (cf. illustration ci-dessus), si vous choisissez **Créer hiérarchie** dans le menu contextuel, une hiérarchie à trois niveaux est créée dans la première colonne, les colonnes 2 et 3 sont supprimées et la co
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
 ##### Annuler une hiérarchie
 
-When the first column is selected and already specified as hierarchical, you can use the **Cancel hierarchy** command. Lorsque vous choisissez cette commande, les actions suivantes sont effectuées :
+Lorsque la première colonne est sélectionnée et déjà définie comme hiérarchique, vous pouvez utiliser la commande **Annuler hiérarchie**. Lorsque vous choisissez cette commande, les actions suivantes sont effectuées :
 
-- The **Hierarchical list box** option is deselected for the object,
+- L’option **List box hiérarchique** est désélectionnée pour l’objet,
 - Les niveaux hiérarchiques 2 à n sont supprimés et transformés en colonnes ajoutées dans la list box.
 
 ### Principes de fonctionnement
@@ -729,7 +734,7 @@ Les tableaux ne sont pas triés avant la construction de la hiérarchie. If, for
 \>    A
 \>    C
 
-Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
+Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. Si vous effectuez **Alt+clic** (Windows) ou **Option+clic** (macOS) sur le nœud, tous ses sous-éléments seront déployés ou contractés. Ces opérations peuvent également être effectuées par programmation à l'aide des commandes `LISTBOX EXPAND` et `LISTBOX COLLAPSE`.
 
 Lorsque des valeurs de type date ou heure sont incluses dans une list box hiérarchique, elles sont affichées dans un format normalisé.
 
@@ -750,7 +755,7 @@ Si vous cliquez sur l’en-tête "Population" afin de trier les populations par 
 
 ![](../assets/en/FormObjects/hierarch4.png)
 
-As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
+Comme pour toutes les list box, vous pouvez [désactiver le mécanisme de tri standard](properties_Action.md#sortable) en désélectionnant la propriété "Triable" pour la list box et gérer le tri par programmation.
 
 #### Gestion des sélections et des positions dans les list box hiérarchiques
 
@@ -791,7 +796,7 @@ Hierarchical representation:
 
 > Si une ou plusieurs lignes sont masquées du fait que leurs parents ont été contractés, elles ne sont plus sélectionnées. Seules les lignes visibles (directement ou suite à un défilement) sont sélectionnables. Autrement dit, les lignes ne peuvent pas être à la fois sélectionnées et cachées.
 
-As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
+Tout comme pour les sélections, la commande `LISTBOX GET CELL POSITION` retournera les mêmes valeurs pour une list box hiérarchique et une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, `LISTBOX GET CELL POSITION` retournera la même position : (3;2).
 
 _Non-hierarchical representation:_
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -803,11 +808,11 @@ Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de r
 
 #### Lignes de rupture
 
-If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. Dans le cas suivant :
+Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant :
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
+... `LISTBOX GET CELL POSITION` returns (2;4). Pour sélectionner une ligne de rupture par programmation, vous devez utiliser la commande `LISTBOX SELECT BREAK`.
 
 Les lignes de rupture ne sont pas prises en compte dans les tableaux internes permettant de gérer l’apparence graphique des list box (styles et couleurs). Il est toutefois possible de modifier ces caractéristiques pour les lignes de rupture via les commandes de gestion graphique des objets. Il suffit pour cela d’exécuter ces commandes appropriées sur les tableaux constituant la hiérarchie.
 
@@ -819,7 +824,7 @@ _Non-hierarchical representation:_
 _Hierarchical representation:_
 ![](../assets/en/FormObjects/hierarch13.png)
 
-In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. Pour modifier la couleur ou le style des niveaux de rupture, vous devez exécuter les instructions suivantes :
+En mode hiérarchique, les niveaux de rupture ne sont pas pris en compte par les tableaux de modification de style nommés `tStyle` et `tCouleurs`. Pour modifier la couleur ou le style des niveaux de rupture, vous devez exécuter les instructions suivantes :
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
@@ -834,21 +839,21 @@ Résultat:
 
 #### Gestion optimisée du déployer/contracter
 
-You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events.
+Vous pouvez optimiser l’affichage et la gestion des list box hiérarchiques en tirant parti des événements formulaire `On Expand` et `On Collapse`.
 
-Une list box hiérarchique est construite à partir du contenu des tableaux qui la constituent, elle ne peut donc être affichée que lorsque tous les tableaux sont chargés en mémoire. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
+Une list box hiérarchique est construite à partir du contenu des tableaux qui la constituent, elle ne peut donc être affichée que lorsque tous les tableaux sont chargés en mémoire. Ce principe peut rendre difficile la génération de list box hiérarchiques de grande taille basées sur des tableaux générés à partir des données (via la commande `SELECTION TO ARRAY`), pour des raisons de rapidité d’affichage et d’utilisation de la mémoire
 
-Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
+L'emploi des événements formulaire `On Expand` et `On Collapse` permet de s’affranchir de ces contraintes : il est possible de n’afficher qu’une partie de la hiérarchie et d’effectuer le chargement et le déchargement des tableaux à la volée, en fonction d Dans le contexte de ces événements, la commande `LISTBOX GET CELL POSITION` retourne la cellule sur laquelle l’utilisateur a cliqué afin de déployer ou de contracter une ligne.
 
 Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués par le code. Les principes à mettre en oeuvre sont :
 
 - A l’affichage de la listbox, seul le premier tableau doit être rempli. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
+- Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
+- Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande `LISTBOX GET CELL POSITION` retourne la cellule concernée : vous supprimez de la list box autant de lignes que nécessaire à l’aide de la commande `LISTBOX DELETE ROWS`.
 
 ## Tableaux d'objets dans les colonnes
 
@@ -891,7 +896,7 @@ ARRAY OBJECT(obColumn;0) //column array
 Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage, la saisie et l'édition des cellules sont basées sur l'attribut valueType présent dans chaque élément du tableau. Les valeurs valueType prises en charge sont les suivantes :
 
 - "text" : pour une valeur texte
-- "real": for a numeric value that can include separators like a `\<space>`, `<.>`, or `<,>`
+- "real" : pour une valeur numérique incluant des séparateurs tels que `\<espace>`, `<.>`, ou `<,>`
 - "integer" : pour une valeur entière
 - "boolean" : pour une valeur True/False
 - "color" : pour définir une couleur de fond
@@ -903,7 +908,7 @@ Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage
 | --------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | text      | zone de saisie de texte                                                      | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
 | réel      | zone de saisie de texte contrôlée (nombre et séparateurs) | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
-| entier    | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
+| integer   | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
 | boolean   | case à cocher                                                                | menu déroulant (enumération obligatoire)                                                                            |
 | color     | couleur de fond                                                              | text                                                                                                                                   |
 | event     | bouton avec libellé                                                          |                                                                                                                                        |
@@ -919,9 +924,9 @@ Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie
 | ---------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | text       | le même que celui de l'objet                                                                | pas de contrôle (tout caractère accepté) |
 | réel       | le même que celui de l'objet (utilisation du séparateur décimal système) | "0-9" et "." et "-"                         |
-|            |                                                                                             | "0-9" and "." if min>=0                     |
-| entier     | le même que celui de l'objet                                                                | "0-9" et "-"                                                |
-|            |                                                                                             | "0-9" if min>=0                                             |
+|            |                                                                                             | "0-9" et "." si min>=0                      |
+| integer    | le même que celui de l'objet                                                                | "0-9" et "-"                                                |
+|            |                                                                                             | "0-9" si min>=0                                             |
 | Boolean    | case à cocher                                                                               | N/A                                                         |
 | color      | N/A                                                                                         | N/A                                                         |
 | event      | N/A                                                                                         | N/A                                                         |
@@ -932,25 +937,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "text", "real", "integer", "boolean", "color" et "event". Le tableau suivant liste tous les attributs acceptés dans les tableaux d'objets des list box, suivant la valeur de "valueType" (tout autre attribut est ignoré). Les formats d'affichage et des exemples sont fournis ci-dessous.
 
-|                       | valueType                                                     | text | réel | entier | boolean | color | event |
-| --------------------- | ------------------------------------------------------------- | ---- | ---- | ------ | ------- | ----- | ----- |
-| _Attributs_           | _Description_                                                 |      |      |        |         |       |       |
-| value                 | valeur de la cellule (saisie ou affichage) | x    | x    | x      |         |       |       |
-| min                   | valeur minimum                                                |      | x    | x      |         |       |       |
-| max                   | valeur maximum                                                |      | x    | x      |         |       |       |
-| behavior              | valeur "threeStates"                                          |      |      | x      |         |       |       |
-| requiredList          | menu déroulant défini dans l'objet                            | x    | x    | x      |         |       |       |
-| choiceList            | combo box défini dans l'objet                                 | x    | x    | x      |         |       |       |
-| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"                   | x    | x    | x      |         |       |       |
-| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs"         | x    | x    | x      |         |       |       |
-| saveAs                | "reference" ou "value"                                        | x    | x    | x      |         |       |       |
-| choiceListReference   | RefList 4D, affiche une combo box                             | x    | x    | x      |         |       |       |
-| choiceListName        | nom d'énumération 4D, affiche une combo box                   | x    | x    | x      |         |       |       |
-| unitList              | tableau de X éléments                                         | x    | x    | x      |         |       |       |
-| unitReference         | indice de l'élément sélectionné                               | x    | x    | x      |         |       |       |
-| unitsListReference    | RefList 4D pour les unités                                    | x    | x    | x      |         |       |       |
-| unitsListName         | nom d'énumération 4D pour les unités                          | x    | x    | x      |         |       |       |
-| alternateButton       | ajouter un bouton alternatif                                  | x    | x    | x      | x       | x     |       |
+|                       | valueType                                                     | text | réel | integer | boolean | color | event |
+| --------------------- | ------------------------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
+| _Attributs_           | _Description_                                                 |      |      |         |         |       |       |
+| value                 | valeur de la cellule (saisie ou affichage) | x    | x    | x       |         |       |       |
+| min                   | valeur minimum                                                |      | x    | x       |         |       |       |
+| max                   | valeur maximum                                                |      | x    | x       |         |       |       |
+| behavior              | valeur "threeStates"                                          |      |      | x       |         |       |       |
+| requiredList          | menu déroulant défini dans l'objet                            | x    | x    | x       |         |       |       |
+| choiceList            | combo box défini dans l'objet                                 | x    | x    | x       |         |       |       |
+| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"                   | x    | x    | x       |         |       |       |
+| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs"         | x    | x    | x       |         |       |       |
+| saveAs                | "reference" ou "value"                                        | x    | x    | x       |         |       |       |
+| choiceListReference   | RefList 4D, affiche une combo box                             | x    | x    | x       |         |       |       |
+| choiceListName        | nom d'énumération 4D, affiche une combo box                   | x    | x    | x       |         |       |       |
+| unitList              | tableau de X éléments                                         | x    | x    | x       |         |       |       |
+| unitReference         | indice de l'élément sélectionné                               | x    | x    | x       |         |       |       |
+| unitsListReference    | RefList 4D pour les unités                                    | x    | x    | x       |         |       |       |
+| unitsListName         | nom d'énumération 4D pour les unités                          | x    | x    | x       |         |       |       |
+| alternateButton       | ajouter un bouton alternatif                                  | x    | x    | x       | x       | x     |       |
 
 #### value
 
@@ -968,7 +973,7 @@ La valeur des cellules est stockée dans l'attribut "value". Cet attribut est ut
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"boolean")
  OB SET($ob3;"value";True)
- 
+
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
  APPEND TO ARRAY(obColumn;$ob3)
@@ -1001,7 +1006,7 @@ L'attribut behavior propose des variations de la représentation standard des va
 
 | Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                                        |
 | -------- | ------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | entier                          | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
+| behavior | threeStates                                                   | integer                         | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
 
 ```4d
  C_OBJECT($ob3)
@@ -1080,7 +1085,7 @@ Exemples :
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
-	OB SET($ob;"requiredListName";"colors")	
+	OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
@@ -1122,7 +1127,8 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
 ```4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
- OB SET($ob;"value";"vert")
+
+ OB SET($ob;"value";"blue")
  OB SET($ob;"choiceListName";"colors")
 ```
 
@@ -1130,10 +1136,10 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
 
 #### unitsList, unitsListName, unitsListReference et unitReference
 
-You can use specific attributes to add units associated with cell values (_e.g._: "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
+Vous pouvez utiliser des attributs spécifiques afin d'associer des unités aux valeurs des cellules (par exemple "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
 
 - "unitsList" : un tableau contenant les x éléments définissant les unités disponibles (ex : "cm", "pouces", "km", "miles", etc.). Utilisez cet attribut pour définir des unités dans l'objet.
-- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
+- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une liste 4D créée avec la commande [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
 - "unitsListName" : un nom d'énumération 4D créée en mode Développement contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une énumération 4D créée dans la Boîte à outils.
 
 Quel que soit son mode de définition, la liste d'unités peut être associée à l'attribut suivant :
@@ -1163,7 +1169,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. Le bouton sera automatiquement affiché dans la cellule.
 
-When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
+Lorsque l'utilisateur clique sur ce bouton, un événement `On Alternative Click` est généré, vous permettant de traiter cette action comme vous le souhaitez (reportez-vous ci-dessous au paragraphe "Gestion des événements" pour plus d'informations).
 
 Voici un exemple :
 
@@ -1191,11 +1197,11 @@ L'attribut "valueType" de valeur "color" vous permet d'afficher soit une couleur
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-- If the value is a text, then the text is displayed (_e.g._: "value";"Automatic").
+- Si la valeur est un texte, le texte est simplement affiché (par exemple : "value";"Automatic").
 
 #### valueType event
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Aucune donnée ou valeur ne peut être passée ou retournée.
+L'attribut "valueType" de valeur "event" affiche un bouton qui génère simplement un événement `On Clicked` lorsque l'utilisateur clique dessus. Aucune donnée ou valeur ne peut être passée ou retournée.
 
 Optionnellement, il est possible de passer un attribut "label".
 
@@ -1213,11 +1219,11 @@ OB SET($ob;"label";"Edit...")
 
 Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox tableau d'objets :
 
-- **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
+- **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget :
   - zone de saisie de texte
   - listes déroulante
   - zone de combo box
   - bouton d'unité (passage valeur x à valeur x+1)
   - case à cocher (passage cochée/non cochée)
-- **On Clicked**: When the user clicks on a button installed using the "event" _valueType_ attribute, an `On Clicked` event will be generated. Cet événement doit être ensuite géré par le programmeur.
-- **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Cet événement doit être ensuite géré par le programmeur.
+- **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut _valueType_, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
+- **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.

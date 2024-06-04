@@ -3,33 +3,33 @@ id: interpreted-compiled
 title: Modes interprété et compilé
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+Les applications 4D fonctionnent en mode **interprété** ou en mode **compilé** :
 
 - En mode interprété, les déclarations sont lues et traduites en langage machine lorsqu'elles sont exécutées. Vous pouvez ajouter ou modifier le code là où vous le souhaitez, l'application se met à jour automatiquement.
 - En mode compilé, toutes les méthodes sont lues et traduites une seule fois, lors de la compilation. Par la suite, l'application contient uniquement des instructions au niveau de l'assemblage, il n'est donc plus possible de modifier le code.
 
 Les avantages procurés par le compilateur sont les suivants :
 
-- **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. Les conflits de logique et de syntaxe sont détectés.
-- **Protection**: Once your application is compiled, you can delete the interpreted code. Alors, l'application compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Vitesse :** votre application s'exécute de 3 à 1000 fois plus vite.
+- **Vérification du code** : la cohérence interne du code de votre application est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
+- **Protection :** une fois votre application compilée, vous pouvez en supprimer le code interprété. Alors, l'application compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
+- **Applications indépendantes double-cliquables** : les applications compilées peuvent également être transformées en applications indépendantes avec leur propre icône.
+- **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif.
 
 ## Différences entre le code interprété et le code compilé
 
 Bien que l'application fonctionnera de la même manière en modes interprété et compilé, il est important de connaitre les différences que l'on peut rencontrer pendant la saisie du code qui sera compilé. L'interpréteur de 4D est généralement plus souple que le compilateur.
 
-| Compilé                                                                                                                                                                                                    | Interprété                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Vous ne devez pas avoir une méthode qui aurait le même nom qu’une variable.                                                                                                                | Aucune erreur n'est générée, mais la méthode est prioritaire                                            |
-| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                    | Les variables peuvent être typées à la volée (non recommandé)                        |
-| Vous ne pouvez pas modifier le type d'une variable ou d'un tableau.                                                                                                                        | La modification du type d'une variable ou d'un tableau est possible (non recommandé) |
-| Vous ne pouvez pas convertir un tableau simple en tableau à deux dimensions, et vice-versa.                                                                                                | Possible                                                                                                |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.            |                                                                                                         |
-| The `Undefined` function always returns False for variables. Les variables sont toujours définies.                                                                         |                                                                                                         |
-| Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe. | Les propriétés du process préemptif sont ignorées                                                       |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                                               | Il est toujours possible d'interrompre 4D                                                               |
+| Compilé                                                                                                                                                                                                              | Interprété                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Vous ne devez pas avoir une méthode qui aurait le même nom qu’une variable.                                                                                                                          | Aucune erreur n'est générée, mais la méthode est prioritaire                                            |
+| Toutes les variables doivent être typées, soit par une déclaration (en utilisant les mots-clés `var`, `#DECLARE`, ou `Function`), soit par le compilateur lors de la compilation. | Les variables peuvent être typées à la volée (non recommandé)                        |
+| Vous ne pouvez pas modifier le type d'une variable ou d'un tableau.                                                                                                                                  | La modification du type d'une variable ou d'un tableau est possible (non recommandé) |
+| Vous ne pouvez pas convertir un tableau simple en tableau à deux dimensions, et vice-versa.                                                                                                          | Possible                                                                                                |
+| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.                      |                                                                                                         |
+| La fonction `Undefined` retournera toujours Faux. Les variables sont toujours définies.                                                                                              |                                                                                                         |
+| Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe.           | Les propriétés du process préemptif sont ignorées                                                       |
+| La commande `APPELER 4D` est nécessaire pour appeler des boucles spécifiques                                                                                                                                         | Il est toujours possible d'interrompre 4D                                                               |
 
 ## Utiliser les directives du compilateur avec l'interpréteur
 
@@ -49,7 +49,7 @@ et ailleurs dans l'application, vous écrivez :
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted _prior_ to the assignment statement.
+Dans cet exemple, `MyInt` se voit assigner la même valeur (3) dans les modes interprété et compilé, étant donné que la directive du compilateur est interprétée _avant_ la déclaration d'affectation.
 
 L'interpréteur 4D utilise des directives de compilateur pour typer les variables. Lorsque l'interpréteur rencontre une directive de compilateur, il type la variable en fonction de la directive. Si une déclaration ultérieure tente d'affecter une valeur incorrecte (ex : affecter une valeur alphanumérique à une variable numérique), l'affectation n'aura pas lieu et générera une erreur.
 
@@ -67,22 +67,22 @@ var $age : Integer
 $name:="Smith"
 $age:=50
 
-$p:=->$name //text target for the pointer
-$p->:="Wesson" //assigns a text value
+$p:=->$name //texte cible pour le pointeur
+$p->:="Wesson" //assigne une valeur texte
 
 $p:=->$age  
-// new target of different type for the pointer
-$p->:=55 //assigns a number value
+// nouvelle cible de type différent pour le pointeur
+$p->:=55 //assigne une valeur numérique
 ```
 
 Imaginez une fonction qui retourne la longueur (nombre de caractères) de valeurs de tout type.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $vp = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length (combien de caractères)
+  // $vp = pointeur vers un type de variable flexible, numérique, text, time, boolean
 
-#DECLARE($vp : Pointer) -> $length : Integer
-var $result : Text  
+#DECLARE($vp : Pointer) -> $length: Entier
+var $result: Text 
 $result:=String($vp->)
 $length:=Length($result)
 ```

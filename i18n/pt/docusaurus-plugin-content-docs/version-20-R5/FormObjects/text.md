@@ -3,7 +3,7 @@ id: text
 title: Text
 ---
 
-A text object allows you to display static written content (_e.g._, instructions, titles, labels, etc.) em um formulário. These static text areas can become dynamic when they include dynamic references. For more information, refer to [Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
+A text object allows you to display static written content (_e.g._, instructions, titles, labels, etc.) em um formulário. These static text areas can become dynamic when they include dynamic references. Para más información, consulte [Uso de referencias en textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
 
 #### JSON Exemplo
 
@@ -23,19 +23,19 @@ A text object allows you to display static written content (_e.g._, instructions
 
 ## Rotação
 
-4D lets you rotate text areas in your forms using the [Orientation](properties_Text.md#orientation) property.
+4D le permite rotar las áreas de texto en sus formularios utilizando la propiedad [Orientación](properties_Text.md#orientation).
 
 ![](../assets/en/FormObjects/staticText.png)
 
-> Text rotation can be defined for a process using the `OBJECT SET TEXT ORIENTATION` language command.
+> La rotación del texto puede definirse para un proceso utilizando el comando de lenguaje `OBJECT SET TEXT ORIENTATION`.
 
 Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Note that the text area’s height and width properties do not depend on its orientation:
 
 ![](../assets/en/FormObjects/staticText2.png)
 
-- If the object is resized in direction A, its [width](properties_CoordinatesAndSizing.md#width) is modified;
-- If the object is resized in direction C, its [height](properties_CoordinatesAndSizing.md#height) is modified;
-- If the object is resized in direction B, both its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are modified.
+- Si el objeto se redimensiona en la dirección A, se modifica su [ancho](properties_CoordinatesAndSizing.md#width);
+- Si el objeto se redimensiona en la dirección C, se modifica su [alto](properties_CoordinatesAndSizing.md#height);
+- Si el objeto se redimensiona en la dirección B, se modifican tanto su [ancho](properties_CoordinatesAndSizing.md#width) como su [alto](properties_CoordinatesAndSizing.md#height).
 
 ## Propriedades compatíveis
 

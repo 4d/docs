@@ -5,7 +5,7 @@ title: Eventos formulário
 
 Eventos de formulário são eventos que podem levar à execução do método de formulário e/ou método(s) de objeto de formulário. Os eventos de formulário permitem que você controle o fluxo do aplicativo e escreva códigos que são executados somente quando ocorre um evento específico.
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. Por exemplo:
+En su código, se controlan los eventos mediante el comando `FORM Event`, que devuelve el evento disparado. Por exemplo:
 
 ```4d
 //código de um botão
@@ -18,7 +18,7 @@ End if
 
 ## Objecto evento
 
-Each event is returned as an object by the `FORM Event` command. Por padrão, ele contém as seguintes propriedades:
+Cada evento es devuelto como un objeto por el comando `FORM Event`. Por padrão, ele contém as seguintes propriedades:
 
 | Propriedade | Tipo          | Descrição                                                                                        |
 | ----------- | ------------- | ------------------------------------------------------------------------------------------------ |
@@ -29,7 +29,7 @@ Each event is returned as an object by the `FORM Event` command. Por padrão, el
 Propriedades adicionais são retornadas quando o evento ocorre em objetos específicos. Em particular:
 
 - [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#additional-properties) such as `columnName` or `isRowSelected`.
-- [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
+- Las [áreas de View Pro](FormObjects/viewProArea_overview.md) devuelven por ejemplo las propiedades `sheetName` o `action` en el objeto evento [On After Edit](onAfterEdit.md).
 
 ## Eventos e métodos
 
@@ -40,7 +40,7 @@ Quando um evento formulário ocorre, 4D executa as seguintes ações:
 
 Não presuma que os métodos do objeto, se houver, serão chamados em uma ordem específica. A regra geral é que os métodos de objeto sejam sempre chamados antes do método de formulário. Se um objeto for um subformulário, os métodos de objeto do formulário de lista do subformulário serão chamados e, em seguida, o método de formulário do formulário de lista será chamado. 4D então continua a chamar os métodos objeto do formulário pai. Em outras palavras, quando um objeto é um subformulário, 4D usa a mesma regra prática para o objeto e os métodos do formulário dentro do objeto do subformulário.
 
-Except for the [On Load](onLoad.md) and [On Unload](onUnload.md) events (see below), if the form event property is not selected for a given event, this does not prevent calls to object methods for the objects whose same event property is selected. Em outras palavras, ativar ou desativar um evento no nível do formulário não tem efeito sobre as propriedades do evento do objeto.
+Excepto en los eventos [En carga](onLoad.md) y [En descarga](onUnload.md) (ver más abajo), si la propiedad del evento formulario no está seleccionada para un evento determinado, esto no impide las llamadas a los métodos objetos cuya misma propiedad de eve Em outras palavras, ativar ou desativar um evento no nível do formulário não tem efeito sobre as propriedades do evento do objeto.
 
 O número de objetos envolvidos em um evento depende da natureza do evento.
 
@@ -113,4 +113,4 @@ A tabela seguinte resume a forma como os métodos objeto e formulário são cham
 
 Lembre-se sempre de que, para qualquer evento, o método de um formulário ou de um objeto é chamado se a propriedade de evento correspondente estiver selecionada para o formulário ou para os objetos. A vantagem de desativar os eventos no ambiente Design (usando a Lista de propriedades do editor de formulários) é que você pode reduzir o número de chamadas para métodos e, portanto, otimizar significativamente a velocidade de execução dos formulários.
 
-> WARNING: The [On Load](onLoad.md) and [On Unload](onUnload.md) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+> ATENCIÓN: los eventos [On Load](onLoad.md) y [On Unload](onUnload.md) se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.

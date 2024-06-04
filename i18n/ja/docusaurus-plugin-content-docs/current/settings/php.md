@@ -3,11 +3,11 @@ id: php
 title: PHP ページ
 ---
 
-You can [execute PHP scripts in 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). このページでは、そのインタープリターを設定します。
+4D では [PHP スクリプトを実行できます](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.ja.html)。 このページでは、そのインタープリターを設定します。
 
 :::note
 
-これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. The parameters modified by the `SET DATABASE PARAMETER` command have priority for the current session.
+これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 各マシンおよび各セッションで異なる設定を適用するために <[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) と [`Get database parameter`](https://doc.4d.com/4dv20/help/command/ja/page643.html) コマンドを使用できます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
 
 :::
 

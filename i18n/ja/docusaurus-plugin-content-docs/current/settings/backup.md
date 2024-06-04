@@ -3,4 +3,4 @@ id: backup
 title: バックアップページ
 ---
 
-These options are detailed in the [**Backup Settings**](../Backup/settings.md) chapter.
+これらのオプションは、[**バックアップ設定**](../Backup/settings.md) で詳しく説明されています。

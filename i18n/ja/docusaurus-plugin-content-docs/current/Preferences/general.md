@@ -11,14 +11,14 @@ title: 一般ページ
 
 このオプションは、ユーザーがアプリケーションのみを起動したとき、4D が起動時に提供するデフォルトの表示を設定することができます。
 
-- **Do nothing**: Only the application window appears, empty.
-- **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-- **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
-  > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-- **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-- **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
+- **何もしない**: アプリケーションウィンドウのみが表示されます。
+- **ローカルプロジェクトを開くダイアログ**: 4Dは標準のドキュメントを開くダイアログボックスを表示し、ローカルのプロジェクトを選択することができます。
+- **最後に使用したプロジェクトを開く**: 4D は最後に使用されたプロジェクトスを直接開きます。ドキュメントを開くダイアログボックスは表示されません。
+  > このオプションが選択されているときに、ドキュメントを開くダイアログボックスを強制的に表示させるには、プロジェクトを起動する際に、**Alt** (Windows) または **Option** (macOS) キーを押します。
+- **リモートプロジェクトを開くダイアログ**: 4D は 4D Server にログオンする標準のダイアログボックスを表示し、ネットワークに公開されたプロジェクトを指定することができます。
+- **Welcomeウィザードを開くダイアログ** (初期設定): 4D は Welcomeウィザードダイアログボックスを表示します。
 
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+> **4D Server**: 4D Server アプリケーションは、このオプションを無視します。 この環境においては、**何もしない** モードが常に選択されます。
 
 ### 自動フォーム作成
 
@@ -37,54 +37,54 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 ![](../assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+**ウィンドウ** メニューのコマンドによって、タブを管理することができます:
 
 ![](../assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+4D の環境設定ダイアログボックス内では、**ウィンドウタブ** オプションでこの機能を管理することができます:
 
 ![](../assets/en/Preferences/general4.png)
 
 次の値が提供されています:
 
-- **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-- **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
-- **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+- **システム設定に従う** (デフォルト): 4D のウィンドウは、macOSシステム環境設定で定義されているように振る舞います (フルスクリーン時のみ、常に、あるいは手動)。
+- **しない**: 4Dフォームエディターあるいはコードエディターで開かれた新しいドキュメントは常に新しいウィンドウを作成します (タブは作成されません)。
+- **常にする**: 4Dフォームエディターあるいはコードエディターで開かれた新しいドキュメントは常に新しいタブを作成します。
 
 ### アピアランス (macOSのみ)
 
-This menu lets you select the color scheme to use for the **4D development** environment. 指定されたカラースキームは、デザインモードのすべてのエディターとウィンドウに適用されます。
+このメニューで、**4D開発**環境で使用するカラースキームを選択します。 指定されたカラースキームは、デザインモードのすべてのエディターとウィンドウに適用されます。
 
-> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+> **デスクトップアプリケーション** で使用するカラースキームは、ストラクチャー設定ダイアログボックスの "インターフェース" ページで設定することができます。
 
 次の値が提供されています:
 
-- **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-- **Light**: Use the Light Theme
-- **Dark**: Use the Dark Theme
+- **システムのカラースキーム設定に合わせる** (デフォルト): macOSシステム環境設定で定義されているカラースキームを使用します。
+- **Light**: ライトテーマを使用します。
+- **Dark**: ダークテーマを使用します。
 
 > この設定は macOS でのみサポートされています。 Windows上では、"Light" テーマが常に使用されます。
 
 ### アプリケーションモードに移動する時に、デザインモードを終了する
 
-If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. このオプションがチェックされていないと (初期設定)、デザインモードのウィンドウはアプリケーションモードの後ろに表示されたままとなります。
+このオプションが選択されていると、**アプリケーションモード** コマンドを使用してユーザーがアプリケーションモードに移動する際に、デザインモードのすべてのウィンドウが閉じられます。 このオプションがチェックされていないと (初期設定)、デザインモードのウィンドウはアプリケーションモードの後ろに表示されたままとなります。
 
 ### バイナリー形式のデータベース作成を有効化する
 
-If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
+このオプションをチェックすると、**ファイル ＞ 新規** メニューと、ツールバーの **新規** ボタンに、2つの項目が追加されます:
 
-- **Database...**
+- **データベース...**
 - **ストラクチャー定義を使用したデータベース...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). これらの項目はデフォルトでは表示されません。今後 4D は、新規の開発にはプロジェクトベースのアーキテクチャーを使用することを推奨するからです。
+この項目を使用するとバイナリーデータベースを作成することができるようになります([新しいデータベースを作成する](https://doc.4d.com/4Dv19/4D/19/Creating-a-new-database.300-5416694.ja.html) の章を参照)。 これらの項目はデフォルトでは表示されません。今後 4D は、新規の開発にはプロジェクトベースのアーキテクチャーを使用することを推奨するからです。
 
 ## 新規プロジェクト作成時
 
 ### ログファイルを使用
 
-このオプションをチェックすると、新規データベース作成時にログファイルが自動的に開始され、使用されます。 For more information, please refer to [Log file (.journal)](Backup/log.md).
+このオプションをチェックすると、新規データベース作成時にログファイルが自動的に開始され、使用されます。 詳細な情報については [ログファイル (.journal)](Backup/log.md) を参照ください。
 
 ### パッケージを作成する
 
@@ -94,17 +94,17 @@ These items allow you to create binary databases (see [Creating a new database](
 
 ### Project ソースファイルにトークンを含める
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+このオプションを有効にすると、新規の 4Dプロジェクトで保存された [メソッドのソースファイル](../Project/architecture.md#sources) には、クラシックランゲージおよびデータベースオブジェクト (定数、コマンド、テーブル、フィールド) 用の **トークン** が含まれます。 トークンとは、ソースコードファイルに挿入される `:C10` や `:5` などの追加文字で、テーブルやフィールドの名前を変更したり、4Dバージョンに関係なく要素を識別したりすることを可能にします ([フォーミュラ内でのトークンの使用](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.ja.html) を参照ください）。
 
 バージョン管理システムや外部のコードエディターを新規プロジェクトで使用したい場合、これらのツールでのコードの可読性のために、このオプションのチェックを外すことができます。
 
 > このオプションは、プロジェクトにのみ適用できます (バイナリデータベースでは常にトークンが含まれます)。
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the _option_ parameter.
+> _option_ パラメーターに 1 を指定して [METHOD GET CODE](https://doc.4d.com/4dv19R/help/command/ja/page1190.html) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
 
 #### 既存プロジェクトからトークンを除外する
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+テキストエディターを使い、[`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-ファイル)ファイルに以下のキーを挿入することで、既存のプロジェクトでも **トークンなし** でコードを保存することができます:
 
 ```
 "tokenizedText": false
@@ -112,17 +112,17 @@ You can configure your existing projects to save code **without tokens** by inse
 
 > この設定は、メソッドが保存されるときにのみ考慮されます。 つまり、再保存しない限り、プロジェクト内の既存メソッドはそのまま残されます。
 
-### Create `.gitignore` file
+### `.gitignore` ファイルを作成する
 
 新しいプロジェクトでは、いくつかのファイルを git に無視させたいことがあるかもしれません。
 
-You can set this preference by checking the **Create .gitignore file**  option.
+この設定をおこなうには、**.gitignore ファイルを作成する** オプションをチェックします。
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+このボックスがチェックされている場合、4D でプロジェクトを作成すると、4D は `.gitignore` ファイルを `Project` フォルダーと同階層に作成します ([プロジェクトのアーキテクチャー](Project/architecture.md#.gitignore-ファイル-任意) 参照)。
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. これにより、.gitignore 設定ファイルがテキストエディターで開かれます。 The contents of this file will be used to generate the `.gitignore` files in your new projects.
+鉛筆アイコンをクリックすると、`.gitignore` ファイルのデフォルトの内容を定義することができます。 これにより、.gitignore 設定ファイルがテキストエディターで開かれます。 このファイルの内容は、新規プロジェクトで `.gitignore` ファイルを生成する際に使用されます。
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+`.gitignore` ファイルの仕組みを理解するには、[git の公式ドキュメント](https://git-scm.com/docs/gitignore) が参考になります。
 
 ### テキスト比較の言語
 
@@ -132,14 +132,14 @@ The [official git documentation](https://git-scm.com/docs/gitignore) is a great 
 
 新規にデータファイルを作成する際、4D はこのメニューで設定されている言語を使用します。 ストラクチャーの言語と異なる言語のデータファイルを開くと、データファイルの言語が使用され、ストラクチャーに言語コードがコピーされます。
 
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
+> データベース設定を使用して、開かれているデータベースの言語を変更することができます ([テキスト比較](../settings/database.md#テキスト比較) 参照)。
 
 ## ドキュメントの場所
 
 このエリアでは、カレントブラウザーに表示される 4D HTMLドキュメントへのアクセスを設定します:
 
-- When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
-- When you double-click on a 4D command in the **Commands Page** of the Explorer.
+- コードエディターで、4Dクラス関数またはコマンド名にカーソルがあるときに、**F1**キーを押したとき
+- エクスプローラーの **コマンドページ** 上の 4Dコマンドをダブルクリックしたとき
 
 ### ドキュメント言語
 
@@ -160,4 +160,4 @@ The [official git documentation](https://git-scm.com/docs/gitignore) is a great 
 
 スタティックな HTMLドキュメントの場所を指定します。 デフォルトでこれは \Help\Command\language サブフォルダーに設定されています。 このエリアに割り当てられているメニューをクリックすると、場所を見ることができます。 このサブフォルダーが存在しない場合、場所は赤で表示されます。
 
-この場所は必要に応じて変更することができます。たとえば、アプリケーションの言語とは異なる言語でドキュメントを表示したい場合などです。 HTMLドキュメントは、異なるボリュームや Webサーバー上などに置くことも可能です。 To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`).
+この場所は必要に応じて変更することができます。たとえば、アプリケーションの言語とは異なる言語でドキュメントを表示したい場合などです。 HTMLドキュメントは、異なるボリュームや Webサーバー上などに置くことも可能です。 他の場所を指定するには、メニューの隣の **[...]** ボタンをクリックし、ドキュメントのルートフォルダー (`fr`, `en`, `es`, `de` または `ja` などの言語に対応するフォルダー) を選択します。

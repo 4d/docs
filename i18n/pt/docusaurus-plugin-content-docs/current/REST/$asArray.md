@@ -7,7 +7,7 @@ Devolve o resultado de uma consulta num array (ou seja, uma coleção) em vez de
 
 ## Descrição
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request (_e.g._, `$asArray=true`).
+Si desea obtener la respuesta en un array, sólo tiene que añadir `$asArray` a su petición REST (_e.g._, `$asArray=true`).
 
 ## Exemplo
 

@@ -45,13 +45,13 @@ Plusieurs options graphiques sont disponibles : valeurs minimales/maximales, gra
 
 ![](../assets/en/FormObjects/indicator.gif)
 
-**Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
+**Le barber shop** est une variante du thermomètre par défaut. Pour active cette variante, vous devez définir la propriété du [Barber shop](properties_Scale.md#barber-shop).
 
 > En code JSON, supprimez simplement la propriété "max" de l'objet thermomètre par défaut pour activer le barber shop.
 
-Barber shop displays a continuous animation, like the [spinner](spinner.md). Les thermomètres “Barber shop” sont généralement utilisés pour indiquer à l’utilisateur que le programme est en train d’effectuer une opération longue. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.
+Le barber shop affiche une animation continue, telle que le [spinner](spinner.md). Les thermomètres “Barber shop” sont généralement utilisés pour indiquer à l’utilisateur que le programme est en train d’effectuer une opération longue. Lorsque le thermomètre est sélectionné, le thème ["Graduations"](properties_Scale.md) de la liste des propriétés est masqué.
 
-A l’exécution du formulaire, l'objet n’est pas animé. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l’animation en passant une valeur à [la variable ou expression qui lui est associée](properties_Object.md#variable-or-expression) :
 
 - 1 = Start animation,
 - 0 = Stopper l’animation.

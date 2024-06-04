@@ -48,17 +48,17 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 ### Utilizar un objeto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
+Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](../Concepts/dt_collection.md) como [fuente de datos](properties_Object.md#variable-or-expression) del control de pestañas. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo       | Descripción                                                                                                                                                                                  |
 | -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valores`      | Collection | Obligatorio - Colección de valores escalares. Sólo se admiten valores de tipo cadena. Si es inválido, vacío o no definido, el control de pestañas está vacío |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                                       |
+| `index`        | number     | Índice de la página de la etiqueta actual (valor entre 0 y `collection.length-1`)                                                                                         |
 | `currentValue` | Text       | Valor actual seleccionado                                                                                                                                                                    |
 
 El código de inicialización debe ejecutarse antes de que el formulario se presente al usuario.
 
-In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
 
 ```4d
 Form.tabControl:=New object
@@ -68,11 +68,11 @@ Form.tabControl.index:=2 //inicio en la página 3
 
 ### Utilizar una lista de selección
 
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Los iconos asociados a los elementos de la lista en el editor de listas se mostrarán en el control de pestañas.
+Puede asignar una [lista de opciones](properties_DataSource.md#choice-list-static-list) al control de pestañas, ya sea a través de una colección (lista estática) o un puntero JSON a una lista json ("$ref"). Los iconos asociados a los elementos de la lista en el editor de listas se mostrarán en el control de pestañas.
 
 ### Utilizar un array Text
 
-Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. Por ejemplo, podrías colocar el código en el método del objeto del control de la pestaña y ejecutarlo cuando se produzca el evento `On Load`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -81,7 +81,7 @@ Puede crear un array Texto que contenga los nombres de cada página del formular
  arrPages{3}:="Notes"  
 ```
 
-> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
+> También puede almacenar los nombres de las páginas en una lista jerárquica y utilizar el comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) para cargar los valores en el array.
 
 ## Funcionalidades de Goto page
 
@@ -110,7 +110,7 @@ He aquí un ejemplo de método objeto:
 
 ### Acción Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Cuando se asigna la acción [acción estándar](properties_Action.md#standard-action) `gotoPage` a un control de pestañas, 4D mostrará automáticamente la página del formulario que corresponde al número de la pestaña que está seleccionada.
 
 Por ejemplo, si el usuario selecciona la tercera pestaña, 4D mostrará la página 3 del formulario actual (si existe).
 

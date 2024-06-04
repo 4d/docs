@@ -3,13 +3,13 @@ id: arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. Un array recibe su tamaño cuando se crea; luego se puede redimensionar tantas veces como sea necesario añadiendo, insertando o eliminando elementos, o redimensionando el array utilizando el mismo comando utilizado para crearlo. Los elementos del array se numeran de 1 a N, siendo N el tamaño del array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Los arrays son variables 4D. Como toda variable, un array tiene un alcance y sigue las reglas del lenguaje 4D, aunque con algunas diferencias únicas.
+Un **array** es una serie ordenada de **variables** del mismo tipo. Cada variable se llama un **elemento** del array. Un array recibe su tamaño cuando se crea; luego se puede redimensionar tantas veces como sea necesario añadiendo, insertando o eliminando elementos, o redimensionando el array utilizando el mismo comando utilizado para crearlo. Los elementos del array se numeran de 1 a N, siendo N el tamaño del array. Un array siempre tiene un [elemento cero](#using-the-element-zero-of-an-array) especial. Los arrays son variables 4D. Como toda variable, un array tiene un alcance y sigue las reglas del lenguaje 4D, aunque con algunas diferencias únicas.
 
-> In most cases, it is recommended to use **collections** instead of **arrays**. Las colecciones son más flexibles y ofrecen una amplia gama de métodos dedicados. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
+> En la mayoría de los casos, se recomienda utilizar **colecciones** en lugar de **arrays**. Las colecciones son más flexibles y ofrecen una amplia gama de métodos dedicados. Para más información, consulte la sección [Colección](Concepts/dt_collection.md).
 
 ## Crear arrays
 
-Se crea un array con uno de los comandos de declaración del tema "Arrays". Cada comando de declaración de arrays puede crear o redimensionar arrays unidimensionales o bidimensionales. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
+Se crea un array con uno de los comandos de declaración del tema "Arrays". Cada comando de declaración de arrays puede crear o redimensionar arrays unidimensionales o bidimensionales. Para más información sobre los arrays bidimensionales, consulte la sección [arrays bidimensionales](#two-dimensional-arrays).
 
 La siguiente línea de código crea (declara) un array de enteros de 10 elementos:
 
@@ -45,13 +45,13 @@ Para referirse a los elementos de un array se utilizan llaves ({...}). Dentro de
  End for
 ```
 
-Tenga en cuenta la sintaxis atNames{$vlElem}. En lugar de especificar un literal numérico como atNames{3}, puede utilizar una variable numérica para indicar a qué elemento de un array se dirige. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
+Tenga en cuenta la sintaxis atNames{$vlElem}. En lugar de especificar un literal numérico como atNames{3}, puede utilizar una variable numérica para indicar a qué elemento de un array se dirige. Utilizando la iteración que ofrece una estructura de bucle ( `For...End for`, `Repeat...Until` o `While...End while`), las piezas compactas de código pueden dirigirse a todos o a parte de los elementos de un array.
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). La asignación y la comparación son operaciones muy diferentes.
+**Importante:** tenga cuidado de no confundir el operador de asignación (:=) con el operador de comparación, igual (=). La asignación y la comparación son operaciones muy diferentes.
 
 ### Asignación de un array a otro array
 
-A diferencia de las variables de tipo texto o cadena, no se puede asignar un array a otro. To copy (assign) an array to another one, use `COPY ARRAY`.
+A diferencia de las variables de tipo texto o cadena, no se puede asignar un array a otro. Para copiar (asignar) un array a otro, utilice `COPY ARRAY`.
 
 ## Utilizar el elemento cero de un array
 
@@ -60,12 +60,12 @@ Un array siempre tiene un elemento cero. Aunque el elemento cero no se muestra c
 He aquí otro ejemplo: quiere inicializar un objeto de formulario con un valor texto pero sin definir un valor por defecto. Puede utilizar el elemento cero del array:
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // método para un combo box o una lista desplegable  
+  // vinculado al array de variables atName
  Case of
     :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+  // Inicializar el array (como se muestra más arriba)   
+  // Pero utiliza el elemento cero
 		ARRAY TEXT(atName;5)
 		atName{0}:=Please select an item"
 		atName{1}:="Text1"
@@ -73,7 +73,7 @@ He aquí otro ejemplo: quiere inicializar un objeto de formulario con un valor t
 		atName{3}:="Text3"
 		atName{4}:="Text4"
 		atName{5}:="Text5"
-	// Position the array to element 0
+	// Posicionar el array en el elemento 0
   		atName:=0
  End case
 ```
@@ -93,31 +93,31 @@ Los arrays de dos dimensiones son esencialmente objetos de lenguaje; no se puede
 En el ejemplo anterior:
 
 - atTopics es una array de dos dimensiones
-- atTopics{8}{5} is the 5th element (5th column...) de la 8ª fila
+- atTopics{8}{5} es el quinto elemento (quinta columna..) de la 8ª fila
 - atTopics{20} es la vigésima fila y es a su vez un array de una dimensión
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- `Tamaño del array(atTopics)` devuelve 100, que es el número de filas
+- `Tamaño de array(atTopics{17})` devuelve 50, que es el número de columnas de la línea 17
 
 En el siguiente ejemplo, un puntero a cada campo de cada tabla de la base se almacena en un array de dos dimensiones:
 
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Create as many rows (empty and without columns) as there are tables
+  // Crear tantas líneas (vacías y sin columnas) como tablas haya
  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
-  // For each table
+  ARRAY POINTER(<>apFields;$vlLastTable;0) //Array 2D con X líneas y cero columnas
+  // Para cada tabla
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
-  // Give value of elements
+       $vlLastField:=Obtener el número del último campo($vlTable)
+  // Dar valor a los elementos
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insert a column in a row of the table underway
-             INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Assign the "cell" with the pointer
+  //Inserta una columna en una línea de la tabla en curso
+                          INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
+  //Asignar la "celda" con el puntero
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -128,9 +128,9 @@ En el siguiente ejemplo, un puntero a cada campo de cada tabla de la base se alm
 Siempre que se haya inicializado este array de dos dimensiones, se pueden obtener los punteros a los campos de una tabla concreta de la siguiente manera:
 
 ```4d
-  // Get the pointers to the fields for the table currently displayed at the screen:
+  // Obtener los punteros a los campos para la tabla que se muestra actualmente en la pantalla:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  // Initialize Boolean and Date fields
+  // Inicializar los campos booleanos y de fecha
  For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
@@ -141,7 +141,7 @@ Siempre que se haya inicializado este array de dos dimensiones, se pueden obtene
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**Nota:** como sugiere este ejemplo, las líneas de un array de dos dimensiones pueden tener el mismo tamaño o diferentes tamaños.
 
 ## Arrays y memoria
 
@@ -155,7 +155,7 @@ Hacer lo mismo con arrays sería prohibido por las siguientes razones:
 - Como un array se mantiene siempre en memoria en su totalidad, habría que mantener toda la información de los códigos postales en memoria durante toda la sesión de trabajo, aunque los datos no estén siempre en uso.
 - De nuevo, dado que un array se mantiene siempre en memoria en su totalidad, cada vez que se inicia la aplicación y se sale de ella, los cuatro arrays tendrían que cargarse y luego guardarse en el disco, aunque los datos no se utilicen ni se modifiquen durante la sesión de trabajo.
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. Por otro lado, como los arrays se mantienen en memoria, son fáciles de manejar y rápidos de manipular.
+**Conclusión:** los arrays están pensados para mantener cantidades razonables de datos durante un corto periodo de tiempo. Por otro lado, como los arrays se mantienen en memoria, son fáciles de manejar y rápidos de manipular.
 
 Sin embargo, en algunas circunstancias, puede ser necesario trabajar con arrays que contengan cientos o miles de elementos. La siguiente tabla muestra las fórmulas utilizadas para calcular la cantidad de memoria utilizada para cada tipo de array:
 

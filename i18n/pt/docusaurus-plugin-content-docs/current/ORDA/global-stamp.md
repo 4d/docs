@@ -5,14 +5,14 @@ title: Usando o selo global
 
 ## Visão Geral
 
-4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.
+4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales
 
 The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
 
-Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
+Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
 1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity.
-   In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
+   En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
 2. The global modification stamp value is incremented.
 
@@ -20,7 +20,7 @@ This mechanism allows you to identify entities that have been modified, added, o
 
 :::info
 
-Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock).
+No confunda el **sello de modificación global** con el **sello de entidad** interna, utilizado para la [funcionalidad bloqueo optimista](entities.md#automatic-optimistic-lock).
 
 :::
 
@@ -30,12 +30,12 @@ By default, the global modification stamp is not created (the [`.getGlobalStamp(
 
 ### Requisitos de estrutura
 
-To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
+Para habilitar el seguimiento de cambios de datos, la estructura de la aplicación debe contener al menos una tabla con un campo `__GlobalStamp`.
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
-- The `__GlobalStamp` field must must be of type _Integer 64 bits_, with _automatic index_, _Expose as REST resource_, and _Invisible_ properties selected.
-- A `__DeletedRecords` table must be added, with the following fields:
+- El campo `__GlobalStamp` debe ser del tipo _Entero 64 bits_, con las propiedades _índice automático_, _Exponer como recurso REST_ e _Invisible_ seleccionadas.
+- Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
 | Campo                                                   | Tipo            | Descrição                             |
 | ------------------------------------------------------- | --------------- | ------------------------------------- |
@@ -44,11 +44,11 @@ In addition, to ensure proper operation of the feature, the following conditions
 | __TableName   | Text            | Nome da tabela de entidades excluída  |
 | __TableNumber | Long Integer    | Número da tabela da entidade excluída |
 
-You can only track changes for data in tables having the `__GlobalStamp` field.
+Sólo puede realizar un seguimiento de los cambios de los datos de las tablas que tengan el campo `__GlobalStamp`.
 
 :::note
 
-In the 4D language, the `__GlobalStamp` field value should be handled through a `Real` type variable.
+En el lenguaje 4D, el valor del campo `__GlobalStamp` debe manejarse a través de una variable de tipo `Real`.
 
 :::
 
@@ -59,21 +59,21 @@ The 4D Structure Editor allows you to enable or disable data change tracking usi
 Para ativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja habilitar o rastreamento de alterações nos dados.
-2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
-3. É exibida uma caixa de diálogo de confirmação. Click **OK**.
+2. Haga clic derecho en una tabla seleccionada y seleccione **Enable data change tracking** en el menú contextual.
+3. É exibida uma caixa de diálogo de confirmação. Haga clic en **OK**.
 
 Em seguida, 4D faz as seguintes alterações:
 
-- A preconfigured `__GlobalStamp` field is added to the table(s).
-- If not already existing, a `__DeletedRecords` table is added to the structure.
+- Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
+- Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
 
 Para desativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja remover o rastreamento de alterações nos dados.
-2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
-3. É exibida uma caixa de diálogo de confirmação. Click **OK**.
+2. Haga clic derecho en una tabla seleccionada y seleccione **Disable data change tracking** en el menú contextual.
+3. É exibida uma caixa de diálogo de confirmação. Haga clic en **OK**.
 
-4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
+4D elimina entonces el campo `__GlobalStamp` de la(s) tabla(s). Tenga en cuenta que si desea eliminar la tabla `__DeletedRecords`, deberá hacerlo manualmente.
 
 ## Exemplo
 

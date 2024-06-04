@@ -9,7 +9,7 @@ title: カスタム HTTPエラーページ
 
 - 5 から始まるステータスコード (サーバーエラー)。たとえば 501 など。
 
-For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+HTTPエラーステータスコードの完全な詳細については、[HTTPステータスコード](https://ja.wikipedia.org/wiki/HTTP%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89) (Wikipedia) を参照してください。
 
 ## デフォルトページの置換
 

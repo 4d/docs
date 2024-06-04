@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: ピクチャー
 ---
 
 ## パス名
@@ -9,8 +9,8 @@ title: Picture
 
 ピクチャーパスに指定できる場所は次の 3箇所です:
 
-- プロジェクトの **Resources** フォルダー。 プロジェクト内の複数のフォームで画像を共有する場合に適切です。 In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- プロジェクトの **Resources** フォルダー。 プロジェクト内の複数のフォームで画像を共有する場合に適切です。 この場合、パス名は "/RESOURCES/\<picture path\>" です。
+- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
 - 4D のピクチャー変数。 フォーム実行時に、ピクチャーがメモリに読み込まれている必要があります。 この場合、パス名は "var:\\<variableName\>"。
 
 #### JSON 文法
@@ -65,4 +65,4 @@ title: Picture
 
 #### 対象オブジェクト
 
-[Static Picture](staticPicture.md)
+[スタティックピクチャー](staticPicture.md)

@@ -15,7 +15,7 @@ Define o número de colunas numa tabela de miniaturas.
 
 #### Objectos suportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
 
 ---
 
@@ -31,4 +31,4 @@ Define o número de linhaas numa tabela de miniaturas.
 
 #### Objectos suportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)

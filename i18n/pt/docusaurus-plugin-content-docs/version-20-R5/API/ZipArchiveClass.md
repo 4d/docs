@@ -28,9 +28,9 @@ End if
 
 ### Resumo
 
-|                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary --> |
+|                                                                                                           |
+| --------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<br/><!-- INCLUDE #ZipArchiveClass.root.Summary --> |
 
 ## ZIP Create archive
 
@@ -273,4 +273,4 @@ The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtua
 
 The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.

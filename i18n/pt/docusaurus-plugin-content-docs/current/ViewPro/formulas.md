@@ -105,13 +105,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
-| Exemplo        | Tipo de referência | Descrição                                                                                                                                                                     |
-| -------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                                  |
-| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                      |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                          |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                                           |
-| Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](commands/vp-add-range-name.md) no matter where the reference is used. |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                                                          |
+| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                                       |
+| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                           |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                               |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                                                |
+| Nome da célula | Absoluto           | A referência é absoluta. Siempre se referirá a la [celda o rango nombrado](commands/vp-add-range-name.md) sin importar donde se use la referencia. |
 
 ## Funções incorporadas
 
@@ -355,7 +355,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
-- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+- **Permitido**: se declaró explícitamente mediante el comando [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 - **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 

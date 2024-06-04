@@ -7,7 +7,7 @@ Número de versión de la imagen
 
 ## Descripción
 
-`$version` is the image's version number returned by the server. El número de versión, que es enviado por el servidor, funciona en torno a la memoria caché del navegador para que usted esté seguro de recuperar la imagen correcta.
+`$version` es el número de versión de la imagen devuelto por el servidor. El número de versión, que es enviado por el servidor, funciona en torno a la memoria caché del navegador para que usted esté seguro de recuperar la imagen correcta.
 
 El valor del parámetro de versión de la imagen es modificado por el servidor.
 

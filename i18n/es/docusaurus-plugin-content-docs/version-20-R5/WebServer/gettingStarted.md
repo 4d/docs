@@ -7,22 +7,22 @@ Esta sección de "Primeros pasos" está orientada a los usuarios principiantes q
 
 ## Ejemplo Hello World
 
-Empecemos por hacer que el servidor web envíe "Hello World" al navegador. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+Empecemos por hacer que el servidor web envíe "Hello World" al navegador. La forma más sencilla de hacerlo es crear un proyecto, iniciar el servidor web y escribir un pequeño código que devuelva un texto en el método base `On Web Connection`.
 
 ### Inicio del servidor web
 
 Para iniciar el servidor Web 4D:
 
 1. Inicie su aplicación 4D y cree un nuevo proyecto 4D vacío.
-2. In the **Run** menu, select **Start Web Server**.
+2. En el menú **Ejecutar**, seleccione **Arrancar el servidor web**.
 
-¡Eso es todo! The web server is started (you can see that the menu item has become **Stop Web Server**). Ahora está listo para atender las peticiones. Para comprobarlo, mostraremos la página de inicio por defecto.
+¡Eso es todo! El servidor web se inicia (verá que el elemento del menú cambia a **Detener el servidor web**). Ahora está listo para atender las peticiones. Para comprobarlo, mostraremos la página de inicio por defecto.
 
 ### Mostrar la página de inicio por defecto
 
-The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
+El servidor web 4D crea automáticamente una página `index.html` por defecto en la carpeta raíz por defecto `WebFolder`, creada al mismo nivel que la carpeta Project.
 
-1. Inicie un navegador web y conéctese a la dirección IP del servidor web (el puerto http por defecto del servidor web de 4D es el 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Inicie un navegador web y conéctese a la dirección IP del servidor web (el puerto http por defecto del servidor web de 4D es el 80). Si el servidor web y el navegador están en la misma máquina, puede seleccionar **Probar servidor web** en el menú **Ejecutar**.
 
 Se muestra la página de inicio por defecto:
 
@@ -30,7 +30,7 @@ Se muestra la página de inicio por defecto:
 
 ### Mostrar Hello World
 
-1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
+1. Abra el Explorador, muestre la lista de Métodos base y haga doble clic en `On Web Connection`.
 
 2. Introduzca el siguiente código:
 
@@ -66,7 +66,7 @@ Cree una base de datos básica con, por ejemplo, una sola tabla que contenga alg
 
 ### Mostrar datos en una página
 
-The most simple solution to display data is to call a [template page](templates.md) containing tags.
+La solución más sencilla para mostrar los datos es llamar a una [página de plantillas](templates.md) que contenga etiquetas.
 
 1. Utilizando cualquier editor de texto, cree un archivo que contenga las siguientes líneas:
 
@@ -81,22 +81,22 @@ The most simple solution to display data is to call a [template page](templates.
 </html>
 ```
 
-2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
+2. Nombre el archivo "friends.shtml" y guárdelo en la **WebFolder** de su proyecto.
 3. En su navegador, introduzca la siguiente URL:
 
 ```
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Se devuelve la página llena de datos:
+Las páginas `.shtml` son procesadas automáticamente por el servidor web. Se devuelve la página llena de datos:
 
 ![](../assets/en/WebServer/hello3bis.png)
 
 ### Petición REST
 
-If we not only want to _display_ data, but to _use_ it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+Si no sólo queremos _visualizar_ datos, sino _utilizarlos_, podemos utilizar ORDA y el servidor REST. Gracias al [concepto ORDA](ORDA/overview.md), la tabla `Friends` se asigna automáticamente a una clase de datos y está disponible a través de [REST](REST/gettingStarted.md).
 
-1. We will use the REST server to access data: go the **Settings** dialog box, select **Web** > **Web Features**, and check the **Expose as REST server** option.
+1. Utilizaremos el servidor REST para acceder a los datos: vaya a la caja de diálogo **Parámetros**, seleccione **Web** > **Funcionalidades Web** y marque la opción **Exponer como servidor REST**.
 
 ![](../assets/en/WebServer/hello5.png)
 
@@ -178,7 +178,7 @@ El servidor devuelve las entidades, es decir, los datos, de la clase de datos Fr
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
 
 ## Inicio de sesión y sesión
 
@@ -188,8 +188,8 @@ En las secciones anteriores, obtenemos acceso libre a la aplicación desde las p
 
 La forma más sencilla y segura de registrar un usuario en el servidor web de 4D se basa en el siguiente escenario:
 
-- Users are stored in a dedicated, unexposed table (named _WebUsers_ for example)
-- The _WebUsers_ table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada _WebUsers_ por ejemplo)
+- La tabla _WebUsers_ podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
 
 1. Cree una tabla con algunos campos, por ejemplo:
 
@@ -211,7 +211,7 @@ $webUser.save()
 
 ### Autenticación de los usuarios
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> Para que sea segura de extremo a extremo, es necesario que toda la conexión se establezca mediante [https](webServerConfig.md#enable-https).
 
 1. Abra el Explorador y cree un método de proyecto llamado "login".
 
@@ -253,7 +253,7 @@ Else
 End if 
 ```
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. Despliegue las propiedades del método haciendo clic en el botón **[i]** del editor de código, marque la opción `etiquetas 4D y URLs (4DACTION...)` y haga clic en **Aceptar**.
 
 ![](../assets/en/WebServer/hello0.png)
 
@@ -263,7 +263,7 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> No se recomienda el uso de este tipo de URLs, sólo se presenta aquí para mantener el ejemplo simple. Una solicitud de inicio de sesión más realista debe ser manejada a través de un formulario web y una petición POST. See [this page](sessions.md#example) for an example of form POST.
+> No se recomienda el uso de este tipo de URLs, sólo se presenta aquí para mantener el ejemplo simple. Una solicitud de inicio de sesión más realista debe ser manejada a través de un formulario web y una petición POST. Consulte [esta página](sessions.md#example) para ver un ejemplo de formulario POST.
 
 Entonces se registrará para la sesión:
 
@@ -273,4 +273,4 @@ Las credenciales incorrectas serían rechazadas:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.
+Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).

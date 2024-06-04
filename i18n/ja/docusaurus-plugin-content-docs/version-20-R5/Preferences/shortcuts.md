@@ -9,6 +9,6 @@ title: ショートカットページ
 
 ショートカットを変更するには、設定する項目のモディファイアキー (Shift および Alt) および文字をリスト中で変更します。 またダブルクリックすると専用のダイアログボックスでショートカットの編集をおこなうことができます:
 
-Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
+それぞれのショートカットには暗黙に **Ctrl** (Windows) または **Command** (macOS) キーが含まれることに留意してください。
 
-If you edit this list, your custom shortcuts settings are stored in a _4DShortcutsvXX.xml_ file, created at the same level as the [user preferences file](overview.md#storage). そのため、4Dがアップデートされても、ショートカット環境設定は残されます。
+このリストを編集すると、カスタムのショートカット設定は [ユーザー Preferences ファイル](overview.md#ストレージ) と同じ階層にある _4D Shortcuts vXX.xml_ ファイルに保存されます。 そのため、4Dがアップデートされても、ショートカット環境設定は残されます。

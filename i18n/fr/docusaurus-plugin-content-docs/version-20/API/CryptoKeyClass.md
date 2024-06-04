@@ -65,12 +65,12 @@ La fonction `.4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée 
 
 #### *settings*
 
-| Propriété       | Type   | Description                                                                                                    |
-| --------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| [type](#type)   | text   | Définit le type de la clé à créer : <li>"RSA" : génère une paire de clés RSA, en utilisant [.size](#size) comme taille.</li><li>"ECDSA" : génère une paire de clés Elliptic Curve Digital Signature Algorithm, en utilisant [.curve](#curve) comme courbe. A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : charge une définition de paire de clés au format PEM, en utilisant [.pem](#pem).</li> |
-| [curve](#curve) | text   | Nom de la courbe ECDSA                                                                                         |
-| [pem](#pem)     | text   | Définition PEM d'une clé de chiffrement à charger                                                              |
-| [size](#size)   | entier | Taille de la clé RSA en octets                                                                                 |
+| Propriété       | Type    | Description                                                                                                    |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text    | Définit le type de la clé à créer : <li>"RSA" : génère une paire de clés RSA, en utilisant [.size](#size) comme taille.</li><li>"ECDSA" : génère une paire de clés Elliptic Curve Digital Signature Algorithm, en utilisant [.curve](#curve) comme courbe. A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : charge une définition de paire de clés au format PEM, en utilisant [.pem](#pem).</li> |
+| [curve](#curve) | text    | Nom de la courbe ECDSA                                                                                         |
+| [pem](#pem)     | text    | Définition PEM d'une clé de chiffrement à charger                                                              |
+| [size](#size)   | integer | Taille de la clé RSA en octets                                                                                 |
 
 
 #### *CryptoKey*

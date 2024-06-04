@@ -4,17 +4,17 @@ title: Página de criptografia
 sidebar_label: Página de criptografia
 ---
 
-You can use this page to encrypt or _decrypt_ (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database.
+Puede utilizar esta página para cifrar o _descifrar_ (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
 
 :::info
 
-For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the _Design Reference_ manual. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post.
+Para obtener información detallada sobre la encriptación de datos en 4D, consulte la sección [Encriptación de datos](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) del manual de _Diseño_. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 
 :::
 
-É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. It is named "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_> or "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_".
+É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_> o "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_".
 
-> Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
+> El cifrado sólo está disponible en [modo mantenimiento](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
 **Warning:**
 
@@ -25,7 +25,7 @@ For detailed information about data encryption in 4D, please refer to the [Encry
 
 Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessários os seguintes passos:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Ver a secção "Propriedades das tabelas".
+1. En el editor de estructuras, marque el atributo **Encriptable** de cada tabla cuyos datos desee encriptar. Ver a secção "Propriedades das tabelas".
 2. Abra a página Encriptar do CSM.
    If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
    ![](../assets/en/MSC/MSC_encrypt1.png)
@@ -45,11 +45,11 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo agora ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
+4D ofrece guardar la llave de encriptación (ver [Guardar la llave de encriptación](#saving-the-encryption-key) más abajo). Pode fazê-lo agora ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
 
 Se o processo de encriptação for bem-sucedido, a página Encriptar apresenta botões de operações de manutenção de encriptação.
 
-**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Os registos pertencentes a tabelas "encriptáveis" são encriptados e depois copiados, os outros registos são apenas copiados (é também executada uma operação de compactação). Se a operação for bem sucedida, o ficheiro de dados original é movido para uma pasta "Replaced Files (Encrypting)". Se tentar entregar um arquivo de dados criptografado, tenha certeza de antes mover/remover qualquer arquivo de dados não criptografado na pasta de banco de dados.
+**Atención:** durante la operación de encriptación, 4D crea un nuevo archivo de datos vacío y lo llena con los datos del archivo de datos original. Os registos pertencentes a tabelas "encriptáveis" são encriptados e depois copiados, os outros registos são apenas copiados (é também executada uma operação de compactação). Se a operação for bem sucedida, o ficheiro de dados original é movido para uma pasta "Replaced Files (Encrypting)". Se tentar entregar um arquivo de dados criptografado, tenha certeza de antes mover/remover qualquer arquivo de dados não criptografado na pasta de banco de dados.
 
 ## Operações de manutenção da cifragem
 
@@ -66,9 +66,9 @@ Por razões de segurança, todas as operações de manutenção da cifragem exig
 
 Nesta fase, tem duas opções:
 
-- enter the current passphrase(2) and click **OK**.
+- introduzca la frase secreta actual(2) y haga clic en **OK**.
   OU
-- connect a device such as a USB key and click the **Scan devices** button.
+- conecte un dispositivo como una llave USB y haga clic en el botón **Escanear dispositivos**.
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session.\
 (2) The current passphrase is the passphrase used to generate the current encryption key.
@@ -77,9 +77,9 @@ Em todos os casos, se uma informação válida for fornecida, 4D reinicia em mod
 
 ### Volte a encriptar os dados com a chave de encriptação atual
 
-This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. Nesse caso, para prevenir inconsistências no arquivo de dados, 4D não permite nenhum acesso de escrita aos registros das tabelas na aplicação. É então necessário voltar a encriptar os dados para restaurar um estado de encriptação válido.
+Esta operación es útil cuando se ha modificado el atributo **Encriptable** de una o varias tablas que contienen los datos. Nesse caso, para prevenir inconsistências no arquivo de dados, 4D não permite nenhum acesso de escrita aos registros das tabelas na aplicação. É então necessário voltar a encriptar os dados para restaurar um estado de encriptação válido.
 
-1. Click on **Re-encrypt data with the current encryption key**.
+1. Haga clic en **Recibir los datos con la llave de cifrado actual**.
 2. Introduzir a chave de encriptação de dados atual.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed:
@@ -89,7 +89,7 @@ The data file is properly re-encrypted with the current key and a confirmation m
 
 Esta operação é útil quando é necessário alterar a chave de encriptação de data atual. Por exemplo, poderá ter de o fazer para cumprir regras de segurança (como a exigência de alterar a frase-chave a cada três meses).
 
-1. Click on **Change your passphrase and re-encrypt data**.
+1. Haga clic en **Cambiar su frase de contraseña y volver a cifrar los datos**.
 2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice):
    ![](../assets/en/MSC/MSC_encrypt9.png)
@@ -100,17 +100,17 @@ Esta operação é útil quando é necessário alterar a chave de encriptação 
 
 Esta operação remove toda a encriptação do ficheiro de dados. Se já não pretender que os seus dados sejam encriptados:
 
-1. Click on **Decrypt all data**.
+1. Haga clic en **Desencriptar todos los datos**.
 2. Introduzir a chave de encriptação de dados atual (ver Fornecer a chave de encriptação de dados atual).
 
 The data file is fully decrypted and a confirmation message is displayed:
 ![](../assets/en/MSC/MSC_encrypt10.png)
 
-> Quando o arquivo de dados for desencriptado, o estado de encriptação das tabelas não corresponde aos seus atributos Encryptable. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
+> Quando o arquivo de dados for desencriptado, o estado de encriptação das tabelas não corresponde aos seus atributos Encryptable. Para restablecer un estado coincidente, debe anular la selección de todos los atributos **Encriptable** al nivel de la estructura de la base.
 
 ## Guardar a chave de encriptação
 
-4D permite salvar a chave de encriptação de dados em um arquivo dedicado. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
+4D permite salvar a chave de encriptação de dados em um arquivo dedicado. El nombre del archivo debe tener la extensión `.4DKeyChain`, por ejemplo "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
 
 É possível guardar a chave de encriptação sempre que for fornecida uma nova frase-chave:
 
@@ -121,13 +121,13 @@ Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). Quando a seqüência de restauração é acionada, 4D deve ter acesso ao arquivo de chave de encriptação, caso contrário ocorre um erro.
+Almacenar el archivo de llave de cifrado de datos en el primer nivel del dispositivo es obligatorio cuando utiliza la función  [de restauración automática y de integración de historiales](../Backup/settings.md#automatic-restore-and-log-integration). Quando a seqüência de restauração é acionada, 4D deve ter acesso ao arquivo de chave de encriptação, caso contrário ocorre um erro.
 
 :::
 
 ## Arquivo histórico
 
-Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. It is created in XML format and named "_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" or "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_".
+Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. Se crea en formato XML y se llama "_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" o "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_".
 
 É apresentado um botão Open log file na página MSC sempre que é gerado um novo arquivo de registo.
 

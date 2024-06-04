@@ -7,10 +7,10 @@ La classe Collection gère les variables de type [Collection](Concepts/dt_collec
 
 Une collection est initialisée avec :
 
-|                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New collection.Summary -->                      |
-| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #_command_.New shared collection.Summary --> |
+|                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<br/><!-- INCLUDE #_command_.New collection.Summary -->                      |
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<br/><!-- INCLUDE #_command_.New shared collection.Summary --> |
 
 ### Exemple
 
@@ -21,55 +21,55 @@ Une collection est initialisée avec :
 
 ### Sommaire
 
-|                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #collection.at().Syntax -->](#at)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.at().Summary -->                                  |
-| [<!-- INCLUDE #collection.average().Syntax -->](#average)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.average().Summary -->                   |
-| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.clear().Summary -->                         |
-| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.combine().Summary -->                   |
-| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.concat().Summary -->                      |
-| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.copy().Summary -->                            |
-| [<!-- INCLUDE #collection.count().Syntax -->](#count)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.count().Summary -->                         |
-| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.countValues().Summary -->       |
-| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.distinct().Summary -->                |
-| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.equal().Summary -->                         |
-| [<!-- INCLUDE #collection.every().Syntax -->](#every)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.every().Summary -->                         |
-| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.extract().Summary -->                   |
-| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.fill().Summary -->                            |
-| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.filter().Summary -->                      |
-| [<!-- INCLUDE #collection.find().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.find().Summary -->                            |
-| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.findIndex().Summary -->                  |
-| [<!-- INCLUDE #collection.first().Syntax -->](#first)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.first().Summary -->                         |
-| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.flatMap().Summary -->                   |
-| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.includes().Summary -->                |
-| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indexOf().Summary -->                   |
-| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.indices().Summary -->                   |
-| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.insert().Summary -->                      |
-| [<!-- INCLUDE #collection.join().Syntax -->](#join)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.join().Summary -->                            |
-| [<!-- INCLUDE #collection.last().Syntax -->](#last)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.last().Summary -->                            |
-| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->       |
-| [<!-- INCLUDE #collection.length.Syntax -->](#length)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.length.Summary -->                          |
-| [<!-- INCLUDE #collection.map().Syntax -->](#map)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.map().Summary -->                               |
-| [<!-- INCLUDE #collection.max().Syntax -->](#max)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.max().Summary -->                               |
-| [<!-- INCLUDE #collection.min().Syntax -->](#min)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.min().Summary -->                               |
-| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.multiSort().Summary -->             |
-| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderBy().Summary -->                   |
-| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.orderByMethod().Summary --> |
-| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.pop().Summary -->                               |
-| [<!-- INCLUDE #collection.push().Syntax -->](#push)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.push().Summary -->                            |
-| [<!-- INCLUDE #collection.query().Syntax -->](#query)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.query().Summary -->                         |
-| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->       |
-| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.remove().Summary -->                      |
-| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.resize().Summary -->                      |
-| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.reverse().Summary -->                   |
-| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.shift().Summary -->                         |
-| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.slice().Summary -->                         |
-| [<!-- INCLUDE #collection.some().Syntax -->](#some)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.some().Summary -->                            |
-| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sort().Summary -->                            |
-| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
-| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
+|                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #collection.at().Syntax -->](#at)<br/><!-- INCLUDE #collection.at().Summary -->                                  |
+| [<!-- INCLUDE #collection.average().Syntax -->](#average)<br/><!-- INCLUDE #collection.average().Summary -->                   |
+| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<br/><!-- INCLUDE #collection.clear().Summary -->                         |
+| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<br/><!-- INCLUDE #collection.combine().Summary -->                   |
+| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)<br/><!-- INCLUDE #collection.concat().Summary -->                      |
+| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)<br/><!-- INCLUDE #collection.copy().Summary -->                            |
+| [<!-- INCLUDE #collection.count().Syntax -->](#count)<br/><!-- INCLUDE #collection.count().Summary -->                         |
+| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<br/><!-- INCLUDE #collection.countValues().Summary -->       |
+| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<br/><!-- INCLUDE #collection.distinct().Summary -->                |
+| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)<br/><!-- INCLUDE #collection.equal().Summary -->                         |
+| [<!-- INCLUDE #collection.every().Syntax -->](#every)<br/><!-- INCLUDE #collection.every().Summary -->                         |
+| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)<br/><!-- INCLUDE #collection.extract().Summary -->                   |
+| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)<br/><!-- INCLUDE #collection.fill().Summary -->                            |
+| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)<br/><!-- INCLUDE #collection.filter().Summary -->                      |
+| [<!-- INCLUDE #collection.find().Syntax -->](#find)<br/><!-- INCLUDE #collection.find().Summary -->                            |
+| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
+| [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
+| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
+| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
+| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
+| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)<br/><!-- INCLUDE #collection.insert().Summary -->                      |
+| [<!-- INCLUDE #collection.join().Syntax -->](#join)<br/><!-- INCLUDE #collection.join().Summary -->                            |
+| [<!-- INCLUDE #collection.last().Syntax -->](#last)<br/><!-- INCLUDE #collection.last().Summary -->                            |
+| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<br/><!-- INCLUDE #collection.lastIndexOf().Summary -->       |
+| [<!-- INCLUDE #collection.length.Syntax -->](#length)<br/><!-- INCLUDE #collection.length.Summary -->                          |
+| [<!-- INCLUDE #collection.map().Syntax -->](#map)<br/><!-- INCLUDE #collection.map().Summary -->                               |
+| [<!-- INCLUDE #collection.max().Syntax -->](#max)<br/><!-- INCLUDE #collection.max().Summary -->                               |
+| [<!-- INCLUDE #collection.min().Syntax -->](#min)<br/><!-- INCLUDE #collection.min().Summary -->                               |
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)<br/><!-- INCLUDE #collection.multiSort().Summary -->             |
+| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<br/><!-- INCLUDE #collection.orderBy().Summary -->                   |
+| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<br/><!-- INCLUDE #collection.orderByMethod().Summary --> |
+| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)<br/><!-- INCLUDE #collection.pop().Summary -->                               |
+| [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
+| [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
+| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
+| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
+| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
+| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<br/><!-- INCLUDE #collection.shift().Summary -->                         |
+| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<br/><!-- INCLUDE #collection.slice().Summary -->                         |
+| [<!-- INCLUDE #collection.some().Syntax -->](#some)<br/><!-- INCLUDE #collection.some().Summary -->                            |
+| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)<br/><!-- INCLUDE #collection.sort().Summary -->                            |
+| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<br/><!-- INCLUDE #collection.sum().Summary -->                               |
+| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<br/><!-- INCLUDE #collection.unshift().Summary -->                   |
 
 ## `New collection`
 
@@ -80,7 +80,7 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                    |     | Description                                |
 | ---------- | ----------------------------------------------------------------------- | :-: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |  -> | Valeur(s) de collection |
-| Résultat   | Collection                                                              |  <- | The new collection                         |
+| Résultat   | Collection                                                              |  <- | La nouvelle collection                     |
 
 <!-- END REF -->
 
@@ -162,7 +162,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 | Paramètres | Type                                                                |     | Description                                            |
 | ---------- | ------------------------------------------------------------------- | :-: | ------------------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection |  -> | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                                          |  <- | The new shared collection                              |
+| Résultat   | Collection                                                          |  <- | La nouvelle collection partagée                        |
 
 <!-- END REF -->
 
@@ -252,7 +252,7 @@ La fonction renvoie Undefined si _index_ est au-delà des limites de la collecti
 #### Exemple
 
 ```4d
-var $col : Collection 
+var $col : Collection
 $col:=New collection(10; 20; 30; 40; 50)
 $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
@@ -459,10 +459,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                      |
-| ------- | ------------------------------------------------------------------ |
-| 18 R3   | New _ck shared_ option. New _groupWith_ parameters |
-| v16 R6  | Ajout                                                              |
+| Release | Modifications                                                                |
+| ------- | ---------------------------------------------------------------------------- |
+| 18 R3   | Nouvelle option _ck shared_. Nouveaux paramètres _groupWith_ |
+| v16 R6  | Ajout                                                                        |
 
 </details>
 
@@ -709,10 +709,10 @@ Le paramètre optionnel _propertyPath_ vous permet de compter des valeurs à l'i
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                |
-| ------- | ---------------------------- |
-| 20      | Support of `ck count values` |
-| v16 R6  | Ajout                        |
+| Release | Modifications                        |
+| ------- | ------------------------------------ |
+| 20      | Prise en charge de `ck count values` |
+| v16 R6  | Ajout                                |
 
 </details>
 
@@ -789,11 +789,17 @@ Dans le paramètre _options_, vous pouvez passer une ou une combinaison des cons
 
 #### Description
 
-La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **true** si elles sont identiques (deep comparison).
+La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare récursivement le contenu de la collection et de _collection2_ (comparaison profonde)<!-- END REF -->et renvoie **true** si elles sont identiques.
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
 
 > Les éléments avec des valeurs **Null** ne sont pas égaux aux éléments Undefined.
+
+:::note
+
+Une comparaison récursive de collections peut prendre beaucoup de temps si la collection est de grande taille et comporte de nombreux niveaux. Si vous souhaitez uniquement comparer deux références de collection, vous pouvez envisager d'utiliser l'opérateur de comparaison [`=` pour les références de collection](../Concepts/dt_collection.md#collection-operators).
+
+:::
 
 #### Exemple
 
@@ -842,14 +848,14 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | startFrom  | Integer                     |  -> | Elément à partir duquel débuter l'évaluation                         |
 | formula    | 4D.Function |  -> | Objet formule                                                        |
 | methodName | Text                        |  -> | Nom de méthode                                                       |
-| param      | Mixed                       |  -> | Paramètre(s) à passer à _formula_ ou _methodName_ |
+| param      | any                         |  -> | Paramètre(s) à passer à _formula_ ou _methodName_ |
 | Résultat   | Boolean                     |  <- | Vrai si tous les éléments sont évalués à vrai                        |
 
 <!-- END REF -->
 
 #### Description
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided _formula_ object or _methodName_ method<!-- END REF -->.
+La fonction `.every()` <!-- REF #collection.every().Summary -->retourne **true** si tous les éléments de la collection ont été évalués à vrai par le test implémenté dans l'objet _formula_ ou la méthode _methodName_<!-- END REF --> fourni(e).
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
 
@@ -1614,27 +1620,27 @@ Optionnellement, vous pouvez passer l'indice de la collection à partir duquel d
 
 <!-- REF #collection.indices().Params -->
 
-| Paramètres  | Type       |     | Description                                                                                                     |
-| ----------- | ---------- | :-: | --------------------------------------------------------------------------------------------------------------- |
-| queryString | Text       |  -> | Critère(s) de recherche                                                                      |
-| value       | any        |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
-| Résultat    | Collection |  <- | Element index(es) matching queryString in the collection                                     |
+| Paramètres  | Type       |     | Description                                                                                                         |
+| ----------- | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------- |
+| queryString | Text       |  -> | Critère(s) de recherche                                                                          |
+| value       | any        |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne     |
+| Résultat    | Collection |  <- | Numéro(s) d'élément(s) de la collection répondant aux critères de queryString |
 
 <!-- END REF -->
 
 #### Description
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the _queryString_ search conditions<!-- END REF -->, and not elements themselves. Les positions sont retournées dans un ordre croissant.
+La fonction `.indices()` fonctionne exactement comme la fonction [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->renvoie les indices, dans la collection d'origine, des éléments de la collection d'objets qui correspondent aux conditions de recherche _queryString_<!-- END REF -->, et non les éléments eux-mêmes. Les positions sont retournées dans un ordre croissant.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-The _queryString_ parameter uses the following syntax:
+Le paramètre _queryString_ doit respecter la syntaxe suivante :
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For a detailed description of the _queryString_ and _value_ parameters, please refer to the `dataClass.query()` function.
+Pour une description détaillée de la construction de recherches à l'aide des paramètres _queryString_ et _value_ veuillez vous reporter à la description de la fonction `dataclass.query()`.
 
 #### Exemple
 
@@ -1679,16 +1685,16 @@ For a detailed description of the _queryString_ and _value_ parameters, please r
 
 #### Description
 
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts _element_ at the specified _index_ position in the collection instance and returns the edited collection<!-- END REF -->.
+La fonction `.insert()` <!-- REF #collection.insert().Summary --> insère _element_ à la position _index_ spécifiée dans l'instance de collection et renvoie la collection modifiée<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
-In _index_, pass the position where you want the element to be inserted in the collection.
+Dans _index_, passez le numéro de l'élément après lequel vous souhaitez que le paramètre element soit inséré.
 
 > **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0.
 
-- If _index_ > the length of the collection, actual starting index will be set to the length of the collection.
-- If _index_ <0, it is recalculated as _index:=index+length_ (it is considered as the offset from the end of the collection).
+- Si _index_ > la longueur de la collection, l'_index_ de départ réel sera fixé à la longueur de la collection.
+- Si _index_ < 0, il est recalculé comme _index:=index+length_ (la fin de la collection est considérée comme point de départ du calcul de la position).
 - Si la valeur recalculée est négative, index prend la valeur 0.
 
 Vous pouvez passer tout type d'élément accepté par les collections, y compris une autre collection.
@@ -1721,21 +1727,21 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 <!-- REF #collection.join().Params -->
 
-| Paramètres | Type    |     | Description                                                                            |
-| ---------- | ------- | :-: | -------------------------------------------------------------------------------------- |
-| delimiter  | Text    |  -> | Séparateur à utiliser entre les éléments                                               |
-| option     | Integer |  -> | `ck ignore null or empty`: ignore null and empty strings in the result |
-| Résultat   | Text    |  <- | Chaîne contenant tous les éléments de la collection, séparés par delimiter             |
+| Paramètres | Type    |     | Description                                                                                    |
+| ---------- | ------- | :-: | ---------------------------------------------------------------------------------------------- |
+| delimiter  | Text    |  -> | Séparateur à utiliser entre les éléments                                                       |
+| option     | Integer |  -> | `ck ignore null or empty` : ignorer les chaînes null ou vides dans le résultat |
+| Résultat   | Text    |  <- | Chaîne contenant tous les éléments de la collection, séparés par delimiter                     |
 
 <!-- END REF -->
 
 #### Description
 
-The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified _delimiter_ string as separator<!-- END REF -->.The function returns the resulting string.
+La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en chaînes et les concatène en utilisant la chaîne _delimiter_ spécifiée comme séparateur<!-- END REF -->. La fonction renvoie la chaîne résultante.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Pass the `ck ignore null or empty` constant in the _option_ parameter if you want to remove them from the resulting string.
+Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre _option_ si vous souhaitez les exclure de la chaîne résultante.
 
 #### Exemple
 
@@ -1773,7 +1779,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 #### Description
 
-The `.last()` function <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+La fonction `.last()` <!-- REF #collection.last().Summary -->renvoie le dernier élément de la collection<!-- END REF -->.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -1787,9 +1793,9 @@ var $last : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $last:=$col.last() // 50
 
-$emptyCol:=New collection() //empty
-// $last:=$emptyCol[$emptyCol.length-1] //returns an error
-$last:=$emptyCol.last() // returns Undefined
+$emptyCol:=New collection() //vide
+// $last:=$emptyCol[$emptyCol.length-1] //retourne une erreur
+$last:=$emptyCol.last() // retourne Undefined
 
 ```
 
@@ -1821,7 +1827,7 @@ $last:=$emptyCol.last() // returns Undefined
 
 #### Description
 
-The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the _toSearch_ expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
+La fonction `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->recherche l'expression _toSearch_ parmi les éléments de la collection et renvoie l'indice de la dernière occurrence<!-- END REF -->, ou -1 si elle n'a pas été trouvée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -1831,14 +1837,14 @@ Dans _toSearch_, passez l'expression à trouver dans la collection. Vous pouvez 
 - la valeur null,
 - une référence d'objet ou de collection.
 
-_toSearch_ must match exactly the element to find (the same rules as for the equality operator are applied).
+_toSearch_ doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
-Optionally, you can pass the index of collection from which to start a reverse search in _startFrom_.
+Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans _startFrom_.
 
-- If _startFrom_ >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
+- Si _startFrom_ >= taille de la collection (coll.length-1), l'ensemble de la collection est évalué (défaut).
 - Si _startFrom_ < 0, il est recalculé comme _startFrom:=startFrom+length_ (il est considéré comme partant de la fin de la collection). Si la position calculée est négative, -1 est retourné (la collection n'est pas évaluée).
-  **Note:** Even if _startFrom_ is negative, the collection is still searched from right to left.
-- If _startFrom_ = 0, -1 is returned, which means the collection is not searched.
+  **Note** : Même si _startFrom_ est négatif, la recherche est effectuée de la droite vers la gauche.
+- Si _startFrom_ = 0, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.
 
 #### Exemple
 
@@ -1871,9 +1877,9 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 #### Description
 
-The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+La propriété `.length` <!-- REF #collection.length.Summary -->renvoie le nombre d'éléments de la collection<!-- END REF -->.
 
-The `.length` property is initialized when the collection is created. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. This property is **read-only** (you cannot use it to set the size of the collection).
+La propriété `.length` est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en **lecture seulement** (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).
 
 #### Exemple
 
@@ -1914,7 +1920,7 @@ The `.length` property is initialized when the collection is created. Elle est a
 
 #### Description
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the _formula_ 4D function or _methodName_ method on each element of the original collection<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à _formula_ ou _methodName_ en utilisant le(s) paramètre(s) _param_. `.map()` always returns a collection with the same size as the original collection, except if _$1.stop_ was used (see below).
+La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D _formula_ ou de la méthode _methodName_ sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à _formula_ ou _methodName_ en utilisant le(s) paramètre(s) _param_. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si _$1.stop_ a été utilisé (voir ci-dessous).
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -1972,15 +1978,15 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 #### Description
 
-The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+La fonction `.max()` <!-- REF #collection.max().Summary -->renvoie l'élément ayant la valeur la plus élevée dans la collection<!-- END REF --> (le dernier élément de la collection si elle était triée par ordre croissant à l'aide de la fonction [`.sort()`](#sort)).
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
+Si la collection contient différents types de valeurs, la fonction `.max()` renverra la valeur maximale du dernier type d'élément dans l'ordre de la liste des types (voir la description de [`.sort()`](#sort)).
 
-If the collection contains objects, pass the _propertyPath_ parameter to indicate the object property whose maximum value you want to get.
+Si la collection contient des objets, passez le paramètre _propertyPath_ pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
 
-If the collection is empty, `.max()` returns _Undefined_.
+Si la collection est vide, `.max()` retourne _Undefined_.
 
 #### Exemple
 
@@ -2022,15 +2028,15 @@ If the collection is empty, `.max()` returns _Undefined_.
 
 #### Description
 
-The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+La fonction `.min()` <!-- REF #collection.min().Summary -->renvoie l'élément ayant la plus petite valeur dans la collection<!-- END REF --> (le premier élément de la collection si elle était triée par ordre croissant à l'aide de la fonction [`.sort()`](#sort)).
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
+Si la collection contient différents types de valeurs, la fonction `.min()` renverra la valeur minimale du premier type d'élément dans l'ordre de la liste des types (voir la description de [`.sort()`](#sort)).
 
-If the collection contains objects, pass the _propertyPath_ parameter to indicate the object property whose minimum value you want to get.
+Si la collection contient des objets, passez le paramètre _propertyPath_ pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur minimum.
 
-If the collection is empty, `.min()` returns _Undefined_.
+Si la collection est vide, `.min()` retourne _Undefined_.
 
 #### Exemple
 
@@ -2063,21 +2069,21 @@ If the collection is empty, `.min()` returns _Undefined_.
 
 <!-- REF #collection.multiSort().Params -->
 
-| Paramètres | Type                        |     | Description                                                                                                                                                   |
-| ---------- | --------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function |  -> | Objet formule                                                                                                                                                 |
-| colsToSort | Collection                  |  -> | Collection of collections and/or objects with {`collection`:_colToSort_;`order`:`ck ascending` or `ck descending`} properties |
-| Résultat   | Collection                  |  <- | Collection d'origine triée                                                                                                                                    |
+| Paramètres | Type                        |     | Description                                                                                                                                                        |
+| ---------- | --------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| formula    | 4D.Function |  -> | Objet formule                                                                                                                                                      |
+| colsToSort | Collection                  |  -> | Collection de collections et/ou d'objets ayant des propriétés {`collection`:_colToSort_;`order`:`ck ascendant` ou `ck descendant`} |
+| Résultat   | Collection                  |  <- | Collection d'origine triée                                                                                                                                         |
 
 <!-- END REF -->
 
 #### Description
 
-The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
+La fonction `.multiSort()` <!-- REF #collection.multiSort().Summary -->vous permet d'effectuer un tri synchronisé à plusieurs niveaux sur un ensemble de collections<!-- END REF -->.
 
-> This function modifies the original collection as well as all collections used in _colsToSort_ parameter.
+> Cette fonction modifie la collection d'origine ainsi que toutes les collections utilisées dans le paramètre _colsToSort_ .
 
-If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
+Si `.multiSort()` est appelé sans paramètres, la fonction a le même effet que la fonction [`.sort()`](#sort) : la collection est triée (uniquement les valeurs scalaires) par défaut dans l'ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1. Null
 2. booléens
@@ -2089,32 +2095,32 @@ If `.multiSort()` is called with no parameters, the function has the same effect
 
 **Tri synchronisé à un niveau**
 
-To sort several collections synchronously, just pass in _colsToSort_ a collection of collections to sort. Vous pouvez passer un nombre illimité de collections. The original collection will be sorted in ascending order and all _colsToSort_ collections will be sorted in a synchronized manner.
+Pour trier plusieurs collections de manière synchronisée, il suffit de passer dans _colsToSort_ une collection de collections à trier. Vous pouvez passer un nombre illimité de collections. La collection originale sera triée par ordre croissant et toutes les collections _colsToSort_ seront triées de manière synchronisée.
 
 :::note
 
-All _colsToSort_ collections must have the same number of elements, otherwise an error is returned.
+Toutes les collections _colsToSort_ doivent avoir le même nombre d'éléments, sinon une erreur est renvoyée.
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a _formula_ ([Formula object](FunctionClass.md#formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if _$1.value_ is less than _$1.value2_, **False** if _$1.value_ is greater than _$1.value2_. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir _formula_ ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si _$1.value_ est inférieur à _$1.value2_, **False** si _$1.value_ est supérieur à _$1.value2_. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - _$1.value_ (any type): first element value to be compared
-  - _$1.value2_ (any type): second element value to be compared
+  - _$1.value_ (tout type) : valeur du premier élément à comparer
+  - _$1.value2_ (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 **Tri synchronisé à plusieurs niveaux**
 
-Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:_colToSort_;`order`:`ck ascending` or `ck descending`} properties instead of the _colToSort_ itself for every collection to use as sub-level.
+Pour définir un tri synchronisé à plusieurs niveaux, vous devez transmettre un objet contenant les propriétés {`collection`:_colToSort_;`order`:`ck ascending` ou `ck descending`} au lieu d'une collection _colToSort_ pour chaque collection à utiliser en ta
 
-The sort levels are determined by the order in which the collections are passed in the _colsToSort_ parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+Les niveaux de tri sont déterminés par l'ordre dans lequel les collections sont passées dans le paramètre _colsToSort_ : la position d'un objet `collection`/`order` dans la syntaxe détermine son niveau de tri.
 
 :::note
 
-The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+La fonction `.multiSort()` utilise un algorithme de tri [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) .
 
 :::
 
@@ -2203,37 +2209,38 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 | ----------- | ---------- | :-: | --------------------------------------------------------------------------------------------------- |
 | pathStrings | Text       |  -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
 | pathObjects | Collection |  -> | Collection d'objets critère                                                                         |
-| ascOrDesc   | Integer    |  -> | `ck ascending` or `ck descending` (scalar values)                                |
+| ascOrDesc   | Integer    |  -> | `ck ascending` ou `ck descending` (valeurs scalaires)                            |
 | Résultat    | Collection |  <- | Copiée triée de la collection (shallow copy)                                     |
 
 <!-- END REF -->
 
 #### Description
 
-The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
+La fonction `.orderBy()` <!-- REF #collection.orderBy().Summary -->renvoie une nouvelle collection contenant tous les éléments de la collection dans l'ordre spécifié<!-- END REF -->.
 
-This function returns a _shallow copy_, which means that objects or collections in both collections share the same reference. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+Cette fonction retourne une _shallow copy_ (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-Si vous ne passez aucun paramètre, la fonction classe les valeurs scalaires de la collection dans un ordre croissant (les autres types d'éléments tels que les objets ou les collections sont renvoyés avec un ordre interne). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the _ascOrDesc_ parameter (see below).
+Si vous ne passez aucun paramètre, la fonction classe les valeurs scalaires de la collection dans un ordre croissant (les autres types d'éléments tels que les objets ou les collections sont renvoyés avec un ordre interne). Vous pouvez modifier ce tri automatique par défaut en passant la constante `ck ascending` ou `ck descending` dans le paramètre _ascOrDesc_ (voir ci-dessous).
 
 Vous pouvez également passer des critères afin de configurer le tri des éléments de la collection. Trois syntaxes sont prises en charge pour ce paramètre :
 
-- _pathStrings_ : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). _pathStrings_ contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. L'ordre dans lequel les propriétés sont passées détermine la priorité de tri des éléments de la collection. Par défaut, les propriétés sont triées pas ordre croissant. Vous pouvez définir l'ordre de tri de chaque propriété dans la formule de critère, séparée du chemin de propriété par un simple espace : passez "asc" pour trier par ordre croissant ou "desc" pour un ordre décroissant.
+- _pathStrings_ : Texte (formule). **Syntaxe** : `propertyPath1 {desc ou asc}, propertyPath2 {desc ou asc},...` (défaut : asc). _pathStrings_ contient une formule constituée de 1 à N chemin(s) de propriété(s) et (optionnellement) ordres de tri, séparés par des virgules. L'ordre dans lequel les propriétés sont passées détermine la priorité de tri des éléments de la collection. Par défaut, les propriétés sont triées pas ordre croissant. Vous pouvez définir l'ordre de tri de chaque propriété dans la formule de critère, séparée du chemin de propriété par un simple espace : passez "asc" pour trier par ordre croissant ou "desc" pour un ordre décroissant.
 
-- _pathObjects_ : Collection. You can add as many objects in the _pathObjects_ collection as necessary. Par défaut, les propriétés sont triées par ordre croissant ("descending" est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
+- _pathObjects_ : Collection. Vous pouvez ajouter autant d'objets dans la collection _pathObjects_ que nécessaire. Par défaut, les propriétés sont triées par ordre croissant ("descending" est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
 
 ```4d
 {
     "propertyPath": string,
+
 
     "descending": boolean
 
 }
 ```
 
-- _ascOrDesc_ : Integer. You pass one of the following constants from the **Objects and collections** theme:
+- _ascOrDesc_ : Integer. Passez une des constantes suivantes du thème **Objets et collections** :
 
   | Constante     | Type    | Valeur | Commentaire                                                             |
   | ------------- | ------- | ------ | ----------------------------------------------------------------------- |
@@ -2350,9 +2357,9 @@ Tri avec un chemin de propriété :
 
 #### Description
 
-The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the _formula_ 4D function or _methodName_ method<!-- END REF -->.
+La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->renvoie une nouvelle collection contenant tous les éléments de la collection dans l'ordre défini par la fonction 4D _formula_ ou la méthode _methodName_<!-- END REF -->.
 
-This function returns a _shallow copy_, which means that objects or collections in both collections share the same reference. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+Cette fonction retourne une _shallow copy_ (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -2362,18 +2369,18 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 
 - soit _methodName_, le nom d'une méthode projet (texte).
 
-In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide _extraParam_ parameters to the callback if necessary.
+Dans la callback, passez votre code qui compare deux valeurs et retourne **true** si la première valeur est inférieure à la seconde valeur. Vous pouvez fournir des paramètres _extraParam_ à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - _$1.value_ (any type): first element value to be compared
-  - _$1.value2_ (any type): second element value to be compared
+  - _$1.value_ (tout type) : valeur du premier élément à comparer
+  - _$1.value2_ (tout type) : valeur du second élément à comparer
   - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
-- _$1.result_ (boolean): **true** if _$1.value < $1.value2_, **false** otherwise
+- _$1.result_ (booléen): **true** si _$1.value < $1.value2_, **false** sinon
 
 #### Exemple 1
 
@@ -2381,10 +2388,10 @@ Vous souhaitez trier une collection de chaînes contenant des nombres par valeur
 
 ```4d
  var $c; $c2; $c3 : Collection
- $c:=New collection
- $c.push("33";"4";"1111";"222")
- $c2:=$c.orderBy() //$c2=["1111","222","33","4"], alphabetical order
- $c3:=$c.orderByMethod(Formula(Num($1.value)<Num($1.value2))) // $c3=["4","33","222","1111"]
+ $c:=Newcollection
+ $c.push("33" ; "4" ; "1111" ; "222")
+ $c2:=$c.orderBy() //$c2=["1111", "222", "33", "4"], ordre alphabétique
+ $c3:=$c.orderByMethod(Formula(Num($1.value)<Num($1.value2))) // $c3=["4", "33", "222", "1111"]
 ```
 
 #### Exemple 2
@@ -2415,11 +2422,11 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-The _**sortCollection**_ method:
+La méthode _**sortCollection**_ :
 
 ```4d
 var $1 : Object
-var $2: Integer // sort option
+var $2: Integer // option de tri
 
 $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ```
@@ -2450,24 +2457,24 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### Description
 
-The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
+La fonction `.pop()` <!-- REF #collection.pop().Summary -->supprime le dernier élément de la collection et le renvoie comme résultat de la fonction<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
-When applied to an empty collection, `.pop()` returns _**undefined**_.
+Lorsqu'elle est appliquée à une collection vide, .`pop()` retourne _**undefined**_.
 
 #### Exemple
 
-`.pop()`, used in conjunction with [`.push()`](#push), can be used to implement a first-in, last-out stack feature:
+`.pop()`, combinée à [`.push()`](#push), peut être utilisée pour implémenter une fonctionnalité first-in last-out de traitement de données empilées :
 
 ```4d
  var $stack : Collection
  $stack:=New collection //$stack=[]
  $stack.push(1;2) //$stack=[1,2]
- $stack.pop() //$stack=[1]  Returns 2
+ $stack.pop() //$stack=[1]  retourne 2
  $stack.push(New collection(4;5)) //$stack=[[1,[4,5]]
- $stack.pop() //$stack=[1]  Returns [4,5]
- $stack.pop() //$stack=[]  Returns 1
+ $stack.pop() //$stack=[1]  retourne [4,5]
+ $stack.pop() //$stack=[]  retourne 1
 ```
 
 <!-- END REF -->
@@ -2490,14 +2497,14 @@ When applied to an empty collection, `.pop()` returns _**undefined**_.
 
 | Paramètres | Type       |     | Description                                             |
 | ---------- | ---------- | :-: | ------------------------------------------------------- |
-| element    | Mixed      |  -> | Élément(s) à ajouter à la collection |
+| element    | any        |  -> | Élément(s) à ajouter à la collection |
 | Résultat   | Collection |  <- | Collection originale contenant des éléments ajoutés     |
 
 <!-- END REF -->
 
 #### Description
 
-The `.push()` function <!-- REF #collection.push().Summary -->appends one or more _element_(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
+La fonction `.push()` <!-- REF #collection.push().Summary -->ajoute un ou plusieurs _element_(s) à la fin de l'instance de collection et renvoie la collection modifiée<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
@@ -2531,21 +2538,22 @@ Vous souhaitez trier la collection obtenue :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 17 R5   | Prise en charge de querySettings |
-| v16 R6  | Ajout                            |
+| Release | Modifications                                                                    |
+| ------- | -------------------------------------------------------------------------------- |
+| 20 R6   | Prise en charge des recherches utilisant des références d'objet ou de collection |
+| 17 R5   | Prise en charge de querySettings                                                 |
+| v16 R6  | Ajout                                                                            |
 
 </details>
 
-<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 <!-- REF #collection.query().Params -->
 
 | Paramètres    | Type       |     | Description                                                                                                     |
 | ------------- | ---------- | :-: | --------------------------------------------------------------------------------------------------------------- |
 | queryString   | Text       |  -> | Critère(s) de recherche                                                                      |
-| value         | Mixed      |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
+| value         | any        |  -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
 | querySettings | Object     |  -> | Options de requête : paramètres, attributs                                                      |
 | Résultat      | Collection |  <- | Élément(s) correspondant à queryString dans la collection                                    |
 
@@ -2553,19 +2561,200 @@ Vous souhaitez trier la collection obtenue :
 
 #### Description
 
-The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by _queryString_ and (optionally) _value_ or _querySettings_. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.query()` <!-- REF #collection.query().Summary -->renvoie tous les éléments d'une collection d'objets qui correspondent aux conditions de recherche <!-- END REF -->définies par _queryString_ et (éventuellement) _value_ ou _querySettings_. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+
+Une collection vide est renvoyée si la collection dans laquelle la requête est exécutée ne contient pas la _value_ recherchée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-The _queryString_ parameter uses the following syntax:
+#### paramètre queryString
+
+Le paramètre _queryString_ doit respecter la syntaxe suivante :
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using _queryString_, _value_ and _querySettings_ parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
+où :
 
-> Formulas are not supported by the `collection.query()` function, neither in the _queryString_ parameter nor as _formula_ object parameter.
+- **propertyPath** : chemin de la propriété sur laquelle vous voulez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple "pays") ou un chemin d'attribut valide (par exemple "pays.nom"). Dans le cas d'un chemin d'accès à un attribut dont le type est `Collection`, la notation `[]` est utilisée pour traiter toutes les occurrences (par exemple `children[].age`).
+
+- **comparator** : symbole qui compare _propertyPath_ et _value_. Les symboles suivants sont pris en charge :
+
+| Comparaison                             | Symbole(s) | Commentaire                                                                                                                                                                                                                                       |
+| --------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Egal à                                  | =, ==                         | Retourne les données correspondantes, prend en charge le joker de recherche (@), ne tient pas compte de la casse et est non diacritique.                                                          |
+|                                         | ===, IS                       | Retourne les données correspondantes, considère le @ comme un caractère standard, ne tient pas compte de la casse et est non diacritique                                                                                             |
+| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Équivalent à "Condition Not appliquée à une assertion" ([voir ci-dessous](#not-equal-to-in-collections)).           |
+|                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                                                                           |
+| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Équivalent à "Not equal to" ([voir ci-dessous](#not-equal-to-in-collections)). |
+| Inférieur à                             | <                             |                                                                                                                                                                                                                                                   |
+| Supérieur à                             | >                             |                                                                                                                                                                                                                                                   |
+| Inférieur ou égal à                     | <=                            |                                                                                                                                                                                                                                                   |
+| Supérieur ou égal à                     | > =                           |                                                                                                                                                                                                                                                   |
+| Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
+
+- **valeur** : valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de n'importe quelle valeur d'expression constante correspondant au type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
+  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+  - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+  - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
+  - Constantes de type **date** : "YYYY-MM-DD" format
+  - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
+  - Dans le cas d'une recherche avec un comparateur IN, _value_doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+
+- **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
+
+| Conjonction | Symbole(s)                                          |
+| ----------- | ---------------------------------------------------------------------- |
+| AND         | &, &&, and |
+| OU          | \|,\|\|, or                                                            |
+
+#### Utilisation de guillemets
+
+Lorsque vous utilisez des guillemets dans des recherches, vous devez utiliser des guillemets simples ' ' à l'intérieur de la requête et des guillemets doubles " " pour encadrer la requête, sinon une erreur est renvoyée. Par exemple :
+
+```4d
+"employee.name = 'smith' AND employee.firstname = 'john'"
+```
+
+> Les guillemets simples (') ne sont pas pris en charge dans les valeurs recherchées car ils casseraient la chaîne de recherche. Par exemple, "comp.name = 'John's pizza' " génèrera une erreur. Si vous devez rechercher des valeurs contenant des guillemets simples, il est nécessaire d'utiliser des placeholders (voir ci-dessous).
+
+#### Utilisation de parenthèses
+
+Vous pouvez utiliser des parenthèses dans la recherche afin de prioriser les calculs. Par exemple, vous pouvez organiser une recherche de la manière suivante :
+
+```4d
+"(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
+```
+
+#### Utilisation de placeholders
+
+4D vous permet d'utiliser des placeholders pour les arguments _propertyPath_ et _value_ dans le paramètre _queryString_. Un placeholder est un paramètre que vous insérez dans des chaines de recherche et qui est remplacé par une autre valeur au moment où la chaîne de recherche est évaluée. La valeur des placeholders est évaluée une seule fois, au début de la requête ; elle n'est pas évaluée pour chaque élément.
+
+Il existe deux types de placeholders : les **placeholders indexés** et les **placeholders nommés**.
+
+- **Placeholders indexés** : les paramètres sont insérés en tant que `:paramIndex` (par exemple ":1", ":2"...) dans _queryString_ et leurs valeurs correspondantes sont fournies par la séquence de paramètres _value_. Vous pouvez utiliser jusqu'à 128 paramètres _value_.
+
+Voici un exemple :
+
+```4d
+$c:=$myCol.query(":1=:2";"city";"Chicago")
+```
+
+- **placeholders nommés** : les paramètres sont insérés en tant que `:paramName` (par exemple ":myparam") et leurs valeurs sont fournies dans les objets "attributes" et/ou "parameters" dans le paramètre _querySettings_.
+
+Voici un exemple :
+
+```4d
+$o.attributes:={att:"city"}
+$o.parameters:={name:"Chicago")
+$c:=$myCol.query(":att=:name";$o)
+```
+
+Vous pouvez combiner tous les types d'arguments dans _queryString_. Une _queryString_ peut contenir, pour les paramètres _propertyPath_ et _value_ :
+
+- des valeurs directes (pas de placeholders)
+- des placeholders indexés et/ou nommés.
+
+L'utilisation de placeholders dans les recherches **est recommandée** pour les raisons suivantes :
+
+1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
+
+```4d
+ $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
+ $result:=$col.query($vquery)
+```
+
+Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone _myname_ une chaîne du type _"smith OR status='private'_, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
+
+Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
+
+```4d
+ $result:=$col.query("status='public' & name=:1";myname)
+```
+
+Dans ce cas, si l'utilisateur saisit _smith OR status='private'_ dans la zone _myname_, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
+
+2. Cela évite d'avoir à se préoccuper des problèmes de formatage ou de caractères, en particulier lors de la gestion des paramètres _propertyPath_ ou _value_ qui peuvent contenir des caractères non alphanumériques tels que ".", "['...
+
+3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
+
+```4d
+$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+$result2:=$col.query("company.name = :1";"John's Pizzas")
+```
+
+> L'utilisation d'une [**référence de collection** ou **référence d'objet**](#object-or-collection-reference-as-value) dans le paramètre _value_ n'est pas prise en charge avec cette syntaxe. Vous devez utiliser le paramètre [_querySettings_](#querysettings-parameter).
+
+#### Recherche de valeurs null
+
+Lorsque vous recherchez les valeurs null, vous ne pouvez pas utiliser la syntaxe placeholder car le moteur de recherche considère la valeur null comme une valeur de comparaison invalide. Par exemple, si vous exécutez la recherche suivante :
+
+```4d
+$vSingles:=$colPersons.query("spouse = :1";Null) // ne fonctionnera PAS
+```
+
+Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée par 4D comme une erreur résultant de l'évaluation du paramètre (pouvant être, par exemple, un attribut provenant d'une autre recherche). Pour ce type de recherche, vous devez utiliser la syntaxe de recherche directe :
+
+```4d
+$vSingles:=$colPersons.query("spouse = null") //syntaxe correcte
+```
+
+#### Référence d'objet ou de collection comme value
+
+Vous pouvez rechercher dans une collection en utilisant une référence d'objet ou une référence de collection comme paramètre _value_ à comparer. La recherche fera correspondre les objets de la collection qui font référence à (pointent vers) la même **instance** d'objet ou de collection.
+
+Les comparateurs suivants sont pris en charge :
+
+| Comparaison  | Symbole(s) |
+| ------------ | ----------------------------- |
+| Egal à       | =, ==                         |
+| Différent de | #, !=                         |
+
+Pour construire une recherche avec une référence d'objet ou de collection, vous devez utiliser la syntaxe du paramètre _querySettings_. Exemple avec une référence d'objet :
+
+```4d
+var $o1:={a: 1}
+var $o2:={a: 1} //même objet mais autre référence
+var $o3:=$o1 //même objet et même référence
+
+var $col; $colResult : Collection
+
+$col:=[{o: $o1}; {o: $o2}; {o: $o3}]
+$colResult:=$col.query("o = :v" ; {parameters : {v: $o3}})
+	//$colResult.length=2
+	//$colResult[0].o=$o1 est true
+	//$colResult[1].o=$o1 est true
+
+```
+
+Exemple avec une référence de collection :
+
+```4d
+
+$c1:=[1 ; 2 ; 3]
+$c2:=[1 ; 2 ; 3] //même collection mais autre référence
+$c3:=$c1 //même collection et même référence
+
+$col:=[{c: $c1}; {c: $c2}; {c: $c3}]
+$col2:=$col.query("c = :v" ; {parameters: {v: $c3}})
+	//$col2.length=2
+	//$col2[0].c=$c1 est true
+	//$col2[1].c=$c1 est true
+
+```
+
+#### Paramètre querySettings
+
+Dans le paramètre _querySettings_, vous pouvez passer un objet contenant des placeholders de recherche en tant qu'objets. Les propriétés suivantes sont prises en charge :
+
+| Propriété  | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters | Object | **Placeholders nommés pour les valeurs** utilisées dans _queryString_. Les valeurs sont exprimées sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour une valeur dans _queryString_ (":placeholder") et où valeur correspond à la valeur à comparer. Vous pouvez combiner, dans une même recherche, des placeholders indexés (valeurs passées directement dans les paramètres <em x-id="3">value</em>) et les valeurs des placeholders nommés.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| attributes | Object | **Placeholders nommés pour les chemins d'attributs** utilisés dans _queryString_. Les attributs sont exprimés sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour un chemin d'attribut dans _queryString_ (":placeholder"), et où valeur peut être une chaine ou une collection de chaines. Chaque valeur est un chemin qui peut désigner une propriété dans un objet de la collection<table><tr><th>Type d'objet</th><th>Description</th></tr><tr><td>Chaîne</td><td>Chemin d'accès de l'attribut exprimé à l'aide de la notation à point, par exemple "name" ou "user.address.zipCode"</td></tr><tr><td>Collection de chaînes</td><td>Chaque chaîne de la collection représente un niveau d'attributePath, par exemple \["name"] ou \["user", "address", "zipCode"]. L'utilisation d'une collection permet de rechercher des attributs dont les noms ne sont pas compatibles avec la notation à points, par exemple \["4Dv17.1", "en/fr"]</td></tr></table>Vous pouvez mélanger des placeholders indexés (valeurs passées directement dans les paramètres _value_) et des valeurs de placeholders nommés dans la même requête. |
+
+> L'utilisation de ce paramètre est obligatoire si vous souhaitez rechercher dans une collection en [utilisant une **référence de collection** ou une **référence d'un objet**](#référence-d-objet-ou-de-collection-comme-value).
 
 #### Exemple 1
 
@@ -2625,7 +2814,19 @@ Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 #### Exemple 3
 
-More examples of queries can be found in the `dataClass.query()` page.
+Recherche avec des dates :
+
+```4d
+
+$entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
+$entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
+```
+
+:::info
+
+Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
+
+:::
 
 <!-- END REF -->
 
@@ -2646,19 +2847,19 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 <!-- REF #collection.reduce().Params -->
 
-| Paramètres | Type                                            |     | Description                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objet formule                                                                     |
-| methodName | Text                                            |  -> | Nom de méthode                                                                    |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of _formula_ or _methodName_ |
-| param      | expression                                      |  -> | Paramètre(s) à passer                                          |
-| Résultat   | Text, Number, Object, Collection, Date, Boolean |  <- | Résultat de la valeur de l'accumulateur                                           |
+| Paramètres | Type                                            |     | Description                                                                            |
+| ---------- | ----------------------------------------------- | :-: | -------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objet formule                                                                          |
+| methodName | Text                                            |  -> | Nom de méthode                                                                         |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valeur à utiliser comme premier argument du premier appel de _formula_ ou _methodName_ |
+| param      | expression                                      |  -> | Paramètre(s) à passer                                               |
+| Résultat   | Text, Number, Object, Collection, Date, Boolean |  <- | Résultat de la valeur de l'accumulateur                                                |
 
 <!-- END REF -->
 
 #### Description
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the _formula_ or _methodName_ callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la callback _formula_ ou le _methodName_ à un accumulateur et à chaque élément de la collection (de gauche à droite) pour les réduire à une seule valeur<!-- END REF -->.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -2667,20 +2868,20 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - _formula_ (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit _methodName_, le nom d'une méthode projet (texte).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into _$1.accumulator_, which is returned in _$1.value_.
+La callback prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans _$1.accumulator_, qui est retourné dans _$1.value_.
 
-You can pass the value to initialize the accumulator in _initValue_. If omitted, _$1.accumulator_ starts with _Undefined_.
+Vous pouvez passer la valeur pour initialiser l'accumulateur dans _initValue_. S'il est omis, _$1.accumulator_ commence par _Undefined_.
 
 La callback reçoit les paramètres suivants :
 
-- in _$1.value_: element value to be processed
-- in _$2: param_
-- in _$N..._: _paramN..._
+- dans _$1.value_ : valeur de l'élément à évaluer
+- dans $2 : _param_
+- dans _$N..._ : _paramN..._
 
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
-- _$1.accumulator_: value to be modified by the function and which is initialized by _initValue_.
-- _$1.stop_ (boolean, optional): **true** to stop the method callback. La valeur retournée est la dernière calculée.
+- _$1.accumulator_: valeur à modifier par la fonction et qui est initialisée par _initValue_.
+- _$1.stop_ (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 #### Exemple 1
 
@@ -2704,7 +2905,7 @@ Cet exemple permet de réduire plusieurs éléments de collection à un seul :
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following _**Flatten**_ method:
+Avec la méthode _**Flatten**_ suivante :
 
 ```4d
  If($1.accumulator=Null)
@@ -2731,19 +2932,19 @@ With the following _**Flatten**_ method:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| Paramètres | Type                                            |     | Description                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objet formule                                                                     |
-| methodName | Text                                            |  -> | Nom de méthode                                                                    |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of _formula_ or _methodName_ |
-| param      | expression                                      |  -> | Paramètre(s) à passer                                          |
-| Résultat   | Text, Number, Object, Collection, Date, Boolean |  <- | Résultat de la valeur de l'accumulateur                                           |
+| Paramètres | Type                                            |     | Description                                                                            |
+| ---------- | ----------------------------------------------- | :-: | -------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objet formule                                                                          |
+| methodName | Text                                            |  -> | Nom de méthode                                                                         |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valeur à utiliser comme premier argument du premier appel de _formula_ ou _methodName_ |
+| param      | expression                                      |  -> | Paramètre(s) à passer                                               |
+| Résultat   | Text, Number, Object, Collection, Date, Boolean |  <- | Résultat de la valeur de l'accumulateur                                                |
 
 <!-- END REF -->
 
 #### Description
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the _formula_ or _methodName_ callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La fonction `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applique la callback _formula_ ou _methodName_ à un accumulateur et chaque élément de la collection (de droite à gauche) pour la réduire à une valeur unique<!-- END REF -->.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -2752,27 +2953,27 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - _formula_ (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit _methodName_, le nom d'une méthode projet (texte).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into _$1.accumulator_, which is returned in _$1.value_.
+La callback prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans _$1.accumulator_, qui est retourné dans _$1.value_.
 
-You can pass the value to initialize the accumulator in _initValue_. If omitted, _$1.accumulator_ starts with _Undefined_.
+Vous pouvez passer la valeur pour initialiser l'accumulateur dans _initValue_. S'il est omis, _$1.accumulator_ commence par _Undefined_.
 
 La callback reçoit les paramètres suivants :
 
-- in _$1.value_: element value to be processed
-- in _$2: param_
-- in _$N..._: _paramN..._
+- dans _$1.value_ : valeur de l'élément à évaluer
+- dans $2 : _param_
+- dans _$N..._ : _paramN..._
 
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
-- _$1.accumulator_: value to be modified by the function and which is initialized by _initValue_.
-- _$1.stop_ (boolean, optional): **true** to stop the method callback. La valeur retournée est la dernière calculée.
+- _$1.accumulator_: valeur à modifier par la fonction et qui est initialisée par _initValue_.
+- _$1.stop_ (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 #### Exemple 1
 
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //86400
 
 ```
 
@@ -2790,7 +2991,7 @@ Cet exemple permet de réduire plusieurs éléments de collection à un seul :
  $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
 ```
 
-With the following _**Flatten**_ method:
+Avec la méthode _**Flatten**_ suivante :
 
 ```4d
 	//Flatten project method
@@ -2828,19 +3029,19 @@ With the following _**Flatten**_ method:
 
 #### Description
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified _index_ position in the collection and returns the edited collection<!-- END REF -->.
+La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la collection à partir de la position spécifiée dans _index_ et renvoie la collection modifiée<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
-In _index_, pass the position where you want the element to be removed from the collection.
+Dans _index_, passez le numéro de l'élément à partir duquel la suppression doit débuter dans la collection.
 
-> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. If _index_ is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. Si _index_ est supérieur à la taille de la collection, l'_index_ de départ réel sera fixé à la longueur (length) de la collection.
 
 - Si _index_ < 0, il est recalculé comme _index:=index+length_ (il est considéré comme décalage depuis la fin de la collection).
-- If the calculated value < 0, _index_ is set to 0.
-- If the calculated value > the length of the collection, _index_ is set to the length.
+- Si la valeur recalculée est négative, _index_ prend la valeur 0.
+- Si valeur recalculée > longueur de la collection, _index_ prend comme valeur la taille de la collection.
 
-In _howMany_, pass the number of elements to remove from _index_. If _howMany_ is not specified, then one element is removed.
+Dans _howMany_, passez le nombre d'éléments à supprimer à partir de l'_index_. Si _howMany_ n'est pas spécifié, un élément est supprimé.
 
 Si vous essayez de supprimer un élément d'une collection vide, la méthode ne fait rien (aucune erreur n'est générée).
 
@@ -2883,14 +3084,14 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 
 #### Description
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+La fonction `.resize()` <!-- REF #collection.resize().Summary -->redéfinit la longueur de la collection à la nouvelle taille spécifiée et renvoie la collection redimensionnée<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
-- If _size_ < collection length, exceeding elements are removed from the collection.
-- If _size_ > collection length, the collection length is increased to size.
+- Si _size_ est inférieure à la longueur de la collection, les éléments excédentaires sont retirés de la collection.
+- Si _size_ > longueur de la collection, _size_ est la nouvelle longueur de la collection.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the _defaultValue_ parameter.
+Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre _defaultValue_.
 
 #### Exemple
 
@@ -2936,7 +3137,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### Description
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->renvoie une copie profonde de la collection avec tous ses éléments dans l'ordre inverse<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -2974,7 +3175,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Description
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+La fonction `.shift()` <!-- REF #collection.shift().Summary -->supprime le premier élément de la collection et le renvoie en tant que résultat de la fonction<!-- END REF -->.
 
 > Cette fonction modifie la collection d'origine.
 
@@ -3019,16 +3220,16 @@ Si la collection est vide, cette méthode ne fait rien.
 
 #### Description
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from _startFrom_ index to _end_ index (end not included). This function returns a _shallow copy_ of the collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.slice()` <!-- REF #collection.slice().Summary -->retourne une partie d'une collection dans une nouvelle collection<!-- END REF -->, sélectionnée de l'indice _startFrom_ à l'indice _end_ (_end_ non inclus). Cette fonction retourne une _copie superficielle_ de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-The returned collection contains the element specified by _startFrom_ and all subsequent elements up to, but not including, the element specified by _end_. If only the _startFrom_ parameter is specified, the returned collection contains all elements from _startFrom_ to the last element of the original collection.
+La collection retournée contient l'élément spécifié par _startFrom_ et tous les éléments suivants jusqu'à l'élément spécifié par _end_ (mais non compris). Si seul le paramètre _startFrom_ est spécifié, la collection retournée contient tous les éléments de _startFrom_ au dernier élément de la collection d'origine.
 
 - Si _startFrom_ < 0, il est recalculé comme _startFrom:=startFrom+length_ (il est considéré comme partant de la fin de la collection).
-- If the calculated value < 0, _startFrom_ is set to 0.
+- Si la valeur calculée est négative, _startFrom_ prend la valeur 0.
 - Si _end_ < 0 , il est recalculé comme _end:=end+length_.
-- If _end < startFrom_ (passed or calculated values), the method does nothing.
+- Si _end < startFrom_ (valeurs passées ou recalculées), la fonction ne fait rien.
 
 #### Exemple
 
@@ -3060,19 +3261,20 @@ The returned collection contains the element specified by _startFrom_ and all su
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type                        |     | Description                                  |
-| ---------- | --------------------------- | :-: | -------------------------------------------- |
-| startFrom  | Integer                     |  -> | Elément à partir duquel débuter l'évaluation |
-| formula    | 4D.Function |  -> | Objet formule                                |
-| methodName | Text                        |  -> | Nom de méthode                               |
-| param      | Mixed                       |  -> | Paramètre(s) à passer     |
-| Résultat   | Boolean                     |  <- | Vrai si au moins un élément a réussi le test |
+| Paramètres | Type |     | Description |
+| ---------- | ---- | :-: | ----------- |
+
+|startFrom |Integer|->|Index pour démarrer le test|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->|Nom d'une méthode|
+|param |any |->|Paramètre(s) à passer|
+|Resultat|Boolean|<-|Vrai si au moins un élément a réussi le test|
 
 <!-- END REF -->
 
 #### Description
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided _formula_ or _methodName_ code<!-- END REF -->.
+La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi le test implémenté dans le code _formula_ ou _methodName_ fourni<!-- END REF -->.
 
 Vous désignez le code 4D de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
 
@@ -3083,26 +3285,28 @@ La callback est appelée avec le(s) paramètre(s) passé(s) dans _param_ (facult
 
 La callback reçoit les paramètres suivants :
 
-- in _$1.value_: element value to be processed
-- in _$2: param_
-- in _$N..._: _paramN..._
+- dans _$1.value_ : valeur de l'élément à évaluer
+- dans $2 : _param_
+- dans _$N..._ : _paramN..._
 
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
-- (mandatory if you used a method) _$1.result_ (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- _$1.stop_ (boolean, optional): **true** to stop the method callback. La valeur retournée est la dernière calculée.
+- (obligatoire si vous avez utilisé une méthode) _$1.result_ (booléen) : **true** si l'évaluation de la valeur de l'élément est à vrai, **false** sinon.
+- _$1.stop_ (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
+Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de la collection retournant true, elle arrête d'appeler la callback et retourne **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in _startFrom_.
+Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans _startFrom_.
 
-- If _startFrom_ >= the collection's length, **False** is returned, which means the collection is not tested.
-- If _startFrom_ < 0, it is considered as the offset from the end of the collection.
+- Si _startFrom_ >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
+
+- Si _startFrom_ < 0, il est considéré comme le décalage depuis la fin de la collection.
+
 - Si _startFrom_ = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
 
-You want to know if at least one collection value is >0.
+Vous voulez savoir si au moins une valeur de la collection est >0.
 
 ```4d
  var $c : Collection
@@ -3149,11 +3353,11 @@ You want to know if at least one collection value is >0.
 
 #### Description
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine et retourne également la collection triée<!-- END REF --> .
 
 > Cette fonction modifie la collection d'origine.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1. Null
 2. booléens
@@ -3163,18 +3367,18 @@ If `.sort()` is called with no parameters, only scalar values (number, text, dat
 6. collections
 7. dates
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in _formula_ ([Formula object](FunctionClass.md)) or _methodName_ (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if _$1.value_ is less than _$1.value2_, **False** if _$1.value_ is greater than _$1.value2_. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans \*formula \* ([objet Formula](FunctionClass.md)) ou _methodName_ (Text) un callback qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si _$1.value_ est inférieur à _$1.value2_, **False** si _$1.value_ est supérieur à _$1.value2_. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 
 - $1 (object), où :
-  - _$1.value_ (any type): first element value to be compared
-  - _$1.value2_ (any type): second element value to be compared
+  - _$1.value_ (tout type) : valeur du premier élément à comparer
+  - _$1.value2_ (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
-- _$1.result_ (boolean): **true** if _$1.value < $1.value2_, **false** otherwise.
+- _$1.result_ (booléen) : **true** si _$1.value < $1.value2_, **false** sinon.
 
 #### Exemple 1
 
@@ -3199,7 +3403,7 @@ Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 var $col; $col2; $col3 : Collection
 $col:=New collection(33;4;66;1111;222)
 $col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
-$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sort: [1111,222,33,4,66]
+$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //tri alphabétique : [1111,222,33,4,66]
 ```
 
 <!-- END REF -->
@@ -3229,13 +3433,13 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 #### Description
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La fonction `.sum()` <!-- REF #collection.sum().Summary -->retourne la somme de toutes les valeurs de l'instance de collection<!-- END REF -->.
 
 Seuls les éléments ayant une valeur numérique sont pris en compte pour le calcul (les autres types d'éléments sont ignorés).
 
 Si la collection contient des objets, passez le paramètre _propertyPath_ pour indiquer la propriété d'objet à prendre en compte.
 
-`.sum()` returns 0 if:
+`.sum()` retourne 0 si :
 
 - la collection est vide,
 - la collection ne contient pas d'éléments numériques,
@@ -3290,7 +3494,7 @@ Si la collection contient des objets, passez le paramètre _propertyPath_ pour i
 
 #### Description
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given _value_(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+La fonction `.unshift()` <!-- REF #collection.unshift().Summary -->insère la/les _value_(s) donnée(s) au début de la collection <!-- END REF -->et renvoie la collection modifiée.
 
 > Cette fonction modifie la collection d'origine.
 

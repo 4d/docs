@@ -11,7 +11,7 @@ La arquitectura de seguridad ORDA se basa en los conceptos de privilegios, accio
 
 When web users or REST users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
 
-Every user request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
+Cada solicitud de usuario enviada dentro de la sesión se evalúa en función de los privilegios definidos en el archivo `roles.json` del proyecto.
 
 Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso adecuados, se genera un error de privilegio o, en el caso de que falte el permiso de Lectura en los atributos, no se envían.
 
@@ -34,7 +34,7 @@ Una acción de permiso definida en un nivel determinado se hereda por defecto en
 
 :::info
 
-Los permisos controlan el acceso a los objetos del almacén de datos. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case.
+Los permisos controlan el acceso a los objetos del almacén de datos. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
 
 :::
 
@@ -56,20 +56,20 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 - Un alias puede leerse tan pronto como los privilegios de sesión permitan el acceso al propio alias, aunque los privilegios de sesión no permitan el acceso a los atributos que resuelven el alias.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
-- Default values: in the current implementation, only _Null_ is available as default value.
+- Valores por defecto: en la implementación actual, solo _Null_ está disponible como valor por defecto.
 
 La definición de permisos requiere ser coherente, en particular:
 
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
-- **promote** permission also need **describe** permission.
+- los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
+- el permiso **promote** también necesita el permiso **describe**.
 
 ## Privilegios y roles
 
-A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Básicamente, un rol reúne varios privilegios para definir un perfil de usuario empresarial. Por ejemplo, "manageInvoices" podría ser un privilegio mientras que "secretary" podría ser un rol (que incluye "manageInvoices" y otros privilegios).
+Un \*\*privilegio \*\* es la capacidad técnica de ejecutar \*\*acciones \*\* en \*\*recursos \*\*, mientras que un **rol** es un privilegio publicado para ser utilizado por un administrador. Básicamente, un rol reúne varios privilegios para definir un perfil de usuario empresarial. Por ejemplo, "manageInvoices" podría ser un privilegio mientras que "secretary" podría ser un rol (que incluye "manageInvoices" y otros privilegios).
 
 Un privilegio o un rol pueden asociarse a varias combinaciones "acción + recurso". Se pueden asociar varios privilegios a una acción. Un privilegio puede incluir otros privilegios.
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
 - You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
 
@@ -99,53 +99,53 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## `roles.json` file
+## archivo `roles.json`
 
-The `roles.json` file describes the whole security settings for the project.
+El archivo `roles.json` describe todos los parámetros de seguridad del proyecto.
 
 :::note
 
-In a context other than _Qodly_ (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+En un contexto que no sea _Qodly_ (nube), debe crear este archivo en la siguiente ubicación: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
 
 :::
 
-The `roles.json` file syntax is the following:
+La sintaxis del archivo `roles.json` es la siguiente:
 
-| Nombre de propiedad |                                                                                     |                                                                                   | Tipo                               | Obligatorio | Descripción                                                                                  |
-| ------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------- | ----------- | -------------------------------------------------------------------------------------------- |
-| privileges          |                                                                                     |                                                                                   | Collection of `privilege` objects  | X           | Lista de privilegios definidos                                                               |
-|                     | \[].privilege  |                                                                                   | String                             |             | Nombre del privilegio                                                                        |
-|                     | \[].includes   |                                                                                   | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                                    |
-| roles               |                                                                                     |                                                                                   | Collection of `role` objects       |             | Lista de roles definidos                                                                     |
-|                     | \[].role       |                                                                                   | String                             |             | Nombre del rol                                                                               |
-|                     | \[].privileges |                                                                                   | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                                    |
-| permissions         |                                                                                     |                                                                                   | Object                             | X           | Lista de acciones permitidas                                                                 |
-|                     | allowed                                                                             |                                                                                   | Collection of `permission` objects |             | Lista de permisos permitidos                                                                 |
-|                     |                                                                                     | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                                         |
-|                     |                                                                                     | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|                     |                                                                                     | \[].read     | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].create   | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].update   | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].drop     | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].describe | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].execute  | Colección de cadenas               |             | Lista de privilegios                                                                         |
-|                     |                                                                                     | \[].promote  | Colección de cadenas               |             | Lista de privilegios                                                                         |
-| forceLogin          |                                                                                     |                                                                                   | Boolean                            |             | True to enable the ["forceLogin" mode](../REST/authUsers.md#force-login-mode)                |
+| Nombre de propiedad |                                                                                     |                                                                                   | Tipo                              | Obligatorio | Descripción                                                                                    |
+| ------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- | ----------- | ---------------------------------------------------------------------------------------------- |
+| privileges          |                                                                                     |                                                                                   | Colección de objetos `privilege`  | X           | Lista de privilegios definidos                                                                 |
+|                     | \[].privilege  |                                                                                   | String                            |             | Nombre del privilegio                                                                          |
+|                     | \[].includes   |                                                                                   | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                                      |
+| roles               |                                                                                     |                                                                                   | Colección de objetos `role`       |             | Lista de roles definidos                                                                       |
+|                     | \[].role       |                                                                                   | String                            |             | Nombre del rol                                                                                 |
+|                     | \[].privileges |                                                                                   | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                                      |
+| permissions         |                                                                                     |                                                                                   | Object                            | X           | Lista de acciones permitidas                                                                   |
+|                     | allowed                                                                             |                                                                                   | Colección de objetos `permission` |             | Lista de permisos permitidos                                                                   |
+|                     |                                                                                     | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                                           |
+|                     |                                                                                     | \[].type     | String                            | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method" |
+|                     |                                                                                     | \[].read     | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].create   | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].update   | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].drop     | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].describe | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].execute  | Colección de cadenas              |             | Lista de privilegios                                                                           |
+|                     |                                                                                     | \[].promote  | Colección de cadenas              |             | Lista de privilegios                                                                           |
+| forceLogin          |                                                                                     |                                                                                   | Boolean                           |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)              |
 
 :::caution Recordatorio
 
 - El nombre de privilegio "WebAdmin" está reservado a la aplicación. No se recomienda utilizar este nombre para los privilegios personalizados.
-- `privileges` and `roles` names are case insensitive.
+- los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.
 
 :::
 
-### `Roles_Errors.json` file
+### Archivo `Roles_Errors.json`
 
-The `roles.json` file is parsed by 4D at startup. Debe reiniciar la aplicación si desea que se tengan en cuenta las modificaciones en este archivo.
+El archivo `roles.json` es analizado por 4D al inicio. Debe reiniciar la aplicación si desea que se tengan en cuenta las modificaciones en este archivo.
 
-In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s).
+En caso de error(es) al analizar el archivo `roles.json`, 4D carga el proyecto pero desactiva la protección de acceso global - esto permite al desarrollador acceder a los archivos y solucionar el error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). Este archivo se elimina automáticamente cuando el archivo `roles.json` deja de contener errores.
 
-It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/architecture.md#logs), which means that there was a parsing error and that accesses will not limited. Puede escribir, por ejemplo:
+Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la carpeta [Logs](../Project/architecture.md#logs), lo que significa que se ha producido un error de análisis y que los accesos no estarán limitados. Puede escribir, por ejemplo:
 
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
@@ -158,9 +158,9 @@ End if
 
 ## Inicialización de privilegios para el despliegue
 
-By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. Esta configuración le permite desarrollar la aplicación sin tener que preocuparse por los accesos.
+Por defecto, si no se definen parámetros específicos en el archivo `roles.json`, los accesos no están limitados. Esta configuración le permite desarrollar la aplicación sin tener que preocuparse por los accesos.
 
-Sin embargo, cuando la aplicación está a punto de desplegarse, una buena práctica es bloquear todos los privilegios y, a continuación, configurar el archivo para que sólo abra las partes controladas a las sesiones autorizadas. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
+Sin embargo, cuando la aplicación está a punto de desplegarse, una buena práctica es bloquear todos los privilegios y, a continuación, configurar el archivo para que sólo abra las partes controladas a las sesiones autorizadas. Para bloquear todos los privilegios en todos los recursos, coloque el siguiente archivo `roles.json` en la carpeta de su proyecto (incluye ejemplos de métodos):
 
 ```json title="/Project/Sources/roles.json"
 {

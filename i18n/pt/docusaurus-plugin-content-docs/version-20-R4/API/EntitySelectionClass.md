@@ -464,7 +464,12 @@ A função devolve Null se o *index* estiver para além dos limites de selecçã
 #### Exemplo
 
 ```4d
-<em x-id="3">pathString</em> (Text) : Este parâmetro contém uma fórmula feita de rotas de atributo 1 a x (e opcionalmente) ordenação separado por vírgulas A sintaxe é:
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
 ```
 
 <!-- END REF -->
@@ -1880,7 +1885,7 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. Esta propriedade está disponível para objectos `EntitySelection` gerados através de consultas se a propriedade `"queryPath":true` tiver sido passada no parâmetro *querySettings* da função [`.query()`](#query).
 
-Para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
 
 <!-- END REF -->
 

@@ -3,7 +3,7 @@ id: manData
 title: Manipulation des données
 ---
 
-All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](ClassFunctions.md) can be accessed through REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
+Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
 
 ## Rechercher des données
 
@@ -17,7 +17,7 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Outre la récupération d'une seule entité dans une dataclass à l'aide de [{dataClass}({key})](dataClass.md#dataclasskey), vous pouvez également écrire une [fonction de classe](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une colle
 
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
@@ -27,11 +27,11 @@ Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$l
 
 ## Créer et gérer un entity set
 
-An entity set (aka _entity selection_) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+Un entity set (également appelé _entity selection_) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
 To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-To access the entity set, you must use `$entityset/{entitySetID}`, for example:
+Pour accéder à l'entity set, vous devez utiliser `$entityset/{entitySetID}`, par exemple :
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -39,7 +39,9 @@ By default, an entity set is stored for two hours; however, you can change the t
 
 If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
 
-Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche. Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set.
+Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche.
+
+Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set. However, by default their reference will remain in the entity set with an _undefined_ value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without _undefined_ entity references.
 
 Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
@@ -61,17 +63,17 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 
 ## Appeler les fonctions de classe du modèle de données
 
-You can call ORDA Data Model [user class functions](ClassFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Vous pouvez appeler des [fonctions de classe utilisateurs](ClassFunctions.md) ORDA du modèle de données via des requêtes POST, afin de pouvoir bénéficier de l'API de l'application ciblée. Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Paris"]`
+avec des données contenues dans le corps de la requête : `["Paris"]`
 
 > Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
 
 ## Selecting Attributes to get
 
-You can always define which attributes to return in the REST response after an initial request by passing their path in the request (_e.g._, `Company(1)/name,revenues/`)
+Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
 Vous pouvez appliquer ce filtre comme suit :
 
@@ -83,7 +85,7 @@ Vous pouvez appliquer ce filtre comme suit :
 |                      | {dataClass}:{attribute}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
 | Entity selection     | {dataClass}/{att1,att2...}/$entityset/{entitySetID}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
-The attributes must be delimited by a comma, _i.e._, `/Employee/firstName,lastName,salary`. Des attributs de stockage ou des attributs relationnels peuvent être transmis.
+Les attributs doivent être délimités par une virgule, c'est-à-dire `/Employee/firstName,lastName,salary`. Des attributs de stockage ou des attributs relationnels peuvent être transmis.
 
 ### Exemples
 
@@ -97,11 +99,11 @@ Vous pouvez appliquer cette méthode à :
 
 #### Exemple avec une dataclass
 
-The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
+Les requêtes suivantes retournent uniquement le prénom et le nom de la dataclass People (soit la dataclass entière, soit une sélection d'entités basée sur la recherche définie dans `$filter`).
 
 `GET  /rest/People/firstName,lastName/`
 
-**Result**:
+**Résultat** :
 
 ```
 {
@@ -140,7 +142,7 @@ The following requests returns only the first name and last name from the People
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
-**Result**:
+**Résultat** :
 
 ```
 {
@@ -165,7 +167,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 `GET  /rest/People(3)/firstName,lastName/`
 
-**Result**:
+**Résultat** :
 
 ```
 {
@@ -179,7 +181,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 `GET  /rest/People(3)/`
 
-**Result**:
+**Résultat** :
 
 ```
 {
@@ -208,13 +210,13 @@ Once you have [created an entity set](#creating-and-managing-entity-set), you ca
 
 `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
-## Affichage d'un attribut d'image
+## Affichage d'un attribut image
 
-Si vous souhaitez afficher intégralement un attribut d'image, saisissez ce qui suit :
+Si vous souhaitez afficher intégralement un attribut image, saisissez :
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
+Pour plus d'informations sur les formats d'image, veuillez vous référer à [`$imageformat`]($imageformat.md). Pour plus d'informations sur le paramètre version, reportez-vous à [`$version`]($version.md).
 
 ## Enregistrement d'un attribut BLOB sur le disque
 

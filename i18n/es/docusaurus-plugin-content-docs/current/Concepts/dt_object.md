@@ -227,6 +227,25 @@ Ejemplo:
  x:=vPtr->a //x=10
 ```
 
+## Operadores Objeto
+
+You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
+
+```4d
+var $o1:={a: 42} //reference to an instance
+var $o2:={a: 42} //reference to a different instance
+var $o3:=$o1 //reference to the same instance
+```
+
+Based upon the code above, the comparison table is:
+
+| Operación   | Sintaxis              | Devuelve | Expression | Valor |
+| ----------- | --------------------- | -------- | ---------- | ----- |
+| Igual       | objectRef = objectRef | Boolean  | $o1 = $o3  | True  |
+|             |                       |          | $o1 = $o2  | False |
+| Desigualdad | objectRef # objectRef | Boolean  | $o1 # $o3  | False |
+|             |                       |          | $o1 # $o2  | True  |
+
 ## Resources
 
 Los objetos utilizan _recursos_ tales documentos, bloqueos de entidades y, por supuesto, memoria. Estos recursos se conservan siempre que los objetos los necesiten. Normalmente, no tiene que preocuparse por ellos, 4D libera automáticamente todos los recursos adjuntos a un objeto cuando detecta que el objeto en sí ya no está referenciado por ninguna variable u otro objeto.

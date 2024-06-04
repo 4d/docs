@@ -3,13 +3,13 @@ id: arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. Um array recebe seu tamanho quando é criado, depois pode ser redimensionado quantas vezes sejam necessário, adicionando, inserindo ou eliminado elementos, ou redimensionando o array através do mesmo comando usado para criá-lo. Elementos do array são numerados de 1 a N, onde N é o tamanho do array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays são variáveis 4D. Como qualquer variável, um array tem um alcance/escopo e segue as regras da linguagem 4D, mas com algumas diferenças únicas.
+Un **array** es una serie ordenada de **variables** del mismo tipo. Cada variable se llama un **elemento** del array. Um array recebe seu tamanho quando é criado, depois pode ser redimensionado quantas vezes sejam necessário, adicionando, inserindo ou eliminado elementos, ou redimensionando o array através do mesmo comando usado para criá-lo. Elementos do array são numerados de 1 a N, onde N é o tamanho do array. Un array siempre tiene un [elemento cero](#using-the-element-zero-of-an-array) especial. Arrays são variáveis 4D. Como qualquer variável, um array tem um alcance/escopo e segue as regras da linguagem 4D, mas com algumas diferenças únicas.
 
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections são mais flexíveis e oferecem uma maior gama de métodos dedicados. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
+> En la mayoría de los casos, se recomienda utilizar **colecciones** en lugar de **arrays**. Collections são mais flexíveis e oferecem uma maior gama de métodos dedicados. Para más información, consulte la sección [Colección](Concepts/dt_collection.md).
 
 ## Criar Arrays
 
-Pode criar um array com um dos comandos de declaração de array no tema "Array". Cada comando de declaração de array pode criar ou redimensionar arrays unidimensionais ou bidimensionais. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
+Pode criar um array com um dos comandos de declaração de array no tema "Array". Cada comando de declaração de array pode criar ou redimensionar arrays unidimensionais ou bidimensionais. Para más información sobre los arrays bidimensionales, consulte la sección [arrays bidimensionales](#two-dimensional-arrays).
 
 A linha de código abaixo cria (declara) um array Inteiro de 10 elementos:
 
@@ -45,13 +45,13 @@ Pode referenciar os elementos em um array usando chaves ({…}). Dentro das chav
  End for
 ```
 
-Lembre da sintaxe atNames{$vlElem}. Ao invés de especificar um literal numérico como atNames{3}, pode usar uma variável numérica para indicar a quais elementos de um array se dirige. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
+Lembre da sintaxe atNames{$vlElem}. Ao invés de especificar um literal numérico como atNames{3}, pode usar uma variável numérica para indicar a quais elementos de um array se dirige. Utilizando la iteración que ofrece una estructura de bucle ( `For...End for`, `Repeat...Until` o `While...End while`), las piezas compactas de código pueden dirigirse a todos o a parte de los elementos de un array.
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). As operações de atribuição e comparação são bem diferentes.
+**Importante:** tenga cuidado de no confundir el operador de asignación (:=) con el operador de comparación, igual (=). As operações de atribuição e comparação são bem diferentes.
 
 ### Atribuindo um array para outro array
 
-Diferente de variáveis texto ou strings, não pode atribuir um array para outro. To copy (assign) an array to another one, use `COPY ARRAY`.
+Diferente de variáveis texto ou strings, não pode atribuir um array para outro. Para copiar (asignar) un array a otro, utilice `COPY ARRAY`.
 
 ## Usar o elemento zero de um array
 
@@ -95,8 +95,8 @@ No exemplo anterior:
 - atTopics é um array de duas dimensõees
 - atTopics{8}{5} is the 5th element (5th column...) of the 8th row
 - atTopics{20} é a 20a linha é por sua vez um array dimensão
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- `Tamaño del array(atTopics)` devuelve 100, que es el número de filas
+- `Tamaño de array(atTopics{17})` devuelve 50, que es el número de columnas de la línea 17
 
 No seguinte exemplo, um ponteiro a cada campo de cada tabela do banco de dados se armazena em um array de duas dimensões:
 
@@ -141,7 +141,7 @@ Sempre que tiver inicializado este array de duas dimensôes, se pedem obter os p
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**Nota:** como sugiere este ejemplo, las líneas de un array de dos dimensiones pueden tener el mismo tamaño o diferentes tamaños.
 
 ## Arrays e memória
 
@@ -155,7 +155,7 @@ Fazer a mesma coisa com arrays seria impossível pelas razões abaixo:
 - Como um array sempre é mantido na memória inteiramente, teria que manter toda a informação de códigos postais na memória durante a sessão inteira, mesmo quando os dados não estivessem sendo usados.
 - De novo,  como um array é sempre mantido na memória em sua totalidade, a cada vez que o banco de dados for iniciados, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.
+**Conclusión:** los arrays están pensados para mantener cantidades razonables de datos durante un corto periodo de tiempo. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.
 
 Entretanto, em algumas circunstâncias, pode precisar trabalhar com arrays que contenham centenas ou milhares de elementos. A tabela abaixo lista as fórmulas usadas para calcular a quantidade de memória usada para cada tipo de array:
 

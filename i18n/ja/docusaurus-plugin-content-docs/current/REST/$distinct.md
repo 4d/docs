@@ -3,13 +3,13 @@ id: distinct
 title: $distinct
 ---
 
-Returns the distinct values for a specific attribute in a collection (_e.g._, `Company/name?$filter="name=a*"&$distinct=true`)
+指定した属性について、重複しない値のコレクションを取得します (_例_: `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## 説明
 
-`$distinct` allows you to return a collection containing the distinct values for a query on a specific attribute. その際、データクラスの属性を一つのみを指定することができます。 通常は文字列型の属性を対象に使用しますが、複数の値を持つ属性であれば、その型に制限はありません。
+`$distinct` を使って、指定した属性における重複しない値を格納したコレクションを取得することができます。 その際、データクラスの属性を一つのみを指定することができます。 通常は文字列型の属性を対象に使用しますが、複数の値を持つ属性であれば、その型に制限はありません。
 
-You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate the selection before it's placed in an array.
+対象となる要素を制限するのに `$skip` および `$top/$limit` も組み合わせて使用することができます。
 
 ## 例題
 
@@ -17,7 +17,7 @@ You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate th
 
 `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Response**:
+**レスポンス**:
 
 ```
 [

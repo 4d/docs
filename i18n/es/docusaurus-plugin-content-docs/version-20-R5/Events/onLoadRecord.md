@@ -9,6 +9,6 @@ title: On Load Record
 
 ## Descripción
 
-The `On Load Record` event can only be used in the context of an **output form**. Se activa durante la entrada de datos en la lista, después de que se resalte un registro y un campo pase al modo de edición.
+El evento `On Load Record` sólo puede utilizarse en el contexto de un **formulario de salida**. Se activa durante la entrada de datos en la lista, después de que se resalte un registro y un campo pase al modo de edición.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.

@@ -25,12 +25,12 @@ La ventana tiene las siguientes características principales:
 - You can filter the window contents by using the **Categories** menu:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar un objeto de la librería en su formulario, puede:
-  - right-click on an object and select **Copy** in the contextual menu
+  - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
   - or drag and drop the object from the library The object is then added to the form.
 
 Esta librería es de sólo lectura. Si desea editar objetos por defecto o crear su propia librería de objetos preconfigurados o formularios proyecto, deberá crear una librería de objetos personalizada (ver abajo).
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+Todos los objetos propuestos en la librería de objetos estándar se describen en [esta sección en doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 ## Crear y utilizar librerías de objetos personalizadas
 
@@ -42,7 +42,7 @@ Mediante el uso de librerías, se pueden construir fondos de objetos de formular
 
 ### Crear una librería de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. Aparece una caja de diálogo estándar para guardar el archivo, que le permite elegir el nombre y la ubicación de la librería de objetos.
+Para crear una librería de objetos, seleccione **Nuevo>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece una caja de diálogo estándar para guardar el archivo, que le permite elegir el nombre y la ubicación de la librería de objetos.
 
 Una vez validada la caja de diálogo, 4D crea una nueva librería de objetos en su disco y muestra su ventana (vacía por defecto).
 
@@ -54,7 +54,7 @@ Puede crear tantas librerías como desee por proyecto. Una librería creada y co
 
 Una determinada librería de objetos sólo puede ser abierta por un proyecto a la vez. Sin embargo, se pueden abrir varias librerías diferentes en el mismo proyecto.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece una caja de diálogo estándar para abrir archivos, que le permite seleccionar la librería de objetos que desea abrir. Puede seleccionar los siguientes tipos de archivos:
+Para abrir una librería de objetos personalizada, seleccione el comando **Abrir>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece una caja de diálogo estándar para abrir archivos, que le permite seleccionar la librería de objetos que desea abrir. Puede seleccionar los siguientes tipos de archivos:
 
 - **.4dproject**
 - **.4dz**
@@ -66,18 +66,18 @@ De hecho, las librerías de objetos personalizadas son proyectos 4D clásicos. S
 
 ### Crear una librería de objetos
 
-Los objetos se colocan en una librería de objetos mediante una operación de arrastrar y soltar o de cortar, copiar y pegar. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No se conserva ningún enlace con el objeto original: si el original se modifica, el objeto copiado no se ve afectado.
+Los objetos se colocan en una librería de objetos mediante una operación de arrastrar y soltar o de cortar, copiar y pegar. Pueden provenir de un formulario o de otra librería de objetos (incluyendo la [librería estándar](#using-the-standard-object-library)). No se conserva ningún enlace con el objeto original: si el original se modifica, el objeto copiado no se ve afectado.
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> Para poder arrastrar y soltar objetos de los formularios a las librerías de objetos, debe asegurarse de seleccionar la opción **Iniciar arrastrar y soltar** en las Preferencias de 4D.
 
 Las principales operaciones están disponibles en el menú contextual o en el menú de opciones de la ventana:
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Cut** or **Copy** to the pasteboard
-- **Paste** an object from the pasteboard
-- **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Tenga en cuenta que los nombres de los objetos deben ser únicos en una librería.
+- **Cortar** o **Copiar** al portapapeles
+- **Pegar** un objeto del tablero portapapeles
+- **Borrar** - elimina el objeto de la librería
+- **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Tenga en cuenta que los nombres de los objetos deben ser únicos en una librería.
 
 Puede colocar objetos individuales (incluidos los subformularios) o conjuntos de objetos en una librería de objetos. Cada objeto o conjunto se agrupa en un solo elemento:
 

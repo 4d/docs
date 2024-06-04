@@ -11,20 +11,20 @@ Os ficheiros de projeto 4D são abertos e editados usando aplicações normais d
 
 Quando os projetos estão em ficheiros de texto simples legíveis (JSON, XML, etc.), podem ser lidos ou editados manualmente pelos programadores, utilizando qualquer editor de código.
 
-Além disso, os ficheiros de projeto 4D facilitam a programação genérica, a criação de modelos de aplicação e a partilha de código. Project are organized internally in [folders and files](Project/architecture.md).
+Além disso, os ficheiros de projeto 4D facilitam a programação genérica, a criação de modelos de aplicação e a partilha de código. Los proyectos se organizan internamente en [carpetas y archivos](Project/architecture.md).
 
 ## Desenvolvimento
 
-4D projects are developed using the **4D** application. Fornece um ambiente de desenvolvimento Integrado (IDE) para projetos 4D, bem como um servidor Web, um gerador de projetos móveis e um tempo de execução de aplicações, permitindo-lhe desenvolver, testar e depurar qualquer tipo de projeto.
+Los proyectos 4D se desarrollan con la aplicación **4D**. Fornece um ambiente de desenvolvimento Integrado (IDE) para projetos 4D, bem como um servidor Web, um gerador de projetos móveis e um tempo de execução de aplicações, permitindo-lhe desenvolver, testar e depurar qualquer tipo de projeto.
 
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+El desarrollo multiusuario se gestiona a través de herramientas estándar del repositorio de **control de fuentes** (Perforce, Git, SVN, etc.), que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificacion
 
 ## Aplicação final
 
-Project files can be [compiled](compiler.md) and easily deployed. 4D permite criar três tipos de aplicações a partir de seus projetos:
+Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente desplegados. 4D permite criar três tipos de aplicações a partir de seus projetos:
 
-- [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/go-mobile/) applications,
-- [desktop](Desktop/building.md) applications (client/server or single-user).
+- las aplicaciones [web](WebServer/webServer.md),
+- las aplicaciones [móviles](https://developer.4d.com/go-mobile/),
+- las aplicaciones [de escritorio](Desktop/building.md) (cliente/servidor o monopuesto).
 
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](../Desktop/building.md).
+Las aplicaciones de back-end pueden desplegarse utilizando 4D Server, 4D, o [fusionadas con la licencia 4D Volume](../Desktop/building.md).

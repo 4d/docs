@@ -3,11 +3,11 @@ id: top_$limit
 title: $top/$limit
 ---
 
-Limits the number of entities to return (e.g., `$top=50`)
+Limita el número de entidades a devolver (por ejemplo, `$top=50`)
 
 ## Descripción
 
-`$top/$limit` defines the limit of entities to return. Por defecto, el número está limitado a 100. You can use either keyword: `$top` or `$limit`.
+`$top/$limit` define el límite de entidades a devolver. Por defecto, el número está limitado a 100. Puede utilizar las siguientes palabras claves: `$top` o `$limit`.
 
 When used in conjunction with [`$skip`]($skip.md), you can navigate through the entity selection returned by the REST request.
 

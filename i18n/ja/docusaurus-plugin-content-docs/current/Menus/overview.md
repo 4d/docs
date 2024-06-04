@@ -7,7 +7,7 @@ title: メニュー
 
 ![](../assets/en/Menus/menubar.png)
 
-A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). メニューやサブメニューコマンドをユーザーが選択すると、プロジェクトメソッドまたは標準アクションが呼び出されます。
+**メニューバー** とは、スクリーン上にまとめて表示されるメニューのグループです。 メニューバー上の各 **メニュー** はメニューコマンドを持ちます。またメニューコマンドは階層メニューと呼ばれるサブメニューを持つこともできます。 メニューやサブメニューコマンドをユーザーが選択すると、プロジェクトメソッドまたは標準アクションが呼び出されます。
 
 各アプリケーションに対し、異なるメニューバーを複数作成することもできます。 たとえば、あるメニューバーには標準的なデータベース処理用のメニューを納め、別のメニューバーはレポート作成時にのみアクティブにすることができます。 また別のメニューバーには、レコード入力用のメニューコマンドを含むメニューを格納することも可能です。 入力フォームと一緒に表示されるメニューバーには同じメニューを格納しながらも、データ入力中は不要になるメニューコマンドを選択不可にすることができます。
 
@@ -26,7 +26,7 @@ A **menu bar** is a group of menus that can be displayed on a screen together. E
 
 ## メニューエディター
 
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+ツールボックスの **メニュー** ページを開くと、メニューエディターにアクセスできます。
 
 ![](../assets/en/Menus/editor1.png)
 

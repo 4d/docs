@@ -58,7 +58,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
 - エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
+[この例](#サーバー上に作成されるエンティティを使用する) と [この例](#エンティティセレクションを引数として受け取る) を参照してください。
 
 
 ### スカラー値の引数
@@ -307,7 +307,7 @@ exposed Function getLastSummary
 ```
 
 
-### エンティティを作成する
+### サーバー上に作成されるエンティティを使用する
 
 
 `Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
@@ -496,7 +496,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students class
+// Students クラス
 
 Class extends DataClass
 
@@ -507,14 +507,14 @@ exposed Function setFinalExam()
 
     var $keys, $0 : Collection
 
-      //Entity selection
+      // エンティティセレクション
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      // エンティティセレクションを捜査します
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -573,10 +573,10 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 // $newStudent は処理する Studentsエンティティです
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// クライアント側で $students エンティティセレクションにエンティティを追加します
 $students.add($newStudent)
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// StudentsSelectionクラスに対して、同セレクション内の生徒エンティティの平均年齢を返す関数を呼び出します
+// この関数は、クライアント側の追加エンティティを含む更新された内容の $students エンティティセレクションに対して、サーバー上で実行されます
 $ageAverage:=$students.getAgeAverage()
 ```

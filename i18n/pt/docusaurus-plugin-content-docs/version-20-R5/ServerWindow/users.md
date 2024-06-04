@@ -3,7 +3,7 @@ id: users
 title: Página Usuários
 ---
 
-The **Users** page lists the 4D users connected to the server.
+La página **Usuarios** lista los usuarios 4D conectados al servidor.
 
 ![](../assets/en/Admin/server-users.png)
 
@@ -19,16 +19,16 @@ For each user connected to the server, the list provides the following informati
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Nombre de máquina**: Nombre de la máquina remota.
+- **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
+- **Dirección IP**: dirección IP de la máquina remota.
+- **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
+- **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
+- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Sleeping" if the remote machine has switched to sleep mode (see below).
 
 ### Gerir usuários adormecidos
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. En el servidor, el usuario conectado pasa a un estado de actividad **Dormido**:
 
 ![](../assets/en/Admin/server-sleeping.png)
 
@@ -42,11 +42,11 @@ The following scenario is supported: a remote user stops working for awhile, for
 
 This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
 
-A lista é atualizada em tempo real à medida que o texto é introduzido na área. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+A lista é atualizada em tempo real à medida que o texto é introduzido na área. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. En este caso se utiliza el operador de tipo `OR`. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 ## Botões de administração
 
-Esta página inclui três botões de controlo. Esses botões estarão ativos se pelo menos uma linha estiver selecionada. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Esta página inclui três botões de controlo. Esses botões estarão ativos se pelo menos uma linha estiver selecionada. Puede seleccionar varias líneas manteniendo presionada la tecla **Mayús** para una selección adyacente o **Ctrl** (Windows) / **Comando** (macOS) llave para una selección no adyacente.
 
 ### Enviar mensagem
 

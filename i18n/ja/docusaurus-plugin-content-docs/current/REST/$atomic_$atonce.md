@@ -7,7 +7,7 @@ RESTリクエストに含まれる操作をトランザクション内で処理�
 
 ## 説明
 
-When you have multiple actions together, you can use `$atomic/$atOnce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atOnce`.
+複数の操作を一回のリクエストで処理する際には `$atomic/$atOnce` を使うことで、１つでも操作に問題があった場合にすべての操作をキャンセルすることができます。 `$atomic` および `$atOnce` のどちらでも利用できます。
 
 ## 例題
 
@@ -15,7 +15,7 @@ When you have multiple actions together, you can use `$atomic/$atOnce` to make s
 
 `POST  /rest/Employee?$method=update&$atomic=true`
 
-**POST data**:
+**POST データ**:
 
 ```json
 [

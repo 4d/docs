@@ -3,7 +3,7 @@ id: sql
 title: Página SQL
 ---
 
-This page is used to configure the publishing parameters, access rights, and engine options of the [4D SQL Server](https://doc.4d.com/What-s-new/4D-SQL-Reference-19-R3/Using-SQL-in-4D.200-5680718.en.html).
+Esta página se utiliza para configurar los parámetros de publicación, los derechos de acceso y las opciones del motor del [servidor SQL 4D](https://doc.4d.com/What-s-new/4D-SQL-Reference-19-R3/Using-SQL-in-4D.200-5680718.en.html).
 
 ## Publicação do servidor SQL
 

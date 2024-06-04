@@ -3,33 +3,33 @@ id: interpreted-compiled
 title: Modos interpretado e compilado
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+Las aplicaciones 4D pueden funcionar en modo **interpretado** o **compilado**:
 
 - no modo interpretado, as declarações são lidas e traduzidas em linguagem de máquina no momento da sua execução. Pode adicionar ou modificar o código sempre que precisar, a aplicação é actualizada automaticamente.
 - no modo compilado, todos os métodos são lidos e traduzidos uma vez, na etapa de compilação. Posteriormente, a aplicação contém apenas instruções de nível de montagem, já não é possível editar o código.
 
 As vantagens da compilação são:
 
-- **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. São detectados conflitos tanto lógicos como sintácticos.
-- **Protection**: Once your application is compiled, you can delete the interpreted code. Então, o banco de dados compilado é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Velocidad**: su base aplicación se ejecuta de 3 a 1.000 veces más rápido.
+- **Verificación del código**: su aplicación se analiza para comprobar la consistencia del código. São detectados conflitos tanto lógicos como sintácticos.
+- **Protección:**: una vez compilada su aplicación, puede eliminar el código interpretado. Então, o banco de dados compilado é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
+- **Aplicaciones independientes con doble clic**: las aplicaciones compiladas también pueden transformarse en aplicaciones autónomas con su propio icono.
+- **Modo apropiativo**: sólo se puede ejecutar código compilado en procesos apropiativos.
 
 ## Diferenças entre código interpretado e compilado
 
 Apesar de aplicações funcionarem da mesma forma em modo compilado e interpretado, há diferenças quando escrever código que será compilado. O 4D interpreter é mais flexível que o compilador.
 
-| Compilado                                                                                                                                                                                              | Interpretado                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                              | Nenhum erro é gerado, mas prioridade é dada ao método                                                  |
-| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
-| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                  | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
-| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                | Possível                                                                                               |
-| Embora o compilador vá digitar a variável por você, deve especificar o tipo de dados de uma variável utilizando declarações quando o tipo de dados é ambíguo, como num formulário.     |                                                                                                        |
-| The `Undefined` function always returns False for variables. As variáveis são sempre definidas.                                                                        |                                                                                                        |
-| Se tiver marcado a propriedade "Pode ser executado em processos preemptivos" para o método, o código não deve chamar quaisquer comandos thread-unsafe ou outros métodos thread-unsafe. | As propriedades do processo preemptivo são ignoradas                                                   |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                                           | É sempre possível interromper 4D                                                                       |
+| Compilado                                                                                                                                                                                                                     | Interpretado                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                                                     | Nenhum erro é gerado, mas prioridade é dada ao método                                                  |
+| Todas las variables deben estar digitadas, ya sea mediante una declaración (utilizando las palabras claves `var`, `#Declare`, o `Function`), o por el compilador en tiempo de compilación. | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
+| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                                         | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
+| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                                       | Possível                                                                                               |
+| Embora o compilador vá digitar a variável por você, deve especificar o tipo de dados de uma variável utilizando declarações quando o tipo de dados é ambíguo, como num formulário.                            |                                                                                                        |
+| La función `Undefined` siempre devuelve False para las variables. As variáveis são sempre definidas.                                                                                          |                                                                                                        |
+| Se tiver marcado a propriedade "Pode ser executado em processos preemptivos" para o método, o código não deve chamar quaisquer comandos thread-unsafe ou outros métodos thread-unsafe.                        | As propriedades do processo preemptivo são ignoradas                                                   |
+| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                                                                         | É sempre possível interromper 4D                                                                       |
 
 ## Utilização de directivas de compilação com o Intérprete
 
@@ -49,7 +49,7 @@ e noutra parte do projecto, escreve-se:
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted _prior_ to the assignment statement.
+En este ejemplo, `MyInt` se asigna el mismo valor (3) tanto en el modo interpretado como en el compilado, siempre que la directiva del compilador se interprete _antes_ de la declaración de asignación.
 
 O interpretador 4D usa as diretivas do compilador para digitar variáveis. Quando o intérprete encontra uma diretiva do compilador, digita a variável de acordo com a diretiva. Se uma expressão subsequente tentar atribuir um valor incorreto (por exemplo, atribuir um valor alfanumérico a uma variável numérica), a atribuição não será efectuada e gerará um erro.
 
@@ -67,19 +67,19 @@ var $age : Integer
 $name:="Smith"
 $age:=50
 
-$p:=->$name //text target for the pointer
-$p->:="Wesson" //assigns a text value
+$p:=->$name //texto objetivo para el puntero
+$p->:="Wesson" //asigna un valor texto
 
 $p:=->$age  
-// new target of different type for the pointer
-$p->:=55 //assigns a number value
+// nuevo objetivo de tipo diferente para el puntero
+$p->:=55 //asigna un valor
 ```
 
 Imagine uma função que devolve o comprimento (número de caracteres) de valores que podem ser de qualquer tipo.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $vp = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length (quantos caracteres)
+  // $vp = ponteiro para tipo de variável flexível, numérico, texto, tempo, booleano
 
 #DECLARE($vp : Pointer) -> $length : Integer
 var $result : Text  

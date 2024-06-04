@@ -11,7 +11,7 @@ title: On URL Resource Loading
 
 This event is generated each time a new resource (picture, frame, etc.) is loaded on the current Web page.
 
-The [Progression](FormObjects/properties_WebArea.md#progression) variable associated with the area lets you find out the current state of the loading.
+La variable [Progresión](FormObjects/properties_WebArea.md#progression) asociada al área permite conocer el estado actual de la carga.
 
 ### Veja também
 

@@ -5,19 +5,19 @@ title: Préférences
 
 User preferences specify various settings affecting your working environment, e.g. default options, display themes, Code Editor features, shortcuts, etc. Elles sont appliquées à tous les projets ouverts avec votre application 4D ou 4D Server.
 
-**4D Server**: Object locking occurs when two or more users try to modify the settings in the Preferences dialog box at the same time. Un seul utilisateur à la fois peut utiliser la boîte de dialogue Préférences.
+**4D Server** : Le verrouillage des objets se produit lorsque deux utilisateurs ou plus tentent de modifier les paramètres de la boîte de dialogue Préférences en même temps. Un seul utilisateur à la fois peut utiliser la boîte de dialogue Préférences.
 
-> 4D offers a different set of parameters specific to the open projet: **Settings** (available from the **Design** menu). Pour plus d'informations, reportez-vous au chapitre Paramètres.
+> 4D propose un ensemble de paramètres spécifiques pour le projet ouvert : **Paramètres** (disponible dans le menu **Développement**). Pour plus d'informations, reportez-vous au chapitre Paramètres.
 
 ## Accès
 
-You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the **4D** Application menu (macOS):
+Vous pouvez accéder à la boîte de dialogue Préférences à partir du menu **Edition> Préférences...** (Windows) ou du menu de l'application **4D** (macOS) :
 
 ![](../assets/en/Preferences/overviewAccess.png)
 
 Cette option de menu est disponible même lorsqu'il n'y a pas de projet ouvert.
 
-You can also display the Preferences dialog box in Application mode using the "Preferences" standard action (associated with a menu item or a button) or using the `OPEN SETTINGS WINDOW` command.
+Vous pouvez également afficher la boîte de dialogue Préférences en mode Application en utilisant l'action standard "Préférences" (associée à un élément de menu ou à un bouton) ou à l'aide de la commande `OPEN SETTINGS WINDOW`.
 
 ## Storage
 
@@ -36,7 +36,7 @@ Les préférences indiquées comme personnalisées peuvent avoir été modifiée
 
 Un paramètre apparaît toujours en gras même lorsque sa valeur est remplacée manuellement par ses valeurs par défaut. Ainsi, il est toujours possible d'identifier visuellement les paramètres qui ont été personnalisés.
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click on the **Reset to factory settings** button:
+Pour rétablir les valeurs par défaut des paramètres et supprimer le style gras indiquant qu'ils ont été personnalisés, cliquez sur le bouton **Rétablir les paramètres d'usine** :
 
 ![](../assets/en/Preferences/overviewSettings.png)
 

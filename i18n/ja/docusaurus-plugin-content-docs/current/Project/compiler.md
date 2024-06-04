@@ -9,23 +9,23 @@ title: コンパイル
 
 コンパイル処理はすべて 4Dアプリケーションにより自動的でおこなわれます。
 
-> On macOS, the compilation requires that you install `Xcode`. See [this section](#silicon-compiler) for more information about this requirement.
+> macOS上でコンパイルするには、`Xcode` をインストールする必要があります。 このことについての詳細は [Apple Silicon用コンパイラー](#apple-silicon用コンパイラー) を参照ください。
 
-1. Open the compiler window by selecting the **Compiler...** command in the **Design** menu or the **Compiler** toolbar button.
+1. コンパイラーウィンドウを表示するには、**デザイン** メニューの **コンパイラー...** を選択するか、またはツールバーにある **コンパイラー** ボタンをクリックします。
 
    ![](../assets/en/Project/compilerWin1.png)
 
    ![](../assets/en/Project/comp1.png)
 
-> You can also launch directly the compilation by selecting the **Start Compilation** menu item from the **Design** menu.
+> また、**デザイン** メニューの **コンパイル開始...** を選択すると、コンパイル処理を直接開始できます。
 
-2. Click the **Compile** button to launch the compilation using the current [compilation settings](#compiler-settings).
+2. **コンパイル** ボタンをクリックすると、現在の [コンパイル設定](#コンパイル設定) に基づいてコンパイル処理を開始します。
 
 エラーが検出されなければ、実際のコンパイル処理が開始します。コンパイル処理が完了すると、"コンパイルに成功しました" というメッセージがウィンドウの下部に表示されます:
 
 ![](../assets/en/Project/success.png)
 
-You can immediately [run your application in compiled mode](#run-compiled) and see how faster it is.
+コンパイルが終了次第、[アプリケーションをコンパイル済みモードで実行](#コンパイル済み実行)し、実行速度がどれだけ向上したのか確認することができます。
 
 エラーが検出されると処理が中止され、"コンパイルに失敗しました" というメッセージが表示されます。 ウィンドウの情報エリアに、問題となるメソッド名と行番号が階層リスト形式で表示されます:
 
@@ -33,35 +33,35 @@ You can immediately [run your application in compiled mode](#run-compiled) and s
 
 関係するメソッドを直接 4D のコードエディターで開くには、検出された各エラーをダブルクリックします。 エラーを含む行がハイライト表示され、エラーの種類がウィンドウのシンタックスエリアに表示されます。
 
-Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
+**メソッド** メニューから **前のエラー** / **次のエラー** を選択すると、エラーが含まれる各行を移動することができます。
 
-初めてのコンパイルで検出されるエラーの数に辟易するかもしれませんが、気にすることはありません。 ほどなく、これらのエラーが同じ原因によるものであることに気づくでしょう。たとえば、特定のプロジェクト規約に対する違反などです。 The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
+初めてのコンパイルで検出されるエラーの数に辟易するかもしれませんが、気にすることはありません。 ほどなく、これらのエラーが同じ原因によるものであることに気づくでしょう。たとえば、特定のプロジェクト規約に対する違反などです。 コンパイラーは、エラーの訂正に役立つよう [正確なエラー診断](#エラーファイル) を提供します。
 
 > コンパイルには、適切なライセンスが必要です。 ライセンスがない場合、コンパイルを実行することはできません (ボタンが無効になります)。 その場合でも、シンタックスチェックと変数定義メソッドの生成はおこなうことができます。
 
 ## コンパイル済み実行
 
-Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](GettingStarted/creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
+プロジェクトがコンパイルされると、[インタープリターモードとコンパイル済みモード](Concepts/interpreted.md) を切り替えて実行できるようになります。この際、4Dアプリケーションを終了する必要はありません (インタープリターコードを削除している場合は除きます)。 切り替えには、**実行** メニューの **インタープリター再起動** や **コンパイル済み再起動** コマンドを使用します。 [プロジェクトを開くダイアログボックス](GettingStarted/creating.md#オプション) でも、起動時にインタープリターモードとコンパイル済みモードから選択することができます。
 
-モードを変更すると、4D は現在のモードを閉じ、新しいモードを開きます。 つまり、アプリケーションが閉じられ、再び開かれます。 Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
+モードを変更すると、4D は現在のモードを閉じ、新しいモードを開きます。 つまり、アプリケーションが閉じられ、再び開かれます。 モードを切り替えるたびに、4D は 2つのデータベースメソッド (定義されていれば) を次の順番に実行します: `On Exit` -> `On Startup`。
 
 インタープリターモードでプロジェクトを編集したら、それをコンパイルコードに反映させるには再コンパイルしなければなりません。
 
 ## コンパイラーウィンドウ
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+コンパイラーウィンドウでは、[**コンパイル** ボタン](#コンパイル) の他にも、プロジェクト開発時に有用な機能が提供されています。
 
 ### シンタックスチェック
 
-The **Check Syntax** button starts the execution of the syntax-checking phase. チェックが終了すると、検出されたエラーがすべて情報エリアに表示されます。 エラー行をダブルクリックすると、対応するメソッドを表示することができます。
+**シンタックスチェック** ボタンは、シンタックスチェックフェーズの実行を開始します。 チェックが終了すると、検出されたエラーがすべて情報エリアに表示されます。 エラー行をダブルクリックすると、対応するメソッドを表示することができます。
 
-Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. アプリケーションをコンパイルするための適切なライセンスを持たない場合は、このオプションしか使用できません。
+シンタックスチェックは、ツールバーの **コンパイラー** ボタンに割り当てられた **シンタックスチェック** コマンドから実行することもできます。 アプリケーションをコンパイルするための適切なライセンスを持たない場合は、このオプションしか使用できません。
 
 ### 型宣言を生成する
 
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
+**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 コンパイラーメソッドは、すべての変数・配列の型宣言 (プロセスおよびインタープロセス) と [プロトタイプ宣言されていないメソッド引数の定義](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を集約したプロジェクトメソッドです。 これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
 
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
+これらのメソッドは、必ず `Compiler_` で始まります。 [コンパイラー設定](#コンパイラーメソッド) にて、5つのコンパイラーメソッドそれぞれに対してデフォルト名を設定することができます。 4D により生成、管理されるコンパイラーメソッドは自動的に "非表示" 属性が割り当てられます:
 
 ![](../assets/en/Project/compilerWin3.png)
 
@@ -71,13 +71,13 @@ The name of these methods must begin with `Compiler_`. You can set the default n
 
 ### コンパイルコードを削除
 
-The **Clear compiled code** button deletes the compiled code of the project. When you click on it, all of the [code generated during compilation](#classic-compiler) is deleted, the **Restart Compiled** command of the **Run** menu is disabled and the "Compiled Project" option is not available at startup.
+**コンパイルコードを削除** ボタンを使用すると、プロジェクトのコンパイル済みコードが削除されます。 ボタンをクリックすると、[コンパイル時に生成されたコード](#クラシックコンパイラー) がすべて削除されます。**実行** メニューの **コンパイル済み再起動** コマンドが無効になり、開始時の "開く: コンパイルモード済みデータベース" オプションはグレー表示されます。
 
 ### 警告を表示/隠す
 
 警告は、コンパイラーがシンタックスチェックをおこなう際に生成するとメッセージです。 これらのメッセージの目的は、実行時エラーを引き起こす可能性のあるステートメントに注意を向けることです。 警告によりコンパイルが中断されることはありません。
 
-状況や使用されるプログラミングスタイルによって、これらのメッセージの重要性は変化します。 You can toggle the warnings on or off by clicking the **Show/Hide Warnings** button:
+状況や使用されるプログラミングスタイルによって、これらのメッセージの重要性は変化します。 **警告を表示/隠す** ボタンをクリックすることで、警告の表示・非表示を切り替えられます。
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -99,7 +99,7 @@ The **Clear compiled code** button deletes the compiled code of the project. Whe
 
 _1: 配列定義コマンド内にポインタが存在します (518.5)_
 
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
+... この場合、4D メソッド (できれば `COMPILER_xxx` メソッド) に次のコメントを記述します:
 
 ```4d
   //%W-518.5
@@ -107,7 +107,7 @@ _1: 配列定義コマンド内にポインタが存在します (518.5)_
 
 ## コンパイラー設定
 
-ストラクチャー設定ダイアログボックスの "コンパイラー" ページでは、プロジェクトのコンパイルに関連するパラメーターを設定できます。 You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
+ストラクチャー設定ダイアログボックスの "コンパイラー" ページでは、プロジェクトのコンパイルに関連するパラメーターを設定できます。 [コンパイラーウィンドウ](#コンパイラーウィンドウ) の **コンパイラー設定** ボタンをクリックすると、コンパイラーページを直接開くことができます。
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,23 +117,23 @@ _1: 配列定義コマンド内にポインタが存在します (518.5)_
 
 #### Symbolファイルを生成
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトの [Logs フォルダー](Project/architecture.md#logs) 内に `ProjectName_symbols.txt` という名前で作成されます。
 
 #### エラーファイルを生成
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 エラーファイルは、プロジェクトの [Logs フォルダー](Project/architecture.md#logs) 内に `ProjectName_error.xml` という名前で作成されます。
 
 #### コンパイルパス
 
 コンパイラーによって実施されるコード解析の実行周期数を設定するために使用します。これは、コンパイルの所要時間に影響します。
 
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. このオプションは、コンパイルを可能にするために必要なすべてのステップをコンパイラーに実行させるため、コンパイルの時間が増加します。
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. このオプションを選択する場合、すべての変数およびメソッド引数が明示的に宣言されていなければなりません。
+- **すべて定義させる**: コード内の変数や引数の型をコンパイラーに推論させたい場合は、このオプションをチェックします。 このオプションは、コンパイルを可能にするために必要なすべてのステップをコンパイラーに実行させるため、コンパイルの時間が増加します。
+- **ローカル変数のみ自動定義させる**: プロセスおよびインタープロセス変数、そしてプロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
+- **自動変数定義は行わない**: ローカル、プロセス、インタープロセス変数および、プロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべての変数およびメソッド引数が明示的に宣言されていなければなりません。
 
 :::tip
 
-You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options.
+あらかじめ [型宣言を生成する](#型宣言を生成する) ボタンを使用すると、"ローカル変数のみ自動定義させる" および "自動変数定義は行わない" のオプションを選択してコンパイルすることができます。
 
 :::
 
@@ -149,44 +149,44 @@ You can use the [Generate Typing](#generate-typing) button then compile with one
 
 この設定で、4Dプロジェクトをネイティブコンパイルする対象となるプロセッサー・ファミリーを選択します。 4D のコンパイラーは 2つのプロセッサー・ファミリーに向けてネイティブコードをビルドできます:
 
-- **Intel/AMD** processors (all machines),
-- **Apple Silicon** processors.
+- **Intel/AMD** プロセッサー (すべてのマシン)
+- **Apple Silicon** プロセッサー
 
 対象CPUの選択肢は 2つ提示されます。 結果は、4D を実行しているマシンのプロセッサーに依存します。
 
-| _オプション_                                                       | _Windows Intel/AMD_                                                                  | _macOS Intel_                                                                          | _macOS Silicon_                                                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| **全てのプロセッサ (Intel/AMD および Apple Silicon)** | Code for Intel/AMD<br/>_It is not possible to produce Apple Silicon code on Windows_ | Code for Apple Silicon + Code for Intel/AMD<br/>_Two compiled codes will be available_ | Code for Apple Silicon + Code for Intel/AMD<br/>_Two compiled codes will be available_ |
-| **自分のプロセッサ (プロセッサー名)**                     | Intel/AMD 用コード                                                                       | Intel/AMD 用コード                                                                         | Apple Silicon 用コード                                                                     |
+| _オプション_                                                       | _Windows Intel/AMD_                                          | _macOS Intel_                                            | _macOS Silicon_                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------------- |
+| **全てのプロセッサ (Intel/AMD および Apple Silicon)** | Intel/AMD 用コードのみ<br/>_Windows上で Apple Silicon 用のコードは生成できません_ | Apple Silicon + Intel/AMD 用コード<br/>_2種類のコンパイルコードが生成されます_ | Apple Silicon + Intel/AMD 用コード<br/>_2種類のコンパイルコードが生成されます_ |
+| **自分のプロセッサ (プロセッサー名)**                     | Intel/AMD 用コード                                               | Intel/AMD 用コード                                           | Apple Silicon 用コード                                       |
 
-> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang は最新バージョンの Xcode に含まれています。 See the [Silicon compiler requirements](#requirements) for more information.
+> Apple Silicon 用にコンパイルするには、マシンに **Clang** アプリケーションをインストールする必要があります。 Clang は最新バージョンの Xcode に含まれています。 詳細については [Apple Silicon用コンパイルの要件](#要件) を参照ください。
 
 ### デフォルトの型指定
 
 このエリアでは、曖昧なデータベースオブジェクトのデフォルト型を設定します。
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 倍長整数を指定することでデータベースを最適化できます。
-- **Button**: Used to force button typing in an unambiguous manner, either in real or longint. プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 この型指定はボタンのほか、チェックボックス、ピクチャーボタン、ボタングリッド、ラジオボタン、ピクチャーポップアップメニューおよびドロップダウンリストが対象となります。
+- **数値**: 実数または倍長整数に数値を型指定します。 プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 倍長整数を指定することでデータベースを最適化できます。
+- **ボタン**: 実数または倍長整数にボタンを型指定します。 プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 この型指定はボタンのほか、チェックボックス、ピクチャーボタン、ボタングリッド、ラジオボタン、ピクチャーポップアップメニューおよびドロップダウンリストが対象となります。
 
 ### コンパイラーメソッド...
 
-This area lets you rename the Compiler methods that are generated automatically by the compiler when you click [Generate Typing](#generate-typing).
+このエリアでは、[型宣言を生成](#型宣言を生成する) をクリックしたときにコンパイラーが自動生成するコンパイラーメソッドの名前を設定できます。
 
 最大 5つのコンパイラーメソッドが生成されます。プロジェクトに対応する要素が存在する場合のみ、コンパイラーメソッドは作成されます:
 
-- **Variables**: Groups together process variable declarations;
-- **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
-- **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **変数**: プロセス変数定義を集約します。
+- **インタープロセス変数**: インタープロセス変数定義を集約します。
+- **配列**: プロセス配列定義を集約します。
+- **インタープロセス配列**: インタープロセス配列定義を集約します。
+- **メソッド**: [プロトタイプ宣言されていないメソッド引数](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
 
-You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
+それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 
 ## コンパイルツール
 
 ### Symbolファイル
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. このドキュメントはいくつかの部分に分かれています:
+コンパイラー設定の [**Symbolファイルを生成**](#symbolファイルを生成) オプションを選択してコンパイルすると、プロジェクトの [Logs フォルダー](Project/architecture.md#logs) 内に `ProjectName_symbols.txt` という名称の Symbolファイルが作成されます。 このドキュメントはいくつかの部分に分かれています:
 
 #### プロセスおよびインタープロセス変数のリスト
 
@@ -228,39 +228,38 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 この情報は、次の形式で示されます:
 
 ```
-Procedure or Function <Method name>(parameter data types):
-result data type, number of calls, Thread Safe or Thread Unsafe
+プロシージャーまたは関数 <メソッド名>(パラメーターの型):戻り値の型, コール数, スレッドセーフまたはスレッドアンセーフ
 ```
 
 ### エラーファイル
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+コンパイラー設定の [**エラーファイルを生成**](#エラーファイルを生成) オプションを使用して、コンパイル時にエラーファイルを生成するかどうかを選択することができます。 エラーファイルは、プロジェクトの [Logsフォルダー](Project/architecture.md#logs)内に `ProjectName_errors.txt` という名前で作成されます。
 
-Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. エラーファイルは、その内容を自動的に解析しやすいように XMLフォーマットで生成されます。 これを利用して、エラー表示用に独自のインターフェースを作成することもできます。
+[コンパイラーウインドウ](#コンパイラーウインドウ) からエラーに直接アクセスすることができますが、マシンからマシンへ送信できるエラーファイルがあると便利な場合があります。 エラーファイルは、その内容を自動的に解析しやすいように XMLフォーマットで生成されます。 これを利用して、エラー表示用に独自のインターフェースを作成することもできます。
 
 エラーファイルの長さは、コンパイラーにより生成されるエラーと警告の数により変わります。
 
 エラーファイルの構造は次のとおりです:
 
 - ファイルの一番上にはエラーと警告のリストがあり、メソッドごと、そして 4D で作成された順序で並べられます。
-- In the _**General errors**_ section, all the typing impossibilities and identity ambiguities are grouped together. これらのエラーと警告は、次の形式で表示されます:
+- _**全般的なエラー**_ セクションには、タイプ定義がおこなえないものと識別が不明確なものがすべて集められます。 これらのエラーと警告は、次の形式で表示されます:
   - メソッドにおける行番号 (0 は全般的なエラー)
   - warning属性は、検出された異常が警告であるのか (warning="true")、あるいはエラーであるのか (warning="false") を表わします
   - エラーを解説する診断の表示
 
-If your project does not have any general errors, the file will not have a _General errors_ section.
+プロジェクトに全般的なエラーが存在しない場合、そのファイルには _全般的なエラー_ セクションがありません。
 
 エラーファイルには、次の 3つのタイプのメッセージが含まれます:
 
-- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. コンパイラーは、データ型やシンタックスに関する矛盾を含む式で見つけると、このタイプのエラーをレポートします。 コンパイラーウィンドウでは、検出された各エラーをダブルクリックすると、該当するメソッドが直接 4Dのコードエディターで開かれ、エラーを含む行が反転表示されます。
+- **特定の行に関連するエラー**: これらのエラーは、コンテキスト (エラーが見つかった行) 内に説明とともに表示されます。 コンパイラーは、データ型やシンタックスに関する矛盾を含む式で見つけると、このタイプのエラーをレポートします。 コンパイラーウィンドウでは、検出された各エラーをダブルクリックすると、該当するメソッドが直接 4Dのコードエディターで開かれ、エラーを含む行が反転表示されます。
 
-- **General errors**: These are errors that make it impossible to compile the project. コンパイラーが全般的なエラーを生成するケースは、次の 2つです:
+- **全般的なエラー**: これらのエラーは、プロジェクトのコンパイルを不可能にします。 コンパイラーが全般的なエラーを生成するケースは、次の 2つです:
   - プロセス変数のデータ型が決定できなかった。
   - 異なる 2つのオブジェクトが同じ名称である。
 
 全般的なエラーは特定のメソッドに関連していないため、このような名前が付けられています。 最初のケースは、コンパイラーがプロジェクトのいずれの箇所でも、指定された型定義を実行できなかった場合です。 2番目のケースでは、いずれのオブジェクトに特定の名前を割り当てるべきかを決定できません。
 
-- **Warnings**: Warnings are not errors. 警告により、プロジェクトがコンパイルできなくなることはありません。これは、エラーになる可能性のあるコードを示すだけです。 コンパイラーウィンドウにおいて、警告はイタリック体で表示されます。 それぞれの警告をダブルクリックすると、該当するメソッドが直接 4Dのコードエディターで開かれ、その警告に関係する行が反転表示されます。
+- **警告**: 警告はエラーではありません。 警告により、プロジェクトがコンパイルできなくなることはありません。これは、エラーになる可能性のあるコードを示すだけです。 コンパイラーウィンドウにおいて、警告はイタリック体で表示されます。 それぞれの警告をダブルクリックすると、該当するメソッドが直接 4Dのコードエディターで開かれ、その警告に関係する行が反転表示されます。
 
 ### 範囲チェック
 
@@ -268,14 +267,15 @@ If your project does not have any general errors, the file will not have a _Gene
 
 コード内で間違いがないと思われる箇所に対して範囲チェックを適用したくないときもあります。 具体的には、かなりの回数繰り返されるループに関し、旧式のマシン上でコンパイル済みデータベースを実行すると、範囲チェックにより処理速度が著しく低下するおそれがあります。 関連するコードに誤りがなく、システムエラーを引き起こさないことが確実であれば、範囲チェックをローカル上で無効にすることができます。
 
-To do this, you must surround the code to be excluded from range checking with the special comments `//%R-` and `//%R+`. The `//%R-` comment disables range checking and `//%R+` enables it again:
+これをおこなうには、範囲チェックから外すコードを特殊なコメントである `//%R-` と `//%R+` で囲みます。 `//%R-` コメントは範囲チェックを無効にし、`//%R+` はそれを再び有効にします:
 
 ```4d
-  // %R-   to disable range checking
- 
- ... //Place the code to be excluded from range checking here
- 
-  // %R+   to enable range checking again for the rest
+// %R-   範囲チェックを無効化
+
+ ... // ここに範囲チェックから外すコードを記述します
+
+  // %R+   以降は範囲チェックが再び有効になります
+
 ```
 
 ## コンパイラーについて
@@ -287,35 +287,35 @@ To do this, you must surround the code to be excluded from range checking with t
 
 クラシックコンパイラーは Windows および macOS のどちらでも使用できますが、Apple SIlicon用コンパイラーは macOS マシンでのみ使用できます:
 
-|             |        Windows用コンパイル        |       Intel Mac用コンパイル       |      Silicon Mac用コンパイル      |
-| ----------- | :-------------------------: | :-------------------------: | :-------------------------: |
-| Windows     | &#10003 | &#10003 | &#10007 |
-| Intel Mac   | &#10003 | &#10003 | &#10003 |
-| Silicon Mac | &#10003 | &#10003 | &#10003 |
+|             | Windows用コンパイル | Intel Mac用コンパイル | Silicon Mac用コンパイル |
+| ----------- | :-----------: | :-------------: | :---------------: |
+| Windows     |       O       |        O        |         X         |
+| Intel Mac   |       O       |        O        |         O         |
+| Silicon Mac |       O       |        O        |         O         |
 
-どちらのコンパイラーも 4D に統合されています。 The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+どちらのコンパイラーも 4D に統合されています。 [コンパイル対象CPU](#コンパイル対象CPU) オプションの設定に応じて、適切なコンパイラーが自動的に選択されます。
 
 ### クラシックコンパイラー
 
 マシンの OS に関わらず、クラシックコンパイラーは Intel/AMDプロセッサー向けのネイティブコンパイルコードを生成します。 特別な設定は必要ありません。
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+結果のコンパイルコードはプロジェクトの [DerivedData](architecture.md#deriveddata) フォルダーに保存されます。
 
 ### Apple Silicon用コンパイラー
 
-The Silicon compiler generates native compiled code for Apple Silicon processors, such as _Apple M1_.
+Apple Silicon用コンパイラーは _Apple M1_ などの Apple Silicon プロセッサー向けのネイティブコンパイルコードを生成します。
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+結果のコンパイルコードはプロジェクトの [Libraries](architecture.md#libraries) フォルダーに保存されます。
 
 #### 要件
 
-- **Apple machine**: The Silicon compiler can only be run from an Apple machine.
-- **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. _clang_ requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
-  - **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.
-  - **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
+- **macOS マシン**: Apple Silicon用コンパイラーは Apple のマシン上でのみ実行可能です。
+- **4D プロジェクトアーキテクチャー**: Apple Silicon用コンパイラーは [プロジェクトアーキテクチャー](architecture.md) を使った 4D開発でのみ利用できます。
+- **Xcode または Developer Tools**: コンパイルの [2つ目のステップ](#インクリメンタルコンパイルラー) において、プロジェクトを C++ コードからコンパイルするために、Apple Silicon用コンパイラーはオープンソース macOS コンパイラー **Clang** を呼び出します。 _Clang_ は Apple ネイティブライブラリを必要とします。これらは **Xcode** または **Developer Tools** パッケージより提供されています。
+  - Xcode や Developer Tools をマシン上でインストールされた状態で **すでに持っている場合**、それらのバージョンが 4D の要件と合っていることを確認します。
+  - マシンにインストールされた状態でこれらのツールを **持っていない場合**、Apple Developer の Webサイトからいずれかをダウンロードする必要があります。
 
-> We recommend to install **Xcode**, which is quite simple to install. You can decide to install **Developer Tools** which is more compact, however its installation is a little more complex.
+> インストール手順が簡単なため **Xcode** のインストールを推奨しています。 よりコンパクトな **Developer Tools** をインストールしても問題ありませんが、こちらはインストール手順がやや複雑です。
 
 いずれにせよ、要件が満たされていない場合には、4D の Apple Silicon用コンパイラーが警告を発します。
 
@@ -323,5 +323,5 @@ Resulting compiled code is stored in the [Libraries](architecture.md#libraries) 
 
 Apple Silicon用コンパイラーはインクリメンタルコンパイラーです:
 
-- During the very first compilation, **all 4D methods** are compiled. これには時間がかかる可能性がありますが、 一度きりです。
-- During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time.
+- 初めてのコンパイルにおいては、**すべての 4Dメソッド** がコンパイルされます。 これには時間がかかる可能性がありますが、 一度きりです。
+- 以降のコンパイルにおいては、**新規または編集されたメソッド** のみが処理され、コンパイル時間を大幅に短縮します。

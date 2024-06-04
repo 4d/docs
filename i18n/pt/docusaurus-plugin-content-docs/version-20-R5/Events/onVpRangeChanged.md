@@ -23,4 +23,4 @@ O objeto devolvido pelo comando FORM Event contém:
 | changedCells | object        | Intervalo que contém apenas as células alteradas. Pode ser um intervalo combinado.                                                                                                                                                                                                                                                                                                                  |
 | action       | text          | The type of operation generating the event:<li>"clear" - A clear range value operation</li><li>"dragDrop" - A drag and drop operation</li><li>"dragFill" - A drag fill operation</li><li>"evaluateFormula" - Setting a formula in a specified cell range</li><li>"paste" - A paste operation</li><li>"setArrayFormula" - Setting a formula in a specified cell range</li><li>"sort" - Sorting a range of cells</li> |
 
-> See also [On After Edit](onAfterEdit.md).
+> Ver también [On After Edit](onAfterEdit.md).

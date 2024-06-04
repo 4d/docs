@@ -8,51 +8,51 @@ Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dan
 La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
-- catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface.
+- détecter et récupérer des erreurs inattendues dans les applications déployées ; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
 
-Basically, there are two ways to handle errors in 4D. Vous pouvez :
+Fondamentalement, il y a deux façons de gérer les erreurs en 4D. Vous pouvez :
 
-- [install an error-handling method](#installing-an-error-handling-method), or
-- use a [`Try()` keyword](#tryexpression) or a [`Try/Catch` structure](#trycatchend-try) before pieces of code that call a function, method, or expression that can throw an error.
+- [installer une méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs), ou
+- utiliser un mot-clé [`Try()`](#tryexpression) ou une structure [`Try/Catch`](#trycatchend-try) avant des parties de code qui appellent une fonction, une méthode ou une expression qui peut générer une erreur.
 
-:::tip Good practice
+:::tip Bonne pratique
 
-Il est fortement recommandé d'installer une méthode globale de gestion des erreurs sur 4D Server, pour tout le code s'exécutant sur le serveur. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
+Il est fortement recommandé d'installer une méthode globale de gestion des erreurs sur 4D Server, pour tout le code s'exécutant sur le serveur. Lorsque 4D Server ne fonctionne pas [headless](../Admin/cli.md) (c'est-à-dire qu'il est lancé avec sa [fenêtre d'administration](../ServerWindow/overview.md)), cette méthode permet d'éviter l'affichage de boîtes de dialogue sur la machine serveur. En mode headless, les erreurs sont enregistrées dans le fichier [4DDebugLog](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) pour une analyse plus approfondie.
 
 :::
 
 ## Erreur ou statut
 
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a _status_ object. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
+De nombreuses fonctions des classes 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet _status_. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
-D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être gérée par une méthode de gestion des erreurs ou un mot-clé `Try()`.
 
 ## Installer une méthode de gestion des erreurs
 
-In 4D, all errors can be caught and handled by specific project methods, named **error-handling** (or **error-catching**) methods.
+Dans 4D, toutes les erreurs peuvent être détectées et traitées par des méthodes projet spécifiques, appelées **méthodes de gestion des erreurs** (ou **méthodes d'interception des erreurs**).
 
 Une fois installés, les gestionnaires d'erreurs sont automatiquement appelés en mode interprété ou compilé en cas d'erreur dans l'application 4D ou l'un de ses composants. Un gestionnaire d'erreur différent peut être appelé en fonction du contexte d'exécution (voir ci-dessous).
 
-To _install_ an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. Par exemple :
+Pour _installer_ une méthode projet de gestion des erreurs, vous devez simplement appeler la commande [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/fr/page155.html) avec en paramètre le nom de la méthode projet et (optionnellement) sa portée. Par exemple :
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installe une méthode locale de gestion des erreurs
 ```
 
-To stop catching errors for an execution context and give back hand, call `ON ERR CALL` with an empty string:
+Pour arrêter d'intercepter les erreurs dans un contexte d'exécution et rendre la main, appelez `ON ERR CALL` avec une chaîne vide :
 
 ```4d
 ON ERR CALL("";ek local) //rend le contrôle au process local
 ```
 
-The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
+La commande [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) vous permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le process courant. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error(ek local)
  ON ERR CALL("NewMethod";ek local)
-  //If the document cannot be opened, an error is generated
+  //Si le document ne peut pas être ouvert, une erreur est générée
  $ref:=Open document("MyDocument")
-  //Reinstallation of previous method
+  //Réinstallation de la méthode précédente
  ON ERR CALL($methCurrent;ek local)
 
 ```
@@ -61,9 +61,9 @@ The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704
 
 Une méthode de gestion des erreurs peut être définie pour différents contextes d'exécution :
 
-- for the **current process**- a local error handler will be only called for errors that occurred in the current process of the current project,
-- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context of the current project,
-- from the **components**- this error handler is defined in a host project and will be called for all errors that occurred in the components when they were not already caught by a component handler.
+- pour le **process courant**- un gestionnaire d'erreurs local ne sera appelé que pour les erreurs survenues dans le process courant du projet courant,
+- pour l'**ensemble de l'application**- un gestionnaire d'erreurs global sera appelé pour toutes les erreurs qui se sont produites dans le contexte d'exécution de l'application du projet courant,
+- depuis les **composants**- ce gestionnaire d'erreurs est défini dans un projet hôte et sera appelé pour toutes les erreurs survenues dans chaque composant lorsqu'elles n'ont pas déjà été interceptées par la méthode de gestion d'erreurs du composant.
 
 Exemples :
 
@@ -87,19 +87,19 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 
 - des variables système dédiées :
 
-  - `Error` (longint): error code
-  - `Error method` (text): name of the method that triggered the error
-  - `Error line` (longint): line number in the method that triggered the error
-  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error.
+  - `Error` (entier long): Code d'erreur
+  - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
+  - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
 
 :::info
 
-4D automatically maintains a number of variables called **system variables**, meeting different needs. Consultez le manuel Language de 4D\*.
+4D gère automatiquement un certain nombre de variables appelées **variables système**, répondant à différents besoins. Consultez le manuel Language de 4D\*.
 
 :::
 
-- the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) command that returns a collection of the current stack of errors that occurred in the 4D application. You can also use the [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
-- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D. Vous pouvez également utiliser la commande [`GET LAST ERROR STACK`](https://doc.4d.com/4dv20/help/command/en/page1015.html) qui renvoie les mêmes informations sous forme de tableaux.
+- la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 #### Exemple
 
@@ -113,36 +113,36 @@ ON ERR CALL("errorMethod")
 ```
 
 ```4d
-// errorMethod project method
- If(Error#1006) //this is not a user interruption
-    ALERT("The error "+String(Error)+" occurred". The code in question is: \""+Error formula+"\"")
+// méthode projet errorMethod
+ If(Error#1006) //ce n'est pas une interruption générée par l'utilisateur
+    ALERT("L'erreur "+String(Error)+" s'est produite". Le code en question est : \""+Error formula+"\"")
  End if
 ```
 
 ### Utiliser une méthode de gestion des erreurs vide
 
-Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. The `Error` system variable can be tested in any method, i.e. outside of the error-handling method:
+Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
-ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
+ON ERR CALL("emptyMethod") //emptyMethod existe mais elle est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-	ALERT("File not found.")
+ ALERT("File not found.")
 End if
 ON ERR CALL("")
 ```
 
 ## Try(expression)
 
-The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `Try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
+L'instruction `Try(expression)` vous permet de tester une expression d'une seule ligne dans son contexte d'exécution réel (y compris, en particulier, les valeurs de variables locales) et d'intercepter les erreurs qu'elle renvoie, de sorte que la boîte de dialogue d'erreur 4D ne soit pas affichée. L'utilisation de `Try(expression)` fournit un moyen facile de gérer des cas d'erreur simples avec un nombre très faible de lignes de code, et sans nécessiter de méthode de gestion des erreurs.
 
 :::note
 
-If you want to try a more complex code than a single-line expression, you might consider using a [`Try/Catch` structure](#trycatchend-try).
+Si vous voulez tester un code plus complexe qu'une expression d'une ligne simple, vous pouvez envisager d'utiliser une structure [`Try/Catch`](#trycatchend-try).
 
 :::
 
-The formal syntax of the `Try(expression)` statement is:
+La syntaxe formelle de l'instruction `Try(expression)` est :
 
 ```4d
 
@@ -150,21 +150,21 @@ Try (expression) : any | Undefined
 
 ```
 
-_expression_ can be any valid expression.
+_expression_ peut être n'importe quelle expression valide.
 
-If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If _expression_ returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`.
+Si une erreur s'est produite pendant son exécution, elle est interceptée et aucune fenêtre d'erreur n'est affichée, qu'une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) ait été installée ou non avant l'appel à `Try()`. Si _expression_ retourne une valeur, `Try()` retourne la dernière valeur évaluée, sinon elle retourne `Undefined`.
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If _expression_ throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
+Vous pouvez gérer les erreurs en utilisant la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html). Si _expression_ génère une erreur dans une pile d'appels `Try()`, le flux d'exécution s'arrête et retourne au dernier `Try()` exécuté (le premier trouvé en remontant dans la pile d'appels).
 
 :::note
 
-If an [error-handling method](#installing-an-error-handling-method) is installed by _expression_, it is called in case of error.
+Si une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) est installée par _expression_, elle est appelée en cas d'erreur.
 
 :::
 
 ### Exemples
 
-1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. Vous pouvez écrire :
+1. Vous voulez afficher le contenu d'un fichier si le fichier peut être ouvert sans erreur, et si son contenu peut être lu. Vous pouvez écrire :
 
 ```4d
 var $text : Text
@@ -175,12 +175,12 @@ If ($fileHandle # Null)
 End if
 ```
 
-2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+2. Vous voulez gérer la division par zéro. Dans ce cas, vous voulez retourner 0 et générer une erreur:
 
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
   if ($p2=0)
-     $result:=0 //only for clarity (0 is the default for reals)
+     $result:=0 //pour être clair (0 est la valeur par défaut pour les réels)
      throw(-12345; "Division by zero")
   else
     $result:=$p1/$p2
@@ -194,12 +194,12 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#error-or-status) errors:
+3. Vous voulez gérer à la fois les erreurs [prévisibles et non prévisibles](#erreur-ou-statut) :
 
 ```4d
 var $e:=ds.Employee.new()
 $e.name:="Smith"
-$status:=Try($e.save()) //catch predictable and non-predictable errors
+$status:=Try($e.save()) //intercepter les erreurs prévisibles et imprévisibles
 If ($status.success)
    ALERT( "Success")
 Else
@@ -210,51 +210,51 @@ End if
 
 ## Try...Catch...End try
 
-The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
+La structure `Try...Catch...End try` vous permet de tester un bloc de code dans son contexte d'exécution réel (y compris, en particulier, les valeurs des variables locales) et d'intercepter les erreurs qu'il retourne, de sorte que la boîte de dialogue d'erreur 4D ne soit pas affichée.
 
-Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way.
+A la différence du mot-clé `Try(expression)` qui évalue une expression d'une seule ligne, la structure `Try...Catch...End try` vous permet d'évaluer n'importe quel bloc de code, du plus simple au plus complexe, sans nécessiter une méthode de gestion des erreurs. En outre, le bloc `Catch` peut être utilisé pour gérer l'erreur de manière personnalisée.
 
-The formal syntax of the `Try...Catch...End try` structure is:
+La syntaxe formelle de la structure `Try...Catch...End try` est la suivante :
 
 ```4d
 
 Try 
-	statement(s) // Code to evaluate
+	statement(s) // Code à évaluer
 Catch
-	statement(s) // Code to execute in case of error
+	statement(s) // Code à exécuter en cas d'erreur
 End try
 
 ```
 
-The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution.
+Le code placé entre les mots-clés `Try` et `Catch` est d'abord exécuté, puis le flux dépend des erreurs rencontrées lors de cette exécution.
 
-- If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
-- If the code block execution throws a _non-deferred error_, the execution flow stops and executes the corresponding `Catch` code block.
-- If the code block execution throws a _deferred error_, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block.
+- Si aucune erreur n'est levée, l'exécution du code se poursuit après le mot clé `End try` correspondant. Le code placé entre les mots-clés `Catch` et `End try` n'est pas exécuté.
+- Si l'exécution du bloc de code génère une _erreur non différée_, le flux d'exécution s'arrête et exécute le bloc de code `Catch` correspondant.
+- Si l'exécution du bloc de code lance une _erreur différée_, le flux d'exécution continue jusqu'à la fin du bloc `Try`, puis exécute le bloc de code `Catch` correspondant.
 
 :::note
 
-If a _deferred_ error is thrown outside of the `Try` block, the code execution continues until the end of the method or function.
+Si une erreur _différée_ est générée en dehors du bloc `Try`, l'exécution du code se poursuit jusqu'à la fin de la méthode ou de la fonction.
 
 :::
 
 :::info
 
-For more information on _deferred_ and _non-deferred_ errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
+Pour plus d'informations sur les erreurs _différées_ et _non différées_, veuillez vous reporter à la description de la commande [`throw`](https://doc.4d.com/4dv20R/help/command/fr/page1805.html).
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+Dans le bloc de code `Catch`, vous pouvez gérer la ou les erreur(s) en utilisant les commandes de gestion des erreurs standard. La fonction [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) contient la collection des dernières erreurs. Vous pouvez [déclarer une méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) dans ce bloc de code, auquel cas elle est appelée en cas d'erreur (sinon la boîte de dialogue d'erreur 4D est affichée).
 
 :::note
 
-If an [error-handling method](#installing-an-error-handling-method) is installed in the code placed between the `Try` and the `Catch` keywords, it is called in case of error.
+Si une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) est installée dans le code placé entre les mots-clés `Try` et `Catch`, elle est appelée en cas d'erreur.
 
 :::
 
 ### Exemple
 
-Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical features.
+La combinaison de transactions et de structures `Try...Catch...End try` permet d'écrire un code sécurisé pour les fonctionnalités critiques.
 
 ```4d
 Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
@@ -271,7 +271,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 			$newInvoiceLine.item:=$item.item
 			$newInvoiceLine.amount:=$item.amount
 			$newInvoiceLine.invoice:=$newInvoice
-			//call other specific functions to validate invoiceline
+			//appel d'autres fonctions spéciiques pour valider invoiceline
 			$newInvoiceLine.save()
 		End for each 
 		$newInvoice.save()

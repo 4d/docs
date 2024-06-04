@@ -5,7 +5,7 @@ title: Prise en main
 
 4D vous fournit un serveur REST puissant, qui permet d'accéder directement aux données stockées dans vos applications 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+Le serveur REST est inclus dans 4D et 4D Server et automatiquement disponible dans vos applications 4D [une fois configuré](configuration.md).
 
 Cette section est destinée à vous familiariser avec la fonctionnalité REST à l'aide d'un exemple simple. Nous allons :
 
@@ -31,9 +31,9 @@ Pour simplifier l'exemple, nous allons utiliser 4D et un navigateur qui s'exécu
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Affichez la page **Web > Web Features** de la boîte de dialogue des Propriétés et [cochez l'option Exposer en tant que serveur REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. Dans le menu **Exécuter**, sélectionnez **Démarrer le serveur Web** (si nécessaire), puis sélectionnez **Tester le serveur Web**.
 
 4D affiche la page d'accueil par défaut du serveur Web 4D.
 
@@ -41,7 +41,7 @@ Pour simplifier l'exemple, nous allons utiliser 4D et un navigateur qui s'exécu
 
 Vous pouvez désormais lire et modifier des données dans 4D uniquement via les requêtes REST.
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. Par exemple, pour voir le contenu du datastore 4D, vous pouvez écrire :
+Toute requête d'URL 4D REST commence par `/ rest`, pour être insérée après la zone `adress:port`. Par exemple, pour voir le contenu du datastore 4D, vous pouvez écrire :
 
 ```
 http://127.0.0.1/rest/$catalog
@@ -74,7 +74,7 @@ Si vous souhaitez obtenir toutes les entités de la dataclass Employee, vous pou
 /rest/Employees
 ```
 
-**Response:**
+**Réponse :**
 
 ```
 {
@@ -121,7 +121,7 @@ Il existe plusieurs possibilités pour filtrer les données à recevoir. Par exe
 /rest/Employees(2)/Lastname
 ```
 
-**Response:**
+**Réponse :**
 
 ```
 {
@@ -133,4 +133,4 @@ Il existe plusieurs possibilités pour filtrer les données à recevoir. Par exe
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.
+L'[API REST](REST_requests.md) de 4D fournit plusieurs commandes pour interagir avec les applications 4D.

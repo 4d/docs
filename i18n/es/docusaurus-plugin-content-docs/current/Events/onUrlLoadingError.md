@@ -5,13 +5,13 @@ title: On URL Loading Error
 
 | Code | Puede ser llamado por                       | Definición                                |
 | ---- | ------------------------------------------- | ----------------------------------------- |
-| 50   | [Web Area](FormObjects/webArea_overview.md) | Se ha producido un error al cargar la URL |
+| 50   | [Área Web](FormObjects/webArea_overview.md) | Se ha producido un error al cargar la URL |
 
 ## Descripción
 
 Este evento se genera cuando se detecta un error durante la carga de una URL.
 
-You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
+Puede llamar al comando `WA GET LAST URL ERROR` para obtener información sobre el error.
 
 ### Ver también
 

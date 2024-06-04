@@ -11,14 +11,14 @@ Esta página contém várias opções para configurar o funcionamento geral da s
 
 Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usuário inicia apenas a aplicação.
 
-- **Do nothing**: Only the application window appears, empty.
-- **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-- **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
+- **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
+- **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
+- **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
   > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-- **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-- **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
+- **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
+- **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
 
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+> **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
 ### Criação de formulários automática
 
@@ -37,54 +37,54 @@ Todas as janelas destes editores podem ser colocadas no formulário de tabulaç�
 
 ![](../assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+Un conjunto de comandos en el menú **Ventana** permite gestionar las pestañas:
 
 ![](../assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas** le permite controlar este funcionamiento:
 
 ![](../assets/en/Preferences/general4.png)
 
 Estão disponíveis três opções:
 
-- **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-- **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
-- **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+- **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
+- **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
+- **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Aparência (somente macOS)
 
-This menu lets you select the color scheme to use for the **4D development** environment. O esquema especificado será aplicado a todos os editores e janelas do modo Design.
+Este menú permite seleccionar la combinación de colores que se utilizará para el entorno de **desarrollo 4D**. O esquema especificado será aplicado a todos os editores e janelas do modo Design.
 
-> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+> También puede definir la paleta de colores que se utilizará en sus **aplicaciones de escritorio** en la página "Interfaz" de la caja de diálogo de los Parámetros.
 
 Estão disponíveis três opções:
 
-- **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-- **Light**: Use the Light Theme
-- **Dark**: Use the Dark Theme
+- **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
+- **Claro**: utilizar el tema claro
+- **Sombra**: utilizar el tema Sombra
 
 > Esta preferência só é suportada no macOS. No Windows, é sempre utilizado o esquema "Light".
 
 ### Sair do modo Desenho ao passar para o modo Aplicação
 
-If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. Se essa opção não estiver marcada (configuração padrão), as janelas do ambiente Design permanecerão visíveis no plano de fundo do ambiente Application.
+Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación utilizando el comando de menú **Probar la aplicación**, se cierran todas las ventanas del entorno Diseño. Se essa opção não estiver marcada (configuração padrão), as janelas do ambiente Design permanecerão visíveis no plano de fundo do ambiente Application.
 
 ### Ativar a criação de bases de dados binárias
 
-If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
+Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
 - **Database...**
 - **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). Eles não são mais propostos por padrão porque 4D recomenda o uso de arquitetura baseada em projeto para novos desenvolvimentos.
+Estos elementos permiten crear bases de datos binarias (ver la sección [Crear una nueva base](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html)). Eles não são mais propostos por padrão porque 4D recomenda o uso de arquitetura baseada em projeto para novos desenvolvimentos.
 
 ## Ao criar um novo projeto
 
 ### Usar arquivo de registo
 
-Quando essa opção está marcada, um arquivo de registro é iniciado automaticamente e usado quando um novo banco de dados é criado. For more information, please refer to [Log file (.journal)](Backup/log.md).
+Quando essa opção está marcada, um arquivo de registro é iniciado automaticamente e usado quando um novo banco de dados é criado. Para más información, consulte [Archivo de historial (.journal)](Backup/log.md).
 
 ### Criar pacote
 
@@ -94,7 +94,7 @@ Graças a esse princípio, no macOS, as pastas do banco de dados aparecem como p
 
 ### Incluir tokens no arquivo de origem do projeto
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
 Se você pretende usar VCS ou editores de código externos em seus novos projetos, talvez queira desmarcar essa opção para melhorar a legibilidade do código com essas ferramentas.
 
@@ -112,17 +112,17 @@ You can configure your existing projects to save code **without tokens** by inse
 
 > Este parâmetro só é tida em conta quando os métodos são guardados. Os métodos existentes em seus projetos não são modificados, a menos que você os salve novamente.
 
-### Create `.gitignore` file
+### Crear el archivo `.gitignore`
 
 Talvez você precise ou queira que o git ignore alguns arquivos em seus novos projetos.
 
-You can set this preference by checking the **Create .gitignore file**  option.
+Puede definir esta preferencia marcando la opción **Crear el archivo .gitignore**.
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+Cuando se crea un proyecto en 4D y esa casilla está marcada, 4D crea un archivo `.gitignore` al mismo nivel que la carpeta `Project` (ver [Arquitectura de un proyecto](Project/architecture.md#gitignore-file-optional)).
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. Isso abrirá o arquivo de configuração .gitignore em seu editor de texto. The contents of this file will be used to generate the `.gitignore` files in your new projects.
+Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Isso abrirá o arquivo de configuração .gitignore em seu editor de texto. El contenido de este archivo se utilizará para generar los archivos `.gitignore` en sus nuevos proyectos.
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+La [documentación oficial de git](https://git-scm.com/docs/gitignore) es un gran recurso para entender cómo funcionan los archivos `.gitignore`.
 
 ### Linguagem de comparação de texto
 
@@ -132,14 +132,14 @@ Um banco de dados 4D pode, portanto, operar em uma linguagem diferente da do sis
 
 Ao criar um novo arquivo de dados, o 4D usa o idioma previamente definido nesse menu. Ao abrir um arquivo de dados que não está no mesmo idioma que a estrutura, o idioma do arquivo de dados é usado e o código do idioma é copiado para a estrutura.
 
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
+> Puede modificar este parámetro para la base abierta utilizando la Configuración de la base (ver [Comparación de textos](../settings/database.md#text-comparison)).
 
 ## Localização da documentação
 
 Esta área configura o acesso à documentação HTML 4D exibida no seu navegador atual:
 
-- When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
-- When you double-click on a 4D command in the **Commands Page** of the Explorer.
+- Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
+- Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
 ### Língua da documentação
 
@@ -160,4 +160,4 @@ Define onde 4D irá procurar por páginas de documentação.
 
 Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
-Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`).
+Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar una ubicación diferente, haga clic en el botón **[...]** junto al área de entrada y elija una carpeta raíz de documentación (carpeta correspondiente al idioma: `fr`, `en`, `es`, `de` o `ja`).
