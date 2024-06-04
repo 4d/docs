@@ -27,7 +27,7 @@ La classe `WebForm` contient des fonctions et des propriétés permettant de gé
 | [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
 | [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
-### _.componentName_
+### *.componentName*
 
 <!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
@@ -41,7 +41,7 @@ Pour plus d'informations, veuillez vous référer à la description de [`.compon
 
 <!-- REF #WebFormClass.disableState().Syntax -->
 
-**.disableState**( _state_ : string)<!-- END REF -->
+**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -53,12 +53,12 @@ Pour plus d'informations, veuillez vous référer à la description de [`.compon
 
 #### Description
 
-La fonction `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->désactive le rendu de l'_état_ dans le formulaire web courant<!-- END REF -->.
+La fonction `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->désactive le rendu de l'*état* dans le formulaire web courant<!-- END REF -->.
 
 Cette fonction ne fait rien si :
 
-- l'_état_ n'est actuellement pas activé dans le formulaire web,
-- l'_état_ n'existe pas pour le formulaire web.
+- l'*état* n'est actuellement pas activé dans le formulaire web,
+- l'*état* n'existe pas pour le formulaire web.
 
 Si vous [activez](#enablestate) ou désactivez plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
@@ -68,7 +68,7 @@ Pour plus d'informations sur les états des formulaires web, veuillez consulter 
 
 <!-- REF #WebFormClass.enableState().Syntax -->
 
-**.enableState**( _state_ : string )<!-- END REF -->
+**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -80,12 +80,12 @@ Pour plus d'informations sur les états des formulaires web, veuillez consulter 
 
 #### Description
 
-La fonction `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->active le rendu de l'_état_ dans le formulaire web courant<!-- END REF -->.
+La fonction `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->active le rendu de l'*état* dans le formulaire web courant<!-- END REF -->.
 
 Cette fonction ne fait rien si :
 
-- l'_état_ a déjà été activé sur le formulaire web,
-- l'_état_ n'existe pas pour le formulaire web.
+- l'*état* a déjà été activé sur le formulaire web,
+- l'*état* n'existe pas pour le formulaire web.
 
 Si vous activez ou [désactivez](#disablestate) plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
@@ -106,7 +106,7 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Syntax -->
 
-**.setError**( _msg_ : string)<!-- END REF -->
+**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -118,7 +118,7 @@ Function authenticationError()
 
 #### Description
 
-La fonction `.setError()` <!-- REF #WebFormClass.setError().Summary -->envoie _msg_ en tant que message d'erreur vers le formulaire web<!-- END REF -->.
+La fonction `.setError()` <!-- REF #WebFormClass.setError().Summary -->envoie *msg* en tant que message d'erreur vers le formulaire web<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de la fonction `.setError()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
@@ -126,7 +126,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la fonct
 
 <!-- REF #WebFormClass.setMessage().Syntax -->
 
-**.setMessage**( _msg_ : string)<!-- END REF -->
+**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -138,7 +138,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la fonct
 
 #### Description
 
-La fonction `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envoie _msg_ en tant que message d'information au formulaire web<!-- END REF -->.
+La fonction `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envoie *msg* en tant que message d'information au formulaire web<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de la méthode `.setMessage()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
@@ -146,7 +146,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la méth
 
 <!-- REF #WebFormClass.setWarning().Syntax -->
 
-**.setWarning**( _msg_ : string)<!-- END REF -->
+**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
@@ -158,7 +158,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la méth
 
 #### Description
 
-La fonction `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envoie _msg_ en tant que message d'avertissement au formulaire web<!-- END REF -->.
+La fonction `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envoie *msg* en tant que message d'avertissement au formulaire web<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de la méthode `.setWarning()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
