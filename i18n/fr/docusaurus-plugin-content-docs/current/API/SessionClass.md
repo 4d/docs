@@ -71,7 +71,7 @@ Selon le process à partir duquel la commande est appelée, la session utilisate
 
 Pour plus d'informations, voir le paragraphe [Types de sessions](#types-de-sessions).
 
-Si la commande est appelée à partir d'un contexte non pris en charge (application mono-utilisateur, sessions évolutives désactivées...), elle retourne _Null_.
+Si la commande est appelée à partir d'un contexte non pris en charge (application mono-utilisateur, sessions évolutives désactivées...), elle retourne *Null*.
 
 #### Sessions Web
 
@@ -320,15 +320,15 @@ $privileges := Session.getPrivileges()
 | Paramètres | Type    |     | Description                                           |
 | ---------- | ------- | :-: | ----------------------------------------------------- |
 | privilege  | Text    |  -> | Nom du privilège à vérifier                           |
-| Résultat   | Boolean |  <- | Vrai si la session dispose du _privilege_, sinon Faux |
+| Résultat   | Boolean |  <- | Vrai si la session dispose du *privilege*, sinon Faux |
 
 <!-- END REF -->
 
 #### Description
 
-La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le _privilege_ est associé à la session, et False sinon<!-- END REF -->.
+La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le *privilege* est associé à la session, et False sinon<!-- END REF -->.
 
-Avec des sessions de client distant et de procédure stockée, cette fonction renvoie toujours True, quel que soit le _privilege_.
+Avec des sessions de client distant et de procédure stockée, cette fonction renvoie toujours True, quel que soit le *privilege*.
 
 #### Exemple
 
@@ -541,11 +541,11 @@ Cette fonction ne fait rien et retourne toujours **False** avec les sessions des
 
 La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe le ou les privilège(s) et/ou rôle(s) défini(s) en paramètre à la session et renvoie **True** si l'exécution a réussi<!-- END REF -->.
 
-- Dans le paramètre _privilege_, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
+- Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
-- Dans le paramètre _privileges_, passez une collection de chaînes contenant des noms de privilèges.
+- Dans le paramètre *privileges*, passez une collection de chaînes contenant des noms de privilèges.
 
-- Dans le paramètre _settings_, passez un objet contenant les propriétés suivantes :
+- Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 
 | Propriété  | Type               | Description                                                                                                      |
 | ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
