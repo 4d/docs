@@ -13,7 +13,7 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Syntax -->
 
-**VP Get table range** ( _vpAreaName_ : Text ; _tableName_ : Text {; _onlyData_ : Integer {; _sheet_ : Integer }} ) : Object<!-- END REF -->
+**VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table range.Params -->
 
@@ -27,22 +27,22 @@ title: VP Get table range
 
 #### 説明
 
-`VP Get table range` コマンドは、<!-- REF #_method_.VP Get table range.Summary -->_tableName_ で指定した表組みが含まれるレンジを返します<!-- END REF -->。
+`VP Get table range` コマンドは、<!-- REF #_method_.VP Get table range.Summary -->*tableName* で指定した表組みが含まれるレンジを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_onlyData_ 引数に次のいずれかの定数を渡すことで、データ部のみを対象とするかを指定できます:
+*onlyData* 引数に次のいずれかの定数を渡すことで、データ部のみを対象とするかを指定できます:
 
 | 定数                    | 値 | 説明                                                                   |
 | --------------------- | - | -------------------------------------------------------------------- |
 | `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
 | `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                                           |
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-_tableName_ に指定した名称の表組みが見つからない場合、コマンドは **null** を返します。
+*tableName* に指定した名称の表組みが見つからない場合、コマンドは **null** を返します。
 
 #### 参照
 
