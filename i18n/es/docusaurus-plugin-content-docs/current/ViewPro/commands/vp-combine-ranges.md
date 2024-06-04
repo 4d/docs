@@ -5,7 +5,7 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Syntax -->
 
-**VP Combine ranges** ( _rangeObj_ : Object ; _otherRangeObj_ : Object {;..._otherRangeObjN_ : Object }  ) : Object<!-- END REF -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
@@ -19,11 +19,11 @@ title: VP Combine ranges
 
 El comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->devuelve un nuevo objeto de rango que incorpora dos o más objetos de rango existentes<!-- END REF -->. Todos los rangos deben ser de la misma área 4D View Pro.
 
-En _rangeObj_, pase el primer rango.
+En *rangeObj*, pase el primer rango.
 
-En _otherRangeObj_, pase otro objeto(s) rango para combinar con _rangeObj_.
+En *otherRangeObj*, pase otro objeto(s) rango para combinar con *rangeObj*.
 
-> El comando incorpora _rangeObj_ y _otherRangeObj_ por referencia.
+> El comando incorpora *rangeObj* y *otherRangeObj* por referencia.
 
 #### Ejemplo
 
