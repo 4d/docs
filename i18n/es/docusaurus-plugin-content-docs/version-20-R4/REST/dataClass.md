@@ -1,7 +1,6 @@
----
-id: dataClass
-title: dataClass
----
+- - -
+id: dataClass title: dataClass
+- - -
 
 Los nombres de dataclass pueden utilizarse directamente en las peticiones REST para trabajar con entidades, selecciones de entidades o funciones de clase de la dataclass.
 
