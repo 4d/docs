@@ -13,7 +13,7 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
 
-**VP Get table column attributes** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer {; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
@@ -23,19 +23,19 @@ title: VP Get column attributes
 | tableName  | Text    | -> | Table name                                     |                  |
 | column     | Integer | -> | 表の列のインデックス                                     |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
-| 戻り値        | Object  | <- | _column_ の属性                                   | <!-- END REF --> |
+| 戻り値        | Object  | <- | *column* の属性                                   | <!-- END REF --> |
 
 #### 説明
 
-`VP Get table column attributes` コマンドは、<!-- REF #_method_.VP Get table column attributes.Summary -->_tableName_ で指定した表組みの _column_ でインデックスを指定した列のカレント属性を返します<!-- END REF -->。
+`VP Get table column attributes` コマンドは、<!-- REF #_method_.VP Get table column attributes.Summary -->*tableName* で指定した表組みの *column* でインデックスを指定した列のカレント属性を返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-このコマンドは、_column_ のカレント属性を格納するオブジェクトを返します:
+このコマンドは、*column* のカレント属性を格納するオブジェクトを返します:
 
 | プロパティ               | タイプ     | 説明                                                 |
 | ------------------- | ------- | -------------------------------------------------- |
@@ -45,7 +45,7 @@ _sheet_ には、ターゲットシートのインデックスを渡します。
 | footerFormula       | text    | 列のフッターのフォーミュラ。                                     |
 | filterButtonVisible | boolean | 列のフィルターボタンが表示されている場合には true、そうでない場合は false。        |
 
-_tableName_ に指定した名称の表組みが見つからない場合、または _column_ に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
+*tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
 
 #### 例題
 
