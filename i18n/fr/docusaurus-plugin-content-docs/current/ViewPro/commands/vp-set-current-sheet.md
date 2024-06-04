@@ -5,7 +5,7 @@ title: VP SET CURRENT SHEET
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Syntax -->
 
-**VP SET CURRENT SHEET** ( _vpAreaName_ : Text ; _sheet_ : Integer)<!-- END REF -->
+**VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)<!-- END REF -->
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
@@ -16,11 +16,11 @@ title: VP SET CURRENT SHEET
 
 #### Description
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in _vpAreaName_<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the sheet to be set as current sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+In *sheet*, pass the index of the sheet to be set as current sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
 > La numérotation démarre à 0.
 
