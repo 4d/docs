@@ -5,7 +5,7 @@ title: VP PRINT
 
 <!-- REF #_method_.VP PRINT.Syntax -->
 
-**VP PRINT** ( _vpAreaName_ : Text  { ; _sheet_ : Integer } ) <!-- END REF -->
+**VP PRINT** ( *vpAreaName* : Text  { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP PRINT.Params -->
 
@@ -16,13 +16,13 @@ title: VP PRINT
 
 #### Description
 
-The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print _vpAreaName_<!-- END REF -->.
+The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print *vpAreaName*<!-- END REF -->.
 
-Pass the 4D View Pro area to be printed in _vpAreaName_. La commande ouvrira la fenêtre de dialogue d'impression permettant de définir l'imprimante et les propriétés de la page.
+Pass the 4D View Pro area to be printed in *vpAreaName*. La commande ouvrira la fenêtre de dialogue d'impression permettant de définir l'imprimante et les propriétés de la page.
 
 > The properties defined in the print dialog window are for the printer paper, they are not the printing properties for the 4D View Pro area. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](vp-set-print-info.md) command. It is highly recommended that the properties for both the printer and the 4D View Pro area match, otherwise the printed document may not correspond to your expectations.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet to print (counting begins at 0). S'il est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou le workbook entier à l'aide des constantes suivantes :
+In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). S'il est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou le workbook entier à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
