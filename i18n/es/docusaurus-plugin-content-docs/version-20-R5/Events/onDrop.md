@@ -11,7 +11,7 @@ title: On Drop
 
 El evento `On Drop` se envía una vez al objeto de destino cuando el puntero del ratón se mueve sobre el objeto. Este evento es la segunda fase de la operación de arrastrar y soltar, en la que se realiza una operación en respuesta a la acción del usuario.
 
-This event is not sent to the object if the drag was not accepted during the [`On Drag Over`](onDragOver.md) events. Si se procesa el evento `On Drag Over` para un objeto y se rechaza un arrastre, no se produce el evento `On Drop`. Así, si durante el evento `On Drag Over` se ha probado la compatibilidad de los tipos de datos entre los objetos origen y destino y se ha aceptado una posible caída, no es necesario volver a comprobar los datos durante el evento `On Drop`. Ya sabe que los datos son adecuados para el objeto de destino.
+Este evento no se envía al objeto si el arrastre no fue aceptado durante los eventos [`On Drag Over`](onDragOver.md). Si se procesa el evento `On Drag Over` para un objeto y se rechaza un arrastre, no se produce el evento `On Drop`. Así, si durante el evento `On Drag Over` se ha probado la compatibilidad de los tipos de datos entre los objetos origen y destino y se ha aceptado una posible caída, no es necesario volver a comprobar los datos durante el evento `On Drop`. Ya sabe que los datos son adecuados para el objeto de destino.
 
 #### Ver también
 
