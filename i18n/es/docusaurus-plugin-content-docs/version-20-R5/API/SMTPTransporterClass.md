@@ -81,7 +81,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Result
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
+The function returns a [**SMTP transporter object**](#smtp-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 #### Ejemplo
 
