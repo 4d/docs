@@ -190,7 +190,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                      | X              | X                  | X                                     |
 | [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                          | X              | X                  | X                                     |
 | [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                             | X              | X                  | X                                     |
-| [Visibility](properties_Display.md#visibility)                                               | X              | X                  | X                                     |
+| [Visibilidad](properties_Display.md#visibility)                                              | X              | X                  | X                                     |
 | [Width](properties_CoordinatesAndSizing.md#width)                                            | X              | X                  | X                                     |
 
 > Las columnas, los encabezados y los pies de list box soportan propiedades específicas.
@@ -1164,7 +1164,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
+Si desea añadir un botón de elipsis [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
 
 Cuando este botón es presionado por un usuario, se generará un evento `On Alternate Click`, y usted podrá manejarlo como quiera (vea el párrafo "Manejo de eventos" para más información).
 
