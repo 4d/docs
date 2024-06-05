@@ -90,7 +90,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         | Zona horaria: ISO8601 extendido hm, con Z                | XXX          | -08:00, Z                                             |
 |         | Zona horaria: ISO8601 hms básico, con Z                  | XXXX         | -0800, -075258, Z                                                     |
 |         | Zona horaria: ISO8601 hms extendido, con Z               | XXXXX        | -08:00, -07:52:58, Z  |
-| x       | Time Zone: ISO8601 basic hm?, without Z for 0            | x            | -08, +0530                                                            |
+| x       | Zona horaria: ISO8601 hm básico, sin Z para 0            | x            | -08, +0530                                                            |
 |         | Zona horaria: ISO8601 hm básico, sin Z                   | xx           | -0800, +0000                                                          |
 |         | Zona horaria: ISO8601 hm extendido, sin Z                | xxx          | -08:00                                                |
 |         | Zona horaria: ISO8601 hms básico, sin Z                  | xxxx         | -0800, -075258                                                        |
