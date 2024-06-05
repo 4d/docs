@@ -172,6 +172,7 @@ Once the session is opened, the following statements become equivalent and retur
   //$myds and $myds2 are equivalent
 ```
 
+
 Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 If no matching datastore is found, `Open datastore` returns **Null**.
@@ -227,7 +228,9 @@ var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-
 var $remoteDS : 4D.DataStoreImplementation
 var $data : 4D.EntitySelection
 
-$connect["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0"
+$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
+  //it is recommended to store the API key in a secured place (e.g. a file)
+  //and to load it in the code
 
 $remoteDS:=Open datastore($connectTo; "remoteId")
 $data:=$remoteDS.item.all()
@@ -421,6 +424,7 @@ You want to know the number of encrypted tables in the current data file:
 <details><summary>History</summary>
 
 |Release|Changes|
+
 |---|---|
 |20|Added|
 
