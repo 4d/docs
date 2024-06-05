@@ -5,7 +5,7 @@ title: VP SET FORMULAS
 
 <!-- REF #_method_.VP SET FORMULAS.Syntax -->
 
-**VP SET FORMULAS** ( _rangeObj_ : Object ; _formulasCol_ : Collection ) <!-- END REF -->
+**VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 
@@ -18,9 +18,9 @@ title: VP SET FORMULAS
 
 El comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->asigna una colección de fórmulas que comienzan en el rango de celdas especificado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. Si _rangeObj_ incluye varios rangos, sólo se utiliza el primer rango.
+In *rangeObj*, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
 
-El parámetro _formulasCol_ es una colección bidimensional:
+El parámetro *formulasCol* es una colección bidimensional:
 
 - La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección define una línea.
 - Cada subcolección define los valores de las celdas para la línea. Los valores deben ser elementos textuales que contengan las fórmulas a asignar a las celdas.
@@ -28,7 +28,7 @@ El parámetro _formulasCol_ es una colección bidimensional:
 > Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
 > If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
 
-Las fórmulas de _rangeObj_ se eliminan sustituyéndolas por una cadena vacía ("").
+Las fórmulas de *rangeObj* se eliminan sustituyéndolas por una cadena vacía ("").
 
 #### Ejemplo 1
 
@@ -41,7 +41,7 @@ $formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Segunda lí
 VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Definir las celdas con las fórmulas
 ```
 
-_myMethod_:
+*myMethod*:
 
 ```4d
 $0:=$1*3.33

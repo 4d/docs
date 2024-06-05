@@ -59,7 +59,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Syntax -->
 
-**4D.SystemWorker.new** ( _commandLine_ : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
+**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
@@ -73,25 +73,25 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 #### Description
 
-La fonction `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary -->crée et renvoie un objet `4D.SystemWorker` qui exécutera la _commandLine_ que vous avez passée en paramètre pour lancer un process externe<!-- END REF -->.
+La fonction `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary -->crée et renvoie un objet `4D.SystemWorker` qui exécutera la *commandLine* que vous avez passée en paramètre pour lancer un process externe<!-- END REF -->.
 
 L'objet system worker retourné peut être utilisé pour envoyer des messages au worker et obtenir les résultats du worker.
 
 Si une erreur se produit pendant la création de l'objet proxy, la fonction renvoie un objet `null` et une erreur est levée.
 
-Dans le paramètre _commandLine_ , passez le chemin complet du fichier de l'application à exécuter (syntaxe posix), ainsi que les arguments requis, si nécessaire. Si vous ne passez que le nom de l'application, 4D utilisera la variable d'environnement `PATH` pour localiser l'exécutable.
+Dans le paramètre *commandLine* , passez le chemin complet du fichier de l'application à exécuter (syntaxe posix), ainsi que les arguments requis, si nécessaire. Si vous ne passez que le nom de l'application, 4D utilisera la variable d'environnement `PATH` pour localiser l'exécutable.
 
 **Attention :** Cette fonction ne peut lancer que des applications exécutables ; elle ne peut pas exécuter les instructions qui font partie du shell (interpréteur de commandes). Par exemple, sous Windows, il n'est pas possible d'utiliser cette commande pour exécuter l'instruction `dir` .
 
-#### Objet _options_
+#### Objet *options*
 
-Dans le paramètre _options_, passez un objet qui peut contenir les propriétés suivantes :
+Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
 
 | Propriété        | Type    | Par défaut | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ---------------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | onResponse       | Formula | undefined  | Callback pour les messages du system worker. Ce callback est appelé une fois que la réponse complète est reçue. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                         |
 | onData           | Formula | undefined  | Callback pour les données du system worker. Ce callback est appelé chaque fois que le system worker reçoit des données. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                 |
-| onDataError      | Formula | undefined  | Callback pour les erreurs du process externe (_stderr_ du processs externe). Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                                                         |
+| onDataError      | Formula | undefined  | Callback pour les erreurs du process externe (*stderr* du processs externe). Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                                                         |
 | onError          | Formula | undefined  | Callback pour les erreurs d'exécution, renvoyées par le system worker en cas de conditions d'exécution inhabituelles (erreurs système). Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                              |
 | onTerminate      | Formula | undefined  | Callback lorsque le process externe est terminé. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                                                                                                        |
 | timeout          | Number  | undefined  | Délai en secondes avant que le process soit tué s'il est toujours actif                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -103,7 +103,7 @@ Dans le paramètre _options_, passez un objet qui peut contenir les propriétés
 
 Toutes les fonctions de callback reçoivent deux paramètres objet. Leur contenu dépend du callback :
 
-| Paramètres                   | Type         | _onResponse_ | _onData_       | _onDataError_    | _onError_    | _onTerminate_ |
+| Paramètres                   | Type         | *onResponse* | *onData*       | *onDataError*    | *onError*    | *onTerminate* |
 | ---------------------------- | ------------ | ------------ | -------------- | ---------------- | ------------ | ------------- |
 | $param1                      | Object       | SystemWorker | SystemWorker   | SystemWorker     | SystemWorker | SystemWorker  |
 | $param2.type | Text         | "response"   | "data"         | "error"          | "error"      | "termination" |
@@ -278,7 +278,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 #### Description
 
-La fonction `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->ferme le flux d'entrée (_stdin_) du process externe<!-- END REF -->.
+La fonction `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->ferme le flux d'entrée (*stdin*) du process externe<!-- END REF -->.
 
 Lorsque l'exécutable attend que toutes les données soient reçues par `postMessage()`, `.closeInput()` est utile pour indiquer à l'exécutable que l'envoi des données est terminé et qu'il peut continuer.
 
@@ -404,7 +404,7 @@ Si aucune erreur ne s'est produite, `.errors` est undefined.
 
 #### Description
 
-La propriété `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contient le code de sortie renvoyé par le process externe<!-- END REF -->. Si le process ne s'est pas terminé normalement, `exitCode` est _undefined_.
+La propriété `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contient le code de sortie renvoyé par le process externe<!-- END REF -->. Si le process ne s'est pas terminé normalement, `exitCode` est *undefined*.
 
 Cette propriété est en **lecture seule**.
 
@@ -448,7 +448,7 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.postMessage().Syntax -->
 
-**.postMessage**( _message_ : Text)<br/>**.postMessage**( _messageBLOB_ : Blob)<!-- END REF -->
+**.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
@@ -461,9 +461,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La fonction `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary -->vous permet d'écrire dans le flux d'entrée (stdin) du process externe<!-- END REF -->. Dans le paramètre _message_, passez le texte à écrire dans _stdin_.
+La fonction `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary -->vous permet d'écrire dans le flux d'entrée (stdin) du process externe<!-- END REF -->. Dans le paramètre *message*, passez le texte à écrire dans *stdin*.
 
-La fonction `.postMessage()` accepte également une valeur de type Blob dans _messageBLOB_, de sorte que vous pouvez poster des données binaires dans _stdin_.
+La fonction `.postMessage()` accepte également une valeur de type Blob dans *messageBLOB*, de sorte que vous pouvez poster des données binaires dans *stdin*.
 
 Vous pouvez utiliser la propriété `.dataType` de l'objet [options](#options-object) pour que le corps de réponse renvoie des valeurs Blob.
 
@@ -572,7 +572,7 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Syntax -->
 
-**.wait**( {_timeout_ : Real} ) : 4D.SystemWorker<!-- END REF -->
+**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
@@ -585,11 +585,11 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La fonction `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->attend la fin de l'exécution du `SystemWorker` ou le _timeout_ spécifié<!-- END REF -->.
+La fonction `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->attend la fin de l'exécution du `SystemWorker` ou le *timeout* spécifié<!-- END REF -->.
 
-Dans _timeout_, passez une valeur en secondes. Le script `SystemWorker` attendra le process externe pendant la durée définie dans le paramètre _timeout_ . Si vous omettez le paramètre _timeout_, l'exécution du script attendra indéfiniment.
+Dans *timeout*, passez une valeur en secondes. Le script `SystemWorker` attendra le process externe pendant la durée définie dans le paramètre *timeout* . Si vous omettez le paramètre *timeout*, l'exécution du script attendra indéfiniment.
 
-En fait, `.wait()` attend la fin du traitement de la formule `onTerminate`, sauf si le _timeout_ est atteint. Si le _timeout_ est atteint, le `SystemWorker` n'est pas tué.
+En fait, `.wait()` attend la fin du traitement de la formule `onTerminate`, sauf si le *timeout* est atteint. Si le *timeout* est atteint, le `SystemWorker` n'est pas tué.
 
 Pendant une exécution `.wait()`, les fonctions de callback sont exécutées, en particulier les callbacks provenant d'autres événements ou d'autres instances de `SystemWorker`. Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
 

@@ -58,15 +58,15 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 
 #### Description
 
-La commande `ds` <!-- REF #_command_.ds.Summary -->retourne une référence vers le datastore correspondant à la base de données 4D courante ou à la base de données désignée par _localID_<!-- END REF -->.
+La commande `ds` <!-- REF #_command_.ds.Summary -->retourne une référence vers le datastore correspondant à la base de données 4D courante ou à la base de données désignée par *localID*<!-- END REF -->.
 
-Si vous omettez le paramètre _localID_ (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`.
+Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`.
 
-Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre _localID_. Le datastore doit avoir été préalablement ouvert avec la commande [`Open datastore`](#open-datastore) par la base de données courante (hôte ou composant). L'identifiant local est défini lors de l'utilisation de cette commande.
+Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. Le datastore doit avoir été préalablement ouvert avec la commande [`Open datastore`](#open-datastore) par la base de données courante (hôte ou composant). L'identifiant local est défini lors de l'utilisation de cette commande.
 
 > La portée de l'identifiant local est la base de données dans laquelle le datastore a été ouvert.
 
-Si aucun datastore nommé _localID_ n'est trouvé, la commande renvoie **Null**.
+Si aucun datastore nommé *localID* n'est trouvé, la commande renvoie **Null**.
 
 Les objets disponibles dans le `cs.Datastore` sont créés à partir de la base de données cible en fonction des [règles générales](ORDA/dsMapping.md#règles-générales) de correspondance d'ORDA.
 
@@ -110,7 +110,7 @@ Utilisation du datastore principal de la base 4D :
 
 | Release | Modifications                          |
 | ------- | -------------------------------------- |
-| 20 R4   | Nouvelle propriété _passwordAlgorithm_ |
+| 20 R4   | Nouvelle propriété *passwordAlgorithm* |
 | 18      | Ajout                                  |
 
 </details>
@@ -129,9 +129,9 @@ Utilisation du datastore principal de la base 4D :
 
 #### Description
 
-La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre _connectionInfo_<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local _localID_.
+La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
 
-La base de données _connectionInfo_ 4D doit être disponible en tant que datastore distant, c'est-à-dire :
+La base de données *connectionInfo* 4D doit être disponible en tant que datastore distant, c'est-à-dire :
 
 - son serveur Web doit être lancé avec http et/ou https activé,
 - le datastore doit être exposé (option [**Exposer en tant que serveur REST**](REST/configuration.md#démarrer-le-serveur-rest) cochée) ainsi que les [dataclass et les attributs](../REST/configuration.md#exposer-les-tables-et-les-champs).
@@ -144,7 +144,7 @@ Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter
 
 Si aucune base de données correspondante n'est trouvée, `Open datastore` retourne **Null**.
 
-_localID_ est un alias local de la session ouverte sur le datastore distant. Si _localID_ existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session _localID_ est créée lors de l’utilisation de l’objet datastore.
+*localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
 
 Les objets disponibles dans le `cs.Datastore` sont créés à partir de la base de données cible en fonction des [règles générales](ORDA/dsMapping.md#règles-générales) de correspondance d'ORDA.
 
@@ -156,7 +156,7 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
   //$myds et $myds2 sont équivalents
 ```
 
-Passez dans _connectionInfo_ un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Toutes les propriétés sont optionnelles excepté _hostname_ :
+Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Toutes les propriétés sont optionnelles excepté *hostname* :
 
 | Propriété         | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -165,7 +165,7 @@ Passez dans _connectionInfo_ un objet décrivant le datastore distant auquel vou
 | password          | Text    | Mot de passe de l'utilisateur. Par défaut, le mot de passe est envoyé en clair, il est donc **vivement recommandé** d'utiliser des communications chiffrées en passant `true` dans la propriété `tls`.                                                                                                                                                                                                                                    |
 | idleTimeout       | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
 | tls               | Boolean | Utilisez une connexion sécurisée(\*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                                                                            |
-| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe en utilisant la commande [`Validate password`](https://doc.4d.com/4dv20/help/command/fr/page638.html) avec le paramètre _digest_ défini sur `true`.                                                                                                                                                                                                                                          |
+| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe en utilisant la commande [`Validate password`](https://doc.4d.com/4dv20/help/command/fr/page638.html) avec le paramètre *digest* défini sur `true`.                                                                                                                                                                                                                                          |
 | type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 (\*) Si tls est vrai, le protocole HTTPS est utilisé si :
@@ -220,7 +220,7 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
 
-## _.dataclassName_
+## *.dataclassName*
 
 <details><summary>Historique</summary>
 
@@ -357,7 +357,7 @@ L'objet retourné contient les propriétés suivantes :
 | isEncrypted |             |               | Boolean | Vrai si le fichier de données est chiffré                                                                                     |
 | keyProvided |             |               | Boolean | Vrai si la clé de chiffrement correspondant au fichier de données chiffré est fournie(\*). |
 | tables      |             |               | Object  | Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.                                  |
-|             | _tableName_ |               | Object  | Table chiffrable ou chiffrée                                                                                                  |
+|             | *tableName* |               | Object  | Table chiffrable ou chiffrée                                                                                                  |
 |             |             | name          | Text    | Nom de la table                                                                                                               |
 |             |             | num           | Number  | Numéro de la table                                                                                                            |
 |             |             | isEncryptable | Boolean | Vrai si la table est déclarée chiffrable dans le fichier de structure                                                         |
@@ -698,7 +698,7 @@ Sur un datastore distant :
 
 #### Description
 
-La fonction `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> renvoie un objet qui contient des informations sur le contexte d'optimisation _contextName_ dans le datastore<!-- END REF -->.
+La fonction `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> renvoie un objet qui contient des informations sur le contexte d'optimisation *contextName* dans le datastore<!-- END REF -->.
 
 Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
@@ -713,7 +713,7 @@ L'objet retourné contient les propriétés suivantes :
 | dataclass                                  | Text | Nom de la dataclass                                                                                                                                                                                                                                                                                                                        |
 | currentItem (optionnel) | Text | Attributs du [mode page](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités) si le contexte est lié à une list box. Retourn `Null` ou un élément de texte vide si le contexte n'est pas utilisé pour une list box, ou s'il n'y a pas de contexte pour l'élément courant (currentItem) |
 
-Comme les contextes se comportent comme des filtres d'attributs, si _main_ est retourné vide, cela signifie qu'aucun filtre n'est appliqué et que le serveur donc retourne tous les attributs de la dataclass.
+Comme les contextes se comportent comme des filtres d'attributs, si *main* est retourné vide, cela signifie qu'aucun filtre n'est appliqué et que le serveur donc retourne tous les attributs de la dataclass.
 
 #### Exemple
 
@@ -901,11 +901,11 @@ La fonction `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summar
 > - La fonction `.provideDataKey()` doit être appelée dans une base de données chiffrée. S'il est appelé dans une base de données non cryptée, l'erreur 2003 (la clé de cryptage ne correspond pas aux données) est retournée. Utilisez la commande `Data file encryption status` pour déterminer si la base de données est chiffrée.
 > - La fonction `.provideDataKey()` ne peut pas être appelée depuis un 4D distant ou un datastore distant chiffré.
 
-Si vous utilisez le paramètre _curPassPhrase_, passez la chaîne utilisée pour générer la clé de chiffrement des données. Lorsque vous utilisez ce paramètre, une clé de chiffrement est générée.
+Si vous utilisez le paramètre *curPassPhrase*, passez la chaîne utilisée pour générer la clé de chiffrement des données. Lorsque vous utilisez ce paramètre, une clé de chiffrement est générée.
 
-Si vous utilisez le paramètre _curDataKey_, passez un objet (avec la propriété _encodedKey_) contenant la clé de chiffrement des données. Cette clé peut avoir été générée à l'aide de la commande `New data key`.
+Si vous utilisez le paramètre *curDataKey*, passez un objet (avec la propriété *encodedKey*) contenant la clé de chiffrement des données. Cette clé peut avoir été générée à l'aide de la commande `New data key`.
 
-Si une clé de chiffrement des données valide est fournie, elle est ajoutée à la _keyChain_ dans la mémoire et le mode chiffrement est activé :
+Si une clé de chiffrement des données valide est fournie, elle est ajoutée à la *keyChain* dans la mémoire et le mode chiffrement est activé :
 
 - toutes les modifications de données apportées dans les tables chiffrables sont chiffrées sur le disque (fichiers .4DD, .journal,  . 4Dindx).
 - toutes les données chargées à partir de tables chiffrables sont déchiffrées dans la mémoire
@@ -917,7 +917,7 @@ Le résultat de la commande est décrit dans l'objet retourné :
 | Propriété  |                                                                                              | Type       | Description                                                                                        |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
 | success    |                                                                                              | Boolean    | Vrai si la clé de chiffrement fournie correspond aux données chiffrées, sinon Faux                 |
-|            |                                                                                              |            | Les propriétés ci-dessous sont retournées uniquement si success est à _Faux_                       |
+|            |                                                                                              |            | Les propriétés ci-dessous sont retournées uniquement si success est à *Faux*                       |
 | status     |                                                                                              | Number     | Code d'erreur (4 si la clé de chiffrement fournie est erronée)                  |
 | statusText |                                                                                              | Text       | Message d'erreur                                                                                   |
 | errors     |                                                                                              | Collection | Pile d'erreurs. La première erreur possède l'indice le plus élevé. |
@@ -925,7 +925,7 @@ Le résultat de la commande est décrit dans l'objet retourné :
 |            | \[ ].errCode            | Number     | Numéro de l'erreur                                                                                 |
 |            | \[ ].message            | Text       | Message d'erreur                                                                                   |
 
-Si aucun paramètre _curPassphrase_ ou _curDataKey_ n'est fourni, `.provideDataKey()` retourne **null** (aucune erreur n'est générée).
+Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataKey()` retourne **null** (aucune erreur n'est générée).
 
 #### Exemple
 
@@ -960,7 +960,7 @@ Si aucun paramètre _curPassphrase_ ou _curDataKey_ n'est fourni, `.provideDataK
 
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->
 
-**.setAdminProtection**( _status_ : Boolean )<!-- END REF -->
+**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -980,7 +980,7 @@ Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux do
 
 #### Exemple
 
-Vous créez une méthode projet _protectDataFile_ à appeler par exemple avant le déploiement :
+Vous créez une méthode projet *protectDataFile* à appeler par exemple avant le déploiement :
 
 ```4d
  ds.setAdminProtection(True) //Désactive l'accès aux données de l'Explorateur de données
@@ -1022,7 +1022,7 @@ Cette fonction est destinée aux développeurs qui ont besoin de modifier la val
 
 #### Description
 
-La fonction `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->définit _newStamp_ comme la nouvelle valeur du marqueur de modification global du datastore<!-- END REF -->.
+La fonction `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->définit *newStamp* comme la nouvelle valeur du marqueur de modification global du datastore<!-- END REF -->.
 
 :::info
 
@@ -1081,7 +1081,7 @@ ds.setGlobalStamp($newValue)
 
 #### Description
 
-La fonction `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->lie les attributs de la dataclass spécifiée au contexte d'optimisation _contextName_<!-- END REF -->. Si un contexte d'optimisation existe déjà pour les attributs spécifiés, la commande le remplace.
+La fonction `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->lie les attributs de la dataclass spécifiée au contexte d'optimisation *contextName*<!-- END REF -->. Si un contexte d'optimisation existe déjà pour les attributs spécifiés, la commande le remplace.
 
 Lorsque vous passez un contexte aux fonctions de classe ORDA, l'optimisation des requêtes REST est déclenchée immédiatement :
 
@@ -1090,22 +1090,22 @@ Lorsque vous passez un contexte aux fonctions de classe ORDA, l'optimisation des
 
 > Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
-Dans _contextName_, passez le nom du contexte d'optimisation à lier aux attributs de la dataclass.
+Dans *contextName*, passez le nom du contexte d'optimisation à lier aux attributs de la dataclass.
 
-Pour désigner la dataclass qui doit recevoir le contexte, vous pouvez passer un _dataClassName_ ou un _dataClassObject_.
+Pour désigner la dataclass qui doit recevoir le contexte, vous pouvez passer un *dataClassName* ou un *dataClassObject*.
 
-Pour désigner les attributs à lier au contexte, passez soit une liste d'attributs séparés par des virgules dans _attributes_ (Text), soit une collection de noms d'attributs dans _attributesColl_ (collection de textes).
+Pour désigner les attributs à lier au contexte, passez soit une liste d'attributs séparés par des virgules dans *attributes* (Text), soit une collection de noms d'attributs dans *attributesColl* (collection de textes).
 
-Si _attributes_ est un texte vide, ou si _attributesColl_ est une collection vide, tous les attributs scalaires de la dataclass sont intégrés au contexte d'optimisation. Si vous passez un attribut qui n'existe pas dans la dataclass, la fonction l'ignore et une erreur est générée.
+Si *attributes* est un texte vide, ou si *attributesColl* est une collection vide, tous les attributs scalaires de la dataclass sont intégrés au contexte d'optimisation. Si vous passez un attribut qui n'existe pas dans la dataclass, la fonction l'ignore et une erreur est générée.
 
-Vous pouvez passer un _contextType_ pour spécifier si le contexte est standard ou s'il s'agit du contexte de l'élément courant de l'entity selection affichée dans une list box :
+Vous pouvez passer un *contextType* pour spécifier si le contexte est standard ou s'il s'agit du contexte de l'élément courant de l'entity selection affichée dans une list box :
 
-- Si sa valeur est "main" (défaut), _contextName_ désigne un contexte standard.
+- Si sa valeur est "main" (défaut), *contextName* désigne un contexte standard.
 - Si sa valeur est "currentItem", les attributs passés sont intégrés dans le contexte de l'élément courant.  Voir  [Listbox basée sur une sélection d'entités](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités).
 
-Dans _pageLength_, spécifiez le nombre d'entités de dataclass à demander au serveur.
+Dans *pageLength*, spécifiez le nombre d'entités de dataclass à demander au serveur.
 
-Vous pouvez passer une _pageLength_ pour un attribut relationnel qui est une entity selection (1-vers-N). La syntaxe est `relationAttributeName:pageLength` (e.g employees:20).
+Vous pouvez passer une *pageLength* pour un attribut relationnel qui est une entity selection (1-vers-N). La syntaxe est `relationAttributeName:pageLength` (e.g employees:20).
 
 #### Exemple 1
 
@@ -1219,21 +1219,21 @@ Pour une description du format du journal des requêtes ORDA, veuillez vous réf
 
 Pour créer un journal des requêtes ORDA côté client, appelez cette fonction sur une machine distante. Le journal peut être envoyé à un fichier ou en mémoire, selon le type de paramètre :
 
-- Si vous avez passé un objet _file_ créé à l'aide de la commande `File`, les données de l'enregistrement sont écrites dans ce fichier sous forme de collection d'objets (format JSON). Chaque objet représente une requête.<br/>Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
+- Si vous avez passé un objet *file* créé à l'aide de la commande `File`, les données de l'enregistrement sont écrites dans ce fichier sous forme de collection d'objets (format JSON). Chaque objet représente une requête.<br/>Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
   Si la fonction `.startRequestLog()` est appelée avec un fichier alors qu'un enregistrement des requêtes est déjà en cours en mémoire, l'enregistrement en mémoire est stoppé et vidé.
 
 > Un caractère \] doit être ajouté manuellement à la fin du fichier pour effectuer une validation JSON
 
-- Si vous avez passé un numéro _reqNum_, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Il gardera en mémoire les requêtes jusqu'à atteindre le nombre _reqNum_, auquel cas les entrées les plus anciennes sont vidées (pile FIFO).<br/>Si la fonction `.startRequestLog()` est appelée avec un _reqNum_ alors qu'un enregistrement des requêtes était déjà en cours dans un fichier, l'enregistrement dans le fichier est stoppé.
+- Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Il gardera en mémoire les requêtes jusqu'à atteindre le nombre *reqNum*, auquel cas les entrées les plus anciennes sont vidées (pile FIFO).<br/>Si la fonction `.startRequestLog()` est appelée avec un *reqNum* alors qu'un enregistrement des requêtes était déjà en cours dans un fichier, l'enregistrement dans le fichier est stoppé.
 
-- Si vous n'avez passé aucun paramètre, l'enregistrement est lancé dans la mémoire. Si `.startRequestLog()` a été préalablement appelée avec un _reqNum_ (avant un `.stopRequestLog()`), les données enregistrées sont empilées dans la mémoire jusqu'au prochain vidage ou appel de `.stopRequestLog()`.
+- Si vous n'avez passé aucun paramètre, l'enregistrement est lancé dans la mémoire. Si `.startRequestLog()` a été préalablement appelée avec un *reqNum* (avant un `.stopRequestLog()`), les données enregistrées sont empilées dans la mémoire jusqu'au prochain vidage ou appel de `.stopRequestLog()`.
 
 #### Côté serveur
 
 Pour créer un journal des requêtes ORDA côté serveur, appelez cette fonction sur la machine serveur. Les données du journal sont écrites dans un fichier au format `.jsonl`. Chaque objet représente une requête. Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
 
-- Si vous avez passé le paramètre _file_ , les données du journal sont écrites dans ce fichier, à l'emplacement demandé. - Si vous omettez le paramètre _file_ ou s'il est null, les données du journal sont écrites dans un fichier nommé _ordaRequests.jsonl_ et stockées dans le dossier "/LOGS".
-- Le paramètre _options_ peut être utilisé pour spécifier si la réponse du serveur doit être enregistrée et si elle doit inclure le corps du message. Par défaut, lorsque le paramètre est omis, la réponse complète est enregistrée. Les constantes suivantes peuvent être utilisées dans ce paramètre :
+- Si vous avez passé le paramètre *file* , les données du journal sont écrites dans ce fichier, à l'emplacement demandé. - Si vous omettez le paramètre *file* ou s'il est null, les données du journal sont écrites dans un fichier nommé *ordaRequests.jsonl* et stockées dans le dossier "/LOGS".
+- Le paramètre *options* peut être utilisé pour spécifier si la réponse du serveur doit être enregistrée et si elle doit inclure le corps du message. Par défaut, lorsque le paramètre est omis, la réponse complète est enregistrée. Les constantes suivantes peuvent être utilisées dans ce paramètre :
 
 | Constante                     | Description                                                               |
 | ----------------------------- | ------------------------------------------------------------------------- |

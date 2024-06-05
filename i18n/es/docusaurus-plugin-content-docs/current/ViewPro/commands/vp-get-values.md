@@ -5,7 +5,7 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Syntax -->
 
-**VP Get values** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get values** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get values.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get values
 
 #### Descripción
 
-El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del _rangeObj_ designado<!-- END REF -->.
+El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del *rangeObj* designado<!-- END REF -->.
 
-En _rangeObj_, pase un rango cuyos valores desea recuperar. Si _rangeObj_ incluye varios rangos, sólo se utiliza el primer rango.
+En *rangeObj*, pase un rango cuyos valores desea recuperar. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
 
 La colección devuelta por `VP Get values` contiene una colección bidimensional:
 

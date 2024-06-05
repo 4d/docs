@@ -20,9 +20,9 @@ Avec une version française de 4D, une heure est structurée sous la forme heure
 Voici quelques exemples de constantes littérales de type heure :
 
 ```4d
-?00:00:00? // minuit
-?09:30:00? // 9:30 du matin
-?13:01:59? // 13 heures, 1 minute et 59 secondes
+?00:00:00? //midnight
+?09:30:00? //9:30 am
+?13:01:59? //1 pm, 1 minute, and 59 seconds
 ```
 
 Une heure nulle s’écrit ?00:00:00?
@@ -31,33 +31,29 @@ Une heure nulle s’écrit ?00:00:00?
 
 ## Opérateurs sur les heures
 
-| Opération        | Syntaxe         | Retourne | Expression                                                                              | Valeur                                     |
-| ---------------- | --------------- | -------- | --------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Addition         | Heure + Heure   | Time     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction     | Heure – Heure   | Time     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition         | Heure + Nombre  | Number   | ?02:03:04? + 65                                         | 7449                                       |
-| Soustraction     | Heure – Nombre  | Number   | ?02:03:04? – 65                                         | 7319                                       |
-| Multiplication   | Heure \* Nombre | Number   | ?02:03:04? \* 2                                         | 14768                                      |
-| Division         | Heure / Nombre  | Number   | ?02:03:04? / 2                                          | 3692                                       |
-| Division entière | Heure \ Nombre  | Number   | ?02:03:04? \ 2                                          | 3692                                       |
-| Modulo           | Heure % Heure   | Time     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo           | Heure % Nombre  | Number   | ?02:03:04? % 2                                          | 0                                          |
-| Egalité          | Heure = Heure   | Boolean  | ?01:02:03? = ?01:02:03? | True                                       |
-
-```
-		||||?01:02:03? = ?01:02:04?	|False|
-```
-
-|Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
-||||?01:02:03? # ?01:02:03?	|False|
-|Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
-||||		?01:02:03? > ?01:02:03?	|False|
-|Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:03?	|True|
-||||	?01:02:03? < ?01:02:03?	|False|
-|Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
-||||?01:02:03? >=?01:02:03?	|False|
-|Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
-||||?01:02:04? <=?01:02:03?	|False|
+| Opération           | Syntaxe         | Retourne | Expression                                                                              | Valeur                                     |
+| ------------------- | --------------- | -------- | --------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Addition            | Heure + Heure   | Time     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Soustraction        | Heure – Heure   | Time     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition            | Heure + Nombre  | Number   | ?02:03:04? + 65                                         | 7449                                       |
+| Soustraction        | Heure – Nombre  | Number   | ?02:03:04? – 65                                         | 7319                                       |
+| Multiplication      | Heure \* Nombre | Number   | ?02:03:04? \* 2                                         | 14768                                      |
+| Division            | Heure / Nombre  | Number   | ?02:03:04? / 2                                          | 3692                                       |
+| Division entière    | Heure \ Nombre  | Number   | ?02:03:04? \ 2                                          | 3692                                       |
+| Modulo              | Heure % Heure   | Time     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo              | Heure % Nombre  | Number   | ?02:03:04? % 2                                          | 0                                          |
+| Egalité             | Heure = Heure   | Boolean  | ?01:02:03? = ?01:02:03? | True                                       |
+|                     |                 |          | ?01:02:03? = ?01:02:04? | False                                      |
+| Inégalité           | Heure # Heure   | Boolean  | ?01:02:03? # ?01:02:04? | True                                       |
+|                     |                 |          | ?01:02:03? # ?01:02:03? | False                                      |
+| Supérieur à         | Time > Time     | Boolean  | ?01:02:04? > ?01:02:03? | True                                       |
+|                     |                 |          | ?01:02:03? > ?01:02:03? | False                                      |
+| Inférieur à         | Time < Time     | Boolean  | ?01:02:03? < ?01:02:03? | True                                       |
+|                     |                 |          | ?01:02:03? < ?01:02:03? | False                                      |
+| Supérieur ou égal à | Time >= Time    | Boolean  | ?01:02:03? >=?01:02:03? | True                                       |
+|                     |                 |          | ?01:02:03? >=?01:02:03? | False                                      |
+| Inférieur ou égal à | Time <= Time    | Boolean  | ?01:02:03? <=?01:02:03? | True                                       |
+|                     |                 |          | ?01:02:04? <=?01:02:03? | False                                      |
 
 ### Exemple 1
 

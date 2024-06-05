@@ -13,7 +13,7 @@ title: VP Get binding path
 
 <!-- REF #_method_.VP Get binding path.Syntax -->
 
-**VP Get binding path** ( _rangeObj_ : Object ) : Text<!-- END REF -->
+**VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get binding path.Params -->
 
@@ -24,12 +24,12 @@ title: VP Get binding path
 
 #### 説明
 
-`VP Get binding path` コマンドは、<!-- REF #_method_.VP Get binding path.Summary -->_rangeObj_ で指定したセルにバインドされた属性の名称を返します<!-- END REF -->。
+`VP Get binding path` コマンドは、<!-- REF #_method_.VP Get binding path.Summary -->*rangeObj* で指定したセルにバインドされた属性の名称を返します<!-- END REF -->。
 
-_rangeObj_ 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。 注:
+*rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。 注:
 
-- _rangeObj_ のレンジが複数セルを含む場合、コマンドは最初のセルにバインドされている属性名を返します。
-- _rangeObj_ 引数が複数のレンジを含む場合、最初のレンジの最初のセルにバインドされた属性名が返されます。
+- *rangeObj* のレンジが複数セルを含む場合、コマンドは最初のセルにバインドされている属性名を返します。
+- *rangeObj* 引数が複数のレンジを含む場合、最初のレンジの最初のセルにバインドされた属性名が返されます。
 
 #### 例題
 

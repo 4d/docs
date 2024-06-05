@@ -79,7 +79,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | Lanzamiento | Modificaciones                                                 |
 | ----------- | -------------------------------------------------------------- |
 | 20          | Validación TLS por defecto                                     |
-| 19 R7       | Support of _automaticRedirections_ and _decodeData_ properties |
+| 19 R7       | Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -97,11 +97,11 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 #### Descripción
 
-The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in _url_ with the defined _options_, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
-In _url_, pass the URL where you want to send the request. La sintaxis a utilizar es:
+In *url*, pass the URL where you want to send the request. La sintaxis a utilizar es:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -123,9 +123,9 @@ Por ejemplo, puede pasar las siguientes cadenas:
     http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
-#### Parámetro _options_
+#### Parámetro *options*
 
-In the _options_ parameter, pass an object that can contain the following properties:
+In the *options* parameter, pass an object that can contain the following properties:
 
 | Propiedad              | Tipo                                            | Descripción                                                                                                                                                                                                                                                                                                                                                    | Por defecto  |
 | ---------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -135,7 +135,7 @@ In the _options_ parameter, pass an object that can contain the following proper
 | dataType               | Text                                            | Tipo de atributo del cuerpo de la respuesta. Valores: "text", "blob", "object", o "auto". Si "auto", el tipo de contenido del cuerpo se deducirá de su tipo MIME (object para JSON, texto para texto, javascript, xml, mensaje http y formulario codificado en url, blob en caso contrario) | "auto"       |
 | decodeData             | Boolean                                         | If true, the data received in the `onData` callback is uncompressed                                                                                                                                                                                                                                                                                            | False        |
 | encoding               | Text                                            | Used only in case of requests with a `body` (`post` or `put` methods). Codificación del contenido del cuerpo de la petición si es un texto, se ignora si se define content-type dentro de los encabezados                                                                                                                   | "UTF-8"      |
-| headers                | Object                                          | Encabezados de la petición. Syntax: `headers.key=value` (_value_ can be a Collection if the same key must appear multiple times)                                                                                                                                                                            | Objeto vacío |
+| headers                | Object                                          | Encabezados de la petición. Syntax: `headers.key=value` (*value* can be a Collection if the same key must appear multiple times)                                                                                                                                                                            | Objeto vacío |
 | method                 | Text                                            | "POST", "GET" u otro método                                                                                                                                                                                                                                                                                                                                    | "GET"        |
 | minTLSVersion          | Text                                            | Sets the minimum version of TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                                                                            | "`TLSv1_2`"  |
 | onData                 | [Function](FunctionClass.md)                    | Retrollamada cuando se reciben los datos del cuerpo. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                                                     | indefinido   |
@@ -177,7 +177,7 @@ An `event` object is returned when a [callback function](#callback-functions) is
 
 | Propiedad             | Tipo | Descripción                                                                                                            |
 | --------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------- |
-| .data | blob | Datos recibidos. It is always _undefined_ except in the `onData` callback                              |
+| .data | blob | Datos recibidos. It is always *undefined* except in the `onData` callback                              |
 | .type | text | Tipo de evento. Valores posibles: "response", "error", "headers", "data", o "terminate |
 
 #### authentication object
@@ -372,7 +372,7 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
 
-A `response` object is a non-sharable object. Ofrece las siguientes propiedades:
+Un objeto `response` es un objeto no compartible. Ofrece las siguientes propiedades:
 
 | Propiedad                   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -414,7 +414,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta función es hilo seguro.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. It triggers the `onTerminate` event.
+The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Activa el evento `onTerminate`.
 
 <!-- END REF -->
 
@@ -475,7 +475,7 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
 
-If a _time_ parameter is passed, the function will wait at most the defined number of seconds.
+If a *time* parameter is passed, the function will wait at most the defined number of seconds.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 

@@ -79,7 +79,7 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 | Release | Modifications                                                          |
 | ------- | ---------------------------------------------------------------------- |
 | 20      | Validation TLS par défaut                                              |
-| 19 R7   | Prise en charge des propriétés _automaticRedirections_ et _decodeData_ |
+| 19 R7   | Prise en charge des propriétés *automaticRedirections* et *decodeData* |
 
 </details>
 
@@ -97,11 +97,11 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 #### Description
 
-La fonction `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->crée et envoie une requête HTTP au serveur HTTP défini dans _url_ avec les _options_ définies, et renvoie un objet `4D.HTTPRequest`<!-- END REF -->.
+La fonction `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->crée et envoie une requête HTTP au serveur HTTP défini dans *url* avec les *options* définies, et renvoie un objet `4D.HTTPRequest`<!-- END REF -->.
 
 L'objet `HTTPRequest` retourné est utilisé pour traiter les réponses du serveur HTTP et appeler des méthodes.
 
-Dans _url_, passez l'URL où vous voulez envoyer la requête. La syntaxe à utiliser est la suivante :
+Dans *url*, passez l'URL où vous voulez envoyer la requête. La syntaxe à utiliser est la suivante :
 
 ```
 {http://}[{user}:[{password}]@]host[ :{port}][/{path}][ ?{queryString}]
@@ -125,7 +125,7 @@ Par exemple, vous pouvez passer les chaînes suivantes :
 
 #### Paramètre `options`
 
-Dans le paramètre _options_, passez un objet qui peut contenir les propriétés suivantes :
+Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
 
 | Propriété              | Type                                               | Description                                                                                                                                                                                                                                                                                                                                             | Par défaut  |
 | ---------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -135,7 +135,7 @@ Dans le paramètre _options_, passez un objet qui peut contenir les propriétés
 | dataType               | Text                                               | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon)                        | "auto"      |
 | decodeData             | Boolean                                            | Si vrai, les données reçues dans le callback `onData` sont décompressées                                                                                                                                                                                                                                                                                | False       |
 | encoding               | Text                                               | Utilisé uniquement dans le cas de requêtes avec un `body` (méthodes `post` ou `put`). Encodage du body content de la requête s'il s'agit d'un texte, ignoré si le content-type est défini dans les headers                                                                                                           | "UTF-8"     |
-| headers                | Object                                             | Headers de la requête. Syntaxe : `headers.key=value` (_value_ peut être une Collection si la même clé doit apparaître plusieurs fois)                                                                                                                                                                | Objet vide  |
+| headers                | Object                                             | Headers de la requête. Syntaxe : `headers.key=value` (*value* peut être une Collection si la même clé doit apparaître plusieurs fois)                                                                                                                                                                | Objet vide  |
 | method                 | Text                                               | "POST", "GET", ou autre méthode                                                                                                                                                                                                                                                                                                                         | "GET"       |
 | minTLSVersion          | Text                                               | Définit la version minimale de TLS : "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                                                                 | "`TLSv1_2`" |
 | onData                 | [Function](FunctionClass.md)                       | Callback lorsque les données du body sont reçues. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                            | undefined   |
@@ -177,7 +177,7 @@ Un objet `event` est renvoyé lorsqu'une [fonction de callback](#callback-functi
 
 | Propriété             | Type | Description                                                                                                                  |
 | --------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| .data | blob | Données reçues. Toujours _undefined_ sauf dans la callback `onData`                                          |
+| .data | blob | Données reçues. Toujours *undefined* sauf dans la callback `onData`                                          |
 | .type | text | Type d'événement. Valeurs possibles : "response", "error", "headers", "data", or "terminate" |
 
 #### authentication object
@@ -475,7 +475,7 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
-Si un paramètre _time_ est passé, la fonction attendra au maximum le nombre de secondes défini.
+Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
 

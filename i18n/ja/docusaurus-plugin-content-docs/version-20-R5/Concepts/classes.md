@@ -345,7 +345,7 @@ $o:=cs.MyClass.new("John";42)
 // $o = {"name":"John";"age":42}
 ```
 
-### `プロパティ`
+### `property`
 
 #### シンタックス
 

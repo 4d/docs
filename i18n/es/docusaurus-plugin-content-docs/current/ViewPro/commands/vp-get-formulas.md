@@ -5,7 +5,7 @@ title: VP Get formulas
 
 <!-- REF #_method_.VP Get formulas.Syntax -->
 
-**VP Get formulas** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get formulas
 
 #### Descripción
 
-El comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera las fórmulas de un _rangeObj_ designado<!-- END REF -->.
+El comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera las fórmulas de un *rangeObj* designado<!-- END REF -->.
 
-En _rangeObj_, pase un rango cuyas fórmulas desea recuperar. Si _rangeObj_ designa varios rangos, se devuelve la fórmula del primer rango. Si _rangeObj_ no contiene fórmulas, el comando devuelve una cadena vacía.
+En *rangeObj*, pase un rango cuyas fórmulas desea recuperar. Si *rangeObj* designa varios rangos, se devuelve la fórmula del primer rango. Si *rangeObj* no contiene fórmulas, el comando devuelve una cadena vacía.
 
 La colección devuelta es bidimensional:
 

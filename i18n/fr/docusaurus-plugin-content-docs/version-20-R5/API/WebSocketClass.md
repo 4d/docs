@@ -66,7 +66,7 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 | Release | Modifications                                                      |
 | ------- | ------------------------------------------------------------------ |
-| 20 R3   | Prise en charge de la propriété `headers` dans _connectionHandler_ |
+| 20 R3   | Prise en charge de la propriété `headers` dans *connectionHandler* |
 
 </details>
 
@@ -82,18 +82,18 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <!-- END REF -->
 
-La fonction `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crée et renvoie un nouvel objet [`4D.WebSocket`](#websocket-object) connecté au serveur WebSocket à l'adresse que vous avez spécifiée dans _url_<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
+La fonction `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crée et renvoie un nouvel objet [`4D.WebSocket`](#websocket-object) connecté au serveur WebSocket à l'adresse que vous avez spécifiée dans *url*<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
 
-Dans _url_, indiquez l'URL à laquelle le serveur WebSocket répondra. Les modèles d'URL suivants peuvent être utilisés :
+Dans *url*, indiquez l'URL à laquelle le serveur WebSocket répondra. Les modèles d'URL suivants peuvent être utilisés :
 
 - `ws://host[:port]path[?query]` pour les connexions standard
 - `wss://host[:port]path[?query]` pour les connexions TLS sécurisées
 
 Si la connexion n'est pas possible, un objet `null` est renvoyé et une erreur est générée (que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`).
 
-### Paramètre _connectionHandler_
+### Paramètre *connectionHandler*
 
-Dans _connectionHandler_, vous pouvez transmettre un objet contenant des fonctions de callback à appeler selon les événements de connexion, ainsi que le type de données et les en-têtes à gérer.
+Dans *connectionHandler*, vous pouvez transmettre un objet contenant des fonctions de callback à appeler selon les événements de connexion, ainsi que le type de données et les en-têtes à gérer.
 
 - Les callbacks sont automatiquement appelées dans le contexte du formulaire ou du worker qui initie la connexion.
 - La WebSocket reste valide tant que le formulaire ou le worker n'est pas fermé.
@@ -105,7 +105,7 @@ Dans _connectionHandler_, vous pouvez transmettre un objet contenant des fonctio
 | onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. La callback reçoit les paramètres suivants : <li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.code` (nombre, lecture seule) : unsigned short contenant le code de fermeture envoyé par le serveur.</li><li>`$2.reason` (texte, lecture seule) : Raison pour laquelle le serveur a fermé la connexion. Elle est spécifique au serveur et au sous-protocole particulier.</li></ul>                                                                                                               |
 | onOpen      | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est ouverte. La callback reçoit les paramètres suivants:<li>`$1`: objet WebSocket</li><li>`$2`: Objet</li><ul><li>`$2.type` (texte): toujours "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | dataType    | Text                         | Type de données reçues ou envoyées. Valeurs disponibles : "text" (par défaut), "blob", "object". "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| headers     | Object                       | En-têtes du WebSocket.<li>Syntaxe pour l'assignation de clé standard : `headers.*clé*:=*valeur*` (_valeur_ peut être une Collection si la même clé apparaît plusieurs fois)</li><li>Syntaxe pour l'assignation de Cookie (cas particulier) : `headers.Cookie:="*nom*=*valeur* {; *nom2*=*valeur2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                  |
+| headers     | Object                       | En-têtes du WebSocket.<li>Syntaxe pour l'assignation de clé standard : `headers.*clé*:=*valeur*` (*valeur* peut être une Collection si la même clé apparaît plusieurs fois)</li><li>Syntaxe pour l'assignation de Cookie (cas particulier) : `headers.Cookie:="*nom*=*valeur* {; *nom2*=*valeur2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                  |
 
 Voici la séquence des appels de callbacks :
 
@@ -189,9 +189,9 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie _message_ au serveur WebSocket dans le type de données défini (Text, Blob ou Object)<!-- END REF -->.
+La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message* au serveur WebSocket dans le type de données défini (Text, Blob ou Object)<!-- END REF -->.
 
-Les contenus suivants sont envoyés en fonction du type de _message_ :
+Les contenus suivants sont envoyés en fonction du type de *message* :
 
 | Type   | Contenu                                                                                                                                   |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -232,14 +232,14 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->referme la connexion WebSocket, avec les paramètres optionnels _code_ et _reason_<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->referme la connexion WebSocket, avec les paramètres optionnels *code* et *reason*<!-- END REF -->.
 
-Dans _code_, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
+Dans *code*, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
 
 - S'il n'est pas spécifié, le code de fermeture de la connexion est automatiquement fixé à 1000 pour une fermeture normale, ou à une autre valeur standard dans la plage 1001-1015 qui indique la raison réelle de la fermeture de la connexion.
-- Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du \*code \* , vous devez également spécifier une _reason_.
+- Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du \*code \* , vous devez également spécifier une *reason*.
 
-Dans _reason_, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée.
+Dans *reason*, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée.
 
 <!-- END REF -->
 

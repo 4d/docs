@@ -44,7 +44,7 @@ Cada comando de menú puede tener un método proyecto o una acción estándar ad
 
 Si no asigna un método o una acción estándar a un comando de menú, la elección de ese comando de menú hace que 4D salga del entorno de Aplicación y pase al entorno de Diseño. Si sólo está disponible el entorno de la Aplicación, esto significa salir al Escritorio.
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
+Las acciones estándar se pueden utilizar para llevar a cabo diversas operaciones actuales vinculadas a las funciones del sistema (copiar, salir, etc.) o a las de la base de datos (añadir registro, seleccionar todo, etc.).
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto a un comando de menú. En este caso, la acción estándar no se ejecuta nunca; sin embargo, 4D utiliza esta acción para habilitar/deshabilitar el comando de menú según el contexto actual y para asociar una operación específica según la plataforma. Cuando se desactiva un comando de menú, no se puede ejecutar el método proyecto asociado.
 
@@ -54,7 +54,7 @@ La elección entre asociar una acción estándar o un método proyecto a un coma
 
 Puede asignar un método proyecto y/o una acción estándar a un comando de menú seleccionado en el editor de menú:
 
-- **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de código.
+- **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...] button. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de código.
 - **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el _Modo Diseño_.
   **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción _Salir_ se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
@@ -132,7 +132,7 @@ Estas combinaciones de teclas reservadas se indican en la siguiente tabla:
 Para asignar un atajo de teclado en el editor de menús:
 
 Seleccione la opción de menú a la que desea asignar un atajo de teclado.
-Haga clic en el botón [...] button to the right of the "Shortcut" entry area. Aparece la siguiente ventana:
+Haga clic en el botón [...] botón a la derecha del área de entrada "Acceso directo". Aparece la siguiente ventana:
 
 ![](../assets/en/Menus/Shortcut.png)
 

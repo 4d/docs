@@ -13,7 +13,7 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
 
-**VP Get table theme** ( _vpAreaName_ : Text ; _tableName_ : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
@@ -25,9 +25,9 @@ title: VP Get table theme
 
 #### 説明
 
-`VP Get table theme` コマンドは、<!-- REF #_method_.VP Get table theme.Summary -->_tableName_ で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](vp-create-table.md) または [`VP SET TABLE THEME`](vp-set-table-theme.md) コマンド、もしくはインターフェースから設定することができます。
+`VP Get table theme` コマンドは、<!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](vp-create-table.md) または [`VP SET TABLE THEME`](vp-set-table-theme.md) コマンド、もしくはインターフェースから設定することができます。
 
-_vpAreaName_ には 4D View Pro エリアの名前を渡します。_tableName_ には表組みの名前を渡します。
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には表組みの名前を渡します。
 
 このコマンドは、現在の表テーマを記述するプロパティと値を格納する、[cs.ViewPro.TableTheme](../classes.md#tabletheme) クラスのオブジェクトを返します。
 

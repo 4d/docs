@@ -5,7 +5,7 @@ title: VP Get default style
 
 <!-- REF #_method_.VP Get default style.Syntax -->
 
-**VP Get default style** ( _vpAreaName_ : Text { ; _sheet_ :  Integer } ) : Object<!-- END REF -->
+**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
 
@@ -19,9 +19,9 @@ title: VP Get default style
 
 `VP Get default style` コマンドは、<!-- REF #_method_.VP Get default style.Summary -->シートのデフォルトスタイルオブジェクトを返します<!-- END REF -->。 返されるオブジェクトには、ドキュメントの基本的なレンダリングプロパティに加え、[VP SET DEFAULT STYLE](vp-set-default-style.md) コマンドによって事前に設定されたデフォルトのスタイル設定 (あれば) が格納されます。 スタイルプロパティの詳細な情報については、[スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート) を参照ください。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-任意の _sheet_ 引数にシートインデックス (0 起点) を指定することで、どのシートのカラム数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
+任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、どのシートのカラム数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
 #### 例題
 
@@ -35,7 +35,7 @@ _vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在し
 $defaultStyle:=VP Get default style("myDoc")
 ```
 
-_$defaultStyle_ オブジェクトに以下のような情報が返されます:
+*$defaultStyle* オブジェクトに以下のような情報が返されます:
 
 ```4d
 {

@@ -5,7 +5,7 @@ title: VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
 
-**VP SET CELL STYLE** ( _rangeObj_ : Object  ; _styleObj_  : Object) <!-- END REF -->
+**VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
 
@@ -16,18 +16,18 @@ title: VP SET CELL STYLE
 
 #### Description
 
-The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the _styleObj_ to the cells defined in the _rangeObj_<!-- END REF -->.
+The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the *styleObj* to the cells defined in the *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass a range of cells where the style will be applied. If the _rangeObj_ contains multiple cells, the style is applied to each cell.
+In *rangeObj*, pass a range of cells where the style will be applied. If the *rangeObj* contains multiple cells, the style is applied to each cell.
 
-> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the _rangeObj_, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the _rangeObj_ as a whole.
+> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the *rangeObj* as a whole.
 
-The _styleObj_ parameter lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. If the _styleObj_ contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
+The *styleObj* parameter lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. If the *styleObj* contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
 
 Attribuez la valeur NULL pour supprimer un style et rétablir les paramètres de style par défaut (le cas échéant) :
 
-- giving the _styleObj_ parameter a NULL value will remove any style settings from the _rangeObj_,
-- giving an attribute a NULL value will remove this specific attribute from the _rangeObj_.
+- giving the *styleObj* parameter a NULL value will remove any style settings from the *rangeObj*,
+- giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
 
 For more information about style objects and style sheets, see the [Style Objects](../configuring.md#style-objects) paragraph.
 

@@ -71,7 +71,7 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 
 For more information, see the [Session types](#session-types) paragraph.
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns _Null_.
+If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
 #### Sesiones web
 
@@ -320,15 +320,15 @@ $privileges := Session.getPrivileges()
 | Parámetros | Tipo    |     | Descripción                                      |
 | ---------- | ------- | :-: | ------------------------------------------------ |
 | privilege  | Text    |  -> | Nombre del privilegio a verificar                |
-| Result     | Boolean |  <- | True if session has _privilege_, False otherwise |
+| Result     | Boolean |  <- | True if session has *privilege*, False otherwise |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the _privilege_ is associated to the session, and False otherwise<!-- END REF -->.
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
 
-With remote client and stored procedure sessions, this function always returns True, whatever the _privilege_.
+With remote client and stored procedure sessions, this function always returns True, whatever the *privilege*.
 
 #### Ejemplo
 
@@ -450,7 +450,7 @@ The `.info` object contains the following properties:
 | hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                 |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión                                                                                                                           |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                          |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                                                                    |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                             |
 | persistentID     | Text          | ID persistente de la sesión                                                                                                                                     |
 
 :::note
@@ -541,11 +541,11 @@ This function does nothing and always returns **False** with remote client and s
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
 
-- In the _privilege_ parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
-- In the _privileges_ parameter, pass a collection of strings containing privilege names.
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
 
-- In the _settings_ parameter, pass an object containing the following properties:
+- In the *settings* parameter, pass an object containing the following properties:
 
 | Propiedad  | Tipo              | Descripción                                                                                              |
 | ---------- | ----------------- | -------------------------------------------------------------------------------------------------------- |

@@ -5,7 +5,7 @@ title: Email
 
 La création, l'envoi et la réception d'emails dans 4D s'effectuent par l'intermédiaire des objets `Email`.
 
-Des objets `Email` sont créés lorsque vous recevez des emails via une fonction de classe _transporter_ :
+Des objets `Email` sont créés lorsque vous recevez des emails via une fonction de classe *transporter* :
 
 - IMAP - fonctions [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) pour obtenir des emails à partir d'un serveur IMAP
 - POP3 - fonction [`.getMail()`](POP3TransporterClass.md#getmail) pour obtenir un email à partir d'un serveur POP3.
@@ -126,7 +126,7 @@ La propriété `.bcc` contient <!-- REF #EmailObjectClass.bcc.Summary -->les [ad
 
 #### Description
 
-La propriété `.bodyStructure` contient l'<!-- REF #EmailObjectClass.bodyStructure.Summary -->objet _EmailBodyPart_, c'est-à-dire la structure MIME complète du body du message (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyStructure` contient l'<!-- REF #EmailObjectClass.bodyStructure.Summary -->objet *EmailBodyPart*, c'est-à-dire la structure MIME complète du body du message (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyStructure` contient les propriété suivantes :
 
@@ -139,8 +139,8 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 | disposition | Text                 | Valeur du champ d'en-tête Content-Disposition de la partie                                                                                                                                      |
 | language    | Collection de textes | Liste de balises de langage, telles que définies dans la [RFC3282](https://tools.ietf.org/html/rfc3282), dans le champ d'en-tête Content-Language de la partie, le cas échéant. |
 | location    | Text                 | URI, tel que défini dans la [RFC2557](https://tools.ietf.org/html/rfc2557), dans le champ d'en-tête Content-Location de la partie, le cas échéant.                              |
-| subParts    | Collection d'objets  | Parties du corps de chaque enfant (collection d'objets _EmailBodyPart_)                                                                                                      |
-| headers     | Collection d'objets  | Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets _EmailHeader_ voir propriété [headers](#headers-))             |
+| subParts    | Collection d'objets  | Parties du corps de chaque enfant (collection d'objets *EmailBodyPart*)                                                                                                      |
+| headers     | Collection d'objets  | Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets *EmailHeader* voir propriété [headers](#headers-))             |
 
 ## .bodyValues
 
@@ -148,14 +148,14 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 
 #### Description
 
-La propriété `.bodyValues` contient l'<!-- REF #EmailObjectClass.bodyValues.Summary -->objet _EmailBodyValue_, contenant un objet pour chaque \\<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyValues` contient l'<!-- REF #EmailObjectClass.bodyValues.Summary -->objet *EmailBodyValue*, contenant un objet pour chaque \\<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyValues` contient les propriété suivantes :
 
 | Propriété                                  | Type    | Valeur                                                                                                                                                                                     |
 | ------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _partID_.value             | text    | Valeur de la partie body                                                                                                                                                                   |
-| _partID_.isEncodingProblem | boolean | Vrai si des sections malformées sont identifiées durant le décodage du charset, si le charset est inconnu, ou si le content transfer-encoding est inconnu. Faux par défaut |
+| *partID*.value             | text    | Valeur de la partie body                                                                                                                                                                   |
+| *partID*.isEncodingProblem | boolean | Vrai si des sections malformées sont identifiées durant le décodage du charset, si le charset est inconnu, ou si le content transfer-encoding est inconnu. Faux par défaut |
 
 ## .cc
 
@@ -388,7 +388,7 @@ La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.
 
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
-Passez dans _mime_ un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre _mime_. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
+Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre *mime*. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
 
 #### Objet retourné
 
@@ -474,18 +474,18 @@ $status:=$transporter.send($email)
 
 La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
-Dans _mail_, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
+Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
-Dans _options_, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
+Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
 
 | Propriété     | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | headerCharset | Text | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>Mode courrier ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & 7-bit si possible, sinon UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mode courrier ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mode courrier UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</td></tr><tr><td>mode courrier UTF8 en base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
 | bodyCharset   | Text | Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-Si le paramètre _options_ est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.
+Si le paramètre *options* est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.
 
 #### Exemple
 

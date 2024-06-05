@@ -82,11 +82,11 @@ La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un 
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-Dans le paramètre _path_, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA").
+Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 
-Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre _pathType_. Les constantes suivantes sont disponibles :
+Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre *pathType*. Les constantes suivantes sont disponibles :
 
 | Constante        | Valeur | Commentaire                                                                                                                  |
 | ---------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -95,7 +95,7 @@ Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travail
 
 **Folder ( folderConstant { ; \* } )**
 
-Dans le paramètre _folderConstant_, passez un dossier 4D interne ou un dossier système, à l'aide d'une des constantes suivantes :
+Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier système, à l'aide d'une des constantes suivantes :
 
 | Constante                  | Valeur | Commentaire                                                                                                                                 |
 | -------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -130,7 +130,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -224,18 +224,18 @@ End if
 
 #### Description
 
-La fonction `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> du dossier avec le nom _aliasName_ dans le dossier désigné par l'objet _destinationFolder_.
+La fonction `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> du dossier avec le nom *aliasName* dans le dossier désigné par l'objet *destinationFolder*.
 
-Passez le nom de l'alias ou du raccourci à créer dans le paramètre _aliasName_.
+Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName*.
 
-Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre _aliasType_. Les constantes suivantes sont disponibles :
+Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre *aliasType*. Les constantes suivantes sont disponibles :
 
 | Constante          | Valeur | Commentaire                                                                     |
 | ------------------ | ------ | ------------------------------------------------------------------------------- |
 | `fk alias link`    | 0      | Lien alias (macOS uniquement)(par défaut) |
 | `fk symbolic link` | 1      | Lien symbolique (macOS uniquement)                           |
 
-Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre _aliasType_ est ignoré).
+Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre *aliasType* est ignoré).
 
 **Objet retourné**
 
@@ -360,11 +360,11 @@ Lorsque la constante `Delete with contents` est passée :
 
 #### Description
 
-La fonction `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `Folder` (dossier source) dans le dossier _destinationFolder_ spécifié<!-- END REF -->.
+La fonction `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->déplace ou déplace et renomme l'objet `Folder` (dossier source) dans le dossier *destinationFolder* spécifié<!-- END REF -->.
 
-Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 
@@ -418,9 +418,9 @@ Vous souhaitez déplacer et renommer un dossier :
 
 #### Description
 
-La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans _newName_ et retourne l'objet `Folder` renommé<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans *newName* et retourne l'objet `Folder` renommé<!-- END REF -->.
 
-Le paramètre _newName_ doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
+Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
 **Objet retourné**
 

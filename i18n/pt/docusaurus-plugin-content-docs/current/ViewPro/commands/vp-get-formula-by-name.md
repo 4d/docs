@@ -5,7 +5,7 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( _vpAreaName_ : Text ; _name_ : Text { ; _scope_ : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
@@ -18,13 +18,13 @@ title: VP Get formula by name
 
 #### Descrição
 
-The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the _name_ parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
+The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the named range or named formula that you want to get in _name_. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
+Pass the named range or named formula that you want to get in *name*. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
 
-You can define where to get the formula in _scope_ using either the sheet index (counting begins at 0) or the following constants:
+You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
 
 - `vk current sheet`
 - `vk workbook`

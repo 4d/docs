@@ -444,13 +444,13 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified _destinationFolder_<!-- END REF -->.
+The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Como padrão, a pasta é copiada com o nome da pasta original. If you want to rename the copy, pass the new name in the _newName_ parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, a pasta é copiada com o nome da pasta original. If you want to rename the copy, pass the new name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-If a folder with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 | Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
@@ -462,7 +462,7 @@ The copied `Folder` object.
 
 #### Exemplo
 
-You want to copy a Pictures _folder_ from the user's Document folder to the Database folder:
+You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -501,11 +501,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
+In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
-A `File` object or null if _path_ is invalid.
+A `File` object or null if *path* is invalid.
 
 #### Exemplo
 
@@ -547,7 +547,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
-By default, if you omit the _options_ parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Parâmetros            | Valor | Comentário                                                       |
 | --------------------- | ----- | ---------------------------------------------------------------- |
@@ -603,7 +603,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 | Parâmetro  | Tipo                       |    | Descrição                                                         |
 | ---------- | -------------------------- | -- | ----------------------------------------------------------------- |
 | path       | Text                       | -> | Rota POSIX relativa                                               |
-| Resultados | 4D. Folder | <- | Created folder object (null if invalid _path_) |
+| Resultados | 4D. Folder | <- | Created folder object (null if invalid *path*) |
 
 <!-- END REF -->
 
@@ -611,11 +611,11 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the folder to return. A rota se avaliará a partir da pasta pai como raíz.
+In *path*, pass a relative POSIX path to designate the folder to return. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
-A `Folder` object or null if _path_ is invalid.
+A `Folder` object or null if *path* is invalid.
 
 #### Exemplo
 
@@ -655,7 +655,7 @@ A `Folder` object or null if _path_ is invalid.
 
 The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
-By default, if you omit the _options_ parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Parâmetros            | Valor | Comentário                                                     |
 | --------------------- | ----- | -------------------------------------------------------------- |
@@ -706,7 +706,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 

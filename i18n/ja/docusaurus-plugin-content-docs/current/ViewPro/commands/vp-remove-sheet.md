@@ -5,7 +5,7 @@ title: VP REMOVE SHEET
 
 <!-- REF #_method_.VP REMOVE SHEET.Syntax -->
 
-**VP REMOVE SHEET** ( _vpAreaName_ : Text ; _index_: Integer ) <!-- END REF -->
+**VP REMOVE SHEET** ( *vpAreaName* : Text ; *index*: Integer ) <!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
@@ -16,11 +16,11 @@ title: VP REMOVE SHEET
 
 #### 説明
 
-`VP REMOVE SHEET` コマンドは、<!-- REF #_method_.VP REMOVE SHEET.Summary -->_vpAreaName_ 引数で指定したエリアにロードされているドキュメントから、_index_ 引数で指定したインデックスのシートを削除します<!-- END REF -->。
+`VP REMOVE SHEET` コマンドは、<!-- REF #_method_.VP REMOVE SHEET.Summary -->*vpAreaName* 引数で指定したエリアにロードされているドキュメントから、*index* 引数で指定したインデックスのシートを削除します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_index_ 引数には、削除したいシートのインデックスを渡します。 _index_ 引数に渡したインデックスが存在しない場合、このコマンドは何もしません。
+*index* 引数には、削除したいシートのインデックスを渡します。 *index* 引数に渡したインデックスが存在しない場合、このコマンドは何もしません。
 
 > インデックスは 0 起点です。
 

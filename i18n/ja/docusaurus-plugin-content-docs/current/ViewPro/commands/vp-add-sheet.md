@@ -5,7 +5,7 @@ title: VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
 
-**VP ADD SHEET** ( _vpAreaName_ : Text )<br/>**VP ADD SHEET** ( _vpAreaName_ : Text ; _index_ : Integer )<br/>**VP ADD SHEET** ( _vpAreaName_ : Text ; _sheet_ : Integer ; _name_ : Text )<!-- END REF -->
+**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
@@ -17,15 +17,15 @@ title: VP ADD SHEET
 
 #### 説明
 
-`VP ADD SHEET` コマンドは、<!-- REF #_method_.VP ADD SHEET.Summary -->_vpAreaName_ にロードされているドキュメントにシートを挿入します。<!-- END REF -->
+`VP ADD SHEET` コマンドは、<!-- REF #_method_.VP ADD SHEET.Summary -->*vpAreaName* にロードされているドキュメントにシートを挿入します。<!-- END REF -->
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_sheet_ 引数として、新しいシートのインデックスを渡します。 渡した _index_ 引数が 0以下だった場合、コマンドは新しいシートを先頭に挿入します。 _index_ 引数がシートの総数より多い場合、コマンドは既存のシートの後に新しいシートを挿入します。
+*sheet* 引数として、新しいシートのインデックスを渡します。 渡した *index* 引数が 0以下だった場合、コマンドは新しいシートを先頭に挿入します。 *index* 引数がシートの総数より多い場合、コマンドは既存のシートの後に新しいシートを挿入します。
 
 > インデックスは 0 起点です。
 
-_name_ 引数として、新しいシートの名前を渡します。 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
+*name* 引数として、新しいシートの名前を渡します。 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
 
 #### 例題
 

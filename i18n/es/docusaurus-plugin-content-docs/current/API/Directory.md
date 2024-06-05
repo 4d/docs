@@ -444,13 +444,13 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified _destinationFolder_<!-- END REF -->.
+The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por defecto, la carpeta se copia con el nombre de la carpeta original. If you want to rename the copy, pass the new name in the _newName_ parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta se copia con el nombre de la carpeta original. If you want to rename the copy, pass the new name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-If a folder with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 | Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
@@ -462,7 +462,7 @@ El objeto `Folder` copiado.
 
 #### Ejemplo
 
-You want to copy a Pictures _folder_ from the user's Document folder to the Database folder:
+You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -490,10 +490,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                             |
-| ---------- | ----------------------- | -- | ------------------------------------------------------- |
-| path       | Text                    | -> | Ruta POSIX relativa                                     |
-| Result     | 4D.File | <- | `File` object (null if invalid path) |
+| Parámetros | Tipo                    |    | Descripción                                                    |
+| ---------- | ----------------------- | -- | -------------------------------------------------------------- |
+| path       | Text                    | -> | Ruta POSIX relativa                                            |
+| Result     | 4D.File | <- | Objeto `File` (null si la ruta es inválida) |
 
 <!-- END REF -->
 
@@ -501,11 +501,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the file to return. La ruta se evaluará a partir de la carpeta padre como raíz.
+In *path*, pass a relative POSIX path to designate the file to return. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
-A `File` object or null if _path_ is invalid.
+A `File` object or null if *path* is invalid.
 
 #### Ejemplo
 
@@ -547,7 +547,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 > Los alias o enlaces simbólicos no se resuelven.
 
-By default, if you omit the _options_ parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
@@ -556,7 +556,7 @@ By default, if you omit the _options_ parameter, only the files at the first lev
 
 **Valor devuelto**
 
-Collection of `File` objects.
+Colección de objetos`File`.
 
 #### Ejemplo 1
 
@@ -603,7 +603,7 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 | Parámetros | Tipo                      |    | Descripción                                                       |
 | ---------- | ------------------------- | -- | ----------------------------------------------------------------- |
 | path       | Text                      | -> | Ruta POSIX relativa                                               |
-| Result     | 4D.Folder | <- | Created folder object (null if invalid _path_) |
+| Result     | 4D.Folder | <- | Created folder object (null if invalid *path*) |
 
 <!-- END REF -->
 
@@ -611,11 +611,11 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the folder to return. La ruta se evaluará a partir de la carpeta padre como raíz.
+In *path*, pass a relative POSIX path to designate the folder to return. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
-A `Folder` object or null if _path_ is invalid.
+A `Folder` object or null if *path* is invalid.
 
 #### Ejemplo
 
@@ -655,7 +655,7 @@ A `Folder` object or null if _path_ is invalid.
 
 The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
-By default, if you omit the _options_ parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
@@ -706,7 +706,7 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 
 The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
 Si la carpeta no existe en el disco, se devuelve un icono vacío por defecto.
 

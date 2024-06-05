@@ -21,7 +21,7 @@ La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opció
 
 ![](../assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+2. Selecione o tipo de folha de estilos a criar e clique no botão **Criar** ou **Editar**: ![](../assets/en/FormEditor/createButton.png)
 
 3. A folha de estilo se abrirá em seu editor de texto predeterminado.
 
@@ -288,7 +288,7 @@ Se um atributo estiver definido na descrição do formulário JSON e em uma folh
 
 Para anular este comportamiento, el valor del estilo debe ir seguido de una declaración `!important`.
 
-**Example 1:**
+**Exemplo 1:**
 
 | Descripción do formulário JSON | Folha de estilo | 4D exibe   |
 | ------------------------------ | --------------- | ---------- |

@@ -5,7 +5,7 @@ title: VP Get formulas
 
 <!-- REF #_method_.VP Get formulas.Syntax -->
 
-**VP Get formulas** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get formulas
 
 #### 説明
 
-`VP Get formulas` コマンドは、<!-- REF #_method_.VP Get formulas.Summary -->_rangeObj_ 引数で指定したレンジからフォーミュラを取得します<!-- END REF -->。
+`VP Get formulas` コマンドは、<!-- REF #_method_.VP Get formulas.Summary -->*rangeObj* 引数で指定したレンジからフォーミュラを取得します<!-- END REF -->。
 
-_rangeObj_ 引数で、フォーミュラを取得したいレンジを指定します。 _rangeObj_ 引数のレンジが複数レンジを指定している場合、最初のレンジのフォーミュラが返されます。 _rangeObj_ 引数のレンジにフォーミュラが一つも含まれていない場合には、コマンドは空の文字列を返します。
+*rangeObj* 引数で、フォーミュラを取得したいレンジを指定します。 *rangeObj* 引数のレンジが複数レンジを指定している場合、最初のレンジのフォーミュラが返されます。 *rangeObj* 引数のレンジにフォーミュラが一つも含まれていない場合には、コマンドは空の文字列を返します。
 
 返されるコレクションは 2次元構造になっています:
 

@@ -65,4 +65,4 @@ El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior iz
 
 #### Objetos soportados
 
-[Static Picture](staticPicture.md)
+[Imagen estática](staticPicture.md)

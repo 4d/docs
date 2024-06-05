@@ -25,7 +25,7 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit un objet d'interface à une
 
 <!-- REF DataClassClass.attributeName.Desc -->
 
-## ._attributeName_
+## .*attributeName*
 
 <details><summary>Historique</summary>
 
@@ -128,7 +128,7 @@ Considérant les propriétés de table suivantes :
 
 | Release | Modifications                           |
 | ------- | --------------------------------------- |
-| 17 R5   | Prise en charge du paramètre _settings_ |
+| 17 R5   | Prise en charge du paramètre *settings* |
 | 17      | Ajout                                   |
 
 </details>
@@ -156,7 +156,7 @@ Le mode lazy loading est appliqué.
 
 **settings**
 
-Dans le paramètre optionnel _settings_, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
+Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
 | Propriété | Type | Description                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -233,7 +233,7 @@ $ds.Persons.clearRemoteCache()
 
 | Release | Modifications                           |
 | ------- | --------------------------------------- |
-| 17 R5   | Prise en charge du paramètre _settings_ |
+| 17 R5   | Prise en charge du paramètre *settings* |
 | 17      | Ajout                                   |
 
 </details>
@@ -252,17 +252,17 @@ $ds.Persons.clearRemoteCache()
 
 #### Description
 
-La fonction `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->met à jour ou crée des entités dans la dataclass en fonction de la collection d'objets _objectCol_ et renvoie l'entity selection correspondante<!-- END REF -->.
+La fonction `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->met à jour ou crée des entités dans la dataclass en fonction de la collection d'objets *objectCol* et renvoie l'entity selection correspondante<!-- END REF -->.
 
-Dans le paramètre _objectCol_ passez une collection d'objets destinée à créer ou à modifier des entités de la dataclass. Les noms des propriétés doivent correspondre à ceux des attributs de la dataclass. Si un nom de propriété n'existe pas dans la dataclass, il est ignoré. Si une valeur d'attribut n'est pas définie dans la collection pour une entité créée, l'attribut prend la valeur Null.
+Dans le paramètre *objectCol* passez une collection d'objets destinée à créer ou à modifier des entités de la dataclass. Les noms des propriétés doivent correspondre à ceux des attributs de la dataclass. Si un nom de propriété n'existe pas dans la dataclass, il est ignoré. Si une valeur d'attribut n'est pas définie dans la collection pour une entité créée, l'attribut prend la valeur Null.
 
 La correspondance entre les objets de la collection et les entités est effectuée au niveau des **noms d'attributs** et de leur **type de données**. Si une propriété d'objet a le même nom qu'un attribut d'entité mais que leurs types ne sont pas compatibles, l'attribut de l'entité ne reçoit pas de valeur.
 
 **Mode création ou modification**
 
-Pour chaque objet de _objectCol_ :
+Pour chaque objet de *objectCol* :
 
-- Si l'objet contient une propriété booléenne "\_\_NEW" fixée à faux (ou ne contient pas de propriété booléenne "\_\_NEW"), l'entité est modifiée ou créée avec les valeurs correspondantes des propriétés de l'objet. Aucune vérification spécifique n'est effectuée concernant la clé primaire :
+- Si l'objet contient une propriété booléenne "\_\*NEW" fixée à faux (ou ne contient pas de propriété booléenne "\*\_NEW"), l'entité est modifiée ou créée avec les valeurs correspondantes des propriétés de l'objet. Aucune vérification spécifique n'est effectuée concernant la clé primaire :
   - Si la clé primaire est fournie et existe, l'entité est modifiée. Dans ce cas, la clé primaire peut être fournie telle quelle ou via la propriété "\_\_KEY" (contenant la valeur de la propriété primaire).
   - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
@@ -271,13 +271,13 @@ Pour chaque objet de _objectCol_ :
   - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
-> La propriété "\_\_KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\_\_NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
+> La propriété "\_\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\*\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
 **Entités liées**
 
-Les objets de _objectCol_ peuvent contenir un ou plusieurs objet(s) imbriqué(s) décrivant une ou plusieurs entité(s) relative(s), ce qui peut être utile pour créer ou modifier des relations entre les entités.
+Les objets de *objectCol* peuvent contenir un ou plusieurs objet(s) imbriqué(s) décrivant une ou plusieurs entité(s) relative(s), ce qui peut être utile pour créer ou modifier des relations entre les entités.
 
-Les objets imbriqués décrivant les entités relatives doivent contenir une propriété "\_\_KEY" (contenant la valeur de la clé primaire de l'entité relative) ou la clé primaire de l'entité relative elle-même. L'utilisation de la propriété \_\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
+Les objets imbriqués décrivant les entités relatives doivent contenir une propriété "\_\*KEY" (contenant la valeur de la clé primaire de l'entité relative) ou la clé primaire de l'entité relative elle-même. L'utilisation de la propriété \*\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
 
 > Ce mécanisme ne permet pas de créer ou de modifier les entités liées.
 
@@ -287,7 +287,7 @@ Si une propriété \_\_STAMP est fournie, une vérification est effectuée sur l
 
 **settings**
 
-Dans le paramètre optionnel _settings_, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
+Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
 | Propriété | Type | Description                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -315,7 +315,7 @@ Nous souhaitons modifier une entité existante. La propriété \_\_NEW n'est pas
 
 #### Exemple 2
 
-Nous souhaitons modifier une entité existante. La propriété \_\_NEW n'est pas fournie, la clé primaire de l'employé est avec l'attribut \_\_KEY et existe :
+Nous souhaitons modifier une entité existante. La propriété \_\*NEW n'est pas fournie, la clé primaire de l'employé est avec l'attribut \*\_KEY et existe :
 
 ```4d
  var $empsCollection : Collection
@@ -447,17 +447,17 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 #### Description
 
-La fonction `.get()` <!-- REF #DataClassClass.get().Summary -->requête la dataclass pour récupérer l'entité correspondant au paramètre _primaryKey_<!-- END REF -->.
+La fonction `.get()` <!-- REF #DataClassClass.get().Summary -->requête la dataclass pour récupérer l'entité correspondant au paramètre *primaryKey*<!-- END REF -->.
 
-Dans _primaryKey_, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Vous pouvez également vous assurer que la valeur de la clé primaire est toujours renvoyée sous forme de texte en utilisant la fonction [`.getKey()`](EntityClass.md#getkey) avec le paramètre `dk key as string`.
+Dans *primaryKey*, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Vous pouvez également vous assurer que la valeur de la clé primaire est toujours renvoyée sous forme de texte en utilisant la fonction [`.getKey()`](EntityClass.md#getkey) avec le paramètre `dk key as string`.
 
-Si aucune entité avec _primaryKey_ n'est trouvée, une entité **Null** est retournée.
+Si aucune entité avec *primaryKey* n'est trouvée, une entité **Null** est retournée.
 
 Le chargement différé (lazy loading) est appliqué, ce qui signifie que les données associées sont chargées à partir du disque uniquement lorsque cela est nécessaire.
 
 **settings**
 
-Dans le paramètre optionnel _settings_, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
+Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
 | Propriété | Type | Description                                                                                                                                                                                                                                                                                                                 |
 | --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -474,7 +474,7 @@ Dans le paramètre optionnel _settings_, vous pouvez passer un objet contenant d
 
 #### Exemple 2
 
-Cet exemple illustre l'utilisation de la propriété _context_ :
+Cet exemple illustre l'utilisation de la propriété *context* :
 
 ```4d
  var $e1; $e2; $e3; $e4 : cs.EmployeeEntity
@@ -572,7 +572,7 @@ Le datastore peut être :
 
 #### Exemple
 
-La méthode projet _**SearchDuplicate**_ recherche des valeurs dupliquées dans une dataclass.
+La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans une dataclass.
 
 ```4d
  var $pet : cs.CatsEntity
@@ -834,7 +834,7 @@ La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary --
 
 > Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre _keepOrder_. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
+Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
 
 Une fois créée, l'entity selection ne contient aucune entité (`mySelection.length` retourne 0). Cette méthode vous permet de construire progressivement des entity selections en faisant des appels ultérieurs à la fonction [`add()`](EntitySelectionClass.md#add).
 
@@ -872,19 +872,19 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 | formula       | Object                             | -> | Critères de recherche en objet formule                                                                                                                                                     |
 | value         | any                                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                            |
 | querySettings | Object                             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                          |
-| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans _queryString_ ou _formula_ |
+| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula* |
 
 <!-- END REF -->
 
 #### Description
 
-La fonction `.query()` <!-- REF #DataClassClass.query().Summary -->recherche les entités qui répondent aux critères de recherche spécifiés dans _queryString_ ou _formula_ et (optionnellement) _value_(s)<!-- END REF -->, pour toutes les entités de la dataclass, et renvoie un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
+La fonction `.query()` <!-- REF #DataClassClass.query().Summary -->recherche les entités qui répondent aux critères de recherche spécifiés dans *queryString* ou *formula* et (optionnellement) *value*(s)<!-- END REF -->, pour toutes les entités de la dataclass, et renvoie un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
 
 Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est retournée.
 
 #### paramètre queryString
 
-Le paramètre _queryString_ doit respecter la syntaxe suivante :
+Le paramètre *queryString* doit respecter la syntaxe suivante :
 
 ```4d
 attributePath|formula comparator value   
@@ -900,7 +900,7 @@ où :
 
 - **formula** : Une formule valide passée en `Text` ou en `Object`. La formule sera évaluée pour chaque entité traitée et doit retourner une valeur booléenne. Dans la formule, l'entité est disponible via l'objet `This`.
 
-  - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : _"eval(length(This.lastname) >=30)"_
+  - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
   - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
 
 > * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
@@ -911,7 +911,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 > - Vous pouvez également passer directement un paramètre `formula` au lieu d'un paramètre `queryString` (recommandé lorsque les formules sont plus complexes). Voir le paragraphe **Paramètre formula** ci-dessous.
 > - Pour des raisons de sécurité, les appels de formule dans les fonctions `query()` peuvent être interdits. Voir la description du paramètre `querySettings`.
 
-- **comparator** : symbole d'opérateur utilisé pour comparer _attributePath_ et _value_. Les symboles suivants sont pris en charge :
+- **comparator** : symbole d'opérateur utilisé pour comparer *attributePath* et *value*. Les symboles suivants sont pris en charge :
 
 | Comparaison                             | Symbole(s) | Commentaire                                                                                                                                                                                                                                       |
 | --------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -934,7 +934,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
   - Constantes de type **date** : "YYYY-MM-DD" format
   - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
-  - Dans le cas d'une recherche avec un comparateur IN, _value_doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                          |
@@ -942,7 +942,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | AND         | &, &&, and |
 | OU          | \|,\|\|, or                                                            |
 
-- **order by attributePath** : vous pouvez inclure une déclaration order by _attributePath_ dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by _attributePath1_ desc, _attributePath2_ asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
+- **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 
 > Si vous utilisez cette instruction, l'entity selection renvoyée est ordonnée (pour plus d'informations, veuillez vous référer à [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
@@ -966,16 +966,16 @@ Vous pouvez utiliser des parenthèses dans la recherche afin de prioriser les ca
 
 #### Utilisation de placeholders
 
-4D vous permet d'utiliser des placeholders pour les arguments _attributePath_, _formula_ et _value_ dans le paramètre _queryString_. Un placeholder est un paramètre que vous insérez dans des chaines de recherche et qui est remplacé par une autre valeur au moment où la chaîne de recherche est évaluée. La valeur des placeholders est évaluée une seule fois, au début de la requête ; elle n'est pas évaluée pour chaque élément.
+4D vous permet d'utiliser des placeholders pour les arguments *attributePath*, *formula* et *value* dans le paramètre *queryString*. Un placeholder est un paramètre que vous insérez dans des chaines de recherche et qui est remplacé par une autre valeur au moment où la chaîne de recherche est évaluée. La valeur des placeholders est évaluée une seule fois, au début de la requête ; elle n'est pas évaluée pour chaque élément.
 
 Il existe deux types de placeholders : les **placeholders indexés** et les **placeholders nommés** :
 
 |            | Placeholders indexés                                                                                                                                                                                                                                                                                                                                                                                            | Placeholders nommés                                                                                                                                                                                                           |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Définition | Les paramètres sont insérés sous la forme `:paramIndex` (par exemple :1, :2...) dans _queryString_ et leurs valeurs correspondantes sont fournies par la séquence de paramètres _value_. A _queryString_ can contain, for _attributePath_, _formula_ and _value_ parameters: | Les paramètres sont insérés sous la forme `:paramName` (par exemple :myparam) et leurs valeurs sont fournies dans les objets attributes et/ou parameters dans le paramètre _querySettings_ |
+| Définition | Les paramètres sont insérés sous la forme `:paramIndex` (par exemple :1, :2...) dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters: | Les paramètres sont insérés sous la forme `:paramName` (par exemple :myparam) et leurs valeurs sont fournies dans les objets attributes et/ou parameters dans le paramètre *querySettings* |
 | Exemple    | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                                                                                     | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                                          |
 
-Vous pouvez combiner tous les types d'arguments dans _queryString_. Une _queryString_ peut contenir, pour les paramètres _attributePath_, _formula_ et _value_ :
+Vous pouvez combiner tous les types d'arguments dans *queryString*. Une *queryString* peut contenir, pour les paramètres *attributePath*, *formula* et *value* :
 
 - des valeurs directes (pas de placeholders)
 - des placeholders indexés et/ou nommés.
@@ -989,7 +989,7 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
  $result:=$col.query($vquery)
 ```
 
-Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone _myname_ une chaîne du type _"smith OR status='private'_, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
+Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone *myname* une chaîne du type *"smith OR status='private'*, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
 
 Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
 
@@ -997,9 +997,9 @@ Lorsque vous utilisez des placeholders, le contournement des options de sécurit
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-Dans ce cas, si l'utilisateur saisit _smith OR status='private'_ dans la zone _myname_, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
+Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
-2. Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres _attributePath_ et _value_ qui peuvent contenir des caractères non-alphanumériques tels que ".", "["...
+2. Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres *attributePath* et *value* qui peuvent contenir des caractères non-alphanumériques tels que ".", "["...
 
 3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
@@ -1024,7 +1024,7 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 
 #### Not equal to et les collections
 
-Lors d'une recherche dans les attributs d'objets de dataclass contenant des collections, le comparateur "not equal to _value_" (`#` ou `!=`) trouvera les éléments dont TOUTES les propriétés sont différentes de _value_ (et non ceux dont AU MOINS une propriété est différente de _value_, ce qui est le cas des autres comparateurs). Fondamentalement, cela équivaut à rechercher "Not(chercher éléments de la collection pour lesquels la propriété vaut _value_"). Par exemple, avec les entités suivantes :
+Lors d'une recherche dans les attributs d'objets de dataclass contenant des collections, le comparateur "not equal to *value*" (`#` ou `!=`) trouvera les éléments dont TOUTES les propriétés sont différentes de *value* (et non ceux dont AU MOINS une propriété est différente de *value*, ce qui est le cas des autres comparateurs). Fondamentalement, cela équivaut à rechercher "Not(chercher éléments de la collection pour lesquels la propriété vaut *value*"). Par exemple, avec les entités suivantes :
 
 ```
 Entity 1:
@@ -1066,7 +1066,7 @@ ds.Class.query("info.coll[].val != :1";0)
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
-Si vous souhaitez mettre en œuvre une recherche qui trouve les entités dont "au moins une propriété est différente de _value_", vous devez utiliser une notation spéciale en utilisant une lettre dans les `[]` :
+Si vous souhaitez mettre en œuvre une recherche qui trouve les entités dont "au moins une propriété est différente de *value*", vous devez utiliser une notation spéciale en utilisant une lettre dans les `[]` :
 
 ```4d
 ds.Class.query("info.coll[a].val != :1";0)  
@@ -1130,7 +1130,7 @@ ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relati
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imaginez que vous souhaitiez rechercher tous les films dans lesquels un acteur A _et_ un acteur B ont simultanément joué un rôle. Si vous écrivez une recherche simple utilisant l'opérateur `AND`, cela ne va pas fonctionner :
+Imaginez que vous souhaitiez rechercher tous les films dans lesquels un acteur A *et* un acteur B ont simultanément joué un rôle. Si vous écrivez une recherche simple utilisant l'opérateur `AND`, cela ne va pas fonctionner :
 
 ```4d
 // code invalide
@@ -1140,7 +1140,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"H
 
 Fondamentalement, le problème vient de la logique interne de la recherche : vous ne pouvez pas rechercher une entité dont un attribut aurait simultanément la valeur "A" et "B".
 
-Pour rendre possible ce type de recherche, ORDA prend en charge une syntaxe spéciale : vous devez juste ajouter un _index de classe_ entre les caractères **{}** dans tous les attributs relationnels supplémentaires utilisés dans la chaîne de recherche :
+Pour rendre possible ce type de recherche, ORDA prend en charge une syntaxe spéciale : vous devez juste ajouter un *index de classe* entre les caractères **{}** dans tous les attributs relationnels supplémentaires utilisés dans la chaîne de recherche :
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
@@ -1158,21 +1158,21 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 #### Paramètre formula
 
-Au lieu d'insérer une formule dans le paramètre _queryString_ (voir ci-dessus), vous pouvez directement passer un objet formule en tant que critère de recherche booléen. L'utilisation d'un objet formule pour les recherches est **recommandée** car vous bénéficiez de la tokenisation et le code est plus facile à rechercher/lire.
+Au lieu d'insérer une formule dans le paramètre *queryString* (voir ci-dessus), vous pouvez directement passer un objet formule en tant que critère de recherche booléen. L'utilisation d'un objet formule pour les recherches est **recommandée** car vous bénéficiez de la tokenisation et le code est plus facile à rechercher/lire.
 
 La formule doit avoir été créée à l'aide de la commande [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string). Dans ce cas :
 
-- _formula_ est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
-- dans _formula_, l'entité est disponible via l'objet `This`.
+- *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
+- dans *formula*, l'entité est disponible via l'objet `This`.
 - si l'objet `Formula` est **null**, l'erreur 1626 ("Attente d'un texte ou d'une formule") est générée, que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`.
 
-> Pour des raisons de sécurité, les appels de formule dans les fonctions `query()` peuvent être interdits. Voir la description du paramètre _querySettings_.
+> Pour des raisons de sécurité, les appels de formule dans les fonctions `query()` peuvent être interdits. Voir la description du paramètre *querySettings*.
 
 #### Passer des paramètres aux formules
 
-Toute _formula_ appelée par la fonction `query()` peut recevoir des paramètres :
+Toute *formula* appelée par la fonction `query()` peut recevoir des paramètres :
 
-- Les paramètres doivent être passés via la propriété **args** du paramètre _querySettings_.
+- Les paramètres doivent être passés via la propriété **args** du paramètre *querySettings*.
 - La formule reçoit cet objet **args** en tant que paramètre **$1**.
 
 Ce code montre comment les paramètres sont passés aux fonctions :
@@ -1188,13 +1188,13 @@ Des exemples supplémentaires sont fournis dans l'exemple 3.
 
 #### Paramètre querySettings
 
-Dans le paramètre _querySettings_ vous pouvez passer un objet contenant des options supplémentaires. Les propriétés suivantes sont prises en charge :
+Dans le paramètre *querySettings* vous pouvez passer un objet contenant des options supplémentaires. Les propriétés suivantes sont prises en charge :
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| parameters    | Object  | **Placeholders nommés pour les valeurs** utilisées dans _queryString_ ou _formula_. Les valeurs sont exprimées sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour une valeur dans _queryString_ ou _formula_ (":placeholder") et où valeur correspond à la valeur à comparer. Vous pouvez combiner, dans une même recherche, des placeholders indexés (valeurs passées directement dans les paramètres <em x-id="3">value</em>) et les valeurs des placeholders nommés.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| attributes    | Object  | **Placeholders nommés pour les chemins d'attributs** utilisés dans _queryString_ ou _formula_. Les attributs sont exprimés sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour un chemin d'attribut dans _queryString_ or _formula_ (":placeholder"), et où valeur peut être une chaine ou une collection de chaines. Chaque valeur est un chemin qui peut désigner soit un scalaire, soit un attribut lié de la classe de données, soit une propriété dans un champ d'objet de la classe de données.<table><tr><th>Type de données</th><th>Description</th></tr><tr><td>Chaîne</td><td>attributePath exprimé à l'aide de la notation point, par exemple "name" ou "user.address.zipCode"</td></tr><tr><td>Collection de chaînes</td><td>Chaque chaîne de la collection représente un niveau d'attributePath, par exemple \["name"] ou \["user", "address", "zipCode"]. L'utilisation d'une collection permet de rechercher des attributs dont les noms ne sont pas compatibles avec la notation à points, par exemple \["4Dv17.1", "en/fr"]</td></tr></table>Vous pouvez mélanger des placeholders indexés (valeurs passées directement dans les paramètres _value_) et des valeurs de placeholders nommés dans la même requête. |
-| args          | Object  | Paramètre(s) à passer aux formules, le cas échéant. L'objet **args** sera reçu dans $1 à l'intérieur des formules et donc ses valeurs seront disponibles via la propriété _$1.property_ (cf. exemple 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| parameters    | Object  | **Placeholders nommés pour les valeurs** utilisées dans *queryString* ou *formula*. Les valeurs sont exprimées sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour une valeur dans *queryString* ou *formula* (":placeholder") et où valeur correspond à la valeur à comparer. Vous pouvez combiner, dans une même recherche, des placeholders indexés (valeurs passées directement dans les paramètres <em x-id="3">value</em>) et les valeurs des placeholders nommés.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| attributes    | Object  | **Placeholders nommés pour les chemins d'attributs** utilisés dans *queryString* ou *formula*. Les attributs sont exprimés sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour un chemin d'attribut dans *queryString* or *formula* (":placeholder"), et où valeur peut être une chaine ou une collection de chaines. Chaque valeur est un chemin qui peut désigner soit un scalaire, soit un attribut lié de la classe de données, soit une propriété dans un champ d'objet de la classe de données.<table><tr><th>Type de données</th><th>Description</th></tr><tr><td>Chaîne</td><td>attributePath exprimé à l'aide de la notation point, par exemple "name" ou "user.address.zipCode"</td></tr><tr><td>Collection de chaînes</td><td>Chaque chaîne de la collection représente un niveau d'attributePath, par exemple \["name"] ou \["user", "address", "zipCode"]. L'utilisation d'une collection permet de rechercher des attributs dont les noms ne sont pas compatibles avec la notation à points, par exemple \["4Dv17.1", "en/fr"]</td></tr></table>Vous pouvez mélanger des placeholders indexés (valeurs passées directement dans les paramètres *value*) et des valeurs de placeholders nommés dans la même requête. |
+| args          | Object  | Paramètre(s) à passer aux formules, le cas échéant. L'objet **args** sera reçu dans $1 à l'intérieur des formules et donc ses valeurs seront disponibles via la propriété *$1.property* (cf. exemple 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | allowFormulas | Boolean | Vrai pour autoriser les appels de formules dans la query (défaut). Passez faux pour interdire l'exécution de formules. Si la `query()` contient une formule alors que cette propriété est à Faux, une erreur est retournée (1278 - Formule non autorisée).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | context       | Text    | Nom du contexte d'optimisation automatique appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est conçue pour le traitement client/serveur ; pour plus d'informations, veuillez vous référer à la section [**Optimisation client/serveur**](../ORDA/client-server-optimization.md#contexte-doptimisation).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | queryPlan     | Boolean | Dans l'entity selection résultante, retourne ou ne retourne la description détaillée de la recherche juste avant d'être exécutée, i.e. La propriété retournée est un objet qui inclut chaque recherche et sous-recherche programmée (dans le cas d'une recherche complexe). Cette option est utile durant la phase de développement d'une application. Elle est utilisée conjointement à queryPath. Par défaut, si elle est omise : faux.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -1430,7 +1430,7 @@ Recherche avec des placeholders nommés pour les attributs et les valeurs :
 
 Ces exemples illustrent les diverses manières d'utiliser des formules avec ou sans paramètres dans vos recherches.
 
-La formule est fournie sous forme de texte avec `eval()` dans le paramètre _queryString_ :
+La formule est fournie sous forme de texte avec `eval()` dans le paramètre *queryString* :
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1464,7 +1464,7 @@ Plusieurs formules peuvent être appliquées :
  $0:=ds.Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-Une formule texte dans _queryString_ reçoit un paramètre :
+Une formule texte dans *queryString* reçoit un paramètre :
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1480,7 +1480,7 @@ Une formule texte dans _queryString_ reçoit un paramètre :
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-En utilisant la même méthode _**checkName**_, un objet `Formula` en placeholder reçoit un paramètre :
+En utilisant la même méthode ***checkName***, un objet `Formula` en placeholder reçoit un paramètre :
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1540,7 +1540,7 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
 
-Dans le paramètre _settings_, passez un objet contenant les propriétés suivantes :
+Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 
 | Propriété  | Type    | Description                               |
 | ---------- | ------- | ----------------------------------------- |

@@ -13,7 +13,7 @@ title: VP Get table column index
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
 
-**VP Get table column index** ( _vpAreaName_ : Text ; _tableName_ : Text ; _columnName_ : Text {; _sheet_ : Integer } ) : Integer<!-- END REF -->
+**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column index.Params -->
 
@@ -23,21 +23,21 @@ title: VP Get table column index
 | tableName  | Text    | -> | Nom de table                                                                |                  |
 | columnName | Text    | -> | Nom de la colonne de la table                                               |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Integer | <- | Index of _columnName_                                                       | <!-- END REF --> |
+| Résultat   | Integer | <- | Index of *columnName*                                                       | <!-- END REF --> |
 
 #### Description
 
-The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the _columnName_ in the _tableName_<!-- END REF -->.
+The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _columnName_, pass the name of the table column for which you want to get the index.
+In *columnName*, pass the name of the table column for which you want to get the index.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-If _tableName_ or _columnName_ is not found, the command returns -1.
+If *tableName* or *columnName* is not found, the command returns -1.
 
 #### Exemple
 

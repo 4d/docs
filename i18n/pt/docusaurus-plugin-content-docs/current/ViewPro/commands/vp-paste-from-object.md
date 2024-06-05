@@ -13,7 +13,7 @@ title: VP PASTE FROM OBJECT
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
 
-**VP PASTE FROM OBJECT** ( _rangeObj_ : Object ; _dataObject_ : Object {; _options_ : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -25,13 +25,13 @@ title: VP PASTE FROM OBJECT
 
 #### Descrição
 
-The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in _dataObject_ to the _rangeObj_ object<!-- END REF -->.
+The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
-In _rangeObj_, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If _rangeObj_ refers to more than one cell, only the first one is used.
+In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If *rangeObj* refers to more than one cell, only the first one is used.
 
-In _dataObject_, pass the object that contains the cell data, formatting, and formulas to be pasted.
+In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
 
-In the optional _options_ parameter, you can specify what to paste in the cell range. Valores possíveis:
+In the optional *options* parameter, you can specify what to paste in the cell range. Valores possíveis:
 
 |Constant|Description|
 \|---|---|---|
@@ -44,7 +44,7 @@ In the optional _options_ parameter, you can specify what to paste in the cell r
 
 The paste options defined in the [workbook options](vp-set-workbook-options.md) are taken into account.
 
-If _options_ refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
 #### Exemplo
 

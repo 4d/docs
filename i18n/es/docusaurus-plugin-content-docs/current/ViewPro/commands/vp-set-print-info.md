@@ -5,7 +5,7 @@ title: VP SET PRINT INFO
 
 <!-- REF #_method_.VP SET PRINT INFO.Syntax -->
 
-**VP SET PRINT INFO** ( _vpAreaName_ : Text ; _printInfo_ : Object { ; _sheet_ : Integer }  ) <!-- END REF -->
+**VP SET PRINT INFO** ( *vpAreaName* : Text ; *printInfo* : Object { ; *sheet* : Integer }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET PRINT INFO
 
 #### Descripción
 
-El comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define los atributos que se utilizarán al imprimir _vpAreaName_<!-- END REF -->.
+El comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define los atributos que se utilizarán al imprimir *vpAreaName*<!-- END REF -->.
 
-Pase el nombre del área 4D View Pro en _vpAreaName_. Si pasa un nombre que no existe, se devuelve un error.
+Pase el nombre del área 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
-Puede pasar un objeto que contenga las definiciones para varios atributos de impresión en el parámetro _printInfo_. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
+Puede pasar un objeto que contenga las definiciones para varios atributos de impresión en el parámetro *printInfo*. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
 
-En el parámetro opcional _sheet_, puede designar una hoja específica a imprimir (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
+En el parámetro opcional *sheet*, puede designar una hoja específica a imprimir (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
 - `vk current sheet`
 

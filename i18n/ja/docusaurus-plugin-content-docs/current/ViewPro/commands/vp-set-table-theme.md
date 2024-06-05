@@ -13,7 +13,7 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
 
-**VP SET TABLE THEME** ( _vpAreaName_ : Text ; _tableName_ : Text ; _options_ : cs.ViewPro.TableTheme )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
@@ -25,11 +25,11 @@ title: VP SET TABLE THEME
 
 #### 説明
 
-`VP SET TABLE THEME` コマンドは、<!-- REF #_method_.VP SET TABLE THEME.Summary -->_tableName_ の表の現在のテーマを変更します<!-- END REF -->。
+`VP SET TABLE THEME` コマンドは、<!-- REF #_method_.VP SET TABLE THEME.Summary -->*tableName* の表の現在のテーマを変更します<!-- END REF -->。
 
-_vpAreaName_ には 4D View Pro エリアの名前を渡します。_tableName_ には変更する表の名前を渡します。
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には変更する表の名前を渡します。
 
-_options_ には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](../classes.md#tabletheme) のオブジェクトを渡します。
+*options* には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](../classes.md#tabletheme) のオブジェクトを渡します。
 
 #### 例題 1
 

@@ -5,7 +5,7 @@ title: VP INSERT COLUMNS
 
 <!-- REF #_method_.VP INSERT COLUMNS.Syntax -->
 
-**VP INSERT COLUMNS** ( _rangeObj_ : Object ) <!-- END REF -->
+**VP INSERT COLUMNS** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 
@@ -15,11 +15,11 @@ title: VP INSERT COLUMNS
 
 #### Descripción
 
-The `VP INSERT COLUMNS` command <!-- REF #_method_.VP INSERT COLUMNS.Summary -->inserts columns into the _rangeObj_<!-- END REF -->.
+The `VP INSERT COLUMNS` command <!-- REF #_method_.VP INSERT COLUMNS.Summary -->inserts columns into the *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. Si se omite el número de columna a insertar (no se define), se inserta una sola columna.
+In *rangeObj*, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. Si se omite el número de columna a insertar (no se define), se inserta una sola columna.
 
-New columns are inserted on the left, directly before the starting column in the _rangeObj_.
+New columns are inserted on the left, directly before the starting column in the *rangeObj*.
 
 #### Ejemplo
 

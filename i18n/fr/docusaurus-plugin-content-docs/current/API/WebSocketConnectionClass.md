@@ -76,9 +76,9 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La fonction `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envoie _message_ au client<!-- END REF -->.
+La fonction `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envoie *message* au client<!-- END REF -->.
 
-Les contenus suivants sont envoyés en fonction du type de _message_ :
+Les contenus suivants sont envoyés en fonction du type de *message* :
 
 | Type   | Contenu                                                                                                                                   |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -121,7 +121,7 @@ Cette propriété est en lecture seule.
 
 La fonction `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->force la fermeture de la connexion<!-- END REF -->.
 
-Un _code_ et un _message_ peuvent être envoyés au client pendant la fermeture pour indiquer la raison de la fermeture.
+Un *code* et un *message* peuvent être envoyés au client pendant la fermeture pour indiquer la raison de la fermeture.
 
 <!-- END REF -->
 

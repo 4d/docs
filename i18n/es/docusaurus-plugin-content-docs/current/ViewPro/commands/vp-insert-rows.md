@@ -5,7 +5,7 @@ title: VP INSERT ROWS
 
 <!-- REF #_method_.VP INSERT ROWS.Syntax -->
 
-**VP INSERT ROWS** ( _rangeObj_ : Object ) <!-- END REF -->
+**VP INSERT ROWS** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP INSERT ROWS.Params -->
 
@@ -15,11 +15,11 @@ title: VP INSERT ROWS
 
 #### Descripción
 
-El comando `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->inserta filas definidas por el _rangeObj_<!-- END REF -->.
+El comando `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->inserta filas definidas por el *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. Si se omite el número de línea a insertar (no se define), se inserta una sola línea.
+In *rangeObj*, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. Si se omite el número de línea a insertar (no se define), se inserta una sola línea.
 
-Las nuevas líneas se insertan directamente antes de la primera línea de _rangeObj_.
+Las nuevas líneas se insertan directamente antes de la primera línea de *rangeObj*.
 
 #### Ejemplo
 

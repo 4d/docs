@@ -5,7 +5,7 @@ title: VP SET VALUE
 
 <!-- REF #_method_.VP SET VALUE.Syntax -->
 
-**VP SET VALUE** ( _rangeObj_ : Object ; _valueObj_ : Object ) <!-- END REF -->
+**VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
@@ -18,16 +18,16 @@ title: VP SET VALUE
 
 `VP SET VALUE` コマンドは、<!-- REF #_method_.VP SET VALUE.Summary -->指定されたセルレンジに値を割り当てます<!-- END REF -->。
 
-このコマンドを使用すると、汎用的なコードで _rangeObj_ のレンジに様々な型の値とそのフォーマットを設定できます。それに対して [`VP SET TEXT VALUE`](vp-set-text-value.md) や [`VP SET NUM VALUE`](vp-set-num-value.md) などの他のコマンドは、設定する値の型が限定されています。
+このコマンドを使用すると、汎用的なコードで *rangeObj* のレンジに様々な型の値とそのフォーマットを設定できます。それに対して [`VP SET TEXT VALUE`](vp-set-text-value.md) や [`VP SET NUM VALUE`](vp-set-num-value.md) などの他のコマンドは、設定する値の型が限定されています。
 
-_rangeObj_ には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-_valueObj_ 引数は、_rangeObj_ のレンジに対して割り当てたい値と[フォーマット](../configuring.md#セルフォーマット) のプロパティを格納しているオブジェクトです。 このオブジェクトには以下のプロパティを含めることができます:
+*valueObj* 引数は、*rangeObj* のレンジに対して割り当てたい値と[フォーマット](../configuring.md#セルフォーマット) のプロパティを格納しているオブジェクトです。 このオブジェクトには以下のプロパティを含めることができます:
 
 | プロパティ  | タイプ                                      | 説明                                                                                                        |
 | ------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| value  | Integer, Real, Boolean, Text, Date, Null | _rangeObj_ のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                         |
-| time   | Real                                     | _rangeObj_ のレンジに対して割り当てる時間 (秒単位)                                                       |
+| value  | Integer, Real, Boolean, Text, Date, Null | *rangeObj* のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                         |
+| time   | Real                                     | *rangeObj* のレンジに対して割り当てる時間 (秒単位)                                                       |
 | format | Text                                     | 値や日時に対するパターン 値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、[セルフォーマット](../configuring.md#セルフォーマット) の章を参照してください。 |
 
 #### 例題

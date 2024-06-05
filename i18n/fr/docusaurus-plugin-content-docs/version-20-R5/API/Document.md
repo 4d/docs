@@ -221,7 +221,7 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.isWritable` renvoie <!-- REF #document.isWritable.Summary -->true si le fichier existe sur le disque et est modifiable<!-- END REF -->.
 
-> Cette propriété vérifie la capacité de l'application 4D à écrire sur le disque (droits d'accès). elle ne se base pas uniquement sur l'attribut _writable_ du fichier.
+> Cette propriété vérifie la capacité de l'application 4D à écrire sur le disque (droits d'accès). elle ne se base pas uniquement sur l'attribut *writable* du fichier.
 
 Cette propriété est en **lecture seule**.
 
@@ -444,13 +444,13 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La fonction `.copyTo()` <!-- REF #document.copyTo().Summary -->copie l'objet `File` vers le _destinationFolder_ spécifié <!-- END REF -->.
+La fonction `.copyTo()` <!-- REF #document.copyTo().Summary -->copie l'objet `File` vers le *destinationFolder* spécifié <!-- END REF -->.
 
-Le _destinationFolder_ doit exister sur disque, sinon une erreur est générée.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le fichier est copié avec le nom du fichier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre _newName_. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le fichier est copié avec le nom du fichier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-S'il existe déjà un fichier portant le même nom dans _destinationFolder_, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre _overwrite_ pour ignorer et écraser le dossier existant :
+S'il existe déjà un fichier portant le même nom dans *destinationFolder*, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre *overwrite* pour ignorer et écraser le dossier existant :
 
 | Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
@@ -462,7 +462,7 @@ L'objet `File` copié.
 
 #### Exemple
 
-Vous souhaitez copier un _file_ image, à partir du dossier Documents de l'utilisateur vers le dossier de la base :
+Vous souhaitez copier un *file* image, à partir du dossier Documents de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $source; $copy : Object
@@ -544,7 +544,7 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 
 La fonction `.getIcon()` retourne <!-- REF #document.getIcon().Summary -->l'icône du fichier<!-- END REF -->.
 
-Le paramètre optionnel _size_ spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
+Le paramètre optionnel *size* spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
 Si le fichier n'existe pas sur disque, une icône par défaut vide est retournée.
 
@@ -585,15 +585,15 @@ La fonction `.getText()` <!-- REF #document.getText().Summary -->retourne le con
 
 Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour la lecture du contenu. Vous pouvez passer soit :
 
-- dans _charSetName_, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
-- ou dans _charSetNum_, l'ID MIBEnum (numéro) du nom du jeu standard.
+- dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
+- ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
 > Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
-Si le document contient un BOM (Byte Order Mark), 4D utilise le jeu de caractères inséré au lieu de celui qui est indiqué dans _charSetName_ or _charSetNum_ (ce paramètre est alors ignoré).
-Si le document ne contient pas de BOM et si le paramètre _charSetName_ ou _charSetNum_ est omis, 4D utilise par défaut le jeu de caractères "UTF-8".
+Si le document contient un BOM (Byte Order Mark), 4D utilise le jeu de caractères inséré au lieu de celui qui est indiqué dans *charSetName* or *charSetNum* (ce paramètre est alors ignoré).
+Si le document ne contient pas de BOM et si le paramètre *charSetName* ou *charSetNum* est omis, 4D utilise par défaut le jeu de caractères "UTF-8".
 
-Dans le paramètre _breakMode_, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne du document. Les constantes suivantes du thème "Documents système" sont disponibles :
+Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne du document. Les constantes suivantes du thème "Documents système" sont disponibles :
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                                                                                                        |
 | ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -603,7 +603,7 @@ Dans le paramètre _breakMode_, vous pouvez passer une valeur numérique indiqua
 | `Document with CR`            | 3      | Les fins de ligne sont convertis au format OS X : CR (carriage return)                                                                                                                                          |
 | `Document with LF`            | 4      | Les fins de ligne sont convertis au format Unix : LF (line feed)                                                                                                                                                |
 
-Par défaut, lorsque vous omettez le paramètre _breakMode_ les retours à la ligne sont traités en mode natif (1).
+Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
 **Valeur retournée**
 

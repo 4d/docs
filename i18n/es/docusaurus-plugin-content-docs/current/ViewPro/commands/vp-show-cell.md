@@ -5,7 +5,7 @@ title: VP SHOW CELL
 
 <!-- REF #_method_.VP SHOW CELL.Syntax -->
 
-**VP SHOW CELL** ( _rangeObj_ : Object { ; _vPos_ : Integer; _hPos_ : Integer } ) <!-- END REF -->
+**VP SHOW CELL** ( *rangeObj* : Object { ; *vPos* : Integer; *hPos* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
@@ -17,13 +17,13 @@ title: VP SHOW CELL
 
 #### Descripción
 
-El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del _rangeObj_<!-- END REF -->.
+El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un rango de celdas como objeto para designar las celdas a visualizar. La vista del _rangeObj_ se posicionará vertical u horizontalmente (es decir, donde aparezca _rangeObj_) en función de los parámetros _vPos_ y _hPos_. El parámetro _vPos_ define la posición vertical deseada para mostrar el r_rangeObj_ y el parámetro _hPos_ define la posición horizontal deseada para mostrar el _rangeObj_.
+En *rangeObj*, pase un rango de celdas como objeto para designar las celdas a visualizar. La vista del *rangeObj* se posicionará vertical u horizontalmente (es decir, donde aparezca *rangeObj*) en función de los parámetros *vPos* y *hPos*. El parámetro *vPos* define la posición vertical deseada para mostrar el r*rangeObj* y el parámetro *hPos* define la posición horizontal deseada para mostrar el *rangeObj*.
 
 Los siguientes selectores están disponibles:
 
-| Selector              | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                 | Disponible con _vPos_ | Disponible con _hPos_ |
+| Selector              | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                 | Disponible con *vPos* | Disponible con *hPos* |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
 | `vk position bottom`  | Alineación vertical a la parte inferior de la celda o de la línea.                                                                                                                                                                                                                                                                                                                                                          | X                     |                       |
 | `vk position center`  | Alineación al centro. El alineamiento será a la celda, fila, o límite de columna según la posición indicada en la vista:<li>Posición de la vista vertical - celda o fila</li><li>Posición horizontal de la vista - celda o columna</li>                                                                                                                                                                     | X                     | X                     |
@@ -32,7 +32,7 @@ Los siguientes selectores están disponibles:
 | `vk position right`   | Alineación horizontal a la derecha de la celda o de la columna                                                                                                                                                                                                                                                                                                                                                                              |                       | X                     |
 | `vk position top`     | Alineación vertical a la parte superior de la celda o de la línea                                                                                                                                                                                                                                                                                                                                                                           | X                     |                       |
 
-> Este comando sólo es eficaz si es posible reposicionar la vista. Por ejemplo, si el _rangeObj_ está en la celda A1 (la primera columna y la primera línea) de la hoja actual, reposicionar la vista no supondrá ninguna diferencia porque ya se han alcanzado los límites vertical y horizontal (es decir, no es posible desplazarse más arriba o más a la izquierda). Lo mismo ocurre si _rangeObj_ está en la celda C3 y la vista se reposiciona al centro o abajo a la derecha. La vista permanece inalterada.
+> Este comando sólo es eficaz si es posible reposicionar la vista. Por ejemplo, si el *rangeObj* está en la celda A1 (la primera columna y la primera línea) de la hoja actual, reposicionar la vista no supondrá ninguna diferencia porque ya se han alcanzado los límites vertical y horizontal (es decir, no es posible desplazarse más arriba o más a la izquierda). Lo mismo ocurre si *rangeObj* está en la celda C3 y la vista se reposiciona al centro o abajo a la derecha. La vista permanece inalterada.
 
 #### Ejemplo
 

@@ -5,7 +5,7 @@ title: VP SET FIELD
 
 <!-- REF #_method_.VP SET FIELD.Syntax -->
 
-**VP SET FIELD** ( _rangeObj_ : Object ; _field_ : Pointer { ; _formatPattern_ : Text } ) <!-- END REF -->
+**VP SET FIELD** ( *rangeObj* : Object ; *field* : Pointer { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET FIELD
 
 `VP SET FIELD` コマンドは、<!-- REF #_method_.VP SET FIELD.Summary -->指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジを渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定されたフィールドはそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定されたフィールドはそれぞれのセルに対して繰り返し割り当てられます。
 
-_field_ 引数は、_rangeObj_ のレンジに対して割り当てられる 4Dデータベースの [仮想フィールド](../formulas.md#仮想ストラクチャーを使ったフィールド参照) を指定します。 フォーミュラバーには、_field_ の仮想ストラクチャー名が表示されます。 _rangeObj_ に含まれるセルに既存のコンテンツがあった場合、そのコンテンツは _field_ で上書きされます。
+*field* 引数は、*rangeObj* のレンジに対して割り当てられる 4Dデータベースの [仮想フィールド](../formulas.md#仮想ストラクチャーを使ったフィールド参照) を指定します。 フォーミュラバーには、*field* の仮想ストラクチャー名が表示されます。 *rangeObj* に含まれるセルに既存のコンテンツがあった場合、そのコンテンツは *field* で上書きされます。
 
-任意の _formatPattern_ 引数は、_field_ 引数に対するパターンを定義します。 有効な [カスタムフォーマット](../configuring.md#セルフォーマット) を渡すことができます。
+任意の *formatPattern* 引数は、*field* 引数に対するパターンを定義します。 有効な [カスタムフォーマット](../configuring.md#セルフォーマット) を渡すことができます。
 
 #### 例題
 

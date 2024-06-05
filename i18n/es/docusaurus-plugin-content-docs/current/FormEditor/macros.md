@@ -44,7 +44,7 @@ Function onInvoke($editor : Object)->$result : Object
 	
 	var $btnHello : Object
 	
-	// Create a "Hello" button
+	// Crear un botón "Hello"
 	$btnHello:=New object("type"; "button"; \
 	"text"; "Hello World!"; \
 	"method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -54,19 +54,19 @@ Function onInvoke($editor : Object)->$result : Object
 	"top"; 0; \
 	"left"; 0)	
 	
-	// Add button in the current page
+	// Añadir botón en la página actual
 	$editor.editor.currentPage.objects.btnHello:=$btnHello	
 	
-	// Select the new button in the form editor
+	// Seleccionar el nuevo botón en el editor de formularios
 	$editor.editor.currentSelection.clear() //unselect elements
 	$editor.editor.currentSelection.push("btnHello")	
 	
-	// Notify the modification to the 4D Form editor
+	// Notificar la modificación al editor de formularios 4D
 	$result:=New object("currentSelection"; $editor.editor.currentSelection;\  
 		"currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro:
+Luego puede llamar a la macro:
 ![](../assets/en/FormEditor/macroex1.png)
 ![](../assets/en/FormEditor/macroex2.png)
 
@@ -78,7 +78,7 @@ Cuando las macros están definidas en su proyecto 4D, puede llamar una macro uti
 
 Este menú se crea sobre el [archivo de definición de macros](#location-of-macros) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
 
-Este menú puede ser llamado en un área vacía o en una selección en el formulario. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+Este menú puede ser llamado en un área vacía o en una selección en el formulario. El objeto seleccionado se pasa a `$editor.currentSelection` o `$editor.target` en la función [`onInvoke`](#oninvoke) de la macro.
 
 Una sola macro puede ejecutar varias operaciones. Si se selecciona, la función **Deshacer** del editor de formularios puede utilizarse para revertir las operaciones de las macros de forma global.
 
@@ -142,7 +142,7 @@ Cada macro que quiera instanciar en su proyecto o componente debe ser declarada 
 
 El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#creating-macros) del archivo `formMacros.json`.
 
-Las macros se instancian al iniciar la aplicación. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
+Las macros se instancian al iniciar la aplicación. En consecuencia, si se modifica la estructura de la clase macro (añadir una función, modificar un parámetro...) o el [constructor](#class-constructor), tendrá que reiniciar la aplicación para aplicar los cambios.
 
 ## Funciones macro
 
@@ -265,7 +265,7 @@ Function onInvoke($editor : Object)->$result : Object
 	var $name : Text
 	
 	If ($editor.editor.currentSelection.length>0)		
-		// Set stroke to red and style to italic for each selected object
+		// Define el trazo en rojo y el estilo en cursiva para cada objeto seleccionado
 		For each ($name; $editor.editor.currentSelection)
 			$editor.editor.currentPage.objects[$name].stroke:="red"
 			$editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -276,7 +276,7 @@ Function onInvoke($editor : Object)->$result : Object
 		ALERT("Please select a form object.")
 	End if 
 	
-	// Notify to 4D the modification
+	// Notificar la modificación a 4D
 	$result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 

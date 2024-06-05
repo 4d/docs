@@ -600,7 +600,7 @@ Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto,
 
 #### Automático para entrada (opción por defecto)
 
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - En las áreas de una sola línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - En áreas multilíneas, 4D realiza retornos de línea automáticos.

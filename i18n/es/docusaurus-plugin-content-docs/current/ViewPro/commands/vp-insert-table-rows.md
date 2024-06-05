@@ -13,7 +13,7 @@ title: VP INSERT TABLE ROWS
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
 
-**VP INSERT TABLE ROWS** ( _vpAreaName_ : Text ; _tableName_ : Text ; _row_ : Integer {; _count_ : Integer {; _insertAfter_ : Integer {; _sheet_ : Integer }}} )<!-- END REF -->
+**VP INSERT TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
@@ -23,25 +23,25 @@ title: VP INSERT TABLE ROWS
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | row         | Integer | -> | Índice en la tabla de la línea inicial a insertar              |                  |
 | count       | Text    | -> | Número de líneas a añadir (debe ser >0)     |                  |
-| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` _fila_      |                  |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` *fila*      |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
 #### Descripción
 
-The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or _count_ empty row(s) in the specified _tableName_ at the specified _row_ index<!-- END REF -->.
+The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
 
-En el parámetro _insertAfter_, puede pasar una de las siguientes constantes para indicar si la(s) línea(s) debe(n) ser insertada(s) antes o después del índice _row_:
+En el parámetro *insertAfter*, puede pasar una de las siguientes constantes para indicar si la(s) línea(s) debe(n) ser insertada(s) antes o después del índice *row*:
 
 | Constante                | Valor | Descripción                                                                                         |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insertar fila(s) antes de la _fila_ (por defecto si se omite) |
-| `vk table insert after`  | 1     | Insertar línea(s) después de la _línea_                                          |
+| `vk table insert before` | 0     | Insertar fila(s) antes de la *fila* (por defecto si se omite) |
+| `vk table insert after`  | 1     | Insertar línea(s) después de la *línea*                                          |
 
-Este comando inserta algunas líneas en la tabla _tableName_, NO en la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
+Este comando inserta algunas líneas en la tabla *tableName*, NO en la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
 
-Si la tabla _tableName_ está vinculada a un [contexto de datos](vp-set-data-context.md), el comando inserta nuevos elementos vacíos en la colección.
+Si la tabla *tableName* está vinculada a un [contexto de datos](vp-set-data-context.md), el comando inserta nuevos elementos vacíos en la colección.
 
-Si _tableName_ no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
+Si *tableName* no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
 
 #### Ejemplo
 

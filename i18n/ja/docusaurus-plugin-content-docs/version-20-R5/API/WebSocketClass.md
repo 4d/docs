@@ -66,7 +66,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 | リリース  | 内容                                         |
 | ----- | ------------------------------------------ |
-| 20 R3 | _connectionHandler_ で `headers` プロパティをサポート |
+| 20 R3 | *connectionHandler* で `headers` プロパティをサポート |
 
 </details>
 
@@ -82,18 +82,18 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 <!-- END REF -->
 
-`4D.WebSocket.new()` 関数は、<!-- REF #4D.WebSocket.new().Summary -->_url_ で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
+`4D.WebSocket.new()` 関数は、<!-- REF #4D.WebSocket.new().Summary -->*url* で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
 
-_url_には、WebSocketサーバーが応答する URL を渡します。 以下の URLパターンが使用できます:
+*url*には、WebSocketサーバーが応答する URL を渡します。 以下の URLパターンが使用できます:
 
 - 標準接続用: `ws://host[:port]path[?query]`
 - TLSセキュア接続用: `wss://host[:port]path[?query]`
 
 接続できない場合、`null` オブジェクトが返され、エラーが生成されます (このエラーは `ON ERR CALL` で実装したメソッドによってインターセプトできます)。
 
-### _connectionHandler_ パラメーター
+### *connectionHandler* パラメーター
 
-_connectionHandler_ には、接続イベントに応じて呼び出されるコールバック関数のほか、処理するデータ型やヘッダーを含むオブジェクトを渡すことができます。
+*connectionHandler* には、接続イベントに応じて呼び出されるコールバック関数のほか、処理するデータ型やヘッダーを含むオブジェクトを渡すことができます。
 
 - コールバックは、接続を開始したフォームまたはワーカーのコンテキストで自動的に呼び出されます。
 - フォームまたはワーカーが閉じられていない限り、WebSocket は有効です。
@@ -105,7 +105,7 @@ _connectionHandler_ には、接続イベントに応じて呼び出されるコ
 | onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>`$2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li></ul>                                                                                                                                                                                                                                                                                                                                                      |
 | onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| headers     | Object                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス:` headers.*key*:=*value*` (同じ key を複数指定する場合、_value_ にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| headers     | Object                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス:` headers.*key*:=*value*` (同じ key を複数指定する場合、*value* にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 以下は、コールバック呼び出しの流れです:
 
@@ -189,9 +189,9 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### 説明
 
-`.send()` 関数は、<!-- REF #WebSocketClass.send().Summary -->定義されたデータ型 (Text、Blob、または Object) で、WebSocket サーバーに _message_ を送信します<!-- END REF -->。
+`.send()` 関数は、<!-- REF #WebSocketClass.send().Summary -->定義されたデータ型 (Text、Blob、または Object) で、WebSocket サーバーに *message* を送信します<!-- END REF -->。
 
-_メッセージ_ の型によって、以下の内容が送信されます:
+*メッセージ* の型によって、以下の内容が送信されます:
 
 | タイプ    | 内容                                                                                                                      |
 | ------ | ----------------------------------------------------------------------------------------------------------------------- |
@@ -232,14 +232,14 @@ _メッセージ_ の型によって、以下の内容が送信されます:
 
 #### 説明
 
-`.terminate()` 関数は、<!-- REF #WebSocketClass.terminate().Summary -->任意の _code_ および _reason_ 引数とともに、WebSocket 接続を閉じます<!-- END REF -->。
+`.terminate()` 関数は、<!-- REF #WebSocketClass.terminate().Summary -->任意の *code* および *reason* 引数とともに、WebSocket 接続を閉じます<!-- END REF -->。
 
-_code_ には、接続を閉じる理由を説明するステータスコードを渡すことができます ([RFC6455 の WebSocket Connection Close Code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) も参照ください):
+*code* には、接続を閉じる理由を説明するステータスコードを渡すことができます ([RFC6455 の WebSocket Connection Close Code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) も参照ください):
 
 - 指定しなかった場合、接続のクローズコードは自動的に設定されます: 通常終了の場合は 1000、そうでない場合は、接続が切断された実際の理由を示す 1001〜1015 の標準値。
-- 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。 値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 _code_ を指定する場合は、_reason_ の値も指定する必要があります。
+- 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。 値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。
 
-_reason_ には、接続を閉じる理由を説明するテキストを渡すことができます。
+*reason* には、接続を閉じる理由を説明するテキストを渡すことができます。
 
 <!-- END REF -->
 

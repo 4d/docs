@@ -35,7 +35,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 <!-- REF EntityClass.attributeName.Desc -->
 
-## ._attributeName_
+## .*attributeName*
 
 <details><summary>Historia</summary>
 
@@ -55,11 +55,11 @@ Todo atributo de la dataclass está disponible como una propiedad de una entidad
 
 The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
 
-- If _attributeName_ kind is **storage**:
-  `.attributeName` returns a value of the same type as _attributeName_.
-- If _attributeName_ kind is **relatedEntity**:
+- If *attributeName* kind is **storage**:
+  `.attributeName` returns a value of the same type as *attributeName*.
+- If *attributeName* kind is **relatedEntity**:
   `.attributeName` returns the related entity. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
-- If _attributeName_ kind is **relatedEntities**:
+- If *attributeName* kind is **relatedEntities**:
   `.attributeName` returns a new entity selection of related entities. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 #### Ejemplo
@@ -145,9 +145,9 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
-In _entityToCompare_, pass the entity to be compared to the original entity.
+In *entityToCompare*, pass the entity to be compared to the original entity.
 
-In _attributesToCompare_, you can designate specific attributes to compare. Si se suministra, la comparación se realiza sólo en los atributos especificados. Si no se suministra, se devuelven todas las diferencias entre las entidades.
+In *attributesToCompare*, you can designate specific attributes to compare. Si se suministra, la comparación se realiza sólo en los atributos especificados. Si no se suministra, se devuelven todas las diferencias entre las entidades.
 
 Las diferencias se devuelven como una colección de objetos cuyas propiedades son:
 
@@ -155,11 +155,11 @@ Las diferencias se devuelven como una colección de objetos cuyas propiedades so
 | ------------------- | ----------------------------------------- | ------------------------------------------- |
 | attributeName       | String                                    | Nombre del atributo                         |
 | value               | cualquiera - Depende del tipo de atributo | Valor del atributo en la entidad            |
-| otherValue          | cualquiera - Depende del tipo de atributo | Value of the attribute in _entityToCompare_ |
+| otherValue          | cualquiera - Depende del tipo de atributo | Value of the attribute in *entityToCompare* |
 
 Sólo se incluyen en la colección los atributos con valores diferentes. If no differences are found, `.diff()` returns an empty collection.
 
-The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as _attributeName_ properties (_value_ and _otherValue_ are empty for the related entity name).
+The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
 If one of the compared entities is **Null**, an error is raised.
 
@@ -348,9 +348,9 @@ The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data 
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
-By default, if the _mode_ parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
+By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
-Otherwise, you can pass the `dk force drop if stamp changed` option in the _mode_ parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).
+Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode* parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).
 
 **Resultado**
 
@@ -359,10 +359,10 @@ The object returned by `.drop( )` contains the following properties:
 | Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                              |
 | --------------------------------- | ----------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success                           |                                     | boolean               | true si la acción de soltar tiene éxito, false en caso contrario.                                                                                                                        |
-|                                   |                                     |                       | _**Disponible sólo en caso de error:**_                                                                                                                                                  |
+|                                   |                                     |                       | ***Disponible sólo en caso de error:***                                                                                                                                                  |
 | status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                               |
 | statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                         |
-|                                   |                                     |                       | _**Available only in case of pessimistic lock error:**_                                                                                                                                  |
+|                                   |                                     |                       | ***Available only in case of pessimistic lock error:***                                                                                                                                  |
 | LockKindText                      |                                     | text                  | "Locked by record"                                                                                                                                                                                       |
 | lockInfo                          |                                     | object                | Información sobre el origen del bloqueo                                                                                                                                                                  |
 |                                   | task_id        | number                | Id del proceso                                                                                                                                                                                           |
@@ -371,13 +371,13 @@ The object returned by `.drop( )` contains the following properties:
 |                                   | host_name      | text                  | Nombre de la máquina                                                                                                                                                                                     |
 |                                   | task_name      | text                  | Nombre del proceso                                                                                                                                                                                       |
 |                                   | client_version | text                  |                                                                                                                                                                                                          |
-|                                   |                                     |                       | _**Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):**_ |
+|                                   |                                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors                            |                                     | collection of objects |                                                                                                                                                                                                          |
 |                                   | message                             | text                  | Mensaje de error                                                                                                                                                                                         |
 |                                   | component signature                 | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                                 |
 |                                   | errCode                             | number                | Código de error                                                                                                                                                                                          |
 
-(\*) The following values can be returned in the _status_ and _statusText_ properties of _Result_ object in case of error:
+(\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -491,7 +491,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Descripción
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the _filler_ content<!-- END REF -->.
+The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
 
 > Esta función modifica la entidad original.
 
@@ -501,10 +501,10 @@ El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atribu
 - Los tipos de datos deben ser equivalentes. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
 - La llave primaria puede darse tal cual o con una propiedad "__KEY" (llenada con el valor de la llave primaria). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas de la base de datos. El autoincremento sólo se calcula si la llave primaria es nula.
 
-_filler_ can handle a related entity under the following conditions:
+*filler* can handle a related entity under the following conditions:
 
-- _filler_ contains the foreign key itself, or
-- _filler_ contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
+- *filler* contiene la propia llave foránea, o
+- *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
 - si la entidad relacionada no existe, se ignora.
 
 #### Ejemplo
@@ -628,7 +628,7 @@ El siguiente código genérico duplica cualquier entidad:
 
 The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
-Las llaves primarias pueden ser números (enteros) o cadenas. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the _mode_ parameter.
+Las llaves primarias pueden ser números (enteros) o cadenas. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
 #### Ejemplo
 
@@ -820,12 +820,12 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 
 The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
-By default if the _entitySelection_ parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified _entitySelection_.
+By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
 
 El valor resultante se incluye entre 0 y la longitud de la selección de entidades -1.
 
-- If the entity does not have an entity selection or does not belong to _entitySelection_, the function returns -1.
-- If _entitySelection_ is Null or does not belong to the same dataclass as the entity, an error is raised.
+- If the entity does not have an entity selection or does not belong to *entitySelection*, the function returns -1.
+- If *entitySelection* is Null or does not belong to the same dataclass as the entity, an error is raised.
 
 #### Ejemplo
 
@@ -958,9 +958,9 @@ A record locked by `.lock()` is unlocked:
 
 > An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
 
-By default, if the _mode_ parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
+By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
-Otherwise, you can pass the `dk reload if stamp changed` option in the _mode_ parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).
+Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).
 
 **Resultado**
 
@@ -969,15 +969,15 @@ The object returned by `.lock()` contains the following properties:
 | Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------------------------- | ----------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success                           |                                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                                                                                                                                                                                                        |
-|                                   |                                     |                       | _**Available only if `dk reload if stamp changed` option is used:**_                                                                                                                                                                                                                                                                                                  |
+|                                   |                                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                                                                                                                                                                                                                                                                  |
 | **wasReloaded**                   |                                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                                                                                                                                                                                                                                  |
-|                                   |                                     |                       | _**Disponible sólo en caso de error:**_                                                                                                                                                                                                                                                                                                                               |
+|                                   |                                     |                       | ***Disponible sólo en caso de error:***                                                                                                                                                                                                                                                                                                                               |
 | status(\*)     |                                     | number                | Código de error, ver abajo                                                                                                                                                                                                                                                                                                                                                            |
 | statusText(\*) |                                     | text                  | Descripción del error, ver abajo                                                                                                                                                                                                                                                                                                                                                      |
-|                                   |                                     |                       | _**Available only in case of pessimistic lock error:**_                                                                                                                                                                                                                                                                                                               |
+|                                   |                                     |                       | ***Available only in case of pessimistic lock error:***                                                                                                                                                                                                                                                                                                               |
 | lockKindText                      |                                     | text                  | "Locked by record" si está bloqueado por un proceso 4D, "Locked by session" si está bloqueado por una sesión REST                                                                                                                                                                                                                                                                     |
 | lockInfo                          |                                     | object                | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                                                                                                                                                                                     |
-|                                   |                                     |                       | _**Available only for a 4D process lock:**_                                                                                                                                                                                                                                                                                                                           |
+|                                   |                                     |                       | ***Available only for a 4D process lock:***                                                                                                                                                                                                                                                                                                                           |
 |                                   | task_id        | number                | ID del Proceso                                                                                                                                                                                                                                                                                                                                                                        |
 |                                   | user_name      | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                                                                                                                                                                                                                                          |
 |                                   | user4d_alias   | text                  | Nombre o alias del usuario 4D                                                                                                                                                                                                                                                                                                                                                         |
@@ -985,17 +985,17 @@ The object returned by `.lock()` contains the following properties:
 |                                   | host_name      | text                  | Nombre de la máquina                                                                                                                                                                                                                                                                                                                                                                  |
 |                                   | task_name      | text                  | Nombre del proceso                                                                                                                                                                                                                                                                                                                                                                    |
 |                                   | client_version | text                  | Versión del cliente                                                                                                                                                                                                                                                                                                                                                                   |
-|                                   |                                     |                       | _**Available only for a REST session lock:**_                                                                                                                                                                                                                                                                                                                         |
+|                                   |                                     |                       | ***Available only for a REST session lock:***                                                                                                                                                                                                                                                                                                                         |
 |                                   | host                                | text                  | \| URL that locked the entity (e.g. "www.myserver.com") \|                                                                                                                                                                                                                                         |
 |                                   | IPAddr                              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                                                                                                                                                |
 |                                   | userAgent                           | text                  | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                                   |                                     |                       | _**Available only in case of serious error**_ (primary key already exists, disk full...):                                                                                                                                                                                                          |
+|                                   |                                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                                                                                                                                                                                                          |
 | errors                            |                                     | collection of objects |                                                                                                                                                                                                                                                                                                                                                                                       |
 |                                   | message                             | text                  | Mensaje de error                                                                                                                                                                                                                                                                                                                                                                      |
 |                                   | component signature                 | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                                                                                                                                                                                                              |
 |                                   | errCode                             | number                | Código de error                                                                                                                                                                                                                                                                                                                                                                       |
 
-(\*) The following values can be returned in the _status_ and _statusText_ properties of the _Result_ object in case of error:
+(\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1157,16 +1157,16 @@ The object returned by `.reload( )` contains the following properties:
 
 | Propiedad                         | Tipo    | Descripción                                                                                                                     |
 | --------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| success                           | boolean | True if the reload action is successful, False otherwise._**Available only in case of error**_: |
+| success                           | boolean | True if the reload action is successful, False otherwise.***Available only in case of error***: |
 | status(\*)     | number  | Código de error, ver abajo                                                                                                      |
 | statusText(\*) | text    | Descripción del error, ver abajo                                                                                                |
 
-(\*) The following values can be returned in the _status_ and _statusText_ properties of _Result_ object in case of error:
+(\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.lock()`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>_**Associated statusText**_: "Entity does not exist anymore" |
-| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>_**Associated statusText**_: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.lock()`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>***Associated statusText***: "Entity does not exist anymore" |
+| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>***Associated statusText***: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 #### Ejemplo
 
@@ -1220,9 +1220,9 @@ The save operation is executed only if at least one entity attribute has been "t
 
 In a multi-user or multi-process application, the `.save()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
-By default, if the _mode_ parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
+By default, if the *mode* parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
 
-Otherwise, you can pass the `dk auto merge` option in the _mode_ parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. Los datos resultantes guardados en la entidad serán la combinación (la "fusión") de todas las modificaciones no concurrentes (si se aplicaron modificaciones al mismo atributo, el guardado falla y se devuelve un error, incluso con el modo de fusión automática).
+Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. Los datos resultantes guardados en la entidad serán la combinación (la "fusión") de todas las modificaciones no concurrentes (si se aplicaron modificaciones al mismo atributo, el guardado falla y se devuelve un error, incluso con el modo de fusión automática).
 
 > El modo de fusión automática no está disponible para los atributos de tipo Imagen, Objeto y Texto cuando se almacenan fuera del registro. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
 
@@ -1233,12 +1233,12 @@ The object returned by `.save()` contains the following properties:
 | Propiedad    |                                     | Tipo                  | Descripción                                                                                                                                                                                                |
 | ------------ | ----------------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success      |                                     | boolean               | True si la acción guardar tiene éxito, false en caso contrario.                                                                                                                            |
-|              |                                     |                       | _**Available only if `dk auto merge` option is used**_:                                                                                                                                    |
+|              |                                     |                       | ***Available only if `dk auto merge` option is used***:                                                                                                                                    |
 | autoMerged   |                                     | boolean               | True si se ha realizado una fusión automática, False en caso contrario.                                                                                                                    |
-|              |                                     |                       | _**Disponible sólo en caso de error**_:                                                                                                                                                    |
+|              |                                     |                       | ***Disponible sólo en caso de error***:                                                                                                                                                    |
 | status       |                                     | number                | Error code, [see below](#status-and-statustext)                                                                                                                                                            |
 | statusText   |                                     | text                  | Description of the error, [see below](#status-and-statustext)                                                                                                                                              |
-|              |                                     |                       | _**Available only in case of pessimistic lock error**_:                                                                                                                                    |
+|              |                                     |                       | ***Available only in case of pessimistic lock error***:                                                                                                                                    |
 | lockKindText |                                     | text                  | "Locked by record"                                                                                                                                                                                         |
 | lockInfo     |                                     | object                | Información sobre el origen del bloqueo                                                                                                                                                                    |
 |              | task_id        | number                | Id del proceso                                                                                                                                                                                             |
@@ -1247,7 +1247,7 @@ The object returned by `.save()` contains the following properties:
 |              | host_name      | text                  | Nombre de la máquina                                                                                                                                                                                       |
 |              | task_name      | text                  | Nombre del proceso                                                                                                                                                                                         |
 |              | client_version | text                  |                                                                                                                                                                                                            |
-|              |                                     |                       | _**Available only in case of serious error**_ (serious error - can be trying to duplicate a primary key, disk full...): |
+|              |                                     |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                                     | collection of objects |                                                                                                                                                                                                            |
 |              | message                             | text                  | Mensaje de error                                                                                                                                                                                           |
 |              | componentSignature                  | text                  | Firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                                   |
@@ -1355,7 +1355,7 @@ Updating an entity with `dk auto merge` option:
 
 The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Los nombres de las propiedades en el objeto coinciden con los nombres de los atributos de la entidad.
 
-If no filter is specified, or if the _filterString_ parameter contains an empty string or "\*", the returned object will contain:
+If no filter is specified, or if the *filterString* parameter contains an empty string or "\*", the returned object will contain:
 
 - todos los atributos de la entidad de almacenamiento
 - attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). El atributo se extrae con la forma simple.
@@ -1363,8 +1363,8 @@ If no filter is specified, or if the _filterString_ parameter contains an empty 
 
 En el primer parámetro, se pasa el atributo o atributos de la entidad a extraer. Puede pasar:
 
-- _filterString_: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
-- _filterCol_: a collection of strings: \["propertyPath1","propertyPath2";...]
+- *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
+- *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
 
 If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
 
@@ -1377,7 +1377,7 @@ If a filter is specified for attributes of the relatedEntities [kind](DataClassC
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> sólo se extraen esas propiedades
 
-In the _options_ parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
 :::caution Atención
 
@@ -1730,7 +1730,7 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
 
 En este caso:
 
-- firstName and lastName have a `storage` kind
+- firstName y lastName tienen un tipo `storage`
 - el empleador tiene un tipo `relatedEntity`
 - employerID es la llave extranjera de la entidad relacionada con el empleador
 

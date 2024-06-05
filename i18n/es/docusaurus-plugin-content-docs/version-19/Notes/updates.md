@@ -34,7 +34,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 #### Destacados
 
-- 4D 19.5 is certified on Windows 11 22H2
+- 4D v19.5 está certificado en Windows 11 22H2
 - 4D 19.5 está certificado en macOS Ventura (macOS 13)
 - La versión SpreadJS ha sido actualizada (14.1.6).
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos los bugs corregidos en 4D 19.5.

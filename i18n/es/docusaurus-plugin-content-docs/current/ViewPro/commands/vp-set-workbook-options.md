@@ -5,7 +5,7 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->
 
-**VP SET WORKBOOK OPTIONS** ( _vpAreaName_ : Text ; _optionObj_ : Object)<!-- END REF -->
+**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET WORKBOOK OPTIONS
 #### Descripción
 
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
-define las opciones del libro de trabajo en _vpAreaName_<!-- END REF -->.
+define las opciones del libro de trabajo en *vpAreaName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _optionObj_, pase las opciones del libro de trabajo a aplicar a _vpAreaName_.
+En *optionObj*, pase las opciones del libro de trabajo a aplicar a *vpAreaName*.
 
-Si _optionObj_ está vacío, el comando no hace nada.
+Si *optionObj* está vacío, el comando no hace nada.
 
 Las opciones modificadas del libro de trabajo se guardan con el documento.
 

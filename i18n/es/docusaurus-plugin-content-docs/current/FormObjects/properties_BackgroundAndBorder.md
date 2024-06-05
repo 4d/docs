@@ -37,7 +37,7 @@ En el caso de un list box, por defecto se selecciona _Automático_: la columna u
 
 #### Ver también
 
-[Transparent](#transparent)
+[Transparente](#transparente)
 
 ---
 

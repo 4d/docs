@@ -5,7 +5,7 @@ title: VP DELETE ROWS
 
 <!-- REF #_method_.VP DELETE ROWS.Syntax -->
 
-**VP DELETE ROWS** ( _rangeObj_ : Object )<!-- END REF -->
+**VP DELETE ROWS** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 
@@ -15,9 +15,9 @@ title: VP DELETE ROWS
 
 #### Descripción
 
-El comando `VP DELETE ROWS` <!-- REF #_method_.VP DELETE ROWS.Summary -->elimina las filas del _rangeObj_<!-- END REF -->.
+El comando `VP DELETE ROWS` <!-- REF #_method_.VP DELETE ROWS.Summary -->elimina las filas del *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un objeto que contenga un rango de líneas a eliminar. Si el rango pasado contiene:
+En *rangeObj*, pase un objeto que contenga un rango de líneas a eliminar. Si el rango pasado contiene:
 
 - tanto las columnas como las líneas, sólo se eliminan las líneas.
 - sólo columnas, el comando no hace nada.

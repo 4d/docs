@@ -13,7 +13,7 @@ title: VP Get table column index
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
 
-**VP Get table column index** ( _vpAreaName_ : Text ; _tableName_ : Text ; _columnName_ : Text {; _sheet_ : Integer } ) : Integer<!-- END REF -->
+**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column index.Params -->
 
@@ -23,21 +23,21 @@ title: VP Get table column index
 | tableName  | Text    | -> | Table name                                     |                  |
 | columnName | Text    | -> | 列の名称                                           |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
-| 戻り値        | Integer | <- | _columnName_ のインデックス                           | <!-- END REF --> |
+| 戻り値        | Integer | <- | *columnName* のインデックス                           | <!-- END REF --> |
 
 #### 説明
 
-`VP Get table column index` コマンドは、<!-- REF #_method_.VP Get table column index.Summary -->_tableName_ で指定した表組みの _columnName_ で指定した列のインデックスを返します<!-- END REF -->。
+`VP Get table column index` コマンドは、<!-- REF #_method_.VP Get table column index.Summary -->*tableName* で指定した表組みの *columnName* で指定した列のインデックスを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_columnName_ には、インデックスを取得する表組みの列の名前を渡します。
+*columnName* には、インデックスを取得する表組みの列の名前を渡します。
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-_tableName_ で指定した表組み、または _columnName_ で指定した列が見つからない場合、コマンドは -1 を返します。
+*tableName* で指定した表組み、または *columnName* で指定した列が見つからない場合、コマンドは -1 を返します。
 
 #### 例題
 

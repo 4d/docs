@@ -9,7 +9,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 ## Componentes interpretados y compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
 - either a Project folder (interpreted component)
 - o un archivo .4DZ (componente compilado)
@@ -80,7 +80,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-### Priority
+### Prioridad
 
 Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
@@ -100,7 +100,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
-To display the Dependencies panel:
+Para mostrar el panel Dependencias:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
@@ -108,7 +108,7 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+A continuación se muestra el panel Dependencias. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 
@@ -118,7 +118,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are supported:
+Se soportan los siguientes orígenes:
 
 | Etiqueta de origen | Descripción                                                                    |
 | ------------------ | ------------------------------------------------------------------------------ |
@@ -153,7 +153,7 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 ![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
-The following status labels are available:
+Las siguientes etiquetas de estado están disponibles:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).

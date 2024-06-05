@@ -5,7 +5,7 @@ title: VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
 
-**VP SET DATE VALUE** ( _rangeObj_ : Object ; _dateValue_ : Date { ; _formatPattern_ : Text } ) <!-- END REF -->
+**VP SET DATE VALUE** ( *rangeObj* : Object ; *dateValue* : Date { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET DATE VALUE
 
 `VP SET DATE VALUE` コマンドは、<!-- REF #_method_.VP SET DATE VALUE.Summary -->指定されたセルレンジに日付値を割り当てます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジを渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-_dateValue_ 引数に、_rangeObj_ 引数のレンジに割り当てたい日付値を指定します。
+*dateValue* 引数に、*rangeObj* 引数のレンジに割り当てたい日付値を指定します。
 
-任意の _formatPattern_ 引数は、_dateValue_ 引数に対するパターンを定義します。 カスタムのフォーマット、または以下の定数のいずれかを渡します:
+任意の *formatPattern* 引数は、*dateValue* 引数に対するパターンを定義します。 カスタムのフォーマット、または以下の定数のいずれかを渡します:
 
 | 定数                      | 説明                       | デフォルト US パターン        |
 | ----------------------- | ------------------------ | -------------------- |

@@ -77,9 +77,9 @@ Leurs propriétés et fonctions sont les suivantes :
 
 <!-- END REF -->
 
-La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre _option_<!-- END REF -->.
+La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre *option*<!-- END REF -->.
 
-Par défaut, si le paramètre _option_ est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre _option_ :
+Par défaut, si le paramètre *option* est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre *option* :
 
 | Constante                      | Valeur | Commentaire                                                                 |
 | ------------------------------ | ------ | --------------------------------------------------------------------------- |
@@ -205,7 +205,7 @@ Liste de chiffrement utilisée pour le protocole sécurisé<!-- END REF -->. Dé
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.CORSEnabled.Summary -->statut du service CORS (_Cross-origin resource sharing_) pour le serveur Web<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir \`COR Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
+Le <!-- REF #WebServerClass.CORSEnabled.Summary -->statut du service CORS (*Cross-origin resource sharing*) pour le serveur Web<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir \`COR Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
 
 Par défaut : False (désactivé)
 
@@ -221,7 +221,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et de méthodes autorisées pour le service CORS<!-- END REF --> (voir la propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
-- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si _host_ n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
+- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -233,7 +233,7 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - myProject.myDomain.com
   - \*
 
-- **methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si _methods_ est vide, null ou non défini, toutes les méthodes sont activées.
+- **methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si *methods* est vide, null ou non défini, toutes les méthodes sont activées.
 
 <!-- END REF -->
 
@@ -412,7 +412,7 @@ Adresse IP sur laquelle le serveur Web recevra les requêtes HTTP<!-- END REF --
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-_Propriété en lecture seulement._
+*Propriété en lecture seulement.*
 
 Le <!-- REF #WebServerClass.isRunning.Summary -->statut d'exécution du serveur web<!-- END REF -->.
 
@@ -511,7 +511,7 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-_Propriété en lecture seulement._
+*Propriété en lecture seulement.*
 
 <em x-id="3">Propriété en lecture seulement.</em> <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->Disponibilité du PFS sur le serveur<!-- END REF -->.
 
@@ -523,7 +523,7 @@ _Propriété en lecture seulement._
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-_Propriété en lecture seulement._
+*Propriété en lecture seulement.*
 
 <em x-id="3">Propriété en lecture seulement.</em> <!-- REF #WebServerClass.openSSLVersion.Summary -->Version de la librairie OpenSSL utilisée<!-- END REF -->.
 
@@ -535,7 +535,7 @@ _Propriété en lecture seulement._
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-_Propriété en lecture seulement._
+*Propriété en lecture seulement.*
 
 La fonction <code>.start()</code> function <!-- REF #WebServerClass.start().Summary -->démarre le serveur Web server auquel elle est appliquée<!-- END REF -->, en utilisant les propriétés définies dans le paramètre optionnel <em x-id="3">settings</em>.
 
@@ -583,7 +583,7 @@ Champ "domain" du cookie de session<!-- END REF -->. Utilisé pour contrôler la
 
 Nom du cookie utilisé pour stocker l'ID de session<!-- END REF -->.
 
-_Propriété en lecture seulement._
+*Propriété en lecture seulement.*
 
 <!-- END REF -->
 
@@ -615,7 +615,7 @@ Valeur "SameSite" du cookie de session<!-- END REF -->. Valeurs possibles (avec 
 
 | Constante           | Valeur   | Description                                                                                                                                                                                            |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Web SameSite Strict | "Strict" | _Valeur par défaut_ - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                    |
+| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                    |
 | Web SameSite Lax    | "Lax"    | Les cookies sont également envoyés aux sous-requêtes intersites mais uniquement lorsque l'internaute navigue vers le site d'origine (i.e.           |
 | Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin. |
 
@@ -649,7 +649,7 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 <!-- REF #WebServerClass.start().Syntax -->
 
-**.start**() : Object<br/>**.start**( _settings_ : Object ) : Object<!-- END REF -->
+**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
@@ -660,9 +660,9 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 <!-- END REF -->
 
-La fonction `.start()` <!-- REF #WebServerClass.start().Summary -->démarre le serveur web sur lequel elle est appliquée<!-- END REF -->, en utilisant les propriétés définies dans le paramètre facultatif _settings_.
+La fonction `.start()` <!-- REF #WebServerClass.start().Summary -->démarre le serveur web sur lequel elle est appliquée<!-- END REF -->, en utilisant les propriétés définies dans le paramètre facultatif *settings*.
 
-Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre _settings_, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
+Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre *settings*, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
 
 Tous les paramètres des [objets Serveur Web](#objet-serveur-web) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
 
@@ -725,7 +725,7 @@ La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serv
 
 Si le serveur Web était lancé, toutes les connexions Web et tous les process Web sont fermés une fois que les requêtes actuellement traitées sont terminées. Si le serveur Web n'était pas démarré, la fonction ne fait rien.
 
-> Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre _settings_ de la fonction [`.start()`](#start), le cas échéant.
+> Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre *settings* de la fonction [`.start()`](#start), le cas échéant.
 
 #### Exemple
 

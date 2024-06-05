@@ -5,7 +5,7 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Syntax -->
 
-**VP Get cell style** (  _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get cell style** (  *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
@@ -16,13 +16,13 @@ title: VP Get cell style
 
 #### 説明
 
-`VP Get cell style` コマンドは、<!-- REF #_method_.VP Get cell style.Summary -->_rangeObj_ 引数で指定したレンジの最初のセルの [スタイルオブジェクト](../configuring.md#スタイルオブジェクト) を返します<!-- END REF -->。
+`VP Get cell style` コマンドは、<!-- REF #_method_.VP Get cell style.Summary -->*rangeObj* 引数で指定したレンジの最初のセルの [スタイルオブジェクト](../configuring.md#スタイルオブジェクト) を返します<!-- END REF -->。
 
-_rangeObj_ 引数で、スタイルを取得するレンジを指定します。
+*rangeObj* 引数で、スタイルを取得するレンジを指定します。
 
-- _rangeObj_ 引数としてセルレンジを渡した場合、セルのスタイルが返されます。
-- _rangeObj_ 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
-- _rangeObj_ 引数に複数のレンジが含まれている場合、最初のレンジの最初のセルのスタイルのみが返されます。
+- *rangeObj* 引数としてセルレンジを渡した場合、セルのスタイルが返されます。
+- *rangeObj* 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
+- *rangeObj* 引数に複数のレンジが含まれている場合、最初のレンジの最初のセルのスタイルのみが返されます。
 
 #### 例題
 

@@ -13,7 +13,7 @@ title: VP PASTE FROM OBJECT
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
 
-**VP PASTE FROM OBJECT** ( _rangeObj_ : Object ; _dataObject_ : Object {; _options_ : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -25,13 +25,13 @@ title: VP PASTE FROM OBJECT
 
 #### Descripción
 
-The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in _dataObject_ to the _rangeObj_ object<!-- END REF -->.
+The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
-In _rangeObj_, pass the cell range object where the values, formatting, and/or formula cells will be pasted. Si _rangeObj_ se refiere a más de una celda, sólo se utiliza la primera.
+In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. Si *rangeObj* se refiere a más de una celda, sólo se utiliza la primera.
 
-En _dataObject_, pase el objeto que contiene los datos de la celda, el formato y las fórmulas a pegar.
+En *dataObject*, pase el objeto que contiene los datos de la celda, el formato y las fórmulas a pegar.
 
-En el parámetro opcional _options_, puede especificar qué pegar en el rango de celdas. Valores posibles:
+En el parámetro opcional *options*, puede especificar qué pegar en el rango de celdas. Valores posibles:
 
 |Constant|Description|
 \|---|---|---|
@@ -44,7 +44,7 @@ En el parámetro opcional _options_, puede especificar qué pegar en el rango de
 
 Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro de trabajo](vp-set-workbook-options.md).
 
-If _options_ refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
 #### Ejemplo
 

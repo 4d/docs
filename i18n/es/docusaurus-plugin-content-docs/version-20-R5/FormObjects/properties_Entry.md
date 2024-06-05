@@ -196,7 +196,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 #### Objetos soportados
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 

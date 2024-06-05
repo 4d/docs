@@ -5,7 +5,7 @@ title: VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
 
-**VP SET CELL STYLE** ( _rangeObj_ : Object  ; _styleObj_  : Object) <!-- END REF -->
+**VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
 
@@ -16,18 +16,18 @@ title: VP SET CELL STYLE
 
 #### Descripción
 
-El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->aplica el estilo o estilos definidos en el _styleObj_ a las celdas definidas en el _rangeObj_<!-- END REF -->.
+El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->aplica el estilo o estilos definidos en el *styleObj* a las celdas definidas en el *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un rango de celdas donde se aplicará el estilo. Si _rangeObj_ contiene múltiples celdas, el estilo se aplica a cada celda.
+En *rangeObj*, pase un rango de celdas donde se aplicará el estilo. Si *rangeObj* contiene múltiples celdas, el estilo se aplica a cada celda.
 
-> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the _rangeObj_, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the _rangeObj_ as a whole.
+> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the *rangeObj* as a whole.
 
-El parámetro _styleObj_ permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Si _styleObj_ contiene a la vez una hoja de estilo existente y propiedades de estilo adicionales, se aplica primero la hoja de estilo existente, seguida de las propiedades adicionales.
+El parámetro *styleObj* permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Si *styleObj* contiene a la vez una hoja de estilo existente y propiedades de estilo adicionales, se aplica primero la hoja de estilo existente, seguida de las propiedades adicionales.
 
 Para eliminar un estilo y volver a la configuración de estilo por defecto (si la hay), pase un valor NULL:
 
-- dar al parámetro _styleObj_ un valor NULL eliminará toda configuración de estilo del _rangeObj_,
-- si se le da a un atributo un valor NULL, se eliminará este atributo específico de _rangeObj_.
+- dar al parámetro *styleObj* un valor NULL eliminará toda configuración de estilo del *rangeObj*,
+- si se le da a un atributo un valor NULL, se eliminará este atributo específico de *rangeObj*.
 
 Para obtener más información sobre los objetos de estilo y las hojas de estilo, consulte el párrafo [Objetos de estilo](../configuring.md#style-objects).
 

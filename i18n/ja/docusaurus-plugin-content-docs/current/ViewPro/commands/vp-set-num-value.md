@@ -5,7 +5,7 @@ title: VP SET NUM VALUE
 
 <!-- REF #_method_.VP SET NUM VALUE.Syntax -->
 
-**VP SET NUM VALUE** ( _rangeObj_ : Object ; _numberValue_ : Number { ; _formatPattern_ : Text } ) <!-- END REF -->
+**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET NUM VALUE
 
 `VP SET NUM VALUE` コマンドは、<!-- REF #_method_.VP SET NUM VALUE.Summary -->指定のセルレンジに数値を割り当てます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 _rangeObj_ 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-_numberValue_ 引数に、_rangeObj_ 引数のレンジに割り当てたい数値を指定します。
+*numberValue* 引数に、*rangeObj* 引数のレンジに割り当てたい数値を指定します。
 
-任意の _formatPattern_ 引数は、_numberValue_ に対する [パターン](../configuring.md#セルフォーマット) を定義します。
+任意の *formatPattern* 引数は、*numberValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
 #### 例題
 

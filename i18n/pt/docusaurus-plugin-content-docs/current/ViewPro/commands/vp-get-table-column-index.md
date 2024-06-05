@@ -13,7 +13,7 @@ title: VP Get table column index
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
 
-**VP Get table column index** ( _vpAreaName_ : Text ; _tableName_ : Text ; _columnName_ : Text {; _sheet_ : Integer } ) : Integer<!-- END REF -->
+**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column index.Params -->
 
@@ -23,21 +23,21 @@ title: VP Get table column index
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | columnName | Text    | -> | Nome da coluna da tabela                                    |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Integer | <- | Índice de _columnName_                                      | <!-- END REF --> |
+| Resultados | Integer | <- | Índice de *columnName*                                      | <!-- END REF --> |
 
 #### Descrição
 
-The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the _columnName_ in the _tableName_<!-- END REF -->.
+The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In _columnName_, pass the name of the table column for which you want to get the index.
+In *columnName*, pass the name of the table column for which you want to get the index.
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+In *sheet*, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-If _tableName_ or _columnName_ is not found, the command returns -1.
+If *tableName* or *columnName* is not found, the command returns -1.
 
 #### Exemplo
 

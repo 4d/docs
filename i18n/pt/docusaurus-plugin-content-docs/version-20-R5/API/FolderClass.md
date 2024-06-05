@@ -82,11 +82,11 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the _path_ parameter, pass a folder path string. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
+In the *path* parameter, pass a folder path string. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
 
 > Only absolute pathnames are supported with the `Folder` command.
 
-Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the _pathType_ parameter. Estão disponíveis as seguintes constantes:
+Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. Estão disponíveis as seguintes constantes:
 
 | Parâmetros       | Valor | Comentário                                                                                                                  |
 | ---------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -95,7 +95,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 **Folder ( folderConstant { ; \* } )**
 
-In the _folderConstant_ parameter, pass a 4D built-in or system folder, using one of the following constants:
+In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
 | Parâmetros                 | Valor | Comentário                                                                                                                                  |
 | -------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -114,7 +114,7 @@ In the _folderConstant_ parameter, pass a 4D built-in or system folder, using on
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\\<userName&gt;</code> directory.         |
 | fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo |
 
-If the command is called from a component, pass the optional _parameter to get the path of the host database. Otherwise, if you omit the_ parameter, a null object is always returned.
+If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
 
 > On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
 
@@ -130,7 +130,7 @@ If the command is called from a component, pass the optional _parameter to get t
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( _path_ : Text { ; _pathType_ : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( _folderConstant_ : Integer ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
 
 #### Descrição
 
@@ -224,18 +224,18 @@ End if
 
 #### Descrição
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified _aliasName_ name in the folder designated by the _destinationFolder_ object.
+The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the _aliasName_ parameter.
+Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-Por padrão em macOS, a função cria um pseudónimo padrão. You can also create a symbolic link by using the _aliasType_ parameter. Estão disponíveis as seguintes constantes:
+Por padrão em macOS, a função cria um pseudónimo padrão. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
 
 | Parâmetros         | Valor | Comentário                                      |
 | ------------------ | ----- | ----------------------------------------------- |
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the _aliasType_ parameter is ignored).
+On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 **Returned object**
 
@@ -360,11 +360,11 @@ When `Delete with contents` is passed:
 
 #### Descrição
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified _destinationFolder_<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por padrão, a pasta mantém o seu nome quando movida. If you want to rename the moved folder, pass the new full name in the _newName_ parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, a pasta mantém o seu nome quando movida. If you want to rename the moved folder, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Returned object**
 
@@ -418,9 +418,9 @@ Quer mover-se e renomear uma pasta:
 
 #### Descrição
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in _newName_ and returns the renamed `Folder` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
-The _newName_ parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
 **Returned object**
 

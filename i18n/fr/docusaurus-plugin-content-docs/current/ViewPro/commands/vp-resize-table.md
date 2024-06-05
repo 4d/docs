@@ -13,7 +13,7 @@ title: VP RESIZE TABLE
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
 
-**VP RESIZE TABLE** ( _rangeObj_ : Object; _tableName_ : Text )<!-- END REF -->
+**VP RESIZE TABLE** ( *rangeObj* : Object; *tableName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
@@ -24,7 +24,7 @@ title: VP RESIZE TABLE
 
 #### Description
 
-The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the _tableName_ size with regards to the _rangeObj_<!-- END REF -->.
+The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->.
 
 Les règles suivantes s'appliquent :
 
@@ -34,7 +34,7 @@ Les règles suivantes s'appliquent :
   - if rows are added, data is deleted,
   - if columns are added, data are kept and are displayed in new columns.
 
-If _tableName_ does not exist, nothing happens.
+If *tableName* does not exist, nothing happens.
 
 #### Exemple
 

@@ -21,7 +21,7 @@ La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opció
 
 ![](../assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+2. Seleccione el tipo de hoja de estilo a crear y haga clic en el botón **Crear** o **Editar**: ![](../assets/en/FormEditor/createButton.png)
 
 3. La hoja de estilo se abrirá en su editor de texto predeterminado.
 
@@ -341,4 +341,4 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 ## Ver también
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+Ver la presentación en video de [**CSS para Formularios 4D**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

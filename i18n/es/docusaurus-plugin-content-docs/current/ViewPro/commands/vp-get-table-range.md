@@ -13,7 +13,7 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Syntax -->
 
-**VP Get table range** ( _vpAreaName_ : Text ; _tableName_ : Text {; _onlyData_ : Integer {; _sheet_ : Integer }} ) : Object<!-- END REF -->
+**VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table range.Params -->
 
@@ -27,22 +27,22 @@ title: VP Get table range
 
 #### Descripción
 
-El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devuelve el rango de _tableName_<!-- END REF -->.
+El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devuelve el rango de *tableName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En el parámetro _onlyData_, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
+En el parámetro *onlyData*, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
 | Constante             | Valor | Descripción                                                                                                                     |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
 | `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                                               |
 
-En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
-Si no se encuentra _tableName_, el comando devuelve **null**.
+Si no se encuentra *tableName*, el comando devuelve **null**.
 
 #### Ver también
 

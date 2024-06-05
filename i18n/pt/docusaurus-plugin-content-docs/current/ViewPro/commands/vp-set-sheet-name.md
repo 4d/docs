@@ -5,7 +5,7 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Syntax -->
 
-**VP SET SHEET NAME** ( _vpAreaName_ : Text ; _name_ : Text {; _sheet_: Integer} )<!-- END REF -->
+**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
@@ -17,17 +17,17 @@ title: VP SET SHEET NAME
 
 #### Descrição
 
-O comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomeia uma planilha no documento carregado em _vpAreaName_<!-- END REF -->.
+O comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomeia uma planilha no documento carregado em *vpAreaName*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em _name_, introduza um novo nome para a folha.
+Em *name*, introduza um novo nome para a folha.
 
-Em _sheet_, passe o índice da folha a ser renomeada.
+Em *sheet*, passe o índice da folha a ser renomeada.
 
 > A indexação começa em 0.
 
-Se nenhum _sheet_ for passado, o comando renomeia a planilha atual.
+Se nenhum *sheet* for passado, o comando renomeia a planilha atual.
 
 O novo nome não pode conter os seguintes caracteres: `*, :, [, ], ?,\,/`
 
@@ -36,7 +36,7 @@ O comando não faz nada se:
 - o novo nome contém caracteres proibidos
 - o valor do novo nome está em branco
 - o novo nome já existe
-- o índice _sheet_ passado não existe
+- o índice *sheet* passado não existe
 
 #### Exemplo
 
