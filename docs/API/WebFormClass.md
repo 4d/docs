@@ -47,8 +47,7 @@ For more information, please refer to the [`.componentName` description in the Q
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->
-**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 |Parameter|Type||Description|
@@ -73,8 +72,7 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->
-**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 |Parameter|Type||Description|
@@ -108,8 +106,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->
-**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 |Parameter|Type||Description|
@@ -127,8 +124,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->
-**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 |Parameter|Type||Description|
@@ -145,8 +141,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->
-**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 |Parameter|Type||Description|

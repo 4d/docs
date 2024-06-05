@@ -118,6 +118,7 @@ Using the main datastore on the 4D database:
 
 
 
+
 <!-- REF #_command_.Open datastore.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -946,8 +947,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->

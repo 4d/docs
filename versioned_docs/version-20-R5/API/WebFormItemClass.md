@@ -29,8 +29,7 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 
 ### .hide()
 
-<!-- REF #WebFormItemClass.hide().Syntax -->
-**.hide**()<!-- END REF -->
+<!-- REF #WebFormItemClass.hide().Syntax -->**.hide**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.hide().Params -->
 |Parameter|Type||Description|
@@ -49,8 +48,7 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 ### .show()
 
-<!-- REF #WebFormItemClass.show().Syntax -->
-**.show**()<!-- END REF -->
+<!-- REF #WebFormItemClass.show().Syntax -->**.show**()<!-- END REF -->
 
 
 <!-- REF #WebFormItemClass.show().Params -->
@@ -69,8 +67,7 @@ For more information, please refer to the [`.show()` description in the Qodly do
 
 ### .addCSSClass()
 
-<!-- REF #WebFormItemClass.addCSSClass().Syntax -->
-**.addCSSClass**(*className* : string)<!-- END REF -->
+<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 |Parameter|Type||Description|
@@ -88,8 +85,7 @@ For more information, please refer to the [`.addCSSClass` description in the Qod
 ### .removeCSSClass()
 
 
-<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->
-**.removeCSSClass**(*className*: string)<!-- END REF -->
+<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 |Parameter|Type||Description|

@@ -303,6 +303,7 @@ The resulting object is an entity selection of Employee with duplications remove
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
 |Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
 
+
 <!-- END REF -->
 
 
@@ -979,13 +980,7 @@ Example with the `dk stop dropping on first error` option:
 </details>
 
 
-
-
-
-
-
-<!-- REF #EntitySelectionClass.extract().Syntax -->
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
@@ -1088,7 +1083,7 @@ Given the following table and relation:
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first**() : 4D.Entity<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.first().Params -->
@@ -1146,7 +1141,7 @@ There is, however, a difference between both statements when the selection is em
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass**() : 4D.DataClass<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
@@ -1195,7 +1190,7 @@ The following generic code duplicates all entities of the entity selection:
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes**() : Text<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
@@ -1250,7 +1245,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable**() : Boolean<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
@@ -1292,7 +1287,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered**() : Boolean<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
@@ -1347,7 +1342,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last**() : 4D.Entity<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.last().Params -->
@@ -1996,7 +1991,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh**()<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
