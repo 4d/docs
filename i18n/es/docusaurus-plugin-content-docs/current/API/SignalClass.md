@@ -144,7 +144,7 @@ Este es un ejemplo típico de un worker que fija una señal:
  End if
 ```
 
-The ***doSomething*** method could be like:
+El método ***doSomething*** puede ser como:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
