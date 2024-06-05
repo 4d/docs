@@ -915,7 +915,7 @@ donde:
 Las fórmulas en las consultas pueden recibir parámetros a través de $1. This point is detailed in the **formula parameter** paragraph below.
 
 > - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Vea el párrafo **Parámetros fórmula** abajo.
-> - For security reasons, formula calls within `query()` functions can be disallowed. See `querySettings` parameter description.
+> - For security reasons, formula calls within `query()` functions can be disallowed. Ver la descripción del parámetro `querySettings`.
 
 - **comparator**: symbol that compares *attributePath* and *value*. Se soportan los siguientes símbolos:
 
@@ -938,7 +938,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. This 
   - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - **boolean** type constants: **true** or **false** (case sensitive).
   - **numeric** type constants: decimals are separated by a '.' (period).
-  - **date** type constants: "YYYY-MM-DD" format
+  - Constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
   - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 - **logicalOperator**: used to join multiple conditions in the query (optional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
@@ -1172,7 +1172,7 @@ The formula must have been created using the [`Formula`](FunctionClass.md#formul
 - within the *formula*, the entity is available through the `This` object.
 - if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 
-> For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
+> For security reasons, formula calls within `query()` functions can be disallowed. Ver la descripción del parámetro *querySettings*.
 
 #### Pasar parámetros a fórmulas
 
