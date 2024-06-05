@@ -503,7 +503,7 @@ El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atribu
 
 *filler* can handle a related entity under the following conditions:
 
-- *filler* contains the foreign key itself, or
+- *filler* contiene la propia llave foránea, o
 - *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
 - si la entidad relacionada no existe, se ignora.
 
@@ -1730,7 +1730,7 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
 
 En este caso:
 
-- firstName and lastName have a `storage` kind
+- firstName y lastName tienen un tipo `storage`
 - el empleador tiene un tipo `relatedEntity`
 - employerID es la llave extranjera de la entidad relacionada con el empleador
 
