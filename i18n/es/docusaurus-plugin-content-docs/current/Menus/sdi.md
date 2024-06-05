@@ -55,7 +55,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 
 ### Debugger
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
+Cuando se muestra en modo SDI, la [ventana del depurador](../Debugging/debugger.md) no contiene [botones de edición](../Debugging/debugger.md#tool-bar-buttons), porque cambiar al entorno de desarrollo requiere abortar la ejecución y reiniciar la aplicación en modo MDI.
 
 ### Salida automática
 
@@ -92,6 +92,6 @@ Aunque es manejado de forma transparente por 4D, el modo SDI introduce pequeñas
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+Puede utilizar el comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para saber el modo de ejecución actual en Windows.
 
 :::
