@@ -372,7 +372,7 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
 
-A `response` object is a non-sharable object. Ofrece las siguientes propiedades:
+Un objeto `response` es un objeto no compartible. Ofrece las siguientes propiedades:
 
 | Propiedad                   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
