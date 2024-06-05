@@ -15,6 +15,10 @@ title: リリースノート
 - New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
 - New [4DCEFParameters.json file](../FormObjects/webArea_overview.md#4dcefparametersjson) to customize 4D embedded web areas.
 
+#### 動作の変更
+
+- Scroll chaining in forms: Parent subforms now scroll automatically when embedded [scrollable objects](../FormObjects/properties_Appearance.md#vertical-scroll-bar) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+
 ## 4D 20 R5
 
 [**4D 20 R5 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R5/): 4D 20 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
