@@ -45,9 +45,9 @@ For more information, please refer to the [`.componentName` description in the Q
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                |
-| ---------- | ------ | :-: | ------------------------------------------ |
-| state      | string |  -> | Name of state to disable from the web form |
+| Parámetros | Tipo   |     | Descripción                                         |
+| ---------- | ------ | :-: | --------------------------------------------------- |
+| state      | string |  -> | Nombre del estado a desactivar en el formulario web |
 
 <!-- END REF -->
 
@@ -58,7 +58,7 @@ The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->
 This function does nothing if:
 
 - the *state* is currently not enabled in the web form,
-- the *state* does not exist for the web form.
+- el *estado* no existe para el formulario web.
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
@@ -85,7 +85,7 @@ The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->en
 This function does nothing if:
 
 - the *state* has already been enabled on the web form,
-- the *state* does not exist for the web form.
+- el *estado* no existe para el formulario web.
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 
