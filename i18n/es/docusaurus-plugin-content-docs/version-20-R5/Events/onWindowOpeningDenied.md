@@ -5,7 +5,7 @@ title: On Window Opening Denied
 
 | Code | Puede ser llamado por                          | Definición                            |
 | ---- | ---------------------------------------------- | ------------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
+| 53   | [Área web](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
 <details><summary>Historia</summary>
 
