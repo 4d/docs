@@ -1185,10 +1185,10 @@ End case
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                               |
-| ----------- | -------------------------------------------- |
-| 20          | Server side support, new `options` parameter |
-| 17 R6       | Añadidos                                     |
+| Lanzamiento | Modificaciones                                           |
+| ----------- | -------------------------------------------------------- |
+| 20          | Soporte del lado del servidor, nuevo parámetro `options` |
+| 17 R6       | Añadidos                                                 |
 
 </details>
 
