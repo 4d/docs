@@ -86,7 +86,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Result
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 > La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.
 
@@ -160,7 +160,7 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 In the `msgIDs` parameter, you can pass either:
 
 - a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- el ID único (*text*) de un solo mensaje o
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Constante | Valor | Comentario                                            |
@@ -1394,7 +1394,7 @@ The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summa
 In the `msgIDs` parameter, you can pass either:
 
 - a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- el ID único (*text*) de un solo mensaje o
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Constante | Valor | Comentario                                            |
@@ -1648,7 +1648,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
 **DELETED**: Messages with the \Deleted flag set.\
 **UNDELETED**: Messages that do not have the \Deleted flag set.\
-**DRAFT**: Messages with the \Draft flag set.\
+**DRAFT**: mensajes con el indicador \Draft activado.\
 **UNDRAFT**: Messages that do not have the \Draft flag set.\
 **FLAGGED**: Messages with the \Flagged flag set.\
 **UNFLAGGED**: Messages that do not have the \Flagged flag set.\
@@ -1689,7 +1689,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 | Lanzamiento | Modificaciones                               |
 | ----------- | -------------------------------------------- |
-| 20          | *id*, *flags*, *permanentFlags* are returned |
+| 20          | *id*, *flags*, *permanentFlags* se devuelven |
 | 18 R4       | Añadidos                                     |
 
 </details>
