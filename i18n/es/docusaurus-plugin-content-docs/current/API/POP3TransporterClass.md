@@ -70,7 +70,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Result
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
+The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 > La conexión POP3 se cierra automáticamente cuando se destruye el objeto transportador.
 
