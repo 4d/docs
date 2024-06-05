@@ -2600,7 +2600,7 @@ donde:
   - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - **boolean** type constants: **true** or **false** (case sensitive).
   - **numeric** type constants: decimals are separated by a '.' (period).
-  - **date** type constants: "YYYY-MM-DD" format
+  - Constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
   - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 
@@ -2875,7 +2875,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
+- en *$1.value*: valor del elemento a procesar
 - en *$2: param*
 - en *$N...*: *paramN...*
 
@@ -2960,7 +2960,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
+- en *$1.value*: valor del elemento a procesar
 - en *$2: param*
 - en *$N...*: *paramN...*
 
@@ -3286,7 +3286,7 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
+- en *$1.value*: valor del elemento a procesar
 - en *$2: param*
 - en *$N...*: *paramN...*
 
