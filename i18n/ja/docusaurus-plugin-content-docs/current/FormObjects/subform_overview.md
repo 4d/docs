@@ -3,21 +3,18 @@ id: subformOverview
 title: サブフォーム
 ---
 
-
 サブフォームとは、他のフォームに組み込まれるフォームのことです。
-
 
 ## 用語
 
 サブフォームに実装されたコンセプトを明確に説明するために、いくつかの用語についてここで定義します:
 
-*   **サブフォーム**: 他のフォームに組み込まれることを意図したフォーム。
-*   **親フォーム**: 1つ以上のサブフォームを含むフォーム。
-*   **サブフォームコンテナー**: 親フォームに組み込まれた、サブフォームのインスタンスを表示するオブジェクト。
-*   **サブフォームインスタンス**: 親フォームに表示されたサブフォームの実体。 このコンセプトはとても重要です。親フォームには、同じサブフォームのインスタンスを複数表示することができるからです。
-*   **リストフォーム**: データをリストとして表示するサブフォームインスタンス。
-*   **詳細フォーム**: リストサブフォームをダブルクリックすることでアクセスすることができる、ページタイプの入力フォーム。
-
+- **サブフォーム**: 他のフォームに組み込まれることを意図したフォーム。
+- **親フォーム**: 1つ以上のサブフォームを含むフォーム。
+- **サブフォームコンテナー**: 親フォームに組み込まれた、サブフォームのインスタンスを表示するオブジェクト。
+- **サブフォームインスタンス**: 親フォームに表示されたサブフォームの実体。 このコンセプトはとても重要です。親フォームには、同じサブフォームのインスタンスを複数表示することができるからです。
+- **リストフォーム**: データをリストとして表示するサブフォームインスタンス。
+- **詳細フォーム**: リストサブフォームをダブルクリックすることでアクセスすることができる、ページタイプの入力フォーム。
 
 ## リストサブフォーム
 
@@ -27,10 +24,10 @@ title: サブフォーム
 
 リストサブフォームは通常 Nテーブルに結び付けられますが、それだけでなく他の任意のデータベーステーブルのレコードをサブフォームのインスタンスに表示することもできます。
 
-また、ユーザーがリストサブフォームに直接データを入力するようにもできます。 サブフォームの設定に基づき、ユーザーがサブレコード上でダブルクリックするか、サブレコードを追加/編集するコマンドを使用すると、詳細フォームが表示されます。
+また、ユーザーがリストサブフォームに直接データを入力するようにもできます。
+サブフォームの設定に基づき、ユーザーがサブレコード上でダブルクリックするか、サブレコードを追加/編集するコマンドを使用すると、詳細フォームが表示されます。
 
 > 4Dはサブレコードを管理する基本的なニーズに応える 3つの標準アクション `editSubrecord` (サブレコード編集)、`deleteSubrecord` (サブレコード削除) および `addSubrecord` (サブレコード追加) を提供しています。 フォームに複数のサブフォームインスタンスが含まれる場合、フォーカスを持っているサブフォームにアクションが適用されます。
-
 
 ## ページサブフォーム
 
@@ -40,17 +37,14 @@ title: サブフォーム
 
 > 4Dウィジェットは、ページサブフォームに基づいた定義済みの複合オブジェクトです。 詳細は専用のドキュメント [4D Widgets (ウィジェット)](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.ja.html) を参照してください。
 
-
 ### バインドされた変数あるいは式の管理
 
 サブフォームコンテナーオブジェクトには、[変数あるいは式](properties_Object.md#変数あるいは式) をバインドすることができます。 これは、親フォームとサブフォーム間で値を同期するのに便利です。
 
-デフォルトで、4D はサブフォームコンテナーに [オブジェクト型](properties_Object.md#式の型式タイプ) の変数あるいは式をバインドし、`Form` コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。 しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など) の変数や式を使用することもできます。
+デフォルトで、4D はサブフォームコンテナーに [オブジェクト型](properties_Object.md#式の型式タイプ) の変数あるいは式をバインドし、`Form` コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。 しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など)  の変数や式を使用することもできます。
 
 - バインドするスカラー型の変数あるいは式を定義し、[On Bound Variable Change](../Events/onBoundVariableChange.md) や [On Data Change](../Events/onDataChange.md) フォームイベントが発生したときに、`OBJECT Get subform container value` や `OBJECT SET SUBFORM CONTAINER VALUE` コマンドを呼び出して値を共有します。 この方法は、単一の値を同期させるのに推奨されます。
 - または、バインドされた **オブジェクト** 型の変数あるいは式を定義し、`Form` コマンドを使用してサブフォームからそのプロパティにアクセスします。 この方法は、複数の値を同期させるのに推奨されます。
-
-
 
 ### 親フォームとサブフォームの同期 (単一値)
 
@@ -58,7 +52,7 @@ title: サブフォーム
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-親フォームにおいて、両オブジェクト (入力エリアとサブフォームコンテナー) の ***変数あるいは式* プロパティは同じ設定にされています**。 変数 (例: `parisTime`)、あるいは式 (例: `Form.parisTime`) を設定することができます。
+親フォームにおいて、両オブジェクト (入力エリアとサブフォームコンテナー) の **_変数あるいは式_ プロパティは同じ設定にされています**。 変数 (例: `parisTime`)、あるいは式 (例: `Form.parisTime`) を設定することができます。
 
 :::info
 
@@ -73,7 +67,6 @@ title: サブフォーム
 
 サブフォームにおいては、時計オブジェクトの同プロパティとして `Form.clockValue` が設定されています。
 
-
 #### サブフォームの内容を更新する
 
 ケース1: 親フォームの変数あるいは式の値が更新され、この更新をサブフォームに反映させる必要があります。
@@ -82,13 +75,14 @@ title: サブフォーム
 
 以下のコードが実行されます:
 
-```4d  
+```4d
 // サブフォームのフォームメソッド
 If (Form event code=On Bound Variable Change) 
 // 親フォーム内でバインドされた変数あるいは式が変更されました
     Form.clockValue:=OBJECT Get subform container value 
     // 親フォームのサブフォームコンテナー値を取得し、ローカルの値を同期させます
 End if
+
 ```
 
 上のコードは、サブフォームの `Form.clockValue` の値を更新します:
@@ -100,14 +94,12 @@ End if
 - 親フォームの変数/式に値が割り当てられたとき (同じ値が再代入された場合でも) で、
 - サブフォームが 0ページまたはカレントフォームページに置かれているとき。
 
-先の例のとおり、式を直接使用するのではなく、親フォームのサブフォームコンテナーの式の値を取得する `OBJECT Get subform container value` コマンドの利用が推奨されます。 親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。
+先の例のとおり、式を直接使用するのではなく、親フォームのサブフォームコンテナーの式の値を取得する `OBJECT Get subform container value` コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。
 
 バインドされた変数あるいは式を変更すると、フォームイベントが発生し、親フォームとサブフォームの値を同期させることができます:
 
 - 親フォームのサブフォームコンテナーの変数あるいは式が変更されたことをサブフォーム (のフォームメソッド) に通知するには、サブフォームの [On Bound Variable Change](../Events/onBoundVariableChange.md) フォームイベントを使用します。
 - 同様に、サブフォーム内で変数あるいは式の値が変更されたことを親フォームのサブフォームコンテナーに通知するには、サブフォームの [On Data Change](../Events/onDataChange.md) フォームイベントを使用します。
-
-
 
 #### 親フォームの内容を更新する
 
@@ -117,22 +109,21 @@ End if
 
 以下のコードが実行されます:
 
-```4d  
+```4d
 // サブフォームの時計オブジェクトのメソッド
 If (Form event code=On Data Change) 
 // 値が変化したときに
     OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) 
     // 親フォームのサブフォームコンテナーに値をプッシュします
 End if
+
 ```
 
 ![](../assets/en/FormObjects/update-main-form.png)
 
 サブフォームの `Form.clockValue` の値が変化するたびに、サブフォームコンテナーの `Form.parisTime` も更新されます。
 
-
 > 変数あるいは式の値が複数の場所で設定されている場合、4D は最後にロードされた値を使用します。 以下のロード順が適用されます:<br /> 1 - サブフォームのオブジェクトメソッド<br /> 2 - サブフォームのフォームメソッド<br /> 3 - 親フォームのオブジェクトメソッド<br /> 4 - 親フォームのフォームメソッド
-
 
 ### 親フォームとサブフォームの同期 (複数値)
 
@@ -162,22 +153,23 @@ Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 
 同じオブジェクトが使用されているため、親フォームまたはサブフォームで値を変更すると、もう一方のフォームでも値が自動更新されます:
 
-![](../assets/en/FormObjects/subnew4.png) ![](../assets/en/FormObjects/subnew5.png)
+![](../assets/en/FormObjects/subnew4.png)
+![](../assets/en/FormObjects/subnew5.png)
 
 ### ポインターの使用 (互換性)
 
 4D v19 R5 以前のバージョンでは、親フォームとサブフォーム間の同期は **ポインター** を使っておこなわれていました。 たとえば、サブフォームオブジェクトを更新するには、以下のコードを呼び出しておこえます:
 
-```4d  
+```4d
 // サブフォームメソッド
 If (Form event code=On Bound Variable Change) 
     ptr:=OBJECT Get pointer(Object subform container) 
     clockValue:=ptr-> 
 End if
+
 ```
 
-**この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。**今後の開発では、この原則は使うべきではありません。 すべての場合において、フォームとサブフォームの値を同期させるには、[`Form` コマンド](#親フォームとサブフォームの同期-複数値) か [`OBJECT Get subform container value` と `OBJECT SET SUBFORM CONTAINER VALUE` コマンド](#親フォームとサブフォームの同期-単一値) を使用することが推奨されます。
-
+\*\*この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。\*\*今後の開発では、この原則は使うべきではありません。 すべての場合において、フォームとサブフォームの値を同期させるには、[`Form` コマンド](#親フォームとサブフォームの同期-複数値) か [`OBJECT Get subform container value` と `OBJECT SET SUBFORM CONTAINER VALUE` コマンド](#親フォームとサブフォームの同期-単一値) を使用することが推奨されます。
 
 ### 高度なフォーム間通信プログラム
 
@@ -189,7 +181,6 @@ End if
 - `EXECUTE METHOD IN SUBFORM` コマンドを使用してサブフォームのコンテキストでメソッドを実行する。
 
 > `GOTO OBJECT` はサブフォームから実行されても、親フォーム内にて目的のオブジェクトを検索します。
-
 
 #### CALL SUBFORM CONTAINER コマンド
 
@@ -209,10 +200,6 @@ End if
 
 詳細は `EXECUTE METHOD IN SUBFORM` コマンドの説明を参照してください。
 
-
-
-
-
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム ](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド) 
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム ](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド)

@@ -13,14 +13,14 @@ Pour accéder à un élément d'une collection, vous devez passer le numéro de 
 collectionRef[expression]
 ```
 
-Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans *expression*. Exemples :
+You can pass any valid 4D expression which returns a positive integer in _expression_. Exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection
  myCollection[$var]
 ```
 
-**Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
+**Warning:** Collection elements are numbered from 0.
 
 Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection :
 
@@ -46,34 +46,34 @@ Les collections doivent avoir été instanciées, sinon toute tentative de lectu
 
 L'instanciation d'une collection peut se faire de l'une des manières suivantes :
 
-- à l'aide de la commande [`New collection`](../API/CollectionClass.md#new-collection),
-- en utilisant l'opérateur `[]`.
+- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
+- using the `[]` operator.
 
 :::info
 
-Plusieurs commandes et fonctions 4D renvoient des collections, par exemple [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) ou [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
 
 :::
 
-### Commande `New collection`
+### `New collection` command
 
-La commande [`New collection`](../API/CollectionClass.md#new-collection) crée une nouvelle collection vide ou pré-remplie et renvoie sa référence.
+The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
 
 Exemples :
 
 ```4d
- var $colVar : Collection //déclaration d'une variable 4D de type collection
- $colVar:=New collection //instanciation de la collection et affectation à la variable 4D
-
+ var $colVar : Collection //declaration of a collection type 4D variable
+ $colVar:=New collection //instantiation of the collection and assignment to the 4D variable
+ 
  var $colFilled : Collection
- $colFilled:=New collection("a" ; "b";1;42;{}) //instanciation et affectation d'une collection pré-remplie
+ $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
-### Opérateur `[]`
+### `[]` operator
 
-L'opérateur `[]` vous permet de créer une collection **littérale**. Une collection littérale est une liste de zéro ou plusieurs expressions, dont chacune représente un élément de collection, entre crochets (`[]`). Lorsque vous créez une collection en utilisant une collection littérale, elle est instanciée avec les valeurs spécifiées comme éléments, et sa longueur est définie au nombre d'arguments spécifiés.
+The `[]` operator allows you to create a **collection literal**. Une collection littérale est une liste de zéro ou plusieurs expressions, dont chacune représente un élément de collection, entre crochets (`[]`). Lorsque vous créez une collection en utilisant une collection littérale, elle est instanciée avec les valeurs spécifiées comme éléments, et sa longueur est définie au nombre d'arguments spécifiés.
 
-Tout élément étant considéré comme une expression, vous pouvez créer des sous-collections en utilisant `[]` dans les éléments.  Vous pouvez également créer et référencer des **objets littéraux**.
+Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
 
 Si un élément n'est pas défini, il apparaîtra comme Null dans la collection.
 
@@ -81,40 +81,38 @@ Exemples :
 
 ```4d
 var $col1; $col2; $users : Collection
-$col1:=[] //collection vide
-$col2:=[1;2;3;4;5;6] //collection de nombres
-//collection d'objets
+$col1:=[] //empty collection
+$col2:=[1;2;3;4;5;6] //collection of numbers
+//collection of objects
 $users:=[{name: "Alice"; \
-    height: 183; \
-    eyecolor: "hazel"; \
-    id: $col2[5]\
-    }; \
-    {name: "Bob"; \
-    height: 172; \
-    eyecolor: "blue"\
-    }]
+	height: 183; \
+	eyecolor: "hazel"; \
+	id: $col2[5]\
+	}; \
+	{name: "Bob"; \
+	height: 172; \
+	eyecolor: "blue"\
+	}]
 ```
 
 :::note
 
-Si vous créez une collection littérale contenant un seul élément, assurez-vous que vous n'utilisez pas un nom correspondant à un nom de table existant, sinon la syntaxe de table `[tableName]` sera prioritaire.
+If you create a collection literal containing a single element, make sure you do not use a name corresponding to an existing table name, otherwise the table syntax `[tableName]` will take priority.
 
 :::
-
-
 
 ### Collection standard ou collection partagée
 
 Vous pouvez créer deux types de collections :
 
-- des collections standard (non partagées), à l'aide de la commande [`New collection`](API/CollectionClass.md#new-collection) ou de la syntaxe littérale de collection (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- des collections partagées, à l'aide de la commande [`New shared collection`](API/CollectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
 
-Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
+For more information, refer to the [Shared objects and collections](shared.md) section.
 
 ## Fonctions de collection
 
-Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions membres*). Les fonctions de collections sont listées dans la section [Class API Reference](../API/CollectionClass.md) .
+4D collection references benefit from special class functions (sometimes named _member functions_). Collection functions are listed in the [Class API Reference](../API/CollectionClass.md) section.
 
 Par exemple :
 
@@ -130,16 +128,14 @@ Certaines fonctions retournent la collection d'origine après modification, de m
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
-
 ### paramètre propertyPath
 
-
-Plusieurs fonctions acceptent un paramètre nommé _propertyPath_. Ce paramètre peut contenir :
+Several functions accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Attention :** Lorsque vous utilisez des fonctions et des paramètres *propertyPath*, vous ne pouvez pas utiliser ".", "[ ]" ou des espaces dans les noms de propriétés, car cela empêcherait 4D d'analyser correctement le chemin :
+**Warning:** When using functions and _propertyPath_ parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
@@ -148,7 +144,7 @@ Plusieurs fonctions acceptent un paramètre nommé _propertyPath_. Ce paramètre
 
 ## Undefined
 
-La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
+Reading the **length** property of an undefined collection produces 0:
 
 ```4d
      var $c : Collection //variable créée mais aucune collection n'est définie

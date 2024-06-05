@@ -13,25 +13,25 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Syntax -->
 
-**VP SET BINDING PATH** ( _rangeObj_ : Object  ; _dataContextAttribute_  : Text) <!-- END REF -->
+**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
 | 引数                   | タイプ    |    | 説明                      |                  |
 | -------------------- | ------ | -- | ----------------------- | ---------------- |
 | rangeObj             | Object | -> | レンジオブジェクト               |                  |
-| dataContextAttribute | Text   | -> | _rangeObj_ にバインドする属性の名称 | <!-- END REF --> |
+| dataContextAttribute | Text   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
 
 #### 説明
 
-`VP SET BINDING PATH` コマンドは、<!-- REF #_method_.VP SET BINDING PATH.Summary -->_rangeObj_ で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。 機能するには、[SET DATA CONTEXT](vp-set-data-context.md) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、_dataContextAttribute_ の値が _rangeObj_ のセルに自動的に表示されます。
+`VP SET BINDING PATH` コマンドは、<!-- REF #_method_.VP SET BINDING PATH.Summary -->*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。 機能するには、[SET DATA CONTEXT](vp-set-data-context.md) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
 
-_rangeObj_ 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
+*rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
 
-- _rangeObj_ 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
-- _rangeObj_ のレンジが複数セルを含む場合、コマンドは最初のセルに属性をバインドします。
+- *rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
+- *rangeObj* のレンジが複数セルを含む場合、コマンドは最初のセルに属性をバインドします。
 
-_dataContextAttribute_ には、_rangeObj_ にバインドする属性の名称を渡します。 _dataContextAttribute_ が空の文字列だった場合、関数は属性のバインドを解除します。
+*dataContextAttribute* には、*rangeObj* にバインドする属性の名称を渡します。 *dataContextAttribute* が空の文字列だった場合、関数は属性のバインドを解除します。
 
 > コレクション型の属性はサポートされていません。 コレクション属性の名前を渡した場合、コマンドは何もしません。
 

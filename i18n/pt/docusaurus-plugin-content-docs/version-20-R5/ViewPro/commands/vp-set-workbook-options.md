@@ -9,10 +9,10 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                        |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro       |                  |
-| optionObj  | Object | -> | Object containing the workbook options to be set | <!-- END REF --> |
+| Parâmetro  | Tipo   |    | Descrição                                      |                  |
+| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro     |                  |
+| optionObj  | Object | -> | Objeto que contém as opções do livro a definir | <!-- END REF --> |
 
 #### Descrição
 

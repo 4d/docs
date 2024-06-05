@@ -5,22 +5,19 @@ title: Instalação
 
 Bem-vindo a 4D! Vai encontrar abaixo toda informação necessário para instalar e registrar sua aplicação 4D.
 
-
 ## Configuração necessária
 
-Consulte a [página de descarga de produto](https://us.4d.com/product-download) no web site de 4D para conhecer a configuração mínima de Mac / Windows para sua serie 4D.
+La página [Descarga de productos](https://us.4d.com/product-download) del sitio web de 4D ofrece información sobre los requisitos mínimos del sistema macOS / Windows para su serie 4D.
 
-Todos os detalhes estão disponíveis na [página Recursos](https://us.4d.com/resources/feature-release) do website de 4D.
-
+Encontrará más detalles técnicos en la [página Recursos](https://us.4d.com/resources/feature-release) del sitio web de 4D.
 
 ## Instalação no disco
 
 Os produtos 4D são instalados desde o website de 4D:
 
-1. Utilizando seu navegador, conecte-se ao website de 4D e vá à página de [Descargas/downloads](https://us.4d.com/product-download/Feature-Release).
+1. Conéctese al sitio web de 4D y vaya a la página de [Descargas](https://us.4d.com/product-download).
 
 2. Clique no link de download do seu produto e siga as instruções exibidas na tela.
-
 
 ## Iniciar sessão
 
@@ -32,23 +29,22 @@ Aparece então o Assistente de Boas-vindas:
 
 ![](../assets/en/getStart/welcome2.png)
 
-- Se quiser descobrir e explorar 4D, clique no link **free trial** . Digite seu ID (email ou conta 4D) e sua senha.
+- Si desea descubrir y explorar 4D, haga clic en el enlace **prueba gratuita**. Digite seu ID (email ou conta 4D) e sua senha.
 
-- Se já tiver uma conta 4D, clique no link **Sign in** no canto superior direito da caixa de diálogo do Welcome Wizard e introduza a informação da sua conta. Qualquer licença 4D já registada é automaticamente atualizada (ou pacotes de expansão adicionais são carregados) na sua máquina.
+- Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta. Qualquer licença 4D já registada é automaticamente atualizada (ou pacotes de expansão adicionais são carregados) na sua máquina.
 
-Expanda a área **Abrir ou criar aplicação de projecto** e selecione a ação que quiser executar:
+Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la acción que desea realizar:
 
-- **Conectar ao Servidor 4D** - use 4D como um cliente remoto e conecte-se a uma aplicação que já esteja carregada pelo Servidor 4D.
+- **Conéctese a 4D Server** - utilice 4D como cliente remoto y conéctese a una aplicación ya cargada por 4D Server.
 
-- **Abrir um projeto de aplicação local** - carregar um projeto de aplicação existente armazenado no seu disco.
+- **Abra un proyecto de aplicación local**: cargue un proyecto de aplicación existente almacenado en su disco.
 
-- **Criar um novo projeto de aplicação** - criar um novo projeto de aplicação vazio no seu disco.
+- **Cree un nuevo proyecto de aplicación**: cree un nuevo proyecto de aplicación vacío en su disco.
 
 Desfrute da sua experiência 4D!
 
-
 :::info
 
-Também é preciso ativar qualquer licença adicional que obter. Visite a página [Managing 4D licenses](../Admin/licenses.md) .
+Também é preciso ativar qualquer licença adicional que obter. Visite la página [Gestión de licencias 4D](../Admin/licenses.md).
 
 :::

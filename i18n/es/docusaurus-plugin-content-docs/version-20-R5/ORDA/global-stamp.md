@@ -3,17 +3,16 @@ id: global-stamp
 title: Utilizando el sello global
 ---
 
-
-
 ## Generalidades
 
-4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales, etc.
+4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales
 
-El sello de modificación global es un número, siempre mantenido por 4D, incluso en caso de restauración de la base de datos, importación, etc. Sin embargo, tenga en cuenta que el sello puede modificarse utilizando la función [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
+El sello de modificación global es un número, siempre mantenido por 4D, incluso en caso de restauración de la base de datos, importación, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
 
 Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
-1. El valor actual del sello de modificación global se guarda en el atributo especial "__GlobalStamp" de la entidad implicada. En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
+1. El valor actual del sello de modificación global se guarda en el atributo especial "__GlobalStamp" de la entidad implicada.
+   En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
 2. Se incrementa el valor del sello de modificación global.
 
@@ -25,11 +24,9 @@ No confunda el **sello de modificación global** con el **sello de entidad** int
 
 :::
 
-
-
 ## Configuración del seguimiento de cambios en los datos
 
-Por defecto, el sello de modificación global no se crea (la función [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) devuelve 0. Para habilitar el seguimiento de cambios en los datos, debe añadir campos especiales y una tabla a su estructura. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
+By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. Para habilitar el seguimiento de cambios en los datos, debe añadir campos especiales y una tabla a su estructura. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
 
 ### Requisitos de estructura
 
@@ -37,11 +34,11 @@ Para habilitar el seguimiento de cambios de datos, la estructura de la aplicaci�
 
 Además, para garantizar el correcto funcionamiento de la funcionalidad, se requieren las siguientes condiciones:
 
-- El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
+- El campo `__GlobalStamp` debe ser del tipo _Entero 64 bits_, con las propiedades _índice automático_, _Exponer como recurso REST_ e _Invisible_ seleccionadas.
 - Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
-| Campo         | Tipo           | Descripción                                |
-| ------------- | -------------- | ------------------------------------------ |
+| Campo                                                   | Tipo           | Descripción                                |
+| ------------------------------------------------------- | -------------- | ------------------------------------------ |
 | __PrimaryKey  | Text           | Llave primaria de la entidad eliminada     |
 | __Stamp       | Entero 64 bits | Sello global justo antes de la eliminación |
 | __TableName   | Text           | Nombre de la tabla de entidades eliminada  |
@@ -63,23 +60,20 @@ Para activar el seguimiento de cambios en los datos:
 
 1. Seleccione la(s) tabla(s) para las cuales desea habilitar el seguimiento de cambios de datos.
 2. Haga clic derecho en una tabla seleccionada y seleccione **Enable data change tracking** en el menú contextual.
-3. Aparece una caja de diálogo de confirmación. Haga clic en **OK**.
+3. Aparece una caja de diálogo de confirmación. Presione **OK**.
 
 4D realiza entonces los siguientes cambios:
 
 - Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
 - Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
 
-
 Para desactivar el seguimiento de cambios de datos:
 
 1. Seleccione la tabla o tablas para las que desea eliminar el seguimiento de cambios de datos.
 2. Haga clic derecho en una tabla seleccionada y seleccione **Disable data change tracking** en el menú contextual.
-3. Aparece una caja de diálogo de confirmación. Haga clic en **OK**.
+3. Aparece una caja de diálogo de confirmación. Presione **OK**.
 
 4D elimina entonces el campo `__GlobalStamp` de la(s) tabla(s). Tenga en cuenta que si desea eliminar la tabla `__DeletedRecords`, deberá hacerlo manualmente.
-
-
 
 ## Ejemplo
 
@@ -91,13 +85,13 @@ var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
 $tableName:="Employee"
 $oldStamp:=... //load the previous stamp value  
-    //from which you want to compare the current stamp
+	//from which you want to compare the current stamp
 
 If ($oldStamp # ds.getGlobalStamp())
-        //get all new or modified entities
-    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
-        //get all deleted entities
-    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName)
+		//get all new or modified entities
+	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+		//get all deleted entities
+	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+	$oldStamp; $tableName)
 End if
 ```

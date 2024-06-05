@@ -160,10 +160,10 @@ Par exemple :
 
 | Date or time | Pattern      | Résultat         | Commentaires          |
 | ------------ | ------------ | ---------------- | --------------------- |
-| 15/06/2000   | "QQQQ"       | "2nd quarter"    | localized             |
+| 15/06/2000   | "QQQQ"       | "2nd quarter"    | localisé              |
 | 17/03/2001   | "D"          | "76"             | 76th day of the year  |
 | 17/03/1954   | "w"          | "11"             | 11th week of the year |
-| 17/03/1954   | "eeee"       | "Wednesday"      | localized             |
+| 17/03/1954   | "eeee"       | "Wednesday"      | localisé              |
 | 15:00:00     | "a"          | "PM"             |                       |
 | 18:00:00     | "K a"        | "6 PM"           |                       |
 | 13:30:15     | "hh:mm aa O" | "01:30 PM GMT+1" |                       |

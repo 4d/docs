@@ -5,13 +5,11 @@ title: Instalación
 
 ¡Bienvenido a 4D! ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D. Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
 
-
 ## Configuración requerida
 
 La página [Descarga de productos](https://us.4d.com/product-download) del sitio web de 4D ofrece información sobre los requisitos mínimos del sistema macOS / Windows para su serie 4D.
 
 Encontrará más detalles técnicos en la [página Recursos](https://us.4d.com/resources/feature-release) del sitio web de 4D.
-
 
 ## Instalación en disco
 
@@ -20,7 +18,6 @@ Los productos 4D se instalan desde el sitio web de 4D:
 1. Conéctese al sitio web de 4D y vaya a la página de [Descargas](https://us.4d.com/product-download).
 
 2. Haga clic en el enlace de descarga de su producto 4D y siga las instrucciones en pantalla.
-
 
 ## Conexión
 
@@ -45,7 +42,6 @@ Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la ac
 - **Cree un nuevo proyecto de aplicación**: cree un nuevo proyecto de aplicación vacío en su disco.
 
 ¡Disfrute de su experiencia 4D!
-
 
 :::info
 

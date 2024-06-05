@@ -5,20 +5,20 @@ title: VP Get formulas
 
 <!-- REF #_method_.VP Get formulas.Syntax -->
 
-**VP Get formulas** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
-| Paramètres | Type       |    | Description                  |                  |
-| ---------- | ---------- | -- | ---------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objet plage                  |                  |
-| Résultat   | Collection | <- | Collection of formula values | <!-- END REF --> |
+| Paramètres | Type       |    | Description                         |                  |
+| ---------- | ---------- | -- | ----------------------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objet plage                         |                  |
+| Résultat   | Collection | <- | Collection de valeurs d'une formule | <!-- END REF --> |
 
 #### Description
 
-The `VP Get formulas` command <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated _rangeObj_<!-- END REF -->.
+The `VP Get formulas` command <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass a range whose formulas you want to retrieve. If _rangeObj_ designates multiple ranges, the formula of the first range is returned. If _rangeObj_ does not contain any formulas, the command returns an empty string.
+In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* designates multiple ranges, the formula of the first range is returned. If *rangeObj* does not contain any formulas, the command returns an empty string.
 
 La collection retournée est bidemensionnelle :
 

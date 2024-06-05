@@ -15,7 +15,6 @@ El lenguaje integrado de 4D, que consta de más de 1300 comandos, convierte a 4D
 
 La flexibilidad y el poder del lenguaje de programación 4D lo convierten en la herramienta ideal para todos los niveles de usuarios y desarrolladores para realizar una completa gama de tareas de gestión de la información. Los usuarios principiantes pueden realizar rápidamente los cálculos. Los desarrolladores experimentados pueden utilizar este poderoso lenguaje de programación para añadir sofisticadas funciones y capacidades a sus aplicaciones, como la transferencia de archivos, las comunicaciones y la supervisión. Los desarrolladores con experiencia en programación en otros lenguajes pueden añadir sus propios comandos al lenguaje 4D. Los usuarios experimentados sin experiencia en programación pueden personalizar sus aplicaciones.
 
-
 ## ¿Qué es un lenguaje?
 
 El lenguaje de 4D no es muy diferente del lenguaje hablado que utilizamos a diario. Es una forma de comunicación utilizada para expresar ideas, informar y dar instrucciones. Como un lenguaje hablado, 4D tiene su propio vocabulario, gramática y sintaxis; usted lo utiliza para decirle a 4D cómo manejar su aplicación y sus datos.
@@ -47,7 +46,8 @@ El lenguaje 4D es muy poderoso: un solo comando sustituye a menudo cientos o inc
 
 El lenguaje está diseñado para que pueda realizar fácilmente casi cualquier tarea. Añadir un registro, ordenar los registros, buscar datos y operaciones similares son definidas con comandos simples y directos. Pero el lenguaje también puede controlar los puertos serie, leer documentos en el disco, controlar el procesamiento de transacciones complejas y mucho más.
 
-El lenguaje 4D realiza incluso las tareas más sofisticadas con relativa sencillez. Realizar estas tareas sin utilizar el lenguaje sería inimaginable para muchos. Incluso con los poderosos comandos del lenguaje, algunas tareas pueden ser complejas y difíciles. Una herramienta por sí misma no hace posible una tarea; la propia tarea puede ser un reto y la herramienta sólo puede facilitar el proceso. Por ejemplo, un procesador de textos hace que escribir un libro sea más rápido y fácil, pero no escribirá el libro por usted. El uso del lenguaje 4D facilitará el proceso de gestión de sus datos y le permitirá abordar tareas complicadas con confianza.
+El lenguaje 4D realiza incluso las tareas más sofisticadas con relativa sencillez. Realizar estas tareas sin utilizar el lenguaje sería inimaginable para muchos.
+Incluso con los poderosos comandos del lenguaje, algunas tareas pueden ser complejas y difíciles. Una herramienta por sí misma no hace posible una tarea; la propia tarea puede ser un reto y la herramienta sólo puede facilitar el proceso. Por ejemplo, un procesador de textos hace que escribir un libro sea más rápido y fácil, pero no escribirá el libro por usted. El uso del lenguaje 4D facilitará el proceso de gestión de sus datos y le permitirá abordar tareas complicadas con confianza.
 
 ## ¿Es un lenguaje informático "tradicional"?
 

@@ -1,6 +1,6 @@
 ---
 id: binary
-title: '$binary'
+title: $binary
 ---
 
 ドキュメントを BLOB として保存するには "true" を渡します (`$expand={blobAttributeName}` も渡す必要があります)
@@ -18,4 +18,3 @@ GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt
 ディスク上の BLOB の保存先を聞かれます:
 
 ![](../assets/en/REST/binary.png)
-

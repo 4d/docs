@@ -43,13 +43,13 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 > Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
-#### Bouton 'Reprendre exécution'
+#### Reprendre exécution
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
 > La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
-#### Bouton 'Exécuter pas à pas'
+#### Exécuter pas à pas
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
 
@@ -57,7 +57,7 @@ Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les foncti
 
 Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
 
-#### Bouton 'Exécuter pas à pas détaillé'
+#### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
@@ -65,21 +65,33 @@ La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtr
 
 Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
 
-#### Bouton 'Exécuter et sortir'
+
+#### Exécuter et sortir
+
+Si vous tracez des sous-routines et des fonctions, cliquer sur ce bouton vous permet d'exécuter l’intégralité de la méthode qui est en train d'être tracée, et de revenir à la méthode appelante. La fenêtre du débogueur retourne à la méthode précédente dans la chaîne d’appel. Si la méthode courante est la dernière méthode de la chaîne d’appel, la fenêtre du débogueur se referme.
+
+Dans le débogage distant, lors de l'exécution de la dernière ligne de la méthode, si la méthode est exécutée sur le serveur, la méthode parente est appelée. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton Reprendre exécution.
+
+#### Pas à pas nouveau process
+
+Lors de l’exécution d’une ligne qui crée un nouveau process (par exemple qui appelle la commande New process), ce bouton ouvre une nouvelle fenêtre du débogueur qui vous permet de tracer la méthode de gestion du process que vous venez de créer. Lors de l’exécution d’une ligne qui ne crée pas de nouveau process, ce bouton se comporte comme le bouton Exécuter pas à pas.
+
+
+#### Stopper exécution
 
 La méthode s’arrête et vous retournez là où vous étiez avant son exécution :
 
 * Si vous tracez une méthode formulaire ou une méthode objet s’exécutant en réponse à un événement, elle s’arrête et vous retournez au formulaire.
 * Si vous tracez une méthode s’exécutant à partir du mode Application, vous retournez à ce mode.
 
-#### Bouton 'Exécuter et sortir'
+#### Stopper et éditer
 
-La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+Suspend l'exécution de la méthode. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
-#### Editer
+#### Editer méthode
 
-La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+Suspend l'exécution de la méthode. La méthode qui s'exécute au moment où vous cliquez sur le bouton Éditer s'ouvre dans l'éditeur de méthode.
 
 Si vous utilisez ce bouton pour modifier une méthode, les modifications ne seront effectives que la prochaine fois qu'elle sera exécutée.
 
@@ -87,10 +99,10 @@ Si vous utilisez ce bouton pour modifier une méthode, les modifications ne sero
 
 #### Bouton 'Enregistrer paramètres'
 
-Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. This includes:
+Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclus :
 
-* the size and position of the window
-* the position of the division lines and the contents of the area that evaluates the expressions
+* la taille et la position de la fenêtre
+* la position des lignes de division et le contenu de la zone qui évalue les expressions
 
 Ces paramétrages sont stockés dans le projet.
 
@@ -102,24 +114,24 @@ The **Watch pane** is displayed in the top left corner of the Debugger window, b
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
-> This pane is not available in remote debugging mode.
+> Ce volet n'est pas disponible en mode débogage à distance.
 
 The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Cliquer sur n'importe quelle valeur sur le côté droit du panneau vous permet de modifier la valeur de l'objet, si cela est autorisé pour cet objet.
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
-### Expression list
+### Liste Expression
 
-#### Line Objects
+#### Objets courants
 
-This theme lets you keep track of the values of the objects or expressions:
+Ce thème vous permet de garder une trace des valeurs des objets ou des expressions :
 
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
-* used in the previous line of code
+* utilisé(e) s dans la ligne de code précédente
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Let's say you execute the following method:
+Comme la ligne de code précédente est celle qui a été exécutée avant, ce thème montre donc les objets ou expressions de la ligne courante avant et après que la ligne ait été exécutée.  Imaginons que vous exécutiez la méthode suivante :
 
 ```4d
 TRACE
@@ -136,7 +148,7 @@ $c:=a+b
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. À ce stade, le thème Objets courants affiche :
 
     | $a | 1         |
     | -- | --------- |
@@ -144,7 +156,7 @@ $c:=a+b
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. You click the **Step Over** button again. Le compteur du programme est maintenant défini sur la ligne $c:=a+b. À ce stade, le thème **Objets courants** affiche :
 
     | $c | Undefined |
     | -- | --------- |
@@ -155,17 +167,17 @@ $c:=a+b
 
 #### Variables
 
-This theme is composed of the following subthemes:
+Ce thème est composé des sous-thèmes suivants :
 
-| Subtheme     | Description                                                  | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Oui                         |
-| Process      | List of process variables used by the current process        | Oui                         |
-| Local        | List of local variables used by the method being traced      | Oui                         |
-| Paramètres   | List of parameters received by the method                    | Oui                         |
-| Self         | Pointer to the current object, when tracing an Object Method | Non                         |
+| Sous-thème   | Description                                                              | Peut-on modifier les valeurs ? |
+| ------------ | ------------------------------------------------------------------------ | ------------------------------ |
+| Interprocess | Liste des variables interprocess utilisées à ce stade                    | Oui                            |
+| Process      | Liste des variables process utilisées par le process courant             | Oui                            |
+| Local        | Liste des variables locales utilisées par la méthode en cours de traçage | Oui                            |
+| Paramètres   | Liste des paramètres reçus par la méthode                                | Oui                            |
+| Self         | Pointeur vers l'objet courant, lors du traçage d'une méthode objet       | Non                            |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Les tableaux, comme les autres variables, apparaissent dans les sous-thèmes interprocess, process et local, selon leur portée. Le débogueur affiche les 100 premiers éléments. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
 To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
@@ -175,57 +187,57 @@ Voici le résultat :
 
 ![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
-#### Current Form Values
+#### Valeurs du formulaire courant
 
-This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
+Ce thème contient le nom de chaque objet dynamique inclus dans le formulaire courant, ainsi que la valeur de sa variable associée :
 
 ![current-form-value](../assets/en/Debugging/current-form-values.png)
 
-Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
+Certains objets, tels que les list box tableaux, peuvent être présentés comme deux objets distincts, la variable de l'objet lui-même et sa source de données.
 
 #### Constantes
 
-Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
+Comme la page Constantes de la fenêtre de l'Explorateur, ce thème affiche des constantes prédéfinies fournies par 4D. Les expressions de ce thème ne peuvent pas être modifiées.
 
-#### Semaphores
+#### Sémaphores
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
+Ce thème liste les sémaphores locaux définis. Pour chaque sémaphore, la colonne Valeur fournit le nom du process qui a posé le sémaphore. Les expressions de ce thème ne peuvent pas être modifiées. Les sémaphores globaux ne sont pas affichés.
 
 #### Process
 
-This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
+Ce thème liste les process démarrés depuis le début de la session de travail. La colonne de valeur affiche le temps utilisé et l'état courant pour chaque process (Exécution, Pause, etc.). Les expressions de ce thème ne peuvent pas être modifiées.
 
 #### Tables et champs
 
-This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
+Ce thème répertorie les tables et les champs dans la base de données 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
-For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.
+Pour chaque champ, la colonne Valeur affiche la valeur du champ pour l'enregistrement courant (sauf image et BLOB). Vous pouvez modifier les valeurs des champs, mais pas les informations des tables.
 
 #### Ensembles
 
-This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+Ce thème liste les ensembles définis dans le process courant (celui que vous tracez actuellement) et les ensembles interprocess. Pour chaque ensemble, la colonne Valeur affiche le nombre d'enregistrements et le nom de la table. Les expressions de ce thème ne peuvent pas être modifiées.
 
 #### Sélections temporaires
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+Ce thème répertorie les sélections temporaires qui sont définies dans le process courant (celui que vous tracez actuellement) ; il répertorie également les sélections temporaires interprocess. Pour chaque sélection temporaire, la colonne Valeur affiche le nombre d'enregistrements et le nom de la table. Les expressions de ce thème ne peuvent pas être modifiées.
 
 #### Informations
 
-This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
+Ce thème contient des informations générales sur les opérations de base de données, telles que la table par défaut courante (si elle existe), l'espace de mémoire physique, virtuel, libre et utilisée, la destination des requêtes, etc.
 
 #### Web
 
-This theme displays information regarding the main Web server of the application (only available if the Web server is active):
+Ce thème affiche des informations concernant le serveur Web principal de l'application (disponible uniquement si le serveur Web est actif) :
 
-* Web File To Send: name of Web file waiting to be sent (if any)
-* Web Cache Usage: number of pages present in Web cache as well as its use percentage
-* Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
-* Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
-* Number of active Web processes: number of active Web processes, all Web processes together
+* Fichier Web à envoyer : nom du fichier Web en attente d'envoi (le cas échéant)
+* Occupation du cache Web : nombre de pages présentes dans le cache Web ainsi que le pourcentage d'utilisation
+* Temps d’activité du serveur Web : durée d'utilisation du serveur Web au format heures:minutes:secondes
+* Nombre de requêtes http : nombre total de requêtes HTTP reçues depuis le lancement du serveur web, ainsi que le nombre instantané de requêtes par seconde
+* Nombre de process Web actifs : nombre de process Web actifs, tous process Web confondus
 
-The expressions contained within this theme cannot be modified.
+Les expressions contenues dans ce thème ne peuvent pas être modifiées.
 
-### Menu contextuel de la fenêtre d’expression
+### Menu contextuel de la fenêtre d'évaluation
 
 Le menu contextuel de la fenêtre d’expression vous propose des options supplémentaires.
 
@@ -240,26 +252,26 @@ Le menu contextuel de la fenêtre d’expression vous propose des options suppl�
 * **Afficher les entiers en hexadécimal** : Les nombres s’affichent en notation décimale. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
 * **Activer le suivi d'activité** : Active le suivi d'activité (contrôle avancé de l'activité interne de l'application) et affiche les informations collectées dans des thèmes supplémentaires : **Séquenceur**, **Web** et **Réseau**.
 
-## Call Chain Pane
+## Chaîne d'appel
 
-A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
+Une méthode peut appeler d'autres méthodes ou fonctions de classe, qui peuvent à leur tour appeler d'autres méthodes ou fonctions. Le volet Chaîne d'appels vous permet de suivre cette hiérarchie.
 
 ![call-chain-pane](../assets/en/Debugging/call-chain-example.png)
 
-Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
+Chaque élément de niveau principal est le nom d'une méthode ou d'une fonction de classe. L'élément supérieur est celui que vous tracez actuellement, l'élément de niveau principal suivant est le nom de l'appelant (la méthode ou la fonction qui a appelé celle que vous tracez actuellement), le suivant est l'appelant de l'appelant, et ainsi de suite.
 
-In the image above:
+Dans l'image ci-dessus :
 
 * `thirdMethod` has not received any parameter
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
   * $1 is a pointer to the `[Employee]` table
   * $2 is a pointer to the `ID` field in the  `[Employee]` table
-  * $3 is an alphanumeric parameter whose value is "Z"
+  * $3 est un paramètre alphanumérique dont la valeur est "Z"
 
 You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result.
+En cliquant sur l'icône à côté d'un nom de méthode ou de fonction, vous pouvez développer ou replier les paramètres et le résultat (le cas échéant). Les valeurs apparaissent sur le côté droit du volet. En cliquant sur n'importe quelle valeur du côté droit, vous pouvez modifier la valeur de n'importe quel paramètre ou résultat de fonction.
 
 To display the parameter type, check the **Show types** option in the contextual menu:
 
@@ -269,40 +281,40 @@ After you deploy the list of parameters, you can drag and drop parameters and fu
 
 You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
 
-## Custom Watch Pane
+## Fenêtre d'évaluation
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
+Le fenêtre d'évaluation sert à évaluer les expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Tout type d'expression peut être évalué :
 
 * champ
 * variable
 * pointer
-* calculation
-* 4D command
+* calcul
+* commande 4D
 * method
-* and anything else that returns a value
+* et tout ce qui renvoie une valeur
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
-### Handling expressions
+### Gestion des expressions
 
-There are several ways to add expressions to the list:
+Il y a plusieurs façons d'ajouter des expressions à la liste :
 
-* Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
+* Glisser et déposer un objet ou une expression depuis la fenêtre d'expression ou la fenêtre de chaîne d'appel
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
-* Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
+* Double-cliquer quelque part dans l'espace vide du volet (ajoute une expression avec un nom de paramètre fictif que vous pouvez modifier)
 
-You can enter any formula that returns a result.
+Vous pouvez entrer n'importe quelle formule qui renvoie un résultat.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 > **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
-### Menu contextuel de la fenêtre d’expression
+### Menu contextuel de la fenêtre d'évaluation
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D et à d'autres options :
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
@@ -323,20 +335,20 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 * **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec des numéros de table ou de champs, ou avec des pointeurs utilisant les commandes `Table` ou `Champ`.
 * **Show Icons**: Displays an icon denoting the type of each item.
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
-* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. Pour entrer une valeur numérique en hexadécimal, tapez 0x (zéro + "x"), suivi des chiffres hexadécimaux.
 
-## Source Code Pane
+## Fenêtre d'évaluation du code
 
 Ce panneau affiche le code source de la méthode ou de la fonction en cours de traçage.
 
 Cette zone vous permet également d'ajouter ou de supprimer les [**points de rupture**](breakpoints.md).
 
-### Tool tip
+### Infobulle
 
 Passez votre pointeur sur une expression pour afficher une info-bulle qui indique :
 
-* the declared type of the expression
-* the current value of the expression
+* le type déclaré de l'expression
+* la valeur courante de l'expression
 
 ![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
@@ -344,23 +356,23 @@ Cela fonctionne également avec les sélections :
 
 ![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
 
-### Adding expressions to the Custom Watch Pane
+### Ajout d'expressions à la fenêtre d'évaluation
 
 Vous pouvez copier n'importe quelle expression sélectionnée de la palette de code source dans le [Custom Watch Pane](#custom-watch-pane).
 
-1. In the Source code pane, select the expression to evaluate
+1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
-    * Drag and drop the selected text to the Expression area of the Custom Watch Pane
+    * Glissez et déposez le texte sélectionné dans la zone d'expression
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
     * Right-click the selected text **>** **Copy to Expression Pane**
 
-### Program Counter
+### Compteur de programme
 
-La flèche jaune située dans la marge gauche du Code Source s'appelle le compteur de programme. Elle marque la prochaine ligne à exécuter.
+La flèche jaune située dans la marge gauche de la fenêtre du code source s'appelle le compteur de programme. Elle marque la prochaine ligne à exécuter.
 
 Par défaut, la ligne du compteur de programme (également appelée ligne d'exécution) est mise en évidence dans le débogueur. Vous pouvez personnaliser la couleur de surbrillance dans la [page Méthodes des Préférences](Preferences/methods.md).
 
-#### Moving the program counter
+#### Déplacer le compteur de programme
 
 À des fins de débogage, vous pouvez déplacer le compteur de programme de la méthode située au sommet de la chaîne d'appels (la méthode en cours d'exécution). Pour ce faire, cliquez et faites glisser la flèche jaune vers une autre ligne.
 
@@ -380,9 +392,9 @@ Par exemple :
 
 Considérons que le compteur de programme est défini sur la ligne `Si (condition This)`. Lorsque vous cliquez sur le bouton **Step over** , le compteur du programme passe directement à la ligne `DO_SOMETHING_ELSE` . Pour examiner les résultats de la ligne `DO_SOMETHING` , vous pouvez déplacer le compteur de programme sur cette ligne et l'exécuter.
 
-### Menu contexuel de la fenêtre d'évaluation des méthodes
+### Menu contexuel de la fenêtre d'évaluation du code
 
-Le menu contextuel de la Fenêtre d'évaluation des méthodes donne accès à plusieurs fonctions utiles en phase d’exécution des méthodes en mode Trace :
+Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieurs fonctions utiles en phase d’exécution du code en mode Trace :
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
@@ -400,7 +412,7 @@ Le menu contextuel de la Fenêtre d'évaluation des méthodes donne accès à pl
 * **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Cette fonction modifie le point d’arrêt de façon permanente : par exemple, un point d’arrêt supprimé dans le débogueur n’apparaît plus dans la méthode d’origine.
 * **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cette fonction modifie le point d’arrêt de façon permanente.
 
-### Find Next/Previous
+### Chercher Suivant/Précédent
 
 Des raccourcis spécifiques permettent de trouver des chaînes de caractères identiques à celle qui est sélectionnée :
 
@@ -420,7 +432,7 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 * Un **double-clic** sur un article de la fenêtre d’expression copie cet article dans la fenêtre d’évaluation
 * Un **double-clic** dans la sous-fenêtre d’évaluation crée une nouvelle expression
 
-#### Source Code Pane
+#### Fenêtre d'évaluation du code
 
 * Un clic dans la marge gauche place ou supprime un point d’arrêt.
 * **Alt+Majuscule+clic** (Windows) ou **Option+Majuscule+clic** (macOS) pose un point d’arrêt provisoire.
@@ -432,7 +444,7 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 
 #### Toutes les fenêtres
 
-* **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. The modified font size is also applied to the Code Editor and is stored in the Preferences.
+* **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. La taille de la police modifiée s'applique également à l'Editeur de code et est stockée dans les Préférences.
 * **Ctrl+***(Windows) ou **Commande+*** (macOS) force la réactualisation de la Fenêtre d'expression.
 * Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 * Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.

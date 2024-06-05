@@ -1,25 +1,23 @@
 ---
 id: orderby
-title: '$orderby'
+title: $orderby
 ---
 
-
-Ordena os dados devolvidos pelo atributo e pela ordem de ordenação definidos (*e.g.*, `$orderby="lastName desc, salary asc"`)
+Ordena los datos devueltos por el atributo y el orden de clasificación definidos (_por ejemplo_, `$orderby="lastName desc, salary asc"`)
 
 ## Descrição
 
-`$orderby` ordena as entidades devolvidas pelo pedido REST. Para cada atributo, especifica-se a ordem como `ASC` (ou `asc`) para ordem ascendente e `DESC` (`desc`) para ordem descendente. Por defeito, os dados são ordenados por ordem ascendente. By default, the data is sorted in ascending order.
-
+`$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defeito, os dados são ordenados por ordem ascendente. By default, the data is sorted in ascending order.
 
 ## Exemplo
 
 Neste exemplo, recuperamos entidades e ordenamo-las em simultâneo:
 
- `GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
+`GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
 
 O exemplo abaixo ordena o conjunto de entidades pelo atributo lastName em ordem ascendente:
 
- `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
+`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
 **Resultado**:
 
@@ -48,4 +46,3 @@ O exemplo abaixo ordena o conjunto de entidades pelo atributo lastName em ordem 
     ]
 }
 ```
-

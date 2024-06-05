@@ -461,102 +461,102 @@ Appuyez sur la touche **Entrée** pour sélectionner l'occurrence la plus proche
 
 Cliquez sur le bouton de bascule **v** sur le côté gauche de la *zone Recherche* pour afficher/masquer la zone *Remplacer*. Vous pouvez également sélectionner **Chercher > Remplacer...** dans le menu **Édition** ou taper **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS).
 
-The *Replace* entry area is used to define the character string that will replace the one defined above.
+La zone de saisie *Remplacer* est utilisée pour définir la chaîne de caractères qui remplacera celle définie ci-dessus.
 
-Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
+Cliquez sur le bouton **Remplacer** pour lancer la recherche avec toutes les options définies et remplacer la première occurrence trouvée. 4D commence la recherche à partir du point d'insertion de texte en cours et la poursuit jusqu'à la fin de la méthode. Il est ensuite possible de continuer à chercher/remplacer en utilisant les commandes **Remplacer suivant** et **Remplacer précédent** du [menu **Edition**](#shortcuts).
 
-Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
-
-
-
-### Find Same
-
-The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
-
-The search carried out is of the "Find Next" type in the current code editor window.
-
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+Cliquez sur le bouton **Tout remplacer** pour remplacer toutes les occurrences correspondant aux critères de recherche directement dans la méthode ouverte.
 
 
-### Bookmark All
 
-The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
+### Chercher identique
+
+La commande **Chercher identique** permet de rechercher les chaînes de caractères identiques à celle sélectionnée. Cette commande n'est active que si vous avez sélectionné au moins un caractère dans l'éditeur de code.
+
+La recherche effectuée est de type "Chercher suivant" dans la fenêtre courante de l'éditeur de code.
+
+Les commandes **Chercher identique suivant** et **Chercher identique précédent** permettent de trouver des chaînes de caractères *strictement* identiques à celles sélectionnées. Par exemple, la casse doit correspondre.
+
+
+### Tout marquer
+
+La commande **Edition > Tout marquer** est activée lorsqu'une recherche a déjà été spécifiée dans la boîte de dialogue de recherche ou de remplacement. Lorsque vous sélectionnez cette commande, 4D place un signet à chaque ligne contenant un élément correspondant aux critères de recherche "courants". Cela permet de repérer facilement tous les résultats de la recherche. Pour plus d'informations sur les signets, voir [Signets](#bookmarks).
 
 
 
 
 ## Syntax errors
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). Lorsque vous passez la souris sur le symbole, une infobulle affiche la cause de l'erreur :
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
+When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. You can also force validation by pressing the **Enter** key.
 
 When the method, class or function is validated, 4D checks for:
 
 - basic syntax errors
-- the structure of statements (`If`, `End if` and so on)
+- la structure des instructions (`If`, `End if` et similaires)
 - matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
 > If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.
+The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Help tips
+## Infobulles
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
+L'éditeur de code fournit diverses informations contextuelles à l'aide d'infobulles. Elles apparaissent lorsque vous survolez un objet avec la souris.
 
 :::tip
 
-The [status bar](#status-bar) also provides contextual information.
+La [barre d'état](#status-bar) fournit également des informations contextuelles.
 
 :::
 
-- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#syntax-errors)).
+- **Erreurs** : Lorsque vous passez la souris sur le symbole indiquant une erreur à gauche de la zone d'édition, une infobulle affiche la cause de l'erreur (voir [Erreurs de syntaxe](#syntax-errors)).
 
-- **4D command documentation**: When you move the mouse over a 4D command or function, a help tip provides its syntax along with a brief description of how it works. ![](../assets/en/code-editor/status-bar-description.png)
+- **Documentation de commande 4D** : Lorsque vous déplacez la souris sur une commande ou une fonction 4D, une infobulle affiche sa syntaxe ainsi qu'une brève description de son fonctionnement. ![](../assets/en/code-editor/status-bar-description.png)
 
-- **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any. ![](../assets/en/code-editor/variable-type.png)
+- **Type et description de la variable** : Lorsque vous survolez une variable, une infobulle affiche son type (si celui-ci a été explicitement défini dans la méthode) et le commentaire associé, le cas échéant. ![](../assets/en/code-editor/variable-type.png)
 
-- **Project methods or functions**: When you mouse over a project method or class function, a help tip displays:
+- **Méthodes projet ou fonctions** : Lorsque vous survolez une méthode projet ou une fonction de classe, une infobulle affiche :
 
-  - either the comments specified in the Explorer.
-  - or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
+  - soit les commentaires spécifiés dans l'Explorateur.
+  - soit les premières lignes de la méthode ou de la fonction de classe si elle comporte des commentaires (lignes commençant par // ou bloc de commentaires /*...*/). Il est courant d'insérer la documentation de la méthode ainsi que ses paramètres sous forme de commentaires au début de la méthode. Vous pouvez obtenir ces informations directement dans l'infobulle, en veillant à supprimer au préalable tous les commentaires présents dans l'Explorateur. Commentaires au début d'une méthode: ![](../assets/en/code-editor/comments-method.png) Infobulle dans une autre méthode : ![](../assets/en/code-editor/help-tip.png)
 
-- You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
+- Vous pouvez également créer un **fichier de documentation dédié** nommé `<MethodName>MethodName<MethodName>.md` dans le dossier `<package>package<package>/documentation`. Voir [Afficher la documentation dans l'éditeur de code](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
 
-## Comment / Uncomment
+## Commenter / Décommenter
 
-Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. The length of comments is limited to the maximum size of 32,000 characters per line.
+Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. La longueur des commentaires est limitée à la taille maximale de 32 000 caractères par ligne.
 
-There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
+Il existe deux types de commentaires : `//commentaire` (commentaire sur une seule ligne) et `/*commentaire*/` (commentaires en ligne ou blocs de commentaires multilignes).
 
-Des commentaires peuvent être créés en tapant les caractères `/`. Ou encore, la commande **Comment/Uncomment** , présente dans le menu **Method** ainsi que dans le menu contextuel de l'éditeur de code, permet de marquer un groupe de lignes de code sélectionnées en tant que commentaires d'une seule ligne ou, au contraire, de supprimer les caractères de commentaires d'une seule ligne d'une sélection. Pour utiliser cette commande, sélectionnez le code à marquer comme commenté, puis sélectionnez la commande **Comment/Uncomment** :
+Des commentaires peuvent être créés en tapant les caractères `/`. Ou encore, la commande **Commenter/Ne pas commenter** , présente dans le menu **Méthode** ainsi que dans le menu contextuel de l'éditeur de code, permet de marquer un groupe de lignes de code sélectionnées en tant que commentaires d'une seule ligne ou, au contraire, de supprimer les caractères de commentaires d'une seule ligne d'une sélection. Pour utiliser cette commande, sélectionnez le code à commenter, puis sélectionnez la commande **Commenter/Ne pas commenter** :
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-Lorsque la sélection ne contient que du code actif, la commande **Comment** est appliquée. Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée". Lorsque la sélection ne contient que des lignes commentées, la commande **Uncomment** est appliquée.
+Lorsque la sélection ne contient que du code actif, la commande **Commenter** est appliquée. Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée". Lorsque la sélection ne contient que des lignes commentées, la commande **Ne pas commenter** est appliquée.
 
-> The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
+> La commande **Commenter/Ne pas commenter** ne fonctionne qu'avec des lignes complètes - elle ne peut pas être utilisée pour commenter seulement une partie d'une ligne.
 
 
-## Expand / Collapse
+## Déployer / Contracter
 
-4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:
+Le code 4D situé à l'intérieur des boucles et des conditions peut être replié ou déplié, afin de faciliter la lecture des méthodes :
 
-- Expanded code: ![](../assets/en/code-editor/expanded-code.png)
+- Code déployé : ![](../assets/en/code-editor/expanded-code.png)
 
-- Collapsed code: ![](../assets/en/code-editor/collapsed-code.png)
+- Code contracté :  ![](../assets/en/code-editor/collapsed-code.png)
 
-If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
+Si vous placez la souris sur le bouton de déploiement [...], une infobulle apparaît, affichant les premières lignes du code masqué.
 
-A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.
+Une portion de code repliée peut être sélectionnée, copiée, collée ou supprimée. Toutes les lignes incluses seront copiées, collées ou supprimées respectivement. Lorsqu'une portion de code est collée, elle est automatiquement déployée.
 
 There are several ways to expand and collapse code:
 

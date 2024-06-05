@@ -5,7 +5,7 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
 
-**VP Get sheet options** ( _vpAreaName_ : Text {; _sheet_ : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get sheet options
 
 #### Descrição
 
-The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the _vpAreaName_ area<!-- END REF -->.
+The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
 #### Objeto devolvido
 

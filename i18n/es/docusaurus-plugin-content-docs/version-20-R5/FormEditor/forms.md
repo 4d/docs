@@ -3,15 +3,14 @@ id: forms
 title: Formularios
 ---
 
-
 Los formularios ofrecen la interfaz a través de la cual se introduce, modifica e imprime la información en una aplicación de escritorio. Los usuarios interactúan con los datos de una base de datos mediante formularios e imprimen informes utilizando formularios. Los formularios pueden utilizarse para crear cajas de diálogo personalizadas, paletas o toda ventana personalizada.
 
 ![](../assets/en/FormObjects/form1.png)
 
 Los formularios también pueden contener otros formularios a través de las siguientes funcionalidades:
 
-- [los objetos subformularios](FormObjects/subform_overview.md)
-- [los formularios heredados](properties_FormProperties.md#inherited-forms)
+- [objetos de subformulario](FormObjects/subform_overview.md)
+- [formularios heredados](properties_FormProperties.md#inherited-forms)
 
 ## Creación de formularios
 
@@ -99,7 +98,7 @@ Un formulario multipáginas tiene una página de fondo y varias páginas de visu
 
 ## Formularios heredados
 
-Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de *Formulario A* pueden ser utilizados en *Formulario B*. En este caso, *Formulario B* "hereda" los objetos de *Formulario A*.
+Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de _Formulario A_ pueden ser utilizados en _Formulario B_. En este caso, _Formulario B_ "hereda" los objetos de _Formulario A_.
 
 Las referencias a un formulario heredado están siempre activas: si se modifica un elemento de un formulario heredado (estilos de botón, por ejemplo), se modificarán automáticamente todos los formularios que utilicen este elemento.
 
@@ -118,11 +117,12 @@ Este orden determina el [orden de entrada](../FormEditor/formEditor.html#data-en
 
 Las propiedades y el método de un formulario no se tienen en cuenta cuando ese formulario se utiliza como formulario heredado. Por otro lado, se llaman los métodos de los objetos que contiene.
 
-Para definir un formulario heredado, las propiedades [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (para el formulario tabla) deben definirse en el formulario que heredará algo de otro formulario.
+To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
 
-Un formulario puede heredar de un formulario proyecto, definiendo la propiedad [Inherited Form Table](properties_FormProperties.md#inherited-form-table) en `\&#060;None&#062;` en la Lista de propiedades (o " " en JSON).
+Un formulario puede heredar de un formulario proyecto, definiendo la propiedad [Inherited Form Table](properties_FormProperties.md#inherited-form-table) en `\<None>` en la Lista de propiedades (o " " en JSON).
 
-Para dejar de heredar un formulario, seleccione `\&#060;None&#062;` en la lista de propiedades (o " " en JSON) para la propiedad [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
+Para dejar de heredar un formulario, seleccione `\<None>` en la lista de propiedades (o " " en JSON) para la propiedad [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
+
 > Es posible definir un formulario heredado en un formulario que eventualmente se utilizará como formulario heredado para un tercer formulario. La combinación de objetos se realiza de forma recursiva. 4D detecta los bucles recursivos (por ejemplo, si el formulario [table1]form1 se define como el formulario heredado de [table1]form1, es decir, él mismo) e interrumpe la cadena de formularios.
 
 ## Propiedades soportadas

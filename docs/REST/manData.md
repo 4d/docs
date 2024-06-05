@@ -46,7 +46,9 @@ By default, an entity set is stored for two hours; however, you can change the t
 
 If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
 
-If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. Any entities you delete will, of course, no longer be a part of the entity set.
+If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. 
+
+Any entities you delete will, of course, no longer be a part of the entity set. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without *undefined* entity references. 
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 

@@ -5,19 +5,19 @@ title: Opciones de redimensionamiento
 
 ## Redimensionamiento columnas auto
 
-Cuando esta propiedad está activa (valor `rightToLeft` en JSON), las columnas del listbox se redimensionan automáticamente junto con el list box, dentro de los límites de los anchos [mínimo](properties_CoordinatesAndSizing.md#minimum-width) y [máximo](properties_CoordinatesAndSizing.md#maximum-width) definidos.
+When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 
 Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redimensiona la columna más a la derecha del listbox, aunque su ancho supere el valor máximo definido.
 
 ### Cómo funciona el redimensionamiento automático de las columnas
 
-* A medida que el ancho del list box aumenta, sus columnas se amplían, una a una, empezando de derecha a izquierda, hasta que cada una alcanza su [ancho máximo](properties_CoordinatesAndSizing.md#maximum-width). Sólo se redimensionan las columnas con la propiedad [Resizable](#resizable) seleccionada.
+- A medida que el ancho del list box aumenta, sus columnas se amplían, una a una, empezando de derecha a izquierda, hasta que cada una alcanza su [ancho máximo](properties_CoordinatesAndSizing.md#maximum-width). Sólo se redimensionan las columnas con la propiedad [Resizable](#resizable) seleccionada.
 
-* El mismo procedimiento se aplica cuando el ancho del list box disminuye, pero en orden inverso (*es decir,*, las columnas se redimensionan empezando de izquierda a derecha). Cuando cada columna ha alcanzado su [ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width), la barra de desplazamiento horizontal vuelve a activarse.
+- El mismo procedimiento se aplica cuando el ancho del list box disminuye, pero en orden inverso (_es decir,_, las columnas se redimensionan empezando de izquierda a derecha). Cuando cada columna ha alcanzado su [ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width), la barra de desplazamiento horizontal vuelve a activarse.
 
-* Las columnas se redimensionan sólo cuando la barra de desplazamiento horizontal no está "activa"; *es decir,*, todas las columnas son totalmente visibles en el list box en su tamaño actual. **Nota**: si la barra de desplazamiento horizontal está oculta, esto no altera su estado: una barra de desplazamiento puede seguir estando activa, aunque no sea visible.
+- Las columnas se redimensionan sólo cuando la barra de desplazamiento horizontal no está "activa"; _es decir,_, todas las columnas son totalmente visibles en el list box en su tamaño actual. **Nota**: si la barra de desplazamiento horizontal está oculta, esto no altera su estado: una barra de desplazamiento puede seguir estando activa, aunque no sea visible.
 
-* Una vez que todas las columnas alcanzan su tamaño máximo, dejan de ampliarse y en su lugar se añade una columna en blanco (falsa) a la derecha para rellenar el espacio extra. Si hay una columna falsa (en blanco), cuando el ancho del list box disminuye, ésta es la primera área que se reduce.
+- Una vez que todas las columnas alcanzan su tamaño máximo, dejan de ampliarse y en su lugar se añade una columna en blanco (falsa) a la derecha para rellenar el espacio extra. Si hay una columna falsa (en blanco), cuando el ancho del list box disminuye, ésta es la primera área que se reduce.
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
@@ -25,9 +25,9 @@ Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redim
 
 La apariencia de la columna falsa coincide con la de las columnas existentes; tendrá un encabezado y/o un pie de página falsos si estos elementos están presentes en las columnas del list box existentes y tendrá aplicados los mismos colores de fondo.
 
-Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, `On Header Click` y `On Footer Click` se generan en consecuencia.
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \`On Header Cl
 
-Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existentes).
+Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
 #### Gramática JSON
 
@@ -52,6 +52,7 @@ Hay tres opciones disponibles:
 | Agrandar | "grow"     | El mismo porcentaje se aplica al ancho del objeto cuando el usuario redimensiona el ancho de la ventana,                                              |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad a la izquierda o a la derecha que el aumento del ancho cuando el usuario redimensiona el ancho de la ventana, |
 | Ninguno  | "fixed"    | El objeto permanece inmóvil cuando se cambia el tamaño del formulario                                                                                 |
+
 > Esta propiedad funciona junto con la propiedad [Dimensionamiento vertical](#tamaño-vertical).
 
 #### Gramática JSON
@@ -62,7 +63,7 @@ Hay tres opciones disponibles:
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -77,6 +78,7 @@ Hay tres opciones disponibles:
 | Agrandar | "grow"     | El mismo porcentaje se aplica a la altura del objeto cuando el usuario redimensiona el ancho de la ventana,                                           |
 | Mover    | "move"     | El objeto se desplaza la misma cantidad hacia arriba o hacia abajo que el aumento de la altura cuando el usuario redimensiona el ancho de la ventana, |
 | Ninguno  | "fixed"    | El objeto permanece inmóvil cuando se cambia el tamaño del formulario                                                                                 |
+
 > Esta propiedad funciona junto con la propiedad [Dimensionamiento horizontal](#horizontal-sizing).
 
 #### Gramática JSON
@@ -87,7 +89,7 @@ Hay tres opciones disponibles:
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
 ---
 
@@ -95,7 +97,8 @@ Hay tres opciones disponibles:
 
 Cuando un objeto splitter tiene esta propiedad, los otros objetos a su derecha (splitter vertical) o debajo de él (separador horizontal) son empujados al mismo tiempo que el splitter, sin parar.
 
-Here is the result of a “pusher” splitter being moved: ![](../assets/en/FormObjects/splitter_pusher1.png)
+Here is the result of a “pusher” splitter being moved:
+![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)
 
@@ -105,13 +108,13 @@ Cuando esta propiedad no se aplica al splitter, el resultado es el siguiente:
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos |           Valores posibles           |
-|:------------ |:--------------:|:------------------------------------:|
+| Nombre       | Tipos de datos |                              Valores posibles                              |
+| :----------- | :------------: | :------------------------------------------------------------------------: |
 | splitterMode |     string     | "move" (pusher), "resize" (standard) |
 
 #### Objetos soportados
 
-[Separador](splitters.md)
+[Separadores](splitters.md)
 
 ---
 
@@ -122,9 +125,9 @@ Designa si el tamaño de la columna puede ser modificado por el usuario.
 #### Gramática JSON
 
 | Nombre          | Tipos de datos | Valores posibles |
-|:--------------- |:--------------:|:----------------:|
-| redimensionable |    boolean     | "true", "false"  |
+| :-------------- | :------------: | :--------------: |
+| redimensionable |     boolean    |  "true", "false" |
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)

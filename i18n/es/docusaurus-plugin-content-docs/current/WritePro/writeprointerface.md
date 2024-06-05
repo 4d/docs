@@ -7,7 +7,7 @@ title: Interfaz 4D Write Pro
 
 Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 
-La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
+La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual _Diseño 4D_.
 
 A continuación encontrará la documentación de configuración del Asistente para tablas.
 
@@ -39,7 +39,7 @@ Dependiendo de si el usuario selecciona un modelo o una tabla, puede ver la list
 
 ![](../assets/en/WritePro/rows.PNG)
 
-En el Asistente de tablas, el usuario también puede definir el número de líneas de encabezado y de líneas adicionales (de 0 a 5 cada una), definir [líneas de interrupción](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (líneas de resumen) por encima o por debajo de la línea de datos, y elegir mostrar/ocultar [líneas de arrastre](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
 ##### En pantalla:
 
@@ -55,9 +55,9 @@ Una vez integrada la tabla en el documento, el usuario puede personalizar su est
 
 La configuración de las plantillas incluye:
 
-* Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
-* Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
-* Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
+- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 Estos tres tipos de archivos contribuyen a la configuración del Asistente para tablas y, aunque cada uno de ellos tiene una finalidad distinta, ninguno de ellos se considera un componente esencial.
 
@@ -76,33 +76,33 @@ En la implementación actual (4D v20 R2), las fórmulas en saltos, fuentes de da
 
 :::
 
-El archivo de plantilla debe almacenarse en una carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dentro de su proyecto.
+The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
 El archivo de plantilla en formato JSON contiene los siguientes atributos:
 
-| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                              |
-|:-------------------- |:---------- |:----------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| tableDataSource      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                                |
-| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                           |
-| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                                   |
-| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
-| columns.source       | Text       | x           | Formula                                                                                                                                                                  |
-| breaks               | Collection |             | Colección de objetos de ruptura. El orden de las interrupciones es importante. Corresponde al orden en el documento cuando las rupturas están sobre las líneas de datos. |
-| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                                  |
-| breakFormulas        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                       |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                       |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                  |
-| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                          |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                  |
+| Atributo                             | Tipo       | Obligatorio | Descripción                                                                                                                                                                                                              |
+| :----------------------------------- | :--------- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource                      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                                                                                |
+| columns                              | Collection | x           | Colección de columnas de tabla                                                                                                                                                                                           |
+| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                                                   |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
+| columns.source       | Text       | x           | Formula                                                                                                                                                                                                                  |
+| breaks                               | Collection |             | Colección de objetos de ruptura. El orden de las interrupciones es importante. Corresponde al orden en el documento cuando las rupturas están sobre las líneas de datos. |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                                                                                  |
+| breakFormulas                        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                                                                       |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                  |
+| bcorFormulas                         | Collection |             | Colección de objetos de fórmula aplicables a las filas de transferencia inferiores                                                                                                                                       |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                                                                  |
+| extraFormulas                        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                                                                          |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                  |
 
 :::note Francés
 
-Si es probable que su aplicación se ejecute en un 4D con el idioma configurado en francés, asegúrese de utilizar [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) en sus fórmulas para que se interpreten correctamente independientemente de la configuración de idioma del usuario.
+If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
 
 :::
 
@@ -135,7 +135,7 @@ He aquí un breve ejemplo del aspecto que podría tener su archivo JSON:
     "breakFormulas": [{
             "label": "Company",
             "source": "This.item.toCompany.name"
-    }, {
+	}, {
             "label": "Sum of salaries",
             "source": "String(This.breakItems.sum(\"salary\"); \"###,###.00\")"
         }
@@ -156,23 +156,23 @@ He aquí un breve ejemplo del aspecto que podría tener su archivo JSON:
 
 #### Archivos de traducción
 
-Los archivos de traducción traducen los nombres de plantillas, temas, tablas, campos y fórmulas. Estos archivos se añaden a la carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" de su proyecto.
+Los archivos de traducción traducen los nombres de plantillas, temas, tablas, campos y fórmulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
 
 Cada archivo de traducción debe nombrarse con el código de idioma correspondiente (por ejemplo, "en" para inglés o "fr" para francés).
 
 El archivo de traducción en formato JSON contiene los siguientes atributos:
 
-| Atributo  | Tipo       | Obligatorio | Descripción                                                                               |
-|:--------- |:---------- |:----------- |:----------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Colección de objetos de tabla traducidos                                                  |
-| fields    | Collection |             | Colección de objetos de campo traducidos                                                  |
-| formulas  | Collection |             | Colección de objetos fórmula traducidos                                                   |
+| Atributo  | Tipo       | Obligatorio | Descripción                                                                                                  |
+| :-------- | :--------- | :---------- | :----------------------------------------------------------------------------------------------------------- |
+| tablas    | Collection |             | Colección de objetos de tabla traducidos                                                                     |
+| fields    | Collection |             | Colección de objetos de campo traducidos                                                                     |
+| formulas  | Collection |             | Colección de objetos fórmula traducidos                                                                      |
 | fileNames | Collection |             | Colección de objetos fileName traducidos (aplicables al tema y al nombre de la plantilla) |
 
 En cada uno de estos atributos, el objeto de traducción incluye los atributos siguientes:
 
 | Atributo    | Tipo | Obligatorio | Descripción                           |
-|:----------- |:---- |:----------- |:------------------------------------- |
+| :---------- | :--- | :---------- | :------------------------------------ |
 | original    | Text | x           | Texto original destinado a traducción |
 | translation | Text | x           | Versión traducida del texto original  |
 
@@ -211,41 +211,40 @@ El archivo de traducción cumple una función adicional cuando un usuario selecc
         }
     ]
 }
-
+    
 ```
 
 #### Archivos de temas
 
-El componente 4D Write Pro Interface proporciona por defecto una lista de temas, como "Arial", "CourierNew" y "YuGothic", disponibles en múltiples variaciones como "Blue" y "Green". Sin embargo, puede crear su propio tema colocándolo en la carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" dentro de su proyecto.
+El componente 4D Write Pro Interface proporciona por defecto una lista de temas, como "Arial", "CourierNew" y "YuGothic", disponibles en múltiples variaciones como "Blue" y "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
 
 El archivo del tema en formato JSON contiene los siguientes atributos:
 
-| Atributo | Tipo   | Obligatorio | Descripción                                                                                                                                            |
-|:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| default  | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                                                |
-| table    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                      |
-| rows     | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                                              |
-| cells    | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                                              |
-| header1  | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                                               |
-| header2  | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea del encabezado.                                                               |
-| header3  | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea del encabezado.                                                               |
-| header4  | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea del encabezado.                                                                |
-| header5  | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea del encabezado.                                                                |
-| headers  | Object |             | Objeto que contiene la definición de estilo aplicable a las líneas de encabezado, si no se define un encabezado específico (como header1, header2...). |
-| data     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de datos repetida.                                                                    |
-| break1   | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea de ruptura.                                                                   |
-| break2   | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea de ruptura.                                                                   |
-| break3   | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea de ruptura.                                                                   |
-| break4   | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea de ruptura.                                                                    |
-| break5   | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea de ruptura.                                                                    |
-| breaks   | Object |             | Objeto que contiene la definición de estilo aplicable a las líneas de ruptura, si no se define una ruptura específica (como break1, break2...).        |
-| bcor     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de arrastre inferior.                                                                 |
+| Atributo | Tipo   | Obligatorio | Descripción                                                                                                                                                                                                                |
+| :------- | :----- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                                                                                                    |
+| tabla    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                                                                          |
+| rows     | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                                                                                                  |
+| cells    | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                                                                                                  |
+| header1  | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                                                                                                   |
+| header2  | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea del encabezado.                                                                                                                   |
+| header3  | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea del encabezado.                                                                                                                   |
+| header4  | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea del encabezado.                                                                                                                    |
+| header5  | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea del encabezado.                                                                                                                    |
+| headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) no está definido. |
+| data     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de datos repetida.                                                                                                                        |
+| break1   | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea de ruptura.                                                                                                                       |
+| break2   | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea de ruptura.                                                                                                                       |
+| break3   | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea de ruptura.                                                                                                                       |
+| break4   | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea de ruptura.                                                                                                                        |
+| break5   | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea de ruptura.                                                                                                                        |
+| breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) no está definido.     |
+| bcor     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de arrastre inferior.                                                                                                                     |
 
-
-Por cada atributo usado en su archivo JSON (encabezado, datos, arrastre, resumen y líneas adicionales) puede definir los siguientes atributos WP, mencionados con su [constante WP correspondiente](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
+For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
 | Atributos WP    | Constante WP correspondiente |
-|:--------------- |:---------------------------- |
+| :-------------- | :--------------------------- |
 | textAlign       | wk text align                |
 | backgroundColor | wk background color          |
 | borderColor     | wk border color              |
@@ -292,9 +291,9 @@ Por cada atributo usado en su archivo JSON (encabezado, datos, arrastre, resumen
            "fontSize": "15pt"
     }
 }
-
+    
 ```
 
 #### Ver también
 
-[4D Write Pro - Asistente de tablas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)

@@ -5,7 +5,7 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Syntax -->
 
-**VP Name** ( _vpAreaName_ : Text ; _rangeName_ : Text { ; _sheet_ : Integer }  ) : Object <!-- END REF -->
+**VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
 
 <!-- REF #_method_.VP Name.Params -->
 
@@ -14,17 +14,17 @@ title: VP Name
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                |                  |
 | rangeName  | Text    | -> | Nom de plage existante                                                 |                  |
 | sheet      | Integer | -> | Emplacement de la plage (si omis, feuille courante) |                  |
-| Résultat   | Object  | <- | Range object of name                                                   | <!-- END REF --> |
+| Résultat   | Object  | <- | Plage nommée                                                           | <!-- END REF --> |
 
 #### Description
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _rangeName_ parameter specifies an existing named cell range.
+The *rangeName* parameter specifies an existing named cell range.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where _rangeName_ is defined. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
+In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`

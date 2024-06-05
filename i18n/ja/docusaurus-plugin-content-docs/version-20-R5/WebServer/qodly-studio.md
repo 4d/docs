@@ -47,7 +47,8 @@ Qodly Studio は、以下の Webブラウザーをサポートしています:
 - 開発: 4D v20 R2 以上
 - 運用: 4D Server v20 R2 以上
 - Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
-
+- Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
+- Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
 
 ### Qodly Studio へのアクセスを有効化する
 
@@ -57,9 +58,8 @@ Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって�
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-* 4Dレベルで (4D または 4D Server)
-* プロジェクトレベルで
-
+- 4Dレベルで (4D または 4D Server)
+- プロジェクトレベルで
 
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
 
@@ -83,11 +83,9 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 [ユーザー設定](../settings/overview.md) はいくつかのレベルで定義でき、優先順位が適用されることに留意してください。
 
-
 ### 認証を有効化する
 
 WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
-
 
 ### プロジェクト管理
 
@@ -96,19 +94,16 @@ WebAdmin Webサーバーでの認証には、アクセスキーを使用しま�
 - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
 - Qodlyフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
-
-
-
-
 ## Qodly Studio を開く
 
 Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](../Admin/webAdmin.md#開始と停止)、認証が有効化されている場合に使用できます (上述参照)。
 
 Qodly Studio にアクセスするには 2つの方法があります:
 
-* 4Dシングルユーザーアプリケーションから、**デザイン** > **Qodly Studio...** を選択します。 WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
+- 4Dシングルユーザーアプリケーションから、**デザイン** > **Qodly Studio...** を選択します。
+  WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
-* 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:
+- 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:
 
 `IPaddress:HTTPPort/studio`
 
@@ -122,16 +117,15 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
 
-
 ## Qodly Studio を使う
 
-### ドキュメント
+### Documentation
 
 公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
-Qodlyフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します ([機能の比較](#機能の比較)) 参照)。
+Qodlyフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します ([機能の比較](#機能の比較) 参照)。
 
-コードの例は [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 詳細については、[QodlyScript から 4Dランゲージへ](from-qodlyscript-to-4d.md) を参照ください。
+コードの例は [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 詳細については、[QodlyScript から 4Dランゲージへ](#qodlyscript-から-4dランゲージへ) を参照ください。
 
 :::info
 
@@ -141,19 +135,18 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 
 ### 機能の比較
 
-|                                         | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                              | Qodlyデベロッパー向けの Qodly Studio                                                  |
-| --------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                                                    |
-| Qodlyフォーム                               | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor                                                  |
-| デスクトップフォーム                              | 4D IDE                                                                             | *サポートされていません*                                                                |
-| プログラミング言語                               | 4Dランゲージ (ORDA を使用)                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
-| コーディング IDE                              | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                                                        |
-| デバッガー                                   | 4D IDE デバッガー                                                                       | Qodly Studio デバッガー                                                           |
-| REST/Web ロールとアクセス権                      | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                     | Qodly Studio ロールとアクセス権エディター                                                  |
+|                                                                               | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                                                 | Qodlyデベロッパー向けの Qodly Studio                                                                     |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                                                                       |
+| Qodlyフォーム                                                                     | Qodly Studio Webform Editor                                                                           | Qodly Studio Webform Editor                                                                     |
+| デスクトップフォーム                                                                    | 4D IDE                                                                                                | _サポートされていません_                                                                                   |
+| プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
+| コーディング IDE                                                                    | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                                                                           |
+| デバッガー                                                                         | 4D IDE デバッガー                                                                                          | Qodly Studio デバッガー                                                                              |
+| REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                        | Qodly Studio ロールとアクセス権エディター                                                                     |
 
-(1) Qodly Studio で **Model** ボタンをクリックしても、何も起こりません。 (2) Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
-
-
+(1) Qodly Studio で **Model** ボタンをクリックしても、何も起こりません。
+(2) Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### ランゲージ
 
@@ -164,7 +157,6 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 - [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyフォームを管理する関数とプロパティを持ちます。
 - [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyフォームのコンポーネントを管理する関数とプロパティを持ちます。
 
-
 ### プロジェクトメソッドを使用する
 
 推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
@@ -172,14 +164,12 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 - クラス関数からメソッドを呼び出すことができます。
 - Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
-
 ### オフラインでの使用
 
 コンピュータがインターネットに接続されていない状態でも、Qodly Studio を使って開発することができます。 ただしこの場合、以下の機能は使用できません:
 
 - [テンプレート](https://developer.qodly.com/docs/studio/design-webforms/templates): テンプレートライブラリは空です。
 - UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
-
 
 ## 運用
 
@@ -195,8 +185,8 @@ Qodly で Qodlyフォームをレンダリングする方法の詳細につい�
 
 Qodlyフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
-* 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
-* [4D Webサーバー](webServer.md) を起動しておく必要があります。
+- 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
+- [4D Webサーバー](webServer.md) を起動しておく必要があります。
 
 :::note
 
@@ -208,13 +198,9 @@ Qodlyフォームのレンダリングを有効にするには、以下のオプ
 
 Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[4D WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。
 
-
 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
 
 しかし、実際のフォームのレンダリングは Qodly Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
-
-
-
 
 ### Qodlyフォームへのアクセス
 
@@ -226,16 +212,13 @@ Qodlyフォームは以下の URL からダウンロードできます:
 IP:port/$lib/renderer/?w=QodlyFormName
 ```
 
-*IP:port* は Webサーバーのアドレスを表し、*QodlyFormName* は Qodlyフォームの名前です。
+_IP:port_ は Webサーバーのアドレスを表し、_QodlyFormName_ は Qodlyフォームの名前です。
 
 例:
 
 ```
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
-
-
-
 
 ## 強制ログイン
 
@@ -276,23 +259,21 @@ $salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
 $sp:=$salesPersons.first()
 
 If ($sp#Null)
-    If (Verify password hash($credentials.password; $sp.password))
+	If (Verify password hash($credentials.password; $sp.password))
 
-        Session.clearPrivileges()
-        Session.setPrivileges("") // ゲストセッション
+		Session.clearPrivileges()
+		Session.setPrivileges("") // ゲストセッション
 
-        return "認証に成功しました"
-    Else 
-        return "パスワードに誤りがあります"
-    End if
+		return "認証に成功しました"
+	Else 
+		return "パスワードに誤りがあります"
+	End if
 Else 
-    return "ユーザーは登録されていません"
-End if 
+	return "ユーザーは登録されていません"
+End if
 ```
 
 この呼び出しは許可されており、そして認証が成功しない限り `Session.setPrivileges()` は実行されないため、ライセンスは消費されません。 `Session.setPrivileges()` が呼び出されると、4Dクライアントライセンスが消費され、その後はすべての RESTリクエストが受け入れられます。
-
-
 
 ### ログアウト
 
@@ -308,9 +289,6 @@ Webユーザーセッションからログアウトアクションをトリガ�
 - 関連する 4Dライセンスが解放されます。
 - `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
 
-
-
-
 ## レンダリングのためのライセンス消費について
 
 QodlyフォームのレンダリングはプロジェクトデータベースのメインWebサーバーを対象とするため、デフォルトモードではあらゆるフォームがレンダリングされるとき、また、"強制ログイン" モードではデータ処理や関数を実行するフォームがレンダリングされるときに、利用可能なライセンスが必要です。
@@ -319,7 +297,7 @@ Qodlyフォームのレンダリングはプロジェクトデータベースの
 
 Qodly Studio の URLスキーム設定 (HTTP および HTTPS) によって、Qodlyフォームのレンダリング時に使用されるライセンスの数が決まります。 適切な設定により、不要なライセンスの使用を回避できます。
 
-[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。
+[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。 そのため、従来の 4Dクライアントと同じように動作します。
 
 Qodly Studio からレンダラーを実行する際、これら 2つの Webサーバーに同じ URLスキーム (HTTP または HTTPS) 経由でアクセスしていない場合には、ライセンスのカウントが正しくおこなわれない可能性があります。
 
@@ -359,11 +337,8 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
 - プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 
-
-
-
 ## Hello, World
 
 この 5分間のビデオでは "Hello World" の例を説明します。まず、Qodly Studio へのアクセスを有効にし、基本的なインターフェースを作成して、ユーザー名を使って挨拶をするイベントを設定します。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

@@ -5,25 +5,25 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->
 
-**VP SET WORKBOOK OPTIONS** ( _vpAreaName_ : Text ; _optionObj_ : Object)<!-- END REF -->
+**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                        |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro       |                  |
-| optionObj  | Object | -> | Object containing the workbook options to be set | <!-- END REF --> |
+| Parâmetro  | Tipo   |    | Descrição                                      |                  |
+| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro     |                  |
+| optionObj  | Object | -> | Objeto que contém as opções do livro a definir | <!-- END REF --> |
 
 #### Descrição
 
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
-sets the workbook options in _vpAreaName_<!-- END REF -->.
+sets the workbook options in *vpAreaName*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em _optionObj_, passe as opções da pasta de trabalho a serem aplicadas a _vpAreaName_.
+Em *optionObj*, passe as opções da pasta de trabalho a serem aplicadas a *vpAreaName*.
 
-If _optionObj_ is empty, the command does nothing.
+If *optionObj* is empty, the command does nothing.
 
 As opções modificadas do livro são guardadas com o documento.
 

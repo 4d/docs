@@ -13,7 +13,7 @@ title: VP SET DATA CONTEXT
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Syntax -->
 
-**VP SET DATA CONTEXT** ( _vpAreaName_ : Text ; _dataObj_ : Object {; _options_ : Object } {; _sheet_ : Integer} )<br/>**VP SET DATA CONTEXT** ( _vpAreaName_ : Text ; _dataColl_ : Collection ; {_options_ : Object } {; _sheet_ : Integer} )<!-- END REF -->
+**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
@@ -29,25 +29,25 @@ title: VP SET DATA CONTEXT
 
 The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. On the other hand, the [VP Get data context](vp-get-data-context.md) command can return a context containing user modifications.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-In _dataObj_ or _dataColl_, pass an object or a collection containing the data to load in the data context. Les images sont converties en schémas URI de données.
+In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. Les images sont converties en schémas URI de données.
 
-To pass a time value in _dataObj_ or _dataColl_, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
+To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
 
 | Propriété | Type                                     | Description                                                             |
 | --------- | ---------------------------------------- | ----------------------------------------------------------------------- |
 | value     | Integer, Real, Boolean, Text, Date, Null | Valeur à placer dans le contexte                                        |
 | time      | Real                                     | Valeur heure (en secondes) à placer dans le contexte |
 
-In _options_, you can pass an object that specifies additional options. Il peut contenir les propriétés suivantes :
+In *options*, you can pass an object that specifies additional options. Il peut contenir les propriétés suivantes :
 
 | Propriété           | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reset               | Object | Vrai pour réinitialiser le contenu de la feuille avant de charger le nouveau contexte, Faux (par défaut) dans le cas contraire.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| autoGenerateColumns | Object | Utilisé uniquement lorsque les données sont une collection. Vrai (par défaut) pour spécifier que les colonnes doivent être générées automatiquement lorsque le contexte de données est lié. In this case, the following rules apply: <ul><li>If _dataColl_ is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If _dataColl_ contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). The first subcollection determines how many columns are created.</li></ul> |
+| autoGenerateColumns | Object | Utilisé uniquement lorsque les données sont une collection. Vrai (par défaut) pour spécifier que les colonnes doivent être générées automatiquement lorsque le contexte de données est lié. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). The first subcollection determines how many columns are created.</li></ul> |
 
-In _sheet_, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
+In *sheet*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
 
 If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. For more details, refer to the description of those methods.
 
@@ -93,7 +93,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 #### Exemple 3
 
-The _data_ passed as a parameter is a collection that contains subcollections. Each subcollection defines the contents of a row:
+The *data* passed as a parameter is a collection that contains subcollections. Each subcollection defines the contents of a row:
 
 ```4d
 var $data : Collection

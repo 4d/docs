@@ -3,10 +3,9 @@ id: methods
 title: Methods
 ---
 
-
 Une méthode est essentiellement un morceau de code qui exécute une ou plusieurs action(s). Une méthode est composée d'instructions.
 
-Une instruction exécute une action, et peut être simple ou complexe. Chaque instruction tient généralement sur une ligne dans la méthode (si nécessaire, elle peut toutefois être scindée [à l'aide du caractère `\`](quick-tour.md#code-sur-plusieurs-lignes)).
+Une instruction exécute une action, et peut être simple ou complexe. Chaque instruction tient généralement sur une ligne dans la méthode (si nécessaire, elle peut toutefois être [scindée à l'aide du caractère `\`](quick-tour.md#code-sur-plusieurs-lignes)).
 
 La taille maximale d'une méthode est limitée à 2 Go de texte ou à 32 000 lignes de code.
 
@@ -14,15 +13,14 @@ La taille maximale d'une méthode est limitée à 2 Go de texte ou à 32 000 lig
 
 Dans le langage 4D, il existe plusieurs catégories de méthodes. La catégorie dépend de la façon dont on peut les appeler :
 
-| Type                             | Contexte d'appel                                                                                                            | Accepte des paramètres | Description                                                                                                                                                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Méthode**                      | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods)) | Oui                    | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                       |
-| **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                            | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
-| **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                                      | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
-| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                  | Non                    | Propriété d'une table. Les triggers sont des méthodes qui permettent d'éviter les opérations "illégales" sur les enregistrements de votre base de données.                                                              |
-| **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                                       | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D.                                                                                                                                                                                     |
-| **Classe**                       | [**Les fonctions de classes**](classes.md#function) sont appelées dans le contexte d'une instance d'objet                   | oui                    | Les fonctions de classes peuvent être intégrées au langage 4D (par exemple `collection.orderBy()` ou `entity.save()`), ou créées par le développeur 4D. Voir [**Classes**](classes.md)                                  |
-
+| Type                                                | Contexte d'appel                                                                                                                               | Accepte des paramètres             | Description                                                                                                                                                                                                                                             |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Méthode projet**                                  | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods)) | Oui                                | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                       |
+| **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                                               | Non                                | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                                            |
+| **Méthode formulaire**                              | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                                                         | Non                                | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
+| **Trigger** (ou _méthode table_) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                  | Non                                | Propriété d'une table. Les triggers sont des méthodes qui permettent d'éviter les opérations "illégales" sur les enregistrements de votre base de données.                                                              |
+| **Méthode base**                                    | Automatique, lorsqu'un événement se produit sur la session de travail                                                                          | Oui (prédéfini) | Il existe 16 méthodes base dans 4D.                                                                                                                                                                                                     |
+| **Type**                                            | [**Les fonctions de classes**](classes.md#function) sont appelées dans le contexte d'une instance d'objet                                      | oui                                | Les fonctions de classes peuvent être intégrées au langage 4D (par exemple `collection.orderBy()` ou `entity.save()`), ou créées par le développeur 4D. Voir [**Classes**](classes.md)                               |
 
 ## Méthodes projet
 
@@ -40,7 +38,7 @@ Vous pouvez également exécuter les méthodes projet manuellement, à des fins 
 
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes (méthode projet, méthode objet, etc.) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez alors appeler la méthode projet à partir d'une autre méthode (méthode projet, méthode objet...) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -110,7 +108,7 @@ La syntaxe avec des crochets est également prise en charge :
 $o["custom_Alert"]() //affiche "Hello world!"
 ```
 
-Vous pouvez appeler votre formule en lui [passant des paramètres](Concepts/parameters.md) $1, $2, etc., tout comme pour les méthodes projet de 4D :
+Vous pouvez également [passer des paramètres](Concepts/parameters.md) à votre formule lorsque vous l'appelez en utilisant $1, $2… tout comme avec les méthodes de projet 4D:
 
 ```4d
 //méthode fullName
@@ -128,7 +126,7 @@ $result:=$o.full_name("John";"Smith")
 //équivalent à $result:=fullName("param1";"param2")
 ```
 
-Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple :
+Lorsqu'elles sont associées à la fonction `This`, ces méthodes objet vous permettent d'écrire du code générique très puissant. Par exemple :
 
 ```4d
 //méthode fullName2 
@@ -157,13 +155,13 @@ $o:=$f.message //retourne l'objet formule en $o
 
 Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. En créant des menus personnalisés qui appellent des méthodes de menu qui exécutent des actions spécifiques, vous créez des interfaces personnalisées pour vos applications de bureau.
 
-Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.
+Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouve
 
 L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre application.
 
 ### Méthodes de gestion de process
 
-Une **méthode projet** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété *Démarrer un nouveau process* est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
+Une **méthode process** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété _Démarrer un nouveau process_ est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
 
 ### Méthodes de gestion d’événements et d'erreurs
 
@@ -184,7 +182,7 @@ Vous pouvez exécuter les méthodes de deux manières :
 
 #### Depuis l'éditeur de code
 
-Chaque fenêtre de l'[**éditeur de code**](../code-editor/write-class-method.md) dispose d'un bouton qui peut être utilisé pour exécuter la méthode en cours. A l'aide du menu associé à ce bouton, vous pouvez choisir le type d'exécution souhaité.
+Chaque fenêtre de l'[**Éditeur de code**](../code-editor/write-class-method.md) dispose d'un bouton qui peut être utilisé pour exécuter la méthode courante. A l'aide du menu associé à ce bouton, vous pouvez choisir le type d'exécution souhaité.
 
 Ce bouton est uniquement actif pour les méthodes projet et pour les méthodes base suivantes :
 
@@ -203,12 +201,12 @@ Cette boîte de dialogue répertorie toutes les méthodes projet de la base, y c
 
 Pour exécuter une méthode de projet, il suffit de sélectionner son nom dans la liste et de cliquer sur **Exécuter**. Pour exécuter une méthode étape par étape en mode Debug, cliquez sur **Debug**. Pour plus d'informations sur le débogueur 4D, reportez-vous à la section [Debugging](../Debugging/basics.md) .
 
-Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. Pour plus d'informations sur les process, reportez-vous à la section [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) dans le *manuel de référence du langage 4D*.
+Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. Pour plus d'informations sur les process, reportez-vous à la section [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) dans le _manuel de référence du langage 4D_.
 
 **Notes 4D Server**:
 
-- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
-- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes de travail clients n'apparaîtront pas dans le menu, à moins qu'ils n'aient été préalablement "enregistrés" (pour plus d'informations, reportez-vous à la description de la commande [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
+- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé _procédure stockée_, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
+- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes de travail clients n'apparaîtront pas dans le menu, à moins qu'ils n'aient été préalablement "enregistrés" (pour plus d'informations, reportez-vous à la description de la commande [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/e
 
 Par défaut, l'option **En local** est sélectionnée. Avec la version mono-utilisateur de 4D, c'est la seule option disponible.
 
@@ -231,21 +229,21 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 1. Vous pouvez procéder de la manière suivante :
 
 ```4d
- $vsName:=Request("Saisissez le nom :";"John")
- Si(OK=1)
-    QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
-    If(Records in selection([Amis et parents])>0)
-       $vtHistoireComplète:="Un de mes amis, "+$vsName
+ $vsName:=Request("Enter the name:";"John")
+ If(OK=1)
+    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
+    If(Records in selection([Friends and Relatives])>0)
+       $vtTheWholeStory:="A friend of mine, "+$vsName
        Repeat
-          QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$vsName)
-          $vlResultRecherche:=Records in selection([Amis et parents])
-          If($vlResultRecherche>0)
-             $vtHistoireComplète:=$vtHistoireComplète+" qui est le rejeton de "+[Amis et parents]Nom
-             $vsName:=[Amis et parents]Nom
+          QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$vsName)
+          $vlQueryResult:=Records in selection([Friends and Relatives])
+          If($vlQueryResult>0)
+             $vtTheWholeStory:=$vtTheWholeStory+" who is the child of "+[Friends and Relatives]Name
+             $vsName:=[Friends and Relatives]Name
           End if
-       Until($vlResultRecherche=0)
-       $vtHistoireComplète:=$vtHistoireComplète+", fait cela pour gagner sa vie !"
-       ALERT($vtHistoireComplète)
+       Until($vlQueryResult=0)
+       $vtTheWholeStory:=$vtTheWholeStory+", does this for a living!"
+       ALERT($vtTheWholeStory)
     End if
  End if
 ```
@@ -253,30 +251,30 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 2. Vous pouvez également procéder ainsi :
 
 ```4d
- $vsName:=Request("Saisissez le nom :";"John")
-  If(OK=1)
-    QUERY([Amis et parents];[Amis et parents]Nom=$vsName)
-    If(Records in selection([Amis et parents])>0)
-       ALERT("Un de mes amis, "+Généalogie de($vsName)+", fait cela pour gagner sa vie !")
+ $vsName:=Request("Enter the name:";"John")
+ If(OK=1)
+    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
+    If(Records in selection([Friends and Relatives])>0)
+       ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
     End if
  End if
 ```
 
-en utilisant la fonction récursive `Généalogie de` suivante :
+en utilisant la fonction récursive `Genealogy of` suivante :
 
 ```4d
-  // Méthode projet Généalogie de
-  // Généalogie de ( Chaîne ) -> Texte
-  // Généalogie de ( Nom ) -> Partie de la phrase
-
+  ` Genealogy of project method
+  ` Genealogy of ( String ) -> Text
+  ` Genealogy of ( Name ) -> Part of sentence
+ 
  $0:=$1
- QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$1)
-If(Enregistrements trouves([Amis et parents])>0)
-    $0:=$0+" qui est le rejeton de "+Généalogie de([Amis et parents]Nom)
-End if
+ QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
+ If(Records in selection([Friends and Relatives])>0)
+    $0:=$0+" who is the child of "+Genealogy of([Friends and Relatives]Name)
+ End if
 ```
 
-Vous notez que la méthode `Généalogie de` s'appelle elle-même.
+Vous notez que la méthode `Genealogy of` s'appelle elle-même.
 
 La première manière de procéder utilise un **algorithme itératif**. La seconde manière utilise un **algorithme récursif**.
 

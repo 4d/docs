@@ -3,7 +3,6 @@ id: forms
 title: Página Formulários
 ---
 
- 
 Esta página permite-lhe definir a operação e o ecrã padrão do editor de formulários de 4D.
 
 ## Mover
@@ -12,24 +11,23 @@ Este grupo de opções define parâmetros para mover objetos utilizando o teclad
 
 ### Passo utilizando o teclado
 
-This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
+Esta opción permite establecer el valor (en puntos) del paso utilizado para mover o redimensionar un objeto utilizando el teclado y la tecla **Mayús**.
 
 ### Ao ultrapassar os limites da janela
 
 This option allows setting the behavior of the Form editor when moving an object using the mouse beyond window limits.
 
-*   **Autoscroll**: When this option is checked, this action causes the scroll of the form in the window, as if you clicked on the scroll bars. Esse comportamento é útil para mover objetos em formulários grandes.
-*   **Start drag and drop**: When this option is checked, this action is interpreted as a drag and drop. The form window is not modified and the moved object can be dropped in another window (if its contents are compatible), for example, in another form. This behavior is useful for recycling objects among several forms or using object libraries (see [Creating and using custom object libraries](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
+- **Provocar un desplazamiento automático**: cuando esta opción está marcada, esta acción provoca el desplazamiento del formulario en la ventana, como si se hiciera clic en las barras de desplazamiento. Esse comportamento é útil para mover objetos em formulários grandes.
+- **Comenzar un arrastrar y soltar**: cuando se marca esta opción, esta acción se interpreta como un arrastrar y soltar. The form window is not modified and the moved object can be dropped in another window (if its contents are compatible), for example, in another form. Este funcionamiento es útil para reciclar los objetos entre varios formularios o para utilizar las librerías de objetos (ver [Crear y utilizar librerías de objetos personalizadas](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
 
 You can configure this option depending on your work habits and development needs.
 
 ### Ativar o alinhamento automático por padrão
 
-This option activates auto alignment by default in each new window of the Form editor. It is possible to modify this option individually in each window (refer to [Using the magnetic grid](FormEditor/formEditor.md#using-the-magnetic-grid)).
+This option activates auto alignment by default in each new window of the Form editor. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
 
 ## Exibição padrão do novo formulário
 
-- **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor.
-- **Color for marker lines**: modifies the color of the marker lines used in the Form editor to define the different areas (header, breaks, detail and footer, etc.). Para obter mais informações sobre marcadores, consulte [Usando linhas de controle de saída](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).
-- **Default display shield**: sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
-
+- **Limites**, **Reglas**, ...: elementos de control que deben mostrarse por defecto en cada nueva ventana del editor de formularios. Es posible modificar la visualización de cada ventana individualmente utilizando el menú jerárquico **Mostrar** del editor de formularios.
+- **Color de las líneas de marcado**: modifica el color de las líneas de marcado utilizadas en el editor de formularios para definir las diferentes áreas (encabezado, rupturas, detalle y pie de página, etc.). Para obtener más información sobre los marcadores, consulte [Utilizar las líneas de control de salida](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).
+- **Marca de visualización por defecto**: define qué marcas se mostrarán por defecto en cada nueva ventana del editor de formularios. Para más información sobre marcas, consulte [Utilizar marcas](FormEditor/formEditor.md#using-shields).

@@ -10,7 +10,7 @@ Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types d
 Une fois créée, vous pouvez utiliser une variable partout dans votre application. Par exemple, vous pouvez stocker une variable de type texte dans un champ du même type :
 
 ```4d
- [MyTable]MyField:=MyText
+ [MaTable]MonChamp:=MonTexte
 ```
 
 Les variables sont des objets du langage; vous pouvez créer et utiliser des variables qui n’apparaîtront jamais à l'écran. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
@@ -29,9 +29,9 @@ When variables are declared, they are initialized to the [**default value corres
 Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //MyDate est créé 
+ // 4D identifie le type date  
+ // et affecte la date courante + 30 jours
 ```
 
 When a variable is created before being declared, it is not initialized at the declaration step.
@@ -69,7 +69,7 @@ The following table lists all supported `varType` values:
 | `Date`                      | Valeur date                                                               |
 | `Time`                      | Valeur Heure                                                              |
 | `Boolean`                   | Valeur booléen                                                            |
-| `Integer`                   | Valeur entier long                                                        |
+| `Entier`                    | Valeur entier long                                                        |
 | `Real`                      | Valeur réel                                                               |
 | `Pointer`                   | Valeur pointeur                                                           |
 | `Picture`                   | Valeur image                                                              |
@@ -79,7 +79,7 @@ The following table lists all supported `varType` values:
 | `Object`                    | Objet de classe par défaut (4D.Object) |
 | `4D.<className>`            | Object de la classe 4D className                                          |
 | `cs.<className>`            | Object de la classe utilisateur className                                 |
-| `cs.<namespace><className>` | Object of the `<namespace>` component class name                          |
+| `cs.<namespace><className>` | Object de la classe className du composant `<namespace>`                  |
 
 ### Exemples
 
@@ -207,15 +207,15 @@ Lorsque vous développez un projet d'application comportant de nombreuses métho
 Souvent, dans une application, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
- $vsID:=Request("Please enter your ID:")
- If(OK=1)
-    QUERY([People];[People]ID =$vsID)
+ $vsID:=Request("Saisissez votre numéro d'identification :")
+If(OK=1)
+    QUERY([Personnes];[Personnes]ID=$vsID)
  End if
 ```
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Note:** Parameters $1, $2... passés à des méthodes sont des variables locales. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variables process
 

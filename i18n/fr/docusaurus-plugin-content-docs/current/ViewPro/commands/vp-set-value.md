@@ -5,29 +5,29 @@ title: VP SET VALUE
 
 <!-- REF #_method_.VP SET VALUE.Syntax -->
 
-**VP SET VALUE** ( _rangeObj_ : Object ; _valueObj_ : Object ) <!-- END REF -->
+**VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Paramètres | Type   |    | Description                    |                  |
-| ---------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objet plage                    |                  |
-| valueObj   | Object | -> | Cell values and format options | <!-- END REF --> |
+| Paramètres | Type   |    | Description                                   |                  |
+| ---------- | ------ | -- | --------------------------------------------- | ---------------- |
+| rangeObj   | Object | -> | Objet plage                                   |                  |
+| valueObj   | Object | -> | Valeurs de la cellule et options de formatage | <!-- END REF --> |
 
 #### Description
 
 The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in _rangeObj_, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
+The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. If _rangeObj_ includes multiple cells, the value specified will be repeated in each cell.
+In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The parameter _valueObj_ is an object that includes properties for the value and the [format](../configuring.md#cell-format) to assign to _rangeObj_. Il peut contenir les propriétés suivantes :
+The parameter *valueObj* is an object that includes properties for the value and the [format](../configuring.md#cell-format) to assign to *rangeObj*. Il peut contenir les propriétés suivantes :
 
 | Propriété | Type                                     | Description                                                                                                                                                                                             |
 | --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passez null pour effacer le contenu de la cellule.                                                     |
-| time      | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                                                      |
+| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to *rangeObj* (except- time). Passez null pour effacer le contenu de la cellule.                                                     |
+| time      | Real                                     | Time value (in seconds) to assign to *rangeObj*                                                                                                                                      |
 | format    | Text                                     | Modèle pour la propriété value/time. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
 
 #### Exemple

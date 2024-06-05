@@ -23,7 +23,6 @@ El área gráfica permite ver la evolución en tiempo real de varios parámetros
 
 Tenga en cuenta que cuando se selecciona esta opción, el desplazamiento del área gráfica se ralentiza, ya que un análisis eficaz de la memoria caché se realiza generalmente durante un período de observación bastante largo.
 
-
 ## Visión general del área
 
 El área "Visión general" ofrece diferente información sobre el sistema, la aplicación y las licencias instaladas en la máquina 4D Server.
@@ -35,7 +34,7 @@ El área "Visión general" ofrece diferente información sobre el sistema, la ap
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Generalmente, tendrá que verificar el [**Administrador de licencias**](Admin/licenses.md).
+Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
 
 ## Área Detalles
 

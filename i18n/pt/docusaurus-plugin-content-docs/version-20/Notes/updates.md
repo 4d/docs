@@ -67,7 +67,8 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 
 #### Mudanças de comportamento
 
-- A partir da v20.2, o 4D 20 LTS não é mais compatível com o Windows Server 2012 R2.
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
 - **Aviso**: O valor inicial do [`offset/deslocamento`](../API/FileHandleClass.md#offset) dos objetos [4D.FileHandle](../API/FileHandleClass.md) foi incorretamente definido como 1 em vez de 0. Foi feita uma correção no 4D a partir das versões **20.1 HF1** e **20 R2** e o valor agora é 0.
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Os certificados TLS agora são validados automaticamente por 4D ao enviar solicitações HTTP com [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) e rejeitados com um erro se forem inválidos. Uma nova propriedade *option* permite-lhe controlar esta validação.
@@ -190,7 +191,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - O [Code Editor](../code-editor/overview.md) agora inclui uma ferramenta suspensa e suporta marcadores para melhorar a navegação do código.
 - Novas Preferências: [**Incluir tokens nos arquivos de origem do projeto**](../Preferences/general.md#include-tokens-in-project-source-files) e a opção [**Mostrar pranchetas**](../Preferences/methods.md#show-clipboards) na página de Métodos.
 - New REST request to [lock/unlock](../REST/$lock.md) entities.
-- [4D View Pro](../ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
+- [4D View Pro](../ViewPro/getting-started.md) capítulo adicionado com novos comandos: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
 - Nova classe [SystemWorker](../API/SystemWorkerClass.md).
 - A constante `Alias selection` foi renomeada para `Allow alias files` para resolver um conflito resultante do suporte de atributos de alias no ORDA.
 - Para melhor conformidade com as especificações ORDA, a propriedade de campo *Map NULL values to blank values* agora está desmarcada por padrão em bancos de dados criados com 4D 19 R4 e superior. Você também pode ativar esse comportamento padrão em seus bancos de dados convertidos de versões anteriores selecionando a configuração de compatibilidade Mapear valores NULOS para valores em branco desmarcada por padrão na criação do campo. Agora é recomendável trabalhar com valores nulos, pois eles são totalmente compatíveis com o ORDA.
@@ -307,4 +308,3 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | PHP        | 8.2.4        | 20               |                                                                                                             |
 | libldap    | 2.6.4        | 20               |                                                                                                             |
 | libsasl    | 2.1.28       | 20               |                                                                                                             |
-

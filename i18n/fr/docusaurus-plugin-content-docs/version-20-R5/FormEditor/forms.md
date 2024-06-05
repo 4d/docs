@@ -3,15 +3,14 @@ id: forms
 title: Formulaires
 ---
 
-
 Les formulaires fournissent l'interface par laquelle les informations sont saisies, modifiées et imprimées dans une application de bureau. A l'aide des formulaires, les utilisateurs peuvent interagir avec les données d'une base de données et imprimer des rapports. Les formulaires permettent de créer des boîtes de dialogue personnalisées, des palettes ou toute fenêtre personnalisée.
 
 ![](../assets/en/FormObjects/form1.png)
 
 Les formulaires peuvent également contenir d'autres formulaires grâce aux fonctionnalités suivantes :
 
-- [les objets sous-formulaires](FormObjects/subform_overview.md)
-- [les formulaires hérités](properties_FormProperties.md#inherited-forms)
+- [subform objects](FormObjects/subform_overview.md)
+- [inherited forms](properties_FormProperties.md#inherited-forms)
 
 ## Création de formulaires
 
@@ -99,7 +98,7 @@ Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusie
 
 ## Formulaires hérités
 
-Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
+Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du _Formulaire A_ peuvent être utilisés dans le _Formulaire B_. Dans ce cas, _Formulaire B_ "hérite" des objets du _Formulaire A_.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
@@ -118,11 +117,12 @@ Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entr
 
 Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en compte lorsque celui-ci est utilisé comme formulaire hérité. En revanche, les méthodes des objets qu’il contient sont appelées.
 
-Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
+To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\<None>` in the Property List (or " " in JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+To stop inheriting a form, select `\<None>` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
 
 ## Propriétés prises en charge

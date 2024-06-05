@@ -5,8 +5,7 @@ title: On VP Ready
 
 | Code | Peut être appelé par                                    | Définition                                       |
 | ---- | ------------------------------------------------------- | ------------------------------------------------ |
-| 9    | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) | Le chargement de la zone 4D View Pro est terminé |
-
+| 9    | [4D View Pro Area](FormObjects/viewProArea_overview.md) | Le chargement de la zone 4D View Pro est terminé |
 
 ## Description
 

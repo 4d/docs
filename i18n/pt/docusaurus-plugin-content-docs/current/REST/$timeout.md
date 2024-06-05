@@ -1,21 +1,20 @@
 ---
 id: timeout
-title: '$timeout'
+title: $timeout
 ---
 
-
-Define o número de segundos para guardar um conjunto de entidades na cache do 4D Server (*e.g.*, `$timeout=1800`)
+Define el número de segundos para guardar un conjunto de entidades en la caché de 4D Server (_por ejemplo_, `$timeout=1800`)
 
 ## Descrição
 
-Para definir um timeout para um conjunto de entidades criado com [`$method=entityset`]($method.md#methodentityset), passar o número de segundos para `$timeout`. Por exemplo, se pretender definir o tempo limite para 20 minutos, introduza 1200. Por defeito, o tempo limite é de duas (2) horas.
+To define a timeout for an entity set that you create using [`$method=entityset`]($method.md#methodentityset), pass the number of seconds to `$timeout`. Por exemplo, se pretender definir o tempo limite para 20 minutos, introduza 1200. Por defeito, o tempo limite é de duas (2) horas.
 
-Uma vez definido o tempo limite, sempre que um conjunto de entidades é chamado (utilizando `$method=entityset`), o tempo limite é recalculado com base na hora atual e no tempo limite.
+Una vez que se ha definido el tiempo de espera, cada vez que se llama a un conjunto de entidades (mediante el uso de `$method=entityset`), el tiempo de espera se recalcula basándose en la hora actual y el tiempo de espera.
 
-Se um conjunto de entidades for removido e depois recriado utilizando `$method=entityset` com [`$savedfilter`]($savedfilter.md), o novo tempo limite predefinido é de 10 minutos, independentemente do tempo limite definido ao chamar `$timeout`.
+If an entity set is removed and then recreated using `$method=entityset` along with [`$savedfilter`]($savedfilter.md), the new default timeout is 10 minutes regardless of the timeout you defined when calling `$timeout`.
 
 ## Exemplo
 
 No nosso conjunto de entidades que criamos, definimos o tempo limite para 20 minutos:
 
-`GET  /rest/Employee/?$filter="salary!=0"&$method=entityset&$timeout=1200`
+` GET  /rest/Employee/?$filter="salary!=0"&$method=entityset&$timeout=1200`

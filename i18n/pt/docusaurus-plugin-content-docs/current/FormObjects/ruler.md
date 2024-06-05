@@ -3,14 +3,13 @@ id: ruler
 title: Regra
 ---
 
-
 A régua é um objeto de interface padrão utilizado para definir ou obter valores utilizando um cursor movido ao longo das suas graduações.
 
 ![](../assets/en/FormObjects/indicator_ruler.png)
 
-[A variável ou expressão associada](properties_Object.md#expression-type) ao objeto pode ser atribuída a uma área gravável (campo ou variável) para armazenar ou modificar o valor atual do objeto.
+Puede asignar su [variable o expresión asociada](properties_Object.md#expression-type) a un área editable (campo o variable) para almacenar o modificar el valor actual del objeto.
 
-Para mais informações, consultar [Utilizar indicadores](progressIndicator.md#using-indicatire) na página "Indicadores de progresso".
+Para más información, consulte [Uso de indicadores](progressIndicator.md#using-indicatire) en la página "Indicadores de progreso".
 
 ### Propriedades compatíveis
 
@@ -18,5 +17,5 @@ Para mais informações, consultar [Utilizar indicadores](progressIndicator.md#u
 
 ## Veja também
 
-- [indicadores de progresso](progressIndicator.md)
+- [progress indicators](progressIndicator.md)
 - [steppers](stepper.md)

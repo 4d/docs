@@ -17,11 +17,11 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Paramètres | Type                                                                              |    | Description                             |                  |
-| ---------- | --------------------------------------------------------------------------------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text                                                                              | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| tableName  | Text                                                                              | -> | Nom de table                            |                  |
-| Résultat   | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Current table theme property values     | <!-- END REF --> |
+| Paramètres | Type                                                                              |    | Description                                          |                  |
+| ---------- | --------------------------------------------------------------------------------- | -- | ---------------------------------------------------- | ---------------- |
+| vpAreaName | Text                                                                              | -> | Nom d'objet formulaire zone 4D View Pro              |                  |
+| tableName  | Text                                                                              | -> | Nom de table                                         |                  |
+| Résultat   | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valeurs des propriétés du thème de la table actuelle | <!-- END REF --> |
 
 #### Description
 

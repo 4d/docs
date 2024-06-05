@@ -7,8 +7,7 @@ ORDA signifie **Object Relational Data Access** (Accès objet aux données relat
 
 Les relations font partie du concept de façon transparente, en combinaison avec le principe du [Lazy loading](glossary.md#lazy-loading), afin de supprimer toutes les problématiques spécifiques à la sélection ou au transfert de données.
 
-Avec ORDA, les données sont accessibles via une couche d'abstraction, le [datastore](dsMapping.md#datastore). Un datastore est un objet fournissant une interface au modèle de base de données et aux données via des objets et des classes. Par exemple, une table correspond à un objet [dataclass](dsMapping.md#dataclass), un champ est un [attribut](dsMapping.md##attribute) d'une dataclass, et les enregistrements sont des [entités](dsMapping.md#entity) et des [sélections d'éntités](dsMapping.md#entity-selection).
-
+Avec ORDA, les données sont accessibles via une couche d'abstraction, le [datastore](dsMapping.md#datastore). Un datastore est un objet fournissant une interface au modèle de base de données et aux données via des objets et des classes. Par exemple, une table correspond à un [objet dataclass](dsMapping.md#dataclass), un champ est un [attribut](dsMapping.md##attribute) d'une dataclass, et les enregistrements sont accessibles via les [entités](dsMapping.md#entity) et les [entity selections](dsMapping.md#entity-selection) (sélections d'entités).
 
 ## Pourquoi utiliser ORDA ?
 
@@ -24,11 +23,8 @@ En outre, les objets ORDA tels que les sélections d'entités ou les entités pe
 
 ## Comment utiliser ORDA ?
 
-Fondamentalement, ORDA gère des objets. Dans ORDA, tous les concepts principaux, y compris le datastore lui-même, sont disponible via des objets. Dans 4D, le datastore est automatiquement [mappé sur la structure 4D](dsMapping.md).
+Fondamentalement, ORDA gère des objets. Dans ORDA, tous les concepts principaux, y compris le datastore lui-même, sont disponibles via des objets. Dans 4D, le datastore est automatiquement [mappé sur la structure 4D](dsMapping.md).
 
-Les objets dans ORDA peuvent être manipulés comme des objets standard 4D, mais ils bénéficient automatiquement de propriétés et de méthodes spécifiques.
+Les objets dans ORDA peuvent être manipulés comme des objets standard 4D, mais ils bénéficient automatiquement de propriétés et de fonctions spécifiques.
 
-ORDA objects are created and instanciated when necessary by 4D methods (you do not need to create them). However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
-
-
-
+Les objets ORDA sont créés et instanciés lorsque nécessaire par les méthodes 4D (vous n'avez pas besoin de les créer). Cependant, les objets du modèle de données ORDA sont associés à [des classes où vous pouvez ajouter des fonctions personnalisées](ordaClasses.md).

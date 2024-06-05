@@ -5,7 +5,7 @@ title: VP SET VALUES
 
 <!-- REF #_method_.VP SET VALUES.Syntax -->
 
-**VP SET VALUES** ( _rangeObj_ : Object ; _valuesCol_ : Collection ) <!-- END REF -->
+**VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUES.Params -->
 
@@ -18,12 +18,12 @@ title: VP SET VALUES
 
 El comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->asigna una colección de valores comenzando en el rango de celdas especificado<!-- END REF -->.
 
-In _rangeObj_, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. La celda definida en _rangeObj_ se utiliza para determinar el punto de partida.
+In *rangeObj*, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. La celda definida en *rangeObj* se utiliza para determinar el punto de partida.
 
-> - Si _rangeObj_ no es un rango de celdas, sólo se utilizará la primera celda del rango.
-> - Si _rangeObj_ incluye varios rangos, sólo se utilizará la primera celda del primer rango.
+> - Si *rangeObj* no es un rango de celdas, sólo se utilizará la primera celda del rango.
+> - Si *rangeObj* incluye varios rangos, sólo se utilizará la primera celda del primer rango.
 
-El parámetro _valuesCol_ es bidimensional:
+El parámetro *valuesCol* es bidimensional:
 
 - La colección de primer nivel contiene subcolecciones de valores. Cada subcolección define una línea. Pasa una colección vacía para saltar una línea.
 - Cada subcolección define los valores de las celdas para la línea. Los valores pueden ser enteros, reales, booleanos, texto, fecha, null u objeto. Si el valor es un objeto, puede tener las siguientes propiedades:

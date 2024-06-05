@@ -5,7 +5,7 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Syntax -->
 
-**VP Get formula** ( _rangeObj_ : Object) : Text<!-- END REF -->
+**VP Get formula** ( *rangeObj* : Object) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula.Params -->
 
@@ -18,7 +18,7 @@ title: VP Get formula
 
 `VP Get formula` コマンドは、<!-- REF #_method_.VP Get formula.Summary -->指定したセルレンジのフォーミュラを取得します<!-- END REF -->。
 
-_rangeObj_ 引数で、フォーミュラを取得したいレンジを指定します。 _rangeObj_ 引数のレンジが複数セルあるいは複数レンジを指定している場合、最初のセルのフォーミュラが返されます。 _rangeObj_ 引数がフォーミュラのないセルを指定している場合、コマンドは空の文字列を返します。
+*rangeObj* 引数で、フォーミュラを取得したいレンジを指定します。 *rangeObj* 引数のレンジが複数セルあるいは複数レンジを指定している場合、最初のセルのフォーミュラが返されます。 *rangeObj* 引数がフォーミュラのないセルを指定している場合、コマンドは空の文字列を返します。
 
 #### 例題
 

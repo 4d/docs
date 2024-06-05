@@ -7,7 +7,6 @@ title: On Close Box
 | ---- | --------------------- | ------------------------------------------------ |
 | 22   | Formulario            | Se ha presionado la caja de cierre de la ventana |
 
-
 ## Descripción
 
 El evento `On Close Box` se genera cuando el usuario hace clic en una caja de cierre de la ventana.
@@ -23,8 +22,7 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("Este registro ha sido modificado. Save Changes?")
-          Save Changes?")
+          CONFIRM("Este registro ha sido modificado. ¿Guardar cambios?")
           If(OK=1)
              ACCEPT
           Else
@@ -34,6 +32,5 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
           CANCEL
        End if
   //...
- //statement(s)
  End case
 ```

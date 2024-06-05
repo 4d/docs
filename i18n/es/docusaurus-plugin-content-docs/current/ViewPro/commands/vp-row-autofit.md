@@ -5,7 +5,7 @@ title: VP ROW AUTOFIT
 
 <!-- REF #_method_.VP ROW AUTOFIT.Syntax -->
 
-**VP ROW AUTOFIT** ( _rangeObj_ : Object) <!-- END REF -->
+**VP ROW AUTOFIT** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
 
@@ -15,9 +15,9 @@ title: VP ROW AUTOFIT
 
 #### Descripción
 
-El comando `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->dimensiona automáticamente la(s) fila(s) de _rangeObj_ en función de su contenido<!-- END REF -->.
+El comando `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->dimensiona automáticamente la(s) fila(s) de *rangeObj* en función de su contenido<!-- END REF -->.
 
-En _rangeObj_, pase un objeto rango que contenga un rango de líneas cuyo tamaño se gestionará automáticamente.
+En *rangeObj*, pase un objeto rango que contenga un rango de líneas cuyo tamaño se gestionará automáticamente.
 
 #### Ejemplo
 

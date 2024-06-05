@@ -5,7 +5,7 @@ title: VP SET VALUES
 
 <!-- REF #_method_.VP SET VALUES.Syntax -->
 
-**VP SET VALUES** ( _rangeObj_ : Object ; _valuesCol_ : Collection ) <!-- END REF -->
+**VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUES.Params -->
 
@@ -18,12 +18,12 @@ title: VP SET VALUES
 
 `VP SET VALUES` コマンドは、<!-- REF #_method_.VP SET VALUES.Summary -->指定のセルレンジから開始して値のコレクションを割り当てていきます<!-- END REF -->。
 
-_rangeObj_ には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 _rangeObj_ 引数で定義されたセルは、開始ポイントを決定します。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](vp-cell.md) あるいは [`VP Column`](vp-column.md) で作成されたレンジ) を渡します。 *rangeObj* 引数で定義されたセルは、開始ポイントを決定します。
 
-> - _rangeObj_ がセルレンジではない場合、レンジの最初のセルが使用されます。
-> - _rangeObj_ のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。
+> - *rangeObj* がセルレンジではない場合、レンジの最初のセルが使用されます。
+> - *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。
 
-_valuesCol_ 引数は 2次元構造のコレクションです:
+*valuesCol* 引数は 2次元構造のコレクションです:
 
 - 第1レベルのコレクションは、値のサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。 行をスキップするには空のコレクションを渡します。
 - それぞれのサブコレクションは行におけるセルの値を定義します。 値は整数、実数、ブール、テキスト、日付、Null、オブジェクトのいずれかです。 値がオブジェクトの場合、以下のプロパティを持つことができます:

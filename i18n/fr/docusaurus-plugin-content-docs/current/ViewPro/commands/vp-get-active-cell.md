@@ -5,7 +5,7 @@ title: VP Get active cell
 
 <!-- REF #_method_.VP Get active cell.Syntax -->
 
-**VP Get active cell** (  _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Get active cell** (  *vpAreaName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
@@ -13,15 +13,15 @@ title: VP Get active cell
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Range object of single cell                                                 | <!-- END REF --> |
+| Résultat   | Object  | <- | Objet plage d'une seule cellule                                             | <!-- END REF --> |
 
 #### Description
 
 The `VP Get active cell` command <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
 #### Exemple
 

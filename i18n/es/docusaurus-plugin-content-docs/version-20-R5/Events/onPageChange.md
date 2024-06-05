@@ -7,7 +7,6 @@ title: On Page Change
 | ---- | --------------------- | ----------------------------------------- |
 | 56   | Formulario            | Se cambia la página actual del formulario |
 
-
 ## Descripción
 
 Este evento sólo está disponible a nivel del formulario (se llama en el método formulario). Se genera cada vez que la página actual del formulario cambia (tras una llamada al comando `FORM GOTO PAGE` o una acción de navegación estándar).

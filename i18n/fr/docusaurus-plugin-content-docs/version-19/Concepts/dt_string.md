@@ -64,7 +64,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 - Lors d'une comparaison de chaînes, 4D ne tient pas compte de la casse des caractères ; par exemple, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante retourne `FAUX` :
 
 ```4d
-Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
+Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
 - Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
@@ -118,7 +118,7 @@ Lorsque l'opérateur de comparaison est ou contient un symbole < ou >, seule la 
 Si vous souhaitez effectuer des comparaisons ou des recherches utilisant @ en tant que caractère (et non en tant que joker), vous devez utiliser l'instruction `Code de caractere(Arobase)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L’expression suivante (si $vaValeur n'est pas vide) retourne toujours `VRAI` :
 
 ```4d
-($vaValeur[[Longueur($vaValeur)]]="@")
+($vsValue[[Length($vsValue)]]="@")
 ```
 
 L'expression suivante sera correctement évaluée :

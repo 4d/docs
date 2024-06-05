@@ -7,7 +7,6 @@ title: On Timer
 | ---- | --------------------- | ----------------------------------------------------------------------- |
 | 27   | Formulario            | El número de graduaciones definido por el comando `SET TIMER` ha pasado |
 
-
 ## Descripción
 
 Este evento se genera sólo si el método formulario contiene una llamada previa al comando `SET TIMER`.

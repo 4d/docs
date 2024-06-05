@@ -5,7 +5,7 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Syntax -->
 
-**VP Get spans** ( _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get spans** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get spans.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get spans
 
 #### Descrição
 
-O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no _rangeObj_ designado<!-- END REF -->.
+O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no *rangeObj* designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of cell spans you want to retrieve. If _rangeObj_ does not contain a cell span, an empty range is returned.
+In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
 
 #### Exemplo
 

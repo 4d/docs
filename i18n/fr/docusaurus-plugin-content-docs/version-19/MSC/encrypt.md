@@ -31,7 +31,7 @@ Cela signifie que le statut **Encryptable** d'au moins une table a été modifi�
    Vous serez invité à saisir une phrase secrète pour votre fichier de données : ![](../assets/en/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de cryptage des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. Par exemple, vous pouvez saisir une phrase secrète telle que "Nous sommes tous venus à Montreux" ou "Ma première phrase de passe géniale !!". L'indicateur de niveau de sécurité peut vous aider à évaluer la force de votre phrase secrète : ![](../assets/en/MSC/MSC_encrypt5.png) (le vert foncé est le niveau le plus élevé)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
-Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, l'application est rouverte en mode maintenance.
+Le process de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, l'application est rouverte en mode maintenance.
 
 4D propose de sauvegarder la clé de chiffrement (voir le paragraphe [Sauvegarder la clé de chiffrement](#saving-the-encryption-key) ci-dessous). Vous pouvez la sauvegarder à ce moment précis ou bien ultérieurement. Vous pouvez également ouvrir le fichier d'historique du chiffrement.
 
@@ -96,11 +96,11 @@ Les clés de chiffrement successives peuvent être sauvegardées sur le même ap
 
 :::caution
 
-Le stockage du fichier de clé de cryptage des données au premier niveau du lecteur est obligatoire lorsque vous utilisez la fonction de [restauration automatique et d'intégration des journaux](../Backup/settings.md#automatic-restore-and-log-integration). Lorsque la séquence de restauration est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
+Le stockage du fichier de clé de cryptage des données au premier niveau du lecteur est obligatoire lorsque vous utilisez la fonction de [restauration automatique et d'intégration des journaux](../Backup/settings.md#automatic-restore-and-log-integration). Lorsque la séquence de restitution est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
 
 :::
 
-## Fichier d'historique
+## Fichier journal
 Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de l'application. Il est créé au format XML et nommé "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 Chaque fois qu'un nouveau fichier d'historique est généré, un bouton Voir le compte rendu s'affiche dans la page CSM.

@@ -13,7 +13,7 @@ title: VP Get column count
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Integer | <- | Total number of columns                                                     | <!-- END REF --> |
+| Résultat   | Integer | <- | Nombre total de colonnes                                                    | <!-- END REF --> |
 
 #### Description
 

@@ -9,30 +9,27 @@ Les Paramètres configurent le fonctionnement du projet en cours. Ces paramètre
 
 > 4D fournit un autre ensemble de paramètres, appelés **Préférences**, qui s'appliquent à l'application 4D IDE. Pour plus d'informations, reportez-vous à la section [Préférences](../Preferences/general.md).
 
-
 ## Accès aux paramètres
 
 Vous pouvez accéder à la boîte de dialogue Paramètres :
 
--   en utilisant l'option de menu **Développement > Paramètres...**
--   en cliquant sur **Paramètres** dans la barre d'outils 4D
--   sur 4D Server, via l'option de menu **Edition > Paramètres...**
+- en utilisant l'option de menu **Développement > Paramètres...**
+- en cliquant sur **Paramètres** dans la barre d'outils 4D
+- sur 4D Server, via l'option de menu **Edition > Paramètres...**
 
-Lorsque le mode [**Paramètres utilisateur** est activé](../Desktop/user-settings.md), **Paramètres...** est renommé **Paramètres de la structure...** et deux commandes de menu supplémentaires sont disponibles à chaque emplacement :
+When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
--   **Paramètres utilisateur...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
--   **Paramètres utilisateur pour le fichier de données...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur rattaché au fichier de données courant. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
+- **Paramètres utilisateur...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
+- **Paramètres utilisateur pour le fichier de données...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur rattaché au fichier de données courant. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
 
 ### Informations sur le verrouillage
 
 Le verrouillage peut se produire dans les modes Projet et Client/serveur lorsque :
 
--   Le fichier *settings.4DSettings* est en 'Lecture seule' (Projets uniquement). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
--   Deux utilisateurs ou plus tentent de modifier les mêmes paramètres en même temps. Les paramètres ne peuvent pas être utilisés jusqu'à ce que le premier utilisateur les libère en fermant la fenêtre. (Client/serveur uniquement)
+- Le fichier _settings.4DSettings_ est en 'Lecture seule' (Projets uniquement). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
+- Deux utilisateurs ou plus tentent de modifier les mêmes paramètres en même temps. Les paramètres ne peuvent pas être utilisés jusqu'à ce que le premier utilisateur les libère en fermant la fenêtre. (Client/serveur uniquement)
 
 Dans les deux cas, les paramètres peuvent être ouverts en 'Lecture seule', mais ne peuvent pas être utilisés tant qu'ils sont verrouillés.
-
-
 
 ## Personnalisation des paramètres
 
@@ -45,7 +42,6 @@ Les paramètres indiqués comme personnalisés peuvent avoir été modifiés dir
 Un paramètre apparaît toujours en gras même lorsque sa valeur est remplacée manuellement par ses valeurs par défaut. Ainsi, il est toujours possible d'identifier visuellement les paramètres qui ont été personnalisés.
 
 La plupart des paramètres sont appliqués immédiatement. Toutefois, certains d'entre eux (tels que le paramètre de démarrage) ne prennent effet que lorsque la base de données est redémarrée. Dans ce cas, une boîte de dialogue apparaît pour vous informer que la modification prendra effet au prochain démarrage.
-
 
 ## Réinitialisation des paramètres
 

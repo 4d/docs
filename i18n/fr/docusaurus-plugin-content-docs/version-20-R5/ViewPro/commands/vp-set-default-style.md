@@ -9,11 +9,11 @@ title: VP SET DEFAULT STYLE
 
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 
-| Paramètres | Type    |    | Description                                              |                  |
-| ---------- | ------- | -- | -------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |                  |
-| styleObj   | Object  | -> | Objet style                                              |                  |
-| sheet      | Integer | -> | Sheet index (default = current sheet) | <!-- END REF --> |
+| Paramètres | Type    |    | Description                                                             |                  |
+| ---------- | ------- | -- | ----------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                 |                  |
+| styleObj   | Object  | -> | Objet style                                                             |                  |
+| sheet      | Integer | -> | Indice de la feuille (par défaut = feuille courante) | <!-- END REF --> |
 
 #### Description
 

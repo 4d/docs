@@ -5,7 +5,7 @@ title: VP ADD FORMULA NAME
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Syntax -->
 
-**VP ADD FORMULA NAME** ( _vpAreaName_ : Text ; _vpFormula_ : Text ; _name_ : Text { ; _options_ : Object } )<!-- END REF -->
+**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 
@@ -22,17 +22,17 @@ El comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary 
 
 > Las fórmulas nombradas creadas por este comando se guardan en el documento.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase la fórmula 4D View Pro que desea nombrar en _vpFormula_. For detailed information about formula syntax, see [Formulas and Functions](../formulas.md) page.
+Pase la fórmula 4D View Pro que desea nombrar en *vpFormula*. For detailed information about formula syntax, see [Formulas and Functions](../formulas.md) page.
 
-Pase el nuevo nombre para la fórmula en _name_. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
+Pase el nuevo nombre para la fórmula en *name*. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Puede pasar un objeto con las propiedades adicionales para la fórmula nombrada en _options_. Se soportan las siguientes propiedades:
+Puede pasar un objeto con las propiedades adicionales para la fórmula nombrada en *options*. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| scope     | Number | Alcance de la fórmula. Puede pasar el índice de hojas (el conteo comienza en 0) o usar las siguientes constantes: <li>`vk current sheet`</li><li>`vk workbook`</li>El ámbito determina si un nombre de fórmula es local en una hoja de trabajo determinada (_scope_=sheet index o `vk current sheet`), o global en todo el libro de trabajo (_scope_=`vk workbook`). |
+| scope     | Number | Alcance de la fórmula. Puede pasar el índice de hojas (el conteo comienza en 0) o usar las siguientes constantes: <li>`vk current sheet`</li><li>`vk workbook`</li>El ámbito determina si un nombre de fórmula es local en una hoja de trabajo determinada (*scope*=sheet index o `vk current sheet`), o global en todo el libro de trabajo (*scope*=`vk workbook`). |
 | comment   | Text   | Comentario asociado a una fórmula nombrada                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 #### Ejemplo

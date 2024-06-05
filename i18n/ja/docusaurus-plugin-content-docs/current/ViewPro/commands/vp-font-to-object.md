@@ -5,7 +5,7 @@ title: VP Font to object
 
 <!-- REF #_method_.VP Font to object.Syntax -->
 
-**VP Font to object** (  _font_ : Text ) : Object<!-- END REF -->
+**VP Font to object** (  *font* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Font to object.Params -->
 
@@ -20,7 +20,7 @@ title: VP Font to object
 
 `VP Font to object` ユーティリティコマンドは、<!-- REF #_method_.VP Font to object.Summary -->フォントのショートハンド文字列からオブジェクトを返します<!-- END REF -->。 このオブジェクトはその後、オブジェクト記法を通してフォントプロパティ設定を取得・設定するのに使用することができます。
 
-_font_ には、フォントのショートハンド文字列を渡してフォントのプロパティを指定します (例: "12 pt Arial")。 フォントのショートハンド文字列についての詳細は、[こちら](https://www.w3schools.com/cssref/pr_font_font.asp) を参照ください。
+*font* には、フォントのショートハンド文字列を渡してフォントのプロパティを指定します (例: "12 pt Arial")。 フォントのショートハンド文字列についての詳細は、[こちら](https://www.w3schools.com/cssref/pr_font_font.asp) を参照ください。
 
 返されるオブジェクトには、フォント属性がプロパティとして格納されています。 利用可能なプロパティの詳細については、[VP Object to font](vp-object-to-font.md) コマンドを参照ください。
 

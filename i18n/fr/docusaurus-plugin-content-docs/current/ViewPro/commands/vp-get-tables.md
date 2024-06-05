@@ -13,7 +13,7 @@ title: VP Get tables
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 
-**VP Get tables** ( _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Collection<!-- END REF -->
+**VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get tables.Params -->
 
@@ -21,15 +21,15 @@ title: VP Get tables
 | ---------- | ---------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Collection | <- | Text collection with all table names                                        | <!-- END REF --> |
+| Résultat   | Collection | <- | Collection de textes avec tous les noms des tables                          | <!-- END REF --> |
 
 #### Description
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the _sheet_<!-- END REF -->.
+The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
+In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 

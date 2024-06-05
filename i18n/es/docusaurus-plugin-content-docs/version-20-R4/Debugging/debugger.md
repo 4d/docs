@@ -65,6 +65,18 @@ El nuevo método se convierte en el método actual (superior) en la [Ventana cad
 
 Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
 
+
+#### Ejecutar y salir
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+
+
 #### Abortar
 
 Detiene la ejecución del método y vuelve al estado anterior al inicio de la ejecución del método:

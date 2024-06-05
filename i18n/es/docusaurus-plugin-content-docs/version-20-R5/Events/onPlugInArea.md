@@ -7,7 +7,6 @@ title: On Plug in Area
 | ---- | --------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | 19   | Formulario - [Área de plug-in](FormObjects/pluginArea_overview.md#overview) | Un objeto externo solicitó la ejecución de su método objeto |
 
-
 ## Descripción
 
-El evento se genera cuando un plug-in solicita su área de formulario para ejecutar el método objeto asociado. 
+El evento se genera cuando un plug-in solicita su área de formulario para ejecutar el método objeto asociado.

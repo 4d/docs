@@ -13,7 +13,7 @@ title: VP SET DATE VALUE
 | ------------- | ------ | -- | ------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage         |                  |
 | dateValue     | Date   | -> | Valeur date à fixer |                  |
-| formatPattern | Text   | -> | Format of value     | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur | <!-- END REF --> |
 
 #### Description
 

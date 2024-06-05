@@ -16,6 +16,7 @@ La nature modulaire de l'environnement 4D permet la création d'applications de 
 Un plug-in est un morceau de code que 4D lance au démarrage. Il ajoute des fonctionnalités à 4D et augmente ainsi sa capacité.
 
 Habituellement, un plug-in fait des choses :
+
 - Que 4D ne peut pas effectuer (c'est-à-dire une technologie de plate-forme spécifique),
 - Qui sera très difficile à écrire en utilisant uniquement 4D,
 - Qui sont uniquement disponibles en tant que point d'entrée de plug-in
@@ -32,12 +33,11 @@ Un plug-in peut être très simple, avec une seule routine effectuant une très 
 
 ## Comment créer un plug-in ?
 
-Sur GitHub, 4D fournit un [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK) open source, contenant le plug-in API 4D et l'assistant de plug-in 4D :
+4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
 
-- le [**Plugin API de 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), écrit en C, ajoute plus de 400 fonctions qui vous aident à créer facilement vos propres plug-ins pour ajouter de nouvelles fonctionnalités à votre application 4D. Les fonctions du plug-in API de 4D gèrent toutes les interactions entre l'application 4D et votre plug-in.
-- [**L'assistant de plug-in 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) est un outil essentiel qui simplifie la tâche de développement des plug-ins 4D. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
-
+- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. Les fonctions du plug-in API de 4D gèrent toutes les interactions entre l'application 4D et votre plug-in.
+- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
 
 ## Partager des plug-ins
 
-Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos plug-ins, notamment sur la [plateforme GitHub](https://github.com/topics/4d-plugin). Afin d'être correctement référencé, nous vous recommandons d'utiliser la rubrique **`4d-plugin`**.  
+Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos plug-ins, notamment sur la [plateforme GitHub](https://github.com/topics/4d-plugin). Afin d'être correctement référencé, nous vous recommandons d'utiliser la rubrique **`4d-plugin`**.

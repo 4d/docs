@@ -3,14 +3,13 @@ id: allowProject
 title: プロジェクトメソッドの許可
 ---
 
-  
-`4DEVAL`, `4DTEXT`, `4DHTML` などの 4Dタグや [`/4DACTION URL`](httpRequests.md#/4daction) を使用すると、Webに公開された 4Dプロジェクトのあらゆるプロジェクトメソッドが実行できます。 たとえば、リクエスト *http://www.server.com/4DACTION/login* は ***login*** プロジェクトメソッドを (存在すれば) 実行します。
+`4DEVAL`, `4DTEXT`, `4DHTML` などの 4Dタグや  [`/4DACTION URL`](httpRequests.md#/4daction) を使用すると、Webに公開された 4Dプロジェクトのあらゆるプロジェクトメソッドが実行できます。 たとえば、リクエスト _http://www.server.com/4DACTION/login_ は _**login**_ プロジェクトメソッドを (存在すれば) 実行します。
 
 このメカニズムは具体的には、インターネット上のユーザーが故意に (あるいは予期せず) Web用でないメソッドを実行してしまうというような、アプリケーションのセキュリティを脅かすリスクをもたらします。 このリスクは以下の 3つの方法で回避できます:
 
-*   [`On Web Authentication`](authentication.md#on-web-authentication) データベースメソッドを使用して URL から呼び出されるメソッドをフィルターする。 欠点: データベースに多くのメソッドが定義されている場合、この方法は管理が困難になります。
+- [`On Web Authentication`](authentication.md#on-web-authentication) データベースメソッドを使用して URL から呼び出されるメソッドをフィルターする。 欠点: データベースに多くのメソッドが定義されている場合、この方法は管理が困難になります。
 
-*   **公開オプション: 4DタグとURL (4DACTION...)** (メソッドプロパティ) を使用する:
+- **公開オプション: 4DタグとURL (4DACTION...)** (メソッドプロパティ) を使用する:
 
 ![](../assets/en/WebServer/methodProperties.png)
 
@@ -20,4 +19,4 @@ title: プロジェクトメソッドの許可
 
 このプロパティが指定されたプロジェクトメソッドは、エクスプローラーで以下のアイコンが表示されます:
 
- ![](../assets/en/WebServer/methodIcon.png)
+![](../assets/en/WebServer/methodIcon.png)

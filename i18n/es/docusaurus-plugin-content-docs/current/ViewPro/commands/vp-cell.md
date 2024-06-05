@@ -5,7 +5,7 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Syntax -->
 
-**VP Cell** ( _vpAreaName_ ; _column_ : Integer ; _row_ : Integer ; Text { ; _sheet_ : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -25,13 +25,13 @@ El comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->devuelve un nuevo obj
 
 > Este comando se aplica a los rangos de una sola celda. Para crear un objeto de rango para múltiples celdas, utilice el comando [VP Cells](vp-cells.md).
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-El parámetro _column_ define la columna de la posición del rango de celdas. Pase el índice de columna en este parámetro.
+El parámetro *column* define la columna de la posición del rango de celdas. Pase el índice de columna en este parámetro.
 
-El parámetro _row_ define la línea del rango de celdas. Pase el índice de la línea en este parámetro.
+El parámetro *row* define la línea del rango de celdas. Pase el índice de la línea en este parámetro.
 
-En el parámetro opcional _sheet_, puede designar el índice de la hoja en donde se definirá el rango. Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual por defecto.
+En el parámetro opcional *sheet*, puede designar el índice de la hoja en donde se definirá el rango. Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual por defecto.
 
 > la indexación comienza en 0.
 

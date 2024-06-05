@@ -14,15 +14,16 @@ This property allows associating help messages with active objects in your forms
 
 Você também pode:
 
-- designate an existing help tip, previously specified in the [Help tips](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) editor of 4D.
-- ou introduzir a mensagem de ajuda diretamente como uma cadeia de caracteres. Isto permite-lhe tirar partido da arquitetura XLIFF. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). Você também pode usar referências 4D ([consulte Usando referências em texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
-> > > In macOS, displaying help tips is not supported in pop-up type windows.
+- designar un mensajes de ayuda existente, previamente especificado en el editor de [mensajes de ayuda](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
+- ou introduzir a mensagem de ajuda diretamente como uma cadeia de caracteres. Isto permite-lhe tirar partido da arquitetura XLIFF. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+
+> \> > In macOS, displaying help tips is not supported in pop-up type windows.
 
 #### Gramática JSON
 
-|  Nome   | Tipo de dados | Valores possíveis                             |
-|:-------:|:-------------:| --------------------------------------------- |
-| tooltip |     text      | informações adicionais para ajudar um usuário |
+|   Nome  | Tipo de dados | Valores possíveis                             |
+| :-----: | :-----------: | --------------------------------------------- |
+| tooltip |      text     | informações adicionais para ajudar um usuário |
 
 #### Objectos suportados
 
@@ -32,15 +33,15 @@ Você também pode:
 
 You can also associate help messages with form objects in two other ways:
 
-- ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para obter mais informações, consulte "Dicas de ajuda" em [Propriedades de campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- utilizando o comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para o processo atual.
+- ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para más información, consulte "Consejos de ayuda" en [Propiedades de los campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
+- utilizando el comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para el proceso actual.
 
 When different tips are associated with the same object in several locations, the following priority order is applied:
 
 1. nível de estrutura (prioridade mais baixa)
 2. nível do editor de formulários
-3. Comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (prioridade máxima)
+3. Comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (alta prioridad)
 
 #### Veja também
 
-[Placeholder (valores provisórios)](properties_Entry.md#placeholder)
+[Placeholder](properties_Entry.md#placeholder)

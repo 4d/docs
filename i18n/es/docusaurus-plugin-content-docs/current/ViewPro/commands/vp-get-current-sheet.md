@@ -5,7 +5,7 @@ title: VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
 
-**VP Get current sheet** ( _vpAreaName_ : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get current sheet
 
 #### Descripción
 
-El comando `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->devuelve el índice de la hoja actual en _vpAreaName_. La hoja actual es la hoja seleccionada en el documento.<!-- END REF -->
+El comando `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->devuelve el índice de la hoja actual en *vpAreaName*. La hoja actual es la hoja seleccionada en el documento.<!-- END REF -->
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 > La indexación comienza en 0.
 

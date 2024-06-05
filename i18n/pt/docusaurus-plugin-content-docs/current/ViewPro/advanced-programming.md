@@ -3,13 +3,13 @@ id: advanced-programming
 title: Programação avançada com Javascript
 ---
 
-A 4D View Pro Area is a [Web Area form object](../FormObjects/webArea_overview.md) that uses the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, ele se comporta como qualquer outra área Web, e você pode fazer com que execute o código Javascript chamando o comando 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html).
+Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html) 4D command.
 
-Como 4D View Pro é alimentado pela [solução de planilha eletrônica SpreadJS](https://developer.mescius.com/spreadjs), você também pode chamar os métodos Javascript SpreadJS nas áreas 4D View Pro.
+Dado que 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://developer.mescius.com/spreadjs), también puede llamar a los métodos Javascript de SpreadJS en las áreas 4D View Pro.
 
 ## Exemplo prático: Esconder a faixa de opções
 
-Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. The following example hides the spreadJS [Ribbon](./configuring.md#ribbon):
+Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. El siguiente ejemplo oculta la [cinta](./configuring.md#ribbon) spreadJS:
 
 ```4d
 //Button's object method
@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Repositório 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Sinta-se à vontade para o clonar e experimentar com o projeto. 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho m Sinta-se à vontade para o clonar e experimentar com o projeto.

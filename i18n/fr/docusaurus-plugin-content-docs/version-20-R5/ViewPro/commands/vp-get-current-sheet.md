@@ -12,7 +12,7 @@ title: VP Get current sheet
 | Paramètres | Type    |    | Description                             |                  |
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| Résultat   | Integer | <- | Index of the current sheet              | <!-- END REF --> |
+| Résultat   | Integer | <- | Indice de la feuille courante           | <!-- END REF --> |
 
 #### Description
 

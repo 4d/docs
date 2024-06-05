@@ -1,11 +1,9 @@
 ---
 id: distinct
-title: '$distinct'
+title: $distinct
 ---
 
-
-Devuelve los diferentes valores de un atributo específico en una colección (*por ejemplo*, `Company/name?$filter="name=a*"&$distinct=true`)
-
+Devuelve los diferentes valores de un atributo específico en una colección (_por ejemplo_, `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## Descripción
 
@@ -14,16 +12,16 @@ Devuelve los diferentes valores de un atributo específico en una colección (*p
 También puede utilizar `$skip` y `$top/$limit`, si desea navegar por la selección antes de colocarla en un array.
 
 ## Ejemplo
+
 En nuestro ejemplo siguiente, queremos recuperar los diferentes valores de un nombre de empresa que empiece por la letra "a":
 
- `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
+`GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Respuesta**:
+**Response**:
 
-````
+```
 [
     "Adobe",
     "Apple"
 ]
-````
-
+```

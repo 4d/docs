@@ -3,29 +3,24 @@ id: ClassClass
 title: Class
 ---
 
-
 Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto en sí mismo, de la clase "Class", que tiene propiedades y una función.
-
-
 
 ### Resumen
 
-
-|                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->|
-| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isSingleton.Summary -->|
-| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.me.Summary -->|
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
-
-
+|                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->          |
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary --> |
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                            |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                      |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                     |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->    |
 
 <!-- REF ClassClass.isShared.Desc -->
+
 ## .isShared
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -37,17 +32,17 @@ Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en 
 
 #### Descripción
 
-La propiedad `.isShared` <!-- REF #ClassClass.isShared.Summary -->devuelve `true` si la clase usuario ha sido definida como [clase compartida](../Concepts/classes.md#shared-classes)<!-- END REF -->y `false` en caso contrario.
+La propiedad `.isShared` <!-- REF #ClassClass.isShared.Summary -->devuelve `true` si la clase de usuario ha sido definida como [clase compartida](../Concepts/classes.md#shared-classes)<!-- END REF -->, y `false` en caso contrario.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF ClassClass.isSingleton.Desc -->
+
 ## .isSingleton
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -59,17 +54,17 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->devuelve `true` si la clase usuario se ha definido como [clase singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->y `false` en caso contrario.
+La propiedad `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->devuelve `true` si la clase usuario ha sido definida como una [clase singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->, y `false` en caso contrario.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF ClassClass.me.Desc -->
+
 ## .me
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -81,19 +76,19 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.me` <!-- REF #ClassClass.me.Summary -->devuelve la instancia singleton de la clase singleton `cs.className`<!-- END REF -->. Si la clase singleton nunca fue instanciada de antemano, esta propiedad llama al constructor de la clase sin parámetros y crea la instancia. En caso contrario, devuelve la instancia singleton existente.
+La propiedad `.me` <!-- REF #ClassClass.me.Summary -->devuelve la instancia única de la clase singleton `cs.className`<!-- END REF -->. Si la clase singleton nunca fue instanciada de antemano, esta propiedad llama al constructor de la clase sin parámetros y crea la instancia. En caso contrario, devuelve la instancia singleton existente.
 
-Si `cs.className` no es una [clase singleton](../Concepts/classes.md#singleton-classes), `.me` es **indefinido** por defecto.
+Si `cs.className` no es una [clase singleton](../Concepts/classes.md#singleton-classes), `.me` es **undefined** por defecto.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF ClassClass.name.Desc -->
+
 ## .name
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -107,16 +102,15 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.name` <!-- REF #ClassClass.name.Summary -->contiene el nombre del objeto `4D.Class`<!-- END REF -->. .
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF ClassClass.new().Desc -->
+
 ## .new()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -126,25 +120,24 @@ Esta propiedad es **de sólo lectura**.
 
 <!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
 
-
-
 <!-- REF #ClassClass.new().Params -->
-| Parámetros | Tipo     |    | Descripción                                   |
-| ---------- | -------- |:--:| --------------------------------------------- |
-| param      | any      | -> | Parámetro(s) a pasar a la función constructor |
-| Result     | 4D.Class | <- | Nuevo objeto de la clase                      |
-<!-- END REF -->
 
+| Parámetros | Tipo                     |     | Descripción                                                      |
+| ---------- | ------------------------ | :-: | ---------------------------------------------------------------- |
+| param      | any                      |  -> | Parámetro(s) a pasar a la función constructor |
+| Result     | 4D.Class |  <- | Nuevo objeto de la clase                                         |
+
+<!-- END REF -->
 
 #### Descripción
 
-La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases del class store [`cs`](Concepts/classes.md#cs).
+La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases a partir del [class store `cs`](Concepts/classes.md#cs).
 
-Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la función [constructor de la clase](Concepts/classes.md#class-constructor) (si la hay) en la definición de la clase *className*. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
+Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la [función class constructor](Concepts/classes.md#class-constructor) (si existe) en la definición de la clase *className*. Dentro de la función constructor, el [`This`](Concepts/classes.md#this) está vinculado al nuevo objeto que se está construyendo.
 
 :::note Notas
 
-- Si `. ew()` es llamado en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, la instancia singleton es devuelta, no una nueva instancia.
+- Si se llama a `.new()` en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, se devuelve la instancia singleton, no una nueva instancia.
 - Si se llama a `.new()` en una clase inexistente, se devuelve un error.
 
 :::
@@ -164,9 +157,9 @@ Para crear una nueva instancia de la clase Person con parámetros:
 ```4d
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text; $age : Integer)
-    This.firstName:=$firstname
-    This.lastName:=$lastname
-    This.age:=$age
+	This.firstName:=$firstname
+	This.lastName:=$lastname
+	This.age:=$age
 ```
 
 ```4d
@@ -178,15 +171,13 @@ $person:=cs.Person.new("John";"Doe";40)
 //$person.age = 40
 ```
 
-
 <!-- END REF -->
 
-
-
 <!-- REF ClassClass.superclass.Desc -->
+
 ## .superclass
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -200,9 +191,9 @@ $person:=cs.Person.new("John";"Doe";40)
 
 La propiedad `.superclass` <!-- REF #ClassClass.superclass.Summary -->devuelve la clase padre de la clase<!-- END REF -->. Una superclase puede ser un objeto `4D.Class`, o un objeto `cs.className`. Si la clase no tiene una clase padre, la propiedad devuelve **null**.
 
-Una superclase de clase usuario se declara en una clase utilizando la palabra clave the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
+Una superclase de una clase usuario se declara en una clase utilizando la palabra clave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 #### Ejemplos
 
@@ -217,7 +208,6 @@ $sup:=cs.MyFile.superclass //File
 
 ```
 
-
-
 **Ver también:** [Super](Concepts/classes.md#super)
+
 <!-- END REF -->

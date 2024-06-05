@@ -5,7 +5,7 @@ title: VP SET SHEET COUNT
 
 <!-- REF #_method_.VP SET SHEET COUNT.Syntax -->
 
-**VP SET SHEET COUNT** ( _vpAreaName_ : Text ; _number_ : Integer  ) <!-- END REF -->
+**VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
@@ -16,7 +16,7 @@ title: VP SET SHEET COUNT
 
 #### 説明
 
-`VP SET SHEET COUNT` コマンドは、<!-- REF #_method_.VP SET SHEET COUNT.Summary -->_vpAreaName_ 引数で指定した View Pro エリア内のシートの数を設定します<!-- END REF -->。
+`VP SET SHEET COUNT` コマンドは、<!-- REF #_method_.VP SET SHEET COUNT.Summary -->*vpAreaName* 引数で指定した View Pro エリア内のシートの数を設定します<!-- END REF -->。
 
 `number` 引数には、コマンド実行後にドキュメントが格納するシート数を指定する数値を渡します。
 

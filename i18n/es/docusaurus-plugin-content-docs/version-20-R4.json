@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "20 R4 BETA",
+    "message": "20 R4",
     "description": "The label for version 20-R4"
   },
   "sidebar.docs.category.Getting Started": {
@@ -272,7 +272,7 @@
     "description": "The label for link 4D for iOS (archive) in sidebar docs, linking to https://developer.4d.com/4d-for-ios"
   },
   "sidebar.docs.doc.Command Line Interface": {
-    "message": "Interfaz de línea de comando",
+    "message": "Interfaz de línea de\n          comando",
     "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
   },
   "sidebar.docs.doc.TLS Protocol": {

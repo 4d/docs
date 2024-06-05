@@ -3,13 +3,12 @@ id: authUsers
 title: ユーザーとセッション
 ---
 
-[スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) を作成・使用することができます。 これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
+[スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
 
 開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
 
 > - 4D Server上では、[ユーザーログインモード](#ユーザーログインモード) によっては、RESTセッションを開く際に 4Dクライアントライセンスが必要になる場合があります。<br/>
 > - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
-
 
 ## ユーザーログインモード
 
@@ -32,11 +31,10 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 
 :::
 
-
 ### デフォルトモード
 
-デフォルトモードでは、RESTリクエストは Webユーザーセッションで処理され、自動的にライセンスが消費されます (Webユーザーセッションが存在しない場合は作成されます)。 サーバー上で保持されるライセンス数を制御する必要がない場合は、このシンプルモードを使用できます。 デフォルトモードが有効になっている場合、`On REST Authentication` データベースメソッドを使用してユーザーを認証することができます (後述参照)。
-
+デフォルトモードでは、RESTリクエストは Webユーザーセッションで処理され、自動的にライセンスが消費されます (Webユーザーセッションが存在しない場合は作成されます)。 サーバー上で保持されるライセンス数を制御する必要がない場合は、このシンプルモードを使用できます。
+デフォルトモードが有効になっている場合、`On REST Authentication` データベースメソッドを使用してユーザーを認証することができます (後述参照)。
 
 ### 強制ログインモード
 
@@ -65,7 +63,6 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
-
 ### `Function authentify`
 
 #### シンタックス
@@ -73,6 +70,7 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 ```4d
 exposed Function authentify({params : type}) {-> result : type}
     // コード
+
 ```
 
 `authentify()` 関数は、プロジェクトの [DataStore クラス](../ORDA/ordaClasses.md#datastore-クラス) に実装されている必要があり、RESTリクエストを介して呼び出される必要があります。
@@ -87,7 +85,6 @@ exposed Function authentify({params : type}) {-> result : type}
 - 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
 
 関数が [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出さない場合、権限が割り当てられないため、ライセンスも消費されず、後続の記述的でない RESTリクエストは拒否されます。
-
 
 #### 例題
 
@@ -111,8 +108,8 @@ If ($user#Null) // 登録されているユーザーの場合
 Else 
         return "登録されていないユーザーです"
 End if 
-```
 
+```
 
 `authentify()` 関数を呼び出すには:
 
@@ -125,15 +122,11 @@ End if
 "password":"123"}]
 ```
 
-
-
 ## `On REST Authentication` の使用
 
 デフォルトのログインモードの (つまり、"強制ログイン" モードが無効化されている) 場合に、アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。 このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。このメソッド内でユーザーの認証をおこなうことができます (後述参照)。
 
 `On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
-
-
 
 ### 例題
 
@@ -142,7 +135,6 @@ End if
 htmlログインページ:
 
 ![alt-text](../assets/en/REST/login.png)
-
 
 ```html
 <html><body bgcolor="#ffffff">
@@ -185,12 +177,13 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 }
 </script></body></html>
 
+
 ```
 
 サーバーにログイン情報が送信されると、`On REST Authentication` データベースメソッドが呼び出されます:
 
 ```4d
-    // On REST Authentication データベースメソッド
+// On REST Authentication データベースメソッド
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
@@ -207,6 +200,7 @@ If ($userId#"")
         End if 
     End if 
 End if 
+
 ```
 
 > 一旦呼び出されて `True` を返すと、同セッションにおいて `On REST Authentication` データベースメソッドはそれ以上呼び出されません。
@@ -228,6 +222,3 @@ Use (Session.storage)
     End if 
 End use
 ```
-
-
-

@@ -14,17 +14,17 @@ Al igual que otros tipos de campo que pueden retener una gran cantidad de datos 
 Utilizando el lenguaje 4D, hay dos maneras de manipular un blob:
 
 - **como un valor escalar**: un blob puede ser almacenado en una variable o un campo Blob y puede ser modificado.
-- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se llama [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
+- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se llama [boxing](https://en.wikipedia.org/wiki/Object_type_\(object-oriented_programming\)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
 
 Cada tipo de blob tiene sus ventajas. Utilice la siguiente tabla para determinar cuál se ajusta a sus necesidades:
 
 |                                      | Blob | 4D.Blob |
-| ------------------------------------ |:----:|:-------:|
-| Alterable                            |  Sí  |   No    |
-| Compartible en objetos y colecciones |  No  |   Sí    |
-| Pasado por referencia\*            |  No  |   Sí    |
-| Rendimiento al acceder a los bytes   |  +   |    -    |
-| Tamaño máximo                        | 2GB  | Memoria |
+| ------------------------------------ | :--: | :---------------------: |
+| Alterable                            |  Sí  |            No           |
+| Compartible en objetos y colecciones |  No  |            Sí           |
+| Pasado por referencia\*              |  No  |            Sí           |
+| Rendimiento al acceder a los bytes   |   -  |            *            |
+| Tamaño máximo                        |  2GB |         Memoria         |
 
 Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos. Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos.
 
@@ -34,7 +34,8 @@ No se pueden utilizar operadores en los blobs.
 
 ## Verificar si una variable contiene un blob escalar o un `4D.Blob`
 
-Utilice el comando [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) para determinar si un valor es de tipo Blob u Objeto. Para verificar que un objeto es un objeto blob (`4D.Blob`), utilice [instancia OB de](https://doc.4d.com/4dv20/help/command/en/page1731.html):
+Utilice el comando [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) para determinar si un valor es de tipo Blob u Objeto.
+Para verificar que un objeto es un objeto blob (`4D.Blob`), utilice [instancia OB de](https://doc.4d.com/4dv20/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob
@@ -143,7 +144,8 @@ $myBlob:= $myObject.blob
 $type:= Value type($myBlob) // Blob
 ```
 
-> Al convertir un `4D.Blob` a un blob escalar, si el tamaño del `4D.Blob` excede el tamaño máximo para los blobs escalares, el blob escalar resultante está vacío. Por ejemplo, cuando el tamaño máximo para los blobs escalares es 2GB, si convierte un `4D.Blob` de 2,5GB a un blob, obtiene un blob vacío.
+> Al convertir un `4D.Blob` a un blob escalar, si el tamaño del `4D.Blob` excede el tamaño máximo para los blobs escalares, el blob escalar resultante está vacío.
+> Por ejemplo, cuando el tamaño máximo para los blobs escalares es 2GB, si convierte un `4D.Blob` de 2,5GB a un blob, obtiene un blob vacío.
 
 ## Modificación de un blob escalar
 

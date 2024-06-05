@@ -15,7 +15,7 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
 
-**VP CREATE TABLE** ( _rangeObj_ : Object ; _tableName_ : Text {; _source_ : Text} {; _options_ : cs.ViewPro.TableOptions} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -32,27 +32,27 @@ El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crea 
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-En _rangeObj_, pase el rango de celdas donde se creará la tabla.
+En *rangeObj*, pase el rango de celdas donde se creará la tabla.
 
-En _tableName_, introduzca un nombre para la tabla. El nombre debe:
+En *tableName*, introduzca un nombre para la tabla. El nombre debe:
 
 - ser único en la hoja
 - incluir al menos 5 caracteres
 - no incluir espacios o empezar con un número
 
-En _source_, puede pasar un nombre de propiedad de un [data context](vp-set-data-context.md) para mostrar sus datos en la tabla. Esto vincula la tabla al contexto de datos. Cuando se actualiza el contexto de los datos, los datos mostrados en la tabla se actualizan en consecuencia. La propiedad _source_ debe contener una colección de objetos y cada elemento representa una fila.
+En *source*, puede pasar un nombre de propiedad de un [data context](vp-set-data-context.md) para mostrar sus datos en la tabla. Esto vincula la tabla al contexto de datos. Cuando se actualiza el contexto de los datos, los datos mostrados en la tabla se actualizan en consecuencia. La propiedad *source* debe contener una colección de objetos y cada elemento representa una fila.
 
-- Si no especifica una _source_, el comando crea una tabla vacía con el tamaño definido en _rangeObj_.
-- Si la _source_ especificada no se puede mostrar completamente en el documento, no se crea ninguna tabla.
+- Si no especifica una *source*, el comando crea una tabla vacía con el tamaño definido en *rangeObj*.
+- Si la *source* especificada no se puede mostrar completamente en el documento, no se crea ninguna tabla.
 
-In the _options_ parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
 
-Dentro del objeto _options_, la colección _tableColumns_ determina la estructura de las columnas de la tabla. La longitud de la colección _tableColumns_ debe ser igual al recuento de columnas del rango:
+Dentro del objeto *options*, la colección *tableColumns* determina la estructura de las columnas de la tabla. La longitud de la colección *tableColumns* debe ser igual al recuento de columnas del rango:
 
-- Cuando el conteo de columnas en _rangeObj_ excede el número de columnas en _tableColumns_, la tabla se llena con columnas vacías adicionales.
-- Cuando la cuenta de columnas en _rangeObj_ es inferior al número de _tableColumns_, la tabla muestra un número de columnas que coinciden con el recuento de columnas del rango.
+- Cuando el conteo de columnas en *rangeObj* excede el número de columnas en *tableColumns*, la tabla se llena con columnas vacías adicionales.
+- Cuando la cuenta de columnas en *rangeObj* es inferior al número de *tableColumns*, la tabla muestra un número de columnas que coinciden con el recuento de columnas del rango.
 
-Si pasa una _source_ pero no la opción _tableColumn_, el comando genera las columnas automáticamente. En este caso, _rangeObj_ debe ser un rango de celdas. De lo contrario, se utilizará la primera celda del rango. Cuando se generan columnas automáticamente, se aplican las siguientes reglas:
+Si pasa una *source* pero no la opción *tableColumn*, el comando genera las columnas automáticamente. En este caso, *rangeObj* debe ser un rango de celdas. De lo contrario, se utilizará la primera celda del rango. Cuando se generan columnas automáticamente, se aplican las siguientes reglas:
 
 - Si los datos pasados al comando son una colección de objetos, los nombres de las propiedades se utilizan como títulos de las columnas. Por ejemplo:
 
@@ -68,7 +68,7 @@ Aquí los títulos de las columnas serían `LastName` y `FirstName`.
   - Los índices de las subcolecciones se utilizan como títulos de las columnas.
   - Cada subcolección define los valores de las celdas para la línea. Los valores pueden ser `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` o `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](vp-set-value.md).
 
-> Esto sólo funciona cuando se generan columnas automáticamente. No puede utilizar una colección de datos escalares con la opción _tableColumns_.
+> Esto sólo funciona cuando se generan columnas automáticamente. No puede utilizar una colección de datos escalares con la opción *tableColumns*.
 
 #### Ejemplo
 

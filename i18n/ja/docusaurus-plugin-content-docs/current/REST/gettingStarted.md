@@ -8,21 +8,20 @@ title: はじめに
 RESTサーバーは 4D および 4D Server に含まれており、[設定完了後は](configuration.md) 4Dアプリケーションにて自動的に利用可能となります。
 
 この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
+
 - 簡単な 4Dアプリケーションプロジェクトを作成し、設定します。
 - 標準のブラウザーを開き、REST を介して 4Dプロジェクトのデータにアクセスします。
 
 例題が複雑にならないよう、ここでは 4D とブラウザーを同じマシン上で使用します。 もちろん、リモートアーキテクチャーを使うことも可能です。
-
-
 
 ## 4Dプロジェクトの作成と設定
 
 1. 4D または 4D Server アプリケーションを起動し、新規プロジェクトを作成します。 名前は仮に "Emp4D" とします。
 
 2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
-    - Lastname (文字列)
-    - Firstname (文字列)
-    - Salary (倍長整数)
+   - Lastname (文字列)
+   - Firstname (文字列)
+   - Salary (倍長整数)
 
 ![](../assets/en/REST/getstarted1.png)
 
@@ -38,7 +37,6 @@ RESTサーバーは 4D および 4D Server に含まれており、[設定完了
 
 規定のブラウザーが開かれ、4D Webサーバーのデフォルトホームページが表示されます。
 
-
 ## ブラウザーから 4D データにアクセスする
 
 これで、RESTリクエストを使った 4D のデータの読み込み・編集が可能になりました。
@@ -53,14 +51,14 @@ RESTサーバーの応答です:
 
 ```
 {
-    "__UNIQID": "96A49F7EF2ABDE44BF32059D9ABC65C1",
-    "dataClasses": [
-        {
-            "name": "Employees",
-            "uri": "/rest/$catalog/Employees",
-            "dataURI": "/rest/Employees"
-        }
-    ]
+	"__UNIQID": "96A49F7EF2ABDE44BF32059D9ABC65C1",
+	"dataClasses": [
+		{
+			"name": "Employees",
+			"uri": "/rest/$catalog/Employees",
+			"dataURI": "/rest/Employees"
+		}
+	]
 }
 ```
 
@@ -80,40 +78,40 @@ RESTサーバーの応答です:
 
 ```
 {
-    "__entityModel": "Employees",
-    "__GlobalStamp": 0,
-    "__COUNT": 3,
-    "__FIRST": 0,
-    "__ENTITIES": [
-        {
-            "__KEY": "1",
-            "__TIMESTAMP": "2020-01-07T17:07:52.467Z",
-            "__STAMP": 2,
-            "ID": 1,
-            "Lastname": "Brown",
-            "Firstname": "Michael",
-            "Salary": 25000
-        },
-        {
-            "__KEY": "2",
-            "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
-            "__STAMP": 2,
-            "ID": 2,
-            "Lastname": "Jones",
-            "Firstname": "Maryanne",
-            "Salary": 35000
-        },
-        {
-            "__KEY": "3",
-            "__TIMESTAMP": "2020-01-07T17:08:34.844Z",
-            "__STAMP": 2,
-            "ID": 3,
-            "Lastname": "Smithers",
-            "Firstname": "Jack",
-            "Salary": 41000
-        }
-    ],
-    "__SENT": 3
+	"__entityModel": "Employees",
+	"__GlobalStamp": 0,
+	"__COUNT": 3,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-01-07T17:07:52.467Z",
+			"__STAMP": 2,
+			"ID": 1,
+			"Lastname": "Brown",
+			"Firstname": "Michael",
+			"Salary": 25000
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+			"__STAMP": 2,
+			"ID": 2,
+			"Lastname": "Jones",
+			"Firstname": "Maryanne",
+			"Salary": 35000
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-01-07T17:08:34.844Z",
+			"__STAMP": 2,
+			"ID": 3,
+			"Lastname": "Smithers",
+			"Firstname": "Jack",
+			"Salary": 41000
+		}
+	],
+	"__SENT": 3
 }
 ```
 
@@ -127,12 +125,12 @@ RESTサーバーの応答です:
 
 ```
 {
-    "__entityModel": "Employees",
-    "__KEY": "2",
-    "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
-    "__STAMP": 2,
-    "Lastname": "Jones"
+	"__entityModel": "Employees",
+	"__KEY": "2",
+	"__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+	"__STAMP": 2,
+	"Lastname": "Jones"
 }
 ```
 
-4D の [REST API](REST_requests.md) は、4Dアプリケーションを操作するためのコマンドを多数提供しています。  
+4D の [REST API](REST_requests.md) は、4Dアプリケーションを操作するためのコマンドを多数提供しています。

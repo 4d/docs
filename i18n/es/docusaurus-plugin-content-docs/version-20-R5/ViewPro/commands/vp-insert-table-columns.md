@@ -41,7 +41,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 
 Este comando inserta algunas columnas en _tableName_, NO en la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
 
-If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
+Si _tableName_ no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
 
 #### Ejemplo
 

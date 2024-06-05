@@ -5,7 +5,7 @@ title: Data Model Classes
 
 
 
-ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les sélections d'entités et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
+ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
 Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
@@ -26,7 +26,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 - Si la structure physique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. Vous devez déclarer explicitement chaque fonction publique et alias avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
+- Par défaut, toutes les fonctions de classe de votre modèle de données (y compris [les fonctions des champs calculés](#computed-attributes)) ne sont pas exposées (**not exposed**) aux applications distantes et ne peuvent pas être appelées à partir de requêtes REST. Vous devez déclarer explicitement chaque fonction publique et alias avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](../assets/en/ORDA/api.png)
 
@@ -42,7 +42,7 @@ ORDA fournit des **classes génériques** exposées via le [class store](Concept
 
 Toutes les classes de modèle de données ORDA sont exposées en tant que propriétés du class store **`cs`**. Les classes ORDA suivantes sont disponibles :
 
-| Classe                      | Nom de l'exemple     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Class                       | Nom de l'exemple     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cs.DataStore                | cs.DataStore         | commande [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -64,11 +64,11 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                                      |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| 19 R4   | Alias attributes in the Entity Class                                                               |
-| 19 R3   | Computed attributes in the Entity Class                                                            |
-| 18 R5   | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| Release | Modifications                                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 19 R4   | Attributs alias dans la classe Entity                                                                                            |
+| 19 R3   | Attributs calculés dans la classe Entity                                                                                         |
+| 18 R5   | Les fonctions des classes du modèle de données ne sont pas exposées par défaut en REST. Nouveaux mots-clés `exposed` et `local`. |
 </details>
 
 
@@ -215,7 +215,7 @@ Vous pouvez alors obtenir les employés dont le salaire est supérieur à la moy
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
 
-### Entity Class
+### Classe Entity
 
 Chaque table exposée avec ORDA affiche une classe Entity dans le class store `cs`.
 
@@ -223,9 +223,9 @@ Chaque table exposée avec ORDA affiche une classe Entity dans le class store `c
 - **Nom de classe **: *DataClassName*Entity (où *DataClassName* est le nom de la table)
 - **Exemple ** : cs.CityEntity
 
-#### Champs calculés
+#### Attributs calculés
 
-Les classes Entity vous permettent de définir des **champs calculés** à l'aide de mots-clés spécifiques :
+Les classes Entity vous permettent de définir des **attributs calculés** à l'aide de mots-clés spécifiques :
 
 - `Function get` *attributeName*
 - `Function set` *attributeName*
@@ -297,7 +297,7 @@ Lors de la compilation, les fonctions de classe du modèle de données sont exé
 Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).
 
 
-## Champs calculés
+## Attributs calculés
 
 
 ### Vue d’ensemble
@@ -313,15 +313,15 @@ Tout comme les champs de stockage, les champs calculés peuvent être inclus dan
 De même, les champs calculés peuvent être inclus dans des **tris**. Lorsqu'un champ calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les champs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
 
 
-### Comment définir les champs calculés
+### Comment définir les attributs calculés
 
-Créez un champ calculé en définissant un accesseur `get` dans la [**classe entity**](#entity-class) de la dataclass. Le champ calculé sera automatiquement disponible dans les attributs de la dataclass et dans les attributs de l'entité.
+Créez un champ calculé en définissant un accesseur `get` dans la [**classe entity**](#entity-class) de la dataclass. L'attribut calculé sera automatiquement disponible dans les attributs de la dataclass et dans les attributs de l'entité.
 
 D'autres fonctions de champs calculés (`set`, `query` et `orderBy`) peuvent également être définies dans la classe entity. Elles sont facultatives.
 
-Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) désigne l'entité. Les champs calculés peuvent être utilisés et traités comme n'importe quel champ de dataclass, c'est-à-dire qu'ils seront traités par les fonctions de [classe entity](API/EntityClass.md) ou de [classe entity selection](API/EntitySelectionClass.md).
+Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) désigne l'entité. Les attributs calculés peuvent être utilisés et traités comme n'importe quel attribut de dataclass, c'est-à-dire qu'ils seront traités par les fonctions de [classe entity](API/EntityClass.md) ou de [classe entity selection](API/EntitySelectionClass.md).
 
-> Les champs calculés d'ORDA ne sont pas exposés ([**exposed**](#exposed-vs-non-exposed-functions)) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
+> Les attributs calculés d'ORDA ne sont pas exposés ([**exposed**](#exposed-vs-non-exposed-functions)) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
 
 > **Les fonctions get et set** peuvent avoir la propriété [**local**](#local-functions) pour optimiser le traitement client/serveur.
 
@@ -336,7 +336,7 @@ Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) dési
 ```
 La fonction *getter* est obligatoire pour déclarer le champ calculé *attributeName*. Chaque fois que l'on accède à l'*attributeName*, 4D évalue le code de la fonction `getter` et retourne la valeur *$result*.
 
-> Un champ calculé peut utiliser la valeur d'un ou plusieurs autres champs calculés. Les appels récursifs génèrent des erreurs.
+> Un attribut calculé peut utiliser la valeur d'un ou plusieurs autres attributs calculés. Les appels récursifs génèrent des erreurs.
 
 La fonction *getter* définit le type de données du champ calculé grâce au paramètre *$result*. Les types de résultats suivants sont autorisés :
 
@@ -345,13 +345,13 @@ La fonction *getter* définit le type de données du champ calculé grâce au pa
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- **Exemple ** : cs.EmployeeSelection
+- Entity selection (i.e. cs.EmployeeSelection)
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                   |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nom du champ calculé                                                                                          |
+| attributeName | Text    | Nom de l'attribut calculé                                                                                     |
 | dataClassName | Text    | Nom de la dataclass                                                                                           |
 | kind          | Text    | "get"                                                                                                         |
 | result        | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
@@ -359,7 +359,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 #### Exemples
 
-- Le champ calculé *fullName* :
+- L'attribut calculé *fullName* :
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
@@ -376,7 +376,7 @@ Function get fullName($event : Object)-> $fullName : Text
     End case 
 ```
 
-- Un champ calculé peut être basé sur un attribut relatif à une entité :
+- Un attribut calculé peut être basé sur un attribut relatif à une entité :
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
@@ -384,7 +384,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 
 ```
 
-- Un champ calculé peut être basé sur un attribut relatif à une entity selection :
+- Un attribut calculé peut être basé sur un attribut relatif à une entity selection :
 
 ```4d
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
@@ -412,12 +412,12 @@ Le paramètre *$value* reçoit la valeur attribuée à l'attribut.
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
-| Propriété     | Type    | Description                         |
-| ------------- | ------- | ----------------------------------- |
-| attributeName | Text    | Nom du champ calculé                |
-| dataClassName | Text    | Nom de la dataclass                 |
-| kind          | Text    | "set"                               |
-| value         | Variant | Valeur à gérer par le champ calculé |
+| Propriété     | Type    | Description                           |
+| ------------- | ------- | ------------------------------------- |
+| attributeName | Text    | Nom de l'attribut calculé             |
+| dataClassName | Text    | Nom de la dataclass                   |
+| kind          | Text    | "set"                                 |
+| value         | Variant | Valeur à gérer par l'attribut calculé |
 
 #### Exemple
 
@@ -462,10 +462,10 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
+| attributeName | Text    | Nom de l'attribut calculé                                                                                                                                                                                                                                                                                                                                                          |
 | dataClassName | Text    | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
 | kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                            |
-| value         | Variant | Valeur à gérer par le champ calculé                                                                                                                                                                                                                                                                                                                                                |
+| value         | Variant | Valeur à gérer par l'attribut calculé                                                                                                                                                                                                                                                                                                                                              |
 | operator      | Text    | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
 
@@ -587,7 +587,7 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // code
 ```
 
-La fonction `orderBy` s'exécute chaque fois que le champ calculé doit être ordonné. Elle permet de trier le champ calculé. Par exemple, vous pouvez trier *fullName* sur les prénoms puis les noms, ou inversement. Lorsque la fonction `orderBy` n'est pas implémentée pour un champ calculé, le tri est toujours séquentiel (basé sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
+La fonction `orderBy` s'exécute chaque fois que le champ calculé doit être ordonné. Elle permet de trier l'attribut calculé. Par exemple, vous pouvez trier *fullName* sur les prénoms puis les noms, ou inversement. Lorsque la fonction `orderBy` n'est pas implémentée pour un champ calculé, le tri est toujours séquentiel (basé sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
 > L'appel d'une fonction `orderBy` sur des champs calculés de type Entity class ou Entity selection class **n'est pas pris en charge**.
 
@@ -595,10 +595,10 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                        |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Text    | Nom du champ calculé                                                                                               |
+| attributeName | Text    | Nom de l'attribut calculé                                                                                          |
 | dataClassName | Text    | Nom de la dataclass                                                                                                |
 | kind          | Text    | "orderBy"                                                                                                          |
-| value         | Variant | Valeur à gérer par le champ calculé                                                                                |
+| value         | Variant | Valeur à gérer par l'attribut calculé                                                                              |
 | operator      | Text    | "desc" or "asc" (default)                                                                                          |
 | descending    | Boolean | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
@@ -647,11 +647,11 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### Vue d’ensemble
 
-An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. You can define as many alias attributes as you want in a dataclass.
+Un attribut **alias** est construit au-dessus d'un autre attribut du modèle de données, nommé attribut **cible**. L'attribut cible peut appartenir à une dataclass liée (accessible via n'importe quel niveau de relation) ou à la même dataclass. Un attribut alias ne stocke aucune donnée, mais uniquement le chemin vers son attribut cible. Vous pouvez définir autant d'attributs alias que vous le souhaitez dans une dataclass.
 
-Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+Les attributs Alias sont particulièrement utiles pour gérer les relations N vers N. Ils apportent plus de lisibilité et de simplicité dans le code et dans les recherches en permettant de s'appuyer sur des concepts métier plutôt que sur des détails d'implémentation.
 
-### How to define alias attributes
+### Comment définir des attributs alias
 
 You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
 
@@ -669,16 +669,16 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 
 *targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
 
-An alias can be used as a part of a path of another alias.
+Un alias peut être utilisé comme partie d'un chemin d'un autre alias.
 
-A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
+A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. Par exemple, si "fullName" est un attribut calculé, un alias avec le chemin "employee.fullName" est valide.
 
 > ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
 
 
-### Using alias attributes
+### Utiliser les attributs alias
 
-Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
+Les attributs alias sont en lecture seule (sauf lorsqu'ils sont basés sur un attribut scalaire de la même dataclass, voir le dernier exemple ci-dessous). Ils peuvent être utilisés à la place de leur chemin d'attribut cible dans les fonctions ORDA telles que :
 
 | Function                                       |
 | ---------------------------------------------- |
@@ -697,9 +697,9 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 | `entity.diff()`                                |
 | `entity.touchedAttributes()`                   |
 
-> Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
+> Gardez à l'esprit que les attributs alias sont calculés sur le serveur. Dans les configurations à distance, la mise à jour des attributs d'alias dans les entités nécessite que les entités soient rechargées à partir du serveur.
 
-### Alias properties
+### Propriétés des alias
 
 Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
 
@@ -713,11 +713,11 @@ Alias attributes based upon relations have a specific [`path`](../API/DataClassC
 
 ### Exemples
 
-Considering the following model:
+Considérant le modèle suivant :
 
 ![](../assets/en/ORDA/alias1.png)
 
-In the Teacher dataclass, an alias attribute returns all students of a teacher:
+Dans la dataclasse Teacher, un attribut alias renvoie tous les élèves d'un enseignant :
 
 ```4d
 // cs.TeacherEntity class
@@ -727,7 +727,7 @@ Class extends Entity
 Alias students courses.student //relatedEntities 
 ```
 
-In the Student dataclass, an alias attribute returns all teachers of a student:
+Dans la dataclass Student, un attribut alias renvoie tous les enseignants d'un élève:
 
 
 ```4d
@@ -738,11 +738,11 @@ Class extends Entity
 Alias teachers courses.teacher //relatedEntities 
 ```
 
-In the Course dataclass:
+Dans la dataclass Course :
 
-- an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- un attribut alias renvoie une autre libellé pour l'attribut "name"
+- un attribut alias renvoie le nom de l'enseignant
+- un attribut alias renvoie le nom de l'étudiant
 
 
 ```4d
@@ -756,38 +756,38 @@ Exposed Alias studentName student.name //scalar value
 
 ```
 
-You can then execute the following queries:
+Vous pouvez alors exécuter les recherches suivantes :
 
 ```4d
-// Find course named "Archaeology"
+// Trouver le cours nommé "Archaeology"
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Find courses given by the professor Smith
+// Trouver les cours donnés par le professeur Smith
 ds.Course.query("teacherName = :1";"Smith")
 
-// Find courses where Student "Martin" assists
+// Trouver des cours auxquels l'étudiant "Martin" assiste
 ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher 
+// Trouver des étudiants qui ont M. Smith en tant qu'enseignant 
 ds.Student.query("teachers.name = :1";"Smith")
 
-// Find teachers who have M. Martin as Student
-ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex 
-// query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
-//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
-//  subquery:[ Student.name === Martin]]"
+// Trouver des enseignants qui ont M. Martin comme étudiant
+ds.Teacher.query("students.name = :1"; Martin")
+// Notez que cette chaîne de recherche très simple traite une requête complexe 
+// incluant une double jointure, comme vous pouvez le voir dans le queryPlan:   
+// "Join on Table: Course : Teacher.ID = Course.teacherID,    
+// subquery:[ Join on Table : Student: Course.studentID = Student.ID,
+// subquery:[ Student.name === Martin]]"
 ```
 
 
-You can also edit the value of the *courseName* alias:
+Vous pouvez également modifier la valeur de l'alias *courseName*:
 
 ```4d
-// Rename a course using its alias attribute
+// Renommer un cours en utilisant son attribut alias
 $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
-$arch.save() //courseName and name are "Archaeology II"
+$arch.save() //courseName et name sont "Archaeology II"
 ```
 
 
@@ -856,9 +856,9 @@ $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 
 ## Fonctions locales
 
-Par défaut dans l'architecture client/serveur, les fonctions de modèle de données ORDA sont exécutées **sur le serveur**. Il garantit généralement les meilleures performances puisque seuls la requête de fonction et le résultat sont envoyés sur le réseau.
+Par défaut dans l'architecture client/serveur, les fonctions de modèle de données ORDA sont exécutées **sur le serveur**. Cela garantit généralement les meilleures performances puisque seuls la requête de fonction et le résultat sont envoyés sur le réseau.
 
-Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez enregistrer les requêtes sur le serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
+Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
 
 ```4d  
 // déclarer une fonction à exécuter localement en client/serveur 
@@ -869,7 +869,7 @@ Avec ce mot-clé, la fonction sera toujours exécutée côté client.
 
 > Le mot-clé `local` ne peut être utilisé qu'avec les fonctions de classe du modèle de données. S'il est utilisé avec une fonction de [classe utilisateur standard](Concepts/classes.md), il est ignoré et une erreur est retournée par le compilateur.
 
-A noter que la fonction fonctionnera même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
+A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
 // Obtenir les élèves les plus jeunes  
@@ -939,7 +939,7 @@ End if
 
 
 
-## Prise en charge en IDE 4D
+## Prise en charge dans l'IDE 4D
 
 
 ### Fichiers de classe (class files)
@@ -956,7 +956,7 @@ Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au 
 
 > Par défaut, les classes ORDA vides ne sont pas affichées dans l'Explorateur. Vous devez les afficher en sélectionnant **Afficher toutes les dataclasses** dans le menu d'options de l'Explorateur : ![](../assets/en/ORDA/showClass.png)
 
-Les classes d'utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
+Les classes utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
 
 
 ![](../assets/en/ORDA/classORDA2.png)
@@ -983,7 +983,7 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 
 ### Éditeur de code
 
-In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemple avec une variable de classe Entity :
+Dans l'éditeur de code 4D, les variables typées en tant que classe ORDA bénéficient automatiquement des fonctions d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 

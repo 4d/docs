@@ -11,11 +11,13 @@ Esta página contiene varias opciones para configurar el funcionamiento general 
 
 Esta opción permite configurar la visualización por defecto de 4D al inicio, cuando el usuario lanza únicamente la aplicación.
 
-*   **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
-*   **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
-*   **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura. >Para forzar la visualización de la caja de diálogo de apertura cuando se selecciona esta opción, mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) mientras lanza el proyecto.
-*   **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
-*   **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
+- **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
+- **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
+- **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
+  > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+- **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
+- **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
+
 > **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
 ### Creación de formularios automática
@@ -28,8 +30,8 @@ A partir de macOS Sierra, las aplicaciones Mac pueden beneficiarse de la funció
 
 Puede beneficiarse de esta funcionalidad en los siguientes entornos (sólo con las versiones 4D de 64 bits):
 
-*   Ventanas del editor de código
-*   Ventanas del editor de formularios
+- Ventanas del editor de código
+- Ventanas del editor de formularios
 
 Todas las ventanas de estos editores se pueden poner en forma de pestaña:
 
@@ -45,9 +47,9 @@ En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas
 
 Hay tres opciones disponibles:
 
-*   **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
-*   **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
-*   **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
+- **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
+- **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
+- **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Apariencia (sólo para macOS)
 
@@ -57,24 +59,22 @@ Este menú permite seleccionar la combinación de colores que se utilizará para
 
 Hay tres opciones disponibles:
 
-*   **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
-*   **Claro**: utilizar el tema claro
-*   **Sombra**: utilizar el tema Sombra
+- **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
+- **Claro**: utilizar el tema claro
+- **Sombra**: utilizar el tema Sombra
 
 > Esta preferencia sólo es compatible en macOS. En Windows, se utiliza siempre el esquema "Light".
-
 
 ### Salir del modo Diseño al ir al modo Aplicación
 
 Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación utilizando el comando de menú **Probar la aplicación**, se cierran todas las ventanas del entorno Diseño. Si esta opción no está marcada (configuración de fábrica), las ventanas del entorno Diseño permanecen visibles al fondo del entorno Aplicación.
 
-
 ### Activar la creación de bases de datos binarias
 
 Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
-*   **Base de datos...**
-*   **Base de datos a partir de una definición de estructura...**
+- **Base de datos...**
+- **Base de datos a partir de una definición de estructura...**
 
 ![](../assets/en/Preferences/general5.png)
 
@@ -94,24 +94,23 @@ Gracias a este principio, en macOS las carpetas de las bases aparecen como paque
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
-Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y campos). Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar los elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
 Si tiene intención de utilizar VCS o los editores de código externos con sus nuevos proyectos, es posible que desee desmarcar esta opción para una mejor legibilidad del código con estas herramientas.
 
 > Esta opción sólo puede aplicarse a proyectos (las bases de datos binarias siempre incluyen tokens).
 
-> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro *option*.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the _option_ parameter.
 
 #### Exclusión de los tokens en los proyectos existentes
 
-Puede configurar sus proyectos existentes para guardar el código **sin tokens** insertando la siguiente llave en el archivo [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) utilizando un editor de texto:
+You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
 
 ```
 "tokenizedText": false
 ```
 
 > Este parámetro sólo se tiene en cuenta cuando se guardan los métodos. Los métodos existentes en sus proyectos no se modifican, a menos que los vuelva a guardar.
-
 
 ### Crear el archivo `.gitignore`
 
@@ -132,15 +131,15 @@ Este parámetro permite definir el lenguaje utilizado por defecto utilizado para
 Una base 4D puede funcionar en un lenguaje distinto al del sistema. Cuando se abre una base, el motor de 4D detecta el lenguaje utilizado por el fichero de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las realiza el motor de la base de datos o el lenguaje, se hacen en el mismo lenguaje.
 
 Al crear un nuevo archivo de datos, 4D utiliza el idioma previamente configurado en este menú. Al abrir un archivo de datos que no está en el mismo idioma que la estructura, se utiliza el idioma del archivo de datos y el código del idioma se copia en la estructura.
+
 > Puede modificar este parámetro para la base abierta utilizando la Configuración de la base (ver [Comparación de textos](../settings/database.md#text-comparison)).
 
 ## Ubicación de la documentation
 
 Esta área configura el acceso a la documentación HTML de 4D mostrada en su navegador actual:
 
-*   Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
-*   Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
-
+- Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
+- Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
 ### Lenguaje de la documentación
 
@@ -152,8 +151,8 @@ Lenguaje de la documentación HTML a mostrar. Puede seleccionar una documentaci�
 
 Define dónde buscará 4D las páginas de documentación.
 
-*   Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
-*   Cuando no está marcada, 4D busca la página deseada directamente en el sitio web de documentación en línea y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
+- Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
+- Cuando no está marcada, 4D busca la página deseada directamente en el sitio web de documentación en línea y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
 
 ### Carpeta local
 
@@ -161,4 +160,4 @@ Define dónde buscará 4D las páginas de documentación.
 
 Indica la ubicación de la documentación HTML estática. Por defecto, se trata de la subcarpeta \Help\Command\language. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
-Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. Para designar una ubicación diferente, haga clic en el botón **[...]** junto al área de entrada y elija una carpeta raíz de documentación (carpeta correspondiente al idioma: `fr`, `en`, `es`, `de` o `ja`). 
+Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. Para designar una ubicación diferente, haga clic en el botón **[...]** junto al área de entrada y elija una carpeta raíz de documentación (carpeta correspondiente al idioma: `fr`, `en`, `es`, `de` o `ja`).

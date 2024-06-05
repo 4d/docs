@@ -3,20 +3,19 @@ id: FileHandleClass
 title: FileHandle
 ---
 
-La clase `FileHandle` tiene funciones que permiten leer secuencialmente o añadir contenido a un objeto abierto [`File`](FileClass). Un manejador de archivo puede acceder a cualquier parte de un documento.
+The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. Un manejador de archivo puede acceder a cualquier parte de un documento.
 
-Los objetos manejadores de archivos se crean con la función [`file.open()`](FileClass#open).
+File handle objects are created with the [`file.open()`](FileClass#open) function.
 
-> Para leer o escribir un documento completo de una vez, puede considerar el uso de las funciones [file.getText()](FileClass.md#gettext) y [file.setText()](FileClass.md#settext).
+> To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
 
-Gracias al objeto estándar 4D *refcounting*, un manejador de archivo se elimina automáticamente cuando deja de ser referenciado y, por tanto, el objeto [`File`](FileClass) solicitado se cierra automáticamente. Por lo tanto, con los gestores de archivos no hay que preocuparse por el cierre de los documentos.
+Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Por lo tanto, con los gestores de archivos no hay que preocuparse por el cierre de los documentos.
 
 :::note
 
-Los recursos de los objetos, como los documentos, se liberan cuando ya no existen referencias en la memoria, lo que ocurre, por ejemplo, al final de la ejecución del método para las variables locales. Si desea "forzar" la liberación de los recursos del objeto en cualquier momento, puede [anular sus referencias](../Concepts/dt_object.md#resources).
+Los recursos de los objetos, como los documentos, se liberan cuando ya no existen referencias en la memoria, lo que ocurre, por ejemplo, al final de la ejecución del método para las variables locales. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
 
 :::
-
 
 ### Ejemplo
 
@@ -25,21 +24,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Escribiendo línea a línea desde el principio
+//Writing line by line from the start
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Escribir línea a línea desde el final
+//Writing line by line from the end
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Lectura utilizando un caracter de parada y un parámetro objeto
+//Reading using a stop character and an object parameter
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -48,11 +47,11 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Lectura línea a línea
+//Reading line by line
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
-    $lines.push($fhandle.readLine())
+	$lines.push($fhandle.readLine())
 End while
 
 ```
@@ -61,167 +60,163 @@ End while
 
 Los objetos manejadores de archivos no pueden ser compartidos.
 
-|                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.file.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readBlob().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readLine().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readText().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.setSize().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeBlob().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeLine().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeText().Summary -->|
-
-
+|                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)<br/><!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->    |
+| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)<br/><!-- INCLUDE #FileHandleClass.breakModeWrite.Summary --> |
+| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)<br/><!-- INCLUDE #FileHandleClass.charset.Summary -->                      |
+| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)<br/><!-- INCLUDE #FileHandleClass.eof.Summary -->                                  |
+| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)<br/><!-- INCLUDE #FileHandleClass.file.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)<br/><!-- INCLUDE #FileHandleClass.getSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)<br/><!-- INCLUDE #FileHandleClass.mode.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)<br/><!-- INCLUDE #FileHandleClass.offset.Summary -->                         |
+| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)<br/><!-- INCLUDE #FileHandleClass.readBlob().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)<br/><!-- INCLUDE #FileHandleClass.readLine().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)<br/><!-- INCLUDE #FileHandleClass.readText().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)<br/><!-- INCLUDE #FileHandleClass.setSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)<br/><!-- INCLUDE #FileHandleClass.writeBlob().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)<br/><!-- INCLUDE #FileHandleClass.writeLine().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)<br/><!-- INCLUDE #FileHandleClass.writeText().Summary -->            |
 
 <!-- REF FileHandleClass.breakModeRead.Desc -->
+
 ## .breakModeRead
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
 
-
 #### Descripción
 
-La propiedad `.breakModeRead` devuelve <!-- REF #FileHandleClass.breakModeRead.Summary -->el modo de procesamiento de los saltos de línea utilizados al leer el archivo<!-- END REF -->.
+The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
 
+The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Por defecto es "native".
 
-La propiedad `.breakModeRead` puede ser definida en la creación del handle con la función [`file.open()`](FileClass.md#open) (ver [la función `.open()`](FileClass.md#open) para más información). Por defecto es "native".
+> The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
-> La propiedad `.breakModeRead` siempre contiene un valor de texto, incluso si la opción `.open()` fue definida utilizando un número (constante).
-
-
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.breakModeWrite.Desc -->
+
 ## .breakModeWrite
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
 
-
 #### Descripción
 
-La propiedad `.breakModeWrite` devuelve <!-- REF #FileHandleClass.breakModeWrite.Summary -->el modo de procesamiento de los saltos de línea utilizados al escribir en el archivo<!-- END REF -->.
+The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->.
 
-La propiedad `.breakModeWrite` puede ser definida en la creación del handle con la función [`file.open()`](FileClass.md#open) (ver [la función `.open()`](FileClass.md#open) para más información). Por defecto es "native".
+The `.breakModeWrite` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Por defecto es "native".
 
-> La propiedad `.breakModeWrite` siempre contiene un valor texto, incluso si la opción `.open()` fue definida utilizando un número (constante).
+> The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
-
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.charset.Desc -->
+
 ## .charset
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
 
-
 #### Descripción
 
-La propiedad `.charset` devuelve <!-- REF #FileHandleClass.charset.Summary -->el conjunto de caracteres utilizado al leer o escribir en el archivo<!-- END REF -->.
+The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->.
 
-El conjunto de caracteres puede definirse en la creación del gestor con la función [`file.open()`](FileClass#open). Por defecto es "UTF-8".
+The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por defecto es "UTF-8".
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.eof.Desc -->
+
 ## .eof
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
 
-
 #### Descripción
 
-La propiedad `.eof` devuelve <!-- REF #FileHandleClass.eof.Summary -->True es el `offset<` que ha llegado al final del archivo, y False en caso contrario<!-- END REF -->.
+The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
-
 
 <!-- REF FileHandleClass.file.Desc -->
+
 ## .file
 
-<!-- REF #FileHandleClass.file.Syntax -->**.file**: 4D.File<!-- END REF -->
-
+<!-- REF #FileHandleClass.file.Syntax -->**.file** : 4D.File<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.file` devuelve <!-- REF #FileHandleClass.file.Summary -->el objeto [4D.File](FileClass.md) sobre el que se ha creado el gestor de archivos<!-- END REF -->.
+The `.file` property returns <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.getSize().Desc -->
+
 ## .getSize()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
-
 <!--REF #FileHandleClass.getSize().Params -->
+
 | Parámetros | Tipo |    | Descripción                   |
 | ---------- | ---- | -- | ----------------------------- |
 | Result     | Real | <- | Tamaño del documento en bytes |
+
 <!-- END REF -->
 
 #### Descripción
 
-La función `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->devuelve el tamaño actual del documento, expresado en bytes<!-- END REF -->.
+The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
 
-> Esta función devuelve el mismo valor que la propiedad ([.size](FileClass#size)) de la clase `File`.
+> This function returns the same value as the ([.size](FileClass#size)) property of the `File` class.
 
 #### Ver también
 
@@ -229,70 +224,69 @@ La función `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->devuelve
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.mode.Desc -->
+
 ## .mode
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
-<!-- REF #FileHandleClass.mode.Syntax -->**.mode**: Text<!-- END REF -->
-
+<!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.mode` devuelve <!-- REF #FileHandleClass.mode.Summary -->el modo en el que se creó el gestor de archivos: "leer", "escribir" o "añadir"<!-- END REF -->.
+The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
 
-El modo se puede definir en la creación del manejador con la función [`file.open()`](FileClass#open). Por defecto es "leer".
+The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por defecto es "leer".
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.offset.Desc -->
+
 ## .offset
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
 
-
 #### Descripción
 
-La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
+The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Definiendo el `.offset` cambiará su valor actual en el momento de la siguiente operación de lectura o escritura.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
-- Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
-- Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).
+- If the passed value is negative, the `.offset` is set to the start of the file (zero).
+- If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
-Esta propiedad es **lectura/escritura**.
+Esta propiedad es **lectura-escritura**.
 
 :::caution
 
-Cuando se crea un filehandle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por ejemplo:
 
 ```4d
-  // Abrir un fichero de texto europeo utilizando la codificación utf-16 (dos bytes por caracter)
-  // Queremos leer los 10 primeros caracteres como bytes y luego el resto como texto.
+  // Open a european text file using utf-16 encoding (two bytes per character)
+  // We want to read the first 10 characters as bytes, then the remaining as text.
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // lee los 20 primeros bytes (es decir, 10 caracteres)
+  // read the 20 first bytes (i.e. 10 characters)
 $b:=$fh.readBlob(20) // $fh.offset=20
-  // a continuación lee todo el texto saltándose los 10 primeros caracteres que acabamos de leer en el blob anterior
-  // como ahora estamos leyendo texto en lugar de bytes, el significado de 'offset' no es el mismo.
-  // Necesitamos traducirlo de bytes a caracteres.
-$fh.offset:=10 // pide que se omitan 10 caracteres utf-16 (20 bytes)
+  // then read all text skipping the first 10 characters we just read in previous blob
+  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
+  // We need to translate it from bytes to characters.
+$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
 $s:=$fh.readText()
 ```
 
@@ -300,37 +294,34 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.readBlob().Desc -->
+
 ## .readBlob()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción              |
-| ---------- | -------------------- | -- | ------------------------ |
-| *bytes*    | Real                 | -> | Número de bytes a leer   |
+
+| Parámetros | Tipo                                 |    | Descripción              |
+| ---------- | ------------------------------------ | -- | ------------------------ |
+| *bytes*    | Real                                 | -> | Número de bytes a leer   |
 | Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
+
 <!-- END REF -->
-
-
 
 #### Descripción
 
-La función `.readBlob()` <!-- REF #FileHandleClass.readBlob().Summary -->devuelve un blob de un tamaño de *bytes* del archivo, empezando por la posición actual <!-- END REF -->.
+The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte leído.
-
-
+When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
 
 #### Ver también
 
@@ -338,44 +329,41 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!-- END REF -->
 
-
-
-
 <!-- REF FileHandleClass.readLine().Desc -->
+
 ## .readLine()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readLine().Params -->
+
 | Parámetros | Tipo |    | Descripción    |
 | ---------- | ---- | -- | -------------- |
 | Result     | Text | <- | Línea de texto |
+
 <!-- END REF -->
-
-
 
 #### Descripción
 
-La función `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->devuelve una línea de texto desde la posición actual hasta que se encuentre un delimitador de fin de línea o se llegue al final del documento<!-- END REF -->.
+The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
-Cuando se ejecuta esta función, la posición actual ([`.offset`](#offset)) se actualiza.
+When this function is executed, the current position ([`.offset`](#offset)) is updated.
 
-:::caution Advertencia
+:::caution Atención
 
-Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
 
 :::
 
 > Cuando esta función se ejecuta por primera vez en un manejador de archivo, todo el contenido del documento se carga en un buffer.
-
 
 #### Ver también
 
@@ -383,43 +371,44 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.readText().Desc -->
+
 ## .readText()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readText().Params -->
-| Parámetros | Tipo |    | Descripción                           |
-| ---------- | ---- | -- | ------------------------------------- |
-| *stopChar* | Text | -> | Caracter(es) en los que dejar de leer |
-| Result     | Text | <- | Texto del archivo                     |
-<!-- END REF -->
 
+| Parámetros | Tipo |    | Descripción                                              |
+| ---------- | ---- | -- | -------------------------------------------------------- |
+| *stopChar* | Text | -> | Caracter(es) en los que dejar de leer |
+| Result     | Text | <- | Texto del archivo                                        |
+
+<!-- END REF -->
 
 #### Descripción
 
-La función `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devuelve el texto del archivo, empezando por la posición actual hasta que se encuentre la primera cadena *stopChar* (si se ha pasado) o se llegue al final del archivo<!-- END REF -->.
+The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
-La cadena de caracteres *stopChar* no se incluye en el texto devuelto. Si se omite el parámetro *stopChar*, se devuelve todo el texto del documento.
+The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.
 
-Cuando se ejecuta esta función, el ([.offset](#offset)) se coloca justo después de la cadena *stopChar*.
+When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
 
-:::caution Advertencia
+:::caution Atención
 
-Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
 
 :::
 
-Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve una cadena vacía y el [.offset](#offset) se deja intacto.
+If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
 
 > Cuando esta función se ejecuta por primera vez en un manejador de archivo, todo el contenido del documento se carga en un buffer.
 
@@ -429,32 +418,33 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.setSize().Desc -->
+
 ## .setSize()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
-<!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size*: Real)<!-- END REF -->
-
+<!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
 <!--REF #FileHandleClass.setSize().Params -->
+
 | Parámetros | Tipo |    | Descripción                         |
 | ---------- | ---- | -- | ----------------------------------- |
 | size       | Real | -> | Nuevo tamaño del documento en bytes |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### Descripción
 
-La función `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->define un nuevo *size* en bytes para el documento<!-- END REF -->.
+The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
 
-Si el valor del *size* es menor que el tamaño actual del documento, el contenido del documento se trunca desde el principio para obtener el nuevo *size*.
+If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
 #### Ver también
 
@@ -462,32 +452,33 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.writeBlob().Desc -->
+
 ## .writeBlob()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
-
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción                   |
-| ---------- | -------------------- | -- | ----------------------------- |
-| *blob*     | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo |
-<!-- END REF -->
 
+| Parámetros | Tipo                                 |    | Descripción                   |
+| ---------- | ------------------------------------ | -- | ----------------------------- |
+| *blob*     | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo |
+
+<!-- END REF -->
 
 #### Descripción
 
-La función `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->escribe *blob* en el archivo, empezando por la posición actual <!-- END REF -->.
+The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->.
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte escrito.
+When this function is executed, the current position ([.offset](#offset)) is updated after the last byte written.
 
 #### Ver también
 
@@ -495,34 +486,33 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.writeLine().Desc -->
+
 ## .writeLine()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
-
-
 <!--REF #FileHandleClass.writeLine().Params -->
+
 | Parámetros   | Tipo |    | Descripción      |
 | ------------ | ---- | -- | ---------------- |
 | *lineOfText* | Text | -> | Texto a escribir |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### Descripción
 
-La función `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->escribe *lineOfText* contenido en la posición actual e inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeText()](#writetext)). Por defecto, se utiliza el delimitador de fin de línea, pero se puede definir otro delimitador al [abrir el manejador del archivo](FileClass.md#open) definiendo la propiedad [`.breakModeRead`](#breakmodewrite).
+The `.writeLine()` function <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (unlike the [.writeText()](#writetext) function). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último delimitador de fin de línea.
+When this function is executed, the current position ([.offset](#offset)) is updated after the end-of-line delimiter.
 
 #### Ver también
 
@@ -530,32 +520,33 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.writeText().Desc -->
+
 ## .writeText()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
-
 <!--REF #FileHandleClass.writeText().Params -->
+
 | Parámetros    | Tipo |    | Descripción      |
 | ------------- | ---- | -- | ---------------- |
 | *textToWrite* | Text | -> | Texto a escribir |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### Descripción
 
-La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). This function replaces all original end-of-line delimiters.
+The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del siguiente delimitador de fin de línea.
+When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
 
 #### Ver también
 

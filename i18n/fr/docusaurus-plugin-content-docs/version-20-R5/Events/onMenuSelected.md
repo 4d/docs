@@ -7,7 +7,6 @@ title: Sur menu sélectionné
 | ---- | -------------------- | -------------------------------------------------------------- |
 | 18   | Formulaire           | Un élément de menu a été choisi dans la barre de menu associée |
 
-
 ## Description
 
 L'événement `On Menu Selected` est envoyé à la méthode formulaire lorsqu'une commande d'une barre de menus associée au formulaire est sélectionnée. Vous pouvez ensuite appeler la commande `Menu selected` pour tester le menu sélectionné.

@@ -5,7 +5,7 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Syntax -->
 
-**VP Combine ranges** ( _rangeObj_ : Object ; _otherRangeObj_ : Object {;..._otherRangeObjN_ : Object }  ) : Object<!-- END REF -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
@@ -13,17 +13,17 @@ title: VP Combine ranges
 | ------------- | ------ | -- | ---------------------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage                        |                  |
 | otherRangeObj | Object | -> | Objet plage                        |                  |
-| Résultat      | Object | <- | Object containing a combined range | <!-- END REF --> |
+| Résultat      | Object | <- | Objet contenant une plage combinée | <!-- END REF --> |
 
 #### Description
 
 The `VP Combine Ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
-In _rangeObj_, pass the first range object.
+In *rangeObj*, pass the first range object.
 
-In _otherRangeObj_, pass another range object(s) to combine with _rangeObj_.
+In *otherRangeObj*, pass another range object(s) to combine with *rangeObj*.
 
-> The command incorporates _rangeObj_ and _otherRangeObj_ objects by reference.
+> The command incorporates *rangeObj* and *otherRangeObj* objects by reference.
 
 #### Exemple
 

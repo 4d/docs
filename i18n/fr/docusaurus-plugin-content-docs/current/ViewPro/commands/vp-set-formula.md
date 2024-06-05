@@ -5,7 +5,7 @@ title: VP SET FORMULA
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 
-**VP SET FORMULA** ( _rangeObj_ : Object ; _formula_ : Text { ; _formatPattern_ : Text } ) <!-- END REF -->
+**VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
@@ -13,22 +13,22 @@ title: VP SET FORMULA
 | ------------- | ------ | -- | --------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage           |                  |
 | formula       | Text   | -> | Formule ou méthode 4D |                  |
-| formatPattern | Text   | -> | Format of field       | <!-- END REF --> |
+| formatPattern | Text   | -> | Format du champ       | <!-- END REF --> |
 
 #### Description
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. If _rangeObj_ includes multiple cells, the formula specified will be linked in each cell.
+In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
 
-The _formula_ parameter specifies a formula or 4D method name to be assigned to the _rangeObj_.
+The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
-> If the _formula_ is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
+> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
 > If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
 
-The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _formula_.
+The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *formula*.
 
-You remove the formula in _rangeObj_ by replacing it with an empty string ("").
+You remove the formula in *rangeObj* by replacing it with an empty string ("").
 
 #### Exemple 1
 

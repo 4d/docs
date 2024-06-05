@@ -1,8 +1,7 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
-
 
 Retourne un ID du fichier téléchargé sur le serveur
 
@@ -20,7 +19,7 @@ Pour télécharger une image (ou tout autre fichier binaire), sélectionnez d'ab
 
 Téléchargez ensuite l'image sélectionnée vers le serveur 4D à l'aide d'une requête telle que :
 
- `POST  /rest/$upload?$rawPict=true`
+`POST  /rest/$upload?$rawPict=true`
 
 Par conséquent, le serveur retourne un ID qui identifie le fichier :
 
@@ -28,9 +27,9 @@ Par conséquent, le serveur retourne un ID qui identifie le fichier :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant [`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité. La requête est la suivante :
+Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. La requête est la suivante :
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
 **Données POST** :
 
@@ -66,7 +65,7 @@ L'entité modifiée est retournée :
 
 ## Exemple avec un client 4D HTTP
 
-L'exemple suivant montre comment télécharger un fichier *.pdf* vers le serveur à l'aide du client 4D HTTP.
+L'exemple suivant montre comment télécharger un fichier _.pdf_ vers le serveur à l'aide du client 4D HTTP.
 
 ```4d
 var $params : Text
@@ -78,30 +77,30 @@ var $blob : Blob
 ARRAY TEXT($headerNames; 1)
 ARRAY TEXT($headerValues; 1)
 
-$url:="localhost:80/rest/$upload?$binary=true" //préparer une requête the REST
+$url:="localhost:80/rest/$upload?$binary=true" //prepare the REST request
 
 $headerNames{1}:="Content-Type"
 $headerValues{1}:="application/octet-stream"
 
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Charger le binaire 
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
 
  //Execute the first POST request to upload the file
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
 
 If ($result=200) 
-    var $data : Object
+	var $data : Object
     $data:=New object
     $data.__KEY:="3"
     $data.__STAMP:="3"
     $data.pdf:=New object("ID"; String($response.ID)) 
 
-    $url:="localhost:80/rest/Invoices?$method=update" //seconde requête pour mettre à jour l'entité
+    $url:="localhost:80/rest/Invoices?$method=update" //second request to update the entity
 
     $headerNames{1}:="Content-Type"
     $headerValues{1}:="application/json"
 
     $result:=HTTP Request(HTTP POST method; $url; $data; $response; $headerNames; $headerValues)
 Else
-    ALERT(String($result)+" Error")
+	ALERT(String($result)+" Error")
 End if
 ```

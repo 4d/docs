@@ -1,8 +1,7 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
-
 
 サーバーにアップロードしたファイルの ID を返します
 
@@ -20,7 +19,7 @@ title: '$upload'
 
 次に、下のようなリクエストを使用して、選択した画像を 4D Server にアップロードします:
 
- `POST  /rest/$upload?$rawPict=true`
+`POST  /rest/$upload?$rawPict=true`
 
 その結果、サーバーからはファイルを識別する ID が返されます。
 
@@ -28,9 +27,9 @@ title: '$upload'
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します. リクエストは次のようになります:
+この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します。 リクエストは次のようになります:
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
 **POST データ**:
 
@@ -66,7 +65,7 @@ title: '$upload'
 
 ## 4D HTTPクライアントを使った例
 
-次の例では、4D HTTPクライアントを使用して、*.pdf* ファイルをサーバーにアップロードする方法を示します。
+次の例では、4D HTTPクライアントを使用して、_.pdf_ ファイルをサーバーにアップロードする方法を示します。
 
 ```4d
 var $params : Text

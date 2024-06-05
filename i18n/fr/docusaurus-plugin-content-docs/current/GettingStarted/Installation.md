@@ -5,13 +5,11 @@ title: Installation
 
 Bienvenue dans 4D ! Cette page regroupe toutes les informations nécessaires sur l'installation et le lancement de votre produit 4D.
 
-
 ## Configuration requise
 
 La page [Téléchargements](https://us.4d.com/product-download) dut site de 4D fournit des informations sur les pré-requis macOS / Windows nécessaires à la gamme 4D.
 
 Des détails techniques supplémentaires sont disponibles sur la [page Ressources](https://us.4d.com/resources/feature-release) du site web de 4D.
-
 
 ## Installation sur disque
 
@@ -20,7 +18,6 @@ Les produits 4D sont installés à partir du site web de 4D :
 1. Connectez-vous au site internet de 4D puis consultez la page [Téléchargements](https://us.4d.com/product-download).
 
 2. Cliquez sur le lien de téléchargement du produit 4D de votre choix, puis suivez les instructions qui s'affichent à l'écran.
-
 
 ## Connexion
 
@@ -45,7 +42,6 @@ Apparaît ensuite l'assistant de bienvenue :
 - **Créez un nouveau projet d'application** - créez un nouveau projet d'application vide sur votre disque.
 
 Nous vous souhaitons une excellente expérience 4D !
-
 
 :::info
 

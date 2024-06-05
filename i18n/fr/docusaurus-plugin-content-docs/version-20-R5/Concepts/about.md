@@ -15,7 +15,6 @@ Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est 
 
 La flexibilité et la puissance du langage de 4D en font l’outil idéal pour exécuter toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent exécuter des calculs rapidement, les utilisateurs plus expérimentés peuvent personnaliser leurs applications sans connaissances préalables en programmation et les développeurs chevronnés peuvent utiliser ce langage puissant pour ajouter à leurs applications des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Quant aux développeurs ayant une maîtrise de la programmation dans d’autres langages, ils peuvent ajouter leurs propres commandes au langage de 4D.
 
-
 ## Qu'est-ce qu'un langage ?
 
 Le langage de 4D n’est pas très différent de celui que nous utilisons tous les jours. C’est une forme de communication qui permet d'exprimer des idées, d'informer ou de donner des instructions. Tout comme un langage parlé, celui de 4D se compose d'un vocabulaire, d’une grammaire et d’une syntaxe, que vous employez pour indiquer au programme comment gérer votre application et vos données.
@@ -47,7 +46,8 @@ Le langage 4D est très puissant — une commande remplace souvent des centaines
 
 Le langage est conçu de telle manière que vous puissiez facilement accomplir n’importe quelle tâche. L’ajout d’un enregistrement, le tri des enregistrements, la recherche de valeurs et les autres opérations de même type sont définies par des commandes simples et directes. Mais les routines peuvent également contrôler les ports série, lire des documents sur le disque, traiter des systèmes de transactions complexes, et plus encore.
 
-Même les opérations les plus compliquées se définissent de manière relativement simple. Il serait inimaginable de les réaliser sans le langage de 4D. Cependant, même à l’aide de la puissance des commandes du langage, certaines tâches peuvent se révéler complexes et difficiles. Ce n’est pas l’outil lui-même qui fait le travail ; une tâche peut représenter en soi une difficulté, l’outil ne fait que faciliter son traitement. Par exemple, un logiciel de traitement de texte permet d’écrire un livre plus rapidement et plus facilement, mais il ne l’écrira pas à votre place. Le langage de 4D vous permet de gérer plus facilement vos données et d’appréhender les tâches ardues en toute confiance.
+Même les opérations les plus compliquées se définissent de manière relativement simple. Il serait inimaginable de les réaliser sans le langage de 4D.
+Cependant, même à l’aide de la puissance des commandes du langage, certaines tâches peuvent se révéler complexes et difficiles. Ce n’est pas l’outil lui-même qui fait le travail ; une tâche peut représenter en soi une difficulté, l’outil ne fait que faciliter son traitement. Par exemple, un logiciel de traitement de texte permet d’écrire un livre plus rapidement et plus facilement, mais il ne l’écrira pas à votre place. Le langage de 4D vous permet de gérer plus facilement vos données et d’appréhender les tâches ardues en toute confiance.
 
 ## Est-ce un langage informatique “traditionnel” ?
 

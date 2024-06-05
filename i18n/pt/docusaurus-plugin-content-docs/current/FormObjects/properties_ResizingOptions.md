@@ -7,17 +7,17 @@ title: Opções de redimensionamento
 
 When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 
-When this property is disabled (`legacy` value in JSON), only the rightmost column of the list box is resized, even if its width exceeds the maximum value defined.
+Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redimensiona la columna más a la derecha del listbox, aunque su ancho supere el valor máximo definido.
 
 ### Como funciona o redimensionamento automático de colunas
 
-* As the list box width increases, its columns are enlarged, one by one, starting from right to left, until each reaches its [maximum width](properties_CoordinatesAndSizing.md#maximum-width). Only columns with the [Resizable](#resizable) property selected are resized.
+- A medida que el ancho del list box aumenta, sus columnas se amplían, una a una, empezando de derecha a izquierda, hasta que cada una alcanza su [ancho máximo](properties_CoordinatesAndSizing.md#maximum-width). Sólo se redimensionan las columnas con la propiedad [Resizable](#resizable) seleccionada.
 
-* The same procedure applies when the list box width decreases, but in reverse order (*i.e.*, columns are resized starting from left to right). When each column has reached its [minimum width](properties_CoordinatesAndSizing.md#minimum-width), the horizontal scroll bar becomes active again.
+- El mismo procedimiento se aplica cuando el ancho del list box disminuye, pero en orden inverso (_es decir,_, las columnas se redimensionan empezando de izquierda a derecha). Cuando cada columna ha alcanzado su [ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width), la barra de desplazamiento horizontal vuelve a activarse.
 
-* Columns are resized only when the horizontal scroll bar is not "active"; *i.e.*, all columns are fully visible in the list box at its current size. **Note**: If the horizontal scroll bar is hidden, this does not alter its state: a scroll bar may still be active, even though it is not visible.
+- Las columnas se redimensionan sólo cuando la barra de desplazamiento horizontal no está "activa"; _es decir,_, todas las columnas son totalmente visibles en el list box en su tamaño actual. **Nota**: si la barra de desplazamiento horizontal está oculta, esto no altera su estado: una barra de desplazamiento puede seguir estando activa, aunque no sea visible.
 
-* After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space. If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
+- After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space. If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
@@ -25,9 +25,9 @@ When this property is disabled (`legacy` value in JSON), only the rightmost colu
 
 The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
 
-The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \`On Header Cl
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
+Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
 #### Gramática JSON
 
@@ -43,7 +43,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 ## Dimensionamento horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
+This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
@@ -52,7 +52,8 @@ Estão disponíveis três opções:
 | Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                  |
 | Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
 | Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                   |
-> This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
+
+> Esta propiedad funciona junto con la propiedad [Dimensionamiento vertical](#tamaño-vertical).
 
 #### Gramática JSON
 
@@ -68,7 +69,7 @@ Estão disponíveis três opções:
 
 ## Alinhamento vertical
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
@@ -77,7 +78,8 @@ Estão disponíveis três opções:
 | Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
 | Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                 |
-> This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
+
+> Esta propiedad funciona junto con la propiedad [Dimensionamiento horizontal](#horizontal-sizing).
 
 #### Gramática JSON
 
@@ -95,7 +97,8 @@ Estão disponíveis três opções:
 
 When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
 
-Here is the result of a “pusher” splitter being moved: ![](../assets/en/FormObjects/splitter_pusher1.png)
+Here is the result of a “pusher” splitter being moved:
+![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)
 
@@ -105,13 +108,13 @@ Quando esta propriedade não é aplicada ao splitter, o resultado é o seguinte:
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados |          Valores possíveis           |
-|:------------ |:-------------:|:------------------------------------:|
-| splitterMode |    string     | "move" (pusher), "resize" (standard) |
+| Nome         | Tipo de dados |                              Valores possíveis                             |
+| :----------- | :-----------: | :------------------------------------------------------------------------: |
+| splitterMode |     string    | "move" (pusher), "resize" (standard) |
 
 #### Objectos suportados
 
-[Separador](splitters.md)
+[Splitter](splitters.md)
 
 ---
 
@@ -122,9 +125,9 @@ Designa se o tamanho da coluna pode ser modificado pelo usuário.
 #### Gramática JSON
 
 | Nome      | Tipo de dados | Valores possíveis |
-|:--------- |:-------------:|:-----------------:|
+| :-------- | :-----------: | :---------------: |
 | resizable |    boolean    |  "true", "false"  |
 
 #### Objectos suportados
 
-[Coluna da List Box](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns)

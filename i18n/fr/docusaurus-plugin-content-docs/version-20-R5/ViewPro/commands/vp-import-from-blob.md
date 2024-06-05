@@ -41,7 +41,7 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | param3     |                               | object                  | A reference to the command's _paramObj_ parameter        |
 | param4     |                               | object                  | Objet retourné par la méthode avec un message de statut  |
 |            | .success      | boolean                 | Vrai si l'import est réussi, Faux sinon. |
-|            | .errorCode    | entier                  | Code d'erreur.                           |
+|            | .errorCode    | integer                 | Code d'erreur.                           |
 |            | .errorMessage | text                    | Message d'erreur.                        |
 
 #### Exemple

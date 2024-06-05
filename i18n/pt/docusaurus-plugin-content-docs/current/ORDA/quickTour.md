@@ -7,7 +7,7 @@ Uma vez que o ORDA é baseado em objectos, a sua utilização requer conheciment
 
 ## Explorar o datastore
 
-The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
+El datastore ORDA se basa automáticamente en una estructura de base de datos 4D, siempre que cumpla los [requisitos previos de ORDA](overview.md#orda-prerequisites).
 
 Este exemplo utilizará a seguinte estrutura de banco de dados 4D simple:
 
@@ -19,7 +19,9 @@ To know what is exposed as the datastore, create a new project method, write the
 TRACE
 ```
 
-Executar o método: ele chama simplesmente a janela do depurador. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Executar o método: ele chama simplesmente a janela do depurador.
+En el área de Expresión, haga doble clic para insertar una expresión e introduzca `ds`. Devolve o objeto do datastore.
+Despliegue el objeto, puede ver que las tablas y los campos son expuestos automáticamente por ORDA como propiedades del objeto `ds`:
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -29,13 +31,14 @@ It means for example that, whenever you need to refer to the city field of the [
 ds. Company.city //returns the name of the city
 ```
 
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+> En el mundo ORDA, ds.Company es una **dataclass**. ds.Company.city es un **atributo**.
 
-> ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
+> ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` no hará referencia al atributo ds.Company.city.
 
-You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
+También habrá notado la propiedad extra `hires` en la dataclass ds.Company. Não corresponde a um campo. `hires` es en realidad el nombre de la relación _Uno a muchos_ entre Company y Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Nome da relação conforme definido no Inspetor*
+![](../assets/en/ORDA/struc2s.png)
+_Name of the relation as defined in the Inspector_
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 
@@ -45,11 +48,11 @@ ds. Company.hires //returns the list of employees
 
 Mas não vá demasiado depressa. Vejamos agora como registar dados em dataclasses ORDA.
 
-
 ## Adicionar dados
 
-In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+En ORDA, puede añadir un registro a una dataclass utilizando el comando `new()`.
+
+> En el mundo ORDA, un registro es una **entidad** -- una entidad es en sí misma un objeto. Un comando que se adjunta a un objeto específico se denomina **método miembro**.
 
 ```code4d
 $entity:=ds. Company.new() //create a new entity reference
@@ -62,19 +65,11 @@ A new entity object contains a "copy" of all attributes of its parent dataclass,
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID é automaticamente preenchido
+//$entity.ID is automatically filled
 ```
 
-Atualmente, a entidade só existe na memória. To store it in the data file, you need to save it using the `save()` member method:
+Atualmente, a entidade só existe na memória. Para almacenarlo en el archivo de datos, es necesario guardarlo utilizando el método miembro `save()`:
 
 ```code4d
 $status:=$entity.save()
 ```
-
-
-
-
-
-
-
-

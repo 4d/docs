@@ -3,18 +3,16 @@ id: onOpenDetail
 title: On Open Detail
 ---
 
-| Code | Puede ser llamado por                                    | Definición                                                                                      |
-| ---- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Code | Puede ser llamado por                                    | Definición                                                                                                      |
+| ---- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | 25   | Formulario - [List Box](FormObjects/listbox_overview.md) | El formulario detallado asociado al formulario de salida o al list box está a punto de abrirse. |
-
 
 ## Descripción
 
 El evento `On Open Detail` puede utilizarse en los siguientes contextos:
 
 - **Formularios de salida**: un registro está a punto de ser mostrado en el formulario detallado asociado al formulario de salida. Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.
-- List box [**de tipo selección**](FormObjects/listbox_overview.md#selection-list-boxes): este evento se genera cuando se va a mostrar un registro en el formulario detallado asociado a un list box del tipo de selección (y antes de que se abra este formulario).
-
+- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
 
 ### Número de línea mostrado
 

@@ -83,10 +83,10 @@ Una colección se inicializa con:
 
 
 <!-- REF #_command_.New collection.Params -->
-| Parámetros | Tipo                                                                    |    | Descripción                                |
-| ---------- | ----------------------------------------------------------------------- |:--:| ------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                    |
-| Result     | Collection                                                              | <- | Nueva colección|<!-- END REF -->
+| Parámetros | Tipo                                                                    |    | Descripción                                   |
+| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                       |
+| Result     | Collection                                                              | <- | La nueva colección|<!-- END REF -->
 
 
 |
@@ -171,10 +171,10 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parámetros | Tipo                                                                |    | Descripción                                      |
-| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida            |
-| Result     | Collection                                                          | <- | New shared collection|<!-- END REF -->
+| Parámetros | Tipo                                                                |    | Descripción                                              |
+| ---------- | ------------------------------------------------------------------- |:--:| -------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida                    |
+| Result     | Collection                                                          | <- | La nueva colección compartida|<!-- END REF -->
 
 
 |
@@ -920,7 +920,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 #### Descripción
 
-La función `.every()` <!-- REF #collection.every().Summary -->devuelve **true** si todos los elementos de la colección han pasado con éxito una prueba implementada en el objeto *formula* o en el nombre *methodName*<!-- END REF -->.
+La función `.every()` <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 

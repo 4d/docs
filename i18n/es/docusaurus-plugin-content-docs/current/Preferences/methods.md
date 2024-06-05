@@ -15,8 +15,8 @@ Esta página permite seleccionar, crear o configurar los temas del Editor de Có
 
 En esta lista, se selecciona el tema que se aplicará al editor de código. Se muestran todos los temas disponibles, incluidos los temas personalizados (si los hay). 4D ofrece dos temas por defecto:
 
-*   **Tema Light por defecto**
-*   **Tema oscuro por defecto**
+- **Tema Light por defecto**
+- **Tema oscuro por defecto**
 
 > Los temas por defecto no pueden ser modificados ni eliminados.
 
@@ -28,9 +28,9 @@ Puede crear temas totalmente personalizables. Para crear un tema, seleccione un 
 
 ### Archivos de temas personalizados
 
-Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json*. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#storage) de 4D.
+Cada tema personalizado se almacena en un único archivo JSON llamado _themeName.json_. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#stora
 
-Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema *Default Light Theme*. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
+Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema _Default Light Theme_. Si un archivo de tema JSON es inválido, se carga el tema _Default Light Theme_ y se genera un error.
 
 > Cuando un archivo de tema es modificado por un editor externo, 4D debe ser reiniciado para tener en cuenta las modificaciones.
 
@@ -51,45 +51,38 @@ Los menús **fuente** y **tamaño de fuente** le permiten seleccionar el nombre 
 
 Puede definir diferentes estilos de fuente y colores de fuente (color de fuente o color de fondo) para cada tipo de elemento del lenguaje. Puede seleccionar los elementos que desea personalizar en la lista de categorías.
 
-
 ### Otros estilos
 
 Estas opciones configuran los distintos colores utilizados en las interfaces del Editor de código y del depurador.
 
 ![](../assets/en/Preferences/categories.png)
 
-
-|                                                        | Descripción                                                                                                                                                                                  |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                        | Descripción                                                                                                                                                                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                                           |
 | **Borde de la línea en ejecución en el depurador**     | Color del borde que rodea la línea que se está ejecutando en el depurador cuando la opción "Resaltar la línea en ejecución" está activada en la página [Opciones](#options).                 |
 | **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                                           |
 | **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                                           |
 | **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                                              |
-| **Destacar los paréntesis**                            | Color de resaltado de los paréntesis correspondientes (se utiliza cuando los pares de paréntesis se señalan mediante resaltado, ver [Opciones](#options)).                                   |
+| **Destacar los paréntesis**                            | Color de resaltado de los paréntesis correspondientes (se utiliza cuando los pares de paréntesis se señalan mediante resaltado, ver [Opciones](#options)).                |
 | **Resaltado de los bloques**                           | Color de resaltado de los bloques lógicos seleccionados cuando la opción "Resaltar bloques lógicos" está activada en las [Opciones](#options).                                               |
 | **Resaltar la misma variable o campo**                 | Color de resaltado para las otras ocurrencias de la misma variable o del mismo texto de campo cuando una de las opciones "Resaltar variables y texto" está activada en [Opciones](#options). |
 | **Resaltado de la línea en ejecución en el depurador** | Color de resaltado de la línea que se está ejecutando en el depurador cuando la opción "Resaltar línea en ejecución" está activada en [Opciones](#options).                                  |
 | **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                                              |
 | **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                                           |
 
-
-
 ## Opciones
-
 
 Esta página configura las opciones de visualización del Editor de Código.
 
 ![](../assets/en/Preferences/options.png)
 
-
 ### Opciones
-
-
 
 #### Lenguaje de programación 4D (Utilizar los parámetros regionales del sistema)
 
 Permite desactivar/activar los parámetros del código "internacional" para la aplicación 4D local.
+
 - **no seleccionado** (por defecto): los parámetros English-US y el lenguaje de programación inglés se utilizan en los métodos 4D.
 - **seleccionado**: los parámetros regionales se utilizan en los métodos 4D.
 
@@ -111,7 +104,7 @@ Le permite mostrar los números de línea por defecto en cada ventana del Editor
 
 #### Mostrar las listas
 
-Le permite elegir si mostrar o no las listas de objetos (Comandos, Tablas y campos, etc.) por defecto cuando se abre la ventana del Editor de Código. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
 
 #### Mostrar los portapapeles
 
@@ -149,15 +142,16 @@ Activa la inserción automática de () y de llaves de cierre mientras se escribe
 
 - **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta función permite insertar pares de símbolos coincidentes en el punto de inserción o alrededor de un texto seleccionado. Por ejemplo, si resalta una cadena de caracteres y escribe un simple caracter ", toda la cadena seleccionada quedará encerrada en "":
 
-![](../assets/en/Preferences/optionsClosing.png)  
+![](../assets/en/Preferences/optionsClosing.png)\
 ![](../assets/en/Preferences/optionsClosing2.png)
 
 #### Correspondencia \[]\(){}
 
-Define la señalización gráfica de las llaves correspondientes en el código. Esta señalización aparece siempre que se selecciona un corchete, un paréntesis o una llave. Las siguientes opciones están disponibles:
+Define la señalización gráfica de las llaves correspondientes en el código. Esta señalización aparece siempre que se selecciona un corchete, un paréntesis o una llave.
+Las siguientes opciones están disponibles:
 
 - **Ninguno**: sin señales
-- **Rectángulo** (por defecto): corchetes rodeados por una línea negra  
+- **Rectangle** (default): Braces surrounded by a black line\
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.
@@ -186,9 +180,7 @@ Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
 Esta área le permite configurar los mecanismos de autocompletar en el Editor de código para adaptarlo a sus propios hábitos de trabajo.
 
-|                                   | Descripción                                                                                                                                                                                                                                                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para:<ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos de objetos</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p>Por ejemplo, cuando la opción "Variables (locales o interproceso) y atributos de objetos" está seleccionada, aparece una lista de sugerencias al escribir el caracter $:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> Puede desactivar este funcionamiento para determinados elementos del lenguaje desmarcando su opción correspondiente. |
-| Validación de una sugerencia      | Define el contexto de entrada que permite al Editor de Código validar automáticamente la sugerencia actual mostrada en la ventana de autocompletar.<ul><li>**Tabulación y delimitadores**<br/>Cuando se selecciona esta opción, puede validar la selección actual con la tecla Tab o con cualquier delimitador pertinente al contexto. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Esta es la lista de delimitadores que se tienen en cuenta:<br/> ( ; : = < [ {</li><li>**Sólo tabulador**<br/>Cuando se selecciona esta opción, sólo se puede utilizar el tabulador para insertar la sugerencia actual. Esto puede utilizarse más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de elementos, como ${1}.**Note**: También puede hacer doble clic en la ventana o presionar la tecla Retorno de carro para validar una sugerencia.</li></ul>                                                                                         |
-	
-
+|                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Apertura automática de la ventana | Triggers the automatic display of the suggestion window for:<ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (_i.e._, class functions)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> You can disable this functioning for certain elements of the language by deselecting their corresponding option.                                                                                                                                                                                                                                                                                                                                                                                    |
+| Validación de una sugerencia      | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul> |

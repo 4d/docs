@@ -5,7 +5,7 @@ title: VP Export to object
 
 <!-- REF #_method_.VP Export to object.Syntax -->
 
-**VP Export to object** ( _vpAreaName_ : Text {; _options_ : Object} ) : Object<!-- END REF -->
+**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Export to object.Params -->
 
@@ -17,11 +17,11 @@ title: VP Export to object
 
 #### Descrição
 
-The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area _vpAreaName_<!-- END REF -->. Você pode usar esse comando, por exemplo, para armazenar a área do 4D View Pro em um campo de objeto do banco de dados 4D.
+The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. Você pode usar esse comando, por exemplo, para armazenar a área do 4D View Pro em um campo de objeto do banco de dados 4D.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In the _options_ parameter, you can pass the following export options, if required:
+In the *options* parameter, you can pass the following export options, if required:
 
 | Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                            |
 | -------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

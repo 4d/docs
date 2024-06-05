@@ -7,7 +7,6 @@ title: On Header Click
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | 42   | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Un clic se produit dans un en-tête de colonne |
 
-
 ## Description
 
 ### List Box
@@ -25,14 +24,14 @@ Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) n'est pa
 
 Cet événement est généré lorsque l'utilisateur clique sur un en-tête de colonne ou de ligne dans un document 4D View Pro. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
-| Propriété   | Type        | Description                                                                                                                                  |
-| ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| code        | entier long | 42                                                                                                                                           |
-| Description | text        | "On Header Click"                                                                                                                            |
-| objectName  | text        | Nom de la zone 4D View Pro                                                                                                                   |
-| sheetName   | text        | Nom de la feuille de l'événement                                                                                                             |
-| range       | object      | Plage de cellule                                                                                                                             |
-| sheetArea   | entier long | L'emplacement de la feuille où l'événement a eu lieu :<br/><li>0 : la zone de croisement entre le numéro de colonne/les en-têtes de lettre (en haut à gauche de la feuille)</li><li>1 : les en-têtes de colonne (zone indiquant les numéros/lettres de colonnes)</li><li>2 : les en-têtes de ligne (zone indiquant les numéros de ligne)</li> |
+| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| code        | entier long | 42                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Description | text        | "On Header Click"                                                                                                                                                                                                                                                                                                                                                                                              |
+| objectName  | text        | Nom de la zone 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                     |
+| sheetName   | text        | Nom de la feuille de l'événement                                                                                                                                                                                                                                                                                                                                                                               |
+| range       | object      | Plage de cellule                                                                                                                                                                                                                                                                                                                                                                                               |
+| sheetArea   | entier long | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### Exemple
 

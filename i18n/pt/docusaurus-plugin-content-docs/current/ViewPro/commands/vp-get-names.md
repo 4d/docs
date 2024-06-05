@@ -17,11 +17,11 @@ title: VP Get names
 
 #### Descrição
 
-The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the _scope_ parameter<!-- END REF -->.
+The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the names in _scope_ using either the sheet index (counting begins at 0) or the following constants:
+You can define where to get the names in *scope* using either the sheet index (counting begins at 0) or the following constants:
 
 - `vk current sheet`
 - `vk workbook`

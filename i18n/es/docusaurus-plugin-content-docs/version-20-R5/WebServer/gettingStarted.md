@@ -5,7 +5,6 @@ title: Desarrollo web
 
 Esta sección de "Primeros pasos" está orientada a los usuarios principiantes que desean una visión general sobre cómo pasar de cero a un sitio web 4D que maneja datos de la base. ¡Empecemos!
 
-
 ## Ejemplo Hello World
 
 Empecemos por hacer que el servidor web envíe "Hello World" al navegador. La forma más sencilla de hacerlo es crear un proyecto, iniciar el servidor web y escribir un pequeño código que devuelva un texto en el método base `On Web Connection`.
@@ -37,17 +36,14 @@ Se muestra la página de inicio por defecto:
 
 ```4d
 Case of 
-    : ($1="/hello")
-        WEB SEND TEXT("Hello World!")
-    Else 
-        // Error 404 for example
-End case
-    Else 
-        // Error 404 por ejemplo
+	: ($1="/hello")
+		WEB SEND TEXT("Hello World!")
+	Else 
+		// Error 404 por ejemplo
 End case 
 ```
 
-El método base [`On Web Connection`](httpRequests.md#on-web-connection) se llama para las peticiones entrantes y recibe la URL destino en el parámetro `$1`. Este código tan sencillo sólo envía el texto al navegador.
+The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. Este código tan sencillo sólo envía el texto al navegador.
 
 3. En su navegador, introduzca la siguiente URL:
 
@@ -59,14 +55,14 @@ El servidor web gestiona la solicitud y la devuelve:
 
 ![](../assets/en/WebServer/hello.png)
 
-
 ## Obtener datos de la base de datos
 
 Ahora veremos lo sencillo que es obtener datos de la base. En primer lugar, crearemos una tabla y la llenaremos con algunos datos.
 
 Cree una base de datos básica con, por ejemplo, una sola tabla que contenga algunos registros:
 
-![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
+![](../assets/en/WebServer/hello2.png)
+![](../assets/en/WebServer/hello3.png)
 
 ### Mostrar datos en una página
 
@@ -98,8 +94,7 @@ Las páginas `.shtml` son procesadas automáticamente por el servidor web. Se de
 
 ### Petición REST
 
-Si no sólo queremos *visualizar* datos, sino *utilizarlos*, podemos utilizar ORDA y el servidor REST. Gracias al [concepto ORDA](ORDA/overview.md), la tabla `Friends` se asigna automáticamente a una clase de datos y está disponible a través de [REST](REST/gettingStarted.md).
-
+Si no sólo queremos _visualizar_ datos, sino _utilizarlos_, podemos utilizar ORDA y el servidor REST. Gracias al [concepto ORDA](ORDA/overview.md), la tabla `Friends` se asigna automáticamente a una clase de datos y está disponible a través de [REST](REST/gettingStarted.md).
 
 1. Utilizaremos el servidor REST para acceder a los datos: vaya a la caja de diálogo **Parámetros**, seleccione **Web** > **Funcionalidades Web** y marque la opción **Exponer como servidor REST**.
 
@@ -115,14 +110,14 @@ El servidor web devuelve los resultados en JSON:
 
 ```json
 {
-    "__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
-    "dataClasses": [
-        {
-            "name": "Friends",
-            "uri": "/rest/$catalog/Friends",
-            "dataURI": "/rest/Friends"
-        }
-    ]
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
 }
 ```
 
@@ -140,53 +135,50 @@ El servidor devuelve las entidades, es decir, los datos, de la clase de datos Fr
 
 ```json
 {
-    "__DATACLASS": "Friends",
-    "__entityModel": "Friends",
-    "__GlobalStamp": 0,
-    "__COUNT": 4,
-    "__FIRST": 0,
-    "__ENTITIES": [
-        {
-            "__KEY": "1",
-            "__TIMESTAMP": "2020-10-27T14:29:01.914Z",
-            "__STAMP": 1,
-            "ID": 1,
-            "lastName": "Smith",
-            "firstName": "John"
-        },
-        {
-            "__KEY": "2",
-            "__TIMESTAMP": "2020-10-27T14:29:16.035Z",
-            "__STAMP": 1,
-            "ID": 2,
-            "lastName": "Brown",
-            "firstName": "Danny"
-        },
-        {
-            "__KEY": "3",
-            "__TIMESTAMP": "2020-10-27T14:29:43.945Z",
-            "__STAMP": 1,
-            "ID": 3,
-            "lastName": "Purple",
-            "firstName": "Mark"
-        },
-        {
-            "__KEY": "4",
-            "__TIMESTAMP": "2020-10-27T14:34:58.457Z",
-            "__STAMP": 1,
-            "ID": 4,
-            "lastName": "Dupont",
-            "firstName": "Jenny"
-        }
-    ],
-    "__SENT": 4
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
 }
 ```
 
 Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
-
-
-
 
 ## Inicio de sesión y sesión
 
@@ -196,8 +188,8 @@ En las secciones anteriores, obtenemos acceso libre a la aplicación desde las p
 
 La forma más sencilla y segura de registrar un usuario en el servidor web de 4D se basa en el siguiente escenario:
 
-- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada *WebUsers* por ejemplo)
-- La tabla *WebUsers* podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
+- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada _WebUsers_ por ejemplo)
+- La tabla _WebUsers_ podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
 
 1. Cree una tabla con algunos campos, por ejemplo:
 
@@ -217,15 +209,13 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-
-
 ### Autenticación de los usuarios
 
 > Para que sea segura de extremo a extremo, es necesario que toda la conexión se establezca mediante [https](webServerConfig.md#enable-https).
 
 1. Abra el Explorador y cree un método de proyecto llamado "login".
 
-3. Escriba el siguiente código:
+2. Escriba el siguiente código:
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -247,20 +237,16 @@ $password:=$avalues{$indexPassword}
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
 If ($user#Null) //a user was found
-        //check the password
+		//check the password
     If (Verify password hash($password; $user.password))
-            //password ok, fill the session
+    		//password ok, fill the session
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-            //You can use the user session to store any information
+        	//You can use the user session to store any information
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
-    End if 
-Else 
-    WEB SEND TEXT("Wrong user name or password.")
-End if
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")
@@ -270,7 +256,6 @@ End if
 3. Despliegue las propiedades del método haciendo clic en el botón **[i]** del editor de código, marque la opción `etiquetas 4D y URLs (4DACTION...)` y haga clic en **Aceptar**.
 
 ![](../assets/en/WebServer/hello0.png)
-
 
 4. En su navegador, introduzca la siguiente URL:
 
@@ -288,5 +273,4 @@ Las credenciales incorrectas serían rechazadas:
 
 ![](../assets/en/WebServer/login2.png)
 
-Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md). 
-
+Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).

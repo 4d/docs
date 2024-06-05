@@ -3,9 +3,9 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
-La classe `HTTPRequest` vous permet de manipuler des [`objets HTTPRequest`](#objet-httprequest) qui peuvent être utilisés pour configurer et envoyer des requêtes à un serveur HTTP, ainsi que pour traiter les réponses du serveur HTTP.
+La classe `HTTPRequest` vous permet de manipuler des [`objets HTTPRequest`](#httprequest-object) qui peuvent être utilisés pour configurer et envoyer des requêtes à un serveur HTTP, ainsi que pour traiter les réponses du serveur HTTP.
 
-La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et envoyez des requêtes HTTP à l'aide de la fonction [4D.HTTPRequest.new()](#4dhttprequestnew), qui renvoie un objet [`HTTPRequest`](#objet-httprequest).
+La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et envoyez des requêtes HTTP à l'aide de la fonction [4D.HTTPRequest.new()](#4dhttprequestnew), qui renvoie un objet [`HTTPRequest`](#httprequest-object).
 
 <details><summary>Historique</summary>
 
@@ -14,7 +14,6 @@ La classe `HTTPRequest` est disponible dans le class store `4D`. Vous créez et 
 | 19 R6   | Classe ajoutée |
 
 </details>
-
 
 ### Exemple
 
@@ -55,25 +54,25 @@ Un objet HTTPRequest est un objet non partageable.
 
 Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
-|                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.dataType.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.encoding.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.errors.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.headers.Syntax -->](#headers)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.headers.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.method.Syntax -->](#method)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.method.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.protocol.Syntax -->](#protocol)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.protocol.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.response.Syntax -->](#response)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.response.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#returnResponseBody)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.terminate().Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.terminated.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.timeout.Syntax -->](#timeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.timeout.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.url.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.wait().Summary -->|
+|                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #HTTPRequestClass.dataType.Summary -->                               |
+| [<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #HTTPRequestClass.encoding.Summary -->                               |
+| [<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #HTTPRequestClass.errors.Summary -->                                     |
+| [<!-- INCLUDE #HTTPRequestClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #HTTPRequestClass.headers.Summary -->                                  |
+| [<!-- INCLUDE #HTTPRequestClass.method.Syntax -->](#method)<br/><!-- INCLUDE #HTTPRequestClass.method.Summary -->                                     |
+| [<!-- INCLUDE #HTTPRequestClass.protocol.Syntax -->](#protocol)<br/><!-- INCLUDE #HTTPRequestClass.protocol.Summary -->                               |
+| [<!-- INCLUDE #HTTPRequestClass.response.Syntax -->](#response)<br/><!-- INCLUDE #HTTPRequestClass.response.Summary -->                               |
+| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#returnResponseBody)<br/><!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary --> |
+| [<!-- INCLUDE #HTTPRequestClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #HTTPRequestClass.terminate().Summary -->                        |
+| [<!-- INCLUDE #HTTPRequestClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #HTTPRequestClass.terminated.Summary -->                         |
+| [<!-- INCLUDE #HTTPRequestClass.timeout.Syntax -->](#timeout)<br/><!-- INCLUDE #HTTPRequestClass.timeout.Summary -->                                  |
+| [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)<br/><!-- INCLUDE #HTTPRequestClass.url.Summary -->                                              |
+| [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #HTTPRequestClass.wait().Summary -->                                       |
 
 <!-- REF #4D.HTTPRequest.new().Desc -->
-## 4D.HTTPRequest.new()
 
+## 4D.HTTPRequest.new()
 
 <details><summary>Historique</summary>
 
@@ -86,13 +85,14 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
-
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Paramètres | Type           |    | Description                               |
-| ---------- | -------------- |:--:| ----------------------------------------- |
-| url        | Text           | -> | URL à laquelle envoyer la requête         |
-| options    | Object         | -> | Propriétés de configuration de la requête |
-| Résultat   | 4D.HTTPRequest | <- | Nouvel objet HTTPRequest                  |
+
+| Paramètres | Type                           |     | Description                               |
+| ---------- | ------------------------------ | :-: | ----------------------------------------- |
+| url        | Text                           |  -> | URL à laquelle envoyer la requête         |
+| options    | Object                         |  -> | Propriétés de configuration de la requête |
+| Résultat   | 4D.HTTPRequest |  <- | Nouvel objet HTTPRequest                  |
+
 <!-- END REF -->
 
 #### Description
@@ -127,29 +127,28 @@ Par exemple, vous pouvez passer les chaînes suivantes :
 
 Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
 
-| Propriété              | Type                                            | Description                                                                                                                                                                                                                                                   | Par défaut  |
-| ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| automaticRedirections  | Boolean                                         | Si true, les redirections sont effectuées automatiquement (jusqu'à 5 redirections sont gérées, la 6e réponse de redirection est renvoyée s'il y en a une)                                                                                                     | True        |
-| body                   | Variant                                         | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                           | undefined   |
-| certificatesFolder     | [Folder](FolderClass.md)                        | Définit le dossier actif des certificats du client                                                                                                                                                                                                            | undefined   |
-| dataType               | Text                                            | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon) | "auto"      |
-| decodeData             | Boolean                                         | Si vrai, les données reçues dans le callback `onData` sont décompressées                                                                                                                                                                                      | False       |
-| encoding               | Text                                            | Utilisé uniquement dans le cas de requêtes avec un `body` (méthodes `post` ou `put`). Encodage du body content de la requête s'il s'agit d'un texte, ignoré si le content-type est défini dans les headers                                                    | "UTF-8"     |
-| headers                | Object                                          | Headers de la requête. Syntaxe : `headers.key=value` (*value* peut être une Collection si la même clé doit apparaître plusieurs fois)                                                                                                                         | Objet vide  |
-| method                 | Text                                            | "POST", "GET", ou autre méthode                                                                                                                                                                                                                               | "GET"       |
-| minTLSVersion          | Text                                            | Définit la version minimale de TLS : "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                       | "`TLSv1_2`" |
-| onData                 | [Function](FunctionClass.md)                    | Callback lorsque les données du body sont reçues. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                     | undefined   |
-| onError                | [Function](FunctionClass.md)                    | Callback lorsqu'une erreur se produit. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                | undefined   |
-| onHeaders              | [Function](FunctionClass.md)                    | Callback lorsque les headers sont reçus. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                              | undefined   |
-| onResponse             | [Function](FunctionClass.md)                    | Rappel lorsqu'une réponse est reçue. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                  | undefined   |
-| onTerminate            | [Function](FunctionClass.md)                    | Rappel lorsque la requête est terminée. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                               | undefined   |
-| protocol               | Text                                            | "auto" ou "HTTP1". "auto" signifie HTTP1 dans l'implémentation actuelle                                                                                                                                                                                       | "auto"      |
-| proxyAuthentication    | [authentication object](#authentication-object) | Objet manipulant l'authentification du proxy                                                                                                                                                                                                                  | undefined   |
-| serverAuthentication   | [authentication object](#authentication-object) | Objet manipulant l'authentification par serveur                                                                                                                                                                                                               | undefined   |
-| returnResponseBody     | Boolean                                         | Si faux, le body de la réponse n'est pas renvoyé dans l'objet [`response`](#response). Renvoie une erreur si faux et `onData` est undefined                                                                                                                   | True        |
-| timeout                | Real                                            | Timeout en secondes. Undefined = pas de timeout                                                                                                                                                                                                               | Undefined   |
-| validateTLSCertificate | Boolean                                         | Si faux, 4D ne valide pas le certificat TLS et ne renvoie pas d'erreur s'il est invalide (c'est-à-dire expiré, auto-signé...). Important : dans l'implémentation actuelle, l'autorité de certification elle-même n'est pas vérifiée.                          | True        |
-
+| Propriété              | Type                                               | Description                                                                                                                                                                                                                                                                                                                                             | Par défaut  |
+| ---------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| automaticRedirections  | Boolean                                            | Si true, les redirections sont effectuées automatiquement (jusqu'à 5 redirections sont gérées, la 6e réponse de redirection est renvoyée s'il y en a une)                                                                                                                                                                            | True        |
+| body                   | Variant                                            | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                                                                  | undefined   |
+| certificatesFolder     | [Folder](FolderClass.md)                           | Définit le dossier actif des certificats du client                                                                                                                                                                                                                                                                                                      | undefined   |
+| dataType               | Text                                               | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon)                        | "auto"      |
+| decodeData             | Boolean                                            | Si vrai, les données reçues dans le callback `onData` sont décompressées                                                                                                                                                                                                                                                                                | False       |
+| encoding               | Text                                               | Utilisé uniquement dans le cas de requêtes avec un `body` (méthodes `post` ou `put`). Encodage du body content de la requête s'il s'agit d'un texte, ignoré si le content-type est défini dans les headers                                                                                                           | "UTF-8"     |
+| headers                | Object                                             | Headers de la requête. Syntaxe : `headers.key=value` (*value* peut être une Collection si la même clé doit apparaître plusieurs fois)                                                                                                                                                                | Objet vide  |
+| method                 | Text                                               | "POST", "GET", ou autre méthode                                                                                                                                                                                                                                                                                                                         | "GET"       |
+| minTLSVersion          | Text                                               | Définit la version minimale de TLS : "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                                                                 | "`TLSv1_2`" |
+| onData                 | [Function](FunctionClass.md)                       | Callback lorsque les données du body sont reçues. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                            | undefined   |
+| onError                | [Function](FunctionClass.md)                       | Callback lorsqu'une erreur se produit. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                       | undefined   |
+| onHeaders              | [Function](FunctionClass.md)                       | Callback lorsque les headers sont reçus. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                     | undefined   |
+| onResponse             | [Function](FunctionClass.md)                       | Rappel lorsqu'une réponse est reçue. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                         | undefined   |
+| onTerminate            | [Function](FunctionClass.md)                       | Rappel lorsque la requête est terminée. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                      | undefined   |
+| protocol               | Text                                               | "auto" ou "HTTP1". "auto" signifie HTTP1 dans l'implémentation actuelle                                                                                                                                                                                                                                                                 | "auto"      |
+| proxyAuthentication    | [objet d'authentification](#authentication-object) | Objet manipulant l'authentification du proxy                                                                                                                                                                                                                                                                                                            | undefined   |
+| serverAuthentication   | [objet d'authentification](#authentication-object) | Objet manipulant l'authentification par serveur                                                                                                                                                                                                                                                                                                         | undefined   |
+| returnResponseBody     | Boolean                                            | Si false, le body de la réponse n'est pas renvoyé dans l'[objet `response`](#response). Renvoie une erreur si faux et `onData` est undefined                                                                                                                                                                                            | True        |
+| timeout                | Real                                               | Timeout en secondes. Undefined = pas de timeout                                                                                                                                                                                                                                                                                         | Undefined   |
+| validateTLSCertificate | Boolean                                            | Si faux, 4D ne valide pas le certificat TLS et ne renvoie pas d'erreur s'il est invalide (c'est-à-dire expiré, auto-signé...). Important : dans l'implémentation actuelle, l'autorité de certification elle-même n'est pas vérifiée. | True        |
 
 #### Fonctions de callback
 
@@ -157,42 +156,45 @@ Toutes les fonctions de callback reçoivent deux paramètres objet:
 
 | Paramètres | Type                                       |
 | ---------- | ------------------------------------------ |
-| $param1    | [objet `HTTPRequest`](#httprequest-object) |
-| $param2    | [objet `Event`](#event-object)             |
+| $param1    | [`Objet HTTPRequest`](#httprequest-object) |
+| $param2    | [`Objet Event`](#event-object)             |
 
 Voici la séquence des appels de callbacks :
 
 1. `onHeaders` est toujours appelé une fois
+
 2. `onData` est appelé zéro ou plusieurs fois (non appelé si la requête n'a pas de body)
 
 3. Si aucune erreur ne s'est produite, `onResponse` est toujours appelé une fois
+
 4. Si une erreur se produit, `onError` est exécuté une fois (et termine la requête)
+
 5. `onTerminate` est toujours exécuté une fois
 
 #### event object
 
 Un objet `event` est renvoyé lorsqu'une [fonction de callback](#callback-functions) est appelée. Il contient les propriétés suivantes :
 
-| Propriété | Type | Description                                                                                  |
-| --------- | ---- | -------------------------------------------------------------------------------------------- |
-| .data     | blob | Données reçues. Toujours *undefined* sauf dans la callback `onData`                          |
-| .type     | text | Type d'événement. Valeurs possibles : "response", "error", "headers", "data", or "terminate" |
+| Propriété             | Type | Description                                                                                                                  |
+| --------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| .data | blob | Données reçues. Toujours *undefined* sauf dans la callback `onData`                                          |
+| .type | text | Type d'événement. Valeurs possibles : "response", "error", "headers", "data", or "terminate" |
 
 #### authentication object
 
 Un objet d'authentification gère la propriété `options.serverAuthentication` ou `options.proxyAuthentication` . Il peut contenir les propriétés suivantes :
 
-| Propriété | Type | Description                                                          | Par défaut |
-| --------- | ---- | -------------------------------------------------------------------- | ---------- |
-| name      | Text | Nom utilisé pour l'authentification                                  | undefined  |
-| password  | Text | Mot de passe utilisé pour l'authentification                         | undefined  |
+| Propriété | Type | Description                                                                          | Par défaut |
+| --------- | ---- | ------------------------------------------------------------------------------------ | ---------- |
+| name      | Text | Nom utilisé pour l'authentification                                                  | undefined  |
+| password  | Text | Mot de passe utilisé pour l'authentification                                         | undefined  |
 | method    | Text | Méthode utilisée pour l'authentification : "basic", "digest", "auto" | "auto"     |
 
 <!-- END REF -->
 
 <!-- REF #HTTP Parse message.Desc -->
-## HTTP Parse message
 
+## HTTP Parse message
 
 <details><summary>Historique</summary>
 
@@ -204,24 +206,24 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 <!-- REF #HTTP Parse message.Syntax -->**HTTP Parse message**( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF -->
 
-
 <!-- REF #HTTP Parse message.Params -->
-| Paramètres | Type       |    | Description                                                         |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Données à analyser                                                  |
-| Résultat   | Object     | <- | Objet dont chaque propriété est une partie des données multiparties |
+
+| Paramètres | Type       |     | Description                                                         |
+| ---------- | ---------- | :-: | ------------------------------------------------------------------- |
+| data       | Text, Blob |  -> | Données à analyser                                                  |
+| Résultat   | Object     |  <- | Objet dont chaque propriété est une partie des données multiparties |
+
 <!-- END REF -->
 
 #### Description
 
-La commande `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analyse un texte ou un blob multipart/form-data (message HTTP "response") et en extrait le contenu dans un objet. Chaque propriété de l'objet renvoyé correspond à une partie des données multiparties<!-- END REF -->.
+La commande `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analyse un texte ou un blob multipart/form-data (message HTTP "response") et extrait le contenu vers un objet. Chaque propriété de l'objet renvoyé correspond à une partie des données multipart<!-- END REF -->.
 
 :::info
 
 HTTP lui-même est un protocole de communication sans état. Dans ce cadre, les clients initient la communication en envoyant des messages "request" aux serveurs, en spécifiant des détails tels que la méthode, la cible, les en-têtes, le contenu, etc. Les serveurs, à leur tour, répondent par des messages "response" qui contiennent les mêmes détails. `HTTP Parse message` analyse le message "request" ou "response" et retourne un objet structuré.
 
 :::
-
 
 #### Exemple
 
@@ -256,6 +258,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
+
 Pour analyser le fichier :
 
 ```4d
@@ -271,6 +274,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.dataType.Desc -->
+
 ## .dataType
 
 <!-- REF #HTTPRequestClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
@@ -282,6 +286,7 @@ La propriété `.dataType` contient <!-- REF #HTTPRequestClass.dataType.Summary 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.encoding.Desc -->
+
 ## .encoding
 
 <!-- REF #HTTPRequestClass.encoding.Syntax -->**encoding** : Text<!-- END REF -->
@@ -293,6 +298,7 @@ La propriété `.encoding` contient <!-- REF #HTTPRequestClass.encoding.Summary 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.errors.Desc -->
+
 ## .errors
 
 <!-- REF #HTTPRequestClass.errors.Syntax -->**errors** : Collection<!-- END REF -->
@@ -303,9 +309,9 @@ La propriété `.errors` contient <!-- REF #HTTPRequestClass.errors.Summary -->l
 
 Voici le contenu de la propriété `.errors` :
 
-| Propriété |                       | Type       | Description                                            |
-| --------- | --------------------- | ---------- | ------------------------------------------------------ |
-| errors    |                       | Collection | Pile d'erreurs 4D en cas d'erreur                      |
+| Propriété |                                                                                           | Type       | Description                                            |
+| --------- | ----------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------ |
+| errors    |                                                                                           | Collection | Pile d'erreurs 4D en cas d'erreur                      |
 |           | [].errCode            | Number     | Code d'erreur 4D                                       |
 |           | [].message            | Text       | Description de l'erreur 4D                             |
 |           | [].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur |
@@ -313,6 +319,7 @@ Voici le contenu de la propriété `.errors` :
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.headers.Desc -->
+
 ## .headers
 
 <!-- REF #HTTPRequestClass.headers.Syntax -->**headers** : Object<!-- END REF -->
@@ -324,36 +331,37 @@ La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary --
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.method.Desc -->
+
 ## .method
 
 <!-- REF #HTTPRequestClass.method.Syntax -->**method** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, elle contient "GET".
+La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `méthode` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, elle contient "GET".
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.protocol.Desc -->
+
 ## .protocol
 
 <!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol** : Text<!-- END REF -->
 
 #### Description
 
-
-La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
-
+La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocole` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.response.Desc -->
+
 ## .response
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                               |
-| ------- | --------------------------------------------------------------------------- |
+| Release | Modifications                                                                               |
+| ------- | ------------------------------------------------------------------------------------------- |
 | 19 R8   | `.headers` renvoie les noms en minuscules. Nouvelle propriété `.rawHeaders` |
 
 </details>
@@ -362,21 +370,22 @@ La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary 
 
 #### Description
 
-La propriété `.response` contient <!-- REF #HTTPRequestClass.response.Summary -->la réponse à la requête si elle a reçu au moins le status code, sinon undefined<!-- END REF -->.
+La propriété `.response` contient <!-- REF #HTTPRequestClass.response.Summary -->la réponse à la requête si elle a reçu au moins le code de statut, sinon undefined<!-- END REF -->.
 
 Un objet `response` est un objet non partageable. Il contient les propriétés suivantes :
 
-| Propriété   | Type    | Description                                                                                                                                                                                                                                                            |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Body de la réponse. Le type du message est défini en fonction de la propriété [`dataType`](#datatype). Undefined si le body n'a pas encore été reçu                                                                                                                    |
-| .headers    | Object  | Headers de la réponse. Les noms des headers sont retournés en minuscules. `<headername>.key` = valeur (la valeur peut être une collection si la même clé apparaît plusieurs fois). Undefined si les headers n'ont pas encore été reçus.                          |
-| .status     | Number  | Status code de la réponse                                                                                                                                                                                                                                              |
-| .statusText | Text    | Message expliquant le status code                                                                                                                                                                                                                                      |
-| .rawHeaders | Object  | Headers de la réponse. Les noms des headers sont retournés tels quels (avec leur casse d'origine). `<headerName>.key` = valeur (la valeur peut être une collection si la même clé apparaît plusieurs fois). Undefined si les headers n'ont pas encore été reçus. |
+| Propriété                   | Type    | Description                                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Body de la réponse. Le type du message est défini selon l'attribut [`dataType`](#datatype). Undefined si le body n'a pas encore été reçu                                                                                                                                                                                               |
+| .headers    | Object  | Headers de la réponse. Les noms des headers sont retournés en minuscules. `<headername>.key` = valeur (la valeur peut être une collection si la même clé apparaît plusieurs fois). Undefined si les headers n'ont pas encore été reçus.                                             |
+| .status     | Number  | Status code de la réponse                                                                                                                                                                                                                                                                                                                                              |
+| .statusText | Text    | Message expliquant le status code                                                                                                                                                                                                                                                                                                                                      |
+| .rawHeaders | Object  | Headers de la réponse. Les noms des headers sont retournés tels quels (avec leur casse d'origine). `<headername>.key` = valeur (la valeur peut être une collection si la même clé apparaît plusieurs fois). Undefined si les headers n'ont pas encore été reçus. |
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
+
 ## .returnResponseBody
 
 <!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->**returnResponseBody** : Boolean<!-- END REF -->
@@ -388,37 +397,41 @@ La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnR
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.terminate().Desc -->
+
 ## .terminate()
 
 <!-- REF #HTTPRequestClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
 
-
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Paramètres | Type |  | Description                 |
-| ---------- | ---- |::| --------------------------- |
-|            |      |  | Ne requiert aucun paramètre |
+
+| Paramètres | Type |     | Description                 |
+| ---------- | ---- | :-: | --------------------------- |
+|            |      |     | Ne requiert aucun paramètre |
+
 <!-- END REF -->
 
 #### Description
 
 > Cette fonction est thread-safe.
 
-La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->met fin à la requête HTTP<!-- END REF -->. Elle déclenche l'événement `onTerminate` .
+La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->interrompt la requête HTTP<!-- END REF -->. Elle déclenche l'événement `onTerminate` .
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.terminated.Desc -->
+
 ## .terminated
 
 <!-- REF #HTTPRequestClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.terminated` contient <!-- REF #HTTPRequestClass.terminated.Summary -->Vrai si la requête est terminée (après l'appel à `onTerminate`), Faux sinon<!-- END REF -->.
+La propriété `.terminated` contient <!-- REF #HTTPRequestClass.terminated.Summary -->True si la requête est terminée (après l'appel à `onTerminate`), false sinon<!-- END REF -->.
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.timeout.Desc -->
+
 ## .timeout
 
 <!-- REF #HTTPRequestClass.timeout.Syntax -->**timeout** : Real<!-- END REF -->
@@ -430,6 +443,7 @@ La propriété `.timeout` contient <!-- REF #HTTPRequestClass.timeout.Summary --
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.url.Desc -->
+
 ## .url
 
 <!-- REF #HTTPRequestClass.url.Syntax -->**url** : Text<!-- END REF -->
@@ -441,26 +455,28 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Desc -->
+
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
-
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
-| Paramètres | Type           |    | Description                                         |
-| ---------- | -------------- |:--:| --------------------------------------------------- |
-| time       | Real           | -> | Délai d'attente maximum en secondes pour la réponse |
-| Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
+
+| Paramètres | Type                           |     | Description                                         |
+| ---------- | ------------------------------ | :-: | --------------------------------------------------- |
+| time       | Real                           |  -> | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | 4D.HTTPRequest |  <- | Objet HTTPRequest                                   |
+
 <!-- END REF -->
 
 #### Description
 
 > Cette fonction est thread-safe.
 
-
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
 Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
+
 <!-- END REF -->

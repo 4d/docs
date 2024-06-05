@@ -67,7 +67,7 @@ Exemples :
 
 ### `{}` operator
 
-The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). La syntaxe d'objet littérale permet de créer des objets vides ou remplis.
+The `{}` operator allows you to create an **object literal**. Un objet littéral est une liste de zéro ou plusieurs paires de noms de propriétés et de valeurs associées d'un objet, entre accolades et séparées par des points-virgules (`{}`). La syntaxe d'objet littérale permet de créer des objets vides ou remplis.
 
 Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
 
@@ -124,7 +124,7 @@ You access object property values through a chain of tokens. Object properties c
 Voici un exemple :
 
 ```4d
-     employee.name:="Smith"
+     employee.name:="Dupont"
 ```
 
 - using a string within square brackets:
@@ -153,17 +153,17 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 ```4d
      $age:=$myObjVar.employee.age //variable
-     $addr:=[Emp]data_obj.address //field
-     $city:=$addr.city //property of an object
-     $pop:=$aObjCountries{2}.population //object array
-     $val:=$myCollection[3].subvalue //collection element
+ $addr:=[Emp]data_obj.address //champ
+ $city:=$addr.city //propriété d'un objet
+ $pop:=$aObjCountries{2}.population //tableau d'objets
+ $val:=$myCollection[3].subvalue //élément de collection
 ```
 
 - **4D commands** that return objects.
   Voici un exemple :
 
 ```4d
-     $measures:=Get database measures.DB.tables
+     $measures:=Lire mesures base.DB.tables
 ```
 
 - **Project methods** or **Functions** that return objects.
@@ -182,7 +182,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
   Example:
 
 ```4d
-     myColl.length //size of the collection
+     myColl.length //taille de la collection
 ```
 
 ### Valeur Null
@@ -210,11 +210,11 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 
 - Accès direct :
 
-> pointerOnObject->propertyName
+> pointeurObjet->nomPropriété
 
 - Accès par le nom :
 
-> pointerOnObject->["propertyName"]
+> pointeurObjet->["nomPropriété"]
 
 Voici un exemple :
 

@@ -42,6 +42,7 @@ If you execute the following code:
  $e1.name:="Hammer"
   //both variables $e1 and $e2 share the reference to the same entity
   //$e2.name contains "Hammer"
+ If($e1=$e2) //True
 ```
 
 This is illustrated by the following graphic:
@@ -58,6 +59,7 @@ Now if you execute:
   //variable $e1 contains a reference to an entity
   //variable $e2 contains another reference to another entity
   //$e2.name contains "smith"
+ If($e1=$e2) //False
 ```
 
 This is illustrated by the following graphic:
@@ -90,6 +92,7 @@ You can handle entities like any other object in 4D and pass their references di
 :::info
 
 With the entities, there is no concept of "current record" as in the 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+
 
 
 
@@ -248,11 +251,17 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 *	Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 *	Using a relation attribute of type "related entities" (see below).
 
+:::note
+
+You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
+
+:::
+
 You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
 
 :::note
 
-You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
+When entities are deleted, their references remain in the entity selection with an *undefined* value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
 
 :::
 
@@ -443,7 +452,7 @@ A filter creates a restricted view of the data, built upon any business rules su
 
 :::info
 
-Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](privileges.md) which are more appropriate in this case. 
+Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](privileges.md) which are more appropriate in this case.
 
 :::
 

@@ -13,8 +13,7 @@ El entorno de desarrollo 4D ofrece varias herramientas de depuración para todo 
 
 Los errores de escritura son detectados por el Editor de código. Se muestran en rojo y se ofrece información adicional en la parte inferior de la ventana. He aquí un error de escritura:
 
-![punto de ruptura](../assets/en/Debugging/typing-error.png)
-
+![break-point](../assets/en/Debugging/typing-error.png)
 
 Estos errores de escritura suelen causar errores de sintaxis (en la imagen anterior, el nombre de la tabla es desconocido). Se obtiene la descripción del error cuando se valida la línea de código. Cuando esto ocurre, corrija el error de digitación y escriba Enter para validar la solución.
 
@@ -34,8 +33,8 @@ Ocasionalmente, puede que no haya suficiente memoria para crear un BLOB. O, cuan
 
 Estos son generalmente los tipos de errores más difíciles de encontrar. A excepción de los errores de digitación, todos los tipos de errores listados arriba están cubiertos hasta cierto punto por la expresión "error de diseño o de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por ejemplo:
 
-- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+- Puede ocurrir un _error de sintaxis_ cuando intenta utilizar una variable que aún no está inicializada.
+- Puede ocurrir un _error de entorno_ cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Los errores de diseño o de lógica también incluyen situaciones como:
 
@@ -75,8 +74,8 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Abandonar**: detiene la ejecución del método y devuelve al estado antes del inicio de la ejecución del método:
 
-    - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
-    - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
+  - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
+  - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
 - **Copiar**: copia la información de depuración en el portapapeles. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 

@@ -20,18 +20,19 @@ Le serveur web 4D crée automatiquement un dossier racine et une page d'accueil 
 
 La sécurité des données est présente à tous les stades d'implémentation du serveur web 4D. Les niveaux de sécurité sont évolutifs, et les options les plus sécurisées sont généralement sélectionées par défaut. La sécurité du serveur web 4D est basée sur les éléments suivants :
 
-* Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+- Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-* **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  * [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
-  * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  * [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
+- **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
+  - [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
+  - [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
+  - [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
 
-* **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
+- **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
+- **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
+
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
 ## Sessions Utilisateur
@@ -52,9 +53,9 @@ Les requêtes REST sont détaillées dans la section [serveur REST](REST/getting
 
 Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
-* **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ( pour le serveur web et []
 
-* [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des formulaires HTML.
+- [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des form
 
 ## Méthodes base dédiées
 

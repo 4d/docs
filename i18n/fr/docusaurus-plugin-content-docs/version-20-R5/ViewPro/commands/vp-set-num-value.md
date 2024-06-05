@@ -13,7 +13,7 @@ title: VP SET NUM VALUE
 | ------------- | ------ | -- | ------------------------ | ---------------- |
 | rangeObj      | Object | -> | Objet plage              |                  |
 | numberValue   | Number | -> | Valeur du nombre à fixer |                  |
-| formatPattern | Text   | -> | Format of value          | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur      | <!-- END REF --> |
 
 #### Description
 

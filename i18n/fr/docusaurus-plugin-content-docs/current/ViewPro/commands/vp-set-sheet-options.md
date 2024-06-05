@@ -5,7 +5,7 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Syntax -->
 
-**VP SET SHEET OPTIONS** ( _vpAreaName_ : Text; _sheetOptions_ : Object { ; _sheet_ : Integer}  ) <!-- END REF -->
+**VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET SHEET OPTIONS
 
 #### Description
 
-The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the _vpAreaName_ area<!-- END REF -->.
+The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
+Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass an object containing definitions for the options to set in the _sheetOptions_ parameter. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
+Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
+In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
 - `vk current sheet`
 

@@ -13,7 +13,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
 
-**VP SET TABLE COLUMN ATTRIBUTES** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer ; _attributes_ : Object {; _sheet_ : Integer } )<!-- END REF -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
@@ -22,16 +22,16 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | tableName  | Text    | -> | Nombre de la tabla                                             |                  |
 | column     | Integer | -> | Índice de la columna en la tabla                               |                  |
-| attributes | Object  | -> | Atributo(s) a aplicar a _column_            |                  |
+| attributes | Object  | -> | Atributo(s) a aplicar a *column*            |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
 #### Descripción
 
-El comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->aplica los _atributos_ definidos a la _columna_ en la _tableName_<!-- END REF -->.
+El comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->aplica los *atributos* definidos a la *columna* en la *tableName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En el parámetro _attributes_, pase un objeto que contenga las propiedades a definir:
+En el parámetro *attributes*, pase un objeto que contenga las propiedades a definir:
 
 | Propiedad           | Tipo    | Descripción                                                                                                                                                                                                                     |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,11 +42,11 @@ En el parámetro _attributes_, pase un objeto que contenga las propiedades a def
 | footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                                                     |
 | filterButtonVisible | boolean | Define si se muestra el botón de filtro de la columna de la tabla (por defecto es `True` cuando se crea la tabla).                                                                           |
 
-En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
-Si no se encuentra _tableName_ o si _column_ es mayor que el número de columnas, el comando no hace nada.
+Si no se encuentra *tableName* o si *column* es mayor que el número de columnas, el comando no hace nada.
 
 #### Ejemplo
 

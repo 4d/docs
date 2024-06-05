@@ -7,7 +7,6 @@ title: Sur minuteur
 | ---- | -------------------- | --------------------------------------------------------------------- |
 | 27   | Formulaire           | Le nombre de graduations défini par la commande `SET TIMER` est passé |
 
-
 ## Description
 
 Cet événement est généré uniquement si la méthode formulaire contient un appel à la commande `SET TIMER` réalisé antérieurement.

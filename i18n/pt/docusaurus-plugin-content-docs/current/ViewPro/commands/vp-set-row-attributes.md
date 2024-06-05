@@ -5,7 +5,7 @@ title: VP SET ROW ATTRIBUTES
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 
-**VP SET ROW ATTRIBUTES** ( _rangeObj_ : Object ; _propertyObj_ : Object  ) <!-- END REF -->
+**VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -16,11 +16,11 @@ title: VP SET ROW ATTRIBUTES
 
 #### Descrição
 
-The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the _propertyObj_ to the rows in the _rangeObj_<!-- END REF -->.
+The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->.
 
-In the _rangeObj_, pass an object containing a range. Se o intervalo contiver colunas e linhas, os atributos são aplicados apenas às linhas.
+In the *rangeObj*, pass an object containing a range. Se o intervalo contiver colunas e linhas, os atributos são aplicados apenas às linhas.
 
-The _propertyObj_ parameter lets you specify the attributes to apply to the rows in the _rangeObj_. Estes atributos são:
+The *propertyObj* parameter lets you specify the attributes to apply to the rows in the *rangeObj*. Estes atributos são:
 
 | Propriedade | Tipo    | Descrição                                                                                |
 | ----------- | ------- | ---------------------------------------------------------------------------------------- |

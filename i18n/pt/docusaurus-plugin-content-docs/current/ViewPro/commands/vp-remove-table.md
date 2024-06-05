@@ -13,7 +13,7 @@ title: VP REMOVE TABLE
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
 
-**VP REMOVE TABLE** ( _vpAreaName_ : Object; _tableName_ : Text {; _options_ : Integer} {; _sheet_ : Integer}} )<!-- END REF -->
+**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
@@ -28,11 +28,11 @@ title: VP REMOVE TABLE
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
 
-Em _vpAreaName_, passe o nome da área onde a tabela a ser removida está localizada.
+Em *vpAreaName*, passe o nome da área onde a tabela a ser removida está localizada.
 
-In _tableName_, pass the name of the table to remove.
+In *tableName*, pass the name of the table to remove.
 
-In _options_, you can specify additional behavior. Valores possíveis:
+In *options*, you can specify additional behavior. Valores possíveis:
 
 | Parâmetros            | Valor | Descrição                                   |
 | --------------------- | ----- | ------------------------------------------- |
@@ -40,7 +40,7 @@ In _options_, you can specify additional behavior. Valores possíveis:
 | vk table remove style | 1     | Remover o estilo, mas manter os dados       |
 | vk table remove data  | 2     | Remover dados, mas manter o estilo          |
 
-Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional _sheet_ parameter (indexing starts at 0).
+Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
 #### Exemplo
 

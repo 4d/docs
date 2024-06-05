@@ -77,7 +77,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 }
 ```
 
-### Classe
+### Class
 
 Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 

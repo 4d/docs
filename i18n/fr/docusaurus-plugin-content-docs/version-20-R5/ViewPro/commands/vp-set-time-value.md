@@ -13,7 +13,7 @@ title: VP SET TIME VALUE
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage          |                  |
 | timeValue     | Text   | -> | Valeur heure à fixer |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur  | <!-- END REF --> |
 
 #### Description
 

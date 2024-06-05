@@ -5,7 +5,7 @@ title: VP Column
 
 <!-- REF #_method_.VP Column.Syntax -->
 
-**VP Column** ( _vpAreaName_ : Text ; _column_: Integer ; _columnCount_ : Integer { ; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Column** ( *vpAreaName* : Text ; *column*: Integer ; *columnCount* : Integer { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Column.Params -->
 
@@ -21,13 +21,13 @@ title: VP Column
 
 The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new range object referencing a specific column or columns<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _column_ parameter defines the first column of the column range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range contains multiple columns, you should also use the optional _columnCount_ parameter.
+The *column* parameter defines the first column of the column range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range contains multiple columns, you should also use the optional *columnCount* parameter.
 
-The optional _columnCount_ parameter allows you to define the total number of columns of the range. _columnCount_ must be greater than 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
+The optional *columnCount* parameter allows you to define the total number of columns of the range. *columnCount* must be greater than 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
 #### Exemple
 
@@ -38,7 +38,7 @@ Vous souhaitez définir une plage pour la colonne ci-dessous (dans la feuille co
 Le code est le suivant :
 
 ```4d
- $column:=VP Column("ViewProArea";3) // column D
+ $column:=VP Column("ViewProArea";3) // colonne D
 ```
 
 #### Voir également

@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
 Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
-
 
 ## Description
 
@@ -22,10 +19,9 @@ Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=`
 
 ### Utiliser un filtre complexe
 
-A more complex filter is composed of the following elements, which joins two queries:
+Un filtre plus complexe est composé des éléments suivants, qui joint deux requêtes:
 
-**{attribut} {comparateur} {valeur} {AND/OR/EXCEPT} {attribut} {comparateur} {valeur}**
-
+**{attribut} {comparateur} {value} {AND/OR/EXCEPT} {attribut} {comparateur} {value}**
 
 Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
 
@@ -33,20 +29,22 @@ Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `sa
 
 Vous pouvez également utiliser la propriété params de 4D.
 
-**{attribut} {comparateur} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
+**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la [documentation de dataClass.query()](../API/DataClassClass.md#query).
+
 > Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
-> 
+>
 > <li>Quotes ('): \u0027</li>
-  <li>Guillemets doubles ("): \u0022</li>
-> 
-> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :  
+> <li>Guillemets doubles ("): \u0022</li>
+>
+> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété _params_ :\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
-> 
-> If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+>
+> Si vous passez la valeur directement, vous pouvez écrire ce qui suit:
+> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Attribut
 
@@ -64,7 +62,7 @@ Vous pouvez également rechercher des attributs de type Objet en utilisant la no
 
 Vous pouvez rechercher dans l'objet en écrivant ce qui suit :
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## Comparateur
 
@@ -75,8 +73,8 @@ Le comparateur doit être l'une des valeurs suivantes :
 | =           | est égal à          |
 | !=          | différent de        |
 | >           | supérieur à         |
-| >=          | supérieur ou égal à |
-|             | inférieur à         |
+| > =         | supérieur ou égal à |
+| <           | inférieur à         |
 | <=          | inférieur ou égal à |
 | begin       | commence avec       |
 

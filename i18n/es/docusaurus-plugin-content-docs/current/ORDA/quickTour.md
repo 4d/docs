@@ -19,7 +19,9 @@ Para saber qué se expone como datastore, cree un nuevo método proyecto, escrib
 TRACE
 ```
 
-Ejecute el método -- simplemente llama la ventana del depurador. En el área de Expresión, haga doble clic para insertar una expresión e introduzca `ds`. Devuelve el objeto del datastore. Despliegue el objeto, puede ver que las tablas y los campos son expuestos automáticamente por ORDA como propiedades del objeto `ds`:
+Ejecute el método -- simplemente llama la ventana del depurador.
+En el área de Expresión, haga doble clic para insertar una expresión e introduzca `ds`. Devuelve el objeto del datastore.
+Despliegue el objeto, puede ver que las tablas y los campos son expuestos automáticamente por ORDA como propiedades del objeto `ds`:
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -33,9 +35,10 @@ ds.Company.city // devuelve el nombre de la ciudad
 
 > ORDA es sensible a las mayúsculas y minúsculas. `ds.company.city` no hará referencia al atributo ds.Company.city.
 
-También habrá notado la propiedad extra `hires` en la dataclass ds.Company. No corresponde a un campo. `hires` es en realidad el nombre de la relación *Uno a muchos* entre Company y Employee:
+También habrá notado la propiedad extra `hires` en la dataclass ds.Company. No corresponde a un campo. `hires` es en realidad el nombre de la relación _Uno a muchos_ entre Company y Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Nombre de la relación definida en el Inspector*
+![](../assets/en/ORDA/struc2s.png)
+_Name of the relation as defined in the Inspector_
 
 Es decir, siempre que necesite acceder a la lista de empleados que trabajan en una empresa, en ORDA sólo tiene que escribir:
 
@@ -45,10 +48,10 @@ ds.Company.hires //devuelve la lista de empleados
 
 Pero no vaya tan rápido. Veamos ahora cómo registrar datos en las clases de datos ORDA.
 
-
 ## Añadir datos
 
 En ORDA, puede añadir un registro a una dataclass utilizando el comando `new()`.
+
 > En el mundo ORDA, un registro es una **entidad** -- una entidad es en sí misma un objeto. Un comando que se adjunta a un objeto específico se denomina **método miembro**.
 
 ```code4d
@@ -62,7 +65,7 @@ Un nuevo objeto entidad contiene una "copia" de todos los atributos de su datacl
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID se llena automáticamente
+//$entity.ID is automatically filled
 ```
 
 Por el momento, la entidad sólo existe en la memoria. Para almacenarlo en el archivo de datos, es necesario guardarlo utilizando el método miembro `save()`:
@@ -70,11 +73,3 @@ Por el momento, la entidad sólo existe en la memoria. Para almacenarlo en el ar
 ```code4d
 $status:=$entity.save()
 ```
-
-
-
-
-
-
-
-

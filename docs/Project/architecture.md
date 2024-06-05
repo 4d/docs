@@ -224,11 +224,11 @@ CompilerIntermediateFiles|Intermediate files resulting from Apple Silicon compil
 
 ## `Components`
 
-Legacy folder containing components (must be stored at the same level as the Project folder). 
+Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). These components have priority over any other locations. 
 
 :::info
 
-It is now recommended to [use the **dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare your components instead of the Components folder.
+You can also use the [**dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare components.
 
 :::
 

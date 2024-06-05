@@ -3,15 +3,13 @@ id: code-overview
 title: Methods and classes
 ---
 
-
 The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
 
 L'IDE de 4D vous offre diverses fonctionnalités pour créer, modifier, exporter ou supprimer votre code. You will usually use the 4D [code editor](../code-editor/write-class-method.md) to work with your code.
 
-
 ## Créer des méthodes
 
-Une méthode dans 4D est stockée dans un fichier **.4dm** situé dans le dossier approprié du dossier [`/Project/Sources/`](../Project/architecture.md#sources) .
+A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
 
 Vous pouvez créer [plusieurs types de méthodes](../Concepts/methods.md) :
 
@@ -22,22 +20,20 @@ Vous pouvez créer [plusieurs types de méthodes](../Concepts/methods.md) :
 
 ## Créer des classes
 
-Une classe utilisateur dans 4D est définie par un fichier de méthode spécifique (**.4dm**), stocké dans le dossier [`/Project/Sources/Classes/`](../Project/architecture.md#sources) . Le nom du fichier est le nom de la classe.
+A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. Le nom du fichier est le nom de la classe.
 
 Vous pouvez créer un fichier de classe à partir du menu ou de la barre d'outils **Fichier** (**Nouveau/Classe...**) ou dans la page **Méthodes** de la fenêtre de l'**Explorateur** .
 
 Pour plus d'informations, reportez-vous à la section [Classes](../Concepts/classes.md).
 
-
 ## Supprimer des méthodes ou des classes
 
 Pour supprimer une méthode ou une classe existante, vous pouvez :
 
-- sur votre disque, supprimer le fichier *.4dm* du dossier "Sources",
-- dans l'Explorateur de 4D, sélectionner la classe et cliquer sur ![](../assets/en/Users/MinussNew.png) ou choisir **Déplacer vers la corbeille** dans le menu contextuel.
+- sur votre disque, supprimer le fichier _.4dm_ du dossier "Sources",
+- in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 > Pour supprimer une méthode objet, choisissez **Supprimer la méthode objet** dans l'[éditeur de formulaires](../FormEditor/formEditor.md) (menu **Objet** ou menu contextuel).
-
 
 ## Importer et exporter le code
 
@@ -50,9 +46,8 @@ La fonction d’import/export est multi-plate-forme : une méthode exportée sou
 
 4D peut exporter et importer les méthodes dans deux formats :
 
-- Méthode 4D (extension *.c4d*) : Dans ce format, les méthodes sont exportées sous forme encodée. Les noms d’objets sont transformés en références (tokens). Ce format permet notamment d’échanger des méthodes entre des applications 4D et des plug-ins dans langues différentes. En revanche, il n’est pas possible de les visualiser dans un éditeur de texte.
-- Texte (extension *.txt*) : Dans ce format, les méthodes sont exportées sous forme de texte uniquement. Dans ce cas, les méthodes sont lisibles à l'aide d'un éditeur de texte standard ou d'un outil de contrôle de sources.
-
+- Méthode 4D (extension _.c4d_) : Dans ce format, les méthodes sont exportées sous forme encodée. Les noms d’objets sont transformés en références (tokens). Ce format permet notamment d’échanger des méthodes entre des applications 4D et des plug-ins dans langues différentes. En revanche, il n’est pas possible de les visualiser dans un éditeur de texte.
+- Texte (extension _.txt_) : Dans ce format, les méthodes sont exportées sous forme de texte uniquement. Dans ce cas, les méthodes sont lisibles à l'aide d'un éditeur de texte standard ou d'un outil de contrôle de sources.
 
 ## Propriétés des méthodes projet
 
@@ -64,7 +59,6 @@ Pour afficher la boîte de dialogue **Propriétés de la méthode** pour une mé
 
 - in the [Code Editor](../code-editor/write-class-method.md), select the **Method Properties...** command in the **Method** menu,
 - ou dans la page **Méthodes** de l'Explorateur, **clic droit** sur la méthode projet et sélectionner **Propriétés de la méthode.** dans le menu contextuel ou dans le menu d'options.
-
 
 > Une fonction de paramétrage global vous permet de modifier une propriété pour tout ou partie des méthodes projet en une seule opération (voir [Modifier attributs globalement](#modifier-attributs-globalement)).
 
@@ -122,7 +116,7 @@ Les attributs de disponibilité précisent les services externes autorisés à a
 
 Cet attribut vous permet de publier la méthode courante comme service Web accessible via des requêtes SOAP. Pour plus d’informations, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Lorsque cette option est cochée, l’option **Publié dans WSDL** est active.
 
-Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png) indique une méthode projet bénéficiant de cet attribut.
+In the Explorer, project methods that are offered as a Web Service are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
 **Note :** Il n'est pas possible de publier en tant que Web service une méthode dont le nom comporte des caractères non conformes à la nomenclature XML (par exemple des espaces). Si le nom de la méthode n'est pas conforme, 4D refuse l'affectation de la propriété.
 
@@ -130,13 +124,13 @@ Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440512/pict4
 
 Cet attribut est actif uniquement si l'attribut "Web service" est coché. Il permet d’inclure la méthode courante dans le fichier WSDL de l’application 4D. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Génération du WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-Dans l'Explorateur, les méthodes projet offertes comme Web Service et publiées dans le WSDL bénéficient d’une icône spécifique ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 #### Balises HTML et URLs 4D (4DACTION...)
 
 This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/transformation-tags.md).
 
-Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png) indique une méthode projet bénéficiant de cet attribut.
+In the Explorer, project methods with this attribute are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 
 Pour des raisons de sécurité, cette option est désélectionnée par défaut. Vous devez désigner individuellement chaque méthode pouvant être exécutée via les URLs et les balises spéciales.
 
@@ -144,43 +138,44 @@ Pour des raisons de sécurité, cette option est désélectionnée par défaut. 
 
 Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode projet par le moteur SQL de 4D. Elle est désélectionnée par défaut, ce qui signifie que, sauf autorisation explicite, les méthodes projet de 4D sont protégées et ne peuvent pas être appelées par le moteur SQL de 4D.
 
-Cette propriété s’applique à toutes les requêtes SQL internes et externes — exécutées via le pilote ODBC, le code SQL inséré dans les balises [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  ou la commande [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html).
+This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
 
 **Notes :**
 
--   Même si une méthode dispose de l’attribut “SQL”, les accès définis au niveau des propriétés de la base et des propriétés de la méthode sont pris en compte pour l’exécution de la méthode.
--   La fonction ODBC **SQLProcedure** retourne uniquement les méthodes projet disposant de l’attribut "SQL".
+- Même si une méthode dispose de l’attribut “SQL”, les accès définis au niveau des propriétés de la base et des propriétés de la méthode sont pris en compte pour l’exécution de la méthode.
+- La fonction ODBC **SQLProcedure** retourne uniquement les méthodes projet disposant de l’attribut "SQL".
 
 Pour plus d’informations, reportez-vous à la section [Implémentations du moteur SQL de 4D](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in dans le manuel SQL de 4D.
 
 #### Serveur REST
 
-*Cette option est obsolète. L'appel de code par le biais d'appels REST n'est possible qu'avec les fonctions de classe du [modèle de données ORDA](../REST/ClassFunctions.md).*
+_Cette option est obsolète. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md)._
 
 #### Modifier attributs globalement
 
-La boîte de dialogue “Attributs des méthodes” permet de modifier un attribut de méthode projet (Invisible, Offerte comme Web Service, etc.) pour la totalité ou une partie des méthodes de la base en une seule opération. Cette fonction est très utile pour modifier les attributs d’un grand nombre de méthodes projet. Elle peut également être utilisée en cours de développement pour appliquer rapidement des attributs communs à des groupes homogènes de méthodes.
+Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. Cette fonction est très utile pour modifier les attributs d’un grand nombre de méthodes projet. Elle peut également être utilisée en cours de développement pour appliquer rapidement des attributs communs à des groupes homogènes de méthodes.
 
 Pour modifier globalement les attributs des méthodes :
 
-1.  Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît. La boîte de dialogue **Attributs des méthodes** apparaît.
+1. Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît. La boîte de dialogue **Attributs des méthodes** apparaît.
 
-2.  Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement. La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
+2. Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement.
+   La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
 
 Utilisez le caractère générique @ pour vous aider à définir des groupes de méthodes :
 
 - pour désigner les méthodes dont le nom débute par..., saisissez @ en fin de chaîne. Par exemple : `web@`
 - pour désigner les méthodes dont le nom contient..., saisissez @ en milieu de chaîne. Par exemple : `web@write`
-- pour désigner les méthodes dont le nom se termine par..., saisissez @ en début de chaîne. Par exemple : `@write`
+- pour désigner les méthodes dont le nom se termine par..., saisissez @ en début de chaîne. Par exemple : `web@write`
 - Pour désigner toutes les méthodes, il suffit de taper @ dans la zone.
 
 **Notes :**
+
 - La recherche ne tient pas compte des majuscules et des minuscules.
 - Vous pouvez saisir plusieurs caractères @ dans la chaîne, par exemple `dtro_@web@pro.@`
 
-3.  Dans la zone "Attribut à modifier", choisissez un attribut dans la liste déroulante puis cliquez sur le bouton radio **Vrai** ou **Faux** correspondant à la valeur à appliquer.
+3. Dans la zone "Attribut à modifier", choisissez un attribut dans la liste déroulante puis cliquez sur le bouton radio **Vrai** ou **Faux** correspondant à la valeur à appliquer.
 
 **Note :** Si l'attribut "Publié dans WSDL" est défini à Vrai, il ne sera appliqué qu'aux méthodes projet qui contiennent déjà l'attribut "Web Service".
 
-4.  Cliquez sur **Appliquer**. La modification est appliquée instantanément à toutes les méthodes projet désignées par la chaîne de caractères saisie.
-
+4. Cliquez sur **Appliquer**. La modification est appliquée instantanément à toutes les méthodes projet désignées par la chaîne de caractères saisie.

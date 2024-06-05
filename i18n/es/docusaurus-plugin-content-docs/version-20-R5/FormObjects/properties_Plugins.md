@@ -17,4 +17,4 @@ Dado que la función de propiedades avanzadas está bajo el control del autor de
 
 #### Objetos soportados
 
-[Área de plug-in](pluginArea_overview.md)
+[Plug-in Area](pluginArea_overview.md)

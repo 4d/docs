@@ -17,7 +17,6 @@ title: FileHandle
 
 :::
 
-
 ### 例題
 
 ```code4d
@@ -44,14 +43,15 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!" $fhandle:=$f.open($o)
+$stopChar:="!"
+$fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 // 1行ずつ読み取ります
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
-    $lines.push($fhandle.readLine())
+	$lines.push($fhandle.readLine())
 End while
 
 ```
@@ -60,27 +60,26 @@ End while
 
 FileHandle オブジェクトは共有できません。
 
-|                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.file.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readBlob().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readLine().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readText().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.setSize().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeBlob().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeLine().Summary -->|
-| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeText().Summary -->|
-
-
+|                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)<br/><!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->    |
+| [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)<br/><!-- INCLUDE #FileHandleClass.breakModeWrite.Summary --> |
+| [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)<br/><!-- INCLUDE #FileHandleClass.charset.Summary -->                      |
+| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)<br/><!-- INCLUDE #FileHandleClass.eof.Summary -->                                  |
+| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)<br/><!-- INCLUDE #FileHandleClass.file.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)<br/><!-- INCLUDE #FileHandleClass.getSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)<br/><!-- INCLUDE #FileHandleClass.mode.Summary -->                               |
+| [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)<br/><!-- INCLUDE #FileHandleClass.offset.Summary -->                         |
+| [<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)<br/><!-- INCLUDE #FileHandleClass.readBlob().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)<br/><!-- INCLUDE #FileHandleClass.readLine().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)<br/><!-- INCLUDE #FileHandleClass.readText().Summary -->               |
+| [<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)<br/><!-- INCLUDE #FileHandleClass.setSize().Summary -->                  |
+| [<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)<br/><!-- INCLUDE #FileHandleClass.writeBlob().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)<br/><!-- INCLUDE #FileHandleClass.writeLine().Summary -->            |
+| [<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)<br/><!-- INCLUDE #FileHandleClass.writeText().Summary -->            |
 
 <!-- REF FileHandleClass.breakModeRead.Desc -->
+
 ## .breakModeRead
 
 <details><summary>履歴</summary>
@@ -88,27 +87,25 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
 
-
 #### 説明
 
-`.breakModeRead` プロパティは、 <!-- REF #FileHandleClass.breakModeRead.Summary -->ファイル読み取り時に使用される改行の処理モードを返します<!-- END REF -->。
-
+`.breakModeRead` プロパティは、<!-- REF #FileHandleClass.breakModeRead.Summary -->ファイル読み取り時に使用される改行の処理モードを返します<!-- END REF -->。
 
 `.breakModeRead` プロパティは、FileHandle 作成時に [`file.open()`](FileClass.md#open) 関数で定義できます (詳細については [`.open()` 関数](FileClass.md#open) を参照ください)。 デフォルトは "native" です。
 
 > `.breakModeRead` プロパティは、`.open()` のオプションが数値 (定数) を使って設定されていたとしても、常にテキスト値を格納します。
 
-
 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.breakModeWrite.Desc -->
+
 ## .breakModeWrite
 
 <details><summary>履歴</summary>
@@ -116,27 +113,25 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
 
-
 #### 説明
 
-`.breakModeWrite` プロパティは、 <!-- REF #FileHandleClass.breakModeWrite.Summary -->ファイル書き込み時に使用される改行の処理モードを返します<!-- END REF -->。
+`.breakModeWrite` プロパティは、<!-- REF #FileHandleClass.breakModeWrite.Summary -->ファイル書き込み時に使用される改行の処理モードを返します<!-- END REF -->。
 
 `.breakModeWrite` プロパティは、FileHandle 作成時に [`file.open()`](FileClass.md#open) 関数で定義できます (詳細については [`.open()` 関数](FileClass.md#open) を参照ください)。 デフォルトは "native" です。
 
 > `.breakModeWrite` プロパティは、`.open()` のオプションが数値 (定数) を使って設定されていたとしても、常にテキスト値を格納します。
 
-
 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.charset.Desc -->
+
 ## .charset
 
 <details><summary>履歴</summary>
@@ -144,14 +139,14 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
 
-
 #### 説明
 
-`.charset` プロパティは、 <!-- REF #FileHandleClass.charset.Summary -->ファイルの読み取りや書き込みに使用される文字セットを返します<!-- END REF -->。
+`.charset` プロパティは、<!-- REF #FileHandleClass.charset.Summary -->ファイルの読み取りや書き込みに使用される文字セットを返します<!-- END REF -->。
 
 文字セットは、FileHandle 作成時に [`file.open()`](FileClass#open) 関数で定義できます。 デフォルト値: "UTF-8"
 
@@ -159,8 +154,8 @@ FileHandle オブジェクトは共有できません。
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.eof.Desc -->
+
 ## .eof
 
 <details><summary>履歴</summary>
@@ -168,36 +163,35 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
 
-
 #### 説明
 
-`.eof` プロパティは、 <!-- REF #FileHandleClass.eof.Summary -->`offset` がファイルの終端に達した場合に true、それ以外は false を返します<!-- END REF -->。
+`.eof` プロパティは、<!-- REF #FileHandleClass.eof.Summary -->`offset` がファイルの終端に達した場合に true、それ以外は false を返します<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.file.Desc -->
+
 ## .file
 
 <!-- REF #FileHandleClass.file.Syntax -->**.file** : 4D.File<!-- END REF -->
 
-
 #### 説明
 
-`.file` プロパティは、 <!-- REF #FileHandleClass.file.Summary -->作成された FileHandle の対象である [4D.File](FileClass.md) オブジェクトを格納します<!-- END REF -->。
+`.file` プロパティは、<!-- REF #FileHandleClass.file.Summary -->作成された FileHandle の対象である [4D.File](FileClass.md) オブジェクトを格納します<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.getSize().Desc -->
+
 ## .getSize()
 
 <details><summary>履歴</summary>
@@ -205,20 +199,22 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
-
 <!--REF #FileHandleClass.getSize().Params -->
-| 引数  | タイプ  |    | 説明                 |
-| --- | ---- | -- | ------------------ |
+
+| 引数  | タイプ  |    | 説明                                    |
+| --- | ---- | -- | ------------------------------------- |
 | 戻り値 | Real | <- | ドキュメントのサイズ (バイト単位) |
+
 <!-- END REF -->
 
 #### 説明
 
-`.getSize()` 関数は、 <!-- REF #FileHandleClass.getSize().Summary -->ドキュメントの現在のサイズをバイト単位で返します<!-- END REF -->。
+`.getSize()` 関数は、<!-- REF #FileHandleClass.getSize().Summary -->ドキュメントの現在のサイズをバイト単位で返します<!-- END REF -->。
 
 > この関数は、`File` クラスの [.size](FileClass#size) プロパティと同じ値を返します。
 
@@ -228,8 +224,8 @@ FileHandle オブジェクトは共有できません。
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.mode.Desc -->
+
 ## .mode
 
 <details><summary>履歴</summary>
@@ -237,14 +233,14 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
 
-
 #### 説明
 
-`.mode` プロパティは、 <!-- REF #FileHandleClass.mode.Summary -->FileHandle が作成されたモード ("read"、"write"、"append" のいずれか) を返します<!-- END REF -->。
+`.mode` プロパティは、<!-- REF #FileHandleClass.mode.Summary -->FileHandle が作成されたモード ("read"、"write"、"append" のいずれか) を返します<!-- END REF -->。
 
 モードは、FileHandle 作成時に [`file.open()`](FileClass#open) 関数で定義できます。 デフォルトは "read" です。
 
@@ -252,9 +248,8 @@ FileHandle オブジェクトは共有できません。
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.offset.Desc -->
+
 ## .offset
 
 <details><summary>履歴</summary>
@@ -262,14 +257,14 @@ FileHandle オブジェクトは共有できません。
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
 
-
 #### 説明
 
-`.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
+`.offset` プロパティは、<!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
 `.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
@@ -287,7 +282,7 @@ FileHandle の作成時、`.offset` の値はバイト数です。 しかしな�
   // 最初の 10文字をバイトとして、残りをテキストとして読み込みます
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
   // 最初の 20バイト (=10文字) を読み取ります
-$b:=$fh.readBlob(20) // 現在のオフセット: $fh.offset=20
+$b:=$fh.readBlob(20) // $fh.offset=20
   // 次にすでに読み取った 10文字を飛ばして残りのテキストをすべて読み取ります
   // バイトからテキストの読み取りへと切り替えるため、オフセットの単位が変わります
   // そのため、オフセットをバイトから文字数に変換する必要があります
@@ -299,9 +294,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.readBlob().Desc -->
+
 ## .readBlob()
 
 <details><summary>履歴</summary>
@@ -309,27 +303,25 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readBlob().Params -->
-| 引数      | タイプ                  |    | 説明             |
-| ------- | -------------------- | -- | -------------- |
-| *bytes* | Real                 | -> | 読み取るバイト数       |
+
+| 引数      | タイプ                                  |    | 説明             |
+| ------- | ------------------------------------ | -- | -------------- |
+| *bytes* | Real                                 | -> | 読み取るバイト数       |
 | 戻り値     | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト |
+
 <!-- END REF -->
-
-
 
 #### 説明
 
-`.readBlob()` 関数は、 <!-- REF #FileHandleClass.readBlob().Summary -->ファイルの現在の位置から *bytes* サイズの Blob を返します <!-- END REF -->。
+`.readBlob()` 関数は、<!-- REF #FileHandleClass.readBlob().Summary -->ファイルの現在の位置から bytes サイズの Blob を返します<!-- END REF -->。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に読み取ったバイトの後に更新されます。
-
-
 
 #### 参照
 
@@ -337,10 +329,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
-
-
 <!-- REF FileHandleClass.readLine().Desc -->
+
 ## .readLine()
 
 <details><summary>履歴</summary>
@@ -348,22 +338,22 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readLine().Params -->
+
 | 引数  | タイプ  |    | 説明      |
 | --- | ---- | -- | ------- |
 | 戻り値 | Text | <- | 1行のテキスト |
+
 <!-- END REF -->
-
-
 
 #### 説明
 
-`.readLine()` 関数は、 <!-- REF #FileHandleClass.readLine().Summary -->現在の位置から次の改行文字まで、あるいはドキュメントの終端に到達するまでのテキストを返します<!-- END REF -->。
+`.readLine()` 関数は、<!-- REF #FileHandleClass.readLine().Summary -->現在の位置から次の改行文字まで、あるいはドキュメントの終端に到達するまでのテキストを返します<!-- END REF -->。
 
 この関数を実行すると、現在の位置 ([`.offset`](#offset)) が更新されます。
 
@@ -375,15 +365,14 @@ $s:=$fh.readText()
 
 > この関数が FileHandle を対象に初めて実行されると、ドキュメント全体がバッファーに読み込まれます。
 
-
 #### 参照
 
 [.readText()](#readtext), [.writeLine()](#writeline)
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.readText().Desc -->
+
 ## .readText()
 
 <details><summary>履歴</summary>
@@ -391,22 +380,23 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
-
 <!--REF #FileHandleClass.readText().Params -->
+
 | 引数         | タイプ  |    | 説明          |
 | ---------- | ---- | -- | ----------- |
 | *stopChar* | Text | -> | 読み取りを停止する文字 |
 | 戻り値        | Text | <- | ファイルのテキスト   |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### 説明
 
-`.readText()` 関数は、 <!-- REF #FileHandleClass.readText().Summary -->現在の位置から、最初の *stopChar* 文字列まで (渡された場合)、あるいはファイルの終端に達するまでのテキストを返します<!-- END REF -->。
+`.readText()` 関数は、<!-- REF #FileHandleClass.readText().Summary -->現在の位置から、最初の stopChar 文字列まで (渡された場合)、あるいはファイルの終端に達するまでのテキストを返します<!-- END REF -->。
 
 *stopChar* の文字列は、返されるテキストに含まれません。 *stopChar* を省略した場合、ドキュメント全体のテキストが返されます。
 
@@ -428,8 +418,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.setSize().Desc -->
+
 ## .setSize()
 
 <details><summary>履歴</summary>
@@ -437,21 +427,22 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
-
 <!--REF #FileHandleClass.setSize().Params -->
-| 引数   | タイプ  |    | 説明                    |
-| ---- | ---- | -- | --------------------- |
-| size | Real | -> | ドキュメントの新しいサイズ (バイト単位) |
-<!-- END REF -->
 
+| 引数   | タイプ  |    | 説明                                       |
+| ---- | ---- | -- | ---------------------------------------- |
+| size | Real | -> | ドキュメントの新しいサイズ (バイト単位) |
+
+<!-- END REF -->
 
 #### 説明
 
-`.setSize()` 関数は、 <!-- REF #FileHandleClass.setSize().Summary -->ドキュメントの新しいサイズをバイト単位で設定します<!-- END REF -->。
+`.setSize()` 関数は、<!-- REF #FileHandleClass.setSize().Summary -->ドキュメントの新しいサイズをバイト単位で設定します<!-- END REF -->。
 
 *size* の値が現在のドキュメントサイズより小さい場合、内容は先頭から切り捨てられ、新しい *size* が取得されます。
 
@@ -461,8 +452,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.writeBlob().Desc -->
+
 ## .writeBlob()
 
 <details><summary>履歴</summary>
@@ -470,21 +461,22 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
-
 <!--REF #FileHandleClass.writeBlob().Params -->
-| 引数     | タイプ                  |    | 説明             |
-| ------ | -------------------- | -- | -------------- |
-| *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
-<!-- END REF -->
 
+| 引数     | タイプ                                  |    | 説明             |
+| ------ | ------------------------------------ | -- | -------------- |
+| *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
+
+<!-- END REF -->
 
 #### 説明
 
-`.writeBlob()` 関数は、 <!-- REF #FileHandleClass.writeBlob().Summary -->ファイルの現在の位置から *blob* に渡した Blob を書き込みます <!-- END REF -->。
+`.writeBlob()` 関数は、<!-- REF #FileHandleClass.writeBlob().Summary -->ファイルの現在の位置から *blob* に渡した Blob を書き込みます<!-- END REF -->。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだバイトの後に更新されます。
 
@@ -494,9 +486,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
-
 <!-- REF FileHandleClass.writeLine().Desc -->
+
 ## .writeLine()
 
 <details><summary>履歴</summary>
@@ -504,22 +495,22 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
-
-
 <!--REF #FileHandleClass.writeLine().Params -->
+
 | 引数           | タイプ  |    | 説明       |
 | ------------ | ---- | -- | -------- |
 | *lineOfText* | Text | -> | 書き込むテキスト |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### 説明
 
-`.writeLine()` 関数は、 <!-- REF #FileHandleClass.writeLine().Summary -->現在の位置に *lineOfText* の内容を書き込み、改行文字を挿入します<!-- END REF --> ([.writeText()](#writetext) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeLine()` 関数は、<!-- REF #FileHandleClass.writeLine().Summary -->現在の位置に *lineOfText* の内容を書き込み、改行文字を挿入します<!-- END REF --> ([.writeText()](#writetext) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだ改行文字の後に更新されます。
 
@@ -529,8 +520,8 @@ $s:=$fh.readText()
 
 <!-- END REF -->
 
-
 <!-- REF FileHandleClass.writeText().Desc -->
+
 ## .writeText()
 
 <details><summary>履歴</summary>
@@ -538,21 +529,22 @@ $s:=$fh.readText()
 | リリース  | 内容 |
 | ----- | -- |
 | 19 R7 | 追加 |
+
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
-
 <!--REF #FileHandleClass.writeText().Params -->
+
 | 引数            | タイプ  |    | 説明       |
 | ------------- | ---- | -- | -------- |
 | *textToWrite* | Text | -> | 書き込むテキスト |
-<!-- END REF -->
 
+<!-- END REF -->
 
 #### 説明
 
-`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeText()` 関数は、<!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) は、次の改行文字の後に更新されます。
 

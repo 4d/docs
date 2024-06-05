@@ -13,7 +13,7 @@ title: VP SET DATA CONTEXT
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Syntax -->
 
-**VP SET DATA CONTEXT** ( _vpAreaName_ : Text ; _dataObj_ : Object {; _options_ : Object } {; _sheet_ : Integer} )<br/>**VP SET DATA CONTEXT** ( _vpAreaName_ : Text ; _dataColl_ : Collection ; {_options_ : Object } {; _sheet_ : Integer} )<!-- END REF -->
+**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
@@ -29,25 +29,25 @@ title: VP SET DATA CONTEXT
 
 El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. Por otro lado, el comando [VP Get data context](vp-get-data-context.md) puede devolver un contexto que contenga modificaciones del usuario.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En _dataObj_ o _dataColl_, pase un objeto o una colección que contenga los datos a cargar en el contexto de datos. Las imágenes se convierten en esquemas URI de datos.
+En *dataObj* o *dataColl*, pase un objeto o una colección que contenga los datos a cargar en el contexto de datos. Las imágenes se convierten en esquemas URI de datos.
 
-Para pasar un valor de tiempo en _dataObj_ o _dataColl_, encapsúlelo en un objeto con las siguientes propiedades (ver [ejemplo 4](#ejemplo-4---date-and-time-syntax)):
+Para pasar un valor de tiempo en *dataObj* o *dataColl*, encapsúlelo en un objeto con las siguientes propiedades (ver [ejemplo 4](#ejemplo-4---date-and-time-syntax)):
 
 | Propiedad | Tipo                                     | Descripción                                                                |
 | --------- | ---------------------------------------- | -------------------------------------------------------------------------- |
 | value     | Integer, Real, Boolean, Text, Date, Null | Valor a poner en el contexto                                               |
 | time      | Real                                     | Valor de tiempo (en segundos) para poner en el contexto |
 
-En _options_, puede pasar un objeto que especifique las opciones adicionales. Las propiedades posibles son:
+En *options*, puede pasar un objeto que especifique las opciones adicionales. Las propiedades posibles son:
 
 | Propiedad           | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | reset               | Object | True para restablecer el contenido de la hoja antes de cargar el nuevo contexto, False (por defecto) en caso contrario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| autoGenerateColumns | Object | Sólo se utiliza cuando los datos son una colección. True (por defecto) para especificar que las columnas deben generarse automáticamente cuando se vincula el contexto de datos. En este caso, se aplican las siguientes reglas: <ul><li>Si _dataColl_ es una colección de objetos, los nombres de los atributos se utilizan como títulos de las columnas (ver el ejemplo 2).</li><li>Si _dataColl_ contiene subcolecciones de valores escalares, cada subcolección define los valores de una fila (ver el ejemplo 3). La primera subcolección determina cuántas columnas se crean.</li></ul> |
+| autoGenerateColumns | Object | Sólo se utiliza cuando los datos son una colección. True (por defecto) para especificar que las columnas deben generarse automáticamente cuando se vincula el contexto de datos. En este caso, se aplican las siguientes reglas: <ul><li>Si *dataColl* es una colección de objetos, los nombres de los atributos se utilizan como títulos de las columnas (ver el ejemplo 2).</li><li>Si *dataColl* contiene subcolecciones de valores escalares, cada subcolección define los valores de una fila (ver el ejemplo 3). La primera subcolección determina cuántas columnas se crean.</li></ul> |
 
-En _sheet_, pase el índice de la hoja que recibirá el contexto de datos. Si no se pasa ningún índice, el contexto se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja que recibirá el contexto de datos. Si no se pasa ningún índice, el contexto se aplica a la hoja actual.
 
 If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para más detalles, consulte la descripción de esos métodos.
 
@@ -93,7 +93,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 #### Ejemplo 3
 
-_data_ pasado como parámetro es una colección que contiene subcolecciones. Cada subcolección define el contenido de una línea:
+*data* pasado como parámetro es una colección que contiene subcolecciones. Cada subcolección define el contenido de una línea:
 
 ```4d
 var $data : Collection

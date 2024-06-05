@@ -5,7 +5,7 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
 
-**VP Get sheet options** ( _vpAreaName_ : Text {; _sheet_ : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -13,15 +13,15 @@ title: VP Get sheet options
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Sheet options object                                                        | <!-- END REF --> |
+| Résultat   | Object  | <- | Objet options de la feuille                                                 | <!-- END REF --> |
 
 #### Description
 
-The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the _vpAreaName_ area<!-- END REF -->.
+The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
+Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
 #### Objet retourné
 

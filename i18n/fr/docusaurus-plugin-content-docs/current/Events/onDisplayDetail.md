@@ -3,10 +3,9 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Peut être appelé par                                     | Définition                                                                                                                                       |
-| ---- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Code | Peut être appelé par                                     | Définition                                                                                                                                                       |
+| ---- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 8    | Formulaire - [List Box](FormObjects/listbox_overview.md) | Un enregistrement est sur le point d'être affiché dans un formulaire liste ou bien une ligne est sur le point d'être affichée dans une list box. |
-
 
 ## Description
 
@@ -21,19 +20,17 @@ Un enregistrement est sur le point d'être affiché sous forme de liste affiché
 Dans ce contexte, la séquence d'appels de méthodes et d'événements de formulaire suivante est déclenchée :
 
 - Pour chaque enregistrement :
-    - Pour chaque objet de la zone détaillée :
-        - Méthode objet avec l'événement `On Display Detail`
-    - Méthode formulaire avec l'événement `On Display Detail`
+  - Pour chaque objet de la zone détaillée :
+    - Méthode objet avec l'événement `On Display Detail`
+  - Méthode formulaire avec l'événement `On Display Detail`
 
-> La zone d'en-tête est gérée à l'aide de l'événement [`On Header`](onHeader.md).
+> The header area is handled using the [`On Header`](onHeader.md) event.
 
 L'appel d'une commande 4D qui affiche une boîte de dialogue à partir de l'événement `On Display Detail` n'est pas autorisé et générera une erreur de syntaxe. Plus particulièrement, les commandes concernées sont : `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, et `MODIFY SELECTION`.
 
-
 ### Liste box sélection
 
-Cet événement est généré lorsqu'une ligne de list box [**de type sélection**](FormObjects/listbox_overview.md#selection-list-boxes) est affichée.
-
+This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
 
 ### Numéro de ligne affiché
 

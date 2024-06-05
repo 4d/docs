@@ -12,7 +12,7 @@ title: VP Get sheet count
 | Paramètres | Type    |    | Description                             |                  |
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| Résultat   | Integer | <- | Number of sheets                        | <!-- END REF --> |
+| Résultat   | Integer | <- | Nombre de feuilles                      | <!-- END REF --> |
 
 #### Description
 

@@ -114,7 +114,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Função de retorno de chamada para dados WebSocket. Chamado sempre que o WebSocket tiver recebido dados. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (text): sempre "message"</li><li>`$2.data` (texto, blob, ou objeto, ver `dataType`): Dados recebidos</li></ul> |
 | onError     | [Function](FunctionClass.md) | Função de retorno de chamada para erros de execução. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (text): sempre "error"</li><li>`$2.errors`: coleção de pilha de erros 4D em caso de erro de execução.<ul><li>`[].errCode` (number): Código de erro 4D</li><li>`[].message` (text): Descrição do erro 4D</li><li>`[].componentSignature` (text): Assinatura do componente interno que retornou o erro</li></ul></li></ul>                                                    |
-| onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.code` (number, só de leitura): curto sem sinal que contém o código de fecho enviado pelo servidor.</li><li>`$2.reason` (text, só de leitura): Motivo pelo qual o servidor fechou a conexão. Isto é específico do servidor e do subprotocolo em causa.</li><li>`$2.wasClean` (boolean, somente leitura): indica se a conexão foi ou não fechada de forma limpa.</li></ul>                                           |
+| onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.code` (number, só de leitura): curto sem sinal que contém o código de fecho enviado pelo servidor.</li><li>`$2.reason` (text, só de leitura): Motivo pelo qual o servidor fechou a conexão. Isto é específico do servidor e do subprotocolo em causa.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Função de retorno de chamada quando o websocket está aberto. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (texto): sempre "open"</li></ul>                                         |
 | dataType    | Text                         | Tipo de dados recebidos ou enviados. Valores disponíveis: "text" (padrão), "blob", "object". "text" = utf-8                                                                                                                             |
 | headers     | Object                       | Cabeçalhos do WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                            |
@@ -254,7 +254,7 @@ In *code*, you can pass a status code explaining why the connection is being clo
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
 - Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
 
-In *reason*, you can pass a string describing why the connection is being closed. 
+In *reason*, you can pass a string describing why the connection is being closed.
 
 
 <!-- END REF -->
@@ -272,9 +272,3 @@ A propriedade `.url` contém <!-- REF #WebSocketClass.url.Summary -->o URL ao qu
 Esta propriedade é só de leitura.
 
 <!-- END REF -->
-
-
-
-
-
-

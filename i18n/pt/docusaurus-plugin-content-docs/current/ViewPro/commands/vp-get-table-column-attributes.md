@@ -13,7 +13,7 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
 
-**VP Get table column attributes** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer {; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
@@ -23,19 +23,19 @@ title: VP Get column attributes
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | column     | Integer | -> | Índice da coluna na tabela                                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Atributos da _coluna_                                       | <!-- END REF --> |
+| Resultados | Object  | <- | Atributos da *coluna*                                       | <!-- END REF --> |
 
 #### Descrição
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified _column_ in the _tableName_<!-- END REF -->.
+The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+In *sheet*, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-The command returns an object describing the current attributes of the _column_:
+The command returns an object describing the current attributes of the *column*:
 
 | Propriedade         | Tipo    | Descrição                                                                                                                               |
 | ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ The command returns an object describing the current attributes of the _column_:
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
 | filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                                  |
 
-If _tableName_ is not found or if _column_ index is higher than the number of columns, the command returns **null**.
+If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
 
 #### Exemplo
 

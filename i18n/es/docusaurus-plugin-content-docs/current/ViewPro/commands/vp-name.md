@@ -5,7 +5,7 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Syntax -->
 
-**VP Name** ( _vpAreaName_ : Text ; _rangeName_ : Text { ; _sheet_ : Integer }  ) : Object <!-- END REF -->
+**VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
 
 <!-- REF #_method_.VP Name.Params -->
 
@@ -14,17 +14,17 @@ title: VP Name
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                     |                  |
 | rangeName  | Text    | -> | Nombre del rango existente                                       |                  |
 | sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Range object of name                                             | <!-- END REF --> |
+| Result     | Object  | <- | Rango de nombre                                                  | <!-- END REF --> |
 
 #### Descripción
 
 El comando `VP Name` <!-- REF #_method_.VP Name.Summary -->devuelve un nuevo objeto de rango que hace referencia a un rango con nombre<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-The _rangeName_ parameter specifies an existing named cell range.
+The *rangeName* parameter specifies an existing named cell range.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where _rangeName_ is defined. Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
+In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`

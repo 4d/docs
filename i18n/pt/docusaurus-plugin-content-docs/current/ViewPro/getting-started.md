@@ -3,16 +3,13 @@ id: getting-started
 title: Começando
 ---
 
-
 4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [commands](commands.md). Permite que você incorpore funcionalidades avançadas de planilha em seus projetos.
-
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs) integrated in 4D.
+A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://developer.mescius.com/spreadjs) integrada en 4D.
 
 Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
-
 
 ## Instalação e ativação
 
@@ -22,19 +19,17 @@ No entanto, 4D View Pro requer uma licença. You need to activate this license i
 
 ![](../assets/en/ViewPro/licenseError.png)
 
-
 ## Inserção de uma área 4D View Pro
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. Para selecionar este objeto, clique na última ferramenta da barra de objetos:
+Los documentos de 4D View Pro se muestran y editan manualmente en un [objeto de formulario 4D](FormObjects/viewProArea_overview.md) llamado 4D View Pro. Para selecionar este objeto, clique na última ferramenta da barra de objetos:
 
 ![](../assets/en/ViewPro/vpArea.png)
 
-You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
+También puede seleccionar un área 4D View Pro preconfigurada en la [librería de objetos](FormEditor/objectLibrary.md).
 
-> 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
+> Las áreas 4D View Pro también pueden ser [creadas y utilizadas fuera de la pantalla](commands/vp-run-offscreen-area.md).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro commands.
-
+Puede [configurar el área](configuring.md) utilizando los comandos de la Lista de Propiedades y 4D View Pro.
 
 ## Noções básicas de seleção, introdução e navegação
 
@@ -42,19 +37,20 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Seleção de células, colunas e linhas
 
-*   To select a cell, simply click on it or use the direction arrows on the keyboard. O seu conteúdo (ou fórmula) é apresentado na célula.
+- To select a cell, simply click on it or use the direction arrows on the keyboard. O seu conteúdo (ou fórmula) é apresentado na célula.
 
-*   To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
+- To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
 
-*   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
+- To select all cells in the spreadsheet, click on the cell at the top left of the area:
+  ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-*   Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
+- Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
 
-*   Para selecionar uma linha, clique no número correspondente.
+- Para selecionar uma linha, clique no número correspondente.
 
-*   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
+- Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
 
-*   Para anular a seleção de células, basta clicar em qualquer parte da folha de cálculo.
+- Para anular a seleção de células, basta clicar em qualquer parte da folha de cálculo.
 
 ### Introdução de dados
 
@@ -64,30 +60,28 @@ Clicar duas vezes em uma célula permite passar para o modo entrada na célula r
 
 Data can be entered directly once a cell is already selected, even if the insertion cursor is not visible. The input then replaces the content of the cell.
 
-The **Tab** key validates the cell input and selects the cell to its right. Combining the **Shift + Tab** keys validates the cell input and selects the cell to its left.
+La tecla **Tab** valida la entrada de la celda y selecciona la celda a su derecha. Combinando las teclas **Mayús + Tab** se valida la entrada de la celda y se selecciona la celda a su izquierda.
 
-
-The **Carriage return** key validates the cell input and selects the cell below it. Combining the **Shift + Carriage return** keys validates the cell input and selects the cell above it.
+La tecla **Retorno de carro** valida la entrada de la celda y selecciona la celda de abajo. Combinando las teclas **Mayús + Retorno de carro** se valida la entrada de la celda y se selecciona la celda superior.
 
 The direction keys (arrows) allow you to move a cell in the direction indicated by the arrow.
-
 
 ### Utilizar o menu de contexto
 
 4D View Pro areas benefit from an automatic context menu that offers standard editing features such as copy and paste, but also basic spreadsheet features:
 
 ![](../assets/en/ViewPro/vpContext.PNG)
-> The Copy/Cut and Paste features of the context menu only work within the spreadsheet area, they do not have access to the system pasteboard. System shortcuts such as **Ctrl+c/Ctrl+v** works however and can be used to exchange data between the area and other applications.
 
- Depending on the clicked area, the following options are also available:
+> The Copy/Cut and Paste features of the context menu only work within the spreadsheet area, they do not have access to the system pasteboard. Sin embargo, los atajos del sistema como **Ctrl+c/Ctrl+v** funcionan y pueden utilizarse para intercambiar datos entre el área y otras aplicaciones.
 
-*   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
-*   clique numa célula ou num intervalo de células:
-    *   **Filtrar**: permite ocultar linhas através de filtros (consulte "Filtragem linhas" na [documentação SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
-    *   **Ordenar**: ordena o conteúdo da coluna.
-    *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
-      ![](../assets/en/ViewPro/vpContext2.PNG)
+Depending on the clicked area, the following options are also available:
 
+- haga clic en el encabezado de una columna o línea: **Insertar**, **Borrar**, **Ocultar**, o **Mostrar** el contenido
+- clique numa célula ou num intervalo de células:
+  - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
+  - **Ordenar**: ordena el contenido de la columna.
+  - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+    ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Using 4D View Pro commands
 
@@ -97,7 +91,7 @@ Since 4D View Pro is a built-in 4D component, you can access its list of command
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list, see [Commands](commands.md).
+Para obtener una lista detallada, consulte [Comandos](commands.md).
 
 ### Processamento de uma zona 4D View Pro
 
@@ -105,7 +99,7 @@ Uma área 4D View Pro lida com vários objetos e elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
+Most of 4D View Pro commands require a _vpAreaName_ parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
 
 Por exemplo, se quiser definir o número total de colunas de uma área chamada "myVpArea", escreva:
 
@@ -113,22 +107,19 @@ Por exemplo, se quiser definir o número total de colunas de uma área chamada "
 VP SET COLUMN COUNT("myVpArea";5)
 ```
 
-
-
-> When loading a 4D View Pro object in a form area, 4D generates the [On VP Ready](../Events/onVpReady.md) form event once the whole area is loaded. You must execute any 4D View Pro code handling the area in this event, otherwise an error is returned.
-
+> Cuando se carga un objeto 4D View Pro en un área de formulario, 4D genera el evento formulario [On VP Ready](../Events/onVpReady.md) una vez que se carga toda el área. You must execute any 4D View Pro code handling the area in this event, otherwise an error is returned.
 
 ### Utilização de objectos de intervalo
 
-Some 4D View Pro commands require a *rangeObj* parameter. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Algunos comandos 4D View Pro requieren un parámetro _rangeObj_. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 Por exemplo, para criar um objeto intervalo para as seguintes células:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-Você pode usar o método [VP Cells](commands/vp-cells.md):
+Puede utilizar el método [VP Cell](commands/vp-cells.md):
 
-```4d 
+```4d
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
@@ -137,29 +128,28 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
-*   área - O nome da área 4D View Pro
-*   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
+- área - O nome da área 4D View Pro
+- intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades _.column_ y _.sheet_.
 
-| Propriedade |                   | Tipo       | Descrição                                                                 | Disponível para                                              |
-| ----------- | ----------------- | ---------- | ------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| area        |                   | text       | Nome de objeto formulário área 4D View Pro                                | sempre disponível                                            |
-| ranges      |                   | collection | Coleção de intervalo(s)                                                   | sempre disponível                                            |
-|             | \[ ].name        | text       | Nome do intervalo                                                         | name                                                         |
+| Propriedade |                                                                                       | Tipo       | Descrição                                                                                                       | Disponível para                                              |
+| ----------- | ------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| area        |                                                                                       | text       | Nome de objeto formulário área 4D View Pro                                                                      | sempre disponível                                            |
+| ranges      |                                                                                       | collection | Coleção de intervalo(s)                                                                      | sempre disponível                                            |
+|             | \[ ].name        | text       | Nome do intervalo                                                                                               | name                                                         |
 |             | \[ ].sheet       | number     | Índice da folha (índice da folha atual por padrão) (contagem começa em 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
-|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                                  | célula, células, linha, linhas                               |
-|             | \[ ].rowCount    | number     | Contagem de linhas                                                        | células, linhas                                              |
-|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                                 | célula, células, coluna, colunas                             |
-|             | \[ ].columnCount | number     | Contagem das colunas                                                      | cells, columns                                               |
-
+|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                                                     | célula, células, linha, linhas                               |
+|             | \[ ].rowCount    | number     | Contagem de linhas                                                                                              | células, linhas                                              |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                                                    | célula, células, coluna, colunas                             |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                                                            | cells, columns                                               |
 
 ## Importação e exportação de documentos
 
 4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
-* .4vp
-* .xlsx
-* .txt e .csv
-* .sjs
-* .pdf (apenas para exportação)
+- .4vp
+- .xlsx
+- .txt e .csv
+- .sjs
+- .pdf (apenas para exportação)
 
 For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).

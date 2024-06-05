@@ -48,17 +48,16 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant se puede utilizar para declarar parámetros de métodos ($0, $1,...) que pueden ser de varios tipos. En este caso, puede construir su código probando el tipo de valor del parámetro, por ejemplo:
+Variant can be used to declare [method parameters](parameters.md) that can be of various types. En este caso, puede construir su código probando el tipo de valor del parámetro, por ejemplo:
 
 ```4d
-C_VARIANT($1)
+#DECLARE ($param : Variant)
 Case of
-: (Value type($1)=Is longint)
+: (Value type($param)=Is longint)
 ...
-: (Value type($1)=Is text)
+: (Value type($param)=Is text)
 ...
-//statement(s)
- End case
+End case
 ```
 
-> Cuando las variables variant no son necesarias (es decir, cuando se conoce el tipo de datos), se recomienda utilizar variables de tipo estándar. Las variables de tipo estándar ofrecen un mejor rendimiento, hacen que el código sea más claro y son útiles para que el compilador evite los errores relacionados con el paso de tipos de datos inesperados. 
+> Cuando las variables variant no son necesarias (es decir, cuando se conoce el tipo de datos), se recomienda utilizar variables de tipo estándar. Las variables de tipo estándar ofrecen un mejor rendimiento, hacen que el código sea más claro y son útiles para que el compilador evite los errores relacionados con el paso de tipos de datos inesperados.

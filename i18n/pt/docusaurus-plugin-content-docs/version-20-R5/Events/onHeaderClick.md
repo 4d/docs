@@ -3,36 +3,35 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                        | Definição                                   |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Ocorre um clique no cabeçalho de uma coluna |
-
+| Code | Pode ser chamado por                                                                                                                                                             | Definição                                   |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| 42   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | Ocorre um clique no cabeçalho de uma coluna |
 
 ## Descrição
 
 ### List Box
 
-This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
+This event is generated when a click occurs on the header of a column in the list box. En este caso, el comando `Self` permite identificar el encabezado de la columna sobre la que se ha hecho clic.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+Si se seleccionó la propiedad [Sortable](FormObjects/properties_Action.md#sortable) para el list box, se puede decidir si se autoriza o no una ordenación estándar de la columna pasando el valor 0 o -1 en la variable `$0`:
 
-- Se `$0` é igual a 0, é efetuada uma ordenação padrão.
-- If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
+- Si `$0` es igual a 0, se realiza una ordenación estándar.
+- Si `$0` es igual a -1, no se realiza una ordenación estándar y el encabezado no muestra la flecha de ordenación. The developer can still generate a column sort based on customized sort criteria using the 4D language.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
+Si la propiedad [Sortable](FormObjects/properties_Action.md#sortable) no está seleccionada para el list box, la variable `$0` no se utiliza.
 
 ### 4D View Pro
 
-This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+This event is generated when the user clicks on a column or row header in a 4D View Pro document. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propriedade | Tipo          | Descrição                                                                                                                        |
-| ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| code        | inteiro longo | 42                                                                                                                               |
-| description | text          | "On Header Click"                                                                                                                |
-| objectName  | text          | Nome da área 4D View Pro                                                                                                         |
-| sheetName   | text          | Nome da folha do evento                                                                                                          |
-| range       | object        | Intervalo de células                                                                                                             |
-| sheetArea   | inteiro longo | O local da folha onde o evento teve lugar:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: os cabeçalhos das colunas (área que indica os números/letras das colunas)</li><li>2: os cabeçalhos das linhas (área que indica os números das linhas)</li> |
+| Propriedade | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| code        | inteiro longo | 42                                                                                                                                                                                                                                                                                                                                                                                                             |
+| description | text          | "On Header Click"                                                                                                                                                                                                                                                                                                                                                                                              |
+| objectName  | text          | Nome da área 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                       |
+| sheetName   | text          | Nome da folha do evento                                                                                                                                                                                                                                                                                                                                                                                        |
+| range       | object        | Intervalo de células                                                                                                                                                                                                                                                                                                                                                                                           |
+| sheetArea   | inteiro longo | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### Exemplo
 

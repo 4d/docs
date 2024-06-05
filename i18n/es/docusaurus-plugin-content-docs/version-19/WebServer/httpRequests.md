@@ -302,7 +302,7 @@ Las principales características de esta página son:
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 
 ```4d
-  // Retrieval of value of variables
+  // Recuperación del valor de las variables
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
@@ -310,25 +310,25 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
 
  Case of
 
-  // The Log On button was clicked
+  // Se ha presionado el botón Log On
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // The WWW POST EVENT method saves the information in a database table
+  // El método WWW POST EVENT guarda la información en una tabla de la base
        Else
 
           $0:=WWW Register
-  // The WWW Register method lets a new Web user register
+  // El método WWW Register permite que un nuevo usuario de la Web se registre
        End if
 
-  // The Register button was clicked
+  // Se ha presionado el botón Register
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
 
-  // The Information button was clicked
+  // Se ha presionado el botón de información
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case

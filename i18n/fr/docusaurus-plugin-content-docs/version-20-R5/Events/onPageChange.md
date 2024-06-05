@@ -7,7 +7,6 @@ title: Sur changement page
 | ---- | -------------------- | ------------------------------------------- |
 | 56   | Formulaire           | La page courante du formulaire est modifiée |
 
-
 ## Description
 
 Cet événement n'est disponible qu'au niveau du formulaire (il est appelé dans la méthode formulaire). Il est généré à chaque fois que la page courante du formulaire change (suite à un appel à la commande `FORM GOTO PAGE` ou à une action de navigation standard).

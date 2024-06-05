@@ -15,7 +15,6 @@ Aucune activation n’est requise pour les usages suivants :
 - 4D utilisé en mode distant (connexion à un 4D Server)
 - 4D utilisé en mode local avec un projet d'application interprété sans accès au mode Développement.
 
-
 ## Première activation
 
 Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. La boîte de dialogue de choix du [mode d'activation](#activation-mode) apparaît.
@@ -36,25 +35,24 @@ Entrez ensuite le numéro de licence du produit à activer. Ce numéro se trouve
 
 ![](../assets/en/getStart/activ2.png)
 
-
 ### Activation différée
 
 Si vous ne pouvez pas utiliser [l'activation immédiate](#instant-activation) parce que votre ordinateur n'a pas d'accès Internet, vous pouvez effectuer une activation différée comme décrit dans les étapes suivantes.
 
 1. Dans la fenêtre du Gestionnaire de licences de 4D accessible depuis le menu Aide, sélectionnez l'onglet **Activation différée**.
-2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (*reg.txt*).
+2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (_reg.txt_).
 
 ![](../assets/en/getStart/activ3.png)
 
-3. Enregistrez le fichier *reg.txt* sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
+3. Enregistrez le fichier _reg.txt_ sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
 4. Depuis la machine qui a un accès Internet, connectez-vous sur [https://activation.4d.com](https://activation.4d.com).
-5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier *reg.txt* généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
+5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier _reg.txt_ généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
 6. Téléchargez le(s) fichier(s) de licence.
 
 ![](../assets/en/getStart/activ4.png)
 
-7. Enregistrez le ou les fichier(s) *license4d* sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
-8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier *license4d* depuis le media partagé utilisé à l'étape 7.
+7. Enregistrez le ou les fichier(s) _license4d_ sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
+8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier _license4d_ depuis le media partagé utilisé à l'étape 7.
 
 ![](../assets/en/getStart/activ5.png)
 
@@ -69,7 +67,6 @@ Votre application 4D est désormais activée.
 ### Activation d’urgence
 
 Ce mode permet l’activation exceptionnelle et temporaire de l’application 4D (5 jours maximum) sans connexion au site Internet de 4D. Cette activation ne peut être utilisée qu’une seule fois.
-
 
 ## Ajouter des licences
 
@@ -89,8 +86,6 @@ Vous pouvez utiliser le bouton **Actualiser** dans les contextes suivants :
 - Lorsque vous avez acquis une expansion supplémentaire et souhaitez l'activer,
 - Lorsque vous voulez mettre à jour un numéro de licence temporaire ayant expiré (Partenaires ou évolutions).
 
-
-
 ## 4D Online Store
 
 Sur le site web 4D Store, vous pouvez commander, mettre à jour, étendre et gérer vos produits 4D. Vous pouvez vous connecter au store à l'adresse suivante : [https://store.4d.com/fr/](https://store.4d.com/us/) (veuillez sélectionner votre pays).
@@ -105,7 +100,7 @@ Après vous être identifié, vous pouvez cliquer sur le lien **Liste de mes lic
 
 Vous pouvez ensuite gérer vos licences en les affectant à des projets.
 
-Sélectionnez la licence que vous souhaitez dans la liste, puis cliquez sur **Lier à un projet >** :
+Sélectionnez la licence appropriée dans la liste, puis cliquez sur **Lier à un projet... >**:
 
 ![](../assets/en/getStart/licens3.png)
 
@@ -119,19 +114,17 @@ Les projets vous permettent d'organiser vos licences comme vous le souhaitez :
 
 ![](../assets/en/getStart/licens6.png)
 
-
 ## Dépannage
 
 En cas d’échec du processus d’installation ou d’activation, veuillez consulter le tableau suivant, présentant les causes de dysfonctionnements les plus fréquentes :
 
-| Symptômes                                                               | Causes possibles                                | Solution(s)                                                                                                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Impossible de télécharger le produit depuis le site Internet de 4D      | Site Internet indisponible, antivirus, firewall | 1- Réessayez ultérieurement OU 2- Désactivez temporairement votre antivirus ou votre firewall.                                                          |
+| Symptômes                                                                                                  | Causes possibles                                | Solution(s)                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Impossible de télécharger le produit depuis le site Internet de 4D                                         | Site Internet indisponible, antivirus, firewall | 1- Réessayez ultérieurement OU 2- Désactivez temporairement votre antivirus ou votre firewall.                                                             |
 | Impossible d’installer le produit sur le disque (installation refusée). | Droits d’accès utilisateur insuffisants         | Ouvrez une session avec des droits d’accès permettant l’installation d’applications (accès administrateur)                                              |
-| Echec de l’activation en ligne                                          | Antivirus, firewall, proxy                      | 1- Désactivez temporairement votre antivirus ou votre firewall OU 2- Utilisez l’activation différée (non disponible avec les licences des versions "R") |
+| Echec de l’activation en ligne                                                                             | Antivirus, firewall, proxy                      | 1- Désactivez temporairement votre antivirus ou votre firewall OU 2- Utilisez l’activation différée (non disponible avec les licences des versions "R") |
 
 Si ces informations ne vous permettent pas de résoudre votre problème, veuillez contacter 4D ou votre distributeur local.
-
 
 ## Contacts
 

@@ -3,7 +3,6 @@ id: sdi
 title: Mode SDI sous Windows
 ---
 
-
 Sous Windows, les développeurs 4D peuvent tester et configurer leurs applications fusionnées 4D pour qu'elles fonctionnent comme des applications SDI (Single-Document Interface). Dans les applications SDI, chaque fenêtre est indépendante des autres et peut avoir sa propre barre de menus. Les applications SDI sont opposées aux applications MDI (Multiple Documents Interface), où toutes les fenêtres sont contenues dans une fenêtre principale, et en dépendent.
 
 :::info
@@ -18,7 +17,7 @@ Le mode SDI n'est disponible que dans les environnements d'exécution suivants :
 
 - Windows
 - Application 4D fusionnée [autonome](../Desktop/building.md#build-stand-alone-application) ou [cliente](../Desktop/building.md#build-client-application)
-- Fonction [**Test application**](bars.md#previewing-menu-bars) disponible dans le menu **Exécution**.
+- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## Activation du mode SDI
 
@@ -34,7 +33,6 @@ Une fois l'option activée, pour exécuter votre application en mode SDI, vous p
 L'environnement de développement étant exécuté en MDI, le passage du mode développement au mode exécution à l'aide du menu **Tester l'application en mode SDI** équivaut à un redémarrage de l'application.
 
 :::
-
 
 ## Gestion des applications en mode SDI
 
@@ -57,7 +55,7 @@ Les fenêtres peuvent donc être utilisées dans les modes MDI ou SDI sans avoir
 
 ### Débogueur
 
-Lorsqu'elle est affichée en mode SDI, la [fenêtre du débogueur](../Debugging/debugger.md) ne contient pas de [boutons d'édition](../Debugging/debugger.md#tool-bar-buttons), car le passage à l'environnement de développement nécessite d'interrompre l'exécution et de redémarrer l'application en mode MDI.
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
 
 ### Arrêt automatique
 
@@ -73,7 +71,7 @@ Pour gérer cette situation, les applications 4D exécutées en mode SDI incluen
 
 :::note
 
-Lorsqu'un menu avec une action standard associée pour *quitter* est appelé, l'application quitte et toutes les fenêtres sont fermées, quel que soit l'endroit d'où le menu a été appelé.
+Lorsqu'un menu avec une action standard associée pour _quitter_ est appelé, l'application quitte et toutes les fenêtres sont fermées, quel que soit l'endroit d'où le menu a été appelé.
 
 :::
 
@@ -81,19 +79,19 @@ Lorsqu'un menu avec une action standard associée pour *quitter* est appelé, l'
 
 Bien qu'il soit traité de manière transparente par 4D, le mode SDI introduit de légères variations dans la gestion de l'interface d'application. Les spécificités dans le langage 4D sont listées ci-dessous :
 
-| Commande/fonctionnalité           | Spécificité en mode SDI sous Windows                                                                                                                                                                                                                                                                                                                          |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Options pour supporter les fenêtres flottantes en SDI (`Controller form window`) et pour supprimer la barre de menu (`Form has no menu bar`)                                                                                                                                                                                                                  |
-| `Menu bar height`                 | Retourne la hauteur en pixels d'une ligne de barre de menu unique, même si la barre de menu a été incluse sur une ou plusieurs lignes. Retourne 0 lorsque la commande est appelée à partir d'un process sans fenêtre formulaire                                                                                                                               |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Appliqué uniquement à la fenêtre formulaire courante (d'où le code est exécuté)                                                                                                                                                                                                                                                                               |
-| `MAXIMIZE WINDOW`                 | La fenêtre est maximisée à la taille de l'écran                                                                                                                                                                                                                                                                                                               |
+| Commande/fonctionnalité           | Spécificité en mode SDI sous Windows                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Open form window`                | Options pour supporter les fenêtres flottantes en SDI (`Controller form window`) et pour supprimer la barre de menu (`Form has no menu bar`)                                                                                                                                                                                                                               |
+| `Menu bar height`                 | Retourne la hauteur en pixels d'une ligne de barre de menu unique, même si la barre de menu a été incluse sur une ou plusieurs lignes. Retourne 0 lorsque la commande est appelée à partir d'un process sans fenêtre formulaire                                                                                                                                                                  |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | Appliqué uniquement à la fenêtre formulaire courante (d'où le code est exécuté)                                                                                                                                                                                                                                                                                                               |
+| `MAXIMIZE WINDOW`                 | La fenêtre est maximisée à la taille de l'écran                                                                                                                                                                                                                                                                                                                                                                  |
 | `CONVERT COORDINATES`             | `XY Screen` est le système de coordonnées global dans lequel l'écran principal est positionné à (0,0). Les écrans à gauche ou au-dessus de lui peuvent avoir des valeurs de coordonnées négatives et les écrans à droite ou au-dessous de lui peuvent avoir des valeurs de coordonnées supérieures à celles retournées par `Screen height` ou `Screen width`. |
-| `GET MOUSE`                       | Les coordonnées globales sont relatives à l'écran                                                                                                                                                                                                                                                                                                             |
-| `GET WINDOW RECT`                 | Lorsque -1 est passé dans le paramètre fenêtre, la commande retourne 0;0;0;0                                                                                                                                                                                                                                                                                  |
-| `On Drop database method`         | Non supporté                                                                                                                                                                                                                                                                                                                                                  |
+| `GET MOUSE`                       | Les coordonnées globales sont relatives à l'écran                                                                                                                                                                                                                                                                                                                                                                |
+| `GET WINDOW RECT`                 | Lorsque -1 est passé dans le paramètre fenêtre, la commande retourne 0;0;0;0                                                                                                                                                                                                                                                                                                                                     |
+| `On Drop database method`         | Non supporté                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 :::info
 
-Vous pouvez utiliser la commande [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) pour connaître le mode d'exécution courant sous Windows.
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
 
 :::

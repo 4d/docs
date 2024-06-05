@@ -13,7 +13,7 @@ title: VP Get stylesheets
 | ---------- | ---------- | -- | -------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                  |                  |
 | sheet      | Integer    | -> | Cible (par défaut = feuille courante) |                  |
-| Résultat   | Collection | <- | Collection of style sheet objects                        | <!-- END REF --> |
+| Résultat   | Collection | <- | Collection d'objets feuille de style                     | <!-- END REF --> |
 
 #### Description
 

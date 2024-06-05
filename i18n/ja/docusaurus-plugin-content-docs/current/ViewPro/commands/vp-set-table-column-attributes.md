@@ -13,7 +13,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
 
-**VP SET TABLE COLUMN ATTRIBUTES** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer ; _attributes_ : Object {; _sheet_ : Integer } )<!-- END REF -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
@@ -22,16 +22,16 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
 | tableName  | Text    | -> | Table name                                     |                  |
 | column     | Integer | -> | 表の列のインデックス                                     |                  |
-| attributes | Object  | -> | _column_ の列に適用する属性                             |                  |
+| attributes | Object  | -> | *column* の列に適用する属性                             |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
 #### 説明
 
-`VP SET TABLE COLUMN ATTRIBUTES` コマンドは、<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->_tableName_ で指定した表組みの _column_ でインデックスを指定した列に _attributes_ の属性を適用します<!-- END REF -->。
+`VP SET TABLE COLUMN ATTRIBUTES` コマンドは、<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->*tableName* で指定した表組みの *column* でインデックスを指定した列に *attributes* の属性を適用します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_attributes_ 引数には、設定するプロパティを含むオブジェクトを渡します:
+*attributes* 引数には、設定するプロパティを含むオブジェクトを渡します:
 
 | プロパティ               | タイプ     | 説明                                                                                                                                               |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -42,11 +42,11 @@ _attributes_ 引数には、設定するプロパティを含むオブジェク�
 | footerFormula       | text    | 列のフッターのフォーミュラ。                                                                                                                                   |
 | filterButtonVisible | boolean | 表組みの列のフィルターボタンを表示するかどうかを設定します (表組み作成時のデフォルトは `true`)。                                                                         |
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-_tableName_ に指定した名称の表組みが見つからない場合、または _column_ に指定したインデックスが列数を超える場合には、コマンドは何もしません。
+*tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは何もしません。
 
 #### 例題
 

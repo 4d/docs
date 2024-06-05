@@ -1,38 +1,37 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
-
 
 Devolve um ID do ficheiro carregado para o servidor
 
 ## Descrição
 
-Publique essa petição quando quiser fazer upload de um ficheiro para o servidor. Se tiver uma imagem, passe `$rawPict=true`. Para todos os outros ficheiros, deve passar `$binary=true`.
+Publique essa petição quando quiser fazer upload de um ficheiro para o servidor. Si tiene una imagen, pase `$rawPict=true`. Para todos los demás archivos, se pasa `$binary=true`.
 
-Pode modificar o tempo limite, que por defeito é de 120 segundos, passando um valor para o parâmetro `$timeout`.
+Puede modificar el tiempo de espera, que por defecto es de 120 segundos, pasando un valor al parámetro `$timeout`.
 
 ## Cenário de carregamento
 
 Imagine que pretende carregar uma imagem para atualizar o atributo imagem de uma entidade.
 
-Para carregar uma imagem (ou qualquer ficheiro binário), deve primeiro selecionar o ficheiro a partir da aplicação cliente. O ficheiro em si deve ser passado no **corpo ** do pedido.
+Para carregar uma imagem (ou qualquer ficheiro binário), deve primeiro selecionar o ficheiro a partir da aplicação cliente. El archivo en sí debe pasarse en el **cuerpo** de la petición.
 
 Depois, carrega a imagem selecionada para 4D Server usando uma petição como:
 
- `POST  /rest/$upload?$rawPict=true`
+`POST  /rest/$upload?$rawPict=true`
 
 Como resultado, o servidor devolve um ID que identifica o ficheiro:
 
-**Resposta**:
+**Response**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity: O pedido tem o seguinte aspecto:
+Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. O pedido tem o seguinte aspecto:
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
-**Dados POST**:
+**Datos POST**:
 
 ```
 {
@@ -42,7 +41,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Resposta**:
+**Response**:
 
 A entidade modificada é devolvida:
 
@@ -66,23 +65,30 @@ A entidade modificada é devolvida:
 
 ## Exemplo com um cliente 4D HTTP
 
-O exemplo a seguir mostra como fazer o upload de um arquivo *.pdf* para o servidor usando o cliente 4D HTTP.
+El siguiente ejemplo muestra cómo subir un archivo _.pdf_ al servidor utilizando el cliente 4D HTTP.
 
 ```4d
 var $params : Text
 var $response : Object
 var $result : Integer
-var $blob : Blob ARRAY TEXT($headerNames; 1)
+var $blob : Blob
+
+
+ARRAY TEXT($headerNames; 1)
 ARRAY TEXT($headerValues; 1)
 
 $url:="localhost:80/rest/$upload?$binary=true" //prepare the REST request
 
 $headerNames{1}:="Content-Type"
-$headerValues{1}:="application/octet-stream" DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
+$headerValues{1}:="application/octet-stream"
+
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
 
  //Execute the first POST request to upload the file
-$result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues) If ($result=200) 
-    var $data : Object
+$result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
+
+If ($result=200) 
+	var $data : Object
     $data:=New object
     $data.__KEY:="3"
     $data.__STAMP:="3"
@@ -95,6 +101,6 @@ $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $h
 
     $result:=HTTP Request(HTTP POST method; $url; $data; $response; $headerNames; $headerValues)
 Else
-    ALERT(String($result)+" Error")
+	ALERT(String($result)+" Error")
 End if
 ```

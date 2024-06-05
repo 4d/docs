@@ -1,10 +1,9 @@
 ---
 id: directory
-title: '$directory'
+title: $directory
 ---
 
 O diretório processa o acesso dos usuários através de pedidos REST.
-
 
 ## $directory/login
 
@@ -12,14 +11,14 @@ Abre uma sessão REST na sua aplicação 4D e faz o login do usuário.
 
 ### Descrição
 
-Utilize `$directory/login` para abrir uma sessão na sua aplicação 4D através de REST e fazer o login de um usuário. Também pode modificar o tempo limite predefinido da sessão 4D.
+Utilice `$directory/login` para abrir una sesión en su aplicación 4D a través de REST y conecte un usuario. Também pode modificar o tempo limite predefinido da sessão 4D.
 
-Todos os parâmetros devem ser transmitidos nos **cabeçalhos ** de um método POST:
+Todos los parámetros deben pasarse en **encabezados**de un método POST:
 
-| Chave de cabeçalho | Valor do cabeçalho                                                                     |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| username-4D        | Usuário - Não obrigatório                                                              |
-| password-4D        | Password in plain text - Not mandatory                                                 |
+| Chave de cabeçalho | Valor do cabeçalho                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| username-4D        | Usuário - Não obrigatório                                                                                                 |
+| password-4D        | Password in plain text - Not mandatory                                                                                    |
 | session-4D-length  | Tempo de inatividade da sessão (minutos). Não pode ser inferior a 60 - Não obrigatório |
 
 :::caution
@@ -43,7 +42,7 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
-**Resultadoi**:
+**Resultado**:
 
 Se o login for bem-sucedido, o resultado será:
 

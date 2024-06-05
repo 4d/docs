@@ -5,7 +5,7 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Syntax -->
 
-**VP Get sheet index** ( _vpAreaName_ : Text ; _name_ : Text ) : Integer<!-- END REF -->
+**VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get sheet index
 
 #### 説明
 
-`VP Get sheet index` コマンドは、<!-- REF #_method_.VP Get sheet index.Summary -->_vpAreaName_ 引数で指定したエリア内の、シート名で指定したシートのインデックスを返します<!-- END REF -->。
+`VP Get sheet index` コマンドは、<!-- REF #_method_.VP Get sheet index.Summary -->*vpAreaName* 引数で指定したエリア内の、シート名で指定したシートのインデックスを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_name_ には、インデックスを返して欲しいシートの名前を渡します。 _name_ 引数のシート名がドキュメント内に見つからない場合、コマンドは -1 を返します。
+*name* には、インデックスを返して欲しいシートの名前を渡します。 *name* 引数のシート名がドキュメント内に見つからない場合、コマンドは -1 を返します。
 
 > インデックスは 0 起点です。
 

@@ -26,15 +26,15 @@ $city:=ds.City.getCity("Aguada")
 
 サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| クラス関数                                                            | シンタックス                                                                      |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
-| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
+| クラス関数                                                          | シンタックス                                                                      |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
 
 
@@ -58,7 +58,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
 - エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-[エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
+[この例](#サーバー上に作成されるエンティティを使用する) と [この例](#エンティティセレクションを引数として受け取る) を参照してください。
 
 
 ### スカラー値の引数
@@ -128,7 +128,7 @@ US_Cities `DataStore`クラスは API を提供しています:
 Class extends DataStoreImplementation
 
 exposed Function getName()
-    $0:="US cities and zip codes manager" 
+    $0:="US cities and zip codes manager"
 ```
 
 次のリクエストを実行します:
@@ -139,7 +139,7 @@ exposed Function getName()
 
 ```
 {
-"result": "US cities and zip codes manager" 
+"result": "US cities and zip codes manager"
 }
 ```
 
@@ -181,12 +181,12 @@ exposed Function getCity()
     "county": {
         "__deferred": {
             "uri": "/rest/County(72003)",
-            "__KEY": "72003" 
+            "__KEY": "72003"
         }
     },
     "zips": {
         "__deferred": {
-            "uri": "/rest/City(1)/zips?$expand=zips" 
+            "uri": "/rest/City(1)/zips?$expand=zips"
         }
     }
 }
@@ -259,7 +259,7 @@ exposed Function getAgeAverage
     $sum:=0
     For each ($s;This)
         $sum:=$sum+$s.age()
-    End for each 
+    End for each
     $0:=$sum/This.length
 ```
 
@@ -302,12 +302,12 @@ exposed Function getLastSummary
 
 ```
 {
-    "result": "Wilbert - Bull is ... 21" 
+    "result": "Wilbert - Bull is ... 21"
 }
 ```
 
 
-### エンティティを作成する
+### サーバー上に作成されるエンティティを使用する
 
 
 `Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
@@ -330,7 +330,7 @@ exposed Function pushData
         $status:=$entity.save()
        If ($status.success)
            $0:=$entity
-      End if 
+      End if
     End if
 
 ```
@@ -346,7 +346,7 @@ exposed Function pushData
 "__DATACLASS":"Students",
 "__ENTITY":true,
 "firstname":"Ann",
-"lastname":"Brown" 
+"lastname":"Brown"
 }]
 ```
 
@@ -392,7 +392,7 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 
 #### 戻り値
 
-``` 
+```
 {
     "__entityModel": "Students",
     "__DATACLASS": "Students",
@@ -403,7 +403,7 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
     "firstname": "Ann",
     "lastname": "BROWNIE",
     "schoolID": null,
-    "school": null 
+    "school": null
 }
 ```
 
@@ -442,7 +442,7 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
        "school": {
         "__deferred": {
             "uri": "/rest/Schools(2)",
-            "__KEY": "2" 
+            "__KEY": "2"
         }
     }
 }
@@ -471,7 +471,7 @@ exposed Function putToSchool()
     $0:=$status
 ```
 
-Studentsエンティティを対象に次のリクエストを実行します: <br /> **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`<br/> リクエストのボディ:
+You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
 ```
 [{
 "__DATACLASS":"Schools",
@@ -496,7 +496,7 @@ Studentsエンティティを対象に次のリクエストを実行します: <
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// cs.Students クラス
+// Students クラス
 
 Class extends DataClass
 
@@ -514,14 +514,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      // エンティティセレクションをループします
+      // エンティティセレクションを捜査します
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if 
-    End for each 
+        End if
+    End for each
 
     $0:=$keys
 ```
@@ -540,9 +540,9 @@ exposed Function setFinalExam()
 [
 {
 "__ENTITIES":true,
-"__DATASET":"9B9C053A111E4A288E9C1E48965FE671" 
+"__DATASET":"9B9C053A111E4A288E9C1E48965FE671"
 },
-"Passed" 
+"Passed"
 ]
 
 ```
@@ -574,7 +574,7 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
 // クライアント側で $students エンティティセレクションにエンティティを追加します
-$students.add($newStudent) 
+$students.add($newStudent)
 
 // StudentsSelectionクラスに対して、同セレクション内の生徒エンティティの平均年齢を返す関数を呼び出します
 // この関数は、クライアント側の追加エンティティを含む更新された内容の $students エンティティセレクションに対して、サーバー上で実行されます

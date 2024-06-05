@@ -208,7 +208,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph. Ceci est décrit dans le paragraphe [Fonctions](#functions).
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Fonctions](#functions).
 
 
 ### Cas particuliers : objets et collections

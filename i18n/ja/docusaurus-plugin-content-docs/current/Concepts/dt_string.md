@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字列
+title: String
 ---
 
 文字列とは、以下を示す総称です:
@@ -24,39 +24,40 @@ title: 文字列
 
 以下のエスケープシーケンスを文字列内で使用できます:
 
-| エスケープシーケンス | 意味する文字        |
-| ---------- | ------------- |
-| \n        | LF (行送り)      |
-| \t        | HT (タブ)       |
-| \r        | CR (改行)       |
-| \\\     | \ (バックスラッシュ) |
-| \\"      | " (引用符)       |
+| エスケープシーケンス                              | 意味する文字                      |
+| --------------------------------------- | --------------------------- |
+| \n                                      | LF (行送り) |
+| \t                                      | HT (タブ)  |
+| \r                                      | CR (改行)  |
+| \\\\|\ (バックスラッシュ) |                             |
+| \\"                                   | " (引用符)  |
 
-**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はコードエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのコードエディターに記述する場合は "\\\\\" となる点に注意してください。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はコードエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br />
+さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのコードエディターに記述する場合は "\\\\\" となる点に注意してください。
 
 ## 文字列演算子
 
-| 演算       | シンタックス           | 戻り値     | 式                       | 値        |
-| -------- | ---------------- | ------- | ----------------------- | -------- |
-| 連結 (結合)  | String + String  | String  | "abc" + "def"           | "abcdef" |
-| 繰り返し     | String * Number  | String  | "ab" * 3                | "ababab" |
-| 等しい      | String = String  | Boolean | "abc" = "abc"           | true     |
-|          |                  |         | "abc" = "abd"           | false    |
-| 異なる      | String # String  | Boolean | "abc" # "abd"           | true     |
-|          |                  |         | "abc" # "abc"           | false    |
-| 大きい      | String > String  | Boolean | "abd" > "abc"           | true     |
-|          |                  |         | "abc" > "abc"           | false    |
-| 小さい      | String < String  | Boolean | "abc" < "abd"           | true     |
-|          |                  |         | "abc" < "abc"           | false    |
-| 以上       | String >= String | Boolean | "abd" >= "abc"          | true     |
-|          |                  |         | "abc" >= "abd"          | false    |
-| 以下       | String <= String | Boolean | "abc" <= "abd"          | true     |
-|          |                  |         | "abd" <= "abc"          | false    |
-| キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
-|          |                  |         | "Alpha Bravo" % "ravo"  | false    |
-|          | Picture % String | Boolean | Picture_expr % "Mer"    | true (*) |
+| 演算                         | シンタックス           | 戻り値     | 式                                         | 値                            |
+| -------------------------- | ---------------- | ------- | ----------------------------------------- | ---------------------------- |
+| 連結 (結合) | String + String  | String  | "abc" + "def"                             | "abcdef"                     |
+| 繰り返し                       | String \* Number | String  | "ab" \* 3                                 | "ababab"                     |
+| 等しい                        | String = String  | Boolean | "abc" = "abc"                             | true                         |
+|                            |                  |         | "abc" = "abd"                             | false                        |
+| 異なる                        | String # String  | Boolean | "abc" # "abd"                             | true                         |
+|                            |                  |         | "abc" # "abc"                             | false                        |
+| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"                             | true                         |
+|                            |                  |         | "abc" > "abc"                             | false                        |
+| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"                             | true                         |
+|                            |                  |         | "abc" < "abc"                             | false                        |
+| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"                            | true                         |
+|                            |                  |         | "abc" >= "abd"                            | false                        |
+| 以下                         | String <= String | Boolean | "abc" <= "abd"                            | true                         |
+|                            |                  |         | "abd" <= "abc"                            | false                        |
+| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo"                   | true                         |
+|                            |                  |         | "Alpha Bravo" % "ravo"                    | false                        |
+|                            | Picture % String | Boolean | Picture_expr % "Mer" | true (\*) |
 
-(*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
+(\*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
 
 ## 文字列比較の詳細
 
@@ -141,10 +142,11 @@ Character code("A")=Character code("a")
      "Alpha,Bravo,Charlie"%"Alpha" // true
      "Software and Computers"%"comput@" // true
 ```
+
 > **注:**
-> 
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/reports/tr29/#Word_Boundaries)
-> - <br />- 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照ください。
+>
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: http://www.unicode.org/reports/tr29/#Word_Boundaries
+> - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、<a href="https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024">Mecab のサポート(日本語版)</a> を参照ください。
 
 ## 文字参照記号
 

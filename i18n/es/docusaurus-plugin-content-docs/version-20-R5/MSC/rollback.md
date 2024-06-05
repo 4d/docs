@@ -10,7 +10,7 @@ Esta función sólo está disponible cuando la aplicación trabaja con un archiv
 
 ![](../assets/en/MSC/MSC_rollback1.png)
 
-> Si la base de datos está encriptada y no se ha suministrado una llave de datos válida correspondiente al archivo de registro abierto, los valores encriptados no se muestran en la columna **Valores** y se muestra un diálogo en el que se solicita la frase secreta o la llave de datos si se hace clic en el botón **Retroceso**.
+> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the **Values** column and a dialog requesting the passphrase or the data key is displayed if you click the **Rollback** button.
 
 El contenido y el funcionamiento de la lista de operaciones es el mismo que el de la ventana [Análisis de actividades](analysis.md).
 

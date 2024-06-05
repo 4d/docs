@@ -3,7 +3,6 @@ id: sdi
 title: Modo SDI em Windows
 ---
 
-
 No Windows, os desenvolvedores 4D podem testar e configurar suas aplicações 4D fundidas para trabalhar como aplicações SDI (Single-Document Interface). Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
 
 :::info
@@ -17,24 +16,23 @@ O conceito SDI/MDI não existe no macOS. Esta funcionalidade diz respeito apenas
 O modo SDI está disponível apenas nos seguintes ambientes de execução:
 
 - Windows
-- Aplicação 4D fundida [autônoma](../Desktop/building.md#build-stand-alone-application) ou [cliente](../Desktop/building.md#build-client-application)
-- Funcionalidade [**Aplicação de teste** ](bars.md#previewing-menu-bars) disponível no menu **Executar**.
+- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
+- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## Activação do modo SDI
 
-Para ativar o modo SDI na sua aplicação, basta selecionar a opção **Utilizar o modo SDI no Windows** na página ["Interface" da caixa de diálogo Parâmetros](../settings/interface.md#display-windows).
+Para activar el modo SDI en su aplicación, sólo tiene que marcar la opción **Utilizar el modo SDI en Windows** en la página ["Interfaz" de la caja de diálogo Configuración](../settings/interface.md#display-windows).
 
 Uma vez ativada, para executar efetivamente a sua aplicação no modo SDI, pode:
 
 - criar uma aplicação combinada (autônoma e/ou aplicação cliente) e executá-la no Windows, ou
-- selecione **Test Application in SDI Mode** a partir do menu **Run** no Windows para testar o desenvolvimento.
+- seleccione **Aplicación de prueba en modo SDI** en el menú **Ejecutar** en Windows para probar el desarrollo.
 
 :::info
 
-Como o ambiente de desenvolvimento é executado em MDI, mudar do modo de desenvolvimento para o modo de tempo de execução usando o item de menu **Test Application in SDI Mode** é equivalente a reiniciar sua aplicação.
+Dado que el entorno de desarrollo se ejecuta en MDI, cambiar del modo de desarrollo al modo de ejecución utilizando el elemento de menú **Probar aplicación en modo SDI** equivale a reiniciar la aplicación.
 
 :::
-
 
 ## Gerir aplicações no modo SDI
 
@@ -50,30 +48,30 @@ Os menus são adicionados por cima das janelas sem alterar o tamanho do seu cont
 
 Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necessário recalcular a posição dos objectos.
 
-#### Splash screen
+#### Tela inicial
 
-- Se selecionar a opção de interface **Splash screen** nas [ Definições](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido apresentados na janela MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en los [Parámetros](../settings/interface.md#display-windows), la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Depurador
 
-Quando apresentada no modo SDI, a janela do  [depurador](../Debugging/debugger.md) não contém [botões de edição ](../Debugging/debugger.md#tool-bar-buttons), porque a mudança para o ambiente de desenvolvimento exige que se aborte a execução e se reinicie a aplicação no modo MDI.
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
 
 ### Saída automática
 
 Quando executada em modo MDI, uma aplicação 4D simplesmente sai quando o utilizador fecha a janela da aplicação (janela MDI). No entanto, quando executadas em modo SDI, as aplicações 4D não têm uma janela de aplicação e, por outro lado, fechar a última janela aberta não significa necessariamente que o utilizador quer que a aplicação saia (podem estar a correr processos sem rosto, por exemplo) - embora possa ser o que ele quiser.
 
-Para lidar com este caso, as aplicações 4D executadas no modo SDI incluem um mecanismo para sair automaticamente (chamando o comando `QUIT 4D` ) quando as seguintes condições são cumpridas:
+Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un mecanismo para salir automáticamente (llamando al comando `QUIT 4D`) cuando se cumplen las siguientes condiciones:
 
 - o utilizador já não pode interagir com a aplicação
 - não existem processos usuário ativos
 - Os processos 4D ou processos de trabalho estão à espera de um evento
 - o servidor Web não é iniciado
-- o servidor [WebAdmin](../Admin/webAdmin.md) não foi iniciado.
+- el [servidor WebAdmin](../Admin/webAdmin.md) no está iniciado.
 
 :::note
 
-Quando um menu com uma ação padrão associada *quit* for chamado, a aplicação é encerrada e todas as janelas são fechadas, independentemente do local a partir do qual o menu foi chamado.
+Cuando se llama a un menú con una acción estándar asociada _salir_, la aplicación sale y se cierran todas las ventanas, sea cual sea el lugar desde el que se llamó al menú.
 
 :::
 
@@ -81,19 +79,19 @@ Quando um menu com uma ação padrão associada *quit* for chamado, a aplicaçã
 
 Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas variações na gestão da interface da aplicação. As especificidades da língua 4D são enumeradas a seguir.
 
-| Comando/funcionalidade            | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                                   |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Opções de compatibilidade com janelas flutuantes em SDI (`Janela do formulário do controlador`) e para remover a barra de menus (`O formulário não tem barra de menus`)                                                                                                                                                 |
-| `Menu bar height`                 | Devolve a altura em píxeis de uma única linha da barra de menus, mesmo que a barra de menus tenha sido envolvida em duas ou mais linhas. Devolve 0 quando o comando é chamado a partir de um processo sem uma janela de formulário                                                                                      |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Aplicado apenas à janela do formulário atual (a partir de onde o código é executado)                                                                                                                                                                                                                                    |
-| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                            |
-| `CONVERT COORDINATES`             | ` XY Screen` é o sistema de coordenadas global onde a tela principal está posicionada em (0,0). Telas situadas à sua esquerda ou por cima podem ter coordenadas negativas e as telas situadas à sua direita ou por baixo podem ter coordenadas superiores aos valores devolvidos por `Screen height` ou `Screen width`. |
-| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                            |
-| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                 |
-| `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                          |
+| Comando/funcionalidade            | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Open form window`                | Opciones para soportar las ventanas flotantes en SDI (`Controller form window`) y para eliminar la barra de menú (`Form has no menu bar`)                                                                                                                                                                                           |
+| `Menu bar height`                 | Devolve a altura em píxeis de uma única linha da barra de menus, mesmo que a barra de menus tenha sido envolvida em duas ou mais linhas. Devolve 0 quando o comando é chamado a partir de um processo sem uma janela de formulário                                                                                                                        |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | Aplicado apenas à janela do formulário atual (a partir de onde o código é executado)                                                                                                                                                                                                                                                                   |
+| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                                                                              |
+| `CONVERT COORDINATES`             | `XY Screen` es el sistema de coordenadas global donde la pantalla principal se sitúa en (0,0). Las pantallas situadas a su izquierda o arriba pueden tener coordenadas negativas y las situadas a su derecha o debajo pueden tener coordenadas mayores que los valores devueltos por `Screen height` o `Screen width`. |
+| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                                                                              |
+| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                                                                   |
+| `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                                                                            |
 
 :::info
 
-Pode utilizar o comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para conhecer o modo de execução atual no Windows.
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
 
 :::

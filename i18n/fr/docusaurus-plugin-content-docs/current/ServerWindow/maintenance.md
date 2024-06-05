@@ -3,11 +3,9 @@ id: maintenance
 title: Page maintenance
 ---
 
-
 La page **Maintenance** fournit diverses informations relatives au fonctionnement courant de la base. Elle donne également accès aux fonctions de maintenance élémentaires :
 
 ![](../assets/en/Admin/server-maintenance.png)
-
 
 ## Dernière vérification/dernier compactage
 
@@ -35,11 +33,9 @@ Une fois le compactage terminé, 4D Server relance automatiquement l'application
 
 A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
-
 ## Durée de fonctionnement
 
 Cette zone indique la durée de fonctionnement du serveur depuis son dernier démarrage (jours, heures et minutes).
-
 
 ### Redémarrer le serveur...
 
@@ -53,18 +49,16 @@ Cette zone indique la date et l’heure de la [dernière sauvegarde](MSC/backup.
 
 - **Dernière sauvegarde** : date et heure de la dernière sauvegarde automatique.
 - **Prochaine sauvegarde** : date et heure de la prochaine sauvegarde.
-- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. La véritable taille réelle du fichier de sauvegarde pourra varier en fonction des paramétrages (compression...) et des variations du fichier de données.
+- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
 - **Place disponible** : place disponible sur le volume de sauvegarde.
 
-
 Le bouton **Sauvegarder la base** permet de démarrer une sauvegarde immédiate de la base en utilisant les paramètres de sauvegarde courants (fichiers sauvegardés, emplacement des archives, options, etc.). Vous pouvez visualiser ces paramètres en cliquant sur le bouton **Propriétés...**. Pendant une sauvegarde sur le serveur, les postes clients sont "bloqués" (mais pas déconnectés) et il n’est pas possible à de nouveaux clients de se connecter.
-
 
 ## Requêtes et débogage
 
 Cette zone indique la durée d’enregistrement des fichiers d'historique (lorsqu’ils sont activés) et vous permet de gérer leur activation.
 
-Consultez la section [**Description des fichiers d'historique**](Debugging/debugLogFiles.md) pour obtenir plus de détails sur les fichiers d'historique.
+Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
 ### Start/Stop Request and Debug Logs
 
@@ -81,7 +75,6 @@ Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si 
 ### Load logs configuration file
 
 Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Such a file can be provided by 4D technical services to monitor and study specific cases.
-
 
 ### Pause logging
 

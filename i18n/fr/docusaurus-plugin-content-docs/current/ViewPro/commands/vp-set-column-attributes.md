@@ -5,22 +5,22 @@ title: VP SET COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Syntax -->
 
-**VP SET COLUMN ATTRIBUTES** ( _rangeObj_ : Object  ; _propertyObj_ : Object) <!-- END REF -->
+**VP SET COLUMN ATTRIBUTES** ( *rangeObj* : Object  ; *propertyObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| Paramètres  | Type   |    | Description                         |                  |
-| ----------- | ------ | -- | ----------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Objet plage                         |                  |
-| propertyObj | Object | -> | Object containing column properties | <!-- END REF --> |
+| Paramètres  | Type   |    | Description                                |                  |
+| ----------- | ------ | -- | ------------------------------------------ | ---------------- |
+| rangeObj    | Object | -> | Objet plage                                |                  |
+| propertyObj | Object | -> | Objet contenant des propriétés de colonnes | <!-- END REF --> |
 
 #### Description
 
-The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the _propertyObj_ to the columns in the _rangeObj_<!-- END REF -->.
+The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range. Si la plage contient des colonnes et des lignes, les attributs s'appliquent uniquement aux colonnes.
+In *rangeObj*, pass an object containing a range. Si la plage contient des colonnes et des lignes, les attributs s'appliquent uniquement aux colonnes.
 
-The _propertyObj_ parameter lets you specify the attributes to apply to the columns in the _rangeObj_. Ces attributs sont :
+The *propertyObj* parameter lets you specify the attributes to apply to the columns in the *rangeObj*. Ces attributs sont :
 
 | Propriété | Type    | Description                                                                         |
 | --------- | ------- | ----------------------------------------------------------------------------------- |

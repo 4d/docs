@@ -87,7 +87,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|<!-- END REF -->
+|Result|Collection|<-|The new collection|<!-- END REF -->
 
 
 #### Description
@@ -98,7 +98,7 @@ If you do not pass any parameters, `New collection` creates an empty collection 
 
 You must assign the returned reference to a 4D variable of the Collection type.
 
->Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+>Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
@@ -173,7 +173,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|<!-- END REF -->
+|Result|Collection|<-|The new shared collection|<!-- END REF -->
 
 
 #### Description
@@ -889,7 +889,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 #### Description
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
 
 You designate the callback to be executed to evaluate collection elements using either:
 
@@ -2751,6 +2751,7 @@ This example returns persons hired more than 90 days ago:
 #### Example 3
 
 More examples of queries can be found in the `dataClass.query()` page.
+
 
 <!-- END REF -->
 

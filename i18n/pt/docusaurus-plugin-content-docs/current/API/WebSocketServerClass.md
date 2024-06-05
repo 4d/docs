@@ -30,7 +30,7 @@ Consulte também [esta postagem no blog] (https://blog.4d.com/new-built-in-webso
 Para criar e manipular seu servidor WebSocket em 4D, é preciso usar duas classes embutidas em 4D:
 
 - essa classe (`4D.WebSocketServer`) para gerenciar o próprio servidor,
-- the [`4D.WebSocketConnection`](WebSocketConnectionClass.md) class to manage connections and messages.
+- a classe [`4D.WebSocketConnection`](WebSocketConnectionClass.md) para gerir as ligações e as mensagens.
 
 Além disso, terá de criar duas classes de utilizador que conterão funções de retorno de chamada:
 
@@ -90,14 +90,14 @@ Consulte [esta publicação no blog] (https://blog.4d.com/websocket-server/) par
 
 Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções:
 
-|                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
-| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
-| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
-| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
+|                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
+| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
+| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
+| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
 
 ## 4D.WebSocketServer.new()
 
@@ -113,13 +113,13 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 
 <!-- END REF -->
 
-A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que usará os retornos de chamada especificados _WSSHandler_ e (opcionalmente) _opções_  e retorna um objeto `4D.WebSocketServer`<!-- END REF -->.
+A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que usará os retornos de chamada especificados *WSSHandler* e (opcionalmente) *opções*  e retorna um objeto `4D.WebSocketServer`<!-- END REF -->.
 
 A chamada dessa função requer que o [4D Web Server] (WebServerClass.md) seja iniciado. O **host** e a **port** do servidor WebSocket são os mesmos que o host e a porta do 4D Web Server.
 
-### Parâmetro _WSSHandler_
+### Parâmetro *WSSHandler*
 
-No parâmetro _WSSHandler_, passe uma instância de uma classe de usuário que será chamada sempre que ocorrer um evento no servidor WebSocket - essencialmente, eventos de conexão. A classe deve definir as seguintes funções de retorno de chamada (somente `onConnection` é obrigatório):
+No parâmetro *WSSHandler*, passe uma instância de uma classe de usuário que será chamada sempre que ocorrer um evento no servidor WebSocket - essencialmente, eventos de conexão. A classe deve definir as seguintes funções de retorno de chamada (somente `onConnection` é obrigatório):
 
 | Propriedade  | Tipo                         | Descrição                                                                                                                         | Por padrão |
 | ------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------- |
@@ -128,7 +128,7 @@ No parâmetro _WSSHandler_, passe uma instância de uma classe de usuário que s
 | onTerminate  | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é terminado (ver abaixo)                                                  | indefinido |
 | onError      | [Function](FunctionClass.md) | Callback quando ocorre um erro (ver abaixo)                                                                    | indefinido |
 
-**WSHandler.onConnection**(_WSServer_ : Object ; _event_ : Object) : Object | null
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | Parâmetro |         | Tipo                               |     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------- | ------- | ---------------------------------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ No parâmetro _WSSHandler_, passe uma instância de uma classe de usuário que s
 
 Esta chamada de retorno é feita quando o handshake estiver concluído. Ele deve ser chamado com um objeto [`connectionHandler`] válido (#connectionhandler-object) para criar a conexão WebSocket; caso contrário, a conexão será cancelada.
 
-**WSHandler.onOpen**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | Parâmetro |      | Tipo                               |     | Descrição                            |
 | --------- | ---- | ---------------------------------- | :-: | ------------------------------------ |
@@ -150,7 +150,7 @@ Esta chamada de retorno é feita quando o handshake estiver concluído. Ele deve
 
 Evento emitido quando o servidor websocket é iniciado.
 
-**WSHandler.onTerminate**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | Parâmetro |      | Tipo                               |     | Descrição                            |
 | --------- | ---- | ---------------------------------- | :-: | ------------------------------------ |
@@ -160,7 +160,7 @@ Evento emitido quando o servidor websocket é iniciado.
 
 Evento emitido quando o servidor HTTP ou o servidor WebSocket é encerrado.
 
-**WSHandler.onError**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
 | Parâmetro |        | Tipo                               |     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | ---------------------------------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ Evento emitido quando ocorre um erro no servidor WebSocket.
 
 ### Exemplo de classe `WSSHandler`
 
-Este exemplo de um recurso básico de bate-papo ilustra como lidar com conexões de servidor WebSocket em uma classe _WSSHandler_.
+Este exemplo de um recurso básico de bate-papo ilustra como lidar com conexões de servidor WebSocket em uma classe *WSSHandler*.
 
 ```4d
 //minhaWSServerHandler classe 
@@ -225,7 +225,7 @@ Como resultado do `WSHandler. callback nConnection`, passe um objeto `connection
 | onTerminate | [Function](FunctionClass.md) | Função chamada quando esta ligação é terminada                                                    |
 | onError     | [Function](FunctionClass.md) | Função chamada quando ocorre um erro                                                              |
 
-**connectionHandler.onMessage**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parâmetro |      | Tipo                                                    |     | Descrição                           |
 | --------- | ---- | ------------------------------------------------------- | :-: | ----------------------------------- |
@@ -236,7 +236,7 @@ Como resultado do `WSHandler. callback nConnection`, passe um objeto `connection
 
 Este Callback para dados WebSocket. Chamado sempre que o WebSocket recebe dados.
 
-**connectionHandler.onOpen**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parâmetro |      | Tipo                                                    |     | Descrição                           |
 | --------- | ---- | ------------------------------------------------------- | :-: | ----------------------------------- |
@@ -246,7 +246,7 @@ Este Callback para dados WebSocket. Chamado sempre que o WebSocket recebe dados.
 
 Chamado quando o objeto `connectionHandler` for criado (após o evento `WSS.onConnection`).
 
-**connectionHandler.onTerminate**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parâmetro |        | Tipo                                                    |     | Descrição                                                                                                                                                                                                                                  |
 | --------- | ------ | ------------------------------------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -258,7 +258,7 @@ Chamado quando o objeto `connectionHandler` for criado (após o evento `WSS.onCo
 
 Função chamada quando o WebSocket é fechado.
 
-**connectionHandler.onError**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parâmetro |        |            | Tipo                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Descrição                           |
 | --------- | ------ | ---------- | ------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ----------------------------------- |
@@ -271,7 +271,7 @@ Função chamada quando ocorre um erro.
 
 ### Exemplo de classe `connectionHandler`
 
-Este exemplo de um recurso básico de bate-papo ilustra como tratar mensagens em uma classe _connectionHandler_.
+Este exemplo de um recurso básico de bate-papo ilustra como tratar mensagens em uma classe *connectionHandler*.
 
 ```4d
 // myConnectionHandler Class
@@ -302,9 +302,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 ```
 
-### Parâmetro _options_
+### Parâmetro *options*
 
-No parâmetro opcional _options_, passe um objeto que contenha as seguintes propriedades:
+No parâmetro opcional *options*, passe um objeto que contenha as seguintes propriedades:
 
 | Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Por padrão |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |

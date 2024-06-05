@@ -1,6 +1,6 @@
 ---
 id: string
-title: Chaîne
+title: String
 ---
 
 Chaîne est un terme générique utilisé pour :
@@ -24,50 +24,50 @@ Une chaîne vide est spécifiée par la succession de deux guillemets ("").
 
 Les séquences d’échappement suivantes peuvent être utilisées dans les chaînes :
 
-| Séquence d’échappement | Caractère remplacé          |
-| ---------------------- | --------------------------- |
-| \n                    | LF (Retour ligne)           |
-| \t                    | HT (Tabulation)             |
-| \r                    | CR (Retour chariot)         |
-| \\\                 | \ (Barre oblique inversée) |
-| \\"                  | " (Guillemets)              |
+| Séquence d’échappement                                | Caractère remplacé                     |
+| ----------------------------------------------------- | -------------------------------------- |
+| \n                                                    | LF (Retour ligne)   |
+| \t                                                    | HT (Tabulation)     |
+| \r                                                    | CR (Retour chariot) |
+| \\\\|\ (Barre oblique inversée) |                                        |
+| \\"                                                 | " (Guillemets)      |
 
-**Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
+**Note :** Le caractère \ (backslash) est utilisé comme séparateur dans les chemins d'accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
-| ------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne * Nombre  | String   | "ab" * 3                | "ababab" |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
-|                     |                  |          | "abc" = "abd"           | False    |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
-|                     |                  |          | "abc" # "abc"           | False    |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
-|                     |                  |          | "abc" > "abc"           | False    |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
-|                     |                  |          | "abc" < "abc"           | False    |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
-|                     |                  |          | "abc" >= "abd"          | False    |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
-|                     |                  |          | "abd" <= "abc"          | False    |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
-|                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                     | Image % Chaîne   | Boolean  | Expr_image % "Mer"      | True (*) |
+| Opération           | Syntaxe          | Retourne | Expression                              | Valeur                       |
+| ------------------- | ---------------- | -------- | --------------------------------------- | ---------------------------- |
+| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"                           | "abcdef"                     |
+| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3                               | "ababab"                     |
+| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"                           | True                         |
+|                     |                  |          | "abc" = "abd"                           | False                        |
+| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"                           | True                         |
+|                     |                  |          | "abc" # "abc"                           | False                        |
+| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"                           | True                         |
+|                     |                  |          | "abc" > "abc"                           | False                        |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"                           | True                         |
+|                     |                  |          | "abc" < "abc"                           | False                        |
+| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"                          | True                         |
+|                     |                  |          | "abc" >= "abd"                          | False                        |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"                          | True                         |
+|                     |                  |          | "abd" <= "abc"                          | False                        |
+| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo"                 | True                         |
+|                     |                  |          | "Alpha Bravo" % "ravo"                  | False                        |
+|                     | Image % Chaîne   | Boolean  | Expr_image % "Mer" | True (\*) |
 
-(*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
+(\*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
 ## Comparaisons de chaînes
 
-- Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par [mot-clé](dt_string.md#keywords), cf. ci-dessous).
-- Lors d'une comparaison de chaînes, 4D ne tient pas compte de la casse des caractères ; par exemple, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante retourne `FAUX` :
+- Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par [mot-clé](dt_string.md#mots-cles), cf. ci-dessous).
+- Lors d'une comparaison de chaînes, la casse des caractères est ignorée ; ainsi, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante renvoie `FALSE` :
 
 ```4d
-Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
+Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
+- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
@@ -80,19 +80,19 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 
 ### Le joker (@)
 
-Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Par exemple, l'expression suivante est `TRUE` :
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est évaluée à `FAUX` car le joker est alors considéré en tant que caractère :
+Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est `FALSE`, car le @ est considéré comme un caractère dans le premier opérande :
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont évaluées à `VRAI` :
+Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,7 +102,7 @@ Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions 
      "abcdefghij"="@abcde@fghij@"
 ```
 
-En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera évaluée à `FAUX`. L'expression suivante est à `FAUX` :
+En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera toujours évaluée à `FALSE`. L'expression suivante est `FALSE` :
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -111,27 +111,27 @@ En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés da
 Lorsque l'opérateur de comparaison est ou contient un symbole < ou >, seule la comparaison avec un seul joker situé en fin d'opérande est prise en charge :
 
 ```4d
-     "abcd"<="abc@" //Comparaison valide
- "abcd"<="abc@ef" //Comparaison non valide
+     "abcd"<="abc@" // Comparaison valide
+     "abcd"<="abc@ef" //Comparaison non valide
 ```
 
-Si vous souhaitez effectuer des comparaisons ou des recherches utilisant @ en tant que caractère (et non en tant que joker), vous devez utiliser l'instruction `Code de caractere(Arobase)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L’expression suivante (si $vaValeur n'est pas vide) retourne toujours `VRAI` :
+Si vous souhaitez exécuter des comparaisons ou des requêtes en utilisant @ comme caractère (et non comme joker), vous devez utiliser l'instruction `Character code(At sign)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L'expression suivante (si $vsValue n'est pas vide) est toujours `TRUE` :
 
 ```4d
-($vaValeur[[Longueur($vaValeur)]]="@")
+($vsValue[[Length($vsValue)]]="@")
 ```
 
 L'expression suivante sera correctement évaluée :
 
 ```4d
-(Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
+(Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note :** Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.
+**Note :** Une option 4D du mode Développement vous permet de définir comment le caractère @ est interprété lorsqu'il est inclus dans une chaîne de caractères.
 
 ### Mots-clés
 
-A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L’opérateur **%** retournera toujours `Faux` si la recherche porte sur plusieurs mots ou une partie de mot (par exemple une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
+A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L'opérateur **%** retournera toujours `False` si la requête concerne plusieurs mots ou seulement une partie d'un mot (par exemple, une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Retourne Vrai
@@ -140,9 +140,10 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Alpha,Bravo,Charlie"%"Alpha" // Retourne Vrai
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
+
 > **Notes :**
-> 
-> - 4D utilise la bibliothèque ICU pour comparer des chaînes de caractères (en utilisant les opérateurs `<>=#`) et détecter des mots-clés. Pour plus d'informations sur les règles mises en œuvre, veuillez vous reporter à l'adresse suivante : <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+>
+> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - Dans la version japonaise, au lieu de ICU, 4D utilise Mecab par défaut pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
@@ -162,14 +163,14 @@ End if
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
-//L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"
+//L'exemple suivant teste si le dernier caractère de vtText est un signe "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
-
-  //En utilisant la syntaxe des caractères d'indice de chaîne, vous écririez plus simplement :
+ 
+  //En utilisant la syntaxe de référence des caractères, vous écririez d'une manière plus simple :
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -186,7 +187,7 @@ Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsa
 - Ne pas respecter cette condition en mode compilé est signalé lorsque le contrôle d'exécution est activé. Si, par exemple, vous exécutez le code suivant :
 
 ```
-//Ne pas faire ça !
+//Très mauvaise et vilaine chose à faire, bouh !
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
@@ -200,10 +201,10 @@ L'alerte suivante s'affichera en mode compilé :
 La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :
 
 ```4d
-  // Méthode projet de passage en capitale
-  // PasserEnCap ( Texte ) -> Texte
-  // PasserEnCap ( Texte source ) -> Texte avec des lettres capitales
-
+  //Capitalize_text project method
+  //Capitalize_text ( Text ) -> Text
+  //Capitalize_text ( Source text ) -> Capitalized text
+ 
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

@@ -1,6 +1,6 @@
 ---
 id: entities
-title: Travailler avec des données
+title: Travailler avec les données
 ---
 
 Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
@@ -168,7 +168,7 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1"
   //l'entité associée est mise à jour
 ```
 
-## Créer une sélection d'entité (entity selection)
+## Créer une entity selection (sélection d'entités)
 
 Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
@@ -177,7 +177,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 * Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) pour créer une sélection d'entités vide;
 * Utilisez la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
 * Utilisez l'une des diverses fonctions de [Entity selection class](API/EntitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/EntitySelectionClass.md#or);
-* Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
+* En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
@@ -318,7 +318,7 @@ The `sendMails` method:
  End for each
 ```
 
-### Sélections d'entités et attributs de stockage
+### Entity selections et attributs de stockage
 
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
@@ -421,9 +421,9 @@ Les **verrouillages de transaction** s'appliquent également aux commandes class
 
 Les mécanismes d'optimisation suivants sont mis en œuvre :
 
-* Lorsqu'un client demande une sélection d'entité au serveur, 4D "apprend" automatiquement attributs de la sélection d'entité sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est relié à la sélection d'entité et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite.
+* Lorsqu'un client requête une entity selection au serveur, 4D "apprend" automatiquement quels attributs de l'entity selection sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est lié à l'entity selection et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite.
 
-* Les requêtes ultérieures envoyées au serveur sur la même sélection d'entité réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une list box basée sur une sélection d'entités, la phase d'apprentissage a lieu durant l'affichage des premières lignes et l'affichage des lignes suivantes est fortement optimisé.
+* Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une list box basée sur une sélection d'entités, la phase d'apprentissage a lieu durant l'affichage des premières lignes et l'affichage des lignes suivantes est fortement optimisé.
 
 * Un contexte d'optimisation existant peut être passé en tant que propriété à une autre sélection d'entité de la même dataclass, ce qui permet d'éviter la phase d'apprentissage et d'accélérer l'application (voir [Utilisation de la propriété context](#using-the-context-property) ci-dessous).
 
@@ -451,7 +451,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 ### Utilisation de la propriété context
 
-Vous pouvez tirer un meilleur parti de l'optimisation en utilisant la propriété **context**. Cette propriété référence un contexte d'optimisation "appris" pour une sélection d'entités. Elle peut être passée comme paramètre aux méthodes ORDA qui retournent de nouvelles sélections d'entités, afin que les sélections d'entités demandent directement au serveur les attributs utilisés, sans passer par la phase d'apprentissage.
+Vous pouvez tirer un meilleur parti de l'optimisation en utilisant la propriété **context**. Cette propriété référence un contexte d'optimisation "appris" pour une entity selection. Elle peut être passée comme paramètre aux méthodes ORDA qui retournent de nouvelles sélections d'entités, afin que les sélections d'entités demandent directement au serveur les attributs utilisés, sans passer par la phase d'apprentissage.
 
 Une même propriété de contexte d'optimisation peut être passée à un nombre illimité de sélections d'entités de la même dataclass. Toutes les méthodes ORDA qui gèrent les sélections d'entités prennent en charge la propriété **context** (par exemple les méthodes `dataClass.query( )` ou `dataClass.all( )`). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 > Un mécanisme similaire est mis en place pour des entités qui sont chargées, afin que seuls les attributs utilisés soient demandés (voir la méthode `dataClass.get( )`).

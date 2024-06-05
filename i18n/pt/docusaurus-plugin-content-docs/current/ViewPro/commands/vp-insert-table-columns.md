@@ -13,7 +13,7 @@ title: VP INSERT TABLE COLUMNS
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
 
-**VP INSERT TABLE COLUMNS** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer {; _count_ : Integer {; _insertAfter_ : Integer {; _sheet_ : Integer }}} )<!-- END REF -->
+**VP INSERT TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
 
@@ -23,25 +23,25 @@ title: VP INSERT TABLE COLUMNS
 | tableName   | Text    | -> | Nome da tabela                                               |                  |
 | column      | Integer | -> | Índice na tabela da coluna inicial a inserir                 |                  |
 | count       | Text    | -> | Number of columns to add (must be >0)     |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _column_ |                  |
+| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column* |                  |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)  | <!-- END REF --> |
 
 #### Descrição
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or _count_ empty column(s) in the specified _tableName_ at the specified _column_ index<!-- END REF -->.
+The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
 
 When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md) command.
 
-In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the _column_ index:
+In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
 
 | Parâmetros               | Valor | Descrição                                                                                       |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert column(s) before the _column_ (default if omitted) |
-| `vk table insert after`  | 1     | Inserir coluna(s) após a _coluna_                                            |
+| `vk table insert before` | 0     | Insert column(s) before the *column* (default if omitted) |
+| `vk table insert after`  | 1     | Inserir coluna(s) após a *coluna*                                            |
 
-This command inserts some columns in the _tableName_ table, NOT in the sheet. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
+This command inserts some columns in the *tableName* table, NOT in the sheet. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
 
-If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
+If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
 #### Exemplo
 

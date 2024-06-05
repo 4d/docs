@@ -5,20 +5,20 @@ title: VP Get value
 
 <!-- REF #_method_.VP Get value.Syntax -->
 
-**VP Get value** ( _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get value** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Paramètres | Type   |    | Description                    |                  |
-| ---------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objet plage                    |                  |
-| Résultat   | Object | <- | Object containing a cell value | <!-- END REF --> |
+| Paramètres | Type   |    | Description                           |                  |
+| ---------- | ------ | -- | ------------------------------------- | ---------------- |
+| rangeObj   | Object | -> | Objet plage                           |                  |
+| Résultat   | Object | <- | Objet contenant une valeur de cellule | <!-- END REF --> |
 
 #### Description
 
 The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range whose value you want to retrieve.
+In *rangeObj*, pass a range whose value you want to retrieve.
 
 #### Objet retourné
 
@@ -26,7 +26,7 @@ The object returned will contain the `value` property, and, in case of a js date
 
 | Propriété | Type                                       | Description                                                               |
 | --------- | ------------------------------------------ | ------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Object | Value in the _rangeObj_ (except- time)                 |
+| value     | Integer, Real, Boolean, Text, Date, Object | Value in the *rangeObj* (except- time)                 |
 | time      | Real                                       | Valeur heure (en secondes) si la valeur est du type js |
 
 Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit :
@@ -34,7 +34,7 @@ Si l'objet retourné inclut une date ou une heure, il est traité en tant que da
 - valeur heure - la date est complétée comme suit : December 30, 1899 au format dd/MM/yyyy (30/12/1899)
 - valeur date - l'heure est complétée comme suit : minuit au format HH:mm:ss (00:00:00)
 
-If _rangeObj_ contains multiple cells or multiple ranges, the value of the first cell is returned. La commande retourne un objet null si la cellule est vide.
+If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. La commande retourne un objet null si la cellule est vide.
 
 #### Exemple
 

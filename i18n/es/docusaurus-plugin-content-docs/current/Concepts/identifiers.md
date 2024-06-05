@@ -27,7 +27,7 @@ Los nombres de función deben cumplir con el estándar [reglas de nomenclatura d
 
 ## Propiedades de los objetos
 
-El nombre de una propiedad objeto (también llamado objeto *atributo*) puede contener hasta 255 caracteres.
+El nombre de una propiedad objeto (también llamado objeto _atributo_) puede contener hasta 255 caracteres.
 
 Las propiedades de los objetos pueden hacer referencia a valores escalares, elementos ORDA, funciones de clase, otros objetos, etc. Sea cual sea su naturaleza, los nombres de las propiedades de los objetos deben seguir las siguientes reglas **si se quiere utilizar la [notación de punto](dt_object.md#object-properties)**:
 
@@ -55,7 +55,6 @@ Ver también [ECMA Script standard](https://www.ecma-international.org/ecma-262/
 Si utiliza **notación de cadena** entre corchetes, los nombres de las propiedades pueden contener cualquier caracter (ej.: `miObjeto["1. First property"]`).
 
 :::
-
 
 ## Parámetros
 
@@ -88,7 +87,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método devuelve un valor, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir un proyecto para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
 
- > Cuando se llama a un método, sólo hay que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como también todos los comandos del plug-in, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método.
+> Cuando se llama a un método, sólo hay que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como también todos los comandos del plug-in, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método.
 
 Ejemplos:
 
@@ -130,9 +129,9 @@ QUERY([Clients];[Clients]Name="Smith")
 El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
 - Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables de interproceso](variables.md#interprocess-variables).
-- Un dígito como primer carácter está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
+- Se permite un dígito como primer caracter pero no se recomienda, y no es compatible con la [sintaxis de declaración `var`](variables.md#usando-la-palabra-clave-var).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Un caracter de espacio está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
+- Se permite el carácter de espacio pero no se recomienda, y no es compatible con la [`sintaxis de declaración var`](variables.md#usando-la-palabra-clave-var).
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
@@ -168,6 +167,6 @@ $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 CREATE SET([Customers];"Customer Orders")//Conjunto process
 USE SET("<>Deleted Records") //Conjunto interprocess
-If(Records in set("$Selection"+String($i))>0) //Conjunto client
+If(Records in set("$Selection"+String($i))>0) //Conjunto Client
 
 ```

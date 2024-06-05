@@ -499,20 +499,18 @@ Este ejemplo crea una clase llamada `Square` de una clase llamada `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm
+//path: Classes/Square. dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // Llama al constructor de la clase padre con las longitudes
+ // proporcionadas para el ancho y alto del polígono
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // En las clases derivadas, Super debe ser llamado antes de 
+ // utilizar 'This'
  This.name:="Square"
-
-
 
  Function getArea()
   C_LONGINT($0)

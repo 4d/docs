@@ -65,6 +65,18 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
+
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+
+
 #### Abort
 
 Stops method execution, and returns to the state before the method started executing:

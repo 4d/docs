@@ -5,7 +5,7 @@ title: VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
 
-**VP SET SHOW PRINT LINES** ( _vpAreaName_ : Text {; visible : Boolean}{; _sheet_ : Integer} )<!-- END REF -->
+**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET SHOW PRINT LINES
 
 `VP SET SHOW PRINT LINES` コマンドは、<!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> スプレッドシート内で印刷プレビュー線を表示するかどうかを設定します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_visible_ には、印刷線を表示するには `True`、非表示にするには `False` を渡します。 デフォルトでは `True` が渡されます。
+*visible* には、印刷線を表示するには `True`、非表示にするには `False` を渡します。 デフォルトでは `True` が渡されます。
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 

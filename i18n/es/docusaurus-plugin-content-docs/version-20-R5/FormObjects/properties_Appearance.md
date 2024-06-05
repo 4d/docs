@@ -21,10 +21,9 @@ En Windows, el concepto de "opción recomendada" no está soportado: sólo el bo
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- defaultButton|boolean|true, false |
+| Nombre        | Tipos de datos | Valores posibles |
+| ------------- | -------------- | ---------------- |
+| defaultButton | boolean        | true, false      |
 
 #### Objetos soportados
 
@@ -54,7 +53,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 Esta propiedad se utiliza para desactivar el resaltado de la selección en los list box.
 
-Cuando esta opción está activada, el resaltado de la selección ya no es visible para las selecciones realizadas en los list box. Las selecciones en sí siguen siendo válidas y funcionan exactamente igual que antes; sin embargo, ya no se representan gráficamente en la pantalla, y tendrá que [definir su apariencia por programación](listbox_overview.md#customizing-appearance-of-selected-rows).
+Cuando esta opción está activada, el resaltado de la selección ya no es visible para las selecciones realizadas en los list box. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Por defecto, esta opción no está activa.
 
@@ -76,11 +75,11 @@ Una herramienta de interfaz que permite al usuario desplazar el área de visuali
 
 Valores disponibles:
 
-| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                      |
-| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                                                         |
+| -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sí                   | "visible"   | La barra de desplazamiento está siempre visible, incluso cuando no es necesaria (es decir, cuando el tamaño del contenido del objeto es menor que el del marco). |
-| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                      |
-| Automático           | "automatic" | La barra de desplazamiento aparece automáticamente cuando es necesario y el usuario puede introducir un texto mayor que el ancho del objeto                      |
+| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                                                         |
+| Automático           | "automatic" | La barra de desplazamiento aparece automáticamente cuando es necesario y el usuario puede introducir un texto mayor que el ancho del objeto                                                         |
 
 > Los objetos imagen pueden tener las barras de desplazamiento cuando el formato de visualización de la imagen está definido como "Truncado (no centrado)."
 
@@ -96,7 +95,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Barra de desplazamiento vertical](#vertical-scroll-bar)
+[Vertical scroll bar](#vertical-scroll-bar)
 
 ---
 
@@ -106,14 +105,13 @@ Define la resolución de la pantalla para el contenido del área 4D Write Pro. P
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- dpi|number|0=automatic, 72, 96 |
+| Nombre | Tipos de datos | Valores posibles    |
+| ------ | -------------- | ------------------- |
+| dpi    | number         | 0=automatic, 72, 96 |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -123,14 +121,13 @@ Muestra/oculta tanto las imágenes de fondo como el color de fondo.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showBackground|boolean|true (por defecto), false|
+| Nombre         | Tipos de datos | Valores posibles                             |
+| -------------- | -------------- | -------------------------------------------- |
+| showBackground | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -140,14 +137,13 @@ Muestra/oculta los pies de página cuando el [modo visualización de la página 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showFooters|boolean|true (por defecto), false|
+| Nombre      | Tipos de datos | Valores posibles                             |
+| ----------- | -------------- | -------------------------------------------- |
+| showFooters | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -159,14 +155,13 @@ Cuando está activada, la barra de fórmulas es visible debajo de la interfaz de
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- withFormulaBar|booléen|true (por defecto), false|
+| Nombre         | Tipos de datos | Valores posibles                             |
+| -------------- | -------------- | -------------------------------------------- |
+| withFormulaBar | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md)
+[4D View Pro area](viewProArea_overview.md)
 
 ---
 
@@ -176,14 +171,13 @@ Muestra/oculta los encabezados cuando el [modo visualización de la página ](#v
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showHeaders|boolean|true (por defecto), false|
+| Nombre      | Tipos de datos | Valores posibles                             |
+| ----------- | -------------- | -------------------------------------------- |
+| showHeaders | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -193,14 +187,13 @@ Muestra/oculta los caracteres invisibles
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showHiddenChars|boolean|true (por defecto), false|
+| Nombre          | Tipos de datos | Valores posibles                             |
+| --------------- | -------------- | -------------------------------------------- |
+| showHiddenChars | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -210,14 +203,13 @@ Muestra/oculta la regla horizontal cuando la vista del documento está en modo [
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showHorizontalRuler|boolean|true (por defecto), false|
+| Nombre              | Tipos de datos | Valores posibles                             |
+| ------------------- | -------------- | -------------------------------------------- |
+| showHorizontalRuler | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -227,14 +219,13 @@ Activa/desactiva la vista HTML WYSIWYG, en la que se eliminan los atributos avan
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showHTMLWysiwyg|boolean|true, false (por defecto)|
+| Nombre          | Tipos de datos | Valores posibles                             |
+| --------------- | -------------- | -------------------------------------------- |
+| showHTMLWysiwyg | boolean        | true, false (por defecto) |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -244,20 +235,19 @@ Muestra/oculta el marco de la página cuando [modo visualización de página ](#
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showPageFrames|boolean|true, false|
+| Nombre         | Tipos de datos | Valores posibles |
+| -------------- | -------------- | ---------------- |
+| showPageFrames | boolean        | true, false      |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
 ## Mostrar las referencias
 
-Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como *referencias*. Cuando esta opción está desactivada, las expresiones 4D se muestran como *valores*. Por defecto, cuando se inserta un campo o expresión 4D, 4D Write Pro calcula y muestra su valor actual. Seleccione esta propiedad si desea saber qué campo o expresión se muestra. Las referencias de campo o de expresión aparecen entonces en su documento, con un fondo gris.
+Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como _referencias_. Cuando esta opción está desactivada, las expresiones 4D se muestran como _valores_. Por defecto, cuando se inserta un campo o expresión 4D, 4D Write Pro calcula y muestra su valor actual. Seleccione esta propiedad si desea saber qué campo o expresión se muestra. Las referencias de campo o de expresión aparecen entonces en su documento, con un fondo gris.
 
 Por ejemplo, ha insertado la fecha actual junto con un formato, la fecha se muestra:
 
@@ -271,14 +261,13 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showReferences|boolean|true, false (por defecto)|
+| Nombre         | Tipos de datos | Valores posibles                             |
+| -------------- | -------------- | -------------------------------------------- |
+| showReferences | boolean        | true, false (por defecto) |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -288,14 +277,13 @@ Muestra/oculta la regla vertical cuando la vista del documento está en modo [P�
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- showVerticalRuler|boolean|true (por defecto), false|
+| Nombre            | Tipos de datos | Valores posibles                             |
+| ----------------- | -------------- | -------------------------------------------- |
+| showVerticalRuler | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -307,14 +295,13 @@ Cuando los controles de pestañas con una dirección personalizada se muestran e
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- labelsPlacement|boolean|"top", "bottom" |
+| Nombre          | Tipos de datos | Valores posibles |
+| --------------- | -------------- | ---------------- |
+| labelsPlacement | boolean        | "top", "bottom"  |
 
 #### Objetos soportados
 
-[Pestañas](tabControl.md)
+[Tab Control](tabControl.md)
 
 ---
 
@@ -324,18 +311,17 @@ Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- userInterface|text|"none" (por defecto), "ribbon", "toolbar" |
+| Nombre        | Tipos de datos | Valores posibles                                             |
+| ------------- | -------------- | ------------------------------------------------------------ |
+| userInterface | text           | "none" (por defecto), "ribbon", "toolbar" |
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md)
+[4D View Pro area](viewProArea_overview.md)
 
 #### Ver también
 
-[guía de referencia 4D View Pro](../ViewPro/getting-started.md)
+[4D View Pro reference guide](../ViewPro/getting-started.md)
 
 ---
 
@@ -345,11 +331,11 @@ Una herramienta de interfaz que permite al usuario mover el área de visualizaci
 
 Valores disponibles:
 
-| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                      |
-| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                                                         |
+| -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sí                   | "visible"   | La barra de desplazamiento está siempre visible, incluso cuando no es necesaria (es decir, cuando el tamaño del contenido del objeto es menor que el del marco). |
-| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                      |
-| Automático           | "automatic" | La barra de desplazamiento aparece automáticamente cuando es necesario (es decir, cuando el tamaño del contenido del objeto es mayor que el del marco)           |
+| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                                                         |
+| Automático           | "automatic" | La barra de desplazamiento aparece automáticamente cuando es necesario (es decir, cuando el tamaño del contenido del objeto es mayor que el del marco)                           |
 
 > Los objetos imagen pueden tener las barras de desplazamiento cuando el formato de visualización de la imagen está definido como "Truncado (no centrado)."
 
@@ -367,7 +353,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Barra de desplazamiento horizontal](#horizontal-scroll-bar)
+[Horizontal scroll bar](#horizontal-scroll-bar)
 
 ---
 
@@ -383,14 +369,13 @@ Establece el modo de visualización del documento de 4D Write Pro en el área de
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles |
-| ------ | -------------- | ---------------- |
-|        |                |                  |
- layoutMode|text|"page", "draft", "embedded"|
+| Nombre     | Tipos de datos | Valores posibles            |
+| ---------- | -------------- | --------------------------- |
+| layoutMode | text           | "page", "draft", "embedded" |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -402,9 +387,8 @@ Define el porcentaje de zoom para mostrar el contenido del área 4D Write Pro.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-|        |                |                  |
- zoom|número|minimum = 0 |
+| zoom   | number         | mínimo = 0       |
 
 #### Objetos soportados
 
-[Área 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)

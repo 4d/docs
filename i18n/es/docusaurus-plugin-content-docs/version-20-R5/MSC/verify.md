@@ -4,37 +4,35 @@ title: Página Verificación
 sidebar_label: Página Verificación
 ---
 
-Esta página se utiliza para verificar la integridad de los datos. La verificación puede llevarse a cabo en los registros y/o índices. Esta página sólo comprueba la integridad de los datos. Si se encuentran errores y es necesario repararlos, se le indicará que utilice la página [Reparación](repair.md).
-
+Esta página se utiliza para verificar la integridad de los datos. La verificación puede llevarse a cabo en los registros y/o índices.
+Esta página sólo comprueba la integridad de los datos. Si se encuentran errores y es necesario repararlos, se le indicará que utilice la página [Reparación](repair.md).
 
 ## Acciones
 
 La página contiene botones de acción que dan acceso directo a las funciones de verificación.
-> Cuando la base está encriptada, la verificación incluye la validación de la consistencia de los datos encriptados. Si no se ha suministrado una llave de datos válida, aparecerá un diálogo solicitando la frase secreta o la llave de datos.
 
+> Cuando la base está encriptada, la verificación incluye la validación de la consistencia de los datos encriptados. Si no se ha suministrado una llave de datos válida, aparecerá un diálogo solicitando la frase secreta o la llave de datos.
 
 - **Verificar los registros y los índices:** inicia el procedimiento de verificación total de los datos.
 - **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
 - **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
-> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
+> \> Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 ## Abrir archivo de historial
 
-Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. Este archivo lista todas las verificaciones realizadas e indica los errores encontrados, cuando sea el caso (se muestra [OK] cuando la verificación es correcta). Se crea en formato XML y se denomina: *NombreAplicacion*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml donde:
+Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. Este archivo lista todas las verificaciones realizadas e indica los errores encontrados, cuando sea el caso (se muestra [OK] cuando la verificación es correcta). It is created in XML format and is named: _ApplicationName__Verify_Log__yyyy-mm-dd hh-mm-ss_.xml where:
 
-- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
-- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
+- _ApplicationName_ es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- _yyyy-mm-dd hh-mm-ss_ es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
 Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
-
 
 ## Detalles
 
 El botón **Lista de tablas** muestra una página detallada que puede utilizarse para ver y seleccionar los registros e índices reales que se van a verificar:
 
 ![](../assets/en/MSC/MSC_Verify.png)
-
 
 La designación de los elementos a verificar le permite ahorrar tiempo durante el procedimiento de verificación.
 
@@ -53,4 +51,5 @@ La columna "Estado" muestra el estado de verificación de cada elemento mediante
 Haga clic en **Verificar** para comenzar la verificación o en **Estándar** para volver a la página estándar.
 
 El botón **Abrir archivo de historial** puede utilizarse para mostrar el archivo de historialen el navegador predeterminado de la máquina (ver [Abrir archivo de historial](#abrir-archivo-de-registro) arriba).
+
 > La página estándar no tendrá en cuenta las modificaciones realizadas en la página detallada: cuando se presiona un botón de verificación en la página estándar, se verifican todos los elementos. Por otra parte, los parámetros establecidos en la página detallada se conservan de una sesión a otra.

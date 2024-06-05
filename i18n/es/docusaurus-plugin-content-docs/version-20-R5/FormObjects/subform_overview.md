@@ -3,21 +3,18 @@ id: subformOverview
 title: Subformulario
 ---
 
-
 Un subformulario es un formulario incluido en otro formulario.
-
 
 ## Terminología
 
 Con el fin de definir claramente los conceptos implementados con los subformularios, aquí hay algunas definiciones para ciertos términos utilizados:
 
-*   **Subformulario**: un formulario destinado a ser incluido en otro formulario, llamado a su vez formulario padre.
-*   **Formulario padre**: un formulario que contiene uno o más subformularios.
-*   **Contenedor de subformulario**: un objeto incluido en el formulario padre, que muestra una instancia del subformulario.
-*   **Instancia de subformulario**: la representación de un subformulario en un formulario padre. Este concepto es importante porque es posible mostrar varias instancias del mismo subformulario en un formulario padre.
-*   **Formulario listado**: instancia de subformulario mostrada como una lista.
-*   **Formulario detallado**: formulario de entrada tipo página asociado a un subformulario tipo lista al que se accede haciendo doble clic en la lista.
-
+- **Subformulario**: un formulario destinado a ser incluido en otro formulario, llamado a su vez formulario padre.
+- **Formulario padre**: un formulario que contiene uno o más subformularios.
+- **Contenedor de subformulario**: un objeto incluido en el formulario padre, que muestra una instancia del subformulario.
+- **Instancia de subformulario**: la representación de un subformulario en un formulario padre. Este concepto es importante porque es posible mostrar varias instancias del mismo subformulario en un formulario padre.
+- **Formulario listado**: instancia de subformulario mostrada como una lista.
+- **Formulario detallado**: formulario de entrada tipo página asociado a un subformulario tipo lista al que se accede haciendo doble clic en la lista.
 
 ## Sub-formularios en lista
 
@@ -27,10 +24,10 @@ Por ejemplo, una base de datos del gestor de contactos puede utilizar un subform
 
 Aunque los subformularios lista suelen estar asociados a muchas tablas, una instancia de subformulario puede mostrar los registros de cualquier otra tabla de la base de datos.
 
-También puede permitir que el usuario introduzca datos en el formulario lista. Dependiendo de la configuración del subformulario, el usuario puede mostrar el formulario detallado haciendo doble clic en un subregistro o utilizando los comandos para añadir y editar subregistros.
+También puede permitir que el usuario introduzca datos en el formulario lista.
+Dependiendo de la configuración del subformulario, el usuario puede mostrar el formulario detallado haciendo doble clic en un subregistro o utilizando los comandos para añadir y editar subregistros.
 
 > 4D ofrece tres acciones estándar para satisfacer las necesidades básicas de gestión de los subregistros: `Edit Subrecord`, `Delete Subrecord` y `Add Subrecord`. Cuando el formulario incluye varias instancias de subformulario, la acción se aplicará al subformulario que tenga el foco.
-
 
 ## Sub-formularios en página
 
@@ -40,17 +37,14 @@ El subformulario en página utiliza el formulario de entrada indicado por la pro
 
 > Los widgets 4D son objetos compuestos predefinidos basados en subformularios página. Se describen detalladamente en un manual aparte, [4D Widgets](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html).
 
-
 ### Utilización de la variable o expresión asociada
 
 Puede vincular [una variable o una expresión](properties_Object.md#variable-or-expression) a un objeto contenedor de subformulario. Esto es muy útil para sincronizar valores del formulario padre y su(s) subformulario(s).
 
-Por defecto, 4D crea una variable o expresión de [tipo objeto](properties_Object.md#expression-type) para un subformulario contenedor, que le permite compartir valores en el contexto del subformulario utilizando el comando `Form` ([ver abajo](#using-the-subform-bound-object)). Sin embargo, puede utilizar una variable o expresión de cualquier tipo escalar (tiempo, entero, etc.) especialmente si sólo necesita compartir un único valor:
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-subform-bound-object)). However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
 
-- Defina una variable ligada o una expresión de tipo escalar y llame a los comandos `OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE` para intercambiar valores cuando se produzcan los eventos de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) o [On Data Change](../Events/onDataChange.md). Esta solución se recomienda para sincronizar un solo valor.
+- Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. Esta solución se recomienda para sincronizar un solo valor.
 - Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solución se recomienda para sincronizar varios valores.
-
-
 
 ### Sincronizando formulario padre y subformulario (valor único)
 
@@ -58,7 +52,7 @@ Vincular la misma variable o expresión al contenedor del subformulario y a otro
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) ***tienen el mismo valor que ***Variable o Expresión******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) **tienen el mismo valor que _Variable o Expresión_**. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
 
 :::info
 
@@ -73,7 +67,6 @@ El valor del texto debe tener el formato "hh:mm:ss".
 
 En el subformulario, el objeto reloj se gestiona a través de la propiedad `Form.clockValue`.
 
-
 #### Actualizando el contenido de un subformulario
 
 Caso 1: se modifica el valor de la variable o expresión del formulario padre y esta modificación debe pasarse al subformulario.
@@ -82,10 +75,10 @@ Caso 1: se modifica el valor de la variable o expresión del formulario padre y 
 
 Se ejecuta el siguiente código:
 
-```4d  
-// Método de formulario del subformulario
-If (Form event code=On Bound Variable Change) //la variable o expresión vinculada se modificó en el formulario padre
-    Form.clockValue:=OBJECT Get subform container value //sincroniza el valor local
+```4d
+// Subform form method
+If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
+	Form.clockValue:=OBJECT Get subform container value //synchonize the local value
 End if
 ```
 
@@ -98,14 +91,12 @@ Se genera el evento formulario [On Bound Variable Change](../Events/onBoundVaria
 - en cuanto se asigna un valor a la variable/expresión del formulario padre, incluso si se reasigna el mismo valor
 - si el subformulario pertenece a la página formulario actual o a la página 0.
 
-Tenga en cuenta que, como en el ejemplo anterior, es preferible utilizar el comando `OBJECT Get subform container value` que devuelve el valor de la expresión en el contenedor del subformulario en lugar de la propia expresión, ya que es posible insertar varios subformularios en el mismo formulario padre (por ejemplo, una ventana que muestra diferentes zonas horarias contiene varios relojes).
+Note that, as in the above example, it is preferable to use the `OBJECT Get subform container value` command which returns the value of the expression in the subform container rather than the expression itself because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks).
 
 La modificación de la variable o expresión asociada desencadena eventos de formulario que permiten sincronizar los valores del formulario padre y del subformulario:
 
 - Utilice el evento de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) para indicar al subformulario (método de formulario del subformulario) que la variable o expresión fue modificada en el formulario padre.
 - Utilice el evento de formulario [On Data Change](../Events/onDataChange.md) para indicar al contenedor del subformulario que el valor de la variable o expresión fue modificado en el subformulario.
-
-
 
 #### Actualizar el contenido de un formulario padre
 
@@ -115,10 +106,10 @@ Dentro del subformulario, el botón cambia el valor de la expresión `Form.clock
 
 Se ejecuta el siguiente código:
 
-```4d  
-// método objeto reloj del subformulario
-If (Form event code=On Data Change) //sea cual sea la forma se cambia el valor
-    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Empujar el valor al contenedor
+```4d
+// subform clock object method
+If (Form event code=On Data Change) //whatever the way the value is changed
+	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
 End if
 ```
 
@@ -126,9 +117,7 @@ End if
 
 Cada vez que cambia el valor de `Form.clockValue` en el subformulario, también se actualiza `parisTime` o `Form.parisTime` en el contenedor del subformulario.
 
-
 > Si el valor de la variable o expresión se establece en varias ubicaciones, 4D utiliza el valor que se cargó en último lugar. Aplica el siguiente orden de carga: 1-Métodos objeto del subformulario, 2-Método formulario del subformulario, 3-Métodos objeto del formulario padre, 4-Método formulario del formulario padre
-
 
 ### Sincronizando formulario padre y subformulario (múltiples valores)
 
@@ -158,22 +147,22 @@ Cuando ejecuta el formulario y presiona el botón, ve que todos los valores se m
 
 Si modifica un valor en el formulario padre o en el subformulario, se actualiza automáticamente en el otro formulario porque se utiliza el mismo objeto:
 
-![](../assets/en/FormObjects/subnew4.png) ![](../assets/en/FormObjects/subnew5.png)
+![](../assets/en/FormObjects/subnew4.png)
+![](../assets/en/FormObjects/subnew5.png)
 
 ### Uso de punteros (compatibilidad)
 
 En versiones anteriores a 4D v19 R5, la sincronización entre formularios padre y subformularios se gestionaba a través de **punteros**. Por ejemplo, para actualizar un objeto subformulario, podría llamar al siguiente código:
 
-```4d  
-// Método formulario subformulario
+```4d
+// Subform form method
 If (Form event code=On Bound Variable Change) 
-    ptr:=OBJECT Get pointer(Object subform container) 
-    clockValue:=ptr-> 
+	ptr:=OBJECT Get pointer(Object subform container) 
+	clockValue:=ptr-> 
 End if
 ```
 
-**Este principio aún se soporta por compatibilidad, pero ahora es obsoleto, ya que no permite vincular expresiones a subformularios.** Ya no debería utilizarse en sus desarrollos. En todos los casos, recomendamos utilizar el comando [`Form`](#synchronizing-parent-form-and-subform-multiple-values) o los comandos [`OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE`](#synchronizing-parent-form-and-subform-single-value) para sincronizar los valores de formulario y subformulario.
-
+**Este principio aún se soporta por compatibilidad, pero ahora es obsoleto, ya que no permite vincular expresiones a subformularios.** Ya no debería utilizarse en sus desarrollos. In any cases, we recommend to use the [`Form` command](#synchronizing-parent-form-and-subform-multiple-values) or the [`OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands](#synchronizing-parent-form-and-subform-single-value) to synchronize form and subform values.
 
 ### Programación entre formularios avanzada
 
@@ -185,7 +174,6 @@ La comunicación entre el formulario padre y las instancias del subformulario pu
 - Ejecución de un método en el contexto del subformulario mediante el comando `EXECUTE METHOD IN SUBFORM`
 
 > El comando `GOTO OBJECT` busca el objeto de destino en el formulario padre aunque se ejecute desde un subformulario.
-
 
 #### Comando CALL SUBFORM CONTAINER
 
@@ -205,10 +193,8 @@ Este mecanismo se ilustra en el siguiente diagrama:
 
 Para más información, consulte la descripción del comando `EXECUTE METHOD IN SUBFORM`.
 
-
-
-
-
 ## Propiedades soportadas
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) -
+[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) -
+[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)

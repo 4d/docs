@@ -13,25 +13,25 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Syntax -->
 
-**VP SET BINDING PATH** ( _rangeObj_ : Object  ; _dataContextAttribute_  : Text) <!-- END REF -->
+**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
 | Parámetros           | Tipo   |    | Descripción                                 |                  |
 | -------------------- | ------ | -- | ------------------------------------------- | ---------------- |
 | rangeObj             | Object | -> | Objeto rango                                |                  |
-| dataContextAttribute | Text   | -> | Nombre del atributo a vincular a _rangeObj_ | <!-- END REF --> |
+| dataContextAttribute | Text   | -> | Nombre del atributo a vincular a *rangeObj* | <!-- END REF --> |
 
 #### Descripción
 
-El comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->vincula un atributo del contexto de datos de una hoja a _rangeObj_<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. Cuando se carga, si el contexto de datos contiene el atributo, el valor de _dataContextAttribute_ se muestra automáticamente en las celdas en _rangeObj_.
+El comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->vincula un atributo del contexto de datos de una hoja a *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. Cuando se carga, si el contexto de datos contiene el atributo, el valor de *dataContextAttribute* se muestra automáticamente en las celdas en *rangeObj*.
 
-En _rangeObj_, pase un objeto que es un rango de celdas o un rango combinado de celdas.
+En *rangeObj*, pase un objeto que es un rango de celdas o un rango combinado de celdas.
 
-- Si _rangeObj_ es un rango con varias celdas, el comando vincula el atributo a la primera celda del rango.
-- Si _rangeObj_ contiene varios rangos de celdas, el comando vincula el atributo a la primera celda de cada rango.
+- Si *rangeObj* es un rango con varias celdas, el comando vincula el atributo a la primera celda del rango.
+- Si *rangeObj* contiene varios rangos de celdas, el comando vincula el atributo a la primera celda de cada rango.
 
-En _dataContextAttribute_, pase el nombre del atributo a vincular a _rangeObj_. Si _dataContextAttribute_ es una cadena vacía, la función elimina el enlace actual.
+En *dataContextAttribute*, pase el nombre del atributo a vincular a *rangeObj*. Si *dataContextAttribute* es una cadena vacía, la función elimina el enlace actual.
 
 > Los atributos de tipo colección no están soportados. Cuando se pasa el nombre de un atributo de la colección, el comando no hace nada.
 

@@ -13,7 +13,7 @@ title: VP EXPORT DOCUMENT
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Syntax -->
 
-**VP EXPORT DOCUMENT** ( _vpAreaName_ : Text ; _filePath_ : Text {; _paramObj_ : Object} )<!-- END REF -->
+**VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )<!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
@@ -25,11 +25,11 @@ title: VP EXPORT DOCUMENT
 
 #### Description
 
-The `VP EXPORT DOCUMENT` command <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area _vpAreaName_ to a document on disk according to the _filePath_ and _paramObj_ parameters<!-- END REF -->.
+The `VP EXPORT DOCUMENT` command <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area *vpAreaName* to a document on disk according to the *filePath* and *paramObj* parameters<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-In _filePath_, pass the destination path and name of the document to be exported. Si vous ne spécifiez pas de chemin, le document sera sauvegardé au même niveau que le dossier Projet.
+In *filePath*, pass the destination path and name of the document to be exported. Si vous ne spécifiez pas de chemin, le document sera sauvegardé au même niveau que le dossier Projet.
 
 Vous pouvez préciser le format du document en incluant une extension après son nom :
 
@@ -39,13 +39,13 @@ Vous pouvez préciser le format du document en incluant une extension après son
 - CSV (".txt", or ".csv")
 - [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
-If the extension is not included, but the format is specified in _paramObj_, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
+If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
-The optional _paramObj_ parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
+The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
 
 | Propriété            | Type                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format               | text                        | (optionnel) S'il est présent, désigne le format du fichier exporté : ".4vp" (par défaut), ".csv", ".xlsx", ".pdf", ou ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in _filePath_, it will be added to the end of _filePath_. If a format is not specified and no extension is provided in _filePath_, the default file format is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| format               | text                        | (optionnel) S'il est présent, désigne le format du fichier exporté : ".4vp" (par défaut), ".csv", ".xlsx", ".pdf", ou ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | password             | text                        | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger le document MS Excel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | formula              | 4D.Function | Méthode callback à lancer lorsque l'export est terminé. L'utilisation d'une méthode callback est nécessaire lorsque l'export est asynchrone (ce qui est le cas pour les formats PDF et Excel) si vous avez besoin d'un code à exécuter après l'export. The callback method must be passed with the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | valuesOnly           | boolean                     | Précise que seules les valeurs issues de formules (le cas échéant) seront exportées.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -60,38 +60,38 @@ The optional _paramObj_ parameter allows you to define multiple properties for t
 **Notes about Excel format**:
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about PDF format**:
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, les polices utilisées dans le document sont automatiquement intégrées dans le fichier PDF. Seules les polices OpenType (fichiers .OTF ou .TTF) ayant une table Unicode peuvent être intégrées. Si aucun fichier de polices valide n'est trouvé pour une police, une police par défaut est utilisée à sa place.
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about CSV format**:
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, certains paramètres peuvent être perdus, car seuls le texte et les valeurs sont sauvegardés.
 - Toutes les valeurs sont enregistrées sous la forme de chaînes entre guillemets. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about SpreadJS file format**:
 
 - [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
-Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the _formula_ property of the _paramObj_, if used.
+Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
 #### Passer une méthode callback (formula)
 
-When including the optional _paramObj_ parameter, the command allows you to use the [`Formula`](../../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. La méthode callback recevra les valeurs suivantes dans des variables locales :
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. La méthode callback recevra les valeurs suivantes dans des variables locales :
 
 | Paramètres |                               | Type    | Description                                              |
 | ---------- | ----------------------------- | ------- | -------------------------------------------------------- |
 | param1     |                               | text    | Nom de l'objet 4D View Pro                               |
 | param2     |                               | text    | Chemin d'accès de l'objet 4D View Pro exporté            |
-| param3     |                               | object  | A reference to the command's _paramObj_                  |
+| param3     |                               | object  | A reference to the command's *paramObj*                  |
 | param4     |                               | object  | Objet retourné par la méthode avec un message de statut  |
 |            | .success      | boolean | Vrai si l'export est réussi, Faux sinon. |
-|            | .errorCode    | entier  | Code d'erreur.                           |
+|            | .errorCode    | integer | Code d'erreur.                           |
 |            | .errorMessage | text    | Message d'erreur.                        |
 
 #### Exemple 1
@@ -132,7 +132,7 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
-_**AfterExport**_ method:
+***AfterExport*** method:
 
 ```4d
  #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )

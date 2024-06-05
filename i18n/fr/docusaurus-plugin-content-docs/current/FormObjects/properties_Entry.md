@@ -31,14 +31,15 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 
 - **Fonts...**: displays the font system dialog box
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
-- commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+- commands for supported style modifications: font, size, style, color and background color.
+  When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                     |
-| ----------- | --------------- | ------------------------------------- |
+| Nom         | Type de données | Valeurs possibles                                        |
+| ----------- | --------------- | -------------------------------------------------------- |
 | contextMenu | string          | "automatic" (used if missing), "none" |
 
 #### Objets pris en charge
@@ -63,7 +64,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objets pris en charge
 
-[Zones 4D Write Pro](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Barre de progression](progressIndicator.md) - [Règle](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -90,32 +91,32 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Ce tableau décrit les filtres de saisie du menu de sélection :
 
-| Filtres de saisie               | Description                                                                                                                                                 |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                              | Permet la saisie de toute lettre, mais les transforme en caractères majuscules.                                                                             |
-| &9                              | Permet tout chiffre.                                                                                                                                        |
-| &A                              | Ne permet que la saisie de lettres majuscules.                                                                                                              |
-| &a                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                              |
-| &@                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                          |
-| ~a##                            | State name abbreviation (e.g., CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                                         |
-| !0&9##/##/##                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                        |
+| Filtres de saisie                                                                                   | Description                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                                                                                  | Permet la saisie de toute lettre, mais les transforme en caractères majuscules.                                                                                                                             |
+| &9                                                                              | Permet tout chiffre.                                                                                                                                                                                        |
+| &A                                                                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                                              |
+| &A                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                           |
+| &3                                                                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                          |
+| ~a##                                                                                | State name abbreviation (e.g., CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                      |
+| !0&9##/##/##                                                                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                        |
 | !0&9 Day: ## Month: ## Year: ## | Time entry format. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Limited to hours and minutes.                            |
-| !0&9##:##                       | Filtre de saisie d’heure. Limited to hours and minutes. Affiche des zéros aux emplacements de saisie. Affiche des zéros aux emplacements de saisie.         |
-| !0&9## Hrs ## Mins ## Secs      | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Allow any two numbers before each word.                                             |
-| !0&9Hrs: ## Mins: ## Secs: ##   | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Allow any two numbers after each word.                                              |
-| !0&9##-##-##-##                 | Local telephone number format. Affiche des zéros aux emplacements de saisie. Allow any number. Three entries, hyphen, four entries.                         |
-| !_&9(###)!0###-####             | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                        |
-| !0&9###-###-###                 | Long distance telephone number. Affiche des zéros aux emplacements de saisie. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                  | Social Security number. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                     |
-| ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                               |
-| &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                        |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                      |
+| !0&9##:##                                                       | Filtre de saisie d’heure. Limited to hours and minutes. Affiche des zéros aux emplacements de saisie. Affiche des zéros aux emplacements de saisie.         |
+| !0&9## Hrs ## Mins ## Secs                                                      | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Allow any two numbers before each word.                                                             |
+| !0&9Hrs: ## Mins: ## Secs: ##   | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Allow any two numbers after each word.                                                              |
+| !0&9##-##-##-##                                                                 | Local telephone number format. Affiche des zéros aux emplacements de saisie. Allow any number. Three entries, hyphen, four entries.                         |
+| !_&9(###)!0###-####                     | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                                                        |
+| !0&9###-###-###                                                                 | Long distance telephone number. Affiche des zéros aux emplacements de saisie. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
+| !0&9###-##-###                                                                  | Social Security number. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                     |
+| ~"A-Z;0-9; ;,;.;-"                                                  | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                                               |
+| &"a-z;0-9; ;,;.;-"                                              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                                        |
+| &"0-9;.;-"                                                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                                   |
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                    |
-| ----------- | --------------- | ---------------------------------------------------- |
-| entryFilter | string          | <li>Entry filter code</li> ou <li>Entry filter name (filter names start with &#124; )</li> |
+| Nom         | Type de données | Valeurs possibles                                                                          |
+| ----------- | --------------- | ------------------------------------------------------------------------------------------ |
+| entryFilter | string          | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
 
 #### Objets pris en charge
 
@@ -157,8 +158,8 @@ By default, the object uses the current keyboard layout.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                                           |
-| --------------- | --------------- | --------------------------------------------------------------------------- |
+| Nom             | Type de données | Valeurs possibles                                                                           |
+| --------------- | --------------- | ------------------------------------------------------------------------------------------- |
 | keyboardDialect | text            | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 #### Objets pris en charge
@@ -174,13 +175,13 @@ Cette propriété est disponible pour les [objets de zone de saisie](input_overv
 #### Automatique
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques :  
+- In multiline inputs, 4D carries out automatic line returns:\
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Non
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si le champ ou la variable alpha ou texte contient des retour chariots, le texte situé après le premier retour chariot est effacé dès que la zone est modifiée :  
+- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Oui
@@ -189,13 +190,13 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                   |
-| --------- | --------------- | --------------------------------------------------- |
+| Nom       | Type de données | Valeurs possibles                                                      |
+| --------- | --------------- | ---------------------------------------------------------------------- |
 | multiline | text            | "yes", "no", "automatic" (par défaut si non défini) |
 
 #### Objets pris en charge
 
-[Zone de saisie](input_overview.md)
+[Input](input_overview.md)
 
 ---
 
@@ -216,15 +217,16 @@ A placeholder can be displayed for the following types of data:
 
 You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
 
- :xliff:PH_Lastname
+:xliff:PH_Lastname
 
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
+
 > You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                  |
-| ----------- | --------------- | ------------------------------------------------------------------ |
+| Nom         | Type de données | Valeurs possibles                                                                     |
+| ----------- | --------------- | ------------------------------------------------------------------------------------- |
 | placeholder | string          | Texte à afficher (grisé) lorsque l'objet ne contient aucune valeur |
 
 #### Objets pris en charge
@@ -233,7 +235,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Voir également
 
-[Message d'aide](properties_Help.md)
+[Help tip](properties_Help.md)
 
 ---
 
@@ -260,20 +262,21 @@ This property allows setting special meaning keys (keyboard shortcuts) for [butt
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
+
 > You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                  |
-| --------------- | --------------- | -------------------------------------------------- |
-| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)           |
-| shortcutAlt     | boolean         | true, false                                        |
-| shortcutCommand | boolean         | true, false                                        |
-| shortcutControl | boolean         | true, false (macOS Control)                        |
-| shortcutShift   | boolean         | true, false                                        |
-|                 |                 |                                                    |
+| Nom             | Type de données | Valeurs possibles                                                                                                                                                                                                                                         |
+| --------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                               |
+| shortcutAlt     | boolean         | true, false                                                                                                                                                                                                                                               |
+| shortcutCommand | boolean         | true, false                                                                                                                                                                                                                                               |
+| shortcutControl | boolean         | true, false (macOS Control)                                                                                                                                                                                                            |
+| shortcutShift   | boolean         | true, false                                                                                                                                                                                                                                               |
+|                 |                 |                                                                                                                                                                                                                                                           |
 | shortcutKey     | string          | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objets pris en charge

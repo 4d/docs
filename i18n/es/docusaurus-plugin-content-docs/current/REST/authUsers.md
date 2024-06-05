@@ -10,8 +10,7 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 > - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
 > - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
-
-## User login modes
+## Modos de inicio de sesión de usuario
 
 El modo de inicio de sesión del usuario le permite controlar cómo las peticiones REST adquieren licencias 4D Client. Puedes elegir entre dos modos de inicio de sesión de usuario: "predeterminado" o "inicio de sesión forzado".
 
@@ -32,13 +31,12 @@ In Qodly Studio for 4D, the mode can be set using the [**Force login** option](.
 
 :::
 
-
 ### Modo por defecto
 
-In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor. When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
+In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor.
+When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
 
-
-### Force login mode
+### Forzar el modo de inicio de sesión
 
 En el modo "inicio de sesión forzada", el uso de la licencia está desconectado de las sesiones de usuario web. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
@@ -65,14 +63,13 @@ Descriptive REST requests can be processed in web user sessions that do not requ
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
-
 ### `Function authentify`
 
 #### Sintaxis
 
 ```4d
 exposed Function authentify({params : type}) {-> result : type}
-    // código
+	// code
 ```
 
 The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request.
@@ -81,13 +78,12 @@ This function is the only available entry point from REST guest sessions when th
 
 The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
 
-This function should contain two parts:
+Esta función debe contener dos partes:
 
 - algún código para identificar y autenticar al remitente de la petición REST,
 - if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that assigns appropriate privileges to the session.
 
 If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent non-descriptive REST requests are rejected.
-
 
 #### Ejemplo
 
@@ -98,22 +94,21 @@ exposed Function authentify($credentials : Object) : Text
 
 var $users : cs.UsersSelection
 var $user : cs.UsersEntity
-
+	
 $users:=ds.Users.query("name = :1"; $credentials.name)
 $user:=$users.first()
 
 If ($user#Null) //the user is known
-    If (Verify password hash($credentials.password; $user.password))
-        Session.setPrivileges("vip")
-    Else 
+	If (Verify password hash($credentials.password; $user.password))
+		Session.setPrivileges("vip")
+	Else 
 
-        return "Wrong password"
-    End if 
+		return "Wrong password"
+	End if 
 Else 
         return "Wrong user"
 End if 
 ```
-
 
 Para llamar a la función `authentify()`:
 
@@ -126,30 +121,25 @@ Cuerpo de la petición:
 "password":"123"}]
 ```
 
-
-
 ## Using `On REST Authentication`
 
 In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
 
 Si no se ha definido el método base `On REST Authentication`, se abre una sesión `guest`.
 
-
-
 ### Ejemplo
 
-En este ejemplo, el usuario introduce su correo electrónico y contraseña en una página html que solicita [`$directory/login`]($directory.md#directorylogin) en un POST (se recomienda utilizar una conexión HTTPS para enviar la página html). Se llama al método base `On REST Authentication` para validar las credenciales y establecer la sesión.
+In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). Se llama al método base `On REST Authentication` para validar las credenciales y establecer la sesión.
 
 Página de inicio de sesión HTML:
 
 ![alt-text](../assets/en/REST/login.png)
 
-
 ```html
 <html><body bgcolor="#ffffff">
 
 <div id="demo">
-    <FORM name="myForm">
+	<FORM name="myForm">
 Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
 Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <button type="button" onclick="onClick()">
@@ -162,7 +152,7 @@ Login
 <script>
 function sendData(data) {
   var XHR = new XMLHttpRequest();
-
+  
   XHR.onreadystatechange = function() {
     if (this.status == 200) {      
       window.location = "authenticationOK.shtml"; 
@@ -171,13 +161,13 @@ function sendData(data) {
       document.getElementById("authenticationFailed").style.visibility = "visible";
       }
   };
-
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //dirección del servidor rest
-
+  
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+  
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
   XHR.setRequestHeader('session-4D-length', data.timeout);
-
+  
   XHR.send();
 };
 function onClick()
@@ -191,14 +181,14 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 Cuando la página de inicio de sesión se envía al servidor, se llama al método base `On REST Authentication`:
 
 ```4d
-    //On REST Authentication
+	//On REST Authentication
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-    //Una URL '/rest' ha sido llamada con los encabezados username-4D y password-4D
+	//A '/rest' URL has been called with headers username-4D and password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
@@ -229,6 +219,3 @@ Use (Session.storage)
     End if 
 End use
 ```
-
-
-

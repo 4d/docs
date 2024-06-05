@@ -3,7 +3,6 @@ id: clientServer
 title: Gestión Cliente/Servidor
 ---
 
-
 Las aplicaciones 4D Desktop pueden utilizarse en una configuración Cliente/Servidor, ya sea como aplicaciones combinadas cliente/servidor o como proyectos remotos.
 
 - Las **aplicaciones cliente/servidor fusionadas** son generadas por el [gestor de creación de aplicaciones](building.md#clientserver-page). Se utilizan para el despliegue de aplicaciones.
@@ -58,9 +57,9 @@ Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá 
 
 ### Actualización de los archivos del proyecto en el servidor
 
-4D Server crea y envía automáticamente a las máquinas remotas una versión [.4dz](building.md#build-compiled-structure) del archivo proyecto *.4DProject* (no comprimido) en modo interpretado.
+4D Server crea y envía automáticamente a las máquinas remotas una versión [.4dz](building.md#build-compiled-structure) del archivo proyecto _.4DProject_ (no comprimido) en modo interpretado.
 
-- Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, *es decir, *cuando el proyecto ha sido modificado y recargado por 4D Server. El proyecto se recarga:
+- Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, \*es decir, \*cuando el proyecto ha sido modificado y recargado por 4D Server. El proyecto se recarga:
   - automáticamente, cuando la ventana de la aplicación 4D Server pasa al frente del sistema operativo o cuando la aplicación 4D en la misma máquina guarda una modificación (ver abajo).
   - cuando se ejecuta el comando `RELOAD PROJECT`. Llamar a este comando es necesario cuando, por ejemplo, se ha sacado una nueva versión del proyecto desde la plataforma de control de fuentes.
 
@@ -86,18 +85,15 @@ Sin embargo, debe prestar atención a las siguientes diferencias de comportamien
 
 > No se recomienda instalar plug-ins o componentes a nivel de la aplicación 4D o 4D Server.
 
-
 ## Sesiones de usuarios remotos
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
-
+En el servidor, el comando [`Session`](../API/SessionClass.md#session) devuelve un objeto `session` que describe la sesión actual del usuario. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 ### Utilización
 
-The `session` object allows you to get information about the remote user session. You can share data between all processes of the user session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+El objeto `session` permite obtener información sobre la sesión del usuario remoto. Puede compartir datos entre todos los procesos de la sesión del usuario utilizando el objeto compartido [`session.storage`](../API/SessionClass.md#storage).
 
 For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
-
 
 ### Disponibilidad
 
@@ -115,5 +111,4 @@ Todos los procedimientos almacenados en el servidor comparten la misma sesión d
 
 ### Ver también (entrada de blog)
 
-[4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
-
+[Objeto sesión remota 4D con conexión cliente/servidor y procedimiento almacenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).

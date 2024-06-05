@@ -65,7 +65,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->|<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -83,7 +83,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.File`<!-- END REF -->. O comando aceita duas sintaxes:
 
-**File ( path { ; pathType } { ; * })**
+**File ( path { ; pathType } { ; \* })**
 
 No parâmetro *path* , passe um file path string. Pode utilizar uma string personalizada ou um sistema de ficheiros (por exemplo, "/DATA/myfile.txt").
 
@@ -96,7 +96,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 | fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
 | fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
 
-**File ( fileConstant { ; * } )**
+**File ( fileConstant { ; \* } )**
 
 No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, utilizando uma das constantes seguintes:
 
@@ -139,7 +139,7 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; * } ) : 4D. File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Descrição
 

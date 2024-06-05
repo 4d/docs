@@ -9,11 +9,11 @@ title: VP Convert to picture
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                         |                  |
-| ---------- | ------ | -- | --------------------------------------------------- | ---------------- |
-| vpObject   | Object | -> | Objeto 4D View Pro que contiene el área a convertir |                  |
-| rangeObj   | Object | -> | Objeto rango                                        |                  |
-| Result     | Object | <- | Imagen SVG del área                                 | <!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                         |                  |
+| ---------- | ------- | -- | --------------------------------------------------- | ---------------- |
+| vpObject   | Object  | -> | Objeto 4D View Pro que contiene el área a convertir |                  |
+| rangeObj   | Object  | -> | Objeto rango                                        |                  |
+| Result     | Picture | <- | Imagen SVG del área                                 | <!-- END REF --> |
 
 #### Descripción
 

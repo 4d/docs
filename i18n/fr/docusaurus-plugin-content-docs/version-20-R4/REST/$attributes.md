@@ -27,9 +27,9 @@ Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1))
 
 
 
-## Exemples avec plusieurs entités relatives
+## Exemple avec plusieurs entités liées
 
-Si nous passons la requête REST suivante pour la dataclasse Company (qui possède un attribut de relation "employees"):
+Si nous exécutons la requête REST suivante pour la dataclass Company (qui possède un attribut relatif "employees"):
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
@@ -73,7 +73,7 @@ Si vous souhaitez obtenir le nom de famille et les attributs de nom de poste des
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 
-## Exemples avec une entité relative
+## Exemple avec une entité liée
 
 Si nous passons la requête REST suivante pour la dataclass Employee (qui a plusieurs attributs relationnels, y compris "employer") :
 

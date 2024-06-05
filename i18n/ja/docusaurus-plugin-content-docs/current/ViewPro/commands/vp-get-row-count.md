@@ -5,7 +5,7 @@ title: VP Get row count
 
 <!-- REF #_method_.VP Get row count.Syntax -->
 
-**VP Get row count** ( _vpAreaName_ : Text {; _sheet_ : Integer } ) : Integer<!-- END REF -->
+**VP Get row count** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get row count.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get row count
 
 #### 説明
 
-`VP Get row count` コマンドは、<!-- REF #_method_.VP Get row count.Summary -->_sheet_ 引数で指定したシートにおける行の総数を返します<!-- END REF -->。
+`VP Get row count` コマンドは、<!-- REF #_method_.VP Get row count.Summary -->*sheet* 引数で指定したシートにおける行の総数を返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-任意の _sheet_ 引数にシートインデックス (0 起点) を指定することで、どのシートの行数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
+任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、どのシートの行数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
 #### 例題
 

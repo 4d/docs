@@ -3,7 +3,6 @@ id: webServerObject
 title: Webサーバーオブジェクト
 ---
 
-
 4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
 たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
@@ -19,12 +18,12 @@ title: Webサーバーオブジェクト
 > 4Dランゲージの従来の [WEBコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
 
 各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
+
 - `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
 - 4Dタグの処理とメソッドの呼び出し
 - Webセッションや TLSプロトコルの管理
 
 これにより、独自の Webインターフェースを備えた独立したコンポーネントや機能を開発することができます。
-
 
 ## Webサーバーオブジェクトのインスタンス化
 
@@ -38,16 +37,18 @@ $nbSrv:=WEB Server list.length
 Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](API/WebServerClass.md#web-server) コマンドを呼び出します。
 
 ```4d
-    // 4D.WebServer クラスのオブジェクト変数を作成します。
+	// 4D.WebServer クラスのオブジェクト変数を作成します。
 var webServer : 4D.WebServer 
-    // カレントコンテキストから Webサーバーを呼び出します
+	// カレントコンテキストから Webサーバーを呼び出します
 webServer:=WEB Server  
 
-    // 以下と同じです
+	// 以下と同じです
 webServer:=WEB Server(Web server database)
+
 ```
 
 アプリケーションがコンポーネントを使用している場合に:
+
 - コンポーネントからホストアプリケーションの Webサーバーを呼び出す場合や
 - リクエストを受け取ったサーバー (どのサーバーでも) を呼び出す場合
 
@@ -59,17 +60,17 @@ var webServer : 4D.WebServer
 webServer:=WEB Server(Web server host database)  
     // ターゲットの Webサーバーを呼び出す
 webServer:=WEB Server(Web server receiving request)  
-```
 
+```
 
 ## Webサーバー関数
 
 [Webサーバークラスのオブジェクト](API/webServerClass.md#webサーバーオブジェクト) には、以下の機能があります。
 
-| 関数                                       | 引数                | 戻り値             | 説明            |
-| ---------------------------------------- | ----------------- | --------------- | ------------- |
+| 関数                                       | 引数                                   | 戻り値                                | 説明            |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------- | ------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
-| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Webサーバーを停止します |
+| [`stop()`](API/WebServerClass.md#start)  | -                                    | *                                  | Webサーバーを停止します |
 
 Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/WebServerClass.md#start) および [`stop()`](API/WebServerClass.md#stop) 関数を呼び出すだけです。
 
@@ -83,8 +84,8 @@ webServer.start($settings)
 
     // Webサーバーを停止します
 $status:=webServer.stop()
-```
 
+```
 
 ## Webサーバープロパティ
 
@@ -99,8 +100,7 @@ Webサーバーオブジェクトには、Webサーバーを構成する [さま
 - Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
 - Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
 
-> *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
-
+> _isRunning_、_name_、_openSSLVersion_、_perfectForwardSecrecy_ は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
 
 ## 4D Webコマンドのスコープ
 

@@ -15,7 +15,6 @@ Les fautes de frappe sont détectées par l'éditeur de méthode. Elles sont aff
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
-
 Ces erreurs de frappe provoquent généralement des erreurs de syntaxe (dans l'image ci-dessus, le nom de la table est inconnu). Vous obtenez la description de l'erreur lorsque vous validez la ligne de code. Lorsque cela se produit, corrigez l'erreur de frappe et tapez Entrée pour valider la correction.
 
 ### Erreurs de syntaxe
@@ -34,8 +33,8 @@ Il peut arriver que la mémoire soit insuffisante pour créer une BLOB. Ou, lors
 
 Ce sont généralement les types d'erreurs les plus difficiles à trouver. À l'exception des erreurs de frappe, tous les types d'erreurs énumérés ci-dessus sont, dans une certaine mesure, couverts par l'expression "erreur de conception ou de logique". Utilisez le [débogueur](debugger.md) pour les détecter. Par exemple :
 
-- Une *erreur de syntaxe* peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
-- Une *erreur au niveau de l'Environnement* peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
+- Une _erreur de syntaxe_ peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
+- Une _erreur au niveau de l'Environnement_ peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
 
 Les erreurs de conception ou de logique comprennent également des situations telles que :
 
@@ -75,8 +74,8 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 - **Abandonner** : Stoppe l'exécution de la méthode et revient à l'état antérieur au début de l'exécution de la méthode :
 
-    - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
-    - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
+  - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
+  - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
 - **Copier** : Copie les informations de débogage dans le presse-papiers. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 

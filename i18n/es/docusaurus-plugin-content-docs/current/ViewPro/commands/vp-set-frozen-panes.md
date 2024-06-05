@@ -5,7 +5,7 @@ title: VP SET FROZEN PANES
 
 <!-- REF #_method_.VP SET FROZEN PANES.Syntax -->
 
-**VP SET FROZEN PANES** ( _vpAreaName_ : Text ; _paneObj_ : Object { ; _sheet_ : Integer } ) <!-- END REF -->
+**VP SET FROZEN PANES** ( *vpAreaName* : Text ; *paneObj* : Object { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
@@ -19,14 +19,14 @@ title: VP SET FROZEN PANES
 
 #### Descripción
 
-El comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->define el estado congelado de las columnas y filas del _paneObj_ para que se muestren siempre en el _vpAreaName_<!-- END REF -->. . Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
+El comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->define el estado congelado de las columnas y filas del *paneObj* para que se muestren siempre en el *vpAreaName*<!-- END REF -->. . Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
 
 - **Columnas a la izquierda o a la derecha**: para las columnas a la izquierda de la hoja, la línea se muestra a la derecha de la última columna congelada. Para las columnas situadas a la derecha de la hoja, la línea se muestra a la izquierda de la primera columna congelada.
 - **Líneas en la parte superior o inferior**: para las líneas en la parte superior de la hoja, la línea se muestra debajo de la última línea congelada. Para las líneas situadas en la parte inferior de la hoja, la línea se muestra sobre la primera línea congelada.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro _paneObj_. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
+Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
 | Propiedad           | Tipo    | Descripción                                                    |
 | ------------------- | ------- | -------------------------------------------------------------- |
@@ -35,7 +35,7 @@ Puede pasar un objeto que defina las columnas y líneas a congelar en el paráme
 | rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
 | trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
-En el parámetro opcional _sheet_, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
+En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
 - `vk current sheet`
 

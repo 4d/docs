@@ -473,10 +473,10 @@ La fonction renvoie la valeur Null si *index* est au-delà des limites de l'enti
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1" ; "H@")
-$emp1:=$employees.at(2) //3e entité de l'entity selection $employees 
-$emp2:=$employees.at(-3) //en partant de la fin, 3e entité
-    //de l'entity selection $employees
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
 ```
 
 <!-- END REF -->
@@ -809,7 +809,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
 | Paramètres | Type       |    | Description                                                              |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| attribute  | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès  |
+| attribut   | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès  |
 | Résultat   | Collection | <- | Nouvelle collection avec les chemins distincts<!-- END REF -->
 
 
@@ -1908,7 +1908,7 @@ Vous trouverez plus d'exemples de requêtes dans la page [`.query()`](DataClassC
 
 La propriété `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contient une description détaillée de la requête telle qu'elle a été effectuée par 4D<!-- END REF -->. Cette propriété est disponible pour les objets de type `EntitySelection` générés via des recherches si la propriété `"queryPath":true` a été passée dans le paramètre *querySettings* de la fonction [`.query()`](#query).
 
-Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings** de la fonction de dataclass [`.query()`](DataClassClass.html#query).
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
 
 <!-- END REF -->
 

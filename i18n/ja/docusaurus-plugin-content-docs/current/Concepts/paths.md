@@ -11,7 +11,6 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 さらに、ファイルおよびフォルダーオブジェクトは、アプリケーションの主なフォルダーへのコンテキストパスを提供する `filesystem` をサポートしています。
 
-
 ## filsystemパス名
 
 4D は、macOS および Windows上で様々な場所にある特定の 4Dフォルダーを指定するいくつかの "filesystem" パス名を受け取ります。 filesystemパス名の使用は、主に二つの理由から有用です:
@@ -21,14 +20,14 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 以下の filesystemパス名がサポートされています:
 
-| filesystem   | 指定先                                   |
-| ------------ | ------------------------------------- |
-| "/DATA"      | カレントデータフォルダー                          |
-| "/LOGS"      | Logs フォルダー                            |
+| filesystem   | 指定先                                                      |
+| ------------ | -------------------------------------------------------- |
+| "/DATA"      | カレントデータフォルダー                                             |
+| "/LOGS"      | Logs フォルダー                                               |
 | "/PACKAGE"   | プロジェクトのルートフォルダー (拡張子 4dbase の有無に関わらず) |
-| "/PROJECT"   | Project フォルダー                         |
-| "/RESOURCES" | カレントプロジェクトの Resources フォルダー           |
-| "/SOURCES"   | カレントプロジェクトの Sources フォルダー             |
+| "/PROJECT"   | Project フォルダー                                            |
+| "/RESOURCES" | カレントプロジェクトの Resources フォルダー                              |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー                                |
 
 ## POSIX シンタックス
 
@@ -46,9 +45,6 @@ POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) 
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
-
-
-
 
 ## プラットフォーム特有のシンタックス
 
@@ -73,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 4Dランゲージでは [エスケープシーケンス](quick-tour.md#エスケープシーケンス) を使用できます。 エスケープシーケンスはバックスラッシュ (`\`: 日本語フォント環境では円マーク) で始まり、その後に文字が続きます。 たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
 
-Windows では、`\` 文字をパスの区切り文字としても使用するため、Windows のパス名を入力するにはダブルバックスラッシュ `\` を使用します。
+Windows では、`\` 文字をパスの区切り文字としても使用するため、Windows のパス名を入力するにはダブルバックスラッシュ `\\` を使用します。
 
 ### macOS
 
@@ -96,7 +92,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() // ボリュームの名
 [`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
 
 ```4d
-    //ERROR
+//ERROR
 $ko:=Folder("myFolder").create() // コンストラクターで相対パス名を使用しています
 ```
 
@@ -120,21 +116,20 @@ $ok:=Folder(fk desktop folder).folder("myFolder").create()
 
 絶対パス名はサポートされておらず、エラーを返します。
 
-
 ## 例題
 
 File および Folder のコマンドや関数により、以下の例題のように様々な方法でファイルやフォルダーを管理することが可能になります:
 
 ```4d
 $f:=Folder(fk desktop folder).folder("archive/jan2019")
-
+ 
 $f2:=Folder("/DATA/archive/jan2019").file("total.txt")
-
+ 
 $f3:=Folder("/DATA/archive/jan2019")
-
+ 
 $f4:=File("/DATA/info.txt")
-
+ 
 $f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
-
+ 
 $f6:=File(fk backup log file)
 ```

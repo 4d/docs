@@ -21,7 +21,7 @@ A variant type variable can contain a value of the following data types:
 - null
 - undefined
 
-> Arrays cannot be stored in variant variables. 
+> Arrays cannot be stored in variant variables.
 
 In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
 
@@ -48,16 +48,16 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant can be used to declare method parameters ($0, $1,...) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:
+Variant can be used to declare [method parameters](parameters.md) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:
 
 ```4d
-C_VARIANT($1)
+#DECLARE ($param : Variant)
 Case of
-: (Value type($1)=Is longint)
+: (Value type($param)=Is longint)
 ...
-: (Value type($1)=Is text)
+: (Value type($param)=Is text)
 ...
 End case
 ```
 
-> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
+> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types.

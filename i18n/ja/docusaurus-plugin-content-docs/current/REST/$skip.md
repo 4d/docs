@@ -1,10 +1,9 @@
 ---
 id: skip
-title: '$skip'
+title: $skip
 ---
 
-エンティティセレクション内で、この数値によって指定されたエンティティから処理を開始します (*例*: `$skip=10`)
-
+エンティティセレクション内で、この数値によって指定されたエンティティから処理を開始します (_例_: `$skip=10`)
 
 ## 説明
 
@@ -16,4 +15,4 @@ title: '$skip'
 
 エンティティセットの20番目のエンティティ以降を取得します:
 
- `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`
+`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`

@@ -13,7 +13,7 @@ Cadena es un término genérico utilizado para:
 Una constante literal de tipo cadena se encierra entre comillas dobles y rectas ("..."). Estos son algunos ejemplos:
 
 ```4d
-"Añadir registros"
+"Añadir Registros"
 "No se han encontrado registros."
 "Factura"
 ```
@@ -24,39 +24,39 @@ Una cadena vacía se especifica con dos comillas sin nada entre ellas ("").
 
 Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
-| Secuencias de escape | Carácter reemplazado |
-| -------------------- | -------------------- |
-| \n                  | LF (Retorno línea)   |
-| \t                  | HT (Tabulación)      |
-| \r                  | CR (Retorno carro)   |
-| \\\               | \ (Barra invertida) |
-| \\"                | " (Comillas)         |
+| Secuencias de escape                           | Carácter reemplazado                  |
+| ---------------------------------------------- | ------------------------------------- |
+| \n                                             | LF (Retorno línea) |
+| \t                                             | HT (Tabulación)    |
+| \r                                             | CR (Retorno carro) |
+| \\\\|\ (Barra invertida) |                                       |
+| \\"                                          | " (Comillas)       |
 
 **Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
 
 ## Operadores de cadenas
 
-| Operación              | Sintaxis         | Devuelve | Expression              | Valor    |
-| ---------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"           | "abcdef" |
-| Repetición             | Cadena * Número  | String   | "ab" * 3                | "ababab" |
-| Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"           | True     |
-|                        |                  |          | "abc" = "abd"           | False    |
-| Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"           | True     |
-|                        |                  |          | "abc" # "abc"           | False    |
-| Mayor que              | Cadena > Cadena  | Boolean  | "abd" > "abc"           | True     |
-|                        |                  |          | "abc" > "abc"           | False    |
-| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"           | True     |
-|                        |                  |          | "abc" < "abc"           | False    |
-| Mayor o igual que      | Cadena >= Cadena | Boolean  | "abd" >= "abc"          | True     |
-|                        |                  |          | "abc" >= "abd"          | False    |
-| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd"          | True     |
-|                        |                  |          | "abd" <= "abc"          | False    |
-| Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
-|                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                        | Imagen % Cadena  | Boolean  | Picture_expr % "Mer"    | True (*) |
+| Operación              | Sintaxis         | Devuelve | Expression                                | Valor                        |
+| ---------------------- | ---------------- | -------- | ----------------------------------------- | ---------------------------- |
+| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"                             | "abcdef"                     |
+| Repetición             | Cadena \* Número | String   | "ab" \* 3                                 | "ababab"                     |
+| Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"                             | True                         |
+|                        |                  |          | "abc" = "abd"                             | False                        |
+| Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"                             | True                         |
+|                        |                  |          | "abc" # "abc"                             | False                        |
+| Mayor que              | Cadena > Cadena  | Boolean  | "abd" > "abc"                             | True                         |
+|                        |                  |          | "abc" > "abc"                             | False                        |
+| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"                             | True                         |
+|                        |                  |          | "abc" < "abc"                             | False                        |
+| Mayor o igual que      | Cadena >= Cadena | Boolean  | "abd" >= "abc"                            | True                         |
+|                        |                  |          | "abc" >= "abd"                            | False                        |
+| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd"                            | True                         |
+|                        |                  |          | "abd" <= "abc"                            | False                        |
+| Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo"                   | True                         |
+|                        |                  |          | "Alpha Bravo" % "ravo"                    | False                        |
+|                        | Imagen % Cadena  | Boolean  | Picture_expr % "Mer" | True (\*) |
 
-(*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
+(\*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
 ## Comparaciones de cadenas
 
@@ -140,9 +140,10 @@ A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave 
      "Alpha,Bravo,Charlie"%"Alpha" // Devuelve True
      "Software and Computers"%"comput@" // Devuelve True
 ```
+
 > **Notas:**
-> 
-> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas aplicadas, consulte la siguiente dirección: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+>
+> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas implementadas, por favor consulte la siguiente dirección: http://www.unicode.org/reports/tr29/#Word_Boundaries.
 > - En la versión japonesa, en lugar de ICU, 4D utiliza por defecto Mecab para detectar las palabras claves.
 
 ## Símbolos de indice de cadena
@@ -162,13 +163,15 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//El siguiente ejemplo comprueba si el último caracter de vtText es una arroba "@". If(vtText#"")
+//El siguiente ejemplo prueba si el último carácter de vtText es una arroba "@"
+ If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
-
-  //Using the character reference syntax, you would write in a simpler manner: If(vtText#"")
+ 
+  //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
+ If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
     End if
@@ -184,8 +187,7 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 - Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. Por ejemplo, ejecutando el siguiente código:
 
 ```
-//Muy malo y desagradable, ¡Boo!
- //Very bad and nasty thing to do, boo!
+//Muy mala y desagradable cosa que hacer, ¡buu!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
@@ -200,9 +202,9 @@ El siguiente método proyecto pone en mayúsculas el primer carácter de cada pa
 
 ```4d
   //Método proyecto Capitalize_text
-  //Capitalize_text ( Texto ) -> Texto
-  //Capitalize_text ( Texto fuente ) -> Texto en mayúsculas
-
+  //Capitalize_text ( Text ) -> Text
+  //Capitalize_text ( Source text ) -> Capitalized text
+ 
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

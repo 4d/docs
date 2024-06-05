@@ -6,7 +6,7 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
 #### Gramática JSON
 
@@ -24,7 +24,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 Define a cor de fundo de um objeto.
 
-In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
+No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
 
 #### Gramática JSON
 
@@ -34,7 +34,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### Objectos suportados
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Lista hierárquica](list_overview.md) - [Caixa de listagem](listbox_overview.md) - [Coluna](listbox_overview.md#list-box-columns) de caixa de listagem - [Rodapé de caixa de lista](listbox_overview.md#list-box-footers) gem - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Veja também
 
@@ -46,10 +46,10 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 `List box de tipo coleção e seleção de entidades`
 
-An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
-> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+> Com caixas de listagem do tipo de seleção de coleção ou entidade, essa propriedade também pode ser definida usando uma [expressão de metainformação](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
@@ -97,7 +97,7 @@ Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e branc
 
 ## Esconder linhas em branco extras
 
-Controls the display of extra blank rows added at the bottom of a list box object. Por defeito, 4D adiciona essas linhas extra para preencher a área vazia:
+Controla a exibição de linhas em branco extras adicionadas na parte inferior de um objeto de caixa de listagem. Por defeito, 4D adiciona essas linhas extra para preencher a área vazia:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
@@ -133,7 +133,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 | ------ | ------------- | ---------------------------------------- |
 | stroke | string        | um valor css, "transparent", "automatic" |
 
-> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+> Essa propriedade também está disponível para objetos baseados em texto e, nesse caso, ela designa a cor da fonte e as linhas do objeto; consulte [Cor da fonte](properties_Text.md#font-color).
 
 #### Objectos suportados
 
@@ -161,11 +161,11 @@ Designa a espessura de uma linha.
 
 `List box de tipo array`
 
-The name of an array to apply a custom background color to each row of the list box or column.
+O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
-Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
 
-For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
+Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada de cinza/cinza claro, definida nas propriedades da caixa de listagem. Um array de cor de fundo também foi definida para a caixa de listagem, a fim de mudar a cor das linhas em que pelo menos um valor é negativo para laranja claro:
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // laranja
@@ -174,7 +174,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-De seguida, deve colorir as células com valores negativos a laranja-escuro. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+De seguida, deve colorir as células com valores negativos a laranja-escuro. Para fazer isso, você define uma matriz de cores de fundo para cada coluna, por exemplo, `<>_BgndColor_1`, `<>_BgndColor_2` e `<>_BgndColor_3`. Os valores dessas arrays têm prioridade sobre os valores definidos nas propriedades da caixa de listagem, bem como sobre os valores do array geral de cores de fundo:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // laranja escura
@@ -185,7 +185,7 @@ De seguida, deve colorir as células com valores negativos a laranja-escuro. To 
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
 
 #### Gramática JSON
 
@@ -195,13 +195,13 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de fundo alternativa](#alternate-background-color) ou [cor de fundo](#background-color-fill-color) definida para a coluna é ignorada.
 
 #### Gramática JSON
 

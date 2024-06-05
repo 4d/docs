@@ -3,10 +3,9 @@ id: propertiesBackgroundAndBorder
 title: 背景色と境界線
 ---
 
-
 ## 交互に使用する背景色
 
-奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
+奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、_自動_ が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
 
 #### JSON 文法
 
@@ -24,7 +23,7 @@ title: 背景色と境界線
 
 オブジェクトの背景色を設定します。
 
-リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
+リストボックスの場合にはデフォルトで、_自動_ が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
 
 #### JSON 文法
 
@@ -46,9 +45,10 @@ title: 背景色と境界線
 
 `セレクションとコレクション型リストボックス`
 
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドの説明を参照ください。
+リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、_4Dランゲージリファレンス_ マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドの説明を参照ください。
 
 また、このプロパティは [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/ja/page1440.html) コマンドに `lk background color expression` 定数を指定して設定することもできます。
+
 > コレクション/エンティティセレクション型リストボックスでは、このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
 #### JSON 文法
@@ -75,7 +75,23 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[スピナー](spinner.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[テキストエリア](text.md) -
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -85,8 +101,8 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称              | データタイプ     | とりうる値                                              |
-| --------------- | ---------- | -------------------------------------------------- |
+| 名称              | データタイプ     | とりうる値                                                                                                                  |
+| --------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | strokeDashArray | 数値配列または文字列 | 例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
 
 #### 対象オブジェクト
@@ -119,11 +135,12 @@ title: 背景色と境界線
 
 ## 線カラー
 
-オブジェクトの線の色を指定します。 カラーは次の方法で指定できます:
+オブジェクトの線の色を指定します。
+カラーは次の方法で指定できます:
 
-* カラーネーム - 例: "red"
-* 16進数値 - 例: "#ff0000"
-* RGB値 - 例: "rgb(255,0,0)"
+- カラーネーム - 例: "red"
+- 16進数値 - 例: "#ff0000"
+- RGB値 - 例: "rgb(255,0,0)"
 
 このプロパティは [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドでも設定できます。
 

@@ -1,29 +1,27 @@
 ---
 id: distinct
-title: '$distinct'
+title: $distinct
 ---
 
-
-Devolve os valores distintos de um atributo específico numa coleção (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
-
+Devuelve los diferentes valores de un atributo específico en una colección (_por ejemplo_, `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## Descrição
 
-`$distinct` permite-lhe devolver uma coleção que contém os valores distintos de uma consulta sobre um atributo específico. Só pode ser especificado um atributo na dataclass. Geralmente, o tipo String é o melhor; no entanto, também pode ser utilizado em qualquer tipo de atributo que possa conter vários valores.
+`$distinct` permite devolver una colección que contiene los diferente valores de una petición sobre un atributo específico. Só pode ser especificado um atributo na dataclass. Geralmente, o tipo String é o melhor; no entanto, também pode ser utilizado em qualquer tipo de atributo que possa conter vários valores.
 
-Também pode utilizar `$skip` e `$top/$limit`, se pretender navegar na seleção antes de esta ser colocada num array.
+También puede utilizar `$skip` y `$top/$limit`, si desea navegar por la selección antes de colocarla en un array.
 
 ## Exemplo
+
 No nosso exemplo abaixo, queremos obter os valores distintos de um nome de empresa que começa com a letra "a":
 
- `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
+`GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Resposta**:
+**Response**:
 
-````
+```
 [
     "Adobe",
     "Apple"
 ]
-````
-
+```

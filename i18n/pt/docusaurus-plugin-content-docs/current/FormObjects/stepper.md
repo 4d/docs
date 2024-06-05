@@ -13,25 +13,21 @@ You can assign the variable associated with the object to an enterable area (fie
 
 Um stepper pode ser associado diretamente a uma variável número, hora ou data.
 
-* For values of the time type, the Minimum, Maximum and Step properties represent seconds. Por exemplo, para definir um passo de 8:00 a 18:00 com passos de 10 minutos:
-    * [mínimo](properties_Scale.md#minium) = 28 800 (8\*60\*60)
-    * [máximo](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
-    * [passo](properties_Scale.md#step) = 600 (10*60)
-* Para valores do tipo data, o valor introduzido na propriedade [passo](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.
+- For values of the time type, the Minimum, Maximum and Step properties represent seconds. Por exemplo, para definir um passo de 8:00 a 18:00 com passos de 10 minutos:
+  - [minimum](properties_Scale.md#minium) = 28 800 (8\*60\*60)
+  - [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
+  - [step](properties_Scale.md#step) = 600 (10\*60)
+- For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. As propriedades Mínimo e Máximo são ignoradas.
+
 > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variables.md#declaring-variables) as `Time` or `Date`.
 
 For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
 
 ## Propriedades compatíveis
-[Negrita](properties_Text.md#bold) - [Estilo da borda](properties_BackgroundAndBorder.md#Border-line-style) - [Fundo](properties_CoordinatesAndSizing.md#bottom) - \[Classe\](properties_Object. md#css-class) - [Colunas](properties_Crop.md#columns) - [Executar método objeto](properties_Action.md#execute-object-method) - \[Tipo de expressão\](properties_Object. md#expression-type) (só "inteiro", "número", "data" ou "hora") - [Altura](properties_CoordinatesAndSizing.md#height) - \[Conselho de ajuda\](properties_Help. md#help-tip) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - \[Máximo\](properties_Scale. md#maximum) - [Mínimo](properties_Scale.md#minimum) - [Nome de objeto](properties_Object.md#object-name) - \[Nome de objeto\](properties_Picture. md#pathname) - [Direita](properties_CoordinatesAndSizing.md#right) - [Linhas](properties_Crop.md#rows) - [Passo](properties_Scale.md#step) - \[Ação padrão\](properties_Action. md#standard-action) - [Acima](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - \[Variável ou expressão\](properties_Object.
 
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## Veja também
-- [indicadores de progresso](progressIndicator.md)
-- [regras](ruler.md)
 
-
-
-
-
-
+- [progress indicators](progressIndicator.md)
+- [rulers](ruler.md)

@@ -47,7 +47,7 @@ Toutes les formules ont des opérandes et des opérateurs :
 | [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (addition)<br/>- (soustraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
 | [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | * (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                                                                   |
 | [Time](Concepts/dt_time.md)       | 10:12:10                                                            | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>\* (duration \* number -> duration)<br/>/ (duration / number -> duration)                                                                                                                    |
-| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concatenation)                                                                                                                                                                                                                                                                                              |
+| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concaténation)                                                                                                                                                                                                                                                                                              |
 | [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                                                                       | -                                                                                                                                                                                                                                                                                                                                                     |
 
 ### Opérateurs de comparaison
@@ -182,7 +182,7 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
     :(Form event code=On Load)
        var $o : Object
        $o:=New object
-  // Define "vpHello" function from the "myMethod" method
+  // Définir la fonction "vpHello" à partir de la méthode "myMethod"
        $o.vpHello:=New object
        $o.vpHello.formula:=Formula(myMethod)
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)

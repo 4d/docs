@@ -21,7 +21,7 @@ The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summa
 
 Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
+No parâmetro opcional _sheet_, pode designar uma planilha específica (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
 #### Objeto devolvido
 

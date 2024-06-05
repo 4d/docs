@@ -91,7 +91,7 @@ When including the optional _paramObj_ parameter, the command allows you to use 
 | param3     |                               | object  | A reference to the command's _paramObj_                  |
 | param4     |                               | object  | Objet retourné par la méthode avec un message de statut  |
 |            | .success      | boolean | Vrai si l'export est réussi, Faux sinon. |
-|            | .errorCode    | entier  | Code d'erreur.                           |
+|            | .errorCode    | integer | Code d'erreur.                           |
 |            | .errorMessage | text    | Message d'erreur.                        |
 
 #### Exemple 1

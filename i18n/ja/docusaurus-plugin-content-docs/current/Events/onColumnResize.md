@@ -7,7 +7,6 @@ title: On Column Resize
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | 33  | [4D View Pro エリア](../FormObjects/viewProArea_overview.md) - [リストボックス](../FormObjects/listbox_overview.md) - [リストボックス列](../FormObjects/listbox_overview.md#リストボックス列) | ユーザーのマウス操作によって、またはフォームウィンドウのリサイズによって、カラムの幅が変更された |
 
-
 ## 説明
 
 ### リストボックス
@@ -20,13 +19,13 @@ title: On Column Resize
 
 このイベントはカラムの幅がユーザーによって変更されたときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | タイプ     | 説明                                                  |
-| ----------- | ------- | --------------------------------------------------- |
-| code        | longint | On Column Resize                                    |
-| description | text    | "On Column Resize"                                  |
-| objectName  | text    | 4D View Pro エリア名                                    |
-| sheetName   | text    | イベントが発生したシート名                                       |
-| range       | object  | 幅が変更されたカラムのセルレンジ                                    |
+| プロパティ       | タイプ     | 説明                                                                     |
+| ----------- | ------- | ---------------------------------------------------------------------- |
+| code        | longint | On Column Resize                                                       |
+| description | text    | "On Column Resize"                                                     |
+| objectName  | text    | 4D View Pro エリア名                                                       |
+| sheetName   | text    | イベントが発生したシート名                                                          |
+| range       | object  | 幅が変更されたカラムのセルレンジ                                                       |
 | header      | boolean | 行ヘッダーカラム (最初のカラム) がリサイズされた場合には true、それ以外の場合には false |
 
 #### 例題

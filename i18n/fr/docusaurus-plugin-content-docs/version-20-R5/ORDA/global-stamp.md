@@ -1,85 +1,79 @@
 ---
 id: global-stamp
-title: Using the Global Stamp
+title: Utiliser le marqueur global
 ---
-
-
 
 ## Vue d’ensemble
 
-4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.
+4D gère automatiquement un **marqueur de modification globale** interne, utile en cas d'implémentation d'un suivi des modifications de données, par exemple pour surveiller l'activité, la sauvegarde, la synchronisation incrémentielle, etc.
 
-The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
+Le marqueur de modification global est un nombre, toujours maintenu par 4D, même en cas de restitution de la base de données, d'importation, etc. Notez cependant que le marqueur peut être modifié par la fonction [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
 
-Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
+Une fois que le [suivi des changements de données est configuré et activé](#configuring-data-change-tracking), les actions suivantes sont automatiquement exécutées par 4D à chaque modification de l'enregistrement (ajout, modification, suppression) :
 
-1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity. In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
+1. La valeur courante du marqueur de modification globale est stockée dans l'attribut spécial "__GlobalStamp" de l'entité concernée.
+   En cas de suppression, une nouvelle entité est également ajoutée dans la table `__DeletedRecords` avec des informations à propos de l'entité supprimée et la valeur courante du marqueur de modification global est enregistrée dans l'attribut "__Stamp".
 
-2. The global modification stamp value is incremented.
+2. La valeur du marqueur de modification global est incrémentée.
 
-This mechanism allows you to identify entities that have been modified, added, or deleted since a point in time, and to implement any appropriate action (see example).
+Ce mécanisme vous permet d'identifier les entités qui ont été modifiées, ajoutées ou supprimées depuis un point dans le temps, et de mettre en œuvre toute action appropriée (voir exemple).
 
 :::info
 
-Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock).
+Ne confondez pas le **marqueur de modification global** avec le **marqueur interne d'entité**, utilisé pour la fonctionnalité de [verrouillage optimiste](entities.md#automatic-optimistic-lock).
 
 :::
 
+## Configuration du suivi des changements de données
 
+Par défaut, le marqueur de modification global n'est pas créé (la fonction [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retourne 0. Pour activer le suivi des changements de données, vous devez ajouter des champs spéciaux et une table à votre structure. Vous pouvez utiliser le menu contextuel de l'éditeur de structure pour créer automatiquement tous les éléments nécessaires.
 
-## Configuring data change tracking
+### Configuration de la structure
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
+Pour activer le suivi des changements de données, la structure de l'application doit contenir au moins une table avec un champ `__GlobalStamp`.
 
-### Structure requirements
+De plus, pour assurer la bonne marche de la fonctionnalité, les conditions suivantes sont requises :
 
-To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
+- Le champ `__GlobalStamp` doit être de type _Integer 64 bits_, avec _index automatique_, _Exposer comme ressource REST_, et _Invisible_ sélectionné.
+- Une table `__DeletedRecords` doit être ajoutée, avec les champs suivants :
 
-In addition, to ensure proper operation of the feature, the following conditions are required:
+| Champ                                                   | Type            | Description                                |
+| ------------------------------------------------------- | --------------- | ------------------------------------------ |
+| __PrimaryKey  | Text            | Clé primaire de l'entité supprimée         |
+| __Stamp       | Integer 64 bits | Marqueur global juste avant la suppression |
+| __TableName   | Text            | Nom de la table de l'entité supprimée      |
+| __TableNumber | Longint         | Numéro de la table de l'entité supprimée   |
 
-- The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
-- A `__DeletedRecords` table must be added, with the following fields:
-
-| Champ         | Type            | Description                           |
-| ------------- | --------------- | ------------------------------------- |
-| __PrimaryKey  | Text            | Primary key of the deleted entity     |
-| __Stamp       | Integer 64 bits | Global stamp just before the deletion |
-| __TableName   | Text            | Name of the deleted entity table      |
-| __TableNumber | Longint         | Number of the deleted entity table    |
-
-You can only track changes for data in tables having the `__GlobalStamp` field.
+Vous ne pouvez suivre que les changements de données dans les tables ayant le champ `__GlobalStamp`.
 
 :::note
 
-In the 4D language, the `__GlobalStamp` field value should be handled through a `Real` type variable.
+Dans le langage 4D, la valeur du champ `__GlobalStamp` doit être gérée par le biais d'une variable de type `Real`.
 
 :::
 
-### Using the Structure Editor
+### Utilisation de l'Editeur de structure
 
-The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
+L'Editeur de structure de 4D vous permet d'activer ou de désactiver le suivi du changement de données à l'aide d'une commande de menu.
 
-To enable data change tracking:
+Pour activer le suivi des changements de données :
 
-1. Select the table(s) for which you want to enable data change tracking.
-2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. Cliquez sur **OK**.
+1. Sélectionnez la ou les table(s) pour lesquelles vous souhaitez activer le suivi des changements de données.
+2. Faites un clic droit sur une table sélectionnée et choisissez **Activer le suivi du changement de données** dans le menu contextuel.
+3. Une boîte de dialogue de confirmation s'affiche. Cliquez sur **OK**.
 
-4D then makes the following changes:
+4D effectue alors les modifications suivantes :
 
-- A preconfigured `__GlobalStamp` field is added to the table(s).
-- If not already existing, a `__DeletedRecords` table is added to the structure.
+- Un champ `__GlobalStamp` préconfiguré est ajouté à la ou aux table(s).
+- Si elle n'existe pas déjà, une table `__DeletedRecords` est ajoutée à la structure.
 
+Pour désactiver le suivi des changements de données :
 
-To disable data change tracking:
+1. Sélectionnez la ou les table(s) pour lesquelles vous souhaitez supprimer le suivi des changements de données.
+2. Faites un clic droit sur une table sélectionnée et choisissez **Désactiver le suivi du changement de données** dans le menu contextuel.
+3. Une boîte de dialogue de confirmation s'affiche. Cliquez sur **OK**.
 
-1. Select the table(s) for which you want to remove data change tracking.
-2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. Cliquez sur **OK**.
-
-4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
-
-
+4D supprime alors le champ `__GlobalStamp` de la ou des table(s). Notez que si vous voulez supprimer la table `__DeletedRecords`, vous devez le faire manuellement.
 
 ## Exemple
 
@@ -91,13 +85,13 @@ var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
 $tableName:="Employee"
 $oldStamp:=... //load the previous stamp value  
-    //from which you want to compare the current stamp
+	//from which you want to compare the current stamp
 
 If ($oldStamp # ds.getGlobalStamp())
-        //get all new or modified entities
-    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
-        //get all deleted entities
-    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName)
+		//get all new or modified entities
+	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+		//get all deleted entities
+	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+	$oldStamp; $tableName)
 End if
 ```

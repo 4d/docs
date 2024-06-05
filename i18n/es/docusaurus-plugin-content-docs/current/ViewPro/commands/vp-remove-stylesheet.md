@@ -5,7 +5,7 @@ title: VP REMOVE STYLESHEET
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Syntax -->
 
-**VP REMOVE STYLESHEET** ( _vpAreaName_ : Text ; _styleName_ : Text { ; _sheet_ : Integer } ) <!-- END REF -->
+**VP REMOVE STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
@@ -17,20 +17,20 @@ title: VP REMOVE STYLESHEET
 
 #### Descripción
 
-The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->removes the style sheet passed in the _styleName_ from the _vpAreaName_<!-- END REF -->.
+The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->removes the style sheet passed in the *styleName* from the *vpAreaName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase la hoja de estilo a eliminar en el parámetro _styleName_.
+Pase la hoja de estilo a eliminar en el parámetro *styleName*.
 
-Puede definir dónde eliminar el estilo en el parámetro opcional _sheet_ utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
+Puede definir dónde eliminar el estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
 
 #### Ejemplo
 
-Para eliminar el objeto estilo _GreenDashDotStyle_ de la hoja actual:
+Para eliminar el objeto estilo *GreenDashDotStyle* de la hoja actual:
 
 ```4d
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")

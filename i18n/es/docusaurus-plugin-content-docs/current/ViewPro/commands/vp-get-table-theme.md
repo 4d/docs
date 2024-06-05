@@ -13,7 +13,7 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
 
-**VP Get table theme** ( _vpAreaName_ : Text ; _tableName_ : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
@@ -25,9 +25,9 @@ title: VP Get table theme
 
 #### Descripción
 
-El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->devuelve los valores actuales de las propiedades del tema de la tabla _tableName_<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
+El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->devuelve los valores actuales de las propiedades del tema de la tabla *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
 
-En\* vpAreaName\*, pase el nombre del área 4D View Pro y en _tableName_, el nombre de la tabla.
+En\* vpAreaName\*, pase el nombre del área 4D View Pro y en *tableName*, el nombre de la tabla.
 
 The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme.
 

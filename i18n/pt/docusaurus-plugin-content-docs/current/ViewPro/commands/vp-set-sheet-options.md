@@ -5,7 +5,7 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Syntax -->
 
-**VP SET SHEET OPTIONS** ( _vpAreaName_ : Text; _sheetOptions_ : Object { ; _sheet_ : Integer}  ) <!-- END REF -->
+**VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET SHEET OPTIONS
 
 #### Descrição
 
-O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir várias opções de planilha da área _vpAreaName_<!-- END REF -->.
+O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir várias opções de planilha da área *vpAreaName*<!-- END REF -->.
 
-Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-Passe um objeto que contenha definições para as opções a serem definidas no parâmetro _sheetOptions_. Para ver a lista completa das opções disponíveis, veja parágrafo [Opções de folha](../configuring.md#sheet-options).
+Passe um objeto que contenha definições para as opções a serem definidas no parâmetro *sheetOptions*. Para ver a lista completa das opções disponíveis, veja parágrafo [Opções de folha](../configuring.md#sheet-options).
 
-No parâmetro opcional _sheet_, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
 - `vk current sheet`
 

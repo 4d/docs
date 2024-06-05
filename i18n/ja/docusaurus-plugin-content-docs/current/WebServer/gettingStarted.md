@@ -5,7 +5,6 @@ title: Web 開発
 
 この章は、データベースのデータを扱う 4D Webサイトをゼロから作成する方法を知りたい、初心者ユーザーを対象としています。 さあ、始めましょう！
 
-
 ## Hello World 例題
 
 まずは、Webサーバーからブラウザーに向けて "Hello World" を送信するところから始めましょう。 もっとも簡単な方法は、プロジェクトを作成して Webサーバーを開始し、`On Web Connection` データベースメソッドにテキストを返す短いコードを書くことです。
@@ -37,10 +36,10 @@ title: Web 開発
 
 ```4d
 Case of 
-    : ($1="/hello")
-        WEB SEND TEXT("Hello World!")
-    Else 
-        // 404エラーなど
+	: ($1="/hello")
+		WEB SEND TEXT("Hello World!")
+	Else 
+		// 404エラーなど
 End case 
 ```
 
@@ -56,14 +55,14 @@ Webサーバーがリクエストを処理して次を返します:
 
 ![](../assets/en/WebServer/hello.png)
 
-
 ## データベースのデータを取得する
 
 次に、データベースからデータを取得するのが、いかに簡単か見てみましょう。 まず、テーブルを作成し、そこにデータを入力していきます。
 
 たとえば、数件のレコードを含む 1つのテーブルを持つ基本的なデータベースを作成します:
 
-![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
+![](../assets/en/WebServer/hello2.png)
+![](../assets/en/WebServer/hello3.png)
 
 ### ページへのデータ表示
 
@@ -95,8 +94,7 @@ http://localhost/friends.shtml
 
 ### RESTリクエスト
 
-データを *表示* するだけでなく、*使用* するには、ORDA と RESTサーバーを使うことができます。 [ORDAコンセプト](ORDA/overview.md) により、`Friends` テーブルは自動的にデータクラスにマッピングされ、[REST](REST/gettingStarted.md) を通じて利用可能です。
-
+データを _表示_ するだけでなく、_使用_ するには、ORDA と RESTサーバーを使うことができます。 [ORDAコンセプト](ORDA/overview.md) により、`Friends` テーブルは自動的にデータクラスにマッピングされ、[REST](REST/gettingStarted.md) を通じて利用可能です。
 
 1. RESTサーバーを使ってデータにアクセスしましょう: **ストラクチャー設定** ダイアログボックスで **Web** ＞ **Web機能** ページを選択し、**RESTサーバーとして公開** オプションをチェックします。
 
@@ -112,14 +110,14 @@ Webサーバーは結果を JSON で返します:
 
 ```json
 {
-    "__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
-    "dataClasses": [
-        {
-            "name": "Friends",
-            "uri": "/rest/$catalog/Friends",
-            "dataURI": "/rest/Friends"
-        }
-    ]
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
 }
 ```
 
@@ -137,53 +135,50 @@ http://localhost/rest/Friends
 
 ```json
 {
-    "__DATACLASS": "Friends",
-    "__entityModel": "Friends",
-    "__GlobalStamp": 0,
-    "__COUNT": 4,
-    "__FIRST": 0,
-    "__ENTITIES": [
-        {
-            "__KEY": "1",
-            "__TIMESTAMP": "2020-10-27T14:29:01.914Z",
-            "__STAMP": 1,
-            "ID": 1,
-            "lastName": "Smith",
-            "firstName": "John"
-        },
-        {
-            "__KEY": "2",
-            "__TIMESTAMP": "2020-10-27T14:29:16.035Z",
-            "__STAMP": 1,
-            "ID": 2,
-            "lastName": "Brown",
-            "firstName": "Danny"
-        },
-        {
-            "__KEY": "3",
-            "__TIMESTAMP": "2020-10-27T14:29:43.945Z",
-            "__STAMP": 1,
-            "ID": 3,
-            "lastName": "Purple",
-            "firstName": "Mark"
-        },
-        {
-            "__KEY": "4",
-            "__TIMESTAMP": "2020-10-27T14:34:58.457Z",
-            "__STAMP": 1,
-            "ID": 4,
-            "lastName": "Dupont",
-            "firstName": "Jenny"
-        }
-    ],
-    "__SENT": 4
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
 }
 ```
 
 この非常にシンプルな例では、Webサーバーが [RESTサーバー](REST/gettingStarted.md) と透過的に通信し、要求されたデータが公開されていればそれを返す様子を示しています。 返されたデータは、Webインターフェース内で javascript や html のコードと簡単に結びつけることができます。 データクラスにバインドされている、洗練された Webインターフェースの例として、ビルトインの [Webデータエクスプローラー](Admin/dataExplorer.md) を参照ください。
-
-
-
 
 ## ログインとセッション
 
@@ -193,8 +188,8 @@ http://localhost/rest/Friends
 
 4D Webサーバーにユーザーをログインさせる、もっともシンプルで安全な方法は、以下のシナリオに基づきます:
 
-- ユーザーは、専用の非公開テーブル (例: *WebUsers*) に保存されます。
-- [暗号化](MSC/encrypt.md) することも可能な *WebUsers* テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
+- ユーザーは、専用の非公開テーブル (例: _WebUsers_) に保存されます。
+- [暗号化](MSC/encrypt.md) することも可能な _WebUsers_ テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
 
 1. いくつかのフィールドを持つテーブルを作成します。たとえば:
 
@@ -214,15 +209,13 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-
-
 ### ユーザー認証
 
 > 通信が安全であるためには、接続は [https](webServerConfig.md#httpsを有効にする) で確立されている必要があります。
 
 1. エクスプローラーを開き、"login" というプロジェクトメソッドを作成します。
 
-3. 以下のコードを書きます:
+2. 以下のコードを書きます:
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -264,7 +257,6 @@ End if
 
 ![](../assets/en/WebServer/hello0.png)
 
-
 4. ブラウザーで次の URL を入力します:
 
 ```
@@ -281,5 +273,4 @@ http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 
 ![](../assets/en/WebServer/login2.png)
 
-ユーザーがログインすると、`WEB Get Current Session ID` メソッドを使って、関連するセッションを処理することができます。 [ユーザーセッション](sessions.md) のページを参照ください。 
-
+ユーザーがログインすると、`WEB Get Current Session ID` メソッドを使って、関連するセッションを処理することができます。 [ユーザーセッション](sessions.md) のページを参照ください。

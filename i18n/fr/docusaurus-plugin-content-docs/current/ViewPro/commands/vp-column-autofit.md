@@ -5,7 +5,7 @@ title: VP COLUMN AUTOFIT
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Syntax -->
 
-**VP COLUMN AUTOFIT** ( _rangeObj_ : Object )<!-- END REF -->
+**VP COLUMN AUTOFIT** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 
@@ -15,9 +15,9 @@ title: VP COLUMN AUTOFIT
 
 #### Description
 
-The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in _rangeObj_ according to their contents<!-- END REF -->.
+The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in *rangeObj* according to their contents<!-- END REF -->.
 
-In _rangeObj_, pass a range object containing a range of the columns whose size will be automatically handled.
+In *rangeObj*, pass a range object containing a range of the columns whose size will be automatically handled.
 
 #### Exemple
 

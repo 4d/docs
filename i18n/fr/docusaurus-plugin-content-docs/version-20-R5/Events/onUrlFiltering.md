@@ -3,10 +3,9 @@ id: onUrlFiltering
 title: On URL Filtering
 ---
 
-| Code | Peut être appelé par                         | Définition                            |
-| ---- | -------------------------------------------- | ------------------------------------- |
-| 51   | [Zones Web](FormObjects/webArea_overview.md) | Une URL a été bloquée par la zone Web |
-
+| Code | Peut être appelé par                        | Définition                            |
+| ---- | ------------------------------------------- | ------------------------------------- |
+| 51   | [Web Area](FormObjects/webArea_overview.md) | Une URL a été bloquée par la zone Web |
 
 ## Description
 
@@ -15,4 +14,5 @@ Cet événement est généré lorsque le chargement d'une URL est bloqué par la
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 ### Voir également
+
 [`On Open External Link`](onOpenExternalLink.md)

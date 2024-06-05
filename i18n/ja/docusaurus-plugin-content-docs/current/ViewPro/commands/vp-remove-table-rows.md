@@ -13,7 +13,7 @@ title: VP REMOVE TABLE ROWS
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
 
-**VP REMOVE TABLE ROWS** ( _vpAreaName_ : Text ; _tableName_ : Text ; _row_ : Integer {; _count_ : Integer {; _sheet_ : Integer }}} )<!-- END REF -->
+**VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
 
@@ -27,13 +27,13 @@ title: VP REMOVE TABLE ROWS
 
 #### 説明
 
-`VP REMOVE TABLE ROWS` コマンドは、<!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->_tableName_ で指定した表組みの _row_ で指定した行インデックスから、1つまたは _count_ で指定した数の行を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
+`VP REMOVE TABLE ROWS` コマンドは、<!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスから、1つまたは *count* で指定した数の行を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
-このコマンドは、シートではなく、_tableName_ の表組みから行を削除します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、削除された行の数に応じて自動的に上に移動します。
+このコマンドは、シートではなく、*tableName* の表組みから行を削除します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、削除された行の数に応じて自動的に上に移動します。
 
-_tableName_ の表組みが [データコンテキスト](vp-set-data-context.md) にバインドされている場合、このコマンドはコレクションから要素を削除します。
+*tableName* の表組みが [データコンテキスト](vp-set-data-context.md) にバインドされている場合、このコマンドはコレクションから要素を削除します。
 
-_tableName_ の表組みが存在しない場合には、何も起こりません。
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 #### 例題
 

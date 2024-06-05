@@ -1,25 +1,23 @@
 ---
 id: orderby
-title: '$orderby'
+title: $orderby
 ---
-
 
 Trie les données retournées par l'attribut et l'ordre de tri définis (par exemple,`$orderby="lastName desc, salaire asc"`)
 
 ## Description
 
-`$orderby` ordonne les entités retournées par la requête REST. Pour chaque attribut, définissez l'ordre sur `ASC` (ou `asc`) pour l'ordre croissant et sur `DESC` (`desc`) pour l'ordre décroissant. Par défaut, les données sont triées par ordre croissant. By default, the data is sorted in ascending order.
-
+`$orderby` ordonne les entités retournées par la requête REST. Pour chaque attribut, définissez l'ordre sur `ASC` (ou `asc`) pour l'ordre croissant et sur `DESC` (`desc`) pour l'ordre décroissant. Par défaut, les données sont triées par ordre croissant. Si vous souhaitez spécifier plusieurs attributs, vous pouvez les délimiter avec une virgule, _par exemple_, `$orderby="lastName desc, firstName asc"`.
 
 ## Exemple
 
 Dans cet exemple, nous récupérons les entités et les trions en même temps :
 
- `GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
+`GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
 
 L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordre croissant :
 
- `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
+`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
 **Résultat** :
 
@@ -48,4 +46,3 @@ L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordr
     ]
 }
 ```
-

@@ -114,7 +114,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | WebSocket データ用のコールバック関数。 WebSocket がデータを受信するたびに呼び出されます。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "message"</li><li>`$2.data` (text, BLOB, または object。`dataType` 参照): 受信データ</li></ul> |
 | onError     | [Function](FunctionClass.md) | 実行エラー用のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "error"</li><li>`$2.errors`: 実行エラーの場合、4Dエラースタックのコレクション。<ul><li>`[].errCode` (number): 4Dエラーコード</li><li>`[].message` (text): 4Dエラーの説明</li><li>`[].componentSignature` (text) - エラーを返した内部コンポーネントの署名</li></ul></li></ul>                                        |
-| onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li><li>`$2.wasClean` (boolean、読み取り専用): 接続がきれいに閉じられたかどうかを示します。</li></ul>                             |
+| onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>`$2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li></ul>                             |
 | onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                           |
 | dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                 |
 | headers     | Object                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス: `headers.*key*:=*value*` (同じ key を複数指定する場合、*value* にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                    |
@@ -254,7 +254,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 - 指定しなかった場合、接続のクローズコードは自動的に設定されます: 通常終了の場合は 1000、そうでない場合は、接続が切断された実際の理由を示す 1001〜1015 の標準値。
 - 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。 値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。
 
-*reason* には、接続を閉じる理由を説明するテキストを渡すことができます。 
+*reason* には、接続を閉じる理由を説明するテキストを渡すことができます。
 
 
 <!-- END REF -->
@@ -272,9 +272,3 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 このプロパティは 読み取り専用 です。
 
 <!-- END REF -->
-
-
-
-
-
-

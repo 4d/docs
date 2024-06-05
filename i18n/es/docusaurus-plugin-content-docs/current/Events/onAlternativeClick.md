@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Puede ser llamado por                                                                                                                                            | Definición                                         |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | <li>Botones: el área "flecha" de un botón se presiona</li><li>List box: en una columna de un array, se hace clic en un botón de selección (atributo "alternateButton")</li> |
+| Code | Puede ser llamado por                                                                                                                                            | Definición                                                                                                                                                                                                        |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | <li>Botones: se hace clic en el área de "flecha" de un botón</li><li>Listas desplegables: en una columna de un array de objetos, se hace clic en un botón de puntos suspensivos (atributo "alternateButton")</li> |
 
 ## Descripción
 

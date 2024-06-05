@@ -1,48 +1,43 @@
 ---
 id: method
-title: '$method'
+title: $method
 ---
 
 Este parâmetro permite-lhe definir a operação a executar com a entidade ou a seleção de entidades devolvida.
 
 ## Sintaxe disponível
 
-| Sintaxe                                         | Exemplo                                                                                         | Descrição                                                                                                    |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Elimina a entidade, coleção de entidades ou seleção de entidades atual                                       |
-| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Cria um conjunto de entidades no cache do 4D Server baseado na coleção de entidades definidas no pedido REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Libera um conjunto de entidades existente armazenado no cache do 4D Server                                   |
+| Sintaxe                                         | Exemplo                                                                                 | Descrição                                                                                                    |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Elimina a entidade, coleção de entidades ou seleção de entidades atual                                       |
+| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | Cria um conjunto de entidades no cache do 4D Server baseado na coleção de entidades definidas no pedido REST |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                | Libera um conjunto de entidades existente armazenado no cache do 4D Server                                   |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Cria um conjunto de entidades com base na coleção de entidades relacionadas definidas no pedido REST         |
-| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Actualiza e/ou cria uma ou mais entidades                                                                    |
-
-
-
-
+| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | Actualiza e/ou cria uma ou mais entidades                                                                    |
 
 ## $method=delete
 
 Elimina a entidade, coleção de entidades ou seleção de entidades atual (criada através de REST)
 
-
 ### Descrição
 
-Com `$method=delete`, é possível eliminar uma entidade ou toda uma coleção de entidades. Pode definir a coleção de entidades utilizando, por exemplo, [`$filter`]($filter.md) ou especificando uma diretamente utilizando [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(por exemplo,* /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) _(e.g._, /Employee(22)).
 
-Também é possível eliminar as entidades de um conjunto de entidades, chamando [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
+You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
 ### Exemplo
 
 Pode então escrever o seguinte pedido REST para eliminar a entidade cuja chave é 22:
 
- `POST  /rest/Employee(22)/?$method=delete`
+`POST  /rest/Employee(22)/?$method=delete`
 
 Também é possível efetuar uma consulta utilizando $filter:
 
- `POST  /rest/Employee?$filter="ID=11"&$method=delete`
+`POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
 Também é possível eliminar um conjunto de entidades utilizando $entityset/{entitySetID}:
 
- `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
+`POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
 Responsa:
 
@@ -52,38 +47,35 @@ Responsa:
 }
 ```
 
-
-
 ## $method=entityset
 
 Cria um conjunto de entidades no cache do 4D Server baseado na coleção de entidades definidas no pedido REST
 
 ### Descrição
 
-Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. O conjunto de entidades terá um número de referência que pode ser passado para `$entityset/{entitySetID}` para aceder ao mesmo. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
+Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. El conjunto de entidades tendrá un número de referencia que puede pasar a `$entityset/{entitySetID}` para acceder a él. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
 
-Se usou `$savedfilter` e/ou `$savedorderby` (em conjunto com `$filter` e/ou `$orderby`) quando criou seu conjunto de entidades, pode recriá-lo com o mesmo ID de referência mesmo que tenha sido removido do cache de 4D Server.
+Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
 
 ### Exemplo
 
-Para criar um conjunto de entidades, que será guardado no cache do 4D Server por duas horas, adicione `$method=entityset` no final do seu pedido REST:
+Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada `$method=entityset` al final de su petición REST:
 
- `GET  /rest/People/?$filter="ID>320"&$method=entityset`
+`GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-Pode criar um conjunto de entidades que será armazenado na cache do 4D Server por apenas dez minutos, passando um novo timeout para `$timeout`:
+Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a `$timeout`:
 
- `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
+`GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-Também é possível guardar o filtro e ordenar por, passando true para `$savedfilter` e `$savedorderby`.
-> `$skip` e `$top/$limit` não são tidos em consideração quando se guarda um conjunto de entidades.
+También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
 
-Após criar um conjunto de entidades, o primeiro elemento, `__ENTITYSET`, é adicionado ao objeto devolvido e indica o URI a utilizar para aceder ao conjunto de entidades:
+> `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
+
+Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
 ```
-
-
 
 ## $method=release
 
@@ -91,7 +83,7 @@ Libera um conjunto de entidades existente armazenado no cache do 4D Server.
 
 ### Descrição
 
-Você pode liberar um conjunto de entidades, que você criou usando [`$method=entityset`](#methodentityset), do cache de 4D Server.
+You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
 
 ### Exemplo
 
@@ -119,31 +111,29 @@ Se o pedido for bem sucedido, é devolvida a seguinte resposta:
 }
 ```
 
-
 ## $method=subentityset
 
 Cria um conjunto de entidades no cache do 4D Server baseado na coleção de entidades relacionadas definidas no pedido REST
 
-
 ### Descrição
 
-`$method=subentityset` permite-lhe ordenar os dados devolvidos pelo atributo relacional definido no pedido REST.
+`$method=subentityset` permite ordenar los datos devueltos por el atributo relacional definido en la petición REST.
 
-Para ordenar os dados, utilize a propriedade `$subOrderby`. Para cada atributo, especifica a ordem como ASC (ou asc) para ordem ascendente e DESC (desc) para ordem descendente. Por defeito, os dados são ordenados por ordem ascendente.
+Para ordenar los datos, se utiliza la propiedad `$subOrderby`. Para cada atributo, especifica a ordem como ASC (ou asc) para ordem ascendente e DESC (desc) para ordem descendente. Por defeito, os dados são ordenados por ordem ascendente.
 
-Se pretender especificar vários atributos, pode delimitá-los com uma vírgula, µ, `$subOrderby="lastName desc, firstName asc"`.
+Si desea especificar varios atributos, puede delimitarlos con una coma, µ, `$subOrderby="lastName desc, firstName asc"`.
 
 ### Exemplo
 
 Se pretender recuperar apenas as entidades relacionadas para uma entidade específica, pode efetuar o seguinte pedido REST em que staff é o atributo de relação na dataclass Company ligada à dataclass Employee:
 
-`GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
+` GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
 
 #### Responsa:
 
 ```json
 {
-
+ 
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
     "__entityModel": "Employee",
     "__COUNT": 2,
@@ -179,43 +169,41 @@ Se pretender recuperar apenas as entidades relacionadas para uma entidade espec�
             }
         }
     ]
-
+ 
 }
 ```
 
-
 ## $method=update
-
 
 Actualiza e/ou cria uma ou mais entidades
 
 ### Descrição
 
-`$method=update` permite-lhe atualizar e/ou criar uma ou mais entidades num único **POST**. Se atualizar e/ou criar uma entidade, isso é feito num objeto em que cada propriedade é um atributo com o respetivo valor, *por exemplo*, `{ lastName: "Smith" }`. Se forem atualizadas e/ou criadas várias entidades, é necessário criar uma coleção de objetos.
+`$method=update` le permite actualizar y/o crear una o más entidades en un solo **POST**. Si se actualiza y/o crea una entidad, se efectúa en un objeto con, para cada propiedad, un atributo y su valor, _por ejemplo_ `{ lastName: "Smith" }`. Se forem atualizadas e/ou criadas várias entidades, é necessário criar uma coleção de objetos.
 
-Em qualquer caso, é necessário definir os dados **POST** no corpo **** do pedido.
+En cualquier caso, debe definir los **POST** datos en el **body** de la petición.
 
-Para atualizar uma entidade, é necessário passar os parâmetros `__KEY` e `__STAMP` no objeto, com quaisquer atributos modificados. Se ambos os parâmetros estiverem em falta, será adicionada uma entidade com os valores do objeto que enviar no corpo do seu **POST**.
+Para actualizar una entidad, debes pasar los parámetros `__KEY` y `__STAMP` en el objeto junto con todos los atributos modificados. Si faltan ambos parámetros, se añadirá una entidad con los valores del objeto que envíe en el cuerpo de su **POST**.
 
 Os triggers são executados imediatamente ao guardar a entidade no servidor. A resposta contém todos os dados tal como existem no servidor.
 
-Também é possível colocar estes pedidos para criar ou atualizar entidades numa transação, chamando `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. Pode também utilizar `$method=validate` para validar as entidades antes de as criar ou atualizar.
+También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. También puede utilizar `$method=validate` para validar las entidades antes de crearlas o actualizarlas.
 
 Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado um erro com essa informação.
 
 :::note
-*   **As datas** devem ser expressas no formato YYYY-MM-DDTHH:MM:SSZ (por exemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
-*   **Booleanos** são true ou false.
-*   Os ficheiros carregados utilizando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objecto devolvido no seguinte formato `{"ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
 
+- **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
+- **Booleanos** son true o false.
+- Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`:::
 
 ### Exemplo
 
 Para atualizar uma entidade específica, utilizar o seguinte URL:
 
- `POST  /rest/Person/?$method=update`
+`POST  /rest/Person/?$method=update`
 
-**Dados POST:**
+**POST data:**
 
 ```json
 {
@@ -230,9 +218,9 @@ Os atributos firstName e lastName na entidade indicada acima serão modificados,
 
 Se você quiser criar uma entidade, poderá enviar os atributos via POST usando este URL:
 
- `POST  /rest/Person/?$method=update`
+`POST  /rest/Person/?$method=update`
 
-**Dados POST:**
+**POST data:**
 
 ```json
 { 
@@ -243,9 +231,9 @@ Se você quiser criar uma entidade, poderá enviar os atributos via POST usando 
 
 Também é possível criar e atualizar várias entidades em simultâneo, utilizando o mesmo URL acima, passando vários objetos num array para o POST:
 
- `POST  /rest/Person/?$method=update`
+`POST  /rest/Person/?$method=update`
 
-**Dados POST:**
+**POST data:**
 
 ```json
 [{ 
@@ -260,7 +248,7 @@ Também é possível criar e atualizar várias entidades em simultâneo, utiliza
 }]
 ```
 
-**Responsa:**
+**Response:**
 
 Quando se adiciona ou modifica uma entidade, esta é-lhe devolvida com os atributos modificados. Por exemplo, se criar o novo empregado acima, ser-lhe-á devolvido o seguinte:
 

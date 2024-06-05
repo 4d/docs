@@ -25,7 +25,7 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
    Vous serez invité à saisir une phrase secrète pour votre fichier de données : ![](../assets/en/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de cryptage des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. Par exemple, vous pouvez saisir une phrase secrète telle que "Nous sommes tous venus à Montreux" ou "Ma première phrase de passe géniale !!". L'indicateur de niveau de sécurité peut vous aider à évaluer la force de votre phrase secrète : ![](../assets/en/MSC/MSC_encrypt5.png) (le vert foncé est le niveau le plus élevé)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
-Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, la base de données est rouverte en mode maintenance.
+Le process de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, la base de données est rouverte en mode maintenance.
 
 4D propose de sauvegarder la clé de chiffrement (voir le paragraphe [Sauvegarder la clé de chiffrement](#saving-the-encryption-key) ci-dessous). Vous pouvez la sauvegarder à ce moment précis ou bien ultérieurement. Vous pouvez également ouvrir le fichier d'historique du chiffrement.
 
@@ -49,7 +49,7 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 - entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OU
 - connecter un appareil tel qu'une clé USB et cliquer sur le bouton **Scanner les disques**.
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session. (2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) Le trousseau 4D stocke toutes les clés de chiffrement des données valides qui ont été saisies au cours de la session d'application. (2) La phrase secrète courante est la phrase secrète utilisée pour générer la clé de chiffrement courante.
 
 Dans tous les cas, si des informations valides sont fournies, 4D redémarre en mode maintenance (si ce n'est pas déjà le cas) et exécute l'opération.
 
@@ -91,7 +91,7 @@ Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phras
 
 Les clés de chiffrement successives peuvent être sauvegardées sur le même appareil.
 
-## Fichier d'historique
+## Fichier journal
 
 Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de la base. Il est créé au format XML et nommé "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss>.xml*".
 

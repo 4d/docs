@@ -7,7 +7,6 @@ title: On Before Data Entry
 | ---- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 41   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Une cellule de list box est sur le point de passer en mode d'édition |
 
-
 ## Description
 
 Cet événement est généré juste avant la modification d'une cellule de list box (avant l'affichage du curseur d'entrée). Cet événement permet par exemple au développeur d'afficher un texte différent selon le mode de l'utilisateur (mode affichage ou mode édition).

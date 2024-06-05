@@ -18,7 +18,7 @@ Le générateur d'applications vous permet de :
 
 ## Vue d’ensemble
 
-Générer un package de projet peut être réalisée à l'aide de :
+Générer un package de projet peut être réalisé à l'aide de :
 
 * soit la commande [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
 * Utiliser la [Page Application](#application) ou la [Page Client/Serveur](#client-server) de boîte de dialogue du Générateur d'applications.
@@ -46,13 +46,13 @@ La génération ne peut s'effectuer qu'une fois le projet compilé. Si vous sél
 
 Chaque paramètre de génération de l'application est sauvegardé en tant que clé XML dans le fichier XML de l'application nommé `buildApp.4DSettings`, situé dans le dossier [`Settings` du projet](../Project/architecture.md#settings-1).
 
-Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
+Des paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
 Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.
 
-### Fichier d'historique
+### Fichier journal
 
-Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier journal stocke les informations suivantes pour chaque build :
 
 * Le début et la fin de la génération des cibles,
 * Le nom et le chemin d'accès complet des fichiers générés,
@@ -106,13 +106,13 @@ Si vous avez nommé votre application *MyComponent*, 4D créera un dossier *Comp
 
 Le dossier *MyComponent.4dbase* contient :
 
-* fichier *MyComponent.4DZ*
+* *MyComponent.4DZ* file
 
 * Un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
 
 ## Page Application
 
-Cet onglet vous permet de créer une version autonome et monoposte de votre application :
+Cet onglet vous permet de créer une version monoposte autonome de votre application :
 
 ![](../assets/en/Project/standaloneProj.png)
 
@@ -454,7 +454,7 @@ La page liste les éléments chargés par l'application 4D courante :
 
 ![](../assets/en/Desktop/buildappcomps.png)
 
-* La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. To exclude a plug-in, a component, or a module, deselect the check box next to it.
+* La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. Pour exclure un plug-in, un composant ou un module, désélectionnez la case qui lui est associée.
 
 * **Plugins and components** column - Displays the name of the plug-in/component/module.
 
@@ -462,7 +462,7 @@ La page liste les éléments chargés par l'application 4D courante :
 
 * **Type** column - Indicates the type of item: Plug-in, Component, or Module.
 
-### Adding plug-ins or components
+### Ajout de plugins ou de composants
 
 Si vous souhaitez intégrer d’autres plug-ins ou composants dans l’application exécutable, il vous suffit de les placer dans un dossier **PlugIns** ou **Components** à côté de l’application 4D Volume Desktop ou de l’application 4D Server. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
 
@@ -695,26 +695,26 @@ Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélecti
 
 * **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. The user can access the server selection window by clicking on the **Select...** button. `ServerSelectionAllowed`: **True** ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
 
-## Automatic updating of server or single-user applications
+## Mise à jour automatique des applications serveur ou monoposte
 
-In principle, updating server applications or merged single-user applications require user intervention (or programming custom system routines): whenever a new version of the merged application is available, you have to exit the application in production and manually replace the old files with the new ones; then restart the application and select the current data file.
+En principe, la mise à jour des applications serveur ou des applications mono-utilisateur fusionnées nécessite l'intervention de l'utilisateur (ou la programmation de routines système personnalisées) : chaque fois qu'une nouvelle version de l'application fusionnée est disponible, vous devez quitter l'application en production et remplacer manuellement les anciens fichiers par les nouveaux ; puis redémarrer l'application et sélectionner le fichier de données courant.
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) for monitoring operations. The idea is to implement a function in your 4D application triggering the automatic update sequence described below. It can be a menu command or a process running in the background and checking at regular intervals for the presence of an archive on a server.
+You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) for monitoring operations. L'idée est d'implémenter une fonction dans votre application 4D déclenchant la séquence de mise à jour automatique décrite ci-dessous. Il peut s'agir d'une commande de menu ou d'un process s'exécutant en arrière-plan et vérifiant à intervalles réguliers la présence d'une archive sur un serveur.
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
-Here is the scenario for updating a server or merged single-user application:
+Voici le scénario pour la mise à jour d'un serveur ou d'une application mono-utilisateur fusionnée :
 
-1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
-2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
-3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. The former version is renamed.
+1. Vous transférez, par exemple en utilisant un serveur HTTP, la nouvelle version de l'application serveur ou l'application mono-utilisateur fusionnée sur la machine en production.
+2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Facultativement, vous pouvez copier dans ce dossier les éléments personnalisés de la version en production (fichiers utilisateur).
+3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. La version précédente est renommée.
 
-> This sequence is compatible with Windows server applications run as a Service.
+> Cette séquence est compatible avec les applications serveur Windows exécutées en tant que service.
 
-### Update log
+### Journal des mises à jour
 
-The installation procedure produces a log file detailing the update operations of merged applications (client, server or single-user) on the target machines. This file is useful for analyzing any errors that occur during the installation process.
+La procédure d'installation produit un fichier journal détaillant les opérations de mise à jour des applications fusionnées (client, serveur ou mono-utilisateur) sur les machines cibles. Ce fichier est utile pour analyser les erreurs qui se produisent pendant le processus d'installation.
 
 The update log is named `YYYY-MM-DD_HH-MM-SS_log_X.txt`, for example, `2021-08-25_14-23-00_log_1.txt` for a file created on August 25, 2021 at 14:23.
 
-This file is created in the "Updater" application folder, within the system user folder. You can find out the location of this file at any time using the [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) command.
+Ce fichier est créé dans le dossier de l'application "Updater", dans le dossier de l'utilisateur du système. You can find out the location of this file at any time using the [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) command.

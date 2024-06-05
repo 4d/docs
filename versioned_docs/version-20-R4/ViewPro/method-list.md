@@ -610,7 +610,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 |---|---|---|---|
 |vpObject| Object|->|4D View Pro object containing the area to convert|
 |rangeObj| Object|->|Range object|
-|Result| Object|<-|SVG picture of the area|<!-- END REF -->
+|Result| Picture|<-|SVG picture of the area|<!-- END REF -->
 
 #### Description
 
@@ -1530,6 +1530,7 @@ The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->
 In *rangeObj*, pass a range containing the style to retrieve.
 
 * If *rangeObj* contains a cell range, the cell style is returned.
+
 * If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
 * If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
 
@@ -3217,6 +3218,7 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 #### See also
 
 
+
 [VP Export to object](#vp-export-to-object)
 
 ### VP INSERT COLUMNS
@@ -3773,6 +3775,7 @@ You can define where to remove the name in *scope* using either the sheet index 
 
 * `vk current sheet`
 * `vk workbook`  
+
 
 
 #### Example
@@ -5845,6 +5848,7 @@ Result:
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6142,6 +6146,7 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+
 
 
 #### Example

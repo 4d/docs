@@ -3,10 +3,9 @@ id: onUrlFiltering
 title: On URL Filtering
 ---
 
-| コード | 呼び出し元                                     | 定義                  |
-| --- | ----------------------------------------- | ------------------- |
-| 51  | [Webエリア](FormObjects/webArea_overview.md) | Webエリアが URL をブロックした |
-
+| コード | 呼び出し元                                      | 定義                  |
+| --- | ------------------------------------------ | ------------------- |
+| 51  | [Web エリア](FormObjects/webArea_overview.md) | Webエリアが URL をブロックした |
 
 ## 説明
 
@@ -15,4 +14,5 @@ title: On URL Filtering
 `WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
 ### 参照
+
 [`On Open External Link`](onOpenExternalLink.md)

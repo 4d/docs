@@ -9,30 +9,27 @@ Los parámetros configuran el funcionamiento del proyecto actual. Estos parámet
 
 > 4D ofrece otro conjunto de parámetros, llamados **Preferencias**, que se aplican a la aplicación 4D IDE. Para más información, consulte [Preferencias](../Preferences/general.md).
 
-
 ## Acceso a los parámetros
 
 Puede acceder a la caja de diálogo Parámetros:
 
--   utilizando la opción de menú **Diseño > Parámetros...**
--   haciendo clic en **Parámetros** en la barra de herramientas 4D
--   en 4D Server, utilizando la opción de menú **Edición > Parámetros...**
+- utilizando la opción de menú **Diseño > Parámetros...**
+- haciendo clic en **Parámetros** en la barra de herramientas 4D
+- en 4D Server, utilizando la opción de menú **Edición > Parámetros...**
 
-Cuando se activa el modo [**Parámetros usuario**](../Desktop/user-settings.md), **Parámetros...** pasa a llamarse **Parámetros de la estructura...** y se dispone de dos comandos de menú adicionales en cada ubicación:
+When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
--   **Parámetros usuario...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario. Si se modifican, se utilizan en lugar de los parámetro de estructura.
--   **Parámetros usuario para el archivo de datos...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario adjunto al archivo de datos actual. Si se modifican, se utilizan en lugar de los parámetros usuario de los parámetros de estructura.
+- **Parámetros usuario...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario. Si se modifican, se utilizan en lugar de los parámetro de estructura.
+- **Parámetros usuario para el archivo de datos...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario adjunto al archivo de datos actual. Si se modifican, se utilizan en lugar de los parámetros usuario de los parámetros de estructura.
 
 ### Información sobre el bloqueo
 
 El bloqueo puede ocurrir tanto en los modos Proyecto y Cliente/servidor cuando:
 
--   El archivo *settings.4DSettings* es de "sólo lectura" (sólo Proyectos). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
--   Dos o más usuarios intentan modificar los mismos parámetros al tiempo. Los parámetros no pueden utilizarse hasta que el primer usuario los libere cerrando la ventana. (Cliente/servidor únicamente)
+- El archivo _settings.4DSettings_ es de "sólo lectura" (sólo Proyectos). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
+- Dos o más usuarios intentan modificar los mismos parámetros al tiempo. Los parámetros no pueden utilizarse hasta que el primer usuario los libere cerrando la ventana. (Cliente/servidor únicamente)
 
 En ambos casos, los parámetros pueden abrirse en "Sólo lectura", pero no pueden utilizarse hasta que se elimine el bloqueo.
-
-
 
 ## Personalización de los parámetros
 
@@ -45,7 +42,6 @@ Los parámetros indicados como personalizados pueden haber sido modificados dire
 Un parámetro sigue apareciendo en negrita aunque su valor se remplace manualmente por sus valores por defecto. De este modo, siempre es posible identificar visualmente los parámetros que se hayan personalizado.
 
 La mayoría de los parámetros se aplican inmediatamente. Sin embargo, algunas de ellas (como la configuración del entorno de inicio) sólo surten efecto cuando se reinicia la base de datos. En este caso, aparece una caja de diálogo para informarle de que el cambio surtirá efecto en el próximo inicio.
-
 
 ## Reinicialización de los parámetros
 

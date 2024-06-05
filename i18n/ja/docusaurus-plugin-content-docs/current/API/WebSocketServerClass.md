@@ -90,14 +90,14 @@ WebSocket 接続を処理するクライアントサイドの Javascriptコー�
 
 WebSocketサーバーオブジェクトは、以下のプロパティと機能を提供します:
 
-|                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
-| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
-| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
-| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
+|                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
+| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
+| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
+| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
 
 ## 4D.WebSocketServer.new()
 
@@ -113,13 +113,13 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 <!-- END REF -->
 
-`4D.WebSocketServer.new()` 関数は、<!-- REF #4D.WebSocketServer.new().Summary -->指定した _WSSHandler_ コールバックと、_options_ の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
+`4D.WebSocketServer.new()` 関数は、<!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
 
 この関数を呼び出すには、[4D Webサーバー](WebServerClass.md) が起動されている必要があります。 WebSocketサーバーの **ホスト** と **ポート** は、4D Webサーバーのホストとポートと同じです。
 
-### _WSSHandler_ 引数
+### *WSSHandler* 引数
 
-_WSSHandler_ 引数には、WebSocketサーバーでイベント (主に接続イベント) が発生するたびに呼び出されるユーザークラスのインスタンスを渡します。 このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須):
+*WSSHandler* 引数には、WebSocketサーバーでイベント (主に接続イベント) が発生するたびに呼び出されるユーザークラスのインスタンスを渡します。 このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須):
 
 | プロパティ        | タイプ                          | 説明                                                                        | デフォルト     |
 | ------------ | ---------------------------- | ------------------------------------------------------------------------- | --------- |
@@ -128,7 +128,7 @@ _WSSHandler_ 引数には、WebSocketサーバーでイベント (主に接続�
 | onTerminate  | [Function](FunctionClass.md) | WebSocketサーバーが終了した時のコールバック (後述参照)                      | undefined |
 | onError      | [Function](FunctionClass.md) | エラーが発生した時のコールバック (後述参照)                                | undefined |
 
-**WSHandler.onConnection**(_WSServer_ : Object ; _event_ : Object) : Object | null
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | 引数       |         | タイプ                                |     | 説明                                                                                                                                                                                                                                                                                                                                                                    |
 | -------- | ------- | ---------------------------------- | :-: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ _WSSHandler_ 引数には、WebSocketサーバーでイベント (主に接続�
 
 このコールバックは、ハンドシェイクが完了したときに呼び出されます。 WebSocket 接続を作成するためには、有効な [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) を指定して呼び出す必要があり、そうでない場合は接続がキャンセルされます。
 
-**WSHandler.onOpen**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | 引数       |      | タイプ                                |     | 説明                        |
 | -------- | ---- | ---------------------------------- | :-: | ------------------------- |
@@ -150,7 +150,7 @@ _WSSHandler_ 引数には、WebSocketサーバーでイベント (主に接続�
 
 WebSocketサーバーが起動したときに発生するイベントです。
 
-**WSHandler.onTerminate**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | 引数       |      | タイプ                                |     | 説明                        |
 | -------- | ---- | ---------------------------------- | :-: | ------------------------- |
@@ -160,7 +160,7 @@ WebSocketサーバーが起動したときに発生するイベントです。
 
 HTTPサーバーまたは WebSocketサーバーが終了したときに発生するイベントです。
 
-**WSHandler.onError**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
 | 引数       |        | タイプ                                |     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | -------- | ------ | ---------------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ WebSocketサーバーでエラーが発生したときに発生するイベン�
 
 ### `WSSHandler` クラスの例
 
-この基本的なチャット機能の例では、_WSSHandler_ クラスを使って WebSocket サーバー接続を管理する方法を説明します。
+この基本的なチャット機能の例では、*WSSHandler* クラスを使って WebSocket サーバー接続を管理する方法を説明します。
 
 ```4d
 // myWSServerHandler クラス 
@@ -225,7 +225,7 @@ LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 | onTerminate | [Function](FunctionClass.md) | 接続が終了したときに呼び出される関数                                     |
 | onError     | [Function](FunctionClass.md) | エラーが発生したときに呼び出される関数                                    |
 
-**connectionHandler.onMessage**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |      | タイプ                                                     |     | 説明                       |
 | ----- | ---- | ------------------------------------------------------- | :-: | ------------------------ |
@@ -236,7 +236,7 @@ LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 WebSocket データ用のコールバックです。 WebSocket がデータを受信するたびに呼び出されます。
 
-**connectionHandler.onOpen**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |      | タイプ                                                     |     | 説明                       |
 | ----- | ---- | ------------------------------------------------------- | :-: | ------------------------ |
@@ -246,7 +246,7 @@ WebSocket データ用のコールバックです。 WebSocket がデータを�
 
 `connectionHandler` オブジェクトが作成されたときに呼び出されます (`WSS.onConnection` イベントの後)。
 
-**connectionHandler.onTerminate**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |        | タイプ                                                     |     | 説明                                                                                                       |
 | ----- | ------ | ------------------------------------------------------- | :-: | -------------------------------------------------------------------------------------------------------- |
@@ -258,7 +258,7 @@ WebSocket データ用のコールバックです。 WebSocket がデータを�
 
 WebSocket 終了したときに呼び出されます。
 
-**connectionHandler.onError**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |        |            | タイプ                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                             | 説明                       |
 | ----- | ------ | ---------- | ------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ------------------------ |
@@ -271,7 +271,7 @@ WebSocket 終了したときに呼び出されます。
 
 ### `connectionHandler` クラスの例
 
-この基本的なチャット機能の例では、_connectionHandler_ クラスを使ってメッセージを処理する方法を説明します。
+この基本的なチャット機能の例では、*connectionHandler* クラスを使ってメッセージを処理する方法を説明します。
 
 ```4d
 // myConnectionHandler クラス
@@ -302,9 +302,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 ```
 
-### _options_ 引数
+### *options* 引数
 
-任意の _options_ 引数には、以下のプロパティを持つオブジェクトを渡します:
+任意の *options* 引数には、以下のプロパティを持つオブジェクトを渡します:
 
 | プロパティ    | タイプ  | 説明                                                                                                                                                                                                                                                                                                        | デフォルト     |
 | -------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |

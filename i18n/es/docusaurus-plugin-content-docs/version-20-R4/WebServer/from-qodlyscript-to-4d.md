@@ -31,7 +31,7 @@ Algunos símbolos básicos, operadores y palabras clave difieren en QodlyScript 
 
 Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this` vs `This`), pero se pueden pegar directamente en código de 4D.
 
-## Command and Constant names
+## Nombres de comandos y constantes
 
 Los nombres de comandos y constantes de QodlyScript se escriben en mayúsculas y sin espacios. Además, los nombres de las constantes de QodlyScript comienzan con la letra `k`. Puede que necesite adaptar estos elementos de QodlyScript al lenguaje 4D.
 

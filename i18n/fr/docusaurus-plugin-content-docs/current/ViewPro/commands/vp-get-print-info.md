@@ -13,15 +13,15 @@ title: VP Get print info
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Object of printing information                                              | <!-- END REF --> |
+| Résultat   | Object  | <- | Objet contenant les informations d'impression                               | <!-- END REF --> |
 
 #### Description
 
-The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the _vpAreaName_<!-- END REF -->.
+The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
+Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
 #### Exemple
 

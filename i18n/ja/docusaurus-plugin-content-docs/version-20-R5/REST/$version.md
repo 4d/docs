@@ -1,6 +1,6 @@
 ---
 id: version
-title: '$version'
+title: $version
 ---
 
 画像のバージョン番号
@@ -15,4 +15,4 @@ title: '$version'
 
 photo属性の実際の形式に関わらず、画像形式を JPEG に指定し、サーバーより受け取ったバージョン番号を受け渡している例です:
 
- `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`

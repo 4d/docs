@@ -16,7 +16,7 @@ collectionRef[expression]
 You can pass any valid 4D expression which returns a positive integer in _expression_. Exemples :
 
 ```4d
- myCollection[5]  //access to 6th element of the collection
+ myCollection[5]  //accès au 6e élément de la collection
  myCollection[$var]
 ```
 
@@ -25,7 +25,7 @@ You can pass any valid 4D expression which returns a positive integer in _expres
 Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection :
 
 ```4d
- myCol[10]:="My new element"
+ myCol[10]:="Mon nouvel élément"
  $myVar:=myCol[0]
 ```
 
@@ -71,7 +71,7 @@ Exemples :
 
 ### `[]` operator
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Lorsque vous créez une collection en utilisant une collection littérale, elle est instanciée avec les valeurs spécifiées comme éléments, et sa longueur est définie au nombre d'arguments spécifiés.
+The `[]` operator allows you to create a **collection literal**. Une collection littérale est une liste de zéro ou plusieurs expressions, dont chacune représente un élément de collection, entre crochets (`[]`). Lorsque vous créez une collection en utilisant une collection littérale, elle est instanciée avec les valeurs spécifiées comme éléments, et sa longueur est définie au nombre d'arguments spécifiés.
 
 Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
 
@@ -139,7 +139,7 @@ Several functions accept a _propertyPath_ as parameter. Ce paramètre peut conte
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
- $vmin:=$col.min(["My.special.property"]) //error
+ $vmin:=$col.min(["My.special.property"]) //erreur
 ```
 
 ## Undefined
@@ -147,6 +147,6 @@ Several functions accept a _propertyPath_ as parameter. Ce paramètre peut conte
 Reading the **length** property of an undefined collection produces 0:
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variable créée mais aucune collection n'est définie
      $size:=$c.length //$size = 0
 ```

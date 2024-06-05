@@ -1,11 +1,9 @@
 ---
 id: distinct
-title: '$distinct'
+title: $distinct
 ---
 
-
-指定した属性について、重複しない値のコレクションを取得します (*例*: `Company/name?$filter="name=a*"&$distinct=true`)
-
+指定した属性について、重複しない値のコレクションを取得します (_例_: `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## 説明
 
@@ -14,16 +12,16 @@ title: '$distinct'
 対象となる要素を制限するのに `$skip` および `$top/$limit` も組み合わせて使用することができます。
 
 ## 例題
+
 "a" で始まる会社名について、重複しない値のコレクションを取得するには、次のように書きます:
 
- `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
+`GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
 **レスポンス**:
 
-````
+```
 [
     "Adobe",
     "Apple"
 ]
-````
-
+```

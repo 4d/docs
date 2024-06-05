@@ -13,7 +13,7 @@ title: VP IMPORT DOCUMENT
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
 
-**VP IMPORT DOCUMENT** ( _vpAreaName_ : Text ; _filePath_ : Text { ; _paramObj_ : Object} ) <!-- END REF -->
+**VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
@@ -25,11 +25,11 @@ title: VP IMPORT DOCUMENT
 
 #### 説明
 
-`VP IMPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->_vpAreaName_ で指定した 4D View Pro エリアに、_filePath_ 引数のドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
+`VP IMPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、*filePath* 引数のドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_filePath_ には読み込むドキュメントのパスとファイル名を渡します。 以下のフォーマットがサポートされています :
+*filePath* には読み込むドキュメントのパスとファイル名を渡します。 以下のフォーマットがサポートされています :
 
 - 4D View Pro ドキュメント (拡張子 ".4vp")
 - Microsoft Excel 形式 (拡張子 ".xlsx")
@@ -40,7 +40,7 @@ _filePath_ には読み込むドキュメントのパスとファイル名を渡
 
 `filePath` 引数が無効だった場合や、対象ファイルが存在しなかったり、壊れたりしている場合には、エラーが返されます。
 
-任意の _paramObj_ 引数を渡すことで、読み込まれるドキュメントのプロパティを定義することができます:
+任意の *paramObj* 引数を渡すことで、読み込まれるドキュメントのプロパティを定義することができます:
 
 | 引数         |                     | タイプ                         | 説明                                                                                                                                                                                                                                                                                                                     |
 | ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

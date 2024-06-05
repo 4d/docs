@@ -5,7 +5,7 @@ title: VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
 
-**VP SET DATE VALUE** ( _rangeObj_ : Object ; _dateValue_ : Date { ; _formatPattern_ : Text } ) <!-- END REF -->
+**VP SET DATE VALUE** ( *rangeObj* : Object ; *dateValue* : Date { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
@@ -13,17 +13,17 @@ title: VP SET DATE VALUE
 | ------------- | ------ | -- | ------------------- | ---------------- |
 | rangeObj      | Object | -> | Objet plage         |                  |
 | dateValue     | Date   | -> | Valeur date à fixer |                  |
-| formatPattern | Text   | -> | Format of value     | <!-- END REF --> |
+| formatPattern | Text   | -> | Format de la valeur | <!-- END REF --> |
 
 #### Description
 
 The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) whose value you want to specify. If _rangeObj_ includes multiple cells, the value specified will be repeated in each cell.
+In *rangeObj*, pass a range of the cell(s) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The _dateValue_ parameter specifies a date value to be assigned to the _rangeObj_.
+The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
 
-The optional _formatPattern_ defines a pattern for the _dateValue_ parameter. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :
+The optional *formatPattern* defines a pattern for the *dateValue* parameter. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :
 
 | Constante               | Description                             | Configuration par défaut des US |
 | ----------------------- | --------------------------------------- | ------------------------------- |

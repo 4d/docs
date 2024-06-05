@@ -5,7 +5,7 @@ title: VP SET ACTIVE CELL
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Syntax -->
 
-**VP SET ACTIVE CELL** ( _rangeObj_ : Object) <!-- END REF -->
+**VP SET ACTIVE CELL** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 
@@ -17,7 +17,7 @@ title: VP SET ACTIVE CELL
 
 The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
 
-In _rangeObj_, pass a range containing a single cell as an object (see [VP Cell](vp-cell.md)). If _rangeObj_ is not a cell range or contains multiple ranges, the first cell of the first range is used.
+In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](vp-cell.md)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
 #### Exemple
 

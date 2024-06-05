@@ -5,7 +5,7 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( _vpAreaName_ : Text ; _name_ : Text { ; _scope_ : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
@@ -18,13 +18,13 @@ title: VP Get formula by name
 
 #### 説明
 
-`VP Get formula by name` コマンドは、<!-- REF #_method_.VP Get formula by name.Summary --> _name_ 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します (定義されたスコープにそれらが存在しない場合には **null** が返されます)<!-- END REF -->。
+`VP Get formula by name` コマンドは、<!-- REF #_method_.VP Get formula by name.Summary --> *name* 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します (定義されたスコープにそれらが存在しない場合には **null** が返されます)<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_name_ には、取得したい命名レンジあるいは命名フォーミュラの名前を渡します。 命名レンジは、絶対セル参照を格納したフォーミュラとして返されるという点に注意してください。
+*name* には、取得したい命名レンジあるいは命名フォーミュラの名前を渡します。 命名レンジは、絶対セル参照を格納したフォーミュラとして返されるという点に注意してください。
 
-_scope_ 引数を使用することで、フォーミュラを取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
+*scope* 引数を使用することで、フォーミュラを取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
 
 - `vk current sheet`
 - `vk workbook`

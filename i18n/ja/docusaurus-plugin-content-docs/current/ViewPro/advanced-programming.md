@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## 4D View Pro Tips のリポジトリ
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) は GitHub のリポジトリで、フローティングピクチャーの管理、列や行のソート、カスタムカルチャの作成など、便利な機能を満載したプロジェクトが含まれています。 このリポジトリを自由にクローンして、プロジェクトで実験してください。 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) は GitHub のリポジトリで、フローティングピクチャーの管理、列や行のソート、カスタムカルチャの作成など、便利な機能を満載したプロジェクトが含まれています。 このリポジトリを自由にクローンして、プロジェクトで実験してください。

@@ -10,7 +10,7 @@ title: Servidor Web
 
 Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
+Supervisar el servidor web 4D es fácil y se puede hacer utilizando la ventana de administración de 4D Server o a través de [ URLs especiales](webServerAdmin.md#administration-urls).
 
 ## Pronto a usar
 
@@ -20,42 +20,43 @@ The 4D web server automatically creates a default root folder and a default home
 
 A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Security levels are scalable and default settings usually select the most secure options. A segurança do servidor web 4D é baseada nos seguintes elementos:
 
-* Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+- Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. É necessário declarar:
-  * [Métodos projeto](templates.md#allowing-project-methods) expostos por meio de solicitações HTTP
-  * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
+- **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. É necessário declarar:
+  - [Los métodos proyecto](templates.md#allowing-project-methods) expuestos a través de peticiones HTTP
+  - [Las funciones ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) expuestas a través de peticiones REST
+  - [Tablas y campos](REST/configuration.md#exposing-tables-and-fields) que no quiere que estén disponibles para las peticiones REST.
 
-* **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
+- **Sandboxing** mediante la definición de una [carpeta HTML raíz](webServerConfig.md#root-folder) por defecto,
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
-> Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
+- **Control del uso de los recursos del servidor** (por ejemplo, vía la opción [máximo de procesos web concurrentes](webServerConfig.md#maximum-concurrent-web-processes)).
+
+> Para una visión general de las funciones de seguridad de 4D, consulte la [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/).
 
 ## Sessões Usuário
 
-The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
+El servidor web 4D incluye completas funcionalidades automáticas para gestionar fácilmente las [sesiones web](sessions.md) (sesiones de usuario) basadas en cookies.
 
 ## Ponto de acesso para solicitações REST
 
 The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
 
-REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
+Las peticiones REST se detallan en la sección [Servidor REST](REST/gettingStarted.md).
 
 ## Extensão dos parâmetros
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
+La configuración del servidor web 4D se define a través de un amplio conjunto de ajustes a nivel de aplicación que también pueden personalizarse para la sesión utilizando las propiedades del objeto `webServer` o el comando `WEB SET OPTION`.
 
 ## Modelos e URLs
 
 The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
 
-* Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
+- Las páginas de plantillas contienen [etiquetas especiales](templates.md) que inician el procesamiento del servidor web en el momento en que se envían a los navegadores.
 
-* [URLs específicos](httpRequests.md) permitem que 4D seja chamado para executar qualquer ação; esses URLs também podem ser usados como ações de formulário para acionar o processamento quando o usuário publica formulários HTML.
+- [Las URLs específicas](httpRequests.md) permiten llamar a 4D para ejecutar cualquier acción; estas URLs también pueden utilizarse como acciones de formulario para activar el procesamiento cuando el usuario publica formularios HTML.
 
 ## Métodos banco de dados dedicados
 
-`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
+`On Web Authentication`, `On Web Connection`, así como también los métodos base`On REST Authentication` son los puntos de entrada de las peticiones en el servidor web; se pueden utilizar para evaluar y enrutar todo tipo de petición.

@@ -11,7 +11,6 @@ Les cases à cocher sont contrôlées par des méthodes ou des [actions standard
 
 Une case à cocher affiche généralement du texte en face de la case. Ce texte est défini dans la zone [Titre](properties_Object.md#title) du thème “Objets” de la Liste des propriétés. Vous pouvez saisir dans cette zone un libellé sous forme de référence XLIFF (cf. [Annexe B : Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
-
 ## Utiliser une case à cocher
 
 Une case à cocher peut être associée à une [variable ou expression](properties_Object.md#variable-or-expression) de type entier ou booléen.
@@ -21,7 +20,6 @@ Une case à cocher peut être associée à une [variable ou expression](properti
 
 Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Plusieurs cases à cocher permettent à l'utilisateur de cocher plusieurs options.
 
-
 ### Cases à cocher à trois états
 
 Les objets case à cocher avec le [style de bouton](checkbox_overview.md#regular) [Normal](checkbox_overview.md#flat) et [Plat](properties_TextAndPicture.md#button-style) acceptent un troisième état. Ce troisième état représente un statut intermédiaire, généralement utilisé pour l’affichage. Il permet par exemple d’indiquer qu’une propriété est présente parmi une sélection d’objets mais pas dans chaque objet de la sélection.
@@ -30,11 +28,11 @@ Les objets case à cocher avec le [style de bouton](checkbox_overview.md#regular
 
 Pour qu’une case à cocher prenne en charge ce troisième état, vous devez lui attribuer la propriété [Trois états](properties_Display.md#three-states) dans la Liste des propriétés, thème “Affichage” .
 
-Cette propriété n’est disponible que pour les cases à cocher classiques et à plat associées à des [variables ou expressions](properties_Object.md#variable-or-expression) numériques — les cases à cocher de représentation des expressions booléennes sont exclues de ce principe (une expression booléenne ne pouvant pas se trouver dans un état intermédiaire).
+Cette propriété n’est disponible que pour les cases à cocher classiques et flat associées à des [variables ou expressions](properties_Object.md#variable-or-expression) numériques — les cases à cocher de représentation des expressions booléennes sont exclues de ce principe (une expression booléenne ne pouvant pas se trouver dans un état intermédiaire).
 
 La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
-> En saisie, les cases à cocher à trois états affichent séquentiellement chaque état, dans l’ordre suivant : non coché / coché / intermédiaire / non coché, etc. L’état intermédiaire étant généralement inutile en saisie ; il vous suffit, dans le code, de “forcer” la valeur de la variable à 0 lorsqu’elle prend la valeur 2 afin de passer directement de l’état coché à l’état non coché.
 
+> En saisie, les cases à cocher à trois états affichent séquentiellement chaque état, dans l’ordre suivant : non coché / coché / intermédiaire / non coché, etc. L’état intermédiaire étant généralement inutile en saisie ; il vous suffit, dans le code, de “forcer” la valeur de la variable à 0 lorsqu’elle prend la valeur 2 afin de passer directement de l’état coché à l’état non coché.
 
 ## Utiliser une action standard
 
@@ -43,35 +41,35 @@ Vous pouvez affecter une [action standard](properties_Action.md#standard-action)
 Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
 
 | Actions prises en charge            | Conditions d'utilisation (le cas échéant) |
-| ----------------------------------- | ----------------------------------------- |
-| avoidPageBreakInsideEnabled         | Zones 4D Write Pro uniquement             |
-| fontItalic                          |                                           |
-| fontBold                            |                                           |
-| fontLinethrough                     |                                           |
-| fontSubscript                       | Zones 4D Write Pro uniquement             |
-| fontSuperscript                     | Zones 4D Write Pro uniquement             |
-| fontUnderline                       |                                           |
-| font/showDialog                     | Mac uniquement                            |
-| htmlWYSIWIGEnabled                  | Zones 4D Write Pro uniquement             |
-| section/differentFirstPage          | Zones 4D Write Pro uniquement             |
-| section/differentLeftRightPages     | Zones 4D Write Pro uniquement             |
-| spell/autoCorrectionEnabled         |                                           |
-| spell/autoDashSubstitutionsEnabled  | Mac uniquement                            |
-| spell/autoLanguageEnabled           | Mac uniquement                            |
-| spell/autoQuoteSubstitutionsEnabled | Mac uniquement                            |
-| spell/autoSubstitutionsEnabled      |                                           |
-| spell/enabled                       |                                           |
-| spell/grammarEnabled                | Mac uniquement                            |
-| spell/showDialog                    | Mac uniquement                            |
-| spell/visibleSubstitutions          |                                           |
-| visibleBackground                   | Zones 4D Write Pro uniquement             |
-| visibleFooters                      | Zones 4D Write Pro uniquement             |
-| visibleHeaders                      | Zones 4D Write Pro uniquement             |
-| visibleHiddenChars                  | Zones 4D Write Pro uniquement             |
-| visibleHorizontalRuler              | Zones 4D Write Pro uniquement             |
-| visiblePageFrames                   | Zones 4D Write Pro uniquement             |
-| visibleReferences                   |                                           |
-| widowAndOrphanControlEnabled        | Zones 4D Write Pro uniquement             |
+| ----------------------------------- | ------------------------------------------------------------ |
+| avoidPageBreakInsideEnabled         | Zones 4D Write Pro uniquement                                |
+| fontItalic                          |                                                              |
+| fontBold                            |                                                              |
+| fontLinethrough                     |                                                              |
+| fontSubscript                       | Zones 4D Write Pro uniquement                                |
+| fontSuperscript                     | Zones 4D Write Pro uniquement                                |
+| fontUnderline                       |                                                              |
+| font/showDialog                     | Mac uniquement                                               |
+| htmlWYSIWIGEnabled                  | Zones 4D Write Pro uniquement                                |
+| section/differentFirstPage          | Zones 4D Write Pro uniquement                                |
+| section/differentLeftRightPages     | Zones 4D Write Pro uniquement                                |
+| spell/autoCorrectionEnabled         |                                                              |
+| spell/autoDashSubstitutionsEnabled  | Mac uniquement                                               |
+| spell/autoLanguageEnabled           | Mac uniquement                                               |
+| spell/autoQuoteSubstitutionsEnabled | Mac uniquement                                               |
+| spell/autoSubstitutionsEnabled      |                                                              |
+| spell/enabled                       |                                                              |
+| spell/grammarEnabled                | Mac uniquement                                               |
+| spell/showDialog                    | Mac uniquement                                               |
+| spell/visibleSubstitutions          |                                                              |
+| visibleBackground                   | Zones 4D Write Pro uniquement                                |
+| visibleFooters                      | Zones 4D Write Pro uniquement                                |
+| visibleHeaders                      | Zones 4D Write Pro uniquement                                |
+| visibleHiddenChars                  | Zones 4D Write Pro uniquement                                |
+| visibleHorizontalRuler              | Zones 4D Write Pro uniquement                                |
+| visiblePageFrames                   | Zones 4D Write Pro uniquement                                |
+| visibleReferences                   |                                                              |
+| widowAndOrphanControlEnabled        | Zones 4D Write Pro uniquement                                |
 
 Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](properties_Action.md#standard-action).
 
@@ -79,33 +77,31 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 Les cases à cocher utilisent [les styles de bouton](properties_TextAndPicture.md#button-style) pour contrôler l'apparence générale de la case à cocher ainsi que ses propriétés disponibles. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont _structurellement_ identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D propose des cases à cocher avec les styles de bouton prédéfinis suivants :
 
 ### Classique
 
-Le style Classique du bouton case à cocher correspond à un système de case à cocher standard (*i.e.*, un rectangle avec un titre descriptif) :
+Le style Classique du bouton case à cocher correspond à un système de case à cocher standard (_i.e._, un rectangle avec un titre descriptif) :
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-        "type": "checkbox", 
-        "style":"regular",
-        "text": "Cancel",   
-        "action": "Cancel",     
-        "left": 60,         
-        "top": 160,     
-        "width": 100,           
-        "height": 20        
-        "dataSourceTypeHint":"boolean"
-        }
+	"myCheckBox": {
+		"type": "checkbox",	
+		"style":"regular",
+		"text": "Cancel",	
+		"action": "Cancel", 	
+		"left": 60,			
+		"top": 160,		
+		"width": 100,			
+		"height": 20		
+		"dataSourceTypeHint":"boolean"
+		}
 ```
-
-
 
 ### A plat
 
@@ -116,19 +112,17 @@ Le style plat du bouton case à cocher a un design minimaliste. Le graphisme du 
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-            "type": "checkbox", 
-            "style":"flat",
-            "text": "Cancel",   
-            "action": "cancel", 
-            "left": 60,     
-            "top": 160, 
-            "width": 100,           
-            "height": 20            
-            }
+	"myCheckBox": {
+			"type": "checkbox",	
+			"style":"flat",
+			"text": "Cancel",	
+			"action": "cancel", 
+			"left": 60,		
+ 			"top": 160,	
+ 			"width": 100,			
+			"height": 20			
+			}
 ```
-
-
 
 ### Bouton barre outils
 
@@ -140,24 +134,21 @@ Exemples avec les états coché / non coché / surligné :
 
 ![](../assets/en/FormObjects/checkbox_toolbar.png)
 
-
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
+	"myCheckBox": {
                 "type": "checkbox",
-                "style":"toolbar",  
+                "style":"toolbar",	
                 "text": "Checkbox",
-                "icon": "/RESOURCES/File.png", 
-                "iconFrames": 4 
-                "left": 60, 
-                "top": 160, 
-                "width": 100,                   
-                "height": 20                    
+				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+                "left": 60,	
+                "top": 160,	
+                "width": 100,					
+                "height": 20					
                 }
 ```
-
-
 
 ### Bevel
 
@@ -169,24 +160,21 @@ Exemples avec les états coché / non coché / surligné :
 
 ![](../assets/en/FormObjects/checkbox_bevel.png)
 
-
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-                "type": "checkbox", 
+	"myCheckBox": {
+                "type": "checkbox",	
                 "style":"bevel",
-                "text": "Checkbox",  
-                "icon": "/RESOURCES/File.png", 
-                "iconFrames": 4 
-                "left": 60, 
-                "top": 160, 
-                "width": 100,               
-                "height": 20                
+                "text": "Checkbox",	 
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+              	"left": 60,	
+                "top": 160,	
+                "width": 100,				
+                "height": 20				
                 }
 ```
-
-
 
 ### Bevel arrondi
 
@@ -196,28 +184,25 @@ Le style de bouton Bevel arrondi possède un fond gris clair et un titre. Il est
 
 Exemple sous macOS :
 
-  ![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
+![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
 > Sous Windows, le style de bouton Bevel arrondi est identique au style de bouton [Bevel](#bevel).
-
 
 #### Exemple JSON :
 
 ```4d
-    "myCheckBox": {
-                "type": "checkbox", 
-                "style":"roundedBevel",  
-                "text": "Checkbox", 
-                "icon": "/RESOURCES/File.png", 
-                "iconFrames": 4 
-                "left": 60, 
-                "top": 160, 
-                "width": 100,           
-                "height": 20            
+	"myCheckBox": {
+                "type": "checkbox",	
+                "style":"roundedBevel",	 
+                "text": "Checkbox",	
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+                "left": 60,	
+                "top": 160,	
+                "width": 100,			
+                "height": 20			
                 }
 ```
-
-
 
 ### OS X Gradient
 
@@ -225,29 +210,25 @@ Le style du bouton OS X Gradient est presque identique au style du bouton [Bevel
 
 Le style Gradient OS X a un arrière-plan gris clair et un titre et s'affiche sous la forme d'un bouton système bicolore sur macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
-  ![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
+![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
 > Sous Windows, ce style est identique au style [Bevel](#bevel).
-
 
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-            "type": "checkbox", 
-            "style":"gradientBevel", 
-            "text": "Checkbox", 
-            "icon": "/RESOURCES/File.png",
-            "iconFrames": 4
-            "left": 60,     
-            "top": 160,     
-            "width": 100,               
-            "height": 20                
+	"myCheckBox": {
+			"type": "checkbox",	
+			"style":"gradientBevel", 
+			"text": "Checkbox",	
+			"icon": "/RESOURCES/File.png",
+			"iconFrames": 4
+			"left": 60,		
+			"top": 160,		
+			"width": 100,				
+			"height": 20				
            }
 ```
-
-
-
 
 ### OS X Texture
 
@@ -255,30 +236,27 @@ Le style de bouton OS X Textured est presque identique au style [Bevel](#bevel) 
 
 Par défaut, le style OS X Textured apparaît comme :
 
- - *Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
+- _Windows_ - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
-  ![](../assets/en/FormObjects/checkbox_osxtextured.png)
+![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - un bouton système standard. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+- _macOS_ - un bouton système standard. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
-  ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
+![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-            "type": "checkbox", 
-            "style":"texturedBevel", 
-            "text": "Checkbox", 
-            "left": 60, 
-            "top": 160, 
-            "width": 100,                   
-            "height": 20                    
-            }
+	"myCheckBox": {
+			"type": "checkbox",	
+			"style":"texturedBevel", 
+			"text": "Checkbox",	
+			"left": 60,	
+			"top": 160,	
+			"width": 100,					
+			"height": 20					
+			}
 ```
-
-
-
 
 ### Office XP
 
@@ -286,44 +264,42 @@ Le style de bouton Office XP combine l'apparence du style [Classique](#regular) 
 
 Les couleurs (surbrillance et arrière-plan) d'une case à cocher avec le style de bouton Office XP sont basées sur les couleurs du système. L'apparence de la case à cocher peut être différente lorsque le curseur la survole, selon le système d'exploitation :
 
- - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
+- _Sous Windows_ - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
 
-  ![](../assets/en/FormObjects/checkbox_officexp.png)
+![](../assets/en/FormObjects/checkbox_officexp.png)
 
- - *Sous macOS* - son arrière-plan est toujours affiché. Exemples avec les états cochés / non cochés :
+- _Sous macOS_ - son arrière-plan est toujours affiché. Exemples avec les états cochés / non cochés :
 
-  ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
+![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-                "type": "checkbox", 
+	"myCheckBox": {
+                "type": "checkbox",	
                 "style":"office",
-                "text": "Checkbox",  
+                "text": "Checkbox",	 
                 "action": "fontBold",
-                "icon": "/RESOURCES/File.png", 
-                "iconFrames": 4     
-               "left": 60,  
-                "top": 160,     
-                "width": 100,           
-                "height": 20            
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 	
+               "left": 60,	
+                "top": 160,		
+                "width": 100,			
+                "height": 20			
                 }
 ```
-
-
 
 ### Contracter/Déployer
 
 Ce style de case à cocher peut être utilisé pour ajouter une icône standard contracter/déployer. Ces icônes sont utilisées nativement dans les listes hiérarchiques.
 
- - *Sous Windows* - le bouton est semblable à [+] ou à [-]
+- _Sous Windows_ - le bouton est semblable à [+] ou à [-]
 
-  ![](../assets/en/FormObjects/checkbox_collapse.png)
+![](../assets/en/FormObjects/checkbox_collapse.png)
 
- - *Sous macOS* - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
+- _Sous macOS_ - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
 
-  ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
+![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
 :::info
 
@@ -331,34 +307,31 @@ Le style contracter/déployer est nommé "disclosure" dans la [grammaire JSON du
 
 :::
 
-
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-                "type": "checkbox", 
+	"myCheckBox": {
+                "type": "checkbox",	
                 "style":"disclosure",
-                "method": "m_collapse",
-                "left": 60, 
-                "top": 160, 
-                "width": 100,           
-                "height": 20            
+				"method": "m_collapse",
+				"left": 60,	
+                "top": 160,	
+                "width": 100,			
+                "height": 20			
                 }
 ```
-
-
 
 ### Disclosure
 
 Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît comme un bouton disclosure standard, généralement utilisé pour afficher/masquer des informations supplémentaires. Lorsqu'il est utilisé comme bouton radio, le symbole du bouton pointe vers le bas avec la valeur 0 et vers le haut avec la valeur 1.
 
- - *Windows*
+- _Windows_
 
-    ![](../assets/en/FormObjects/checkbox_disclosure.png)
+  ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
- - *macOS*
+- _macOS_
 
-    ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -366,65 +339,60 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 :::
 
-
 #### Exemple JSON :
 
 ```
-    "myCheckBox": {
-                "type": "checkbox",     
-                "style":"roundedDisclosure",    
-                "method": "m_disclose",
-                "left": 60,     
-                "top": 160, 
-                "width": 100,           
-                "height": 20            
+	"myCheckBox": {
+                "type": "checkbox",		
+                "style":"roundedDisclosure",	
+				"method": "m_disclose",
+                "left": 60,		
+                "top": 160,	
+                "width": 100,			
+                "height": 20			
                 }
 ```
-
 
 ### Personnalisé
 
 Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques :
 
-- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname)
-- [Décalage icône](properties_TextAndPicture.md#icon-offset)
+- [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#backgroundPathname)
+- [Décalage de l'icône](properties_TextAndPicture.md#icon-offset)
 - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) et [Marge verticale](properties_TextAndPicture.md#verticalMargin)
 
-Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée conjointement avec une [image d'arrière-plan](properties_TextAndPicture.md#backgroundPathname) [à 4 états](properties_TextAndPicture.md#number-of-states).
+Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée en conjonction avec une [image d'arrière-plan à 4 états](properties_TextAndPicture.md#backgroundPathname).
 
 #### Exemple JSON :
 
 ```
-    "myCheckbox": {
-        "type": "checkbox",
-        "style":"custom",
-        "text": "OK", 
-        "icon": "/RESOURCES/smiley.jpg", 
-        "iconFrame": 4, 
-        "customBackgroundPicture": "/RESOURCES/paper.jpg", 
-        "iconOffset": 5, //décalage icône personnalisé au clic
-        "left": 60, 
-        "top": 160, 
-        "width": 100,       
-        "height": 20,
-        "customBorderX": 20,
-        "customBorderY": 5
-        }
+	"myCheckbox": {
+		"type": "checkbox",
+		"style":"custom",
+		"text": "OK", 
+		"icon": "/RESOURCES/smiley.jpg", 
+		"iconFrame": 4, 
+		"customBackgroundPicture": "/RESOURCES/paper.jpg", 
+		"iconOffset": 5, //custom icon offset when clicked
+		"left": 60,	
+		"top": 160,	
+		"width": 100,		
+		"height": 20,
+		"customBorderX": 20,
+		"customBorderY": 5
+		}
 ```
-
-
-
 
 ## Propriétés prises en charge
 
 Toutes les cases à cocher partagent une même série de propriétés de base :
 
+[Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Classe](properties_Object.md#css-class) - [Entrable](properties_Entry.md#enterable) - [Type d'expression](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille de police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Astuce d'aide](properties_Help.md#help-tip) - [Alignement horizontal](properties_Text.md#horizontal-alignment)(1) - [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) - [L'image serre le titre](properties_TextAndPicture.md#image-hugs-title)(2) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nombre d'états](properties_TextAndPicture.md#number-of-states)(2) - [Nom d'objet](properties_Object.md#object-name) - [Chemin d'accès de l'image](properties_TextAndPicture.md#picture-pathname)(2) - [Droite](properties_CoordinatesAndSizing.md#right) - [Enregistrer la valeur](properties_Object.md#save-value) - [Raccourci](properties_Entry.md#shortcut) - [Action standard](properties_Action.md#standard-action) - [Titre](properties_Object.md#title) - [Position du titre/image](properties_TextAndPicture.md#title-picture-position)(2) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligner](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dimensionnement vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
-[Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Classe](properties_Object.md#css-class) - [Saisissable](properties_Entry.md#enterable) - [Type d'expression](properties_Object.md#expression-type) - [Focalisable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille de la police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Conseil d'aide](properties_Help.md#help-tip) - [Alignement horizontal](properties_Text.md#horizontal-alignment)(1) - [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Image embrasse le titre](properties_TextAndPicture.md#image-hugs-title)(2) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nombre d'états](properties_TextAndPicture.md#number-of-states)(2) - [Nom d'objet](properties_Object.md#object-name) - [Chemin d'accès à l'image](properties_TextAndPicture.md#picture-pathname)(2) - [Droite](properties_CoordinatesAndSizing.md#right) - [Enregistrer la valeur](properties_Object.md#save-value) - [Raccourci](properties_Entry.md#shortcut) - [Action standard](properties_Action.md#standard-action) - [Titre](properties_Object.md#title) - [Position du titre/de l'image](properties_TextAndPicture.md#title-picture-position)(2) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dimensionnement vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
-
-> (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat) .<br/> (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
+> (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat).<br/>
+> (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
 
 Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
 
-- Personnalisé : [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#backgroundPathname) - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) - [Décalage de l'icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#verticalMargin)
+- Personnalisé : [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname) - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) - [Décalage de l'icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#verticalMargin)
 - Flat, Regular: [Trois états](properties_Display.md#three-states)

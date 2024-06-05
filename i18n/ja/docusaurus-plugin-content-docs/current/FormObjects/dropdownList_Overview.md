@@ -13,14 +13,14 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 それぞれに特有の機能を持つ、複数タイプのドロップダウンリストを作成することができます。 タイプを定義するには、プロパティリストで適切な **式の型** と **データタイプ** の値を選択するか、それらに相当する JSON を指定します。
 
-| タイプ           | 機能                   | 式の型/式タイプ | データタイプ                        | JSON 定義                                                                                                                                                          |
-| ------------- | -------------------- | -------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object        | コレクションに基づく           | オブジェクト   | Numeric, Text, Date, または Time | `dataSourceTypeHint: object` + `numberFormat: <format>` または `textFormat: <format>` または `dateFormat: <format>` または `timeFormat: <format>` |
-| 配列            | 配列に基づく               | 配列       | Numeric, Text, Date, または Time | `dataSourceTypeHint: arrayNumber` または `arrayText` または `arrayDate` または `arrayTime`                                                                                |
-| 選択リスト (値を保存)  | 選択リストに基づく (標準)       | リスト      | 選択された項目値                      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                     |
-| 選択リスト (参照を保存) | 選択リストに基づく (項目の位置を保存) | リスト      | 選択された項目参照                     | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                              |
-| 階層型選択リスト      | 階層型の表示が可能            | リスト      | リスト参照                         | `dataSourceTypeHint: integer`                                                                                                                                    |
-| 標準アクション       | アクションにより自動生成         | *any*    | *リスト参照以外*                     | いずれかの定義 + `action: <action>` (他エリアに適用されるアクションの場合は + `focusable: false`)                                                                                    |
+| タイプ                              | 機能                                      | 式の型/式タイプ | データタイプ                        | JSON 定義                                                                                                                                  |
+| -------------------------------- | --------------------------------------- | -------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Object                           | コレクションに基づく                              | Object   | Numeric, Text, Date, または Time | `dataSourceTypeHint: object` + `numberFormat: <format>` または `textFormat: <format>` または `dateFormat: <format>` または `timeFormat: <format>` |
+| 配列                               | 配列に基づく                                  | 配列       | Numeric, Text, Date, または Time | `dataSourceTypeHint: arrayNumber` または `arrayText` または `arrayDate` または `arrayTime`                                                        |
+| 選択リスト (値を保存)  | 選択リストに基づく (標準)       | リスト      | 選択された項目値                      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                             |
+| 選択リスト (参照を保存) | 選択リストに基づく (項目の位置を保存) | リスト      | 選択された項目参照                     | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                      |
+| 階層型選択リスト                         | 階層型の表示が可能                               | リスト      | リスト参照                         | `dataSourceTypeHint: integer`                                                                                                            |
+| 標準アクション                          | アクションにより自動生成                            | _any_    | _リスト参照以外_                     | いずれかの定義 + `action: <action>` (他エリアに適用されるアクションの場合は + `focusable: false`)                                               |
 
 ## ドロップダウンリストの使い方
 
@@ -30,19 +30,19 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 ドロップダウンリストのデータソースとして、[コレクション](Concepts/dt_collection) を内包した [オブジェクト](Concepts/dt_object.md) を使用できます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ             | 説明                                                                                                                                                                                   |
-| -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| プロパティ          | タイプ             | 説明                                                                                                                                            |
+| -------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection      | 必須 - スカラー値のコレクション。 すべての同じ型の値でなくてはなりません。 サポートされている型:<li>文字列</li><li>数値</li><li>日付</li><li>時間</li>空、または未定義の場合、ドロップダウンリストは空になります |
-| `index`        | number          | 選択項目のインデックス (0 と `collection.length-1` の間の値)。 -1 に設定すると、プレースホルダー文字列として currentValue が表示されます。                                                                                         |
-| `currentValue` | Collection要素と同じ | 選択中の項目 (コードにより設定した場合はプレースホルダーとして使用される)                                                                                                                                               |
+| `index`        | number          | 選択項目のインデックス (0 と `collection.length-1` の間の値)。 -1 に設定すると、プレースホルダー文字列として currentValue が表示されます。                               |
+| `currentValue` | Collection要素と同じ | 選択中の項目 (コードにより設定した場合はプレースホルダーとして使用される)                                                                                     |
 
 オブジェクトにその他のプロパティが含まれている場合、それらは無視されます。
 
 ドロップダウンリストに関連付けるオブジェクトを初期化するには、次の方法があります:
 
-* プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `\<Static List>` を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、オブジェクトへと自動的にロードされます。
+- プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `\<Static List>` を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、オブジェクトへと自動的にロードされます。
 
-* オブジェクトとそのプロパティを作成するコードを実行します。 たとえば、ドロップダウンリストに紐づいた [変数](properties_Object.md#変数あるいは式) が "myList" であれば、[On Load](Events/onLoad.md) フォームイベントに次のように書けます:
+- オブジェクトとそのプロパティを作成するコードを実行します。 たとえば、ドロップダウンリストに紐づいた [変数](properties_Object.md#変数あるいは式) が "myList" であれば、[On Load](Events/onLoad.md) フォームイベントに次のように書けます:
 
 ```4d
 // Form.myDrop はフォームオブジェクトのデータソースです
@@ -73,9 +73,9 @@ Form.myDrop.index //3
 
 ドロップダウンリストに関連付ける配列を初期化するには、次の方法があります:
 
-* プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `\<Static List>` を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、配列へと自動的にロードされます。 オブジェクトに関連付けた変数名を使用して、この配列を参照することができます。
+- プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `\<Static List>` を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、配列へと自動的にロードされます。 オブジェクトに関連付けた変数名を使用して、この配列を参照することができます。
 
-* オブジェクトが表示される前に、値を配列要素に代入するコードを実行します。 例:
+- オブジェクトが表示される前に、値を配列要素に代入するコードを実行します。 例:
 
 ```4d
   ARRAY TEXT(aCities;6) 
@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-* オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使ってリストの値を配列にロードします。 例:
+- オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使ってリストの値を配列にロードします。 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -124,9 +124,11 @@ Form.myDrop.index //3
 入力エリア (列挙型のフィールドまたは変数) の管理のためにリストボックスを使用したい場合、フィールドまたは変数をドロップダウンリストの [データソース](properties_Object.md#変数あるいは式) として直接参照することができます。 これにより列挙型のフィールド/変数を容易に管理できるようになります。
 
 たとえば、"White"、"Blue"、"Green"、"Red" という値のみを含む "Color" というフィールドがあった場合、これらの値を含むリストを作成し、それを "Color" フィールドを参照するドロップダウンリストに関連付けることができます。 こうすることによって、あとは 4D が自動的にカレント値の入力や表示に関して管理してくれます。
+
 > 階層リストの場合、第一階層の値のみが表示・選択できます。 階層的な内容を表示したい場合は、[階層型の選択リスト](#階層型選択リストの使用) を使用する必要があります。
 
 ドロップダウンリストをフィールドや変数と関連付けるには、プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) 欄にフィールドまたは変数の名前を直接入力します。
+
 > この原理は、オブジェクトや配列を用いたドロップダウンリストと組み合わせることはできません。 "変数あるいは式" の欄にフィールド名を入力した場合は、必ず選択リストを使用します。
 
 フォームを実行すると、4D が自動的に入力中または表示中のドロップダウンリストの状態を管理します。ユーザーが値を選択すると、その値はフィールドに保存され、このフィールドの値はフォームが表示されたときにドロップダウンリスト表示されます:
@@ -153,14 +155,46 @@ Form.myDrop.index //3
 
 [標準アクション](properties_Action.md#標準アクション) を使って、ドロップダウンリストを自動的に構築することができます。 この機能は、以下のコンテキストでサポートされています:
 
-* `gotoPage` 標準アクションの使用。 この場合、4D は選択された項目の番号に対応する [フォームのページ](FormEditor/forms.md#フォームのページ) を自動的に表示します。 たとえば、ユーザーが 3番目の項目をクリックすると、4Dはカレントフォームの 3ページ目 (存在する場合) を表示します。 実行時のデフォルトでは、ドロップダウンリストにはページ番号 (1、2...) が表示されます。
+- `gotoPage` 標準アクションの使用。 この場合、4D は選択された項目の番号に対応する [フォームのページ](FormEditor/forms.md#フォームのページ) を自動的に表示します。 たとえば、ユーザーが 3番目の項目をクリックすると、4Dはカレントフォームの 3ページ目 (存在する場合) を表示します。 実行時のデフォルトでは、ドロップダウンリストにはページ番号 (1、2...) が表示されます。
 
-* 項目のサブリストを表示する標準アクションの使用 (例: `backgroundColor`)。 この機能には以下の条件があります:
-  * スタイル付きテキストエリア ([4D Write Pro エリア](writeProArea_overview.md) または [マルチスタイル](properties_Text.md#マルチスタイル) プロパティ付き [入力](input_overview.md)) が標準アクションのターゲットとしてフォーム内に存在する。
-  * ドロップダウンリストに [フォーカス可](properties_Entry.md#フォーカス可) 設定されていない。 実行時のドロップダウンリストは、背景色などの値の自動リストを表示します。 この自動リストは、各項目が任意の標準アクションを割り当てられた選択リストを設定することで上書きすることもできます。
+- 項目のサブリストを表示する標準アクションの使用 (例: `backgroundColor`)。 この機能には以下の条件があります:
+  - スタイル付きテキストエリア ([4D Write Pro エリア](writeProArea_overview.md) または [マルチスタイル](properties_Text.md#マルチスタイル) プロパティ付き [入力](input_overview.md)) が標準アクションのターゲットとしてフォーム内に存在する。
+  - ドロップダウンリストに [フォーカス可](properties_Entry.md#フォーカス可) 設定されていない。
+    実行時のドロップダウンリストは、背景色などの値の自動リストを表示します。 この自動リストは、各項目が任意の標準アクションを割り当てられた選択リストを設定することで上書きすることもできます。
 
 > この機能は、階層型のドロップダウンリストでは使用できません。
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [選択リスト](properties_DataSource.md#選択リスト) - [データタイプ (式の型)](properties_DataSource.md#データタイプ-式の型) - [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [文字フォーマット](properties_Display.md#文字フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)  
+[文字フォーマット](properties_Display.md#文字フォーマット) -
+[太字](properties_Text.md#太字) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) -
+[選択リスト](properties_DataSource.md#選択リスト) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[データタイプ (式の型)](properties_DataSource.md#データタイプ-式の型) -
+[データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) -
+[日付フォーマット](properties_Display.md#日付フォーマット) -
+[式の型](properties_Object.md#式の型) -
+[フォーカス可](properties_Entry.md#フォーカス可) -
+[フォント](properties_Text.md#フォント) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[フォントサイズ](properties_Text.md#フォントサイズ) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[イタリック](properties_Text.md#イタリック) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[レンダリングしない](properties_Display.md#レンダリングしない) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[標準アクション](properties_Action.md#標準アクション) -
+[値を記憶](properties_Object.md#値を記憶) -
+[時間フォーマット](properties_Display.md#時間フォーマット) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[タイプ](properties_Object.md#タイプ) -
+[下線](properties_Text.md#下線) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[幅](properties_CoordinatesAndSizing.md#幅)

@@ -3,12 +3,10 @@ id: ZipFolderClass
 title: ZIPFolder
 ---
 
-
 [Folder](FolderClass.md) クラスの次のプロパティや関数は `ZIPFolder` オブジェクトにおいて利用可能です:
 
-
-| ZIPFolder で利用可能な [Folder](FolderClass.md) API                                                    | 説明                                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| ZIPFolder で利用可能な [Folder](FolderClass.md) API                                          | 説明                                                                       |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](FolderClass.md#copyto)                   |                                                                          |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](FolderClass.md#creationdate)         | アーカイブ内のフォルダーと `root` フォルダーの日付が異なる場合があります                                 |
 | [<!-- INCLUDE #directory.creationTime.Syntax -->](FolderClass.md#creationtime)         | アーカイブ内のフォルダーと `root` フォルダーの時刻が異なる場合があります                                 |

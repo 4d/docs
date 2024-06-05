@@ -13,7 +13,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
 
-**VP SET TABLE COLUMN ATTRIBUTES** ( _vpAreaName_ : Text ; _tableName_ : Text ; _column_ : Integer ; _attributes_ : Object {; _sheet_ : Integer } )<!-- END REF -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
@@ -22,16 +22,16 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | column     | Integer | -> | Índice da coluna na tabela                                  |                  |
-| attributes | Object  | -> | Attribute(s) to apply to the _column_    |                  |
+| attributes | Object  | -> | Attribute(s) to apply to the *column*    |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
 #### Descrição
 
-The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined _attributes_ to the _column_ in the _tableName_<!-- END REF -->.
+The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the _attributes_ parameter, pass an object that contains the properties to set:
+In the *attributes* parameter, pass an object that contains the properties to set:
 
 | Propriedade         | Tipo    | Descrição                                                                                                                                                                                                   |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,11 +42,11 @@ In the _attributes_ parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+In *sheet*, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-If _tableName_ is not found or if _column_ is higher than the number of columns, the command does nothing.
+If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
 
 #### Exemplo
 

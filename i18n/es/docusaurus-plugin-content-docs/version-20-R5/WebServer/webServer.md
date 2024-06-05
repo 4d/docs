@@ -20,18 +20,19 @@ El servidor web 4D crea automáticamente una carpeta raíz y una página de inic
 
 La seguridad de los datos está presente en todas las etapas de las implementaciones del servidor web 4D. Los niveles de seguridad son escalables y la configuración por defecto suele seleccionar las opciones más seguras. La seguridad del servidor web 4D se basa en los elementos siguientes:
 
-* Soporte extendido del [**protocolo TLS (HTTPS)**](../Admin/tls.md),
+- Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 
-* **Autenticación**: [funciones de autenticación](authentication.md) flexibles y personalizables basadas en la configuración integrada, así como también métodos base de reserva ([`On Web Authentication`](authentication.md#on-web-authentication) para el servidor web y [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para el servidor REST),
+- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-* **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. Debe declarar:
-  * [Los métodos proyecto](templates.md#allowing-project-methods) expuestos a través de peticiones HTTP
-  * [Las funciones ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) expuestas a través de peticiones REST
-  * [Tablas y campos](REST/configuration.md#exposing-tables-and-fields) que no quiere que estén disponibles para las peticiones REST.
+- **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. Debe declarar:
+  - [Los métodos proyecto](templates.md#allowing-project-methods) expuestos a través de peticiones HTTP
+  - [Las funciones ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) expuestas a través de peticiones REST
+  - [Tablas y campos](REST/configuration.md#exposing-tables-and-fields) que no quiere que estén disponibles para las peticiones REST.
 
-* **Sandboxing** mediante la definición de una [carpeta HTML raíz](webServerConfig.md#root-folder) por defecto,
+- **Sandboxing** mediante la definición de una [carpeta HTML raíz](webServerConfig.md#root-folder) por defecto,
 
-* **Control del uso de los recursos del servidor** (por ejemplo, vía la opción [máximo de procesos web concurrentes](webServerConfig.md#maximum-concurrent-web-processes)).
+- **Control del uso de los recursos del servidor** (por ejemplo, vía la opción [máximo de procesos web concurrentes](webServerConfig.md#maximum-concurrent-web-processes)).
+
 > Para una visión general de las funciones de seguridad de 4D, consulte la [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/).
 
 ## Sesiones usuario
@@ -52,9 +53,9 @@ La configuración del servidor web 4D se define a través de un amplio conjunto 
 
 El servidor web 4D soporta el acceso a los datos almacenados en sus aplicaciones 4D a través de páginas de plantillas y URLs específicas.
 
-* Las páginas de plantillas contienen [etiquetas especiales](templates.md) que inician el procesamiento del servidor web en el momento en que se envían a los navegadores.
+- Las páginas de plantillas contienen [etiquetas especiales](templates.md) que inician el procesamiento del servidor web en el momento en que se envían a los navegadores.
 
-* [Las URLs específicas](httpRequests.md) permiten llamar a 4D para ejecutar cualquier acción; estas URLs también pueden utilizarse como acciones de formulario para activar el procesamiento cuando el usuario publica formularios HTML.
+- [Las URLs específicas](httpRequests.md) permiten llamar a 4D para ejecutar cualquier acción; estas URLs también pueden utilizarse como acciones de formulario para activar el procesamiento cuando el usuario publica formularios HTML.
 
 ## Métodos base dedicados
 

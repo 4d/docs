@@ -18,7 +18,7 @@ Le générateur d'applications vous permet de :
 
 ## Aperçu du générateur d'application
 
-Générer un package de projet peut être réalisée à l'aide de :
+Générer un package de projet peut être réalisé à l'aide de :
 
 * soit la commande [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
 * soit la[ fenêtre Générateur d'application](#application-builder).
@@ -37,13 +37,13 @@ La génération ne peut s'effectuer qu'une fois le projet compilé. Si vous sél
 
 Dans le fichier *buildApp.4DSettings* de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :
 
-Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
+Des paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
 Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.
 
-### Fichier d'historique
+### Fichier journal
 
-Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier journal stocke les informations suivantes pour chaque build :
 
 * Le début et la fin de la génération des cibles,
 * Le nom et le chemin d'accès complet des fichiers générés,
@@ -95,12 +95,12 @@ Si vous avez nommé votre application *MyComponent*, 4D créera un dossier *Comp
 
 Le dossier *MyComponent.4dbase* contient :
 
-* fichier *MyComponent.4DZ*
+* *MyComponent.4DZ* file
 * Un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
 
 ## Page Application
 
-Cet onglet vous permet de créer une version autonome et monoposte de votre application :
+Cet onglet vous permet de créer une version monoposte autonome de votre application :
 
 ![](../assets/en/Project/standaloneProj.png)
 

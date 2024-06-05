@@ -13,7 +13,7 @@ title: VP SET FIELD
 | ------------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | rangeObj      | Object  | -> | Objet plage                                    |                  |
 | champ         | Pointer | -> | Référence au champ dans la structure virtuelle |                  |
-| formatPattern | Text    | -> | Format of field                                | <!-- END REF --> |
+| formatPattern | Text    | -> | Format du champ                                | <!-- END REF --> |
 
 #### Description
 

@@ -89,14 +89,14 @@ Voir [cet article de blog](https://blog.4d.com/websocket-server/) pour un exempl
 
 Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
-|                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
-| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
-| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
-| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
+|                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary --> |
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->          |
+| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->             |
+| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->                      |
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->   |
+| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #WebSocketServerClass.terminated.Summary -->    |
 
 ## 4D.WebSocketServer.new()
 
@@ -112,13 +112,13 @@ Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
 <!-- END REF -->
 
-La fonction `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->crée et démarre un serveur WebSocket qui utilisera les callbacks _WSSHandler_ et les _options_ spécifiées (optionnellement), et renvoie un objet `4D.WebSocketServer`<!-- END REF -->.
+La fonction `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->crée et démarre un serveur WebSocket qui utilisera les callbacks *WSSHandler* et les *options* spécifiées (optionnellement), et renvoie un objet `4D.WebSocketServer`<!-- END REF -->.
 
 L'appel de cette fonction nécessite que le [serveur Web 4D](WebServerClass.md) soit démarré. Le **host** et le **port** du serveur WebSocket sont les mêmes que l'hôte et le port du serveur Web 4D.
 
-### Paramètre _WSSHandler_
+### Paramètre *WSSHandler*
 
-Dans le paramètre _WSSHandler_, passez une instance d'une classe utilisateur qui sera appelée chaque fois qu'un événement se produit sur le serveur WebSocket -- essentiellement des événements de connexion. La classe doit définir les fonctions de callback suivantes (seule la fonction `onConnection` est obligatoire) :
+Dans le paramètre *WSSHandler*, passez une instance d'une classe utilisateur qui sera appelée chaque fois qu'un événement se produit sur le serveur WebSocket -- essentiellement des événements de connexion. La classe doit définir les fonctions de callback suivantes (seule la fonction `onConnection` est obligatoire) :
 
 | Propriété    | Type                         | Description                                                                                                                      | Par défaut |
 | ------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------- |
@@ -127,7 +127,7 @@ Dans le paramètre _WSSHandler_, passez une instance d'une classe utilisateur qu
 | onTerminate  | [Function](FunctionClass.md) | Callback quand le serveur WebSocket est stoppé (voir ci-dessous)                                              | undefined  |
 | onError      | [Function](FunctionClass.md) | Callback quand une erreur est survenue (voir ci-dessous)                                                      | undefined  |
 
-**WSHandler.onConnection**(_WSServer_ : Object ; _event_ : Object) : Object | null
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | Paramètres |         | Type                               |     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | ------- | ---------------------------------- | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -139,7 +139,7 @@ Dans le paramètre _WSSHandler_, passez une instance d'une classe utilisateur qu
 
 Cette callback est appelée lorsque le handshake est terminé. Elle doit être appelée avec un [objet `connectionHandler`](#objet-connectionhandler) valide pour créer la connexion WebSocket, sinon la connexion est annulée.
 
-**WSHandler.onOpen**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | Paramètres |      | Type                               |     | Description                     |
 | ---------- | ---- | ---------------------------------- | :-: | ------------------------------- |
@@ -149,7 +149,7 @@ Cette callback est appelée lorsque le handshake est terminé. Elle doit être a
 
 Événement émis lorsque le serveur websocket est démarré.
 
-**WSHandler.onTerminate**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | Paramètres |      | Type                               |     | Description                     |
 | ---------- | ---- | ---------------------------------- | :-: | ------------------------------- |
@@ -159,7 +159,7 @@ Cette callback est appelée lorsque le handshake est terminé. Elle doit être a
 
 Événement émis lors de la fermeture du serveur HTTP ou du serveur WebSocket.
 
-**WSHandler.onError**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
 | Paramètres |        | Type                               |     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------- | ------ | ---------------------------------- | :-: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -172,7 +172,7 @@ Cette callback est appelée lorsque le handshake est terminé. Elle doit être a
 
 ### Exemple de classe `WSSHandler`
 
-Cet exemple de fonctionnalité de chat basique montre comment gérer les connexions au serveur WebSocket dans une classe _WSSHandler_.
+Cet exemple de fonctionnalité de chat basique montre comment gérer les connexions au serveur WebSocket dans une classe *WSSHandler*.
 
 ```4d
 //myWSServerHandler class 
@@ -224,7 +224,7 @@ En résultat d'une callback `WSHandler.onConnection`, passez un objet `connectio
 | onTerminate | [Function](FunctionClass.md) | Fonction appelée lorsque cette connexion est terminée                                                   |
 | onError     | [Function](FunctionClass.md) | Fonction appelée en cas d'erreur                                                                        |
 
-**connectionHandler.onMessage**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Paramètres |      | Type                                                    |     | Description                       |
 | ---------- | ---- | ------------------------------------------------------- | :-: | --------------------------------- |
@@ -235,7 +235,7 @@ En résultat d'une callback `WSHandler.onConnection`, passez un objet `connectio
 
 Callback pour les données WebSocket. Appelée à chaque fois que le WebSocket reçoit des données.
 
-**connectionHandler.onOpen**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Paramètres |      | Type                                                    |     | Description                       |
 | ---------- | ---- | ------------------------------------------------------- | :-: | --------------------------------- |
@@ -245,7 +245,7 @@ Callback pour les données WebSocket. Appelée à chaque fois que le WebSocket r
 
 Appelée lorsque l'objet `connectionHandler` est créé (après l'événement `WSS.onConnection`).
 
-**connectionHandler.onTerminate**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Paramètres |        | Type                                                    |     | Description                                                                                                                                                                                                                                   |
 | ---------- | ------ | ------------------------------------------------------- | :-: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -257,7 +257,7 @@ Appelée lorsque l'objet `connectionHandler` est créé (après l'événement `W
 
 Fonction appelée lorsque la WebSocket est fermée.
 
-**connectionHandler.onError**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Paramètres |        |            | Type                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Description                       |
 | ---------- | ------ | ---------- | ------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------------------------------- |
@@ -270,7 +270,7 @@ Fonction appelée en cas d'erreur.
 
 ### Exemple de classe `connectionHandler`
 
-Cet exemple de fonctionnalité de chat basique montre comment gérer les messages dans une classe _connectionHandler_.
+Cet exemple de fonctionnalité de chat basique montre comment gérer les messages dans une classe *connectionHandler*.
 
 ```4d
 // Classe myConnectionHandler
@@ -301,9 +301,9 @@ Function broadcast($ws : 4D.WebSocketConnection ; $message:text)
 
 ```
 
-### Paramètre _options_
+### Paramètre *options*
 
-Dans le paramètre facultatif _options_, passez un objet contenant les propriétés suivantes :
+Dans le paramètre facultatif *options*, passez un objet contenant les propriétés suivantes :
 
 | Propriété | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                          | Par défaut |
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |

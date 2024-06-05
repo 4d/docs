@@ -127,7 +127,7 @@ Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-f
 
 #### Générer le fichier d'erreurs
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
+Permet de générer le fichier d'erreurs (voir [fichier d'erreurs](#fichier-derreurs)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
 
 
 #### Chemin de compilation

@@ -3,7 +3,6 @@ id: webServerObject
 title: Objet Web Server
 ---
 
-
 Un projet 4D peut démarrer et surveiller un serveur Web pour l'application principale (hôte) ainsi que chaque composant hébergé.
 
 Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
@@ -19,12 +18,12 @@ Chaque serveur web 4D, y compris le serveur web de l'application principale, est
 > Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
 Chaque serveur web (application hôte ou composant) peut être utilisé dans son propre contexte, notamment :
+
 - les appels vers la méthode base `On Web Authentication` et `On Web Connection`
 - le traitement des balises 4D et les appels de méthodes,
 - sessions web et gestion du protocole TLS.
 
 Cela vous permet de développer des composants indépendants et des fonctionnalités qui accompagnent leurs propres interfaces Web.
-
 
 ## Instancier un objet serveur web
 
@@ -35,19 +34,20 @@ $nbSrv:=WEB Server list.length
 //la valeur de $nbSrv est 1
 ```
 
-Pour instancier un objet serveur web, appelez la commande [`WEB Server`](API/WebServerClass.md#web-server) :
+To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
 
 ```4d
-    //créer une variable objet de la classe 4D.WebServer
+	//create an object variable of the 4D.WebServer class
 var webServer : 4D.WebServer 
-    //appeler le serveur Web depuis le contexte courant
+	//call the web server from the current context
 webServer:=WEB Server  
 
-    //équivalent à
+	//equivalent to
 webServer:=WEB Server(Web server database)
 ```
 
 Si l'application utilise des composants et que vous souhaitez appeler :
+
 - le serveur Web de l'application hôte à partir d'un composant ou
 - le serveur qui a reçu la requête (quel que soit le serveur)
 
@@ -55,36 +55,34 @@ vous pouvez également utiliser :
 
 ```4d
 var webServer : 4D.WebServer 
-    //appler le serveur web hôte depuis un composant  
+	//call the host web server from a component  
 webServer:=WEB Server(Web server host database)  
-    //appeler le serveur web cible
+	//call the target web server
 webServer:=WEB Server(Web server receiving request)  
 ```
-
 
 ## Fonctions du serveur web
 
 Un [objet de classe Web server](API/WebServerClass.md#web-server-object) contient les fonctions suivantes :
 
-| Fonctions                                | Paramètres       | Valeur retournée | Description            |
-| ---------------------------------------- | ---------------- | ---------------- | ---------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (object)  | Démarre le serveur web |
-| [`stop()`](API/WebServerClass.md#start)  | -                | -                | Stoppe le serveur web  |
+| Fonctions                                | Paramètres                          | Valeur retournée                   | Description            |
+| ---------------------------------------- | ----------------------------------- | ---------------------------------- | ---------------------- |
+| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (object) | Démarre le serveur web |
+| [`stop()`](API/WebServerClass.md#start)  | -                                   | *                                  | Stoppe le serveur web  |
 
-Pour démarrer et arrêter un serveur Web, il suffit d'appeler les fonctions [`start()`](API/WebServerClass.md#start) et [`stop()`](API/WebServerClass.md#stop) de l'objet serveur Web :
+To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
 
 ```4d
 var $status : Object
-    //pour démarrer un serveur web avec les paramètres par défaut
+  	//to start a web server with default settings
 $status:=webServer.start()
-    //pour démarrer un serveur web avec des paramètres personnalisés   
-    //objet $settings contenant des propriétés du serveur web
+	//to start the web server with custom settings  
+	//$settings object contains web server properties
 webServer.start($settings)
 
-    //pour stopper le serveur web
+	//to stop the web server
 $status:=webServer.stop()
 ```
-
 
 ## Propriétés du serveur web
 
@@ -92,15 +90,14 @@ Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-
 
 Ces propriétés sont définies :
 
-1. de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
+1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
-- Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
+- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
-> *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
-
+> _isRunning_, _name_, _openSSLVersion_, and _perfectForwardSecrecy_ are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
 ## Portée des commandes 4D Web
 

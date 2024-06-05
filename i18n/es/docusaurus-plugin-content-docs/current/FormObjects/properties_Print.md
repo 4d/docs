@@ -23,8 +23,8 @@ Las opciones de impresión son:
 
 #### Gramática JSON
 
-|   Nombre   | Tipos de datos | Valores posibles                                                |
-|:----------:|:--------------:| --------------------------------------------------------------- |
+|   Nombre   | Tipos de datos | Valores posibles                                                                   |
+| :--------: | :------------: | ---------------------------------------------------------------------------------- |
 | printFrame |     string     | "fixed", "variable", (subformulario únicamente) "fixedMultiple" |
 
 #### Objetos soportados

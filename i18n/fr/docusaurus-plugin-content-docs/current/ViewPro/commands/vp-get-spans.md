@@ -5,20 +5,20 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Syntax -->
 
-**VP Get spans** ( _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get spans** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Paramètres | Type   |    | Description                               |                  |
-| ---------- | ------ | -- | ----------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage                               |                  |
-| Résultat   | Object | <- | Object of cell spans in the defined range | <!-- END REF --> |
+| Paramètres | Type   |    | Description                                                                        |                  |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------- | ---------------- |
+| rangeObj   | Object | -> | Objet plage                                                                        |                  |
+| Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie | <!-- END REF --> |
 
 #### Description
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated _rangeObj_<!-- END REF -->.
+The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass a range of cell spans you want to retrieve. If _rangeObj_ does not contain a cell span, an empty range is returned.
+In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
 
 #### Exemple
 

@@ -19,7 +19,9 @@ Pour savoir ce qui est exposé en tant que datastore, créez une nouvelle métho
 TRACE
 ```
 
-Exécutez la méthode - elle appelle simplement la fenêtre du débogueur. Dans la zone d'Expression, double-cliquez pour insérer une expression et entrez `ds`. Elle retourne l'objet du datastore. Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet `ds` :
+Exécutez la méthode - elle appelle simplement la fenêtre du débogueur.
+Dans la zone d'Expression, double-cliquez pour insérer une expression et entrez `ds`. Elle retourne l'objet du datastore.
+Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet `ds` :
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -33,9 +35,10 @@ ds.Company.city // retourne le nom de la ville
 
 > ORDA est sensible à la casse. `ds.company.city` ne fera pas référence à l'attribut ds.Company.city.
 
-Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation *1 vers N* entre Company et Employee :
+Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation _1 vers N_ entre Company et Employee :
 
-![](../assets/en/ORDA/struc2s.png) *Nom de la relation tel que défini dans l'inspecteur*
+![](../assets/en/ORDA/struc2s.png)
+_Name of the relation as defined in the Inspector_
 
 Cela signifie que, chaque fois que vous avez besoin d'accéder à la liste des employés travaillant pour une entreprise, il vous suffit d'écrire, dans ORDA :
 
@@ -45,10 +48,10 @@ ds.Company.hires // retourne la liste des employés
 
 Mais n'allez pas trop vite. Voyons maintenant comment enregistrer des données dans des dataclass ORDA.
 
-
 ## Ajouter des données
 
 Avec ORDA, vous pouvez ajouter un enregistrement à une dataclass à l'aide de la commande `new()`.
+
 > Dans le monde d'ORDA, un enregistrement est une **entité** (entity) - une entité est elle-même un objet. Une commande attachée à un objet spécifique est appelée une **méthode membre**.
 
 ```code4d
@@ -62,7 +65,7 @@ Un nouvel objet entité contient une "copie" de tous les attributs de sa datacla
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID est automatiquement rempli
+//$entity.ID is automatically filled
 ```
 
 Pour le moment, l'entité n'existe qu'en mémoire. Pour la stocker dans le fichier de données, vous devez l'enregistrer à l'aide de la méthode membre `save()` :
@@ -70,11 +73,3 @@ Pour le moment, l'entité n'existe qu'en mémoire. Pour la stocker dans le fichi
 ```code4d
 $status:=$entity.save()
 ```
-
-
-
-
-
-
-
-

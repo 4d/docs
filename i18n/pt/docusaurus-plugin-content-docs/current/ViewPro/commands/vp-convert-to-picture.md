@@ -5,7 +5,7 @@ title: VP Convert to picture
 
 <!-- REF #_method_.VP Convert to picture.Syntax -->
 
-**VP Convert to picture** ( _vpObject_ : Object {; _rangeObj_ : Object} ) : Picture<!-- END REF -->
+**VP Convert to picture** ( *vpObject* : Object {; *rangeObj* : Object} ) : Picture<!-- END REF -->
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
@@ -13,22 +13,22 @@ title: VP Convert to picture
 | ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
 | vpObject   | Object | -> | Objeto 4D View Pro que contém a área a converter |                  |
 | rangeObj   | Object | -> | Objeto intervalo                                 |                  |
-| Resultados | Object | <- | Imagem SVG da área                               | <!-- END REF --> |
+| Resultados | Imagem | <- | Imagem SVG da área                               | <!-- END REF --> |
 
 #### Descrição
 
-O comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->converte o objeto _vpObject_ do 4D View Pro (ou o intervalo _rangeObj_ dentro de _vpObject_) em uma imagem SVG<!-- END REF -->.
+O comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->converte o objeto *vpObject* do 4D View Pro (ou o intervalo *rangeObj* dentro de *vpObject*) em uma imagem SVG<!-- END REF -->.
 
 Este comando é útil, por exemplo:
 
 - para incorporar um documento 4D View Pro em outro documento, como um documento 4D Write Pro
 - para imprimir um documento do 4D View Pro sem ter que carregá-lo em uma área do 4D View Pro.
 
-Em _vpObject_, passe o objeto 4D View Pro que você deseja converter. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).
+Em *vpObject*, passe o objeto 4D View Pro que você deseja converter. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).
 
 > SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. Se você converter um documento que não foi avaliado anteriormente, as expressões ou os formatos poderão ser renderizados de forma inesperada.
 
-Em _rangeObj_, passe um intervalo de células a ser convertido. Por padrão, se esse parâmetro for omitido, todo o conteúdo do documento será convertido.
+Em *rangeObj*, passe um intervalo de células a ser convertido. Por padrão, se esse parâmetro for omitido, todo o conteúdo do documento será convertido.
 
 O conteúdo do documento é convertido com relação aos seus atributos de visualização, incluindo formatos (veja a observação acima), visibilidade de cabeçalhos, colunas e linhas. Há suporte para a conversão dos seguintes elementos:
 

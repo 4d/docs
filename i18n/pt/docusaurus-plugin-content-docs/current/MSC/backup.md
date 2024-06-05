@@ -10,10 +10,10 @@ Pode utilizar a página de cópia de segurança para ver alguns parâmetros de c
 
 Esta página é composta pelas três áreas seguintes:
 
-- **Destino do ficheiro de cópia de segurança**: apresenta informações sobre a localização do ficheiro de cópia de segurança da aplicação. Também indica o espaço livre/utilizado no disco de backup.
-- **Informações da última cópia de segurança**: fornece a data e a hora da última cópia de segurança (automática ou manual) efetuada na aplicação.
-- **Conteúdo do ficheiro de cópia de segurança**: lista os ficheiros e pastas incluídos no ficheiro de cópia de segurança.
+- **Destino del archivo de copia de seguridad**: muestra información sobre la ubicación del archivo de copia de seguridad de la aplicación. Também indica o espaço livre/utilizado no disco de backup.
+- **Información de la última copia de seguridad**: ofrece la fecha y la hora de la última copia de seguridad (automática o manual) realizada en la aplicación.
+- **Contenido del archivo de copia de seguridad**: lista los archivos y carpetas incluidos en el archivo de copia de seguridad.
 
-O botão **Backup** é utilizado para iniciar uma cópia de segurança manual.
+El botón **Copia de seguridad** se utiliza para lanzar una copia de seguridad manual.
 
-Esta página não pode ser utilizada para modificar os parâmetros de cópia de segurança. Para o fazer, deve clicar no botão **Propriedades da base...**.
+Esta página não pode ser utilizada para modificar os parâmetros de cópia de segurança. Para ello, debe hacer clic en el botón **Propiedades de la base...**.

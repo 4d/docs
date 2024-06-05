@@ -13,7 +13,7 @@ title: VP Copy to object
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
 
-**VP Copy to object** ( _rangeObj_ : Object {; _options_ : Object} ) : Object<!-- END REF -->
+**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Copy to object.Params -->
 
@@ -25,15 +25,15 @@ title: VP Copy to object
 
 #### Descripción
 
-El comando `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->copia el contenido, estilo y fórmulas de _rangeObj_ a un objeto<!-- END REF -->.
+El comando `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->copia el contenido, estilo y fórmulas de *rangeObj* a un objeto<!-- END REF -->.
 
-En _rangeObj_, pase el rango de celdas con los valores, formato y fórmulas a copiar. Si _rangeObj_ es un rango combinado, sólo se utiliza el primero.
+En *rangeObj*, pase el rango de celdas con los valores, formato y fórmulas a copiar. Si *rangeObj* es un rango combinado, sólo se utiliza el primero.
 
-Puede pasar un parámetro opcional _options_ con las siguientes propiedades:
+Puede pasar un parámetro opcional *options* con las siguientes propiedades:
 
 | Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| copy        | Boolean | _True_ (por defecto) para mantener los valores, el formato y las fórmulas copiados después de la ejecución del comando. _False_ para eliminarlos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| copy        | Boolean | *True* (por defecto) para mantener los valores, el formato y las fórmulas copiados después de la ejecución del comando. *False* para eliminarlos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | copyOptions | Longint | Especifica lo que se copia o mueve. Valores posibles: <p><table><tr><th>Valor</th><th>Descripción</th></tr><tr><td>`vk clipboard options all` (por defecto)</td><td>Copia todos los objetos de datos, incluidos los valores, el formato y las fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia sólo el formato.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia sólo las fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia las fórmulas y el formato.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia sólo los valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia los valores y el formato.</td></tr></table></p> |
 
 Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro de trabajo](vp-set-workbook-options.md).

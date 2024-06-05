@@ -5,20 +5,20 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Syntax -->
 
-**VP Get values** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get values** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Paramètres | Type       |    | Description          |                  |
-| ---------- | ---------- | -- | -------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objet plage          |                  |
-| Résultat   | Collection | <- | Collection of values | <!-- END REF --> |
+| Paramètres | Type       |    | Description           |                  |
+| ---------- | ---------- | -- | --------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objet plage           |                  |
+| Résultat   | Collection | <- | Collection de valeurs | <!-- END REF --> |
 
 #### Description
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
+The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass a range whose values you want to retrieve. If _rangeObj_ includes multiple ranges, only the first range is used.
+In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
 
 The collection returned by `VP Get values` contains a two-dimensional collection:
 

@@ -5,7 +5,7 @@ title: VP NEW DOCUMENT
 
 <!-- REF #_method_.VP NEW DOCUMENT.Syntax -->
 
-**VP NEW DOCUMENT** ( _vpAreaName_ : Text ) <!-- END REF -->
+**VP NEW DOCUMENT** ( *vpAreaName* : Text ) <!-- END REF -->
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
@@ -15,9 +15,9 @@ title: VP NEW DOCUMENT
 
 #### 説明
 
-`VP NEW DOCUMENT` コマンドは、<!-- REF #_method_.VP NEW DOCUMENT.Summary -->_vpAreaName_ で指定した 4D View Pro エリアに、新規のデフォルトドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは新規の空ドキュメントによって置換されます。
+`VP NEW DOCUMENT` コマンドは、<!-- REF #_method_.VP NEW DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、新規のデフォルトドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは新規の空ドキュメントによって置換されます。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 #### 例題
 

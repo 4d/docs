@@ -5,7 +5,7 @@ title: VP NEW DOCUMENT
 
 <!-- REF #_method_.VP NEW DOCUMENT.Syntax -->
 
-**VP NEW DOCUMENT** ( _vpAreaName_ : Text ) <!-- END REF -->
+**VP NEW DOCUMENT** ( *vpAreaName* : Text ) <!-- END REF -->
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
@@ -15,9 +15,9 @@ title: VP NEW DOCUMENT
 
 #### Descrição
 
-The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object _vpAreaName_<!-- END REF -->. O novo documento vazio substitui quaisquer dados já inseridos na área.
+The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. O novo documento vazio substitui quaisquer dados já inseridos na área.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 #### Exemplo
 

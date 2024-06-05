@@ -13,23 +13,22 @@ Puede desplazarse por el contenido de métodos, clases y funciones, que pueden i
 
 El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis. Cuando se ejecuta el código se realiza una comprobación adicional de errores. Para más información sobre cómo gestionar los errores, consulte [Depuración](../Debugging/basics.md).
 
-## Interfaz
+## Interface
 
 ### Toolbar (Barra de herramientas)
 
 Cada ventana del Editor de Código tiene una barra de herramientas que ofrece acceso instantáneo a las funciones básicas relacionadas con la ejecución y edición de código.
 
-| Elemento                             | Icono                                                                             | Descripción                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: crea un nuevo proceso y muestra el método en la ventana Depurador para la ejecución paso a paso en este proceso.</li><li>**Ejecutar en el proceso de Aplicación**: ejecuta el método en modo estándar en el contexto del proceso de Aplicación (en otras palabras, la ventana de visualización de registros).</li><li>**Ejecutar y depurar en el proceso Aplicación**: muestra el método en la ventana Depurador para su ejecución paso a paso en el contexto del proceso Aplicación (es decir, en la ventana de visualización de registros).</li></ul>Para obtener más información sobre la ejecución de métodos, consulte [Llamar Métodos Proyecto](../Concepts/methods.md#calling-project-methods). |
-| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Muestra el [*área de búsqueda*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                        |
-| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. Para obtener más información sobre como crear e instanciar macros, consulte [Macros](#macros).                                                                                                                                                                         |
-| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Estos botones permiten expandir o contraer todas las estructuras de flujo de control del código.                                                                                                                                                                                                                                                                                           |
-| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Muestra el diálogo [Propiedades del método](../Concepts/methods.md#project-method-properties) (sólo métodos proyecto).                                                                                                                                                                                                                                                                     |
-| **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                                                                |
-| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. Puede [utilizar estos portapapeles](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) haciendo clic directamente sobre ellos o utilizando atajos de teclado. Puede utilizar la opción [Preferencias](Preferences/methods.md#options-1) para ocultarlas.                                                      |
-| **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                                                                      |
-
+| Elemento                             | Icono                                                                             | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Utilizando el menú asociado a este botón, puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: Crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: Crea un nuevo proceso y muestra el método en la ventana Depurador para su ejecución paso a paso en este proceso.</li><li>**Ejecutar en proceso Aplicación**: Ejecuta el método en modo estándar en el contexto del proceso Aplicación (es decir, en la ventana de visualización del registro).</li><li>**Ejecutar y depurar en el proceso Aplicación**: Muestra el método en la ventana del Depurador para su ejecución paso a paso en el contexto del proceso Aplicación (en otras palabras, la ventana de visualización de registros).</li></ul>Para más información sobre la ejecución de métodos, ver [Llamada a métodos proyecto](../Concepts/methods.md#calling-project-methods). |
+| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Muestra el [_Área de búsqueda_](#encontrar-y-reemplazar).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. Para obtener más información sobre como crear e instanciar macros, consulte [Macros](#macros).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Estos botones permiten expandir o contraer todas las estructuras de flujo de control del código.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Muestra el diálogo [Propiedades del método](../Concepts/methods.md#project-method-properties) (sólo métodos proyecto).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Portapapeles**                     | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nueve portapapeles disponibles en el editor de código. Puede [utilizar estos portapapeles](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) haciendo clic directamente sobre ellos o utilizando atajos de teclado. Puede utilizar la opción [Preferencias](Preferences/methods.md#options-1) para ocultarlas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Menú desplegable de navegación**   | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ### Área de edición
 
@@ -37,9 +36,13 @@ Aquí es donde se escribe y edita el código. El editor aplica automáticamente 
 
 Puede personalizar la visualización del área de edición. Toda personalización se transmite automáticamente a todas las ventanas del editor de código:
 
-| Opción | Descripción | Definir en... |
-
-|---|---|---| |**fuente** y **tamaño de fuente**| Defin la fuente y el tamaño de los caracteres que se utilizarán en el área de edición| **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Ver** > **Fuente más grande** o **Fuente más pequeña** |**estilo y color de los elementos de sintaxis**| asigna un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los diferentes colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).| Haga clic derecho en un elemento del lenguaje (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md)| |**espacios**| Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Vista > Espacios en blanco** |**temas**| Puede seleccionar el tema Oscuro o Claro, o definir uno personalizado | **Preferencias** > [**Métodos**](../Preferences/methods.md) |**ancho de las sangrías de código**| Defina el ancho de las sangrías de código| **Preferencias** > [**Métodos**](../Preferences/methods.md)
+| Option                                          | Descripción                                                                                                                                                                                                                                                                                                        | Definido en...                                                                                                                                                      |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fuente** y **tamaño de fuente**               | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                                                                                                                             | **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Ver** > **Fuente más grande** o **Fuente más pequeña**                                                                                     |
+| **estilo y color de los elementos de sintaxis** | Asignar un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los distintos colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).                                            | Haga clic derecho en un elemento lingüístico (variable, palabra clave, etc.) > Submenú **Estilo**. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **espacios**                                    | Puede visualizar los espacios entre palabras mediante puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Ver > Espacios en blanco**                                                                                                                                                                               |
+| **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                                                                                                                               | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                         |
+| **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                                                                                                                          | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                         |
 
 #### Barras de cambio
 
@@ -51,8 +54,6 @@ Las barras de modificación cambian de color para indicar si las modificaciones 
 
 - amarillo: se ha modificado la línea y aún no se ha guardado el método.
 - verde: se ha modificado la línea y se ha guardado el método.
-
-
 
 ### Área listas
 
@@ -67,11 +68,12 @@ Puede ampliar o reducir el ancho relativo de cada área lista arrastrando una de
 
 ![](../assets/en/code-editor/list-area.png)
 
-- Para añadir o eliminar una lista, haga clic en el área del título de una de las listas y elija el comando correspondiente en el menú emergente. El comando **Eliminar esta lista** se desactiva al hacer clic en la última lista. Si desea ocultar todas las listas, debe hacer clic en el botón **mostrar u ocultar listas** situado en la parte inferior derecha de la ventana u ocultarlas por defecto en las **Preferencias**.
+- Para añadir o eliminar una lista, haga clic en el área del título de una de las listas y elija el comando correspondiente en el menú emergente.
+  El comando **Eliminar esta lista** se desactiva al hacer clic en la última lista. Si desea ocultar todas las listas, debe hacer clic en el botón **mostrar u ocultar listas** situado en la parte inferior derecha de la ventana u ocultarlas por defecto en las **Preferencias**.
 
 - Puede ocultar las listas en todas las ventanas de las siguientes maneras:
   - Seleccione la opción **Ver > Listas** en el menú **Método** (una marca de verificación indica si se muestran las listas)
-  - For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+  - Desmarque la opción **Preferencias** > **Métodos** > **Opciones** > **Mostrar listas**. Para que se tengan en cuenta las modificaciones realizadas en la ventana de diálogo de **Preferencias**, primero es necesario cerrar y luego volver a abrir cualquier método, clase o función que esté abierto.
 
 #### Listas de elementos disponibles
 
@@ -90,7 +92,7 @@ Puede mostrar las siguientes listas de elementos en el área de listas de la ven
 - **Comandos por temas**: comandos del lenguaje 4D clasificados por temas en forma de lista jerárquica.
 - **Barras de menú**: nombres y números de las barras de menú [creadas con el editor de barras de menú 4D](../Menus/creating.md).
 - **Constantes**: constantes 4D y de los posibles plug-ins, clasificadas por temas en forma de lista jerárquica.
-- **Listas**: nombres de listas.
+- **Listas**: nombres de las listas.
 - **Todos los comandos de los plug-ins**: comandos para todos los plug-ins instalados en la base de datos (si los hay), clasificados por temas en forma de lista jerárquica.
 - **Palabras clave SQL**: conjunto de palabras clave reconocidas por el analizador sintáctico de 4D SQL. Esta lista incluye comandos (por ejemplo, SELECT), cláusulas (por ejemplo, WHERE) y funciones (ABS).
 - **Funciones SQL**: Funciones SQL 4D.
@@ -121,7 +123,7 @@ Puede mostrar u ocultar los números de línea en el área de puntos de interrup
 - Para activar o desactivar la visualización de los números de línea por defecto, seleccione **Preferencias** > **Métodos** > **Mostrar números de línea**.
 - Para modificar esta visualización por separado para cada ventana del Editor de Código, elija **Método** > **Ver** > **Números de línea**.
 
-La visualización de los números de línea facilita la orientación en la ventana. **Método ** > **Ir al número de línea...** también le permite aprovechar esta visualización.
+La visualización de los números de línea facilita la orientación en la ventana. \*\*Método \*\* > **Ir al número de línea...** también le permite aprovechar esta visualización.
 
 Este tipo de búsqueda es útil cuando se utiliza junto con el [compilador](../Project/compiler.md), que señala los errores de ejecución por el número de línea en el que se producen.
 
@@ -134,9 +136,10 @@ La barra de estado situada en la parte inferior derecha de la ventana del editor
 - **Ln**: número de línea
 - **Col**: número de columna, es decir, el nivel en la jerarquía de las estructuras de programación. El primer nivel es 0. El número de columna es útil para la depuración, ya que esta información puede ser proporcionada por el intérprete en caso de error en el código.
 - **Ch**: ubicación del caracter en la línea.
-- ![](../assets/en/code-editor/show-hide-list.png): Ocultar/mostrar listas.
+- ![](../assets/en/code-editor/show-hide-list.png): ocultar/mostrar listas.
 
-Al situar el cursor en un comando, función o parámetro(s), la barra de estado muestra la sintaxis del comando. Si escribe o selecciona un parámetro, el área muestra el parámetro actual en **negrita**: ![](../assets/en/code-editor/status-bar-bold.png)
+Al situar el cursor en un comando, función o parámetro(s), la barra de estado muestra la sintaxis del comando. Si escribe o selecciona un parámetro, el área muestra el parámetro actual en **negrita**:
+![](../assets/en/code-editor/status-bar-bold.png)
 
 ### Despliegue de navegación
 
@@ -158,19 +161,19 @@ Cuando no hay ninguna etiqueta en la clase/método, la herramienta muestra "Sin 
 
 Los siguientes elementos se añaden automáticamente:
 
-| Icono                                                                       | Elemento                                       |
-| --------------------------------------------------------------------------- | ---------------------------------------------- |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                   |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor o declaración de método      |
+| Icono                                                                       | Elemento                                                          |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                                      |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor o declaración de método                         |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Atributo calculado (get, set, orderBy y query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | Nombre de la función de clase                  |
+| ![function-icon](../assets/en/code-editor/function.png)                     | Nombre de la función de clase                                     |
 
 #### Etiquetado manual
 
 Añadiendo marcadores en su código, puede añadir las siguientes etiquetas a la lista desplegable:
 
-| Icono                                                   | Elemento       |
-| ------------------------------------------------------- | -------------- |
+| Icono                                                   | Elemento                       |
+| ------------------------------------------------------- | ------------------------------ |
 | ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta |
 | ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
 | ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
@@ -204,8 +207,6 @@ Para mostrar las etiquetas de un método o de una clase en orden alfabético, re
 
 > Las etiquetas dentro de las funciones se mueven con sus elementos padres.
 
-
-
 ### Atajos
 
 Múltiples funcionalidades del editor de código de 4D están disponibles a través de atajos de teclado por defecto.
@@ -216,54 +217,52 @@ En macOS, utilice la tecla **Command** en lugar de la tecla **Ctrl** mencionada 
 
 :::
 
-| **Atajo**                                                 | **Acción**                                                                                                                                           |
-| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Selección y navegación**                                |                                                                                                                                                      |
-| Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                       |
-| [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                       |
-| [Shift]+[flecha derecha]                                  | Crear y ampliar la selección, caracter por caracter, hacia la derecha, o Reducir la selección, caracter por caracter, desde la izquierda             |
-| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda              |
-| [Shift]+[flecha abajo]                                    | Crear y ampliar una selección, línea por línea, de arriba abajo                                                                                      |
-| [Shift]+[flecha arriba]                                   | Crear y ampliar una selección, línea por línea, desde abajo hacia arriba                                                                             |
-| [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                                  |
-| [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda                 |
-| [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                             |
-| [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                             |
-| [Alt]+[flecha abajo]                                      | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                                |
-| [Alt]+[flecha arriba]                                     | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                        |
-| [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                                |
-| [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                                    |
-| [Ctrl]+[Home]                                             | Colocar el punto de inserción al comienzo del método                                                                                                 |
-| [Ctrl]+[End]                                              | Coloca el punto de inserción al final del método                                                                                                     |
-| [Shift]+[Home]                                            | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                                      |
-| [Shift]+[End]                                             | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                        |
-| [PgUp]                                                    | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                            |
-| [PgDn]                                                    | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                              |
-| [**Introspección**](#goto-definition)                     |                                                                                                                                                      |
-| [Ctrl]+K o [Alt]+doble clic                               | Igual que el comando [**Goto definition**](#goto-definition)                                                                                         |
-| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Haga clic en el token subrayado = igual que el comando [**Goto definition**](#goto-definition) |
-| [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                                      |
-| [Ctrl]+F                                                  | Buscar                                                                                                                                               |
-| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                                     |
-| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                                      |
-| [Ctrl]+E                                                  | Buscar el siguiente                                                                                                                                  |
-| [Ctrl]+[Shift]+E                                          | Buscar el mismo anterior                                                                                                                             |
-| [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                           |
-| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                                 |
-| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                                  |
-| [**Portapapeles**](#clipboards)                           |                                                                                                                                                      |
-| [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                                      |
-| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                             |
-| [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                                      |
-| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                               |
+| **Atajo**                                                                                                                                                                                           | **Acción**                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Selección y navegación**                                                                                                                                                                          |                                                                                                                                                                                        |
+| Doble clic                                                                                                                                                                                          | Seleccionar un nombre de elemento del lenguaje                                                                                                                                         |
+| [Alt]+doble clic                                                                                                                                | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                      |
+| [Shift]+[flecha derecha]                                                                    | Crear y ampliar la selección, caracter por caracter, hacia la derecha, o Reducir la selección, caracter por caracter, desde la izquierda                                               |
+| [Shift]+[flecha izquierda]                                                                  | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda                                                |
+| [Shift]+[flecha abajo]                                                                      | Crear y ampliar una selección, línea por línea, de arriba abajo                                                                                                                        |
+| [Shift]+[flecha arriba]                                                                     | Crear y ampliar una selección, línea por línea, desde abajo hacia arriba                                                                                                               |
+| [Ctrl]+[Shift]+[flecha derecha]         | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                                                                    |
+| [Ctrl]+[Shift]+[flecha izquierda]       | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda                                                   |
+| [Ctrl]+[flecha derecha]                                                                     | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                                                               |
+| [Ctrl]+[flecha izquierda]                                                                   | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                                                               |
+| [Alt]+[flecha abajo]                                                                        | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                            |
+| [Alt]+[flecha arriba]                                                                       | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                    |
+| [Home]                                                                                                                                          | Colocar el punto de inserción al comienzo de la línea                                                                                                                                  |
+| [End]                                                                                                                                           | Coloca el punto de inserción al final de la línea                                                                                                                                      |
+| [Ctrl]+[Home]                                                                               | Colocar el punto de inserción al comienzo del método                                                                                                                                   |
+| [Ctrl]+[End]                                                                                | Coloca el punto de inserción al final del método                                                                                                                                       |
+| [Shift]+[Home]                                                                              | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                                                                        |
+| [Shift]+[End]                                                                               | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                                                          |
+| [PgUp]                                                                                                                                          | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                                           |
+| [PgDn]                                                                                                                                          | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                                             |
+| [**Introspección**](#goto-definition)                                                                                                                                                               |                                                                                                                                                                                        |
+| [Ctrl]+K o [Alt]+doble clic                                                                 | Igual que el comando [**Goto definition**](#goto-definition)                                                                                                                           |
+| [Ctrl] (Windows) o [Alt] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Haz clic en el token subrayado = igual que el comando [**Goto definition**](#goto-definition) |
+| [**Buscar y reemplazar**](#buscar y reemplazar)                                                                              |                                                                                                                                                                                        |
+| [Ctrl]+F                                                                                                                                        | Buscar                                                                                                                                                                                 |
+| [Ctrl]+G                                                                                                                                        | Buscar siguiente                                                                                                                                                                       |
+| [Ctrl]+[Shift]+G                                                                            | Buscar anterior                                                                                                                                                                        |
+| [Ctrl]+E                                                                                                                                        | Buscar el siguiente                                                                                                                                                                    |
+| [Ctrl]+[Shift]+E                                                                            | Buscar el mismo anterior                                                                                                                                                               |
+| [Ctrl]+[Alt]+F                                                                              | Reemplazar                                                                                                                                                                             |
+| [Ctrl]+[Alt]+G                                                                              | Reemplazar siguiente                                                                                                                                                                   |
+| [Ctrl]+[Alt]+[Shift]+G                  | Reemplazar anterior                                                                                                                                                                    |
+| [**Portapapeles**](#portapapeles)                                                                                                                                                                   |                                                                                                                                                                                        |
+| [Shift]+clic o [Alt]+clic en el icono del portapapeles                                      | Copiar el texto seleccionado en el portapapeles                                                                                                                                        |
+| [Ctrl]+[Shift]+tecla numérica                                                               | Copiar el texto seleccionado en el portapapeles numérico                                                                                                                               |
+| [Ctrl]+clic en el icono del portapapeles                                                                                                        | Pegar el contenido de un portapapeles en la posición del cursor                                                                                                                        |
+| [Ctrl]+tecla numérica                                                                                                                           | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                                                                 |
 
 :::tip
 
 La mayoría de estos atajos pueden personalizarse en la caja de diálogo [Preferencias 4D](../Preferences/shortcuts.md).
 
 :::
-
-
 
 ## Edición de código
 
@@ -284,14 +283,11 @@ El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4
 - insertado al final de las líneas, permite escribir una única instrucción en [varias líneas](../Concepts/quick-tour.md#code-on-several-lines).
 - permite definir [secuencias de escape](../Concepts/quick-tour.md#escape-sequences).
 
-
 :::caution
 
-El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. Por ejemplo, `C:\MyDocuments` se convertirá en `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. Por ejemplo, `C:\MyDocuments` se convertirá en `C:\\MyDocuments`. Sin embargo, si escribe `"C:\MyDocuments\New"`, 4D mostrará `"C:\\MyDocuments\New"`. En este caso, la segunda barra invertida se interpreta incorrectamente como `\N` (una [secuencia de escape](../Concepts/quick-tour.md#escape-sequences) existente). You must therefore enter a double backslash when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
-
-
 
 ### Arrastrar y soltar
 
@@ -299,10 +295,8 @@ Desde el Explorador, puede arrastrar y soltar tablas, campos, formularios, méto
 
 Cuando inserta un comando arrastrándolo desde la página **Comandos** del Explorador, aparece con su sintaxis (que consiste en todos sus parámetros) en el Editor de Código. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
-
-También puede arrastrar y soltar dentro de un método, clase, función o entre dos diferentes. En el Editor de código, el mecanismo de arrastrar y soltar se activa en cuanto se selecciona una parte del texto. Por defecto, el mecanismo de arrastrar y soltar **mueve** el texto seleccionado. Para **copiarlo**, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Opción** (macOS) durante la operación.
-
-
+También puede arrastrar y soltar dentro de un método, clase, función o entre dos diferentes. En el Editor de código, el mecanismo de arrastrar y soltar se activa en cuanto se selecciona una parte del texto.
+Por defecto, el mecanismo de arrastrar y soltar **mueve** el texto seleccionado. Para **copiarlo**, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Opción** (macOS) durante la operación.
 
 ### Alternancia entre mayúsculas y minúsculas
 
@@ -323,7 +317,7 @@ se convierte en
 
 `variable2:=variable1`
 
-Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
+Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Para utilizar esta función, seleccione la(s) línea(s) que desea modificar y, a continuación, elija **Método** > **Intercambiar expresión** o utilice el menú contextual del área. To use this function, select the line(s) to be modified, then choose <strong x-id="1">Method</strong> > <strong x-id="1">Swap Expression</strong> or use the context menu of the area.
 
 ### Portapapeles
 
@@ -331,22 +325,17 @@ Además de la operación estándar de copiar y pegar, 4D ofrece dos funciones ad
 
 - El programa almacena en memoria las 10 últimas acciones de "copiar" o "cortar" realizadas en el Editor de código durante la sesión actual. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. Para ello, utilice el comando **Historial del Portapapeles** del menú contextual del Editor de Código o el botón "Últimos valores del Portapapeles" de la barra de herramientas:
 
-    ![](../assets/en/code-editor/last-clipboard-values-2.png)
+  ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    Se muestran las primeras palabras de los elementos copiados o cortados. Seleccione un elemento para insertarlo en la ubicación actual del cursor.
+  Se muestran las primeras palabras de los elementos copiados o cortados. Seleccione un elemento para insertarlo en la ubicación actual del cursor.
 
 - Dispone de nueve portapapeles numerados adicionales que pueden emplearse directamente mediante los botones de la barra de herramientas del Editor de código o [utilizando atajos de teclado](#shortcuts):
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-
 ### Líneas móviles
 
-Puede mover la línea donde está el cursor directamente sin seleccionarla primero utilizando los comandos **Mover líneas hacia arriba** y **Mover líneas hacia abajo** del menú **Método**. También puede hacerlo utilizando el atajo de teclado **Alt/Opción** + **Flecha arriba** o **Flecha abajo** [](#shortcuts).
-
-
-
-
+Puede mover la línea donde está el cursor directamente sin seleccionarla primero utilizando los comandos **Mover líneas hacia arriba** y **Mover líneas hacia abajo** del menú **Método**. También puede hacerlo utilizando el atajo de teclado **Alt/Opción** + **Flecha arriba** o **Flecha abajo** .
 
 ### Funciones de autocompletar
 
@@ -356,11 +345,14 @@ En el ejemplo siguiente, al teclear la cadena "poli" aparece un triángulo azul 
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
-When the characters you enter correspond to a single possibility, this suggested value appears greyed out (and is inserted if you hit the **Tab** key): ![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
+Cuando los caracteres que ingresa corresponden a una única posibilidad, este valor sugerido aparece en gris (y se inserta si presiona la tecla **Tab**):
+![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
 
-> If you checked the **Insert () and closing } ) ] "** option in the **Methods** page of the **Preferences**, 4D will also automatically add **()** after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion): ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
+> Si marcó la opción **Insertar () y cerrar } ) ] "** en la página **Métodos** de las **Preferencias**, 4D añadirá automáticamente **()** después de un comando 4D, palabra clave o método de proyecto que requiere uno o más argumentos obligatorios (después de aceptar una sugerencia o finalización):
+> ! ](. /assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
-Autocompletion also works with code structures (e.g. If..End if, For each... End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:![](../assets/en/code-editor/autocomplete-code-structures.png)
+El autocompletado también funciona con estructuras de código (por ejemplo, If..End if, For each...End for each): cuando introduzca la primera parte de la estructura, el Editor de código le sugerirá automáticamente la parte de cierre:
+![](../assets/en/code-editor/autocomplete-code-structures.png)
 
 Si hay varias sugerencias disponibles, 4D las muestra en una lista emergente al presionar la tecla **Tab**:
 
@@ -391,7 +383,7 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Palabras clave SQL
 - Macros (mostradas entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes**, **tables** and/or **prototypes**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
+> Por razones prácticas, puede desactivar la visualización automática de la lista de sugerencias para **constantes**, **variables (locales o interprocesos) y atributos de objeto**, **tablas** y/o **prototipos**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
 
 #### Nombres de propiedad objeto
 
@@ -414,9 +406,7 @@ Cuando se reinicia la base de datos, la lista se reinicia.
 
 > Puede desactivar la visualización automática de las propiedades de los objetos en **Preferencias** > **Métodos** > **sugerencias**.
 
-
 ## Buscar y reemplazar
-
 
 El editor de código dispone de poderosas funcionalidades de **buscar y reemplazar** que se aplican a la ventana actual.
 
@@ -424,7 +414,7 @@ En la barra de herramientas de toda ventana de método se puede mostrar un área
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-Para mostrar esta área, haga clic en el icono **Buscar en el método** de la [barra de herramientas](#toolbar) o seleccione una función de buscar o reemplazar a través de un [**acceso directo**](#shortcuts) o un comando del submenú **Editar > Buscar**. Puede cerrar esta áreaa en cualquier momento presionando el botón **x** situado en el extremo derecho de la barra de herramientas.
+Para mostrar esta área, haga clic en el icono **Buscar en método** de la [barra de herramientas](#barra de herramientas) o seleccione una función de búsqueda o sustitución a través de un [**método abreviado**](#métodos abreviados) o un comando del submenú **Edición > Buscar**. Puede cerrar esta área en cualquier momento presionando el botón **x** situado en el extremo derecho de la barra de herramientas.
 
 :::tip
 
@@ -432,10 +422,9 @@ La función **Buscar en diseño** de la barra de herramientas de 4D o del menú 
 
 :::
 
-
 ### Buscar
 
-Seleccione **Buscar > Buscar...** en el menú **Editar** o escriba **Ctrl+F** (Windows)/**Cmd+F** (macOS) para mostrar/activar el área *Buscar*.
+Seleccione **Buscar > Buscar...** en el menú **Editar** o escriba **Ctrl+F** (Windows)/**Cmd+F** (macOS) para mostrar/activar el área _Buscar_.
 
 La búsqueda definida en esta área se realizará en el código situado en la ventana.
 
@@ -443,27 +432,22 @@ El área de entrada **buscar** permite introducir la cadena a buscar. Esta área
 
 Una vez introducida o seleccionada una cadena, se resaltan todas las ocurrencias encontradas en la ventana abierta y en la parte derecha del área se muestra el número total de aciertos encontrados. También indica la posición actual del cursor entre todos los aciertos.
 
-Presione la tecla **Intror** para seleccionar la ocurrencia más cercana al cursor. También puede hacer clic en los botones **Siguiente / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para seleccionar todas las ocurrencias secuencialmente hacia el principio o el final del método actual, a partir de la posición inicial del cursor, o utilizar los comandos **Buscar siguiente** y **Buscar anterior** del menú [**Editar**](#shortcuts).
-
+Presione la tecla **Intror** para seleccionar la ocurrencia más cercana al cursor. También puede hacer clic en los botones **Siguiente / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para seleccionar todas las ocurrencias secuencialmente hacia el principio o el final del método actual, comenzando desde la posición inicial del cursor, o utilizar los comandos **Buscar siguiente** y **Buscar anterior** del [menú **Edición**](#shortcuts).
 
 #### Opciones
 
-- **Sensible a mayúsculas y minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tiene en cuenta las mayúsculas y minúsculas de los caracteres tal y como se han introducido en el área de búsqueda. Esta opción también tiene en cuenta los caracteres diacríticos. Por ejemplo, una búsqueda de "MyVar" no encontrará "myVar"; una búsqueda de "dej" no encontrará "déjà".
-- **Palabra completa** ![full-word](../assets/en/code-editor/full-word.png): limita la búsqueda a las apariciones exactas de la palabra buscada. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" Por defecto, esta opción no está marcada; por lo tanto, una búsqueda de "var" encontrará "Myvar", "variation", etc.
-
-
+- **Sensible a mayúsculas y minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tenga en cuenta las mayúsculas y minúsculas tal como se ingresaron en el área de búsqueda. Esta opción también tiene en cuenta los caracteres diacríticos. Por ejemplo, una búsqueda de "MyVar" no encontrará "myVar"; una búsqueda de "dej" no encontrará "déjà".
+- **Toda la palabra** ![full-word](../assets/en/code-editor/full-word.png): limita la búsqueda a las ocurrencias exactas de la palabra buscada. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" Por defecto, esta opción no está marcada; por lo tanto, una búsqueda de "var" encontrará "Myvar", "variation", etc.
 
 ### Reemplazar
 
-Haga clic en el botón de alternancia **v** situado a la izquierda del área *Buscar* para mostrar/ocultar el área *Reemplazar*. También puede seleccionar **Buscar > Reemplazar...** en el menú **Editar** o escribir **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS).
+Haga clic en el botón de alternancia **v** situado a la izquierda del área _Buscar_ para mostrar/ocultar el área _Reemplazar_. También puede seleccionar **Buscar > Reemplazar...** en el menú **Editar** o escribir **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS).
 
-El área de entrada *Reemplazar* se utiliza para definir la cadena de caracteres que sustituirá a la definida anteriormente.
+El área de entrada _Reemplazar_ se utiliza para definir la cadena de caracteres que sustituirá a la definida anteriormente.
 
-Haga clic en el botón **Reemplazar** para iniciar la búsqueda con todas las opciones definidas y reemplazar la primera ocurrencia encontrada. 4D inicia la búsqueda a partir del punto de inserción del texto actual y continúa hasta el final del método. A continuación, es posible seguir buscando/reemplazando utilizando los comandos **Reemplazar siguiente** y **Reemplazar anterior** del menú [**Editar**](#shortcuts).
+Haga clic en el botón **Reemplazar** para iniciar la búsqueda con todas las opciones definidas y reemplazar la primera ocurrencia encontrada. 4D inicia la búsqueda a partir del punto de inserción del texto actual y continúa hasta el final del método. Luego es posible continuar encontrando/reemplazando utilizando los comandos **Reemplazar siguiente** y **Reemplazar anterior** del [menú Editar](#shortcuts).
 
 Haga clic en el botón **Reemplazar todo** para reemplazar todas las ocurrencias correspondientes a los criterios de búsqueda directamente en el método abierto.
-
-
 
 ### Buscar lo mismo
 
@@ -471,14 +455,11 @@ El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idé
 
 La búsqueda realizada es del tipo "Buscar siguiente" en la ventana actual del editor de código.
 
-Los comandos **Find Same Next** y **Find Same Previous** se utilizan para encontrar cadenas de caracteres *estrictamente* idénticas a las seleccionadas. Por ejemplo, las mayúsculas y minúsculas deben coincidir.
-
+Los comandos **Find Same Next** y **Find Same Previous** se utilizan para encontrar cadenas de caracteres _estrictamente_ idénticas a las seleccionadas. Por ejemplo, las mayúsculas y minúsculas deben coincidir.
 
 ### Marcar todo
 
 El comando **Editar > Marcar todo** se activa cuando ya se ha especificado una búsqueda en la caja de diálogo buscar o reemplazar. Cuando selecciona este comando, 4D pone un marcador en cada línea que contiene un elemento correspondiente al criterio de búsqueda "actual". Esto facilita la localización de todos los resultados de la búsqueda. Para más información sobre marcadores, consulte [Marcadores](#bookmarks).
-
-
 
 ## Advertencias y errores
 
@@ -518,12 +499,11 @@ Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-Puede modificar la forma en que 4D indica los caracteres de coincidencia de encerramiento o desactivar esta función en las [**Preferencias**](../Preferences/methods.md#options-1).
+Puede modificar la forma en que 4D indica los caracteres de cierre coincidentes o desactivar esta función en las [**Preferencias**](../Preferences/methods.md#options-1).
 
 :::
 
-El Verificador en vivo de código no puede detectar algunos errores que solo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código. Sin embargo, tenga en cuenta que el compilador [](../Project/compiler.md) también proporciona una ayuda indispensable para detectar errores.
-
+El Verificador en vivo de código no puede detectar algunos errores que solo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código. Sin embargo, tenga en cuenta que el compilador  también proporciona una ayuda indispensable para detectar errores.
 
 ## Mensajes de ayuda
 
@@ -537,17 +517,22 @@ La [barra de estado](#status-bar) también ofrece información contextual.
 
 - **Errores**: al pasar el ratón sobre el símbolo que indica un error a la izquierda del área de edición, aparece un consejo de ayuda que muestra la causa del error (ver [Errores de sintaxis](#syntax-errors)).
 
-- **Documentación de comandos 4D**: al pasar el ratón sobre un comando o función 4D, un mensaje de ayuda ofrece su sintaxis junto con una breve descripción de su funcionamiento. ![](../assets/en/code-editor/status-bar-description.png)
+- **Documentación de comandos 4D**: al pasar el ratón sobre un comando o función 4D, un mensaje de ayuda ofrece su sintaxis junto con una breve descripción de su funcionamiento.
+  ![](../assets/en/code-editor/status-bar-description.png)
 
-- **Tipo de variable y descripción**: al pasar el ratón sobre una variable, un mensaje de ayuda muestra su tipo (si se ha definido explícitamente en el método) y el comentario asociado, si existe. ![](../assets/en/code-editor/variable-type.png)
+- **Tipo de variable y descripción**: al pasar el ratón sobre una variable, un mensaje de ayuda muestra su tipo (si se ha definido explícitamente en el método) y el comentario asociado, si existe.
+  ![](../assets/en/code-editor/variable-type.png)
 
 - **Métodos o funciones proyecto**: al pasar el ratón sobre un método proyecto o función clase, aparece un mensaje de ayuda:
 
   - o los comentarios especificados en el Explorador.
-  - o las primeras líneas del método o función de clase si incluye comentarios (líneas que empiezan por // o /*...*/ bloque de comentarios). Es práctica habitual insertar la documentación del método, así como sus parámetros, en forma de comentarios al principio del método. Puede obtener esta información directamente en el mensaje de ayuda, sólo asegúrese de eliminar primero todo comentario que se encuentre en el Explorador. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
+  - o las primeras líneas del método o función de clase si incluye comentarios (líneas que empiezan por // o /_..._/ bloque de comentarios). Es práctica habitual insertar la documentación del método, así como sus parámetros, en forma de comentarios al principio del método. Puede obtener esta información directamente en el mensaje de ayuda, sólo asegúrese de eliminar primero todo comentario que se encuentre en el Explorador.
+    Comentarios al inicio de un método:
+    ![](../assets/en/code-editor/comments-method.png)
+    Consejo de ayuda en otro método:
+    ![](../assets/en/code-editor/help-tip.png)
 
 - También puede crear un **archivo de documentación dedicado** llamado `<MethodName>.md` en la carpeta `<package>/documentation`. Ver [Visualización de la documentación en el editor de código](../Project/documentation.md#viewing-documentation-in-the-code-editor)
-
 
 ## Comentar / Descomentar
 
@@ -563,14 +548,15 @@ Cuando la selección sólo contiene código activo, se aplica el comando **Comen
 
 > El comando **Comentar/Descomentar** sólo funciona con líneas completas --- no puede utilizarse para comentar sólo parte de una línea.
 
-
 ## Expandir / Contraer
 
 El código 4D situado dentro de bucles y condiciones puede ahora contraerse o expandirse, para facilitar la lectura de los métodos:
 
-- Expanded code: ![](../assets/en/code-editor/expanded-code.png)
+- Código expandido:
+  ![](../assets/en/code-editor/expanded-code.png)
 
-- Collapsed code: ![](../assets/en/code-editor/collapsed-code.png)
+- Código contraído:
+  ![](../assets/en/code-editor/collapsed-code.png)
 
 Si sitúa el ratón sobre el botón de expansión [...], aparece un mensaje de ayuda que muestra las primeras líneas del código oculto.
 
@@ -584,7 +570,6 @@ Hay varias formas de expandir y contraer código:
   - **Contraer selección** / **Expandir selección**: contrae o expande todas las estructuras de código que se encuentran en la selección de texto.
   - **Contraer nivel actual** / **Expandir nivel actual**: contrae o expande la estructura del código en el nivel en el que se encuentra el cursor. Estos comandos también están disponibles en el **menú contextual** del editor.
   - **Contraer todo** / **Expandir todo**: contrae o expande todos los bucles y condiciones de un método. Estos comandos también están disponibles en la barra de herramientas del editor.
-
 
 ## Bloques
 
@@ -604,7 +589,6 @@ Si ya se ha seleccionado un bloque de texto, la función selecciona el bloque ad
 Si presiona **Ctrl+Mayús+B** (Windows) o **Comando+Mayús+B** (macOS), podrá invertir esta operación y anular la selección del último bloque delimitador seleccionado.
 
 **Nota:** si el punto de inserción se sitúa en una estructura de tipo `If` o `Else`, el bloque que lo encierra será el que contenga, respectivamente, la sentencia `If` o `Else`.
-
 
 ### Inicio del bloque o fin del bloque
 
@@ -642,15 +626,13 @@ Puede utilizar marcadores como señalizadores de líneas que contengan un elemen
 
 El comando **Revelar en el Explorador...** abre una ventana del Explorador con el elemento de destino seleccionado. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Revelar en el Explorador...**.
 
-
 ## Buscar los llamantes
 
 El comando **Buscar los llamantes** del menú **Método** solo está habilitado para métodos proyecto. Busca todos los objetos (otros métodos o menús) que hacen referencia al método proyecto.
 
-Selecting the **Find...** command displays the following dialog box:
+**Nota:** el comando **Buscar llamantes...** también está disponible en **Explorador** > **Métodos**
 
 Este comando muestra sus resultados en una nueva ventana.
-
 
 ## Ir a definición
 
@@ -658,7 +640,7 @@ El comando **Ir a definición** abre la definición de un elemento referenciado 
 
 :::tip
 
-Esta funcionalidad también está disponible a través del atajo de teclado **Ctrl+K** (Windows) / **Command+K** (macOS) o  **Alt+doble clic**.
+Esta función también está disponible a través del atajo de teclado **Ctrl+K** (Windows) / **Comando+K** (macOS) o **Alt+doble clic**.
 
 :::
 
@@ -672,7 +654,7 @@ El efecto del comando **Ir a definición...** varía en función del elemento de
 
 El comando **Mostrar documentación...** abre la documentación del elemento de destino. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Mostrar documentación...** o utilice el menú contextual. El efecto varía en función del elemento objetivo. Por ejemplo:
 
-- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
+- Seleccionar un método proyecto o una clase usuario y elegir **Mostrar documentación...** selecciona el método en el Explorador y cambia a la pestaña de documentación
 - Al seleccionar un comando, función o nombre de clase 4D y elegir **Mostrar documentación...** se muestra la documentación en línea.
 - Si no se selecciona ningún elemento, el comando abre la documentación del método actualmente abierto en el Editor de Código, [si existe](../Project/documentation.md).
 
@@ -682,21 +664,17 @@ Para mostrar la documentación de un comando del lenguaje "clásico" 4D, selecci
 
 :::
 
-
 ## Buscar referencias
 
-El comando **Buscar Referencias...** que se encuentra en el menú **Método** o en el menú contextual del Editor de Código encuentra todos los objetos (métodos y formularios) del proyecto en los que el elemento actual del método está referenciado (utilizado).
+El comando **Buscar Referencias...** que se encuentra en el menú **Método** o en el menú contextual del Editor de Código encuentra todos los objetos (métodos y formularios) del proyecto en los que el elemento actual del método está referenciado (utilizado
 
-El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. Por ejemplo, la siguiente acción busca todas las ocurrencias de la variable _vlNbCmd_ en la base de datos:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 
 Este comando muestra sus resultados en una nueva ventana.
 
-
-
 ## Macros
-
 
 Puede utilizar macrocomandos en sus métodos. El uso de macrocomandos permite ahorrar mucho tiempo durante la entrada de código.
 
@@ -712,7 +690,8 @@ Las macros 4D están escritas en formato XML. Puede utilizar el archivo de macro
 
 La carpeta "Macros v2" puede ser ubicada:
 
-- En la carpeta 4D activa de la máquina. Las macros son compartidas para todas las bases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
+- En la carpeta 4D activa de la máquina. Las macros son compartidas para todas las bases.
+  **Nota:** la ubicación de la carpeta 4D activa varía según el sistema operativo utilizado. Para más información, consulta la descripción del comando [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) en el manual _Lenguaje_ 4D.
 - Junto al archivo de estructura de la base. Las macros sólo se cargan para esta estructura.
 - Para los componentes: en la carpeta **Components** de la base. Las macros sólo se cargan si el componente está instalado.
 
@@ -720,10 +699,7 @@ Estas tres ubicaciones pueden utilizarse simultáneamente: es posible instalar u
 
 ### Macros por defecto
 
-
-
-
-4D ofrece un conjunto de macros por defecto que contienen, por ejemplo, palabras clave de flujo de control. Estas macros se incluyen en el archivo por defecto "*Macros.xml*", ubicado en la carpeta "Macros v2" que se crea en la carpeta 4D activa de la máquina durante el arranque inicial de 4D.
+4D ofrece un conjunto de macros por defecto que contienen, por ejemplo, palabras clave de flujo de control. Estas macros se incluyen en el archivo por defecto "_Macros.xml_", ubicado en la carpeta "Macros v2" que se crea en la carpeta 4D activa de la máquina durante el arranque inicial de 4D.
 
 Posteriormente, puede modificar este archivo o el contenido de la carpeta como desee (ver el párrafo siguiente). En caso de problemas con esta carpeta, se puede borrar y 4D la volverá a crear en el siguiente inicio.
 
@@ -755,72 +731,73 @@ De conformidad con las especificaciones XML, algunas etiquetas de elementos pued
 - Etiquetas dobles: `<tag attribute="value"> </macro>`
 - Etiquetas individuales: `<tag attribute="value"/>`
 
-If the element accepts several attributes, you can group them in the same line of command, separated by a space: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`
+Si el elemento acepta varios atributos, puede agruparlos en la misma línea de comando, separados por un espacio:
+`\<tag attribute1="value" attribute2="value" attribute3="value"... >`
 
 Aquí está la lista de etiquetas y su modo de uso:
 
-| **Etiquetas de elementos**       | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<macros> </macros>` | Inicio y fin del archivo macro (etiqueta obligatoria).                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `<macro> </macro>`   | Inicio y fin de la definición de una macro y sus atributos.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                  | *Atributos*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - name: Nombre**de la macro tal y como aparece en los menús y en las listas del Editor de código (atributo obligatorio).                                                                                                                                                                                                                                                                                                                                                                 |
-|                                  | - type_ahead_text: Cadena de caracteres** que debe introducirse para llamar a la macro utilizando la función type-ahead (también conocida como autocompletar)*.                                                                                                                                                                                                                                                                                                                      |
-|                                  | - in_menu: booleano que indica si la macro se puede llamar utilizando el menú contextual*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                                      |
-|                                  | - type_ahead: Booleano que indica si la macro puede llamarse utilizando la función de tecleo predictivo (o autocompletar)*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                     |
-|                                  | - method_event: se utiliza para activar la llamada automática de la macro en función de la fase actualde manejo de cada método (creación, cierre, etc.). Valores = "on_load": la macro se dispara al abrir cada método, "on_save": la macro se dispara al guardar cada método (cierre de un método modificado o guardado utilizando el comando File>Save, "on_create": la macro se dispara cuando se crea cada método, "on_close": la macro se dispara cuando se cierra cada método. |
-|                                  | "on_save" y "on_close" pueden utilizarse conjuntamente --- en otras palabras, ambos eventos se generan cuando se cierra un método modificado. Por otro lado, "on_create" y "on_load" nunca se generan de forma consecutiva. Este atributo puede utilizarse, por ejemplo, para preformatear los métodos cuando se crean (comentarios en el área de encabezado) o para registrar información como la fecha y la hora en que se cierran.                                                |
-|                                  | - version: utilizada para activar el nuevo modo de soportar selecciones de texto para la macro (ver más adelante la sección "Acerca de la etiqueta `<method>`"). Para activar este nuevo modo, pase el valor "2". Si omite este atributo o pasa la version="1", se conserva el modo anterior.                                                                                                                                                                                      |
-|                                  | - in_toolbar: booleano que indica si la macro debe estar presente en el menú del botón Macro de la barra de herramientas. Valores= "true" (por defecto) o "false".                                                                                                                                                                                                                                                                                                                       |
-| `<selection/>`             | Etiqueta reemplazada por el texto seleccionado cuando la macro se inserta. La selección puede estar vacía.                                                                                                                                                                                                                                                                                                                                                                               |
-| `<text> </text>`     | Inicio y fin del código que debe insertarse en el método. Se añadirá un retorno de carro antes y después del código.                                                                                                                                                                                                                                                                                                                                                                     |
-| `<method> </method>` | Inicio y fin del nombre del método proyecto y de su parámetro (opcional). El método se ejecuta cuando se llama a la macro. Puede pasar un parámetro de la forma ("param1;param2;..."). Este parámetro se recibirá en el método utilizando las variables $1, $2, etc. Para más información sobre esta etiqueta, consulte la sección "Acerca de la etiqueta `<method>`".                                                                                                             |
-| `<caret/>`                 | Ubicación del punto de inserción en el código una vez insertada la macro.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `<user_4D/>`               | Etiqueta reemplazada por el nombre del usuario 4D actual.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `<user_os/>`               | Etiqueta reemplazada por el nombre de usuario actual del sistema.                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `<method_name/>`           | Etiqueta reemplazada por el nombre del método actual.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `<method_path/>`           | Etiqueta sustituida por la sintaxis de la ruta (tal como la devuelve [`METHOD Get path`](https://doc.4d.com/4dv19R/help/command/en/page1164.html) del método actual.                                                                                                                                                                                                                                                                                                                     |
-| `<date/>`                  | Etiqueta reemplazada por la fecha actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|                                  | *Atributo*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                  | - format: formato 4D utilizado para mostrar la fecha. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 8).                                                                                                                                                                                                                                                                                                                    |
-| `<time/>`                  | Etiqueta reemplazada por la hora actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|                                  | *Atributo*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                  | - format: formato 4D utilizado para mostrar la hora. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 6).                                                                                                                                                                                                                                                                                                                     |
-| `<clipboard/>`             | Etiqueta reemplazada por el contenido del portapapeles.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                                  | *Atributo*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                  | - index: portapapeles a pegar. Valores = número del portapapeles (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Etiquetas de elementos** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<macros> </macros>`       | Inicio y fin del archivo macro (etiqueta obligatoria).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `<macro> </macro>`         | Inicio y fin de la definición de una macro y sus atributos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                            | _Atributos_:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                            | - name: Nombre\*\*de la macro tal y como aparece en los menús y en las listas del Editor de código (atributo obligatorio).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                            | * type_ahead_text: Cadena de caracteres\*\* que debe introducirse para llamar a la macro utilizando la función type-ahead (también conocida como autocompletar)\*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                            | - in_menu: booleano que indica si la macro se puede llamar utilizando el menú contextual\*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                            | * type_ahead: Booleano que indica si la macro puede llamarse utilizando la función de tecleo predictivo (o autocompletar)\*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                            | - method_event: se utiliza para activar la llamada automática de la macro en función de la fase actualde manejo de cada método (creación, cierre, etc.). Valores = "on_load": la macro se dispara al abrir cada método, "on_save": la macro se dispara al guardar cada método (cierre de un método modificado o guardado utilizando el comando Archivo>Guardar, "on_create": la macro se dispara cuando se crea cada método, "on_close": la macro se dispara cuando se cierra cada método. |
+|                            | "on_save" y "on_close" pueden utilizarse conjuntamente --- en otras palabras, ambos eventos se generan cuando se cierra un método modificado. Por otro lado, "on_create" y "on_load" nunca se generan de forma consecutiva. Este atributo puede utilizarse, por ejemplo, para preformatear los métodos cuando se crean (comentarios en el área de encabezado) o para registrar información como la fecha y la hora en que se cierran.                                                                                                                                                                              |
+|                            | * version: utilizada para activar el nuevo modo de soportar selecciones de texto para la macro (ver más adelante la sección "Acerca de la etiqueta `<method>`"). Para activar este nuevo modo, pase el valor "2". Si omite este atributo o pasa la version="1", se conserva el modo anterior.                                                                                                                                                                                                                                                                                                                                                                                          |
+|                            | - in_toolbar: booleano que indica si la macro debe estar presente en el menú del botón Macro de la barra de herramientas. Valores= "true" (por defecto) o "false".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `<selection/>`             | Etiqueta reemplazada por el texto seleccionado cuando la macro se inserta. La selección puede estar vacía.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `<text> </text>`           | Inicio y fin del código que debe insertarse en el método. Se añadirá un retorno de carro antes y después del código.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `<method> </method>`       | Inicio y fin del nombre del método proyecto y de su parámetro (opcional). El método se ejecuta cuando se llama a la macro. Puede pasar un parámetro de la forma ("param1;param2;..."). Este parámetro se recibirá en el método utilizando las variables $1, $2, etc. Para más información sobre esta etiqueta, consulte la sección "Acerca de la etiqueta `<method>`".                                                                                                                                                                                                                              |
+| `<caret/>`                 | Ubicación del punto de inserción en el código una vez insertada la macro.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `<user_4D/>`               | Etiqueta reemplazada por el nombre del usuario 4D actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `<user_os/>`               | Etiqueta reemplazada por el nombre de usuario actual del sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `<method_name/>`           | Etiqueta reemplazada por el nombre del método actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `<method_path/>`           | Etiqueta reemplazada por sintaxis de ruta (como se devuelve por [`METHOD Get path`](https://doc.4d.com/4dv19R/help/command/en/page1164.html) del método actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `<date/>`                  | Etiqueta reemplazada por la fecha actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                            | _Atributo_:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                            | * format: formato 4D utilizado para mostrar la fecha. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 8).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `<time/>`                  | Etiqueta reemplazada por la hora actual.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                            | _Atributo_:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                            | - format: formato 4D utilizado para mostrar la hora. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 6).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `<clipboard/>`             | Etiqueta reemplazada por el contenido del portapapeles.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                            | _Atributo_:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                            | * index: portapapeles a pegar. Valores = número del portapapeles (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-- Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).\
-  ** If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
+- Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).<br s-id="1" />
+  \*\* If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 
 - Si desea ajustarse a las especificaciones del lenguaje XML, no debe utilizar caracteres extendidos (caracteres acentuados, comillas, etc.).
 
 Este es un ejemplo de definición de una macro:
 
-| **Contenido de la macro**                            | **Comentarios**                                                                                                                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<?xml version="1.0"...?>`                     | Declaración XML                                                                                                                                                       |
-| `<!DOCTYPE macros SYSTEM>`                     | Declaración del documento                                                                                                                                             |
-| `<macros>`                                     | Inicio del archivo XML de macros                                                                                                                                      |
-| `<macro name="RecordLoop">`                    | Inicio de la definición y del nombre de la macro                                                                                                                      |
-| `<text>`                                       | Inicio del código de la macro                                                                                                                                         |
+| **Contenido de la macro**                                                            | **Comments**                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<?xml version="1.0"...?>`                                                           | Declaración XML                                                                                                                                                                    |
+| `<!DOCTYPE macros SYSTEM>`                                                           | Declaración del documento                                                                                                                                                          |
+| `<macros>`                                                                           | Inicio del archivo XML de macros                                                                                                                                                   |
+| `<macro name="RecordLoop">`                                                          | Inicio de la definición y del nombre de la macro                                                                                                                                   |
+| `<text>`                                                                             | Inicio del código de la macro                                                                                                                                                      |
 | For($i;1;Records in selection(`<Selection/>`)) | La etiqueta `<Selection/>` será reemplazada por el código seleccionado en el método 4D al momento de la inserción de la macro (por ejemplo, un nombre de tabla) |
-| SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                                       |
-| NEXT RECORD(`<Selection/>`)                    |                                                                                                                                                                       |
-| End for                                              |                                                                                                                                                                       |
-| `</text>`                                      | Fin del código macro                                                                                                                                                  |
-| `</macro>`                                     | Fin de la definición de macro                                                                                                                                         |
-| `</macros>`                                    | Fin del archivo XML de macros                                                                                                                                         |
+| SAVE RECORD(`<Selection/>`)                                       |                                                                                                                                                                                    |
+| NEXT RECORD(`<Selection/>`)                                       |                                                                                                                                                                                    |
+| End for                                                                              |                                                                                                                                                                                    |
+| `</text>`                                                                            | Fin del código macro                                                                                                                                                               |
+| `</macro>`                                                                           | Fin de la definición de macro                                                                                                                                                      |
+| `</macros>`                                                                          | Fin del archivo XML de macros                                                                                                                                                      |
 
-#### Sobre la etiqueta `<method>`
+#### Acerca de la etiqueta `<method>`
 
-La etiqueta `<method>` permite generar y utilizar macrocomandos que ejecutan métodos proyecto 4D. Esto permite a los desarrolladores crear funciones sofisticadas que pueden distribuirse mediante macrocomandos asociados a los componentes. For example, the following macro will cause the *MyMethod* method to be executed with the name of the current method as parameter:
+La etiqueta `<method>` permite generar y utilizar macrocomandos que ejecutan métodos proyecto 4D. Esto permite a los desarrolladores crear funciones sofisticadas que pueden distribuirse mediante macrocomandos asociados a los componentes. Por ejemplo, la siguiente macro hará que el método _MyMethod_ se ejecute con el nombre del método actual como parámetro:
 
 `<method>MyMethod("<method_name/>")</method>`
 
 El código de un método llamado se ejecuta en un nuevo proceso. Este proceso se cierra una vez se ejecuta el método.
 
-> **Note:** The structure process remains frozen until the called method execution is completed. Debe asegurarse de que la ejecución es rápida y de que no hay riesgo de que bloquee la aplicación. If this occurs, use the **Ctrl+F8** (Windows) or **Command+F8** (Mac OS) command to "kill" the process.
+> <strong x-id="1">Note:</strong> The structure process remains frozen until the called method execution is completed. Debe asegurarse de que la ejecución es rápida y de que no hay riesgo de que bloquee la aplicación. Si esto ocurre, utilice el comando **Ctrl+F8** (Windows) o **Comando+F8** (Mac OS) para "matar" el proceso.
 
 ### Llamando macros
 
@@ -830,21 +807,21 @@ Tenga en cuenta que para cada macro es posible restringir la posibilidad de llam
 
 #### Menú contextual y barra de herramientas
 
-By default, all macros can be called via the context menu of the Code Editor (using the **Insert macro** hierarchical command) or the **Macros** button of the toolbar.
+Por defecto, todas las macros pueden ser llamadas a través del menú contextual del Editor de Código (utilizando el comando jerárquico **Insert macro**) o el botón **Macros** de la barra de herramientas.
 
-The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
+El atributo _in_menu_ de la etiqueta `<macro>` se utiliza para definir si la macro aparece o no en este menú.
 
 En el menú contextual, las macros se muestran en el orden del archivo "Macros.xml" y de cualquier archivo XML adicional. Por lo tanto, es posible cambiar el orden modificando estos archivos.
 
 #### Autocompletar
 
-By default, all macros are accessible using the autocomplete (aka type-ahead) function (see [Writing a method](./write-class-method.md)). The *type_ahead* attribute of the `<macro>` tag can be used to exclude a macro from this type of operation.
+Por defecto, todos los macros son accesibles utilizando la función de autocompletar (también conocida como escritura anticipada) (ver [Escribir un método](./write-class-method.md)). El atributo _type_ahead_ de la etiqueta `<macro>` se puede utilizar para excluir una macro de este tipo de operación.
 
-**Note:** If the macro contains the `<selection/>` tag, it will not appear in the autocomplete pop-up window.
+**Nota:** si la macro contiene la etiqueta `<selection/>`, no aparecerá en la ventana emergente de autocompletar.
 
 #### Lista del editor de código
 
-You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Basta con hacer doble clic en el nombre de una macro de la lista para llamarla. No es posible excluir una macro específica de esta lista.
+Puede mostrar sus macros en una lista del Editor de Código (ver [Escribir un método](./write-class-method.md)). Basta con hacer doble clic en el nombre de una macro de la lista para llamarla. No es posible excluir una macro específica de esta lista.
 
 ### Notas de compatibilidad
 
@@ -852,7 +829,7 @@ El soporte de macros puede cambiar de una versión de 4D a otra. Con el fin de m
 
 #### Variables de selección de texto para métodos
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/GET-MACRO-PARAMETER.301-5739797.en.html)and [SET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/SET-MACRO-PARAMETER.301-5739788.en.html) commands. Estos comandos pueden utilizarse para superar la partición de los espacios de ejecución del proyecto local/componente y permitir así la creación de componentes dedicados a la gestión de macros. Para activar este modo para una macro, debe declarar el atributo Version con el valor 2 en el elemento Macro. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/GET-MACRO-PARAMETER.301-5739797.en.html)and [SET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/SET-MACRO-PARAMETER.301-5739788.en.html) are used. Este atributo debe declararse así:
+Se recomienda gestionar las selecciones de texto utilizando los comandos [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) y [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html). Estos comandos pueden utilizarse para superar la partición de los espacios de ejecución del proyecto local/componente y permitir así la creación de componentes dedicados a la gestión de macros. Para activar este modo para una macro, debe declarar el atributo Version con el valor 2 en el elemento Macro. En este caso, 4D ya no gestiona las variables predefinidas _textSel,_textReplace, etc. y se utilizan los comandos [GET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/GET-MACRO-PARAMETER.301-5739797.es.html) y [SET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/SET-MACRO-PARAMETER.301-5739788.es.html). Este atributo debe declararse así:
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 

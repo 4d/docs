@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
-データクラスまたはメソッドが返すデータをフィルターします *(例*: `$filter="firstName!='' AND salary>30000"`)
-
+データクラスまたはメソッドが返すデータをフィルターします _(例_: `$filter="firstName!='' AND salary>30000"`)
 
 ## 説明
 
@@ -26,7 +23,6 @@ title: '$filter'
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
-
 たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
 
 ### paramsプロパティの使用
@@ -38,19 +34,20 @@ title: '$filter'
 たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 
 4D においてデータをクエリする方法についての詳細は、[dataClass.query()](../API/DataClassClass.md#query) ドキュメンテーションを参照ください。
+
 > 単一引用符 (') または二重引用符 (") を挿入するには、対応する文字コードを使ってそれらをエスケープする必要があります:
-> 
+>
 > <li>単一引用符 ('): \u0027</li>
-  <li>二重引用符 ("): \u0022</li>
-> 
-> たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
+> <li>二重引用符 ("): \u0022</li>
+>
+> たとえば、単一引用符が含まれる値を _params_ プロパティに渡すには、次のように書きます:\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
-> 
+>
 > 値を直接渡す場合は、次のように書けます: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## 属性
 
-同じデータクラスに属している属性はそのまま受け渡せます (*例*: `firstName`)。 別のデータクラスをクエリする場合は、リレーション名と属性、つまりパスを渡さなくてはなりません (*例*: employer.name)。 属性名の文字の大小は区別されます (`firstName` と `FirstName` は異なります)。
+同じデータクラスに属している属性はそのまま受け渡せます (_例_: `firstName`)。 別のデータクラスをクエリする場合は、リレーション名と属性、つまりパスを渡さなくてはなりません (_例_: employer.name)。 属性名の文字の大小は区別されます (`firstName` と `FirstName` は異なります)。
 
 オブジェクト型属性もドット記法によってクエリできます。 たとえば、"objAttribute" という名称のオブジェクト属性が次の構造を持っていた場合:
 
@@ -64,7 +61,7 @@ title: '$filter'
 
 このオブジェクトをクエリするには、次のように書きます:
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## 比較演算子
 
@@ -75,7 +72,7 @@ title: '$filter'
 | =     | 等しい   |
 | !=    | 等しくない |
 | >     | 大きい   |
-| >=    | 以上    |
+| > =   | 以上    |
 | <     | 小さい   |
 | <=    | 以下    |
 | begin | 前方一致  |

@@ -3,7 +3,6 @@ id: markers
 title: Marcadores
 ---
 
-
 Estas propiedades permiten especificar la ubicación precisa de los marcadores en la regla vertical de un **formulario tabla**. Los marcadores se utilizan principalmente en los formularios de salida. Controlan la información que se lista y definen las áreas de encabezado, saltos, detalles y pie de página del formulario. Todo objeto que se coloque en estas áreas se mostrará o imprimirá en el lugar correspondiente.
 
 Siempre que se utilice cualquier formulario para la salida, ya sea para la visualización en pantalla o para la impresión, las líneas de marcador de salida tienen efecto y las áreas se muestran o imprimen en los lugares designados. Los marcadores también tienen efecto cuando un formulario se utiliza como formulario lista en un área de subformulario. Sin embargo, no tienen ningún efecto cuando se utiliza un formulario para introducir datos.
@@ -22,9 +21,9 @@ Puede hacer que las áreas Ruptura sean más pequeñas o más grandes. Puede uti
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos                    | Valores posibles                                                                                                         |
-| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| markerBreak | integer &#x7c; integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
+| Nombre      | Tipos de datos                | Valores posibles                                                                                                                                   |
+| ----------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer \| integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
 
 ---
 
@@ -36,8 +35,8 @@ Puede hacer el área Detalle más pequeña o más grande. Lo que coloque en el �
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                            |
-| ---------- | -------------- | ------------------------------------------- |
+| Nombre     | Tipos de datos | Valores posibles                                                            |
+| ---------- | -------------- | --------------------------------------------------------------------------- |
 | markerBody | integer        | Posición del marcador de detalle. Mínimo: 0 |
 
 ---
@@ -52,9 +51,9 @@ Puede utilizar el área de pie de página para imprimir gráficos, números de p
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles |
-| ------------ | -------------- | ---------------- |
-| markerFooter | integer        | mínimo: 0        |
+| Nombre       | Tipos de datos | Valores posibles          |
+| ------------ | -------------- | ------------------------- |
+| markerFooter | integer        | mínimo: 0 |
 
 ---
 
@@ -78,9 +77,9 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos                    | Valores posibles                                                                                                               |
-| ------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| markerHeader | integer &#x7c; integer collection | Posición del marcador de encabezado o colección de posiciones del marcador de encabezado en píxeles.<br/>Valor mínimo: 0 |
+| Nombre       | Tipos de datos                | Valores posibles                                                                                                                                         |
+| ------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer \| integer collection | Posición del marcador de encabezado o colección de posiciones del marcador de encabezado en píxeles.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionales
 

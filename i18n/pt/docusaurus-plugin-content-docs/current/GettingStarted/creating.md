@@ -3,28 +3,28 @@ id: creating
 title: Criar ou abrir um projeto
 ---
 
-Projetos 4D são criados e desenvolvidos usando a aplicação **4D** , que fornece um abrangente Ambiente Integrado de Desenvolvimento (IDE). **4D Server** também pode criar novos projetos vazios.
-
+Los proyectos 4D se crean y desarrollan utilizando la aplicación **4D**, que ofrece un completo Entorno de Desarrollo Integrado (IDE). **4D Server** también puede crear nuevos proyectos vacíos.
 
 ## Criar arquivos de projeto
 
-**Nota:** Servidor 4D pode abrir arquivos .4DProject em modo apenas leitura, mas apenas para propósitos de teste. Para lançamento, projetos 4D são oferecidos como arquivos .4dz (arquivos compactados zipados). Para saber mais, consulte [Construir um pacote de projetos](building.md). Em qualquer caso, os ficheiros de projeto são armazenados na máquina local.
+Se pueden crear nuevos proyectos de aplicaciones 4D desde **4D** o **4D Server**. Em qualquer caso, os ficheiros de projeto são armazenados na máquina local.
 
 Para criar um novo projeto de banco de dados:
 
 1. Inicie 4D ou 4D Server.
+
 2. Faça uma das seguintes opções:
-    * Selecionar **Novo > Projeto...** do menu **Arquivo**: ![](../assets/en/getStart/projectCreate1.png)
-    * (apenas 4D) Selecione **Projeto...** do botão da barra de ferramentas **Novo**:<p>![](../assets/en/getStart/projectCreate2.png)</p>Um diálogo padrão **Salvar** aparece para que você possa escolher o nome e local da pasta principal do projeto 4D.
+   - Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
+   - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Coloque o nome de sua pasta de projeto e clique **Save**. Este nome será utilizado:
+3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nome será utilizado:
 
-    * as the name of the .4DProject file at the first level of the "Project" folder.
-    * as the name of the .4DProject file at the first level of the "Project" folder.
+   - as the name of the .4DProject file at the first level of the "Project" folder.
+   - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
 
- Pode escolher qualquer nome permitido pelo seu sistema operacional. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
+Pode escolher qualquer nome permitido pelo seu sistema operacional. <em x-id="3">Atenção:</em> se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
 
-Quando validar a caixa de diálogo, 4D fecha o banco de dados atual (se houver) e cria uma pasta "Project" no local indicado e coloca nela todos os arquivos necessários para o funcioanamento correto do banco de dados projeto. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
+Al validar el diálogo **Guardar**, 4D cierra el proyecto actual (si lo hay), crea una carpeta de proyecto en la ubicación indicada y coloca en ella todos los archivos necesarios para el proyecto. Para más información, consulte [Arquitectura de un proyecto 4D](Project/architecture.md).
 
 Pode então começar a desenvolver o seu projeto.
 
@@ -34,73 +34,73 @@ Lance uma aplicação 4D Developer.
 
 1. Faça uma das seguintes opções:
 
-    * Selecione **Projeto Aberto/Local...** no menu **Arquivo** ou no botão da barra de ferramentas **Abrir**.
-    * Selecionar **Abrir um projeto de aplicativo local** na caixa de diálogo Assistente de Boas Vindas
+   - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+   - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
 
 Aparece a caixa de diálogo padrão Abrir.
 
-2. Select the project's `.4dproject` file and click **Open**.
+2. Seleccione el archivo `.4dproject` del proyecto (situado dentro de la carpeta ["Project" del proyecto](../Project/architecture.md#project-folder)) y haga clic en **Abrir**.
 
-    Por padrão, o projeto é aberto com seu arquivo de dados atual. Outros tipos de arquivo são sugeridos:
+   Por padrão, o projeto é aberto com seu arquivo de dados atual. Outros tipos de arquivo são sugeridos:
 
-    * *Arquivos de projeto empacotados*: `.4dz` extensão - projetos de implantação
-    * *Arquivos de atalho*: `.4DLink` extensão - armazenar parâmetros adicionais necessários para a abertura de projetos ou aplicativos (endereços, identificadores, etc.)
-    * *Arquivos binários*: `.4db` ou `.4dc` extensão - formatos de banco de dados legacy 4D
+   - _Archivos de proyectos empaquetados_: extensión `.4dz` - proyectos de despliegue
+   - _Archivos de acceso directo_: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
+   - _Archivos binarios_: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
 ### Opções
 
-Além das opções padrão do sistema, o diálogo *Abrir* em 4D fornece dois menus com opções específicas que estão disponíveis usando o botão **Abrir** e o menu **Arquivo de Dados**.
+Además de las opciones sistema estándar, la caja de diálogo _Abrir_ de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
 
-* **Abrir** - Modo de abertura do projeto:
-  * **Interpretado** ou **Compilado**: Essas opções estão disponíveis quando o projeto selecionado contém ambos [interpretados e compilados código](Concepts/interpreted.md).
-  * **[Manutenção do Centro de Segurança](MSC/overview.md)**: Abrir em modo seguro permitindo acesso a projetos danificados a fim de realizar os reparos necessários.
+- **Abrir** - modo de apertura del proyecto:
+  - **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
+  - **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
 
-* **Arquivo de dados** - especifica o arquivo de dados a ser usado com o projeto. Por predefinição, a opção **Current data file** está selecionada.
+- **Archivo de datos** - especifica el archivo de datos a utilizar con el proyecto. Por defecto, está seleccionada la opción **Archivo de datos actual**.
 
 ## Atalhos de abertura de projectos
 
 4D oferece várias maneiras de abrir projetos diretamente e ignorar o diálogo Aberto:
 
-* através de opções de menu:
-  * *Barra de Menu* - **Arquivo** > **Abrir Projetos Recentes / {project name}**
-  * *4D Tool bar* - Selecione o projeto no menu associado ao botão **Abrir**
+- através de opções de menu:
+  - _Barra de menús_ - **Archivo** > **Abrir proyectos recientes / {project name}**
+  - _Barra de herramientas 4D_ - Seleccione el proyecto en el menú asociado al botón **Abrir**
 
-* através das preferências:
-  * Defina a preferência geral **Na inicialização** para **Abrir o último projeto utilizado**.
+- através das preferências:
+  - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
 
-* usando o arquivo `.4DLink`.
+- utilizando un archivo `.4DLink`.
 
 ### Abrir um projeto com um ficheiro 4DLink
 
-Você pode usar um arquivo [`.4DLink`](#about-4DLink-files) para iniciar o aplicativo 4D e abrir o projeto 4D de destino. Há duas formas de o fazer:
+You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Há duas formas de o fazer:
 
-* duplo-clique ou arraste e solte o arquivo `.4DLink` no aplicativo 4D
-* ir para **Arquivo** > **Abrir Projetos Recentes** e selecionar um projeto
+- haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
+- vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto
 
 ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
 Um arquivo .4DLink do tipo "projeto remoto" pode ser copiado e usado em várias máquinas.
+
 > Também é possível selecionar um arquivo 4DLink na caixa de diálogo 4D e 4D Server de abertura (abrindo apenas projeto local).
 
 ## Sobre 4DLink Files
 
-Arquivos com a extensão `.4DLink` são arquivos XML que contêm parâmetros destinados a automatizar e simplificar a abertura de projetos 4D locais ou remotos.
+Los archivos con la extensión `.4DLink` son archivos XML que contienen parámetros destinados a automatizar y a simplificar la apertura de proyectos 4D locales o remotos.
 
-Arquivos`.4DLink` podem salvar o endereço de um projeto 4D assim como seus identificadores de conexão e modo de abertura, poupando tempo quando abrir projetos.
+Los archivos `.4DLink` pueden guardar la dirección de un proyecto 4D, así como sus identificadores de conexión y el modo de apertura, lo que permite ahorrar tiempo al abrir los proyectos.
 
-4D gera automaticamente um `. DLink` arquivo quando um projeto local é aberto pela primeira vez ou quando se conecta a um servidor pela primeira vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
+4D genera automáticamente un archivo `.4DLink` cuando se abre un proyecto local por primera vez o cuando se conecta a un servidor por primera vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
 
-* Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa o número da versão da aplicação. Por exemplo, "Favorites v19" para 4D v19.
 
 Esta pasta está dividida em duas subpastas:
 
-* a pasta **Local** contém os arquivos `.4DLink` que podem ser usados para abrir projetos locais
-* a pasta **Remote** contém os arquivos `.4DLink` dos projetos remotos recentes
+- la carpeta **Local** contiene los archivos `.4DLink` que pueden utilizarse para abrir proyectos locales
+- la carpeta **Remote** contiene los archivos `.4DLink` de proyectos remotos recientes
 
-Os arquivos `.4DLink` podem também ser criados com um editor XML.
+Los archivos `.4DLink` también pueden crearse con un editor XML.
 
-4D fornece um DTD descrevendo as chaves XML que podem ser usadas para construir um arquivo `.4DLink`. This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.
-
+4D ofrece un DTD que describe las llaves XML que pueden utilizarse para crear un archivo `.4DLink`. This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.

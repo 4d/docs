@@ -52,7 +52,7 @@
     "description": "The label for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Command Line Interface": {
-    "message": "Interfaz de línea de comando",
+    "message": "Interfaz de línea de\n          comando",
     "description": "The label for category Command Line Interface in sidebar docs"
   },
   "sidebar.docs.category.TLS Protocol": {
@@ -161,19 +161,19 @@
   },
   "sidebar.docs.link.4D NetKit": {
     "message": "4D NetKit",
-    "description": "The label for link 4D NetKit in sidebar docs, linking to https://github.com/4d/4D-NetKit"
+    "description": "The label for link 4D NetKit in sidebar docs, linking to https://github.com/4d/4D-NetKit/tree/20R5"
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
-    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html"
   },
   "sidebar.docs.link.4D SVG": {
     "message": "4D SVG",
-    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.en.html"
   },
   "sidebar.docs.link.4D Widgets": {
     "message": "4D Widgets",
-    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
     "message": "Interfaz 4D Write Pro",
@@ -189,7 +189,7 @@
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.en.html"
   },
   "sidebar.docs.category.Getting Started.link.generated-index.title": {
     "message": "Comencemos",
@@ -292,7 +292,7 @@
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.doc.Command Line Interface": {
-    "message": "Interfaz de línea de comando",
+    "message": "Interfaz de línea de\n          comando",
     "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
   },
   "sidebar.docs.doc.TLS Protocol": {
@@ -361,7 +361,7 @@
   },
   "sidebar.docs.link.Commands": {
     "message": "Comandos",
-    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
+    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.en.html"
   },
   "sidebar.docs.category.Commands": {
     "message": "Comandos",
@@ -482,5 +482,29 @@
   "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
     "message": "Uso de Qodly Studio para crear poderosas interfaces web.",
     "description": "The generated-index page description for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.REST API": {
+    "message": "REST API",
+    "description": "The label for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.title": {
+    "message": "REST API",
+    "description": "The generated-index page title for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.description": {
+    "message": "Exposing your datastore to REST and using the REST API.",
+    "description": "The generated-index page description for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST": {
+    "message": "Exposing your datastore in REST",
+    "description": "The label for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
+    "message": "Exposing your datastore in REST",
+    "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
+    "message": "Configure your datastore for REST access",
+    "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
   }
 }

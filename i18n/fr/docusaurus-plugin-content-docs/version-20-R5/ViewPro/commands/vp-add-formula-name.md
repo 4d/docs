@@ -14,7 +14,7 @@ title: VP ADD FORMULA NAME
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | vpFormula  | Text   | -> | Formule 4D View Pro                     |                  |
 | name       | Text   | -> | Nom de la formule                       |                  |
-| options    | Object | -> | Options for the named formula           | <!-- END REF --> |
+| options    | Object | -> | Options de la formule nommée            | <!-- END REF --> |
 
 #### Description
 

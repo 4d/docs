@@ -29,25 +29,26 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### Grammaire JSON
 
-| Nom          | Type de données                     | Valeurs possibles                          |
-| ------------ | ----------------------------------- | ------------------------------------------ |
+| Nom          | Type de données                     | Valeurs possibles                                          |
+| ------------ | ----------------------------------- | ---------------------------------------------------------- |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 #### Objets pris en charge
 
-[Zone de saisie](input_overview.md)
+[Input](input_overview.md)
 
 ---
 
 ## Excluded List
 
 Allows setting a list whose values cannot be entered in the object. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
+
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles               |
-| ------------ | --------------- | ------------------------------- |
+| Nom          | Type de données | Valeurs possibles                               |
+| ------------ | --------------- | ----------------------------------------------- |
 | excludedList | liste           | Une liste de valeurs à exclure. |
 
 #### Objets pris en charge
@@ -60,13 +61,15 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 Limite les entrées valides aux éléments de la liste. Par exemple, si vous souhaitez utiliser une liste pour les titres de postes, afin que les entrées valides soient limitées aux titres qui ont été approuvés par la direction.
 
-La création d'une liste obligatoire n'affiche pas automatiquement la liste lorsque le champ est sélectionné. Si vous souhaitez afficher la liste requise, assignez la même liste à la propriété [Choice List](properties_DataSource.md#choice-list). Cependant, contrairement à la propriété [Choice List](properties_DataSource.md#choice-list), lorsqu'une liste obligatoire est définie, la saisie au clavier n'est plus possible, seule la sélection d'une valeur de liste à l'aide du pop-up menu est autorisée. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+La création d'une liste obligatoire n'affiche pas automatiquement la liste lorsque le champ est sélectionné. Si vous souhaitez afficher la liste requise, assignez la même liste à la propriété [Choice List](properties_DataSource.md#choice-list).
+Cependant, contrairement à la propriété [Choice List](properties_DataSource.md#choice-list), lorsqu'une liste obligatoire est définie, la saisie au clavier n'est plus possible, seule la sélection d'une valeur de liste à l'aide du pop-up menu est autorisée If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                  |
-| ------------ | --------------- | ---------------------------------- |
+| Nom          | Type de données | Valeurs possibles                                  |
+| ------------ | --------------- | -------------------------------------------------- |
 | requiredList | liste           | Une liste de valeurs obligatoires. |
 
 #### Objets pris en charge

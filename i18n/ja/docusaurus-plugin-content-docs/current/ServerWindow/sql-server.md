@@ -3,11 +3,9 @@ id: sql-server
 title: SQLサーバーページ
 ---
 
-
 **SQLサーバー** ページには、4D Server に統合された SQLサーバーについての情報が集められています。 また、SQLサーバーを有効にするためのボタンも含まれています。
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
-
 
 ページの上部には、4D Server の SQLサーバーの現在の状況が表示されます。
 

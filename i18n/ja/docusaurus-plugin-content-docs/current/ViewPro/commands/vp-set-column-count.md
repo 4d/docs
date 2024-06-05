@@ -5,7 +5,7 @@ title: VP SET COLUMN COUNT
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
 
-**VP SET COLUMN COUNT** ( _vpAreaName_ : Text , _columnCount_ : Integer { , _sheet_ : Integer } ) <!-- END REF -->
+**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET COLUMN COUNT
 
 #### 説明
 
-`VP SET COLUMN COUNT` コマンドは、<!-- REF #_method_.VP SET COLUMN COUNT.Summary -->_vpAreaName_ 引数内にあるカラムの総数を定義します<!-- END REF -->。
+`VP SET COLUMN COUNT` コマンドは、<!-- REF #_method_.VP SET COLUMN COUNT.Summary -->*vpAreaName* 引数内にあるカラムの総数を定義します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_columnCount_ には、カラムの総数を渡します。 _columnCount_ 引数は 0 より大きい値でなくてはなりません。
+*columnCount* には、カラムの総数を渡します。 *columnCount* 引数は 0 より大きい値でなくてはなりません。
 
-任意の _sheet_ 引数として、シートのインデックス (0 起点) を渡すことで、_columnCount_ が適用されるスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
+任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、*columnCount* が適用されるスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
 - `vk current sheet`
 

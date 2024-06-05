@@ -7,29 +7,26 @@ title: Glossaire
 
 ![](../assets/en/ORDA/mainConcepts.png)
 
-
-
 ## Action
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
+Chaque action qui peut être effectuée sur une [ressource](#resource). Les actions disponibles sont : create, read, update, drop, execute, promote, et describe.
 
 ## Attribut
 
 Un attribut est la plus petite cellule de stockage dans une base de données relationnelle (voir aussi [Attribut relationnel](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
 
-*   Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
-*   Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
-> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+- Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
+- Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
+
+> Les _attributs_ et les _propriétés_ sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
 Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [propertyPath](#propertyPath).
 
-
 ## Class code
 
 Code pour la (les) fonction(s) de classe utilisateurs.
-
 
 ## Champ calculé
 
@@ -53,7 +50,6 @@ Une dataclass est un objet qui décrit les données. Les tables de la base de do
 
 Une dataclass est reliée à un seul datastore.
 
-
 ## DataClass class
 
 Classe pour des objets dataclass spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
@@ -64,8 +60,8 @@ Un datastore est l'objet d'interface fourni par ORDA pour référencer une struc
 
 Un datastore fournit :
 
-*   une connexion à la base de données 4D
-*   un ensemble de dataclasses pour travailler avec la base de données
+- une connexion à la base de données 4D
+- un ensemble de dataclasses pour travailler avec la base de données
 
 La base peut être une base locale 4D (le datastore principal), ou une base 4D Server exposée en ressource REST (un datastore distant).
 
@@ -74,7 +70,6 @@ Un datastore ne référence qu'une seule base de données. Il est toutefois poss
 ## DataStore class
 
 Classe pour des objets datastore spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
-
 
 ## DataStoreImplementation
 
@@ -102,18 +97,15 @@ Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête e
 
 Une sélection d'entités contient :
 
-
-*   un ensemble de 0 à X références d'entités,
-*   une propriété length (toujours),
-*   les propriétés queryPlan et queryPath (si demandées lors de la requête).
+- un ensemble de 0 à X références d'entités,
+- une propriété length (toujours),
+- les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
 Une sélection d'entités peut également être vide.
 
-
-## Generic class
+## Classe générique
 
 Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
-
 
 ## Lazy loading
 
@@ -137,16 +129,16 @@ $myClass.query("name = smith")
 
 Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Cela inclut :
 
-*   number
-*   text
-*   Null
-*   boolean
-*   date
-*   object
-*   collection
-*   image(\*)
+- number
+- text
+- Null
+- boolean
+- date
+- object
+- collection
+- image(\*)
 
-*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
+_(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans_ `entitySelection.max()`.
 
 ## Verrouillage optimiste
 
@@ -156,15 +148,15 @@ En mode "verrouillage optimiste", les entités ne sont pas verrouillées explici
 
 Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que l'on y accède, en utilisant la méthode entity.lock( ). Les autres process ne peuvent ni mettre à jour ni supprimer l'entité tant qu'elle n'est pas déverrouillée. Le langage 4D classique n'autorise que les verrouillages pessimistes. Voir "Verrouillage optimiste".
 
+## Privilège
 
-## Privilege
-
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
 
 ## Propriété
 
 Voir [Attribut](#attribute).
-> > Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+
+> \> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 
@@ -182,8 +174,8 @@ Ce sont des dataclasses liées par des attributs de relation.
 
 Les attributs de relation sont utilisés pour conceptualiser les relations entre les dataclasses (N vers 1 et 1 vers N).
 
-*   Relation N vers 1 (la dataclassA fait référence à une occurrence de la dataclassB) : un attribut de relation est disponible dans dataclassA et fait référence à une instance de dataclassB.
-*   Relation 1 vers N (une occurrence de dataclassB fait référence à plusieurs occurrences de dataclassA) : un attribut de relation est disponible dans la dataclassB et fait référence à plusieurs instances de la dataclassA.
+- Relation N vers 1 (la dataclassA fait référence à une occurrence de la dataclassB) : un attribut de relation est disponible dans dataclassA et fait référence à une instance de dataclassB.
+- Relation 1 vers N (une occurrence de dataclassB fait référence à plusieurs occurrences de dataclassA) : un attribut de relation est disponible dans la dataclassB et fait référence à plusieurs instances de la dataclassA.
 
 Une dataclass peut avoir des attributs de relation récursifs.
 
@@ -199,16 +191,13 @@ Les sélections d'entités peuvent faire référence à des entités relatives s
 
 Une base de données 4D ouverte sur 4D ou 4D Server (disponible via HTTP) et exposée en tant que ressource REST. Cette base de données peut être référencée localement en tant que Datastore à partir d'autres postes de travail, où un locaID lui est attribué. Le datastore distant peut être utilisé à travers les concepts ORDA (datastore, dataclass, sélection d'entités, etc.). Cette utilisation est soumise à un système de licence.
 
-
 ## Ressource
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+Un élément ORDA sur lequel une [action](#action) peut être autorisée ou non en fonction d'un [privilège](#privilege). Les ressources disponibles sont : le datastore, une dataclass, un attribut de dataclass, une fonction de modèle de données ORDA, ou une méthode projet.
 
+## Rôle
 
-## Role
-
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
-
+Un rôle est un [privilège](#privilege) publié destiné à être utilisé par un administrateur. Il peut contenir un ou plusieurs privilèges.
 
 ## Session
 

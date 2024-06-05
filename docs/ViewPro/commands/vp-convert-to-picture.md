@@ -13,7 +13,7 @@ title: VP Convert to picture
 |---|---|---|---|
 |vpObject| Object|->|4D View Pro object containing the area to convert|
 |rangeObj| Object|->|Range object|
-|Result| Object|<-|SVG picture of the area|<!-- END REF -->
+|Result| Picture|<-|SVG picture of the area|<!-- END REF -->
 
 #### Description
 

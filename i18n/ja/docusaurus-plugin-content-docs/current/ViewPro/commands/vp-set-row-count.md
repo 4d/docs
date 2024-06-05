@@ -5,7 +5,7 @@ title: VP SET ROW COUNT
 
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 
-**VP SET ROW COUNT** ( _vpAreaName_ : Text ; _rowCount_ : Integer { ; _sheet_ : Integer }  ) <!-- END REF -->
+**VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET ROW COUNT
 
 #### 説明
 
-`VP SET ROW COUNT` コマンドは、<!-- REF #_method_.VP SET ROW COUNT.Summary -->_vpAreaName_ 引数内にある行の総数を定義します<!-- END REF -->。
+`VP SET ROW COUNT` コマンドは、<!-- REF #_method_.VP SET ROW COUNT.Summary -->*vpAreaName* 引数内にある行の総数を定義します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_rowCount_ には、行の総数を渡します。 _rowCount_ 引数は 0 より大きい値でなくてはなりません。
+*rowCount* には、行の総数を渡します。 *rowCount* 引数は 0 より大きい値でなくてはなりません。
 
-任意の _sheet_ 引数として、シートのインデックス (0 起点) を渡すことで、_rowCount_ が適用されるスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
+任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、*rowCount* が適用されるスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
 - `vk current sheet`
 

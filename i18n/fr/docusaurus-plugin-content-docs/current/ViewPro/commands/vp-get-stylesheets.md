@@ -5,7 +5,7 @@ title: VP Get stylesheets
 
 <!-- REF #_method_.VP Get stylesheets.Syntax -->
 
-**VP Get stylesheets** ( _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Collection<!-- END REF -->
+**VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
@@ -13,15 +13,15 @@ title: VP Get stylesheets
 | ---------- | ---------- | -- | -------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                  |                  |
 | sheet      | Integer    | -> | Cible (par défaut = feuille courante) |                  |
-| Résultat   | Collection | <- | Collection of style sheet objects                        | <!-- END REF --> |
+| Résultat   | Collection | <- | Collection d'objets feuille de style                     | <!-- END REF --> |
 
 #### Description
 
-The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated _sheet_<!-- END REF -->.
+The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
 
-In _vpAreaName_, pass the name property of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+In *vpAreaName*, pass the name property of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the style sheets in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
 - `vk current sheet`
 - `vk workbook`

@@ -9,10 +9,10 @@ title: VP Object to font
 
 <!-- REF #_method_.VP Object to font.Params -->
 
-| Paramètres | Type   |    | Description    |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
-| fontObj    | Object | -> | Objet police   |                  |
-| Résultat   | Text   | <- | Font shorthand | <!-- END REF --> |
+| Paramètres | Type   |    | Description                                      |                  |
+| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
+| fontObj    | Object | -> | Objet police                                     |                  |
+| Résultat   | Text   | <- | Police raccourcie (shorthand) | <!-- END REF --> |
 
 #### Description
 

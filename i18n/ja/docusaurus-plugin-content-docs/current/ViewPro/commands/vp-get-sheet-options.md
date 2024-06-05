@@ -5,7 +5,7 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
 
-**VP Get sheet options** ( _vpAreaName_ : Text {; _sheet_ : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -17,11 +17,11 @@ title: VP Get sheet options
 
 #### 説明
 
-`VP Get sheet options` コマンドは、<!-- REF #_method_.VP Get sheet options.Summary -->_vpAreaName_ で指定したエリア内の、カレントのシートオプションを格納したオブジェクトを返します<!-- END REF -->。
+`VP Get sheet options` コマンドは、<!-- REF #_method_.VP Get sheet options.Summary -->*vpAreaName* で指定したエリア内の、カレントのシートオプションを格納したオブジェクトを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-任意の _sheet_ 引数として、シートのインデックス (0 起点) を渡すことで、スプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
+任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、スプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
 #### 返されるオブジェクト
 

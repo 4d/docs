@@ -3,10 +3,9 @@ id: methods
 title: Métodos
 ---
 
-
 Un método es básicamente un trozo de código que ejecuta una o varias acciones. Un método se compone de instrucciones.
 
-Una línea de instrucción realiza una acción, y puede ser simple o compleja. Cada instrucción suele constar de una línea en el método (si es necesario, puede dividirse en [utilizando el caracter `\`](quick-tour.md#code-on-several-lines)).
+Una línea de instrucción realiza una acción, y puede ser simple o compleja. Cada instrucción generalmente consiste en una línea en el método (si es necesario, puede ser [dividida utilizando el carácter `\`](quick-tour.md#codigo-en-varias-lineas)).
 
 El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas de código.
 
@@ -14,15 +13,14 @@ El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas
 
 En el lenguaje 4D, hay varias categorías de métodos. La categoría depende de cómo se les pueda llamar:
 
-| Tipo                           | Contexto de llamada                                                                                                      | Acepta los parámetros | Descripción                                                                                                                                                                               |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Métodos proyecto**           | Por demanda, cuando se llama al nombre del método proyecto (ver [Llamando a métodos proyecto](#calling-project-methods)) | Sí                    | Puede contener código para ejecutar acciones personalizadas. Una vez creado un método proyecto, pasa a formar parte del lenguaje del proyecto.                                            |
-| **Método objeto (widget)**     | Automático, cuando un evento involucra al objeto al que se asocia el método                                              | No                    | Propiedad de un objeto formulario (también llamado widget)                                                                                                                                |
-| **Método formulario**          | Automático, cuando un evento involucra al formulario al que se asocia el método                                          | No                    | Propiedad de un formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. |
-| **Trigger** (o *método tabla*) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar)                          | No                    | Propiedad de una tabla. Los triggers son métodos que pueden evitar operaciones "ilegales" con los registros de su base.                                                                   |
-| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                                          | Sí (predefinido)      | Hay 16 métodos base en 4D.                                                                                                                                                                |
-| **Class**                      | [**Las funciones de clases**](classes.md#function) se llaman en el contexto de una instancia de objeto                   | sí                    | Las funciones de clases pueden estar integradas (*por ejemplo* `collection.orderBy()` o `entity.save()`), o creadas por el desarrollador 4D. Ver [**Clases**](classes.md)                 |
-
+| Tipo                                              | Contexto de llamada                                                                                                                         | Acepta los parámetros               | Descripción                                                                                                                                                                                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Métodos proyecto**                              | Por demanda, cuando se llama al nombre del método proyecto (ver [Llamando a métodos proyecto](#calling-project-methods)) | Sí                                  | Puede contener código para ejecutar acciones personalizadas. Una vez creado un método proyecto, pasa a formar parte del lenguaje del proyecto.                                            |
+| **Método objeto (widget)**     | Automático, cuando un evento involucra al objeto al que se asocia el método                                                                 | No                                  | Propiedad de un objeto formulario (también llamado widget)                                                                                                                                             |
+| **Método formulario**                             | Automático, cuando un evento involucra al formulario al que se asocia el método                                                             | No                                  | Propiedad de un formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. |
+| **Trigger** (o _método tabla_) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar)                          | No                                  | Propiedad de una tabla. Los triggers son métodos que pueden evitar operaciones "ilegales" con los registros de su base.                                                                   |
+| **Método base**                                   | Automático, cuando se produce un evento de la sesión de trabajo                                                                             | Sí (predefinido) | Hay 16 métodos base en 4D.                                                                                                                                                                                |
+| **Class**                                         | [**Las funciones de clases**](classes.md#function) se llaman en el contexto de una instancia de objeto                                      | Sí                                  | Las funciones de clases pueden estar integradas (_por ejemplo_ `collection.orderBy()` o `entity.save()`), o creadas por el desarrollador 4D. Ver [**Clases**](classes.md)              |
 
 ## Métodos proyecto
 
@@ -40,7 +38,7 @@ También puede ejecutar los métodos de su proyecto manualmente, por ejemplo, pa
 
 Una subrutina es un método proyecto que puede considerarse como un ayudante. Realiza aquellas tareas que otros métodos le solicitan. Una función es una subrutina que devuelve un valor al método que la llamó.
 
-Cuando crea un método proyecto, éste pasa a formar parte del lenguaje del proyecto en el que lo crea. Entonces puede llamar al método proyecto desde otros métodos (método proyecto, método objeto, etc.), de la misma manera que llama a los comandos integrados de 4D. Un método proyecto utilizado de este manera se llama una subrutina.
+Cuando crea un método proyecto, éste pasa a formar parte del lenguaje del proyecto en el que lo crea. Luego puede llamar al método proyecto desde otro método (método proyecto, método objeto...) de la misma manera que llama a los comandos integrados de 4D. Un método proyecto utilizado de este manera se llama una subrutina.
 
 Se utilizan subrutinas para:
 
@@ -110,7 +108,7 @@ También se admite la sintaxis con paréntesis:
 $o["custom_Alert"]() //muestra "Hello world!"
 ```
 
-También puede [pasar parámetros](Concepts/parameters.md) a su fórmula cuando la llame utilizando $1, $2... al igual que con los métodos proyecto 4D:
+También puede [pasar parámetros](Concepts/parameters.md) a su fórmula cuando la llame utilizando $1, $2… al igual que con los métodos de proyecto 4D:
 
 ```4d
 //método fullName 
@@ -163,7 +161,7 @@ La automatización de secuencias de actividades es una capacidad muy poderosa de
 
 ### Métodos de gestión de proceso
 
-Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. El proceso dura sólo mientras el método continúa ejecutándose, excepto si se trata de un proceso Worker. Tenga en cuenta que un método de menú asociado a un comando de menú con la propiedad *Iniciar un nuevo proceso* es también el método de gestión de proceso para el proceso recién creado.
+Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. El proceso dura sólo mientras el método continúa ejecutándose, excepto si se trata de un proceso Worker. Tenga en cuenta que un método de menú asociado a un comando de menú con la propiedad _Iniciar un nuevo proceso_ es también el método de gestión de proceso para el proceso recién creado.
 
 ### Métodos de gestión de eventos y errores
 
@@ -184,7 +182,7 @@ Están disponibles los siguientes modos de ejecución:
 
 #### Desde el Editor de código
 
-Cada ventana del [**editor de código**](../code-editor/overview.md) tiene un botón que se puede utilizar para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución deseado.
+Cada ventana del [**Editor de código**](../code-editor/write-class-method.md) tiene un botón que se puede utilizar para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución deseado.
 
 Este botón sólo está activo para los métodos proyecto y para los siguientes métodos base de datos:
 
@@ -203,12 +201,12 @@ Esta caja de diálogo lista todos los métodos proyecto de la base de datos, inc
 
 Para ejecutar un método proyecto, basta con seleccionar su nombre en la lista y hacer clic en **Ejecutar**. Para ejecutar un método paso a paso en modo Depuración, haga clic en **Depuración**. Para más información sobre el depurador de 4D, consulte la sección [Depuración](../Debugging/basics.md).
 
-Si marca la casilla **Nuevo proceso**, el método seleccionado se ejecuta en otro proceso. Si el método está realizando una tarea que requiere mucho tiempo, como la impresión de un gran conjunto de registros, puede seguir trabajando con su base de datos, añadiendo registros a una tabla, creando un gráfico para mostrar los datos, etc. Para más información sobre los procesos, consulte [Procesos](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) en el manual *Lenguaje* 4D.
+Si marca la casilla **Nuevo proceso**, el método seleccionado se ejecuta en otro proceso. Si el método está realizando una tarea que requiere mucho tiempo, como la impresión de un gran conjunto de registros, puede seguir trabajando con su base de datos, añadiendo registros a una tabla, creando un gráfico para mostrar los datos, etc. Para más información sobre los procesos, consulte [Procesos](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) en el manual _Lenguaje_ 4D.
 
 **Notas Servidor 4D**:
 
-- Si desea que el método se ejecute en el equipo servidor y no en el equipo cliente, seleccione la opción **En 4D Server** en el menú A ejecutar. En este caso, se crea un nuevo proceso, llamado *procedimiento almacenado*, en la máquina servidor para ejecutar el método. Esta opción puede utilizarse para reducir el tráfico de red y optimizar el funcionamiento de 4D Server, en particular para los métodos que llaman a los datos almacenados en el disco. Todos los tipos de métodos pueden ejecutarse en la máquina servidor o en otra máquina cliente, excepto los que modifican la interfaz de usuario. En este caso, los procedimientos almacenados son ineficaces.
-- También puede optar por ejecutar el método en otra estación de trabajo cliente. Otras estaciones de trabajo cliente no aparecerán en el menú, a menos que hayan sido previamente "registradas" (para más información, consulte la descripción de la opción [REGISTRAR CLIENTE](https://doc.4d.com/4Dv19R5/4D/19-R5/REGISTER-CLIENT.301-5830908.en.html).
+- Si desea que el método se ejecute en el equipo servidor y no en el equipo cliente, seleccione la opción **En 4D Server** en el menú A ejecutar. En este caso, se crea un nuevo proceso, llamado _procedimiento almacenado_, en la máquina servidor para ejecutar el método. Esta opción puede utilizarse para reducir el tráfico de red y optimizar el funcionamiento de 4D Server, en particular para los métodos que llaman a los datos almacenados en el disco. Todos los tipos de métodos pueden ejecutarse en la máquina servidor o en otra máquina cliente, excepto los que modifican la interfaz de usuario. En este caso, los procedimientos almacenados son ineficaces.
+- También puede optar por ejecutar el método en otra estación de trabajo cliente. Otras estaciones de trabajo cliente no aparecerán en el menú, a menos que hayan sido previamente "registradas" (para más información, consulte la descripción de la opción [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
 Por defecto, está seleccionada la opción **localmente**. Con la versión 4D monousuario, esta es la única opción disponible.
 
@@ -248,9 +246,6 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
        ALERT($vtTheWholeStory)
     End if
  End if
-       ALERT($vtTheWholeStory)
-    End if
- End if
 ```
 
 2. También puede proceder así:
@@ -263,17 +258,15 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
        ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
     End if
  End if
-    End if
- End if
 ```
 
 con la función recursiva `Genealogy of` siguiente:
 
 ```4d
-  ` Método proyecto Genealogy of
+  ` Genealogy of project method
   ` Genealogy of ( String ) -> Text
   ` Genealogy of ( Name ) -> Part of sentence
-
+ 
  $0:=$1
  QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
  If(Records in selection([Friends and Relatives])>0)

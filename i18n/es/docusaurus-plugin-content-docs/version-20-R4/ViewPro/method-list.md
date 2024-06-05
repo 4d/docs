@@ -618,11 +618,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                         |                  |
-| ---------- | ------ | -- | --------------------------------------------------- | ---------------- |
-| vpObject   | Object | -> | Objeto 4D View Pro que contiene el área a convertir |                  |
-| rangeObj   | Object | -> | Objeto rango                                        |                  |
-| Result     | Object | <- | Imagen SVG del área                                 | <!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                         |                  |
+| ---------- | ------- | -- | --------------------------------------------------- | ---------------- |
+| vpObject   | Object  | -> | Objeto 4D View Pro que contiene el área a convertir |                  |
+| rangeObj   | Object  | -> | Objeto rango                                        |                  |
+| Result     | Picture | <- | Imagen SVG del área                                 | <!-- END REF --> |
 
 #### Descripción
 
@@ -981,7 +981,7 @@ El parámetro opcional _paramObj_ le permite definir múltiples propiedades para
 **Notas sobre el formato Excel**:
 
 - Al exportar un documento 4D View Pro a un archivo con formato Microsoft Excel, pueden perderse algunos parámetros. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato PDF**:
 
@@ -1538,7 +1538,9 @@ El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->d
 En _rangeObj_, pase un rango que contenga el estilo a recuperar.
 
 - Si _rangeObj_ contiene un rango de celdas, se devuelve el estilo de la celda.
+
 - Si _rangeObj_ contiene un rango que no es un rango de celdas, se devuelve el estilo de la primera celda del rango.
+
 - Si _rangeObj_ contiene varios rangos, sólo se devuelve el estilo de la primera celda del primer rango.
 
 #### Ejemplo
@@ -2862,7 +2864,7 @@ El siguiente código devolverá una colección de todos los nombres de tablas de
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contiene por ejemplo ["contextTable","emailTable"]
 
 ```
 
@@ -3068,7 +3070,7 @@ The optional _paramObj_ parameter allows you to define properties for the import
 
 :::note Notas
 
-- La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
+- La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
 - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -3335,7 +3337,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 
 Este comando inserta algunas columnas en _tableName_, NO en la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
 
-If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
+Si _tableName_ no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
 
 #### Ejemplo
 
@@ -3500,7 +3502,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                     |                  |
 | rangeName  | Text    | -> | Nombre del rango existente                                       |                  |
 | sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Range object of name                                             | <!-- END REF --> |
+| Result     | Object  | <- | Rango de nombre                                                  | <!-- END REF --> |
 
 #### Descripción
 
@@ -3689,7 +3691,7 @@ Pase el área 4D View Pro a imprimir en _vpAreaName_. El comando abrirá la vent
 
 > Las propiedades definidas en la ventana de diálogo de impresión son para el papel de la impresora, no son las propiedades de impresión para el área 4D View Pro. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](#vp-set-print-info) command. Se recomienda encarecidamente que las propiedades de la impresora y del área 4D View Pro coincidan, de lo contrario el documento impreso podría no corresponder a sus expectativas.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet to print (counting begins at 0). Si se omite, la hoja actual se utiliza por defecto. Puedes seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
+En el parámetro opcional _sheet_, puede designar una hoja específica a imprimir (la numeración comienza en 0). Si se omite, la hoja actual se utiliza por defecto. Puedes seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`

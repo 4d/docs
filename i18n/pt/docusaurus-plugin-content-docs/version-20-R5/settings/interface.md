@@ -3,7 +3,6 @@ id: interface
 title: Página Interface
 ---
 
- 
 A página Interface é usada para definir várias opções relacionadas à interface do projeto.
 
 ## Geral
@@ -14,38 +13,37 @@ Esta área permite-lhe definir várias opções relativas ao ecrã.
 
 ### Fonte a ser usada com o comando MESSAGE
 
-Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
+Haga clic en **Seleccionar...** para definir la fuente y el tamaño de los caracteres utilizados por el comando `MESSAGE`.
 
 The default font and its size depend on the platform where 4D is running.
 
-> Esta propriedade também afecta as seguintes partes de 4D: <li>determinadas áreas de pré-visualização do Explorador</li><li>a régua do editor de formulários</li>
+> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+
 ### Exibir janelas
 
 Other options configure the display of various windows in the Application mode.
 
--   **Splash screen**: When this option is deselected, the [splash screen of the current menu bar](Menus/bars.md#splash-screen) does not appear in the Application mode. When you hide this window, it is up to you to manage the display of all your windows by programming, for example in the `On Startup` database method.
+- **Pantalla de inicio**: cuando esta opción no está seleccionada, la [pantalla de inicio de la barra de menú actual](Menus/bars.md#splash-screen) no aparece en modo Aplicación. Cuando oculte esta ventana, le corresponderá gestionar la visualización de todas sus ventanas por programación, por ejemplo en el método base `On Startup`.
 
--   **Flushing progress**: When this option is checked, 4D displays a window at the bottom left of the screen while the data in the cache is flushed. Since this operation momentarily blocks user actions, displaying this window lets them know that flushing is underway.
+- **Escritura de caché**: cuando esta opción está marcada, 4D muestra una ventana en la parte inferior izquierda de la pantalla mientras se vacían los datos de la caché. Since this operation momentarily blocks user actions, displaying this window lets them know that flushing is underway.
 
 :::note
 
-You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
+Puede definir la [frecuencia de escritura de la caché](database.md#memory-page) en **Propiedades** > **Base de datos** > **Memoria**.
 
 :::
 
--   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
+- **Progreso de la impresión**: permite, durante la impresión, activar o desactivar la visualización de la caja de diálogo de progreso de la impresión.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
+- **Usar modo SDI en Windows**: cuando esta opción está marcada, 4D habilita automáticamente el [modo SDI (Single-Document Interface)](../Menus/sdi.md) en su aplicación cuando se ejecuta en un [contexto soportado](../Menus/sdi.md#sdi-mode-availability). Al seleccionar esta opción, en Windows el menú **Ejecutar** de la barra de menú de 4D le permite seleccionar el modo en el que desea probar la aplicación:
 
-    ![](../assets/en/settings/sdi-mdi.png)
+  ![](../assets/en/settings/sdi-mdi.png)
 
 :::note
 
 This option can be selected on macOS but will be ignored when the application is executed on this platform.
 
 :::
-
-
 
 ### Aparência
 
@@ -55,16 +53,18 @@ This menu lets you select the color scheme to use at the main application level.
 
 Os seguintes esquemas estão disponíveis:
 
--   **Light**: the application will use the Default Light Theme ![](../assets/en/settings/light-appearance.png)
--   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
--   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
+- **Light**: the application will use the Default Light Theme
+  ![](../assets/en/settings/light-appearance.png)
+- **Dark**: the application will use the Default Dark Theme
+  ![](../assets/en/settings/dark-appearance.png)
+- **Heredado** (por defecto): la aplicación heredará el nivel de prioridad superior (es decir, las preferencias del usuario del sistema operativo)
 
-> Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> Os temas predefinidos podem ser tratados com CSS. Para más información, consulte la sección [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 
 O esquema de aplicação principal será aplicado aos formulários por defeito. No entanto, ele pode ser substituído:
 
--   pelo comando [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) no nível da sessão de trabalho;
--   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
+- por el comando [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) a nivel de la sesión de trabajo;
+- utilizando la propiedad de formulario [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) en cada nivel de formulario (nivel de prioridad más alto). **Nota:** cuando se imprimen, los formularios utilizan siempre la paleta "Light".
 
 ## Atalhos
 
@@ -72,14 +72,12 @@ You use the Shortcuts area for viewing and modifying default shortcuts for three
 
 Os atalhos predefinidos são os seguintes:
 
--   Aceitar de formulário de entrada: **Enter**
--   Cancelamento de entrada: **Esc**
--   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
+- Aceptación de formulario de entrada: **Entrada**
+- Anulación de entrada: **Esc**
+- Añadir al subformulario: **Ctrl+Mayús+/** (Windows) o **Comando+Mayús+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. Aparece a seguinte caixa de diálogo:
+Para cambiar el acceso directo de una operación, haga clic en el botón **Editar** correspondiente. Aparece a seguinte caixa de diálogo:
 
 ![](../assets/en/settings/shortcut.png)
 
-To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
-
-
+Para cambiar el acceso directo, escriba la nueva combinación de teclas en su teclado y haga clic en **OK**. Si prefiere no tener un acceso directo para una operación, haga clic en **Borrar**.

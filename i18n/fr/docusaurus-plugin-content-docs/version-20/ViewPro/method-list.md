@@ -611,11 +611,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Paramètres | Type   |    | Description                                     |
-| ---------- | ------ | -- | ----------------------------------------------- |
-| vpObject   | Object | -> | Objet 4D View Pro contenant la zone à convertir |
-| rangeObj   | Object | -> | Objet plage                                     |
-| Résultat   | Object | <- | Image SVG de la zone|<!-- END REF -->
+| Paramètres | Type    |    | Description                                     |
+| ---------- | ------- | -- | ----------------------------------------------- |
+| vpObject   | Object  | -> | Objet 4D View Pro contenant la zone à convertir |
+| rangeObj   | Object  | -> | Objet plage                                     |
+| Résultat   | Picture | <- | Image SVG de la zone|<!-- END REF -->
 
 |
 
@@ -996,7 +996,7 @@ Lorsque vous passez le paramètre optionnel *paramObj*, la commande `VP EXPORT D
 | $3       |               | object  | Référence au *paramObj* de la commande                     |
 | $4       |               | object  | Objet retourné par la méthode avec un message de statut    |
 |          | .success      | boolean | Vrai si l'export est réussi, Faux sinon.                   |
-|          | .errorCode    | entier  | Code d'erreur. Peut être retourné par 4D ou JavaScript.    |
+|          | .errorCode    | integer | Code d'erreur. Peut être retourné par 4D ou JavaScript.    |
 |          | .errorMessage | text    | Message d'erreur. Peut être retourné par 4D ou JavaScript. |
 
 #### Exemple 1
@@ -2664,11 +2664,11 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 Each *dirty row* object in the returned collection contains the following properties:
 
-| Propriété    | Type   | Description                        |
-| ------------ | ------ | ---------------------------------- |
-| item         | object | Objet modifié de la ligne modifiée |
-| originalItem | object | Objet avant modification           |
-| row          | entier | Index de la ligne modifiée         |
+| Propriété    | Type    | Description                        |
+| ------------ | ------- | ---------------------------------- |
+| item         | object  | Objet modifié de la ligne modifiée |
+| originalItem | object  | Objet avant modification           |
+| row          | integer | Index de la ligne modifiée         |
 
 Si *tableName* n'est pas trouvé ou s'il ne contient pas de colonne modifiée, la commande renvoie une collection vide.
 
@@ -3340,6 +3340,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ## M
 
 ### VP MOVE CELLS
+
 
 <details><summary>Historique</summary>
 
@@ -4531,6 +4532,7 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 
 
 Le paramètre *boolValue* vous permet de passer la valeur booléenne (**True** ou **False**) qui sera assignée à *rangeObj*.
+
 
 #### Exemple
 
@@ -6344,7 +6346,7 @@ Le tableau suivant répertorie les options de classeur disponibles :
 | scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                             |
 | scrollByPixel                         | boolean                 | Enable precision scrolling by pixel.                                                                                                                                                                                                                   |
 | scrollIgnoreHidden                    | boolean                 | The scroll bar ignores hidden rows or columns.                                                                                                                                                                                                         |
-| scrollPixel                           | entier                  | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15. |
+| scrollPixel                           | integer                 | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15. |
 | showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                             |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                          |
 | showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                             |

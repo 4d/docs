@@ -13,7 +13,7 @@ title: VP Get row count
 | ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Integer | <- | Total number of rows                                                        | <!-- END REF --> |
+| Résultat   | Integer | <- | Nombre total de lignes                                                      | <!-- END REF --> |
 
 #### Description
 

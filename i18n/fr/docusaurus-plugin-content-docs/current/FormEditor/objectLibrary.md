@@ -3,7 +3,6 @@ id: objectLibrary
 title: Bibliothèques d'objets
 ---
 
-
 Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibliothèque d'objets propose une collection d'objets préconfigurés pouvant être utilisés dans vos formulaires par simple copier-coller ou glisser-déposer.
 
 4D propose deux types de bibliothèques d'objets :
@@ -11,10 +10,9 @@ Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibli
 - une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
 - des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
 
-
 ## Utilisation de la bibliothèque d'objets standard
 
-La bibliothèque d'objets standard est disponible dans l'éditeur de formulaire : cliquez sur le dernier bouton de la barre d'outils :  
+The standard object library is available from the Form editor: click on the last button of the toolbar:\
 ![](../assets/en/FormEditor/library1.png)
 
 La bibliothèque est affichée dans une fenêtre séparée :
@@ -24,15 +22,15 @@ La bibliothèque est affichée dans une fenêtre séparée :
 La fenêtre présente les caractéristiques principales suivantes :
 
 - Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
-- Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** : ![](../assets/en/FormEditor/library3.png)
+- You can filter the window contents by using the **Categories** menu:
+  ![](../assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
-    - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-    - or drag and drop the object from the library The object is then added to the form.
+  - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
+  - or drag and drop the object from the library The object is then added to the form.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
 Tous les objets proposés dans la bibliothèque d'objets standard sont décrits dans [cette section sur doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
-
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
 
@@ -41,7 +39,6 @@ Tous les objets proposés dans la bibliothèque d'objets standard sont décrits 
 Les objets sont stockés avec toutes leurs propriétés, y compris leurs méthodes objet. Les bibliothèques sont constituées et utilisées par simple glisser-déposer ou copier-coller.
 
 A l’aide des bibliothèques d'objets, vous pouvez constituer des fonds d’objets de formulaires regroupés par familles graphiques, par fonctionnalités, etc.
-
 
 ### Créer une bibliothèque d’objets
 
@@ -58,6 +55,7 @@ Vous pouvez créer autant de bibliothèques que vous voulez par projet. Une bibl
 Une même bibliothèque d’objets ne peut être ouverte que par un seul projet à la fois. En revanche, il est possible d’ouvrir plusieurs bibliothèques différentes dans le même projet.
 
 Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la commande **Ouvrir>Bibliothèque d’objets...** dans le menu **Fichier** ou la barre d’outils de 4D. Une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la bibliothèque d’objets à ouvrir. Vous pouvez sélectionner les types de fichier suivants :
+
 - **.4dproject**
 - **.4dz**
 
@@ -65,7 +63,6 @@ Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Se
 
 - formulaires projet
 - pages 1 des formulaires
-
 
 ### Construire une bibliothèque d’objets
 
@@ -82,7 +79,6 @@ Les principales opérations sont accessibles via le menu contextuel ou le menu d
 - **Effacer** - supprime l'objet de la bibliothèque
 - **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque.
 
-
 Vous pouvez placer dans la bibliothèque des objets individuels (y compris des sous-formulaires) ou des ensembles d’objets. Chaque objet ou ensemble d’objets est regroupé en un seul élément :
 
 ![](../assets/en/FormEditor/library6.png)
@@ -92,6 +88,7 @@ Une bibliothèque d’objets peut contenir jusqu’à 32 000 éléments.
 Les objets sont copiés avec toutes leurs propriétés, graphiques et fonctionnelles, y compris leurs méthodes. Elles sont intégralement conservées lorsque l’élément est recopié dans un formulaire ou une autre bibliothèque.
 
 #### Objets dépendants
+
 Le copier-coller ou le glisser-déposer de certains objets dans la bibliothèque entraîne également la copie des objets dépendants. Par exemple, la copie d’un bouton entraînera obligatoirement la copie de la méthode objet qui lui est éventuellement attachée. Ces objets dépendants ne peuvent, quant à eux, être directement copiés ou glissés-déposés.
 
 Voici la liste des objets dépendants qui seront collés dans la bibliothèque en même temps que l’objet principal qui les utilise (le cas échéant) :
@@ -101,4 +98,3 @@ Voici la liste des objets dépendants qui seront collés dans la bibliothèque e
 - Images
 - Messages d’aide (liés à un champ)
 - Méthodes objet
-

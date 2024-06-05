@@ -16,22 +16,16 @@ Una constante literal de tipo fecha está rodeada de signos de exclamación (!..
 ```4d
 !1976-01-01!
 !2004-09-29!
-!1976-01-01!
-!2004-09-29!
-!2015-12-31!
-!2004-09-29!
-!1976-01-01!
-!2004-09-29!
 !2015-12-31!
 ```
 
-Una fecha nula es especificada por _!00-00-00!_.
+Una fecha null es especificada por _!00-00-00!_.
 
-**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha nula, introduzca el carácter de exclamación (!) y pulse Intro.
+**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha null, introduzca el signo de exclamación (!) y presione Intro.
 
 **Notas:**
 
-- Por razones de compatibilidad, 4D acepta que se introduzcan años de dos dígitos. Se asume que un año de dos dígitos se encuentra en el siglo XX o en el XXI según sea mayor o menor de 30, a menos que esta configuración por defecto se haya cambiado utilizando el comando `SET DEFAULT CENTURY`.
+- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. Se asume que un año de dos dígitos se encuentra en el siglo XX o en el XXI según sea mayor o menor de 30, a menos que esta configuración por defecto se haya cambiado utilizando el comando `SET DEFAULT CENTURY`.
 - Si ha marcado la opción "Utilizar la configuración regional del sistema" ( ver Página Métodos), debe utilizar el formato de fecha definido en su sistema. Generalmente, en un entorno estadounidense, las fechas se introducen en la forma mes/día/año, con una barra "/" que separa los valores.
 
 ## Operadores de fechas
@@ -45,11 +39,11 @@ Una fecha nula es especificada por _!00-00-00!_.
 |                   |                |          | !2017-01-20! !2017-01-01! =!2017-01-01!     | False        |
 | Desigualdad       | Fecha # Fecha  | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!    | True         |
 |                   |                |          | !2017-01-20! !2017-01-20! # !2017-01-20!    | False        |
-| Mayor que         | Fecha > Fecha  | Boolean  | !2017-01-20! !2017-01-20! > !2017-01-01!    | True         |
-|                   |                |          | !2017-01-20! !2017-01-20! > !2017-01-20!    | False        |
-| Menor que         | Fecha < Fecha  | Boolean  | !2017-01-20! - !2017-01-01! < !2017-01-20!  | True         |
+| Mayor que         | Date > Date    | Boolean  | !2017-01-20! > !2017-01-01!                 | True         |
+|                   |                |          | !2017-01-20! > !2017-01-20!                 | False        |
+| Menor que         | Date < Date    | Boolean  | !2017-01-20! - !2017-01-01! < !2017-01-20!  | True         |
 |                   |                |          | !2017-01-20! < !2017-01-20!                 | False        |
-| Mayor o igual que | Fecha >= Fecha | Boolean  | !2017-01-20! !2017-01-20! >=!2017-01-01!    | True         |
+| Mayor o igual que | Date >= Date   | Boolean  | !2017-01-20! >=!2017-01-01!                 | True         |
 |                   |                |          | !2017-01-01!>=!2017-01-20!                  | False        |
 | Menor o igual que | Date <= Date   | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
 |                   |                |          | !2017-01-20! <= !2017-01-01!                | False        |

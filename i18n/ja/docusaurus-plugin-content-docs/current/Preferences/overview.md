@@ -6,6 +6,7 @@ title: 環境設定
 環境設定は、作業環境に影響する様々なオプションを指定します (例: デフォルトオプション、表示テーマ、コードエディター機能、ショートカット)。 これらの設定は、4D や 4D Server アプリケーションで開くすべてのプロジェクトに適用されます。
 
 **4D Server**: 複数のユーザーが同時に環境設定を更新しようとすると、オブジェクトのロックが発生します。 一度に一人のユーザーのみが環境設定ダイアログボックスを使用できます。
+
 > 4D は開かれているプロジェクト固有の設定をおこなうための **ストラクチャー設定** ダイアログも提供しています (**デザイン** メニューから利用可能です)。 詳細はデータベース設定の章を参照ください。
 
 ## アクセス
@@ -20,10 +21,10 @@ title: 環境設定
 
 ## ストレージ
 
-環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。このファイルは、[`Get 4D folder`](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
+環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。 このファイルは、[Get 4D folder](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
 
-*   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
-*   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
+- Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
+- macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
 
 ## パラメーターのカスタマイズと初期設定
 
@@ -40,4 +41,3 @@ title: 環境設定
 ![](../assets/en/Preferences/overviewSettings.png)
 
 このボタンをクリックすると、現在表示されているページの全パラメーターがリセットされます。 現在のページで最低でも一つのパラメーターが変更されると、このボタンはアクティブになります。
-

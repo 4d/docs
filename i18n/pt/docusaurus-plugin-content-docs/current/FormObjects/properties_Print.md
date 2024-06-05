@@ -9,24 +9,24 @@ This property handles the print mode for objects whose size can vary from one re
 
 You cannot place more than one variable frame object side-by-side on a form. You can place non-variable frame objects on either side of an object that will be printed with a variable size provided that the variable frame object is at least one line longer than the object beside it and that all objects are aligned on the top. If this condition is not respected, the contents of the other fields will be repeated for every horizontal slice of the variable frame object.
 
-> The `Print object` and `Print form` commands do not support this property.
+> Los comandos `objeto Print` y `Print form` no soportan esta propiedad.
 
 As opções de impressão são:
 
-- **Variable** option / **Print Variable Frame** checked: 4D enlarges or reduces the form object area in order to print all the subrecords.
+- La opción **Variable** / **Imprimir marco variable** marcada: 4D amplía o reduce el área del objeto del formulario para imprimir todos los subregistros.
 
-- **Fixed (Truncation)** option / **Print Variable Frame** unchecked: 4D only prints the contents that appear in the object area. O formulário só é impresso uma vez e os conteúdos não impressos são ignorados.
+- **Opción fija (truncamiento)** / **Imprimir marco variable** no seleccionada: 4D sólo imprime el contenido que aparece en el área del objeto. O formulário só é impresso uma vez e os conteúdos não impressos são ignorados.
 
-- **Fixed (Multiple Records)** (subforms only): the initial size of the subform area is kept but 4D prints the form several times in order to print all the records.
+- **Fijo (Múltiples Registros)** (sólo subformularios): se mantiene el tamaño inicial del área del subformulario pero 4D imprime el formulario varias veces para imprimir todos los registros.
 
-> This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
+> Esta propiedad puede definirse por programación utilizando el comando `OBJECT SET PRINT VARIABLE FRAME`.
 
 #### Gramática JSON
 
-|    Nome    | Tipo de dados | Valores possíveis                                           |
-|:----------:|:-------------:| ----------------------------------------------------------- |
-| printFrame |    string     | "fixed", "variable", (apenas subformulário) "fixedMultiple" |
+|    Nome    | Tipo de dados | Valores possíveis                                                              |
+| :--------: | :-----------: | ------------------------------------------------------------------------------ |
+| printFrame |     string    | "fixed", "variable", (apenas subformulário) "fixedMultiple" |
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)
+[Entrada](input_overview.md) - [Subformularios](subform_overview.md) (sólo subformularios lista) - [Áreas 4D Write Pro](writeProArea_overview.md)

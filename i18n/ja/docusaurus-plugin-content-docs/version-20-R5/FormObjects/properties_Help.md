@@ -16,17 +16,28 @@ title: ヘルプ
 
 - 4D の [ヘルプTipエディター](https://doc.4d.com/4Dv18/4D/18/Help-tips.200-4575424.ja.html) であらかじめ作成したヘルプTip を指定します。
 - または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 XLIFF参照を指定することで、アプリケーションの言語に応じたメッセージを表示させることができます (XLIFF についての詳細は [付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) を参照ください)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) 参照)。
+
 > macOS においては、Pop up window (32) 型のウィンドウはヘルプTips の表示ができません。
 
 #### JSON 文法
 
-|   名称    | データタイプ | とりうる値       |
-|:-------:|:------:| ----------- |
+|    名称   | データタイプ | とりうる値       |
+| :-----: | :----: | ----------- |
 | tooltip |  text  | ユーザー用のヘルプ情報 |
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [ラジオボタン](radio_overview.md)
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[階層リスト](list_overview.md) -
+[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
+[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[ラジオボタン](radio_overview.md)
 
 #### 追加のヘルプ機能
 
@@ -39,7 +50,8 @@ title: ヘルプ
 
 1. ストラクチャーレベル (最低優先度)
 2. フォームエディターレベル
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド (最高優先度)
+3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド
+   (最高優先度)
 
 #### 参照
 

@@ -3,11 +3,9 @@ id: processes
 title: プロセスページ
 ---
 
-
 **プロセス** ページには実行中のプロセスが表示されます。
 
 ![](../assets/en/Admin/server-admin-process-page.png)
-
 
 "プロセス" ボタンには、サーバーで実行中のプロセス数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターや **グループ毎にプロセスを表示** オプションのステータスを考慮しません)。
 
@@ -37,11 +35,11 @@ title: プロセスページ
 
 - プロセスタイプ (後述)
 - セッション/情報:
-    - 4Dプロセス - 空白
-    - ユーザープロセス - 4Dユーザー名
-    - Webプロセス - URLパス
+  - 4Dプロセス - 空白
+  - ユーザープロセス - 4Dユーザー名
+  - Webプロセス - URLパス
 - プロセス名
-- プロセス番号 (たとえば [`New process`](https://doc.4d.com/4dv19/help/command/ja/page317.html) 関数で返される値)。 プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
+- プロセス番号 (たとえば [`New process`](https://doc.4d.com/4dv19/help/command/ja/page317.html) コマンドで返される値)。 プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
 - プロセスの現在の状況
 - 作成されてからのプロセスの実行時間 (秒)
 - 4D Server がこのプロセスに使用した時間のパーセンテージ
@@ -50,35 +48,34 @@ title: プロセスページ
 
 プロセスタイプはアイコンで識別できます。 アイコンの色や形に対応するプロセスタイプは以下のとおりです:
 
-| アイコン                                       | タイプ                                                                                                     |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                                            |
-| ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                                                |
+| icon                                       | type                                                                                                                       |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                                                               |
+| ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                                                                   |
 | ![](../assets/en/Admin/server-icon-3.png)  | DB4D サーバー (データベースエンジン)                                                                                  |
-| ![](../assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                                                |
-| ![](../assets/en/Admin/server-icon-5.png)  | SOAP サーバー                                                                                               |
+| ![](../assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                                                                   |
+| ![](../assets/en/Admin/server-icon-5.png)  | SOAP サーバー                                                                                                                  |
 | ![](../assets/en/Admin/server-icon-6.png)  | 保護された 4Dクライアントプロセス (接続された 4D の開発プロセス)                                                                   |
 | ![](../assets/en/Admin/server-icon-7.png)  | 接続している 4Dクライアントのメインプロセス、または、接続中の4Dクライアント上で `New process` で作成されたプロセス (クライアントマシン上で作成されたプロセスに対応するサーバープロセス) |
 | ![](../assets/en/Admin/server-icon-8.png)  | 4Dクライアント基本プロセス (4Dクライアントプロセスと並列なプロセス。 メイン4Dクライアントプロセスをコントロールするプリエンプティブプロセス)                             |
 | ![](../assets/en/Admin/server-icon-9.png)  | 予備プロセス (以前または後の "4Dクライアントデータベースプロセス")                                                                   |
-| ![](../assets/en/Admin/server-icon-10.png) | SQL サーバーワーカープロセス                                                                                        |
-| ![](../assets/en/Admin/server-icon-11.png) | HTTP サーバーワーカープロセス                                                                                       |
+| ![](../assets/en/Admin/server-icon-10.png) | SQL サーバーワーカープロセス                                                                                                           |
+| ![](../assets/en/Admin/server-icon-11.png) | HTTP サーバーワーカープロセス                                                                                                          |
 | ![](../assets/en/Admin/server-icon-13.png) | ストアドプロシージャー (接続された 4D により起動され、サーバー上で実行しているプロセス)                                                         |
 | ![](../assets/en/Admin/server-icon-14.png) | Web メソッド (4DACTION などにより起動)                                                                             |
 | ![](../assets/en/Admin/server-icon-15.png) | Web メソッド (プリエンプティブ)                                                                                     |
 | ![](../assets/en/Admin/server-icon-16.png) | SOAP メソッド (Webサービスにより起動)                                                                                |
 | ![](../assets/en/Admin/server-icon-17.png) | SOAP メソッド (プリエンプティブ)                                                                                    |
-| ![](../assets/en/Admin/server-icon-18.png) | ロガー                                                                                                     |
-| ![](../assets/en/Admin/server-icon-19.png) | TCP接続リスナー                                                                                               |
-| ![](../assets/en/Admin/server-icon-20.png) | TCPセッションマネージャー                                                                                          |
-| ![](../assets/en/Admin/server-icon-21.png) | その他のプロセス                                                                                                |
+| ![](../assets/en/Admin/server-icon-18.png) | ロガー                                                                                                                        |
+| ![](../assets/en/Admin/server-icon-19.png) | TCP接続リスナー                                                                                                                  |
+| ![](../assets/en/Admin/server-icon-20.png) | TCPセッションマネージャー                                                                                                             |
+| ![](../assets/en/Admin/server-icon-21.png) | その他のプロセス                                                                                                                   |
 | ![](../assets/en/Admin/server-icon-22.png) | ワーカープロセス (コオペラティブ)                                                                                      |
 | ![](../assets/en/Admin/server-icon-23.png) | 4Dクライアントプロセス (プリエンプティブ)                                                                                 |
 | ![](../assets/en/Admin/server-icon-24.png) | ストアドプロシージャー (プリエンプティブプロセス)                                                                              |
 | ![](../assets/en/Admin/server-icon-25.png) | ワーカープロセス (プリエンプティブ)                                                                                     |
 
 > **グループ毎にプロセスを表示** オプションがチェックされていると、それぞれの 4Dクライアントメインプロセスと、その対である 4Dクライアント基本プロセスは一緒にグループ化されて表示されます。
-
 
 ## 管理ボタン
 
@@ -88,7 +85,7 @@ title: プロセスページ
 
 - **プロセスを中断**: 選択したプロセスをアボートします。 このボタンをクリックすると警告ダイアログが表示され、操作を続行またはキャンセルできます。
 
-> 確認ダイアログなしに選択したプロセスをアボートするには、**Alt**キーを押しながらこのボタンをクリックするか、[`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/ja/page1634.html) コマンドを使用します。
+> 確認ダイアログなしに選択したプロセスをアボートするには、**Alt**\*キーを押しながらこのボタンをクリックするか、[`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/ja/page1634.html) コマンドを使用します。
 
 - **プロセスを一時停止**: 選択したプロセスを一時停止します。
 - **ユーザーを表示**: 選択されたプロセスのユーザーを管理ウィンドウの [ユーザーページ](users.md) に直接表示させることができます。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
@@ -97,4 +94,3 @@ title: プロセスページ
 > 確認ダイアログなしに選択したプロセスをデバッグするには、**Alt**キーを押しながらこのボタンをクリックします。
 
 - **ユーザーを表示**: 選択されたプロセスのユーザーを管理ウィンドウの [ユーザーページ](users.md) に直接表示させることができます。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
-

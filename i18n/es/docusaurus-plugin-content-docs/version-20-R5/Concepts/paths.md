@@ -11,7 +11,6 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen una ruta contextual a las carpetas principales de la aplicación.
 
-
 ## Rutas de los filesystem
 
 4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Las rutas de los filesystem son útiles por dos razones principales:
@@ -21,14 +20,14 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                                |
-| ------------ | ------------------------------------------------------ |
-| "/DATA"      | Carpeta de datos actual                                |
-| "/LOGS"      | Carpeta Logs                                           |
+| filesystem   | Designa                                                                   |
+| ------------ | ------------------------------------------------------------------------- |
+| "/DATA"      | Carpeta de datos actual                                                   |
+| "/LOGS"      | Carpeta Logs                                                              |
 | "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) |
-| "/PROJECT"   | Carpeta Project                                        |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                |
-| "/SOURCES"   | Carpeta de fuentes del proyecto actual                 |
+| "/PROJECT"   | Carpeta Project                                                           |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   |
+| "/SOURCES"   | Carpeta de fuentes del proyecto actual                                    |
 
 ## Sintaxis POSIX
 
@@ -46,9 +45,6 @@ En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesyste
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
-
-
-
 
 ## Sintaxis específica de la plataforma
 
@@ -93,10 +89,10 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
+Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas de acceso absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
 ```4d
-    //ERROR
+//ERROR
 $ko:=Folder("myFolder").create() //nombre de ruta relativo con constructor
 ```
 
@@ -109,7 +105,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta d
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan nombres de ruta POSIX relativos. Por ejemplo:
+Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan rutas POSIX relativas. Por ejemplo:
 
 ```4d
   //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
@@ -119,7 +115,6 @@ $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
 Las rutas absolutas no están soportadas y devolverán errores.
-
 
 ## Ejemplos
 
@@ -135,6 +130,6 @@ $f3:=Folder("/DATA/archive/jan2019")
 $f4:=File("/DATA/info.txt")
 
 $f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
-
+ 
 $f6:=File(fk backup log file)
 ```

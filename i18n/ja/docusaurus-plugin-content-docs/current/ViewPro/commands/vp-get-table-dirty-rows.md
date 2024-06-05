@@ -13,7 +13,7 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
 
-**VP Get table dirty rows** ( _vpAreaName_ : Text ; _tableName_ : Text { ; _reset_ : Boolean {; _sheet_ : Integer }} ) : Collection<!-- END REF -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
@@ -27,19 +27,19 @@ title: VP Get table dirty rows
 
 #### 説明
 
-`VP Get table dirty rows` コマンドは、<!-- REF #_method_.VP Get table dirty rows.Summary -->_tableName_ が指定する表組みの前回のリセット以降に変更された項目を含む _dirty row_ ("ダーティ" な行) のオブジェクトのコレクションを返します<!-- END REF -->。
+`VP Get table dirty rows` コマンドは、<!-- REF #_method_.VP Get table dirty rows.Summary -->*tableName* が指定する表組みの前回のリセット以降に変更された項目を含む *dirty row* ("ダーティ" な行) のオブジェクトのコレクションを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_tableName_ には、変更された行を取得したい表組みの名称を渡します。 なお、[データコンテキスト](vp-set-data-context.md) にバインドされている列の変更のみが考慮されます。
+*tableName* には、変更された行を取得したい表組みの名称を渡します。 なお、[データコンテキスト](vp-set-data-context.md) にバインドされている列の変更のみが考慮されます。
 
-デフォルトでは、このコマンドを呼び出すと、現在のテーブルから _ダーティ_ のステータスをクリアします。 この状態をリセットせずに維持するには、_reset_ に `false` を渡します。
+デフォルトでは、このコマンドを呼び出すと、現在のテーブルから *ダーティ* のステータスをクリアします。 この状態をリセットせずに維持するには、*reset* に `false` を渡します。
 
-_sheet_ には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-返されるコレクション内の各 _dirty row_ ("ダーティ" な行) オブジェクトは、以下のプロパティを含みます:
+返されるコレクション内の各 *dirty row* ("ダーティ" な行) オブジェクトは、以下のプロパティを含みます:
 
 | プロパティ        | タイプ     | 説明              |
 | ------------ | ------- | --------------- |
@@ -47,7 +47,7 @@ _sheet_ には、ターゲットシートのインデックスを渡します。
 | originalItem | object  | 変更前のオブジェクト      |
 | row          | integer | 変更された行のインデックス   |
 
-_tableName_ が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
+*tableName* が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
 
 #### 例題
 

@@ -5,7 +5,7 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Syntax -->
 
-**VP SET SHEET OPTIONS** ( _vpAreaName_ : Text; _sheetOptions_ : Object { ; _sheet_ : Integer}  ) <!-- END REF -->
+**VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
@@ -17,13 +17,13 @@ title: VP SET SHEET OPTIONS
 
 #### Descripción
 
-El comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir varias opciones de hoja del área _vpAreaName_<!-- END REF -->.
+El comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir varias opciones de hoja del área *vpAreaName*<!-- END REF -->.
 
-Pase el nombre del área de 4D View Pro en _vpAreaName_. Si pasa un nombre que no existe, se devuelve un error.
+Pase el nombre del área de 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro _sheetOptions_. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
+Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro *sheetOptions*. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
 
-En el parámetro opcional _sheet_, puede designar una hoja específica (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
+En el parámetro opcional *sheet*, puede designar una hoja específica (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
 - `vk current sheet`
 

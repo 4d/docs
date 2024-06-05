@@ -13,7 +13,7 @@ title: VP Get binding path
 
 <!-- REF #_method_.VP Get binding path.Syntax -->
 
-**VP Get binding path** ( _rangeObj_ : Object ) : Text<!-- END REF -->
+**VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get binding path.Params -->
 
@@ -24,12 +24,12 @@ title: VP Get binding path
 
 #### Descripción
 
-El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devuelve el nombre del atributo ligado a la celda especificada en _rangeObj_<!-- END REF -->.
+El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devuelve el nombre del atributo ligado a la celda especificada en *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un objeto que es un rango de celdas o un rango combinado de celdas. Note que:
+En *rangeObj*, pase un objeto que es un rango de celdas o un rango combinado de celdas. Note que:
 
-- Si _rangeObj_ es un rango de varias celdas, el comando devuelve el nombre del atributo asociado a la primera celda del rango.
-- Si _rangeObj_ contiene varios rangos de celdas, el comando devuelve el nombre del atributo asociado a la primera celda del primer rango.
+- Si *rangeObj* es un rango de varias celdas, el comando devuelve el nombre del atributo asociado a la primera celda del rango.
+- Si *rangeObj* contiene varios rangos de celdas, el comando devuelve el nombre del atributo asociado a la primera celda del primer rango.
 
 #### Ejemplo
 

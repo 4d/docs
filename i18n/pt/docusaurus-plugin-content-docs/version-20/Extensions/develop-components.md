@@ -18,7 +18,7 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
-- Para instalar um componente, basta copiar os ficheiros do componente para a pasta [`Components` do projecto](Project/architecture.md). Pode usar pseudónimos ou atalhos.
+- Para instalar um componente, basta copiar os ficheiros do componente para a pasta [`Components` do projeto](Project/architecture.md). Pode usar pseudónimos ou atalhos.
 - Um projeto pode ser tanto uma matriz quanto um host, em outras palavras, um projeto de matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - Um componente pode chamar a maioria dos elementos 4D: classes, funções, métodos de projeto, formulários de projeto, barras de menu, listas de opções e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível usar o datastore, as tabelas padrão ou os arquivos de dados nos componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.

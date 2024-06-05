@@ -21,16 +21,16 @@ You can execute command lines for 4D applications using the macOS Terminal or th
 
 Here is a description of command lines and arguments supported to launch 4D applications.
 
-Syntax: 
+Syntax:
 
 ```
-<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
+<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]]
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]  
 [--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]  
-[--utility] [--skip-onstartup] [--startup-method <methodName string>] 
+[--utility] [--skip-onstartup] [--startup-method <methodName string>]
 ```
 
-|Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
+|Argument|Value|Description|
 |:-------------|---|---|
 |`applicationPath`|Path of 4D, 4D Server, merged application, or tool4d|Launches the application.<br/>If not headless: identical to double-clicking the application; when called without structure file argument, the application is executed and the 'select database' dialog box appears.|
 |`--version`||Displays application version and exits|
@@ -52,7 +52,7 @@ Syntax:
 
 (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
-### Examples 
+### Examples
 
 > The current folder of the user is reached using the "~ " command under macOS and the "%HOMEPATH%" command under Windows.
 
@@ -188,9 +188,9 @@ Open without interface (headless mode):
 ## tool4d
 
 
-**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI. 
+**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI.
 
-tool4d is available on Windows and macOS and is always associated to a 4D release (same version and build number). It is only provided in English localization. 
+tool4d is available on Windows and macOS and is always associated to a 4D release (same version and build number). It is only provided in English localization.
 
 tool4d is a perfect tool if you want to:
 
@@ -201,7 +201,7 @@ tool4d is a perfect tool if you want to:
 
 ### Using tool4d
 
-You can get tool4d from the 4D [Product download page](https://product-download.4d.com/). 
+You can get tool4d from the 4D [Product download page](https://product-download.4d.com/).
 
 You use tool4d by executing a [command line](#launch-a-4d-application) with a standard 4D project. You can use all arguments described in the above table, except --`webadmin` since this component is [disabled in tool4d](#disabled-4d-features). With tool4d, the following specific sequence is launched:
 
@@ -233,8 +233,8 @@ Keep in mind that tool4d runs automatically in **headless mode** (see `--headles
 - hunspell spell checker,
 - japanese spellchecker (*mecab* library),
 - WebAdmin,
-- CEF, 
-- PHP, 
+- CEF,
+- PHP,
 - remote debugger (local debugger, `TRACE` command and breakpoints are ignored in headless applications).
 
 
@@ -250,7 +250,7 @@ You can launch a 4D Server instance in a utility mode (headless) by using the `-
 
 :::info
 
-Unlike tool4d, 4D Server in utility mode has all its features enabled. However, the application server and all other servers are not started. 
+Unlike tool4d, 4D Server in utility mode has all its features enabled. However, the application server and all other servers are not started.
 
 :::
 

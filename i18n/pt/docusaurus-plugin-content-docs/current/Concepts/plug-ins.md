@@ -3,7 +3,7 @@ id: plug-ins
 title: Plug-ins
 ---
 
-Ao desenvolver uma aplicação 4D, irá descobrir muitas capacidades que não notou quando começou. Pode mesmo aumentar a versão padrão de 4D adicionando **plug-ins** ao seu ambiente de desenvolvimento 4D.
+Ao desenvolver uma aplicação 4D, irá descobrir muitas capacidades que não notou quando começou. Incluso puede extender la versión estándar de 4D añadiendo **plug-ins** a su entorno de desarrollo 4D.
 
 ## Por que a necessidade de um plug-in?
 
@@ -11,18 +11,14 @@ A plug-in is a piece of code that 4D launches at start up. Acrescenta funcionali
 
 ## Como criar um plug-in?
 
-Vários plug-ins já foram escritos pela comunidade 4D. O [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) é uma ferramenta essencial que simplifica a tarefa de desenvolvimento de plug-ins 4D. Escreve o código 4D precisa de carregar corretamente e interagir com um plug-in, permitindo-lhe concentrar-se no seu próprio código. Além disso, pode [desenvolver os seus próprios plug-ins](Extensions/develop-plug-ins.md).
-
+Vários plug-ins já foram escritos pela comunidade 4D. Los plug-ins publicados [están disponibles en GitHub](https://github.com/search?q=4d-plugin\&type=Repositories). Adicionalmente, puede [desarrollar sus propios plug-ins](Extensions/develop-plug-ins.md).
 
 ## Instalação de plug-ins
 
-A sua arquitetura interna específica permite ao Servidor 4D carregar a versão apropriada de acordo com a plataforma onde a máquina cliente será executada. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
+Los plug-ins se instalan en el entorno 4D copiando sus archivos en la carpeta **Plugins**, en el [mismo nivel que la carpeta Project](../Project/architecture.md#plugins).
 
 Os plug-ins são carregados por 4D quando a aplicação for lançada, pelo que terá de abandonar a sua aplicação 4D antes de os instalar. Se qualquer plug-in necessitar de uma licença específica para utilização, será carregado mas não estará disponível para utilização.
 
-
 ## Como instalar um plug-in?
 
-Os comandos de plug-ins podem ser utilizados como comandos 4D normais no seu desenvolvimento 4D. Os comandos de plug-in aparecem na página **Plug-ins** do Explorer. 
-
-
+Os comandos de plug-ins podem ser utilizados como comandos 4D normais no seu desenvolvimento 4D. Los comandos de plugins aparecen en la página **Plug-ins** del Explorador.

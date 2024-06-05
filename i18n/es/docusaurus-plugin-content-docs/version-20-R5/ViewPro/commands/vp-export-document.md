@@ -60,23 +60,23 @@ El parámetro opcional _paramObj_ le permite definir múltiples propiedades para
 **Notas sobre el formato Excel**:
 
 - Al exportar un documento 4D View Pro a un archivo con formato Microsoft Excel, pueden perderse algunos parámetros. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato PDF**:
 
 - Al exportar un documento 4D View Pro en PDF, las fuentes utilizadas en el documento se integran automáticamente en el archivo PDF. Sólo se pueden integrar las fuentes OpenType (archivos .OTF o .TTF) que tengan un tabla Unicode. Si no se encuentra un archivo de fuentes válido para una fuente, se utiliza una fuente por defecto.
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato CSV**:
 
 - Al exportar un documento 4D View Pro al formato CSV, es posible que se pierdan algunos parámetros, ya que sólo se guardan el texto y los valores.
 - Todos los valores se guardan como cadenas entre comillas. Para más información sobre valores separados por delimitadores, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato de archivo SpreadJS**:
 
 - [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
-- Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
+- La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the _formula_ property of the _paramObj_, if used.
 

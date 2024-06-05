@@ -9,16 +9,16 @@ title: VP Get row attributes
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Paramètres | Type       |    | Description                  |                  |
-| ---------- | ---------- | -- | ---------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objet plage                  |                  |
-| Résultat   | Collection | <- | Collection of row properties | <!-- END REF --> |
+| Paramètres | Type       |    | Description                        |                  |
+| ---------- | ---------- | -- | ---------------------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objet plage                        |                  |
+| Résultat   | Collection | <- | Collection de propriétés de lignes | <!-- END REF --> |
 
 #### Description
 
-The `VP Get row attributes` command <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the _rangeObj_<!-- END REF -->.
+The `VP Get row attributes` command <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the rows whose attributes will be retrieved.
+In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
 
 The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md) method.
 

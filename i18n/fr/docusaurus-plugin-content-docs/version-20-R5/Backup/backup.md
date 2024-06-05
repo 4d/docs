@@ -14,13 +14,16 @@ Une sauvegarde peut être déclenchée de trois manières :
 
 ## Sauvegarde manuelle
 
-1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D. The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
+1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D.
+   La fenêtre de sauvegarde s'affiche:
+   ![](../assets/en/Backup/backup01.png)
+   Vous pouvez voir l'emplacement du dossier de sauvegarde en utilisant le menu déroulant à côté de la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
 
 - Vous pouvez également sélectionner [Centre de sécurité et de maintenance](MSC/overview.md) de 4D et afficher la [Page Sauvegarde](MSC/backup.md).
 
 Le bouton **Propriétés de la base...** provoque l’affichage de la boîte de dialogue des Propriétés de structure.
 
- 2. Cliquez sur le bouton **Sauvegarde** pour déclencher la sauvegarde avec les paramètres courants.
+2. Cliquez sur le bouton **Sauvegarde** pour déclencher la sauvegarde avec les paramètres courants.
 
 ## Sauvegarde automatique périodique
 
@@ -30,7 +33,7 @@ Les sauvegardes s'effectuent automatiquement au moment défini, sans interventio
 
 ## Commande BACKUP
 
-Lorsque la commande `BACKUP` est exécutée depuis une méthode, la sauvegarde est alors déclenchée avec les paramètres courants définis dans les propriétés. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel *Langage de 4D*).
+Lorsque la commande `BACKUP` est exécutée depuis une méthode, la sauvegarde est alors déclenchée avec les paramètres courants définis dans les propriétés. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel _Langage de 4D_).
 
 ## Déroulement de la sauvegarde
 
@@ -59,11 +62,12 @@ A l’inverse, si seul le fichier de données est sauvegardé, l’accès à la 
 
 Il est possible qu'une sauvegarde ne s’effectue pas correctement. Les causes de l’échec peuvent être diverses : interruption par l’utilisateur, fichier joint introuvable, disque de destination défaillant, transaction non terminée, etc. 4D traite l'incident selon la cause de l'échec.
 
-Dans tous les cas, le statut de la dernière sauvegarde (succès ou échec) est stocké dans la zone "Informations sur la dernière sauvegarde" dans la [Page Sauvegarde du CSM](MSC/backup.md) ou dans la **Page de maintenance** de 4D Server, ainsi que dans le **Backup journal.txt**.
+Dans tous les cas, gardez à l'esprit que le statut de la dernière sauvegarde (réussie ou échouée) est stocké dans la zone Informations sur la dernière sauvegarde de la [page Sauvegarde du CSM](MSC/backup.md) ou dans la page **Maintenance** de 4D Server, ainsi que dans le **Backup journal.txt**.
 
 - **Interruption par l’utilisateur** : le bouton **Arrêter** de la boîte de dialogue de progression de la sauvegarde permet aux utilisateurs d’interrompre la sauvegarde à tout instant. Dans ce cas, la copie des éléments est stoppée et l'erreur 1406 est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 - **Fichier joint introuvable** : lorsqu’un fichier joint est introuvable, 4D effectue une sauvegarde partielle (sauvegarde des fichiers de l'application et des fichiers joints accessibles) et retourne une erreur.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. Le délai d’attente entre les deux tentatives est défini dans la Page **Sauvegarde/Sauvegarde& et Restitution** des Propriétés. Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
+- **Sauvegarde impossible** (disque plein ou protégé en écriture, disque manquant, panne du disque, transaction non terminée, projet non lancé au moment d’une sauvegarde automatique périodique, etc.) : S’il s’agit du premier échec, 4D effectuera ultérieurement une seconde tentative. Le délai d’attente entre les deux tentatives est défini dans la Page **Sauvegarde/Sauvegarde& et Restitution** des Propriétés.
+  Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 
 ## Journal de sauvegarde (Backup Journal)
 
@@ -76,7 +80,7 @@ Le journal de sauvegarde s'appelle "Backup Journal[001].txt" et se trouve dans l
 Dans certaines stratégies de sauvegarde (par exemple, dans le cas où de nombreuses pièces jointes sont sauvegardées), le journal de sauvegarde peut rapidement atteindre une taille importante. Deux mécanismes peuvent être utilisés pour gérer cette taille :
 
 - **Sauvegarde automatique** : Avant chaque sauvegarde, l'application examine la taille du fichier backup journal courant. Si elle est supérieure à 10 Mo, le fichier courant est archivé et un nouveau fichier est créé avec le numéro [xxx] incrémenté, par exemple "Backup Journal[002] .txt”. Une fois le numéro de fichier 999 atteint, la numérotation reprend à 1 et les fichiers existants seront remplacés.
-- **Possibilité de réduire la quantité d'informations enregistrées** : Pour ce faire, il suffit de modifier la valeur de la clé `VerboseMode` dans le fichier *Backup.4DSettings* du projet. Par défaut, cette clé est définie sur True. Si vous définissez la valeur de cette clé sur False, seules les informations principales sont stockées dans le journal de sauvegarde : la date et l'heure du début de l'opération et les éventuelles erreurs générées. Les clés XML concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*.
+- **Possibilité de réduire la quantité d'informations enregistrées** : Pour ce faire, il suffit de modifier la valeur de la clé `VerboseMode` dans le fichier _Backup.4DSettings_ du projet. Par défaut, cette clé est définie sur True. Si vous définissez la valeur de cette clé sur False, seules les informations principales sont stockées dans le journal de sauvegarde : la date et l'heure du début de l'opération et les éventuelles erreurs générées. Les clés XML concernant la configuration de la sauvegarde sont décrites dans le manuel _Sauvegarde des clés XML 4D_.
 
 ## backupHistory.json
 
@@ -87,6 +91,8 @@ Le fichier **backupHistory.json** se situe dans le dossier de destination de sau
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **ATTENTION**  
-> La suppression ou le déplacement du fichier **backupHistory.json** entraînera la réinitialisation du prochain numéro de sauvegarde.
+
+> **ATTENTION**\
+> Supprimer ou déplacer le fichier **backupHistory.json** entraînera la réinitialisation du prochain numéro de sauvegarde.
+
 > Le fichier **backupHistory.json** est formaté afin d'être utilisé par l'application 4D. Si vous recherchez un état lisible sur les opérations de sauvegarde, le journal de sauvegarde sera plus précis.
