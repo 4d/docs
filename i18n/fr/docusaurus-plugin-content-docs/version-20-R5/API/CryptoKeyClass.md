@@ -49,9 +49,7 @@ ASSERT($status.success)
 
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->
-
-**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
@@ -91,7 +89,7 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
-Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -->nom de la courbe normalisée de la clé<!-- END REF -->. Généralement "prime256v1" pour ES256 (défaut), "secp384r1" pour ES384, "secp521r1" pour ES512.
+Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Généralement "prime256v1" pour ES256 (défaut), "secp384r1" pour ES384, "secp521r1" pour ES512.
 
 <!-- END REF -->
 
@@ -107,9 +105,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 </details>
 
-<!-- REF #CryptoKey.decrypt().Syntax -->
-
-**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
@@ -133,15 +129,15 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | encodingEncrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
 | encodingDecrypted | text | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 
-#### *Résultat*
+#### *Result*
 
 La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
 
-| Propriété | Type       | Description                                                                 |
-| --------- | ---------- | --------------------------------------------------------------------------- |
-| success   | boolean    | True si le message a été déchiffré avec succès                              |
-| result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
-| errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
+| Propriété | Type       | Description                                                         |
+| --------- | ---------- | ------------------------------------------------------------------- |
+| success   | boolean    | True si le message a été déchiffré avec succès                      |
+| result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted` |
+| errors    | collection | Si `success` est `false`, peut contenir une collection d'erreurs    |
 
 Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` renvoyé contient une collection d'erreurs dans `status.errors`.
 
@@ -159,9 +155,7 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 
 </details>
 
-<!-- REF #CryptoKey.encrypt().Syntax -->
-
-**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
@@ -185,7 +179,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | encodingEncrypted | text | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
 | encodingDecrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
 
-#### *Résultat*
+#### *Result*
 
 La valeur retournée est un message chiffré.
 
@@ -203,9 +197,7 @@ La valeur retournée est un message chiffré.
 
 </details>
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax -->
-
-**.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
@@ -217,7 +209,7 @@ La valeur retournée est un message chiffré.
 
 La fonction `.getPrivateKey()` <!-- REF #CryptoKey.getPrivateKey().Summary -->renvoie la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide s'il n'y en a pas.
 
-#### *Résultat*
+#### *Result*
 
 La valeur retournée est la clé privée.
 
@@ -235,9 +227,7 @@ La valeur retournée est la clé privée.
 
 </details>
 
-<!-- REF #CryptoKey.getPublicKey().Syntax -->
-
-**.getPublicKey**() : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey**() : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
@@ -249,7 +239,7 @@ La valeur retournée est la clé privée.
 
 La fonction `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->renvoie la clé publique de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide s'il n'y en a pas.
 
-#### *Résultat*
+#### *Result*
 
 La valeur retournée est la clé publique.
 
@@ -269,9 +259,7 @@ La valeur retournée est la clé publique.
 
 </details>
 
-<!-- REF #CryptoKey.pem.Syntax -->
-
-**.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.pem.Summary -->
 
@@ -314,7 +302,7 @@ La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représenta
 | pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                                                                |
 | encoding          | text    | Représentation à utiliser pour la signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                                               |
 
-#### *Résultat*
+#### *Result*
 
 La représentation utf8 de la chaîne *message*.
 
@@ -336,7 +324,7 @@ La représentation utf8 de la chaîne *message*.
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
+Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. Habituellement 2048 (par défaut).
 
 <!-- REF CryptoKey.type -->
 
@@ -356,8 +344,8 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 
 Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
-- "RSA" : paire de clés RSA, utilise `settings.size` pour la taille [.size](#size).
-- "ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété curve [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
+- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
+- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
 - "PEM" : Définition de paire de clés au format PEM, utilise `settings.pem` pour la propriété [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
@@ -372,9 +360,7 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->
-
-**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
@@ -399,15 +385,15 @@ La `CryptoKey` doit contenir une clé **publique** valide.
 | pss       | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                                                              |
 | encoding  | text    | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                                                    |
 
-#### *Résultat*
+#### *Result*
 
 La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
 La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
-| Propriété | Type       | Description                                                                 |
-| --------- | ---------- | --------------------------------------------------------------------------- |
-| success   | boolean    | True si la signature correspond au message                                  |
-| errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
+| Propriété | Type       | Description                                                      |
+| --------- | ---------- | ---------------------------------------------------------------- |
+| success   | boolean    | True si la signature correspond au message                       |
+| errors    | collection | Si `success` est `false`, peut contenir une collection d'erreurs |
 
 <!-- END REF -->
