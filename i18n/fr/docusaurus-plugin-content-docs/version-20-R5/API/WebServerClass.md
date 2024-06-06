@@ -647,9 +647,7 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
