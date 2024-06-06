@@ -49,9 +49,7 @@ ASSERT($status.success)
 
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->
-
-**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
@@ -107,9 +105,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 </details>
 
-<!-- REF #CryptoKey.decrypt().Syntax -->
-
-**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
@@ -125,7 +121,7 @@ The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the 
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-#### *opções*
+#### *options*
 
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                   |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -133,7 +129,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | encodingEncrypted | text | Encoding used to convert the `message` parameter into the binary representation to decrypt. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".       |
 | encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
-#### *Resultado*
+#### *Result*
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
@@ -159,9 +155,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 </details>
 
-<!-- REF #CryptoKey.encrypt().Syntax -->
-
-**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
@@ -177,7 +171,7 @@ The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the 
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-##### *opções*
+##### *options*
 
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                    |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -185,7 +179,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".        |
 | encodingDecrypted | text | Encoding used to convert the `message` parameter into the binary representation to encrypt. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
-#### *Resultado*
+#### *Result*
 
 O valor devolvido é uma mensagem encriptada.
 
@@ -203,9 +197,7 @@ O valor devolvido é uma mensagem encriptada.
 
 </details>
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax -->
-
-**.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
@@ -217,7 +209,7 @@ O valor devolvido é uma mensagem encriptada.
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Resultado*
+#### *Result*
 
 O valor devolvido é a chave privada.
 
@@ -235,9 +227,7 @@ O valor devolvido é a chave privada.
 
 </details>
 
-<!-- REF #CryptoKey.getPublicKey().Syntax -->
-
-**.getPublicKey**() : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey**() : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
@@ -249,7 +239,7 @@ O valor devolvido é a chave privada.
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Resultado*
+#### *Result*
 
 O valor devolvido é a chave pública.
 
@@ -269,9 +259,7 @@ O valor devolvido é a chave pública.
 
 </details>
 
-<!-- REF #CryptoKey.pem.Syntax -->
-
-**.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.pem.Summary -->
 
@@ -305,7 +293,7 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 
 The `CryptoKey` must contain a valid **private** key.
 
-#### *opções*
+#### *options*
 
 | Propriedade       | Tipo    | Descrição                                                                                                                                                                                                                                                                                             |
 | ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -314,7 +302,7 @@ The `CryptoKey` must contain a valid **private** key.
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Pass `true` when producing a JWT for PS@ algorithm                                                                                           |
 | encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                             |
 
-#### *Resultado*
+#### *Result*
 
 The utf8 representation of the *message* string.
 
@@ -372,9 +360,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->
-
-**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
@@ -391,7 +377,7 @@ The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the ba
 
 The `CryptoKey` must contain a valid **public** key.
 
-#### *opções*
+#### *options*
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                             |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -399,7 +385,7 @@ The `CryptoKey` must contain a valid **public** key.
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Pass `true` when verifying a JWT for PS@ algorithm                                                                                           |
 | encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                |
 
-#### *Resultado*
+#### *Result*
 
 The function returns a status object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
 
