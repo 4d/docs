@@ -14,7 +14,7 @@ Este evento se activa cuando el formulario es generado.
 Todos los objetos del formulario (de cualquier página) cuya propiedad de evento `On Unload` esté seleccionada tendrán su método objeto llamado.
 Entonces, si se selecciona la propiedad de evento formulario `On Unload`, se llamará al método formulario.
 
-> The [`On Load`](onLoad.md) and [`On Unload`] events are generated for objects if they are enabled for both the objects and the form to which the objects belong. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.
+> Los eventos [`On Load`](onLoad.md) y [`On Unload`] se generan para los objetos si están habilitados tanto para los objetos como para el formulario al que pertenecen. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.
 
 ### Subformulario
 

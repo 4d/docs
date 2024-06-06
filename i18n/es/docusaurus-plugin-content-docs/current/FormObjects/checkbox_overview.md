@@ -28,7 +28,7 @@ Los objetos casilla de selección con el [estilo de botón](checkbox_overview.md
 
 Para activar este tercer estado, debe seleccionar la propiedad [Tres estados](properties_Display.md#three-states).
 
-This property is only available for regular and flat check boxes associated with numeric [variables or expressions](properties_Object.md#variable-or-expression) — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state).
+Esta propiedad solo está disponible para casillas de selección regulares y planas asociadas a [variables o expresiones](properties_Object.md#variable-o-expresion) numéricas — las casillas de selección para expresiones booleanas no pueden utilizar la propiedad [Tres Estados](properties_Display.md#tres-estados) (una expresión booleana no puede estar en un estado intermedio).
 
 La variable asociada a la casilla de selección devuelve el valor 2 cuando la casilla está en el tercer estado.
 
@@ -357,11 +357,11 @@ El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del 
 
 El estilo del botón Personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname)
-- [Icon Offset](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Margen vertical](properties_TextAndPicture.md#verticalMargin)
+- [Ruta de acceso al fondo de pantalla](properties_TextAndPicture.md#backgroundPathname)
+- [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset)
+- [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) y [Margen vertical](properties_TextAndPicture.md#verticalMargin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
+Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede ser usada en conjunto con una [imagen de fondo](properties_TextAndPicture.md#backgroundPathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Ejemplo JSON:
 
@@ -373,7 +373,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 		"icon": "/RESOURCES/smiley.jpg", 
 		"iconFrame": 4, 
 		"customBackgroundPicture": "/RESOURCES/paper.jpg", 
-		"iconOffset": 5, //custom icon offset when clicked
+		"iconOffset": 5, //desplazamiento del icono personalizado al hacer clic
 		"left": 60,	
 		"top": 160,	
 		"width": 100,		
@@ -394,5 +394,5 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Ruta de fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento del ícono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)

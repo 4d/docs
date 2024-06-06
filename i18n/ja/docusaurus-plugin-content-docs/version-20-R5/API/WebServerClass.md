@@ -647,9 +647,7 @@ HTTPプロトコルの状態<!-- END REF -->。
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 

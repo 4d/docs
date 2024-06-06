@@ -502,7 +502,7 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 
 If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *opções*          | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
+| *options*         | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Opening mode (see *mode* above)                                                                                                                            | "read"        |
 | `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |

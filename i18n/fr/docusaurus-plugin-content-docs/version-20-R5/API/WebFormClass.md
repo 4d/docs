@@ -39,9 +39,7 @@ Pour plus d'informations, veuillez vous référer à la description de [`.compon
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->
-
-**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -66,9 +64,7 @@ Pour plus d'informations sur les états des formulaires web, veuillez consulter 
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->
-
-**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -104,9 +100,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->
-
-**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -124,9 +118,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la fonct
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->
-
-**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -144,9 +136,7 @@ Pour plus d'informations, veuillez vous référer à la [description de la méth
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->
-
-**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 

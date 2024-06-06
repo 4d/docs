@@ -954,9 +954,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -979,7 +977,7 @@ In this case, you can call this function to disable the data access from Data Ex
 You create a *protectDataFile* project method to call before deployments for example:
 
 ```4d
- ds.setAdminProtection(True) //Desativa o acesso aos dados do Explorador de Dados
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### Veja também
@@ -1254,13 +1252,13 @@ Se quiser registras as petições dos clientes ORDA em um arquivo e usar o núme
 Se quiser registrar as petições dos clientes ORDA na memória:
 
 ```4d
- var $es : cs. PersonsSelection
+ var $es : cs.PersonsSelection
  var $log : Collection
 
  ds.startRequestLog(3) //keep 3 requests in memory
 
- $es:=ds. Persons.query("name=:1";"Marie")
- $es:=ds. Persons.query("name IN :1";New collection("Marie"))
+ $es:=ds.Persons.query("name=:1";"Marie")
+ $es:=ds.Persons.query("name IN :1";New collection("Marie"))
  $es:=ds.Persons.query("name=:1";"So@")
 
  $log:=ds.getRequestLog()

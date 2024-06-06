@@ -958,9 +958,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -983,7 +981,7 @@ In this case, you can call this function to disable the data access from Data Ex
 You create a *protectDataFile* project method to call before deployments for example:
 
 ```4d
- ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de datos
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### Ver también

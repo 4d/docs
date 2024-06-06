@@ -5,7 +5,7 @@ title: On Row Resize
 
 | Code | Puede ser llamado por                                   | Definición                                                       |
 | ---- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| 60   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | La altura de una línea es modificada por un usuario con el ratón |
+| 60   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | La altura de una línea es modificada por un usuario con el ratón |
 
 ## Descripción
 

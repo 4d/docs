@@ -958,9 +958,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -983,7 +981,7 @@ Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux do
 Vous créez une méthode projet *protectDataFile* à appeler par exemple avant le déploiement :
 
 ```4d
- ds.setAdminProtection(True) //Désactive l'accès aux données de l'Explorateur de données
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### Voir également
@@ -1266,7 +1264,7 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) //garde 3 requêtes dans la mémoire
+ ds.startRequestLog(3) //keep 3 requests in memory
 
  $es:=ds.Persons.query("name=:1";"Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))

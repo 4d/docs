@@ -108,10 +108,11 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                            |
-| ----- | ----------------------------- |
-| 20 R4 | 新しい *passwordAlgorithm* プロパティ |
-| 18    | 追加                            |
+| リリース  | 内容                                |
+| ----- | --------------------------------- |
+| 20 R6 | Support access to Qodly instances |
+| 20 R4 | 新しい *passwordAlgorithm* プロパティ     |
+| 18    | 追加                                |
 
 </details>
 
@@ -130,24 +131,40 @@ title: DataStore
 #### 説明
 
 `Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
-*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
+*connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
 
-*connectionInfo* で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
+以下のリモートデータストアが、このコマンドでサポートされています:
 
-- データベースの Webサーバーは、http または https が有効化された状態で開始されていなければなりません。
-- データストアは、[**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている必要があります。また、[データクラスと属性](../REST/configuration.md#テーブルやフィールドの公開) も公開されている必要があります。
+| データストアの種類                                                           | 説明                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| リモート4Dアプリケーション                                                      | 次の条件を満たし、リモートデータストアとして利用可能な 4Dアプリケーション:<li>http および/または https が有効な状態で Webサーバーが起動されている。</li><li>データストアが REST に公開されている ([**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている)。</li>ライセンスが必要な場合があります (注記参照)。                                                                                         |
+| [Qodly アプリケーション](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role. |
 
 :::note
 
-`Open datastore` のリクエストは 4D REST API に依存し、接続を開くために 4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
 
 :::
 
-合致するデータベースが見つからない場合、`Open datastore` は **Null** を返します。
+*connectionInfo* には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 オブジェクトは以下のプロパティを格納することができます (*hostname* を除き、すべてのプロパティは任意です):
+
+| プロパティ       | タイプ     | リモート4Dアプリケーション                                                                                                                                                                                                                                                                                                                             | Qodly application                                                            |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| hostname    | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                                                                                        | API Endpoint of the Qodly cloud instance                                     |
+| user        | Text    | ユーザー名                                                                                                                                                                                                                                                                                                                                      | - (ignored)                                               |
+| password    | Text    | ユーザーパスワード                                                                                                                                                                                                                                                                                                                                  | * (ignored)                                               |
+| idleTimeout | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 | - (ignored)                                               |
+| tls         | Boolean | True to use secured connection(1). 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                                                                      | True to use secured connection. If omitted, false by default |
+| type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                        | * (ignored)                                               |
+| api-key     | Text    | - (ignored)                                                                                                                                                                                                                                                                                                             | Api key of the Qodly cloud instance                                          |
+
+(1) If `tls` is true, the HTTPS protocol is used if:
+
+- リモートデータストアで HTTPS が有効化されている。
+- 指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
+- a valid certificate and private encryption key are installed in the 4D application. 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
 
 *localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
-
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
@@ -157,23 +174,9 @@ title: DataStore
   //$myds と $myds2 は同一のものです
 ```
 
-*connectionInfo* には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 *hostname* を除くすべてのプロパティは任意です:
+Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-| プロパティ             | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                         |
-| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname          | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                                                                                        |
-| user              | Text    | ユーザー名                                                                                                                                                                                                                                                                                                                                      |
-| password          | Text    | ユーザーパスワード。 デフォルトでは、パスワードは平文で送信されるため、`tls` プロパティに `true` を渡して暗号化通信を使用することが **強く推奨されます**。                                                                                                                                                                                                                                                    |
-| idleTimeout       | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 |
-| tls               | Boolean | 安全な接続を使用します(\*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                                                                                                        |
-| passwordAlgorithm | Text    | [`Validate password`](https://doc.4d.com/4dv20/help/command/ja/page638.html) コマンドで *digest* パラメーターを `true` に設定してサーバーがパスワードを検証する場合は、"4d-rest-digest" を指定します。                                                                                                                                                                                |
-| type              | Text    | "4D Server" でなければなりません                                                                                                                                                                                                                                                                                                                     |
-
-(\*) tls が true だった場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:
-
-- リモートデータストアで HTTPS が有効化されている。
-- 指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
-- データベースに有効な証明書と非公開暗号鍵がインストールされている。 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
+If no matching datastore is found, `Open datastore` returns **Null**.
 
 #### 例題 1
 
@@ -213,6 +216,27 @@ user / password / timeout / tls を指定してリモートデータストアに
  $foreignStudents:=Open datastore($connectTo;"foreign")
  ALERT("フランスの生徒は "+String($frenchStudents.Students.all().length)+" 名です")
  ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
+```
+
+#### 例題 4
+
+Connection to a Qodly application:
+
+```4d
+var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
+
+var $remoteDS : 4D.DataStoreImplementation
+var $data : 4D.EntitySelection
+
+$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
+  //it is recommended to store the API key in a secured place (e.g. a file)
+  //and to load it in the code
+
+$remoteDS:=Open datastore($connectTo; "remoteId")
+$data:=$remoteDS.item.all()
+
+ALERT(String($data.length)+" items have been read")
+
 ```
 
 #### エラー管理
@@ -401,9 +425,10 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| リリース | 内容 |
-| ---- | -- |
-| 20   | 追加 |
+|Release|Changes|
+
+\|---|---|
+|20|Added|
 
 </details>
 
@@ -960,9 +985,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -985,7 +1008,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 運用前に呼び出す *protectDataFile* プロジェクトメソッドを作成します:
 
 ```4d
- ds.setAdminProtection(True) // データエクスプローラーによるデータアクセスを無効化します
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### 参照
@@ -1268,7 +1291,8 @@ ORDA クライアントリクエストをメモリに記録します:
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) // メモリにはリクエストを 3つまで保管します
+ ds.startRequestLog(3) //keep 3 requests in memory
+
  $es:=ds.Persons.query("name=:1";"Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))
  $es:=ds.Persons.query("name=:1";"So@")

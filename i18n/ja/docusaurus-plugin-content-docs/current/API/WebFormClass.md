@@ -39,9 +39,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->
-
-**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -67,9 +65,7 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->
-
-**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -106,9 +102,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->
-
-**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -126,9 +120,7 @@ Function authenticationError()
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->
-
-**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -146,9 +138,7 @@ Function authenticationError()
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->
-
-**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 

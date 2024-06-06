@@ -884,9 +884,7 @@ Example with the `dk stop dropping on first error` option:
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->
-
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -987,7 +985,7 @@ Dada a seguinte tabela e relação:
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 
@@ -1043,7 +1041,7 @@ Há, entretanto, uma diferença entre ambas as afirmações quando a seleção e
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass**() : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 
@@ -1094,7 +1092,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes**() : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 
@@ -1148,7 +1146,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 
@@ -1190,7 +1188,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 
@@ -1242,7 +1240,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 
@@ -1303,7 +1301,7 @@ Entity selections always have a `.length` property.
 
 ```4d
  var $vSize : Integer
- $vSize:=ds. Employee.query("gender = :1";"male").length
+ $vSize:=ds.Employee.query("gender = :1";"male").length
  ALERT(String(vSize)+" male employees found.")
 ```
 
@@ -1351,9 +1349,9 @@ Um erro é retornado se:
 Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 ```4d
- var $sel : cs. EmpSelection
+ var $sel : cs.EmpSelection
  var $maxSalary : Real
- $sel:=ds. Employee.query("gender = :1";"female")
+ $sel:=ds.Employee.query("gender = :1";"female")
  $maxSalary:=$sel.max("salary")
 ```
 
@@ -1401,9 +1399,9 @@ Um erro é retornado se:
 Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionários mulheres:
 
 ```4d
- var $sel : cs. EmpSelection
+ var $sel : cs.EmpSelection
  var $minSalary : Real
- $sel:=ds. Employee.query("gender = :1";"female")
+ $sel:=ds.Employee.query("gender = :1";"female")
  $minSalary:=$sel.min("salary")
 ```
 
@@ -1476,10 +1474,10 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 Se quisermos ter uma seleção de empregados mulheres que se chamam "Jones" que vivem em Nova York:
 
 ```4d
- var $sel1; $sel2; $sel3 : cs. EmployeeSelection
- $sel1:=ds. Employee.query("name =:1";"Jones")
- $sel2:=ds. Employee.query("city=:1";"New York")
- $sel3:=$sel1.and($sel2).minus(ds. Employee.query("gender='male'"))
+ var $sel1; $sel2; $sel3 : cs.EmployeeSelection
+ $sel1:=ds.Employee.query("name =:1";"Jones")
+ $sel2:=ds.Employee.query("city=:1";"New York")
+ $sel3:=$sel1.and($sel2).minus(ds.Employee.query("gender='male'"))
 ```
 
 #### Exemplo 3
@@ -1535,22 +1533,22 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 #### Exemplo 1
 
 ```4d
- var $employees1; $employees2; $result : cs. EmployeeSelection
- $employees1:=ds. Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
- $employees2:=ds. Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
+ var $employees1; $employees2; $result : cs.EmployeeSelection
+ $employees1:=ds.Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
+ $employees2:=ds.Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
  $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
 #### Exemplo 2
 
 ```4d
- var $employees; $result : cs. EmployeeSelection
- var $employee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"H@") // Devuelve "Colin Hetrick","Grady Harness", "Sherlock Holmes"
- $employee:=ds. Employee.get(686) //a entidade com chave primária 686 não pertence a entity selection $employees 
-  //Coincide com a funcionária "Mary Smith"
+ var $employees; $result : cs.EmployeeSelection
+ var $employee : cs.EmployeeEntity
+ $employees:=ds.Employee.query("lastName = :1";"H@") // Returns "Colin Hetrick","Grady Harness", "Sherlock Holmes"
+ $employee:=ds.Employee.get(686) //the entity with primary key 686 does not belong to the $employees entity selection
+  //It matches the employee "Mary Smith"
 
- $result:=$employees.or($employee) //$result contém "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
+ $result:=$employees.or($employee) //$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
 ```
 
 <!-- END REF -->
@@ -1693,8 +1691,8 @@ You can pass parameter(s) to the formula using the `args` property (object) of t
 Ordenar estudantes usando uma fórmula fornecida como texto:
 
 ```4d
- var $es1; $es2 : cs. StudentsSelection
- $es1:=ds. Students.query("nationality=:1";"French")
+ var $es1; $es2 : cs.StudentsSelection
+ $es1:=ds.Students.query("nationality=:1";"French")
  $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
@@ -1702,9 +1700,9 @@ Ordenar estudantes usando uma fórmula fornecida como texto:
 Mesma ordem mas usando objeto fórmula:
 
 ```4d
- var $es1; $es2 : cs. StudentsSelection
+ var $es1; $es2 : cs.StudentsSelection
  var $formula : Object
- $es1:=ds. Students.query("nationality=:1";"French")
+ $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
  $es2:=$es1.orderByFormula($formula) // ascending by default
  $es2:=$es1.orderByFormula($formula;dk descending)
@@ -1873,7 +1871,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh**()<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 

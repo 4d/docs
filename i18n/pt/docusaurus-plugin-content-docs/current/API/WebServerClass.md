@@ -647,9 +647,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
@@ -732,7 +730,7 @@ Se o servidor web foi iniciado, todas as ligações e processos web são fechado
 Para parar o servidor Web da base de dados:
 
 ```4d
- var $webServer : 4D. WebServer
+ var $webServer : 4D.WebServer
 
  $webServer:=WEB Server(Web server database)
  $webServer.stop()
