@@ -11,9 +11,9 @@ title: リリースノート
 
 - [オブジェクト参照](../Concepts/dt_object.md#オブジェクト演算子) と [コレクション参照](../Concepts/dt_collection.md#コレクション演算子) を対象とした比較演算子をサポート。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。
 - 宣言された名前空間をコンポーネントが持つ場合、そのクラスは [`cs.<namespace>`] を介して、ホストプロジェクトに読み込まれているすべてのコンポーネント間で自動的に共有されるようになりました。
-- New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
-- New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
-- New [4DCEFParameters.json file](../FormObjects/webArea_overview.md#4dcefparametersjson) to customize 4D embedded web areas.
+- 新しい [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) 関数と [`$clean`](../REST/$clean.md) REST API が追加されました。これらは、対象のエンティティセレクションから削除済みエンティティを除外したエンティティセレクションを新規に取得します。
+- セッションの権限を確認し、デバッグを容易にするための新しい [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) 関数と [`$info/privileges`](../REST/$info.md) REST API が追加されました。
+- [4DCEFParameters.jsonファイル](../FormObjects/webArea_overview.md#4dcefparametersjson) が新しく追加されました。これにより、4D埋め込みWebエリアをカスタマイズすることができます。
 
 #### 動作の変更
 
