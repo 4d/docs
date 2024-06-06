@@ -943,9 +943,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->
-
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -1046,7 +1044,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 
@@ -1102,7 +1100,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass**() : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 
@@ -1153,7 +1151,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes**() : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 
@@ -1209,7 +1207,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 
@@ -1251,7 +1249,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 
@@ -1303,7 +1301,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 
@@ -1753,7 +1751,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") // デフォルトで昇順
+ $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
@@ -1764,7 +1762,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
  var $formula : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // デフォルトで昇順
+ $es2:=$es1.orderByFormula($formula) // ascending by default
  $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
@@ -1931,7 +1929,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh**()<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 
