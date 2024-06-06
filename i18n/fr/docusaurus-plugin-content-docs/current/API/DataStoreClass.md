@@ -110,6 +110,7 @@ Utilisation du datastore principal de la base 4D :
 
 | Release | Modifications                          |
 | ------- | -------------------------------------- |
+| 20 R6   | Support access to Qodly instances      |
 | 20 R4   | Nouvelle propriété *passwordAlgorithm* |
 | 18      | Ajout                                  |
 
@@ -129,24 +130,40 @@ Utilisation du datastore principal de la base 4D :
 
 #### Description
 
-La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
 
-La base de données *connectionInfo* 4D doit être disponible en tant que datastore distant, c'est-à-dire :
+The following remote datastores are supported by the command:
 
-- son serveur Web doit être lancé avec http et/ou https activé,
-- le datastore doit être exposé (option [**Exposer en tant que serveur REST**](REST/configuration.md#démarrer-le-serveur-rest) cochée) ainsi que les [dataclass et les attributs](../REST/configuration.md#exposer-les-tables-et-les-champs).
+| datastore kind                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
 
 :::note
 
-Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion. Référez-vous à la section [User login mode](../REST/authUsers.md#user-login-modes) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Référez-vous à la section [User login mode](../REST/authUsers.md#user-login-modes) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
 
 :::
 
-Si aucune base de données correspondante n'est trouvée, `Open datastore` retourne **Null**.
+Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
+
+| Propriété   | Type    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Qodly application                                                            |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                                                                                                           | API Endpoint of the Qodly cloud instance                                     |
+| user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                         | - (ignored)                                               |
+| password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                             | * (ignored)                                               |
+| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. | - (ignored)                                               |
+| tls         | Boolean | True to use secured connection(1). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                                                                               | True to use secured connection. If omitted, false by default |
+| type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                       | * (ignored)                                               |
+| api-key     | Text    | - (ignored)                                                                                                                                                                                                                                                                                                                                                                                                                                            | Api key of the Qodly cloud instance                                          |
+
+(1) If `tls` is true, the HTTPS protocol is used if:
+
+- HTTPS est activé sur le datastore distant
+- Le port donné correspond au port HTTPS configuré dans les propriétés
+- a valid certificate and private encryption key are installed in the 4D application. Sinon, l'erreur "1610 - Une requête vers l’hôte: "{xxx}" a échoué" est générée
 
 *localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
-
-Les objets disponibles dans le `cs.Datastore` sont créés à partir de la base de données cible en fonction des [règles générales](ORDA/dsMapping.md#règles-générales) de correspondance d'ORDA.
 
 Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :
 
@@ -156,23 +173,9 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
   //$myds et $myds2 sont équivalents
 ```
 
-Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Toutes les propriétés sont optionnelles excepté *hostname* :
+Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-| Propriété         | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                                                                                                           |
-| user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| password          | Text    | Mot de passe de l'utilisateur. Par défaut, le mot de passe est envoyé en clair, il est donc **vivement recommandé** d'utiliser des communications chiffrées en passant `true` dans la propriété `tls`.                                                                                                                                                                                                                                    |
-| idleTimeout       | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
-| tls               | Boolean | Utilisez une connexion sécurisée(\*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                                                                            |
-| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe en utilisant la commande [`Validate password`](https://doc.4d.com/4dv20/help/command/fr/page638.html) avec le paramètre *digest* défini sur `true`.                                                                                                                                                                                                                                          |
-| type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-
-(\*) Si tls est vrai, le protocole HTTPS est utilisé si :
-
-- HTTPS est activé sur le datastore distant
-- Le port donné correspond au port HTTPS configuré dans les propriétés
-- Un certificat valide et une clé de chiffrement privée sont installés dans la base. Sinon, l'erreur "1610 - Une requête vers l’hôte: "{xxx}" a échoué" est générée
+If no matching datastore is found, `Open datastore` returns **Null**.
 
 #### Exemple 1
 
@@ -212,6 +215,27 @@ Travailler avec plusieurs datastores distants :
  $foreignStudents:=Open datastore($connectTo;"foreign")
  ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+```
+
+#### Exemple 4
+
+Connection to a Qodly application:
+
+```4d
+var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
+
+var $remoteDS : 4D.DataStoreImplementation
+var $data : 4D.EntitySelection
+
+$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
+  //it is recommended to store the API key in a secured place (e.g. a file)
+  //and to load it in the code
+
+$remoteDS:=Open datastore($connectTo; "remoteId")
+$data:=$remoteDS.item.all()
+
+ALERT(String($data.length)+" items have been read")
+
 ```
 
 #### Gestion des erreurs
@@ -400,9 +424,10 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 <details><summary>Historique</summary>
 
-| Release | Modifications |
-| ------- | ------------- |
-| 20      | Ajout         |
+|Release|Changes|
+
+\|---|---|
+|20|Added|
 
 </details>
 
@@ -958,9 +983,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -983,7 +1006,7 @@ Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux do
 Vous créez une méthode projet *protectDataFile* à appeler par exemple avant le déploiement :
 
 ```4d
- ds.setAdminProtection(True) //Désactive l'accès aux données de l'Explorateur de données
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### Voir également
@@ -1266,7 +1289,7 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) //garde 3 requêtes dans la mémoire
+ ds.startRequestLog(3) //keep 3 requests in memory
 
  $es:=ds.Persons.query("name=:1";"Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))
