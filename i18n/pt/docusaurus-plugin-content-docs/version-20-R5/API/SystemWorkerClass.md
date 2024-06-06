@@ -57,9 +57,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 </details>
 
-<!-- REF #4D.SystemWorker.new().Syntax -->
-
-**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #4D.SystemWorker.new().Syntax -->**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
@@ -264,9 +262,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 </details>
 
-<!-- REF #SystemWorkerClass.closeInput().Syntax -->
-
-**.closeInput**()<!-- END REF -->
+<!-- REF #SystemWorkerClass.closeInput().Syntax -->**.closeInput**()<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
@@ -312,9 +308,7 @@ $output:=$worker.response
 
 ## .commandLine
 
-<!-- REF #SystemWorkerClass.commandLine.Syntax -->
-
-**.commandLine** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.commandLine.Syntax -->**.commandLine** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -342,9 +336,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 ## .dataType
 
-<!-- REF #SystemWorkerClass.dataType.Syntax -->
-
-**.dataType** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -358,9 +350,7 @@ Essa propriedade é **somente leitura**.
 
 ## .encoding
 
-<!-- REF #SystemWorkerClass.encoding.Syntax -->
-
-**.encoding** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.encoding.Syntax -->**.encoding** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -374,9 +364,7 @@ Essa propriedade é **somente leitura**.
 
 ## .errors
 
-<!-- REF #SystemWorkerClass.errors.Syntax -->
-
-**.errors** : Collection<!-- END REF -->
+<!-- REF #SystemWorkerClass.errors.Syntax -->**.errors** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -398,9 +386,7 @@ If no error occured, `.errors` is undefined.
 
 ## .exitCode
 
-<!-- REF #SystemWorkerClass.exitCode.Syntax -->
-
-**.exitCode** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.exitCode.Syntax -->**.exitCode** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -414,9 +400,7 @@ Essa propriedade é **somente leitura**.
 
 ## .hideWindow
 
-<!-- REF #SystemWorkerClass.hideWindow.Syntax -->
-
-**.hideWindow** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.hideWindow.Syntax -->**.hideWindow** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -430,9 +414,7 @@ This property is **read-write**.
 
 ## .pid
 
-<!-- REF #SystemWorkerClass.pid.Syntax -->
-
-**.pid** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -446,9 +428,7 @@ Essa propriedade é **somente leitura**.
 
 ## .postMessage()
 
-<!-- REF #SystemWorkerClass.postMessage().Syntax -->
-
-**.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
+<!-- REF #SystemWorkerClass.postMessage().Syntax -->**.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
@@ -473,9 +453,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 ## .response
 
-<!-- REF #SystemWorkerClass.response.Syntax -->
-
-**.response** : Text<br/>**.response** : Blob<!-- END REF -->
+<!-- REF #SystemWorkerClass.response.Syntax -->**.response** : Text<br/>**.response** : Blob<!-- END REF -->
 
 #### Descrição
 
@@ -491,9 +469,7 @@ Essa propriedade é **somente leitura**.
 
 ## .responseError
 
-<!-- REF #SystemWorkerClass.responseError.Syntax -->
-
-**.responseError** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.responseError.Syntax -->**.responseError** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -505,9 +481,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 ## .terminate()
 
-<!-- REF #SystemWorkerClass.terminate().Syntax -->
-
-**.terminate**()<!-- END REF -->
+<!-- REF #SystemWorkerClass.terminate().Syntax -->**.terminate**()<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
@@ -529,9 +503,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 ## .terminated
 
-<!-- REF #SystemWorkerClass.terminated.Syntax -->
-
-**.terminated** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -545,9 +517,7 @@ Essa propriedade é **somente leitura**.
 
 ## .timeout
 
-<!-- REF #SystemWorkerClass.timeout.Syntax -->
-
-**.timeout** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.timeout.Syntax -->**.timeout** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -570,9 +540,7 @@ Essa propriedade é **somente leitura**.
 
 </details>
 
-<!-- REF #SystemWorkerClass.wait().Syntax -->
-
-**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #SystemWorkerClass.wait().Syntax -->**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
