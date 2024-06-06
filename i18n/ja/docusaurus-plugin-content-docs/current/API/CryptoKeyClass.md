@@ -49,9 +49,7 @@ ASSERT($status.success)
 
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->
-
-**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
@@ -91,7 +89,7 @@ ASSERT($status.success)
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
-ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線名<!-- END REF -->。 通常、ES256 (デフォルト) の場合は "prime256v1"、ES384 の場合は "secp384r1"、ES512 の場合は "secp521r1"。
+Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. 通常、ES256 (デフォルト) の場合は "prime256v1"、ES384 の場合は "secp384r1"、ES512 の場合は "secp521r1"。
 
 <!-- END REF -->
 
@@ -107,9 +105,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 </details>
 
-<!-- REF #CryptoKey.decrypt().Syntax -->
-
-**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
@@ -125,7 +121,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
-#### *オプション*
+#### *options*
 
 | プロパティ             | タイプ  | 説明                                                                                                                         |
 | ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -133,7 +129,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | encodingEncrypted | text | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
 | encodingDecrypted | text | バイナリの復号メッセージを文字列に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
-#### *戻り値*
+#### *Result*
 
 `message` の復号に成功した場合には、success プロパティが `true` に設定された *status* オブジェクトを返します。
 
@@ -159,9 +155,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 </details>
 
-<!-- REF #CryptoKey.encrypt().Syntax -->
-
-**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
@@ -173,11 +167,11 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- END REF -->
 
-`.encrypt()` 関数は、<!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
+The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
-##### *オプション*
+##### *options*
 
 | プロパティ             | タイプ  | 説明                                                                                                                                |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -185,7 +179,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | encodingEncrypted | text | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
 | encodingDecrypted | text | 暗号化するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
-#### *戻り値*
+#### *Result*
 
 戻り値は暗号化されたメッセージです。
 
@@ -203,9 +197,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 </details>
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax -->
-
-**.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
@@ -217,7 +209,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 `.getPrivateKey()` 関数は、<!-- REF #CryptoKey.getPrivateKey().Summary -->`CryptoKey` オブジェクトの秘密鍵を返します<!-- END REF --> (PEM形式)。無い場合は空の文字列を返します。
 
-#### *戻り値*
+#### *Result*
 
 戻り値は秘密鍵です。
 
@@ -235,9 +227,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 </details>
 
-<!-- REF #CryptoKey.getPublicKey().Syntax -->
-
-**.getPublicKey**() : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey**() : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
@@ -250,7 +240,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 `.getPublicKey()` 関数は、<!-- REF #CryptoKey.getPublicKey().Summary -->
 `CryptoKey` オブジェクトの公開鍵を返します<!-- END REF --> (PEM形式)。無い場合は空の文字列を返します。
 
-#### *戻り値*
+#### *Result*
 
 戻り値は公開鍵です。
 
@@ -270,9 +260,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 </details>
 
-<!-- REF #CryptoKey.pem.Syntax -->
-
-**.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.pem.Summary -->
 
@@ -306,7 +294,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
-#### *オプション*
+#### *options*
 
 | プロパティ             | タイプ     | 説明                                                                                                                                                                                               |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -315,7 +303,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                                                            |
 | encoding          | text    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                                                 |
 
-#### *戻り値*
+#### *Result*
 
 utf8 形式の *message* 文字列。
 
@@ -337,7 +325,7 @@ utf8 形式の *message* 文字列。
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
-RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビット単位)<!-- END REF -->。 通常は 2048 (デフォルト)。
+Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. 通常は 2048 (デフォルト)。
 
 <!-- REF CryptoKey.type -->
 
@@ -357,8 +345,8 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM"<!-- END REF -->。
 
-- "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア
-- "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
+- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
+- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
 - "PEM": `settings.pem` を [.pem](#pem) として使った、PEM 形式のキーペア
 
 <!-- REF CryptoKey.verify().Desc -->
@@ -373,9 +361,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->
-
-**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
@@ -392,7 +378,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 `CryptoKey` は有効な **公開** 鍵を格納していなくてはなりません。
 
-#### *オプション*
+#### *options*
 
 | プロパティ    | タイプ     | 説明                                                                                                                                                                                               |
 | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -400,7 +386,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 | pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                                                            |
 | encoding | text    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                                                     |
 
-#### *戻り値*
+#### *Result*
 
 検証で署名が合致した場合には、`success` プロパティが `true` に設定された `status` オブジェクトを返します。
 
