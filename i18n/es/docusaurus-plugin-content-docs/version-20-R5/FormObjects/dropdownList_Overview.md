@@ -30,11 +30,11 @@ Puede crear diferentes tipos de listas desplegables con distintas funcionalidade
 
 Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection) puede utilizarse como fuente de datos de una lista desplegable. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                |
-| -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `valores`      | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number               | Índice del elemento seleccionado actualmente (valor comprendido entre 0 y `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                 |
-| `currentValue` | igual que Collection | Elemento seleccionado actualmente (se utiliza como valor de marcador de posición si se define por código)                                                                                                                                               |
+| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                             |
+| -------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `valores`      | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>números</li><li>fechas</li><li>horas</li>Si está vacío o no se define, la lista desplegable estará vacía |
+| `index`        | number               | Índice del elemento seleccionado actualmente (valor comprendido entre 0 y `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                              |
+| `currentValue` | igual que Collection | Elemento seleccionado actualmente (se utiliza como valor de marcador de posición si se define por código)                                                                                                                                                            |
 
 Si el objeto contiene otras propiedades, se ignoran.
 
@@ -45,11 +45,11 @@ Para inicializar el objeto asociado a la lista desplegable, puede:
 - Ejecutar código que crea el objeto y sus propiedades. Por ejemplo, si "myList" es la variable  asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
 
 ```4d
-// Form.myDrop is the datasource of the form object
+// Form.myDrop es la fuente de datos del objeto formulario
  
 Form.myDrop:=New object
 Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1  //currentValue is a placeholder
+Form.myDrop.index:=-1  //currentValue es un marcador de posición
 Form.myDrop.currentValue:="Select a fruit" 
 ```
 
@@ -103,13 +103,13 @@ Si necesita guardar la elección del usuario en un campo, deberá utilizar una s
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) `nuevo registro
+          aCities:=3 `mostrar un valor por defecto
+       Else `registro existente, mostrar valor almacenado
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) `el usuario modifica la selección
+       City:=aCities{aCities} `el campo obtiene un nuevo valor
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
