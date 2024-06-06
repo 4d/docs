@@ -960,9 +960,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -985,7 +983,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 運用前に呼び出す *protectDataFile* プロジェクトメソッドを作成します:
 
 ```4d
- ds.setAdminProtection(True) // データエクスプローラーによるデータアクセスを無効化します
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### 参照
@@ -1268,7 +1266,8 @@ ORDA クライアントリクエストをメモリに記録します:
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) // メモリにはリクエストを 3つまで保管します
+ ds.startRequestLog(3) //keep 3 requests in memory
+
  $es:=ds.Persons.query("name=:1";"Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))
  $es:=ds.Persons.query("name=:1";"So@")
