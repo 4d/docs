@@ -1751,7 +1751,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
+ $es2:=$es1.orderByFormula("length(this.lastname)") // デフォルトで昇順
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
@@ -1762,7 +1762,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
  var $formula : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // ascending by default
+ $es2:=$es1.orderByFormula($formula) // デフォルトで昇順
  $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
