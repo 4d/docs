@@ -885,9 +885,7 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->
-
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -988,7 +986,7 @@ Considérons les tables et relations suivantes :
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 
@@ -1044,7 +1042,7 @@ Il existe cependant une différence entre les deux instructions lorsque la séle
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass**() : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 
@@ -1095,7 +1093,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes**() : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 
@@ -1151,7 +1149,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 
@@ -1193,7 +1191,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 
@@ -1245,7 +1243,7 @@ Pour plus d'informations, voir [Entity selections triées vs Entity selections n
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 
@@ -1307,7 +1305,7 @@ Les entity selections ont toujours une propriété `.length`.
 ```4d
  var $vSize : Integer
  $vSize:=ds.Employee.query("gender = :1";"male").length
- ALERT(String(vSize)+" employés masculins trouvés.")
+ ALERT(String(vSize)+" male employees found.")
 ```
 
 <!-- END REF -->
@@ -1538,9 +1536,9 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
- $employees1:=ds.Employee.query("lastName = :1";"H@") //"Colin Hetrick","Grady Harness"
- $employees2:=ds.Employee.query("firstName = :1";"C@") //"Colin Hetrick", "Cath Kidston"
- $result:=$employees1.or($employees2) //$result contient "Colin Hetrick", "Grady Harness","Cath Kidston"
+ $employees1:=ds.Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
+ $employees2:=ds.Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
+ $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
 #### Exemple 2
@@ -1548,11 +1546,11 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") // "Colin Hetrick","Grady Harness", "Sherlock Holmes"
- $employee:=ds.Employee.get(686) //l'entité avec clé primaire 686 n'appartient pas à l'entity selection $employees 
-  //elle correspond à l'employée "Mary Smith"
+ $employees:=ds.Employee.query("lastName = :1";"H@") // Returns "Colin Hetrick","Grady Harness", "Sherlock Holmes"
+ $employee:=ds.Employee.get(686) //the entity with primary key 686 does not belong to the $employees entity selection
+  //It matches the employee "Mary Smith"
 
- $result:=$employees.or($employee) //$result contient "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
+ $result:=$employees.or($employee) //$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
 ```
 
 <!-- END REF -->
@@ -1697,7 +1695,7 @@ Pour effectuer un tri d'étudiants à l'aide d'une formule texte :
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") //croissant par défaut
+ $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
@@ -1708,7 +1706,7 @@ Pour effectuer le même tri dans le même ordre, mais à l'aide d'un objet formu
  var $formula : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // croissant par défaut
+ $es2:=$es1.orderByFormula($formula) // ascending by default
  $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
@@ -1875,7 +1873,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings p
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh**()<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 
