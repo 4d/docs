@@ -11,12 +11,12 @@ Cópias de segurança ou backups podem ser começadas de forma manual ou de form
 
 Aplicações podem ser restauradas automaticamente quando uma aplicação danificada for aberta.
 
-Además, el módulo de copia de seguridad integrado puede aprovechar el archivo .journal ([de historial](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com uma aplicação em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que a aplicação for aberta. Pode ver os conteúdos do arquivo journal a qualquer momento.
+Além disso, o módulo de backup integrado pode aproveitar o arquivo .journal ([arquivo de log do banco de dados](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com uma aplicação em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que a aplicação for aberta. Pode ver os conteúdos do arquivo journal a qualquer momento.
 
-> Pode implementar também soluções alternativas para replicar e sincronizar dados para manter versões idênticas de aplicações por razões de backup. These solutions can be based on the following mechanisms and technologies:
+> Pode implementar também soluções alternativas para replicar e sincronizar dados para manter versões idênticas de aplicações por razões de backup. Essas soluções podem ser baseadas nos seguintes mecanismos e tecnologias:
 >
-> - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)
-> - Synchronization using SQL
-> - Synchronization using HTTP (/rest/url)
+> - Configurando um espelho lógico com o 4D Server (usando os mecanismos do módulo de backup integrado)
+> - Sincronização usando SQL
+> - Sincronização usando HTTP (/rest/url)
 
-> Para una visión general de las funciones de seguridad de 4D, consulte la [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/).
+> Para obter uma visão geral das funcionalidades de segurança do 4D, consulte o [guia de segurança do 4D](https://blog.4d.com/4d-security-guide/).
