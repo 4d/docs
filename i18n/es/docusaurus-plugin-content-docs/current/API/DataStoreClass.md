@@ -134,7 +134,7 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 
 The following remote datastores are supported by the command:
 
-| datastore kind                                                         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
+| tipo de almacén de datos                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
 | [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
@@ -153,7 +153,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                | - (ignored)                                               |
 | contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                           | * (ignored)                                               |
 | idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. | - (ignored)                                               |
-| tls         | Boolean | True to use secured connection(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                     | True to use secured connection. If omitted, false by default |
+| tls         | Boolean | True to use secured connection(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                     | True para usar conexión segura. If omitted, false by default |
 | type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                              | * (ignored)                                               |
 | api-key     | Text    | - (ignored)                                                                                                                                                                                                                                                                                                                                                                                                   | Api key of the Qodly cloud instance                                          |
 
@@ -449,7 +449,7 @@ The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
@@ -604,7 +604,7 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
@@ -1051,7 +1051,7 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
