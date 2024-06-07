@@ -147,7 +147,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\`4d ... `) is supported with 4D code highlight:
+- La etiqueta de bloque de código (\`4d ... `) is supported with 4D code highlight:
 
 ````md
 ```4d
