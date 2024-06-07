@@ -96,7 +96,7 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
 
-## Monitoring Project Dependencies
+## Monitoreo de dependencias del proyecto
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
@@ -112,7 +112,7 @@ A continuación se muestra el panel Dependencias. Dependencies are sorted by nam
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### Dependency Origin
+### Origen de dependencia
 
 The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
 
@@ -120,12 +120,12 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 Se soportan los siguientes orígenes:
 
-| Etiqueta de origen | Descripción                                                                    |
-| ------------------ | ------------------------------------------------------------------------------ |
-| Componente 4D      | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| Source             | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Entorno            | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Project Component  | Component located in the [`Components`](architecture.md#components) folder     |
+| Etiqueta de origen      | Descripción                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| Componente 4D           | Built-in 4D component, stored in the `Components` folder of the 4D application |
+| Source                  | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
+| Entorno                 | Component declared in the [`environnement4d.json`](#environment4djson) file    |
+| Componente del proyecto | Component located in the [`Components`](architecture.md#components) folder     |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 
@@ -147,7 +147,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
-### Dependency Status
+### Estado de dependencia
 
 Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
 
