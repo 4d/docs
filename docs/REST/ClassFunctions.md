@@ -1,10 +1,16 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: Calling class functions
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application. 
+
+:::note
+
+You can also call singleton functions, see [this page]($singleton.md) for more information.
+
+:::
 
 Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
@@ -35,6 +41,7 @@ Functions are called on the corresponding object on the server datastore.
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
 |[entity class](ORDA/ordaClasses.md#entity-class)|`/rest/{dataClass}(key)/EntityClassFunction/`|
+|[Singleton class](../Concepts/classes.md#singleton-classes)|`/rest/$singleton/SingletonClass/SingletonClassFunction` (see [$singleton page]($singleton))|
 
 
 
@@ -56,7 +63,7 @@ The following rules apply:
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)
 - All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
@@ -86,8 +93,8 @@ You can also pass values for any attributes of the entity. These values will aut
 |__ENTITY|Boolean|Mandatory - True to indicate to the server that the parameter is an entity|
 |__KEY|mixed (same type as the primary key)|Optional - Primary key of the entity|
 
-- If __KEY is not provided, a new entity is created on the server with the given attributes.
-- If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
+- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
+- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
 

@@ -13,7 +13,7 @@ The catalog describes all the dataclasses, attributes, and [interprocess (shared
 |---|---|---|
 |[**$catalog**](#catalog)|`/$catalog`|Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs|
 |[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes|
-|[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
+|[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns [shared singletons](#singletons) (if any) and information about a dataclass and its attributes|
 |[**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls)|`/$catalog/authentify`|Executes the datastore class function if it exists|
 
 
@@ -182,42 +182,10 @@ For more information about what is returned for each dataclass and its attribute
 }
 ```
 
-## singletons
-
-If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions). 
-
-Singleton functions can be directly called by REST requests using the [`$singleton` REST command]. 
-
-
-### Example  
-
-`GET  /rest/$catalog/$all` 
-
-**Result**:
-
-```json
-{...
-	singletons": [
-    {
-      "name": "VehicleFactory",
-      "methods": [
-        {
-          "name": "buildVehicle",
-          "allowedOnHTTPGET": false,
-          "exposed": true
-        }
-      ]
-    }
-  ],
-  
-	dataClasses: [...]
-}
-```
-
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes 
+Returns [shared singletons](#singletons) (if any) and information about a dataclass and its attributes 
 
 ### Description   
 
@@ -274,7 +242,7 @@ You can retrieve the information regarding a specific dataclass.
 
 **Result**:
 
-````
+```json
 {
     name: "Employee",
     className: "Employee",
@@ -368,5 +336,37 @@ You can retrieve the information regarding a specific dataclass.
         }
     ]
 }
-````
+```
+
+## singletons
+
+If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions). 
+
+Singleton functions can be called by REST requests using the [`$singleton` command]. 
+
+
+### Example  
+
+`GET  /rest/$catalog/$all` 
+
+**Result**:
+
+```json
+{...
+	singletons": [
+    {
+      "name": "VehicleFactory",
+      "methods": [
+        {
+          "name": "buildVehicle",
+          "allowedOnHTTPGET": false,
+          "exposed": true
+        }
+      ]
+    }
+  ],
+  
+	dataClasses: [...]
+}
+```
 
