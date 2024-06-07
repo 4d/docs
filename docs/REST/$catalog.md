@@ -4,21 +4,22 @@ title: $catalog
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.  
+The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.  
 
 
 ## Available syntaxes
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**$catalog**](#catalog)|`/$catalog`|Returns a list of the dataclasses in your project along with two URIs|
-|[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns information about all of your project's dataclasses and their attributes|
+|[**$catalog**](#catalog)|`/$catalog`|Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs|
+|[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes|
 |[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
 |[**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls)|`/$catalog/authentify`|Executes the datastore class function if it exists|
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass	
+
+Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass	
 
 
 ### Description   
@@ -43,7 +44,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 **Result**:
 
-````
+```json
 {
     dataClasses: [
         {
@@ -58,12 +59,12 @@ Here is a description of the properties returned for each dataclass in your proj
         }
     ]
 }
-````
+```
 
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes	
+Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes	
 
 ### Description   
 
@@ -78,7 +79,7 @@ For more information about what is returned for each dataclass and its attribute
 
 **Result**:
 
-````
+```json
 {
  
     "dataClasses": [
@@ -179,7 +180,39 @@ For more information about what is returned for each dataclass and its attribute
         }
     ]
 }
-````
+```
+
+## singletons
+
+If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions). 
+
+Singleton functions can be directly called by REST requests using the [`$singleton` REST command]. 
+
+
+### Example  
+
+`GET  /rest/$catalog/$all` 
+
+**Result**:
+
+```json
+{...
+	singletons": [
+    {
+      "name": "VehicleFactory",
+      "methods": [
+        {
+          "name": "buildVehicle",
+          "allowedOnHTTPGET": false,
+          "exposed": true
+        }
+      ]
+    }
+  ],
+  
+	dataClasses: [...]
+}
+```
 
 
 ## $catalog/{dataClass}
