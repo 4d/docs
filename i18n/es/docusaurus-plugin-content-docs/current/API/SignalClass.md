@@ -178,7 +178,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
-This property is **read-write**.
+Esta propiedad está en **lectura-escritura**.
 
 <!-- END REF -->
 
