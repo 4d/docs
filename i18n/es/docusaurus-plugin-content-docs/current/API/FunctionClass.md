@@ -232,7 +232,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 | Lanzamiento | Modificaciones                                         |
 | ----------- | ------------------------------------------------------ |
-| 20 R3       | Support of *context* parameter                         |
+| 20 R3       | Soporte del parámetro *context*                        |
 | 17 R6       | Renamed New formula from string -> Formula from string |
 | 17 R3       | Añadidos                                               |
 
