@@ -3,11 +3,11 @@ id: IMAPTransporterClass
 title: IMAPTransporter
 ---
 
-The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
+La clase `IMAPTransporter` le permite recuperar mensajes de un servidor de correo IMAP.
 
 ### Objeto IMAP Transporter
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-new-transporter) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter](#imap-new-transporter). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -56,37 +56,37 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                         |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.IMAPTransporter |  <- | [IMAP transporter object](#imap-transporter-object) |
+| Parámetros | Tipo                               |     | Descripción                                           |
+| ---------- | ---------------------------------- | :-: | ----------------------------------------------------- |
+| server     | Object                             |  -> | Información del servidor de correo                    |
+| Result     | 4D.IMAPTransporter |  <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
+El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura una nueva conexión IMAP<!-- END REF --> según el parámetro *server* y devuelve un nuevo objeto *transporter*. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
 
-In the *server* parameter, pass an object containing the following properties:
+En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Valor por defecto (si se omite)                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                     | False                                                                    |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                       | se utiliza el modo de autenticación más seguro soportado por el servidor |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                               | 300                                                                      |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                          | 30                                                                       |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | *obligatorio*                                                            |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                        | ninguno                                                                  |
-| .**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                                                                                                   | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 993                                                                      |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | ninguno                                                                  |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Valor por defecto (si se omite)                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                  | False                                                                    |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena u objeto token que representa las credenciales de autorización OAuth2. Utilizado sólo con OAUTH2 `authationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                    | se utiliza el modo de autenticación más seguro soportado por el servidor |
+| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                                            | 300                                                                      |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                       |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *obligatorio*                                                            |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | ninguno                                                                  |
+| .**password** : Text<br/>contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                               | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 993                                                                      |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ninguno                                                                  |
 
-> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
+> **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
-#### Result
+#### Resultado
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
+La función devuelve un [**objeto transportador IMAP**](#object-imap-transporter). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 > La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.
 
@@ -115,16 +115,16 @@ End if
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                         |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.IMAPTransporter |  <- | [IMAP transporter object](#imap-transporter-object) |
+| Parámetros | Tipo                               |     | Descripción                                           |
+| ---------- | ---------------------------------- | :-: | ----------------------------------------------------- |
+| server     | Object                             |  -> | Información del servidor de correo                    |
+| Result     | 4D.IMAPTransporter |  <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](#imap-new-transporter) command (shortcut).
+La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.IMAPTransporter`<!-- END REF -->. Es idéntico al comando [`IMAP New transporter`](#imap-new-transporter) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -155,19 +155,19 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 #### Descripción
 
-The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
+La función `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->agrega banderas a los `msgIDs` para las `keywords` especificadas<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+En el parámetro `msgIDs`, puedes pasar:
 
-- a *collection* containing the unique IDs of specific messages or
+- una *colección* que contiene los IDs únicos de mensajes específicos o
 - el ID único (*text*) de un solo mensaje o
-- the following constant (*longint*) for all messages in the selected mailbox:
+- la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
 | Constante | Valor | Comentario                                            |
 | --------- | ----- | ----------------------------------------------------- |
 | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-The `keywords` parameter lets you define the flags to add to `msgIDs`. Puede utilizar las siguientes banderas estándar, así como banderas personalizadas (la compatibilidad con banderas personalizadas depende de la implementación del servidor):
+El parámetro `keywords` permite definir las banderas a añadir a `msgIDs`. Puede utilizar las siguientes banderas estándar, así como banderas personalizadas (la compatibilidad con banderas personalizadas depende de la implementación del servidor):
 
 | Propiedad       | Tipo    | Descripción                                          |
 | --------------- | ------- | ---------------------------------------------------- |
@@ -248,13 +248,13 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 #### Descripción
 
-The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
+La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade un `mailObj` al `destinationBox`<!-- END REF -->.
 
-In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+En el parámetro `mailObj`, pase un objeto email. Para obtener una descripción completa de las propiedades del correo, consulte [objeto Email](EmailObjectClass.md#objeto-email). La función `.append()` soporta los marcadores de palabras claves en el atributo `keywords` de objetos Email.
 
-The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. Si se omite, se utiliza el buzón actual.
+El parámetro opcional `destinationBox` permite pasar el nombre de un buzón donde se añadirá el objeto `mailObj`. Si se omite, se utiliza el buzón actual.
 
-In the optional `options` parameter, you can pass an object to define the charset and encoding for specific parts of the email. Propiedades disponibles:
+En el parámetro opcional `options`, puede pasar un objeto para definir el conjunto de caracteres y la codificación para partes específicas del correo electrónico. Propiedades disponibles:
 
 | Propiedad     | Tipo | Descripción                                                                                                                                                                                                                                                                                                      |
 | ------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -263,12 +263,12 @@ In the optional `options` parameter, you can pass an object to define the charse
 
 Charsets posibles:
 
-| Constante                | Valor                                                                                       | Comentario                                                                                                                                                                                                                                                                 |
-| ------------------------ | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
-| mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
-| mail mode UTF8           | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & Quoted-printable (**valor por defecto**)                                                                           |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & base64                                                                                                                                |
+| Constante                | Valor                                                                                       | Comentario                                                                                                                                                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII si es posible, Japanese (ISO-2022-JP) &Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII si es posible, Japanese (ISO-2022-JP) & 7-bit si es posible, de lo contrario UTF-8 & Quoted-printable</li></ul> |
+| mail mode ISO88591       | ISO-8859-1                                                                                  | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                                        |
+| mail mode UTF8           | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & Quoted-printable (**valor por defecto**)                                                                                              |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & base64                                                                                                                                                   |
 
 **Objeto devuelto**
 
@@ -327,9 +327,9 @@ $status:=$imap.append($msg; "Drafts")
 
 #### Descripción
 
-The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. By default, if the property has not been set in the *server* object, the value is 300.
+La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->el tiempo máximo (en segundos) permitido antes de verificar la conexión con el servidor<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. Por defecto, si la propiedad no se ha definido en el objeto *server*, el valor es de 300.
 
-> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
+> **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
 <!-- END REF -->
 
@@ -354,7 +354,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 | Parámetros     | Tipo       |     | Descripción                                                                  |
 | -------------- | ---------- | :-: | ---------------------------------------------------------------------------- |
 | msgsIDs        | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox             |
+| allMsgs        | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
 | destinationBox | Text       |  -> | Buzón para recibir mensajes copiados                                         |
 | Result         | Object     |  <- | Estado de la operación de copia                                              |
 
@@ -362,14 +362,14 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 #### Descripción
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+La función `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copia los mensajes definidos por *msgsIDs* o *allMsgs* en la *destinationBox* en el servidor IMAP<!-- END REF -->.
 
 Puede pasar:
 
-- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
-- in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
+- en el parámetro *msgsIDs*, una colección que contiene los IDs únicos de los mensajes específicos a copiar, o
+- en el parámetro *allMsgs*, la constante `IMAP all` (entero) para copiar todos los mensajes del buzón seleccionado.
 
-The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
+El parámetro *destinationBox* permite pasar un valor texto con el nombre del buzón donde se colocarán las copias de los mensajes.
 
 **Objeto devuelto**
 
@@ -394,20 +394,20 @@ Para copiar una selección de mensajes:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obligatorio
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar buzón
  $boxInfo:=$transporter.selectBox("inbox")
 
-  //get collection of message unique IDs
+  //obtener la colección de IDs únicos de los mensajes
  $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
 
-  // copy found messages to the "documents" mailbox
+  // copiar los mensajes encontrados en el buzón "documents"
  $status:=$transporter.copy($mailIds;"documents")
 ```
 
@@ -420,18 +420,18 @@ Para copiar todos los mensajes del buzón actual:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obligatorio
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar buzón
 
  $boxInfo:=$transporter.selectBox("inbox")
 
-  // copy all messages to the "documents" mailbox
+  // copiar los mensajes encontrados en el buzón "documents"
  $status:=$transporter.copy(IMAP all;"documents")
 ```
 
@@ -462,15 +462,15 @@ Para copiar todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -->creates a mailbox with the given `name`<!-- END REF -->. Si el caracter separador de jerarquía del servidor IMAP aparece en otra parte del nombre del buzón, el servidor IMAP creará todos los nombre padre necesarios para crear el buzón dado.
+La función `.createBox()` <!-- REF #IMAPTransporterClass.createBox().Summary -->crea un buzón con el nombre dado<!-- END REF -->. Si el caracter separador de jerarquía del servidor IMAP aparece en otra parte del nombre del buzón, el servidor IMAP creará todos los nombre padre necesarios para crear el buzón dado.
 
 En otras palabras, un intento de crear "Projects/IMAP/Doc" en un servidor en el que "/" es el carácter separador de jerarquía creará:
 
-- Only the "Doc" mailbox if "Projects" & "IMAP" already exist.
-- "IMAP" & "Doc" mailboxes if only “Projects” already exists.
-- "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
+- Sólo el buzón "Doc" si "Projects" & "IMAP" ya existen.
+- Los buzones "IMAP" & "Doc" si sólo existe "Projects".
+- Los buzones "Projects" & "IMAP" & "Doc", si no existen.
 
-In the `name` parameter, pass the name of the new mailbox.
+En el parámetro `name`, pase el nombre del nuevo buzón.
 
 **Objeto devuelto**
 
@@ -534,21 +534,21 @@ End if
 | Parámetros | Tipo       |     | Descripción                                                                  |
 | ---------- | ---------- | :-: | ---------------------------------------------------------------------------- |
 | msgsIDs    | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs    | Integer    |  -> | `IMAP all`: All messages in the selected mailbox             |
+| allMsgs    | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
 | Result     | Object     |  <- | Estado de la operación de eliminación                                        |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+La función `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->define el marcador "deleted" para los mensajes definidos en `msgsIDs` o `allMsgs`<!-- END REF -->.
 
 Puede pasar:
 
-- in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
-- in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
+- en el parámetro `msgsIDs`, una colección contiene los IDs únicos de los mensajes específicos a eliminar, o
+- en el parámetro `allMsgs`, la constante `IMAP all` (entero) para borrar todos los mensajes en el buzón de correo seleccionado.
 
-La ejecución de esta función no elimina realmente los mensajes. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Los mensajes marcados se eliminan del servidor IMAP con la [función `.expunge()`](#expunge) o al seleccionar otro buzón o cuando el [objeto transporter](#imap-transporter-object) (creado con [IMAP New transporter](#imap-new-transporter)) es destruido.
 
 **Objeto devuelto**
 
@@ -573,20 +573,20 @@ Para eliminar una selección de mensajes:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obligatorio
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar buzón
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get collection of message unique IDs
+  //obtener la colección de IDs únicos de los mensajes
  $mailIds:=$transporter.searchMails("subject \"Reports\"")
 
-  // Delete selected messages
+  // Borrar los mensajes seleccionados
  $status:=$transporter.delete($mailIds)
 ```
 
@@ -599,17 +599,17 @@ Para eliminar todos los mensajes del buzón actual:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obligatorio
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar buzón
  $boxInfo:=$transporter.selectBox("Junk Email")
 
-  // delete all messages in the current mailbox
+  // Borrar los mensajes seleccionados en el buzón actual
  $status:=$transporter.delete(IMAP all)
 ```
 
@@ -640,9 +640,9 @@ Para eliminar todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.deleteBox()` function <!-- REF #IMAPTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->. Intentar eliminar un INBOX o un buzón que no existe generará un error.
+La función `.deleteBox()` <!-- REF #IMAPTransporterClass.deleteBox().Summary -->elimina permanentemente el buzón de correo con el `name` dado del servidor IMAP<!-- END REF -->. Intentar eliminar un INBOX o un buzón que no existe generará un error.
 
-In the `name` parameter, pass the name of the mailbox to delete.
+En el parámetro `name`, pase el nombre del buzón a eliminar.
 
 > - La función no puede eliminar un buzón que tiene buzones hijos si el buzón padre tiene el atributo "\Noselect".
 > - Todos los mensajes del buzón eliminado también se borrarán.
@@ -679,7 +679,7 @@ $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// delete mailbox
+// eliminar buzón
 $name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
 $status:=$transporter.deleteBox($name)
 
@@ -717,7 +717,7 @@ End if
 
 #### Descripción
 
-The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
+La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con el marcador "deleted" del servidor de correo IMAP.<!-- END REF --> El marcador "deleted" puede definirse con los métodos [`delete()`](#delete) o [`addFlags()`](#addflags).
 
 **Objeto devuelto**
 
@@ -787,15 +787,15 @@ $status:=$transporter.expunge()
 
 #### Descripción
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
+La función `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al buzón de correo actual o el buzón de correo *name*<!-- END REF -->. Esta función devuelve la misma información que [`.selectBox()`](#selectbox) sin cambiar el buzón actual.
 
-In the optional *name* parameter, pass the name of the mailbox to access. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+En el parámetro opcional *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede encontrar con la función [`.getDelimiter()`](#getdelimiter).
 
-If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
+Si el buzón *name* no es seleccionable o no existe, la función genera un error y devuelve **null**.
 
 **Objeto devuelto**
 
-The `boxInfo` object returned contains the following properties:
+El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 | Propiedad  | Tipo   | Descripción                                                                                       |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------- |
@@ -1215,7 +1215,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 | Parámetros     | Tipo       |     | Descripción                                                                  |
 | -------------- | ---------- | :-: | ---------------------------------------------------------------------------- |
 | msgsIDs        | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox             |
+| allMsgs        | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
 | destinationBox | Text       |  -> | Buzón para recibir los mensajes desplazados                                  |
 | Result         | Object     |  <- | Estado de la operación de desplazamiento                                     |
 
@@ -1391,11 +1391,11 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+En el parámetro `msgIDs`, puedes pasar:
 
-- a *collection* containing the unique IDs of specific messages or
+- una *colección* que contiene los IDs únicos de mensajes específicos o
 - el ID único (*text*) de un solo mensaje o
-- the following constant (*longint*) for all messages in the selected mailbox:
+- la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
 | Constante | Valor | Comentario                                            |
 | --------- | ----- | ----------------------------------------------------- |
@@ -1712,7 +1712,7 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede encontrar con la función [`.getDelimiter()`](#getdelimiter).
 
 The optional *state* parameter defines the type of access to the mailbox. Los valores posibles son:
 
@@ -1727,7 +1727,7 @@ The optional *state* parameter defines the type of access to the mailbox. Los va
 
 **Objeto devuelto**
 
-The `boxInfo` object returned contains the following properties:
+El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 | Propiedad      | Tipo   | Descripción                                                                                                                                                             |
 | -------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
