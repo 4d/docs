@@ -572,7 +572,7 @@ Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 #### Marcada para list box/Sí para entrada
 
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 Cuando esta opción está seleccionada, el texto pasa automáticamente a la línea siguiente siempre que su ancho supere el de la columna/área, si la altura de la columna/área lo permite.
 

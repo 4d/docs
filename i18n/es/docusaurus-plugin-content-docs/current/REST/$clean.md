@@ -119,7 +119,7 @@ The entity set is returned and still contains 3 entities. There is an undefined 
 }
 ```
 
-3. If this request is sent:
+3. Si se envía esta petición:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A?$clean=true&$method=entityset`
 

@@ -368,7 +368,7 @@ Por defecto, la carpeta conserva su nombre cuando se mueve. If you want to renam
 
 **Objeto devuelto**
 
-The moved `Folder` object.
+El objeto `Folder` movido.
 
 #### Ejemplo
 

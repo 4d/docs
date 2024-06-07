@@ -2702,7 +2702,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 $vSingles:=$colPersons.query("spouse = null") //correct syntax
 ```
 
-#### Object or collection reference as value
+#### Referencia de objeto o de colección como valor
 
 You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
 

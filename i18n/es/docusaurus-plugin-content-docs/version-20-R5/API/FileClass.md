@@ -502,7 +502,7 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 
 If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
@@ -576,7 +576,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 **Objeto devuelto**
 
-The renamed `File` object.
+El objeto `File` renombrado.
 
 #### Ejemplo
 

@@ -70,7 +70,7 @@ All ORDA functions that handle entity selections support the <strong x-id="1">co
 
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
 
-**Example with `dataClass.query()`:**
+**Ejemplo con `dataClass.query()`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object

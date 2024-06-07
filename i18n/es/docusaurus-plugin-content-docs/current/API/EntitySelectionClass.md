@@ -495,7 +495,7 @@ Sólo se tienen en cuenta los valores numéricos para el cálculo. Note however 
 
 Se devuelve un error si:
 
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 #### Ejemplo
@@ -643,7 +643,7 @@ The `.count()` function <!-- REF #EntitySelectionClass.count().Summary -->return
 
 Se devuelve un error si:
 
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* is not found in the entity selection dataclass.
 
 #### Ejemplo
@@ -780,7 +780,7 @@ The `dk count values` option is only available with storage attributes of type b
 
 Se devuelve un error si:
 
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* is not found in the entity selection dataclass.
 
 #### Ejemplos
@@ -1401,7 +1401,7 @@ If you pass in *attributePath* a path to an object property containing different
 
 Se devuelve un error si:
 
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 #### Ejemplo
@@ -1451,7 +1451,7 @@ If you pass in *attributePath* a path to an object property containing different
 
 Se devuelve un error si:
 
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 #### Ejemplo
@@ -2163,7 +2163,7 @@ La suma sólo puede hacerse en valores de tipo numérico. If the *attributePath*
 Se devuelve un error si:
 
 - *attributePath* is not a numerical or an object attribute,
-- *attributePath* is a related attribute,
+- *attributePath* es un atributo relacionado,
 - *attributePath* is not found in the entity selection dataclass.
 
 #### Ejemplo

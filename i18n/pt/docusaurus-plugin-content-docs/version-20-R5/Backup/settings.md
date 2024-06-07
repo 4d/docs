@@ -142,13 +142,13 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 > - Arquivo .4DD
 > - Arquivo .4DIndx
 > - Arquivo .4DSyncData
-> - ficheiro .4DSyncHeader
-> - Pasta External Data
+> - arquivo .4DSyncHeader
+> - Pasta de dados externos
 >
-> Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).
+> Se quiser obter os arquivos anexados ou os arquivos do projeto, você deve realizar uma [restauração manual](restore.md#manually-restoring-a-backup-standard-dialog).
 
 :::caution
 
-If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Caso contrário, será devolvido um erro durante a sequência de restauro.
+Se o [arquivo de dados for criptografado](../MSC/encrypt.md), certifique-se de que você [salvou a chave de criptografia de dados](../MSC/encrypt#saving-the-encryption-key) em um `. Arquivo DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa acessá-lo se o recurso de restauração automática for ativado. Caso contrário, um erro será retornado durante a sequência de restauração.
 
 :::

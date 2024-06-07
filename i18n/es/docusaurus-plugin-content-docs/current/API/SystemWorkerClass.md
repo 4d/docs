@@ -83,7 +83,7 @@ In the *commandLine* parameter, pass the full path of the application's file to 
 
 #### Objeto *options*
 
-In the *options* parameter, pass an object that can contain the following properties:
+En el parámetro *options*, pase un objeto que puede contener las siguientes propiedades:
 
 | Propiedad        | Tipo    | Por defecto | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------- | ------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -94,7 +94,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | onTerminate      | Formula | indefinido  | Retrollamada cuando el proceso externo se termina. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                                                                                                                      |
 | timeout          | Number  | indefinido  | Tiempo en segundos antes de que el proceso sea eliminado si aún está activo                                                                                                                                                                                                                                                                                                                                                   |
 | dataType         | Text    | "text"      | Tipo de contenido del cuerpo de la respuesta. Valores posibles: "text" (por defecto), "blob".                                                                                                                                                                                                                                                              |
-| encoding         | Text    | "UTF-8"     | Only if `dataType="text"`. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                                                                                                |
+| encoding         | Text    | "UTF-8"     | Sólo si `dataType="text"`. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                                                                                                |
 | variables        | Object  |             | Define las variables de entorno personalizadas para el system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Los valores se convierten en cadenas de caracters cuando es posible. El valor no puede contener un '='. Si no se define, el system worker hereda del entorno 4D. |
 | currentDirectory | Folder  |             | Directorio de trabajo en el que se ejecuta el proceso                                                                                                                                                                                                                                                                                                                                                                         |
 | hideWindow       | Boolean | true        | (Windows) Ocultar la ventana de la aplicación (si es posible) o la consola Windows                                                                                                                                                                                                                                                                                                      |
@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` and `onDataError` are executed one or several times
 2. if called, `onError` is executed once (stops the system worker processing)
 3. if no error occured, `onResponse` is executed once
-4. `onTerminate` is always executed
+4. `onTerminate` se ejecuta siempre una vez
 
 #### Valor devuelto
 
@@ -408,7 +408,7 @@ The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can
 
 <!-- END REF -->
 
-This property is **read-write**.
+Esta propiedad está en **lectura-escritura**.
 
 <!-- REF SystemWorkerClass.pid.Desc -->
 

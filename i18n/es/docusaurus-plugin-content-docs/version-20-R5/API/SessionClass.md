@@ -299,7 +299,7 @@ When this property is set, the [`.expirationDate`](#expirationdate) property is 
 
 > El valor no puede ser inferior a 60: si se define un valor inferior, el tiempo de espera se eleva hasta 60.
 
-This property is **read write**.
+Esta propiedad está en **lectura escritura**.
 
 #### Ejemplo
 

@@ -121,7 +121,7 @@ The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the 
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-#### *options*
+#### *opciones*
 
 | Propiedad         | Tipo | Descripción                                                                                                                                                                                                         |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -129,7 +129,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | encodingEncrypted | text | Encoding used to convert the `message` parameter into the binary representation to decrypt. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".             |
 | encodingDecrypted | text | Codificación utilizada para convertir el mensaje binario descifrado en la cadena de resultados. Puede ser "UTF-8", "Base64", o "Base64URL". Por defecto es "UTF-8". |
 
-#### *Result*
+#### *Resultado*
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
@@ -171,7 +171,7 @@ The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the 
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-##### *options*
+##### *opciones*
 
 | Propiedad         | Tipo | Descripción                                                                                                                                                                                                     |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -179,7 +179,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | encodingEncrypted | text | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".     |
 | encodingDecrypted | text | Encoding used to convert the `message` parameter into the binary representation to encrypt. Puede ser "UTF-8", "Base64", o "Base64URL". Por defecto es "UTF-8". |
 
-#### *Result*
+#### *Resultado*
 
 El valor devuelto es un mensaje encriptado.
 
@@ -209,7 +209,7 @@ El valor devuelto es un mensaje encriptado.
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *Resultado*
 
 El valor devuelto es la llave privada.
 
@@ -239,7 +239,7 @@ El valor devuelto es la llave privada.
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *Resultado*
 
 El valor devuelto es la llave pública.
 
@@ -293,7 +293,7 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 
 The `CryptoKey` must contain a valid **private** key.
 
-#### *options*
+#### *opciones*
 
 | Propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                            |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -302,7 +302,7 @@ The `CryptoKey` must contain a valid **private** key.
 | pss               | boolean | Utilice el Probabilistic Signature Scheme (PSS). Se ignora si la llave no es una llave RSA. Pass `true` when producing a JWT for PS@ algorithm                                                                                         |
 | encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por defecto es "Base64".                                                                                                                                            |
 
-#### *Result*
+#### *Resultado*
 
 The utf8 representation of the *message* string.
 
@@ -377,7 +377,7 @@ The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the ba
 
 The `CryptoKey` must contain a valid **public** key.
 
-#### *options*
+#### *opciones*
 
 | Propiedad | Tipo    | Descripción                                                                                                                                                                                                                                                                                            |
 | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -385,7 +385,7 @@ The `CryptoKey` must contain a valid **public** key.
 | pss       | boolean | Utilice el Probabilistic Signature Scheme (PSS). Se ignora si la llave no es una llave RSA. Pass `true` when verifying a JWT for PS@ algorithm                                                                                         |
 | encoding  | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                                                                                                                |
 
-#### *Result*
+#### *Resultado*
 
 The function returns a status object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
 

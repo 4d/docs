@@ -53,7 +53,7 @@ For more information, please refer to the [`.componentName` description in the Q
 
 The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web form<!-- END REF -->.
 
-This function does nothing if:
+Esta función no hace nada si:
 
 - the *state* is currently not enabled in the web form,
 - el *estado* no existe para el formulario web.
@@ -68,9 +68,9 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Parámetros | Tipo   |     | Descripción                             |
-| ---------- | ------ | :-: | --------------------------------------- |
-| state      | string |  -> | Name of state to enable on the web form |
+| Parámetros | Tipo   |     | Descripción                                      |
+| ---------- | ------ | :-: | ------------------------------------------------ |
+| state      | string |  -> | Nombre del estado a activar en el formulario web |
 
 <!-- END REF -->
 
@@ -78,7 +78,7 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web form<!-- END REF -->.
 
-This function does nothing if:
+Esta función no hace nada si:
 
 - the *state* has already been enabled on the web form,
 - el *estado* no existe para el formulario web.
@@ -158,9 +158,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Parámetros | Tipo                       |     | Descripción                |
-| ---------- | -------------------------- | :-: | -------------------------- |
-| Result     | 4D.WebForm |  <- | New `WebForm` proxy object |
+| Parámetros | Tipo                       |     | Descripción                  |
+| ---------- | -------------------------- | :-: | ---------------------------- |
+| Result     | 4D.WebForm |  <- | Nuevo objeto proxy `WebForm` |
 
 <!-- END REF -->
 

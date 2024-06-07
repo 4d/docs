@@ -278,7 +278,7 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 #### Ver también
 
-[Row Height](#row-height)
+[Altura de fila](#altura-fila)
 
 ---
 
