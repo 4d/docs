@@ -5,7 +5,7 @@ title: VP Get default style
 
 <!-- REF #_method_.VP Get default style.Syntax -->
 
-**VP Get default style** ( _vpAreaName_ : Text { ; _sheet_ :  Integer } ) : Object<!-- END REF -->
+**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
 
@@ -19,9 +19,9 @@ title: VP Get default style
 
 The `VP Get default style` command <!-- REF #_method_.VP Get default style.Summary -->returns a default style object for a sheet<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](vp-set-default-style.md) method. Para obtener más información sobre las propiedades de estilo, consulte [Objetos de estilo y hojas de estilo](../configuring.md#style-objects--style-sheets).
 
-En _vpAreaName_, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Puede definir dónde obtener el número de columnas en el parámetro opcional _sheet_ utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
+Puede definir dónde obtener el número de columnas en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
 #### Ejemplo
 
@@ -35,7 +35,7 @@ Este código:
 $defaultStyle:=VP Get default style("myDoc")
 ```
 
-devolverá esta información en el objeto _$defaultStyle_:
+devolverá esta información en el objeto *$defaultStyle*:
 
 ```4d
 {

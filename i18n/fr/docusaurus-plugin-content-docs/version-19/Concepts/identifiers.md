@@ -44,7 +44,7 @@ monObjet.monAttribut:="10"
 
 :::tip
 
-Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+Faire commencer un nom de propriété d'objet avec un caractère de soulignement ("_") exclura la propriété des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
 
 :::
 

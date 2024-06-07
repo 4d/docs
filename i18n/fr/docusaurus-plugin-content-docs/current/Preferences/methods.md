@@ -24,13 +24,13 @@ A **myTheme** theme is automatically added if you already customized Code Editor
 
 ### Création de thèmes personnalisés
 
-Vous pouvez créer des thèmes à personnaliser entièrement. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Vous pouvez créer des thèmes à personnaliser entièrement. Pour créer un thème, sélectionnez un thème existant et cliquez sur le **+** en bas de la liste des thèmes. Vous pouvez également ajouter des thèmes personnalisés en copiant les fichiers de thème dans le dossier `4D Editor Themes` (voir ci-dessous).
 
 ### Fichiers de thèmes personnalisés
 
-Each custom theme is stored in a single JSON file named _themeName.json_ The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+Chaque thème personnalisé est stocké dans un seul fichier JSON nommé _themeName.json_. Les fichiers JSON des thèmes personnalisés sont stockés dans le dossier `4D Editor Themes` situé au même niveau que le [fichier de préférences](overview.md#storage) de
 
-If key values are not defined in a custom theme, they default to the values from the _Default Light Theme_. If a JSON theme file is invalid, the _Default Light Theme_ is loaded and an error is generated.
+Si des valeurs clés ne sont pas définies dans un thème personnalisé, elles prennent par défaut les valeurs du thème _Default Light Theme_. Si un fichier de thème JSON est invalide, le thème _Default Light Theme_ est chargé et une erreur est générée.
 
 > Lorsqu'un fichier de thème est modifié par un éditeur externe, 4D doit être redémarré pour prendre en compte la ou les modifications.
 
@@ -57,19 +57,19 @@ These options configure the various colors used in the Code Editor and debugger 
 
 ![](../assets/en/Preferences/categories.png)
 
-|                                                                | Description                                                                                                                                                                              |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Couleur de la police**                                       | Background color of Code Editor window.                                                                                                                                  |
-| **Bordure de la ligne en cours d'exécution dans le débogueur** | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Couleur de fond de la ligne du curseur**                     | Couleur de fond de la ligne contenant le curseur.                                                                                                                        |
-| **Couleur de fond de la ligne en cours d'exécution**           | Couleur de fond de la ligne en cours d'exécution dans le débogueur.                                                                                                      |
-| **Mise en évidence des mots trouvés**                          | Couleur de surlignage des mots trouvés à l'issue d'une recherche.                                                                                                        |
-| **Mise en évidence des parenthèses**                           | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                  |
-| **Mise en évidence des blocs**                                 | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Mise en évidence de la même variable ou du même champ**      | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Mise en évidence de la ligne courante dans le débogueur**    | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Couleur de fond de la sélection**                            | Couleur de fond de la sélection.                                                                                                                                         |
-| **Texte suggéré**                                              | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
+|                                                                | Description                                                                                                                                                                                                                   |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Couleur de la police**                                       | Background color of Code Editor window.                                                                                                                                                                       |
+| **Bordure de la ligne en cours d'exécution dans le débogueur** | Couleur de la bordure entourant la ligne en cours d'exécution dans le débogueur lorsque l'option "Surligner la ligne en cours d'exécution" est activée dans la page [Options](#options).                      |
+| **Couleur de fond de la ligne du curseur**                     | Couleur de fond de la ligne contenant le curseur.                                                                                                                                                             |
+| **Couleur de fond de la ligne en cours d'exécution**           | Couleur de fond de la ligne en cours d'exécution dans le débogueur.                                                                                                                                           |
+| **Mise en évidence des mots trouvés**                          | Couleur de surlignage des mots trouvés à l'issue d'une recherche.                                                                                                                                             |
+| **Mise en évidence des parenthèses**                           | Couleur de mise en évidence des parenthèses correspondantes (utilisée lorsque des paires de parenthèses sont signalées par la mise en évidence, voir [Options](#options)).                 |
+| **Mise en évidence des blocs**                                 | Couleur de mise en évidence des blocs logiques sélectionnés lorsque l'option "Mise en évidence des blocs logiques" est activée dans les [Options](#options).                                                  |
+| **Mise en évidence de la même variable ou du même champ**      | Couleur de mise en évidence pour les autres occurrences de la même variable ou du même texte de champ lorsque l'option "Mise en évidence des variables et du texte" est activée dans les [Options](#options). |
+| **Mise en évidence de la ligne courante dans le débogueur**    | Couleur de mise en évidence de la ligne courante dans le débogueur lorsque l'option "Surlignage de la ligne en cours" est activée dans les [Options](#options).                                               |
+| **Couleur de fond de la sélection**                            | Couleur de fond de la sélection.                                                                                                                                                                              |
+| **Texte suggéré**                                              | Color of autocomplete text suggested by the Code Editor.                                                                                                                                                      |
 
 ## Options
 
@@ -83,8 +83,8 @@ This page configures Code Editor display options.
 
 Permet de désactiver/activer les paramètres du code "international" pour l'application 4D locale.
 
-- **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-- **checked**: Regional settings are used in 4D methods.
+- **non coché (par défaut)** : Les paramètres Anglais-US et la langue de programmation anglaise sont utilisés dans les méthodes 4D.
+- **coché** : Les paramètres régionaux sont utilisés dans les méthodes 4D.
 
 > Si vous modifiez cette option, vous devez redémarrer l'application 4D pour que le changement soit pris en compte.
 
@@ -112,7 +112,7 @@ Vous permet de choisir d'afficher ou non les multiples presse-papiers dans l'éd
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-The corresponding [clipboard shorcuts](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) are still active when these clipboards are hidden.
+Les [raccourcis du presse-papiers](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) correspondants demeurent actifs lorsque ces presse-papiers sont masqués.
 
 #### Surbrillance des blocs logiques
 
@@ -120,7 +120,7 @@ Lorsque vous cochez l'option, tout le code correspondant à un bloc logique (Si/
 
 ![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+La couleur de surlignage peut être modifiée dans la page [Définition d'un thème](#définition-dun-thème).
 
 #### Toujours afficher les lignes de blocs
 
@@ -138,9 +138,9 @@ Permet de masquer, par défaut, toutes les icônes plier/déplier lorsque vous a
 
 Active l'insertion automatique de () et de caractères fermants lors de la saisie du code. Cette option contrôle deux fonctionnalités automatiques :
 
-- **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
+- **paire de parenthèses ()** : Ajoutée après une commande 4D, un mot-clé ou une méthode projet insérée à partir d'une liste de suggestions ou de complétion, si l'élément inséré nécessite un ou plusieurs arguments obligatoires. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
 
-- **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
+- **fermeture }, ), ] ou "** : caractère ajouté lorsque vous tapez respectivement une ouverture {, (, ] ou ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
 
 ![](../assets/en/Preferences/optionsClosing.png)\
 ![](../assets/en/Preferences/optionsClosing2.png)
@@ -150,11 +150,11 @@ Active l'insertion automatique de () et de caractères fermants lors de la saisi
 Permet de modifier la signalisation graphique des caractères d'encadrement correspondants dans le code. Cette signalisation apparaît lorsqu’un crochet, une parenthèse ou une accolade est sélectionné(e).
 Les options suivantes sont disponibles :
 
-- **None**: No signaling
+- **Aucun** : Aucun signal
 - **Rectangle** (default): Braces surrounded by a black line\
   ![](../assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces displayed in bold.
+- **Couleur de fond** : Caractères mis en surbrillance (la couleur est définie dans la page [Thème](thèmes)).
+- **Gras** : caractères affichés en gras.
 
 #### Surbrillance des variables et champs
 
@@ -162,11 +162,11 @@ Permet de mettre en surbrillance toutes les occurrences d'un(e) même variable o
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
-- **On cursor**: All occurrences are highlighted when the text is clicked
-- **On selection**: All occurrences are highlighted when the text is selected
+- **Non** (par défaut) : Pas de surbrillance
+- **Sur curseur** : Toutes les occurrences sont mises en évidence lorsque le texte est cliqué
+- **Sur sélection** : Toutes les occurrences sont mises en évidence lorsque le texte est sélectionné
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+La couleur de surlignage peut être modifiée dans la page [Définition d'un thème](#définition-dun-thème).
 
 #### Mode trace (Surbrillance de la ligne en exécution)
 

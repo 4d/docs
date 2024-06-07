@@ -43,16 +43,16 @@ Por defecto, el estilo Clásico tiene un fondo gris claro con una etiqueta en el
 ```4d
 
 	"myButton": {
-		"type": "button",	//define the type of object
-		"style":"regular",	//define the style of the button
-		"defaultButton":"true"	//define button as the default choice
-		"text": "OK",	//text to appear on the button
-		"action": "Cancel", //action to be be performed 
-		"left": 60,	 //left position on the form  
-		"top": 160, //top position on the form 
-	  	"width": 100,  //width of the button
-		"height": 20 //height of the button
-		}
+		"type": "button",//define el tipo del objeto
+		"style":"regular", //define el estilo del botón
+		"defaultButton":"true"//define el botón como la opción predeterminada
+		"text": "OK",//texto a aparecer en el botón
+		"action": "Cancelar", //Acción a ejecutar
+		"left": 60,///Posición izquierda en el formulario 
+		"top": 160, ///Posición superior en el formulario 
+	  	"width": 100, //ancho del botón
+		"width": 20 //alto del botón
+}
 ```
 
 Sólo los estilos Clásico y Plano ofrecen la propiedad [Botón por defecto](properties_Appearance.md#default-button).
@@ -273,7 +273,7 @@ El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda est�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.
+> El estilo Ayuda no admite las propiedades básicas [Número de estados](properties_TextAndPicture.md#number-of-states), [Ruta de acceso a la imagen](properties_TextAndPicture.md#picture-pathname) y [Posición Título/Imagen](properties_TextAndPicture.md#title-picture-position).
 
 ### Círculo
 
@@ -325,12 +325,12 @@ El estilo de botón Personalizado acepta una imagen de fondo personalizada y per
 
 Todos los botones comparten el mismo conjunto de propiedades básicas:
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(1) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu)(2)
+[Negrita](properties_Text.md#bold) - [Estilo de línea de borde](properties_BackgroundAndBorder.md#estilo-linea-borde) - [Fondo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#estilo-boton) - [Class](properties_Object.md#css-class) - [Soltable](properties_Action.md#droppable) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - [Alineación horizontal](properties_Text.md#horizontal-alignment) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Cursiva](properties_Text.md#italic) - [Imagen abraza título](properties_TextAndPicture.md#image-hugs-title)(1) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - [Número de estados](properties_TextAndPicture.md#number-of-states)(1) - [Nombre de objeto](properties_Object.md#object-name) - [Nombre de la ruta de la imagen](properties_TextAndPicture.md#nombredelaimagen)(1) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acceso directo](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Posición del título/imagen](properties_TextAndPicture.md#title-picture-position)(1) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#subrayado) - [Variable o expresión](properties_Object.md#variable-o-expresión) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width) - [Con menú emergente](properties_TextAndPicture.md#with-pop-up-menu)(2)
 
-> (1) Not supported by the [Help](#help) style.<br/>
-> (2) Not supported by the [Help](#help), [Flat](#flat) and [Regular](#regular) styles.
+> (1) No soportado por el estilo [Help](#help).<br/>
+> (2) No soportado por los estilos [Help](#help), [Flat](#flat) y [Regular](#regular).
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Ruta de fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento del ícono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin)
 - Plano, Regular: [Botón por defecto](properties_Appearance.md#default-button)

@@ -5,7 +5,7 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Syntax -->
 
-**VP Get cell style** (  _rangeObj_ : Object ) : Object<!-- END REF -->
+**VP Get cell style** (  *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
@@ -16,13 +16,13 @@ title: VP Get cell style
 
 #### Description
 
-The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the _rangeObj_<!-- END REF -->.
+The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
 
-In _rangeObj_, pass a range containing the style to retrieve.
+In *rangeObj*, pass a range containing the style to retrieve.
 
-- If _rangeObj_ contains a cell range, the cell style is returned.
-- If _rangeObj_ contains a range that is not a cell range, the style of the first cell in the range is returned.
-- If _rangeObj_ contains several ranges, only the style of the first cell in the first range is returned.
+- If *rangeObj* contains a cell range, the cell style is returned.
+- If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
+- If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
 
 #### Exemple
 

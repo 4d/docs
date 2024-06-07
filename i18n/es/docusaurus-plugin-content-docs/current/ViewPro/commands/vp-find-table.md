@@ -13,7 +13,7 @@ title: VP Find table
 
 <!-- REF #_method_.VP Find table.Syntax -->
 
-**VP Find table** ( _rangeObj_ : Object ) : Text<!-- END REF -->
+**VP Find table** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Find table.Params -->
 
@@ -24,11 +24,11 @@ title: VP Find table
 
 #### Descripción
 
-El comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->devuelve el nombre de la tabla a la que pertenece la celda _rangeObj_<!-- END REF -->.
+El comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->devuelve el nombre de la tabla a la que pertenece la celda *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un objeto de rango de celdas. Si las celdas designadas no pertenecen a una tabla, el comando devuelve una cadena vacía.
+En *rangeObj*, pase un objeto de rango de celdas. Si las celdas designadas no pertenecen a una tabla, el comando devuelve una cadena vacía.
 
-Si _rangeObj_ no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
+Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 

@@ -13,7 +13,7 @@ title: VP PASTE FROM OBJECT
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
 
-**VP PASTE FROM OBJECT** ( _rangeObj_ : Object ; _dataObject_ : Object {; _options_ : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -25,13 +25,13 @@ title: VP PASTE FROM OBJECT
 
 #### 説明
 
-`VP PASTE FROM OBJECT` コマンドは、<!-- REF #_method_.PASTE FROM OBJECT.Summary -->_dataObject_ のコンテンツ・スタイル・フォーミュラを _rangeObj_ セルレンジオブジェクトにペーストします<!-- END REF -->。
+`VP PASTE FROM OBJECT` コマンドは、<!-- REF #_method_.PASTE FROM OBJECT.Summary -->*dataObject* のコンテンツ・スタイル・フォーミュラを *rangeObj* セルレンジオブジェクトにペーストします<!-- END REF -->。
 
-_rangeObj_ には、値・フォーマット・フォーミュラをペーストする先のセルレンジオブジェクトを渡します。 _rangeObj_ が複数のセルを参照している場合は、最初のセルだけが使用されます。
+*rangeObj* には、値・フォーマット・フォーミュラをペーストする先のセルレンジオブジェクトを渡します。 *rangeObj* が複数のセルを参照している場合は、最初のセルだけが使用されます。
 
-_dataObject_ には、ペーストしたい値・フォーマット・フォーミュラを格納しているオブジェクトを渡します。
+*dataObject* には、ペーストしたい値・フォーマット・フォーミュラを格納しているオブジェクトを渡します。
 
-任意の _options_ 引数を渡して、セルレンジにペーストする内容を指定することができます。 とりうる値:
+任意の *options* 引数を渡して、セルレンジにペーストする内容を指定することができます。 とりうる値:
 
 | 定数                                             | 説明                                       |
 | ---------------------------------------------- | ---------------------------------------- |
@@ -44,7 +44,7 @@ _dataObject_ には、ペーストしたい値・フォーマット・フォー�
 
 [ワークブックオプション](vp-set-workbook-options.md) で定義されている貼り付けオプションが考慮されます。
 
-dataObject に存在しない要素を _options_ で指定した場合 (例: フォーミュラ) コマンドはなにもしません。
+dataObject に存在しない要素を *options* で指定した場合 (例: フォーミュラ) コマンドはなにもしません。
 
 #### 例題
 

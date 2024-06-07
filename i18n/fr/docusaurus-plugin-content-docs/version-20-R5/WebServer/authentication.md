@@ -7,11 +7,11 @@ L'authentification est nécessaire lorsque vous souhaitez fournir des droits d'a
 
 ## Modes d’authentification
 
-The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
+Le serveur web 4D propose trois modes d'authentification que vous pouvez sélectionner sur la page **Web**/**Options (I)** de la fenêtre des Propriétés :
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Using a **custom** authentication is recommended.
+> Il est recommandé d'utiliser une authentification **personnalisée**.
 
 ### Vue d’ensemble
 
@@ -19,16 +19,16 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ![](../assets/en/WebServer/serverAccess.png)
 
-> Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
+> Les requêtes qui commencent par `rest/` sont gérées directement par le [serveur REST](REST/configuration.md).
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
 - soit déléguer l'authentification de l'utilisateur à une application tierce (par exemple, un réseau social, un SSO);
-- or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). L'important est de ne jamais stocker le mot de passe en clair, en utilisant du code tel que :
+- ou alors, fournir une interface à l'utilisateur (par exemple, un formulaire web) pour qu'il puisse créer son compte dans votre base de données clients ; ensuite, vous pouvez authentifier les utilisateurs avec n'importe quel algorithme personnalisé (voir [ L'important est de ne jamais stocker le mot de passe en clair, en utilisant du code tel que :
 
 ```4d
 //... user account creation
@@ -36,11 +36,11 @@ ds.webUser.password:=Generate password hash($password)
 ds.webUser.save()
 ```
 
-See also [this example](gettingStarted.md#authenticating-users) from the "Getting started" chapter.
+Voir également [cet exemple](gettingStarted.md#authenticating-users) du chapitre "Prise en main".
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). En plus de $1 et $2, seules les adresses IP du navigateur et du serveur ($3 et $4) sont fournies, le nom d'utilisateur et le mot de passe ($5 et $6) sont vides. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.
+If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). En plus de $1 et $2, seules les adresses IP du navigateur et du serveur ($3 et $4) sont fournies, le nom d'utilisateur et le mot de passe ($5 et $6) sont vides. La méthode doit retourner **True** dans $0 si l'utilisateur est authentifié avec succès. Ensuite, la ressource qui fait l'objet de la requête est fournie. Si l'authentification échoue, **False** est retourné dans $0.
 
-> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode).
+> **Attention:** Si la méthode de base de données `On Web Authentication` n'existe pas, les connexions sont automatiquement acceptées (mode test).
 
 ### Protocole BASIC
 
@@ -50,10 +50,10 @@ Lorsqu'un utilisateur se connecte au serveur, une boîte de dialogue standard ap
 
 Les valeurs saisies sont ensuite évaluées :
 
-- If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
+- Si l'option **Inclure les mots de passe 4D** est cochée, les informations d'identification des utilisateurs seront d'abord évaluées par rapport à la [table interne des utilisateurs 4D](Users/overview.md).
   - Si le nom d'utilisateur envoyé par le navigateur existe dans la table des utilisateurs 4D et que le mot de passe est correct, la connexion est acceptée. Si le mot de passe est incorrect, la connexion est refusée.
-  - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
-- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
+  - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. Si la méthode base `On Web Authentication` n'existe pas, les connexions sont rejetées.
+- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. Si la méthode base `On Web Authentication` n'existe pas, les connexions sont rejetées.
 
 > Avec le serveur Web du client 4D, gardez à l'esprit que tous les sites publiés par les machines 4D Client partageront la même table d'utilisateurs. La validation des utilisateurs/mots de passe est effectuée par l'application 4D Server.
 
@@ -61,13 +61,13 @@ Les valeurs saisies sont ensuite évaluées :
 
 Ce mode offre un niveau de sécurité plus élevé car les informations d'authentification sont traitées par un processus à sens unique appelé "hashing" qui rend leur contenu impossible à déchiffrer.
 
-Comme en mode BASIC, l'utilisateur doit saisir son nom et mot de passe lors de la connexion. The [`On Web Authentication`](#on-web-authentication) database method is then called. Lorsque le mode DIGEST est activé, le paramètre $6 (mot de passe) est toujours retourné vide. En effet, lors de l'utilisation de ce mode, ces informations ne passent pas par le réseau en texte clair (non chiffré). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
+Comme en mode BASIC, l'utilisateur doit saisir son nom et mot de passe lors de la connexion. The [`On Web Authentication`](#on-web-authentication) database method is then called. Lorsque le mode DIGEST est activé, le paramètre $6 (mot de passe) est toujours retourné vide. En effet, lors de l'utilisation de ce mode, ces informations ne passent pas par le réseau en texte clair (non chiffré). Il est donc impératif dans ce cas d'évaluer les demandes de connexion à l'aide de la commande `WEB Validate digest`.
 
 > Vous devez redémarrer le serveur web pour que les modifications apportées à ces paramètres soient prises en compte.
 
 ## On Web Authentication
 
-The `On Web Authentication` database method is in charge of managing web server engine access. Elle est appelée par 4D ou 4D Server lorsqu'une requête HTTP dynamique est reçue.
+La méthode de base de données `On Web Authentication` est chargée de gérer l'accès au moteur du serveur web. Elle est appelée par 4D ou 4D Server lorsqu'une requête HTTP dynamique est reçue.
 
 ### Database method calls
 
@@ -153,7 +153,7 @@ The `$3` parameter receives the IP address of the browser’s machine. This info
 
 #### $4 - Server IP address
 
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
+The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
 
 #### $5 and $6 - User Name and Password
 

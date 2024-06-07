@@ -3,7 +3,7 @@ id: lock
 title: $lock
 ---
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+Verrouille et déverrouille une entité en utilisant le [mécanisme pessimiste](../ORDA/entities.md#pessimistic-lock).
 
 ## Syntaxe
 
@@ -19,25 +19,25 @@ Pour déverrouiller l'entité pour les autres sessions et processus 4D :
 /?$lock=false
 ```
 
-The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
+La propriété [`lockKindText`](../API/EntityClass.md#lock) est "Locked by session".
 
 ### Description
 
-The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
+Les verrouillages déclenchés par l'API REST sont placés au niveau de la [session](authUsers.md#opening-sessions).
 
-A locked entity is seen as _locked_ (i.e. lock / unlock / update / delete actions are not possible) by:
+Une entité verrouillée est considérée comme _verrouillée_ (c'est-à-dire que les actions de verrouillage / déverrouillage / mise à jour / suppression ne sont pas possibles) par :
 
 - d'autres sessions REST
 - les process 4D (client/serveur, datastore distant, monoposte) exécutés sur le serveur REST.
 
 Une entité verrouillée par l'API REST peut être déverrouillée uniquement :
 
-- by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
-- or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
+- via son verrou, c'est-à-dire un `/?$lock=false` dans la session REST qui définit `/?$lock=true`
+- ou si le [timeout d'inactivité]($directory.md) de la session est atteint (la session est fermée).
 
 ### Réponse
 
-A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
+Une requête `?$lock` retourne un objet JSON avec `"result"=true` si l'opération de verrouillage est réussie et `"result"=false` si elle échoue.
 
 L'objet "__STATUS" retourné possède les propriétés suivantes :
 
@@ -45,13 +45,13 @@ L'objet "__STATUS" retourné possède les propriétés suivantes :
 | ------------ | ----------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |                                     |         | _**Disponible uniquement en cas de succès:**_                                                                                                                                                                                                                                                                                                                               |
 | success      |                                     | boolean | vrai si l'action de verrouillage a été réussie (ou si l'entité est déjà verrouillée dans la session courante), sinon faux (non retourné dans ce cas).                                                                                                                                                                                 |
-|              |                                     |         | _**Available only in case of error:**_                                                                                                                                                                                                                                                                                                                                      |
+|              |                                     |         | _**Disponible uniquement en cas d'erreur :**_                                                                                                                                                                                                                                                                                                                               |
 | status       |                                     | number  | Code d'erreur, voir ci-dessous                                                                                                                                                                                                                                                                                                                                                              |
 | statusText   |                                     | text    | Description de l'erreur, voir ci-dessous                                                                                                                                                                                                                                                                                                                                                    |
 | lockKind     |                                     | number  | Code de verrouillage                                                                                                                                                                                                                                                                                                                                                                        |
 | lockKindText |                                     | text    | "Locked by session" en cas de verrouillage par une session REST, "Locked by record" en cas de verrouillage par un process 4D                                                                                                                                                                                                                                                                |
 | lockInfo     |                                     | object  | Information sur l'origine du verrouillage. Les propriétés retournées dépendent de l'origine du verrouillage (process 4D ou session REST).                                                                                                                                                                                                |
-|              |                                     |         | _**Available only for a 4D process lock:**_                                                                                                                                                                                                                                                                                                                                 |
+|              |                                     |         | _**Disponible uniquement pour un verrouillage par process 4D :**_                                                                                                                                                                                                                                                                                                           |
 |              | task_id        | number  | ID du process                                                                                                                                                                                                                                                                                                                                                                               |
 |              | user_name      | text    | Nom d'utilisateur de la session sur la machine                                                                                                                                                                                                                                                                                                                                              |
 |              | user4d_alias   | text    | Nom ou alias de l'utilisateur 4D                                                                                                                                                                                                                                                                                                                                                            |
@@ -59,13 +59,13 @@ L'objet "__STATUS" retourné possède les propriétés suivantes :
 |              | host_name      | text    | Nom de la machine                                                                                                                                                                                                                                                                                                                                                                           |
 |              | task_name      | text    | Nom du process                                                                                                                                                                                                                                                                                                                                                                              |
 |              | client_version | text    | Version du client                                                                                                                                                                                                                                                                                                                                                                           |
-|              |                                     |         | _**Available only for a REST session lock:**_                                                                                                                                                                                                                                                                                                                               |
+|              |                                     |         | _**Disponible uniquement pour le verrouillage d'une session REST :**_                                                                                                                                                                                                                                                                                                       |
 |              | host                                | text    | URL d'origine du verrouillage de l'entité (ex : "127.0.0.1:8043")                                                                                                                                                                                                                        |
 |              | IPAddr                              | text    | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                                                                                                                                                    |
 |              | recordNumber                        | number  | Numéro de l'enregistrement verrouillé                                                                                                                                                                                                                                                                                                                                                       |
 |              | userAgent                           | text    | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
-The following values can be returned in the _status_ and _statusText_ properties of the ___STATUS_ object in case of error:
+Les valeurs suivantes peuvent être retournées dans les propriétés _status_ et _statusText_ de l'objet ___STATUS_ en cas d'erreur :
 
 | status | statusText                      | Commentaire                                                                                                                                                                                      |
 | ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -82,7 +82,7 @@ Nous verrouillons une entité dans un premier navigateur :
 GET /rest/Customers(1)/?$lock=true
 ```
 
-**Response:**
+**Réponse :**
 
 ```
 {
@@ -95,7 +95,7 @@ GET /rest/Customers(1)/?$lock=true
 
 Dans un second navigateur (autre session), nous envoyons la même requête.
 
-**Response:**
+**Réponse :**
 
 ```
 {

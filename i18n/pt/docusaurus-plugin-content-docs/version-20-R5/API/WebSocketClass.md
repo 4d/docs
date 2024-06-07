@@ -66,7 +66,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 | Release | Mudanças                                             |
 | ------- | ---------------------------------------------------- |
-| 20 R3   | Support of `headers` property in _connectionHandler_ |
+| 20 R3   | Support of `headers` property in *connectionHandler* |
 
 </details>
 
@@ -82,18 +82,18 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <!-- END REF -->
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in _url_<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
 
-In _url_, pass the URL to which the WebSocket server will respond. Podem ser utilizados os seguintes padrões de URL:
+In *url*, pass the URL to which the WebSocket server will respond. Podem ser utilizados os seguintes padrões de URL:
 
 - `ws://host[:port]path[?query]` for standard connections
 - `wss://host[:port]path[?query]` for TLS secured connections
 
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
-### _connectionHandler_ parameter
+### *connectionHandler* parameter
 
-In _connectionHandler_, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
+In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
 - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
 - The WebSocket will be valid as long as the form or worker is not closed.
@@ -105,7 +105,7 @@ In _connectionHandler_, you can pass an object containing callback functions to 
 | onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li></ul>                                                                                                                                       |
 | onOpen      | [Function](FunctionClass.md) | Função de retorno de chamada quando o websocket está aberto. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | dataType    | Text                         | Tipo de dados recebidos ou enviados. Valores disponíveis: "text" (padrão), "blob", "object". "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (_value_ can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                        |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                        |
 
 Aqui está a sequência de chamadas de retorno:
 
@@ -189,9 +189,9 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends _message_ to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
 
-The following contents are sent depending on the _message_ type:
+The following contents are sent depending on the *message* type:
 
 | Tipo   | Conteúdo                                                                                                                               |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -232,14 +232,14 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional _code_ and _reason_ parameters<!-- END REF -->.
+The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional *code* and *reason* parameters<!-- END REF -->.
 
-In _code_, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
+In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
-- Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. If you specify a _code_ value, you should also specify a _reason_ value.
+- Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
 
-In _reason_, you can pass a string describing why the connection is being closed.
+In *reason*, you can pass a string describing why the connection is being closed.
 
 <!-- END REF -->
 

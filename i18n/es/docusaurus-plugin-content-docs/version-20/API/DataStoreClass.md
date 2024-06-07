@@ -105,9 +105,10 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Histórico</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18          | Añadidos       |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20.3        | New *passwordAlgorithm* property |
+| 18          | Añadidos                         |
 
 </details>
 
@@ -149,14 +150,15 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto *hostname*):
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
-| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
-| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                           |
-| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
-| tls         | Boolean | Utilice una conexión segura(*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                           |
-| type        | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                             |
+| Propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                      |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname          | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
+| user              | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
+| contraseña        | Text    | Contraseña del usuario. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                        |
+| idleTimeout       | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
+| tls               | Boolean | Utilice una conexión segura(*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                           |
+| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                             |
+| type              | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                             |
 
 (*) Si tls es true, se utiliza el protocolo HTTPS si:
 
@@ -1193,7 +1195,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción

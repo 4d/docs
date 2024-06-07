@@ -10,11 +10,7 @@ Shared objects and shared collections are stored in standard [`Object`](dt_objec
 - to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
 - to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
-:::note
-
-Os objectos e coleções partilhados podem ser definidos como propriedades de objetos ou coleções padrão (não partilhados).
-
-:::
+Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
 Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
 
@@ -30,6 +26,12 @@ As modificações podem ser aplicadas a objetos partilhados e coleções partilh
 
 - adicionar ou remover propriedades de objectos,
 - adicionar ou editar valores (desde que sejam suportados em objetos partilhados), incluindo outros objetos partilhados ou coleções (que criam um grupo partilhado, ver abaixo).
+
+:::note
+
+Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+
+:::
 
 All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
 

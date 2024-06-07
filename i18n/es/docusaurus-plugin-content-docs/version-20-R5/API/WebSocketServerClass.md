@@ -113,13 +113,13 @@ Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones
 
 <!-- END REF -->
 
-La función `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->crea e inicia un servidor WebSocket que utilizará las retrollamadas _WSSHandler_ y (opcionalmente) _options_ especificados, y devuelve un objeto `4D.WebSocketServer`<!-- END REF -->.
+La función `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->crea e inicia un servidor WebSocket que utilizará las retrollamadas *WSSHandler* y (opcionalmente) *options* especificados, y devuelve un objeto `4D.WebSocketServer`<!-- END REF -->.
 
 Llamar a esta función requiere que el [servidor web 4D](WebServerClass.md) esté iniciado. El **host** y el **port** del servidor WebSocket son los mismos que el host y el puerto del servidor Web 4D.
 
-### Parámetro _WSSHandler_
+### Parámetro *WSSHandler*
 
-En el parámetro _WSSHandler_, pasa una instancia de una clase de usuario que será llamada cada vez que ocurra un evento en el servidor WebSocket --esencialmente, eventos de conexión. La clase debe definir las siguientes funciones de retrollamada (solo `onConnection` es obligatoria):
+En el parámetro *WSSHandler*, pasa una instancia de una clase de usuario que será llamada cada vez que ocurra un evento en el servidor WebSocket --esencialmente, eventos de conexión. La clase debe definir las siguientes funciones de retrollamada (solo `onConnection` es obligatoria):
 
 | Propiedad    | Tipo                         | Descripción                                                                                                                   | Por defecto |
 | ------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -128,7 +128,7 @@ En el parámetro _WSSHandler_, pasa una instancia de una clase de usuario que se
 | onTerminate  | [Function](FunctionClass.md) | Retrollamada cuando se termina el servidor WebSocket (ver abajo)                                           | indefinido  |
 | onError      | [Function](FunctionClass.md) | Retrollamada cuando se ha producido un error (ver abajo)                                                   | indefinido  |
 
-**WSHandler.onConnection**(_WSServer_ : Object ; _event_ : Object) : Object | null
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | Parámetros |         | Tipo                               |     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ---------- | ------- | ---------------------------------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ En el parámetro _WSSHandler_, pasa una instancia de una clase de usuario que se
 
 Esta retrollamada se llama cuando el establecimiento de la comunicación se ha completado. Debe ser llamado con un objeto [`connectionHandler` válido](#connectionhandler-object) para crear la conexión WebSocket, de lo contrario la conexión se cancela.
 
-**WSHandler.onOpen**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | Parámetros |      | Tipo                               |     | Descripción                      |
 | ---------- | ---- | ---------------------------------- | :-: | -------------------------------- |
@@ -150,7 +150,7 @@ Esta retrollamada se llama cuando el establecimiento de la comunicación se ha c
 
 Evento emitido cuando se inicia el servidor websocket.
 
-**WSHandler.onTerminate**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | Parámetros |      | Tipo                               |     | Descripción                      |
 | ---------- | ---- | ---------------------------------- | :-: | -------------------------------- |
@@ -160,7 +160,7 @@ Evento emitido cuando se inicia el servidor websocket.
 
 Evento emitido cuando se cierra el servidor HTTP o el servidor WebSocket.
 
-**WSHandler.onError**(_WSServer_ : Object ; _event_ : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
 | Parámetros |        | Tipo                               |     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------- | ------ | ---------------------------------- | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ Evento emitido cuando se produce un error en el servidor WebSocket.
 
 ### Ejemplo de clase \`WSSHandler
 
-Este ejemplo de una función básica de chat ilustra cómo manejar conexiones de servidor WebSocket en una clase _WSSHandler_.
+Este ejemplo de una función básica de chat ilustra cómo manejar conexiones de servidor WebSocket en una clase *WSSHandler*.
 
 ```4d
 //clase myWSServerHandler 
@@ -225,7 +225,7 @@ Como resultado de la retrollamada `WSHandler.onConnection`, pasa un objeto `conn
 | onTerminate | [Function](FunctionClass.md) | Función a la que se llama cuando finaliza esta conexión                                             |
 | onError     | [Function](FunctionClass.md) | Función llamada cuando se produce un error                                                          |
 
-**connectionHandler.onMessage**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parámetros |      | Tipo                                                    |     | Descripción                         |
 | ---------- | ---- | ------------------------------------------------------- | :-: | ----------------------------------- |
@@ -236,7 +236,7 @@ Como resultado de la retrollamada `WSHandler.onConnection`, pasa un objeto `conn
 
 Esta retrollamada para datos WebSocket. Llamada cada vez que el WebSocket recibe datos.
 
-**connectionHandler.onOpen**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parámetros |      | Tipo                                                    |     | Descripción                         |
 | ---------- | ---- | ------------------------------------------------------- | :-: | ----------------------------------- |
@@ -246,7 +246,7 @@ Esta retrollamada para datos WebSocket. Llamada cada vez que el WebSocket recibe
 
 Llamada cuando se crea el objeto `connectionHandler` (después del evento `WSS.onConnection`).
 
-**connectionHandler.onTerminate**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parámetros |        | Tipo                                                    |     | Descripción                                                                                                                                                                                                                                        |
 | ---------- | ------ | ------------------------------------------------------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -258,7 +258,7 @@ Llamada cuando se crea el objeto `connectionHandler` (después del evento `WSS.o
 
 Función llamada cuando se cierra el WebSocket.
 
-**connectionHandler.onError**(_ws_ : 4D.WebSocketConnection ; _event_ : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | Parámetros |        |            | Tipo                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Descripción                         |
 | ---------- | ------ | ---------- | ------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ----------------------------------- |
@@ -271,7 +271,7 @@ Función llamada cuando se ha producido un error.
 
 ### Ejemplo de clase \`connectionHandler
 
-Este ejemplo de una función básica de chat ilustra cómo gestionar mensajes en una clase _connectionHandler_.
+Este ejemplo de una función básica de chat ilustra cómo gestionar mensajes en una clase *connectionHandler*.
 
 ```4d
 // Clase myConnectionHandler
@@ -302,9 +302,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 ```
 
-### Parámetro _options_
+### Parámetro *options*
 
-En el parámetro opcional _options_, pase un objeto que contenga las siguientes propiedades:
+En el parámetro opcional *options*, pase un objeto que contenga las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Por defecto |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |

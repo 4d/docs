@@ -5,7 +5,7 @@ title: VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
 
-**VP REMOVE NAME** ( _vpAreaName_ : Text  ; _name_  : Text { ; _sheet_ : Integer } )<!-- END REF -->
+**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
@@ -17,13 +17,13 @@ title: VP REMOVE NAME
 
 #### Descripción
 
-The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->removes the named range or named formula passed in the _name_ parameter in the defined _scope_<!-- END REF -->.
+The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->removes the named range or named formula passed in the *name* parameter in the defined *scope*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase el rango con nombre o la fórmula con nombre que desea eliminar en _name_.
+Pase el rango con nombre o la fórmula con nombre que desea eliminar en *name*.
 
-You can define where to remove the name in _scope_ using either the sheet index (counting begins at 0) or the following constants:
+You can define where to remove the name in *scope* using either the sheet index (counting begins at 0) or the following constants:
 
 - `vk current sheet`
 - `vk workbook`

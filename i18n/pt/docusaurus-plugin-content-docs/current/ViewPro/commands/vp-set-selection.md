@@ -5,7 +5,7 @@ title: VP SET SELECTION
 
 <!-- REF #_method_.VP SET SELECTION.Syntax -->
 
-**VP SET SELECTION** ( _rangeObj_ : Object  ) <!-- END REF -->
+**VP SET SELECTION** ( *rangeObj* : Object  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
@@ -17,7 +17,7 @@ title: VP SET SELECTION
 
 The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->defines the specified cells as the selection and the first cell as the active cell<!-- END REF -->.
 
-In _rangeObj_, pass a range object of cells to designate as the current selection.
+In *rangeObj*, pass a range object of cells to designate as the current selection.
 
 #### Exemplo
 

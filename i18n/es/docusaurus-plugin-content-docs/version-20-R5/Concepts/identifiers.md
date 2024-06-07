@@ -129,9 +129,9 @@ QUERY([Clients];[Clients]Name="Smith")
 El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
 - Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables de interproceso](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Se permite un dígito como primer caracter pero no se recomienda, y no es compatible con la [sintaxis de declaración `var`](variables.md#usando-la-palabra-clave-var).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Se permite el carácter de espacio pero no se recomienda, y no es compatible con la [`sintaxis de declaración var`](variables.md#usando-la-palabra-clave-var).
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
@@ -159,14 +159,14 @@ Ejemplos:
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
- //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")//Selección temporal process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Selección temporal interproceso
+ //Iniciar el proceso global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ //Iniciar el proceso local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")//Conjunto process
+USE SET("<>Deleted Records") //Conjunto interprocess
+If(Records in set("$Selection"+String($i))>0) //Conjunto Client
 
 ```

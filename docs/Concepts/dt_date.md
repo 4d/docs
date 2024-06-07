@@ -25,7 +25,7 @@ A null date is specified by _!00-00-00!_.
 
 **Notes:**
 
-- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the ```SET DEFAULT CENTURY``` command.
+- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the ```SET DEFAULT CENTURY``` command.
 - If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.
     
 ## Date operators 
@@ -36,14 +36,14 @@ A null date is specified by _!00-00-00!_.
 |Day addition	|Date + Number	|Date	|!2017-01-20! + 9	|!2017-01-29!|
 |Day subtraction	|Date – Number	|Date	|!2017-01-20! - 9	|!2017-01-11!|
 |Equality	|Date = Date	|Boolean	|!2017-01-01! =!2017-01-01!	|True|
-		||	||!2017-01-20! = !2017-01-01!	|False|
+| | | |!2017-01-20! = !2017-01-01!	|False|
 |Inequality	|Date # Date	|Boolean	|!2017-01-20! # !2017-01-01!	|True|
-			||||!2017-01-20! # !2017-01-20!	|False|
+||||!2017-01-20! # !2017-01-20!	|False|
 |Greater than	|Date > Date	|Boolean	|!2017-01-20! > !2017-01-01!	|True|
-			||||!2017-01-20! > !2017-01-20!	|False|
+||||!2017-01-20! > !2017-01-20!	|False|
 |Less than	|Date < Date	|Boolean	|!2017-01-01! < !2017-01-20!	|True|
-			||||!2017-01-20! < !2017-01-20!	|False|
+||||!2017-01-20! < !2017-01-20!	|False|
 |Greater than or equal to	|Date >= Date	|Boolean	|!2017-01-20! >=!2017-01-01!	|True|
-			||||!2017-01-01!>=!2017-01-20!	|False|
+||||!2017-01-01!>=!2017-01-20!	|False|
 |Less than or equal to	|Date <= Date	|Boolean	|!2017-01-01! <= !2017-01-20!|	True|
-		||||	!2017-01-20! <= !2017-01-01!|	False|
+||||!2017-01-20! <= !2017-01-01!|False|

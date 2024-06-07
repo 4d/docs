@@ -28,6 +28,7 @@ The availability of properties and functions in the `Session` object depend on t
 | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
 | [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
+| [<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
 | [<!-- INCLUDE #SessionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #SessionClass.id.Summary -->                                            |
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
@@ -70,7 +71,7 @@ Dependendo do processo a partir do qual o comando é chamado, a sessão atual do
 
 For more information, see the [Session types](#session-types) paragraph.
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns _Null_.
+If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
 #### Sessões web
 
@@ -151,7 +152,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -160,12 +161,12 @@ The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summa
 #### Exemplo
 
 ```4d
-//Invalidar uma sessão
+//Invalidate a web user session
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest é True
+$isGuest:=Session.isGuest() //$isGuest is True
 ```
 
 <!-- END REF -->
@@ -194,7 +195,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Essa propriedade é **somente leitura**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Exemplo
 
@@ -202,6 +203,101 @@ This property is **read-only**. It is automatically recomputed if the [`.idleTim
 var $expiration : Text
 $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 ```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.getPrivileges().Desc -->
+
+## .getPrivileges()
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R6   | Adicionado |
+
+</details>
+
+<!-- REF #SessionClass.getPrivileges().Syntax -->**.getPrivileges**() : Collection<!-- END REF -->
+
+<!-- REF #SessionClass.getPrivileges().Params -->
+
+| Parâmetro  | Tipo       |     | Descrição                                                  |
+| ---------- | ---------- | :-: | ---------------------------------------------------------- |
+| Resultados | Collection |  <- | Collection of privilege names (strings) |
+
+<!-- END REF -->
+
+#### Descrição
+
+The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
+
+With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
+
+:::info
+
+Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+
+:::
+
+#### Exemplo
+
+The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+
+```json
+{
+   "privileges":[
+      {
+         "privilege":"simple",
+         "includes":[
+
+         ]
+      },
+      {
+         "privilege":"medium",
+         "includes":[
+            "simple"
+         ]
+      }
+   ],
+   "roles":[
+      {
+         "role":"Medium",
+         "privileges":[
+            "medium"
+         ]
+      }
+   ],
+   "permissions":{
+      "allowed":[
+
+      ]
+   }
+}
+```
+
+The session role is assigned in an `authentify()` datastore function:
+
+```4d
+  //Datastore Class
+
+exposed Function authentify($role : Text) : Text
+	Session.clearPrivileges()
+	Session.setPrivileges({roles: $role})
+```
+
+Assuming the `authentify()` function is called with the "Medium" role:
+
+```4d
+var $privileges : Collection
+$privileges := Session.getPrivileges()
+//$privileges: ["simple","medium"]
+```
+
+#### Veja também
+
+[.setPrivileges()](#setprivileges)<br/>
+[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 
@@ -223,24 +319,20 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 | Parâmetro  | Tipo       |     | Descrição                                        |
 | ---------- | ---------- | :-: | ------------------------------------------------ |
-| privilege  | Text       |  <- | Nome do privilegio a verificar                   |
-| Resultados | Parâmetros |  <- | True if session has _privilege_, False otherwise |
+| privilege  | Text       |  -> | Nome do privilegio a verificar                   |
+| Resultados | Parâmetros |  <- | True if session has *privilege*, False otherwise |
 
 <!-- END REF -->
 
 #### Descrição
 
-:::note
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
-
-:::
-
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+With remote client and stored procedure sessions, this function always returns True, whatever the *privilege*.
 
 #### Exemplo
 
-Se quiser comprovar se o privilégio "WebAdmin" está associado à sessão:
+You want to check if the "WebAdmin" privilege is associated to the web user session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -395,7 +487,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+This function always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -443,17 +535,17 @@ End if
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
 
-- In the _privilege_ parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
-- In the _privileges_ parameter, pass a collection of strings containing privilege names.
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
 
-- In the _settings_ parameter, pass an object containing the following properties:
+- In the *settings* parameter, pass an object containing the following properties:
 
 | Propriedade | Tipo               | Descrição                                                                                                |
 | ----------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
@@ -490,6 +582,10 @@ If ($userOK) //The user has been approved
 End if
 
 ```
+
+#### Veja também
+
+[.getPrivileges()](#getprivileges)
 
 <!-- END REF -->
 

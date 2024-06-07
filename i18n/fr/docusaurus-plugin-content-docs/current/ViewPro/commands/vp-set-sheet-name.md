@@ -5,7 +5,7 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Syntax -->
 
-**VP SET SHEET NAME** ( _vpAreaName_ : Text ; _name_ : Text {; _sheet_: Integer} )<!-- END REF -->
+**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
@@ -17,17 +17,17 @@ title: VP SET SHEET NAME
 
 #### Description
 
-The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in _vpAreaName_<!-- END REF -->.
+The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In _name_, pass a new name for the sheet.
+In *name*, pass a new name for the sheet.
 
-In _sheet_, pass the index of the sheet to rename.
+In *sheet*, pass the index of the sheet to rename.
 
 > La numérotation démarre à 0.
 
-If no _sheet_ is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -36,7 +36,7 @@ La commande ne fait rien si :
 - le nouveau nom contient des caractères interdits
 - la valeur du nouveau nom est vide
 - le nouveau nom existe déjà
-- the passed _sheet_ index does not exist
+- the passed *sheet* index does not exist
 
 #### Exemple
 

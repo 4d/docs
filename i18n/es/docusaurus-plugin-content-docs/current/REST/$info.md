@@ -9,14 +9,15 @@ Devuelve información sobre los conjuntos de entidades almacenados actualmente e
 
 Cuando llama a esta petición para su proyecto, se recupera la información en las propiedades siguientes:
 
-| Propiedad      | Tipo       | Descripción                                                                                                 |
-| -------------- | ---------- | ----------------------------------------------------------------------------------------------------------- |
-| cacheSize      | Number     | Tamaño de la caché del servidor 4D.                                                         |
-| usedCache      | Number     | Cuánto se ha utilizado de la caché de 4D Server.                                            |
-| entitySetCount | Number     | Número de selecciones de entidades.                                                         |
-| entitySet      | Collection | Una colección en la que cada objeto contiene información sobre cada selección de entidades. |
-| ProgressInfo   | Collection | Una colección que contiene información sobre el indicador de progreso.                      |
-| sessionInfo    | Collection | Una colección en la que cada objeto contiene información sobre cada sesión usuario.         |
+| Propiedad      | Tipo       | Descripción                                                                                                                                                                                                                     |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | Tamaño de la caché del servidor 4D.                                                                                                                                                                             |
+| usedCache      | Number     | Cuánto se ha utilizado de la caché de 4D Server.                                                                                                                                                                |
+| entitySetCount | Number     | Número de selecciones de entidades.                                                                                                                                                                             |
+| entitySet      | Collection | Una colección en la que cada objeto contiene información sobre cada selección de entidades.                                                                                                                     |
+| ProgressInfo   | Collection | Una colección que contiene información sobre el indicador de progreso.                                                                                                                                          |
+| sessionInfo    | Collection | Una colección en la que cada objeto contiene información sobre cada sesión usuario.                                                                                                                             |
+| privileges     | Object     | An object with a "privileges" property (collection of objects). Each object of the collection has a "privilege" property with a privilege name of the user session as value. |
 
 ### entitySet
 
@@ -100,7 +101,7 @@ ProgressInfo: [
         percent: 0
     }
 ],
-sessionInfo: [ 
+sessionInfo: [
     {
         sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
         userID: "36713176D42DB045B01B8E650E8FA9C6",

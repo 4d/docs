@@ -3,13 +3,13 @@ id: querypath
 title: $querypath
 ---
 
-Returns the query as it was executed by 4D Server (_e.g._, `$querypath=true`)
+Retourne la requête telle qu'elle a été exécutée par 4D Server (par exemple, `$querypath=true`)
 
 ## Description
 
-`$querypath` returns the query as it was executed by 4D Server. Si, par exemple, une partie de la requête passée ne retourne aucune entité, le reste de la requête n'est pas exécuté. The query requested is optimized as you can see in this `$querypath`.
+`$querypath` retourne la requête telle qu'elle a été exécutée par 4D Server. Si, par exemple, une partie de la requête passée ne retourne aucune entité, le reste de la requête n'est pas exécuté. La requête lancée est optimisée, comme vous pouvez le voir dans ce $ `$querypath`.
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Pour plus d'informations sur les chemins de requête, reportez-vous à [queryPlan ete queryPath](genInfo.md#querypath-and-queryplan).
 
 Dans la collection d'étapes, il existe un objet avec les propriétés suivantes qui définissent la requête exécutée :
 
@@ -30,7 +30,7 @@ Et si aucune entité n'a été trouvée, le chemin de la requête suivant sera r
 
 ` GET  /rest/$querypath`
 
-**Response**:
+**Réponse** :
 
 ```
 __queryPath: {
@@ -72,7 +72,7 @@ Si au moins une entité a été trouvée, le chemin de la requête suivant sera 
 
 `GET  /rest/$querypath`
 
-**Respose**:
+**Réponse** :
 
 ```
 "__queryPath": {

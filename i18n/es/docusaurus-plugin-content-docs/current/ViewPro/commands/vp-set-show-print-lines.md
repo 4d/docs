@@ -5,7 +5,7 @@ title: VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
 
-**VP SET SHOW PRINT LINES** ( _vpAreaName_ : Text {; visible : Boolean}{; _sheet_ : Integer} )<!-- END REF -->
+**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET SHOW PRINT LINES
 
 El comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> establece si se muestran las líneas de vista previa de impresión en una hoja de cálculo.<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _visible_, pase `True` para mostrar las líneas de impresión, y `False` para ocultarlas. Por defecto se pasa `True`.
+En *visible*, pase `True` para mostrar las líneas de impresión, y `False` para ocultarlas. Por defecto se pasa `True`.
 
-En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 

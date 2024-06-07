@@ -21,7 +21,7 @@ title: Directory Class
 
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -45,7 +45,7 @@ This property is **read-only**.
 
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -69,7 +69,7 @@ This property is **read-only**.
 
 The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -93,7 +93,7 @@ This property is **read-only**.
 
 The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -117,7 +117,7 @@ This property is **read-only**.
 
 The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -141,7 +141,7 @@ This property is **read-only**.
 
 The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -165,7 +165,7 @@ This property is **read-only**.
 
 The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ This property is **read-only**.
 
 The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -213,7 +213,7 @@ This property is **read-only**.
 
 The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -239,7 +239,7 @@ The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true 
 
 On Windows, `.isPackage` always returns **false**.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -263,7 +263,7 @@ This property is **read-only**.
 
 The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ This property is **read-only**.
 
 The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -311,7 +311,7 @@ This property is **read-only**.
 
 The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -335,7 +335,7 @@ This property is **read-only**.
 
 The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 > Esta propriedade está disponible nas pastas para permitir que o código genérico processe pastas ou arquivos.
 
@@ -363,7 +363,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 
 Se a pasta não tiver um pai (raiz), é devolvido o valor nulo.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -387,7 +387,7 @@ This property is **read-only**.
 
 The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -411,7 +411,7 @@ This property is **read-only**.
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -444,13 +444,13 @@ This property is **read-only**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified _destinationFolder_<!-- END REF -->.
+The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Como padrão, a pasta é copiada com o nome da pasta original. If you want to rename the copy, pass the new name in the _newName_ parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, a pasta é copiada com o nome da pasta original. If you want to rename the copy, pass the new name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-If a folder with the same name already exists in the _destinationFolder_, by default 4D generates an error. You can pass the `fk overwrite` constant in the _overwrite_ parameter to ignore and overwrite the existing file
+If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 | Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
@@ -462,7 +462,7 @@ The copied `Folder` object.
 
 #### Exemplo
 
-You want to copy a Pictures _folder_ from the user's Document folder to the Database folder:
+You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -501,11 +501,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
+In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
-A `File` object or null if _path_ is invalid.
+A `File` object or null if *path* is invalid.
 
 #### Exemplo
 
@@ -547,7 +547,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
-By default, if you omit the _options_ parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Parâmetros            | Valor | Comentário                                                       |
 | --------------------- | ----- | ---------------------------------------------------------------- |
@@ -603,7 +603,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 | Parâmetro  | Tipo                       |    | Descrição                                                         |
 | ---------- | -------------------------- | -- | ----------------------------------------------------------------- |
 | path       | Text                       | -> | Rota POSIX relativa                                               |
-| Resultados | 4D. Folder | <- | Created folder object (null if invalid _path_) |
+| Resultados | 4D. Folder | <- | Created folder object (null if invalid *path*) |
 
 <!-- END REF -->
 
@@ -611,11 +611,11 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
-In _path_, pass a relative POSIX path to designate the folder to return. A rota se avaliará a partir da pasta pai como raíz.
+In *path*, pass a relative POSIX path to designate the folder to return. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
-A `Folder` object or null if _path_ is invalid.
+A `Folder` object or null if *path* is invalid.
 
 #### Exemplo
 
@@ -655,7 +655,7 @@ A `Folder` object or null if _path_ is invalid.
 
 The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
-By default, if you omit the _options_ parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the _options_ parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 | Parâmetros            | Valor | Comentário                                                     |
 | --------------------- | ----- | -------------------------------------------------------------- |
@@ -706,7 +706,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
-The optional _size_ parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 

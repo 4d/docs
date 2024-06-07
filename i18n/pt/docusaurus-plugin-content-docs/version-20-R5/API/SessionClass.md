@@ -70,7 +70,7 @@ Dependendo do processo a partir do qual o comando é chamado, a sessão atual do
 
 For more information, see the [Session types](#session-types) paragraph.
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns _Null_.
+If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
 #### Sessões web
 
@@ -151,7 +151,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -160,12 +160,12 @@ The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summa
 #### Exemplo
 
 ```4d
-//Invalidar uma sessão
+//Invalidate a web user session
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest é True
+$isGuest:=Session.isGuest() //$isGuest is True
 ```
 
 <!-- END REF -->
@@ -194,7 +194,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Essa propriedade é **somente leitura**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Exemplo
 
@@ -224,23 +224,19 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 | Parâmetro  | Tipo       |     | Descrição                                        |
 | ---------- | ---------- | :-: | ------------------------------------------------ |
 | privilege  | Text       |  <- | Nome do privilegio a verificar                   |
-| Resultados | Parâmetros |  <- | True if session has _privilege_, False otherwise |
+| Resultados | Parâmetros |  <- | True if session has *privilege*, False otherwise |
 
 <!-- END REF -->
 
 #### Descrição
 
-:::note
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
-
-:::
-
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+With remote client and stored procedure sessions, this function always returns True, whatever the *privilege*.
 
 #### Exemplo
 
-Se quiser comprovar se o privilégio "WebAdmin" está associado à sessão:
+You want to check if the "WebAdmin" privilege is associated to the web user session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -395,7 +391,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+This function always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -443,17 +439,17 @@ End if
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
 
-- In the _privilege_ parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
-- In the _privileges_ parameter, pass a collection of strings containing privilege names.
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
 
-- In the _settings_ parameter, pass an object containing the following properties:
+- In the *settings* parameter, pass an object containing the following properties:
 
 | Propriedade | Tipo               | Descrição                                                                                                |
 | ----------- | ------------------ | -------------------------------------------------------------------------------------------------------- |

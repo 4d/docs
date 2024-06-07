@@ -12,7 +12,7 @@ El depurador es útil cuando se necesita detectar errores o controlar la ejecuci
 Hay varias formas de conseguir que el depurador se muestre:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
+- Utilizando el comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -64,6 +64,16 @@ Cuando se ejecuta una línea que llama a otro método (subrutina o función), ha
 El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
 
 Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
+
+#### Ejecutar y salir
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Abortar
 
@@ -311,13 +321,13 @@ El menú contextual del panel de control personalizado permite acceder al editor
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
 
 - **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> Esta opción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
@@ -330,7 +340,7 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakpoints.md).
 
 ### Tips
 

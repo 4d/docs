@@ -68,7 +68,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -86,7 +86,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 La commande `File` <!-- REF #_command_.File.Summary -->crée et renvoie un nouvel objet du type `4D.File`<!-- END REF -->. La commande accepte deux syntaxes :
 
-**File ( path { ; pathType } { ; * })**
+**File ( path { ; pathType } { ; \* })**
 
 Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA/myfile.txt").
 
@@ -99,7 +99,7 @@ Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travail
 | fk platform path | 1      | Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme) |
 | fk posix path    | 0      | Chemin exprimé avec la syntaxe POSIX (par défaut)                                                         |
 
-**File ( fileConstant { ; * } )**
+**File ( fileConstant { ; \* } )**
 
 Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier système, à l'aide d'une des constantes suivantes :
 
@@ -143,7 +143,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Description
 
@@ -612,7 +612,7 @@ La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. 
 
 **Paramètre *info* avec un fichier .exe or .dll**
 
-> Ecrire les informations de fichiers .exe ou .dll est possible uniquement sous Windows.
+> La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
 Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 

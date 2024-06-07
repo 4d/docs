@@ -58,15 +58,15 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 #### Descripción
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by _localID_<!-- END REF -->.
+The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
 
-If you omit the _localID_ parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the _localID_ parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). La identificación local se define cuando se utiliza este comando.
+You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). La identificación local se define cuando se utiliza este comando.
 
 > El alcance del id local es la base de datos en la que se ha abierto el almacén de datos.
 
-If no _localID_ datastore is found, the command returns **Null**.
+If no *localID* datastore is found, the command returns **Null**.
 
 Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
@@ -108,9 +108,11 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18          | Añadidos       |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 20 R6       | Support access to Qodly instances   |
+| 20 R4       | Nueva propiedad *passwordAlgorithm* |
+| 18          | Añadidos                            |
 
 </details>
 
@@ -128,24 +130,40 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the _connectionInfo_ parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the _localID_ local alias.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
 
-The _connectionInfo_ 4D database must be available as a remote datastore, i.e.:
+The following remote datastores are supported by the command:
 
-- su servidor web debe ser lanzado con http y/o https activado,
-- the datastore must be exposed ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked) as well as [dataclasses and attributes](../REST/configuration.md#exposing-tables-and-fields).
+| tipo de almacén de datos                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
 
 :::
 
-If no matching database is found, `Open datastore` returns **Null**.
+Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-_localID_ is a local alias for the session opened on remote datastore. If _localID_ already exists on the application, it is used. Otherwise, a new _localID_ session is created when the datastore object is used.
+| Propiedad   | Tipo    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                            | Qodly application                                                            |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                | API Endpoint of the Qodly cloud instance                                     |
+| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                | - (ignored)                                               |
+| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                           | * (ignored)                                               |
+| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. | - (ignored)                                               |
+| tls         | Boolean | True to use secured connection(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                     | True para usar conexión segura. If omitted, false by default |
+| type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                              | * (ignored)                                               |
+| api-key     | Text    | - (ignored)                                                                                                                                                                                                                                                                                                                                                                                                   | Api key of the Qodly cloud instance                                          |
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+(1) If `tls` is true, the HTTPS protocol is used if:
+
+- HTTPS está activado en el almacén de datos remoto
+- el número de puerto especificado coincide con el puerto HTTPS configurado en los ajustes de la base de datos
+- a valid certificate and private encryption key are installed in the 4D application. En caso contrario, se produce el error "1610 - Una solicitud remota al host xxx ha fallado"
+
+*localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
 
 Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelven una referencia sobre el mismo objeto datastore:
 
@@ -155,22 +173,9 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
   //$myds y $myds2 son equivalentes
 ```
 
-Pass in _connectionInfo_ an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except _hostname_):
+Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                |
-| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                |
-| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                           |
-| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Boolean | Utilice una conexión segura(\*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                       |
-| type        | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                             |
-
-(\*) Si tls es true, se utiliza el protocolo HTTPS si:
-
-- HTTPS está activado en el almacén de datos remoto
-- el número de puerto especificado coincide con el puerto HTTPS configurado en los ajustes de la base de datos
-- un certificado válido y una llave privada de encriptación están instalados en la base de datos. En caso contrario, se produce el error "1610 - Una solicitud remota al host xxx ha fallado"
+If no matching datastore is found, `Open datastore` returns **Null**.
 
 #### Ejemplo 1
 
@@ -212,13 +217,34 @@ Trabajar con varios almacenes de datos remotos:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
+#### Ejemplo 4
+
+Connection to a Qodly application:
+
+```4d
+var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
+
+var $remoteDS : 4D.DataStoreImplementation
+var $data : 4D.EntitySelection
+
+$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
+  //it is recommended to store the API key in a secured place (e.g. a file)
+  //and to load it in the code
+
+$remoteDS:=Open datastore($connectTo; "remoteId")
+$data:=$remoteDS.item.all()
+
+ALERT(String($data.length)+" items have been read")
+
+```
+
 #### Gestión de errores
 
 In case of error, the command returns **Null**. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". You can intercept this error with a method installed by `ON ERR CALL`.
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
 
-## _.dataclassName_
+## *.dataclassName*
 
 <details><summary>Historia</summary>
 
@@ -355,7 +381,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | isEncrypted |             |               | Boolean | True si el archivo de datos está encriptado                                                                                              |
 | keyProvided |             |               | Boolean | True si se proporciona la llave de encriptación que coincide con el archivo de datos encriptados(\*). |
 | tablas      |             |               | Object  | Objeto que contiene tantas propiedades como tablas encriptadas o codificadas.                                            |
-|             | _tableName_ |               | Object  | Tabla encriptada o cifrada                                                                                                               |
+|             | *tableName* |               | Object  | Tabla encriptada o cifrada                                                                                                               |
 |             |             | name          | Text    | Nombre de la tabla                                                                                                                       |
 |             |             | num           | Number  | Número de tabla                                                                                                                          |
 |             |             | isEncryptable | Boolean | Verdadero si la tabla está declarada como encriptada en el archivo de estructura                                                         |
@@ -363,9 +389,9 @@ El objeto devuelto contiene las siguientes propiedades:
 
 (\*) Se puede suministrar la llave de encriptación:
 
-- with the `.provideDataKey()` command,
+- con el comando `.provideDataKey()`,
 - en la raíz de un dispositivo conectado antes de abrir el almacén de datos,
-- with the `Discover data key` command.
+- con el comando `Discover data key`.
 
 #### Ejemplo
 
@@ -398,9 +424,10 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20          | Añadidos       |
+|Release|Changes|
+
+\|---|---|
+|20|Added|
 
 </details>
 
@@ -422,7 +449,7 @@ The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
@@ -577,7 +604,7 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
@@ -696,7 +723,7 @@ En un almacén de datos remoto:
 
 #### Descripción
 
-The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the _contextName_ optimization context in the datastore.<!-- END REF -->.
+The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
 
 For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
@@ -711,7 +738,7 @@ El objeto devuelto tiene las siguientes propiedades:
 | dataclass                                 | Text | Nombre de la clase de datos                                                                                                                                                                                                                                                                   |
 | currentItem (opcional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
 
-Since contexts behave as filters for attributes, if _main_ is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
+Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
 
 #### Ejemplo
 
@@ -896,14 +923,14 @@ When this function is not called, new entity selections can be shareable, depend
 
 The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
 
-> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
+> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) es devuelto. Use the `Data file encryption status` command to determine if the database is encrypted.
 > - The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
 
-If you use the _curPassPhrase_ parameter, pass the string used to generate the data encryption key. Cuando se utiliza este parámetro, se genera una llave de encriptación.
+If you use the *curPassPhrase* parameter, pass the string used to generate the data encryption key. Cuando se utiliza este parámetro, se genera una llave de encriptación.
 
-If you use the _curDataKey_ parameter, pass an object (with _encodedKey_ property) that contains the data encryption key. This key may have been generated with the `New data key` command.
+If you use the *curDataKey* parameter, pass an object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the `New data key` command.
 
-If a valid data encryption key is provided, it is added to the _keyChain_ in memory and the encryption mode is enabled:
+If a valid data encryption key is provided, it is added to the *keyChain* in memory and the encryption mode is enabled:
 
 - todas las modificaciones de datos en las tablas encriptadas se cifran en el disco (.4DD, .journal. 4Dindx)
 - todos los datos cargados desde tablas encriptadas se descifran en memoria
@@ -915,7 +942,7 @@ El resultado de la orden se describe en el objeto devuelto:
 | Propiedad  |                                                                                              | Tipo       | Descripción                                                                                                |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                                                                                              | Boolean    | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
-|            |                                                                                              |            | Properties below are returned only if success is _FALSE_                                                   |
+|            |                                                                                              |            | Properties below are returned only if success is *FALSE*                                                   |
 | status     |                                                                                              | Number     | Código de error (4 si la llave de encriptación suministrada es errónea)                 |
 | statusText |                                                                                              | Text       | Mensaje de error                                                                                           |
 | errors     |                                                                                              | Collection | Pila de errores. El primer error tiene el índice más alto                                  |
@@ -923,7 +950,7 @@ El resultado de la orden se describe en el objeto devuelto:
 |            | \[ ].errCode            | Number     | Número de error                                                                                            |
 |            | \[ ].message            | Text       | Mensaje de error                                                                                           |
 
-If no _curPassphrase_ or _curDataKey_ is given, `.provideDataKey()` returns **null** (no error is generated).
+If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 
 #### Ejemplo
 
@@ -956,9 +983,7 @@ If no _curPassphrase_ or _curDataKey_ is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( _status_ : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -978,10 +1003,10 @@ In this case, you can call this function to disable the data access from Data Ex
 
 #### Ejemplo
 
-You create a _protectDataFile_ project method to call before deployments for example:
+You create a *protectDataFile* project method to call before deployments for example:
 
 ```4d
- ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de datos
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### Ver también
@@ -1020,13 +1045,13 @@ Esta función está destinada a los desarrolladores que necesiten modificar el v
 
 #### Descripción
 
-The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets _newStamp_ as new value for the current global modification stamp for the datastore<!-- END REF -->.
+The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
 
 :::info
 
 Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
+- en el datastore local ([`ds`](#ds)).
 - en entorno cliente/servidor, en la máquina servidor.
 
 :::
@@ -1079,7 +1104,7 @@ ds.setGlobalStamp($newValue)
 
 #### Descripción
 
-The `.setRemoteContextInfo()` function <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the _contextName_ optimization context<!-- END REF -->. Si ya existe un contexto de optimización para los atributos especificados, este comando lo reemplaza.
+The `.setRemoteContextInfo()` function <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. Si ya existe un contexto de optimización para los atributos especificados, este comando lo reemplaza.
 
 Cuando se pasa un contexto a las funciones de clase ORDA, la optimización de las peticiones REST se activa inmediatamente:
 
@@ -1088,22 +1113,22 @@ Cuando se pasa un contexto a las funciones de clase ORDA, la optimización de la
 
 > For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/client-server-optimization.md#optimization-context)
 
-In _contextName_, pass the name of the optimization context to link to the dataclass attributes.
+In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
 
-To designate the dataclass that will receive the context, you can pass a _dataClassName_ or a _dataClassObject_.
+To designate the dataclass that will receive the context, you can pass a *dataClassName* or a *dataClassObject*.
 
-To designate the attributes to link to the context, pass either a list of attributes separated by a comma in _attributes_ (Text), or a collection of attribute names in _attributesColl_ (collection of text).
+To designate the attributes to link to the context, pass either a list of attributes separated by a comma in *attributes* (Text), or a collection of attribute names in *attributesColl* (collection of text).
 
-If _attributes_ is an empty Text, or _attributesColl_ is an empty collection, all the scalar attributes of the dataclass are put in the optimization context. Si se pasa un atributo que no existe en la dataclass, la función lo ignora y se genera un error.
+If *attributes* is an empty Text, or *attributesColl* is an empty collection, all the scalar attributes of the dataclass are put in the optimization context. Si se pasa un atributo que no existe en la dataclass, la función lo ignora y se genera un error.
 
-You can pass a _contextType_ to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
+You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
 
-- If set to "main" (default), the _contextName_ designates a standard context.
+- If set to "main" (default), the *contextName* designates a standard context.
 - Si su valor es "currentItem", los atributos pasados se ponen en el contexto del elemento actual.  See  [Entity selection-based list box](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
 
-In _pageLength_, specify the number of dataclass entities to request from the server.
+In *pageLength*, specify the number of dataclass entities to request from the server.
 
-You can pass a _pageLength_ for a relation attribute which is an entity selection (one to many). The syntax is `relationAttributeName:pageLength` (e.g employees:20).
+You can pass a *pageLength* for a relation attribute which is an entity selection (one to many). The syntax is `relationAttributeName:pageLength` (e.g employees:20).
 
 #### Ejemplo 1
 
@@ -1183,10 +1208,10 @@ End case
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                               |
-| ----------- | -------------------------------------------- |
-| 20          | Server side support, new `options` parameter |
-| 17 R6       | Añadidos                                     |
+| Lanzamiento | Modificaciones                                           |
+| ----------- | -------------------------------------------------------- |
+| 20          | Soporte del lado del servidor, nuevo parámetro `options` |
+| 17 R6       | Añadidos                                                 |
 
 </details>
 
@@ -1216,27 +1241,27 @@ For a description of the ORDA request log format, please refer to the [**ORDA re
 
 Para crear un registro de peticiones ORDA del lado del cliente, llame a esta función en una máquina remota. El registro puede enviarse a un archivo o a la memoria, según el tipo de parámetro:
 
-- If you passed a _file_ object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+- If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
   If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
-- If you passed a _reqNum_ integer, the log in memory is emptied (if any) and a new log is initialized. It will keep _reqNum_ requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a _reqNum_ while a logging was previously started in a file, the file logging is stopped.
+- If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
 
-- Si no ha pasado ningún parámetro, el registro se inicia en la memoria. If `.startRequestLog()` was previously called with a _reqNum_ (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
+- Si no ha pasado ningún parámetro, el registro se inicia en la memoria. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
 
 #### Del lado del servidor
 
 Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. The log data is written in a file in `.jsonl` format. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
-- If you passed the _file_ parameter, the log data is written in this file, at the requested location. - If you omit the _file_ parameter or if it is null, the log data is written in a file named _ordaRequests.jsonl_ and stored in the "/LOGS" folder.
-- The _options_ parameter can be used to specify if the server response has to be logged, and if it should include the body. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
+- If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
+- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
 
-|Constant|Description|
-\|----|----|---|
-|srl log all|Log the response entirely (default value)|
-|srl log no response|Disable the logging of the response|
-|srl log response without body|Log the response without the body|
+| Constante                     | Descripción                                                                |
+| ----------------------------- | -------------------------------------------------------------------------- |
+| srl log all                   | Registrar la respuesta por completo (valor por defecto) |
+| srl log no response           | Desactivar el registro de la respuesta                                     |
+| srl log response without body | Registrar la respuesta sin el cuerpo                                       |
 
 #### Ejemplo 1
 

@@ -5,7 +5,7 @@ title: VP EXPORT TO BLOB
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
 
-**VP EXPORT TO BLOB** ( _vpAreaName_ : Text ; _paramObj_ : Object ) <!-- END REF -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
 
@@ -16,9 +16,9 @@ title: VP EXPORT TO BLOB
 
 #### Descrição
 
-The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the _vpAreaName_ 4D View Pro document in a 4D.Blob according to the _paramObj_ options.<!-- END REF --> The exported blob is available through the export callback. A exportação e importação de áreas do 4D View Pro como blobs é rápida e eficiente em termos de memória.
+The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. A exportação e importação de áreas do 4D View Pro como blobs é rápida e eficiente em termos de memória.
 
-In _paramObj_, you can pass several properties:
+In *paramObj*, you can pass several properties:
 
 | Propriedade             | Tipo                         | Descrição                                                                                                                                                                                                                                                                       |
 | ----------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 | :-------- | :---------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
 | param1    |                               | text                    | O nome do objeto 4D View Pro                                                 |
 | param2    |                               | 4D.blob | O blob exportado                                                             |
-| param3    |                               | object                  | A reference to the command's _paramObj_ parameter                            |
+| param3    |                               | object                  | A reference to the command's *paramObj* parameter                            |
 | param4    |                               | object                  | Um objeto devolvido pelo método com uma mensagem de estado                   |
 |           | .success      | boolean                 | True se a exportação for bem sucedida, False caso contrário. |
 |           | .errorCode    | integer                 | Código de erro.                                              |
@@ -47,7 +47,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 #### Exemplo
 
-O comando `VP EXPORT TO BLOB` é assíncrono. Você deve criar um método de retorno de chamada (denominado _VPBlobCallback_ em nosso exemplo) para usar os resultados da exportação.
+O comando `VP EXPORT TO BLOB` é assíncrono. Você deve criar um método de retorno de chamada (denominado *VPBlobCallback* em nosso exemplo) para usar os resultados da exportação.
 
 ```4d
 //Exportar o documento VP

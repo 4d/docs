@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Allows to query the data in a dataclass or method _(e.g._, `$filter="firstName!='' AND salary>30000"`)
+Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
 
 ## Description
 
@@ -15,40 +15,40 @@ Un filtre est composé des éléments suivants :
 
 **{attribut} {comparateur} {valeur}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=` est le **comparateur** et `john` est la **valeur**.
 
 ### Utiliser un filtre complexe
 
-A more complex filter is composed of the following elements, which joins two queries:
+Un filtre plus complexe est composé des éléments suivants, qui joint deux requêtes:
 
 **{attribut} {comparateur} {value} {AND/OR/EXCEPT} {attribut} {comparateur} {value}**
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
 
 ### Utiliser la propriété params
 
 Vous pouvez également utiliser la propriété params de 4D.
 
-**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
+**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
+Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la [documentation de dataClass.query()](../API/DataClassClass.md#query).
 
 > Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
 >
 > <li>Quotes ('): \u0027</li>
 > <li>Guillemets doubles ("): \u0022</li>
 >
-> For example, you can write the following when passing a value with a quote when using the _params_ property:\
+> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété _params_ :\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
-> If you pass the value directly, you can write the following:
+> Si vous passez la valeur directement, vous pouvez écrire ce qui suit:
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Attribut
 
-If the attribute is in the same dataclass, you can just pass it directly (_e.g._, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (_e.g._, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
+Si l'attribut se trouve dans la même dataclass, vous pouvez simplement le passer directement (par exemple, `firstName`). Cependant, si vous souhaitez lancer une requête dans une autre dataclass, vous devez inclure le nom de l'attribut relationnel et le nom d'attribut, c'est-à-dire le chemin d'accès (par exemple, employeur.nom). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
 
 Vous pouvez également rechercher des attributs de type Objet en utilisant la notation par points. Par exemple, si vous avez un attribut dont le nom est "objAttribute" avec la structure suivante :
 

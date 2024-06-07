@@ -15,7 +15,7 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
 
-**VP CREATE TABLE** ( _rangeObj_ : Object ; _tableName_ : Text {; _source_ : Text} {; _options_ : cs.ViewPro.TableOptions} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -32,27 +32,27 @@ The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->crea
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-In _rangeObj_, pass the cell range where the table will be created.
+In *rangeObj*, pass the cell range where the table will be created.
 
-In _tableName_, pass a name for the table. Le nom doit :
+In *tableName*, pass a name for the table. Le nom doit :
 
 - être unique dans la feuille
 - inclure au moins 5 caractères
 - ne pas inclure d'espaces ou commencer par un nombre
 
-In _source_, you can pass a property name of a [data context](vp-set-data-context.md) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The _source_ property must contain a collection of objects and each element represents a row.
+In *source*, you can pass a property name of a [data context](vp-set-data-context.md) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
 
-- If you don't specify a _source_, the command creates an empty table with the size defined in _rangeObj_.
-- If the specified _source_ cannot be fully displayed in the document, no table is created.
+- If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
+- If the specified *source* cannot be fully displayed in the document, no table is created.
 
-In the _options_ parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
 
-Within the _options_ object, the _tableColumns_ collection determines the structure of the table's columns. The length of the _tableColumns_ collection must be equal to the range column count:
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
-- When the column count in _rangeObj_ exceeds the number of columns in _tableColumns_, the table is filled with additional empty columns.
-- When the column count in _rangeObj_ is inferior to the number of _tableColumns_, the table displays a number of columns that match the range's column count.
+- When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
+- When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
 
-If you pass a _source_ but no _tableColumn_ option, the command generates columns automatically. In this case, _rangeObj_ must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
+If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
 
 - If the data passed to the command is a collection of objects, the property names are used as column titles. Par exemple :
 
@@ -68,7 +68,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
   - The subcollections' indices are used as column titles.
   - Chaque sous-collection définit les valeurs des cellules de la ligne. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](vp-set-value.md).
 
-> This only works when generating columns automatically. You cannot use a collection of scalar data with the _tableColumns_ option.
+> This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
 
 #### Exemple
 

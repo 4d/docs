@@ -75,11 +75,11 @@ The table below shows choices available:
 | Internal date short                                | short                                    | 03/25/2020                                                    |
 | ISO Date Time _(3)_             | iso8601                                  | 2020-03-25T00:00:00           |
 
-_(1)_ To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Cette particularité ne s'applique qu'aux versions françaises de 4D.
+_(1)_ Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-_(2)_ The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
+_(2)_ L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
 
-_(3)_ The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
+_(3)_ Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
 
 > Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
 
@@ -566,7 +566,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 ## Wordwrap
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
+> Pour les [input](input_overview.md), disponibles lorsque la propriété [Multiligne](properties_Entry.md#multiline) est définie sur "oui".
 
 Manages the display of contents when it exceeds the width of the object.
 

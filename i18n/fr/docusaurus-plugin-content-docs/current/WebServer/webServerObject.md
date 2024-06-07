@@ -13,13 +13,13 @@ Par exemple, si vous avez installé deux composants dans votre application princ
 
 En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc, de serveurs Web, pouvant être rattachés à un seul projet d'application 4D.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Chaque serveur web 4D, y compris le serveur web de l'application principale, est exposé comme un **objet** spécifique de la classe `4D.WebServer`. Une fois instancié, un objet serveur Web peut être géré depuis l'application courante ou depuis n'importe quel composant à l'aide d'un [grand nombre de propriétés et de fonctions](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
 Chaque serveur web (application hôte ou composant) peut être utilisé dans son propre contexte, notamment :
 
-- `On Web Authentication` and `On Web Connection` database method calls
+- les appels vers la méthode base `On Web Authentication` et `On Web Connection`
 - le traitement des balises 4D et les appels de méthodes,
 - sessions web et gestion du protocole TLS.
 
@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Fonctions du serveur web
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+Un [objet de classe Web server](API/WebServerClass.md#web-server-object) contient les fonctions suivantes :
 
 | Fonctions                                | Paramètres                          | Valeur retournée                   | Description            |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------- | ---------------------- |
@@ -86,12 +86,12 @@ $status:=webServer.stop()
 
 ## Propriétés du serveur web
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-server-object) qui configurent le serveur Web.
 
 Ces propriétés sont définies :
 
 1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
+2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
@@ -101,7 +101,7 @@ Ces propriétés sont définies :
 
 ## Portée des commandes 4D Web
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
+Le langage 4D contient [plusieurs commandes](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
 
 | Command                         | Portée                            |
 | ------------------------------- | --------------------------------- |

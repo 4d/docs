@@ -58,15 +58,15 @@ title: DataStore
 
 #### 説明
 
-`ds` コマンドは、<!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または _localID_ で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
+`ds` コマンドは、<!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または *localID* で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
 
-_localID_ を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
+*localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
 
-開かれているリモートデータストアのローカルIDを _localID_ パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](#open-datastore) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
+開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](#open-datastore) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
 
 > ローカルIDのスコープは、当該データストアを開いたデータベースです。
 
-_localID_ に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
+*localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
 `cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
@@ -108,9 +108,11 @@ _localID_ に合致するデータストアが見つからない場合、コマ�
 
 <details><summary>履歴</summary>
 
-| リリース | 内容 |
-| ---- | -- |
-| 18   | 追加 |
+| リリース  | 内容                                |
+| ----- | --------------------------------- |
+| 20 R6 | Support access to Qodly instances |
+| 20 R4 | 新しい *passwordAlgorithm* プロパティ     |
+| 18    | 追加                                |
 
 </details>
 
@@ -129,24 +131,40 @@ _localID_ に合致するデータストアが見つからない場合、コマ�
 #### 説明
 
 `Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
-_connectionInfo_ 引数が指定する 4Dデータベースにアプリケーションを接続します<!-- END REF -->。戻り値は、_localID_ ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
+*connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
 
-_connectionInfo_ で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
+以下のリモートデータストアが、このコマンドでサポートされています:
 
-- データベースの Webサーバーは、http または https が有効化された状態で開始されていなければなりません。
-- データストアは、[**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている必要があります。また、[データクラスと属性](../REST/configuration.md#テーブルやフィールドの公開) も公開されている必要があります。
+| データストアの種類                                                           | 説明                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| リモート4Dアプリケーション                                                      | 次の条件を満たし、リモートデータストアとして利用可能な 4Dアプリケーション:<li>http および/または https が有効な状態で Webサーバーが起動されている。</li><li>データストアが REST に公開されている ([**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている)。</li>ライセンスが必要な場合があります (注記参照)。                                                                                         |
+| [Qodly アプリケーション](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role. |
 
 :::note
 
-`Open datastore` のリクエストは 4D REST API に依存し、接続を開くために 4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
 
 :::
 
-合致するデータベースが見つからない場合、`Open datastore` は **Null** を返します。
+*connectionInfo* には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 オブジェクトは以下のプロパティを格納することができます (*hostname* を除き、すべてのプロパティは任意です):
 
-_localID_ 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 _localID_ 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに _localID_ のセッションが新規に作成されます。
+| プロパティ       | タイプ     | リモート4Dアプリケーション                                                                                                                                                                                                                                                                                                                             | Qodly application                                                            |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| hostname    | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                                                                                        | API Endpoint of the Qodly cloud instance                                     |
+| user        | Text    | ユーザー名                                                                                                                                                                                                                                                                                                                                      | - (ignored)                                               |
+| password    | Text    | ユーザーパスワード                                                                                                                                                                                                                                                                                                                                  | * (ignored)                                               |
+| idleTimeout | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 | - (ignored)                                               |
+| tls         | Boolean | True to use secured connection(1). 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                                                                      | True to use secured connection. If omitted, false by default |
+| type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                        | * (ignored)                                               |
+| api-key     | Text    | - (ignored)                                                                                                                                                                                                                                                                                                             | Api key of the Qodly cloud instance                                          |
 
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
+(1) If `tls` is true, the HTTPS protocol is used if:
+
+- リモートデータストアで HTTPS が有効化されている。
+- 指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
+- a valid certificate and private encryption key are installed in the 4D application. 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
+
+*localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
@@ -156,22 +174,9 @@ _localID_ 引数は、リモートデータストア上で開かれるセッシ�
   //$myds と $myds2 は同一のものです
 ```
 
-_connectionInfo_ には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 オブジェクトは以下のプロパティを格納することができます (_hostname_ を除き、すべてのプロパティは任意です):
+Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-| プロパティ       | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                         |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname    | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                                                                                        |
-| user        | Text    | ユーザー名                                                                                                                                                                                                                                                                                                                                      |
-| password    | Text    | ユーザーパスワード                                                                                                                                                                                                                                                                                                                                  |
-| idleTimeout | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 |
-| tls         | Boolean | 安全な接続を使用します(\*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                                                                                                        |
-| type        | Text    | "4D Server" でなければなりません                                                                                                                                                                                                                                                                                                                     |
-
-(\*) tls が true だった場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:
-
-- リモートデータストアで HTTPS が有効化されている。
-- 指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
-- データベースに有効な証明書と非公開暗号鍵がインストールされている。 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
+If no matching datastore is found, `Open datastore` returns **Null**.
 
 #### 例題 1
 
@@ -213,13 +218,34 @@ user / password / timeout / tls を指定してリモートデータストアに
  ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
 ```
 
+#### 例題 4
+
+Connection to a Qodly application:
+
+```4d
+var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
+
+var $remoteDS : 4D.DataStoreImplementation
+var $data : 4D.EntitySelection
+
+$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
+  //it is recommended to store the API key in a secured place (e.g. a file)
+  //and to load it in the code
+
+$remoteDS:=Open datastore($connectTo; "remoteId")
+$data:=$remoteDS.item.all()
+
+ALERT(String($data.length)+" items have been read")
+
+```
+
 #### エラー管理
 
 エラーが起きた場合、コマンドは **Null** を返します。 リモートデータベースにアクセスできなかった場合 (アドレス違い、Webサーバーが開始されていない、http/https が有効化されていない、等)、エラー1610 "ホスト XXX へのリモートリクエストに失敗しました" が生成されます。 このエラーは `ON ERR CALL` で実装されたメソッドで割り込み可能です。
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
 
-## _.dataclassName_
+## *.dataclassName*
 
 <details><summary>履歴</summary>
 
@@ -356,7 +382,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 | isEncrypted |             |               | Boolean | データファイルが暗号化されていれば true                                        |
 | keyProvided |             |               | Boolean | 暗号化されたデータファイルに合致する暗号化キーが提供されていれば true (\*) |
 | tables      |             |               | Object  | 暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト                         |
-|             | _tableName_ |               | Object  | 暗号化可能または暗号化されたテーブル                                            |
+|             | *tableName* |               | Object  | 暗号化可能または暗号化されたテーブル                                            |
 |             |             | name          | Text    | テーブル名                                                         |
 |             |             | num           | Number  | テーブル番号                                                        |
 |             |             | isEncryptable | Boolean | ストラクチャーファイルにおいて、テーブルが暗号化可能と宣言されていれば true                      |
@@ -399,9 +425,10 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <details><summary>履歴</summary>
 
-| リリース | 内容 |
-| ---- | -- |
-| 20   | 追加 |
+|Release|Changes|
+
+\|---|---|
+|20|Added|
 
 </details>
 
@@ -698,7 +725,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 #### 説明
 
-`.getRemoteContextInfo()` 関数は、<!-- REF #DataStoreClass.getRemoteContextInfo().Summary -->_contextName_ で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します<!-- END REF -->。
+`.getRemoteContextInfo()` 関数は、<!-- REF #DataStoreClass.getRemoteContextInfo().Summary -->*contextName* で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します<!-- END REF -->。
 
 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#最適化コンテキスト) を参照ください。
 
@@ -713,7 +740,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 | dataclass                           | Text | データクラスの名称                                                                                                                                                                             |
 | currentItem (任意) | Text | コンテキストがリストボックスとリンクしている場合の [ページモード](../ORDA/remoteDatastores.md#エンティティセレクション型リストボックス) の属性。 コンテキスト名がリストボックスに使用されていない場合、または currentItem に対応するコンテキストが存在しない場合は、`Null` または空のテキスト要素として返されます。 |
 
-コンテキストは属性に対するフィルターとして動作するため、_main_ が空で返された場合、それはフィルターが適用されておらず、サーバーがすべてのデータクラス属性を返すことを意味します。
+コンテキストは属性に対するフィルターとして動作するため、*main* が空で返された場合、それはフィルターが適用されておらず、サーバーがすべてのデータクラス属性を返すことを意味します。
 
 #### 例題
 
@@ -901,11 +928,11 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 > - `.provideDataKey()` 関数は暗号化されたデータベース内で呼び出される必要があります。 暗号化されていないデータベース内で呼び出した場合、エラー2003 (暗号化キーはデータと合致しません)  が返されます。 データベースが暗号化されているかどうかを調べるには `Data file encryption status` コマンドを使用します。
 > - リモートの 4D または暗号化されたリモートデータストアから、`.provideDataKey()` 関数を呼び出すことはできません。
 
-_curPassPhrase_ パラメーターを使用する場合は、データ暗号化キーの生成に使用した文字列を渡します。 このパラメーターを使用した場合、暗号化キーが生成されます。
+*curPassPhrase* パラメーターを使用する場合は、データ暗号化キーの生成に使用した文字列を渡します。 このパラメーターを使用した場合、暗号化キーが生成されます。
 
-_curDataKey_ パラメーターを使用する場合は、データ暗号化キー (_encodedKey_ プロパティ) を格納するオブジェクトを渡します。 このキーは、`New data key` コマンドで生成された可能性があります。
+*curDataKey* パラメーターを使用する場合は、データ暗号化キー (*encodedKey* プロパティ) を格納するオブジェクトを渡します。 このキーは、`New data key` コマンドで生成された可能性があります。
 
-有効な暗号化キーが提供された場合、そのキーはメモリ内の _keyChain_ に追加され、暗号化モードが有効になります:
+有効な暗号化キーが提供された場合、そのキーはメモリ内の *keyChain* に追加され、暗号化モードが有効になります:
 
 - 暗号化可能テーブルに対するデータ編集はすべて、ディスク上 (.4DD、.journal、 .4Dindx ファイル) で暗号化されます。
 - 暗号化可能テーブルから読み出したすべてのデータは、メモリ内で復号化されます。
@@ -917,7 +944,7 @@ _curDataKey_ パラメーターを使用する場合は、データ暗号化キ�
 | プロパティ      |                                                                                              | タイプ        | 説明                                                  |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
 | success    |                                                                                              | Boolean    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false            |
-|            |                                                                                              |            | 以下のプロパティは、success が _FALSE_ であった場合にのみ返されます。         |
+|            |                                                                                              |            | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。         |
 | status     |                                                                                              | Number     | エラーコード (提供された暗号化キーが間違っていた場合には 4) |
 | statusText |                                                                                              | Text       | エラーメッセージ                                            |
 | errors     |                                                                                              | Collection | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。               |
@@ -925,7 +952,7 @@ _curDataKey_ パラメーターを使用する場合は、データ暗号化キ�
 |            | \[ ].errCode            | Number     | エラー番号                                               |
 |            | \[ ].message            | Text       | エラーメッセージ                                            |
 
-_curPassphrase_ および _curDataKey_ のどちらの引数も渡されなかった場合、`.provideDataKey()` は **null** を返します (この場合エラーは生成されません)。
+*curPassphrase* および *curDataKey* のどちらの引数も渡されなかった場合、`.provideDataKey()` は **null** を返します (この場合エラーは生成されません)。
 
 #### 例題
 
@@ -958,9 +985,7 @@ _curPassphrase_ および _curDataKey_ のどちらの引数も渡されなか�
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-
-**.setAdminProtection**( _status_ : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
@@ -980,10 +1005,10 @@ _curPassphrase_ および _curDataKey_ のどちらの引数も渡されなか�
 
 #### 例題
 
-運用前に呼び出す _protectDataFile_ プロジェクトメソッドを作成します:
+運用前に呼び出す *protectDataFile* プロジェクトメソッドを作成します:
 
 ```4d
- ds.setAdminProtection(True) // データエクスプローラーによるデータアクセスを無効化します
+ ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
 
 #### 参照
@@ -1022,7 +1047,7 @@ _curPassphrase_ および _curDataKey_ のどちらの引数も渡されなか�
 
 #### 説明
 
-`.setDataStore()` 関数は、<!-- REF #DataStoreClass.setGlobalStamp().Summary -->データストアのグローバル変更スタンプの新しい値として _newStamp_ を設定します<!-- END REF -->。
+`.setDataStore()` 関数は、<!-- REF #DataStoreClass.setGlobalStamp().Summary -->データストアのグローバル変更スタンプの新しい値として *newStamp* を設定します<!-- END REF -->。
 
 :::info
 
@@ -1081,7 +1106,7 @@ ds.setGlobalStamp($newValue)
 
 #### 説明
 
-`.setRemoteContextInfo()` 関数は、<!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->指定したデータクラス属性を _contextName_ の最適化コンテキストにリンクします<!-- END REF -->。 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。
+`.setRemoteContextInfo()` 関数は、<!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->指定したデータクラス属性を *contextName* の最適化コンテキストにリンクします<!-- END REF -->。 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。
 
 ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの最適化が即座に発動します:
 
@@ -1090,22 +1115,22 @@ ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの
 
 > 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#最適化コンテキスト) を参照ください。
 
-_contextName_ には、データクラス属性にリンクする最適化コンテキストの名前を渡します。
+*contextName* には、データクラス属性にリンクする最適化コンテキストの名前を渡します。
 
-コンテキストを受け取るデータクラスを指定するために、_dataClassName_ または _dataClassObject_ を渡すことができます。
+コンテキストを受け取るデータクラスを指定するために、*dataClassName* または *dataClassObject* を渡すことができます。
 
-コンテキストにリンクする属性を指定するには、_attributes_ (テキスト) にカンマ区切りの属性リストを渡すか、属性名のコレクションを _attributesColl_ (テキストのコレクション) に渡します。
+コンテキストにリンクする属性を指定するには、*attributes* (テキスト) にカンマ区切りの属性リストを渡すか、属性名のコレクションを *attributesColl* (テキストのコレクション) に渡します。
 
-_attributes_ が空のテキスト、または _attributesColl_ が空のコレクションの場合、データクラスのすべてのスカラー属性が最適化コンテキストに置かれます。 データクラスに存在しない属性を渡した場合、それは無視され、エラーが返されます。
+*attributes* が空のテキスト、または *attributesColl* が空のコレクションの場合、データクラスのすべてのスカラー属性が最適化コンテキストに置かれます。 データクラスに存在しない属性を渡した場合、それは無視され、エラーが返されます。
 
-_contextType_ を渡して、コンテキストが標準コンテキストか、リストボックスに表示されているカレントエンティティセレクション項目のコンテキストかを指定することができます。
+*contextType* を渡して、コンテキストが標準コンテキストか、リストボックスに表示されているカレントエンティティセレクション項目のコンテキストかを指定することができます。
 
-- "main" (デフォルト) を渡すと、_contextName_ は標準コンテキストを指定します。
+- "main" (デフォルト) を渡すと、*contextName* は標準コンテキストを指定します。
 - "currentItem" の場合には、渡された属性はカレント項目のコンテキストに置かれます。  [エンティティセレクション型リストボックス](../ORDA/remoteDatastores.md#エンティティセレクション型リストボックス) を参照ください。
 
-_pageLength_ には、サーバーに要求するデータクラスエンティティの数を指定します。
+*pageLength* には、サーバーに要求するデータクラスエンティティの数を指定します。
 
-エンティティセレクションであるリレーション属性 (1対N) について、_pageLength_ を渡すことができます。 シンタックスは、`relationAttributeName:pageLength` です (例: employees:20)。
+エンティティセレクションであるリレーション属性 (1対N) について、*pageLength* を渡すことができます。 シンタックスは、`relationAttributeName:pageLength` です (例: employees:20)。
 
 #### 例題 1
 
@@ -1219,21 +1244,21 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 クライアント側の ORDAリクエストログを作成するには、リモートマシン上でこの関数を呼び出します。 ログは、渡した引数によってファイルまたはメモリに送ることができます:
 
-- `File` コマンドで作成された _file_ オブジェクトを渡した場合、ログデータはオブジェクト (JSON フォーマット) のコレクションとしてこのファイルに書き込まれます。 各オブジェクトは一つのリクエストを表します。<br/>ファイルがまだ存在しない場合には、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
+- `File` コマンドで作成された *file* オブジェクトを渡した場合、ログデータはオブジェクト (JSON フォーマット) のコレクションとしてこのファイルに書き込まれます。 各オブジェクトは一つのリクエストを表します。<br/>ファイルがまだ存在しない場合には、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
   メモリへのログ記録が既に始まっている状態で、 `.startRequestLog()`が file 引数付きで呼び出された場合、メモリに記録されていたログは停止され消去されます。
 
 > JSON 評価を実行するには、ファイルの終わりに手動で \] 文字を追加する必要があります。
 
-- _reqNum_ (倍長整数) 引数を渡した場合、メモリ内のログは (あれば) 消去され、新しいログが初期化されます。 _reqNum_ 引数が指定する数にリクエスト数が到達するまでは、ログはメモリに保管され、到達した場合には古いエントリーから消去されていきます (FIFO スタック)。<br/>ファイルへのログ記録が既に始まっている状態で、`.startRequestLog()` が _reqNum_ 引数付きで呼び出された場合、ファイルへのログは停止されます。
+- *reqNum* (倍長整数) 引数を渡した場合、メモリ内のログは (あれば) 消去され、新しいログが初期化されます。 *reqNum* 引数が指定する数にリクエスト数が到達するまでは、ログはメモリに保管され、到達した場合には古いエントリーから消去されていきます (FIFO スタック)。<br/>ファイルへのログ記録が既に始まっている状態で、`.startRequestLog()` が *reqNum* 引数付きで呼び出された場合、ファイルへのログは停止されます。
 
-- 引数を何も渡さなかった場合、ログはメモリに記録されていきます。 前もって `.startRequestLog()` が_reqNum_ 引数付きで 呼び出されていた場合 (ただし `.stopRequestLog()` の前)、ログが次回消去されるかまたは`.stopRequestLog()` が呼び出されるまで、ログデータはメモリ内にスタックされます。
+- 引数を何も渡さなかった場合、ログはメモリに記録されていきます。 前もって `.startRequestLog()` が*reqNum* 引数付きで 呼び出されていた場合 (ただし `.stopRequestLog()` の前)、ログが次回消去されるかまたは`.stopRequestLog()` が呼び出されるまで、ログデータはメモリ内にスタックされます。
 
 #### サーバー側
 
 サーバー側の ORDAリクエストログを作成するには、サーバーマシン上でこの関数を呼び出します。 ログは、`.jsonl` 形式のファイルに書き込まれます。 各オブジェクトは 1つのリクエストを表します。 ファイルが存在しない場合は、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
 
-- _file_ 引数を渡した場合、ログデータはこのファイルの指定位置に書き込まれます。 - _file_ 引数を省略した場合、または引数が NULL の場合、ログデータは _ordaRequests.jsonl_ という名前のファイルに書き込まれ、"/LOGS" フォルダーに保存されます。
-- _options_ 引数を使って、サーバーのレスポンスをログに記録するかどうか、および本文をログに含めるかどうかを指定することができます。 引数を省略した場合のデフォルトでは、全レスポンスがログに記録されます。 この引数には、以下の定数を使用することができます:
+- *file* 引数を渡した場合、ログデータはこのファイルの指定位置に書き込まれます。 - *file* 引数を省略した場合、または引数が NULL の場合、ログデータは *ordaRequests.jsonl* という名前のファイルに書き込まれ、"/LOGS" フォルダーに保存されます。
+- *options* 引数を使って、サーバーのレスポンスをログに記録するかどうか、および本文をログに含めるかどうかを指定することができます。 引数を省略した場合のデフォルトでは、全レスポンスがログに記録されます。 この引数には、以下の定数を使用することができます:
 
 | 定数                            | 説明                                         |
 | ----------------------------- | ------------------------------------------ |
@@ -1266,7 +1291,8 @@ ORDA クライアントリクエストをメモリに記録します:
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) // メモリにはリクエストを 3つまで保管します
+ ds.startRequestLog(3) //keep 3 requests in memory
+
  $es:=ds.Persons.query("name=:1";"Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))
  $es:=ds.Persons.query("name=:1";"So@")

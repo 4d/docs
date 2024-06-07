@@ -47,8 +47,8 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Web sessions (_aka_ **Scalable sessions**) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [**thread-safe**](preemptiveWeb.md).
+- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
 
@@ -275,7 +275,7 @@ End if
 
 This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
-### Logout
+### Cerrar sesión
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
@@ -286,7 +286,7 @@ Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar 
 Al desencadenar la acción de cierre de sesión de una sesión de usuario web, se producen los siguientes efectos:
 
 - the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
-- the associated 4D license is released,
+- se libera la licencia asociada de 4D,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
 ## Acerca del uso de licencias para renderización

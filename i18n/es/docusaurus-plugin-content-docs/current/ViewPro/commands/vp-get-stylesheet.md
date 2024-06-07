@@ -5,7 +5,7 @@ title: VP Get stylesheet
 
 <!-- REF #_method_.VP Get stylesheet.Syntax -->
 
-**VP Get stylesheet** ( _vpAreaName_ : Text ; _styleName_ : Text { ; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
@@ -18,13 +18,13 @@ title: VP Get stylesheet
 
 #### Descripción
 
-The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the _styleName_ style sheet object containing the property values which have been defined<!-- END REF -->.
+The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En _styleName_, pase el nombre de la hoja de estilo a obtener.
+En *styleName*, pase el nombre de la hoja de estilo a obtener.
 
-You can define where to get the style sheet in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
 - `vk current sheet`
 - `vk workbook`
@@ -37,7 +37,7 @@ El código siguiente:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... devolverá el objeto estilo _GreenDashDotStyle_ de la hoja actual:
+... devolverá el objeto estilo *GreenDashDotStyle* de la hoja actual:
 
 ```4d
 {

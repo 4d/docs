@@ -5,7 +5,7 @@ title: VP EXPORT TO BLOB
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
 
-**VP EXPORT TO BLOB** ( _vpAreaName_ : Text ; _paramObj_ : Object ) <!-- END REF -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
 
@@ -16,9 +16,9 @@ title: VP EXPORT TO BLOB
 
 #### 説明
 
-`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->_vpAreaName_ で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、_paramObj_ で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
+`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
 
-_paramObj_ には、複数のプロパティを渡せます:
+*paramObj* には、複数のプロパティを渡せます:
 
 | プロパティ                   | タイプ                         | 説明                                                                                                                                                         |
 | ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ _paramObj_ には、複数のプロパティを渡せます:
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
 | param1 |                               | text                    | 4D View Pro オブジェクト名               |
 | param2 |                               | 4D.blob | エクスポートされた Blob                    |
-| param3 |                               | object                  | コマンドの _paramObj_ 引数への参照           |
+| param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
 |        | .success      | boolean                 | 書き出しに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
@@ -47,7 +47,7 @@ _paramObj_ には、複数のプロパティを渡せます:
 
 #### 例題
 
-`VP EXPORT TO BLOB` コマンドは非同期です。 エクスポートの結果を取得するには、コールバックメソッド (この例では _VPBlobCallback_ という名前) を作成する必要があります。
+`VP EXPORT TO BLOB` コマンドは非同期です。 エクスポートの結果を取得するには、コールバックメソッド (この例では *VPBlobCallback* という名前) を作成する必要があります。
 
 ```4d
 // VPドキュメントをエクスポート

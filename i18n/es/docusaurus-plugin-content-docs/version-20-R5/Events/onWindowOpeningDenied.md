@@ -5,7 +5,7 @@ title: On Window Opening Denied
 
 | Code | Puede ser llamado por                          | Definición                            |
 | ---- | ---------------------------------------------- | ------------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
+| 53   | [Área web](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
 <details><summary>Historia</summary>
 
@@ -21,14 +21,14 @@ Este evento se genera cuando la apertura de una ventana emergente es bloqueada p
 
 Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
+Este evento también se activa cuando se ha realizado una operación de arrastrar y soltar en el área Web (con motores [integrados](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) y del sistema Windows) si la opción de [Arrastrar y soltar](../FormObjects/webArea_overview.md#user-interface) también está habilitada para el área. Puede aceptar la acción de soltar llamando:
 
 ```4d
-//web area object method
+//método objeto área web
 If (FORM Event.code=On Window Opening Denied)
 	WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-	// or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-	// where UrlVariable is the URL variable associated to the web area
+	// o UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+	// donde UrlVariable es la variable URL asociada al área web
 End if 
 ```
 

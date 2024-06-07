@@ -56,7 +56,7 @@ Même si cela est généralement déconseillé, vous pouvez déclarer des variab
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable déclarée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis modifie le type de manière dynamique. Une variable typée avec `var` ne peut pas changer le type. En revanche, en [mode compilé](interpreted.md), le type ne peut jamais être modifié, quelle que soit la façon dont la variable a été déclarée.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable déclarée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis changée de type de manière dynamique. Une variable typée avec `var` ne peut pas changer le type. En revanche, en [mode compilé](interpreted.md), le type ne peut jamais être modifié, quelle que soit la façon dont la variable a été déclarée.
 
 ## Commandes
 
@@ -66,7 +66,7 @@ Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une a
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
-Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Par exemple :
+Certaines commandes sont reliées à des collections ou à des objets, auquel cas elles sont nommées fonctions et sont utilisées à l'aide de la notation à point. Par exemple :
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -371,11 +371,11 @@ Les deux styles de commentaires peuvent être utilisés simultanément.
 Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Voici un exemple :
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
+//Ceci est un commentaire
+For($vCounter;1;100) //Début de la boucle
+  //commentaire
+  //commentaire
+  //commentaire
 End for
 ```
 
@@ -407,11 +407,11 @@ End for
 
 ## Séquences d’échappement
 
-The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+Le langage 4D vous permet d'utiliser des séquences d'échappement (aussi appelées caractères d'échappement). Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”.
 
 The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
 
-In 4D, the following escape sequences can be used:
+Dans 4D, les séquences d'échappement suivantes peuvent être utilisées:
 
 | Séquence d’échappement        | Caractère remplacé  |
 | ----------------------------- | ------------------- |
@@ -421,7 +421,7 @@ In 4D, the following escape sequences can be used:
 | ``\\` |``&#96; (Backslash) |                     |
 | `\"`                         | " (Guillemets)      |
 
-> It is possible to use either upper or lower case in escape sequences.
+> Il est possible d'utiliser des majuscules ou des minuscules dans les séquences d'échappement.
 
 In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
 

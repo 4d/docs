@@ -465,10 +465,10 @@ La función devuelve Null si *index* está más allá de los límites de selecci
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1"; "H@")
-$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
-$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
-    //de la selección de entidades $employees
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
 ```
 
 
@@ -1881,7 +1881,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página [`.query()`](DataC
 
 La propiedad `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contiene una descripción detallada de la consulta tal y como fue realizada por 4D<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPath":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass.
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
 
 <!-- END REF -->
 

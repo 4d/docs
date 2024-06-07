@@ -5,7 +5,7 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get column attributes.Syntax -->
 
-**VP Get column attributes** (  _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get column attributes** (  *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get column attributes
 
 #### 説明
 
-`VP Get column attributes` コマンドは、<!-- REF #_method_.VP Get column attributes.Summary -->_rangeObj_ 引数で指定したレンジ内にあるカラムのプロパティのコレクションを返します<!-- END REF -->。
+`VP Get column attributes` コマンドは、<!-- REF #_method_.VP Get column attributes.Summary -->*rangeObj* 引数で指定したレンジ内にあるカラムのプロパティのコレクションを返します<!-- END REF -->。
 
-_rangeObj_ 引数には、属性を取得したいカラムのレンジを格納しているオブジェクトを渡します。
+*rangeObj* 引数には、属性を取得したいカラムのレンジを格納しているオブジェクトを渡します。
 
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションにはカラムの属性がすべて返されます。
 

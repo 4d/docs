@@ -800,6 +800,7 @@ module.exports =
 								"REST/atomic_$atonce",
 								"REST/attributes",
 								"REST/binary",
+								"REST/clean",
 								"REST/compute",
 								"REST/distinct",
 								"REST/entityset",

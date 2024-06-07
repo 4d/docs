@@ -25,7 +25,7 @@ Une date nulle s’écrit _!00-00-00!_.
 
 **Notes :**
 
-- Pour des raisons de compatibilité, 4D accepte que l'année soit saisie sur deux chiffres. Dans ce cas, le programme considère qu’elle appartient au XXe ou au XXIe siècle selon qu'elle est supérieure ou inférieure à 30, sauf si ce fonctionnement par défaut a été modifié à l'aide de la commande `SET DEFAULT CENTURY`.
+- Pour des raisons de compatibilité, 4D accepte la saisie de dates en utilisant le format du système avec des années sur deux chiffres, telles que !12/04/98!. Dans ce cas, le programme considère qu’elle appartient au XXe ou au XXIe siècle selon qu'elle est supérieure ou inférieure à 30, sauf si ce fonctionnement par défaut a été modifié à l'aide de la commande `SET DEFAULT CENTURY`.
 - Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le format de date défini dans votre système. Généralement dans un environnement français, une date est saisie sous la forme jour/mois/année, une barre oblique "/" séparant les valeurs.
 
 ## Opérateurs sur les dates

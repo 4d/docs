@@ -8,7 +8,7 @@ La page “Informations” fournit diverses informations relatives à l’enviro
 
 ## Programme
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the _4D Language Reference_ manual).
+Cette page affiche le nom, la version et l’emplacement de l’application ainsi que du dossier 4D actif (pour plus d’informations sur le dossier 4D actif, reportez-vous à la description de la commande `Get 4D folder` du manuel _Langage 4D_).
 
 La partie centrale de la fenêtre affiche le nom et l’emplacement du projet et des fichiers de données ainsi que, le cas échéant, du fichier d'historique. La partie inférieure de la fenêtre indique le nom du propriétaire de la licence 4D, le type de licence et le nom de l'utilisateur 4D courant.
 
@@ -17,10 +17,9 @@ La partie centrale de la fenêtre affiche le nom et l’emplacement du projet et
   Si vous sélectionnez un élément de menu (disque ou dossier), il est affiché dans une nouvelle fenêtre système.
   La commande **Copier le chemin** copie le chemin complet comme texte dans le presse-papiers, en utilisant les séparateurs de la plate-forme courante.
 
-- **"Licenses" Folder**
-  The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Tous les fichiers de licence installés dans votre environnement 4D sont regroupés dans ce dossier, placé sur votre disque dur. Lorsqu’ils sont ouverts avec un navigateur Web, ces fichiers affichent des informations relatives aux licences qu’ils contiennent et à leurs caractéristiques.
+- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Tous les fichiers de licence installés dans votre environnement 4D sont regroupés dans ce dossier, placé sur votre disque dur. Lorsqu’ils sont ouverts avec un navigateur Web, ces fichiers affichent des informations relatives aux licences qu’ils contiennent et à leurs caractéristiques.
   L’emplacement du dossier "Licenses" peut varier en fonction de la version ou de la langue de votre système d’exploitation. For more information about the location of this folder, refer to the `Get 4D folder` command.
-  _**Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu)._
+  _**Note :** Vous pouvez également accéder à ce dossier depuis la boîte de dialogue “Mise à jour des licences” (accessible depuis le menu Aide)._
 
 ## Tables
 
@@ -32,19 +31,19 @@ Cette page propose une vue d'ensemble de la base :
 
 La page liste toutes les tables de la base (y compris les tables invisibles) ainsi que leurs caractéristiques :
 
-- **ID**: Internal number of the table.
-- **Tables**: Name of the table. Les noms des tables supprimées sont affichés entre parenthèses (lorsqu'elles sont dans la corbeille).
-- **Records**: Total number of records in the table. If a record is damaged or cannot be read, _Error_ is displayed instead of the number. Dans ce cas, vous devez envisager d'utiliser les outils de vérification et de réparation.
-- **Fields**: Number of fields in the table. Les champs invisibles sont comptés, en revanche les champs supprimés ne le sont pas.
-- **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. _**Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC._
-- **Address Table Size**: Size of the address table for each table. La table d'adresses est une table interne qui stocke un élément par enregistrement créé dans la table. Elle établit le lien entre les enregistrements et leur adresse physique. Pour des raisons de performance, elle n'est pas redimensionnée lorsque des enregistrements sont supprimés. Sa taille peut donc être différente du nombre d'enregistrements actuel de la table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
-  _**Note:** Differences between address table size and record number can also result from an incident during the cache flush._
+- **No.** : Numéros internes des tables.
+- **Tables** : Noms des tables. Les noms des tables supprimées sont affichés entre parenthèses (lorsqu'elles sont dans la corbeille).
+- **Enregistrements** : Nombre total d'enregistrements de chaque table. Si un enregistrement est endommagé ou ne peut pas être lu, le mot _Erreur_ est affiché à la place du total. Dans ce cas, vous devez envisager d'utiliser les outils de vérification et de réparation.
+- **Champs** : Nombre de champs dans la table. Les champs invisibles sont comptés, en revanche les champs supprimés ne le sont pas.
+- **Index** : Nombre d'index de tout type associés à la table
+- **Chiffrable** : Si l'attribut **Chiffrable** est coché, il est sélectionné pour la table au niveau de la structure (voir le paragraphe "Chiffrable" dans le manuel Développement).
+- **Chiffrée** : Si cet attribut est coché, les enregistrements de la table sont chiffrés dans le fichier de données. **Chiffrée** : Si cet attribut est coché, les enregistrements de la table sont chiffrés dans le fichier de données.
+- **Taille table adresses** : Taille de la table d'adresses pour chaque table. La table d'adresses est une table interne qui stocke un élément par enregistrement créé dans la table. Elle établit le lien entre les enregistrements et leur adresse physique. Pour des raisons de performance, elle n'est pas redimensionnée lorsque des enregistrements sont supprimés. Sa taille peut donc être différente du nombre d'enregistrements actuel de la table. À noter que si cette différence est significative, il peut être intéressant de compacter les données avec l'option "Compacter la table d'adresses" afin d'optimiser la taille de la table d'adresses (voir [Page Compactage](compact.md)).
+  \***Note :** Des différences entre la taille de la table d'adresses et le nombre d'enregistrements peuvent également résulter d'un incident durant l'écriture du cache sur le disque.
 
 ## Data
 
-The **Data** page provides information about the available and used storage space in the data file.
+La page **Données** fournit des informations sur l'espace de stockage libre et occupé dans les fichiers de données et la structure de la base.
 
 > Cette page n'est pas accessible en mode maintenance
 

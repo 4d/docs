@@ -9,7 +9,7 @@ title: FileHandle
 
 > ドキュメント全体を一括で読み書きするには、[file.getText()](FileClass.md#gettext) と [file.setText()](FileClass.md#settext) 関数の使用を検討されるとよいでしょう。
 
-標準的な 4Dオブジェクトの _参照カウント_ により、FileHandle は参照されなくなると自動的に削除され、要求された [`File`](FileClass) オブジェクトも自動的に閉じられます。 つまり、FileHandle を使えば、ドキュメントを閉じる必要がなくなります。
+標準的な 4Dオブジェクトの *参照カウント* により、FileHandle は参照されなくなると自動的に削除され、要求された [`File`](FileClass) オブジェクトも自動的に閉じられます。 つまり、FileHandle を使えば、ドキュメントを閉じる必要がなくなります。
 
 :::note
 
@@ -312,7 +312,7 @@ $s:=$fh.readText()
 
 | 引数      | タイプ                                  |    | 説明             |
 | ------- | ------------------------------------ | -- | -------------- |
-| _bytes_ | Real                                 | -> | 読み取るバイト数       |
+| *bytes* | Real                                 | -> | 読み取るバイト数       |
 | 戻り値     | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト |
 
 <!-- END REF -->
@@ -389,7 +389,7 @@ $s:=$fh.readText()
 
 | 引数         | タイプ  |    | 説明          |
 | ---------- | ---- | -- | ----------- |
-| _stopChar_ | Text | -> | 読み取りを停止する文字 |
+| *stopChar* | Text | -> | 読み取りを停止する文字 |
 | 戻り値        | Text | <- | ファイルのテキスト   |
 
 <!-- END REF -->
@@ -398,9 +398,9 @@ $s:=$fh.readText()
 
 `.readText()` 関数は、<!-- REF #FileHandleClass.readText().Summary -->現在の位置から、最初の stopChar 文字列まで (渡された場合)、あるいはファイルの終端に達するまでのテキストを返します<!-- END REF -->。
 
-_stopChar_ の文字列は、返されるテキストに含まれません。 _stopChar_ を省略した場合、ドキュメント全体のテキストが返されます。
+*stopChar* の文字列は、返されるテキストに含まれません。 *stopChar* を省略した場合、ドキュメント全体のテキストが返されます。
 
-この関数を実行すると、[.offset](#offset) が _stopChar_ 文字列の直後に移動します。
+この関数を実行すると、[.offset](#offset) が *stopChar* 文字列の直後に移動します。
 
 :::caution 警告
 
@@ -408,7 +408,7 @@ _stopChar_ の文字列は、返されるテキストに含まれません。 _s
 
 :::
 
-渡した _stopChar_ が見つからない場合、`.readText()` は空の文字列を返し、[.offset](#offset) は更新されません。
+渡した *stopChar* が見つからない場合、`.readText()` は空の文字列を返し、[.offset](#offset) は更新されません。
 
 > この関数が FileHandle を対象に初めて実行されると、ドキュメント全体がバッファーに読み込まれます。
 
@@ -444,7 +444,7 @@ _stopChar_ の文字列は、返されるテキストに含まれません。 _s
 
 `.setSize()` 関数は、<!-- REF #FileHandleClass.setSize().Summary -->ドキュメントの新しいサイズをバイト単位で設定します<!-- END REF -->。
 
-_size_ の値が現在のドキュメントサイズより小さい場合、内容は先頭から切り捨てられ、新しい _size_ が取得されます。
+*size* の値が現在のドキュメントサイズより小さい場合、内容は先頭から切り捨てられ、新しい *size* が取得されます。
 
 #### 参照
 
@@ -470,13 +470,13 @@ _size_ の値が現在のドキュメントサイズより小さい場合、内�
 
 | 引数     | タイプ                                  |    | 説明             |
 | ------ | ------------------------------------ | -- | -------------- |
-| _blob_ | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
+| *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
 
 <!-- END REF -->
 
 #### 説明
 
-`.writeBlob()` 関数は、<!-- REF #FileHandleClass.writeBlob().Summary -->ファイルの現在の位置から _blob_ に渡した Blob を書き込みます<!-- END REF -->。
+`.writeBlob()` 関数は、<!-- REF #FileHandleClass.writeBlob().Summary -->ファイルの現在の位置から *blob* に渡した Blob を書き込みます<!-- END REF -->。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだバイトの後に更新されます。
 
@@ -504,13 +504,13 @@ _size_ の値が現在のドキュメントサイズより小さい場合、内�
 
 | 引数           | タイプ  |    | 説明       |
 | ------------ | ---- | -- | -------- |
-| _lineOfText_ | Text | -> | 書き込むテキスト |
+| *lineOfText* | Text | -> | 書き込むテキスト |
 
 <!-- END REF -->
 
 #### 説明
 
-`.writeLine()` 関数は、<!-- REF #FileHandleClass.writeLine().Summary -->現在の位置に _lineOfText_ の内容を書き込み、改行文字を挿入します<!-- END REF --> ([.writeText()](#writetext) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeLine()` 関数は、<!-- REF #FileHandleClass.writeLine().Summary -->現在の位置に *lineOfText* の内容を書き込み、改行文字を挿入します<!-- END REF --> ([.writeText()](#writetext) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだ改行文字の後に更新されます。
 
@@ -538,13 +538,13 @@ _size_ の値が現在のドキュメントサイズより小さい場合、内�
 
 | 引数            | タイプ  |    | 説明       |
 | ------------- | ---- | -- | -------- |
-| _textToWrite_ | Text | -> | 書き込むテキスト |
+| *textToWrite* | Text | -> | 書き込むテキスト |
 
 <!-- END REF -->
 
 #### 説明
 
-`.writeText()` 関数は、<!-- REF #FileHandleClass.writeText().Summary -->現在の位置に _textToWrite_ の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeText()` 関数は、<!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) は、次の改行文字の後に更新されます。
 

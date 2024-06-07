@@ -5,7 +5,7 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Syntax -->
 
-**VP Cell** ( _vpAreaName_ ; _column_ : Integer ; _row_ : Integer ; Text { ; _sheet_ : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -25,13 +25,13 @@ title: VP Cell
 
 > このコマンドは単一セルのレンジを想定しています。 複数セルに対するレンジオブジェクトを作成するには、[VP Cells](vp-cells.md) コマンドを使用します。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_column_ 引数で、セルレンジの位置のカラムを定義します。 この引数としてカラムのインデックスを渡します。
+*column* 引数で、セルレンジの位置のカラムを定義します。 この引数としてカラムのインデックスを渡します。
 
-_row_ 引数で、セルレンジの位置をの行を定義します。 この引数として行のインデックスを渡します。
+*row* 引数で、セルレンジの位置をの行を定義します。 この引数として行のインデックスを渡します。
 
-任意の _sheet_ 引数で、レンジが定義されるシートのインデックスを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
+任意の *sheet* 引数で、レンジが定義されるシートのインデックスを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
 > インデックスは 0 起点です。
 

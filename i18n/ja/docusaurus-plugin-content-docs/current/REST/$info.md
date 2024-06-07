@@ -9,14 +9,15 @@ title: $info
 
 プロジェクトに対してこのリクエストを送信すると、次のプロパティに情報を取得します:
 
-| プロパティ          | タイプ        | 説明                                 |
-| -------------- | ---------- | ---------------------------------- |
-| cacheSize      | Number     | 4D Server のキャッシュサイズ                |
-| usedCache      | Number     | 4D Server のキャッシュ使用量                |
-| entitySetCount | Number     | エンティティセットの数                        |
-| entitySet      | Collection | 各エンティティセットの情報が格納されているオブジェクトのコレクション |
-| ProgressInfo   | Collection | 進捗インジケーターの情報が格納されているコレクション         |
-| sessionInfo    | Collection | 各ユーザーセッションの情報が格納されているオブジェクトのコレクション |
+| プロパティ          | タイプ        | 説明                                                                                                                            |
+| -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | 4D Server のキャッシュサイズ                                                                                                           |
+| usedCache      | Number     | 4D Server のキャッシュ使用量                                                                                                           |
+| entitySetCount | Number     | エンティティセットの数                                                                                                                   |
+| entitySet      | Collection | 各エンティティセットの情報が格納されているオブジェクトのコレクション                                                                                            |
+| ProgressInfo   | Collection | 進捗インジケーターの情報が格納されているコレクション                                                                                                    |
+| sessionInfo    | Collection | 各ユーザーセッションの情報が格納されているオブジェクトのコレクション                                                                                            |
+| privileges     | Object     | "privileges" プロパティ (オブジェクトのコレクション) を持つオブジェクト。 コレクションの各オブジェクト要素は、ユーザーセッションの権限名を値とする "privilege" プロパティを持ちます。 |
 
 ### entitySet
 
@@ -100,7 +101,7 @@ ProgressInfo: [
         percent: 0
     }
 ],
-sessionInfo: [ 
+sessionInfo: [
     {
         sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
         userID: "36713176D42DB045B01B8E650E8FA9C6",

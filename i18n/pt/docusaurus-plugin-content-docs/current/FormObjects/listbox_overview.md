@@ -102,6 +102,12 @@ Cada elemento de la colección o cada entidad está disponible como un objeto al
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
+:::note
+
+When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+
+:::
+
 Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por exemplo:
 
 ```4d
@@ -497,7 +503,7 @@ Puede escribir en el método _UI_SetColor_:
  Else
     $color:=lk inherited
  End if
- 
+
  $0:=$color
 ```
 
@@ -964,7 +970,7 @@ Os valores das células são armazenados no atributo "value". Este atributo é u
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"boolean")
  OB SET($ob3;"value";True)
- 
+
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
  APPEND TO ARRAY(obColumn;$ob3)
@@ -1078,7 +1084,7 @@ Exemplos:
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
-	OB SET($ob;"requiredListName";"colors")	
+	OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)

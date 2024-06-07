@@ -48,7 +48,7 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant can be used to declare method parameters ($0, $1,...) that can be of various types. Dans ce cas, vous pouvez générer votre code en testant le type de valeur du paramètre, par exemple :
+Le type Variant peut être utilisé pour déclarer des paramètres de méthode ($0, $1,...) qui peuvent être de différents types. Dans ce cas, vous pouvez générer votre code en testant le type de valeur du paramètre, par exemple :
 
 ```4d
 C_VARIANT($1)

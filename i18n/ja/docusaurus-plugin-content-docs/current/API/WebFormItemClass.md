@@ -26,9 +26,7 @@ title: WebFormItem
 
 ### .hide()
 
-<!-- REF #WebFormItemClass.hide().Syntax -->
-
-**.hide**()<!-- END REF -->
+<!-- REF #WebFormItemClass.hide().Syntax -->**.hide**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.hide().Params -->
 
@@ -46,9 +44,7 @@ title: WebFormItem
 
 ### .show()
 
-<!-- REF #WebFormItemClass.show().Syntax -->
-
-**.show**()<!-- END REF -->
+<!-- REF #WebFormItemClass.show().Syntax -->**.show**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.show().Params -->
 
@@ -66,9 +62,7 @@ title: WebFormItem
 
 ### .addCSSClass()
 
-<!-- REF #WebFormItemClass.addCSSClass().Syntax -->
-
-**.addCSSClass**(_className_ : string)<!-- END REF -->
+<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
@@ -80,15 +74,13 @@ title: WebFormItem
 
 #### 説明
 
-`.addCSSClass` 関数は、<!-- REF #WebFormItemClass.addCSSClass().Summary -->_className_ で指定されたクラスをコンポーネントに追加します<!-- END REF -->。
+`.addCSSClass` 関数は、<!-- REF #WebFormItemClass.addCSSClass().Summary -->*className* で指定されたクラスをコンポーネントに追加します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.addCSSClass()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass) を参照ください。
 
 ### .removeCSSClass()
 
-<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->
-
-**.removeCSSClass**(_className_: string)<!-- END REF -->
+<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
@@ -100,6 +92,6 @@ title: WebFormItem
 
 #### 説明
 
-`.removeCSSClass()` 関数は、<!-- REF #WebFormItemClass.removeCSSClass().Summary -->_className_ で指定されたクラスをコンポーネントから削除します<!-- END REF -->。
+`.removeCSSClass()` 関数は、<!-- REF #WebFormItemClass.removeCSSClass().Summary -->*className* で指定されたクラスをコンポーネントから削除します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.removeCSSClass()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass) を参照ください。

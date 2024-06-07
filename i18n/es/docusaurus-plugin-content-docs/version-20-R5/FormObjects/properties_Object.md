@@ -53,12 +53,12 @@ Esta funcionalidad sólo es soportada con los objetos que contribuyen a la geome
 
 Esta es la lista de objetos cuyo valor se puede guardar:
 
-| Object                                     | Valor guardado                                                                                              |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Valor de la variable asociada (0, 1, 2)                                                  |
-| [Drop-down List](dropdownList_Overview.md) | Número de línea seleccionada                                                                                |
-| [Radio Button](radio_overview.md)          | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
-| [Tab control](tabControl.md)               | Número de pestaña seleccionada                                                                              |
+| Object                                          | Valor guardado                                                                                              |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Casilla de verificación](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
+| [Drop-down List](dropdownList_Overview.md)      | Número de línea seleccionada                                                                                |
+| [Botón de radio](radio_overview.md)             | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
+| [Tab control](tabControl.md)                    | Número de pestaña seleccionada                                                                              |
 
 #### Gramática JSON
 
@@ -98,7 +98,7 @@ Puede utilizar una [expresión](Concepts/quick-tour.md#expressions) como fuente 
 
 ### Variables dinámicas
 
-You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
+You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dinámicamente y de acuerdo a sus necesidades. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
 
 Cuando una variable no tiene nombre, al cargar el formulario, 4D crea una nueva variable para el objeto, con un nombre calculado que es único en el espacio de las variables de proceso del intérprete (lo que significa que este mecanismo puede utilizarse incluso en modo compilado). Esta variable temporal se destruirá cuando se cierre el formulario.
 Para que este principio funcione en modo compilado, es imprescindible que las variables dinámicas estén explícitamente declaradas. Hay dos maneras de hacer esto:
@@ -255,7 +255,7 @@ Permite utilizar los botones de radio en conjuntos coordinados: sólo se puede s
 
 #### Objetos soportados
 
-[Radio Button](radio_overview.md)
+[Botón de radio](radio_overview.md)
 
 ---
 

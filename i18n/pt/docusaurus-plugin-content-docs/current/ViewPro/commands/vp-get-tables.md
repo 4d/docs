@@ -13,7 +13,7 @@ title: VP Get tables
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 
-**VP Get tables** ( _vpAreaName_ : Text { ; _sheet_ : Integer } ) : Collection<!-- END REF -->
+**VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get tables.Params -->
 
@@ -25,11 +25,11 @@ title: VP Get tables
 
 #### Descrição
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the _sheet_<!-- END REF -->.
+The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro.
+Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
+In *sheet*, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
 > A indexação começa em 0.
 

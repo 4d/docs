@@ -17,6 +17,7 @@ title: EntitySelection
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)<br/><!-- INCLUDE #EntitySelectionClass.at().Summary -->                                                                |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<br/><!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.clean().Syntax -->](#clean)<br/><!-- INCLUDE #EntitySelectionClass.clean().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
@@ -62,13 +63,13 @@ title: EntitySelection
 
 #### 説明
 
-`Create entity selection` コマンドは、_dsTable_ で指定したテーブルに対応するデータクラスの [追加可能な](ORDA/entities.md#共有可能追加可能なエンティティセレクション) 新規エンティティセレクションを、同テーブルのカレントセレクションに基づいてビルドして返します。
+`Create entity selection` コマンドは、*dsTable* で指定したテーブルに対応するデータクラスの [追加可能な](ORDA/entities.md#共有可能追加可能なエンティティセレクション) 新規エンティティセレクションを、同テーブルのカレントセレクションに基づいてビルドして返します。
 
 ソートされたカレントセレクションの場合、[順列のある](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。 カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
 
-[`ds`](API/DataStoreClass.md#ds) において _dsTable_ が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。
+[`ds`](API/DataStoreClass.md#ds) において *dsTable* が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。
 
-任意の _settings_ には、以下のプロパティを持つオブジェクトを渡せます:
+任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
 | プロパティ   | タイプ  | 説明                                                                            |
 | ------- | ---- | ----------------------------------------------------------------------------- |
@@ -102,13 +103,13 @@ $employees:=Create entity selection([Employee])
 
 #### 説明
 
-`USE ENTITY SELECTION` コマンドは、_entitySelection_ 引数で指定したデータクラスに合致するテーブルのカレントセレクションを、エンティティセレクションの中身に応じて更新します。
+`USE ENTITY SELECTION` コマンドは、*entitySelection* 引数で指定したデータクラスに合致するテーブルのカレントセレクションを、エンティティセレクションの中身に応じて更新します。
 
 [リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
 :::info
 
-このコマンドは、4Dのカレントセレクションが ORDAクエリの力を活用するためのものです。 パフォーマンス上の理由により、シングルユーザーの 4D と 4D Server では、このコマンドは _entitySelection_ をカレントセレクションと直結します。 そのため、このコマンドに受け渡した _entitySelection_ をその後に再利用したり変更したりすることは避けなければなりません。
+このコマンドは、4Dのカレントセレクションが ORDAクエリの力を活用するためのものです。 パフォーマンス上の理由により、シングルユーザーの 4D と 4D Server では、このコマンドは *entitySelection* をカレントセレクションと直結します。 そのため、このコマンドに受け渡した *entitySelection* をその後に再利用したり変更したりすることは避けなければなりません。
 
 :::
 
@@ -130,7 +131,7 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
-## &#91_index_&#93
+## &#91*index*&#93
 
 <details><summary>履歴</summary>
 
@@ -144,14 +145,14 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 
 #### 説明
 
-`EntitySelection[index]` 記法を使用すると、<!-- REF EntitySelectionClass.index.Summary -->標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます<!-- END REF -->。取得したいエンティティの位置を _index_ に渡します。
+`EntitySelection[index]` 記法を使用すると、<!-- REF EntitySelectionClass.index.Summary -->標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます<!-- END REF -->。取得したいエンティティの位置を *index* に渡します。
 
 対応するエンティティはデータストアから再読み込みされる点に注意してください。
 
-_index_ には、0 と `.length`-1 の範囲内で数値を指定することができます。
+*index* には、0 と `.length`-1 の範囲内で数値を指定することができます。
 
-- _index_ が範囲外だった場合、エラーが返されます。
-- _index_ がドロップされたエンティティに対応していた場合、Null値が返されます。
+- *index* が範囲外だった場合、エラーが返されます。
+- *index* がドロップされたエンティティに対応していた場合、Null値が返されます。
 
 :::caution
 
@@ -184,7 +185,7 @@ $result:=$sel[0].lock() //動作しません
 
 <!-- REF EntitySelectionClass.attributeName.Desc -->
 
-## ._attributeName_
+## .*attributeName*
 
 <details><summary>履歴</summary>
 
@@ -200,12 +201,12 @@ $result:=$sel[0].lock() //動作しません
 
 データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、<!-- REF EntitySelectionClass.attributeName.Summary -->エンティティセレクション内の属性値の "投影" を返します<!-- END REF -->。 戻り値は、属性の種類 ([kind](DataClassClass.md#attributename) が `storage` あるいは `relation`) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。
 
-- _attributeName_ で指定した属性がストレージ型の場合:
-  `.attributeName`は _attributeName_ と同じ型の値のコレクションを返します。
-- _attributeName_ で指定した属性がリレートエンティティ型の場合:
-  `.attributeName` は _attributeName_ と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
-- _attributeName_ で指定した属性がリレートエンティティズ型の場合:
-  `.attributeName` は _attributeName_ と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
+- *attributeName* で指定した属性がストレージ型の場合:
+  `.attributeName`は *attributeName* と同じ型の値のコレクションを返します。
+- *attributeName* で指定した属性がリレートエンティティ型の場合:
+  `.attributeName` は *attributeName* と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
+- *attributeName* で指定した属性がリレートエンティティズ型の場合:
+  `.attributeName` は *attributeName* と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションです。
 
@@ -264,7 +265,7 @@ $result:=$sel[0].lock() //動作しません
 
 | リリース  | 内容                            |
 | ----- | ----------------------------- |
-| 19 R7 | _entitySelection_ パラメーターをサポート |
+| 19 R7 | *entitySelection* パラメーターをサポート |
 | 18 R5 | 追加可能なエンティティセレクションのみをサポート      |
 | 17    | 追加                            |
 
@@ -278,37 +279,37 @@ $result:=$sel[0].lock() //動作しません
 | --------------- | ---------------------------------- | :-: | --------------------------------------------------- |
 | entity          | 4D.Entity          |  -> | エンティティセレクションに追加するエンティティ                             |
 | entitySelection | 4D.EntitySelection |  -> | エンティティセレクションに追加するエンティティセレクション                       |
-| 戻り値             | 4D.EntitySelection |  -> | 追加した _entity_ または _entitySelection_ を含むエンティティセレクション |
+| 戻り値             | 4D.EntitySelection |  -> | 追加した *entity* または *entitySelection* を含むエンティティセレクション |
 
 <!-- END REF -->
 
 #### 説明
 
-`.add()` 関数は、<!-- REF #EntitySelectionClass.add().Summary -->_entity_ または _entitySelection_ で渡したエンティティを対象のエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
+`.add()` 関数は、<!-- REF #EntitySelectionClass.add().Summary -->*entity* または *entitySelection* で渡したエンティティを対象のエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
 
 > このコマンドは、元のエンティティセレクションを変更します。
 
 :::info 警告
 
-エンティティセレクションは _追加可能_ のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
+エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 :::
 
 **エンティティの追加**
 
-- エンティティセレクションが順列ありの場合、_entity_ 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
-- エンティティセレクションが順列なしの場合、_entity_ 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
+- エンティティセレクションが順列ありの場合、*entity* 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+- エンティティセレクションが順列なしの場合、*entity* 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
 
 **エンティティセレクションの追加**
 
-- 元のエンティティセレクションが順列ありの場合、_entitySelection_ 引数のエンティティセレクションはセレクションの最後に追加されます。 _entitySelection_ 内の同じエンティティへの参照が元のエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+- 元のエンティティセレクションが順列ありの場合、*entitySelection* 引数のエンティティセレクションはセレクションの最後に追加されます。 *entitySelection* 内の同じエンティティへの参照が元のエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
 - エンティティセレクションが順列なしの場合、順列ありに変更されます。
 
 > 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 編集されたエンティティセレクションが関数から返されるため、関数の呼び出しをつなげることができます。
 
-_entity_ 引数のエンティティとエンティティセレクションが同じデータクラスに属していない場合、エラーが発生します。 追加するエンティティが Null であった場合には、エラーは発生しません。
+*entity* 引数のエンティティとエンティティセレクションが同じデータクラスに属していない場合、エラーが発生します。 追加するエンティティが Null であった場合には、エラーは発生しません。
 
 #### 例題 1
 
@@ -373,14 +374,14 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### 説明
 
-`.and()` 関数は、<!-- REF #EntitySelectionClass.and().Summary -->エンティティセレクションと _entity_ あるいは _entitySelection_ 引数をAND論理演算子を使用して結合します<!-- END REF -->。戻り値は、エンティティセレクションと引数の両方から参照されているエンティティのみを格納した、順列なしの新規エンティティセレクションです。
+`.and()` 関数は、<!-- REF #EntitySelectionClass.and().Summary -->エンティティセレクションと *entity* あるいは *entitySelection* 引数をAND論理演算子を使用して結合します<!-- END REF -->。戻り値は、エンティティセレクションと引数の両方から参照されているエンティティのみを格納した、順列なしの新規エンティティセレクションです。
 
-- _entity_ 引数を渡した場合、引数のエンティティをエンティティセレクションと結合させることになります。 エンティティがエンティティセレクションに属している場合、そのエンティティのみを格納する新しいエンティティセレクションが返されます。 そうでない場合、空のエンティティセレクションが返されます。
-- _entitySelection_ 引数を渡した場合、二つのエンティティセレクションを結合させることになります。 両方のセレクションから参照されているエンティティのみを格納する新しいエンティティセレクションが返されます。 重複するエンティティがなかった場合、空のエンティティセレクションが返されます。
+- *entity* 引数を渡した場合、引数のエンティティをエンティティセレクションと結合させることになります。 エンティティがエンティティセレクションに属している場合、そのエンティティのみを格納する新しいエンティティセレクションが返されます。 そうでない場合、空のエンティティセレクションが返されます。
+- *entitySelection* 引数を渡した場合、二つのエンティティセレクションを結合させることになります。 両方のセレクションから参照されているエンティティのみを格納する新しいエンティティセレクションが返されます。 重複するエンティティがなかった場合、空のエンティティセレクションが返されます。
 
 > [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。 返されるセレクションは常に順列なしのものになります。
 
-元のエンティティセレクションあるいは _entitySelection_ 引数が空であった場合、あるいは_entity_ 引数が Null であった場合、空のエンティティセレクションが返されます。
+元のエンティティセレクションあるいは *entitySelection* 引数が空であった場合、あるいは*entity* 引数が Null であった場合、空のエンティティセレクションが返されます。
 
 元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
@@ -437,11 +438,11 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### 説明
 
-`.at()` 関数は、<!-- REF #EntitySelectionClass.at().Summary -->_index_ の位置にあるエンティティを返します (_index_ は正負の整数)<!-- END REF -->。
+`.at()` 関数は、<!-- REF #EntitySelectionClass.at().Summary -->*index* の位置にあるエンティティを返します (*index* は正負の整数)<!-- END REF -->。
 
-_index_ に負の整数 (-1 から -n; n はエンティティセレクションの length) が渡された場合、エンティティセレクションの最後から逆向きに数えます。
+*index* に負の整数 (-1 から -n; n はエンティティセレクションの length) が渡された場合、エンティティセレクションの最後から逆向きに数えます。
 
-_index_ がエンティティセレクションの範囲を超える場合、この関数は Null を返します。
+*index* がエンティティセレクションの範囲を超える場合、この関数は Null を返します。
 
 #### 例題
 
@@ -482,20 +483,20 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 #### 説明
 
-`.average()` 関数は、<!-- REF #EntitySelectionClass.average().Summary -->_attributePath_ に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します<!-- END REF -->。
+`.average()` 関数は、<!-- REF #EntitySelectionClass.average().Summary -->*attributePath* に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します<!-- END REF -->。
 
-_attributePath_ 引数として、評価する属性パスを渡します。
+*attributePath* 引数として、評価する属性パスを渡します。
 
-計算の対象となるのは数値のみです。 ただし、エンティティセレクションの _attributePath_ 引数で指定したパスに異なる型の値が混在している場合、`.average()` はすべてのスカラー要素を対象として平均値を算出します。
+計算の対象となるのは数値のみです。 ただし、エンティティセレクションの *attributePath* 引数で指定したパスに異なる型の値が混在している場合、`.average()` はすべてのスカラー要素を対象として平均値を算出します。
 
 > 日付値は数値 (秒数) に変換され、平均を計算するのに使用されます。
 
-エンティティセレクションが空の場合、または _attributePath_ 引数に数値型の値が含まれていない場合には、`.average()` は **undefined** を返します。
+エンティティセレクションが空の場合、または *attributePath* 引数に数値型の値が含まれていない場合には、`.average()` は **undefined** を返します。
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
 #### 例題
 
@@ -507,6 +508,58 @@ _attributePath_ 引数として、評価する属性パスを渡します。
  $averageSalary:=ds.Employee.all().average("salary")
  $moreThanAv:=ds.Employee.query("salary > :1";$averageSalary)
 ```
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.clean().Desc -->
+
+## .clean()
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R6 | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.clean().Syntax -->**.clean**() : 4D.EntitySelection<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.clean().Params -->
+
+| 引数  | タイプ                                |     | 説明                             |
+| --- | ---------------------------------- | :-: | ------------------------------ |
+| 戻り値 | 4D.EntitySelection |  <- | 削除されたエンティティを含まない新規エンティティセレクション |
+
+<!-- END REF -->
+
+#### 説明
+
+`.clean()` 関数は、<!-- REF #EntitySelectionClass.clean().Summary -->元のエンティティセレクションに基づいた、削除済エンティティを含まない新しいエンティティセレクションを返します<!-- END REF -->。
+
+デフォルトでは、あるエンティティが削除 ([drop](EntitySelectionClass.md#drop)) された場合、既存のエンティティセレクション内のこのエンティティへの参照は *undefined* になりますが、エンティティセレクションオブジェクトから参照そのものは削除されません。 削除されたエンティティは、[`.length`](#length) プロパティの数にまだ含まれており、リストなどのインターフェースオブジェクトにエンティティセレクションがバインドされている場合、空白の行として表示されます。 この場合、エンティティセレクションに対して `.clean()` 関数を呼び出すことで、*undefined* なエンティティ参照が含まれない、最新のエンティティセレクションを新規に取得することができます。
+
+結果のエンティティセレクションは、元のエンティティセレクションと種別になります ([順序あり/順序なし](../ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)、[変更可能/共有可能](../ORDA/entities.md#共有可能追加可能なエンティティセレクション) の種別が保持されます)。
+
+#### 例題
+
+```4d
+var $sel; $sel2 : cs.SpecialitySelection
+var $status : Object
+
+$sel:=ds.Speciality.query("ID <= 4")
+$status:=ds.Speciality.get(2).drop() // データクラスからエンティティを削除する
+// $sel.length = 4
+
+$sel2:=$sel.clean()
+// $sel2.length = 3
+```
+
+![](../assets/en/API/clean.png)
+
+#### 参照
+
+[`.refresh()`](#refresh)
 
 <!-- END REF -->
 
@@ -537,9 +590,9 @@ _attributePath_ 引数として、評価する属性パスを渡します。
 
 `.contains()` 関数は、<!-- REF #EntitySelectionClass.contains().Summary -->エンティティ参照がエンティティセレクションに属している場合には true を返します<!-- END REF -->。そうでない場合には false を返します。
 
-_entity_ 引数として、エンティティセレクション内で検索するエンティティを渡します。 エンティティが Null の場合、関数は false を返します。
+*entity* 引数として、エンティティセレクション内で検索するエンティティを渡します。 エンティティが Null の場合、関数は false を返します。
 
-_entity_ 引数とエンティティセレクションが同じデータクラスのものでない場合、エラーが生成されます。
+*entity* 引数とエンティティセレクションが同じデータクラスのものでない場合、エラーが生成されます。
 
 #### 例題
 
@@ -578,21 +631,21 @@ _entity_ 引数とエンティティセレクションが同じデータクラ�
 | 引数            | タイプ  |     | 説明                                            |
 | ------------- | ---- | :-: | --------------------------------------------- |
 | attributePath | Text |  -> | 計算に使用する属性パス                                   |
-| 戻り値           | Real |  <- | エンティティセレクション内の _attributePath_ が null でない値の個数 |
+| 戻り値           | Real |  <- | エンティティセレクション内の *attributePath* が null でない値の個数 |
 
 <!-- END REF -->
 
 #### 説明
 
 `.count()` 関数は、<!-- REF #EntitySelectionClass.count().Summary -->
-エンティティセレクション内で _attributePath_ に指定したパスの値が null でないエンティティの数を返します<!-- END REF -->。
+エンティティセレクション内で *attributePath* に指定したパスの値が null でないエンティティの数を返します<!-- END REF -->。
 
 > 対象となるのはスカラー値のみです。 オブジェクトあるいはコレクション型の値は Null値とみなされます。
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない場合。
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
 #### 例題
 
@@ -637,7 +690,7 @@ _entity_ 引数とエンティティセレクションが同じデータクラ�
 
 > この関数は、元のエンティティセレクションを変更しません。
 
-_option_ パラメーターが省略された場合はデフォルトで、たとえコピー元が共有可能なエンティティセレクションであったとしても、関数はデフォルトで追加可能な (共有不可の) 新規エンティティセレクションを返します。 共有可能なエンティティセレクションを取得するには、_option_ に `ck shared` 定数を渡します。
+*option* パラメーターが省略された場合はデフォルトで、たとえコピー元が共有可能なエンティティセレクションであったとしても、関数はデフォルトで追加可能な (共有不可の) 新規エンティティセレクションを返します。 共有可能なエンティティセレクションを取得するには、*option* に `ck shared` 定数を渡します。
 
 > 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
@@ -700,20 +753,20 @@ _option_ パラメーターが省略された場合はデフォルトで、た�
 
 #### 説明
 
-`.distinct()` 関数は、<!-- REF #EntitySelectionClass.distinct().Summary -->_attributePath_ に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->。
+`.distinct()` 関数は、<!-- REF #EntitySelectionClass.distinct().Summary -->*attributePath* に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->。
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-_attributePath_ 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 _attributePath_ のパスが異なる型の値を格納しているオブジェクトプロパティであった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:
+*attributePath* 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 *attributePath* のパスが異なる型の値を格納しているオブジェクトプロパティであった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:
 
 1. ブール
 2. 文字列
 3. 数値
 4. 日付
 
-_attributePath_ がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
+*attributePath* がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
 
-_options_ 引数として、以下の定数を 1つ、または組み合わせで渡すことができます:
+*options* 引数として、以下の定数を 1つ、または組み合わせで渡すことができます:
 
 | 定数                | 値  | 説明                                                                                                                                                            |
 | ----------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -728,8 +781,8 @@ _options_ 引数として、以下の定数を 1つ、または組み合わせ�
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない場合。
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
 #### 例題
 
@@ -788,15 +841,15 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 #### 説明
 
-`.distinctPaths()` 関数は、<!-- REF #EntitySelectionClass.distinctPaths().Summary -->対象のエンティティセレクションにおいて _attribute_ に指定した、インデックスされているオブジェクト属性の重複しない (異なる) パスを格納したコレクションを返します<!-- END REF -->。
+`.distinctPaths()` 関数は、<!-- REF #EntitySelectionClass.distinctPaths().Summary -->対象のエンティティセレクションにおいて *attribute* に指定した、インデックスされているオブジェクト属性の重複しない (異なる) パスを格納したコレクションを返します<!-- END REF -->。
 
-_attribute_ が、インデックスされているオブジェクト属性でない場合、エラーが生成されます。
+*attribute* が、インデックスされているオブジェクト属性でない場合、エラーが生成されます。
 
-呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて _attribute_ で指定したオブジェクト属性が持つ重複しないのパスの数に等しい。 パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 _attribute_ が null 値のエンティティは考慮されません。
+呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて *attribute* で指定したオブジェクト属性が持つ重複しないのパスの数に等しい。 パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 *attribute* が null 値のエンティティは考慮されません。
 
 #### 例題
 
-_fullData_ オブジェクト属性に格納されているすべてのパスを取得します:
+*fullData* オブジェクト属性に格納されているすべてのパスを取得します:
 
 ```4d
 var $paths : Collection
@@ -811,7 +864,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 :::note
 
-_length_ は、ネストされたコレクションプロパティのパスとして自動的に追加されます。
+*length* は、ネストされたコレクションプロパティのパスとして自動的に追加されます。
 
 :::
 
@@ -846,7 +899,7 @@ _length_ は、ネストされたコレクションプロパティのパスと�
 
 > エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。
 
-`.drop()` の実行中にロックされたエンティティに遭遇した場合、そのエンティティは削除されません。 デフォルトでは、メソッドはエンティティセレクション内のすべてのエンティティを処理し、ドロップ不可なエンティティはエンティティセレクション内に返します。 最初のドロップ不可なエンティティに遭遇した時点でメソッドの実行を止めたい場合は、_mode_ パラメーターに `dk stop dropping on first error` 定数を渡します。
+`.drop()` の実行中にロックされたエンティティに遭遇した場合、そのエンティティは削除されません。 デフォルトでは、メソッドはエンティティセレクション内のすべてのエンティティを処理し、ドロップ不可なエンティティはエンティティセレクション内に返します。 最初のドロップ不可なエンティティに遭遇した時点でメソッドの実行を止めたい場合は、*mode* パラメーターに `dk stop dropping on first error` 定数を渡します。
 
 #### 例題
 
@@ -890,9 +943,7 @@ _length_ は、ネストされたコレクションプロパティのパスと�
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->
-
-**.extract**( _attributePath_ : Text { ; _option_ : Integer } ) : Collection<br/>**.extract**( _attributePath_ { ; _targetPath_ } { ; _...attributePathN_ : Text ; _targetPathN_ : Text } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -907,32 +958,32 @@ _length_ は、ネストされたコレクションプロパティのパスと�
 
 #### 説明
 
-`.extract()` 関数は、<!-- REF #EntitySelectionClass.extract().Summary -->_attributePath_ で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します<!-- END REF -->。
+`.extract()` 関数は、<!-- REF #EntitySelectionClass.extract().Summary -->*attributePath* で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します<!-- END REF -->。
 
-_attributePath_ には、以下のものを指定することができます:
+*attributePath* には、以下のものを指定することができます:
 
 - スカラーデータクラス属性
 - リレートエンティティ (単数)
 - リレートエンティティズ (複数)
 
-_attributePath_ 引数が無効な場合、空のコレクションが返されます。
+*attributePath* 引数が無効な場合、空のコレクションが返されます。
 
 このメソッドは 2種類のシンタックスを受け入れます。
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
-このシンタックスを使用すると、`.extract()` はエンティティセレクションの中の、_attributePath_ 引数で指定された値のコレクションを作成して返します。
+このシンタックスを使用すると、`.extract()` はエンティティセレクションの中の、*attributePath* 引数で指定された値のコレクションを作成して返します。
 
-デフォルトで、_attributePath_ で指定された値が _null_ または未定義のエンティティは、返されるコレクション内では無視されます。 _option_ パラメーターに `ck keep null` 定数を渡すと、これらの値は返されるコレクションに **null** 要素として格納されます。
+デフォルトで、*attributePath* で指定された値が *null* または未定義のエンティティは、返されるコレクション内では無視されます。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの値は返されるコレクションに **null** 要素として格納されます。
 
 - [.kind](DataClassClass.md#attributename) = "relatedEntity" であるデータクラス属性は、エンティティのコレクションとして取得されます (重複したものも保持されます)。
 - [.kind](DataClassClass.md#attributename) = "relatedEntities" であるデータクラス属性は、エンティティセレクションのコレクションとして取得されます。
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-このシンタックスを使用すると、`.extract()` は _attributePath_ 引数で指定されたプロパティを持つコレクションを作成して返します。 このコレクションのそれぞれの要素は、_targetPath_ 引数のプロパティと、対応する_attributePath_ 引数のプロパティを格納したオブジェクトです。 Null値はそのまま保持されます (このシンタックスでは _option_ に引数を渡しても無視されます)。
+このシンタックスを使用すると、`.extract()` は *attributePath* 引数で指定されたプロパティを持つコレクションを作成して返します。 このコレクションのそれぞれの要素は、*targetPath* 引数のプロパティと、対応する*attributePath* 引数のプロパティを格納したオブジェクトです。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
-複数の _attributePath_ 引数が渡した場合、それぞれに対して _targetPath_ 引数を渡す必要があります。 有効な \[_attributePath_, _targetPath_] のペアのみが取得されます。
+複数の *attributePath* 引数が渡した場合、それぞれに対して *targetPath* 引数を渡す必要があります。 有効な \[*attributePath*, *targetPath*] のペアのみが取得されます。
 
 - [.kind](DataClassClass.md#attributename) = "relatedEntity" であるデータクラス属性は、エンティティとして取得されます。
 - [.kind](DataClassClass.md#attributename) = "relatedEntities" であるデータクラス属性は、エンティティセレクションとして取得されます。
@@ -993,7 +1044,7 @@ _attributePath_ 引数が無効な場合、空のコレクションが返され�
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 
@@ -1049,7 +1100,7 @@ _attributePath_ 引数が無効な場合、空のコレクションが返され�
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass**() : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 
@@ -1100,7 +1151,7 @@ _attributePath_ 引数が無効な場合、空のコレクションが返され�
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes**() : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 
@@ -1156,7 +1207,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 
@@ -1198,7 +1249,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered**() : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 
@@ -1250,7 +1301,7 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last**() : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 
@@ -1343,16 +1394,16 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.max()` 関数は、<!-- REF #EntitySelectionClass.max().Summary -->_attributePath_ に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->。 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
+`.max()` 関数は、<!-- REF #EntitySelectionClass.max().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->。 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
 
-_attributePath_ に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.max()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します ([`.sort()`](CollectionClass.md#sort) の詳細を参照ください)。
+*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.max()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します ([`.sort()`](CollectionClass.md#sort) の詳細を参照ください)。
 
-エンティティセレクションが空の場合、または _attributePath_ 引数がオブジェクト属性内に見つからない場合には、`.max()` は **undefined** を返します。
+エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.max()` は **undefined** を返します。
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
 #### 例題
 
@@ -1393,16 +1444,16 @@ _attributePath_ に、異なる型の値を格納しているオブジェクト�
 
 #### 説明
 
-`.min()` 関数は、<!-- REF #EntitySelectionClass.min().Summary -->_attributePath_ に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->。  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
+`.min()` 関数は、<!-- REF #EntitySelectionClass.min().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->。  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
 
-_attributePath_ に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.min()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
+*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.min()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
 
-エンティティセレクションが空の場合、または _attributePath_ 引数がオブジェクト属性内に見つからない場合には、`.min()` は **undefined** を返します。
+エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.min()` は **undefined** を返します。
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
 #### 例題
 
@@ -1425,7 +1476,7 @@ _attributePath_ に、異なる型の値を格納しているオブジェクト�
 
 | リリース  | 内容                      |
 | ----- | ----------------------- |
-| 19 R7 | _keepOrder_ パラメーターをサポート |
+| 19 R7 | *keepOrder* パラメーターをサポート |
 | 17    | 追加                      |
 
 </details>
@@ -1445,22 +1496,22 @@ _attributePath_ に、異なる型の値を格納しているオブジェクト�
 
 #### 説明
 
-`.minus()` 関数は、<!-- REF #EntitySelectionClass.minus().Summary -->元のエンティティセレクションから、_entity_ 引数のエンティティ、あるいは _entitySelection_ 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します<!-- END REF -->。
+`.minus()` 関数は、<!-- REF #EntitySelectionClass.minus().Summary -->元のエンティティセレクションから、*entity* 引数のエンティティ、あるいは *entitySelection* 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します<!-- END REF -->。
 
-- _entity_ を引数として渡した場合、メソッドは (_entity_ が元のエンティティセレクションに所属していた場合) _entity_ を除外した新しいエンティティセレクションを作成します。 _entity_ が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
-- _entitySelection_ を引数として渡した場合、メソッドは _entitySelection_ に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。 [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。
+- *entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
+- *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。 [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。
 
-_keepOrder_ 引数を省略した場合のデフォルトでは、結果のエンティティセレクションは順列なしになります。 元のエンティティセレクションの順列を維持したい場合 (たとえば、ユーザーインタフェースでエンティティセレクションを再利用したい場合) には、_keepOrder_ に `dk keep ordered` 定数を渡します。 この場合、結果のエンティティセレクションは順列ありとなり、元のエンティティセレクションの順列が維持されます。
+*keepOrder* 引数を省略した場合のデフォルトでは、結果のエンティティセレクションは順列なしになります。 元のエンティティセレクションの順列を維持したい場合 (たとえば、ユーザーインタフェースでエンティティセレクションを再利用したい場合) には、*keepOrder* に `dk keep ordered` 定数を渡します。 この場合、結果のエンティティセレクションは順列ありとなり、元のエンティティセレクションの順列が維持されます。
 
 :::note
 
-_keepOrder_ に `dk keep ordered` を渡した場合、元のエンティティセレクションにおいて重複しているエンティティが除外される _entitySelection_ に含まれる場合、その重複エンティティはすべて除外されます。
+*keepOrder* に `dk keep ordered` を渡した場合、元のエンティティセレクションにおいて重複しているエンティティが除外される *entitySelection* に含まれる場合、その重複エンティティはすべて除外されます。
 
 :::
 
 元のエンティティセレクションが空であった場合、空のエンティティセレクションが返されます。
 
-_entitySelection_ が空、あるいは _entity_ が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
+*entitySelection* が空、あるいは *entity* が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
 
 元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
@@ -1526,16 +1577,16 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 #### 説明
 
-`.or()` 関数は、<!-- REF #EntitySelectionClass.or().Summary -->OR論理演算子を使用して、_entity_ または _entitySelection_ のエンティティと対象エンティティセレクションを組み合わせます<!-- END REF -->。戻り値は、渡した引数とエンティティセレクションの全エンティティを格納する順列なしの新規エンティティセレクションです。
+`.or()` 関数は、<!-- REF #EntitySelectionClass.or().Summary -->OR論理演算子を使用して、*entity* または *entitySelection* のエンティティと対象エンティティセレクションを組み合わせます<!-- END REF -->。戻り値は、渡した引数とエンティティセレクションの全エンティティを格納する順列なしの新規エンティティセレクションです。
 
-- _entity_ を渡した場合、引数のエンティティをエンティティセレクションと比較することになります。 エンティティがエンティティセレクションに所属している場合、エンティティセレクションへの新しい参照が返されます。 そうでない場合、元のエンティティセレクションと渡したエンティティを格納した新しいエンティティセレクションが返されます。
-- _entitySelection_ を渡した場合、二つのエンティティセレクションを比較することになります。 元のエンティティセレクションと _entitySelection_ のどちらかに所属しているエンティティを格納した新しいエンティティセレクションが返されます (OR は排他的ではなく、また両方のセレクションで参照されているエンティティは、結果のセレクションに複数格納されることはありません)。
+- *entity* を渡した場合、引数のエンティティをエンティティセレクションと比較することになります。 エンティティがエンティティセレクションに所属している場合、エンティティセレクションへの新しい参照が返されます。 そうでない場合、元のエンティティセレクションと渡したエンティティを格納した新しいエンティティセレクションが返されます。
+- *entitySelection* を渡した場合、二つのエンティティセレクションを比較することになります。 元のエンティティセレクションと *entitySelection* のどちらかに所属しているエンティティを格納した新しいエンティティセレクションが返されます (OR は排他的ではなく、また両方のセレクションで参照されているエンティティは、結果のセレクションに複数格納されることはありません)。
 
 > [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。 返されるセレクションは常に順列なしのものになります。
 
-元のエンティティセレクションと _entitySelection_ の両方が空であった場合、空のエンティティセレクションが返されます。 元のエンティティセレクションが空であった場合、_entitySelection_ への参照、あるいは _entity_ のみを格納したエンティティセレクションが返されます。
+元のエンティティセレクションと *entitySelection* の両方が空であった場合、空のエンティティセレクションが返されます。 元のエンティティセレクションが空であった場合、*entitySelection* への参照、あるいは *entity* のみを格納したエンティティセレクションが返されます。
 
-_entitySelection_ が空、あるいは _entity_ が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
+*entitySelection* が空、あるいは *entity* が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
 
 元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
@@ -1588,14 +1639,14 @@ _entitySelection_ が空、あるいは _entity_ が Null であった場合、�
 
 #### 説明
 
-`.orderBy()` 関数は、<!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが _pathString_ または _pathObjects_ が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->。
+`.orderBy()` 関数は、<!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが *pathString* または *pathObjects* が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->。
 
 > - この関数は、元のエンティティセレクションを変更しません。
 > - エンティティセレクションの順列については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 引数を渡して、エンティティの並び替えを指定する必要があります。 並べ替えの指定方法は 2つあります:
 
-- _pathString_ (テキスト): この場合、カンマ区切りされた、1 〜 x 個の属性パスと並べ替え順 (任意) で構成されるフォーミュラを渡します。 シンタックスは以下の通りです:
+- *pathString* (テキスト): この場合、カンマ区切りされた、1 〜 x 個の属性パスと並べ替え順 (任意) で構成されるフォーミュラを渡します。 シンタックスは以下の通りです:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
@@ -1603,7 +1654,7 @@ _entitySelection_ が空、あるいは _entity_ が Null であった場合、�
 
 属性を渡す順番が、エンティティの並べ替えの優先順位を決定します。 デフォルトでは、属性は昇順に並べ替えられます。 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
-- _pathObjects_ (コレクション): コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
+- *pathObjects* (コレクション): コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
 ```4d
 {
@@ -1618,7 +1669,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 > Null は他の値より小さいと評価されます。
 
-_pathString_ または _pathObject_ に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
+*pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
 
 #### 例題
 
@@ -1669,27 +1720,27 @@ _pathString_ または _pathObject_ に無効な属性パスを渡すと、こ�
 
 #### 説明
 
-`.orderByFormula()` 関数は、エンティティセレクションの全エンティティが _formulaString_ または _formulaObj_、および (任意の) _sortOrder_ や _settings_ 引数が指定する順番に並べられた、<!-- REF #EntitySelectionClass.orderByFormula().Summary -->順列ありの新規エンティティセレクションを返します<!-- END REF -->。
+`.orderByFormula()` 関数は、エンティティセレクションの全エンティティが *formulaString* または *formulaObj*、および (任意の) *sortOrder* や *settings* 引数が指定する順番に並べられた、<!-- REF #EntitySelectionClass.orderByFormula().Summary -->順列ありの新規エンティティセレクションを返します<!-- END REF -->。
 
 > この関数は、元のエンティティセレクションを変更しません。
 
-_formulaString_ または _formulaObj_ 引数を渡すことができます:
+*formulaString* または *formulaObj* 引数を渡すことができます:
 
-- _formulaString_: "Year of(this.birthDate)" などの 4D式
-- _formulaObj_: `Formula` または `Formula from string` コマンドを使用して作成された、有効なフォーミュラオブジェクト
+- *formulaString*: "Year of(this.birthDate)" などの 4D式
+- *formulaObj*: `Formula` または `Formula from string` コマンドを使用して作成された、有効なフォーミュラオブジェクト
 
-_formulaString_ および _formulaObj_ はエンティティセレクションの各エンティティに対して実行され、その結果は返されるエンティティセレクション内でのエンティティの位置を決定するのに使用されます。 結果は並べ替え可能な型 (ブール、日付、数値、テキスト、時間、Null) である必要があります。
+*formulaString* および *formulaObj* はエンティティセレクションの各エンティティに対して実行され、その結果は返されるエンティティセレクション内でのエンティティの位置を決定するのに使用されます。 結果は並べ替え可能な型 (ブール、日付、数値、テキスト、時間、Null) である必要があります。
 
 > Null値の結果は常に最小の値とみなされます。
 
-_sortOrder_ 引数を省略した場合のデフォルトでは、返されるエンティティセレクションは昇順に並べられます。 オプションとして、_sortOrder_ に以下の値のいずれか一つを渡すことができます:
+*sortOrder* 引数を省略した場合のデフォルトでは、返されるエンティティセレクションは昇順に並べられます。 オプションとして、*sortOrder* に以下の値のいずれか一つを渡すことができます:
 
 | 定数            | 値 | 説明                            |
 | ------------- | - | ----------------------------- |
 | dk ascending  | 0 | 昇順 (デフォルト) |
 | dk descending | 1 | 降順                            |
 
-_formulaString_ および _formulaObj_ 内では、処理されるエンティティとその属性は `This` コマンドを通して利用可能です (たとえば、`This.lastName` など)。
+*formulaString* および *formulaObj* 内では、処理されるエンティティとその属性は `This` コマンドを通して利用可能です (たとえば、`This.lastName` など)。
 
 `settings` 引数の `args` プロパティ (オブジェクト) を使用することで、フォーミュラに引数を渡すことが可能です。このときフォーミュラは、`settings.args` オブジェクトを $1 に受け取ります。
 
@@ -1717,7 +1768,7 @@ _formulaString_ および _formulaObj_ 内では、処理されるエンティ�
 
 #### 例題 2
 
-引数付きのフォーミュラオブジェクトを渡します。`settings.args` オブジェクトは、_**computeAverage**_ メソッド内で $1 が受け取ります。
+引数付きのフォーミュラオブジェクトを渡します。`settings.args` オブジェクトは、***computeAverage*** メソッド内で $1 が受け取ります。
 
 この例題では、**Students** データクラス内の "marks" オブジェクトフィールドに科目ごとの生徒の成績が格納されています。 フォーミュラオブジェクトを使用し、schoolA と schoolB で異なる係数を用いて生徒の平均の成績を計算します。
 
@@ -1788,21 +1839,21 @@ _formulaString_ および _formulaObj_ 内では、処理されるエンティ�
 | formula       | Object                             |  -> | 検索条件 (フォーミュラオブジェクト)                                                               |
 | value         | any                                |  -> | プレースホルダー用の値                                                                                          |
 | querySettings | Object                             |  -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
-| 戻り値           | 4D.EntitySelection |  <- | _queryString_ または _formula_ に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション\*               |
+| 戻り値           | 4D.EntitySelection |  <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション\*               |
 
 <!-- END REF -->
 
 #### 説明
 
-`.query()` 関数は、<!-- REF #EntitySelectionClass.query().Summary -->エンティティセレクションの全エンティティから、_queryString_ または _formula_ と任意の _value_ 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
+`.query()` 関数は、<!-- REF #EntitySelectionClass.query().Summary -->エンティティセレクションの全エンティティから、*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
 > この関数は、元のエンティティセレクションを変更しません。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-_queryString_ および _value_ や _querySettings_ パラメーターを使ってクエリをビルドする方法の詳細については、DataClass[`.query()`](DataClassClass.md#query) 関数を参照ください。
+*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、DataClass[`.query()`](DataClassClass.md#query) 関数を参照ください。
 
-> _queryString_ 内で **order by** ステートメントを省略した場合のデフォルトでは、返されるエンティティセレクションは、[順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)のものになります。 しかしながら、クライアント/サーバーモードにおいては、順列ありのエンティティセレクションのように振る舞う (エンティティはセレクションの終わりに追加されていく) 点に注意してください。
+> *queryString* 内で **order by** ステートメントを省略した場合のデフォルトでは、返されるエンティティセレクションは、[順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)のものになります。 しかしながら、クライアント/サーバーモードにおいては、順列ありのエンティティセレクションのように振る舞う (エンティティはセレクションの終わりに追加されていく) 点に注意してください。
 
 #### 例題 1
 
@@ -1838,9 +1889,9 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 #### 説明
 
-`.queryPath` プロパティは、<!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4Dで実行されたクエリの詳細な情報<!-- END REF -->を格納します。 このプロパティは、[`.query()`](#query) 関数の _querySettings_ 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
+`.queryPath` プロパティは、<!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4Dで実行されたクエリの詳細な情報<!-- END REF -->を格納します。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
+詳細については、DataClass[`.query()`](DataClassClass.md#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
@@ -1860,7 +1911,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 #### 説明
 
-`.queryPlan` プロパティは、<!-- REF #EntitySelectionClass.queryPlan.Summary -->実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の _querySettings_ 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
+`.queryPlan` プロパティは、<!-- REF #EntitySelectionClass.queryPlan.Summary -->実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
 詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
@@ -1878,7 +1929,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh**()<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 
@@ -1892,7 +1943,7 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 > このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
-`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
+`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->[ローカルの ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) にあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
 
 デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。
 
@@ -1944,6 +1995,10 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
   // リストボックスの中身はデータベースの内容で更新され、クライアント#2 がおこなった変更も反映します
 ```
 
+#### 参照
+
+[`.clean()`](#clean)
+
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.selected().Desc -->
@@ -1971,11 +2026,11 @@ _queryString_ および _value_ や _querySettings_ パラメーターを使っ�
 
 #### 説明
 
-`.selected()` 関数は、<!-- REF #EntitySelectionClass.selected().Summary -->呼び出し対象のエンティティセレクションにおける、_selectedEntities_ に含まれるエンティティの位置を表すオブジェクトを返します<!-- END REF -->。
+`.selected()` 関数は、<!-- REF #EntitySelectionClass.selected().Summary -->呼び出し対象のエンティティセレクションにおける、*selectedEntities* に含まれるエンティティの位置を表すオブジェクトを返します<!-- END REF -->。
 
 > この関数は、元のエンティティセレクションを変更しません。
 
-_entity_ を引数として渡した場合、メソッドは (_entity_ が元のエンティティセレクションに所属していた場合) _entity_ を除外した新しいエンティティセレクションを作成します。 _entity_ が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
+*entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
 
 #### 戻り値
 
@@ -1989,7 +2044,7 @@ _entity_ を引数として渡した場合、メソッドは (_entity_ が元の
 
 `ranges` プロパティに 1件のエンティティしか含まれない場合、`start` = `end` です。 インデックスは 0 起点です。
 
-_attributeName_ で指定した属性がストレージ型の場合: `.attributeName`は _attributeName_ と同じ型の値のコレクションを返します。
+*attributeName* で指定した属性がストレージ型の場合: `.attributeName`は *attributeName* と同じ型の値のコレクションを返します。
 
 #### 例題
 
@@ -2038,16 +2093,16 @@ $result2:=$invoices.selected($creditSel)
 
 #### 説明
 
-`.slice()` 関数は、_startFrom_ の位置 (含まれる) から _end_ の位置 (含まれない) または終わりまでの<!-- REF #EntitySelectionClass.slice().Summary -->エンティティセレクションの一部を、新規エンティティセレクションとして返します<!-- END REF -->。 この関数は、エンティティセレクションのシャロウ・コピーを返します (同じエンティティ参照を使用します)。
+`.slice()` 関数は、*startFrom* の位置 (含まれる) から *end* の位置 (含まれない) または終わりまでの<!-- REF #EntitySelectionClass.slice().Summary -->エンティティセレクションの一部を、新規エンティティセレクションとして返します<!-- END REF -->。 この関数は、エンティティセレクションのシャロウ・コピーを返します (同じエンティティ参照を使用します)。
 
 > この関数は、元のエンティティセレクションを変更しません。
 
-戻り値のエンティティセレクションには、_startFrom_ 引数で指定したエンティティ (含まれる) から、_end_ 引数で指定したエンティティまで (含まれない) の全エンティティが格納されます。 _startFrom_ 引数のみを渡した場合には、_startFrom_ 引数で指定したエンティティから最後のエンティティまでが戻り値のエンティティセレクションに格納されます。
+戻り値のエンティティセレクションには、*startFrom* 引数で指定したエンティティ (含まれる) から、*end* 引数で指定したエンティティまで (含まれない) の全エンティティが格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定したエンティティから最後のエンティティまでが戻り値のエンティティセレクションに格納されます。
 
-- _startFrom_ < 0 の場合、_startFrom:=startFrom+length_ として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、_startFrom_ は 0 に設定されます。
-- _startFrom >= length_ の場合、関数は空のエンティティセレクションを返します。
-- _end_ < 0 の場合、それは _end:=end+length_ として再計算されます。
-- 渡された値、あるいは再計算された値が _end_ < _startFrom_ の場合、関数はなにもしません。
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
+- *startFrom >= length* の場合、関数は空のエンティティセレクションを返します。
+- *end* < 0 の場合、それは *end:=end+length* として再計算されます。
+- 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 エンティティセレクションにドロップされたエンティティが含まれる場合、それらも返されます。
 
@@ -2100,17 +2155,17 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 #### 説明
 
-`.sum()` 関数は、<!-- REF #EntitySelectionClass.sum().Summary -->_attributePath_ に指定したエンティティセレクションの属性値の総和を返します<!-- END REF -->。
+`.sum()` 関数は、<!-- REF #EntitySelectionClass.sum().Summary -->*attributePath* に指定したエンティティセレクションの属性値の総和を返します<!-- END REF -->。
 
 エンティティセレクションが空の場合、`.sum()` は 0 を返します。
 
-総和は、数値型の値に対してのみ実行可能です。 _attributePath_ がオブジェクトプロパティだった場合、計算の対象になるのは数値型の値のみです (他の値の型は無視されます)。 この場合で、_attributePath_ がオブジェクト内に存在しないパス、あるいは数値を含んでいない属性へのパスであった場合には、`.sum()` は 0 を返します。
+総和は、数値型の値に対してのみ実行可能です。 *attributePath* がオブジェクトプロパティだった場合、計算の対象になるのは数値型の値のみです (他の値の型は無視されます)。 この場合で、*attributePath* がオブジェクト内に存在しないパス、あるいは数値を含んでいない属性へのパスであった場合には、`.sum()` は 0 を返します。
 
 以下の場合には、エラーが返されます:
 
-- _attributePath_ が数値型あるいはオブジェクト型の属性ではない
-- _attributePath_ はリレート属性である
-- _attributePath_ がエンティティセレクションデータクラス内に存在しない場合。
+- *attributePath* が数値型あるいはオブジェクト型の属性ではない
+- *attributePath* はリレート属性である
+- *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
 #### 例題
 
@@ -2159,8 +2214,8 @@ filterString および filterCol 引数が省略されるか、空の文字列�
 
 抽出するエンティティ属性を限定したい場合には、それを指定する引数を渡すことができます。 2つのシンタックスを使用できます:
 
-- _filterString_: プロパティパスをカンマで区切った文字列: "propertyPath1, propertyPath2, ..."
-- _filterCol_: プロパティパスを含む文字列のコレクション: \["propertyPath1","propertyPath2",...]
+- *filterString*: プロパティパスをカンマで区切った文字列: "propertyPath1, propertyPath2, ..."
+- *filterCol*: プロパティパスを含む文字列のコレクション: \["propertyPath1","propertyPath2",...]
 
 引数が、`relatedEntity` (リレートエンティティ) 型の属性を指定していた場合:
 
@@ -2173,7 +2228,7 @@ filterString および filterCol 引数が省略されるか、空の文字列�
 - propertyPath = "relatedEntities.\*" -> 全プロパティが取得されます
 - propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> 指定されたプロパティのみが取得されます
 
-_options_ に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
+*options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
 
 :::caution 警告
 
@@ -2181,16 +2236,16 @@ _options_ に `dk with primary key` または `dk with stamp` セレクターを
 
 :::
 
-_begin_ 引数を渡すことで、抽出するエンティティの開始インデックスを指定することができます。 0 からエンティティセレクションの長さ - 1 の範囲で値を渡すことができます。
+*begin* 引数を渡すことで、抽出するエンティティの開始インデックスを指定することができます。 0 からエンティティセレクションの長さ - 1 の範囲で値を渡すことができます。
 
-_howMany_ 引数を渡すと、_begin_ 引数で指定した位置から抽出するエンティティの件数を指定することができます。 ドロップされたエンティティは返されませんが、_howMany_ 引数のカウントでは考慮されます。 たとえば、ドロップされたエンティティが1つある場合に _howMany_= 3 であれば、2件のエンティティが抽出されます。
+*howMany* 引数を渡すと、*begin* 引数で指定した位置から抽出するエンティティの件数を指定することができます。 ドロップされたエンティティは返されませんが、*howMany* 引数のカウントでは考慮されます。 たとえば、ドロップされたエンティティが1つある場合に *howMany*= 3 であれば、2件のエンティティが抽出されます。
 
-_howMany_ 引数がエンティティセレクションの length を超える場合、メソッドは (length - _begin_) の数だけオブジェクトを返します。
+*howMany* 引数がエンティティセレクションの length を超える場合、メソッドは (length - *begin*) の数だけオブジェクトを返します。
 
 以下のいずれかの場合には空のコレクションが返されます:
 
 - エンティティセレクションが空である
-- _begin_ 引数がエンティティセレクションの length を超えている
+- *begin* 引数がエンティティセレクションの length を超えている
 
 #### 例題 1
 
@@ -2388,7 +2443,7 @@ $employeesCollection:=$employees.toCollection("firstName,lastName,employer")
 
 #### 例題 5
 
-_filterCol_ を使用した例:
+*filterCol* を使用した例:
 
 ```4d
 var $employeesCollection; $coll : Collection

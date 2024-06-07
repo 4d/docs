@@ -5,7 +5,7 @@ title: VP Export to object
 
 <!-- REF #_method_.VP Export to object.Syntax -->
 
-**VP Export to object** ( _vpAreaName_ : Text {; _options_ : Object} ) : Object<!-- END REF -->
+**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Export to object.Params -->
 
@@ -17,11 +17,11 @@ title: VP Export to object
 
 #### 説明
 
-`VP Export to object` コマンドは、<!-- REF #_method_.VP Export to object.Summary --> _vpAreaName_ で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを返します<!-- END REF -->。 このコマンドによって、たとえば 4D View Pro エリアを 4Dデータベースのオブジェクトフィールドに保存することができます。
+`VP Export to object` コマンドは、<!-- REF #_method_.VP Export to object.Summary --> *vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを返します<!-- END REF -->。 このコマンドによって、たとえば 4D View Pro エリアを 4Dデータベースのオブジェクトフィールドに保存することができます。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_options_ 引数として、必要に応じて以下の書き出しオプションを渡すことができます:
+*options* 引数として、必要に応じて以下の書き出しオプションを渡すことができます:
 
 | プロパティ                | タイプ     | 説明                                                                                                                                                                                                                   |
 | -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -5,7 +5,7 @@ title: VP ADD SELECTION
 
 <!-- REF #_method_.VP ADD SELECTION.Syntax -->
 
-**VP ADD SELECTION** ( _rangeObj_ : Object )<!-- END REF -->
+**VP ADD SELECTION** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
@@ -17,7 +17,7 @@ title: VP ADD SELECTION
 
 `VP ADD SELECTION` コマンドは、<!-- REF #_method_.VP ADD SELECTION.Summary -->指定されたセルを、現在選択されているセル範囲に追加します<!-- END REF -->。
 
-_rangeObj_ には、カレントセレクションに追加するセルのレンジオブジェクトを渡します。
+*rangeObj* には、カレントセレクションに追加するセルのレンジオブジェクトを渡します。
 
 > アクティブセルは変更されません。
 

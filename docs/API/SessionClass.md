@@ -31,6 +31,7 @@ The availability of properties and functions in the `Session` object depend on t
 |---|
 |[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->|
+|[<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
 |[<!-- INCLUDE #SessionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #SessionClass.id.Summary -->|
 |[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
@@ -215,6 +216,105 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- END REF -->
 
 
+<!-- REF SessionClass.getPrivileges().Desc -->
+## .getPrivileges()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R6|Added|
+
+</details>
+
+<!-- REF #SessionClass.getPrivileges().Syntax -->**.getPrivileges**() : Collection<!-- END REF -->
+
+
+<!-- REF #SessionClass.getPrivileges().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Collection of privilege names (strings)|
+<!-- END REF -->
+
+#### Description
+
+The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
+
+With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
+
+
+:::info
+
+Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+
+:::
+
+
+#### Example
+
+The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+
+```json
+{
+   "privileges":[
+      {
+         "privilege":"simple",
+         "includes":[
+
+         ]
+      },
+      {
+         "privilege":"medium",
+         "includes":[
+            "simple"
+         ]
+      }
+   ],
+   "roles":[
+      {
+         "role":"Medium",
+         "privileges":[
+            "medium"
+         ]
+      }
+   ],
+   "permissions":{
+      "allowed":[
+
+      ]
+   }
+}
+```
+
+
+The session role is assigned in an `authentify()` datastore function:
+
+```4d
+  //Datastore Class
+
+exposed Function authentify($role : Text) : Text
+	Session.clearPrivileges()
+	Session.setPrivileges({roles: $role})
+```
+
+Assuming the `authentify()` function is called with the "Medium" role:
+
+```4d
+var $privileges : Collection
+$privileges := Session.getPrivileges()
+//$privileges: ["simple","medium"]
+```
+
+
+#### See also
+
+[.setPrivileges()](#setprivileges)<br/>
+[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+
+<!-- END REF -->
+
+
+
 
 
 <!-- REF SessionClass.hasPrivilege().Desc -->
@@ -234,7 +334,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|privilege|Text|<-|Name of the privilege to verify|
+|privilege|Text|->|Name of the privilege to verify|
 |Result|Boolean|<-|True if session has *privilege*, False otherwise|
 <!-- END REF -->
 
@@ -504,6 +604,9 @@ End if
 
 ```
 
+#### See also
+
+[.getPrivileges()](#getprivileges)
 
 <!-- END REF -->
 

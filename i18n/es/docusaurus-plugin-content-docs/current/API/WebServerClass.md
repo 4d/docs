@@ -77,9 +77,9 @@ Ofrecen las siguientes propiedades y funciones:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the _option_ parameter<!-- END REF -->.
+The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
-By default, if the _option_ parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the _option_ parameter:
+By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
 | Constante                      | Valor | Comentario                                                                           |
 | ------------------------------ | ----- | ------------------------------------------------------------------------------------ |
@@ -205,7 +205,7 @@ La lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada pa
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (_Cross-origin resource sharing_) service status for the web server<!-- END REF -->. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
+The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
 
 Por defecto: False (desactivado)
 
@@ -221,7 +221,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
 
-- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. If _host_ is not present or empty, the object is ignored. Se soportan varias sintaxis:
+- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. If *host* is not present or empty, the object is ignored. Se soportan varias sintaxis:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -233,7 +233,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - myProject.myDomain.com
   - \*
 
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separe cada método con un ";" (por ejemplo: "post;get"). If _methods_ is empty, null, or undefined, all methods are enabled.
+- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separe cada método con un ";" (por ejemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
 
 <!-- END REF -->
 
@@ -412,7 +412,7 @@ La <!-- REF #WebServerClass.IPAddressToListen.Summary -->dirección IP en la que
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-_Propiedad de sólo lectura_
+*Propiedad de sólo lectura*
 
 La función <code>.stop()</code> <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web sobre el que se aplica<!-- END REF -->.
 
@@ -511,7 +511,7 @@ Valores posibles:
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-_Propiedad de sólo lectura_
+*Propiedad de sólo lectura*
 
 El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie utilizada para almacenar el ID de sesión<!-- END REF -->.
 
@@ -523,7 +523,7 @@ El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie uti
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-_Propiedad de sólo lectura_
+*Propiedad de sólo lectura*
 
 La <!-- REF #WebServerClass.openSSLVersion.Summary -->versión de la librería OpenSSL utilizada<!-- END REF -->.
 
@@ -535,7 +535,7 @@ La <!-- REF #WebServerClass.openSSLVersion.Summary -->versión de la librería O
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-_Propiedad de sólo lectura_
+*Propiedad de sólo lectura*
 
 La disponibilidad de <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS en el servidor<!-- END REF -->.
 
@@ -583,7 +583,7 @@ El campo <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" de la 
 
 Ver la descripción de <a href="WebServer/webServerConfig.md#session-cookie-samesite">Session Cookie SameSite</a> para obtener información detallada.
 
-_Propiedad de sólo lectura_
+*Propiedad de sólo lectura*
 
 <!-- END REF -->
 
@@ -615,7 +615,7 @@ El valor de la cookie de sesión <!-- REF #WebServerClass.sessionCookieSameSite.
 
 | Constante           | Valor    | Descripción                                                                                                                                                                                                   |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | _Default value_ - Cookies are only sent in a first-party context                                                                                                                                              |
+| Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                                                                                              |
 | Web SameSite Lax    | "Lax"    | Las cookies también se envían en las sub-solicitudes entre sitios, pero sólo cuando un usuario está navegando hacia el sitio de origen (es decir, cuando sigue un enlace). |
 | Web SameSite None   | "None"   | Las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado.                                                             |
 
@@ -647,9 +647,7 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( _settings_ : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
@@ -660,9 +658,9 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional _settings_ object parameter.
+The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the _settings_ parameter, you can define customized properties for the web server session.
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
@@ -725,7 +723,7 @@ The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web 
 
 Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
 
-> This function resets the customized web settings defined for the session using the _settings_ parameter of the [`.start()`](#start) function, if any.
+> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 #### Ejemplo
 

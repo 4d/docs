@@ -5,7 +5,7 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get column attributes.Syntax -->
 
-**VP Get column attributes** (  _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get column attributes** (  *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get column attributes
 
 #### Descripción
 
-El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->devuelve una colección de propiedades para toda columna del _rangeObj_<!-- END REF -->.
+El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->devuelve una colección de propiedades para toda columna del *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un objeto que contenga un rango de columnas cuyos atributos serán recuperados.
+En *rangeObj*, pase un objeto que contenga un rango de columnas cuyos atributos serán recuperados.
 
 The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) command.
 

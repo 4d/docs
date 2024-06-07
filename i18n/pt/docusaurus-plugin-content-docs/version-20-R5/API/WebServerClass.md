@@ -77,9 +77,9 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the _option_ parameter<!-- END REF -->.
+The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
-By default, if the _option_ parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the _option_ parameter:
+By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
 | Parâmetros                                   | Valor | Comentário                                                                     |
 | -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
@@ -205,7 +205,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (_Cross-origin resource sharing_) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
+The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
 
 Padrão: Falso (desabilitado)
 
@@ -221,7 +221,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
 
-- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. If _host_ is not present or empty, the object is ignored. Várias sintaxes são suportadas:
+- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. If *host* is not present or empty, the object is ignored. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -233,7 +233,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - myProject.myDomain.com
   - \*
 
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separar cada método com um ";" (por exemplo: "post;get"). If _methods_ is empty, null, or undefined, all methods are enabled.
+- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
 
 <!-- END REF -->
 
@@ -412,7 +412,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-_Propriedade apenas leitura_
+*Propriedade apenas leitura*
 
 The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
 
@@ -511,7 +511,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-_Propriedade apenas leitura_
+*Propriedade apenas leitura*
 
 The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
 
@@ -523,7 +523,7 @@ The <!-- REF #WebServerClass.name.Summary -->name of the web server application<
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-_Propriedade apenas leitura_
+*Propriedade apenas leitura*
 
 The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
 
@@ -535,7 +535,7 @@ The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-_Propriedade apenas leitura_
+*Propriedade apenas leitura*
 
 The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
 
@@ -583,7 +583,7 @@ The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of th
 
 The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
 
-_Propriedade apenas leitura_
+*Propriedade apenas leitura*
 
 <!-- END REF -->
 
@@ -615,7 +615,7 @@ The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session
 
 | Parâmetros          | Valor    | Descrição                                                                                                                                                                                   |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | _Default value_ - Cookies are only sent in a first-party context                                                                                                                            |
+| Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                                                                            |
 | Web SameSite Lax    | "Lax"    | Os cookies também são enviados em pedidos cruzados mas apenas quando um utilizador está a navegar para o sítio de origem (isto é, quando segue um link). |
 | Web SameSite None   | "None"   | Os cookies são enviados em todos os contextos, ou seja, em resposta a pedidos tanto de primeira parte como de origem cruzada.                                               |
 
@@ -647,9 +647,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( _settings_ : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
@@ -660,9 +658,9 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional _settings_ object parameter.
+The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the _settings_ parameter, you can define customized properties for the web server session.
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
@@ -725,14 +723,14 @@ The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web 
 
 Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
 
-> This function resets the customized web settings defined for the session using the _settings_ parameter of the [`.start()`](#start) function, if any.
+> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 #### Exemplo
 
 Para parar o servidor Web da base de dados:
 
 ```4d
- var $webServer : 4D. WebServer
+ var $webServer : 4D.WebServer
 
  $webServer:=WEB Server(Web server database)
  $webServer.stop()

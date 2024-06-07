@@ -5,7 +5,7 @@ title: VP SET FORMULAS
 
 <!-- REF #_method_.VP SET FORMULAS.Syntax -->
 
-**VP SET FORMULAS** ( _rangeObj_ : Object ; _formulasCol_ : Collection ) <!-- END REF -->
+**VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 
@@ -18,9 +18,9 @@ title: VP SET FORMULAS
 
 `VP SET FORMULAS` コマンドは、<!-- REF #_method_.VP SET FORMULAS.Summary -->指定のセルレンジから開始してフォーミュラのコレクションを割り当てていきます<!-- END REF -->。
 
-_rangeObj_ には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](vp-cell.md) で作成されたレンジ) を渡します。 _rangeObj_ のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
+*rangeObj* には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](vp-cell.md) で作成されたレンジ) を渡します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
-_formulasCol_ 引数は 2次元構造のコレクションです:
+*formulasCol* 引数は 2次元構造のコレクションです:
 
 - 第1レベルのコレクションは、フォーミュラのサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。
 - それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルに割り当てるフォーミュラを格納したテキスト要素でなくてはなりません。
@@ -28,7 +28,7 @@ _formulasCol_ 引数は 2次元構造のコレクションです:
 > フォーミュラが文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。
 > 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](vp-set-allowed-method.md) コマンドで許可されている必要があります。
 
-_rangeObj_ 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
+*rangeObj* 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
 
 #### 例題 1
 
@@ -41,7 +41,7 @@ $formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // 二行目
 VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // フォーミュラをセルに設定します
 ```
 
-_myMethod_:
+*myMethod*:
 
 ```4d
 $0:=$1*3.33

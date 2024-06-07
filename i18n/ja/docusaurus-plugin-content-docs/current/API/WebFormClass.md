@@ -27,7 +27,7 @@ title: WebForm
 | [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
 | [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
-### _.componentName_
+### *.componentName*
 
 <!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
@@ -39,9 +39,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->
-
-**.disableState**( _state_ : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -54,12 +52,12 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 #### 説明
 
 `.disableState()` 関数は、<!-- REF #WebFormClass.disableState().Summary -->カレントWeb
-フォーム上の _state_ のレンダリングを無効化します<!-- END REF -->。
+フォーム上の *state* のレンダリングを無効化します<!-- END REF -->。
 
 この関数は、以下の場合には何もしません:
 
-- Webフォーム上で _state_ が現在有効ではない。
-- Webフォーム上で _state_ が存在しない。
+- Webフォーム上で *state* が現在有効ではない。
+- Webフォーム上で *state* が存在しない。
 
 同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
@@ -67,9 +65,7 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->
-
-**.enableState**( _state_ : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -82,12 +78,12 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 #### 説明
 
 `.enableState()` 関数は、<!-- REF #WebFormClass.enableState().Summary -->カレントWeb
-フォーム上の _state_ のレンダリングを有効化します<!-- END REF -->。
+フォーム上の *state* のレンダリングを有効化します<!-- END REF -->。
 
 この関数は、以下の場合には何もしません:
 
-- Webフォーム上で _state_ がすでに有効である。
-- Webフォーム上で _state_ が存在しない。
+- Webフォーム上で *state* がすでに有効である。
+- Webフォーム上で *state* が存在しない。
 
 同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
@@ -106,9 +102,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->
-
-**.setError**( _msg_ : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -120,15 +114,13 @@ Function authenticationError()
 
 #### 説明
 
-`.setError()` 関数は、<!-- REF #WebFormClass.setError().Summary -->_msg_ をエラーメッセージとして Webフォームに送信します<!-- END REF -->。
+`.setError()` 関数は、<!-- REF #WebFormClass.setError().Summary -->*msg* をエラーメッセージとして Webフォームに送信します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.setError()` の説明](https://developer.qodly.com/docs/language/WebFormClass#seterror) を参照ください。
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->
-
-**.setMessage**( _msg_ : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -140,15 +132,13 @@ Function authenticationError()
 
 #### 説明
 
-`.setMessage()` 関数は、<!-- REF #WebFormClass.setMessage().Summary -->_msg_ を情報メッセージとして Webフォームに送信します<!-- END REF -->。
+`.setMessage()` 関数は、<!-- REF #WebFormClass.setMessage().Summary -->*msg* を情報メッセージとして Webフォームに送信します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.setMessage()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setmessage) を参照ください。
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->
-
-**.setWarning**( _msg_ : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
@@ -160,7 +150,7 @@ Function authenticationError()
 
 #### 説明
 
-`.setWarning()` 関数は、<!-- REF #WebFormClass.setWarning().Summary -->_msg_ を警告メッセージとして Webフォームに送信します<!-- END REF -->。
+`.setWarning()` 関数は、<!-- REF #WebFormClass.setWarning().Summary -->*msg* を警告メッセージとして Webフォームに送信します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `.setWarning()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setwarning) を参照ください。
 

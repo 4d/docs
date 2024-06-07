@@ -12,14 +12,14 @@ Las sesiones web permiten:
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - asociar privilegios al usuario que ejecuta la sesión.
 
-## Usages
+## Usos
 
 Las sesiones web se utilizan para:
 
 - [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
-## Enabling web sessions
+## Habilitando sesiones web
 
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 
@@ -71,7 +71,7 @@ Los procesos web no suelen terminar, sino que se reciclan en un fondo común par
 
 :::
 
-## Storing and sharing session information
+## Almacenar y compartir información de sesión
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
 

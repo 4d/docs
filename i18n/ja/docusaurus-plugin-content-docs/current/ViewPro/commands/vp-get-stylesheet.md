@@ -5,7 +5,7 @@ title: VP Get stylesheet
 
 <!-- REF #_method_.VP Get stylesheet.Syntax -->
 
-**VP Get stylesheet** ( _vpAreaName_ : Text ; _styleName_ : Text { ; _sheet_ : Integer } ) : Object<!-- END REF -->
+**VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
@@ -18,13 +18,13 @@ title: VP Get stylesheet
 
 #### 説明
 
-`VP Get stylesheet` コマンドは、<!-- REF #_method_.VP Get stylesheet.Summary -->_styleName_ で指定した、定義済のプロパティ値を格納したスタイルシートオブジェクトを返します<!-- END REF -->。
+`VP Get stylesheet` コマンドは、<!-- REF #_method_.VP Get stylesheet.Summary -->*styleName* で指定した、定義済のプロパティ値を格納したスタイルシートオブジェクトを返します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-_styleName_ には、取得するスタイルシートの名前を渡します。
+*styleName* には、取得するスタイルシートの名前を渡します。
 
-任意の _sheet_ 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
+任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
 - `vk current sheet`
 - `vk workbook`
@@ -37,7 +37,7 @@ _styleName_ には、取得するスタイルシートの名前を渡します�
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... カレントシートの _GreenDashDotStyle_ スタイルオブジェクトを返します:
+... カレントシートの *GreenDashDotStyle* スタイルオブジェクトを返します:
 
 ```4d
 {

@@ -88,6 +88,12 @@ CEFエンジンには以下のような制約があります:
 - [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/ja/page1037.html): このコマンドを使用する場合、([`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
 - [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1041.html) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。
 
+:::note
+
+ローカルで [4DCEFParameters.json 設定ファイル](webAreaOverview#4dcefparametersjson) を作成することで、CEFエリアのパラメーターをカスタマイズできます。
+
+:::
+
 #### JSON 文法
 
 | 名称        | データタイプ | とりうる値                |

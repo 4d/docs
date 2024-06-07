@@ -7,10 +7,10 @@ title: $entityset
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                                                                                                                         | 例題                                                                             | 説明                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | --------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                                                                                          | `/People/$entityset/0ANUMBER`                                                  | 既存のエンティティセットを取得します                |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
+| シンタックス                                                                                                                                                                                   | 例題                                                                           | 説明                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                |
+| [**$entityset/{entitySetID}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
 
 ## $entityset/{entitySetID}
 
@@ -22,7 +22,7 @@ title: $entityset
 
 エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
 ### 例題
 
@@ -30,18 +30,18 @@ title: $entityset
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
-## $entityset/{entitySetID}?$operator...&$otherCollection
+## $entityset/{entitySetID}?$logicOperator...&$otherCollection
 
 複数の既存エンティティセットに基づいて新たなエンティティセットを作成します。
 
 | 引数               | タイプ    | 説明                        |
 | ---------------- | ------ | ------------------------- |
-| $operator        | String | 既存のエンティティセットに対して使用する論理演算子 |
+| $logicOperator   | String | 既存のエンティティセットに対して使用する論理演算子 |
 | $otherCollection | String | エンティティセットID               |
 
 ### 説明
 
-`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator...  &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$logicOperator...  &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 

@@ -1,6 +1,6 @@
 ---
 id: entities
-title: Travailler avec des données
+title: Travailler avec les données
 ---
 
 Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
@@ -172,7 +172,7 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1"
   //l'entité associée est mise à jour
 ```
 
-## Créer une sélection d'entité (entity selection)
+## Créer une entity selection (sélection d'entités)
 
 Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
@@ -181,7 +181,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 *   Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) pour créer une sélection d'entités vide;
 *   Utilisez la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
 *   Utilisez l'une des diverses fonctions de [Entity selection class](API/EntitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/EntitySelectionClass.md#or);
-*   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
+*   En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
@@ -325,7 +325,7 @@ The `sendMails` method:
 ```
 
 
-### Sélections d'entités et attributs de stockage
+### Entity selections et attributs de stockage
 
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 

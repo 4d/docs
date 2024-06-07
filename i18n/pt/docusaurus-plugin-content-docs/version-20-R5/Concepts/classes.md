@@ -5,13 +5,13 @@ title: Classes
 
 ## Visão Geral
 
-El lenguaje 4D soporta el concepto de **clases**. Numa linguagem de programação, a utilização de uma classe permite definir um comportamento do objecto com propriedades e funções associadas.
+A linguagem 4D é compatível com o conceito de classes\*\*. Numa linguagem de programação, a utilização de uma classe permite definir um comportamento do objecto com propriedades e funções associadas.
 
-Cada objeto es una instancia de su clase. Cada objecto é uma instância da sua classe. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
+Uma vez que uma classe de usuário é definida, você pode **instanciar** objetos dessa classe em qualquer lugar do seu código. Cada objecto é uma instância da sua classe. Uma classe pode [`extend`](#class-extends-classname) outra classe e herda suas [funções](#function) e propriedades ([declaradas](#property) e [computadas](#function-get-and-function-set)).
 
 > O modelo de classe em 4D é semelhante às classes em JavaScript, e baseado numa cadeia de protótipos.
 
-Por ejemplo, puede crear una clase `Person` con la siguiente definición:
+Por exemplo, você poderia criar uma classe `Pessoa` com a seguinte definição:
 
 ```4d
 //Class: Person.4dm
@@ -41,11 +41,11 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ### Definição de classe
 
-Una clase usuario en 4D está definida por un archivo [método ](methods.md) específico (.4dm), almacenado en la carpeta `/Project/Sources/Classes/`. O nome do arquivo é o nome da classe.
+Uma classe de usuário em 4D é definida por um arquivo [method](methods.md) (.4dm), armazenado na pasta `/Project/Sources/Classes/` específico. O nome do arquivo é o nome da classe.
 
 Ao nomear classes, deve ter em mente as seguintes regras:
 
-- Un [nombre de clase](identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
+- Um [nome de classe](identifiers.md#classes) deve estar em conformidade com as [regras de nomenclatura das propriedades](identifiers.md#object-properties).
 - Nomes de classe diferenciam minúsculas de maiúsculas.
 - Não se recomenda dar o mesmo nome a uma classe e a uma tabela de base de dados, a fim de evitar qualquer conflito.
 
@@ -60,28 +60,28 @@ Project folder
 Para eliminar uma classe existente, pode:
 
 - no seu disco, remover o arquivo de classe .4dm da pasta "Classes",
-- in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- no Explorador 4D, selecione a classe e clique ![](../assets/en/Users/MinussNew.png) ou escolha **Mover para Lixo** no menu contextual.
 
-### Using 4D interface
+### Utilização da interface 4D
 
-Los archivos de clase se almacenan automáticamente en la ubicación adecuada cuando se crean a través de la interfaz de 4D, ya sea a través del menú **Archivo** o del Explorador.
+Os arquivos de classe são automaticamente armazenados no local apropriado quando criados através da interface 4D, quer através do menu **File**, quer através do Explorer.
 
 #### Menu Arquivo e barra de ferramentas
 
-Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nueva > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
+Você pode criar um novo arquivo de classe para o projeto selecionando **Novo > Class...** no menu **File** do 4D Developer ou na barra de ferramentas.
 
-También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
+Você também pode usar o atalho **Ctrl+Shift+Alt+k**.
 
 #### Explorador
 
-En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
+Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
 
 Para criar uma nova classe, pode:
 
-- select the **Classes** category and click on the ![](../assets/en/Users/PlussNew.png) button.
-- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
+- selecione a categoria **Classes** e clique no botão ![](../assets/en/Users/PlussNew.png).
+- selecione **Nova Classe...** no menu de ação na parte inferior da janela do Explorer, ou no menu contextual do grupo Classes.
   ![](../assets/en/Concepts/newClass.png)
-- seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
+- selecione **Novo > Classe...** a partir do menu contextual da página inicial do Explorador.
 
 #### Suporte de código de classe
 
@@ -90,9 +90,9 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 - No editor de código:
   - uma aula não pode ser executada
   - uma função de classe é um bloco de código
-  - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
-  - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
-- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
+  - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
+  - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
+- No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
 
 ## Lojas de classe
 
@@ -111,11 +111,11 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 | ---------- | ------ | -- | --------------------------------------------------- | ---------------- |
 | classStore | Object | <- | Class store de usuário para o projeto ou componente | <!-- END REF --> |
 
-The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
+O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
 
 #### Exemplo
 
-Quiere crear una nueva instancia de un objeto de `myClass`:
+Se quiser criar uma nova instância de um objecto de `myClass`:
 
 ```4d
 $instance:=cs.myClass.new()
@@ -131,46 +131,46 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- | ---------------- |
 | classStore | Object | <- | Class store 4D | <!-- END REF --> |
 
-The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
+O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a classe store para as classes 4D incorporadas disponíveis<!-- END REF -->. Ele permite acesso a APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemplo
 
-Quiere crear una nueva llave en la clase `CryptoKey`:
+Se quiser criar uma nova chave na classe `CryptoKey`:
 
 ```4d
 $key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## Objecto de classe
+## Objeto da classe
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
+Quando uma classe é [definida](#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
 
 - [`name`](API/ClassClass.md#name) string
-- [`superclass`](API/ClassClass.md#superclass) object (null if none)
-- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects
-- [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
-- [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
-- [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
+- objeto [`superclass`](API/ClassClass.md#superclass) (nulo se não tiver)
+- [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
+- Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
+- Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
+- Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
 
-Un objeto de clase en sí mismo es un [objeto compartido](shared.md) y, por tanto, se puede acceder a él desde diferentes procesos de 4D simultáneamente.
+Um objeto de classe em si é um [objeto compartilhado](shared.md) e, portanto, pode ser acessado de diferentes processos 4D simultaneamente.
 
 ### Herança
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass).
+Se uma classe herda de outra classe (ou seja, a [palavra-chave Class extends](classes.md#class-extends-classname) é usada em sua definição), a classe pai é a sua [`superclasse`](API/ClassClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Quando o 4D não encontra uma função ou uma propriedade em uma classe, ele a procura em sua [`superclasse`](API/ClassClass.md#superclass); se não for encontrada, o 4D continua procurando na superclasse da superclasse e assim por diante até não haver mais superclasse (todos os objetos herdam da superclasse "Objeto").
 
 ## Palavras-chave de classe
 
 As palavras-chave 4D específicas podem ser utilizadas nas definições de classes:
 
-- `Function <Name>` para definir las funciones de clase de los objetos.
-- `Class constructor` para inicializar nuevos objetos de la clase.
-- `property` para definir propiedades estáticas de los objetos con un tipo.
-- `Function get <Name>` y `Function set <Name>` para definir las propiedades calculadas de los objetos.
-- `Class extends <ClassName>` para definir la herencia.
+- `Função <Name>` para definir as funções de classe dos objetos.
+- `Construtor da classe` para inicializar novos objetos da classe.
+- `propriedade` para definir as propriedades estáticas dos objetos com um tipo.
+- `Função get <Nome>` e `Função set <Nome>` para definir propriedades calculadas dos objetos.
+- `Class extends <ClassName>` para definir a herança.
 
 ### `Function`
 
@@ -181,11 +181,11 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 // code
 ```
 
-As funções de classe são propriedades específicas da classe. Son objetos de la clase [4D.Function](API/FunctionClass.md). En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function` seguida del nombre de la función.
+As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
-If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+Se a função for declarada em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` para que a função possa ser chamada sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
-El nombre de la función debe ser compatible con las [reglas de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
+O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
 :::note
 
@@ -423,6 +423,20 @@ When you initialize a property in its declaration line, it is added to the class
 
 Si una clase [extiende a](#class-extends-classname) otra, las propiedades de la clase padre se instancian antes que las propiedades de la clase hija.
 
+:::note
+
+If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+
+```4d
+// in a shared class
+property myCollection := ["something"]
+// myCollection will be a shared collection
+// equivalent to:
+myCollection := New shared collection("something")
+```
+
+:::
+
 #### Exemplo
 
 ```4d
@@ -471,7 +485,7 @@ En el archivo de definición de la clase, las declaraciones de propiedades calcu
 
 Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve _undefined_ quando a propriedade é lida.
 
-If the functions are declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+If the functions are declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
@@ -814,6 +828,8 @@ The class singleton is instantiated at the first call of the [`cs.<class>.me`](.
 If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. Nesse caso, é recomendado instanciar o singleton em algum código executado no início da aplicação.
 
 O escopo de uma instância singleton pode ser o processo atual ou todos os processos. Un singleton _process_ tiene un valor único para el proceso en el que se instancia, mientras que un singleton _interprocess_ tiene un valor único para todos los procesos de la aplicación. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
 
 The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
 

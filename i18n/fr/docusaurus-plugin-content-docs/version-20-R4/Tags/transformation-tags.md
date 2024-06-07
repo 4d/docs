@@ -189,7 +189,7 @@ The collection must contain only **elements of the same type**, otherwise an err
 
 Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the _item_ variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
 
-- If the _item_ variable is of the object type or collection type (i.e. if _expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- If the _item_ variable is of the object type or collection type (i.e. if _expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
 - The _item_ variable gets the same type as the first collection element. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a Null value, an error is generated if the _item_ variable type does not support Null values (such as longint variables).
 

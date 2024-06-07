@@ -28,6 +28,7 @@ Session オブジェクトは [`Session`](#session) コマンドによって返�
 | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
 | [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
+| [<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
 | [<!-- INCLUDE #SessionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #SessionClass.id.Summary -->                                            |
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
@@ -70,7 +71,7 @@ Session オブジェクトは [`Session`](#session) コマンドによって返�
 
 詳細については、[セッションの種類](#セッションの種類) の段落を参照ください。
 
-サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは _Null_ を返します。
+サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
 
 #### Webセッション
 
@@ -151,7 +152,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
 
 :::
 
@@ -160,7 +161,7 @@ IP:port/4DACTION/action_Session
 #### 例題
 
 ```4d
-// セッションを無効にします
+// Webユーザーセッションを無効にします
 var $isGuest : Boolean
 var $isOK : Boolean
 
@@ -205,6 +206,101 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <!-- END REF -->
 
+<!-- REF SessionClass.getPrivileges().Desc -->
+
+## .getPrivileges()
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R6 | 追加 |
+
+</details>
+
+<!-- REF #SessionClass.getPrivileges().Syntax -->**.getPrivileges**() : Collection<!-- END REF -->
+
+<!-- REF #SessionClass.getPrivileges().Params -->
+
+| 引数  | タイプ        |     | 説明                                        |
+| --- | ---------- | :-: | ----------------------------------------- |
+| 戻り値 | Collection |  <- | アクセス権の名称 (文字列) のコレクション |
+
+<!-- END REF -->
+
+#### 説明
+
+`.getPrivileges()` 関数は、<!-- REF #SessionClass.getPrivileges().Summary -->対象セッションに紐づいている全アクセス権の名称のコレクションを返します<!-- END REF -->。
+
+リモートクライアントおよびストアドプロシージャーセッションでは、この関数は "WebAdmin" のみを含むコレクションを返します。
+
+:::info
+
+権限は、[`setPrivileges()`](#setprivileges) 関数によって、セッションに割り当てられます。
+
+:::
+
+#### 例題
+
+以下の [`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) が定義されています:
+
+```json
+{
+   "privileges":[
+      {
+         "privilege":"simple",
+         "includes":[
+
+         ]
+      },
+      {
+         "privilege":"medium",
+         "includes":[
+            "simple"
+         ]
+      }
+   ],
+   "roles":[
+      {
+         "role":"Medium",
+         "privileges":[
+            "medium"
+         ]
+      }
+   ],
+   "permissions":{
+      "allowed":[
+
+      ]
+   }
+}
+```
+
+セッションのロールは、DaraStore クラスの `authentify()` 関数内で割り当てられます:
+
+```4d
+  // DataStore クラス
+
+exposed Function authentify($role : Text) : Text
+	Session.clearPrivileges()
+	Session.setPrivileges({roles: $role})
+```
+
+"medium" ロールを指定して `authentify()` 関数が呼び出された場合:
+
+```4d
+var $privileges : Collection
+$privileges := Session.getPrivileges()
+// $privileges: ["simple","medium"]
+```
+
+#### 参照
+
+[.setPrivileges()](#setprivileges)<br/>
+[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+
+<!-- END REF -->
+
 <!-- REF SessionClass.hasPrivilege().Desc -->
 
 ## .hasPrivilege()
@@ -223,24 +319,20 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 | 引数        | タイプ     |     | 説明                                                |
 | --------- | ------- | :-: | ------------------------------------------------- |
-| privilege | Text    |  <- | 確認するアクセス権の名称                                      |
-| 戻り値       | Boolean |  <- | セッションが _privilege_ のアクセス権を持っていれば true、それ以外は false |
+| privilege | Text    |  -> | 確認するアクセス権の名称                                      |
+| 戻り値       | Boolean |  <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
 
 <!-- END REF -->
 
 #### 説明
 
-:::note
+`.hasPrivilege()` 関数は、<!-- REF #SessionClass.hasPrivilege().Summary -->対象セッションに *privilege* のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
 
-権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
-
-:::
-
-`.hasPrivilege()` 関数は、<!-- REF #SessionClass.hasPrivilege().Summary -->対象セッションに _privilege_ のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
+リモートクライアントとストアドプロシージャーセッションでは、この関数は *privilege* に関係なく、常に True を返します。
 
 #### 例題
 
-"WebAdmin" アクセス権がセッションに紐づいているかを確認します:
+"WebAdmin" アクセス権が Webユーザーセッションに紐づいているかを確認します:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -394,7 +486,7 @@ End if
 
 :::note
 
-この関数は、リモートクライアントとストアドプロシージャーのセッションでは常に **true** を返します。
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは常に **false** を返します。
 
 :::
 
@@ -442,17 +534,17 @@ End if
 
 :::note
 
-権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
 
 :::
 
 `.setPrivileges()` 関数は、<!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権やロールをセッションと紐づけ、実行が成功した場合に **true** を返します<!-- END REF -->。
 
-- _privilege_ には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
+- *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
-- _privileges_ には、アクセス権の名称を文字列のコレクションとして渡します。
+- *privileges* には、アクセス権の名称を文字列のコレクションとして渡します。
 
-- _settings_ には、以下のプロパティを持つオブジェクトを渡します:
+- *settings* には、以下のプロパティを持つオブジェクトを渡します:
 
 | プロパティ      | タイプ                 | 説明                                        |
 | ---------- | ------------------- | ----------------------------------------- |
@@ -489,6 +581,10 @@ If ($userOK) // ユーザー認証に成功した場合
 End if
 
 ```
+
+#### 参照
+
+[.getPrivileges()](#getprivileges)
 
 <!-- END REF -->
 

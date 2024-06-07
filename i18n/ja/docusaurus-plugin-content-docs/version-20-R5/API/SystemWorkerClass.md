@@ -57,9 +57,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 </details>
 
-<!-- REF #4D.SystemWorker.new().Syntax -->
-
-**4D.SystemWorker.new** ( _commandLine_ : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #4D.SystemWorker.new().Syntax -->**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
@@ -73,25 +71,25 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### 説明
 
-`4D.SystemWorker.new()` 関数は、<!-- REF #4D.SystemWorker.new().Summary -->外部プロセスを開始するために _commandLine_ に渡したコマンドラインを実行する `4D.SystemWorker` オブジェクトを作成し、返します<!-- END REF -->。
+`4D.SystemWorker.new()` 関数は、<!-- REF #4D.SystemWorker.new().Summary -->外部プロセスを開始するために *commandLine* に渡したコマンドラインを実行する `4D.SystemWorker` オブジェクトを作成し、返します<!-- END REF -->。
 
 返されたシステムワーカーオブジェクトは、ワーカーにメッセージを送信したり、ワーカーの結果を取得するために使用できます。
 
 プロキシオブジェクトの生成中に問題があった場合、この関数は `null` オブジェクトを返し、エラーが生成されます。
 
-_commandLine_ には、実行するアプリケーションのファイルのフルパス (POSIX シンタックス)、および必要に応じて追加の引数を渡します。 アプリケーション名だけを渡すと、4Dは 実行ファイルを探すために `PATH` 環境変数を使用します。
+*commandLine* には、実行するアプリケーションのファイルのフルパス (POSIX シンタックス)、および必要に応じて追加の引数を渡します。 アプリケーション名だけを渡すと、4Dは 実行ファイルを探すために `PATH` 環境変数を使用します。
 
 **警告:** この関数は、実行可能なアプリケーションを起動するだけで、シェル (コマンドインタープリター) の一部である命令を実行することはできません。 たとえば Windows で、このコマンドを使用して `dir` 命令を実行することはできません。
 
-#### _options_ オブジェクト
+#### *options* オブジェクト
 
-_options_ に渡すオブジェクトは、次のプロパティを持つことができます:
+*options* に渡すオブジェクトは、次のプロパティを持つことができます:
 
 | プロパティ            | タイプ     | デフォルト     | 説明                                                                                                                                                                                              |
 | ---------------- | ------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula | undefined | システムワーカーメッセージ用のコールバック。 完全なレスポンスを受け取り次第、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
 | onData           | Formula | undefined | システムワーカーデータ用のコールバック。 システムワーカーがデータを受け取る度に、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                              |
-| onDataError      | Formula | undefined | 外部プロセスエラー用のコールバック (外部プロセスの _stderr_)。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
+| onDataError      | Formula | undefined | 外部プロセスエラー用のコールバック (外部プロセスの *stderr*)。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
 | onError          | Formula | undefined | 実行エラー用のコールバック。異常なランタイム条件 (システムエラー) の場合にシステムワーカーによって返されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                            |
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                                                        |
@@ -103,7 +101,7 @@ _options_ に渡すオブジェクトは、次のプロパティを持つこと�
 
 すべてのコールバック関数は、2つのオブジェクト引数を受け取ります。 その内容は、コールバックに依存します:
 
-| 引数                           | タイプ           | _onResponse_ | _onData_     | _onDataError_ | _onError_    | _onTerminate_ |
+| 引数                           | タイプ           | *onResponse* | *onData*     | *onDataError* | *onError*    | *onTerminate* |
 | ---------------------------- | ------------- | ------------ | ------------ | ------------- | ------------ | ------------- |
 | $param1                      | Object        | SystemWorker | SystemWorker | SystemWorker  | SystemWorker | SystemWorker  |
 | $param2.type | Text          | "response"   | "data"       | "error"       | "error"      | "termination" |
@@ -264,9 +262,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 </details>
 
-<!-- REF #SystemWorkerClass.closeInput().Syntax -->
-
-**.closeInput**()<!-- END REF -->
+<!-- REF #SystemWorkerClass.closeInput().Syntax -->**.closeInput**()<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
@@ -278,7 +274,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 #### 説明
 
-`.closeInput()` 関数は、<!-- REF #SystemWorkerClass.closeInput().Summary -->外部プロセスの入力ストリーム (_stdin_) を閉じます<!-- END REF -->。
+`.closeInput()` 関数は、<!-- REF #SystemWorkerClass.closeInput().Summary -->外部プロセスの入力ストリーム (*stdin*) を閉じます<!-- END REF -->。
 
 `.closeInput()` は、`postMessage()` を介した全データの受信を待機している実行ファイルに、データ送信が終了したことを知らせるのに便利です。
 
@@ -312,9 +308,7 @@ $output:=$worker.response
 
 ## .commandLine
 
-<!-- REF #SystemWorkerClass.commandLine.Syntax -->
-
-**.commandLine** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.commandLine.Syntax -->**.commandLine** : Text<!-- END REF -->
 
 #### 説明
 
@@ -342,9 +336,7 @@ $output:=$worker.response
 
 ## .dataType
 
-<!-- REF #SystemWorkerClass.dataType.Syntax -->
-
-**.dataType** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
 
 #### 説明
 
@@ -358,9 +350,7 @@ $output:=$worker.response
 
 ## .encoding
 
-<!-- REF #SystemWorkerClass.encoding.Syntax -->
-
-**.encoding** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.encoding.Syntax -->**.encoding** : Text<!-- END REF -->
 
 #### 説明
 
@@ -374,9 +364,7 @@ $output:=$worker.response
 
 ## .errors
 
-<!-- REF #SystemWorkerClass.errors.Syntax -->
-
-**.errors** : Collection<!-- END REF -->
+<!-- REF #SystemWorkerClass.errors.Syntax -->**.errors** : Collection<!-- END REF -->
 
 #### 説明
 
@@ -398,13 +386,11 @@ $output:=$worker.response
 
 ## .exitCode
 
-<!-- REF #SystemWorkerClass.exitCode.Syntax -->
-
-**.exitCode** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.exitCode.Syntax -->**.exitCode** : Integer<!-- END REF -->
 
 #### 説明
 
-`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は _undefined_ です。
+`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
 
 このプロパティは **読み取り専用** です。
 
@@ -414,9 +400,7 @@ $output:=$worker.response
 
 ## .hideWindow
 
-<!-- REF #SystemWorkerClass.hideWindow.Syntax -->
-
-**.hideWindow** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.hideWindow.Syntax -->**.hideWindow** : Boolean<!-- END REF -->
 
 #### 説明
 
@@ -430,9 +414,7 @@ $output:=$worker.response
 
 ## .pid
 
-<!-- REF #SystemWorkerClass.pid.Syntax -->
-
-**.pid** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid** : Integer<!-- END REF -->
 
 #### 説明
 
@@ -446,9 +428,7 @@ $output:=$worker.response
 
 ## .postMessage()
 
-<!-- REF #SystemWorkerClass.postMessage().Syntax -->
-
-**.postMessage**( _message_ : Text)<br/>**.postMessage**( _messageBLOB_ : Blob)<!-- END REF -->
+<!-- REF #SystemWorkerClass.postMessage().Syntax -->**.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
@@ -461,9 +441,9 @@ $output:=$worker.response
 
 #### 説明
 
-`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 _message_ には _stdin_ に書き込むテキストを渡します。
+`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。
 
-`.postMessage()` 関数は、_stdin_ に渡す BLOB型の _messageBLOB_ 引数も受け取るため、バイナリデータを送信することもできます。
+`.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
 
 [options オブジェクト](#options-object) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
 
@@ -473,9 +453,7 @@ $output:=$worker.response
 
 ## .response
 
-<!-- REF #SystemWorkerClass.response.Syntax -->
-
-**.response** : Text<br/>**.response** : Blob<!-- END REF -->
+<!-- REF #SystemWorkerClass.response.Syntax -->**.response** : Text<br/>**.response** : Blob<!-- END REF -->
 
 #### 説明
 
@@ -491,9 +469,7 @@ $output:=$worker.response
 
 ## .responseError
 
-<!-- REF #SystemWorkerClass.responseError.Syntax -->
-
-**.responseError** : Text<!-- END REF -->
+<!-- REF #SystemWorkerClass.responseError.Syntax -->**.responseError** : Text<!-- END REF -->
 
 #### 説明
 
@@ -505,9 +481,7 @@ $output:=$worker.response
 
 ## .terminate()
 
-<!-- REF #SystemWorkerClass.terminate().Syntax -->
-
-**.terminate**()<!-- END REF -->
+<!-- REF #SystemWorkerClass.terminate().Syntax -->**.terminate**()<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
@@ -529,9 +503,7 @@ $output:=$worker.response
 
 ## .terminated
 
-<!-- REF #SystemWorkerClass.terminated.Syntax -->
-
-**.terminated** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->
 
 #### 説明
 
@@ -545,9 +517,7 @@ $output:=$worker.response
 
 ## .timeout
 
-<!-- REF #SystemWorkerClass.timeout.Syntax -->
-
-**.timeout** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.timeout.Syntax -->**.timeout** : Integer<!-- END REF -->
 
 #### 説明
 
@@ -570,9 +540,7 @@ $output:=$worker.response
 
 </details>
 
-<!-- REF #SystemWorkerClass.wait().Syntax -->
-
-**.wait**( {_timeout_ : Real} ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #SystemWorkerClass.wait().Syntax -->**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
@@ -585,9 +553,9 @@ $output:=$worker.response
 
 #### 説明
 
-`.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または _timeout_ で指定した時間が経過するまで待機します<!-- END REF -->。
+`.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または *timeout* で指定した時間が経過するまで待機します<!-- END REF -->。
 
-_timeout_ には、秒単位の値を渡します。 `SystemWorker` スクリプトは、_timeout_ に指定された時間だけ、外部プロセスを待ちます。 _timeout_ を省略した場合、スクリプトの実行は無期限に待機します。
+*timeout* には、秒単位の値を渡します。 `SystemWorker` スクリプトは、*timeout* に指定された時間だけ、外部プロセスを待ちます。 *timeout* を省略した場合、スクリプトの実行は無期限に待機します。
 
 実際には、`.wait()` はタイムアウトに達した場合を除き、`onTerminate` フォーミュラのプロセス終了まで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。
 

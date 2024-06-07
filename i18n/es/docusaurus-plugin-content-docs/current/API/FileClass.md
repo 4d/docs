@@ -59,14 +59,14 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                      |
-| ----------- | ----------------------------------- |
-| 19 R4       | New `HTTP Client log file` constant |
-| 17 R5       | Añadidos                            |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 19 R4       | Nueva constante `HTTP Client log file` |
+| 17 R5       | Añadidos                               |
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -86,11 +86,11 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 **File ( path { ; pathType } { ; \* })**
 
-In the _path_ parameter, pass a file path string. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA/myfile.txt").
+In the *path* parameter, pass a file path string. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA/myfile.txt").
 
 > Only absolute pathnames are supported with the `File` command.
 
-Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the _pathType_ parameter. Las siguientes constantes están disponibles:
+Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. Las siguientes constantes están disponibles:
 
 | Constante        | Valor | Comentario                                                                                                                           |
 | ---------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -99,7 +99,7 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. If you work wit
 
 **File ( fileConstant { ; \* } )**
 
-In the _fileConstant_ parameter, pass a 4D built-in or system file, using one of the following constants:
+In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
 
 | Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,7 +127,7 @@ In the _fileConstant_ parameter, pass a 4D built-in or system file, using one of
 | User settings file for data       | 4     | archivo settings.4DSettings para el archivo de datos actual, almacenado en la carpeta Preferences junto al archivo de datos.                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                               |
 
-If the target _fileConstant_ does not exist, a null object is returned. No se produce ningún error.
+If the target *fileConstant* does not exist, a null object is returned. No se produce ningún error.
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
 
@@ -143,7 +143,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 <!-- REF #4D.File.new().Syntax -->
 
-**4D.File.new** ( _path_ : Text { ; _pathType_ : Integer }{ ; \* } ) : 4D.File<br/>**4D.File.new** ( _fileConstant_ : Integer { ; \* } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Descripción
 
@@ -228,18 +228,18 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 #### Descripción
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified _aliasName_ name in the folder designated by the _destinationFolder_ object.
+The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the _aliasName_ parameter.
+Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-Por defecto en macOS, la función crea un alias estándar. You can also create a symbolic link by using the _aliasType_ parameter. Las siguientes constantes están disponibles:
+Por defecto en macOS, la función crea un alias estándar. You can also create a symbolic link by using the *aliasType* parameter. Las siguientes constantes están disponibles:
 
 | Constante          | Valor | Comentario                                            |
 | ------------------ | ----- | ----------------------------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the _aliasType_ parameter is ignored).
+On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 **Objeto devuelto**
 
@@ -295,7 +295,7 @@ Si el archivo está abierto, el resultado depende del sistema operativo:
 
 :::caution
 
-`.delete()` can delete any file on a disk. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` should be used with extreme caution. Eliminar un archivo es una operación permanente y no se puede deshacer.
+`.delete()` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` should be used with extreme caution. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 :::
 
@@ -440,11 +440,11 @@ ALERT($info.Copyright)
 
 #### Descripción
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified _destinationFolder_<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
-The _destinationFolder_ must exist on disk, otherwise an error is generated.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por defecto, el archivo conserva su nombre cuando se mueve. If you want to rename the moved file, pass the new full name in the _newName_ parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, el archivo conserva su nombre cuando se mueve. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
@@ -488,23 +488,23 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descripción
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified _mode_ or with the specified _options_<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
-If you use the _mode_ (text) parameter, pass the opening mode for the file handle:
+If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
-| _mode_   | Descripción                                                                                                                                                                                                                                                                                                   |
+| *mode*   | Descripción                                                                                                                                                                                                                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Por defecto) Crea un file handle para leer los valores en el archivo. Si el archivo no existe en el disco, se devuelve un error. Puede abrir tantos file handles como quiera en modo "read" en el mismo objeto File.                      |
 | "write"  | Crea un file handle para escribir valores en el archivo (empezando por el inicio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "write" en el mismo objeto File.     |
 | "append" | Crea un file handle para escribir los valores en el archivo (empezando por el final del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "append" en el mismo objeto File. |
 
-> The _mode_ value is case sensitive.
+> El valor de *mode* es sensible a las mayúsculas y minúsculas.
 
-If you use the _options_ (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| _opciones_        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `.mode`           | Text           | Opening mode (see _mode_ above)                                                                                                                                  | "read"       |
+| `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
 | `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                                           | "native" o 1 |
 | `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                                    | "native" o 1 |
@@ -518,7 +518,7 @@ La función reemplaza todos los delimitadores originales de final de línea. Por
 | "cr"                     | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                                                                              |
 | "lf"                     | 4 (`Document with LF`)             | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                                                                                     |
 
-> The _break mode as text_ value is case sensitive.
+> The *break mode as text* value is case sensitive.
 
 #### Ejemplo
 
@@ -568,15 +568,15 @@ $fhandle:=$f.open("read")
 
 #### Descripción
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in _newName_ and returns the renamed `File` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-The _newName_ parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in _newName_, the file will have a name without an extension.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objeto devuelto**
 
-The renamed `File` object.
+El objeto `File` renombrado.
 
 #### Ejemplo
 
@@ -614,17 +614,17 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the _info_ properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
 La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función no hace nada (no se genera ningún error).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
-**_info_ parameter object with a .exe or .dll file**
+***info* parameter object with a .exe or .dll file**
 
 > Escribir la información de archivos .exe o .dll sólo es posible en Windows.
 
-Each valid property set in the _info_ object parameter is written in the version resource of the .exe or .dll file. Las propiedades disponibles son (toda otra propiedad será ignorada):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
 | Propiedad        | Tipo | Comentario                                                                                                                                              |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -642,11 +642,11 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-**_info_ parameter object with a .plist file**
+***info* parameter object with a .plist file**
 
-Each valid property set in the _info_ object parameter is written in the .plist file as a key. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
 
-If a key set in the _info_ parameter is already defined in the .plist file, its value is updated while keeping its original type. Las demás llaves existentes en el archivo .plist no se modifican.
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Las demás llaves existentes en el archivo .plist no se modifican.
 
 > Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de timestamp json formada en ISO UTC sin milisegundos ("2003-02-01T01:02:03Z") como en el editor de plist Xcode.
 
@@ -706,7 +706,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the _content_ BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 #### Ejemplo
 
@@ -745,22 +745,22 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descripción
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes _text_ as the new contents of the file<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
-In _text_, pass the text to write to the file. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
+In *text*, pass the text to write to the file. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 
-- in _charSetName_, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in _charSetNum_, the MIBEnum ID (number) of the standard set name.
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
 Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo "-no-bom" (por ejemplo, "UTF-8-no-bom"). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" sin BOM.
 
-In _breakMode_, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                                                                                          |
 | ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -770,7 +770,7 @@ In _breakMode_, you can pass a number indicating the processing to apply to end-
 | `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                                                                              |
 | `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                                                                                     |
 
-By default, when you omit the _breakMode_ parameter, line breaks are processed in native mode (1).
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
 > **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 

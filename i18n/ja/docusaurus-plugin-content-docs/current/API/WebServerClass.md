@@ -77,9 +77,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- END REF -->
 
-`WEB Server` コマンドは、<!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または _option_ 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
+`WEB Server` コマンドは、<!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または *option* 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
 
-_option_が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、_option_ に以下の定数のいずれか一つを渡してください:
+*option*が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
 | 定数                             | 値 | 説明                                                    |
 | ------------------------------ | - | ----------------------------------------------------- |
@@ -221,7 +221,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ([`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。 **methods** プロパティは任意です。
 
-- **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 _host_ が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
+- **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -233,7 +233,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
   - myProject.myDomain.com
   - \*
 
-- **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 _methods_ が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
+- **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
 <!-- END REF -->
 
@@ -412,7 +412,7 @@ HTTPプロトコルの状態<!-- END REF -->。
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-_内容_
+*内容*
 
 <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<!-- END REF -->。
 
@@ -511,7 +511,7 @@ _内容_
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-_内容_
+*内容*
 
 <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
@@ -523,7 +523,7 @@ _内容_
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-_内容_
+*内容*
 
 <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
@@ -535,7 +535,7 @@ _内容_
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-_内容_
+*内容*
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
@@ -583,7 +583,7 @@ _内容_
 
 <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-_内容_
+*内容*
 
 <!-- END REF -->
 
@@ -615,7 +615,7 @@ _内容_
 
 | 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | _デフォルト値_ - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
 | Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
 | Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
 
@@ -647,9 +647,7 @@ _内容_
 
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-
-**.start**() : Object<br/>**.start**( _settings_ : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 
@@ -660,9 +658,9 @@ _内容_
 
 <!-- END REF -->
 
-`.start()` 関数は、任意の _settings_ オブジェクト引数に設定したプロパティを使用して、<!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。
+`.start()` 関数は、任意の *settings* オブジェクト引数に設定したプロパティを使用して、<!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。
 
-プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、_settings_ 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
+プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
 [Web Server オブジェクト](#web-server-オブジェクト) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
 
@@ -725,7 +723,7 @@ _内容_
 
 Webサーバーが開始されている場合は、処理中のリクエストが完了次第、すべての Web接続と Webプロセスが閉じられます。 Webサーバーが開始されていなかった場合、関数はなにもしません。
 
-> この関数は、[`.start()`](#start) 関数の _settings_ 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
+> この関数は、[`.start()`](#start) 関数の *settings* 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
 
 #### 例題
 

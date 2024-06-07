@@ -13,7 +13,7 @@ title: VP INSERT TABLE ROWS
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
 
-**VP INSERT TABLE ROWS** ( _vpAreaName_ : Text ; _tableName_ : Text ; _row_ : Integer {; _count_ : Integer {; _insertAfter_ : Integer {; _sheet_ : Integer }}} )<!-- END REF -->
+**VP INSERT TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
@@ -28,20 +28,20 @@ title: VP INSERT TABLE ROWS
 
 #### 説明
 
-`VP INSERT TABLE ROWS` コマンドは、<!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->_tableName_ で指定した表組みの _row_ で指定した行インデックスに、1つまたは _count_ で指定した数の空の行を挿入します<!-- END REF -->。
+`VP INSERT TABLE ROWS` コマンドは、<!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスに、1つまたは *count* で指定した数の空の行を挿入します<!-- END REF -->。
 
-_insertAfter_ パラメーターに以下の定数のいずれかを渡すことで、_row_ に指定した行インデックスの前または後に行を挿入するかを指定できます。
+*insertAfter* パラメーターに以下の定数のいずれかを渡すことで、*row* に指定した行インデックスの前または後に行を挿入するかを指定できます。
 
 | 定数                       | 値 | 説明                                              |
 | ------------------------ | - | ----------------------------------------------- |
-| `vk table insert before` | 0 | _row_ の前に行を挿入します (省略時のデフォルト) |
-| `vk table insert after`  | 1 | _row_ の後に行を挿入します                                |
+| `vk table insert before` | 0 | *row* の前に行を挿入します (省略時のデフォルト) |
+| `vk table insert after`  | 1 | *row* の後に行を挿入します                                |
 
-このコマンドは、シート内ではなく、_tableName_ の表組みに行を挿入します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、挿入された行の数に応じて自動的に下に移動します。
+このコマンドは、シート内ではなく、*tableName* の表組みに行を挿入します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、挿入された行の数に応じて自動的に下に移動します。
 
-_tableName_ の表組みが [データコンテキスト](vp-set-data-context.md) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
+*tableName* の表組みが [データコンテキスト](vp-set-data-context.md) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
 
-_tableName_ の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
+*tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
 
 #### 例題
 

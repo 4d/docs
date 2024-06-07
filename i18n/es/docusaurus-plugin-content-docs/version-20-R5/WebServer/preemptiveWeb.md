@@ -11,17 +11,17 @@ For in-depth information on preemptive process in 4D, please refer to the _Preem
 
 La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, dependiendo del contexto de ejecución:
 
-| 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (no asociado al depurador) | Compilado     |
-| --------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------- |
-| Servidor REST         | cooperativo                                                                                 | apropiativo                                                | apropiativo   |
-| Servidor Web          | cooperativo                                                                                 | cooperativo                                                | _web setting_ |
-| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                | _web setting_ |
+| 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (no asociado al depurador) | Compilado           |
+| --------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------- |
+| Servidor REST         | cooperativo                                                                                 | apropiativo                                                | apropiativo         |
+| Servidor Web          | cooperativo                                                                                 | cooperativo                                                | _configuración web_ |
+| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                | _configuración web_ |
 
-| 4D remoto/monopuesto  | Interpretado | Compilado     |
-| --------------------- | ------------ | ------------- |
-| Servidor REST         | cooperativo  | apropiativo   |
-| Servidor Web          | cooperativo  | _web setting_ |
-| Servidor Web Services | cooperativo  | _web setting_ |
+| 4D remoto/monopuesto  | Interpretado | Compilado           |
+| --------------------- | ------------ | ------------------- |
+| Servidor REST         | cooperativo  | apropiativo         |
+| Servidor Web          | cooperativo  | _configuración web_ |
+| Servidor Web Services | cooperativo  | _configuración web_ |
 
 - Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)

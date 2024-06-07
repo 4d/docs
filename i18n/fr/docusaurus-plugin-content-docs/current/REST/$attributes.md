@@ -3,33 +3,33 @@ id: attributes
 title: $attributes
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (_e.g._, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+Permet de sélectionner les attributs relationnels à obtenir à partir de la dataclass (par exemple, `Company(1)?$attributes=employees.lastname` ou `Employee?$attributes=employer.name`).
 
 ## Description
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Lorsque vous avez des attributs relationnels dans une dataclass, utilisez `$attributes` pour définir le chemin des attributs dont vous souhaitez obtenir les valeurs pour l'entité ou les entités associées.
 
-You can apply `$attributes` to an entity (_e.g._, People(1)) or an entity selection (_e.g._, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
-- If `$attributes` is not specified in a query, or if the "\*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "\*" est passée, tous les attributs disponibles sont extraits. Les attributs de type **related entity** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs de type **related entities** ne sont pas extraits.
 
-- If `$attributes` is specified for **related entity** attributes:
-  - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-  - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
-  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
+- Si `$attributes` est spécifié pour les attributs **related entity** :
+  - `$attributes=relatedEntity` : l'entité liée est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et `URI`.
+  - `$attributes=relatedEntity.*` : tous les attributs de l'entité liée sont retournés
+  - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs de l'entité liée sont retournés.
 
-- If `$attributes` is specified for **related entities** attributes:
-  - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
+- Si `$attributes` est spécifié pour les attributs **related entities** :
+  - `$attributes=relatedEntities.*` : toutes les propriétés des entités liées sont retournées
 
-  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+  - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités liées sont retournés.
 
-## Exemples avec plusieurs entités relatives
+## Exemple avec plusieurs entités liées
 
-Si nous passons la requête REST suivante pour la dataclasse Company (qui possède un attribut de relation "employees"):
+Si nous exécutons la requête REST suivante pour la dataclass Company (qui possède un attribut relatif "employees"):
 
 `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Réponse** :
 
 ```
 {
@@ -68,13 +68,13 @@ Si vous souhaitez obtenir le nom de famille et les attributs de nom de poste des
 
 `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
-## Exemples avec une entité relative
+## Exemple avec une entité liée
 
 Si nous passons la requête REST suivante pour la dataclass Employee (qui a plusieurs attributs relationnels, y compris "employer") :
 
 `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Réponse** :
 
 ```
 {

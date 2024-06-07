@@ -684,8 +684,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 |18 R3|Added
 </details>
 
-<!-- REF #WebServerClass.start().Syntax -->
-**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
+<!-- REF #WebServerClass.start().Syntax -->**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 
 <!-- REF #WebServerClass.start().Params -->

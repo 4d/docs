@@ -4,26 +4,26 @@ title: Page restitution
 sidebar_label: Page restitution
 ---
 
-You can manually restore an archive of the current application using the **Restore** page. Cette page propose plusieurs options permettant de contrôler la restitution :
+La page **Restitution** du Centre de sécurité et de maintenance vous permet de restituer manuellement une archive de l'application courante. Cette page propose plusieurs options permettant de contrôler la restitution :
 
 ![](../assets/en/MSC/MSC_restore.png)
 
 > Les systèmes de restitution automatique de 4D restituent les applications et incluent le fichier d'historique si nécessaire.
 
-La liste située dans la partie gauche de la fenêtre affiche les sauvegardes existantes de l'application. You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. Il est alors ajouté à la liste des archives.
+La liste située dans la partie gauche de la fenêtre affiche les sauvegardes existantes de l'application. Vous pouvez également cliquer sur le bouton **Parcourir...** situé sous la zone afin d’ouvrir tout autre fichier d’archive provenant d’un autre emplacement. Il est alors ajouté à la liste des archives.
 
 Lorsque vous sélectionnez une sauvegarde dans cette liste, la partie droite de la fenêtre affiche les informations relatives à cette sauvegarde :
 
-- **Path**: Complete pathname of the selected backup file. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système.
-- **Date and Time**: Date and time of backup.
-- **Content**: Contents of the backup file. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. <strong x-id="1">Emplacement des fichiers restitués</strong> : dossier dans lequel seront placés les fichiers restitués. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Chemin d’accès** : chemin d’accès complet du fichier de sauvegarde sélectionné. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système.
+- **Date et heure** : date et heure de la sauvegarde.
+- **Contenu** : contenu du fichier de sauvegarde. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. Vous pouvez utiliser les boutons **Tout sélectionner** ou **Tout désélectionner** pour paramétrer la liste des éléments à restituer.
+- **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. <strong x-id="1">Emplacement des fichiers restitués</strong> : dossier dans lequel seront placés les fichiers restitués. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
 
-The **Restore** button launches the manual restoration of the selected element(s).
+Le bouton **Restituer** lance la restitution manuelle des éléments sélectionnés.
 
 ## Intégration successive de plusieurs fichiers d’historiques
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. Si, par exemple, vous disposez de 4 sauvegardes d’historique (.4BL) consécutives, correspondant à 4 sauvegardes, vous pouvez restituer la première sauvegarde puis intégrer une à une les sauvegardes d’historique. Ce principe permet par exemple de récupérer un fichier de données alors que les derniers fichiers de sauvegarde de la base sont manquants.
+L’option **Intégrer un ou plusieurs fichier(s) d’historique après la restitution** permet d’intégrer successivement plusieurs sauvegardes d’historiques dans une base de données. Si, par exemple, vous disposez de 4 sauvegardes d’historique (.4BL) consécutives, correspondant à 4 sauvegardes, vous pouvez restituer la première sauvegarde puis intégrer une à une les sauvegardes d’historique. Ce principe permet par exemple de récupérer un fichier de données alors que les derniers fichiers de sauvegarde de la base sont manquants.
 
 Lorsque cette option est cochée, 4D affiche une boîte de dialogue standard d’ouverture de fichiers à l’issue de la restitution, vous permettant de sélectionner la sauvegarde d’historique à intégrer. La boîte de dialogue d’ouverture est affichée de nouveau après chaque intégration, jusqu’à ce qu’elle soit annulée.
 

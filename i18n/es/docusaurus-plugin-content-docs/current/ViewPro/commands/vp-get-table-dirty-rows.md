@@ -13,7 +13,7 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
 
-**VP Get table dirty rows** ( _vpAreaName_ : Text ; _tableName_ : Text { ; _reset_ : Boolean {; _sheet_ : Integer }} ) : Collection<!-- END REF -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
@@ -27,19 +27,19 @@ title: VP Get table dirty rows
 
 #### Descripción
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of _dirty row_ objects, containing items that were modified since the last reset in the specified _tableName_<!-- END REF -->.
+The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En _tableName_, pase el nombre de la tabla de la que desea obtener las líneas sucias. Sólo se tendrán en cuenta las columnas modificadas vinculadas a un [contexto de datos](vp-set-data-context.md).
+En *tableName*, pase el nombre de la tabla de la que desea obtener las líneas sucias. Sólo se tendrán en cuenta las columnas modificadas vinculadas a un [contexto de datos](vp-set-data-context.md).
 
-Por defecto, al llamar al comando se borrará el estado _sucio_ de la tabla actual. Para mantener este estado intacto, pase `False` en el parámetro _reset_.
+Por defecto, al llamar al comando se borrará el estado *sucio* de la tabla actual. Para mantener este estado intacto, pase `False` en el parámetro *reset*.
 
-En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
-Cada objeto _dirty row_ de la colección devuelta contiene las siguientes propiedades:
+Cada objeto *dirty row* de la colección devuelta contiene las siguientes propiedades:
 
 | Propiedad    | Tipo    | Descripción                              |
 | ------------ | ------- | ---------------------------------------- |
@@ -47,7 +47,7 @@ Cada objeto _dirty row_ de la colección devuelta contiene las siguientes propie
 | originalItem | object  | Objeto antes de la modificación          |
 | row          | integer | Índice de la línea modificada            |
 
-If _tableName_ is not found or if it does not contain a modified column, the command returns an empty collection.
+If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
 
 #### Ejemplo
 

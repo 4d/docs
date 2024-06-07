@@ -117,6 +117,8 @@ Using the main datastore on the 4D database:
 <!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 
+
+
 <!-- REF #_command_.Open datastore.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -154,12 +156,12 @@ Once the session is opened, the following statements become equivalent and retur
   //$myds and $myds2 are equivalent
 ```
 
-Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
+Pass in *connectionInfo* an object describing the remote datastore you want to connect to. All properties are optional except *hostname* :
 
 |Property| Type| Description|
 |---|---|---|
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|
-|user|Text|User name
+|user|Text|User name|
 |password|Text|User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.|
 |idleTimeout|Longint|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|
 |tls|Boolean|Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.|
@@ -945,8 +947,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.setAdminProtection().Syntax -->
-**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
+<!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
@@ -1219,7 +1220,7 @@ To create a server-side ORDA request log, call this function on the server machi
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
 
 |Constant|Description|
-|----|----|---|
+|----|----|
 |srl log all|Log the response entirely (default value)|
 |srl log no response|Disable the logging of the response|
 |srl log response without body|Log the response without the body|

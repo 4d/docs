@@ -5,7 +5,7 @@ title: VP SET SELECTION
 
 <!-- REF #_method_.VP SET SELECTION.Syntax -->
 
-**VP SET SELECTION** ( _rangeObj_ : Object  ) <!-- END REF -->
+**VP SET SELECTION** ( *rangeObj* : Object  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
@@ -17,7 +17,7 @@ title: VP SET SELECTION
 
 El comando `VP SET SELECTION` <!-- REF #_method_.VP SET SELECTION.Summary -->define las celdas especificadas como la selección y la primera celda como la celda activa<!-- END REF -->.
 
-En _rangeObj_, pase un objeto rango de celdas a designar como selección actual.
+En *rangeObj*, pase un objeto rango de celdas a designar como selección actual.
 
 #### Ejemplo
 

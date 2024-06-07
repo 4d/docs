@@ -100,10 +100,10 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                      |
-| ----------- | --------------------------------------------------- |
-| 17 R6       | Renamed (New formula -> Formula) |
-| 17 R3       | Añadidos                                            |
+| Lanzamiento | Modificaciones                                         |
+| ----------- | ------------------------------------------------------ |
+| 17 R6       | Renombrado (New formula -> Formula) |
+| 17 R3       | Añadidos                                               |
 
 </details>
 
@@ -120,7 +120,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 #### Descripción
 
-The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the _formulaExp_ expression<!-- END REF -->. _formulaExp_ can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
 Tener una fórmula como objeto permite pasarla como parámetro (atributo calculado) a los comandos o a los métodos o ejecutarla desde varios componentes sin necesidad de declararla como "compartida por los componentes y la base de datos local". Cuando se llama, el objeto fórmula se evalúa en el contexto de la base de datos o del componente que lo creó.
 
@@ -144,7 +144,7 @@ You can pass [parameters](#passing-parameters) to the `Formula`, as seen below i
 
 You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
 
-If _formulaExp_ uses local variables, their values are copied and stored in the returned formula object when it is created. Cuando se ejecuta, la fórmula utiliza estos valores copiados en lugar del valor actual de las variables locales. Tenga en cuenta que no se soporta el uso de arrays como variables locales.
+If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. Cuando se ejecuta, la fórmula utiliza estos valores copiados en lugar del valor actual de las variables locales. Tenga en cuenta que no se soporta el uso de arrays como variables locales.
 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
 
@@ -232,7 +232,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 | Lanzamiento | Modificaciones                                         |
 | ----------- | ------------------------------------------------------ |
-| 20 R3       | Support of _context_ parameter                         |
+| 20 R3       | Soporte del parámetro *context*                        |
 | 17 R6       | Renamed New formula from string -> Formula from string |
 | 17 R3       | Añadidos                                               |
 
@@ -252,13 +252,13 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 #### Descripción
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the _formulaString_ and, optionnally, a _context_<!-- END REF -->.  _formulaString_ can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
 This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
 
-> Because local variable contents can not be accessed by name in compiled mode, they can not be used in _formulaString_. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
+> Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
-If the formula is created in a component, you might consider using the _context_ parameter. Por defecto, dado que las fórmulas se ejecutan en el contexto en el que fueron creadas, no podrá llamar a una variable, función o método no compartido de la base de datos local. In this case, you can pass the `sk execute in host database` constant in the _context_ parameter to execute the `4D.Function` object in the context of the host database. Las siguientes constantes están disponibles:
+If the formula is created in a component, you might consider using the *context* parameter. Por defecto, dado que las fórmulas se ejecutan en el contexto en el que fueron creadas, no podrá llamar a una variable, función o método no compartido de la base de datos local. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Las siguientes constantes están disponibles:
 
 | Constante                        | Tipo    | Descripción                                                                               |
 | -------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
@@ -313,9 +313,9 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the _thisObj_ parameter, you can pass a reference to the object to be used as `This` within the formula.
+In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
-You can also pass a collection to be used as $1...$n parameters in the formula using the optional _formulaParams_ parameter.
+You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
 
 Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. Esto puede ser útil para pasar los resultados calculados.
 
@@ -373,9 +373,9 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the _thisObj_ parameter, you can pass a reference to the object to be used as `This` within the formula.
+In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
-You can also pass values to be used as _$1...$n_ parameters in the formula using the optional _params_ parameter(s).
+You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
 
 Note that `.call()` is similar to [`.apply()`](#apply) except that parameters are passed directly.
 

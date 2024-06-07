@@ -78,8 +78,8 @@ $p->:=55 //asigna un valor
 Imagine uma função que devolve o comprimento (número de caracteres) de valores que podem ser de qualquer tipo.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $vp = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length (quantos caracteres)
+  // $vp = ponteiro para tipo de variável flexível, numérico, texto, tempo, booleano
 
 #DECLARE($vp : Pointer) -> $length : Integer
 var $result : Text  

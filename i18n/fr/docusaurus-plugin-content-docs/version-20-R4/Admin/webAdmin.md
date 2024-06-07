@@ -11,7 +11,7 @@ Le WebAdmin gère l'authentification des utilisateurs via des privilèges "WebAd
 Cette fonctionnalité est disponible pour les applications 4D avec ou sans interfaces.
 
 
-## Démarrer le WebAdmin web server
+## Démarrer le serveur web WebAdmin
 
 Par défaut, le serveur web `WebAdmin` ne démarre pas automatiquement. Il faut configurer son lancement automatique au démarrage, ou (dans les versions avec une interface) le lancer manuellement via un menu.
 

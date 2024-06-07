@@ -70,7 +70,7 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 
 For more information, see the [Session types](#session-types) paragraph.
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns _Null_.
+If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
 #### Sesiones web
 
@@ -151,7 +151,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -160,12 +160,12 @@ The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summa
 #### Ejemplo
 
 ```4d
-//Invalidar una sesión
+//Invalidate a web user session
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest es True
+$isGuest:=Session.isGuest() //$isGuest is True
 ```
 
 <!-- END REF -->
@@ -224,23 +224,19 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 | Parámetros | Tipo    |     | Descripción                                      |
 | ---------- | ------- | :-: | ------------------------------------------------ |
 | privilege  | Text    |  <- | Nombre del privilegio a verificar                |
-| Result     | Boolean |  <- | True if session has _privilege_, False otherwise |
+| Result     | Boolean |  <- | True if session has *privilege*, False otherwise |
 
 <!-- END REF -->
 
 #### Descripción
 
-:::note
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
-
-:::
-
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+With remote client and stored procedure sessions, this function always returns True, whatever the *privilege*.
 
 #### Ejemplo
 
-Quiere comprobar si el privilegio "WebAdmin" está asociado a la sesión:
+You want to check if the "WebAdmin" privilege is associated to the web user session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -303,7 +299,7 @@ When this property is set, the [`.expirationDate`](#expirationdate) property is 
 
 > El valor no puede ser inferior a 60: si se define un valor inferior, el tiempo de espera se eleva hasta 60.
 
-This property is **read write**.
+Esta propiedad está en **lectura escritura**.
 
 #### Ejemplo
 
@@ -358,7 +354,7 @@ The `.info` object contains the following properties:
 | hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                 |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión                                                                                                                           |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                          |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                                                                    |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                             |
 | persistentID     | Text          | ID persistente de la sesión                                                                                                                                     |
 
 :::note
@@ -395,7 +391,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+This function always returns **False** with remote client and stored procedure sessions.
 
 :::
 
@@ -443,17 +439,17 @@ End if
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+This function does nothing and always returns **False** with remote client and stored procedure sessions.
 
 :::
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
 
-- In the _privilege_ parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
-- In the _privileges_ parameter, pass a collection of strings containing privilege names.
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
 
-- In the _settings_ parameter, pass an object containing the following properties:
+- In the *settings* parameter, pass an object containing the following properties:
 
 | Propiedad  | Tipo              | Descripción                                                                                              |
 | ---------- | ----------------- | -------------------------------------------------------------------------------------------------------- |
@@ -572,6 +568,6 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 - Con las sesiones web, esta propiedad es una cadena vacía por defecto. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
 
-This property is **read only**.
+Esta propiedad es **solo lectura**.
 
 <!-- END REF -->

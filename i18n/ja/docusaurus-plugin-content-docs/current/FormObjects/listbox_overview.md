@@ -102,6 +102,12 @@ LIST TO ARRAY("ListName";varCol)
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
+:::note
+
+エンティティが削除されると、その参照は _undefined_ の値とともにエンティティセレクションに 残り、リストボックスには空白の行が表示されます。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
+
+:::
+
 データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば [Collectionクラス](../API/CollectionClass.md) の様々な関数を使用して変更をおこなった場合、コレクション変数を自らに再代入することにより明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 例:
 
 ```4d
@@ -579,7 +585,7 @@ _UI_SetColor_ メソッドに次のように書けます:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // 背景色を緑にします
+    $color:=0x0080C080 //  背景色を緑にします
  Else
     $color:=lk inherited
  End if
@@ -1165,7 +1171,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
-	OB SET($ob;"requiredListName";"colors")	
+	OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)

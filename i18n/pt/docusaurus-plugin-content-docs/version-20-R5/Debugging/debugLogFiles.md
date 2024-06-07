@@ -238,7 +238,7 @@ Esse arquivo registra vários eventos relacionados à operação de aplicação 
 Como iniciar esse log:
 
 ```4d
- SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording
+ SET DATABASE PARAMETER(Diagnostic log recording;1) //começa o registro
 ```
 
 Os campos abaixo estão registrados para cada evento:
@@ -352,10 +352,10 @@ O registo ORDA do lado do cliente regista cada pedido ORDA enviado a partir de u
 Como iniciar esse log:
 
 ```4d
-	//on a remote machine
+	//numa máquina remota
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
-	//can be also sent to memory
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+	//pode também ser enviado para a memória
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 

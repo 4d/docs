@@ -49,8 +49,7 @@ ASSERT($status.success)
 |18 R4|Added
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->
-**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
@@ -102,8 +101,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.decrypt().Syntax -->
-**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.decrypt().Params -->
@@ -149,8 +147,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.encrypt().Syntax -->
-**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
@@ -188,8 +185,7 @@ The returned value is an encrypted message.
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
@@ -215,8 +211,7 @@ The returned value is the private key.
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.getPublicKey().Syntax -->
-**.getPublicKey**() : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
@@ -243,8 +238,7 @@ The returned value is the public key.
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.pem.Syntax -->
-**.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.pem.Summary -->
@@ -338,8 +332,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->
-**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->

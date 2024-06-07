@@ -8,9 +8,9 @@ Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$image
 
 > **Compatibilité** : pour des raisons de compatibilité, $expand peut être utilisé pour développer un attribut relationnel (par exemple, `Company(1)?$expand= staff` ou `EmployeeEmployee/?$filter="firstName BEGIN a"&$expand=employer`). Il est cependant recommandé d'utiliser [`$attributes`]($attributes.md) pour cette fonctionnalité.
 
-## Affichage d'un attribut d'image
+## Affichage d'un attribut image
 
-Si vous souhaitez afficher intégralement un attribut d'image, saisissez ce qui suit :
+Si vous souhaitez afficher intégralement un attribut image, saisissez :
 
  `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 

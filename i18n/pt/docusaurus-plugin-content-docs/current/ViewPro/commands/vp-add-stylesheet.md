@@ -5,7 +5,7 @@ title: VP ADD STYLESHEET
 
 <!-- REF #_method_.VP ADD STYLESHEET.Syntax -->
 
-**VP ADD STYLESHEET** ( _vpAreaName_ : Text ; _styleName_ : Text ; _styleObj_ : Object { ; _sheet_ : Integer } )<!-- END REF -->
+**VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 
@@ -18,22 +18,22 @@ title: VP ADD STYLESHEET
 
 #### Descrição
 
-O comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET. Resumo -->cria ou modifica a folha de estilo _styleName_ com base na combinação das propriedades especificadas em _styleObj_ no documento aberto <!-- END REF -->. .
+O comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET. Resumo -->cria ou modifica a folha de estilo *styleName* com base na combinação das propriedades especificadas em *styleObj* no documento aberto <!-- END REF -->. .
 
 > As folhas de estilo criadas por esse comando são salvas com o documento.
 
-Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro _styleName_ permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
+O parâmetro *styleName* permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-No _styleObj_, designe as configurações da folha de estilo (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
+No *styleObj*, designe as configurações da folha de estilo (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
 
 Você pode designar onde definir a folha de estilos no parâmetro opcional sheet usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 - `vk current sheet`
 - `vk workbook`
 
-Se uma folha de estilo _styleName_ for definida no nível da pasta de trabalho e em um nível de planilha, o nível da planilha terá prioridade sobre o nível da pasta de trabalho quando a folha de estilo for definida.
+Se uma folha de estilo *styleName* for definida no nível da pasta de trabalho e em um nível de planilha, o nível da planilha terá prioridade sobre o nível da pasta de trabalho quando a folha de estilo for definida.
 
 To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
 
@@ -59,7 +59,7 @@ VP ADD STYLESHEET("ViewProArea"; "GreenDashDotStyle";$styles)
 VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name"; "GreenDashDotStyle"))
 ```
 
-criará e aplicará o seguinte objeto estilo denominado _GreenDashDotStyle_:
+criará e aplicará o seguinte objeto estilo denominado *GreenDashDotStyle*:
 
 ```
 {

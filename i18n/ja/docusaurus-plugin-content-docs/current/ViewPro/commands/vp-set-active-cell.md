@@ -5,7 +5,7 @@ title: VP SET ACTIVE CELL
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Syntax -->
 
-**VP SET ACTIVE CELL** ( _rangeObj_ : Object) <!-- END REF -->
+**VP SET ACTIVE CELL** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 
@@ -17,7 +17,7 @@ title: VP SET ACTIVE CELL
 
 `VP SET ACTIVE CELL` コマンドは、<!-- REF #_method_.VP SET ACTIVE CELL.Summary -->指定したセルをアクティブセルにします<!-- END REF -->。
 
-_rangeObj_ 引数には、単独のセルを格納するレンジオブジェクトを渡します ([VP Cell](vp-cell.md) 参照)。 _rangeObj_ 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
+*rangeObj* 引数には、単独のセルを格納するレンジオブジェクトを渡します ([VP Cell](vp-cell.md) 参照)。 *rangeObj* 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
 
 #### 例題
 

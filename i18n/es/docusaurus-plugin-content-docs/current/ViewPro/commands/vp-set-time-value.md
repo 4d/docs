@@ -5,7 +5,7 @@ title: VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
 
-**VP SET TIME VALUE** ( _rangeObj_ : Object ; _timeValue_ : Text { ; _formatPattern_ : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
@@ -19,11 +19,11 @@ title: VP SET TIME VALUE
 
 El comando `VP SET TIME VALUE` <!-- REF #_method_.VP SET TIME VALUE.Summary -->asigna un valor de tiempo especificado a un rango de celdas designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-El parámetro _timeValue_ indica una hora expresada en segundos que se asignará al _rangeObj_.
+El parámetro *timeValue* indica una hora expresada en segundos que se asignará al *rangeObj*.
 
-The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _timeValue_ parameter.
+The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *timeValue* parameter.
 
 #### Ejemplo
 

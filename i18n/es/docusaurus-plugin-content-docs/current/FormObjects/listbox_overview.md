@@ -102,6 +102,12 @@ Cada elemento de la colección o cada entidad está disponible como un objeto al
 
 Cuando la fuente de datos es una entity selection, cualquier modificación realizada del lado del list box se guarda automáticamente en la base de datos. Por otro lado, las modificaciones realizadas en la base de datos son visibles en el list box después de que se hayan recargado las entidades modificadas.
 
+:::note
+
+When entities are deleted, their references remain in the entity selection with an _undefined_ value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+
+:::
+
 Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por ejemplo:
 
 ```4d
@@ -116,7 +122,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | -------------------------------------------------------------------------------------------- | -------------- | ------------------ | ------------------------------------- |
 | [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)   | X              | X                  | X                                     |
 | [Background Color](properties_BackgroundAndBorder.md#background-color)                       | X              | X                  | X                                     |
-| [Bold](properties_Text.md#bold)                                                              | X              | X                  | X                                     |
+| [Negrita](properties_Text.md#bold)                                                           | X              | X                  | X                                     |
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                     |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                     |
 | [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                  | X                                     |
@@ -133,7 +139,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Draggable](properties_Action.md#droppable)                                                  | X              | X                  | X                                     |
 | [Droppable](properties_Action.md#droppable)                                                  | X              | X                  | X                                     |
 | [Focusable](properties_Entry.md#focusable)                                                   | X              | X                  | X                                     |
-| [Font](properties_Text.md#font)                                                              | X              | X                  | X                                     |
+| [Fuente](properties_Text.md#fuente)                                                          | X              | X                  | X                                     |
 | [Font Color](properties_Text.md#font_color)                                                  | X              | X                  | X                                     |
 | [Font Color Expression](properties_Text.md#font-color-expression)                            |                | X                  | X                                     |
 | [Font Size](properties_Text.md#font-size)                                                    | X              | X                  | X                                     |
@@ -176,7 +182,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                     |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                     |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                     |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                     |
+| [Tipo](properties_Object.md#type)                                                            | X              | X                  | X                                     |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                     |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                       |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                     |
@@ -184,7 +190,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                      | X              | X                  | X                                     |
 | [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                          | X              | X                  | X                                     |
 | [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                             | X              | X                  | X                                     |
-| [Visibility](properties_Display.md#visibility)                                               | X              | X                  | X                                     |
+| [Visibilidad](properties_Display.md#visibility)                                              | X              | X                  | X                                     |
 | [Width](properties_CoordinatesAndSizing.md#width)                                            | X              | X                  | X                                     |
 
 > Las columnas, los encabezados y los pies de list box soportan propiedades específicas.
@@ -201,12 +207,12 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Before Keystroke  | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Begin Drag Over   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Clicked           | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
-| On Close Detail      | <li>[row](#additional-properties)</li>                                                                                                                                                                         | _Current Selection & Named Selection list boxes only_                                                                                                                      |
+| On Close Detail      | <li>[row](#propiedades adicionales)</li>                                                                                                                                                                       | _Current Selection & Named Selection list boxes only_                                                                                                                      |
 | On Collapse          | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   | _List box jerárquicos únicamente_                                                                                                                                                              |
 | On Column Moved      | <li>[columnName](#additional-properties)</li><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>                                                                      |                                                                                                                                                                                                |
 | On Column Resize     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[newSize](#additional-properties)</li><li>[oldSize](#additional-properties)</li>                                     |                                                                                                                                                                                                |
 | On Data Change       | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
-| On Delete Action     | <li>[row](#additional-properties)</li>                                                                                                                                                                         |                                                                                                                                                                                                |
+| On Delete Action     | <li>[row](#propiedades adicionales)</li>                                                                                                                                                                       |                                                                                                                                                                                                |
 | On Display Detail    | <li>[isRowSelected](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                                                         |                                                                                                                                                                                                |
 | On Double Clicked    | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Drag Over         | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li> |                                                                                                                                                                                                |
@@ -220,7 +226,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Mouse Enter       | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li> |                                                                                                                                                                                                |
 | On Mouse Leave       |                                                                                                                                                                                                                |                                                                                                                                                                                                |
 | On Mouse Move        | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li> |                                                                                                                                                                                                |
-| On Open Detail       | <li>[row](#additional-properties)</li>                                                                                                                                                                         | _Current Selection & Named Selection list boxes only_                                                                                                                      |
+| On Open Detail       | <li>[row](#propiedades adicionales)</li>                                                                                                                                                                       | _Current Selection & Named Selection list boxes only_                                                                                                                      |
 | On Row Moved         | <li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>                                                                                                                   | _List box array únicamente_                                                                                                                                                                    |
 | On Selection Change  |                                                                                                                                                                                                                |                                                                                                                                                                                                |
 | On Scroll            | <li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>                                                                                                           |                                                                                                                                                                                                |
@@ -497,7 +503,7 @@ Puede escribir en el método _UI_SetColor_:
  Else
     $color:=lk inherited
  End if
- 
+
  $0:=$color
 ```
 
@@ -964,7 +970,7 @@ Los valores de las celdas se almacenan en el atributo "value". Este atributo se 
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"boolean")
  OB SET($ob3;"value";True)
- 
+
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
  APPEND TO ARRAY(obColumn;$ob3)
@@ -1076,7 +1082,7 @@ Ejemplos:
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
-	OB SET($ob;"requiredListName";"colors")	
+	OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
@@ -1158,7 +1164,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
+Si desea añadir un botón de elipsis [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
 
 Cuando este botón es presionado por un usuario, se generará un evento `On Alternate Click`, y usted podrá manejarlo como quiera (vea el párrafo "Manejo de eventos" para más información).
 

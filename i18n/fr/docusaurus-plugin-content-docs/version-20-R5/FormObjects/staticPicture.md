@@ -3,7 +3,7 @@ id: staticPicture
 title: Image statique
 ---
 
-Static pictures are [static objects](formObjects_overview.md#active-and-static-objects) that can be used for various purposes in 4D forms, including decoration, background, or user interface:
+Les images statiques sont des [objets statiques](formObjects_overview.md#active-and-static-objects) pouvant être utilisées à des fins diverses dans les formulaires 4D, notamment comme décor, arrière-plan ou interface utilisateur :
 
 ![](../assets/en/FormObjects/StaticPict.png)
 
@@ -18,7 +18,7 @@ L'image d'origine doit être stockée dans un format géré nativement par 4D (4
 Deux emplacements principaux peuvent être utilisés pour le chemin d'image statique :
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is in the "/RESOURCES/\\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le chemin d'accès est "<\picture path\>" et est résolu à partir de la racine du dossier du formulaire.
+- dans un dossier d'images (nommé **Images** par exemple) dans le dossier du formulaire. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le chemin d'accès est "<\picture path\>" et est résolu à partir de la racine du dossier du formulaire.
 
 ## Propriétés prises en charge
 

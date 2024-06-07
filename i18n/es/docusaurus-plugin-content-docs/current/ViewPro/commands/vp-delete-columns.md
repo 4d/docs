@@ -5,7 +5,7 @@ title: VP DELETE COLUMNS
 
 <!-- REF #_method_.VP DELETE COLUMNS.Syntax -->
 
-**VP DELETE COLUMNS** ( _rangeObj_ : Object )<!-- END REF -->
+**VP DELETE COLUMNS** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 
@@ -15,9 +15,9 @@ title: VP DELETE COLUMNS
 
 #### Descripción
 
-El comando `VP DELETE COLUMNS` <!-- REF #_method_.VP DELETE COLUMNS.Summary -->elimina las columnas del _rangeObj_<!-- END REF -->.
+El comando `VP DELETE COLUMNS` <!-- REF #_method_.VP DELETE COLUMNS.Summary -->elimina las columnas del *rangeObj*<!-- END REF -->.
 
-En _rangeObj_, pase un objeto que contenga un rango de columnas a eliminar. Si el rango pasado contiene:
+En *rangeObj*, pase un objeto que contenga un rango de columnas a eliminar. Si el rango pasado contiene:
 
 - de las columnas y de las líneas, sólo se eliminan las columnas.
 - únicamente las líneas, el comando no hace nada.

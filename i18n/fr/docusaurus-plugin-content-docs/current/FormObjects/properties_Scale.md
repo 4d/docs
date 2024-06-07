@@ -31,7 +31,7 @@ Affiche/masque les graduations à côté des étiquettes.
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler)
 
 ---
 
@@ -43,11 +43,11 @@ Mesure de l'affichage de l'échelle.
 
 |       Nom      | Type de données | Valeurs possibles           |
 | :------------: | :-------------: | --------------------------- |
-| graduationStep |      entier     | minimum : 0 |
+| graduationStep |     integer     | minimum : 0 |
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler)
 
 ---
 
@@ -67,7 +67,7 @@ Indique l'emplacement du texte d'un objet.
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler)
 
 ---
 
@@ -76,7 +76,7 @@ Indique l'emplacement du texte d'un objet.
 Valeur maximale d'un indicateur.
 
 - Pour les steppers numériques, cette propriété représente les secondes lorsque l'objet est associé à une valeur de type heure, et représente les jours lorsqu'il est associé à une valeur de type date.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+- Pour activer les [thermomètres du barber shop](progressIndicator.md#barber-shop), cette propriété doit être omise.
 
 #### Grammaire JSON
 
@@ -86,7 +86,7 @@ Valeur maximale d'un indicateur.
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 ---
 
@@ -102,7 +102,7 @@ Valeur minimale d'un indicateur. Pour les steppers numériques, cette propriét�
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 ---
 
@@ -114,8 +114,8 @@ Intervalle minimum accepté entre les valeurs pendant l'utilisation. Pour les st
 
 |  Nom | Type de données | Valeurs possibles          |
 | :--: | :-------------: | -------------------------- |
-| step |      entier     | minimum: 1 |
+| step |     integer     | minimum: 1 |
 
 #### Objets pris en charge
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Thermomètre](progressIndicator.md#thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md#stepper)

@@ -5,7 +5,7 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Syntax -->
 
-**VP Get values** ( _rangeObj_ : Object ) : Collection<!-- END REF -->
+**VP Get values** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get values.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get values
 
 #### 説明
 
-`VP Get values` コマンドは、<!-- REF #_method_.VP Get values.Summary --> _rangeObj_ で指定したレンジの値をすべて取得します<!-- END REF -->。
+`VP Get values` コマンドは、<!-- REF #_method_.VP Get values.Summary --> *rangeObj* で指定したレンジの値をすべて取得します<!-- END REF -->。
 
-_rangeObj_ 引数で、値を取得したいレンジを指定します。 _rangeObj_ のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
+*rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
 `VP Get values` によって返されるコレクションは、2次元構造のコレクションです:
 

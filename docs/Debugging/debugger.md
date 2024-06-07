@@ -65,6 +65,18 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
+
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+
+
 #### Abort
 
 Stops method execution, and returns to the state before the method started executing:
@@ -74,13 +86,13 @@ Stops method execution, and returns to the state before the method started execu
 
 #### Abort and Edit
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
 >**Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Edit
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -136,7 +148,7 @@ $c:=a+b
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the **Line Objects** theme displays:
 
     |$a|1|
     |---|---|
@@ -144,7 +156,7 @@ $c:=a+b
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. You click the **Step Over** button again. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
 
     |$c|Undefined|
     |---|---|
@@ -311,13 +323,13 @@ The Custom Watch Pane’s context menu gives you access the 4D formula editor an
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 * **Insert Command**: Shortcut for inserting a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> This option is not available in [remote debugging mode](debugging-remote.md).
 
 * **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 * **Show Types**: Displays the type of each item in the list (when appropriate).

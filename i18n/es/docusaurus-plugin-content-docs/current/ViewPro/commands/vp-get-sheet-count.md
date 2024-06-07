@@ -5,7 +5,7 @@ title: VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Syntax -->
 
-**VP Get sheet count** ( _vpAreaName_ : Text ) : Integer<!-- END REF -->
+**VP Get sheet count** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
@@ -16,9 +16,9 @@ title: VP Get sheet count
 
 #### Descripción
 
-El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->devuelve el número de hojas del documento cargado en _vpAreaName_.<!-- END REF -->
+El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->devuelve el número de hojas del documento cargado en *vpAreaName*.<!-- END REF -->
 
-En _vpAreaName_, pase el nombre del área 4D View Pro.
+En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 #### Ejemplo
 

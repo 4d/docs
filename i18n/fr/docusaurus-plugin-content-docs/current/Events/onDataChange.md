@@ -9,8 +9,8 @@ title: On Data Change
 
 ## Description
 
-When the `On Data Change` event property is selected for an object, you can detect and handle the change of the data source value, using the `FORM Event` command.
+Lorsque la propriété d'événement `On Data Change` est sélectionnée pour un objet, vous pouvez détecter et gérer la modification de la valeur de la source de données à l'aide de la commande `FORM Event`.
 
 L'événement est généré dès que la variable associée à l'objet est mise à jour en interne par 4D (c'est-à-dire, en général, lorsque la zone de saisie de l'objet perd le focus).
 
-> With [subforms](FormObjects/subform_overview.md), the `On Data Change` event is triggered when the value of the variable of the subform object has been modified.
+> Avec les [sous-formulaires](FormObjects/subform_overview.md), l'événement `On Data Change` est déclenché lorsque la valeur de la variable de l'objet sous-formulaire a été modifiée.

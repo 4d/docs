@@ -5,7 +5,7 @@ title: VP REMOVE SPAN
 
 <!-- REF #_method_.VP REMOVE SPAN.Syntax -->
 
-**VP REMOVE SPAN** ( _rangeObj_ : Object ) <!-- END REF -->
+**VP REMOVE SPAN** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE SPAN.Params -->
 
@@ -15,9 +15,9 @@ title: VP REMOVE SPAN
 
 #### 説明
 
-`VP REMOVE SPAN` コマンドは、<!-- REF #_method_.VP REMOVE SPAN.Summary -->_rangeObj_ で指定したレンジ内のセル結合を解除します<!-- END REF -->。
+`VP REMOVE SPAN` コマンドは、<!-- REF #_method_.VP REMOVE SPAN.Summary -->*rangeObj* で指定したレンジ内のセル結合を解除します<!-- END REF -->。
 
-_rangeObj_ には、セル結合しているレンジのオブジェクトを渡します。 レンジ内の結合セルは個別セルに分割されます。
+*rangeObj* には、セル結合しているレンジのオブジェクトを渡します。 レンジ内の結合セルは個別セルに分割されます。
 
 #### 例題
 

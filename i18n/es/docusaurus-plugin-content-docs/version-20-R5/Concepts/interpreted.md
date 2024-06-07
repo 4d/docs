@@ -78,8 +78,8 @@ $p->:=55 //asigna un valor
 Imagine una función que devuelve la longitud (número de caracteres) de valores de todo tipo.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $vp = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length (cuántos caracteres)
+  // $vp = puntero a variable de tipo flexible, numérico, texto, tiempo, booleano
 
 #DECLARE($vp : Pointer) -> $length : Integer
 var $result : Text  

@@ -80,9 +80,9 @@ With:
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
 |Equality	|Pointer = Pointer	|Boolean	|vPtrA = vPtrB	|True|
-		|	|||vPtrA = vPtrC	|False|
+||||vPtrA = vPtrC	|False|
 |Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
-||||			vPtrA # vPtrB	|False|
+||||vPtrA # vPtrB|False|
 
 ## Main usages
 ### Pointers to tables

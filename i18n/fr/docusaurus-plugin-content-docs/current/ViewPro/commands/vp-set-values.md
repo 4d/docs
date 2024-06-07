@@ -5,7 +5,7 @@ title: VP SET VALUES
 
 <!-- REF #_method_.VP SET VALUES.Syntax -->
 
-**VP SET VALUES** ( _rangeObj_ : Object ; _valuesCol_ : Collection ) <!-- END REF -->
+**VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUES.Params -->
 
@@ -18,12 +18,12 @@ title: VP SET VALUES
 
 The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. The cell defined in the _rangeObj_ is used to determine the starting point.
+In *rangeObj*, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
 
-> - If _rangeObj_ is not a cell range, only the first cell of the range is used.
-> - If _rangeObj_ includes multiple ranges, only the first cell of the first range is used.
+> - If *rangeObj* is not a cell range, only the first cell of the range is used.
+> - If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
-The _valuesCol_ parameter is two-dimensional:
+The *valuesCol* parameter is two-dimensional:
 
 - La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne.
 - Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, date, null ou objet. Si la valeur est un objet, elle peut avoir les propriétés suivantes :

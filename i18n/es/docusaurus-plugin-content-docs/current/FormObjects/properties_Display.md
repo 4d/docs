@@ -572,7 +572,7 @@ Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 #### Marcada para list box/Sí para entrada
 
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 Cuando esta opción está seleccionada, el texto pasa automáticamente a la línea siguiente siempre que su ancho supere el de la columna/área, si la altura de la columna/área lo permite.
 
@@ -600,7 +600,7 @@ Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto,
 
 #### Automático para entrada (opción por defecto)
 
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - En las áreas de una sola línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - En áreas multilíneas, 4D realiza retornos de línea automáticos.

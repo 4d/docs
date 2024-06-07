@@ -9,4 +9,4 @@ title: On After Sort
 
 ## Descripción
 
-This event is generated just after a standard sort is performed (_i.e._ it is NOT generated if $0 returns -1 in the [`On Header Click`](onHeaderClick.md) event). Este mecanismo es útil para almacenar las direcciones de la última ordenación realizada por el usuario. En este caso, el comando `Self` devuelve un puntero a la variable del encabezado de la columna ordenada.
+Este evento se genera justo después de realizar una ordenación estándar (_es decir_ NO se genera si $0 devuelve -1 en el evento [`On Header Click`](onHeaderClick.md)). Este mecanismo es útil para almacenar las direcciones de la última ordenación realizada por el usuario. En este caso, el comando `Self` devuelve un puntero a la variable del encabezado de la columna ordenada.

@@ -21,7 +21,7 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -39,7 +39,7 @@ Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -69,7 +69,7 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -88,6 +88,12 @@ El motor CEF tiene las siguientes limitaciones:
 - [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
 - When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
 
+:::note
+
+You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview#4dcefparametersjson).
+
+:::
+
 #### Gramática JSON
 
 | Nombre    | Tipos de datos | Valores posibles     |
@@ -96,4 +102,4 @@ El motor CEF tiene las siguientes limitaciones:
 
 #### Objetos soportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)

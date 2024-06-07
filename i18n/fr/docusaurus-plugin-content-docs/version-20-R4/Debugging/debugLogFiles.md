@@ -3,9 +3,9 @@ id: debugLogFiles
 title: Log files
 ---
 
-Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
-Les informations des journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
+Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
@@ -18,7 +18,7 @@ Les informations des journaux doivent être analysées pour détecter et corrige
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [Fichier journal des requêtes ORDA](#orda-requests)
 
-> Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server " est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
+> Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server" est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
 Les fichiers journaux partagent certains champs, ce qui vous permet d'établir une chronologie et de faire des connexions entre les entrées lors du débogage :
 
@@ -155,7 +155,7 @@ Les champs suivants sont enregistrés pour Requête et Réponse :
 
 ## 4DHTTPClientLog.txt
 
-This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+Ce fichier journal enregistre le trafic HTTP qui passe par le client HTTP 4D. Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent optionnellement être enregistrées.
 
 Pour lancer ce journal :
 
@@ -167,19 +167,19 @@ HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
 
-| Noms des champs | Description                                                                      |
-| --------------- | -------------------------------------------------------------------------------- |
-| SequenceID      | Numéro d'opération séquentiel et unique dans la session de log                   |
-| ConnectionID    | Identifiant UUID de process de connexion                                         |
-| LocalIP         | Client IP address                                                                |
-| PeerIP          | Server IP address                                                                |
-| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
-| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+| Noms des champs | Description                                                                       |
+| --------------- | --------------------------------------------------------------------------------- |
+| SequenceID      | Numéro d'opération séquentiel et unique dans la session de log                    |
+| ConnectionID    | Identifiant UUID de process de connexion                                          |
+| LocalIP         | Adresse IP du Client                                                              |
+| PeerIP          | Adresse IP du serveur                                                             |
+| TimeStamp       | Horodatage (ms) de l'envoi de la requête ou de la réception entière de la réponse |
+| ElapsedTimeInMs | (réponse uniquement) Différence avec l'horodatage de la requête                   |
 
-Depending on log options, various other fields can also be logged.
+En fonction des options de journalisation, d'autres champs peuvent également être enregistrés.
 
-- For request: request line, headers, request body
-- For response: status line, headers, response body (uncompressed), if any
+- Pour la requête : ligne de requête, en-têtes, body de la requête
+- Pour la réponse : ligne de statut, en-têtes, body de réponse (décompressé), le cas échéant
 
 
 ## 4DDebugLog.txt (standard)

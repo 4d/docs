@@ -107,10 +107,10 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                               |
-| ----- | -------------------------------- |
-| 20 R4 | New *passwordAlgorithm* property |
-| 18    | 追加                               |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 20 R4 | 新しい *passwordAlgorithm* プロパティ |
+| 18    | 追加                            |
 
 </details>
 
@@ -156,10 +156,10 @@ title: DataStore
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname          | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                            |
 | user              | Text    | ユーザー名                                                                                                                                                                                                                                       |
-| password          | Text    | User password. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                            |
+| password          | Text    | ユーザーパスワード。 デフォルトでは、パスワードは平文で送信されるため、`tls` プロパティに `true` を渡して暗号化通信を使用することが**強く推奨**されます。                                                                                                                                                      |
 | idleTimeout       | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 |
 | tls               | Boolean | 安全な接続を使用します(*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                             |
-| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                        |
+| passwordAlgorithm | Text    | [`Validate password`](https://doc.4d.com/4dv20/help/command/ja/page638.html) コマンドで *digest* パラメーターを `true` に設定してサーバーがパスワードを検証する場合は、"4d-rest-digest" を指定します。                                                                                 |
 | type              | Text    | "4D Server" でなければなりません                                                                                                                                                                                                                      |
 
 (*) tls が true だった場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:
@@ -669,6 +669,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>履歴</summary>

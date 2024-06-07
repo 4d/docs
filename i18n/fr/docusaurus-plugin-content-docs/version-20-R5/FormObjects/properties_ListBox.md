@@ -104,7 +104,7 @@ Locked columns and static columns are two separate and independent functionaliti
 - Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 - Static columns cannot be moved by drag and drop within the list box.
 
-> You can set static and locked columns by programming, refer to "List Box" section in the _4D Language Reference_ manual.
+> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel _4D Language Reference_ .
 
 These properties interact as follows:
 
@@ -128,7 +128,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 | Nom               | Type de données | Valeurs possibles           |
 | ----------------- | --------------- | --------------------------- |
-| lockedColumnCount | entier          | minimum : 0 |
+| lockedColumnCount | integer         | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -142,7 +142,7 @@ Number of columns that cannot be moved during execution.
 
 | Nom               | Type de données | Valeurs possibles           |
 | ----------------- | --------------- | --------------------------- |
-| staticColumnCount | entier          | minimum : 0 |
+| staticColumnCount | integer         | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -160,7 +160,7 @@ Sets the number of columns of the list box.
 
 | Nom         | Type de données | Valeurs possibles          |
 | ----------- | --------------- | -------------------------- |
-| columnCount | entier          | minimum: 1 |
+| columnCount | integer         | minimum: 1 |
 
 #### Objets pris en charge
 

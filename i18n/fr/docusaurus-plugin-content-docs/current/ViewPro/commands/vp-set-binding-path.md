@@ -13,25 +13,25 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Syntax -->
 
-**VP SET BINDING PATH** ( _rangeObj_ : Object  ; _dataContextAttribute_  : Text) <!-- END REF -->
+**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
 | Paramètres           | Type   |    | Description                                 |                  |
 | -------------------- | ------ | -- | ------------------------------------------- | ---------------- |
 | rangeObj             | Object | -> | Objet plage                                 |                  |
-| dataContextAttribute | Text   | -> | Name of the attribute to bind to _rangeObj_ | <!-- END REF --> |
+| dataContextAttribute | Text   | -> | Name of the attribute to bind to *rangeObj* | <!-- END REF --> |
 
 #### Description
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to _rangeObj_<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of _dataContextAttribute_ is automatically displayed in the cells in _rangeObj_.
+The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
-In _rangeObj_, pass an object that is either a cell range or a combined range of cells.
+In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
 
-- If _rangeObj_ is a range with several cells, the command binds the attribute to the first cell of the range.
-- If _rangeObj_ contains several ranges of cells, the command binds the attribute to the first cell of each range.
+- If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
+- If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-In _dataContextAttribute_, pass the name of the attribute to bind to _rangeObj_. If _dataContextAttribute_ is an empty string, the function removes the current binding.
+In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
 > Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
 

@@ -3,7 +3,7 @@ id: users
 title: Page Utilisateurs
 ---
 
-The **Users** page lists the 4D users connected to the server.
+La page **Utilisateurs** liste les utilisateurs 4D connectés au serveur.
 
 ![](../assets/en/Admin/server-users.png)
 
@@ -19,16 +19,16 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 
 - Système de la machine cliente (macOS ou Windows) sous forme d’icône.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
+- **Nom de machine** : Nom de la machine distante.
+- **Nom de session** : Nom de la session ouverte sur la machine distante.
+- **Adresse IP** : Adresse IP de la machine distante.
+- **Connexion** : Date et heure de la connexion de la machine distante.
+- **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
+- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
 ### Gestion des utilisateurs endormis
 
-4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut d'activité **Endormi** :
 
 ![](../assets/en/Admin/server-sleeping.png)
 
@@ -42,11 +42,11 @@ Le scénario suivant est pris en charge : un utilisateur distant cesse de travai
 
 Cette fonction permet de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de recherche. La zone indique les colonnes dans lesquelles la recherche/le filtrage sera effectué(e). Dans la page Utilisateurs, il s’agit des colonnes Utilisateur 4D, Nom de machine et Nom de session.
 
-La mise à jour de la liste est effectuée en temps réel à mesure que vous saisissez du texte dans la zone. Il est possible de saisir plus d’une valeur à chercher. Utilisez un point-virgule pour séparer les valeurs. The `OR` type operator is used in this case. Par exemple, si vous saisissez "Jean;Marie;Pierre", seules les lignes comportant Jean OU Marie OU Pierre dans l’une des colonnes cibles seront conservées.
+La mise à jour de la liste est effectuée en temps réel à mesure que vous saisissez du texte dans la zone. Il est possible de saisir plus d’une valeur à chercher. Utilisez un point-virgule pour séparer les valeurs. L’opérateur utilisé dans ce cas est du type `OU`. Par exemple, si vous saisissez "Jean;Marie;Pierre", seules les lignes comportant Jean OU Marie OU Pierre dans l’une des colonnes cibles seront conservées.
 
 ## Boutons d’administration
 
-La page comporte trois boutons de commande. Ces boutons sont actifs si au moins une ligne est sélectionnée. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+La page comporte trois boutons de commande. Ces boutons sont actifs si au moins une ligne est sélectionnée. Vous pouvez sélectionner plusieurs lignes en appuyant sur la touche **Maj** pour une sélection continue ou **Ctrl** (Windows) / **Commande** (macOS) pour une sélection discontinue.
 
 ### Envoyer message
 

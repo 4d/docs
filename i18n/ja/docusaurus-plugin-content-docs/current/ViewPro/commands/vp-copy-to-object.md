@@ -13,7 +13,7 @@ title: VP Copy to object
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
 
-**VP Copy to object** ( _rangeObj_ : Object {; _options_ : Object} ) : Object<!-- END REF -->
+**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Copy to object.Params -->
 
@@ -25,15 +25,15 @@ title: VP Copy to object
 
 #### 説明
 
-`VP Copy to object` コマンドは、<!-- REF #_method_.VP Copy to object.Summary -->_rangeObj_ のコンテンツ、スタイル、フォーミュラをオブジェクトにコピーします<!-- END REF -->。
+`VP Copy to object` コマンドは、<!-- REF #_method_.VP Copy to object.Summary -->*rangeObj* のコンテンツ、スタイル、フォーミュラをオブジェクトにコピーします<!-- END REF -->。
 
-_rangeObj_ には、コピーしたい値、フォーマット、フォーミュラを格納しているセルレンジを渡します。 _rangeObj_ が結合レンジの場合は、最初のものだけが使用されます。
+*rangeObj* には、コピーしたい値、フォーマット、フォーミュラを格納しているセルレンジを渡します。 *rangeObj* が結合レンジの場合は、最初のものだけが使用されます。
 
-任意の _options_ 引数として、以下のプロパティを渡すことができます。
+任意の *options* 引数として、以下のプロパティを渡すことができます。
 
 | プロパティ       | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| copy        | Boolean | コマンド実行後もコピーされた値、書式、数式が保持するには _true_ (デフォルト)。 削除するには _false_。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| copy        | Boolean | コマンド実行後もコピーされた値、書式、数式が保持するには *true* (デフォルト)。 削除するには *false*。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | copyOptions | Longint | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p> |
 
 [ワークブックオプション](vp-set-workbook-options.md) で定義されている貼り付けオプションが考慮されます。

@@ -10,7 +10,7 @@ Times are in 24-hour format.
 A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
 
 **Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.  
-    
+
 ## Time literals  
 
 A time literal constant is enclosed by question marks (?...?).
@@ -20,42 +20,42 @@ A time literal constant is ordered hour:minute:second, with a colon (:) setting 
 Here are some examples of time literals:
 
 ```4d
-?00:00:00? ` midnight
-?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?00:00:00? //midnight
+?09:30:00? //9:30 am
+?13:01:59? //1 pm, 1 minute, and 59 seconds
 ```
 
 A null time is specified by ?00:00:00?
 
 **Tip:** The Code Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
-    
-## Time operators 
+
+## Time operators
 
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
 |Addition	|Time + Time	|Time	|?02:03:04? + ?01:02:03?	|?03:05:07?|
 |Subtraction	|Time – Time	|Time	|?02:03:04? – ?01:02:03?	|?01:01:01?|
-|Addition	|Time + Number	|Number	|?02:03:04? + 65	|7449|
-|Subtraction	|Time – Number	|Number	|?02:03:04? – 65	|7319|
+|Addition	|Time + Number	|Number	|?02:03:04? + 65|7449|
+|Subtraction	|Time – Number|Number	|?02:03:04? – 65	|7319|
 |Multiplication	|Time * Number	|Number	|?02:03:04? * 2	|14768|
 |Division	|Time / Number	|Number	|?02:03:04? / 2	|3692|
 |Longint division	|Time \ Number	|Number	|?02:03:04? \ 2	|3692|
 |Modulo	|Time % Time	|Time	|?20:10:00? % ?04:20:00?	|?02:50:00?|
 |Modulo	|Time % Number	|Number	|?02:03:04? % 2	|0|
 |Equality	|Time = Time	|Boolean	|?01:02:03? = ?01:02:03?	|True|
-			||||?01:02:03? = ?01:02:04?	|False|
+||||?01:02:03? = ?01:02:04?	|False|
 |Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
-			||||?01:02:03? # ?01:02:03?	|False|
+||||?01:02:03? # ?01:02:03?	|False|
 |Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
-	||||		?01:02:03? > ?01:02:03?	|False|
+||||	?01:02:03? > ?01:02:03?	|False|
 |Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True|
-		||||	?01:02:03? < ?01:02:03?	|False|
+||||?01:02:03? < ?01:02:03?	|False|
 |Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
-			||||?01:02:03? >=?01:02:04?	|False|
+||||?01:02:03? >=?01:02:04?	|False|
 |Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
-			||||?01:02:04? <=?01:02:03?	|False|
+||||?01:02:04? <=?01:02:03?	|False|
 
-### Example 1 
+### Example 1
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
@@ -86,4 +86,3 @@ $t1:=?23:00:00? // It is 23:00 hours
 $t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
 ```
-

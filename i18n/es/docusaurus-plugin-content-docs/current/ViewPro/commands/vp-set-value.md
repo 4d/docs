@@ -5,7 +5,7 @@ title: VP SET VALUE
 
 <!-- REF #_method_.VP SET VALUE.Syntax -->
 
-**VP SET VALUE** ( _rangeObj_ : Object ; _valueObj_ : Object ) <!-- END REF -->
+**VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
@@ -18,16 +18,16 @@ title: VP SET VALUE
 
 El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->asigna un valor especificado a un rango de celdas designado<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in _rangeObj_, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
+The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-El parámetro _valueObj_ es un objeto que incluye propiedades para el valor y el [formato](../configuring.md#cell-format) a asignar a _rangeObj_. Puede contener las siguientes propiedades:
+El parámetro *valueObj* es un objeto que incluye propiedades para el valor y el [formato](../configuring.md#cell-format) a asignar a *rangeObj*. Puede contener las siguientes propiedades:
 
 | Propiedad | Tipo                                     | Descripción                                                                                                                                                                                          |
 | --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a _rangeObj_ (excepto- hora). Pase null para borrar el contenido de la celda.                                                     |
-| time      | Real                                     | Valor hora (en segundos) a asignar a _rangeObj_                                                                                                                                   |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a *rangeObj* (excepto- hora). Pase null para borrar el contenido de la celda.                                                     |
+| time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                                   |
 | format    | Text                                     | Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
 
 #### Ejemplo

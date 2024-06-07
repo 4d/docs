@@ -116,7 +116,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) |                  | X                   | X                                       |
 | [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style)                  | X                | X                   | X                                       |
 | [Bas](properties_CoordinatesAndSizing.md#bottom)                                            | X                | X                   | X                                       |
-| [Classe](properties_Object.md#css-class)                                                    | X                | X                   | X                                       |
+| [Class](properties_Object.md#css-class)                                                     | X                | X                   | X                                       |
 | [Collection ou entity selection](properties_Object.md#collection-or-entity-selection)       |                  | X                   | X                                       |
 | [Redimensionnement colonnes auto](properties_ResizingOptions.md#column-auto-resizing)       | X                | X                   | X                                       |
 | [Élément courant](properties_DataSource.md#current-item)                                    |                  |                     | X                                       |
@@ -732,7 +732,7 @@ Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage
 | --------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | text      | zone de saisie de texte                                   | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
 | réel      | zone de saisie de texte contrôlée (nombre et séparateurs) | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
-| entier    | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
+| integer   | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
 | boolean   | case à cocher                                             | menu déroulant (enumération obligatoire)                                                         |
 | color     | couleur de fond                                           | text                                                                                             |
 | event     | bouton avec libellé                                       |                                                                                                  |
@@ -749,7 +749,7 @@ Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie
 | text       | le même que celui de l'objet                                             | pas de contrôle (tout caractère accepté) |
 | réel       | le même que celui de l'objet (utilisation du séparateur décimal système) | "0-9" et "." et "-"                      |
 |            |                                                                          | "0-9" et "." si min>=0                   |
-| entier     | le même que celui de l'objet                                             | "0-9" et "-"                             |
+| integer    | le même que celui de l'objet                                             | "0-9" et "-"                             |
 |            |                                                                          | "0-9" si min>=0                          |
 | Boolean    | case à cocher                                                            | N/A                                      |
 | color      | N/A                                                                      | N/A                                      |
@@ -761,25 +761,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "text", "real", "integer", "boolean", "color" et "event". Le tableau suivant liste tous les attributs acceptés dans les tableaux d'objets des list box, suivant la valeur de "valueType" (tout autre attribut est ignoré). Les formats d'affichage et des exemples sont fournis ci-dessous.
 
-|                       | valueType                                             | text | réel | entier | boolean | color | event |
-| --------------------- | ----------------------------------------------------- | ---- | ---- | ------ | ------- | ----- | ----- |
-| *Attributs*           | *Description*                                         |      |      |        |         |       |       |
-| value                 | valeur de la cellule (saisie ou affichage)            | x    | x    | x      |         |       |       |
-| min                   | valeur minimum                                        |      | x    | x      |         |       |       |
-| max                   | valeur maximum                                        |      | x    | x      |         |       |       |
-| behavior              | valeur "threeStates"                                  |      |      | x      |         |       |       |
-| requiredList          | menu déroulant défini dans l'objet                    | x    | x    | x      |         |       |       |
-| choiceList            | combo box défini dans l'objet                         | x    | x    | x      |         |       |       |
-| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"           | x    | x    | x      |         |       |       |
-| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs" | x    | x    | x      |         |       |       |
-| saveAs                | "reference" ou "value"                                | x    | x    | x      |         |       |       |
-| choiceListReference   | RefList 4D, affiche une combo box                     | x    | x    | x      |         |       |       |
-| choiceListName        | nom d'énumération 4D, affiche une combo box           | x    | x    | x      |         |       |       |
-| unitList              | tableau de X éléments                                 | x    | x    | x      |         |       |       |
-| unitReference         | indice de l'élément sélectionné                       | x    | x    | x      |         |       |       |
-| unitsListReference    | RefList 4D pour les unités                            | x    | x    | x      |         |       |       |
-| unitsListName         | nom d'énumération 4D pour les unités                  | x    | x    | x      |         |       |       |
-| alternateButton       | ajouter un bouton alternatif                          | x    | x    | x      | x       | x     |       |
+|                       | valueType                                             | text | réel | integer | boolean | color | event |
+| --------------------- | ----------------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
+| *Attributs*           | *Description*                                         |      |      |         |         |       |       |
+| value                 | valeur de la cellule (saisie ou affichage)            | x    | x    | x       |         |       |       |
+| min                   | valeur minimum                                        |      | x    | x       |         |       |       |
+| max                   | valeur maximum                                        |      | x    | x       |         |       |       |
+| behavior              | valeur "threeStates"                                  |      |      | x       |         |       |       |
+| requiredList          | menu déroulant défini dans l'objet                    | x    | x    | x       |         |       |       |
+| choiceList            | combo box défini dans l'objet                         | x    | x    | x       |         |       |       |
+| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"           | x    | x    | x       |         |       |       |
+| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs" | x    | x    | x       |         |       |       |
+| saveAs                | "reference" ou "value"                                | x    | x    | x       |         |       |       |
+| choiceListReference   | RefList 4D, affiche une combo box                     | x    | x    | x       |         |       |       |
+| choiceListName        | nom d'énumération 4D, affiche une combo box           | x    | x    | x       |         |       |       |
+| unitList              | tableau de X éléments                                 | x    | x    | x       |         |       |       |
+| unitReference         | indice de l'élément sélectionné                       | x    | x    | x       |         |       |       |
+| unitsListReference    | RefList 4D pour les unités                            | x    | x    | x       |         |       |       |
+| unitsListName         | nom d'énumération 4D pour les unités                  | x    | x    | x       |         |       |       |
+| alternateButton       | ajouter un bouton alternatif                          | x    | x    | x       | x       | x     |       |
 
 #### value
 
@@ -829,7 +829,7 @@ L'attribut behavior propose des variations de la représentation standard des va
 
 | Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                              |
 | -------- | ----------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| behavior | threeStates             | entier       | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
+| behavior | threeStates             | integer      | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
 
 ```4d
  C_OBJECT($ob3)

@@ -21,11 +21,11 @@ Cependant, 4D View Pro nécessite une licence. Vous devez activer cette licence 
 
 ## Insertion d'une zone 4D View Pro
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. Pour sélectionner cet objet, cliquez sur le dernier outil de la barre d'objets :
+Les documents 4D View Pro sont affichés et modifiés manuellement dans un [objet du formulaire 4D](FormObjects/viewProArea_overview.md) nommé 4D View Pro. Pour sélectionner cet objet, cliquez sur le dernier outil de la barre d'objets :
 
 ![](../assets/en/ViewPro/vpArea.png)
 
-You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
+Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans la [bibliothèque d'objets](FormEditor/objectLibrary.md).
 
 > 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
 
@@ -48,7 +48,7 @@ Les feuilles de calcul sont composées de lignes et de colonnes. Un numéro est 
 
 - Pour sélectionner une ligne, cliquez sur le chiffre correspondant.
 
-- To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
+- Pour sélectionner un groupe de cellules non continues, maintenez la touche **Ctrl** (Windows) ou **Command** (macOS) enfoncée et cliquez sur chaque cellule à sélectionner.
 
 - Pour désélectionner des cellules, il suffit de cliquer n'importe où dans la feuille de calcul.
 
@@ -60,9 +60,9 @@ Un double-clic sur une cellule permet de passer en mode saisie dans la cellule c
 
 Les données peuvent être saisies directement lorsqu'une cellule est déjà sélectionnée, même si le curseur d'insertion n'est pas visible. The input then replaces the content of the cell.
 
-The **Tab** key validates the cell input and selects the cell to its right. Combining the **Shift + Tab** keys validates the cell input and selects the cell to its left.
+La touche **Tab** valide la saisie de la cellule et sélectionne la cellule à sa droite. La combinaison des touches **Shift + Tab** valide la saisie de la cellule et sélectionne la cellule située à sa gauche.
 
-The **Carriage return** key validates the cell input and selects the cell below it. Combining the **Shift + Carriage return** keys validates the cell input and selects the cell above it.
+La touche **Retour chariot** valide la saisie de la cellule et sélectionne la cellule située en dessous. La combinaison des touches **Shift + Retour chariot** valide la saisie de la cellule et sélectionne la cellule située au-dessus.
 
 Les touches de direction (flèches) permettent de déplacer une cellule dans la direction indiquée par la flèche.
 
@@ -72,15 +72,15 @@ Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre d
 
 ![](../assets/en/ViewPro/vpContext.PNG)
 
-> Les fonctions Copier/Couper et Coller du menu contextuel fonctionnent uniquement dans la zone de la feuille de calcul, elles n'ont pas accès au presse-papiers du système. System shortcuts such as **Ctrl+c/Ctrl+v** works however and can be used to exchange data between the area and other applications.
+> Les fonctions Copier/Couper et Coller du menu contextuel fonctionnent uniquement dans la zone de la feuille de calcul, elles n'ont pas accès au presse-papiers du système. Les raccourcis système tels que **Ctrl+c/Ctrl+v** fonctionnent néanmoins et peuvent être utilisés pour échanger des données entre la zone et d'autres applications.
 
 En fonction de la zone cliquée, les options suivantes sont également disponibles :
 
-- click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
+- cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 - cliquez sur une cellule ou une plage de cellules :
   - **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
-  - **Sort**: sorts the column contents.
-  - **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+  - **Trier** : permet de trier le contenu des colonnes.
+  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Using 4D View Pro commands
@@ -99,7 +99,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a _vpAreaName_ parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
+Most of 4D View Pro commands require a _vpAreaName_ parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -107,7 +107,7 @@ Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone n
 VP SET COLUMN COUNT("myVpArea";5)
 ```
 
-> When loading a 4D View Pro object in a form area, 4D generates the [On VP Ready](../Events/onVpReady.md) form event once the whole area is loaded. Vous devez exécuter tout code 4D View Pro manipulant la zone dans cet événement, sinon une erreur est retournée.
+> Lorsque vous chargez un objet 4D View Pro dans une zone de formulaire, 4D génère l'événement formulaire [On VP Ready](../Events/onVpReady.md) une fois que toute la zone est chargée. Vous devez exécuter tout code 4D View Pro manipulant la zone dans cet événement, sinon une erreur est retournée.
 
 ### Utilisation d'objets de plage
 
@@ -129,7 +129,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
 - area - Le nom de la zone 4D View Pro
-- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. For example, a column range object will only include the _.column_ and _.sheet_ properties.
+- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés _.column_ et _.sheet_.
 
 | Propriété |                                                                                       | Type       | Description                                                                                                                      | Disponible pour                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |

@@ -5,7 +5,7 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->
 
-**VP SET WORKBOOK OPTIONS** ( _vpAreaName_ : Text ; _optionObj_ : Object)<!-- END REF -->
+**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
@@ -16,13 +16,13 @@ title: VP SET WORKBOOK OPTIONS
 
 #### 説明
 
-`VP SET WORKBOOK OPTIONS` コマンドは、<!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->_vpAreaName_ 引数で指定した View Pro エリアのワークブックオプションを設定します<!-- END REF -->。
+`VP SET WORKBOOK OPTIONS` コマンドは、<!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->*vpAreaName* 引数で指定した View Pro エリアのワークブックオプションを設定します<!-- END REF -->。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-_optionObj_には、_vpAreaName_ のエリアに対して適用するワークブックオプションを渡します。
+*optionObj*には、*vpAreaName* のエリアに対して適用するワークブックオプションを渡します。
 
-_optionObj_ 引数が空の場合、このコマンドは何もしません。
+*optionObj* 引数が空の場合、このコマンドは何もしません。
 
 変更されたワークブックオプションはドキュメントとともに保存されます。
 

@@ -5,7 +5,7 @@ title: VP RESUME COMPUTING
 
 <!-- REF #_method_.VP RESUME COMPUTING.Syntax -->
 
-**VP RESUME COMPUTING** ( _vpAreaName_ : Text ) <!-- END REF -->
+**VP RESUME COMPUTING** ( *vpAreaName* : Text ) <!-- END REF -->
 
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 
@@ -15,11 +15,11 @@ title: VP RESUME COMPUTING
 
 #### 説明
 
-`VP RESUME COMPUTING` コマンドは、<!-- REF #_method_.VP RESUME COMPUTING.Summary --> _vpAreaName_ 引数で指定したエリア内の計算を再開します<!-- END REF -->。
+`VP RESUME COMPUTING` コマンドは、<!-- REF #_method_.VP RESUME COMPUTING.Summary --> *vpAreaName* 引数で指定したエリア内の計算を再開します<!-- END REF -->。
 
 このコマンドは 4D View Pro 内の計算機能を再開します。 計算停止中におこなった編集に影響されたフォーミュラは更新され、`VP RESUME COMPUTING` 実行後に追加されるフォーミュラは計算されます。
 
-_vpAreaName_ には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 > 4D View Pro 計算機能は停止/再開アクションを内部的にカウントしています。 そのため、`VP RESUME COMPUTING` コマンドの実行数は、[VP SUSPEND COMPUTING](vp-suspend-computing.md) コマンドの実行数と釣り合っていなければなりません。
 

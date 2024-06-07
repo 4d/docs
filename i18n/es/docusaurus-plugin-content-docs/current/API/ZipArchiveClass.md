@@ -55,7 +55,7 @@ End if
 | folderToZip     | 4D.Folder |  -> | Objeto archivo o carpeta a comprimir                                 |
 | zipStructure    | Object                    |  -> | Objeto archivo o carpeta a comprimir                                 |
 | destinationFile | 4D.File   |  -> | Archivo de destino del archivo                                       |
-| options         | Integer                   |  -> | _folderToZip_ option: `ZIP Without enclosing folder` |
+| options         | Integer                   |  -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Result          | Object                    |  <- | Objeto estado                                                        |
 
 <!-- END REF -->
@@ -66,11 +66,11 @@ The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary 
 
 Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer parámetro:
 
-- _fileToZip_: You simply pass a `4D.File` to compress.
+- *fileToZip*: You simply pass a `4D.File` to compress.
 
-- _folderToZip_: You pass a `4D.Folder` to compress. In this case, the _options_ parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the _options_ parameter.
+- *folderToZip*: You pass a `4D.Folder` to compress. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
-- _zipStructure_: You pass an object describing the ZIP archive object. Las siguientes propiedades están disponibles para definir la estructura:
+- *zipStructure*: You pass an object describing the ZIP archive object. Las siguientes propiedades están disponibles para definir la estructura:
 
 | Propiedad    | Tipo                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 | Histórico    | Collection                  | <li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><table><tr><td>Property</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File or 4D.Folder</td><td>File or Folder</td></tr><tr><td>destination</td><td>Text</td><td>(optional) - Specify a relative filepath to change the organization of the contents of the archive</td></tr><tr><td>option</td><td>number</td><td>(optional) - `ZIP Ignore invisible files` or 0 to compress all of the file</td></tr></table> |
 | retrollamada | 4D.Function | Una fórmula de retrollamada que recibirá la progresión de la compresión (0 - 100) en $1.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-In the _destinationFile_ parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
+In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
 
 Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
 
@@ -156,7 +156,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
 
 #### Ejemplo 4
 
-You want to pass a collection of folders and files to compress to the _zipStructure_ object:
+You want to pass a collection of folders and files to compress to the *zipStructure* object:
 
 ```4d
  var $destination : 4D.File
@@ -213,13 +213,13 @@ $err:=ZIP Create archive($zip; $destination)
 
 #### Descripción
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of _zipFile_ and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
 > Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
 
-Pass a `4D.File` object referencing the compressed ZIP archive in the _zipFile_ parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
-If the _zipFile_ is password protected, you need to use the optional _password_ parameter to provide a password. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
+If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
 
 **Objeto archivo**
 
