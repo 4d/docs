@@ -121,7 +121,7 @@ Cuerpo de la petición:
 "password":"123"}]
 ```
 
-## Using `On REST Authentication`
+## Usando `On REST Authentication`
 
 In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
 
