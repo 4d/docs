@@ -25,7 +25,7 @@ To implement the Table Wizard in your application, the developers are able to cr
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
-![](../assets/en/WritePro/tablewizard-interface.png)
+![](../assets/en/WritePro/tablewizard-interface2.png)
 
 From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
 
@@ -37,7 +37,7 @@ Depending on the user's selection of a template or a table, the user can view th
 
 ##### In Rows:
 
-![](../assets/en/WritePro/rows.PNG)
+![](../assets/en/WritePro/rows1.PNG)
 
 In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
@@ -70,13 +70,7 @@ The template file allows you to define the following:
 - the formula that returns an entity selection used as the table's data source,
 - the break formulas (if any break row can be inserted)
 - the dataclass attributes that can be used as table columns,
-- the formulas available as contextual menus inside break rows, carry-over row or extra rows.
-
-:::info Limitation
-
-In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
-
-:::
+- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
  
 The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
