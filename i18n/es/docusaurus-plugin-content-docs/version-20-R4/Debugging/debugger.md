@@ -68,7 +68,7 @@ Cuando se ejecuta una línea que no llama a otro método, este botón tiene el m
 
 #### Ejecutar y salir
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Si está rastreando subrutinas y funciones, al hacer clic en este botón podrá ejecutar todo el método que se está rastreando en ese momento y retroceder hasta el método llamante. La ventana del depurador vuelve al método anterior de la cadena de llamada. If the current method is the last method in the call chain, the Debugger window is closed.
 
 In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
