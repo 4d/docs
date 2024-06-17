@@ -11,7 +11,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
-- either a Project folder (interpreted component)
+- ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. En este caso, sólo se pueden utilizar componentes compilados.
