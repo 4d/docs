@@ -48,13 +48,13 @@ var myPerson : cs.Person
 //variable de la clase usuario Person
 ```
 
-Aunque no se suele recomendar, se pueden declarar variables simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable declarada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y entonces cambia el tipo dinámicamente. Una variable digitada con `var` no puede cambiar de tipo. Sin embargo, en [modo compilado](interpreted.md), el tipo nunca puede cambiarse, independientemente de cómo se haya declarado la variable.
+La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea crea la variable, la asigna con el tipo de fecha (temporal) y un contenido. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 
