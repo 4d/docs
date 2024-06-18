@@ -16,7 +16,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Rutas de acceso
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Los nombres de ruta soportados se detallan en la página [**Rutas de acceso**](../Concepts/paths.md).
 
 ### Objeto Folder
 
@@ -66,13 +66,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parámetros     | Tipo                      |     | Descripción                                                        |
-| -------------- | ------------------------- | :-: | ------------------------------------------------------------------ |
-| path           | Text                      |  -> | Ruta de la carpeta                                                 |
-| folderConstant | Integer                   |  -> | Constante de la carpeta 4D                                         |
-| pathType       | Integer                   |  -> | `fk posix path` (default) or `fk platform path` |
-| -              |                           |  -> | * para devolver la carpeta de la base local                        |
-| Result         | 4D.Folder |  <- | Nuevo objeto de carpeta                                            |
+| Parámetros     | Tipo                      |     | Descripción                                                           |
+| -------------- | ------------------------- | :-: | --------------------------------------------------------------------- |
+| path           | Text                      |  -> | Ruta de la carpeta                                                    |
+| folderConstant | Integer                   |  -> | Constante de la carpeta 4D                                            |
+| pathType       | Integer                   |  -> | `fk posix path` (por defecto) o `fk platform path` |
+| -              |                           |  -> | * para devolver la carpeta de la base local                           |
+| Result         | 4D.Folder |  <- | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->
 
@@ -86,7 +86,7 @@ In the *path* parameter, pass a folder path string. Puede utilizar una cadena pe
 
 > Only absolute pathnames are supported with the `Folder` command.
 
-Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. Las siguientes constantes están disponibles:
+Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
 | Constante        | Valor | Comentario                                                                                                                           |
 | ---------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -166,7 +166,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
+Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades [platformPath](#platformpath) o [path](#path). Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
 
 **Valor devuelto**
 
@@ -226,20 +226,20 @@ End if
 
 The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasName*.
 
-Por defecto en macOS, la función crea un alias estándar. You can also create a symbolic link by using the *aliasType* parameter. Las siguientes constantes están disponibles:
+Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro *aliasType*. Las siguientes constantes están disponibles:
 
 | Constante          | Valor | Comentario                                            |
 | ------------------ | ----- | ----------------------------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro *aliasType* es ignorado).
 
 **Objeto devuelto**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Un objeto `4D.File` con la propiedad `isAlias` definida en **true**.
 
 #### Ejemplo
 
@@ -362,7 +362,7 @@ Cuando se pasa `Delete with contents`:
 
 The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
 Por defecto, la carpeta conserva su nombre cuando se mueve. If you want to rename the moved folder, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
@@ -420,7 +420,7 @@ Quiere mover y renombrar una carpeta:
 
 The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
 **Objeto devuelto**
 
