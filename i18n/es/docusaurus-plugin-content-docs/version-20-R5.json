@@ -280,7 +280,7 @@
     "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
   },
   "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
-    "message": "Configure your datastore for REST access",
+    "message": "Configura tu almacén de datos para acceso REST",
     "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
   },
   "sidebar.docs.category.API (general)": {
