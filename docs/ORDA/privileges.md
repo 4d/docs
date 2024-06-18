@@ -39,7 +39,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case. 
+Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case.
 
 :::
 
@@ -54,7 +54,7 @@ Available actions are related to target resource.
 |**read**|Read attributes in any dataclass|Read attributes in this dataclass|Read this attribute content|n/a|
 |**update**|Update attributes in any dataclass. |Update attributes in this dataclass.|Update this attribute content (ignored for alias attributes).|n/a|
 |**drop**|Delete data in any dataclass. |Delete data in this dataclass. |Delete a not null value for this attribute (except for alias and computed attribute).|n/a|
-|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
+|**execute**|Execute any function on the project (datastore (except `authentify()`, see Notes below), dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
 |**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This attribute is available in the /rest/$catalog API. |This dataclass function is available in the /rest/$catalog API|
 |**promote**|n/a|n/a|n/a|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session.|
 
@@ -63,6 +63,7 @@ Available actions are related to target resource.
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - Default values: in the current implementation, only *Null* is available as default value.
+- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, even if there is no specific **execute** permission on it for the datastore.
 
 Setting permissions requires to be consistent, in particular:
 
