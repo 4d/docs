@@ -207,7 +207,7 @@ Los siguientes campos se registran para cada evento:
 
 ## 4DDebugLog.txt (tabular)
 
-Este archivo de historial registra cada evento que se produce a nivel de programación 4D en un formato compacto y con pestañas que incluye información adicional (en comparación con el formato estándar).
+Este archivo de historial registra cada evento que se produce a nivel de programación 4D en un formato compacto y con tabulaciones que incluye información adicional (en comparación con el formato estándar).
 
 Como iniciar este historial:
 
