@@ -3,7 +3,7 @@ id: restore
 title: Restaurar
 ---
 
-4D le permite restaurar conjuntos enteros de datos de una aplicaci´n en caso de que se presente un incidente, independientemente de sus causas. Pueden producirse dos categorías principales de incidentes:
+4D le permite restaurar conjuntos enteros de datos de una aplicación en caso de que se presente un incidente, independientemente de sus causas. Pueden producirse dos categorías principales de incidentes:
 
 - La parada inesperada de la aplicación mientras está en uso. Este incidente puede producirse por un corte de luz, un fallo de un elemento del sistema, etc. En este caso, dependiendo del estado actual de la caché de datos en el momento del incidente, la restauración de la aplicación puede requerir diferentes operaciones:
     - Si la caché estaba vacía, la aplicación se abre normalmente. Se registraron todos los cambios realizados en la aplicación. Este caso no requiere ninguna operación particular.
