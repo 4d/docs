@@ -170,12 +170,12 @@ var $myBlob : Blob SET BLOB SIZE ($myBlob ; 16*1024)
 Puede acceder a los bytes individuales de un blob escalar utilizando las llaves `{}`. Dentro de um BLOB, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB.
 
 ```4d
-  // Declare a variable of type Blob
+  // Declara uma variável do tipo Blob
  var $vBlob : Blob
-  // Set the size of the blob to 256 bytes
+  // Define o tamanho do blob para 256 bytes
  SET BLOB SIZE($vBlob;256)
-  // The following code loops through the blob to set each byte to zero
- For(vByte;0;BLOB size($vBlob)-1)
+  // O código a seguir percorre o blob para definir cada byte como zero
+  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
  End for
 ```
