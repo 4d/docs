@@ -27,8 +27,8 @@ Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 
-> This is normal text.<br/>
-> **This is bold text.**
+> Esto es texto normal.<br/>
+> **Esto es texto en negrita.**
 
 #### Gramática JSON
 
@@ -300,7 +300,7 @@ Indica una expresión o una variable que se evaluará para cada línea mostrada.
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | unselectable        | boolean | Designa la línea correspondiente como no seleccionable (\* es decir, \*, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
-| disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. Text and controls (checkboxes, lists, etc.) aparecen atenuados o desactivados. Valores por defecto: False.                                                                                                                                                                                                                                                      |
+| disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. Texto y controles (casillas de verificación, listas, etc.) aparecen atenuados o desactivados. Valores por defecto: False.                                                                                                                                                                                                                                       |
 
 La propiedad especial "cell" permite aplicar un conjunto de propiedades a una sola columna:
 
