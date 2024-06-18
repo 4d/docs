@@ -501,7 +501,7 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 **Valor retornado**
 
-A `4D.Blob` object.
+Um objeto `4D.Blob`.
 
 #### Exemplo
 
