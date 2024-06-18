@@ -48,13 +48,13 @@ var myPerson : cs.Person
 //variable of the Person user class
 ```
 
-Mesmo geralmente não sendo recomendado, é possível criar variáveis simplesmente usando-as; não precisa defini-las formalmente como se faz com campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável e a atribuiu com o tipo de data (temporário) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e então muda o tipo dinamicamente. Una variable digitada con `var` no puede cambiar de tipo. Sin embargo, en [modo compilado](interpreted.md), el tipo nunca puede cambiarse, independientemente de cómo se haya declarado la variable.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 
