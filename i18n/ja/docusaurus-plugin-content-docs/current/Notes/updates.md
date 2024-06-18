@@ -17,7 +17,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- Scroll chaining in forms: Parent subforms now scroll automatically when embedded [scrollable objects](../FormObjects/properties_Appearance.md#vertical-scroll-bar) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- フォーム内のスクロールチェーンをサポート: 埋め込まれたスクロール可能なオブジェクト ([縦スクロールバー](../FormObjects/properties_Appearance.md#縦スクロールバー)・[横スクロールバー](../FormObjects/properties_Appearance.md#横スクロールバー)) がスクロール境界に達しても、マウスやトラックパッドを使用してユーザーがスクロールを続ける場合、親サブフォームは自動的にスクロールします (オーバースクロール)。
 
 ## 4D 20 R5
 
@@ -34,6 +34,9 @@ title: リリースノート
 - RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](../WebServer/qodly-studio.md#強制ログイン)。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - リモートユーザーセッションとストアドプロシージャーセッションで [`Session`](../API/SessionClass.md#session) オブジェクトが利用できるようになりました。
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 #### 動作の変更
 
