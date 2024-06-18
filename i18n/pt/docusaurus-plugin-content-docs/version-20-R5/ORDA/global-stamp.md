@@ -60,7 +60,7 @@ Para ativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja habilitar o rastreamento de alterações nos dados.
 2. Haga clic derecho en una tabla seleccionada y seleccione **Enable data change tracking** en el menú contextual.
-3. É exibida uma caixa de diálogo de confirmação. Haga clic en **OK**.
+3. É exibida uma caixa de diálogo de confirmação. Clique em **OK**.
 
 Em seguida, 4D faz as seguintes alterações:
 
@@ -71,7 +71,7 @@ Para desativar o rastreamento de alterações de dados:
 
 1. Selecione a(s) tabela(s) para as quais você deseja remover o rastreamento de alterações nos dados.
 2. Haga clic derecho en una tabla seleccionada y seleccione **Disable data change tracking** en el menú contextual.
-3. É exibida uma caixa de diálogo de confirmação. Haga clic en **OK**.
+3. É exibida uma caixa de diálogo de confirmação. Clique em **OK**.
 
 4D elimina entonces el campo `__GlobalStamp` de la(s) tabla(s). Tenga en cuenta que si desea eliminar la tabla `__DeletedRecords`, deberá hacerlo manualmente.
 
