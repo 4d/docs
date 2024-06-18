@@ -108,10 +108,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                         |
-| ------- | -------------------------------- |
-| 20 R4   | New *passwordAlgorithm* property |
-| 18      | Adicionado                       |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 20 R4   | Nova propriedade *passwordAlgorithm* |
+| 18      | Adicionado                           |
 
 </details>
 
@@ -623,7 +623,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1381,7 +1381,7 @@ Esta função não faz nada se o registo dos pedidos ORDA não tiver sido inicia
 
 #### Exemplo
 
-See examples for [`.startRequestLog()`](#startrequestlog).
+Consulte os exemplos de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -1453,6 +1453,6 @@ Pode aninhar várias transações (subtransações). Se a transação principal 
 
 #### Exemplo
 
-See example for [`.startTransaction()`](#starttransaction).
+Consulte o exemplo de [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
