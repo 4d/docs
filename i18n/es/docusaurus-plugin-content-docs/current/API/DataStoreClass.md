@@ -147,7 +147,7 @@ The following remote datastores are supported by the command:
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propiedad   | Tipo    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                            | Qodly application                                                            |
+| Propiedad   | Tipo    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                            | Aplicación Qodly                                                             |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                | API Endpoint of the Qodly cloud instance                                     |
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                | - (ignorado)                                              |
@@ -424,7 +424,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <details><summary>Historia</summary>
 
-|Release|Changes|
+|Lanzamiento|Cambios|
 
 \|---|---|
 |20|Added|

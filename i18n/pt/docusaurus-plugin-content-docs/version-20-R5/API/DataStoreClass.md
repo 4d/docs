@@ -108,10 +108,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                         |
-| ------- | -------------------------------- |
-| 20 R4   | New *passwordAlgorithm* property |
-| 18      | Adicionado                       |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 20 R4   | Nova propriedade *passwordAlgorithm* |
+| 18      | Adicionado                           |
 
 </details>
 
@@ -282,7 +282,7 @@ Pode aninhar várias transações (subtransações). If the main transaction is 
 
 #### Exemplo
 
-See example for the [`.startTransaction()`](#starttransaction) function.
+Veja o exemplo da função [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
@@ -365,9 +365,9 @@ O objeto retornado contém as propriedades abaixo:
 
 (\*) a chave de criptografia pode ser fornecida:
 
-- with the `.provideDataKey()` command,
+- com o comando `.provideDataKey()`,
 - na raíz de um dispositivo conectado antes de abrir o datastore,
-- with the `Discover data key` command.
+- com o comando `Discover data key`.
 
 #### Exemplo
 
@@ -623,7 +623,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -755,7 +755,7 @@ For a description of the ORDA request log format, please refer to the [**ORDA cl
 
 #### Exemplo
 
-See Example 2 of [`.startRequestLog()`](#startrequestlog).
+Consulte o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -1381,7 +1381,7 @@ Esta função não faz nada se o registo dos pedidos ORDA não tiver sido inicia
 
 #### Exemplo
 
-See examples for [`.startRequestLog()`](#startrequestlog).
+Consulte os exemplos de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -1453,6 +1453,6 @@ Pode aninhar várias transações (subtransações). Se a transação principal 
 
 #### Exemplo
 
-See example for [`.startTransaction()`](#starttransaction).
+Consulte o exemplo de [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->

@@ -147,7 +147,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- La etiqueta de bloque de código (\`4d ... `) is supported with 4D code highlight:
+- La etiqueta de bloque de código (\`4d ... `) es compatible con el resaltado de código 4D:
 
 ````md
 ```4d

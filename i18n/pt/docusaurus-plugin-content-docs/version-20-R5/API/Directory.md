@@ -19,7 +19,7 @@ title: Directory Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+A propriedade `.creationDate` retorna <!-- REF #directory.creationDate.Summary -->a data de criação da pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -43,7 +43,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` retorna <!-- REF #directory.creationTime.Summary -->o horário de criação da pasta<!-- END REF --> (expresso como um número de segundos a partir de 00:00).
 
 Essa propriedade é **somente leitura**.
 
@@ -67,7 +67,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` retorna <!-- REF #directory.exists.Summary -->true se a pasta existe no disco<!-- END REF --> e false caso contrário.
 
 Essa propriedade é **somente leitura**.
 
@@ -91,7 +91,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
+A propriedade `.extension` <!-- REF #directory.extension.Summary -->retorna a extensão do nome da pasta (se houver)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
 Essa propriedade é **somente leitura**.
 
@@ -115,7 +115,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+A propriedade `.fullName` <!-- REF #directory.fullName.Summary -->retorna o nome completo da pasta, incluindo sua extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -664,7 +664,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 **Valor retornado**
 
-Collection of `Folder` objects.
+Coleção de objetos `Folder`.
 
 #### Exemplo
 

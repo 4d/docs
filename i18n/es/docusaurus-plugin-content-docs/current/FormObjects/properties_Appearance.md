@@ -353,7 +353,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barra de desplazamiento horizontal](#horizontal-scroll-bar)
 
 ---
 

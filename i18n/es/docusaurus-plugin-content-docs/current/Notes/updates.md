@@ -17,7 +17,7 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Cambios de comportamiento
 
-- Scroll chaining in forms: Parent subforms now scroll automatically when embedded [scrollable objects](../FormObjects/properties_Appearance.md#vertical-scroll-bar) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- Support of scroll chaining in forms: parent subforms now scroll automatically when embedded scrollable objects ([vertically](../FormObjects/properties_Appearance.md#vertical-scroll-bar) or [horizontally](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
 
 ## 4D 20 R5
 
@@ -34,6 +34,9 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/),
 - New [force login mode for REST requests](../REST/authUsers.md#force-login-mode) with a [specific support in Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nuevo parámetro REST [$format](../REST/$format.md).
 - [`Session`](../API/SessionClass.md#session) object is now available in remote user sessions and stored procedures session.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 #### Cambios de comportamiento
 
@@ -135,7 +138,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 4D 20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
-:::caution 4D 20.1 index rebuild and client/server versions
+:::caution 4D 20.1 reconstrucción de índices y versiones cliente/servidor
 
 4D 20.1 también incluye una actualización de la biblioteca ICU, que tiene las siguientes consecuencias:
 
@@ -380,16 +383,18 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 | Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ICU       | 73.2                      | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
+| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**         | Used for QUIC                                                                                                                                                  |
 | CEF       | 121                                       | 20 R5             | Chromium 6167                                                                                                                                                  |
 | Hunspell  | 1.7.2     | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
-| PDFWriter | 4.3                       | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
-| SpreadJS  | 16.2.6    | 20 R4             | Motor 4D View Pro                                                                                                                                              |
-| OpenSSL   | 3.2.0     | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
-| libZip    | 1.9.2     | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
-| LZMA      | 5.4.1     | 20                |                                                                                                                                                                |
-| Zlib      | 1.2.13    | 20                |                                                                                                                                                                |
-| webKit    | WKWebView                                 | 19                |                                                                                                                                                                |
-| PHP       | 8.2.4     | 20                |                                                                                                                                                                |
+| ICU       | 73.2                      | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
 | libldap   | **2.6.7** | **20 R6**         |                                                                                                                                                                |
 | libsasl   | 2.1.28    | 20                |                                                                                                                                                                |
+| Libuv     | 1.48                      | **20 R6**         | Used for QUIC                                                                                                                                                  |
+| libZip    | 1.9.2     | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
+| LZMA      | 5.4.1     | 20                |                                                                                                                                                                |
+| OpenSSL   | 3.2.0     | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
+| PDFWriter | 4.3                       | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
+| PHP       | 8.2.4     | 20                |                                                                                                                                                                |
+| SpreadJS  | 16.2.6    | 20 R4             | Motor 4D View Pro                                                                                                                                              |
+| webKit    | WKWebView                                 | 19                |                                                                                                                                                                |
+| Zlib      | 1.2.13    | 20                |                                                                                                                                                                |

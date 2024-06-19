@@ -18,6 +18,9 @@ title: リリースノート
 - RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](../WebServer/qodly-studio.md#強制ログイン)。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - リモートユーザーセッションとストアドプロシージャーセッションで [`Session`](../API/SessionClass.md#session) オブジェクトが利用できるようになりました。
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 #### 動作の変更
 

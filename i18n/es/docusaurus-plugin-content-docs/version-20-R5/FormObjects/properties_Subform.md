@@ -111,7 +111,7 @@ Cuando un subformulario lista tiene esta propiedad activada, el usuario puede mo
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 

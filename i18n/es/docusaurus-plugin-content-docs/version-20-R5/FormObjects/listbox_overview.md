@@ -151,7 +151,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                      | X              | X                  | X                                     |
 | [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                         | X              | X                  | X                                     |
 | [Italic](properties_Text.md#italic)                                                          | X              | X                  | X                                     |
-| [Left](properties_CoordinatesAndSizing.md#left)                                              | X              | X                  | X                                     |
+| [Izquierda](properties_CoordinatesAndSizing.md#izquierda)                                    | X              | X                  | X                                     |
 | [Master Table](properties_DataSource.md#table)                                               |                | X                  |                                       |
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                     |
 | [Method](properties_Action.md#method)                                                        | X              | X                  | X                                     |
@@ -160,7 +160,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                     |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                     |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                     |
-| [Object Name](properties_Object.md#object-name)                                              | X              | X                  | X                                     |
+| [Nombre del objeto](properties_Object.md#nombre-del-objeto)                                  | X              | X                  | X                                     |
 | [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                  | X                                     |
 | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                    |                                       |
 | [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                    |                                       |
