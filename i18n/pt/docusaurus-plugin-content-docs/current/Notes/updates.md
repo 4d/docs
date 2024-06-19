@@ -382,16 +382,18 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 | Biblioteca | Versão atual                              | Atualizado em 4D | Comentário                                                                                                                      |
 | ---------- | ----------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |
+| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Used for QUIC                                                                                                                   |
 | CEF        | 121                                       | 20 R5            | Chromium 6167                                                                                                                   |
 | Hunspell   | 7.3.27    | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                             |
-| PDFWriter  | 4.3                       | 20               | Dependência FreeType na 12.2.1                                                                  |
-| SpreadJS   | 16.2.6    | 20 R4            | Motor 4D View Pro                                                                                                               |
-| OpenSSL    | 3.2.0     | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. See [Behavior changes](#behavior-changes) for release 20 R4 |
-| libZip     | 19.5                      | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                            |
-| LZMA       | 5.4.1     | 20               |                                                                                                                                 |
-| Zlib       | 14.1.6    | 20               |                                                                                                                                 |
-| webKit     | WKWebView                                 | 19               |                                                                                                                                 |
-| PHP        | 8.2.4     | 20               |                                                                                                                                 |
+| ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |
 | libldap    | **2.6.7** | **20 R6**        |                                                                                                                                 |
 | libsasl    | 2.1.28    | 20               |                                                                                                                                 |
+| Libuv      | 1.48                      | **20 R6**        | Used for QUIC                                                                                                                   |
+| libZip     | 19.5                      | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                            |
+| LZMA       | 5.4.1     | 20               |                                                                                                                                 |
+| OpenSSL    | 3.2.0     | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. See [Behavior changes](#behavior-changes) for release 20 R4 |
+| PDFWriter  | 4.3                       | 20               | Dependência FreeType na 12.2.1                                                                  |
+| PHP        | 8.2.4     | 20               |                                                                                                                                 |
+| SpreadJS   | 16.2.6    | 20 R4            | Motor 4D View Pro                                                                                                               |
+| webKit     | WKWebView                                 | 19               |                                                                                                                                 |
+| Zlib       | 14.1.6    | 20               |                                                                                                                                 |
