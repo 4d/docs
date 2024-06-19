@@ -282,7 +282,7 @@ Pode aninhar várias transações (subtransações). If the main transaction is 
 
 #### Exemplo
 
-See example for the [`.startTransaction()`](#starttransaction) function.
+Veja o exemplo da função [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
@@ -365,9 +365,9 @@ O objeto retornado contém as propriedades abaixo:
 
 (\*) a chave de criptografia pode ser fornecida:
 
-- with the `.provideDataKey()` command,
+- com o comando `.provideDataKey()`,
 - na raíz de um dispositivo conectado antes de abrir o datastore,
-- with the `Discover data key` command.
+- com o comando `Discover data key`.
 
 #### Exemplo
 
@@ -755,7 +755,7 @@ For a description of the ORDA request log format, please refer to the [**ORDA cl
 
 #### Exemplo
 
-See Example 2 of [`.startRequestLog()`](#startrequestlog).
+Consulte o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
