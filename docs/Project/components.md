@@ -7,6 +7,8 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
+Thanks to the Component manager, component files can be transparently stored in your computer or on a github repository. 
+
 
 ## Interpreted and compiled components
 
