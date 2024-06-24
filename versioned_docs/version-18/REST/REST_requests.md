@@ -10,7 +10,7 @@ The following structures are supported for REST requests:
 |---|---|---|---|
 |http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| | 
 | |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/|	[{method}](%7BdataClass%7D.html#dataclassmethod)|
-| | | |[$entityset/{entitySetID}](entityset.html#entitysetentitysetid)|
+| | | |[$entityset/\{entitySetID\}](entityset.html#entitysetentitysetid)|
 | | | |[?$filter]($filter.md)|
 | | | [{attribute}](manData.html#selecting-attributes-to-get)/|[?$compute]($compute.md)|
 | |[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| |  

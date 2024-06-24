@@ -31,7 +31,7 @@ An entity set (aka *entity selection*) is a collection of entities obtained thro
 
 To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-To access the entity set, you must use `$entityset/{entitySetID}`, for example:
+To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -43,7 +43,7 @@ If you modify any of the entity's attributes in the entity set, the values will 
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -106,7 +106,7 @@ You can apply this filter in the following ways:
 |Collection of entities |{dataClass}/{att1,att2...}/?$filter="{filter}"| /People/firstName,lastName/?$filter="lastName='a@'"|
 |Specific entity| {dataClass}({ID})/{att1,att2...} |/People(1)/firstName,lastName|  
 ||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
-|Entity selection| {dataClass}/{att1,att2...}/$entityset/{entitySetID}| /People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
+|Entity selection| {dataClass}/{att1,att2...}/$entityset/\{entitySetID\}| /People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
