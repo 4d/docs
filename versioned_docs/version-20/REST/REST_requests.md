@@ -6,7 +6,7 @@ title: About REST Requests
 
 The following structures are supported for REST requests:
 
-|URI	|Resource (Input)| /? or &{filter} (Output)|
+|URI	|Resource (Input)| /? or &\{filter\} (Output)|
 |---|---|---|
 |http://{servername}:{port}/rest/	|[{dataClass}](dataClass.md)|[$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)...|
 | |[{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)|[$method=...]($method.md)|
