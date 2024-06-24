@@ -11,13 +11,13 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**{dataClass}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
-|[**{dataClass}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
-|[**{dataClass}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
-|[**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
-|[**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee(22)/getAge`|Returns a value based on an entity method|
+|[**\{dataClass\}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
+|[**\{dataClass\}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
+|[**\{dataClass\}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
+|[**\{dataClass\}/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
+|[**\{dataClass\}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee(22)/getAge`|Returns a value based on an entity method|
 
-## {dataClass}
+## \{dataClass\}
 
 Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`) 
 
@@ -132,7 +132,7 @@ Return all the data for a specific dataclass.
 }
 ````
 
-## {dataClass}({key})
+## \{dataClass\}({key})
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
@@ -179,7 +179,7 @@ The following request returns all the public data in the Company dataclass whose
 }
 ````
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:{attribute}(value)
 
 Returns the data for one entity in which the attribute's value is defined
 
@@ -203,7 +203,7 @@ The following request returns all the public data of the employee named "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} and {dataClass}({key})/{method}
+## \{dataClass\}/{method} and \{dataClass\}({key})/{method}
 
 Returns an object or a collection based on a project method.
 
@@ -224,7 +224,7 @@ To be called in a REST request, a method must:
   - **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
   - **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
     - **Table** -for methods applied to the whole table (dataclass)
-    - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
+    - **Current record** -for methods applied to the current record (entity) using the `\{dataClass\}(key)/{method}` syntax.
     - **Current selection** -for methods applied to the current selection
 
 ![alt-text](../assets/en/REST/MethodProp.png)

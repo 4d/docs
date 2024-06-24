@@ -29,14 +29,14 @@ Functions are called on the corresponding object on the server datastore.
 |Class function|Syntax|
 |---|----|
 |[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/DataStoreClassFunction`|
-|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/DataClassClassFunction`|
-|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
-||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
-||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
-||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
-|[entity class](ORDA/ordaClasses.md#entity-class)|`/rest/{dataClass}(key)/EntityClassFunction/`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/\{dataClass\}/DataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/\{dataClass\}/EntitySelectionClassFunction`|
+||`/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
+||`/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`|
+||`/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`|
+|[entity class](ORDA/ordaClasses.md#entity-class)|`/rest/\{dataClass\}(key)/EntityClassFunction/`|
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).
+> `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).

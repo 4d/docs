@@ -17,7 +17,7 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [\{dataClass\}/{method}](%7BdataClass%7D.html#dataclassmethod).
 
 Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
@@ -92,7 +92,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+Method calls are detailed in the [\{dataClass\}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
 
 ## Selecting Attributes to get
 
@@ -102,11 +102,11 @@ You can apply this filter in the following ways:
 
 |Object |Syntax| Example|
 |---|---|---|
-|Dataclass |{dataClass}/{att1,att2...} |/People/firstName,lastName|
-|Collection of entities |{dataClass}/{att1,att2...}/?$filter="{filter}"| /People/firstName,lastName/?$filter="lastName='a@'"|
-|Specific entity| {dataClass}({ID})/{att1,att2...} |/People(1)/firstName,lastName|  
-||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
-|Entity selection| {dataClass}/{att1,att2...}/$entityset/\{entitySetID\}| /People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
+|Dataclass |\{dataClass\}/{att1,att2...} |/People/firstName,lastName|
+|Collection of entities |\{dataClass\}/{att1,att2...}/?$filter="{filter}"| /People/firstName,lastName/?$filter="lastName='a@'"|
+|Specific entity| \{dataClass\}({ID})/{att1,att2...} |/People(1)/firstName,lastName|  
+||\{dataClass\}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
+|Entity selection| \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}| /People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
@@ -249,6 +249,6 @@ If you want to save a BLOB stored in your dataclass, you can write the following
   
 ## Retrieving only one entity  
 
-You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
+You can use the [`\{dataClass\}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
 
  `GET  /rest/Company:companyCode("Acme001")`
