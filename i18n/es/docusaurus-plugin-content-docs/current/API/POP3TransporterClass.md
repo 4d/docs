@@ -261,7 +261,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------- |
 | msgNumber  | Integer |  -> | Número del mensaje en la lista                                                                          |
 | headerOnly | Boolean |  -> | True para descargar sólo los encabezados del correo electrónico (por defecto, False) |
-| Result     | Object  |  <- | [Email object](EmailObjectClass.md#email-object)                                                        |
+| Result     | Object  |  <- | [Objet Email](EmailObjectClass.md#objet-email)                                                          |
 
 <!-- END REF -->
 
