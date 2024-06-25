@@ -237,7 +237,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. You can also creat
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-**Returned object**
+**Objeto devolvido**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -366,9 +366,9 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, a pasta mantém o seu nome quando movida. If you want to rename the moved folder, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Returned object**
+**Objeto devolvido**
 
-The moved `Folder` object.
+O objeto `Folder` movido.
 
 #### Exemplo
 
@@ -422,7 +422,7 @@ The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the f
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-**Returned object**
+**Objeto devolvido**
 
 The renamed `Folder` object.
 
