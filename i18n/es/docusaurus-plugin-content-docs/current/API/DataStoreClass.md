@@ -157,7 +157,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                              | * (ignorado)                                              |
 | api-key     | Text    | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                  | Api key of the Qodly cloud instance                                          |
 
-(1) If `tls` is true, the HTTPS protocol is used if:
+(1) Si `tls` es true, se utiliza el protocolo HTTPS si:
 
 - HTTPS está activado en el almacén de datos remoto
 - el número de puerto especificado coincide con el puerto HTTPS configurado en los ajustes de la base de datos
@@ -942,7 +942,7 @@ El resultado de la orden se describe en el objeto devuelto:
 | Propiedad  |                                                                                              | Tipo       | Descripción                                                                                                |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                                                                                              | Boolean    | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
-|            |                                                                                              |            | Properties below are returned only if success is *FALSE*                                                   |
+|            |                                                                                              |            | Las siguientes propiedades se devuelven sólo si success es *FALSE*                                         |
 | status     |                                                                                              | Number     | Código de error (4 si la llave de encriptación suministrada es errónea)                 |
 | statusText |                                                                                              | Text       | Mensaje de error                                                                                           |
 | errors     |                                                                                              | Collection | Pila de errores. El primer error tiene el índice más alto                                  |
@@ -1252,7 +1252,7 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 #### Del lado del servidor
 
-Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. The log data is written in a file in `.jsonl` format. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Los datos del registro se escriben en un archivo en formato `.jsonl`. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
