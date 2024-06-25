@@ -212,7 +212,7 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 ## `Componentes`
 
-Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). These components have priority over any other locations.
+Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). Estos componentes tienen prioridad sobre cualquier otra ubicación.
 
 :::info
 
