@@ -781,6 +781,7 @@ module.exports =
 								"REST/catalog",
 								"REST/directory",
 								"REST/info",
+								"REST/singleton",
 								"REST/upload",
 							],
 						},
