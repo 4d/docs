@@ -57,7 +57,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 - Un alias puede leerse tan pronto como los privilegios de sesión permitan el acceso al propio alias, aunque los privilegios de sesión no permitan el acceso a los atributos que resuelven el alias.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Valores por defecto: en la implementación actual, solo _Null_ está disponible como valor por defecto.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, even if there is no specific **execute** permission on it for the datastore.
+- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 La definición de permisos requiere ser coherente, en particular:
 
