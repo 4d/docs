@@ -53,7 +53,7 @@ For more information, please refer to the [`.componentName` description in the Q
 
 The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web form<!-- END REF -->.
 
-This function does nothing if:
+Essa função não faz nada se:
 
 - the *state* is currently not enabled in the web form,
 - the *state* does not exist for the web form.
@@ -78,7 +78,7 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web form<!-- END REF -->.
 
-This function does nothing if:
+Essa função não faz nada se:
 
 - the *state* has already been enabled on the web form,
 - the *state* does not exist for the web form.
@@ -158,9 +158,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Parâmetro  | Tipo                       |     | Descrição                  |
-| ---------- | -------------------------- | :-: | -------------------------- |
-| Resultados | 4D.WebForm |  <- | New `WebForm` proxy object |
+| Parâmetro  | Tipo                       |     | Descrição                   |
+| ---------- | -------------------------- | :-: | --------------------------- |
+| Resultados | 4D.WebForm |  <- | Novo objeto proxy `WebForm` |
 
 <!-- END REF -->
 
