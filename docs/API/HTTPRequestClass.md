@@ -129,6 +129,7 @@ In the *options* parameter, pass an object that can contain the following proper
 
 |Property|Type|Description|Default|
 |---|---|---|---|
+|agent|[4D.HTTPAgent](HTTPAgentClass.md)|HTTPAgent to use for the HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.|Global agent|
 |automaticRedirections|Boolean|If true, redirections are performed automatically (up to 5 redirections are handled, the 6th redirection response is returned if any)|True|
 |body|Variant|Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers|undefined|
 |certificatesFolder|[Folder](FolderClass.md)|Sets the active client certificates folder|undefined|

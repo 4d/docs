@@ -178,6 +178,7 @@ module.exports =
 								"API/FileHandleClass",
 								"API/FolderClass",
 								"API/FunctionClass",
+								"API/HTTPAgentClass",
 								"API/HTTPRequestClass",
 								"API/IMAPTransporterClass",
 								"API/MailAttachmentClass",
