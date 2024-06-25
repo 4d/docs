@@ -70,13 +70,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!-- REF #_command_.File.Params -->
 
-| Parâmetro    | Tipo                     |     | Descrição                                                          |
-| ------------ | ------------------------ | :-: | ------------------------------------------------------------------ |
-| path         | Text                     |  -> | Rota do arquivo                                                    |
-| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                            |
-| pathType     | Integer                  |  -> | `fk posix path` (default) or `fk platform path` |
-| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã                |
-| Resultados   | 4D. File |  <- | Novo objeto arquivo                                                |
+| Parâmetro    | Tipo                     |     | Descrição                                                         |
+| ------------ | ------------------------ | :-: | ----------------------------------------------------------------- |
+| path         | Text                     |  -> | Rota do arquivo                                                   |
+| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                           |
+| pathType     | Integer                  |  -> | `fk posix path` (padrão) ou `fk platform path` |
+| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã               |
+| Resultados   | 4D. File |  <- | Novo objeto arquivo                                               |
 
 <!-- END REF -->
 
@@ -502,7 +502,7 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 
 If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
+| *opções*          | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Opening mode (see *mode* above)                                                                                                                            | "read"        |
 | `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
@@ -574,7 +574,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
-**Returned object**
+**Objeto devolvido**
 
 The renamed `File` object.
 

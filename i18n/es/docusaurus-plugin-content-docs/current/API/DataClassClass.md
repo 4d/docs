@@ -890,7 +890,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 
 #### parámetro queryString
 
-The *queryString* parameter uses the following syntax:
+El parámetro *queryString* utiliza la siguiente sintaxis:
 
 ```4d
 attributePath|formula comparator value   
@@ -981,7 +981,7 @@ Two types of placeholders can be used: **indexed placeholders** and **named plac
 | Definición | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). Puede usar hasta 128 parámetros *value* | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
 | Ejemplo    | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                          | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                         |
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
+Puede mezclar todos los tipos de argumentos en *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
 - valores directos (sin marcadores),
 - marcadores indexados y/o con nombre.
@@ -1452,7 +1452,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Sólo se da como criterio un objeto `Formula`:
 
 ```4d
  var $es : cs.StudentsSelection

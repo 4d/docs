@@ -388,7 +388,7 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.
 
 > 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
 
-Pass in *mime* a valid MIME document to convert. Puede ser suministrado por cualquier servidor o aplicación de correo. You can pass a BLOB or a text *mime* parameter. Si el MIME proviene de un archivo, se recomienda utilizar un parámetro BLOB para evitar problemas relacionados con las conversiones del conjunto de caracteres y los saltos de línea.
+Pase en *mime* un documento MIME válido a convertir. Puede ser suministrado por cualquier servidor o aplicación de correo. You can pass a BLOB or a text *mime* parameter. Si el MIME proviene de un archivo, se recomienda utilizar un parámetro BLOB para evitar problemas relacionados con las conversiones del conjunto de caracteres y los saltos de línea.
 
 #### Objeto devuelto
 

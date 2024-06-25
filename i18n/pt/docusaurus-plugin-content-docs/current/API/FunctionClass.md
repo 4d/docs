@@ -173,7 +173,7 @@ Uma fórmula usando um método projeto com parâmetros:
  $o:=New object("f";Formula($value))
  $value:=20
 
- $result:=$o.f() // returns 10
+ $result:=$o.f() // retorna 10
 ```
 
 #### Exemplo 3
@@ -196,7 +196,7 @@ Uma fórmula simples usando parâmetros:
 
 #### Exemplo 2
 
-Using `This`:
+Usando `This`:
 
 ```4d
  $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
@@ -211,17 +211,17 @@ Chamar uma fórmula usando notação de objeto:
 
 ```4d
  var $feta; $robot : Object
- var $calc : 4D.Function
+ var $calc : 4D. Function
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
 
  $calc:=Formula(This.total:=This.price*This.quantity)
 
-  //sets the formula to object properties
+  //estabelece a fórmula às propriedades objeto
  $feta.calc:=$calc
  $robot.calc:=$calc
 
-  //call the formula
+  //chame a fórmula
  $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
@@ -242,11 +242,11 @@ Chamar uma fórmula usando notação de objeto:
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| Parâmetro     | Tipo                         |     | Descrição                                                                                      |
-| ------------- | ---------------------------- | :-: | ---------------------------------------------------------------------------------------------- |
-| formulaString | Text                         |  -> | Fórmula texto a ser retornada como objeto                                                      |
-| context       | Number                       |  -> | `sk execute in current database` (default) or `sk execute in host database` |
-| Resultados    | 4D. Function |  <- | Objeto nativo encapsulando a fórmula                                                           |
+| Parâmetro     | Tipo                         |     | Descrição                                                                                         |
+| ------------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                         |  -> | Fórmula texto a ser retornada como objeto                                                         |
+| context       | Number                       |  -> | `sk execute in current database` (por padrão) ou `sk execute in host database` |
+| Resultados    | 4D. Function |  <- | Objeto nativo encapsulando a fórmula                                                              |
 
 <!-- END REF -->
 
@@ -271,7 +271,7 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ```4d
  var $textFormula : Text
- var $f : 4D.Function
+ var $f : 4D. Function
  $textFormula:=Request("Please type a formula")
  If(ok=1)
     $f:=Formula from string($textFormula)
@@ -322,17 +322,17 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 #### Exemplo 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // retorna 60
 ```
 
 #### Exemplo 2
 
 ```4d
- var $calc : 4D.Function
+ var $calc : 4D. Function
  var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
@@ -382,9 +382,9 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 #### Exemplo 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // retorna "HELLO"
 ```
 
 #### Exemplo 2
@@ -392,7 +392,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  $o:=New object("value";50)
  $f:=Formula(This.value*2)
- $result:=$f.call($o) // returns 100
+ $result:=$f.call($o) // devolve 100
 ```
 
 <!-- END REF -->

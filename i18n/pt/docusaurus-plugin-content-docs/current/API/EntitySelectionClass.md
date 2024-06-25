@@ -1703,13 +1703,13 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 
-| Parâmetro     | Tipo                                |     | Descrição                                                      |
-| ------------- | ----------------------------------- | :-: | -------------------------------------------------------------- |
-| formulaString | Text                                |  -> | Formula string                                                 |
-| formulaObj    | Object                              |  -> | Objecto fórmula                                                |
-| sortOrder     | Integer                             |  -> | `dk ascending` (default) or `dk descending` |
-| settings      | Object                              |  -> | Parâmetros da fórmula                                          |
-| Resultados    | 4D. EntitySelection |  <- | Nova seleção de entidade ordenada                              |
+| Parâmetro     | Tipo                                |     | Descrição                                                     |
+| ------------- | ----------------------------------- | :-: | ------------------------------------------------------------- |
+| formulaString | Text                                |  -> | Formula string                                                |
+| formulaObj    | Object                              |  -> | Objecto fórmula                                               |
+| sortOrder     | Integer                             |  -> | `dk ascending` (padrão) ou `dk descending` |
+| settings      | Object                              |  -> | Parâmetros da fórmula                                         |
+| Resultados    | 4D. EntitySelection |  <- | Nova seleção de entidade ordenada                             |
 
 <!-- END REF -->
 
@@ -1864,7 +1864,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 #### Veja também
 
-[`.query()`](DataClassClass.md#query) for dataclass
+[`.query()`](DataClassClass.md#query) para dataclass
 
 <!-- END REF -->
 

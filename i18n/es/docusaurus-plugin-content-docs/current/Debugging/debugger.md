@@ -67,13 +67,13 @@ Cuando se ejecuta una línea que no llama a otro método, este botón tiene el m
 
 #### Ejecutar y salir
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Si está rastreando subrutinas y funciones, al hacer clic en este botón podrá ejecutar todo el método que se está rastreando en ese momento y retroceder hasta el método llamante. La ventana del depurador vuelve al método anterior de la cadena de llamada. Si el método actual es el último método de la cadena de llamada, se cierra la ventana del depurador.
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+En la depuración remota, al ejecutarse la última línea del método, si el método se ejecuta en el servidor, se llama al método padre. Si el método padre se ejecuta en el lado remoto, el botón actúa de la misma manera que el botón Reanudar.
 
-#### Step Into Process
+#### Paso a paso del nuevo proceso
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+Al ejecutar una línea que crea un nuevo proceso (es decir, al llamar al comando New process), este botón abre una nueva ventana del depurador que permite rastrear el método de gestión del proceso recién creado. En la ejecución de una línea que no crea un nuevo proceso, este botón actúa de la misma manera que el botón Ejecutar paso a paso.
 
 #### Abortar
 
@@ -146,7 +146,7 @@ $c:=a+b
 
    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. At this point, the **Line Objects** theme displays:
+2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, aparece el tema **Objetos Línea**:
 
    | $a | 1          |
    | -- | ---------- |
@@ -154,7 +154,7 @@ $c:=a+b
 
    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. Haga clic en el botón **Step Over** nuevamente. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
+3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con $c:=a+b. aparece el tema **Objetos en línea**:
 
    | $c | Indefinido |
    | -- | ---------- |
@@ -321,13 +321,13 @@ El menú contextual del panel de control personalizado permite acceder al editor
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
+Para más información sobre el Editor de fórmulas, consulte el [Manual de referencia de Diseño 4D](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 - **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> Esta opción no está disponible en [modo de depuración remota](debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
@@ -336,7 +336,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 - **Tablas y campos ordenados**: muestra la tabla y los campos en orden alfabético.
 - **Mostrar números enteros en hexadecimal**: muestra los números en notación hexadecimal. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
 
-## Panel de código fuente
+## Panel de evaluación del código
 
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 

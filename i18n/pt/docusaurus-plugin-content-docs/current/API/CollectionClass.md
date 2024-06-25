@@ -774,11 +774,11 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 <!-- REF #collection.equal().Params -->
 
-| Parâmetro   | Tipo       |     | Descrição                                                                                           |
-| ----------- | ---------- | :-: | --------------------------------------------------------------------------------------------------- |
-| collection2 | Collection |  -> | Coleção a comparar                                                                                  |
-| option      | Integer    |  -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Resultados  | Parâmetros |  <- | True se as coleções forem idênticas, senão false                                                    |
+| Parâmetro   | Tipo       |     | Descrição                                                                                          |
+| ----------- | ---------- | :-: | -------------------------------------------------------------------------------------------------- |
+| collection2 | Collection |  -> | Coleção a comparar                                                                                 |
+| option      | Integer    |  -> | `ck diacritical`: avaliação diacrítica ("A" # "a", por exemplo) |
+| Resultados  | Parâmetros |  <- | True se as coleções forem idênticas, senão false                                                   |
 
 <!-- END REF -->
 
@@ -2663,13 +2663,13 @@ $result2:=$col.query("company.name = :1";"John's Pizzas")
 Quando pesquisar por valores null não pode usar a sintaxe do marcador de posição porque o motor de consulta considera o valor null como um valor de comparação inesperado. Por exemplo, se executar esta pesquisa:
 
 ```4d
-$vSingles:=$colPersons.query("spouse = :1";Null) // will NOT work
+$vSingles:=$colPersons.query("spouse = :1";Null) // NÃO funcionará
 ```
 
 Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como um erro resultante da avaliação do parâmetro (por exemplo, um atributo vindo de outra consulta). Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:
 
 ```4d
-$vSingles:=$colPersons.query("spouse = null") //correct syntax
+$vSingles:=$colPersons.query("spouse = null") //sintaxe correta
 ```
 
 #### Object or collection reference as value

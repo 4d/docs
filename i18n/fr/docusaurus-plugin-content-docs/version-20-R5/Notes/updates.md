@@ -18,6 +18,9 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nouveau paramètre REST [$format](../REST/$format.md).
 - [`Session`](../API/SessionClass.md#session) object is now available in remote user sessions and stored procedures session.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 #### Changements de comportement
 

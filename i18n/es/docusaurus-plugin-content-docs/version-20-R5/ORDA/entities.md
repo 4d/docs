@@ -601,5 +601,5 @@ Estos principios se muestran en el siguiente diagrama:
 
 Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. En una aplicación multiproceso o multiusuario, un bloqueo definido en una transacción en un registro por un comando clásico tendrá como resultado impedir que cualquier otro proceso bloquee las entidades relacionadas con este registro (o a la inversa), hasta que la transacción sea validada o cancelada.
 
-- Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-- Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+- Ejemplo con un bloqueo definido por un comando clásico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+- Ejemplo con un bloqueo definido por una función ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
