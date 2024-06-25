@@ -159,6 +159,12 @@ The default file has the following contents:
 ```
 
 
+:::note Compatibility
+
+As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the **Web Features** page of the Settings dialog box ("Access" pane). This button can automatically upgrade your security settings (you may have to modify your code, [see this section](../settings/web.md)).
+
+:::
+
 
 ### Syntax
 
