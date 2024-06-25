@@ -5,7 +5,7 @@ title: ZIPFolder
 
 The following properties and functions from the [Folder](FolderClass.md) class are available to `ZIPFolder` objects:
 
-| Available [Folder](FolderClass.md) APIs for ZIPFolder                                  | Comentario                                                                                                                                                                 |
+| APIs disponibles de [Folder](FolderClass.md) para ZIPFolder                            | Comentario                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](FolderClass.md#copyto)                   |                                                                                                                                                                            |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](FolderClass.md#creationdate)         | Date may be different for the `root` folder from a folder within the archive                                                                                               |
