@@ -70,13 +70,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!-- REF #_command_.File.Params -->
 
-| Parâmetro    | Tipo                     |     | Descrição                                                          |
-| ------------ | ------------------------ | :-: | ------------------------------------------------------------------ |
-| path         | Text                     |  -> | Rota do arquivo                                                    |
-| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                            |
-| pathType     | Integer                  |  -> | `fk posix path` (default) or `fk platform path` |
-| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã                |
-| Resultados   | 4D. File |  <- | Novo objeto arquivo                                                |
+| Parâmetro    | Tipo                     |     | Descrição                                                         |
+| ------------ | ------------------------ | :-: | ----------------------------------------------------------------- |
+| path         | Text                     |  -> | Rota do arquivo                                                   |
+| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                           |
+| pathType     | Integer                  |  -> | `fk posix path` (padrão) ou `fk platform path` |
+| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã               |
+| Resultados   | 4D. File |  <- | Novo objeto arquivo                                               |
 
 <!-- END REF -->
 

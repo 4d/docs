@@ -49,7 +49,7 @@ Esta área indica la fecha y la hora de la [última copia de seguridad](MSC/back
 
 - **Última copia de seguridad**: fecha y hora de la última copia de seguridad.
 - **Próxima copia de seguridad**: fecha y hora de la próxima copia de seguridad programada.
-- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. The actual size of the backup file may vary according to the settings (compression, etc.) y de acuerdo a las variaciones del archivo de datos.
 - **Espacio disponible**: espacio disponible en el volumen de copia de seguridad.
 
 El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad inmediata de la base utilizando los parámetros de copia de seguridad actuales (archivos de copia de seguridad, ubicación de los archivos, opciones, etc.). Puede ver estos parámetros haciendo clic en el botón **Propiedades...**. Durante una copia de seguridad en el servidor, los equipos cliente quedan "bloqueados" (pero no desconectados) y no es posible que se conecten nuevos clientes.

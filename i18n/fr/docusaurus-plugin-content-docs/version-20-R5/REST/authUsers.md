@@ -47,7 +47,7 @@ All other REST requests (handling data or executing a function) will only be pro
 This mode allows you to implement the following login sequence:
 
 1. At the first REST call (for a webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
-2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
 3. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
 
@@ -76,6 +76,12 @@ The `authentify()` function must be implemented in the [DataStore class](../ORDA
 
 This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires appropriate privileges.
 
+:::note
+
+The `authentify()` function can always be executed by a REST guest session, even if there is no specific **execute** permission on it for the datastore in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file).
+
+:::
+
 The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
 
 This function should contain two parts:
@@ -94,20 +100,20 @@ exposed Function authentify($credentials : Object) : Text
 
 var $users : cs.UsersSelection
 var $user : cs.UsersEntity
-	
+
 $users:=ds.Users.query("name = :1"; $credentials.name)
 $user:=$users.first()
 
 If ($user#Null) //the user is known
 	If (Verify password hash($credentials.password; $user.password))
 		Session.setPrivileges("vip")
-	Else 
+	Else
 
 		return "Wrong password"
-	End if 
-Else 
+	End if
+Else
         return "Wrong user"
-End if 
+End if
 ```
 
 To call the `authentify()` function:
@@ -152,22 +158,22 @@ Login
 <script>
 function sendData(data) {
   var XHR = new XMLHttpRequest();
-  
+
   XHR.onreadystatechange = function() {
     if (this.status == 200) {      
-      window.location = "authenticationOK.shtml"; 
+      window.location = "authenticationOK.shtml";
       }
       else {
       document.getElementById("authenticationFailed").style.visibility = "visible";
       }
   };
-  
+
   XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
-  
+
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
   XHR.setRequestHeader('session-4D-length', data.timeout);
-  
+
   XHR.send();
 };
 function onClick()
@@ -195,9 +201,9 @@ If ($userId#"")
         If (Verify password hash($password; $sales.password))
             fillSession($sales)
             $Accepted:=True
-        End if 
-    End if 
-End if 
+        End if
+    End if
+End if
 ```
 
 > As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
@@ -216,6 +222,6 @@ Session.setPrivileges($info)
 Use (Session.storage)
     If (Session.storage.myTop3=Null)
         Session.storage.myTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
-    End if 
+    End if
 End use
 ```

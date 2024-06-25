@@ -19,7 +19,7 @@ title: Clase Directory
 
 #### Descripción
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #directory.creationDate.Summary -->la fecha de creación de la carpeta<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -43,7 +43,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.creationTime` devuelve <!-- REF #directory.creationTime.Summary -->la hora de creación de la carpeta<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
 Esta propiedad es de **solo lectura**.
 
@@ -67,7 +67,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+La propiedad `.exists` devuelve <!-- REF #directory.exists.Summary -->true si la carpeta existe en disco<!-- END REF -->, y falso de lo contrario.
 
 Esta propiedad es de **solo lectura**.
 
@@ -91,7 +91,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre de la carpeta no tiene extensión.
+La propiedad `.extension` <!-- REF #directory.extension.Summary -->devuelve la extensión del nombre de la carpeta (si la hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre de la carpeta no tiene extensión.
 
 Esta propiedad es de **solo lectura**.
 
@@ -115,7 +115,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+La propiedad `.fullName` <!-- REF #directory.fullName.Summary -->devuelve el nombre completo de la carpeta, incluyendo su extensión (si la hay)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -139,7 +139,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propiedad `.hidden` devuelve <!-- REF #directory.hidden.Summary --> true si la carpeta está configurada como "oculta" a nivel de sistema<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es de **solo lectura**.
 
@@ -163,7 +163,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+La propiedad `.isAlias` devuelve <!-- REF #directory.isAlias.Summary -->siempre **false** para un objeto `Folder`<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -187,7 +187,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #directory.isFile.Summary -->siempre **false** para una carpeta<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -211,7 +211,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #directory.isFolder.Summary -->siempre **true** para una carpeta<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -235,9 +235,9 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. En caso contrario, devuelve false.
+La propiedad `.isPackage` devuelve <!-- REF #directory.isPackage.Summary -->true si la carpeta es un paquete en macOS (y existe en el disco)<!-- END REF -->. En caso contrario, devuelve false.
 
-On Windows, `.isPackage` always returns **false**.
+En Windows, `.isPackage` siempre devuelve **false**.
 
 Esta propiedad es de **solo lectura**.
 
@@ -261,7 +261,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #directory.modificationDate.Summary --> la fecha de la última modificación de la carpeta<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -285,7 +285,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.modificationDate` devuelve <!-- REF #directory.modificationTime.Summary -->la hora de la última modificación de la carpeta<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
 Esta propiedad es de **solo lectura**.
 
@@ -309,7 +309,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+La propiedad `.name` devuelve <!-- REF #directory.name.Summary --> el nombre de la carpeta, sin extensión (si la hay)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -333,7 +333,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+La propiedad `.original` devuelve <!-- REF #directory.original.Summary -->el mismo objeto de la carpeta <!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -359,7 +359,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
+La propiedad `.parent` devuelve <!-- REF #directory.parent.Summary -->el objeto carpeta padre de la carpeta<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Si la carpeta no tiene un padre (raíz), se devuelve el valor null.
 
@@ -385,7 +385,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
+La propiedad `.path` devuelve <!-- REF #directory.path.Summary -->la ruta POSIX de la carpeta<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es de **solo lectura**.
 
@@ -409,7 +409,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #directory.platformPath.Summary -->la ruta del archivo expresada con la sintaxis de la plataforma actual<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -433,24 +433,24 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #directory.copyTo().Params -->
 
-| Parámetros        | Tipo                      |     | Descripción                                 |
-| ----------------- | ------------------------- | :-: | ------------------------------------------- |
-| destinationFolder | 4D.Folder |  -> | Carpeta de destino                          |
-| newName           | Text                      |  -> | Nombre para la copia                        |
-| overwrite         | Integer                   |  -> | `fk overwrite` to replace existing elements |
-| Result            | 4D.Folder |  <- | Carpeta o archivo copiado                   |
+| Parámetros        | Tipo                      |     | Descripción                                            |
+| ----------------- | ------------------------- | :-: | ------------------------------------------------------ |
+| destinationFolder | 4D.Folder |  -> | Carpeta de destino                                     |
+| newName           | Text                      |  -> | Nombre para la copia                                   |
+| overwrite         | Integer                   |  -> | `fk overwrite` para sustituir los elementos existentes |
+| Result            | 4D.Folder |  <- | Carpeta o archivo copiado                              |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+La función `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia el objeto `Folder` en la *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, la carpeta se copia con el nombre de la carpeta original. If you want to rename the copy, pass the new name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta se copia con el nombre de la carpeta original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
 | Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
@@ -462,7 +462,7 @@ El objeto `Folder` copiado.
 
 #### Ejemplo
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
+Desea copiar una *carpeta* Imágenes de la carpeta de documentos del usuario a la carpeta de la base:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -499,13 +499,13 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Descripción
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+La función `.file()` crea <!-- REF #directory.file().Summary -->un objeto `File` dentro del objeto `Folder` y devuelve su referencia<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the file to return. La ruta se evaluará a partir de la carpeta padre como raíz.
+En *ruta*, pase una ruta POSIX relativa para designar el archivo a regresar. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
-A `File` object or null if *path* is invalid.
+Un objeto `File` o null si *path* no es válido.
 
 #### Ejemplo
 
@@ -543,11 +543,11 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descripción
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colección de objetos `File` contenidos en la carpeta<!-- END REF -->.
 
 > Los alias o enlaces simbólicos no se resuelven.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección los archivos del primer nivel de la carpeta, así como los archivos o carpetas invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
@@ -600,22 +600,22 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 <!-- REF #directory.folder().Params -->
 
-| Parámetros | Tipo                      |    | Descripción                                                       |
-| ---------- | ------------------------- | -- | ----------------------------------------------------------------- |
-| path       | Text                      | -> | Ruta POSIX relativa                                               |
-| Result     | 4D.Folder | <- | Created folder object (null if invalid *path*) |
+| Parámetros | Tipo                      |    | Descripción                                                           |
+| ---------- | ------------------------- | -- | --------------------------------------------------------------------- |
+| path       | Text                      | -> | Ruta POSIX relativa                                                   |
+| Result     | 4D.Folder | <- | Objeto carpeta creado (null si *path* es inválido) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+La función `.folder()` <!-- REF #directory.folder().Summary -->crea un objeto `Folder` dentro del objeto `Folder` padre y devuelve su referencia<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the folder to return. La ruta se evaluará a partir de la carpeta padre como raíz.
+En *path*, pase una ruta relativa POSIX para designar la carpeta a devolver. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
-A `Folder` object or null if *path* is invalid.
+Un objeto `Folder` o null si *path* es inválido.
 
 #### Ejemplo
 
@@ -653,9 +653,9 @@ A `Folder` object or null if *path* is invalid.
 
 #### Descripción
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+La función `.folders()` <!-- REF #directory.folders().Summary -->devuelve una colección de objetos `Folder` contenidos en la carpeta padre<!-- END REF -->.
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección las carpetas del primer nivel de la carpeta. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
@@ -704,14 +704,14 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 
 #### Descripción
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+La función `.getIcon()` <!-- REF #directory.getIcon().Summary -->devuelve el icono de la carpeta<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
+El parámetro opcional *size* especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
 Si la carpeta no existe en el disco, se devuelve un icono vacío por defecto.
 
 **Valor devuelto**
 
-Folder icon [picture](Concepts/dt_picture.md).
+[Imagen](Concepts/dt_picture.md) del icono de la carpeta.
 
 <!-- END REF -->

@@ -17,7 +17,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- Scroll chaining in forms: Parent subforms now scroll automatically when embedded [scrollable objects](../FormObjects/properties_Appearance.md#vertical-scroll-bar) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- フォーム内のスクロールチェーンをサポート: 埋め込まれたスクロール可能なオブジェクト ([縦スクロールバー](../FormObjects/properties_Appearance.md#縦スクロールバー)・[横スクロールバー](../FormObjects/properties_Appearance.md#横スクロールバー)) がスクロール境界に達しても、マウスやトラックパッドを使用してユーザーがスクロールを続ける場合、親サブフォームは自動的にスクロールします (オーバースクロール)。
 
 ## 4D 20 R5
 
@@ -34,6 +34,9 @@ title: リリースノート
 - RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](../WebServer/qodly-studio.md#強制ログイン)。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - リモートユーザーセッションとストアドプロシージャーセッションで [`Session`](../API/SessionClass.md#session) オブジェクトが利用できるようになりました。
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 #### 動作の変更
 
@@ -380,16 +383,18 @@ ALERT($param1+" "+$param2)
 
 | ライブラリ     | 現在のバージョン                                  | 更新された 4D バージョン | 説明                                                                    |
 | --------- | ----------------------------------------- | -------------- | --------------------------------------------------------------------- |
-| ICU       | 73.2                      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                      |
+| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**      | Used for QUIC                                                         |
 | CEF       | 121                                       | 20 R5          | Chromium 6167                                                         |
 | Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                |
-| PDFWriter | 4.3                       | 20             | 12.2.1 で FreeType依存                   |
-| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                      |
-| OpenSSL   | 3.2.0     | 20 R4          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
-| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                 |
-| LZMA      | 5.4.1     | 20             |                                                                       |
-| Zlib      | 1.2.13    | 20             |                                                                       |
-| webKit    | WKWebView                                 | 19             |                                                                       |
-| PHP       | 8.2.4     | 20             |                                                                       |
+| ICU       | 73.2                      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                      |
 | libldap   | **2.6.7** | **20 R6**      |                                                                       |
 | libsasl   | 2.1.28    | 20             |                                                                       |
+| Libuv     | 1.48                      | **20 R6**      | Used for QUIC                                                         |
+| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                 |
+| LZMA      | 5.4.1     | 20             |                                                                       |
+| OpenSSL   | 3.2.0     | 20 R4          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
+| PDFWriter | 4.3                       | 20             | 12.2.1 で FreeType依存                   |
+| PHP       | 8.2.4     | 20             |                                                                       |
+| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                      |
+| webKit    | WKWebView                                 | 19             |                                                                       |
+| Zlib      | 1.2.13    | 20             |                                                                       |

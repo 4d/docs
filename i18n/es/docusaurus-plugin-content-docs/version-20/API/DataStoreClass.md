@@ -105,10 +105,10 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Histórico</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20.3        | New *passwordAlgorithm* property |
-| 18          | Añadidos                         |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 20.3        | Nueva propiedad *passwordAlgorithm* |
+| 18          | Añadidos                            |
 
 </details>
 

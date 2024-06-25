@@ -543,10 +543,10 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
     "salary": 68400,
     "birthDate": "1971-09-03T00:00:00.000Z",
     "woman": false,
-    "employer": {// relatedEntity given as an object
+    "employer": {// relatedEntity dada como um objeto
         "__KEY": "21"
     },
-    "manager": {// relatedEntity given as an object
+    "manager": {// relatedEntity dada como um objeto
         "__KEY": "411"
     }
 }
@@ -585,17 +585,17 @@ The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->r
 O seguinte código genérico duplica qualquer entidade:
 
 ```4d
-  //duplicate_entity method
+  //método duplicate_entity
   //duplicate_entity($entity)
 
  #DECLARE($entity : 4D.Entity)  
  var $entityNew : 4D.Entity
  var $status : Object
 
- $entityNew:=$entity.getDataClass().new() //create a new entity in the parent dataclass
- $entityNew.fromObject($entity.toObject()) //get all attributes
- $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //reset the primary key
- $status:=$entityNew.save() //save the duplicated entity
+ $entityNew:=$entity.getDataClass().new() //criar uma nova entidade na classe de dados pai
+ $entityNew.fromObject($entity.toObject()) //obter todos os atributos
+ $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //redefinir a chave primária
+ $status:=$entityNew.save() //salvar a entidade duplicada
 ```
 
 <!-- END REF -->

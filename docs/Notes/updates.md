@@ -38,6 +38,9 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - New [force login mode for REST requests](../REST/authUsers.md#force-login-mode) with a [specific support in Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - New [$format](../REST/$format.md) REST parameter.
 - [`Session`](../API/SessionClass.md#session) object is now available in remote user sessions and stored procedures session.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
 
 
 
@@ -194,7 +197,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.   
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 
 #### Behavior changes
@@ -431,16 +434,18 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
+|BoringSSL|0aa300b9ba9d66b914793ad18c5b469163e58905|**20 R6**|Used for QUIC|
 |CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
-|PDFWriter|4.3|20|FreeType dependency in 12.2.1|
-|SpreadJS|16.2.6|20 R4|4D View Pro engine|
-|OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
-|libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
-|LZMA|5.4.1|20||
-|Zlib|1.2.13|20||
-|webKit|WKWebView|19||
-|PHP|8.2.4|20||
+|ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |libldap|**2.6.7**|**20 R6**||
 |libsasl|2.1.28|20||
+|Libuv |1.48|**20 R6**|Used for QUIC|
+|libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
+|LZMA|5.4.1|20||
+|OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
+|PDFWriter|4.3|20|FreeType dependency in 12.2.1|
+|PHP|8.2.4|20||
+|SpreadJS|16.2.6|20 R4|4D View Pro engine|
+|webKit|WKWebView|19||
+|Zlib|1.2.13|20||
