@@ -95,7 +95,7 @@ O estado do objeto retornado contém as propriedades abaixo:
 
 #### Exemplo 1
 
-To compress a `4D.File`:
+Para compactar um `4D.File`:
 
 ```4d
  var $file; $destination : 4D.File
