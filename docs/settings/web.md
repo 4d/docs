@@ -5,7 +5,7 @@ title: Web page
 
 Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
 
-## Configuration 
+## Configuration
 
 ### Publishing Information
 
@@ -77,18 +77,18 @@ To do so, you just have to click on the **Clear Cache** button. The cache is the
 
 ### Web Process  
 
-This area allows you to configure how the web server will handle user sessions and their associated processes. 
+This area allows you to configure how the web server will handle user sessions and their associated processes.
 
 > The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
 
 #### Scalable sessions (multi-process sessions)  
 
-When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions). 
+When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
 
 
 #### No sessions  
 
-When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server. 
+When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
 
 In this mode, you can configure additional web server setttings:
 
@@ -119,7 +119,7 @@ Allows you to optimize the operation of the 4D Web server in remote mode. See [R
 
 #### Use preemptive processes  
 
-Not available with [scalable sessions](../WebServer/sessions.md). 
+Not available with [scalable sessions](../WebServer/sessions.md).
 
 Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
 
@@ -128,7 +128,7 @@ Enables preemptive web processes in your compiled applications. When **Use preem
 
 #### Inactive Process Timeout  
 
-Not available with [scalable sessions](../WebServer/sessions.md). 
+Not available with [scalable sessions](../WebServer/sessions.md).
 
 Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
 
@@ -274,7 +274,7 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
 
-## Web Services 
+## Web Services
 
 You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
 
@@ -285,12 +285,12 @@ For more information about the support of Web Services in 4D, refer to the [Publ
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.  
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService. 
+-   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
 -   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
-    
+
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 
-### Client Side 
+### Client Side
 
 This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
 
@@ -309,7 +309,14 @@ Starts and stops the REST Server. See [REST Server Configuration](../REST/config
 
 ### Access  
 
-This option specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests. See [Configuring REST access](../REST/configuration.md#configuring-rest-access).
+**This option is deprecated** as of 4D 20 R6. See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects. The **Activate REST authentication through ds.authentify() function** button is displayed if the current project configuration is obsolete and needs to be upgraded (see below). 
+
+### Activate REST authentication through ds.authentify() function
+
+Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project. Note however that this operation cannot be canceled and may require that you modify your code.
+
+
+specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests.
 
 ### Qodly Studio
 
@@ -319,6 +326,6 @@ This option specifies a group of 4D users that is authorized to establish the li
 
 This option only appears if the Qodly Studio license is activated.
 
-::: 
+:::
 
 This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
