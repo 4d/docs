@@ -241,7 +241,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. You can also creat
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-**Returned object**
+**Objeto devolvido**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -446,9 +446,9 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Returned object**
+**Objeto devolvido**
 
-The moved `File` object.
+O objeto `File` movido.
 
 #### Exemplo
 
@@ -502,9 +502,9 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 
 If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
+| *opções*          | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                                                            | "read"        |
+| `.mode`           | Text           | Modo de abertura (consulte *modo* acima)                                                                                                                   | "read"        |
 | `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
 | `.breakModeRead`  | Text ou Number | Modo de tratamento das quebras de linha utilizadas na leitura do arquivo (veja abaixo)                                                                     | "native" ou 1 |
 | `.breakModeWrite` | Text ou Number | Modo de processamento das quebras de linha utilizadas ao escrever no ficheiro (ver abaixo)                                                                 | "native" ou 1 |
@@ -574,9 +574,9 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
-**Returned object**
+**Objeto devolvido**
 
-The renamed `File` object.
+O objeto `File` renomeado.
 
 #### Exemplo
 
