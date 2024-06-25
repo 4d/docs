@@ -173,7 +173,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [Página Novidades] (https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 #### Mudanças de comportamento
 
@@ -382,13 +382,13 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 | Biblioteca | Versão atual                              | Atualizado em 4D | Comentário                                                                                                                      |
 | ---------- | ----------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Used for QUIC                                                                                                                   |
+| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Usado para QUIC                                                                                                                 |
 | CEF        | 121                                       | 20 R5            | Chromium 6167                                                                                                                   |
 | Hunspell   | 7.3.27    | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                             |
 | ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |
 | libldap    | **2.6.7** | **20 R6**        |                                                                                                                                 |
 | libsasl    | 2.1.28    | 20               |                                                                                                                                 |
-| Libuv      | 1.48                      | **20 R6**        | Used for QUIC                                                                                                                   |
+| Libuv      | 1.48                      | **20 R6**        | Usado para QUIC                                                                                                                 |
 | libZip     | 19.5                      | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                            |
 | LZMA       | 5.4.1     | 20               |                                                                                                                                 |
 | OpenSSL    | 3.2.0     | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. See [Behavior changes](#behavior-changes) for release 20 R4 |
