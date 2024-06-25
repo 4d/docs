@@ -20,7 +20,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 ### Básicos
 
-To load a component in your 4D project, you can either:
+Para cargar un componente en su proyecto 4D, usted puede:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
 - or, copy the component files in the [**Components** folder of your project](architecture.md#components).
@@ -87,7 +87,7 @@ Since components can be installed in different ways, a priority order is applied
 **Máxima prioridad**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file.
+2. Componentes declarados en el archivo **dependencies.json**.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
 **Prioridad más baja**
