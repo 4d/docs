@@ -258,7 +258,7 @@ The mapping between the objects of the collection and the entities is done on th
 
 **Create or update mode**
 
-For each object of *objectCol*:
+Para cada objeto de *objectCol*:
 
 - Se o objeto conter uma propriedade booleana "\__NEW" estabelecida em false (ou não conter uma propriedade booleana "\__NEW"), a entidade se atualiza ou se cria com os valores correspondentes das propriedades do objeto. Nenhuma comprovação é realizada com respeito à chave primária:
   - Se a chave primária for dada e existir, a entidade é atualizada. Nesse caso, a chave primária pode ser dada como etá ou com uma propriedade "\_\_KEY"  (preenchida com o valor da chave primária).
@@ -271,7 +271,7 @@ For each object of *objectCol*:
 
 > The "\_\*KEY" property containing a value is taken into account only when the "\*\*NEW" property is set to **false** (or is omitted) and a corresponding entity exists. Em todos os outros casos, o valor da propriedade "\*\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
 
-**Related entities**
+**Entidades relacionadas**
 
 The objects of *objectCol* may contain one or more nested object(s) featuring one or more related entities, which can be useful to create or update links between entities.
 
@@ -625,7 +625,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo       | Descrição                                 |
 | ----------- | ---------- | ----------------------------------------- |
