@@ -30,7 +30,7 @@ You can assign specific permission actions to the following exposed resources in
 - a dataclass
 - an attribute (including computed and alias)
 - a data model class function
-- a singleton function
+- a [singleton](../REST/$singleton.md) function
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -63,7 +63,7 @@ Available actions are related to target resource.
 
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
-- A permission action assigned to a singleton class will be applied to all its exposed functions. Or, you can assign permissions at singleton function level.
+- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
 - Default values: in the current implementation, only *Null* is available as default value.
 
 Setting permissions requires to be consistent, in particular:
