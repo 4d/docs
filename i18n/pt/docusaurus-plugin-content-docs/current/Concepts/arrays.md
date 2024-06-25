@@ -60,12 +60,12 @@ Um array sempre tem um elemento zero. Apesar do elemento zero não ser mostrado 
 Aqui há outro exemplo: se quiser inicializar um objeto formulário com um valor texto mas sem estabelecer um valor padrão. Pode usar o elemento zero do array:
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // método para um combo box ou lista drop down
+  // vinculado ao array de variável atName
  Case of
     :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+  // Initializar o array (como mostrado acima)
+  // Mas use o elemento zero
 		ARRAY TEXT(atName;5)
 		atName{0}:=Please select an item"
 		atName{1}:="Text1"
@@ -73,7 +73,7 @@ Aqui há outro exemplo: se quiser inicializar um objeto formulário com um valor
 		atName{3}:="Text3"
 		atName{4}:="Text4"
 		atName{5}:="Text5"
-	// Position the array to element 0
+	// Posiciona o array para elemento 0
   		atName:=0
  End case
 ```
