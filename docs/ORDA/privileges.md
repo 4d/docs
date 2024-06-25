@@ -116,14 +116,51 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 ## `roles.json` file
 
 
-The `roles.json` file describes the whole security settings for the project.  
+The `roles.json` file describes the whole security settings for the project.
 
-:::note
+### Default file
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
 
-:::
+The default file has the following contents:
 
+```json
+
+{
+    "privileges": [
+        {
+            "privilege": "none",
+            "includes": []
+        }
+    ],
+
+    "roles": [],
+
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "ds",
+                "type": "datastore",
+                "read": ["none"],
+                "create": ["none"],
+                "update": ["none"],
+                "drop": ["none"],
+                "describe": ["none"],
+                "execute": ["none"],
+                "promote": ["none"]                
+            }
+        ]
+    },
+
+    "forceLogin": true
+
+}
+
+```
+
+
+
+### Syntax
 
 The `roles.json` file syntax is the following:
 
@@ -266,6 +303,7 @@ However, when the application is about to be deployed, a good practice is to loc
 			]
 	 }
 		]
-	}
+	},
+    "forceLogin": true
 }
 ```
