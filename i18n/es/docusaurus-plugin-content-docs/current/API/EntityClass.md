@@ -1285,7 +1285,7 @@ Crear una nueva entidad:
 
 #### Ejemplo 2
 
-Updating an entity without `dk auto merge` option:
+Actualizando una entidad sin opción `dk auto merge`:
 
 ```4d
  var $status : Object

@@ -173,7 +173,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 - Nueva opción `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar la validación automática de certificados.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) en doc.4d.com.
-- Listas de bugs corregidos: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 #### Cambios de comportamiento
 
@@ -383,13 +383,13 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 | Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**         | Used for QUIC                                                                                                                                                  |
+| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
 | CEF       | 121                                       | 20 R5             | Chromium 6167                                                                                                                                                  |
 | Hunspell  | 1.7.2     | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
 | ICU       | 73.2                      | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
 | libldap   | **2.6.7** | **20 R6**         |                                                                                                                                                                |
 | libsasl   | 2.1.28    | 20                |                                                                                                                                                                |
-| Libuv     | 1.48                      | **20 R6**         | Used for QUIC                                                                                                                                                  |
+| Libuv     | 1.48                      | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
 | libZip    | 1.9.2     | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
 | LZMA      | 5.4.1     | 20                |                                                                                                                                                                |
 | OpenSSL   | 3.2.0     | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |

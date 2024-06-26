@@ -57,7 +57,7 @@ Les actions disponibles sont liées à la ressource cible.
 - Un alias peut être lu dès que les privilèges de session permettent l'accès à l'alias lui-même, même si les privilèges de session ne permettent pas l'accès aux attributs résolvant l'alias.
 - Il est possible d'accéder à un attribut calculé même s'il n'y a pas de permissions sur les attributs sur lesquels il est construit.
 - Valeurs par défaut : dans l'implémentation actuelle, seul _Null_ est disponible en tant que valeur par défaut.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, even if there is no specific **execute** permission on it for the datastore.
+- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 Le paramétrage des permissions nécessite d'être cohérent, en particulier :
 

@@ -354,7 +354,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-La propiedad `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contiene la codificación del contenido del cuerpo de la respuesta<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
+La propiedad `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contiene la codificación del contenido del cuerpo de la respuesta<!-- END REF -->. Esta propiedad sólo está disponible si el [`dataType`](#datatype) es "text".
 
 Esta propiedad es de **solo lectura**.
 
@@ -418,7 +418,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+La propiedad `.pid` <!-- REF #SystemWorkerClass.pid.Summary -->contiene el identificador único del proceso externo a nivel de sistema<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -441,11 +441,11 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. En el parámetro *mensaje*, pase el texto a escribir en *stdin*.
 
-The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
+La función `.postMessage()` también acepta un valor de tipo Blob en *messageBLOB* para pasar en *stdin*, de forma que se pueden publicar datos binarios.
 
-You can use the `.dataType` property of the [options object](#options-object) to make response body return Blob values.
+Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) para hacer que el cuerpo de la respuesta devuelva valores Blob.
 
 <!-- END REF -->
 
@@ -457,9 +457,9 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 #### Descripción
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+La propiedad `.response` <!-- REF #SystemWorkerClass.response.Summary -->contiene la concatenación de todos los datos devueltos una vez finalizada la petición<!-- END REF -->, es decir, el mensaje completo recibido de la salida del proceso.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+El tipo del mensaje se define en función del atributo [`dataType`](#datatype).
 
 Esta propiedad es de **solo lectura**.
 
@@ -473,7 +473,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary -->contiene la concatenación de todos los errores devueltos, una vez finalizada la petición<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -493,7 +493,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descripción
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->forces the `SystemWorker` to terminate its execution<!-- END REF -->.
+La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->fuerza al `SystemWorker` a terminar su ejecución<!-- END REF -->.
 
 Esta función envía la instrucción de terminar y devolver el control al script en ejecución.
 
@@ -507,7 +507,7 @@ Esta función envía la instrucción de terminar y devolver el control al script
 
 #### Descripción
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+La propiedad `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contiene **true** si el proceso externo está terminado<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -521,7 +521,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+La propiedad `.timeout` <!-- REF #SystemWorkerClass.timeout.Summary -->contiene la duración en segundos antes de que el proceso externo sea eliminado si sigue vivo<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -553,16 +553,16 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución del `SystemWorker` o el *timeout* especificado<!-- END REF -->.
 
-En *timeout*, pase un valor en segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+En *timeout*, pase un valor en segundos. El script `SystemWorker` esperará al proceso externo durante el tiempo definido en el parámetro *timeout*. Si omite el parámetro *timeout*, la ejecución del script esperará indefinidamente.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. If *timeout* is reached, the `SystemWorker` is not killed.
+En realidad, `.wait()` espera hasta el final del procesamiento de la fórmula `onTerminate`, excepto si se alcanza el *timeout*. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, especialmente las retrollamadas provienen de otros eventos o de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
 
 Esta función devuelve el objeto SystemWorker.
 
-> This function is not necessary if you created the `SystemWorker` from a 4D worker process.
+> Esta función no es necesaria si creó el `SystemWorker` desde un proceso worker 4D.
 
 <!-- END REF -->

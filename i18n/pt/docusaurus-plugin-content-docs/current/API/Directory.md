@@ -556,7 +556,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 **Valor retornado**
 
-Collection of `File` objects.
+Coleção de objetos `File`.
 
 #### Exemplo 1
 

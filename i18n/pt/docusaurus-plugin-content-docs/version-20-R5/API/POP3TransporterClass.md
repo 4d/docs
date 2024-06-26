@@ -271,7 +271,7 @@ The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->re
 
 Pass in *msgNumber* the number of the message to retrieve. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
 
-Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
+Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) são então retornados. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 
 :::note
 
@@ -284,7 +284,7 @@ O método retorna Null se:
 - *msgNumber* designates a non-existing message,
 - the message was marked for deletion using [`.delete()`](#delete).
 
-**Returned object**
+**Objeto devolvido**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
 
@@ -343,7 +343,7 @@ The `mailInfo` object returned contains the following properties:
 | size        | Number | Tamanho da mensagem em bytes |
 | id          | Text   | ID única da mensagem         |
 
-The method returns **Null** if:
+O método retorna **Null** se:
 
 - *msgNumber* designates a non-existing message,
 - the message was marked for deletion using `.delete( )`.

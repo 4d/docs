@@ -798,7 +798,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 :::note
 
-Una comparación recursiva de colecciones puede llevar mucho tiempo si la colección es grande y contiene numerosos niveles. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).
+Una comparación recursiva de colecciones puede llevar mucho tiempo si la colección es grande y contiene numerosos niveles. Si sólo desea comparar dos referencias de colección, puede considerar utilizar el operador de comparación [`=` para las referencias de colección](../Concepts/dt_collection.md#collection-operators).
 
 :::
 
@@ -1028,7 +1028,7 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección). Si el valor calculado es negativo, *startFrom* toma el valor 0.
 - Si *end* < 0 , se recalcula como *end:=end+length*.
-- If *end* < *startFrom* (passed or calculated values), the method does nothing.
+- Si *end* < *startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 
@@ -1318,7 +1318,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-The `.first()` function <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+La función `.first()` <!-- REF #collection.first().Summary -->devuelve el primer elemento de la colección<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2578,7 +2578,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 donde:
 
-- **propertyPath**: ruta de la propiedad sobre la cual quiere ejecutar la consulta. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo <code>Collection</code>, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **propertyPath**: ruta de la propiedad sobre la cual quiere ejecutar la consulta. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre".) En el caso de una ruta de atributos de tipo <code>Collection</code>, se utiliza la notación \[ ] para manejar todas las ocurrencias (por ejemplo "niños[ ].edad"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
 - **comparator**: símbolo que compara *propertyPath* y *value*. Se soportan los siguientes símbolos:
 
@@ -2586,9 +2586,9 @@ donde:
 | ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                                          |
 |                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                                                                                 |
-| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).                                |
+| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivale a "Condición no aplicada en una sentencia" ([ver más abajo](#not-equal-to-in-collections)).                             |
 |                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                                                                                       |
-| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
+| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalente a "Not equal to" ([ver abajo](#not-equal-to-in-collections)). |
 | Menor que                             | <                             |                                                                                                                                                                                                                                             |
 | Mayor que                             | >                             |                                                                                                                                                                                                                                             |
 | Menor o igual que                     | <=                            |                                                                                                                                                                                                                                             |
@@ -2871,7 +2871,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2956,7 +2956,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -3039,7 +3039,7 @@ In *index*, pass the position where you want the element to be removed from the 
 > **Atención**: recuerde que los elementos de la colección están numerados desde 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
-- If the calculated value < 0, *index* is set to 0.
+- Si el valor calculado < 0, *index* toma el valor 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
@@ -3228,7 +3228,7 @@ The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portio
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
-- If the calculated value < 0, *startFrom* is set to 0.
+- Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *end* < 0 , se recalcula como *end:=end+length*.
 - If *end < startFrom* (passed or calculated values), the method does nothing.
 
@@ -3297,7 +3297,7 @@ Puede definir los siguientes parámetros:
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por defecto, `.some()` comprueba toda la colección. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
 
 - If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 
@@ -3307,7 +3307,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 #### Ejemplo
 
-You want to know if at least one collection value is >0.
+Quiere saber si al menos un valor de la colección es >0.
 
 ```4d
  var $c : Collection

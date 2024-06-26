@@ -210,10 +210,10 @@ La conexión SMTP se cierra automáticamente:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                       |
-| ---------- | ------ | :-: | ------------------------------------------------- |
-| mail       | Object |  -> | [Email](EmailObjectClass.md#email-object) to send |
-| Result     | Object |  <- | Estado SMTP                                       |
+| Parámetros | Tipo   |     | Descripción                                        |
+| ---------- | ------ | :-: | -------------------------------------------------- |
+| mail       | Object |  -> | [Email](EmailObjectClass.md#email-object) a enviar |
+| Result     | Object |  <- | Estado SMTP                                        |
 
 <!-- END REF -->
 
