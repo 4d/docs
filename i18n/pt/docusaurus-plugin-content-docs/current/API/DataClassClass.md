@@ -256,7 +256,7 @@ In the *objectCol* parameter, pass a collection of objects to create new or upda
 
 The mapping between the objects of the collection and the entities is done on the **attribute names** and **matching types**. Se uma propriedade de um objeto tiver o mesmo nome que um atributo de entidade mas seus tipos não corresponderem, o atributo da entidade não é preenchido.
 
-**Create or update mode**
+**Modo criação ou atualização**
 
 Para cada objeto de *objectCol*:
 
