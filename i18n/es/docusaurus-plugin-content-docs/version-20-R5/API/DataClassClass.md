@@ -1508,7 +1508,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) //Se produce un error si $queryString contiene una fórmula
  End if
 ```
 
