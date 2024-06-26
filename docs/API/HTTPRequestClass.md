@@ -57,6 +57,7 @@ HTTPRequest objects provide the following properties and functions:
 
 ||
 |---|
+|[<!-- INCLUDE #HTTPRequestClass.agent.Syntax -->](#agent)<br/><!-- INCLUDE #HTTPRequestClass.agent.Summary -->|
 |[<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #HTTPRequestClass.dataType.Summary -->|
 |[<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #HTTPRequestClass.encoding.Summary -->|
 |[<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #HTTPRequestClass.errors.Summary -->|
@@ -129,7 +130,7 @@ In the *options* parameter, pass an object that can contain the following proper
 
 |Property|Type|Description|Default|
 |---|---|---|---|
-|agent|[4D.HTTPAgent](HTTPAgentClass.md)|HTTPAgent to use for the HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.|Global agent|
+|agent|[4D.HTTPAgent](HTTPAgentClass.md)|HTTPAgent to use for the HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.|Global agent object|
 |automaticRedirections|Boolean|If true, redirections are performed automatically (up to 5 redirections are handled, the 6th redirection response is returned if any)|True|
 |body|Variant|Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers|undefined|
 |certificatesFolder|[Folder](FolderClass.md)|Sets the active client certificates folder|undefined|
@@ -268,6 +269,17 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 //requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
 //}
 ```
+
+<!-- END REF -->
+
+<!-- REF #HTTPRequestClass.agent.Desc -->
+## .agent
+
+<!-- REF #HTTPRequestClass.agent.Syntax -->**agent** : 4D.HTTPAgent<!-- END REF -->
+
+#### Description
+
+The `.agent` property contains <!-- REF #HTTPRequestClass.agent.Summary -->the `agent`object passed in [`options`](#options-parameter) or the global agent object if it was omitted<!-- END REF -->.
 
 <!-- END REF -->
 

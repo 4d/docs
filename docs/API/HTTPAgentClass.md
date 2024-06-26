@@ -3,13 +3,13 @@ id: HTTPAgentClass
 title: HTTPAgent
 ---
 
-The `HTTPAgent` class allows you to handle [`HTTPAgent objects`](#httpagent-object) that can be used to manage the persistence and reuse of connections to HTTP servers.
+The `HTTPAgent` class allows you to handle [`HTTPAgent objects`](#httpagent-object) that can be used to manage the persistence and reuse of connections to servers using the [HTTPRequest class](HTTPRequestClass.md).
 
 HTTP agents are especially beneficial for secured connections, as they reduce overhead and improve performance for both the client and server. 
 
 The `HTTPAgent` class is available from the `4D` class store. You can create a new [`HTTPAgent object`](#httpagent-object) using the [4D.HTTPAgent.new()](#4dhttpagentnew) function.
 
-When no agent is associated to an HTTPRequest, a global agent with default values is used. The default agent is the simplest form of HTTP agent, suitable for basic use cases. Custom agents using the `4D.HTTPAgent.new()` function are recommended for more complex scenarios where you need control over specific aspects of the connection. You can configure keep-alive settings, set limits on concurrent connections, define timeouts to prevent indefinite connections, and manage TLS/SSL configurations at the agent level rather than for each [HTTP request](HTTPRequestClass.md).
+When no agent is associated to an HTTP request, a global agent with default values is used. The default agent is the simplest form of HTTP agent, suitable for basic use cases. Custom agents are recommended for more control, at the agent level rather than for each HTTP request, over specific aspects of the connection such keep-alive settings, timeouts or TLS/SSL configurations.
 
 <details><summary>History</summary>
 
@@ -128,7 +128,7 @@ The `.options` property object contains <!-- REF #HTTPAgentClass.options.Summary
 
 #### Description
 
-The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Summary -->the number of requests handled by the HTTPAgent<!-- END REF -->.
+The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Summary -->the number of requests currently handled by the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -140,7 +140,7 @@ The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Su
 
 #### Description
 
-The `.freeSocketsCount` property contains <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->the number of free sockets associated with the HTTPAgent<!-- END REF -->.
+The `.freeSocketsCount` property contains <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->the number of free sockets from `maxSockets` associated with the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
