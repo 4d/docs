@@ -2847,7 +2847,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
 - em *$2: param*
-- in *$N...*: *paramN...*
+- em *$N...*: *paramN...*
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2932,7 +2932,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
 - em *$2: param*
-- in *$N...*: *paramN...*
+- em *$N...*: *paramN...*
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3258,7 +3258,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
 - em *$2: param*
-- in *$N...*: *paramN...*
+- em *$N...*: *paramN...*
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
