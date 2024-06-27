@@ -310,18 +310,19 @@ Starts and stops the REST Server. See [REST Server Configuration](../REST/config
 
 ### Access
 
-**This option is deprecated** as of 4D 20 R6. See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects. 
+**This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section including the **Activate REST authentication through ds.authentify() function** button (see below) are displayed. If the section is missing, your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode and you can ignore this paragraph. 
 
-If the current project configuration is obsolete and needs to be upgraded, the **Activate REST authentication through ds.authentify() function** button is displayed (see below). If the button is not displayed, your project is already compatible with Force Login mode.
+See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects. 
 
-### Activate REST authentication through ds.authentify() function
+
+#### Activate REST authentication through ds.authentify() function
 
 Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
 
 When you click on this button, the following upgrade sequence is triggered:
 
 - The group of REST API users set in the **Read/Write** menu is removed.
-- The `On REST Authentication` database method is moved into the system bin.
+- The `On REST Authentication` database method is deleted (moved into the system bin).
 - A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
 
 Remember to restart your project after performing this upgrade. 
