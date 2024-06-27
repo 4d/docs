@@ -3,11 +3,16 @@ id: authUsers
 title: Users and sessions
 ---
 
+
+## Sessions
+
 When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
 When a web user session is opened, you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie.
 
-> - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
+A session is opened after the user was successfully logged (see below).
+
+> - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
 > - On 4D single-user, you can open up to three REST sessions for testing purposes.
 
 
