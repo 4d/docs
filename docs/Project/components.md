@@ -193,7 +193,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
-			"github": "JohnSmith/myFirstGitHubComponent,
+			"github": "JohnSmith/myFirstGitHubComponent",
 			"tag": "beta2"
 		}
 	}
@@ -206,16 +206,18 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
-			"github": "JohnSmith/myFirstGitHubComponent,
+			"github": "JohnSmith/myFirstGitHubComponent",
 			"version": "2.1.3"
 		}
 	}
 }
 ```
 
-The version is used to define which versions can be used. Here are a few examples:
+The version is used to define which versions can be used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
-- "latest": the version having the “latest” badge in GitHub releases. It’s the default value when no version and no tag have been defined.
+Here are a few examples:
+
+- "latest": the version having the “latest” badge in GitHub releases. 
 - "*": the latest version released.
 - "1.*": all version of major version 1.
 - "1.2.*": all patches of minor version 1.2.
@@ -237,7 +239,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it. 
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**. Then insert the "github"" key in your [**dependencies.json**](#dependenciesjson) or [**environment4d.json**](#environment4djson) file:
+To do this, in your GitHub account, create a **classic** token with access rights to **repo**. Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
 
 ```json
 {
@@ -245,8 +247,9 @@ To do this, in your GitHub account, create a **classic** token with access right
 		"token": "ghpXXXXXXXXXXXXUvW8x9yZ"
 	},
 	"dependencies": {
+
 		"mySecondGitHubComponent": {
-			"github": "JohnSmith/mySecondGitHubComponent
+			"github": "JohnSmith/mySecondGitHubComponent"
 		}
 	}
 }
