@@ -7,7 +7,7 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
-Thanks to the [Component manager](#monitoring-project-dependencies), component files can be transparently stored in your computer or on a Github repository. 
+When developing in 4D, the component files can be transparently stored in your computer or on a Github repository. 
 
 
 ## Interpreted and compiled components
@@ -22,7 +22,17 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 ## Loading components
 
-### Basics
+
+:::note
+
+This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
+
+- in [4D remote](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application. 
+- in [merged applications], components are [included at the build step](../Desktop/building.md#plugins--components-page).
+
+:::
+
+### Overview
 
 To load a component in your 4D project, you can either:
 
@@ -143,7 +153,14 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### Declaring components stored on GitHub
 
-4D components available as GitHub releases can be referenced and automatically downloaded in your 4D projects. 
+4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects. 
+
+:::note
+
+Regarding components stored on GitHub, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
+
+:::
+
 
 #### Configuring the GitHub repository
 
@@ -165,8 +182,9 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 	"dependencies": {
 		"myGitHubComponent1": {
 			"github" : "JohnSmith/myGitHubComponent1"
-	},
+		},
 		"myGitHubComponent2": {}
+	}
 }
 ```
 
@@ -177,6 +195,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 	"dependencies": {
 		"myGitHubComponent2": {
 			"github" : "JohnSmith/myGitHubComponent2"
+		}
 	}
 }
 ```
@@ -213,7 +232,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Here are a few examples:
 
@@ -229,17 +248,20 @@ Here are a few examples:
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
-:::note
-
-Regarding components stored on GitHub, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
-
-:::
 
 #### Private repositories
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it. 
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**. Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
+To do this, in your GitHub account, create a **classic** token with access rights to **repo**. 
+
+:::note
+
+For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+
+:::
+
+Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
 
 ```json
 {
@@ -256,7 +278,21 @@ To do this, in your GitHub account, create a **classic** token with access right
 ```
 
 
+#### Local cache for dependencies
 
+Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. The local cache folder is stored at the following location:
+
+- on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+- on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
+
+...where `<app name>` can be "4D", "4D Server", or "tool4D".
+
+
+#### dependency-lock.json
+
+A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project. 
+
+This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting. 
 
 
 
