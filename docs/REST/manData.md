@@ -94,7 +94,7 @@ You can apply this filter in the following ways:
 |Dataclass	|\{dataClass\}/{att1,att2...}	|/People/firstName,lastName|
 |Collection of entities	|\{dataClass\}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a@'"|
 |Specific entity|	\{dataClass\}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
-||\{dataClass\}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
+||\{dataClass\}:\{attribute\}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
 |Entity selection|	\{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed. 
@@ -244,7 +244,7 @@ If you want to save a BLOB stored in your dataclass, you can write the following
 
 ## Retrieving only one entity  
 
-You can use the [`\{dataClass\}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
+You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

@@ -13,9 +13,9 @@ Dataclass names can be used directly in the REST requests to work with entities,
 |---|---|---|
 |[**\{dataClass\}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
 |[**\{dataClass\}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
-|[**\{dataClass\}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
-|[**\{dataClass\}/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
-|[**\{dataClass\}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee(22)/getAge`|Returns a value based on an entity method|
+|[**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
+|[**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
+|[**\{dataClass\}({key})/\{method\}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee(22)/getAge`|Returns a value based on an entity method|
 
 ## \{dataClass\}
 
@@ -179,7 +179,7 @@ The following request returns all the public data in the Company dataclass whose
 }
 ````
 
-## \{dataClass\}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Returns the data for one entity in which the attribute's value is defined
 
@@ -203,7 +203,7 @@ The following request returns all the public data of the employee named "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## \{dataClass\}/{method} and \{dataClass\}({key})/{method}
+## \{dataClass\}/\{method\} and \{dataClass\}({key})/\{method\}
 
 Returns an object or a collection based on a project method.
 
