@@ -98,6 +98,7 @@ In this mode, you can configure additional web server setttings:
 
 #### Legacy sessions (single process sessions)
 
+
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
 This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. See [Keep Session](../WebServer/webServerConfig.md#keep-session).
@@ -307,16 +308,27 @@ This page contains the options used to enable and control advanced Web features 
 
 Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
 
-### Access  
+### Access
 
-**This option is deprecated** as of 4D 20 R6. See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects. The **Activate REST authentication through ds.authentify() function** button is displayed if the current project configuration is obsolete and needs to be upgraded (see below). 
+**This option is deprecated** as of 4D 20 R6. See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects. 
+
+If the current project configuration is obsolete and needs to be upgraded, the **Activate REST authentication through ds.authentify() function** button is displayed (see below). If the button is not displayed, your project is already compatible with Force Login mode.
 
 ### Activate REST authentication through ds.authentify() function
 
-Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project. Note however that this operation cannot be canceled and may require that you modify your code.
+Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
+
+When you click on this button, the following upgrade sequence is triggered:
+
+- The group of REST API users set in the **Read/Write** menu is removed.
+- The `On REST Authentication` database method is moved into the system bin.
+- A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
+
+Remember to restart your project after performing this upgrade. 
+
+The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications). 
 
 
-specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests.
 
 ### Qodly Studio
 
@@ -328,4 +340,4 @@ This option only appears if the Qodly Studio license is activated.
 
 :::
 
-This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).

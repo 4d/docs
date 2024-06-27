@@ -17,7 +17,7 @@ A session is opened after the user was successfully logged (see below).
 
 
 
-## User login
+## Force login mode
 
 :::note Compatibility
 
