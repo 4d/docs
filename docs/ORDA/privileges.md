@@ -116,14 +116,62 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 ## `roles.json` file
 
 
-The `roles.json` file describes the whole security settings for the project.  
+The `roles.json` file describes the whole security settings for the project.
 
-:::note
+### Default file
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+
+The default file has the following contents:
+
+```json
+
+{
+    "privileges": [
+        {
+            "privilege": "none",
+            "includes": []
+        }
+    ],
+
+    "roles": [],
+
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "ds",
+                "type": "datastore",
+                "read": ["none"],
+                "create": ["none"],
+                "update": ["none"],
+                "drop": ["none"],
+                "describe": ["none"],
+                "execute": ["none"],
+                "promote": ["none"]                
+            }
+        ]
+    },
+
+    "forceLogin": true
+
+}
+
+```
+
+
+:::note Compatibility
+
+As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)).
+:::
+
+:::note Qodly Studio
+
+In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
+
+### Syntax
 
 The `roles.json` file syntax is the following:
 
@@ -266,6 +314,7 @@ However, when the application is about to be deployed, a good practice is to loc
 			]
 	 }
 		]
-	}
+	},
+    "forceLogin": true
 }
 ```

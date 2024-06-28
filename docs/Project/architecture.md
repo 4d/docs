@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a project root 
 
 - MyPackage (*project root folder*)
 	- `Components`
-	- `Data` 
+	- `Data`
 		- `Logs`
 		- `Settings`
 	- `Documentation`
@@ -59,6 +59,7 @@ catalog.4DCatalog|Table and field definitions|XML
 catalog_editor.json|Custom positions and colors of tables, fields, and links in the Structure editor. Depends on a [Compatibility setting](../settings/compatibility.md) in converted projects|JSON
 folders.json|Explorer folder definitions|JSON
 menus.json|Menu definitions|JSON
+roles.json|[Privileges, permissions](../ORDA/privileges.md#rolesjson-files) and other security settings for the project|JSON
 settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
@@ -118,7 +119,7 @@ Contents|Description|Format
 table_*n*.4dm|Trigger methods defined in the project. One trigger file per table (n is the table number)|text
 
 **Note:**
-The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
+The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
 
 ### `Trash`
@@ -129,12 +130,12 @@ The Trash folder contains methods and forms that were deleted from the project (
 - `Forms`
 - `TableForms`
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder. 
+Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
 
 
 ### `DerivedData`
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder. 
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
 
 ## `Libraries`
 
@@ -168,7 +169,7 @@ data.match|(internal) UUID matching table number|XML
 
 ### `Settings` (user data)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration. 
+This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
 
 > These settings take priority over [user settings](#settings-user) and [structure settings](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
 
@@ -193,7 +194,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 ## `Settings` (user)
 
-This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration. 
+This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration.
 
 > These settings take priority over [structure settings](#sources) file. However, if [user settings for data](#settings-user-data) exist, they take priority over the user settings. See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
 
@@ -224,7 +225,7 @@ CompilerIntermediateFiles|Intermediate files resulting from Apple Silicon compil
 
 ## `Components`
 
-Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). These components have priority over any other locations. 
+Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). These components have priority over any other locations.
 
 :::info
 
@@ -240,14 +241,14 @@ This folder contains the plug-ins to be available in the application project. It
 
 ## `Documentation`
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer. 
+This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
 
-For more information, refer to [Documenting a project](Project/documentation.md). 
+For more information, refer to [Documenting a project](Project/documentation.md).
 
 ## `WebFolder`
 
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
 
 ## `.gitignore` file (optional)
 
