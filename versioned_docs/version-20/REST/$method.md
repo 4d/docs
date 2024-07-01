@@ -26,9 +26,9 @@ Deletes the current entity, entity collection, or entity selection (created thro
 
 ### Description  
  
-With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
+You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Example
  
@@ -40,7 +40,7 @@ You can also do a query as well using $filter:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/{entitySetID}:
+You can also delete an entity set using $entityset/\{entitySetID\}:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -60,7 +60,7 @@ Creates an entity set in 4D Server's cache based on the collection of entities d
 
 ### Description   
 
-When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/{entitySetID}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
+When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
 
 If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
 

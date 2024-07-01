@@ -4,9 +4,9 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
-    "prebuild":"node prebuild.js",
-    "prestart":"node prebuild.js",
-    "prestart_watch":"node prebuild.js",
+    "prebuild": "node prebuild.js",
+    "prestart": "node prebuild.js",
+    "prestart_watch": "node prebuild.js",
     "start": "docusaurus start",
     "doc_preprocess": "doc_preprocess",
     "start_watch": "doc_preprocess --settings_type='start_watch'",
@@ -22,18 +22,22 @@
     "docusaurus": "docusaurus"
   },
   "devDependencies": {
-    "highlightjs-4d": "^1.0.0"
+    "highlightjs-4d": "^1.0.6"
   },
   "dependencies": {
     "@4dsas/doc_preprocessing": "1.1.1",
-    "@docusaurus/core": "^2.3.1",
-    "@docusaurus/plugin-client-redirects": "^2.3.1",
-    "@docusaurus/preset-classic": "^2.3.1",
-    "@swc/core": "^1.2.158",
-    "clsx": "^1.1.1",
-    "esbuild-loader": "^2.19.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "swc-loader": "^0.1.15"
+    "@docusaurus/core": "3.4.0",
+    "@docusaurus/plugin-client-redirects": "3.4.0",
+    "@docusaurus/preset-classic": "3.4.0",
+    "@swc/core": "^1.6.5",
+    "clsx": "^2.1.1",
+    "esbuild-loader": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remark-gfm": "^4.0.0",
+    "swc-loader": "^0.2.6"
+  },
+  "engines": {
+    "node": ">=18.0"
   }
 }
