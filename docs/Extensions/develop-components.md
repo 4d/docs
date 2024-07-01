@@ -111,7 +111,7 @@ To allow classes of your component to be exposed in the host projects and their 
 
 ![](../assets/en/settings/namespace.png)
 
-:::Note
+:::note
 
 A *namespace* ensures that no conflict emerges when a host project uses different components that have classes or functions with identical names. A component namespace must be compliant with [property naming rules](../Concepts/identifiers.md#object-properties).
 
