@@ -45,6 +45,8 @@ With this syntax:
 In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
 
 ```4d
+var $pathFile : 4D.File
+var $pathFolder : 4D.Folder
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
@@ -114,6 +116,8 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folde
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. For example:
 
 ```4d
+var $userImages : 4D.Folder
+var $ok : Boolean
   //to reference a "Picture" folder within the user documents folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
   //to create a folder on the desktop
@@ -128,15 +132,13 @@ Absolute pathnames are not supported and will return errors.
 The flexibility of file and folder functions offers you various possibilities for handling files and folders, like in the following examples:
 
 ```4d
-$f:=Folder(fk desktop folder).folder("archive/jan2019")
+var $fold : 4D.Folder
+var $file : 4D.File
 
-$f2:=Folder("/DATA/archive/jan2019").file("total.txt")
-
-$f3:=Folder("/DATA/archive/jan2019")
-
-$f4:=File("/DATA/info.txt")
-
-$f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
-
-$f6:=File(fk backup log file)
+$fold:=Folder(fk desktop folder).folder("archive/jan2019")
+$fold:=Folder("/DATA/archive/jan2019")
+$file:=Folder("/DATA/archive/jan2019").file("total.txt")
+$file:=File("/DATA/info.txt")
+$file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
+$file:=File(fk backup log file)
 ```
