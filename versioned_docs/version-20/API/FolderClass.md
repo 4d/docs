@@ -84,7 +84,7 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Only absolute pathnames are supported with the `Folder` command.
 

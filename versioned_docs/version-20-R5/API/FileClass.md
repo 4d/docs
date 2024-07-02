@@ -85,9 +85,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
-**File ( path { ; pathType } { ; \* })**
+**File ( path { ; pathType } { ; * })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
+In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Only absolute pathnames are supported with the `File` command.
 
@@ -98,7 +98,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 |fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
 |fk posix path|0|Path expressed with POSIX syntax (default)
 
-**File ( fileConstant { ; \* } )**
+**File ( fileConstant { ; * } )**
 
 In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
 
