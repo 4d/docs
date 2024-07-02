@@ -7,7 +7,7 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
-When developing in 4D, the component files can be transparently stored in your computer or on a Github repository. 
+When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
 
 ## Interpreted and compiled components
@@ -27,8 +27,8 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
 
-- in [4D remote](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application. 
-- in [merged applications], components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
+- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -65,7 +65,7 @@ It can contain:
 
 #### environment4d.json
 
-The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root). 
+The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
 The main benefits of this architecture are the following:
 
@@ -90,7 +90,7 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the *Overloaded* [status](#dependency-status). The loaded component has the *Overloading* [status](#dependency-status).
 
-(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment). 
+(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
 
 
 ### Declaring local components
@@ -106,7 +106,7 @@ You declare a local component in the [**dependencies.json** file](#dependencyjso
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components to be loaded. 
+... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
 
 By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
@@ -115,8 +115,8 @@ By default, if "myComponent1" and "myComponent2" are not declared in an [environ
 	/MyProjectComponentRoot/
 ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files. 
- 
+Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files.
+
 
 :::note
 
@@ -153,7 +153,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### Declaring components stored on GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects. 
+4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 
 :::note
 
@@ -167,8 +167,8 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
 - Compress the component files in ZIP format.
-- Name this archive with the same name as the GitHub repository. 
-- Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository. 
+- Name this archive with the same name as the GitHub repository.
+- Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
 
 These steps can easily be automated, with 4D code or using GitHub Actions, for example.
 
@@ -200,7 +200,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-"myGitHubComponent2" can be used by several projects. 
+"myGitHubComponent2" can be used by several projects.
 
 #### Tags and versions
 
@@ -236,7 +236,7 @@ The version is used to define which versions can be used. A [standard semantic v
 
 Here are a few examples:
 
-- "latest": the version having the “latest” badge in GitHub releases. 
+- "latest": the version having the “latest” badge in GitHub releases.
 - "*": the latest version released.
 - "1.*": all version of major version 1.
 - "1.2.*": all patches of minor version 1.2.
@@ -251,9 +251,9 @@ If you do not specify a tag or a version, 4D automatically retrieves the "latest
 
 #### Private repositories
 
-If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it. 
+If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**. 
+To do this, in your GitHub account, create a **classic** token with access rights to **repo**.
 
 :::note
 
@@ -290,9 +290,9 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 #### dependency-lock.json
 
-A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project. 
+A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
 
-This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting. 
+This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
 
 
