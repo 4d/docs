@@ -11,7 +11,7 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Highlights
 
 - Support of comparison operators on [object references](../Concepts/dt_object.md#object-operators) and [collection references](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
-- When a component has a declared namespace, its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`].
+- When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
 - Component manager: Support of [components stored on GitHub](../Project/components.md#declaring-components-stored-on-github).
 - New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
 - New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
