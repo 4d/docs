@@ -152,4 +152,4 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 - .sjs
 - .pdf (sólo para exportación)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).
+Para más detalles, consulte la descripción de [VP IMPORT DOCUMENT](commands/vp-import-document.md) y [VP EXPORT DOCUMENT](commands/vp-export-document.md).
