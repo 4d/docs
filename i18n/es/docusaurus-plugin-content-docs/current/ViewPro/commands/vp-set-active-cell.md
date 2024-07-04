@@ -17,7 +17,7 @@ title: VP SET ACTIVE CELL
 
 El comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define una célula especificada como activa<!-- END REF -->.
 
-In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](vp-cell.md)). Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
+En *rangeObj*, pasa un rango que contenga una sola celda como un objeto (ver [VP Cell](vp-cell.md)). Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 
