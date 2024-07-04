@@ -26,9 +26,9 @@ Elimina la entidad actual, la colección de entidades o la selección de entidad
 
 ### Descripción
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. Puede definir la colección de entidades utilizando, por ejemplo,[`$filter`]($filter.md) o especificando uno directamente mediante [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(por ejemplo*, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
-También puede eliminar las entidades de un conjunto de entidades, llamando a [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
+You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Ejemplo
 
@@ -40,7 +40,7 @@ También se puede hacer una petición de información utilizando $filter:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-También puede eliminar un conjunto de entidades utilizando $entityset/{entitySetID}:
+You can also delete an entity set using $entityset/\{entitySetID\}:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -60,7 +60,7 @@ Crea un conjunto de entidades en la caché de 4D Server basado en la colección 
 
 ### Descripción
 
-Cuando se crea una colección de entidades en REST, también se puede crear un conjunto de entidades que se guardará en la caché de 4D Server. El conjunto de entidades tendrá un número de referencia que puede pasar a `$entityset/{entitySetID}` para acceder a él. Por defecto, es válido durante dos horas; sin embargo, puede modificar esa cantidad de tiempo pasando un valor (en segundos) a $timeout.
+Cuando se crea una colección de entidades en REST, también se puede crear un conjunto de entidades que se guardará en la caché de 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Por defecto, es válido durante dos horas; sin embargo, puede modificar esa cantidad de tiempo pasando un valor (en segundos) a $timeout.
 
 Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
 
