@@ -286,7 +286,33 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 ### Acceso
 
-Esta opción especifica un grupo de usuarios 4D que está autorizado a establecer la conexión a la base 4D utilizando las peticiones REST. Ver [Configuración del acceso REST](../REST/configuration.md#configuring-rest-access).
+:::information Obsoleto
+
+**This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
+
+:::
+
+See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects.
+
+#### Activate REST authentication through ds.authentify() function
+
+Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
+
+:::note
+
+This button is only available in projects opened with the 4D application (single-user).
+
+:::
+
+El botón activa la siguiente secuencia de actualización:
+
+- The group of REST API users set in the **Read/Write** menu is removed.
+- The `On REST Authentication` database method is deleted (moved into the system bin).
+- A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
+
+Remember to restart your project after performing this upgrade.
+
+The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 
@@ -298,4 +324,4 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
-Esta opción permite al usuario acceder a [Qodly Studio](XXX) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
