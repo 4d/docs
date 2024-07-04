@@ -122,10 +122,9 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
     Cette situation se présente, par exemple, si une panne de courant survient alors que des opérations dans le cache de données n'ont pas encore été écrites sur le disque, ou après qu'une anomalie a été détectée lors de l'ouverture du fichier de données et qu'une restitution a eu lieu.
 
-    :::note
+:::note
 
-    Cette fonction implique que le programme analyse tous les fichiers journaux dans le dossier des fichiers journaux courant au démarrage. Par conséquent, pour des raisons de performance, assurez-vous qu'aucun fichier journal inutile n'est stocké dans ce dossier.
-
+Cette fonction implique que le programme analyse tous les fichiers journaux dans le dossier des fichiers journaux courant au démarrage. Par conséquent, pour des raisons de performance, assurez-vous qu'aucun fichier journal inutile n'est stocké dans ce dossier.
 
 :::
 
