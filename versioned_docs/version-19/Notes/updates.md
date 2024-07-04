@@ -11,9 +11,16 @@ Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), t
 
 :::warning Security Note
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/). 
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
+
+
+## 4D 19.8
+
+#### Highlights
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
 
 
 ## 4D 19.7
@@ -58,4 +65,3 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |ICU|68.1|18 R6|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |PHP|7.3.27|18 R6||
 |libldap|2.4.48|18 R2||
-
