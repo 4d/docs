@@ -30,7 +30,7 @@ title: VP INSERT TABLE COLUMNS
 
 The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
 
-When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md) command.
+Cuando se ha insertado una columna con este comando, normalmente se modifica su contenido utilizando el comando [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
 In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
 

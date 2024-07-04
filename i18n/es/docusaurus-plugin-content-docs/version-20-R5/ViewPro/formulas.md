@@ -25,7 +25,7 @@ Al escribir una fórmula, puede utilizar diferentes atajos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. Para hacerlo, ingresa estas fórmulas utilizando el comando [VP ADD FORMULA NAME](commands/vp-add-formula-name.md).
 
 ### Operadores y operandos
 
@@ -135,7 +135,7 @@ Las funciones personalizadas 4D permiten acceder, desde sus fórmulas 4D View Pr
 
 Las funciones personalizadas de 4D pueden recibir [parámetros](#parámetros) del área 4D View Pro y devolver valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Ejemplos:
+Todas las funciones se declaran con el comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions). Ejemplos:
 
 ```4d
 $o:=New object
@@ -278,7 +278,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ## Compatibilidad
 
-Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. Sin embargo, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referenciación de campos mediante la estructura virtual
 

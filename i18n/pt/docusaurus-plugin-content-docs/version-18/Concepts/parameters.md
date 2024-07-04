@@ -355,7 +355,7 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} é designado por **parâmetro genérico**.
+A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros. Within the method, an indirection address is formatted: $\{$i\}, where $i is a numeric variable. $\{$i\} is called a **generic parameter**.
 
 For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 

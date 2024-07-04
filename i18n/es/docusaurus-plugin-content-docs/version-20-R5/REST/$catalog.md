@@ -11,7 +11,7 @@ El catálogo describe todas las clases de datos y atributos disponibles en el al
 | ----------------------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                                                | `/$catalog`            | Devuelve una lista de las clases de datos de su proyecto junto con dos URIs       |
 | [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Devuelve información sobre todas las clases de datos del proyecto y sus atributos |
-| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | Devuelve información sobre una clase de datos y sus atributos                     |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Devuelve información sobre una clase de datos y sus atributos                     |
 | [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Ejecuta la función de la clase del datastore si existe                            |
 
 ## $catalog
@@ -63,7 +63,7 @@ Devuelve información sobre todas las clases de datos del proyecto y sus atribut
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
 
 ### Ejemplo
 
@@ -174,13 +174,13 @@ For more information about what is returned for each dataclass and its attribute
 }
 ```
 
-## $catalog/{dataClass}
+## $catalog/\{dataClass\}
 
 Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-La llamada de `$catalog/{dataClass}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 La información que recupera se refiere a lo siguiente:
 

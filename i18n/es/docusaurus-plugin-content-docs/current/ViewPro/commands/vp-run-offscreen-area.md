@@ -35,7 +35,7 @@ La siguiente propiedad es añadida automáticamente por el comando si es necesar
 | -------------- | ------- | --------------------------------------------------------------- |
 | timeoutReached | boolean | Añadido con el valor true si se ha excedido el tiempo de espera |
 
-> The offscreen area is only available during the execution of the `VP Run offscreen area` command. Se destruirá automáticamente una vez finalizada la ejecución.
+> El área fuera de pantalla solo está disponible durante la ejecución del comando `VP Run offscreen area`. Se destruirá automáticamente una vez finalizada la ejecución.
 
 Los siguientes comandos se pueden utilizar en el método de retrollamada:
 

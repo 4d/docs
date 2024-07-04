@@ -82,7 +82,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-*path* には、フォルダーパス文字列を渡します。 カスタムの文字列やファイルシステム (例: "/DATA") を渡すことができます。
+*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA") を渡すことができます。
 
 > `Folder` コマンドでは絶対パス名のみがサポートされます。
 
@@ -130,7 +130,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 #### 説明
 

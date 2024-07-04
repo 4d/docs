@@ -48,8 +48,8 @@ Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 
-> This is normal text.<br/>
-> _This is text in italics._
+> Esto es texto normal.<br/>
+> _Este es texto en cursiva._
 
 #### Gramática JSON
 
@@ -415,7 +415,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ## Array colores de fuente
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 
@@ -435,7 +435,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 ## Array de estilos
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 

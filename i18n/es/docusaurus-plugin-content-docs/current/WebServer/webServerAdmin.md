@@ -17,7 +17,7 @@ El servidor web principal de 4D puede iniciarse de diferentes maneras:
   - 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
   - 4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
-- Se inicia automáticamente cada vez que se abre la aplicación 4D. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+- Se inicia automáticamente cada vez que se abre la aplicación 4D. Para ello, despliegue la página **Web\/Configuración** de la Configuración y active la casilla **Lanzar servidor web al iniciar**:<br/>![](../assets/en/WebServer/config.png)
 
 - Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 

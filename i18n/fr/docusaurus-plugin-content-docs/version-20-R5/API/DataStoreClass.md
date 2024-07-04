@@ -981,7 +981,7 @@ Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux do
 Vous créez une méthode projet *protectDataFile* à appeler par exemple avant le déploiement :
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Désactive l'accès aux données de l'Explorateur de données
 ```
 
 #### Voir également

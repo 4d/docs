@@ -13,21 +13,23 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 ## Rutas de los filesystem
 
-4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Las rutas de los filesystem son útiles por dos razones principales:
+4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
+
+Las rutas de los filesystem son útiles por dos razones principales:
 
 - Independencia: puede trasladar su solución de un lugar a otro independientemente del sistema operativo, sin tener que preocuparse por las rutas,
 - Seguridad: ningún código puede acceder a los elementos situados por encima de la raíz del sistema de los file system en el disco (sandboxing).
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                                                   |
-| ------------ | ------------------------------------------------------------------------- |
-| "/DATA"      | Carpeta de datos actual                                                   |
-| "/LOGS"      | Carpeta Logs                                                              |
-| "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) |
-| "/PROJECT"   | Carpeta Project                                                           |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   |
-| "/SOURCES"   | Carpeta de fuentes del proyecto actual                                    |
+| filesystem   | Designa                                                                   | Ejemplo                                                          |
+| ------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| "/DATA"      | Carpeta de datos actual                                                   | "C:\\MyApps\\Students\\Data\\"              |
+| "/LOGS"      | Carpeta Logs                                                              | "C:\\MyApps\\Students\\Data\\Logs\\"       |
+| "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                     |
+| "/PROJECT"   | Carpeta Project                                                           | "C:\\MyApps\\Students\\Project\\"           |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   | "C:\\MyApps\\Resources\\"                    |
+| "/SOURCES"   | Carpeta de fuentes del proyecto actual                                    | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxis POSIX
 
@@ -42,6 +44,8 @@ Con esta sintaxis:
 En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesystem` con los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder), por ejemplo:
 
 ```4d
+var $pathFile : 4D.File
+var $pathFolder : 4D.Folder
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
@@ -108,9 +112,11 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta d
 Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan rutas POSIX relativas. Por ejemplo:
 
 ```4d
-  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
+var $userImages : 4D.Folder
+var $ok : Boolean
+  //to reference a "Picture" folder within the user documents folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //para crear una carpeta en el escritorio
+  //to create a folder on the desktop
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
@@ -121,15 +127,13 @@ Las rutas absolutas no están soportadas y devolverán errores.
 La flexibilidad de las funciones de archivos y de carpetas le ofrecen varias posibilidades para manipular los archivos y las carpetas, como en los siguientes ejemplos:
 
 ```4d
-$f:=Folder(fk desktop folder).folder("archive/jan2019")
+var $fold : 4D.Folder
+var $file : 4D.File
 
-$f2:=Folder("/DATA/archive/jan2019").file("total.txt")
-
-$f3:=Folder("/DATA/archive/jan2019")
-
-$f4:=File("/DATA/info.txt")
-
-$f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
- 
-$f6:=File(fk backup log file)
+$fold:=Folder(fk desktop folder).folder("archive/jan2019")
+$fold:=Folder("/DATA/archive/jan2019")
+$file:=Folder("/DATA/archive/jan2019").file("total.txt")
+$file:=File("/DATA/info.txt")
+$file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
+$file:=File(fk backup log file)
 ```

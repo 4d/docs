@@ -26,12 +26,12 @@ Para remover todos os intervalos de células deste documento:
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan1.PNG)
 
 ```4d
- //find all cell spans
- $span:=VP Get spans(VP All("ViewProArea"))
+ //encontre todas as células fusionadas
+ $span:=VP Obter spans(VP All("ViewProArea"))
 
- 
-  //remove the cell spans
- VP REMOVE SPAN($span)
+
+  /remove a célula
+ VP SPAN($span)
 ```
 
 Resultados:

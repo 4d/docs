@@ -8,7 +8,7 @@ Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arqu
 La estrategia de control de acceso 4D depende de la configuración de su despliegue:
 
 - en las aplicaciones multiusuario, puede confiar en los usuarios y grupos 4D,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 

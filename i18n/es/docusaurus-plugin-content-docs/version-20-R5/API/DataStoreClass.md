@@ -68,7 +68,7 @@ También puede obtener una referencia en un datastore remoto abierto pasando su 
 
 Si no se encuentra ningún datastore *localID*, el comando devuelve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `cs.Datastore` son creados apartir de la base de datos objetivo en función de las [reglas generales ORDA](ORDA/dsMapping.md#reglas-generales).
 
 #### Ejemplo 1
 
@@ -97,8 +97,8 @@ Utilizando el almacén de datos principal de la base 4D:
 ```
 
 ```4d
-  //getFirst method
-  //getFirst(localID;dataclass) -> entity
+  //método getFirst
+  //getFirst(localID;dataclass) -> entidad
  #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
 
  $0:=ds($localId)[$dataClassName].all().first()

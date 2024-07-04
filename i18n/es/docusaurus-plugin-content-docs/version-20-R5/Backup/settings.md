@@ -15,7 +15,7 @@ Los parámetros de copia de seguridad se definen a través de tres páginas en e
 
 Puede automatizar la copia de seguridad de las aplicaciones abiertas con 4D o 4D Server (incluso cuando no hay máquinas cliente conectadas). Esto implica definir una frecuencia de copia de seguridad (en horas, días, semanas o meses); para cada sesión, 4D inicia automáticamente una copia de seguridad utilizando la configuración de copia de seguridad actual.
 
-Si esta aplicación no se inició en el momento teórico de la copia de seguridad, la próxima vez que se inicie 4D, considerará que la copia de seguridad ha fallado y procederá según lo establecido en las Propiedades (consulte [Manejo de problemas de la copi
+Si esta aplicación no se inició en el momento teórico de la copia de seguridad, la próxima vez que se inicie 4D, considerará que la copia de seguridad ha fallado y procederá según lo establecido en las Propiedades (consulte [Manejo de problemas de la copia de seguridad](backup.md#handling-backup-issues)).
 
 Los parámetros de copia de seguridad periódicos se definen en la página **Backup/Periodicidad** de las Propiedades:
 

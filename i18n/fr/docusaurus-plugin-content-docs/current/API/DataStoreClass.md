@@ -108,11 +108,11 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                          |
-| ------- | -------------------------------------- |
-| 20 R6   | Support access to Qodly instances      |
-| 20 R4   | Nouvelle propriété *passwordAlgorithm* |
-| 18      | Ajout                                  |
+| Release | Modifications                                  |
+| ------- | ---------------------------------------------- |
+| 20 R6   | Prise en charge de l'accès aux instances Qodly |
+| 20 R4   | Nouvelle propriété *passwordAlgorithm*         |
+| 18      | Ajout                                          |
 
 </details>
 
@@ -130,13 +130,13 @@ Utilisation du datastore principal de la base 4D :
 
 #### Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
 
-The following remote datastores are supported by the command:
+Les datastores distants suivants sont pris en charge par la commande :
 
-| datastore kind                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| type de datastore                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| Application 4D distante                                                | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
 | [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
 
 :::note
@@ -147,7 +147,7 @@ The following remote datastores are supported by the command:
 
 Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
 
-| Propriété   | Type    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Qodly application                                                            |
+| Propriété   | Type    | Application 4D distante                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Qodly application                                                            |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                                                                                                           | API Endpoint of the Qodly cloud instance                                     |
 | user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                         | - (ignored)                                               |

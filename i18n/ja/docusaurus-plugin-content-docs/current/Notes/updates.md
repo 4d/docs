@@ -10,14 +10,20 @@ title: リリースノート
 #### ハイライト
 
 - [オブジェクト参照](../Concepts/dt_object.md#オブジェクト演算子) と [コレクション参照](../Concepts/dt_collection.md#コレクション演算子) を対象とした比較演算子をサポート。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。
-- 宣言された名前空間をコンポーネントが持つ場合、そのクラスは [`cs.<namespace>`] を介して、ホストプロジェクトに読み込まれているすべてのコンポーネント間で自動的に共有されるようになりました。
+- When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
+- Component manager: Support of [components stored on GitHub](../Project/components.md#declaring-components-stored-on-github).
 - 新しい [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) 関数と [`$clean`](../REST/$clean.md) REST API が追加されました。これらは、対象のエンティティセレクションから削除済みエンティティを除外したエンティティセレクションを新規に取得します。
 - セッションの権限を確認し、デバッグを容易にするための新しい [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) 関数と [`$info/privileges`](../REST/$info.md) REST API が追加されました。
 - [4DCEFParameters.jsonファイル](../FormObjects/webArea_overview.md#4dcefparametersjson) が新しく追加されました。これにより、4D埋め込みWebエリアをカスタマイズすることができます。
+- New [`$singleton` API](../REST/$singleton.md) to call exposed singleton functions from REST and new [associated privileges](../ORDA/privileges.md).
+- A [new settings button](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) helps you upgrade your project to use "force login" REST mode (the `On REST Authentication` database method is now deprecated).
+- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands.
+- New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
 
 #### 動作の変更
 
 - フォーム内のスクロールチェーンをサポート: 埋め込まれたスクロール可能なオブジェクト ([縦スクロールバー](../FormObjects/properties_Appearance.md#縦スクロールバー)・[横スクロールバー](../FormObjects/properties_Appearance.md#横スクロールバー)) がスクロール境界に達しても、マウスやトラックパッドを使用してユーザーがスクロールを続ける場合、親サブフォームは自動的にスクロールします (オーバースクロール)。
+- The [`$catalog` REST API](../REST/$catalog.md) now returns singletons (if any).
 
 ## 4D 20 R5
 
@@ -173,7 +179,8 @@ title: リリースノート
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
+- 修正されたバグリスト: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).<br />
+  (日本語版はこちら: [4D 20](https://4d-jp.github.io//2023/191/release-note-version-20/) - [4D 20.1](https://4d-jp.github.io/2023/191/release-note-version-20/) - [4D 20.2](https://4d-jp.github.io/2023/292/release-note-version-20/) - [4D 20.3](https://4d-jp.github.io/2024/35/release-note-version-20/) - [4D 20.4](https://4d-jp.github.io/2024/158/release-note-version-20/))
 
 #### 動作の変更
 
@@ -383,7 +390,7 @@ ALERT($param1+" "+$param2)
 
 | ライブラリ     | 現在のバージョン                                  | 更新された 4D バージョン | 説明                                                                    |
 | --------- | ----------------------------------------- | -------------- | --------------------------------------------------------------------- |
-| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**      | Used for QUIC                                                         |
+| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**      | QUIC に使用                                                              |
 | CEF       | 121                                       | 20 R5          | Chromium 6167                                                         |
 | Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                |
 | ICU       | 73.2                      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                      |
