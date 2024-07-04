@@ -43,10 +43,10 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                         |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo                               |     | Descripción                                        |
+| ---------- | ---------------------------------- | :-: | -------------------------------------------------- |
+| server     | Object                             |  -> | Información del servidor de correo                 |
+| Result     | 4D.SMTPTransporter |  <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
@@ -119,10 +119,10 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                         |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo                               |     | Descripción                                        |
+| ---------- | ---------------------------------- | :-: | -------------------------------------------------- |
+| server     | Object                             |  -> | Información del servidor de correo                 |
+| Result     | 4D.SMTPTransporter |  <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
