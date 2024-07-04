@@ -24,7 +24,7 @@ Este comando es útil, por ejemplo:
 - para integrar un documento de 4D View Pro en otro documento, como un documento de 4D Write Pro
 - para imprimir un documento 4D View Pro sin tener que cargarlo en un área de 4D View Pro.
 
-En *vpObject*, pase el objeto 4D View Pro a convertir. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).
+En *vpObject*, pase el objeto 4D View Pro a convertir. Este objeto debe haber sido analizado previamente utilizando [VP Export to object](vp-export-to-object.md) o guardado utilizando [VP EXPORT DOCUMENT](vp-export-document.md).
 
 > SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. Si convierte un documento que no ha sido evaluado previamente, las expresiones o los formatos pueden aparecer de forma inesperada.
 
@@ -41,7 +41,7 @@ El contenido del documento se convierte con respecto a sus atributos de visualiz
 - Ancho de columnas
 - Columnas / líneas ocultas.
 
-> Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](vp-set-print-info.md).
+> La visibilidad de la línea de la rejilla depende del atributo del documento definido con [VP SET PRINT INFO](vp-set-print-info.md).
 
 #### Resultado
 
