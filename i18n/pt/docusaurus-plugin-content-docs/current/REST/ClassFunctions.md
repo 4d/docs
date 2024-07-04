@@ -1,9 +1,15 @@
 ---
 id: classFunctions
-title: Chamada de funções de classe ORDA
+title: Calling class functions
 ---
 
 Puede llamar a [funciones de clase de modelos de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA a través de sus peticiones REST, para poder beneficiarse de la API expuesta de la aplicación 4D objetivo.
+
+:::note
+
+You can also call singleton functions, see [this page]($singleton.md) for more information.
+
+:::
 
 As funções são simplesmente chamadas em pedidos POST na interface ORDA apropriada, sem (). Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
@@ -25,17 +31,18 @@ Las funciones deben llamarse siempre utilizando peticiones **POST** (una petici�
 
 As funções são chamadas no objeto correspondente no datastore do servidor.
 
-| Função de classe                                                   | Sintaxe                                                                     |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
+| Função de classe                                                   | Sintaxe                                                                                                            |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                            |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                     |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                               |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                    |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                       |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                      |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                  |
+| [Singleton class](../Concepts/classes.md#singleton-classes)        | `/rest/$singleton/SingletonClass/SingletonClassFunction` (see [$singleton page]($singleton.md)) |
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).\
+> `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).\
 > A função é pesquisada primeiro na classe de seleção de entidades. Se não for encontrado, é procurado na dataclass. Por outras palavras, se uma função com o mesmo nome for definida tanto na classe DataClass como na classe EntitySelection, a função da classe de dataClass nunca será executada.
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [_Use preemptive process_ setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
@@ -49,7 +56,7 @@ As regras abaixo são válidas:
 - Los parámetros deben pasarse en el **cuerpo de la petición POST**
 - Os parâmetros devem ser incluídos numa coleção (formato JSON)
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
-- A entidade e a seleção de entidades podem ser passadas como parâmetros. O objeto JSON deve conter atributos específicos utilizados pelo servidor REST para atribuir dados aos objectos ORDA correspondentes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- A entidade e a seleção de entidades podem ser passadas como parâmetros. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
@@ -75,8 +82,8 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 | __ENTITY    | Parâmetros                                                    | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma entidade |
 | __KEY       | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                         |
 
-- Se __KEY não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
-- Se __KEY for fornecido, a entidade correspondente a __KEY é carregada no servidor com os atributos fornecidos
+- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
+- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
