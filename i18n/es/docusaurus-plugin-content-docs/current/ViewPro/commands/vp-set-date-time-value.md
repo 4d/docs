@@ -20,7 +20,7 @@ title: VP SET DATE TIME VALUE
 
 El comando `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->asigna un valor especificado de fecha y hora a un rango de celdas designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](vp-cell.md) o [`VP Column`](vp-column.md)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
 El parámetro *dateValue* indica un valor de fecha que se asignará a *rangeObj*.
 
