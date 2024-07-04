@@ -126,6 +126,10 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
+### Veja também
+
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html)
+
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
 ## .clearPrivileges()
@@ -363,6 +367,12 @@ End if
 
 The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. Esta string única é automaticamente atribuída pelo servidor para cada sessão e permite que você identifique seus processos.
 
+:::tip
+
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+
+:::
+
 <!-- END REF -->
 
 <!-- REF SessionClass.idleTimeout.Desc -->
@@ -371,9 +381,10 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R6   | Adicionado |
+| Release | Mudanças |
+| ------- | -------- |
+
+|18 R6|Added|
 
 </details>
 
@@ -613,6 +624,12 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 > Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
 
 This property is **read only** itself but it returns a read-write object.
+
+:::tip
+
+You can get the `.storage` property of a session using the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+
+:::
 
 <Tabs>
 
