@@ -299,7 +299,7 @@ Especifica uma expressão ou uma variável que será avaliada para cada linha ex
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | unselectable        | boolean | Designa la línea correspondiente como no seleccionable (\* es decir, \*, no es posible el resaltado). As áreas inseríveis deixam de o ser se esta opção estiver ativada, a menos que a opção "Editar com um clique" também esteja ativada. Os controlos como as caixas de verificação e as listas permanecem funcionais. Esta definição é ignorada se o modo de seleção do list box é "Nenhum". This setting is ignored if the list box selection mode is "None". |
-| disabled            | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                                                         |
+| disabled            | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. Text and controls (checkboxes, lists, etc.) parecem escurecidos ou acinzentados. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                                                 |
 
 A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades a uma única coluna:
 
@@ -311,7 +311,7 @@ A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Examples**
+**Exemplos**
 
 En un método proyecto _Color_, escriba el siguiente código:
 
