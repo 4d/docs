@@ -106,7 +106,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.
 
-:::caution Minimal client version for 4D Server 20.2 and later
+:::caution Versión mínima del cliente para 4D Server 20.2 y posterior
 
 For internal reasons, the version of remote clients connecting to 4D Server 20.2 and later must be at least 4D 20.2.
 
