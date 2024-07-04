@@ -82,7 +82,7 @@ La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un 
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA").
+Dans le paramètre *path*, passez un chemin de dossier. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 
@@ -130,7 +130,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 #### Description
 
