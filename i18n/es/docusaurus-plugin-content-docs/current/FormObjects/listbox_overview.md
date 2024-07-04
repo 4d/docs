@@ -536,7 +536,7 @@ The developer can set up custom sorts, for example using the [`LISTBOX SORT COLU
 
 Los ordenamientos personalizados le permiten:
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
 - use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Ejemplo
@@ -789,20 +789,20 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
  ->MyListbox{3}:=True
 ```
 
-Non-hierarchical representation:
-![](../assets/en/FormObjects/hierarch7.png)
-Hierarchical representation:
-![](../assets/en/FormObjects/hierarch8.png)
+Representación no jerárquica:
+![](../assets/en/FormObjects/jerarch7.png)
+Representación jerárquica:
+![](../assets/en/FormObjects/jerarch8.png)
 
 > Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.
 
 Al igual que con las selecciones, el comando `LISTBOX GET CELL POSITION` devolverá los mismos valores para un list box jerárquico y un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, `LISTBOX GET CELL POSITION` devolverá la misma posición: (3;2).
 
-_Non-hierarchical representation:_
+_Representación no jerárquica:_
 ![](../assets/en/FormObjects/hierarch9.png)
 
-_Hierarchical representation:_
-![](../assets/en/FormObjects/hierarch10.png)
+_Representación jerárquica:_
+![](../assets/en/FormObjects/jerarch10.png)
 
 Cuando se ocultan todas las líneas de una subjerarquía, la línea de ruptura se oculta automáticamente. En el ejemplo anterior, si las líneas 1 a 3 están ocultas, la línea de ruptura "Bretaña" no aparecerá.
 
@@ -812,17 +812,17 @@ Si el usuario selecciona una línea de ruptura, `LISTBOX GET CELL POSITION` devu
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` returns (2;4). Para seleccionar una línea de ruptura por programación, deberá utilizar el comando `LISTBOX SELECT BREAK`.
+... `LISTBOX GET CELL POSITION` devuelve (2;4). Para seleccionar una línea de ruptura por programación, deberá utilizar el comando `LISTBOX SELECT BREAK`.
 
 Las líneas de rotura no se tienen en cuenta en los arrays internos utilizados para gestionar el aspecto gráfico de los list box (estilos y colores). No obstante, es posible modificar estas características para las líneas de ruptura mediante los comandos de gestión gráfica de los objetos. Basta con ejecutar los comandos adecuados en los arrays que constituyen la jerarquía.
 
 El siguiente list box fue diseñado utilizando un array de objetos:
 
-_Non-hierarchical representation:_
+_Representación no jerárquica:_
 ![](../assets/en/FormObjects/hierarch12.png)
 
-_Hierarchical representation:_
-![](../assets/en/FormObjects/hierarch13.png)
+_Representación jerárquica:_
+![](../assets/en/FormObjects/jerarch13.png)
 
 En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados `tStyle` y `tColors`. Para modificar el color o el estilo de los niveles de ruptura, debe ejecutar las siguientes instrucciones:
 
@@ -847,7 +847,7 @@ El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar es
 
 En este caso, debe llenar y vaciar los arrays por código. Los principios que deben aplicarse son:
 
-- Cuando se muestra el list box, sólo se debe llenar el primer array. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
+- Cuando se muestra el list box, sólo se debe llenar el primer array. Sin embargo, debe crear un segundo array con valores vacíos para que el list box muestre los botones desplegar/contraer:
   ![](../assets/en/FormObjects/hierarch15.png)
 
 - Cuando un usuario hace clic en un botón de expandir, puede procesar el evento `On Expand`. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
