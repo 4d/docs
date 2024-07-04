@@ -7,20 +7,20 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 
 ## Sintaxe disponível
 
-| Sintaxe                                                                            | Exemplo                                  | Descrição                                                                                   |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass            |
-| [**{dataClass}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Retorna os dados para uma entidade na qual os valores de atributo são definidas             |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executa uma função de classe de uma dataclass                                               |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executa uma função de classe de uma seleção de entidade                                     |
-| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Executa uma função de classe de uma entidade                                                |
+| Sintaxe                                                                                | Exemplo                                  | Descrição                                                                                   |
+| -------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                      | `/Employee`                              | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass            |
+| [**\{dataClass\}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                 | `/Employee:firstName(John)`              | Retorna os dados para uma entidade na qual os valores de atributo são definidas             |
+| [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executa uma função de classe de uma dataclass                                               |
+| [**\{dataClass\}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executa uma função de classe de uma seleção de entidade                                     |
+| [**\{dataClass\}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Executa uma função de classe de uma entidade                                                |
 
 > As chamadas de funções são descritas em detalho na secção [Chamada funções da classe ORDA](ClassFunctions.md).
 
 
 
-## {dataClass}
+## \{dataClass\}
 
 Retorna todos os dados (como padrão as primeiras 100 entidades) para uma classe de dados específica (*por exemplo *, `Company`)
 
@@ -138,7 +138,7 @@ Retorna todas as datas para uma classe de dados específica.
 ```
 
 
-## {dataClass}\[{key}]
+## \{dataClass\}\[{key}]
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
 
@@ -146,7 +146,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
-Para saber mais sobre os dados retornados, veja [{DataClass}](#dataclass).
+For more information about the data returned, refer to [\{dataClass\}](#dataclass).
 
 Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
@@ -187,7 +187,7 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
 
 
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
