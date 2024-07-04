@@ -25,6 +25,7 @@ You can assign specific permission actions to the following exposed resources in
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
+- a [singleton](../REST/$singleton.md) function
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -34,7 +35,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
+Permissions control access to datastore objects or functions. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
 
 :::
 
@@ -42,27 +43,28 @@ Permissions control access to datastore objects. Si desea filtrar los datos leí
 
 As ações disponíveis estão relacionadas com o recurso alvo.
 
-| Acções       | armazém de dados                                                                                                                                                    | dataclass                                                                                                                                                            | atributo                                                                                                                                                 | função de modelo de dados                                                                                                                                                                                                                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **create**   | Criar entidade em qualquer classe de dados                                                                                                                          | Criar entidade nesta classe de dados                                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                                                                   |
-| **read**     | Ler atributos em qualquer dataclass                                                                                                                                 | Ler atributos nesta classe de dados                                                                                                                                  | Leia o conteúdo desse atributo                                                                                                                           | n/a                                                                                                                                                                                                                                                                                                                   |
-| **update**   | Atualizar atributos em qualquer classe de dados.                                                                                                    | Atualiza os atributos nesta classe de dados.                                                                                                         | Atualiza o conteúdo deste atributo (ignorado para atributos alias).                                                   | n/a                                                                                                                                                                                                                                                                                                                   |
-| **drop**     | Eliminar dados em qualquer classe de dados.                                                                                                         | Eliminar dados nesta classe de dados.                                                                                                                | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                                                                   |
-| **execute**  | Execute any function on the project (datastore (except `authentify()`, see Notes below), dataclass, entity selection, entity) | Executa qualquer função na classe de dados. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                                                      | Executar esta função                                                                                                                                                                                                                                                                                                  |
-| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                                                                                                   | Esta dataclass está disponível na API /rest/$catalog                                                                                                                 | Esse atributo está disponível na API /rest/$catalog.                                                                                     | Esta função de classe de dados está disponível na API /rest/$catalog                                                                                                                                                                                                                                                  |
-| **promote**  | n/a                                                                                                                                                                 | n/a                                                                                                                                                                  | n/a                                                                                                                                                      | Associa um determinado privilégio durante a execução da função. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
+| Acções       | armazém de dados                                                                                        | dataclass                                                                                                                                                            | atributo                                                                                                                                                 | data model function or singleton function                                                                                                                                                                                                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **create**   | Criar entidade em qualquer classe de dados                                                              | Criar entidade nesta classe de dados                                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                                                                   |
+| **read**     | Ler atributos em qualquer dataclass                                                                     | Ler atributos nesta classe de dados                                                                                                                                  | Leia o conteúdo desse atributo                                                                                                                           | n/a                                                                                                                                                                                                                                                                                                                   |
+| **update**   | Atualizar atributos em qualquer classe de dados.                                        | Atualiza os atributos nesta classe de dados.                                                                                                         | Atualiza o conteúdo deste atributo (ignorado para atributos alias).                                                   | n/a                                                                                                                                                                                                                                                                                                                   |
+| **drop**     | Eliminar dados em qualquer classe de dados.                                             | Eliminar dados nesta classe de dados.                                                                                                                | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                                                                   |
+| **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Executa qualquer função na classe de dados. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                                                      | Executar esta função                                                                                                                                                                                                                                                                                                  |
+| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                                       | Esta dataclass está disponível na API /rest/$catalog                                                                                                                 | Esse atributo está disponível na API /rest/$catalog.                                                                                     | This dataclass function is available in the /rest/$catalog API (not available with singletons)                                                                                                                                                                                                     |
+| **promote**  | n/a                                                                                                     | n/a                                                                                                                                                                  | n/a                                                                                                                                                      | Associa um determinado privilégio durante a execução da função. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
 
 **Notas:**
 
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
 - Valores por defecto: en la implementación actual, solo _Null_ está disponible como valor por defecto.
 - In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 A definição das permissões deve ser coerente, nomeadamente:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
-- el permiso **promote** también necesita el permiso **describe**.
+- For data model functions, **promote** permission also needs **describe** permission.
 
 ## Privilégios e roles
 
@@ -104,34 +106,81 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 El archivo `roles.json` describe todos los parámetros de seguridad del proyecto.
 
-:::note
+### Default file
 
-En un contexto que no sea _Qodly_ (nube), debe crear este archivo en la siguiente ubicación: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
+
+The default file has the following contents:
+
+```json
+
+{
+    "privileges": [
+        {
+            "privilege": "none",
+            "includes": []
+        }
+    ],
+
+    "roles": [],
+
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "ds",
+                "type": "datastore",
+                "read": ["none"],
+                "create": ["none"],
+                "update": ["none"],
+                "drop": ["none"],
+                "describe": ["none"],
+                "execute": ["none"],
+                "promote": ["none"]                
+            }
+        ]
+    },
+
+    "forceLogin": true
+
+}
+
+```
+
+:::note Compatibidade
+
+As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)).
+:::
+
+:::note Qodly Studio
+
+In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
+### Sintaxe
+
 La sintaxis del archivo `roles.json` es la siguiente:
 
-| Nome da propriedade |                                                                                     |                                                                                   | Tipo                              | Obrigatório | Descrição                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- | ----------- | ---------------------------------------------------------------------------------------------- |
-| privileges          |                                                                                     |                                                                                   | Colección de objetos `privilege`  | X           | Lista de privilégios definidos                                                                 |
-|                     | \[].privilege  |                                                                                   | String                            |             | Nome do privilégio                                                                             |
-|                     | \[].includes   |                                                                                   | Coleção de strings                |             | Lista de nomes de privilégios incluídos                                                        |
-| roles               |                                                                                     |                                                                                   | Colección de objetos `role`       |             | Lista de roles definidos                                                                       |
-|                     | \[].role       |                                                                                   | String                            |             | Nome da role                                                                                   |
-|                     | \[].privileges |                                                                                   | Coleção de strings                |             | Lista de nomes de privilégios incluídos                                                        |
-| permissions         |                                                                                     |                                                                                   | Object                            | X           | Lista de acções permitidas                                                                     |
-|                     | allowed                                                                             |                                                                                   | Colección de objetos `permission` |             | Lista de permissões permitidas                                                                 |
-|                     |                                                                                     | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                                           |
-|                     |                                                                                     | \[].type     | String                            | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method" |
-|                     |                                                                                     | \[].read     | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].create   | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].update   | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].drop     | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].describe | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].execute  | Coleção de strings                |             | Lista de privilégios                                                                           |
-|                     |                                                                                     | \[].promote  | Coleção de strings                |             | Lista de privilégios                                                                           |
-| forceLogin          |                                                                                     |                                                                                   | Parâmetros                        |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)              |
+| Nome da propriedade |                                                                                     |                                                                                   | Tipo                              | Obrigatório | Descrição                                                                                                                    |
+| ------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| privileges          |                                                                                     |                                                                                   | Colección de objetos `privilege`  | X           | Lista de privilégios definidos                                                                                               |
+|                     | \[].privilege  |                                                                                   | String                            |             | Nome do privilégio                                                                                                           |
+|                     | \[].includes   |                                                                                   | Coleção de strings                |             | Lista de nomes de privilégios incluídos                                                                                      |
+| roles               |                                                                                     |                                                                                   | Colección de objetos `role`       |             | Lista de roles definidos                                                                                                     |
+|                     | \[].role       |                                                                                   | String                            |             | Nome da role                                                                                                                 |
+|                     | \[].privileges |                                                                                   | Coleção de strings                |             | Lista de nomes de privilégios incluídos                                                                                      |
+| permissions         |                                                                                     |                                                                                   | Object                            | X           | Lista de acções permitidas                                                                                                   |
+|                     | allowed                                                                             |                                                                                   | Colección de objetos `permission` |             | Lista de permissões permitidas                                                                                               |
+|                     |                                                                                     | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                                                                         |
+|                     |                                                                                     | \[].type     | String                            | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
+|                     |                                                                                     | \[].read     | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].create   | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].update   | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].drop     | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].describe | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].execute  | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+|                     |                                                                                     | \[].promote  | Coleção de strings                |             | Lista de privilégios                                                                                                         |
+| forceLogin          |                                                                                     |                                                                                   | Parâmetros                        |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)                                            |
 
 :::caution Reminder
 
@@ -241,9 +290,16 @@ However, when the application is about to be deployed, a good practice is to loc
 			"execute": [
 				"guest"
 			]
-	}
-
+	 },
+		{
+			"applyTo": "mySingletonClass.createID",
+			"type": "singletonMethod",
+			"execute": [
+				"guest"
+			]
+	 }
 		]
-	}
+	},
+    "forceLogin": true
 }
 ```
