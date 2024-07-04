@@ -116,18 +116,19 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
 ### Restitution automatique et intégration des journaux
 
-- **Restituer la dernière sauvegarde si la base est endommagée** : lorsque cette option est cochée, le programme déclenche automatiquement la restitution du fichier de données de la dernière sauvegarde valide de l'application s’il détecte une anomalie (fichier corrompu par exemple) lors du lancement de l'application. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
+#### Restaurer la dernière sauvegarde si la base de données est endommagée
 
-- **Intégrer les derniers journaux si la base est incomplète** : Lorsque cette option est cochée, le programme intègre automatiquement le fichier journal courant s'il contient des opérations qui ne sont pas présentes dans le fichier de données. S'il existe une séquence valide de fichiers .journal dans le même dossier, le programme intègre au préalable tous les fichiers .journal nécessaires, du plus ancien au plus récent.
+Lorsque cette option est cochée, le programme démarre automatiquement la restitution du fichier de données de la dernière sauvegarde valide de l'application, si une anomalie est détectée (fichier corrompu, par exemple) lors du lancement de l'application. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
 
-    Cette situation se présente, par exemple, si une panne de courant survient alors que des opérations dans le cache de données n'ont pas encore été écrites sur le disque, ou après qu'une anomalie a été détectée lors de l'ouverture du fichier de données et qu'une restitution a eu lieu.
+#### Intégrer les derniers journaux si la base est incomplète
+
+Lorsque cette option est cochée, le programme intègre automatiquement le fichier journal courant s'il contient des opérations qui ne sont pas présentes dans le fichier de données. S'il existe une séquence valide de fichiers .journal dans le même dossier, le programme intègre au préalable tous les fichiers .journal nécessaires, du plus ancien au plus récent. Cette situation se présente, par exemple, si une panne de courant survient alors que des opérations dans le cache de données n'ont pas encore été écrites sur le disque, ou après qu'une anomalie a été détectée lors de l'ouverture du fichier de données et qu'une restitution a eu lieu.
 
 :::note
 
 Cette fonction implique que le programme analyse tous les fichiers journaux dans le dossier des fichiers journaux courant au démarrage. Par conséquent, pour des raisons de performance, assurez-vous qu'aucun fichier journal inutile n'est stocké dans ce dossier.
 
 :::
-
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
 
