@@ -801,7 +801,7 @@ Al igual que con las selecciones, el comando `LISTBOX GET CELL POSITION` devolve
 _Non-hierarchical representation:_
 ![](../assets/en/FormObjects/hierarch9.png)
 
-_Hierarchical representation:_
+_Representação hierárquica:_
 ![](../assets/en/FormObjects/hierarch10.png)
 
 Quando todas as filas de uma sub-hierarquia estão escondidas, a linha de quebra é automaticamente escondida. No exemplo acima, se as linhas 1 a 3 estiverem escondidas, a linha de quebra "Bretanha" não aparecerá.
@@ -821,7 +821,7 @@ Dada, por exemplo, a seguinte caixa de listagem (os nomes dos arrays associados 
 _Non-hierarchical representation:_
 ![](../assets/en/FormObjects/hierarch12.png)
 
-_Hierarchical representation:_
+_Representação hierárquica:_
 ![](../assets/en/FormObjects/hierarch13.png)
 
 En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados `tStyle` y `tColors`. Para modificar a cor ou o estilo dos níveis de quebra, é necessário executar as seguintes declarações:
