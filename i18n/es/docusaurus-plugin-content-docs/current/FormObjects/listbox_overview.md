@@ -790,9 +790,9 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
 ```
 
 Representación no jerárquica:
-![](../assets/en/FormObjects/jerarch7.png)
+![](../assets/en/FormObjects/hierarch7.png)
 Representación jerárquica:
-![](../assets/en/FormObjects/jerarch8.png)
+![](../assets/en/FormObjects/hierarch8.png)
 
 > Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.
 
@@ -802,7 +802,7 @@ _Representación no jerárquica:_
 ![](../assets/en/FormObjects/hierarch9.png)
 
 _Representación jerárquica:_
-![](../assets/en/FormObjects/jerarch10.png)
+![](../assets/en/FormObjects/hierarch10.png)
 
 Cuando se ocultan todas las líneas de una subjerarquía, la línea de ruptura se oculta automáticamente. En el ejemplo anterior, si las líneas 1 a 3 están ocultas, la línea de ruptura "Bretaña" no aparecerá.
 
@@ -822,7 +822,7 @@ _Representación no jerárquica:_
 ![](../assets/en/FormObjects/hierarch12.png)
 
 _Representación jerárquica:_
-![](../assets/en/FormObjects/jerarch13.png)
+![](../assets/en/FormObjects/hierarch13.png)
 
 En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados `tStyle` y `tColors`. Para modificar el color o el estilo de los niveles de ruptura, debe ejecutar las siguientes instrucciones:
 
