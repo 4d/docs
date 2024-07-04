@@ -412,7 +412,7 @@ Los objetos Estilo contienen parámetros de estilo. Se pueden utilizar en una ho
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Las hojas de estilo guardadas con el documento pueden utilizarse para definir las propiedades de una sola hoja, de varias hojas o de todo un libro de trabajo. Cuando se crea, una hoja de estilo 4D View Pro recibe un nombre que se guarda dentro de la hoja de estilo en la propiedad "name". Esto permite utilizar fácilmente una hoja de estilo y si se selecciona cuidadosamente, puede facilitar su identificación y finalidad (por ejemplo, Membrete_interno, Membrete_externo).
 
-Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) command.
+Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md).
 
 The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](commands/vp-get-stylesheets.md) command to retrieve a collection of style objects for multiple style sheets.
 
