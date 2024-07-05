@@ -22,7 +22,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 :::note
 
-This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
+This page describes how to work with components in the **4D** and **4D Server** environments. En otros entornos, los componentes se gestionan de manera diferente:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
 - in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
@@ -63,7 +63,7 @@ Puede contener:
 
 El archivo **environment4d.json** es opcional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
-The main benefits of this architecture are the following:
+Los principales beneficios de esta arquitectura son los siguientes:
 
 - you can store the **environment4d.json** file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
 - if you want to use the same GitHub repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
@@ -76,7 +76,7 @@ Since components can be installed in different ways, a priority order is applied
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
 2. Componentes declarados en el archivo **dependencies.json**.
-3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
+3. Componentes 4D internos del usuario (por ejemplo, 4D NetKit, 4D SVG...)
 
 **Prioridad más baja**
 
@@ -154,7 +154,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
-- Compress the component files in ZIP format.
+- Comprima los archivos componentes en formato ZIP.
 - Name this archive with the same name as the GitHub repository.
 - Integre el archivo en una [versión GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) del repositorio.
 
@@ -219,19 +219,19 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+La versión se utiliza para definir qué versiones se pueden utilizar. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. El `*` se puede utilizar como un marcador de posición para todas las versiones. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Estos son algunos ejemplos:
 
 - "latest": the version having the “latest” badge in GitHub releases.
 - "\*": la última versión lanzada.
-- "1.\*": all version of major version 1.
-- "1.2.\*": all patches of minor version 1.2.
+- "1.\*": todas las versiones de la versión principal 1.
+- "1.2.\*": todos los parches de la versión menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
 - "<=1.2.3": la última versión hasta la 1.2.3.
 - "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
-- "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
+- "`<1.2.3 || >=2`": versión que no está entre 1.2.3 y 2.0.0.
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
@@ -263,9 +263,9 @@ Then insert the "github" key in your [**environment4d.json**](#environment4djson
 }
 ```
 
-#### Local cache for dependencies
+#### Caché local para dependencias
 
-Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. The local cache folder is stored at the following location:
+Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. La carpeta de caché local se guarda en la siguiente ubicación:
 
 - on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -300,7 +300,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are possible:
+Las siguientes opciones de origen son posibles:
 
 | Etiqueta de origen                | Descripción                                                                    |
 | --------------------------------- | ------------------------------------------------------------------------------ |
@@ -319,7 +319,7 @@ This item is not displayed if the dependency is inactive because its files are n
 
 :::
 
-Component icon and location logo provide additional information:
+El icono del componente y el logotipo de ubicación ofrecen información adicional:
 
 - The component logo indicates if it is provided by 4D or a third-party developer.
 - Local components can be differentiated from GitHub components by a small icon.

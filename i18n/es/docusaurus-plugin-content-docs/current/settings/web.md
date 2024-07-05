@@ -239,7 +239,7 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 ## Historial (periodicidad)
 
-Configure los parámetros de copia de seguridad automática para el registro de las peticiones. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
@@ -288,7 +288,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 :::information Obsoleto
 
-**This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
+**Esta sección está obsoleta** a partir de 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
 
 :::
 
@@ -310,9 +310,9 @@ El botón activa la siguiente secuencia de actualización:
 - The `On REST Authentication` database method is deleted (moved into the system bin).
 - A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
 
-Remember to restart your project after performing this upgrade.
+Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+El siguiente paso es modificar su código en consecuencia. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 

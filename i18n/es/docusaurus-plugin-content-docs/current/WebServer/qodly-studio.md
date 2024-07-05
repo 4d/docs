@@ -206,7 +206,7 @@ However, page rendering happens outside Qodly Studio, and is served by the stand
 
 Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
-Your Qodly pages are available through the following url:
+Sus páginas Qodly están disponibles a través de la siguiente url:
 
 ```
 IP:port/$lib/renderer/?w=QodlyPageName

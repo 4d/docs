@@ -25,7 +25,7 @@ You can assign specific permission actions to the following exposed resources in
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
-- a [singleton](../REST/$singleton.md) function
+- uma função [singleton](../REST/$singleton.md)
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 

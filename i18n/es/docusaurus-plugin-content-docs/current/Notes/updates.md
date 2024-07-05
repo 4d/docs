@@ -23,7 +23,7 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Cambios de comportamiento
 
 - Support of scroll chaining in forms: parent subforms now scroll automatically when embedded scrollable objects ([vertically](../FormObjects/properties_Appearance.md#vertical-scroll-bar) or [horizontally](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
-- The [`$catalog` REST API](../REST/$catalog.md) now returns singletons (if any).
+- La API REST [`$catalog`](../REST/$catalog.md) ahora devuelve singletons (si los hay).
 
 ## 4D 20 R5
 

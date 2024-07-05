@@ -203,7 +203,7 @@ La siguiente petición devuelve todos los datos públicos del empleado llamado "
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## \{dataClass\}/\{method\} and \{dataClass\}({key})/\{method\}
+## \{dataClass\}/\{method\} y \{dataClass\}({key})/\{method\}
 
 Devuelve un objeto o una colección basada en un método proyecto.
 
