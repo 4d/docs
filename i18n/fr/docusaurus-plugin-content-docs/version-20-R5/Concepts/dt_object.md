@@ -5,20 +5,20 @@ title: Object
 
 Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets 4D natifs est basée sur le principe classique des paires "propriété/valeur". La syntaxe de ces objets s’inspire du JSON :
 
-- Un nom de propriété est toujours un texte, par exemple "Nom". It must follow [specific rules](identifiers.md#object-properties).
+- Un nom de propriété est toujours un texte, par exemple "Nom". Il doit suivre [des règles spécifiques](identifiers.md#proprietes-des-objets).
 
 - Une valeur de propriété peut être du type suivant :
   - Numérique (réel, entier long, etc.)
   - text
   - Null
   - boolean
-  - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
+  - pointeur (stocké en tant que tel, évalué en utilisant la commande `JSON Stringify` ou lors de la copie),
   - Date (type date ou chaîne au format date ISO)
   - Objet(1) (les objets peuvent être imbriqués sur plusieurs niveaux)
   - Image(2)
   - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) Les **objets non streamables** tels que les objets ORDA ([entités](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [serveur web](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
 (2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
@@ -28,11 +28,11 @@ N'oubliez pas que les noms de propriétés font la différence entre les majuscu
 
 :::
 
-You manage Object type variables, fields or expressions using the standard [object notation](#properties) or the commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Vous gérez les variables, champs ou expressions de type Objet en utilisant la [notation Objet](#proprietes) ou les commandes disponibles dans le thème **Objets (Langage)**. A noter que des commandes spécifiques du thème **Recherches et tris** telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
-- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- Dans le code 4D, soit écrites dans les méthodes (éditeur de code) soit externalisées (formules, fichiers balisés traités par la commande `PROCESS 4D TAGS` ou le serveur Web, fichiers d'export, documents 4D Write Pro, etc.),
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
@@ -42,44 +42,44 @@ Les objets doivent avoir été instanciés, sinon toute tentative de lecture ou 
 
 L'instanciation d'un objet peut se faire de l'une des manières suivantes :
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- en utilisant la commande [`New object`](https://doc.4d.com/4dv20/help/command/fr/page1471.html),
+- en utilisant l'opérateur `{}`.
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
+Plusieurs commandes et fonctions 4D retournent des objets, par exemple [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) ou [`File`](../API/FileClass.md#file). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
 
 :::
 
-### `New object` command
+### Commande `New object`
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
+La commande [`New object`](https://doc.4d.com/4dv20/help/command/fr/page1471.html) crée un nouvel objet vide ou prérempli et renvoie sa référence.
 
 Exemples :
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
- 
+ var $obVar : Object //déclaration d'une variable 4D de type objet
+ $obVar:=New object //instantiation d'un objet et assignation à la variable 4D
+
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //instanciation et assignation d'un objet pré-rempli
 ```
 
-### `{}` operator
+### Opérateur `{}`
 
-The `{}` operator allows you to create an **object literal**. Un objet littéral est une liste de zéro ou plusieurs paires de noms de propriétés et de valeurs associées d'un objet, entre accolades et séparées par des points-virgules (`{}`). La syntaxe d'objet littérale permet de créer des objets vides ou remplis.
+L'opérateur `{}` vous permet de créer un **objet littéral**. Un objet littéral est une liste de zéro ou plusieurs paires de noms de propriétés et de valeurs associées d'un objet, entre accolades et séparées par des points-virgules (`{}`). La syntaxe d'objet littérale permet de créer des objets vides ou remplis.
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+Toute valeur de propriété étant considérée comme une expression, vous pouvez créer des sous-objets en utilisant `{}` dans les valeurs de propriétés.  Vous pouvez également créer et référencer des **collections littérales**.
 
 Exemples :
 
 ```4d
- var $o ; $o2 ; $o3 : Object //declaration of object variables
- $o := {} // instantiation of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
- 		// with properties {"a":"foo","b":42,"c":{},"d":false})
+ var $o ; $o2 ; $o3 : Object //déclaration des variables objet
+ $o := {} // instanciation d'un objet vide 
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instanciation d'un objet
+ 		// avec les propriétés {"a":"foo","b":42,"c":{}, d":false})
 
-	// same properties using variables
+	// mêmes propriétés en utilisant les variables
  var $a : Text
  var $b : Number
  var $c : Object
@@ -90,7 +90,7 @@ Exemples :
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+Vous pouvez mélanger les syntaxes `New object` et littérale :
 
 ```4d
 $o:={\
@@ -102,7 +102,7 @@ $o:={\
 	}
 
 $o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
+$o.form2($o.ob2.message)  // affiche Hello
 $col:=$o.col[5] //6
 ```
 
@@ -110,9 +110,9 @@ $col:=$o.col[5] //6
 
 Vous pouvez créer deux types d'objets :
 
-- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Access to these objects is controlled by `Use...End use` structures.
-  For more information, refer to the [Shared objects and collections](shared.md) section.
+- des objets standard (non-partagés), en utilisant la commande [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.fr.html) ou la syntaxe d'objet littéral (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Access to these objects is controlled by `Use...End use` structures.
+  Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés
 
