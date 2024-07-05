@@ -23,8 +23,8 @@ You can also display the Preferences dialog box in Application mode using the "P
 
 Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html) command:
 
-* Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
-* macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
+* Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
+* macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`
 
 ## Customizing parameters and reset settings
 

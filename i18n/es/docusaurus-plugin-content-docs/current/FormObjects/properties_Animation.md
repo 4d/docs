@@ -15,7 +15,7 @@ Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la úl
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)
 
 ---
 
@@ -31,7 +31,7 @@ Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)
 
 ---
 
@@ -47,7 +47,7 @@ Permite al usuario mantener pulsado el botón del ratón para mostrar las imáge
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)
 
 ---
 
@@ -63,7 +63,7 @@ Permite recorrer el contenido del botón de imagen a la velocidad especificada (
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)
 
 ---
 
@@ -79,7 +79,7 @@ Modifica el contenido del botón de la imagen cuando el cursor del ratón pasa p
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)
 
 ---
 
@@ -95,4 +95,4 @@ Permite definir la última miniatura como la que se mostrará cuando el botón e
 
 #### Objetos soportados
 
-[Picture Button](pictureButton_overview.md)
+[Botón imagen](pictureButton_overview.md)

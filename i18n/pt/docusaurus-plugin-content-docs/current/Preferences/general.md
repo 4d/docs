@@ -73,7 +73,7 @@ Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación u
 
 Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
-- **Database...**
+- **Base de dados...**
 - **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)

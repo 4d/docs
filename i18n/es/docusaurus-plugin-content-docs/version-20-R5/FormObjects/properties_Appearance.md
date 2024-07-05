@@ -111,7 +111,7 @@ Define la resolución de la pantalla para el contenido del área 4D Write Pro. P
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -127,7 +127,7 @@ Muestra/oculta tanto las imágenes de fondo como el color de fondo.
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -143,7 +143,7 @@ Muestra/oculta los pies de página cuando el [modo visualización de la página 
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -177,7 +177,7 @@ Muestra/oculta los encabezados cuando el [modo visualización de la página ](#v
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -193,7 +193,7 @@ Muestra/oculta los caracteres invisibles
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -209,7 +209,7 @@ Muestra/oculta la regla horizontal cuando la vista del documento está en modo [
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -225,7 +225,7 @@ Activa/desactiva la vista HTML WYSIWYG, en la que se eliminan los atributos avan
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -241,7 +241,7 @@ Muestra/oculta el marco de la página cuando [modo visualización de página ](#
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -267,7 +267,7 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -283,7 +283,7 @@ Muestra/oculta la regla vertical cuando la vista del documento está en modo [P�
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -375,7 +375,7 @@ Establece el modo de visualización del documento de 4D Write Pro en el área de
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -391,4 +391,4 @@ Define el porcentaje de zoom para mostrar el contenido del área 4D Write Pro.
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)

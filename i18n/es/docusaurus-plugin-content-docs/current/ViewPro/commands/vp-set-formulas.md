@@ -18,7 +18,7 @@ title: VP SET FORMULAS
 
 El comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->asigna una colección de fórmulas que comienzan en el rango de celdas especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
+En *rangeObj*, pase un rango de la celda (creada con [VP Cell](vp-cell.md)) cuya fórmula desea especificar. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
 
 El parámetro *formulasCol* es una colección bidimensional:
 

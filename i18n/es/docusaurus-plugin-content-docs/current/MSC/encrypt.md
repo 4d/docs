@@ -38,9 +38,9 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
    The passphrase is used to generate the data encryption key. Una frase secreta es una versión más segura de una contraseña y puede contener un gran número de caracteres. Por ejemplo, puede introducir una frase de paso como "We all came out to Montreux" o "¡Mi primera gran frase de paso!".
-   The security level indicator can help you evaluate the strength of your passphrase:
+   El indicador de nivel de seguridad puede ayudarle a evaluar la solidez de su frase de contraseña:
    ![](../assets/en/MSC/MSC_encrypt5.png)
-   (deep green is the highest level)
+   (el verde intenso es el nivel más alto)
 4. Introduzca para confirmar su frase secreta segura.
 
 A continuación, se inicia el proceso de encriptación. Si el CSM se abrió en modo estándar, la aplicación se reabre en modo mantenimiento.
@@ -61,7 +61,7 @@ Cuando una aplicación está encriptada (ver arriba), la página Encriptar ofrec
 Por razones de seguridad, todas las operaciones de mantenimiento del cifrado requieren necesitan la llave de cifrado de datos actual.
 
 - Si la llave de encriptación de datos ya está cargada en el llavero 4D(1), ésta es reutilizada automáticamente por 4D.
-- Si no se encuentra la llave de encriptación de datos, debe proporcionarla. The following dialog is displayed:
+- Si no se encuentra la llave de encriptación de datos, debe proporcionarla. Se muestra el siguiente diálogo:
   ![](../assets/en/MSC/MSC_encrypt7.png)
 
 En este paso, tiene dos opciones:

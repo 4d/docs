@@ -29,7 +29,7 @@ You can configure REST accesses with one of the following means:
 - assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - write an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-:::info Important
+:::info Importante
 
 - It is recommended not to enable different REST access control features simultaneously to avoid conflicts.
 - If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.

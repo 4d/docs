@@ -327,7 +327,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).

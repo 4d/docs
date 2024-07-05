@@ -151,7 +151,7 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 | Parâmetro | Tipo                                        |
 | --------- | ------------------------------------------- |
 | $param1   | [`HTTPRequest` object](#httprequest-object) |
-| $param2   | [`Event` object](#event-object)             |
+| $param2   | [Objeto `Event`](#event-object)             |
 
 Aqui está a sequência de chamadas de retorno:
 
@@ -354,9 +354,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                       |
-| ------- | ------------------------------------------------------------------------------ |
-| 19 R8   | `.headers` returns lowercase names. New `.rawHeaders` property |
+| Release | Mudanças                                                                           |
+| ------- | ---------------------------------------------------------------------------------- |
+| 19 R8   | `.headers` returns lowercase names. Nova propriedade `.rawHeaders` |
 
 </details>
 

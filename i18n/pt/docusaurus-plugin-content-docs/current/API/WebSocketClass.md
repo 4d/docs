@@ -109,7 +109,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 Aqui está a sequência de chamadas de retorno:
 
-1. `onOpen` is executed once
+1. `onOpen` é executado uma vez
 2. Zero or several `onMessage` are executed
 3. Zero or one `onError` is executed (stops the processing)
 4. `onTerminate` is always executed

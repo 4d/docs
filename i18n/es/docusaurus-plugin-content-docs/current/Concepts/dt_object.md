@@ -237,7 +237,7 @@ var $o2:={a: 42} //reference to a different instance
 var $o3:=$o1 //reference to the same instance
 ```
 
-Based upon the code above, the comparison table is:
+Basándonos en el código anterior, la tabla comparativa es:
 
 | Operación   | Sintaxis              | Devuelve | Expression | Valor |
 | ----------- | --------------------- | -------- | ---------- | ----- |

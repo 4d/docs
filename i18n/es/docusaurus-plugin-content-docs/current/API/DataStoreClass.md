@@ -3,10 +3,10 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
+Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos `Datastore` son devueltos por los siguientes comandos:
 
 - [ds](#ds): un acceso directo al datastore principal
-- [Open datastore](#open-datastore): to open any remote datastore
+- [Open datastore](#open-datastore): para abrir cualquier datastore remoto
 
 ### Resumen
 
@@ -58,17 +58,17 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 #### Descripción
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+El comando `ds` <!-- REF #_command_.ds.Summary -->devuelve una referencia al datastore correspondiente a la base de datos 4D actual o a la base de datos designada por *localID*<!-- END REF -->.
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+Si se omite el parámetro *localID* (o se pasa una cadena vacía ""), el comando devuelve una referencia al almacén de datos que coincide con la base de datos local de 4D (o la base de datos de 4D Server en caso de abrir una base de datos remota en 4D Server). El almacén de datos se abre automáticamente y está disponible directamente a través de `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). La identificación local se define cuando se utiliza este comando.
+También puede obtener una referencia en un datastore remoto abierto pasando su id local en el parámetro *localID*. El datastore debe haber sido previamente abierto con el comando [`Open datastore`](#open-datastore) por la base de datos actual (host o componente). La identificación local se define cuando se utiliza este comando.
 
 > El alcance del id local es la base de datos en la que se ha abierto el almacén de datos.
 
-If no *localID* datastore is found, the command returns **Null**.
+Si no se encuentra ningún datastore *localID*, el comando devuelve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `cs.Datastore` son creados apartir de la base de datos objetivo en función de las [reglas generales ORDA](ORDA/dsMapping.md#reglas-generales).
 
 #### Ejemplo 1
 
@@ -97,8 +97,8 @@ Utilizando el almacén de datos principal de la base 4D:
 ```
 
 ```4d
-  //getFirst method
-  //getFirst(localID;dataclass) -> entity
+  //método getFirst
+  //getFirst(localID;dataclass) -> entidad
  #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
 
  $0:=ds($localId)[$dataClassName].all().first()
@@ -108,11 +108,11 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                      |
-| ----------- | ----------------------------------- |
-| 20 R6       | Support access to Qodly instances   |
-| 20 R4       | Nueva propiedad *passwordAlgorithm* |
-| 18          | Añadidos                            |
+| Lanzamiento | Modificaciones                                 |
+| ----------- | ---------------------------------------------- |
+| 20 R6       | Soporte para acceder a las instancias de Qodly |
+| 20 R4       | Nueva propiedad *passwordAlgorithm*            |
+| 18          | Añadidos                                       |
 
 </details>
 
@@ -130,14 +130,14 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos remota identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
 
-The following remote datastores are supported by the command:
+El comando admite los siguientes almacenes de datos remotos:
 
-| tipo de almacén de datos                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
-| [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
+| Tipo de almacén de datos                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aplicación 4D remota                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| [Aplicación Qodly](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
 
 :::note
 
@@ -147,17 +147,17 @@ The following remote datastores are supported by the command:
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propiedad   | Tipo    | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                            | Aplicación Qodly                                                             |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                | API Endpoint of the Qodly cloud instance                                     |
-| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                | - (ignorado)                                              |
-| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                           | * (ignorado)                                              |
-| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. | - (ignorado)                                              |
-| tls         | Boolean | True to use secured connection(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                     | True para usar conexión segura. If omitted, false by default |
-| type        | Text    | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                              | * (ignorado)                                              |
-| api-key     | Text    | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                  | Api key of the Qodly cloud instance                                          |
+| Propiedad   | Tipo    | Aplicación 4D remota                                                                                                                                                                                                                                                                                                                                                                                                                    | Aplicación Qodly                                                                  |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                       | API Endpoint de la instancia Qodly cloud                                          |
+| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                       | - (ignorado)                                                   |
+| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                                  | * (ignorado)                                                   |
+| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). Para más información, consulte **Cierre de sesiones**. | - (ignorado)                                                   |
+| tls         | Boolean | True para utilizar una conexión segura(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                    | True para usar conexión segura. Si se omite, es false por defecto |
+| type        | Text    | debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                    | * (ignorado)                                                   |
+| api-key     | Text    | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                         | API key de la instancia Qodly cloud                                               |
 
-(1) If `tls` is true, the HTTPS protocol is used if:
+(1) Si `tls` es true, se utiliza el protocolo HTTPS si:
 
 - HTTPS está activado en el almacén de datos remoto
 - el número de puerto especificado coincide con el puerto HTTPS configurado en los ajustes de la base de datos
@@ -219,7 +219,7 @@ Trabajar con varios almacenes de datos remotos:
 
 #### Ejemplo 4
 
-Connection to a Qodly application:
+Conexión a una aplicación Qodly:
 
 ```4d
 var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
@@ -240,7 +240,7 @@ ALERT(String($data.length)+" items have been read")
 
 #### Gestión de errores
 
-In case of error, the command returns **Null**. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". You can intercept this error with a method installed by `ON ERR CALL`.
+En caso de error, el comando devuelve **Null**. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". You can intercept this error with a method installed by `ON ERR CALL`.
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
 
@@ -427,7 +427,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 |Lanzamiento|Cambios|
 
 \|---|---|
-|20|Added|
+|20|Añadido|
 
 </details>
 
@@ -519,7 +519,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarla.
+> **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
 #### Descripción
 
@@ -719,7 +719,7 @@ En un almacén de datos remoto:
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarla.
+> **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
 #### Descripción
 
@@ -784,7 +784,7 @@ For a description of the ORDA request log format, please refer to the [**ORDA cl
 
 #### Ejemplo
 
-See Example 2 of [`.startRequestLog()`](#startrequestlog).
+Vea el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -942,7 +942,7 @@ El resultado de la orden se describe en el objeto devuelto:
 | Propiedad  |                                                                                              | Tipo       | Descripción                                                                                                |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                                                                                              | Boolean    | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
-|            |                                                                                              |            | Properties below are returned only if success is *FALSE*                                                   |
+|            |                                                                                              |            | Las siguientes propiedades se devuelven sólo si success es *FALSE*                                         |
 | status     |                                                                                              | Number     | Código de error (4 si la llave de encriptación suministrada es errónea)                 |
 | statusText |                                                                                              | Text       | Mensaje de error                                                                                           |
 | errors     |                                                                                              | Collection | Pila de errores. El primer error tiene el índice más alto                                  |
@@ -1100,7 +1100,7 @@ ds.setGlobalStamp($newValue)
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarla.
+> **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
 #### Descripción
 
@@ -1252,7 +1252,7 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 #### Del lado del servidor
 
-Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. The log data is written in a file in `.jsonl` format. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Los datos del registro se escriben en un archivo en formato `.jsonl`. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
@@ -1414,7 +1414,7 @@ Esta función no hace nada si el registro de peticiones ORDA no se inició en la
 
 #### Ejemplo
 
-See examples for [`.startRequestLog()`](#startrequestlog).
+Ver ejemplos para [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 

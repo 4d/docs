@@ -9,15 +9,15 @@ Qodly Studio for 4D is currently in the **Developer Preview** phase. No debe uti
 
 :::
 
-**Qodly Studio** es un creador de interfaces para aplicaciones web. Ofrece a los desarrolladores un editor gráfico de formularios para diseñar aplicaciones que se ejecutan en navegadores web o smartphones. Soporta de forma nativa los [objetos ORDA](../ORDA/overview.md).
+**Qodly Studio** es un creador de interfaces para aplicaciones web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. Soporta de forma nativa los [objetos ORDA](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
 
 Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https://qodly.com), dedicada al desarrollo de aplicaciones profesionales web.
 
-Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes de datos y aprenderá a:
+With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of Qodly Sources, and learn how to:
 
-- crear formularios Qodly colocando componentes en una página
+- create Qodly pages by placing components on a canvas
 - mapear componentes a datos
 - activar código 4D configurando eventos
 - y mucho más.
@@ -138,7 +138,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 |                                                                                  | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                                           | Qodly Studio para desarrolladores Qodly                                       |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                      | Qodly Studio Model Editor                                                     |
-| Formulario Qodly                                                                 | Qodly Studio Webform Editor                                                                                        | Qodly Studio Webform Editor                                                   |
+| Páginas Qodly                                                                    | Editor de páginas Qodly Studio                                                                                     | Editor de páginas Qodly Studio                                                |
 | Formularios de escritorio                                                        | 4D IDE                                                                                                             | _not supported_                                                               |
 | Lenguaje de programación                                                         | Lenguaje 4D con ORDA                                                                                               | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) con ORDA |
 | IDE de código                                                                    | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                                                 |
@@ -150,12 +150,12 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 ### Lenguaje
 
-The following commands and classes are dedicated to the server-side management of Qodly forms:
+The following commands and classes are dedicated to the server-side management of Qodly pages:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
-- [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly form components.
-- Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
+- [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly page as an object.
+- [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly page components.
+- [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
+- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly page components.
 
 ### Uso métodos proyecto
 
@@ -175,15 +175,15 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 
 ### Activación del renderizado
 
-Qodly Studio encapsulates Qodly forms, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
+Qodly Studio encapsulates Qodly pages, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
 
 :::info
 
-Mira [esta página](https://developer.qodly.com/docs/studio/rendering) para obtener información detallada sobre cómo renderizar formularios Qodly en Qodly.
+See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed information on how to render Qodly pages in Qodly.
 
 :::
 
-Para habilitar el renderizado de formularios Qodly, deben configurarse las siguientes opciones.
+To enable the rendering of Qodly pages, the following options must be set.
 
 - La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#exposed-as-rest-server) del proyecto 4D debe estar activada.
 - El [servidor web 4D](webServer.md) debe estar ejecutándose.
@@ -198,21 +198,21 @@ Para habilitar el renderizado de formularios Qodly, deben configurarse las sigui
 
 When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
 
-Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza un formulario Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
+Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. When you use Qodly Studio as a developer, even when you preview a Qodly Page in the studio, you're using the 4D WebAdmin web server. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
-However, form rendering happens outside Qodly Studio, and is served by the standard 4D web server. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
+However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
 
-### Acceder a formularios Qodly
+### Acceder a páginas Qodly
 
 Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
-Sus formularios Qodly están disponibles a través de la siguiente url:
+Sus páginas Qodly están disponibles a través de la siguiente url:
 
 ```
-IP:port/$lib/renderer/?w=QodlyFormName
+IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-...where _IP:port_ represents the address of the web server and _QodlyFormName_ is the name of the Qodly form.
+...where _IP:port_ represents the address of the web server and _QodlyPageName_ is the name of the Qodly page.
 
 Por ejemplo:
 
@@ -222,31 +222,27 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## Forzar inicio de sesión
 
-With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
+With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
 
-### Setting the force login mode
+### Configuración
 
-You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
-:::note
-
 You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
 
-:::
+You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. A licence will be consumed only when the user is actually logged.
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. La licencia se consume solo cuando el usuario está realmente conectado.
+:::note Compatibilidad
 
-:::info
-
-For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
+When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
 
 :::
 
 #### Ejemplo
 
-In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+In a simple Qodly page with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
 
 ```4d
 
@@ -279,7 +275,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde el formulario Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+To logout the user, you just need to execute the **Logout** standard action from the Qodly page. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
@@ -291,7 +287,7 @@ Al desencadenar la acción de cierre de sesión de una sesión de usuario web, s
 
 ## Acerca del uso de licencias para renderización
 
-In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
+In default mode when any page is rendered, or in "force login" mode when a page handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
 ### Esquemas URL
 
@@ -333,7 +329,7 @@ Para más información sobre el atributo `SameSite`, consulte [esta entrada de b
 
 Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=QodlyFormName`).
+- Run the renderer on another browser tab (by entering the rendered URL of your Qodly page: `IP:port/$lib/renderer/?w=QodlyPageName`).
 - Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
 - Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
 

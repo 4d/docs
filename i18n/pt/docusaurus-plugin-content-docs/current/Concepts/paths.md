@@ -13,21 +13,23 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 ## Filesystem pathnames
 
-4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Os nomes de caminho do sistema de arquivos são úteis por duas razões principais:
+4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
+
+Os nomes de caminho do sistema de arquivos são úteis por duas razões principais:
 
 - Independência: Pode mover a sua solução de um local para outro, independentemente do sistema operativo, sem ter de se preocupar com caminhos,
 - Segurança: Nenhum código pode acessar elementos localizados acima da raiz do sistema de arquivos no disco (sandboxing).
 
 São compatíveis os seguintes nomes de caminho do sistema de arquivos:
 
-| filesystem   | Designa                                                                  |
-| ------------ | ------------------------------------------------------------------------ |
-| "/DATA"      | Pasta de dados actual                                                    |
-| "/LOGS"      | Pasta Logs                                                               |
-| "/PACKAGE"   | Pasta de raiz do projeto (com ou sem extensão 4dbase) |
-| "/PROJECT"   | Pasta Project                                                            |
-| "/RESOURCES" | Pasta de recursos do projeto atual                                       |
-| "/SOURCES"   | Pasta de fontes do projeto atual                                         |
+| filesystem   | Designa                                                                  | Exemplo                                                          |
+| ------------ | ------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| "/DATA"      | Pasta de dados actual                                                    | "C:\\MyApps\\Students\\Data\\"              |
+| "/LOGS"      | Pasta Logs                                                               | "C:\\MyApps\\Students\\Data\\Logs\\"       |
+| "/PACKAGE"   | Pasta de raiz do projeto (com ou sem extensão 4dbase) | "C:\\MyApps\\Students\\"                     |
+| "/PROJECT"   | Pasta Project                                                            | "C:\\MyApps\\Students\\Project\\"           |
+| "/RESOURCES" | Pasta de recursos do projeto atual                                       | "C:\\MyApps\\Resources\\"                    |
+| "/SOURCES"   | Pasta de fontes do projeto atual                                         | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxe POSIX
 
@@ -42,6 +44,8 @@ Com esta sintaxe:
 In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
 
 ```4d
+var $pathFile : 4D.File
+var $pathFolder : 4D.Folder
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
@@ -108,9 +112,11 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por exemplo:
 
 ```4d
-  //para referenciar uma pasta "Picture" dentro da pasta de documentos do utilizador
+var $userImages : 4D.Folder
+var $ok : Boolean
+  //to reference a "Picture" folder within the user documents folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //para criar uma pasta no ambiente de trabalho
+  //to create a folder on the desktop
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
@@ -121,15 +127,13 @@ Os nomes de caminho absolutos não são suportados e devolverão erros.
 A flexibilidade das funções de arquivos e pastas oferece-lhe várias possibilidades de tratamento de arquivos e pastas, como nos exemplos seguintes:
 
 ```4d
-$f:=Folder(fk desktop folder).folder("archive/jan2019")
- 
-$f2:=Folder("/DATA/archive/jan2019").file("total.txt")
- 
-$f3:=Folder("/DATA/archive/jan2019")
- 
-$f4:=File("/DATA/info.txt")
- 
-$f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
- 
-$f6:=File(fk backup log file)
+var $fold : 4D.Folder
+var $file : 4D.File
+
+$fold:=Folder(fk desktop folder).folder("archive/jan2019")
+$fold:=Folder("/DATA/archive/jan2019")
+$file:=Folder("/DATA/archive/jan2019").file("total.txt")
+$file:=File("/DATA/info.txt")
+$file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
+$file:=File(fk backup log file)
 ```

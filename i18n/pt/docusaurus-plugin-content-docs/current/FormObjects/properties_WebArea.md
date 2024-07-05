@@ -21,7 +21,7 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 #### Objectos suportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -39,7 +39,7 @@ Nome de uma variável do tipo Longint. This variable will receive a value betwee
 
 #### Objectos suportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -69,7 +69,7 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 
 #### Objectos suportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)
 
 ---
 
@@ -102,4 +102,4 @@ You can customize CEF area parameters by creating a local [4DCEFParameters.json 
 
 #### Objectos suportados
 
-[Web Area](webArea_overview.md)
+[Área web](webArea_overview.md)

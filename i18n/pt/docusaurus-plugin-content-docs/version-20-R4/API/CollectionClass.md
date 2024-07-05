@@ -84,10 +84,10 @@ Uma coleção se inicializa com:
 
 
 <!-- REF #_command_.New collection.Params -->
-| Parâmetro  | Tipo                                                                    |    | Descrição                                     |
-| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                       |
-| Resultados | Collection                                                              | <- | The new collection|<!-- END REF -->
+| Parâmetro  | Tipo                                                                    |    | Descrição                                 |
+| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection                   |
+| Resultados | Collection                                                              | <- | A nova coleção|<!-- END REF -->
 
 
 |

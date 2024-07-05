@@ -88,7 +88,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 **File ( path { ; pathType } { ; \* })**
 
-*path* には、ファイルパス文字列を渡します。 カスタムの文字列やファイルシステム (例: "/DATA/myfile.txt") を渡すことができます。
+*path* には、ファイルパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA/myfile.txt") を渡すことができます。
 
 > `File` コマンドでは絶対パス名のみがサポートされます。
 

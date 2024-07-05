@@ -8,15 +8,15 @@ Após [criar um conjunto de entidades]($method.md#methodentityset) utilizando `$
 
 ## Sintaxe disponível
 
-| Sintaxe                                                                                                    | Exemplo                                                                            | Descrição                                                                                      |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                                                    |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
+| Sintaxe                                                                                                        | Exemplo                                                                            | Descrição                                                                                      |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                                                    |
+| [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
 
 
 
 
-## $entityset/{entitySetID}
+## $entityset/\{entitySetID\}
 
 Recupera um conjunto de entidades existente (*, por exemplo,*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
@@ -36,7 +36,7 @@ Após criar um conjunto de entidades, o ID do conjunto de entidades é devolvido
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
 
-## $entityset/{entitySetID}?$operator...&$otherCollection
+## $entityset/\{entitySetID\}?$operator...&$otherCollection
 
 Criar outro conjunto de entidades com base em conjuntos de entidades criados anteriormente
 
@@ -49,7 +49,7 @@ Criar outro conjunto de entidades com base em conjuntos de entidades criados ant
 
 ### Descrição
 
-Depois de criar um conjunto de entidades (conjunto de entidades #1) utilizando `$method=entityset`, pode então criar outro conjunto de entidades utilizando a sintaxe `$entityset/{entitySetID}?$operator... &$otherCollection`, a propriedade `$operator` (cujos valores são mostrados abaixo), e outro conjunto de entidades (conjunto de entidades #2) definido pela propriedade `$otherCollection`. Os dois conjuntos de entidades devem estar na mesma classe de dados.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Os dois conjuntos de entidades devem estar na mesma classe de dados.
 
 Pode então criar outro conjunto de entidades que contenha os resultados desta chamada, utilizando `$method=entityset` no final do pedido REST.
 

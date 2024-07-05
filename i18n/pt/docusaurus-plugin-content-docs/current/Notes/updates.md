@@ -10,14 +10,20 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Destaques
 
 - Support of comparison operators on [object references](../Concepts/dt_object.md#object-operators) and [collection references](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
-- When a component has a declared namespace, its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`].
+- When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
+- Component manager: Support of [components stored on GitHub](../Project/components.md#declaring-components-stored-on-github).
 - New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
 - New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
 - New [4DCEFParameters.json file](../FormObjects/webArea_overview.md#4dcefparametersjson) to customize 4D embedded web areas.
+- New [`$singleton` API](../REST/$singleton.md) to call exposed singleton functions from REST and new [associated privileges](../ORDA/privileges.md).
+- A [new settings button](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) helps you upgrade your project to use "force login" REST mode (the `On REST Authentication` database method is now deprecated).
+- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands.
+- New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
 
 #### Mudanças de comportamento
 
 - Support of scroll chaining in forms: parent subforms now scroll automatically when embedded scrollable objects ([vertically](../FormObjects/properties_Appearance.md#vertical-scroll-bar) or [horizontally](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- The [`$catalog` REST API](../REST/$catalog.md) now returns singletons (if any).
 
 ## 4D 20 R5
 
@@ -173,7 +179,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [Página Novidades] (https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 #### Mudanças de comportamento
 
@@ -382,13 +388,13 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 | Biblioteca | Versão atual                              | Atualizado em 4D | Comentário                                                                                                                      |
 | ---------- | ----------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Used for QUIC                                                                                                                   |
+| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Usado para QUIC                                                                                                                 |
 | CEF        | 121                                       | 20 R5            | Chromium 6167                                                                                                                   |
 | Hunspell   | 7.3.27    | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                             |
 | ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |
 | libldap    | **2.6.7** | **20 R6**        |                                                                                                                                 |
 | libsasl    | 2.1.28    | 20               |                                                                                                                                 |
-| Libuv      | 1.48                      | **20 R6**        | Used for QUIC                                                                                                                   |
+| Libuv      | 1.48                      | **20 R6**        | Usado para QUIC                                                                                                                 |
 | libZip     | 19.5                      | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                            |
 | LZMA       | 5.4.1     | 20               |                                                                                                                                 |
 | OpenSSL    | 3.2.0     | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. See [Behavior changes](#behavior-changes) for release 20 R4 |

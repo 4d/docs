@@ -401,7 +401,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
-| `WEB SET OPTION`      | `Web max sessions	`                                |             |
+| `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
 Número máximo de sessões simultâneas. Cuando se alcanza el límite definido, se cierra la sesión más antigua (y se llama al método base `On Web Close Process`) si el servidor web necesita crear una nueva. El número de sesiones simultáneas no puede superar el [número máximo de procesos web](#maximum-concurrent-web-processes) (100 por defecto).
 

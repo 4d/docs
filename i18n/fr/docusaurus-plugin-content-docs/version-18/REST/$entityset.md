@@ -7,12 +7,12 @@ Après avoir [créé un ensemble d'entités]($method.md#methodentityset) à l'ai
 
 ## Syntaxe
 
-| Syntaxe                                                                                                    | Exemple                                                                            | Description                                                                  |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un entity set existant                                              |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
+| Syntaxe                                                                                                        | Exemple                                                                            | Description                                                                  |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Récupère un entity set existant                                              |
+| [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
 
-## $entityset/{entitySetID}
+## $entityset/\{entitySetID\}
 
 Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
@@ -30,7 +30,7 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
-## $entityset/{entitySetID}?$operator...&$otherCollection
+## $entityset/\{entitySetID\}?$operator...&$otherCollection
 
 Créez un autre ensemble d'entités basé sur des ensembles d'entités préalablement créés
 
@@ -41,7 +41,7 @@ Créez un autre ensemble d'entités basé sur des ensembles d'entités préalabl
 
 ### Description
 
-Après avoir créé un ensemble d'entités (ensemble d'entités n°1) à l'aide de `$method=entityset`, vous pouvez ensuite créer un autre ensemble d'entités en utilisant la syntaxe `$entityset/{entitySetID}?$operator... &$otherCollection`, la propriété `$operator` (dont les valeurs sont indiquées ci-dessous), et un autre ensemble d'entités (jeu d'entités n°2) défini par la propriété `$otherCollection`. Les deux ensembles d'entités doivent être dans la même dataclass.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre ensemble d'entités contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 

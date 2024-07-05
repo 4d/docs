@@ -22,8 +22,8 @@ Também pode visualizar a caixa de diálogo Preferências no modo Aplicação ut
 
 Les réglages effectués dans la boîte de dialogue Préférences sont enregistrés dans un fichier de préférences au format XML nommé **4D Preferences vXX.4DPreferences** qui est stocké dans le dossier 4D actif de l'utilisateur actuel, tel que retourné par la commande [`Get 4D folder`](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html):
 
-*   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
-*   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
+*   Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
+*   macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`
 
 ## Personalização de parâmetros e redefinição de configurações
 

@@ -17,7 +17,7 @@ By default, when an entity is [deleted]($method.md#methoddelete), its reference(
 
 ## Exemplo
 
-1. We create an entity set:
+1. Criamos um conjunto de entidades:
 
 `GET /rest/Speciality?$filter="ID<=3"&$method=entityset`
 
@@ -119,7 +119,7 @@ The entity set is returned and still contains 3 entities. There is an undefined 
 }
 ```
 
-3. If this request is sent:
+3. Se essa solicitação for enviada:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A?$clean=true&$method=entityset`
 

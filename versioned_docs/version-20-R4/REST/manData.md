@@ -20,7 +20,7 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
@@ -37,7 +37,7 @@ An entity set (aka *entity selection*) is a collection of entities obtained thro
 
 To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-To access the entity set, you must use `$entityset/{entitySetID}`, for example:
+To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -50,7 +50,7 @@ If you modify any of the entity's attributes in the entity set, the values will 
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -89,11 +89,11 @@ You can apply this filter in the following ways:
 
 |Object	|Syntax|	Example|
 |---|---|---|
-|Dataclass	|{dataClass}/{att1,att2...}	|/People/firstName,lastName|
-|Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a@'"|
-|Specific entity|	{dataClass}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
-||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
-|Entity selection|	{dataClass}/{att1,att2...}/$entityset/{entitySetID}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
+|Dataclass	|\{dataClass\}/{att1,att2...}	|/People/firstName,lastName|
+|Collection of entities	|\{dataClass\}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a@'"|
+|Specific entity|	\{dataClass\}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
+||\{dataClass\}:\{attribute\}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
+|Entity selection|	\{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed. 
 
@@ -242,7 +242,7 @@ If you want to save a BLOB stored in your dataclass, you can write the following
 
 ## Retrieving only one entity  
 
-You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
+You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

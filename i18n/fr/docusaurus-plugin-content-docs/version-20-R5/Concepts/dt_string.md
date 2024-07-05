@@ -67,7 +67,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes renvoient `TRUE` :
+- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
