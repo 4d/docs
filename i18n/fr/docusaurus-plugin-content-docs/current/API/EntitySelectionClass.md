@@ -524,19 +524,19 @@ Nous voulons obtenir la liste des employés dont le salaire est supérieur au sa
 
 <!-- REF #EntitySelectionClass.clean().Params -->
 
-| Paramètres | Type                               |     | Description                                   |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------- |
-| Résultat   | 4D.EntitySelection |  <- | New entity selection without deleted entities |
+| Paramètres | Type                               |     | Description                                       |
+| ---------- | ---------------------------------- | :-: | ------------------------------------------------- |
+| Résultat   | 4D.EntitySelection |  <- | Nouvelle entity selection sans entités supprimées |
 
 <!-- END REF -->
 
 #### Description
 
-The `.clean()` function <!-- REF #EntitySelectionClass.clean().Summary -->returns a new entity selection based upon the original entity selection but without deleted entities, if any<!-- END REF -->.
+La fonction `.clean()` <!-- REF #EntitySelectionClass.clean().Summary -->renvoie une nouvelle entity selection basée sur l'entity selection originale mais sans les entités supprimées, le cas échéant<!-- END REF -->.
 
-By default, when an entity is [dropped](EntitySelectionClass.md#drop), its reference(s) in existing entity selection(s) become *undefined* but are not removed from the entity selection object(s). Deleted entities are still included in the [`.length`](#length) property and are displayed as blank lines if the entity selection is bound to an interface object such as a list. In this case, calling the `.clean()` function on the entity selection allows you to get a new, up-to-date entity selection, not containing *undefined* entity references.
+Par défaut, lorsqu'une entité est [supprimée] (EntitySelectionClass.md#drop), sa ou ses référence(s) dans les entity selection existantes deviennent *undefined* mais ne sont pas supprimées des objets entity selection. Les entités supprimées sont toujours comptabilisées dans la propriété [`.length`](#length) et sont affichées sous forme de lignes vides si l'entity selection est liée à un objet d'interface tel qu'une liste. Dans ce cas, appeler la fonction `.clean()` sur l'entity selection vous permet d'obtenir une nouvelle entity selection à jour, ne contenant pas de références d'entités *undefined*.
 
-The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+La sélection d'entités résultante conserve la même propriété [triable](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) et la même propriété [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) que l'entity selection d'origine.
 
 #### Exemple
 
@@ -545,7 +545,7 @@ var $sel; $sel2 : cs.SpecialitySelection
 var $status : Object
 
 $sel:=ds.Speciality.query("ID <= 4")
-$status:=ds.Speciality.get(2).drop() //delete the entity from the dataclass
+$status:=ds.Speciality.get(2).drop() //supprime l'entité de la dataclass
   //$sel.length = 4
 
 $sel2:=$sel.clean()
@@ -1358,7 +1358,7 @@ Les entity selections ont toujours une propriété `.length`.
 ```4d
  var $vSize : Integer
  $vSize:=ds.Employee.query("gender = :1";"male").length
- ALERT(String(vSize)+" male employees found.")
+ ALERT(String(vSize)+" employés masculins trouvés.")
 ```
 
 <!-- END REF -->
@@ -1589,9 +1589,9 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
- $employees1:=ds.Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
- $employees2:=ds.Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
- $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
+ $employees1:=ds.Employee.query("lastName = :1";"H@") //"Colin Hetrick","Grady Harness"
+ $employees2:=ds.Employee.query("firstName = :1";"C@") //"Colin Hetrick", "Cath Kidston"
+ $result:=$employees1.or($employees2) //$result contient "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
 #### Exemple 2
@@ -1599,11 +1599,11 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") // Returns "Colin Hetrick","Grady Harness", "Sherlock Holmes"
- $employee:=ds.Employee.get(686) //the entity with primary key 686 does not belong to the $employees entity selection
-  //It matches the employee "Mary Smith"
+ $employees:=ds.Employee.query("lastName = :1";"H@") // "Colin Hetrick","Grady Harness", "Sherlock Holmes"
+ $employee:=ds.Employee.get(686) //l'entité avec clé primaire 686 n'appartient pas à l'entity selection $employees 
+  //elle correspond à l'employée "Mary Smith"
 
- $result:=$employees.or($employee) //$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
+ $result:=$employees.or($employee) //$result contient "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
 ```
 
 <!-- END REF -->
@@ -1748,7 +1748,7 @@ Pour effectuer un tri d'étudiants à l'aide d'une formule texte :
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
+ $es2:=$es1.orderByFormula("length(this.lastname)") //croissant par défaut
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
@@ -1759,7 +1759,7 @@ Pour effectuer le même tri dans le même ordre, mais à l'aide d'un objet formu
  var $formula : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // ascending by default
+ $es2:=$es1.orderByFormula($formula) // croissant par défaut
  $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
@@ -1940,7 +1940,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings p
 
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+La fonction `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->"invalide" immédiatement les données de l'entity selection dans le [cache local ORDA](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> de sorte que, la prochaine fois que 4D accède à l'entity selection, elle soit rechargée à partir de la base.
 
 Par défaut, le cache local d'ORDA est invalidé après 30 secondes. Dans le contexte des applications client/serveur à l'aide d'ORDA et du langage classique, cette fonction vous permet d'être certain que l'application distante fonctionne toujours avec les données les plus récentes.
 
