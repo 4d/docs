@@ -22,10 +22,10 @@ title: コンポーネント
 
 :::note
 
-This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
+このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります:
 
-- in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- [リモートモードの 4D](../Desktop/clientServer.md) では、サーバーがコンポーネントを読み込み、リモートアプリケーションに送信します。
+- 統合されたアプリケーションでは、コンポーネントは [ビルドする際に組み込まれます](../Desktop/building.md#プラグインコンポーネントページ)。
 
 :::
 
@@ -33,13 +33,13 @@ This page describes how to work with components in the **4D** and **4D Server** 
 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file.
+- [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
+- または、**dependencies.json** ファイルで、コンポーネントを宣言します。
 
-Components declared in the **dependencies.json** file can be stored at different locations:
+**dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
-- at the same level as your 4D project's package folder: this is the default location,
-- anywhere on your machine: the component path must be declared in the **environment4d.json** file
+- 4Dプロジェクトのパッケージフォルダーと同じ階層 (デフォルトの場所です)
+- マシン上の任意の場所 (コンポーネントパスは **environment4d.json** ファイル内で宣言する必要があります)
 - on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
@@ -140,7 +140,7 @@ If you want to customize the location of local components, you declare the paths
 
 :::
 
-### Declaring components stored on GitHub
+### GitHub に保存されたコンポーネントの宣言
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 
