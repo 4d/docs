@@ -226,27 +226,27 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| Paramètres | Type       |     | Description                                                |
-| ---------- | ---------- | :-: | ---------------------------------------------------------- |
-| Résultat   | Collection |  <- | Collection of privilege names (strings) |
+| Paramètres | Type       |     | Description                                                   |
+| ---------- | ---------- | :-: | ------------------------------------------------------------- |
+| Résultat   | Collection |  <- | Collection de noms de privilèges (chaînes) |
 
 <!-- END REF -->
 
 #### Description
 
-The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
+La fonction `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->renvoie une collection contenant tous les noms de privilèges associés à la session<!-- END REF -->.
 
-With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
+Avec une session de client distant ou de procédure stockée, cette fonction renvoie une collection ne contenant que "WebAdmin".
 
 :::info
 
-Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+Les privilèges sont assignés à une Session en utilisant la fonction [`setPrivileges()`](#setprivileges).
 
 :::
 
 #### Exemple
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+Les rôles suivants [`roles.json`](../ORDA/privileges.md#rolesjson-file) ont été définis :
 
 ```json
 {
@@ -280,7 +280,7 @@ The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defi
 }
 ```
 
-The session role is assigned in an `authentify()` datastore function:
+Le rôle de la session est attribué dans une fonction de datastore `authentify()` :
 
 ```4d
   //Datastore Class
@@ -290,7 +290,7 @@ exposed Function authentify($role : Text) : Text
 	Session.setPrivileges({roles: $role})
 ```
 
-Assuming the `authentify()` function is called with the "Medium" role:
+En supposant que la fonction `authentify()` soit appelée avec le rôle "Medium" :
 
 ```4d
 var $privileges : Collection
@@ -301,7 +301,7 @@ $privileges := Session.getPrivileges()
 #### Voir également
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[Permissions : Inspecter les privilèges de la session pour faciliter le débogage (article de blog)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 
@@ -369,7 +369,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`storage`](#storage) d'une session grâce à la commande [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
 
 :::
 
@@ -627,7 +627,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
 
 :::
 
