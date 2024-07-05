@@ -104,7 +104,7 @@ Le permite mostrar los números de línea por defecto en cada ventana del Editor
 
 #### Mostrar las listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) por defecto cuando se abre la ventana del Editor de código. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
 
 #### Mostrar los portapapeles
 
