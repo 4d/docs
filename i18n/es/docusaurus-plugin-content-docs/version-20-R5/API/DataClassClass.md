@@ -1561,7 +1561,7 @@ In the *settings* parameter, pass an object with the following properties:
 
 Setting a `timeout` property sets a new timeout for the entities already present in the cache. Es útil cuando se trabaja con los datos que no cambian con mucha frecuencia y, por tanto, cuando no son necesarias nuevas peticiones al servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. Por defecto es 30 000.
+`maxEntries` define el número máximo de entidades en la caché ORDA. Por defecto es 30 000.
 
 The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. En caso contrario, se ignora y el número máximo de entradas se fija en 300.
 
