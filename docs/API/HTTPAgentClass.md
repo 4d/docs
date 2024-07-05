@@ -73,10 +73,10 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | maxSockets             |Integer| 65535     |Maximum number of sockets per server                                                 |
 | maxTotalSockets        |Integer| 65535     |Maximum number of sockets for the agent                                     |
 | timeout                |Real| undefined |If defined, timeout after which an unused socket is closed                   |
-| certificatesFolder     |Folder| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Sets the active client certificates folder for the requests using the agent |
-| minTLSVersion          |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Sets the minimum version of TLS for the requests using this agent            |
-| protocol               |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Protocol used for the requests using the agent                              |
-| validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) | validateTLSCertificate for the requests using the agent|
+| certificatesFolder     |Folder| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Sets the active client certificates folder for the requests using the agent |
+| minTLSVersion          |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Sets the minimum version of TLS for the requests using this agent            |
+| protocol               |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Protocol used for the requests using the agent                              |
+| validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent|
 
 :::note
  
