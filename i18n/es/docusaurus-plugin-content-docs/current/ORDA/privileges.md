@@ -25,7 +25,7 @@ Puede asignar acciones de permiso específicas a los siguientes recursos expuest
 - una clase de datos
 - un atributo (incluidos los calculados y los alias)
 - una función de clase de modelo de datos
-- a [singleton](../REST/$singleton.md) function
+- una función [singleton](../REST/$singleton.md)
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
