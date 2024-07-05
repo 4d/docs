@@ -5,8 +5,6 @@ title: HTTPAgent
 
 The `HTTPAgent` class allows you to handle [`HTTPAgent objects`](#httpagent-object) that can be used to manage the persistence and reuse of connections to servers using the [HTTPRequest class](HTTPRequestClass.md).
 
-HTTP agents are especially beneficial for secured connections, as they reduce overhead and improve performance for both the client and server. 
-
 The `HTTPAgent` class is available from the `4D` class store. You can create a new [`HTTPAgent object`](#httpagent-object) using the [4D.HTTPAgent.new()](#4dhttpagentnew) function.
 
 When no agent is associated to an HTTP request, a global agent with default values is used. The default agent is the simplest form of HTTP agent, suitable for basic use cases. Custom agents are recommended for more control, at the agent level rather than for each HTTP request, over specific aspects of the connection such keep-alive settings, timeouts or TLS/SSL configurations.
@@ -63,16 +61,22 @@ The returned [`HTTPAgent object`](#httpagent-object) is used to customize connec
 
 In the *options* parameter, pass an object that can contain the following properties (all the properties are optional):
 
+:::note 
+
+HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#4dhttprequestnew) (HTTPRequest options take precedence); if no specific agent is defined, a global agent is used.
+
+:::
+
 |Property|Type|Default|Description|
 |---|---|---|---|
 | keepAlive              |Boolean | true      |Activates keep alive for the agent                                            |
 | maxSockets             |Integer| 65535     |Maximum number of sockets per server                                                 |
 | maxTotalSockets        |Integer| 65535     |Maximum number of sockets for the agent                                     |
 | timeout                |Real| undefined |If defined, timeout after which an unused socket is closed                   |
-| certificatesFolder     |Folder| undefined |Sets the active client certificates folder for the requests using the agent |
-| minTLSVersion          |Text| undefined |Sets the minimum version of TLS for the requests using this agent            |
-| protocol               |Text| undefined |Protocol used for the requests using the agent                              |
-| validateTLSCertificate |Boolean| undefined | validateTLSCertificate for the requests using the agent|
+| certificatesFolder     |Folder| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Sets the active client certificates folder for the requests using the agent |
+| minTLSVersion          |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Sets the minimum version of TLS for the requests using this agent            |
+| protocol               |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) |Protocol used for the requests using the agent                              |
+| validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#4dhttprequestnew)) | validateTLSCertificate for the requests using the agent|
 
 :::note
  
@@ -82,25 +86,25 @@ You can request multiple servers using the same agent. In that case, each server
 
 #### Example
 
-Creation
+Creating the HTTPAgent:
 
 ```4d
-var options:={}
-options.maxSockets:=5
-options.maxTotalSockets:=10
-options.validateTLSCertificate:=True
+var $options:={}
+$options.maxSockets:=5 //5 is the maximum number of sockets per server
+$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
+$options.validateTLSCertificate:=True //To validate the sever's certificate
 
-var myAgent:=4D.HTTPAgent.new(options)
+var $myAgent:=4D.HTTPAgent.new($options)
 
 ```
 
-Sending a request
+Sending a request to check the local time of any city:
 
 ```4d
-var options:={}
-options.method:="GET"
-options.agent:=myAgent
-var myRequest:=4D.HTTPRequest.new("www.google.com"; options)
+var $options:={}
+$options.method:="GET"
+$options.agent:=$myAgent
+var $myRequest:=4D.HTTPRequest.new("http://worldtimeapi.org/api/timezone/Europe/Paris"; $options) 
 
 ```
 
