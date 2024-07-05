@@ -9,18 +9,18 @@ title: dataClass
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                      | 例題                                       | 説明                                       |
-| --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| [**{dataClass}**](#dataClass)                                               | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
-| [**{dataClass}[{key}]**](#dataclasskey)                                     | `/Employee[22]`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)              | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#関数の呼び出し)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#関数の呼び出し) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
-| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City[2]/getPopulation`                  | Entityクラス関数を実行します                        |
+| シンタックス                                                                                | 例題                                       | 説明                                       |
+| ------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                     | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
+| [**\{dataClass\}[\{key\}]**](#dataclasskey)                                       | `/Employee[22]`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
+| [**\{dataClass\}/\{DataClassClassFunction\}**](ClassFunctions.md#関数の呼び出し)         | `/City/getCity`                          | DataClassクラス関数を実行します                     |
+| [**\{dataClass\}(\{EntitySelectionClassFunction\}**](ClassFunctions.md#関数の呼び出し)   | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
+| [**\{dataClass\}[\{key\}]/\{EntityClassFunction\}**](ClassFunctions.md#関数の呼び出し) | `City[2]/getPopulation`                  | Entityクラス関数を実行します                        |
 
 > 関数の呼び出しについての詳細は [ORDAクラス関数](ClassFunctions.md) を参照ください。
 
-## {dataClass}
+## \{dataClass\}
 
 特定のデータクラス (*例:* `Company`) の全データ (デフォルトでは先頭の 100エンティティ) を返します。
 
@@ -135,7 +135,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 }
 ```
 
-## {dataClass}\[{key}]
+## \{dataClass\}\[{key}]
 
 データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company[22] または Company["IT0911AB2200"]` など)。
 
@@ -143,7 +143,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-返されるデータについての詳細は [{DataClass}](#dataclass) を参照ください。
+返されるデータについての詳細は [\{DataClass\}](#dataclass) を参照ください。
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
@@ -182,7 +182,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 }
 ```
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 指定した属性値を持つ 1件のエンティティのデータを返します
 

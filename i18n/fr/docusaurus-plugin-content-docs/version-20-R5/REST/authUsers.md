@@ -78,7 +78,7 @@ This function is the only available entry point from REST guest sessions when th
 
 :::note
 
-The `authentify()` function can always be executed by a REST guest session, even if there is no specific **execute** permission on it for the datastore in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file).
+The `authentify()` function can always be executed by a REST guest session, whatever the [`roles.json` file](../ORDA/privileges.md#rolesjson-file) configuration.
 
 :::
 

@@ -20,7 +20,7 @@ El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attribute
 
 En *rangeObj*, pase un objeto que contenga un rango de columnas cuyos atributos serán recuperados.
 
-The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) command.
+La colección devuelta contiene todas las propiedades de las columnas, tanto si se han definido con el comando [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) como si no.
 
 #### Ejemplo
 

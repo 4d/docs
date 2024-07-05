@@ -10,7 +10,7 @@ Pode obter várias informações do servidor REST:
 
 ## Catálogo
 
-Utilize os parâmetros [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), o [`$catalog/$all`]($catalog.md#catalogall) para obter a lista de [as classes de dados expostas e seus atributos](configuration.md#exposing-tables-and-fields).
+Use the [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
 
 Para obter a coleção de todas as classes de dados expostas junto com seus atributos:
 

@@ -3,20 +3,20 @@ id: catalog
 title: $catalog
 ---
 
-カタログには、データストアを構成するすべてのデータクラスおよび属性の詳細な情報が含まれます。
+The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                  | 例題                     | 説明                                            |
-| ----------------------------------------------------------------------- | ---------------------- | --------------------------------------------- |
-| [**$catalog**](#catalog)                                                | `/$catalog`            | プロジェクト内のデータクラスのリストを、2つの URI とともに返します。         |
-| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。            |
-| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                       |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば) |
+| シンタックス                                                                  | 例題                     | 説明                                                                                                                                                |
+| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs            |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                                                                                                                           |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば)                                                                                                     |
 
 ## $catalog
 
-プロジェクト内のデータクラスのリストを、2つの URI とともに返します。1つはデータクラスのストラクチャー情報にアクセスするためのもので、もう1つはデータクラスのデータを取得するためのものです。
+Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 ### 説明
 
@@ -38,7 +38,7 @@ title: $catalog
 
 **結果**:
 
-```
+```json
 {
     dataClasses: [
         {
@@ -57,13 +57,13 @@ title: $catalog
 
 ## $catalog/$all
 
-プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。
+Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes
 
 ### 説明
 
 `$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-各データクラスと属性について取得される情報についての詳細は [`$catalog/{dataClass}`](#catalogdataClass) を参照ください。
+各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataClass) を参照ください。
 
 ### 例題
 
@@ -71,9 +71,9 @@ title: $catalog
 
 **結果**:
 
-```
+```json
 {
- 
+
     "dataClasses": [
         {
             "name": "Company",
@@ -174,13 +174,13 @@ title: $catalog
 }
 ```
 
-## $catalog/{dataClass}
+## $catalog/\{dataClass\}
 
 特定のデータクラスとその属性の情報を返します。
 
 ### 説明
 
-`$catalog/{dataClass}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
+`$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
 
 返される情報は次の通りです:
 
@@ -189,7 +189,7 @@ title: $catalog
 - メソッド (あれば)
 - プライマリーキー
 
-### DataClass
+### データクラス
 
 公開されているデータクラスについて、次のプロパティが返されます:
 
@@ -230,7 +230,7 @@ key オブジェクトには、データクラスの **プライマリーキー*
 
 **結果**:
 
-```
+```json
 {
     name: "Employee",
     className: "Employee",
@@ -323,5 +323,36 @@ key オブジェクトには、データクラスの **プライマリーキー*
             name: "ID"
         }
     ]
+}
+```
+
+## シングルトン
+
+1つ以上の [公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) を含む [インタープロセス (共有) シングルトン](../Concepts/classes.md#シングルトンクラス) を定義している場合、`/$catalog` と `/$catalog/$all` の両方の構文で、返される json に `singletons` セクションが追加されます。 コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
+
+シングルトン関数は、[`$singleton` コマンド]($singleton.md) を使用した RESTリクエストで呼び出すことができます。
+
+### 例題
+
+`GET  /rest/$catalog/$all`
+
+**結果**:
+
+```json
+{...
+	singletons": [
+    {
+      "name": "VehicleFactory",
+      "methods": [
+        {
+          "name": "buildVehicle",
+          "allowedOnHTTPGET": false,
+          "exposed": true
+        }
+      ]
+    }
+  ],
+
+	dataClasses: [...]
 }
 ```

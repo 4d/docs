@@ -86,7 +86,7 @@ O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo 
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-No parâmetro *path* , passe uma string de rotas de pasta. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
+No parâmetro *path* , passe uma string de rotas de pasta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder` .
 

@@ -11,7 +11,7 @@ title: $catalog
 | ----------------------------------------------------------------------- | ---------------------- | --------------------------------------------- |
 | [**$catalog**](#catalog)                                                | `/$catalog`            | プロジェクト内のデータクラスのリストを、2つの URI とともに返します。         |
 | [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。            |
-| [**$catalog/{dataClass}**](#catalogdataclass)                           | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                       |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                       |
 | [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば) |
 
 ## $catalog
@@ -63,7 +63,7 @@ title: $catalog
 
 `$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-各データクラスと属性について取得される情報についての詳細は [`$catalog/{dataClass}`](#catalogdataClass) を参照ください。
+各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataClass) を参照ください。
 
 ### 例題
 
@@ -174,13 +174,13 @@ title: $catalog
 }
 ```
 
-## $catalog/{dataClass}
+## $catalog/\{dataClass\}
 
 特定のデータクラスとその属性の情報を返します。
 
 ### 説明
 
-`$catalog/{dataClass}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
+`$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
 
 返される情報は次の通りです:
 

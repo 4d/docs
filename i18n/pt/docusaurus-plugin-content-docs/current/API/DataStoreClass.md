@@ -108,11 +108,11 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                          |
-| ------- | --------------------------------- |
-| 20 R6   | Support access to Qodly instances |
-| 20 R4   | New *passwordAlgorithm* property  |
-| 18      | Adicionado                        |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 20 R6   | Support access to Qodly instances    |
+| 20 R4   | Nova propriedade *passwordAlgorithm* |
+| 18      | Adicionado                           |
 
 </details>
 
@@ -136,7 +136,7 @@ The following remote datastores are supported by the command:
 
 | datastore kind                                                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Remote 4D application                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| Aplicação 4D remoto                                                    | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
 | [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
 
 :::note
@@ -147,15 +147,15 @@ The following remote datastores are supported by the command:
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propriedade | Tipo       | Remote 4D application                                                                                                                                                                                                                                                                                                                                                                                                | Qodly application                                                            |
+| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                  | Aplicação Qodly                                                              |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                  | API Endpoint of the Qodly cloud instance                                     |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                      | - (ignored)                                               |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                     | * (ignored)                                               |
-| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. | - (ignored)                                               |
-| tls         | Parâmetros | True to use secured connection(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                     | True to use secured connection. If omitted, false by default |
-| type        | Text       | must be "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                  | * (ignored)                                               |
-| api-key     | Text       | - (ignored)                                                                                                                                                                                                                                                                                                                                                                                       | Api key of the Qodly cloud instance                                          |
+| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                      | - (ignorado)                                              |
+| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                     | * (ignorado)                                              |
+| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. | - (ignorado)                                              |
+| tls         | Parâmetros | True to use secured connection(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                     | True para usar conexão segura. Se omitido, false por defeito |
+| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                 | * (ignorado)                                              |
+| api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                      | Api key of the Qodly cloud instance                                          |
 
 (1) If `tls` is true, the HTTPS protocol is used if:
 
@@ -427,7 +427,7 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 |Release|Changes|
 
 \|---|---|
-|20|Added|
+|20|Adicionado|
 
 </details>
 
@@ -648,7 +648,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -919,7 +919,7 @@ When this function is not called, new entity selections can be shareable, depend
 
 The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. Esta função pode ser utilizada ao abrir um banco de dados criptografado, ou ao executar qualquer operação de criptografia que precise da chave de criptografia, como por exemplo voltar a criptografar o arquivo de dados.
 
-> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
+> - The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) é retornado. Use the `Data file encryption status` command to determine if the database is encrypted.
 > - The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
 
 If you use the *curPassPhrase* parameter, pass the string used to generate the data encryption key. Quando usar este parâmetro, uma chave de criptografia é gerada.

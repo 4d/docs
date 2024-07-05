@@ -116,16 +116,17 @@ title: バックアップ設定
 
 ### 自動復元とログの統合
 
-- **データベースが壊れていたら、最新のバックアップから復元する**: このオプションが選択されていると、ファイル破損などの異常が検知された場合、4D は起動時にアプリケーションの有効な最新のバックアップからのデータの復旧を自動で開始します。 ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
+#### Restore last backup if database is damaged
 
-- **データベースが完全でない場合、最新のログを統合する**: このオプションがチェックされていると、データファイルに存在しない操作がカレントログファイルに含まれている場合、プログラムは自動的にそれを統合します。 同じリポジトリに連続した有効な .journal ファイルがある場合、プログラムは必要な .journal ファイルを古いものから最新のものまで、あらかじめ統合しておきます。
+When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
 
-    このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合や、データファイルを開いた時に異常が検知されて復元処理がおこなわれた場合に発生します。
+#### Integrate the latest logs if the database is incomplete
 
-    :::note
+When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. 同じリポジトリに連続した有効な .journal ファイルがある場合、プログラムは必要な .journal ファイルを古いものから最新のものまで、あらかじめ統合しておきます。 このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合や、データファイルを開いた時に異常が検知されて復元処理がおこなわれた場合に発生します。
 
-    この機能は、カレントログファイルフォルダーにある全ログファイルがプログラムにより起動時に解析されることを意味します。 したがって、パフォーマンス上の理由から、不要なログファイルがフォルダーに保存されたままにしておかないことが推奨されます。
+:::note
 
+この機能は、カレントログファイルフォルダーにある全ログファイルがプログラムにより起動時に解析されることを意味します。 したがって、パフォーマンス上の理由から、不要なログファイルがフォルダーに保存されたままにしておかないことが推奨されます。
 
 :::
 

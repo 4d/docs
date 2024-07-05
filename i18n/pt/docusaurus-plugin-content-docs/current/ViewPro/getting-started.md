@@ -83,7 +83,7 @@ Depending on the clicked area, the following options are also available:
   - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
-## Using 4D View Pro commands
+## Uso dos comandos 4D View Pro
 
 4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands.
 

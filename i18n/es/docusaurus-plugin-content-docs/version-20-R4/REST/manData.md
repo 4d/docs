@@ -20,7 +20,7 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o varias entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
-Además la recuperación de una sola entidad en una clase de datos utilizando [{dataClass}({key})](dataClass.md#dataclasskey), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
+Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
@@ -37,7 +37,7 @@ Un conjunto de entidades (también conocido como *selección de entidades*) es u
 
 Para crear un conjunto de entidades, llame a [`$method=entityset`]($method.md#methodentityset) en su solicitud REST. Como medida de seguridad, también se puede utilizar [`$savedfilter`]($savedfilter.md) y/o [`$savedorderby`]($savedorderby.md) cuando se llame a [`$filter`]($filter.md) y/o [`$orderby`]($orderby.md) para que si alguna vez el conjunto de entidades se agota o se elimina del servidor, se pueda recuperar rápidamente con el mismo ID que antes.
 
-Para acceder al conjunto de entidades, debe utilizar `$entityset/{entitySetID}`, por ejemplo:
+To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -50,7 +50,7 @@ Si se modifica alguno de los atributos de la entidad en el conjunto de entidades
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
-Utilizando [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), puede combinar dos conjuntos de entidades que haya creado previamente. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
 
 Se devuelve una nueva selección de entidades; sin embargo, también se puede crear un nuevo conjunto de entidades llamando [`$method=entityset`]($method.md#methodentityset) al final de la petición REST.
 
@@ -87,13 +87,13 @@ Siempre se puede definir qué atributos devolver en la respuesta REST después d
 
 Puede aplicar este filtro de las siguientes maneras:
 
-| Object                  | Sintaxis                                            | Ejemplo                                                       |
-| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| Dataclass               | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
-| Collection de entidades | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Entidad específica      | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
-|                         | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
-| Entity selection        | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
+| Object                  | Sintaxis                                                    | Ejemplo                                                       |
+| ----------------------- | ----------------------------------------------------------- | ------------------------------------------------------------- |
+| Dataclass               | \{dataClass\}/{att1,att2...}                              | /People/firstName,lastName                                    |
+| Collection de entidades | \{dataClass\}/{att1,att2...}/?$filter="{filter}"          | /People/firstName,lastName/?$filter="lastName='a@'"           |
+| Entidad específica      | \{dataClass\}({ID})/{att1,att2...}                        | /People(1)/firstName,lastName                                 |
+|                         | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
+| Entity selection        | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
 Los atributos deben estar delimitados por una coma, *i.e.*, `/Employee/firstName,lastName,salary`. Se pueden pasar atributos de almacenamiento o relacionales.
 
@@ -242,7 +242,7 @@ Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo si
 
 ## Recuperar sólo una entidad
 
-Puede utilizar la sintaxis [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) cuando quiera recuperar sólo una entidad. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
+You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

@@ -954,7 +954,7 @@ Example with the `dk stop dropping on first error` option:
 
 The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->returns a collection containing *attributePath* values extracted from the entity selection<!-- END REF -->.
 
-*attributePath* can refer to:
+*attributePath* pode se referir a:
 
 - um atributo escalar de dataclass,
 - entidade relacionada,

@@ -52,7 +52,7 @@ The following table lists all supported patterns for date and time formats.
 | d       | dia no mês                                    | d             | 2                    |
 |         |                                               | dd            | 2                    |
 | D       | dia do ano                                    | D             | 189                  |
-| E       | day of week                                   | E, EE ou EEE  | Tue                  |
+| E       | dia da semana                                 | E, EE ou EEE  | Tue                  |
 |         |                                               | EEEE          | Tuesday              |
 |         |                                               | EEEEE         | T                    |
 |         |                                               | EEEEEE        | Tu                   |
@@ -78,11 +78,11 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | BBBBB         | at night [narrow]    |
 | h       | hora em am/pm (1~12)                          | h             | 7                    |
 |         |                                               | hh            | 07                   |
-| H       | hour in day (0~23)                            | H             | 0                    |
+| H       | hora no dia (0~23)                            | H             | 0                    |
 |         |                                               | HH            | 00                   |
 | K       | hora em am/pm (0~11)                          | K             | 0                    |
 |         |                                               | KK            | 00                   |
-| k       | hour in day (1~24)                            | k             | 24                   |
+| k       | hora no dia (1~24)                            | k             | 24                   |
 |         |                                               | kk            | 24                   |
 | m       | minuto em hora                                | m             | 4                    |
 |         |                                               | mm            | 04                   |

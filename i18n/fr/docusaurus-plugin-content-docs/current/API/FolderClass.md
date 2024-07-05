@@ -82,7 +82,7 @@ La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un 
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA").
+Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 

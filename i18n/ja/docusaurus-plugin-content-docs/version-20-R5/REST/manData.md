@@ -17,7 +17,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
-[{dataClass}({key})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
+[\{dataClass\}(\{key\})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
 
 戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
 
@@ -31,7 +31,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティセットを作成するには、RESTリクエスト内で [`$method=entityset`]($method.md#methodentityset) を呼び出します。 エンティティセットがタイムアウトした場合やサーバーから削除されてしまった場合への安全対策として、[`$filter`]($filter.md) や [`$orderby`]($orderby.md) を呼び出す際に [`$savedfilter`]($savedfilter.md) および [`$savedorderby`]($savedorderby.md) を使用することで、以前と同じ ID で再取得することができます。
 
-エンティティセットにアクセスするには、`$entityset/{entitySetID}` を使います。例:
+エンティティセットにアクセスするには、`$entityset/\{entitySetID\}` を使います。例:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -43,7 +43,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 4D Server のキャッシュからエンティティセットが消えていた場合、10分のデフォルトタイムアウトで再作成されます。 エンティティセットが消えていた場合、再作成されるエンティティセットの内容は更新されたものです (新しくエンティティが追加されていたり、存在していたエンティティが削除されていたりする場合がありえます)。
 
-[`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection) を使って、事前に作成した 2つのセンティティセットを統合できます。 両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
+[`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection) を使って、事前に作成した 2つのセンティティセットを統合できます。 両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
 
 この場合m新規のエンティティセレクションが返されます。RESTリクエストの最後に [`$method=entityset`]($method.md#methodentityset) を追加することで新規のエンティティセットを作成することもできます。
 
@@ -75,13 +75,13 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 このフィルターは次の方法で適用できます:
 
-| Object        | シンタックス                                                                                                                            | 例題                                                                              |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| データクラス        | {dataClass}/{att1,att2...}                                                        | /People/firstName,lastName                                                      |
-| エンティティのコレクション | {dataClass}/{att1,att2...}/?$filter="{filter}"                                    | /People/firstName,lastName/?$filter="lastName='a@'"                |
-| 特定のエンティティ     | {dataClass}({ID})/{att1,att2...}                               | /People(1)/firstName,lastName                                |
-|               | {dataClass}:{attribute}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
-| エンティティセレクション  | {dataClass}/{att1,att2...}/$entityset/{entitySetID}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
+| Object        | シンタックス                                                                                                                                    | 例題                                                                              |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| データクラス        | \{dataClass\}/{att1,att2...}                                                            | /People/firstName,lastName                                                      |
+| エンティティのコレクション | \{dataClass\}/{att1,att2...}/?$filter="{filter}"                                        | /People/firstName,lastName/?$filter="lastName='a@'"                |
+| 特定のエンティティ     | \{dataClass\}({ID})/{att1,att2...}                                   | /People(1)/firstName,lastName                                |
+|               | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
+| エンティティセレクション  | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
 属性名はコンマ区切りで渡します (_例_: `/Employee/firstName,lastName,salary`)。 ストレージ属性およびリレーション属性を渡すことができます。
 
@@ -225,6 +225,6 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 ## 1件のエンティティの取得
 
-エンティティを 1件のみ取得したい場合には [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) シンタックスを利用できます。 これは、データクラスの主キーに基づかないリレーション検索をしたい場合に便利です。 たとえば:
+エンティティを 1件のみ取得したい場合には [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) シンタックスを利用できます。 これは、データクラスの主キーに基づかないリレーション検索をしたい場合に便利です。 たとえば:
 
 `GET  /rest/Company:companyCode("Acme001")`

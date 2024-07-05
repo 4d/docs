@@ -3,7 +3,7 @@ id: directory
 title: $directory
 ---
 
-The directory handles user access through REST requests. 
+The directory handles user access through REST requests.
 
 
 ## $directory/login

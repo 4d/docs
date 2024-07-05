@@ -22,8 +22,8 @@ title: 環境設定
 
 環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。このファイルは、[`Get 4D folder`](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
 
-*   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
-*   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
+*   Windows: `\{disk\}\Users\\{username\}\AppData\Roaming\4D`
+*   macOS: `\{disk\}:Users:\{username\}:Library:Application Support:4D`
 
 ## パラメーターのカスタマイズと初期設定
 

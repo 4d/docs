@@ -126,6 +126,10 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
+### Veja também
+
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html)
+
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
 ## .clearPrivileges()
@@ -363,6 +367,12 @@ End if
 
 The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. Esta string única é automaticamente atribuída pelo servidor para cada sessão e permite que você identifique seus processos.
 
+:::tip
+
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+
+:::
+
 <!-- END REF -->
 
 <!-- REF SessionClass.idleTimeout.Desc -->
@@ -371,9 +381,10 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R6   | Adicionado |
+| Release | Mudanças |
+| ------- | -------- |
+
+|18 R6|Added|
 
 </details>
 
@@ -614,6 +625,12 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 
 This property is **read only** itself but it returns a read-write object.
 
+:::tip
+
+You can get the `.storage` property of a session using the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+
+:::
+
 <Tabs>
 
 <TabItem value="Web session example">
@@ -667,6 +684,6 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 - Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
 
-This property is **read only**.
+Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
