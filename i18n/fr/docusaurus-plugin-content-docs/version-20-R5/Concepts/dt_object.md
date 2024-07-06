@@ -20,7 +20,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 (1) Les **objets non streamables** tels que les objets ORDA ([entités](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [serveur web](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
-(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2) Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[object Picture]".
 
 :::caution
 
@@ -111,14 +111,14 @@ $col:=$o.col[5] //6
 Vous pouvez créer deux types d'objets :
 
 - des objets standard (non-partagés), en utilisant la commande [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.fr.html) ou la syntaxe d'objet littéral (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Access to these objects is controlled by `Use...End use` structures.
+- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+Vous accédez aux valeurs des propriétés de l'objet à travers une chaîne de tokens. On peut accéder aux propriétés des objets de deux manières :
 
-- using a "dot" symbol:
+- en utilisant un symbole "point" :
   > object.propertyName
 
 Voici un exemple :
@@ -127,7 +127,7 @@ Voici un exemple :
      employee.name:="Dupont"
 ```
 
-- using a string within square brackets:
+- en utilisant une chaîne entre crochets :
   > object["propertyName"]
 
 Exemples :
@@ -140,7 +140,7 @@ Exemples :
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, vous pouvez utiliser une séquence de symboles pour accéder aux sous-propriétés, par exemple :
 
 ```4d
  $vAge:=employee.children[2].age
@@ -148,7 +148,7 @@ Since an object property value can be an object or a collection, you can use a s
 
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
+- **les objets** eux-mêmes (stockés dans des variables, des champs, des propriétés d'objets, des tableaux d'objets ou des éléments de collection).
   Exemples :
 
 ```4d
@@ -159,14 +159,14 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
  $val:=$myCollection[3].subvalue //élément de collection
 ```
 
-- **4D commands** that return objects.
+- **les commandes 4D** qui retournent des objets.
   Voici un exemple :
 
 ```4d
-     $measures:=Lire mesures base.DB.tables
+     $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** or **Functions** that return objects.
+- **les méthodes projet** ou **les fonctions** qui retournent des objets.
   Voici un exemple :
 
 ```4d
@@ -178,8 +178,8 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- **Collections**
-  Example:
+- **les collections**
+  Exemple:
 
 ```4d
      myColl.length //taille de la collection
@@ -187,24 +187,24 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 ### Valeur Null
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+Lors de l'utilisation des objets, la valeur **null** est prise en charge par la commande **Null**. Cette commande peut être utilisée pour assigner ou comparer la valeur null aux propriétés de l'objet, par exemple :
 
 ```4d
  myObject.address.zip:=Null
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to [Null and Undefined](dt_null_undefined.md).
+Pour plus d'informations, reportez-vous à la section [Null et Undefined](dt_null_undefined.md).
 
-### Valeur Indéfinie
+### Valeur Undefined
 
-L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Assigning an undefined value to an existing object property reinitializes or clears its value. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
+L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Attribuer une valeur undefined à une propriété d'objet existante réinitialise ou efface sa valeur. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
 
-For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+Pour plus d'informations, reportez-vous à la section [Null et Undefined](dt_null_undefined.md)
 
 ### Pointeurs
 
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
+**Note préliminaire :** Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
 
 La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole "point" doit être omis.
 
@@ -229,18 +229,18 @@ Voici un exemple :
 
 ## Resources
 
-Objects use _resources_ such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+Les objets utilisent des _ressources_, telles que des documents, des verrous d'entités et, bien sûr, de la mémoire. Ces ressources sont conservées aussi longtemps que les objets en ont besoin. Généralement, vous n'avez pas à vous en soucier, 4D libère automatiquement toutes les ressources rattachées à un objet lorsqu'il détecte que l'objet lui-même n'est plus référencé par aucune variable ou autre objet.
 
-For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+Par exemple, lorsqu'il n'y a plus de références à une entité sur laquelle vous avez mis un verrou avec [`$entity.lock()`](../API/EntityClass.md#lock), 4D libérera la mémoire mais relâchera aussi automatiquement le verrou associé, un appel à [`$entity.unlock()`](../API/EntityClass.md#unlock) est inutile.
 
-If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. Par exemple :
+Si vous voulez libérer immédiatement toutes les ressources occupées par un objet sans avoir à attendre que 4D le fasse automatiquement (à la fin de l'exécution de la méthode pour les variables locales par exemple), vous avez juste à **nullifier toutes ses références**. Par exemple :
 
 ```4d
 
 $doc:=WP Import document("large_novel.4wp")
-	... // do something with $doc
-$doc:=Null  // free resources occupied by $doc
-	... // continue execution with more free memory
+	... // faire quelque chose avec $doc
+$doc:=Null // libérer les ressources occupées par $doc
+	... // continuer l'exécution avec davantage de mémoire libre
 
 ```
 
@@ -251,20 +251,20 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
 - Ecriture et lecture de propriétés d'objets (cet exemple compare la notation objet et la syntaxe avec commandes) :
 
 ```4d
-  // Using the object notation
- var $myObj : Object //declares a 4D variable object
- $myObj:={} //creates an object literal and assigns it to the variable
+  // En utilisant la notation objet
+ var $myObj : Object //déclare un objet variable 4D
+ $myObj:={} //crée un objet littéral et l'assigne à la variable
  $myObj.age:=56
  $age:=$myObj.age //56
  
-  // Using the command notation
- var $myObj2 : Object //declares a 4D variable object
- OB SET($myObj2;"age";42) //creates an object and adds the age property
+  // Utilisation de la notation commande
+ var $myObj2 : Object //déclare un objet variable 4D
+ OB SET($myObj2;"age";42) //crée un objet et ajoute la propriété age
  $age:=OB Get($myObj2;"age") //42
  
-  // Of course, both notations can be mixed
+  // Bien sûr, les deux notations peuvent être mélangées
  var $myObj3 : Object
- OB SET($myObj3;"age";10)
+ OB SET($myObj3; age";10)
  $age:=$myObj3.age //10
 ```
 
@@ -273,10 +273,10 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
 ```4d
  var $Emp : Object
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
+ $Emp.city:="London" //crée la propriété city avec la valeur "London"
+ $Emp.city:="Paris" //modifie la propriété city
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+  //crée la propriété phone avec un autre objet comme valeur
 ```
 
 - Lire une valeur dans un sous-objet est très simple avec la notation objet :
@@ -286,15 +286,15 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- You can access properties as strings using the `[]` operator
+- Vous pouvez accéder aux propriétés en tant que chaînes en utilisant l'opérateur `[]`
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" //modification de la propriété city
+  //cette syntaxe est utile pour créer des propriétés à l'aide de variables
  var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
- End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+End for
+  // crée 4 propriétés vides "address1...address4" dans l'objet $Emp
 ```
