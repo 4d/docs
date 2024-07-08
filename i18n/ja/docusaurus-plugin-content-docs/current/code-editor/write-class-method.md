@@ -476,7 +476,7 @@ _置換_ エリアには、上の検索エリアの文字を置換する文字�
 
 2種類の記号が表示されます:
 
-- **警告** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): 警告は、実行エラーにつながる可能性のあるステートメントに注意を促すためのものです。 警告によりコンパイルが中断されることはありません。
+- **[warnings](../Project/compiler.md#warnings)** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. 警告によりコンパイルが中断されることはありません。
 - **エラー** ![error](../assets/en/code-editor/error-icon.png): エラーとは、コードの正しい実行を妨げる異常のことです。 これらを修正しないかぎり、プロジェクトはコンパイルされません。
 
 マウスを記号に重ねるとエラーの内容が表示されます:
