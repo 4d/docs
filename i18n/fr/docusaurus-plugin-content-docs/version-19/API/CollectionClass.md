@@ -714,8 +714,14 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **true** si elles sont identiques (deep comparison).
 
+:::note Notes
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre option.
-> Les éléments ayant la valeur **Null** ne sont pas égaux aux éléments Undefined.
 
 #### Exemple
 
