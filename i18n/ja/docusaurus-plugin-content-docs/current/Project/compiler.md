@@ -75,9 +75,7 @@ title: コンパイル
 
 ### 警告を表示/隠す
 
-警告は、コンパイラーがシンタックスチェックをおこなう際に生成するとメッセージです。 これらのメッセージの目的は、実行時エラーを引き起こす可能性のあるステートメントに注意を向けることです。 警告によりコンパイルが中断されることはありません。
-
-状況や使用されるプログラミングスタイルによって、これらのメッセージの重要性は変化します。 **警告を表示/隠す** ボタンをクリックすることで、警告の表示・非表示を切り替えられます。
+You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -87,27 +85,9 @@ title: コンパイル
 
 警告をダブルクリックすると、対応するメソッドが開かれます。
 
-#### コンパイル時に警告を無効にする
-
-コンパイル時に特定の警告を選択的に無効にすることができます。これをおこなうには、4Dメソッドのコード内に次を挿入します:
-
-```4d
-  //%W-<warning number>
-```
-
-無効化できるのは、番号の付いた警告に限られます。 警告番号は、コンパイルエラーリストの各メッセージの最後に示されています。 たとえば、次の警告を無効にしたいものとします:
-
-_1: 配列定義コマンド内にポインタが存在します (518.5)_
-
-... この場合、4D メソッド (できれば `COMPILER_xxx` メソッド) に次のコメントを記述します:
-
-```4d
-  //%W-518.5
-```
-
 ## コンパイラー設定
 
-ストラクチャー設定ダイアログボックスの "コンパイラー" ページでは、プロジェクトのコンパイルに関連するパラメーターを設定できます。 [コンパイラーウィンドウ](#コンパイラーウィンドウ) の **コンパイラー設定** ボタンをクリックすると、コンパイラーページを直接開くことができます。
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. [コンパイラーウィンドウ](#コンパイラーウィンドウ) の **コンパイラー設定** ボタンをクリックすると、コンパイラーページを直接開くことができます。
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -181,6 +161,73 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 - **メソッド**: [プロトタイプ宣言されていないメソッド引数](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
+
+## Warnings
+
+警告は、コンパイラーがシンタックスチェックをおこなう際に生成するとメッセージです。 これらのメッセージの目的は、実行時エラーを引き起こす可能性のあるステートメントに注意を向けることです。 警告によりコンパイルが中断されることはありません。
+
+Depending on circumstances and the programming style used, warnings may be more or less relevant. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+
+### Warnings tab
+
+![](../assets/en/Project/warnings-tab.png)
+
+This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+
+To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+
+By default, all warning types are checked and enabled.
+
+When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+
+The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+
+### Disabling and enabling warnings locally
+
+You can control warnings in specific parts of your code by using special comments to disable or enable them.
+
+To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+
+```4d
+// Before the selected code part use
+  //%W-<warning number>
+
+// After the selected code part use
+  //%W+<warning number>
+```
+
+To re-enable warnings in a code section, use the following comments:
+
+```4d
+// Before the selected code part use
+  //%W+<warning number>
+
+// After the selected code part use
+  //%W-<warning number>
+```
+
+Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+たとえば、次の警告を無効にしたいものとします:
+
+_1: Redefinition of variable $a (550.10)_
+
+... you just need to write the following comments in your 4D method:
+
+```4d
+  var $a : Text
+  $a:="hello world"
+  
+  //%W-550.10
+  var $a : Text
+  //%W+550.10
+  
+```
+
+:::note
+
+The special warnings comments have priority over the warnings display settings set in the warning tab.
+
+:::
 
 ## コンパイルツール
 
