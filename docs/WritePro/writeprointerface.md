@@ -237,7 +237,7 @@ The theme file in JSON format contains the following attributes:
 |break5|Object| |Object containing the style definition applicable to the fifth break row.|
 |breaks|Object| |Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.|
 |bcor|Object| |Object containing the style definition applicable to the bottom carry-over row.|
-|placehoder|Object| |Object containing the default style applicable to the placeholder row.|
+|placeholder|Object| |Object containing the default style applicable to the placeholder row.|
 
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
