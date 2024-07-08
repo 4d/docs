@@ -40,21 +40,21 @@ title: コンポーネント
 
 - 4Dプロジェクトのパッケージフォルダーと同じ階層 (デフォルトの場所です)
 - マシン上の任意の場所 (コンポーネントパスは **environment4d.json** ファイル内で宣言する必要があります)
-- on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
+- GitHubリポジトリ (コンポーネントパスは、**dependencies.json** ファイルまたは **environment4d.json** ファイル、あるいはその両方で宣言できます)
 
-If the same component is installed at different locations, a [priority order](#priority) is applied.
+同じコンポーネントが異なる場所にインストールされている場合、[優先順位](#優先順位) が適用されます。
 
 ### dependencies.json vs environment4d.json
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを参照します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
 ```
 
-It can contain:
+このファイルには次の内容を含めることができます:
 
 - names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
 - names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
