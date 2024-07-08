@@ -475,7 +475,7 @@ El Verificador en vivo de código se activa en tres niveles:
 
 Se muestran dos tipos de símbolos:
 
-- **advertencias** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): las advertencias pretenden llamar su atención sobre declaraciones que podrían provocar errores de ejecución. No impiden la compilación.
+- **[warnings](../Project/compiler.md#warnings)** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. No impiden la compilación.
 - **errores**![error](../assets/en/code-editor/error-icon.png): los errores son anomalías que impiden que el código se ejecute correctamente. Deben ser corregidos, de lo contrario el proyecto no se compilará.
 
 Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
