@@ -1443,7 +1443,7 @@ The formula is given as text with `eval()` in the *queryString* parameter:
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+La fórmula se da como un objeto `Formula` a través de un marcador de posición:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1514,7 +1514,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Ver también
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para las selecciones de entidades
 
 <!-- END REF -->
 
