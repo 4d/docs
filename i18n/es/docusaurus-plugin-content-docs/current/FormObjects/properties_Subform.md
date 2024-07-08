@@ -17,7 +17,7 @@ Especifica si el usuario puede eliminar subregistros en un subformulario listado
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -25,8 +25,8 @@ Especifica si el usuario puede eliminar subregistros en un subformulario listado
 
 Esta propiedad se utiliza para declarar el formulario detallado que se utilizará en el subformulario. Puede ser:
 
-- un widget, es decir, un subformulario de tipo página dotado de funciones específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.
+- un widget, es decir, un subformulario de tipo página dotado de funciones específicas. En este caso, las propiedades [list subform](#list-form) y [Source](#source) deben estar vacías o no estar presentes.\
+  Puede seleccionar un nombre de formulario de componente cuando se publica en el componente.
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).
 
@@ -40,7 +40,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -59,7 +59,7 @@ Acción a realizar en caso de doble clic en una línea vacía de un subformulari
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### Ver también
 
@@ -89,7 +89,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### Ver también
 
@@ -111,7 +111,7 @@ Cuando un subformulario lista tiene esta propiedad activada, el usuario puede mo
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -129,7 +129,7 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -145,7 +145,7 @@ Especifica la tabla a la que pertenece el subformulario Lista (si la hay).
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -169,4 +169,4 @@ Designa la opción para permitir a los usuarios seleccionar líneas:
 
 #### Objetos soportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)

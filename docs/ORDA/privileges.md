@@ -30,6 +30,7 @@ You can assign specific permission actions to the following exposed resources in
 - a dataclass
 - an attribute (including computed and alias)
 - a data model class function
+- a [singleton](../REST/$singleton.md) function
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -39,7 +40,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case.
+Permissions control access to datastore objects or functions. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case.
 
 :::
 
@@ -48,27 +49,28 @@ Permissions control access to datastore objects. If you want to filter read data
 
 Available actions are related to target resource.
 
-|Actions|datastore|dataclass|attribute|data model function|
+|Actions|datastore|dataclass|attribute|data model function or singleton function|
 |---|---|---|---|---|			
 |**create**|Create entity in any dataclass|Create entity in this dataclass|Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes).|n/a|
 |**read**|Read attributes in any dataclass|Read attributes in this dataclass|Read this attribute content|n/a|
 |**update**|Update attributes in any dataclass. |Update attributes in this dataclass.|Update this attribute content (ignored for alias attributes).|n/a|
 |**drop**|Delete data in any dataclass. |Delete data in this dataclass. |Delete a not null value for this attribute (except for alias and computed attribute).|n/a|
-|**execute**|Execute any function on the project (datastore (except `authentify()`, see Notes below), dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
-|**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This attribute is available in the /rest/$catalog API. |This dataclass function is available in the /rest/$catalog API|
+|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Execute this function|
+|**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This attribute is available in the /rest/$catalog API. |This dataclass function is available in the /rest/$catalog API (not available with singletons)|
 |**promote**|n/a|n/a|n/a|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session.|
 
 **Notes:**
 
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
 - Default values: in the current implementation, only *Null* is available as default value.
 - In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 Setting permissions requires to be consistent, in particular:
 
 - **update** and **drop** permissions also need **read** permission (but **create** does not need it)
-- **promote** permission also need **describe** permission.
+- For data model functions, **promote** permission also needs **describe** permission.
 
 
 
@@ -114,14 +116,62 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 ## `roles.json` file
 
 
-The `roles.json` file describes the whole security settings for the project.  
+The `roles.json` file describes the whole security settings for the project.
 
-:::note
+### Default file
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+
+The default file has the following contents:
+
+```json
+
+{
+    "privileges": [
+        {
+            "privilege": "none",
+            "includes": []
+        }
+    ],
+
+    "roles": [],
+
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "ds",
+                "type": "datastore",
+                "read": ["none"],
+                "create": ["none"],
+                "update": ["none"],
+                "drop": ["none"],
+                "describe": ["none"],
+                "execute": ["none"],
+                "promote": ["none"]                
+            }
+        ]
+    },
+
+    "forceLogin": true
+
+}
+
+```
+
+
+:::note Compatibility
+
+As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)).
+:::
+
+:::note Qodly Studio
+
+In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
+
+### Syntax
 
 The `roles.json` file syntax is the following:
 
@@ -136,7 +186,7 @@ The `roles.json` file syntax is the following:
 |permissions|||Object|X|List of allowed actions|
 ||allowed||Collection of `permission` objects||List of allowed permissions|
 |||\[].applyTo|String|X|Targeted [resource](#resources) name|
-|||\[].type|String|X|[Resource](#resources) type: "datastore", "dataclass", "attribute", "method"|
+|||\[].type|String|X|[Resource](#resources) type: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton"|
 |||\[].read|Collection of strings||List of privileges|
 |||\[].create|Collection of strings||List of privileges|
 |||\[].update|Collection of strings||List of privileges|
@@ -255,9 +305,16 @@ However, when the application is about to be deployed, a good practice is to loc
 			"execute": [
 				"guest"
 			]
-	}
-
+	 },
+		{
+			"applyTo": "mySingletonClass.createID",
+			"type": "singletonMethod",
+			"execute": [
+				"guest"
+			]
+	 }
 		]
-	}
+	},
+    "forceLogin": true
 }
 ```

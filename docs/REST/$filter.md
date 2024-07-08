@@ -16,7 +16,7 @@ This parameter allows you to define the filter for your dataclass or method.
 
 A filter is composed of the following elements:
 
-**{attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value}**
 
 For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
 
@@ -24,7 +24,7 @@ For example: `$filter="firstName=john"` where `firstName` is the **attribute**, 
 
 A more complex filter is composed of the following elements, which joins two queries:
 
-**{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
 
 For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
@@ -33,7 +33,7 @@ For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `
 
 You can also use 4D's params property.
 
-**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
+**\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
 

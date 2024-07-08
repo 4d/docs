@@ -31,7 +31,7 @@ In Qodly Studio for 4D, the mode can be set using the [**Force login** option](.
 
 :::
 
-### Default mode
+### Modo padrão
 
 In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). You can use this simple mode if you don't need to control how many licenses are retained on the server.
 When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
@@ -55,7 +55,7 @@ This mode allows you to implement the following login sequence:
 
 ### Descriptive REST requests
 
-Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). These requests are:
+Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Essas solicitações são:
 
 - [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
@@ -78,7 +78,7 @@ This function is the only available entry point from REST guest sessions when th
 
 :::note
 
-The `authentify()` function can always be executed by a REST guest session, even if there is no specific **execute** permission on it for the datastore in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file).
+The `authentify()` function can always be executed by a REST guest session, whatever the [`roles.json` file](../ORDA/privileges.md#rolesjson-file) configuration.
 
 :::
 

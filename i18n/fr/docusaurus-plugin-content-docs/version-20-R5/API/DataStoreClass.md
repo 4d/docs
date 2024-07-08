@@ -981,7 +981,7 @@ Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux do
 Vous créez une méthode projet *protectDataFile* à appeler par exemple avant le déploiement :
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Désactive l'accès aux données de l'Explorateur de données
 ```
 
 #### Voir également
@@ -1264,14 +1264,14 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
  var $es : cs.PersonsSelection
  var $log : Collection
 
- ds.startRequestLog(3) //keep 3 requests in memory
+ ds.startRequestLog(3) //conserve 3 requêtes en mémoire
 
- $es:=ds.Persons.query("name=:1";"Marie")
+ $es:=ds.Persons.query("name=:1" ; "Marie")
  $es:=ds.Persons.query("name IN :1";New collection("Marie"))
- $es:=ds.Persons.query("name=:1";"So@")
+ $es:=ds.Persons.query("name=:1" ; "So@")
 
  $log:=ds.getRequestLog()
- ALERT("The longest request lasted: "+String($log.max("duration"))+" ms")
+ ALERT("La requête la plus longue a duré : "+String($log.max("duration"))+" ms")
 ```
 
 #### Exemple 3

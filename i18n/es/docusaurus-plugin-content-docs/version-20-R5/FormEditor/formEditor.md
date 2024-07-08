@@ -148,7 +148,7 @@ Para seleccionar un objeto utilizando la barra de herramientas:
 
 <p>Cuando se mueve el puntero en el área del formulario, se convierte en un puntero estándar con forma de flecha</p>.
 
-2. Haga clic en el objeto que desea seleccionar. Resizing handles identify the selected object.<p>![](../assets/en/FormEditor/selectResize.png)</p>
+2. Haga clic en el objeto que desea seleccionar. Las asas de redimensionamiento identifican el objeto seleccionado.<p>![](../assets/en/FormEditor/selectResize.png)</p>
 
 Para seleccionar un objeto utilizando la Lista de propiedades:
 

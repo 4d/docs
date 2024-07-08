@@ -77,7 +77,7 @@ Three entities are received and we get the entity set `DF6903FB5879404A9A818884C
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 
-The entity set is returned and still contains 3 entities. There is an undefined entity for the deleted entity (with stamp = 0):
+Se devuelve el conjunto de entidades y sigue conteniendo 3 entidades. There is an undefined entity for the deleted entity (with stamp = 0):
 
 ```json
 {

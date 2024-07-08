@@ -838,7 +838,7 @@ La clase singleton está instanciada en la primera llamada de la propiedad [`cs.
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
-El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. Un singleton _process_ tiene un valor único para el proceso en el que se instancia, mientras que un singleton _interprocess_ tiene un valor único para todos los procesos de la aplicación. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
+El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes of the application. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
 
@@ -850,9 +850,9 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 :::
 
-### Creación de un singleton process
+### Creating a singleton
 
-Para crear una clase singleton de proceso, añada la palabra clave `singleton` antes del [`Constructor de Clase`](#class-constructor). Por ejemplo:
+To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
 
 ```4d
 	//class: ProcessTag
@@ -860,7 +860,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-Para utilizar el singleton process:
+To use the singleton:
 
 ```4d
 	//en otro proceso
@@ -881,9 +881,9 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creación de un singleton interprocess
+### Creating a shared singleton
 
-Para crear un singleton interprocess, añada las palabras claves `shared singleton` antes del [Class Constructor](#class-constructor). Por ejemplo:
+To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
 
 ```4d
 //Class VehicleFactory

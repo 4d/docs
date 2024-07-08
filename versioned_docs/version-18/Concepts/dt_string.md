@@ -67,7 +67,7 @@ The following escape sequences can be used within strings:
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. For example, the following expressions return `TRUE`:
 
 ```4d
      "n"="ñ"

@@ -385,11 +385,11 @@ Se o servidor e/ou cliente parte do seu aplicativo clicável duplo for usado com
 
 Os elementos devem ser instalados:
 
-- **on Windows**
+- **em Windows**
   - **Aplicación del servidor** - en la subcarpeta `Client Server executable/<ApplicationName>Server/Server Database`.
   - **Aplicación cliente** - en la subcarpeta `Client Server executable/<ApplicationName>Client`.
 
-- **on macOS**
+- **no macOS**
   - **Aplicación del servidor** - junto al paquete de software `<ApplicationName>Server`.
   - **Aplicación cliente** - junto al paquete de software `<ApplicationName>Cliente`.
 
@@ -703,7 +703,7 @@ Este mecanismo aborda o caso de o servidor principal alvo estar temporariamente 
 
 Você pode escolher se deseja ou não exibir a caixa de diálogo de seleção padrão do servidor em aplicações cliente mescladas quando o servidor não pode ser alcançado. La configuración depende del valor de la [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) La llave XML en la máquina donde se generó la aplicación:
 
-- **exibir uma mensagem de erro sem acesso possível à caixa de diálogo de seleção do servidor**. Operação padrão. The application can only quit.\
+- **exibir uma mensagem de erro sem acesso possível à caixa de diálogo de seleção do servidor**. Operação padrão. A aplicação só pode encerrar.\
   `ServerSelectionAllowed`: **False** or key omitted
   ![](../assets/en/Project/connect1.png)
 

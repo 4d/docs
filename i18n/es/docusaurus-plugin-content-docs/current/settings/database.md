@@ -31,7 +31,7 @@ La ubicación actual de esta carpeta se muestra en el área "Actual:". Puede hac
 
 Se ofrecen tres opciones de ubicación:
 
-- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. Los archivos se colocan en una subcarpeta cuyo nombre está formado por el nombre de la base y un identificador único.
+- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. Puede averiguar la ubicación actual definida por su sistema utilizando el comando [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D. Los archivos se colocan en una subcarpeta cuyo nombre está formado por el nombre de la base y un identificador único.
 - **Carpeta de archivos de datos** (opción por defecto): cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta llamada "archivos temporales" situada en el mismo nivel que el archivo de datos de la base de datos.
 - **Definido por el usuario**: esta opción se utiliza para definir una ubicación personalizada. Si se modifica la opción de ubicación, será necesario reiniciar la base para que se tenga en cuenta la nueva opción. 4D verifica si se puede acceder a la carpeta seleccionada mediante escritura. Si no es así, la aplicación prueba otras opciones hasta encontrar una carpeta válida.
 

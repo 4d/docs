@@ -5,8 +5,8 @@ title: Client/Server Optimization
 
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server architectures. Essas otimizações aceleram a execução de seu aplicativo 4D ao reduzir drasticamente o volume de informações transmitidas pela rede. Estes incluem:
 
-- the **optimization context**
-- the **ORDA cache**
+- o **contexto de otimização**
+- o **Cache ORDA**
 
 ## Supported architectures
 
@@ -15,7 +15,7 @@ ORDA client/server architectures that support the optimization are:
 - Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
 - [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
 
-## Optimization context
+## Contexto de otimização
 
 O contexto de otimização é baseado nas seguintes implementações:
 
@@ -60,7 +60,7 @@ Dado o seguinte código:
 
 Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in _$sel_ from the second iteration of the loop.
 
-### Reusing the `context` property
+### Reutilizando a propriedade `context`
 
 You can increase the benefits of the optimization by using the **context** property. Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Ele pode ser passado como parâmetro para funções ORDA que retornam novas seleções de entidades, de modo que as seleções de entidades solicitem diretamente os atributos usados ao servidor e ignorem a fase de aprendizado.
 

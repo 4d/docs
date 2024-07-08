@@ -16,6 +16,13 @@ title: リリースノート
 :::
 
 
+## 4D 19.8
+
+#### ハイライト
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+
+
 ## 4D 19.7
 
 #### ハイライト
@@ -58,4 +65,3 @@ title: リリースノート
 | ICU      | 68.1      | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。          |
 | PHP      | 7.3.27    | 18 R6          |                                                           |
 | libldap  | 2.4.48    | 18 R2          |                                                           |
-

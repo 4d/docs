@@ -88,7 +88,7 @@ O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo obje
 
 **File ( path { ; pathType } { ; \* })**
 
-No parâmetro *path* , passe um file path string. Pode utilizar uma string personalizada ou um sistema de ficheiros (por exemplo, "/DATA/myfile.txt").
+No parâmetro *path* , passe um file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Apenas são compatíveis os nomes de caminho absolutos com o comando `File` .
 

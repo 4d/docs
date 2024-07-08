@@ -1107,7 +1107,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarla.
+> **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
 #### Descripción
 
@@ -1796,7 +1796,7 @@ La función `.query()` <!-- REF #EntitySelectionClass.query().Summary -->busca l
 
 > Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
 Para obtener información detallada sobre cómo generar una consulta utilizando los parámetros *queryString*, *value* y *querySettings*, consulte la descripción de la función DataClass [`.query()`](DataClassClass.md#query).
 
@@ -2041,7 +2041,7 @@ La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelv
 
 La entity selection devuelta contiene las entidades especificadas por *startFrom* y todas las entidades subsiguientes hasta, pero sin incluir, la entidad especificada por *end*. Si sólo se especifica el parámetro *startFrom*, la entity selection devuelta contiene todas las entidades entre *startFrom* y la última entidad de la entity selection original.
 
-- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). If the calculated value < 0, *startFrom* is set to 0.
+- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *startFrom >= length*, la función devuelve una entity selection vacía.
 - Si *end* < 0, se recalcula como *end:=end+length*.
 - If *end < startFrom* (passed or calculated values), the method does nothing.

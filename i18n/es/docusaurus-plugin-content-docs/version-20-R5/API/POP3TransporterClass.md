@@ -3,11 +3,11 @@ id: POP3TransporterClass
 title: POP3Transporter
 ---
 
-The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
+La clase `POP3Transporter` permite recuperar mensajes de un servidor de correo POP3.
 
 ### Objeto POP3 Transporter
 
-POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos Transporter POP3 se instancian con el comando [POP3 New transporter](#pop3-new-transporter). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -46,31 +46,31 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | Parámetros | Tipo                               |     | Descripción                                         |
 | ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
 | server     | object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.POP3Transporter |  <- | [POP3 transporter object](#pop3-transporter-object) |
+| Result     | 4D.POP3Transporter |  <- | [Objeto POP3 transporter](#pop3-transporter-object) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
+El comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary -->configura una nueva conexión POP3<!-- END REF --> en función del parámetro *server* y devuelve un nuevo objeto *[transporter POP3](#pop3-transporter-object)*. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Valor por defecto (si se omite)                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                           | False                                                                    |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena u objeto token que representa las credenciales de autorización OAuth2. Utilizado sólo con OAUTH2 `authationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                             | se utiliza el modo de autenticación más seguro soportado por el servidor |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                | 30                                                                       |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                       | *obligatorio*                                                            |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                              | ninguno                                                                  |
-| **.password** : Text<br/>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                                                                                                                                                                           | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 995                                                                      |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                       | ninguno                                                                  |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor por defecto (si se omite)                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                | False                                                                    |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena u objeto token que representa las credenciales de autorización OAuth2. Utilizado sólo con OAUTH2 `authationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[SMTP transporter](#smtptransporterobject)*. | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                  | se utiliza el modo de autenticación más seguro soportado por el servidor |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                     | 30                                                                       |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | *obligatorio*                                                            |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ninguno                                                                  |
+| **.password** : Text<br/>contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                                                                                                                                               | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 995                                                                      |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | ninguno                                                                  |
 
 #### Result
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
+La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 > La conexión POP3 se cierra automáticamente cuando se destruye el objeto transportador.
 
@@ -105,13 +105,13 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 | Parámetros | Tipo                               |     | Descripción                                         |
 | ---------- | ---------------------------------- | :-: | --------------------------------------------------- |
 | server     | Object                             |  -> | Información del servidor de correo                  |
-| Result     | 4D.POP3Transporter |  <- | [POP3 transporter object](#pop3-transporter-object) |
+| Result     | 4D.POP3Transporter |  <- | [Objeto POP3 transporter](#pop3-transporter-object) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.POP3Transporter`<!-- END REF -->. Es idéntico al comando [`POP3 New transporter`](#pop3-new-transporter) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -168,11 +168,11 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 ##### Descripción
 
-The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
+La función `.delete( )` <!-- REF #POP3TransporterClass.delete().Summary -->marca el correo electrónico *msgNumber* para su eliminación del servidor POP3<!-- END REF -->.
 
-In the *msgNumber* parameter, pass the number of the email to delete. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+En el parámetro *msgNumber*, pase el número del correo electrónico que desea eliminar. Este número es devuelto en la propiedad number por el método [`.getMailInfoList()`](#getmailinfolist).
 
-La ejecución de este método no elimina realmente ningún correo electrónico. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. The flag could be also be removed using the `.undeleteAll()` method.
+La ejecución de este método no elimina realmente ningún correo electrónico. El correo marcado se eliminará del servidor POP3 sólo cuando se destruya el objeto `POP3_transporter` (creado con `POP3 New transporter`). El marcador también puede eliminarse utilizando el método `.undeleteAll()`.
 
 > Si la sesión actual termina inesperadamente y se cierra la conexión (por ejemplo, por tiempo de espera, fallo de la red, etc.), se genera un mensaje de error y los mensajes marcados para ser borrados permanecerán en el servidor POP3.
 
@@ -215,7 +215,7 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 ##### Descripción
 
-The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+La función `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al buzón designado por el objeto [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
@@ -246,10 +246,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                    |
-| ----------- | --------------------------------- |
-| 20          | Support of *headerOnly* parameter |
-| 18 R2       | Añadidos                          |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 20          | Soporte del parámetro \*headerOnly |
+| 18 R2       | Añadidos                           |
 
 </details>
 
@@ -261,21 +261,21 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------- |
 | msgNumber  | Integer |  -> | Número del mensaje en la lista                                                                          |
 | headerOnly | Boolean |  -> | True para descargar sólo los encabezados del correo electrónico (por defecto, False) |
-| Result     | Object  |  <- | [Email object](EmailObjectClass.md#email-object)                                                        |
+| Result     | Object  |  <- | [Objet Email](EmailObjectClass.md#objet-email)                                                          |
 
 <!-- END REF -->
 
 ##### Descripción
 
-The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* en el buzón designado por el objeto [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el email.
 
-Pass in *msgNumber* the number of the message to retrieve. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
+Pase en *msgNumber* el número del mensaje a recuperar. Este número es devuelto en la propiedad `number` por la función [`.getMailInfoList()`](#getmailinfolist).
 
-Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) se devuelven. Esta opción permite optimizar el paso de descarga cuando hay muchos correos electrónicos en el servidor.
+Opcionalmente, puede pasar `true` en el parámetro *headerOnly* para excluir las partes del cuerpo del objeto `Email` devuelto. Solo las propiedades de encabezado ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) se devuelven. Esta opción permite optimizar el paso de descarga cuando hay muchos correos electrónicos en el servidor.
 
 :::note
 
-The *headerOnly* option may not be supported by the server.
+Es posible que el servidor no soporte la opción *headerOnly*.
 
 :::
 
@@ -335,7 +335,7 @@ Quiere saber el remitente del primer correo del buzón:
 
 La función `.getMailInfo()`<!-- REF #POP3TransporterClass.getMailInfo().Summary --> devuelve un objeto `mailInfo` correspondiente al *msgNumber* en el buzón designado por el [`transportador POP3`](#objeto-transportador-pop3)<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
-En *msgNumber*, pase el número del mensaje a recuperar. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+En *msgNumber*, pase el número del mensaje a recuperar. Este número es devuelto en la propiedad number por el método [`.getMailInfoList()`](#getmailinfolist).
 
 El objeto `mailInfo` devuelto contiene las siguientes propiedades:
 
@@ -460,7 +460,7 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 La función `.getMIMEAsBlob()` <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->devuelve un BLOB con el contenido MIME del mensaje correspondiente al *msgNumber* en el buzón designado por el objeto [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
 
-En *msgNumber*, pase el número del mensaje a recuperar. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+En *msgNumber*, pase el número del mensaje a recuperar. Este número es devuelto en la propiedad number por el método [`.getMailInfoList()`](#getmailinfolist).
 
 El método devuelve un BLOB vacío si:
 
@@ -469,7 +469,7 @@ El método devuelve un BLOB vacío si:
 
 **BLOB devuelto**
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` devuelve un `BLOB` que puede almacenarse en una base de datos o convertirse en un objeto [`Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
 ##### Ejemplo
 

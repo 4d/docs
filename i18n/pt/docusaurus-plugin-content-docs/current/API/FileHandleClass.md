@@ -271,7 +271,7 @@ Setting the `.offset` will change its current value at the moment of the next re
 - If the passed value is negative, the `.offset` is set to the start of the file (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
-This property is **read/write**.
+Essa propriedade é **leitura/escrita**.
 
 :::caution
 

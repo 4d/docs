@@ -324,7 +324,7 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::note Entity selections returned from the server
+:::note Entity selections devueltas por el servidor
 
 In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Ejemplo:
 
@@ -552,7 +552,7 @@ Este mecanismo automático se basa en el concepto de "bloqueo optimista", especi
 
 El siguiente diagrama ilustra el bloqueo optimista:
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Dos procesos cargan la misma entidad.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 

@@ -61,8 +61,7 @@ title: リリースノート
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- 修正されたバグリスト: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) ([日本語版はこちら](https://4d-jp.github.io/2024/35/release-note-version-20/))。
-
+- 修正されたバグリスト: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4)。<br /> 日本語版はこちら: [4D 20](https://4d-jp.github.io/2024/170/release-note-version-20/) - [4D 20.1](https://4d-jp.github.io/2023/191/release-note-version-20/) - [4D 20.2](https://4d-jp.github.io/2023/292/release-note-version-20/) - [4D 20.3](https://4d-jp.github.io/2024/35/release-note-version-20/) - [4D 20.4](https://4d-jp.github.io/2024/158/release-note-version-20/)。
 
 
 #### 動作の変更

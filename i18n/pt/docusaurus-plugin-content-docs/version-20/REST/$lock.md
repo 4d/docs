@@ -63,7 +63,7 @@ O objeto "__STATUS" devolvido tem as seguintes propriedades:
 |              | user4d_id      | number  | Id do usuário no diretório do banco de dados 4D                                                                                                             |
 |              | host_name      | text    | Nome da máquina                                                                                                                                             |
 |              | task_name      | text    | Nome de processo                                                                                                                                            |
-|              | client_version | text    | Release of the client                                                                                                                                       |
+|              | client_version | text    | Liberação do cliente                                                                                                                                        |
 |              |                |         | ***Disponível só para um processo trava REST:***                                                                                                            |
 |              | host           | text    | URL que bloqueou a entidade (por exemplo, "127.0.0.1:8043")                                                                                                 |
 |              | IPAddr         | text    | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |

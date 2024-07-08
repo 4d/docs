@@ -359,7 +359,7 @@ When this function is executed, the current position ([`.offset`](#offset)) is u
 
 :::caution Atención
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para más información, consulte la [descripción de.offset](#offset).
 
 :::
 
@@ -404,7 +404,7 @@ When this function is executed, the ([.offset](#offset)) is placed just after th
 
 :::caution Atención
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para más información, consulte la [descripción de.offset](#offset).
 
 :::
 

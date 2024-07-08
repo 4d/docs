@@ -45,8 +45,8 @@ El administrador no puede:
 
 Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
-- Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
+- Icono Administrador: ![](../assets/en/Users/iconAdmin.png)
 
 Puede cambiar el nombre de los usuarios Diseñador y Administrador. En el lenguaje, el ID del diseñador es siempre 1 y el ID del administrador es siempre 2.
 
@@ -72,7 +72,7 @@ Para añadir un usuario desde la caja de herramientas :
 
 La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el Administrador](#designer-and-administrator).
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users.
+2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) ubicado debajo de la lista de usuarios.
    OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
 > El comando **Duplicar** se puede utilizar para crear varios usuarios que tengan las mismas características rápidamente.
@@ -120,7 +120,7 @@ Para crear un grupo:
 1. Seleccione **Caja de herramientas > Grupos** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D luego haga clic en el botón **Grupos**.
    4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.\
+2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) situado debajo de la lista de grupos.\
    OR\
    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 

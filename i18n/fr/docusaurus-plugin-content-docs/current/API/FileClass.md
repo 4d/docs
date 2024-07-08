@@ -86,7 +86,7 @@ La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouv
 
 **File ( path { ; pathType } { ; \* })**
 
-Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un "filesystem" (ex : "/DATA/myfile.txt").
+Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA/myfile.txt").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
