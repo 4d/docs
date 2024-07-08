@@ -269,7 +269,7 @@ La función devuelve Undefined si el *index* sobrepasa los límites de la colecc
 #### Ejemplo
 
 ```4d
-var $col : Collection 
+var $col : Collection
 $col:=New collection(10; 20; 30; 40; 50)
 $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
@@ -859,8 +859,15 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 La función `.equal()` <!-- REF #collection.equal().Summary -->compara collection con collection2 <!-- END REF -->y devuelve **true** si son idénticos (deep comparison).
 
+:::note Notas
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
-> Esta función no modifica la colección original.
+
 
 #### Ejemplo
 
