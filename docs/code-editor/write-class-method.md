@@ -504,7 +504,7 @@ The Code Live Checker is activated at three levels:
 
 Two kinds of symbols are displayed:
 
-- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
+- **[warnings](../Project/compiler.md#warnings)** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
 - **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
 
 When you move the mouse over the symbol, a help tip displays the cause of the error:
