@@ -1,6 +1,6 @@
 ---
 id: null-undefined
-title: Null et Indefinie
+title: Null et Undefined
 ---
 
 ## Null

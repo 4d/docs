@@ -301,7 +301,7 @@ $privileges := Session.getPrivileges()
 #### 参照
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[ブログ記事: セッション権限を検査してデバッグを容易に](https://blog.4d.com/ja/permissions-inspect-session-privileges-for-easy-debugging)
 
 <!-- END REF -->
 
@@ -368,7 +368,7 @@ End if
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドにこのプロパティを渡すことで、セッションの `.storage` オブジェクトを取得できます。
 
 :::
 

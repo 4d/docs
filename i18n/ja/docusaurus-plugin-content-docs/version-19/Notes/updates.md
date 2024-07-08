@@ -20,7 +20,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19.8): 4D 19.8 で修正されたバグのリストです。
 
 
 ## 4D 19.7

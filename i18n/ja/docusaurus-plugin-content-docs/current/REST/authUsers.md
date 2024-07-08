@@ -3,39 +3,39 @@ id: authUsers
 title: ユーザーとセッション
 ---
 
-## Sessions
+## セッション
 
 [スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
 
 開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
 
-A session is opened after the user was successfully logged (see below).
+セッションは、ユーザーが正常にログインした後に開かれます (後述参照)。
 
-> - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
+> - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
 > - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
 
 ## 強制ログインモード
 
 :::note 互換性
 
-The legacy login mode based upon the `On REST Authentication` database method is **deprecated** as of 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#dsauthentify). In converted projects, [a button in the Settings dialog box](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) will help you upgrade your configuration. Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
+4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#dsauthentify) の実装が推奨されています。 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によってrest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
 
 :::
 
-The user login sequence is the following:
+ユーザーログインシーケンスは次のとおりです:
 
-1. 最初の RESTコール (たとえば Webフォームコール) では、"ゲスト" Webユーザーセッションが作成されます。 It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
-   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. この場合、それらは "ゲスト" セッションを介して処理されます。
+1. 最初の RESTコール (たとえば Webフォームコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。\
+   記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
-2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` must be an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class).
+2. 事前に用意した [`authentify()` 関数](#authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
 
-3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 This step only requires a basic login form that do not access data; it can be a [Qodly form](../WebServer/qodly-studio.md) (called via the `/rest/$getWebForm` request).
+3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyフォーム](../WebServer/qodly-studio.md) を利用できます。
 
 4. ユーザーが正常に認証された場合、4Dライセンスがサーバー上で消費され、すべての RESTリクエストが受け入れられます。
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
-In the user login phase, license usage is disconnected from web user sessions. ライセンスは、[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) が実行された時にのみ必要なため、使用されるライセンスの数を制御することができます。
+ユーザーログインの段階では、ライセンスの消費は Webユーザーセッションから切り離されます。 ライセンスは、[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) が実行された時にのみ必要なため、使用されるライセンスの数を制御することができます。
 
 他のすべての RESTリクエスト (データ処理や関数の実行) は、適切な権限を持つ Webセッション内で実行された場合にのみ処理されます。それ以外の場合はエラーを返します Webセッションに権限を割り当てるには、セッションに対して [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を実行する必要があります。 この関数を実行すると、4Dライセンスの消費が発生します。
 
