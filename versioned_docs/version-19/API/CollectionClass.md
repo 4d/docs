@@ -417,7 +417,7 @@ The *groupWithCol* or *groupWithObj* parameters allow you to designate a collect
 
 :::note
 
-Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned. 
+Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned.
 
 :::
 
@@ -693,9 +693,20 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
+:::note Notes
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 
->Elements with **Null** values are not equal to Undefined elements.
+:::tip
+
+A recursive comparison of collections can be time-consuming if the collection is large and deep. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).  
+
+:::
 
 #### Example
 
