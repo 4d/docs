@@ -1,7 +1,6 @@
----
-id: Document
-title: Document Class
----
+- - -
+id: Document title: Document Class
+- - -
 
 ## Descripción
 
