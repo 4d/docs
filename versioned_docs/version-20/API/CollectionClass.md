@@ -838,12 +838,6 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->compares the col
 
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 
-:::tip
-
-A recursive comparison of collections can be time-consuming if the collection is large and deep. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).  
-
-:::
-
 
 #### Example
 
