@@ -75,9 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/Ocultar advertencias
 
-Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
-
-Dependiendo de las circunstancias y del estilo de programación utilizado, estas advertencias pueden ser más o menos relevantes. Puede activar o desactivar las advertencias haciendo clic en el botón **Mostrar/Ocultar las advertencias**:
+You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -87,27 +85,9 @@ Cuando esta opción está marcada, las advertencias (si las hay) se muestran en 
 
 Al hacer doble clic en un aviso se abre el método correspondiente.
 
-#### Desactivar las advertencias durante la compilación
-
-Puede desactivar selectivamente ciertas advertencias durante la compilación insertando el siguiente en el código de un método 4D:
-
-```4d
-  //%W-<warning number>
-```
-
-Sólo se pueden desactivar los avisos con números. Los números de advertencia se indican al final de cada mensaje en la lista de errores de compilación. Por ejemplo, para desactivar la siguiente advertencia:
-
-_1: Puntero en una declaración de array (518.5)_
-
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
-
-```4d
-  //%W-518.5
-```
-
 ## Parámetros del compilador
 
-La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -181,6 +161,73 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
+
+## Warnings
+
+Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
+
+Depending on circumstances and the programming style used, warnings may be more or less relevant. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+
+### Warnings tab
+
+![](../assets/en/Project/warnings-tab.png)
+
+This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+
+To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+
+By default, all warning types are checked and enabled.
+
+When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+
+The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+
+### Disabling and enabling warnings locally
+
+You can control warnings in specific parts of your code by using special comments to disable or enable them.
+
+To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+
+```4d
+// Before the selected code part use
+  //%W-<warning number>
+
+// After the selected code part use
+  //%W+<warning number>
+```
+
+To re-enable warnings in a code section, use the following comments:
+
+```4d
+// Before the selected code part use
+  //%W+<warning number>
+
+// After the selected code part use
+  //%W-<warning number>
+```
+
+Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Por ejemplo, para desactivar la siguiente advertencia:
+
+_1: Redefinition of variable $a (550.10)_
+
+... sólo necesita escribir los siguientes comentarios en su método 4D:
+
+```4d
+  var $a : Text
+  $a:="hello world"
+  
+  //%W-550.10
+  var $a : Text
+  //%W+550.10
+  
+```
+
+:::note
+
+The special warnings comments have priority over the warnings display settings set in the warning tab.
+
+:::
 
 ## Herramientas de compilación
 
