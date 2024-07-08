@@ -3,20 +3,20 @@ id: catalog
 title: $catalog
 ---
 
-The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.
+カタログには、プロジェクトで利用可能なすべてのデータクラス、属性、[インタープロセス (共有) シングルトン](../Concepts/classes.md#シングルトンクラス) が記述されています。
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                  | 例題                     | 説明                                                                                                                                                |
-| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                                                | `/$catalog`            | Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes |
-| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                                                                                                                           |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば)                                                                                                     |
+| シンタックス                                                                  | 例題                     | 説明                                                                                    |
+| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | プロジェクト内の [共有シングルトン](#シングルトン) (あれば) と、データクラスのリストを、2つの URI とともに返します。 |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | プロジェクト内の [共有シングルトン](#シングルトン) (あれば) と、すべてのデータクラスおよびそれらの属性の情報を返します。  |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | 特定のデータクラスとその属性の情報を返します。                                                               |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | DataStoreクラス関数を実行します (あれば)                                         |
 
 ## $catalog
 
-Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+プロジェクト内の [共有シングルトン](#シングルトン) (あれば) と、データクラスのリストを、2つの URI とともに返します。1つはデータクラスのストラクチャー情報にアクセスするためのもので、もう 1つはデータクラスのデータを取得するためのものです。
 
 ### 説明
 
@@ -57,7 +57,7 @@ Returns [shared singletons](#singletons) (if any) and a list of the dataclasses 
 
 ## $catalog/$all
 
-Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes
+プロジェクト内の [共有シングルトン](#シングルトン) (あれば) と、すべてのデータクラスおよびそれらの属性の情報を返します。
 
 ### 説明
 

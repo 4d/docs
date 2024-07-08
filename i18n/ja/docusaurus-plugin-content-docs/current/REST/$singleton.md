@@ -3,17 +3,17 @@ id: singleton
 title: $singleton
 ---
 
-You can directly call exposed [functions of your shared singletons](../Concepts/classes.md#singleton-classes) through REST.
+[共有シングルトンの公開関数](../Concepts/classes.md#シングルトンクラス) は、REST で直接呼び出すことができます。
 
-Singleton functions are called in POST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
+シングルトン関数は、`$singleton` コマンド (`()`は不要です) を使用して POSTリクエストで呼び出されます。 たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
 ```
 
-with data in the body of the POST request: ["truck"]
+POSTリクエストのボディに関数に渡す引数を含めます: ["truck"]
 
-In 4D language, this call is equivalent to:
+この呼び出しは、4Dランゲージでは次のステートメントに相当します:
 
 ```4d
 $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
@@ -21,13 +21,13 @@ $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
 
 :::note
 
-Keep in mind that only functions with the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be directly called from REST requests.
+RESTリクエストから直接呼び出すことができるのは、[`exposed` キーワード](../ORDA/ordaClasses.md#公開vs非公開関数) が付いた関数のみです。
 
 :::
 
 ## 関数の呼び出し
 
-Singleton functions must always be called using REST **POST** requests (a GET request will receive an error). シンタックスは次の通りです:
+シングルトン関数は必ず REST の **POST** リクエストで呼び出さなくてはなりません (GETリクエストの場合はエラーが返されます)。 シンタックスは次の通りです:
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
@@ -35,22 +35,22 @@ Singleton functions must always be called using REST **POST** requests (a GET re
 
 :::info
 
-You can restrict calls to specific singleton functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+特定のシングルトン関数の呼び出しを制限するには、[**roles.json**](../ORDA/privileges.md#rolesjson-ファイル) ファイルで適切な権限を設定することができます。
 
 :::
 
 ## 引数
 
-You can send parameters to singleton functions. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the singleton class functions.
+シングルトン関数に引数を渡すことができます。 サーバーサイドでこれらの引数は、シングルトンクラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
 
-Sending parameters to singleton functions is exactly the same as sending parameter to ORDA class functions. Please refer to [the **Parameters** paragraph of the "Calling class functions" page](ClassFunctions.md#parameters) for a detailed description.
+シングルトン関数に引数を渡す方法は、ORDAクラスの関数に引数を渡すのとまったく同じです。 詳細については、["クラス関数の呼び出し" ページの **引数** の段落](ClassFunctions.md#引数) を参照ください。
 
 ## 例題
 
-You have created a simple shared singleton with an exposed function:
+公開関数を持つ、シンプルな共有シングルトンを作成します:
 
 ```4d
-//class mySingleton
+// class mySingleton
 
 shared singleton Class constructor()
 
@@ -61,7 +61,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singleton) command.
+[`$catalog`]($catalog.md#シングルトン) コマンドを呼び出すと、`mySingleton` クラスと `sayHello` 関数がリストされます。
 
 :::
 
@@ -69,7 +69,7 @@ The `mySingleton` class and `sayHello` function are listed when you call the [`$
 
 **POST** `/rest/$singleton/mySingleton/sayHello`
 
-Body of the request: ["John"]
+リクエストのボディ: ["John"]
 
 #### レスポンス
 
