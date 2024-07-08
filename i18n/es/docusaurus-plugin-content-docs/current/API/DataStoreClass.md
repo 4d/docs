@@ -134,14 +134,14 @@ El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conect
 
 El comando admite los siguientes almacenes de datos remotos:
 
-| Tipo de almacén de datos                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aplicación 4D remota                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
-| [Aplicación Qodly](https://developer.qodly.com/docs/cloud/getStarted) | A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                 |
+| Tipo de almacén de datos                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aplicación 4D remota                                                  | Una aplicación 4D disponible como datastore remoto, es decir<li>: su servidor web se ejecuta con http y/o https activados,</li><li>su datastore está expuesto a REST (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) activada).</li>Puede exigirse una licencia (ver nota) |
+| [Aplicación Qodly](https://developer.qodly.com/docs/cloud/getStarted) | Una aplicación Qodly Server que le proporcionó un **api endpoint** y una **api key** válida asociada a un rol definido. Debe pasar la llave api en la propiedad `api-key` del objeto *connectionInfo*. A continuación, podrá trabajar con el objeto datastore devuelto, con todos los privilegios concedidos al rol asociado.             |
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la sección [User login mode](../REST/authUsers.md#user-login-modes) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión actual seleccionado.
 
 :::
 
@@ -175,7 +175,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-If no matching datastore is found, `Open datastore` returns **Null**.
+Si no se encuentra ningún datastore coincidente, `Open datastore` devuelve **Null**.
 
 #### Ejemplo 1
 
@@ -460,8 +460,8 @@ When multiple calls to `.flushAndLock()` have been done in the same process, the
 
 El datastore se desbloquea cuando:
 
-- the [`.unlock()`](#unlock) function is called in the same process, or
-- the process that called the `.flushAndLock()` function is killed.
+- la función [`.unlock()`](#unlock) es llamada en el mismo proceso, o
+- el proceso que llamó a la función `.flushAndLock()` es eliminado.
 
 If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
 
@@ -928,7 +928,7 @@ The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summa
 
 If you use the *curPassPhrase* parameter, pass the string used to generate the data encryption key. Cuando se utiliza este parámetro, se genera una llave de encriptación.
 
-If you use the *curDataKey* parameter, pass an object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the `New data key` command.
+If you use the *curDataKey* parameter, pass an object (with *encodedKey* property) that contains the data encryption key. Esta llave puede haber sido generada con el comando `New data key`.
 
 If a valid data encryption key is provided, it is added to the *keyChain* in memory and the encryption mode is enabled:
 
@@ -1006,7 +1006,7 @@ In this case, you can call this function to disable the data access from Data Ex
 You create a *protectDataFile* project method to call before deployments for example:
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de datos
 ```
 
 #### Ver también
