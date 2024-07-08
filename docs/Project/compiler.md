@@ -178,7 +178,7 @@ Depending on circumstances and the programming style used, warnings may be more 
 
 ### Warnings tab
 
-![](../assets/en/Project/warningstab.png)
+![](../assets/en/Project/warnings-tab.png)
 
 This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code. 
 
