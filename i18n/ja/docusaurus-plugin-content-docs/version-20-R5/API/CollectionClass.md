@@ -793,15 +793,14 @@ End use
 
 `.equal()` 関数は、<!-- REF #collection.equal().Summary -->コレクションの内容と *collection2* を再帰的に比較し (ディープ比較)、同一であれば **true** を返します<!-- END REF -->。
 
-デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に `ck diacritical` 定数を渡します。
+:::note 注記
 
-> **Null**値の要素は undefined要素と同じとはみなされません。
-
-:::note
-
-コレクションが大きく深い場合には、コレクションの再帰的な比較は時間がかかる場合があります。 2つのコレクション参照を比較するだけの場合は、[コレクション参照の `=`比較演算子](../Concepts/dt_collection.md#コレクション演算子) の使用を検討してください。
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
 
 :::
+
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に `ck diacritical` 定数を渡します。
 
 #### 例題
 
