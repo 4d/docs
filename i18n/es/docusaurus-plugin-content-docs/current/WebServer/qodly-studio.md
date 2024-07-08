@@ -5,7 +5,7 @@ title: Qodly Studio for 4D
 
 :::caution Vista previa para desarrolladores
 
-Qodly Studio for 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
+Qodly Studio for 4D se encuentra actualmente en la fase **Developer Preview**. No debe utilizarse en producción.
 
 :::
 
@@ -232,7 +232,7 @@ Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is ena
 
 You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
 
-You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. A licence will be consumed only when the user is actually logged.
+You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
 
 :::note Compatibilidad
 
