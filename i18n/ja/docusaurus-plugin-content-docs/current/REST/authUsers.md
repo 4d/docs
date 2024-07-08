@@ -18,7 +18,7 @@ title: ユーザーとセッション
 
 :::note 互換性
 
-4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#dsauthentify) の実装が推奨されています。 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によってrest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
+4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#dsauthentify) の実装が推奨されています。 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
 
 :::
 
