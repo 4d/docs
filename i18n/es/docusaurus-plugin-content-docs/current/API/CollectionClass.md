@@ -792,11 +792,16 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 La función `.equal()` <!-- REF #collection.equal().Summary -->compara recursivamente el contenido de la colección y *collection2* (comparación profunda/deep comparison)<!-- END REF --> y devuelve **true** si son idénticas.
 
+:::note Notas
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
 
-> Los elementos con valores **Null** no son iguales a los elementos Undefined.
-
-:::note
+:::tip
 
 Una comparación recursiva de colecciones puede llevar mucho tiempo si la colección es grande y contiene numerosos niveles. Si sólo desea comparar dos referencias de colección, puede considerar utilizar el operador de comparación [`=` para las referencias de colección](../Concepts/dt_collection.md#collection-operators).
 
@@ -3042,7 +3047,7 @@ In *index*, pass the position where you want the element to be removed from the 
 - Si el valor calculado < 0, *index* toma el valor 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+En *howMany*, pase el número de elementos a eliminar de *index*. If *howMany* is not specified, then one element is removed.
 
 Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 

@@ -270,10 +270,12 @@ Se *end* < 0 , é recalculado como sendo *end:=end+length*.
 
 ```4d
 var $col : Collection
-
- var $vSum : Real
- $col:=New collection(10;20;"Monday";True;2)
- $vSum:=$col.sum() //32
+$col:=New collection(10; 20; 30; 40; 50)
+$element:=$col.at(0) // 10
+$element:=$col.at(1) // 20
+$element:=$col.at(-1) // 50
+$element:=$col.at(-2) // 40
+$element:=$col.at(10) // undefined
 ```
 
 <!-- END REF -->
@@ -846,8 +848,15 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 A função `.equal()` <!-- REF #collection.equal().Summary -->compara a collection com a collection2 <!-- END REF -->e retorna **true** se forem idênticos (deep comparison).
 
+:::note Notas
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie maiúsculas de minúsculas e caracteres acentuados, passe a constante`ck diacritical` no parâmetro option.
-> Elementos com valores **Null** não são a mesma coisa que valores Undefined.
+
 
 #### Exemplo
 

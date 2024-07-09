@@ -48,7 +48,7 @@ title: コンポーネント
 
 #### dependencies.json
 
-**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを参照します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
+**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -56,17 +56,17 @@ title: コンポーネント
 
 このファイルには次の内容を含めることができます:
 
-- names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- デフォルトパス、または **environment4d.json** ファイルで定義されたパスに [ローカル保存されている](#ローカルコンポーネントの宣言) コンポーネントの名前
+- [GitHubリポジトリ](#github保存のコンポーネントの宣言) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
 
 #### environment4d.json
 
-The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+**environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
 
-The main benefits of this architecture are the following:
+このアーキテクチャーの主な利点は次のとおりです:
 
-- you can store the **environment4d.json** file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
-- if you want to use the same GitHub repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
+- **environment4d.json** ファイルをプロジェクトの親フォルダーに保存することで、コミットしないように選択できることです。これにより、ローカルでのコンポーネントの管理が可能になります。
+- 複数のプロジェクトで同じ GitHubリポジトリを使用したい場合は、**dependencies.json** ファイルでそれを宣言し、**environment4d.json** ファイルで参照することができます。
 
 ### 優先順位
 
@@ -84,11 +84,11 @@ The main benefits of this architecture are the following:
 
 同じコンポーネントの別のインスタンスがより高い優先度レベルにあるためにコンポーネントを読み込めない場合、そのコンポーネントには _Overloaded_ [ステータス](#依存関係のステータス) が与えられます。 この場合、読み込まれている方のコンポーネントには _Overloading_ [ステータス](#依存関係のステータス) が与えられます。
 
-(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
+(ローカル環境を構成するため、**environment4d.json** で指定されたパスは **dependencies.json** のパスをオーバーライドします)。
 
-### Declaring local components
+### ローカルコンポーネントの宣言
 
-You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
+ローカルコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
 
 ```json
 {
@@ -99,26 +99,26 @@ You declare a local component in the [**dependencies.json** file](#dependencyjso
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
+... 上記の "myComponent1" と "myComponent2" は読み込むコンポーネントの名前です。
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+デフォルトの (つまり、"myComponent1" と "myComponent2" が [environment4d.jsonファイル](#environment4djson) で宣言されていない) 場合、4D はコンポーネントのパッケージフォルダー (コンポーネントのプロジェクトルートフォルダーのこと) を 4Dプロジェクトのパッケージフォルダーと同じ階層に探します。例:
 
 ```
 	/MyProjectRoot/
 	/MyProjectComponentRoot/
 ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files.
+このアーキテクチャーにより、プロジェクトと同じレベルにすべてのコンポーネントにコピーし、**dependencies.json** ファイルで参照することができます。
 
 :::note
 
-If you do not want to benefit from the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+**dependencies.json** のアーキテクチャーを利用したくない場合は、[プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントをコピーすることで、ローカルコンポーネントをインストールすることもできます。
 
 :::
 
-#### Customizing component paths
+#### コンポーネントパスのカスタマイズ
 
-If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
+ローカルコンポーネントの場所をカスタマイズしたい場合は、プロジェクトフォルダーと同じ階層に保存されていない依存関係のパスを、[**environment4d.json**](#environment4djson) ファイルに定義します。
 
 パスには、[POSIXシンタックス](../Concepts/paths#posix-シンタックス) で表現された、絶対パスまたは相対パスを使用できます。 相対パスは、environment4d.json ファイルを基準として相対パスです。
 
@@ -136,33 +136,33 @@ If you want to customize the location of local components, you declare the paths
 
 :::note
 
-**environment4d.json** ファイルで宣言されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、_Not found_ [ステータス](#依存関係のステータス) が表示されます。
+**environment4d.json** ファイルで定義されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、_Not found_ [ステータス](#依存関係のステータス) が表示されます。
 
 :::
 
 ### GitHub に保存されたコンポーネントの宣言
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込むことができます。
 
 :::note
 
-Regarding components stored on GitHub, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
+GitHub に保存されているコンポーネントに関しては、[**dependencies.json**](#dependenciesjson) ファイルと [**environment4d.json**](#environment4djson) ファイルの両方で同じ内容をサポートしています。
 
 :::
 
-#### Configuring the GitHub repository
+#### GitHubリポジトリの設定
 
-To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
+GitHub に保存された 4Dコンポーネントを直接参照して使用するには、GitHubコンポーネントのリポジトリを設定する必要があります。
 
-- Compress the component files in ZIP format.
-- Name this archive with the same name as the GitHub repository.
-- Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
+- ZIP形式でコンポーネントファイルを圧縮します。
+- GitHubリポジトリと同じ名前をこのアーカイブに付けます。
+- このリポジトリの [GitHubリリース](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository) にアーカイブを統合します。
 
-These steps can easily be automated, with 4D code or using GitHub Actions, for example.
+これらのステップは、4Dコードや GitHubアクションを使用することで簡単に自動化できます。
 
-#### Declaring paths
+#### パスの宣言
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
 
 ```json
 {
@@ -175,7 +175,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... 上記の場合、"myGitHubComponent1" は宣言とパス定義の両方がされていますが、"myComponent2" は宣言されているだけです。 そのため、[**environment4d.json**](#environment4djson) ファイルにパスを定義する必要があります:
 
 ```json
 {
@@ -187,13 +187,13 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-"myGitHubComponent2" can be used by several projects.
+"myGitHubComponent2" は複数のプロジェクトで使用できます。
 
-#### Tags and versions
+#### タグとバージョン
 
-When you create a release in GitHub, you specify a **tag** and a **version**.
+GitHub ではリリースを作成するときに、**タグ** と **バージョン** を指定します。
 
-- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
+- **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば:
 
 ```json
 {
@@ -206,7 +206,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- リリースは **バージョン** によっても識別されます。 使用されるバージョニング方法は、最も一般的に使用される _セマンティックバージョニング_ のコンセプトに基づいています。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
 
 ```json
 {
@@ -219,35 +219,35 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+バージョンは、使用できるバージョンを定義するために使用します。 [標準的なセマンティックバージョン](https://regex101.com/r/Ly7O1x/3/) を使用します。 範囲は、最小値と最大値を示す 2つのセマンティックバージョンと演算子 ('`< | > | >= | <= | =`') で定義します。 `*` はすべてのバージョンのプレースホルダーとして使用できます。 ~ および ^ の接頭辞は、数字で始まるバージョンを定義し、それぞれ次のメジャーバージョンおよびマイナーバージョンまでの範囲を示します。
 
-Here are a few examples:
+以下にいくつかの例を示します:
 
-- "latest": the version having the “latest” badge in GitHub releases.
-- "\*": the latest version released.
-- "1.\*": all version of major version 1.
-- "1.2.\*": all patches of minor version 1.2.
-- "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
-- "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
-- "<=1.2.3": the latest version until the 1.2.3 one.
-- "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
-- "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
+- "`latest`": GitHubリリースで "latest" バッジを持つバージョン。
+- "`*`": リリースされている最新バージョン。
+- "`1.*`": メジャーバージョン 1 の全バージョン。
+- "`1.2.*`": マイナーバージョン 1.2 のすべてのパッチ。
+- "`^1.2.3`" または "`>=1.2.3`": バージョン 1.2.3 以降の最新のバージョン 1。
+- "`~1.2.3`" または "`>1.2.3`": バージョン 1.2.3 より後の最新のバージョン 1。
+- "`<=1.2.3`": 1.2.3 までの最新バージョン。
+- "`1.0.0 – 1.2.3`" または ">=1.0.0 <=1.2.3": 1.0.0 から 1.2.3 までのバージョン。
+- "`<1.2.3 ||>=2`": 1.2.3 から 2.0.0 未満までを除いたバージョン。
 
-If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
+タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
-#### Private repositories
+#### プライベートリポジトリ
 
-If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
+プライベートリポジトリにあるコンポーネントを統合したい場合は、アクセストークンを使用して接続するよう 4D に指示する必要があります。
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**.
+これには、GitHubアカウントで **リポジトリ** へのアクセス権を持つ **classic** トークンを作成します。
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+詳細については [GitHubトークンのインターフェース](https://github.com/settings/tokens) を参照ください。
 
 :::
 
-Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
+次に、[**environment4d.json**](#environment4djson) ファイルに "github" キーを挿入します:
 
 ```json
 {
@@ -263,20 +263,20 @@ Then insert the "github" key in your [**environment4d.json**](#environment4djson
 }
 ```
 
-#### Local cache for dependencies
+#### 依存関係のローカルキャッシュ
 
-Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. The local cache folder is stored at the following location:
+参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます:
 
-- on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
-- on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
+- macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+- Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
-...where `<app name>` can be "4D", "4D Server", or "tool4D".
+... 上記で `<app name>` は "4D"、"4D Server"、または "tool4D" となります。
 
 #### dependency-lock.json
 
-A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
+プロジェクトの [`userPreferences` フォルダー](architecture.md#userpreferencesusername) に `dependency-lock.json` ファイルが作成されます。
 
-This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
+このファイルは、依存関係・パス・url・読み込みエラー・その他の情報などをログに記録します。 これは、コンポーネントの読み込み管理やトラブルシューティングに役立ちます。
 
 ## プロジェクトの依存関係の監視
 
@@ -300,13 +300,13 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are possible:
+以下のオリジンがありえます:
 
 | オリジンタグ                            | 説明                                                              |
 | --------------------------------- | --------------------------------------------------------------- |
 | 4Dコンポーネント                         | 4Dアプリケーションの `Components` フォルダーに保存されているビルトインの 4Dコンポーネント          |
 | dependencies.json | [`dependencies.json`](#dependenciesjson) ファイルで宣言されているコンポーネント    |
-| 環境                                | [`environment4d.json`](#environment4djson) ファイルで宣言されているコンポーネント  |
+| environment                       | [`environment4d.json`](#environment4djson) ファイルで宣言されているコンポーネント  |
 | プロジェクトコンポーネント                     | [`Components`](architecture.md#components) フォルダー内に置かれているコンポーネント |
 
 依存関係の行で **右クリック** し、**ディスク上に表示** を選択すると、依存関係の保管場所が表示されます:
@@ -319,10 +319,10 @@ The following origins are possible:
 
 :::
 
-Component icon and location logo provide additional information:
+コンポーネントアイコンとロケーションロゴが追加情報を提供します:
 
-- The component logo indicates if it is provided by 4D or a third-party developer.
-- Local components can be differentiated from GitHub components by a small icon.
+- コンポーネントロゴは、それが 4D またはサードパーティーによる提供かを示します。
+- ローカルコンポーネントと GitHubコンポーネントは、小さなアイコンで区別できます。
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 

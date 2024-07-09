@@ -629,7 +629,7 @@ Consulta la descripción de [cookies de sesión SameSite](WebServer/webServerCon
 
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->**.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
-> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
+> Esta propiedad no se utiliza en [modo sesiones escalables](#scalablesession) (no hay validación de dirección IP).
 
 La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de la dirección IP para las cookies de sesión<!-- END REF -->. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).
 
@@ -658,13 +658,13 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+La función `.start()` <!-- REF #WebServerClass.start().Summary -->inicia el servidor web en el que se aplica<!-- END REF -->, utilizando las propiedades definidas en el parámetro opcional del objeto *settings*.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
+El servidor web se inicia con los parámetros por defecto definidos en el archivo de configuración del proyecto o (base host únicamente) utilizando el comando `WEB SET OPTION`. Sin embargo, utilizando el parámetro *settings*, se pueden definir propiedades personalizadas para la sesión del servidor web.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+Todas los parámetros de los [objetos Servidor Web](#web-server-object) pueden personalizarse, excepto las propiedades de sólo lectura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) y [.sessionCookieName](#sessioncookiename)).
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
+Los parámetros de sesión personalizados se reiniciarán cuando se llame la función [`.stop()`](#stop).
 
 #### Objeto devuelto
 
@@ -719,11 +719,11 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 
 <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+La función `.stop()` <!-- REF #WebServerClass.stop().Summary --> detiene el servidor web sobre el que se aplica<!-- END REF -->.
 
 Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
 
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+> Esta función reinicia los parámetros web personalizados definidos para la sesión utilizando el parámetro *settings* de la función [`.start()`](#start), si los hay.
 
 #### Ejemplo
 

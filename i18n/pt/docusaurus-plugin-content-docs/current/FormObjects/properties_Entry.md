@@ -235,7 +235,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Veja também
 
-[Help tip](properties_Help.md)
+[Dica de ajuda](properties_Help.md)
 
 ---
 

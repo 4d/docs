@@ -47,7 +47,7 @@ Sending parameters to singleton functions is exactly the same as sending paramet
 
 ## Ejemplo
 
-You have created a simple shared singleton with an exposed function:
+Ha creado un singleton compartido sencillo con una función expuesta:
 
 ```4d
 //class mySingleton

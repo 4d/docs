@@ -3449,7 +3449,7 @@ El comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->mueve o c
 
 _originRange_ y _targetRange_ pueden referirse a diferentes áreas View Pro.
 
-En _originRange_, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. If _originRange_ is a combined range, only the first one is used.
+En _originRange_, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. Si _originRange_ es un rango combinado, sólo se utiliza el primero.
 
 In _targetRange_, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 
@@ -3507,7 +3507,7 @@ El comando `VP Name` <!-- REF #_method_.VP Name.Summary -->devuelve un nuevo obj
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-The _rangeName_ parameter specifies an existing named cell range.
+El parámetro _rangeName_ indica un rango de celdas con nombre existente.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where _rangeName_ is defined. Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
 

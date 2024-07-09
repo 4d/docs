@@ -15,15 +15,18 @@ title: リリースノート
 - 新しい [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) 関数と [`$clean`](../REST/$clean.md) REST API が追加されました。これらは、対象のエンティティセレクションから削除済みエンティティを除外したエンティティセレクションを新規に取得します。
 - セッションの権限を確認し、デバッグを容易にするための新しい [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) 関数と [`$info/privileges`](../REST/$info.md) REST API が追加されました。
 - [4DCEFParameters.jsonファイル](../FormObjects/webArea_overview.md#4dcefparametersjson) が新しく追加されました。これにより、4D埋め込みWebエリアをカスタマイズすることができます。
-- New [`$singleton` API](../REST/$singleton.md) to call exposed singleton functions from REST and new [associated privileges](../ORDA/privileges.md).
-- A [new settings button](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) helps you upgrade your project to use "force login" REST mode (the `On REST Authentication` database method is now deprecated).
-- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands.
-- New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
+- 新しい [HTTPAgent](../API/HTTPAgentClass.md) クラスと、HTTPRequest クラスの新しい [`agent`](../API/HTTPRequestClass.md#options-引数) プロパティ。
+- サーバーから Qodlyのページの状態を監視するための新しい [`enableState()`](../API/WebFormClass.md) と [`disableState()`](../API/WebFormClass.md) 関数。
+- 公開されたシングルトン関数を REST で呼び出すための新しい [`$singleton` API](../REST/$singleton.md) と、それに伴う新しい [権限](../ORDA/privileges.md) が追加されました。
+- プロジェクトを "強制ログイン" RESTモードにアップグレードするための [新しい設定ボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) が追加されました (`On REST Authentication`データベースメソッドは非推奨となりました)。
+- [新しい設定タブ](../Project/compiler.md#警告) を使用して、警告の生成をグローバルに定義できます。
+- いくつかのコマンド (主に "4D環境" テーマのもの) がスレッドセーフになりました ([完全なリストはこちらを参照ください](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.ja.html))。また、[`SET DATABASE PARAMETER`](https://doc.4d.com/4Dv20R6/help/command/ja/page642.html)/[`Get database parameter`](https://doc.4d.com/4Dv20R6/help/command/ja/page643.html) コマンドの一部のセレクターもスレッドセーフになりました。
+- PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 
 #### 動作の変更
 
 - フォーム内のスクロールチェーンをサポート: 埋め込まれたスクロール可能なオブジェクト ([縦スクロールバー](../FormObjects/properties_Appearance.md#縦スクロールバー)・[横スクロールバー](../FormObjects/properties_Appearance.md#横スクロールバー)) がスクロール境界に達しても、マウスやトラックパッドを使用してユーザーがスクロールを続ける場合、親サブフォームは自動的にスクロールします (オーバースクロール)。
-- The [`$catalog` REST API](../REST/$catalog.md) now returns singletons (if any).
+- [`$catalog` REST API](../REST/$catalog.md) は、シングルトンを返すようになりました (あれば)。
 
 ## 4D 20 R5
 

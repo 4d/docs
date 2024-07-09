@@ -94,7 +94,7 @@ O objeto Servidor Web retornado contém os valores atuais das propriedades do Se
 Do seu componente, você quer saber se o servidor Web do banco de dados host está iniciado:
 
 ```4d
-  // Method of a component
+  // Método de um componente
  var $hostWS : 4D.WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
@@ -320,7 +320,7 @@ Limite de compressão padrão = 1024 bytes
 
 <!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
+Estado do protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!-- END REF -->.
 
 <!-- END REF -->
 

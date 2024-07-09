@@ -700,7 +700,7 @@ En un almacén de datos remoto:
 
 La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
+Para obtener más información sobre cómo se pueden crear contextos de optimización, consulte [optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devuelto
 
@@ -981,7 +981,7 @@ En este caso, puede llamar a esta función para deshabilitar el acceso a los dat
 Se crea un método proyecto *protectDataFile* para llamar antes de los despliegues, por ejemplo:
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de datos
 ```
 
 #### Ver también

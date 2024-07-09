@@ -424,7 +424,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 **Objeto devolvido**
 
-The renamed `Folder` object.
+O objeto `Folder` renomeado.
 
 #### Exemplo
 

@@ -209,7 +209,7 @@ You can move any graphic or active object in the form including fields and objec
 - Mova o objeto um píxel de cada vez utilizando as teclas de seta,
 - Mova o objeto em etapas usando as teclas de seta (etapas de 20 píxeis por padrão),
 
-Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. Puede presionar la tecla **Mayúsculas** para realizar el movimiento con una restricción.
+Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Tenha cuidado para não arrastar uma alça. Dragging a handle resizes the object. Puede presionar la tecla **Mayúsculas** para realizar el movimiento con una restricción.
 
 Cuando la [rejilla magnética](#usando-la-rejilla-magnética) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
 
