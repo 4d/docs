@@ -3,10 +3,6 @@ id: SessionClass
 title: Session
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-
 Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Session types
@@ -531,9 +527,7 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 
 This property is **read only** itself but it returns a read-write object.
 
-<Tabs>
-
-<TabItem value="Web session example">
+#### Web session example
 
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
 
@@ -546,9 +540,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-</TabItem>
-
-<TabItem value="Remote session example">
+#### Remote session example
 
 You want to share data between processes in the same session:
 
@@ -559,9 +551,6 @@ Use (Session.storage)
 End use
 ```
 
-</TabItem>
-
-</Tabs>
 
 <!-- END REF -->
 
