@@ -17,7 +17,7 @@ Especifica se o utilizador pode eliminar sub-registos num subformulário lista.
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -40,7 +40,7 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -59,7 +59,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### Veja também
 
@@ -89,7 +89,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### Veja também
 
@@ -111,7 +111,7 @@ Cuando un subformulario lista tiene esta propiedad activada, el usuario puede mo
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -129,7 +129,7 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -145,7 +145,7 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 
@@ -169,4 +169,4 @@ Designa a opção que permite aos utilizadores selecionar linhas:
 
 #### Objectos suportados
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
