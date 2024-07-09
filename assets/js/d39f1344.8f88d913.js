@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[23639],{620983:e=>{e.exports=JSON.parse('{"title":"M","slug":"/commands/M","permalink":"/docs/commands/M","navigation":{"previous":{"title":"VP INSERT TABLE ROWS","permalink":"/docs/ViewPro/commands/vp-insert-table-rows"},"next":{"title":"VP MOVE CELLS","permalink":"/docs/ViewPro/commands/vp-move-cells"}}}')}}]);

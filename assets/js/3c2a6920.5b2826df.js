@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[34199],{910059:e=>{e.exports=JSON.parse('{"title":"A","slug":"/commands/A","permalink":"/docs/commands/A","navigation":{"previous":{"title":"Commands","permalink":"/docs/ViewPro/commands"},"next":{"title":"VP ADD FORMULA NAME","permalink":"/docs/ViewPro/commands/vp-add-formula-name"}}}')}}]);

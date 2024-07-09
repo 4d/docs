@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[14123],{138219:e=>{e.exports=JSON.parse('{"title":"D","slug":"/commands/D","permalink":"/docs/commands/D","navigation":{"previous":{"title":"VP CREATE TABLE","permalink":"/docs/ViewPro/commands/vp-create-table"},"next":{"title":"VP DELETE COLUMNS","permalink":"/docs/ViewPro/commands/vp-delete-columns"}}}')}}]);

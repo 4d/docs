@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[90328],{493328:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"C","slug":"/commands/C","permalink":"/docs/commands/C","sidebar":"docs","navigation":{"previous":{"title":"VP All","permalink":"/docs/ViewPro/commands/vp-all"},"next":{"title":"VP Cell","permalink":"/docs/ViewPro/commands/vp-cell"}}}}')}}]);

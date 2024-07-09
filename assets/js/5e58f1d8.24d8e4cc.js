@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[83708],{202023:e=>{e.exports=JSON.parse('{"title":"G","slug":"/commands/G","permalink":"/docs/commands/G","navigation":{"previous":{"title":"VP Font to object","permalink":"/docs/ViewPro/commands/vp-font-to-object"},"next":{"title":"VP Get active cell","permalink":"/docs/ViewPro/commands/vp-get-active-cell"}}}')}}]);

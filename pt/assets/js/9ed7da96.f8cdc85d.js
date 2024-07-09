@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[8575],{853717:t=>{t.exports=JSON.parse('{"title":"Come\xe7ando","image":"/img/docusaurus.png","keywords":["start"],"slug":"/category/getting-started","permalink":"/docs/pt/20-R4/category/getting-started","navigation":{"next":{"title":"Instala\xe7\xe3o","permalink":"/docs/pt/20-R4/GettingStarted/installation"}}}')}}]);

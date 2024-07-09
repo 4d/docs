@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[98418],{864416:e=>{e.exports=JSON.parse('{"title":"F","slug":"/commands/F","permalink":"/docs/es/commands/F","navigation":{"previous":{"title":"VP Export to object","permalink":"/docs/es/ViewPro/commands/vp-export-to-object"},"next":{"title":"VP Find","permalink":"/docs/es/ViewPro/commands/vp-find"}}}')}}]);

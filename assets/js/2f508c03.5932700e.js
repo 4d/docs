@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[550],{414124:e=>{e.exports=JSON.parse('{"title":"R","slug":"/commands/R","permalink":"/docs/commands/R","navigation":{"previous":{"title":"VP PRINT","permalink":"/docs/ViewPro/commands/vp-print"},"next":{"title":"VP RECOMPUTE FORMULAS","permalink":"/docs/ViewPro/commands/vp-recompute-formulas"}}}')}}]);
