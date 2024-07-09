@@ -3415,7 +3415,7 @@ Apenas elementos numéricos são considerados para cálculos (outros tipos são 
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
 
-`.sum()` returns 0 if:
+`.sum()` retorna 0 se:
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
