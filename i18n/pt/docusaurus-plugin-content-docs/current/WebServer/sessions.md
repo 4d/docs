@@ -14,12 +14,12 @@ Web sessions allow to:
 
 ## Usages
 
-Web sessions are used for:
+As sessões Web são usadas para:
 
 - [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
-## Enabling web sessions
+## Activando sessões web
 
 The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
 

@@ -148,7 +148,7 @@ Os formatos de exibição numérica (exceto para notações científicas) são a
 > No Windows, ao usar a tecla de separação decimal do teclado numérico, 4D faz uma distinção dependendo do tipo de campo onde o cursor está localizado:
 >
 > - em um campo do tipo Real, o uso dessa chave inserirá o separador decimal definido no sistema,
-> - in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> - in any other type of field, this key inserts the character associated with the key, usually a period (.) ou vírgula (,).
 
 ### Pontos decimais e outros caracteres de visualização
 

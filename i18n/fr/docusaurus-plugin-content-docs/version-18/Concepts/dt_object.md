@@ -145,7 +145,7 @@ Lorsque la notation objet est utilisée, la valeur **null** est prise en charge 
 
 Pour plus d'informations, veuillez vous reporter à la description de la commande `Null`.
 
-### Valeur Indéfinie
+### Valeur Undefined
 
 L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous :
 

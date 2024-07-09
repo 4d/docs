@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Test build'
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: '20.x'
       - name: Test Build
         run: |
           if [ -e package-lock.json ]; then
@@ -30,10 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Build and update website'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: '20.x'
       - name: Setup config file
         run: |
           if [ ${{ github.repository_owner }} == 'doc4d' ]; then

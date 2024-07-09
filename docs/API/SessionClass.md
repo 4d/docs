@@ -3,9 +3,6 @@ id: SessionClass
 title: Session
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 
 Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
@@ -131,6 +128,10 @@ IP:port/4DACTION/action_Session
        WEB SEND TEXT("4DACTION --> Session is null")
  End case
 ```
+
+### See also
+
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html)
 
 
 
@@ -381,6 +382,13 @@ End if
 The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each session and allows you to identify its processes.
 
 
+:::tip
+
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.  
+
+:::
+
+
 <!-- END REF -->
 
 
@@ -392,6 +400,7 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 
 |Release|Changes|
 |---|---|
+
 |18 R6|Added|
 
 </details>
@@ -634,9 +643,14 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 
 This property is **read only** itself but it returns a read-write object.
 
-<Tabs>
+:::tip
 
-<TabItem value="Web session example">
+You can get the `.storage` property of a session using the [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.  
+
+:::
+
+
+#### Web session example
 
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
 
@@ -649,9 +663,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-</TabItem>
-
-<TabItem value="Remote session example">
+#### Remote session example
 
 You want to share data between processes in the same session:
 
@@ -662,9 +674,6 @@ Use (Session.storage)
 End use
 ```
 
-</TabItem>
-
-</Tabs>
 
 <!-- END REF -->
 

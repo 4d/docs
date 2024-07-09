@@ -68,8 +68,8 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Web/Log (type) page](../settings/web.md#log)                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Log (backup) page](../settings/web.md#log)                       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Web Services page](../settings/web.md#web-services)                                 | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível              |
-| [SQL page](../settings/sql.md)                                                           | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [PHP page](../settings/php.md)                                                           | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página SQL](../settings/sql.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página PHP](../settings/php.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Security page](../settings/security.md)                                                 | N/a                                          | N/a                                                       |
 | [Compatibility page](../settings/compatibility.md)                                       | N/a                                          | N/a                                                       |
 

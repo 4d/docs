@@ -126,6 +126,10 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
+### 参照
+
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html)
+
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
 ## .clearPrivileges()
@@ -297,7 +301,7 @@ $privileges := Session.getPrivileges()
 #### 参照
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[ブログ記事: セッション権限を検査してデバッグを容易に](https://blog.4d.com/ja/permissions-inspect-session-privileges-for-easy-debugging)
 
 <!-- END REF -->
 
@@ -362,6 +366,12 @@ End if
 
 `.id` プロパティは、<!-- REF #SessionClass.id.Summary -->サーバー上のセッションの一意な識別子 (UUID) を格納します<!-- END REF -->。 この一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。
 
+:::tip
+
+[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドにこのプロパティを渡すことで、セッションの `.storage` オブジェクトを取得できます。
+
+:::
+
 <!-- END REF -->
 
 <!-- REF SessionClass.idleTimeout.Desc -->
@@ -370,9 +380,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 18 R6 | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+
+|18 R6|追加|
 
 </details>
 
@@ -612,6 +623,12 @@ End if
 > サーバーの `Storage` オブジェクトと同様に、`.storage` プロパティは常に "single" で存在します。 共有オブジェクトや共有コレクションを `.storage` に追加しても、共有グループは作成されません。
 
 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。
+
+:::tip
+
+セッションの `.storage` プロパティは [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドで取得できます。
+
+:::
 
 <Tabs>
 

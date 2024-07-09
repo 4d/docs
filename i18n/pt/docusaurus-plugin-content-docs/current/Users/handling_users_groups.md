@@ -46,7 +46,7 @@ O administrador pode:
 Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- Ícone Administrador: ![](../assets/en/Users/iconAdmin.png)
 
 Pode renomear os usuários Designer e Administardor. Na linguagem, o ID de Designer é sempre 1 e a ID de Administrador é sempre 2.
 

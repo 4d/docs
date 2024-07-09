@@ -329,7 +329,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](debugging-remote.md).
 
 * **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 * **Show Types**: Displays the type of each item in the list (when appropriate).

@@ -99,13 +99,13 @@ Cada tabla expuesta con ORDA ofrece una clase DataClass en el class store `cs`.
 #### Exemplo
 
 ```4D
-// cs.Company class
+// cs. Classe ompany
 
 
 Class extends DataClass
 
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
+// Retorna empresas cuja receita é acima da média
+// Retorna uma seleção de entidade relacionada com a dataClass Company
 
 Function GetBestOnes()
 	$sel:=This.query("revenues >= :1";This.all().average("revenues"));
@@ -176,12 +176,12 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 #### Exemplo
 
 ```4d
-// cs.EmployeeSelection class
+// Classe cs.EmployeeSelection
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+// Extrair os funcionários com um salário maior que a média desta seleção de entidades
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -239,7 +239,7 @@ Function getPopulation() : Integer
 
 
 Function isBigCity(): Boolean
-// The getPopulation() function is usable inside the class
+// A função getPopulation() pode ser usada dentro da classe
 	return This.getPopulation()>50000
 ```
 
@@ -545,11 +545,11 @@ Function query age($event : Object)->$result : Object
 Código de chamada, por exemplo:
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// pessoas com idades entre 20 e 21 anos (-1 dia)
+$twenty:=people.query("age = 20") // chama o caso "=="
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+// pessoas com 20 anos hoje
+$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
 
 ```
 
@@ -720,9 +720,9 @@ Na classe de dados Curso:
 
 Class extends Entity
 
-Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias courseName name //escalar 
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
@@ -775,7 +775,7 @@ Uma função que não esteja exposta não está disponível em aplicações remo
 Para permitir que una función de clase de modelo de datos sea llamada por una petición remota, debe declararla explícitamente utilizando la palabra clave `exposed`. A sintaxe formal é:
 
 ```4d
-// declare an exposed function
+// declara uma função exposta
 exposed Function <functionName>   
 ```
 
@@ -788,7 +788,7 @@ Se quiser que uma função exposta utilize uma função privada numa classe de d
 ```4d
 Class extends DataClass
 
-//Public function
+// Função pública
 exposed Function registerNewStudent($student : Object) -> $status : Object
 
 var $entity : cs.StudentsEntity
@@ -799,9 +799,9 @@ $entity.school:=This.query("name=:1"; $student.schoolName).first()
 $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
-//Not exposed (private) function
+// Função não exposta (privada)
 Function computeIDNumber()-> $id : Integer
-//compute a new ID number
+// calcular um novo número de ID
 $id:=...
 
 ```
@@ -815,8 +815,8 @@ var $id : Integer
 $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
-$status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$status:=$remoteDS. Schools.registerNewStudent($student) // OK
+$id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
 ## Funções locais
@@ -826,7 +826,7 @@ Por defecto en la arquitectura cliente/servidor, las funciones de modelo de dato
 No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). En este caso, puede ahorrar peticiones al servidor y, de este modo, mejorar el rendimiento de la aplicación insertando la palabra clave `local`. A sintaxe formal é:
 
 ```4d
-// declare a function to execute locally in client/server
+// declarar uma função para executar localmente no cliente/servidor
 local Function <functionName>   
 ```
 
@@ -837,8 +837,8 @@ Com esta palavra-chave, a função será sempre executada no lado do cliente.
 Note-se que a função funcionará mesmo que eventualmente seja necessário aceder ao servidor (por exemplo, se a cache ORDA tiver expirado). No entanto, é altamente recomendável certificar-se de que a função local não acede a dados no servidor, caso contrário a execução local não poderá trazer qualquer benefício em termos de desempenho. Uma função local que gera muitos pedidos ao servidor é menos eficiente do que uma função executada no servidor que apenas devolveria os valores resultantes. Por exemplo, considere a seguinte função na classe de entidade Escolas:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obter os alunos mais novos 
+// Uso inapropriado da palavra-chave local
 local Function getYoungest
 	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)

@@ -705,8 +705,14 @@ End use
 
 `.equal()` 関数は、 <!-- REF #collection.equal().Summary -->コレクションを collection2 とディープ比較し、同一の場合には **true** を返します <!-- END REF -->。
 
+:::note 注記
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. ネイティブオブジェクトの等価性はチェックされません。
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に `ck diacritical` 定数を渡します。
-> **Null**値の要素は undefined要素と同じとはみなされません。
 
 #### 例題
 

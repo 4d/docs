@@ -224,7 +224,7 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
 
-### Setting the force login mode
+### Definir el modo de inicio de sesión forzado
 
 You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
 

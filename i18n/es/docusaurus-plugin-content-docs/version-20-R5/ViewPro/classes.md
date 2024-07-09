@@ -129,7 +129,7 @@ The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a
 
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<!-- END REF -->
 
-The `.theme` property <!-- REF #TableOptions.theme.Summary -->defines a table theme. Can also be a text (name of a native SpreadJS theme)<!-- END REF -->.
+The `.theme` property <!-- REF #TableOptions.theme.Summary -->defines a table theme. También puede ser un texto (nombre de un tema nativo SpreadJS)<!-- END REF -->.
 
 Consulte los[ temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 

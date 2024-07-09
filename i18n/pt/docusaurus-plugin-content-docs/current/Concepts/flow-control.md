@@ -65,7 +65,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
 #### Exemplo
 
 ```4d
-  // Ask the user to enter a name
+  // Peça ao usuário para digitar um nome
  $Find:=Request(Type a name)
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
@@ -185,8 +185,8 @@ Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que
  Case of
     :(vResult=1)
        ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //esse caso nunca será detectado
+       ... //declaração(ões)
  End case
 ```
 
@@ -194,10 +194,10 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //esse caso será detectado primeiro
+       ... //declaração(ões)
     :(vResult=1)
-       ... //statement(s)
+       ... //declaração(ões)
  End case
 ```
 
@@ -400,7 +400,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  //Do something with the element
+  //Faz algo com o elemento
     anArray{$vlElem}:=...
  End for
 ```

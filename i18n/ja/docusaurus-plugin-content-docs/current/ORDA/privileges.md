@@ -17,7 +17,7 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-## Resources
+## リソース
 
 プロジェクト内の以下の公開リソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
 
@@ -25,6 +25,7 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 - データクラス
 - 属性 (計算属性およびエイリアス属性を含む)
 - データモデルクラス関数
+- [シングルトン](../REST/$singleton.md)関数
 
 あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
 
@@ -34,7 +35,7 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 :::info
 
-パーミッションは、データストアオブジェクトへのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
+パーミッションは、データストアオブジェクトや関数へのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
 
 :::
 
@@ -42,27 +43,28 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 利用可能なアクションは対象となるリソースによります。
 
-| アクション        | データストア                                                                                                                                                              | dataclass                                                             | 属性                                                                        | データモデル関数                                                                                                |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **create**   | 任意のデータクラスにおいてエンティティを作成                                                                                                                                              | 当該データクラスにおいてエンティティを作成                                                 | 当該属性に許可されたデフォルト値とは異なる値を持つエンティティを作成 (エイリアス属性の場合は無視されます) | n/a                                                                                                     |
-| **read**     | 任意のデータクラスにおいて属性を読み取り                                                                                                                                                | 当該データクラスにおいて属性を読み取り                                                   | 当該属性を読み取り                                                                 | n/a                                                                                                     |
-| **update**   | 任意のデータクラスにおいて属性を更新                                                                                                                                                  | 当該データクラスにおいて属性を更新                                                     | 当該属性を更新 (エイリアス属性の場合は無視されます)                            | n/a                                                                                                     |
-| **drop**     | 任意のデータクラスにおいてデータを削除                                                                                                                                                 | 当該データクラスにおいてデータを削除                                                    | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)                   | n/a                                                                                                     |
-| **execute**  | Execute any function on the project (datastore (except `authentify()`, see Notes below), dataclass, entity selection, entity) | データクラスの任意の関数を実行。 データクラス関数、エンティティ関数、エンティティセレクション関数は、データクラスの関数として扱われます。 | n/a                                                                       | 当該関数を実行                                                                                                 |
-| **describe** | /rest/$catalog API ですべてのデータクラスが利用可能                                                                                                                                 | /rest/$catalog API で当該データクラスが利用可能                                     | /rest/$catalog API で当該属性が利用可能                                             | /rest/$catalog API で当該関数が利用可能                                                                           |
-| **promote**  | n/a                                                                                                                                                                 | n/a                                                                   | n/a                                                                       | 関数の実行に指定の権限を関連付けます。 権限は一時的にセッションに追加され、関数の実行終了とともに削除されます。 セキュリティ上、セッション全体ではなく、当該関数を実行するプロセスのみに権限が追加されます。 |
+| アクション        | データストア                                                                 | データクラス                                                                | 属性                                                                        | データモデル関数またはシングルトン関数                                                                                     |
+| ------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **create**   | 任意のデータクラスにおいてエンティティを作成                                                 | 当該データクラスにおいてエンティティを作成                                                 | 当該属性に許可されたデフォルト値とは異なる値を持つエンティティを作成 (エイリアス属性の場合は無視されます) | n/a                                                                                                     |
+| **read**     | 任意のデータクラスにおいて属性を読み取り                                                   | 当該データクラスにおいて属性を読み取り                                                   | 当該属性を読み取り                                                                 | n/a                                                                                                     |
+| **update**   | 任意のデータクラスにおいて属性を更新                                                     | 当該データクラスにおいて属性を更新                                                     | 当該属性を更新 (エイリアス属性の場合は無視されます)                            | n/a                                                                                                     |
+| **drop**     | 任意のデータクラスにおいてデータを削除                                                    | 当該データクラスにおいてデータを削除                                                    | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)                   | n/a                                                                                                     |
+| **execute**  | プロジェクトの任意の関数を実行 (データストア、データクラス、エンティティセレクション、エンティティ) | データクラスの任意の関数を実行。 データクラス関数、エンティティ関数、エンティティセレクション関数は、データクラスの関数として扱われます。 | n/a                                                                       | 当該関数を実行                                                                                                 |
+| **describe** | /rest/$catalog API ですべてのデータクラスが利用可能                                    | /rest/$catalog API で当該データクラスが利用可能                                     | /rest/$catalog API で当該属性が利用可能                                             | /rest/$catalog API で当該データクラス関数が利用可能 (シングルトン関数は利用できません)                               |
+| **promote**  | n/a                                                                    | n/a                                                                   | n/a                                                                       | 関数の実行に指定の権限を関連付けます。 権限は一時的にセッションに追加され、関数の実行終了とともに削除されます。 セキュリティ上、セッション全体ではなく、当該関数を実行するプロセスのみに権限が追加されます。 |
 
 **注:**
 
 - エイリアス属性の元である属性に対するアクセス権をセッションが持っていない場合でも、エイリアス属性へのアクセス権があれば、これを読み取ることができます。
 - 計算属性を構成する属性に対するアクセス権をセッションが持っていない場合でも、計算属性へのアクセス権があれば、これを読み取ることができます。
+- シングルトンクラス (`singleton` 型) には許諾アクションを割り当てることができます。その場合、そのシングルトンクラスの公開関数すべて、および、シングルトン関数 (`singletonMethod` 型）に適用されます。
 - デフォルト値: 現在の実装では、_Null_ のみデフォルト値として利用可能です。
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, even if there is no specific **execute** permission on it for the datastore.
+- REST の [強制ログインモード](../REST/authUsers.md/#強制ログインモード) では、[`authentify()`関数](../REST/authUsers.md#function-authentify) は、権限の設定に関係なく常にゲストユーザーによって実行可能です。
 
 許諾の設定は一貫している必要があります。とくに:
 
 - **update** および **drop** アクションには **read** が必要です (**create** には不要です)
-- **promote** アクションには **describe** が必要です
+- データモデル関数の場合、**promote** アクションには **describe** が必要です。
 
 ## 権限とロール
 
@@ -105,34 +107,81 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 `roles.json` ファイルは、プロジェクトのセキュリティ設定の全体を記述します。
 
-:::note
+### デフォルトファイル
 
-_Qodly_ (クラウド) 以外のコンテキストでは、このファイルを次の場所に作成する必要があります: `<project folder>/Project/Sources/`。 [アーキテクチャー](../Project/architecture.md#sources) を参照ください。
+プロジェクトを作成すると、デフォルトの `roles.json` ファイルが次の場所に作成されます: `<project folder>/Project/Sources/`。 [アーキテクチャー](../Project/architecture.md#sources) を参照ください。
+
+デフォルトのファイルには次の内容が含まれています:
+
+```json
+
+{
+    "privileges": [
+        {
+            "privilege": "none",
+            "includes": []
+        }
+    ],
+
+    "roles": [],
+
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "ds",
+                "type": "datastore",
+                "read": ["none"],
+                "create": ["none"],
+                "update": ["none"],
+                "drop": ["none"],
+                "describe": ["none"],
+                "execute": ["none"],
+                "promote": ["none"]                
+            }
+        ]
+    },
+
+    "forceLogin": true
+
+}
+
+```
+
+:::note 互換性
+
+4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
+:::
+
+:::note Qodly Studio
+
+Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
 
 :::
 
+### シンタックス
+
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                                                                                     |                                                                                   | タイプ                        | 必須 | 説明                                                                                 |
-| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------- | -- | ---------------------------------------------------------------------------------- |
-| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトのコレクション  | X  | 定義された権限のリスト                                                                        |
-|             | \[].privilege  |                                                                                   | String                     |    | アクセス権の名称                                                                           |
-|             | \[].includes   |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                        |
-| roles       |                                                                                     |                                                                                   | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                                       |
-|             | \[].role       |                                                                                   | String                     |    | ロール名                                                                               |
-|             | \[].privileges |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                        |
-| permissions |                                                                                     |                                                                                   | Object                     | X  | 設定されたパーミッションのリスト                                                                   |
-|             | allowed                                                                             |                                                                                   | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                                   |
-|             |                                                                                     | \[].applyTo  | String                     | X  | 対象の [リソース](#リソース) 名                                                                |
-|             |                                                                                     | \[].type     | String                     | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
-|             |                                                                                     | \[].read     | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].create   | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].update   | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].drop     | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].describe | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].execute  | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].promote  | String の Collection        |    | 権限名のリスト                                                                            |
-| forceLogin  |                                                                                     |                                                                                   | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true           |
+| プロパティ名      |                                                                                     |                                                                                   | タイプ                        | 必須 | 説明                                                                                                                 |
+| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
+| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトのコレクション  | X  | 定義された権限のリスト                                                                                                        |
+|             | \[].privilege  |                                                                                   | String                     |    | アクセス権の名称                                                                                                           |
+|             | \[].includes   |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                                                        |
+| roles       |                                                                                     |                                                                                   | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                                                                       |
+|             | \[].role       |                                                                                   | String                     |    | ロール名                                                                                                               |
+|             | \[].privileges |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                                                        |
+| permissions |                                                                                     |                                                                                   | Object                     | X  | 設定されたパーミッションのリスト                                                                                                   |
+|             | allowed                                                                             |                                                                                   | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                                                                   |
+|             |                                                                                     | \[].applyTo  | String                     | X  | 対象の [リソース](#リソース) 名                                                                                                |
+|             |                                                                                     | \[].type     | String                     | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
+|             |                                                                                     | \[].read     | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].create   | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].update   | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].drop     | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].describe | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].execute  | String の Collection        |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].promote  | String の Collection        |    | 権限名のリスト                                                                                                            |
+| forceLogin  |                                                                                     |                                                                                   | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true                                           |
 
 :::caution 注記
 
@@ -167,86 +216,92 @@ End if
 
 ```json title="/Project/Sources/roles.json"
 {
-    "privileges": [
-        {
-            "privilege": "none",
-            "includes": []
-        }
-    ],
+	"privileges": [
+		{
+			"privilege": "none",
+			"includes": []
+		}
+	],
 
-    "roles": [],
+	"roles": [],
 
-    "permissions": {
-        "allowed": [{
-            "applyTo": "ds",
-            "type": "datastore",
-            "read": [
-                "none"
-            ],
-            "create": [
-                "none"
-            ],
-            "update": [
-                "none"
-            ],
-            "drop": [
-                "none"
-            ],
-            "execute": [
-                "none"
-            ],
-            "describe": [
-                "none"
-            ],
-            "promote": [
-                "none"
-            ]
-        },
-        {
-            "applyTo": "ds.loginAs",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.hasPrivilege",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.clearPrivileges",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.isGuest",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.getPrivileges",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.setAllPrivileges",
-            "type": "method",
-            "execute": [
-                "guest"
-            ]
-    }
-
-        ]
-    }
+	"permissions": {
+		"allowed": [{
+			"applyTo": "ds",
+			"type": "datastore",
+			"read": [
+				"none"
+			],
+			"create": [
+				"none"
+			],
+			"update": [
+				"none"
+			],
+			"drop": [
+				"none"
+			],
+			"execute": [
+				"none"
+			],
+			"describe": [
+				"none"
+			],
+			"promote": [
+				"none"
+			]
+		},
+		{
+			"applyTo": "ds.loginAs",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.hasPrivilege",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.clearPrivileges",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.isGuest",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.getPrivileges",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.setAllPrivileges",
+			"type": "method",
+			"execute": [
+				"guest"
+			]
+	 },
+		{
+			"applyTo": "mySingletonClass.createID",
+			"type": "singletonMethod",
+			"execute": [
+				"guest"
+			]
+	 }
+		]
+	},
+    "forceLogin": true
 }
-
 ```

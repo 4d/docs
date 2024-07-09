@@ -80,7 +80,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-### Priority
+### Prioridade
 
 Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
@@ -112,7 +112,7 @@ The Dependency panel is then displayed. Dependencies are sorted by name in alpha
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### Dependency Origin
+### Origem da dependência
 
 The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
 
@@ -120,12 +120,12 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 The following origins are supported:
 
-| Origin tag        | Descrição                                                                      |
-| ----------------- | ------------------------------------------------------------------------------ |
-| 4D Component      | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| Source            | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment       | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Project Component | Component located in the [`Components`](architecture.md#components) folder     |
+| Origin tag            | Descrição                                                                      |
+| --------------------- | ------------------------------------------------------------------------------ |
+| Componente 4D         | Built-in 4D component, stored in the `Components` folder of the 4D application |
+| Source                | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
+| Environment           | Component declared in the [`environnement4d.json`](#environment4djson) file    |
+| Componente do projeto | Component located in the [`Components`](architecture.md#components) folder     |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 
@@ -147,7 +147,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
-### Dependency Status
+### Status de dependência
 
 Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
 

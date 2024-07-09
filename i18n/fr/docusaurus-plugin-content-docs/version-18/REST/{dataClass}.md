@@ -9,15 +9,15 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 ## Syntaxe
 
-| Syntaxe                                                                    | Exemple                     | Description                                                                                             |
-| -------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
-| [**{dataClass}/{méthode}**](#dataclassmethod-and-dataclasskeymethod)       | `/Employee/getHighSalaries` | Exécute une méthode projet et retourne un objet ou une collection (la méthode projet doit être exposée) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Renvoie une valeur basée sur une méthode d'entité                                                       |
+| Syntaxe                                                                            | Exemple                     | Description                                                                                             |
+| ---------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                  | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
+| [**\{dataClass\}({key})**](#dataclasskey)                                        | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
+| [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Exécute une méthode projet et retourne un objet ou une collection (la méthode projet doit être exposée) |
+| [**\{dataClass\}({key})/\{method\}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Renvoie une valeur basée sur une méthode d'entité                                                       |
 
-## {dataClass}
+## \{dataClass\}
 
 Renvoie toutes les données (par défaut, les 100 premières entités) pour une dataclass spécifique (par exemple, `Société`)
 
@@ -132,7 +132,7 @@ Retourne toutes les données d'une dataclass spécifique.
 }
 ````
 
-## {dataClass}({key})
+## \{dataClass\}({key})
 
 Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple, `Company (22) ou Company ("IT0911AB2200")`
 
@@ -179,7 +179,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
 }
 ````
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie
 
@@ -203,7 +203,7 @@ La requête suivante retourne toutes les données publiques de l'employé nommé
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} et {dataClass}({key})/{method}
+## \{dataClass\}/\{method\} and \{dataClass\}({key})/\{method\}
 
 Retourne un objet ou une collection basée sur une méthode projet.
 
@@ -224,7 +224,7 @@ Pour être appelée dans une requête REST, une méthode doit :
   - **Table** : la table 4D (c'est-à-dire dataclass) sur laquelle la méthode est appelée. La table doit être [exposée à REST](configuration.md#exposing-tables-and-fields).
   - **Portée** : Ce paramètre est utile lorsque la méthode utilise le langage classique de 4D et doit donc avoir un contexte de base de données côté serveur.
     - **Table ** - pour les méthodes appliquées à la table entière (dataclass)
-    - **Enregistrement courant** - pour les méthodes appliquées à l'enregistrement courant (entité) à l'aide de la syntaxe `{dataClass} (clé)/{méthode}`.
+    - **Current record** -for methods applied to the current record (entity) using the `\{dataClass\}(key)/{method}` syntax.
     - **Sélection courante** - pour les méthodes appliquées à la sélection courante
 
 ![alt-text](../assets/en/REST/MethodProp.png)

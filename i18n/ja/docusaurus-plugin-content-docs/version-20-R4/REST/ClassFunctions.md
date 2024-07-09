@@ -26,19 +26,19 @@ $city:=ds.City.getCity("Aguada")
 
 サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| クラス関数                                                          | シンタックス                                                                      |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
-| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
+| クラス関数                                                          | シンタックス                                                                          |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/DataStoreClassFunction`                                         |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
+|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
+|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
 
 
 
-> `/rest/{dataClass}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/{dataClass}` はデータクラスの全エンティティをエンティティセレクションに返します)。   
+> `/rest/\{dataClass\}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/\{dataClass\}` はデータクラスの全エンティティをエンティティセレクションに返します)。    
 > EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 

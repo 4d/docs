@@ -9,15 +9,15 @@ title: "{dataClass}"
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                     | 例題                          | 説明                                                              |
-| -------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します                        |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | データクラスのプライマリーキーによって特定されるエンティティのデータを返します                         |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | 指定した属性値を持つ 1件のエンティティのデータを返します                                   |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | プロジェクトメソッドを実行し、オブジェクトまたはコレクションを返します (プロジェクトメソッドは公開されている必要があります) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | エンティティメソッドに基づいて値を返します                                           |
+| シンタックス                                                                                 | 例題                          | 説明                                                              |
+| -------------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                      | `/Employee`                 | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します                        |
+| [**\{dataClass\}(\{key\})**](#dataclasskey)                                        | `/Employee(22)`             | データクラスのプライマリーキーによって特定されるエンティティのデータを返します                         |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                 | `/Employee:firstName(John)` | 指定した属性値を持つ 1件のエンティティのデータを返します                                   |
+| [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)            | `/Employee/getHighSalaries` | プロジェクトメソッドを実行し、オブジェクトまたはコレクションを返します (プロジェクトメソッドは公開されている必要があります) |
+| [**\{dataClass\}(\{key\})/\{method\}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | エンティティメソッドに基づいて値を返します                                           |
 
-## {dataClass}
+## \{dataClass\}
 
 特定のデータクラス (*例:* `Company`) の全データ (デフォルトでは先頭の 100エンティティ) を返します。
 
@@ -132,7 +132,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 }
 ````
 
-## {dataClass}({key})
+## \{dataClass\}(\{key\})
 
 データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22) または Company("IT0911AB2200")` など)。
 
@@ -179,7 +179,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 }
 ````
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 指定した属性値を持つ 1件のエンティティのデータを返します
 
@@ -203,7 +203,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} と {dataClass}({key})/{method}
+## \{dataClass\}/\{method\} と \{dataClass\}(\{key\})/\{method\}
 
 プロジェクトメソッドに基づいて、オブジェクトまたはコレクションを返します.
 
@@ -224,7 +224,7 @@ RESTリクエストによってメソッドを呼び出せるようにするに�
   - **テーブル**: メソッドコールを介する 4D テーブル (データクラス)。 このテーブルも [RESTリソースとして公開](configuration.md#テーブルやフィールドの公開) されている必要があります。
   - **スコープ**: メソッドがクラシックな 4Dランゲージを使用しており、サーバーサイドにおいてデータベースのコンテキストが必要な場合に、この設定が適用されます。
     - **テーブル** - テーブル (データクラス) 全体に対して適用されるメソッドの場合
-    - **カレントレコード** - `{dataClass}(key)/{method}` シンタックスを使って、カレントレコード (エンティティ) に対して適用されるメソッドの場合
+    - **カレントレコード** - `\{dataClass\}(key)/\{method\}` シンタックスを使って、カレントレコード (エンティティ) に対して適用されるメソッドの場合
     - **カレントセレクション** - カレントセレクションに対して適応されるメソッドの場合
 
 ![alt-text](../assets/en/REST/MethodProp.png)

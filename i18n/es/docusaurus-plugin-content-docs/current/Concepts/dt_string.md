@@ -67,7 +67,7 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 Character code("A")=Character code("a") // porque 65 no es igual a 97
 ```
 
-- Cuando se comparan las cadenas, se tienen en cuenta los caracteres diacríticos. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
+- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
 
 ```4d
      "n"="ñ"

@@ -9,18 +9,18 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**{dataClass}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
-|[**{dataClass}[{key}]**](#dataclasskey)|`/Employee[22]`|Returns the data for the specific entity defined by the dataclass's primary key|
-|[**{dataClass}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
-|[**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)|`/City/getCity`|Executes a dataclass class function |
-|[**{dataClass}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls)|`/City/getPopulation/?$filter="ID<3"`|Executes an entity selection class function|
-|[**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)|`City[2]/getPopulation`|Executes an entity class function|
+|[**\{dataClass\}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
+|[**\{dataClass\}[{key}]**](#dataclasskey)|`/Employee[22]`|Returns the data for the specific entity defined by the dataclass's primary key|
+|[**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
+|[**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)|`/City/getCity`|Executes a dataclass class function |
+|[**\{dataClass\}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls)|`/City/getPopulation/?$filter="ID<3"`|Executes an entity selection class function|
+|[**\{dataClass\}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)|`City[2]/getPopulation`|Executes an entity class function|
 
 > Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
 
 
 
-## {dataClass}
+## \{dataClass\}
 
 Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)	
 
@@ -138,7 +138,7 @@ Return all the data for a specific dataclass.
 ```
 
 
-## {dataClass}\[{key}]
+## \{dataClass\}\[{key}]
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
@@ -146,7 +146,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
-For more information about the data returned, refer to [{DataClass}](#dataclass).
+For more information about the data returned, refer to [\{dataClass\}](#dataclass).
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). For example:
 
@@ -187,7 +187,7 @@ The following request returns all the public data in the Company dataclass whose
 
 
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Returns the data for one entity in which the attribute's value is defined
 

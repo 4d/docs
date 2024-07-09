@@ -50,7 +50,7 @@ Uma coleção se inicializa com:
 | [<!-- INCLUDE #collection.last().Syntax -->](#last)<br/><!-- INCLUDE #collection.last().Summary -->                            |
 | [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<br/><!-- INCLUDE #collection.lastIndexOf().Summary -->       |
 | [<!-- INCLUDE #collection.length.Syntax -->](#length)<br/><!-- INCLUDE #collection.length.Summary -->                          |
-| [<!-- INCLUDE #collection.map().Syntax -->](#map)<br/><!-- INCLUDE #collection.map().Summary -->                               |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                               |
 | [<!-- INCLUDE #collection.max().Syntax -->](#max)<br/><!-- INCLUDE #collection.max().Summary -->                               |
 | [<!-- INCLUDE #collection.min().Syntax -->](#min)<br/><!-- INCLUDE #collection.min().Summary -->                               |
 | [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)<br/><!-- INCLUDE #collection.multiSort().Summary -->             |
@@ -461,7 +461,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 | Release | Mudanças                                                           |
 | ------- | ------------------------------------------------------------------ |
-| 18 R3   | New *ck shared* option. New *groupWith* parameters |
+| 18 R3   | Nova opção *ck shared*. New *groupWith* parameters |
 | v16 R6  | Adicionado                                                         |
 
 </details>
@@ -706,7 +706,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 | Release | Mudanças                     |
 | ------- | ---------------------------- |
-| 20      | Support of `ck count values` |
+| 20      | Suporte do `ck count values` |
 | v16 R6  | Adicionado                   |
 
 </details>
@@ -786,15 +786,14 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 The `.equal()` function <!-- REF #collection.equal().Summary -->recursively compares the contents of the collection and *collection2* (deep comparison)<!-- END REF -->and returns **true** if they are identical.
 
-Como padrão, uma avaliação não-diacrítica é realizada. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
+:::note Notas
 
-> Elements with **Null** values are not equal to Undefined elements.
-
-:::note
-
-A recursive comparison of collections can be time-consuming if the collection is large and deep. If you only want to compare two collection references, you may consider using the [`=` comparison operator for collection references](../Concepts/dt_collection.md#collection-operators).
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
 
 :::
+
+Como padrão, uma avaliação não-diacrítica é realizada. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 
 #### Exemplo
 
@@ -862,8 +861,8 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -1076,8 +1075,8 @@ The callback is called with the parameter(s) passed in *param* (optional) and an
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -1163,8 +1162,8 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -1251,8 +1250,8 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -1421,8 +1420,8 @@ The callback is called with the parameter(s) passed in *param* (optional). A cha
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -1912,8 +1911,8 @@ The callback is called with the parameter(s) passed in *param* (optional). A cha
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be evaluated
-- in *$2*: param
-- in *$N...*: paramN...
+- em *$2*: param
+- em *$N...*: paramN...
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -2203,7 +2202,7 @@ If you pass no parameter, the function orders scalar values in the collection in
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 
-- *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. A ordem na qual as propriedades são passadas determina a prioridade de ordenação dos elementos da coleção Como padrão as propriedades são ordenadas de forma ascendente. Como padrão as propriedades são ordenadas de forma ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
+- *pathStrings* : Texto (fórmula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. A ordem na qual as propriedades são passadas determina a prioridade de ordenação dos elementos da coleção Como padrão as propriedades são ordenadas de forma ascendente. Como padrão as propriedades são ordenadas de forma ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
 
 - *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
@@ -2846,8 +2845,8 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- em *$2: param*
+- em *$N...*: *paramN...*
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2931,8 +2930,8 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- em *$2: param*
+- em *$N...*: *paramN...*
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3257,8 +3256,8 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 A chamada de retorno recebe os seguintes parâmetros:
 
 - in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- em *$2: param*
+- em *$N...*: *paramN...*
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
@@ -3410,7 +3409,7 @@ Apenas elementos numéricos são considerados para cálculos (outros tipos são 
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
 
-`.sum()` returns 0 if:
+`.sum()` retorna 0 se:
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,

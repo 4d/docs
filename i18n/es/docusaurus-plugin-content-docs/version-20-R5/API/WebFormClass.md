@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+La clase `WebForm` contiene funciones y propiedades que permiten manejar sus componentes de webforms Qodly. Esta clase se detalla en la [documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 <details><summary>Historia</summary>
 
@@ -33,9 +33,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### Descripción
 
-The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these webforms.
+Los componentes de los webforms son los <!-- REF #WebFormClass.componentName.Summary -->objetos disponibles directamente como propiedades<!-- END REF --> de estos webforms.
 
-For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
+Para más información, consulte la [descripción de `.componentName` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
 ### .disableState()
 
@@ -51,16 +51,16 @@ For more information, please refer to the [`.componentName` description in the Q
 
 #### Descripción
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web form<!-- END REF -->.
+La función `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->desactiva la renderización del *estado* en el formulario web actual<!-- END REF -->.
 
 Esta función no hace nada si:
 
-- the *state* is currently not enabled in the web form,
+- el *estado* no está habilitado actualmente en el formulario web,
 - el *estado* no existe para el formulario web.
 
-If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
+Si [activa](#enablestate) o desactiva varios estados en la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez finalizada la función.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+Para más información sobre los estados de los formularios web, consulte [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
 
 ### .enableState()
 
@@ -76,20 +76,20 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 #### Descripción
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web form<!-- END REF -->.
+La función `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->activa la renderización del *estado* en el formulario web actual<!-- END REF -->.
 
 Esta función no hace nada si:
 
-- the *state* has already been enabled on the web form,
+- el *estado* ya ha sido activado en el formulario web,
 - el *estado* no existe para el formulario web.
 
-If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
+Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+Para más información sobre los estados de los formularios web, consulte [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
 
 #### Ejemplo
 
-You enable a specific state named "wrongCredentials" in case of error in your login page:
+Usted activa un estado específico llamado "wrongCredentials" en caso de error en su página de conexión:
 
 ```4d
 Function authenticationError()
@@ -112,9 +112,9 @@ Function authenticationError()
 
 #### Descripción
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
+La función `.setError()` <!-- REF #WebFormClass.setError().Summary -->envía *msg* como mensaje de error al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
+Para más información, consulte la [descripción de `.setError()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
 ### .setMessage()
 
@@ -130,9 +130,9 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 #### Descripción
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
+La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envía *msg* como mensaje de información al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
+Para más información, consulte la [descripción de `.setMessage()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
 ### .setWarning()
 
@@ -148,9 +148,9 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 #### Descripción
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
+La función `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envía *msg* como mensaje de advertencia al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
+Para más información, consulte la [descripción de `.setWarning()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
 ## Web Form
 
@@ -166,9 +166,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 #### Descripción
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
+El comando `Web Form` <!-- REF #_command_.Web Form.Summary --> devuelve un objeto proxy `4D.WebForm` que permite interactuar con el formulario web<!-- END REF -->.
 
-For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
+Para más información, consulte la [descripción de `webForm` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
 ## Web Event
 
@@ -184,6 +184,6 @@ For more information, please refer to the [`webForm` command description in the 
 
 #### Descripción
 
-The `Web Event` command <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->.
+El comando `Web Event` <!-- REF #_command_.Web Event.Summary -->devuelve un objeto con información sobre un evento desencadenado vinculado a un componente de formulario web<!-- END REF -->.
 
-For more information, please refer to the [`webEvent` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webevent).
+Para más información, consulte la [descripción de `webEvent` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webevent).

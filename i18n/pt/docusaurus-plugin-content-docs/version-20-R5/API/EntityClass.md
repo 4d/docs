@@ -111,7 +111,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. It 
  $emp:=ds.Employee.get(672)
  $empCloned:=$emp.clone()
 
- $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+ $emp.lastName:="Smith" //Atualizações feitas em $emp não são feitas em $empCloned
 
 ```
 
@@ -400,7 +400,7 @@ Example without `dk force drop if stamp changed` option:
  $status:=$employee.drop()
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //A entidade descartada permanece na memória
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -419,7 +419,7 @@ Example with `dk force drop if stamp changed` option:
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //A entidade descartada permanece na memória
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
@@ -460,9 +460,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $firstEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1"; "H@") //Esta seleção de entidades contém 3 entidades
  $employee:=$employees[2]
- $firstEmployee:=$employee.first() //$firstEmployee is the first entity of the $employees entity selection
+ $firstEmployee:=$employee.first() //$firstEmployee é a primeira entidade da seleção de entidades $employees
 ```
 
 <!-- END REF -->
@@ -984,7 +984,7 @@ The object returned by `.lock( )` contains the following properties:
 |                                   | task_name      | text                   | Nome de processo                                                                                                                                                                                                                                                                                                                                                                             |
 |                                   | client_version | text                   | Versão do cliente                                                                                                                                                                                                                                                                                                                                                                            |
 |                                   |                                     |                        | ***Disponível só para um processo trava REST:***                                                                                                                                                                                                                                                                                                                             |
-|                                   | host                                | text                   | \|URL que trava a entidade (por exemplo "www.myserver.com")\|                                                                                                                                                                                                                                                                             |
+|                                   | host                                | text                   | URL que trava a entidade (por exemplo "www.myserver.com")                                                                                                                                                                                                                                                                                 |
 |                                   | IPAddr                              | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                                                                                                                                                                           |
 |                                   | userAgent                           | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                                   |                                     |                        | ***Available only in case of serious error*** (primary key already exists, disk full...):                                                                                                                                                                                                                 |
@@ -1073,9 +1073,9 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $nextEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1"; "H@") //Esta seleção de entidades contém 3 entidades
  $employee:=$employees[0]
- $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+ $nextEmployee:=$employee.next() //$nextEmployee é a segunda entidade da seleção de entidades $employees
 
 ```
 
@@ -1340,12 +1340,12 @@ Updating an entity with `dk auto merge` option:
 
 <!-- REF #EntityClass.toObject().Params -->
 
-| Parâmetro    | Tipo       |     | Descrição                                                                                                                                                                                          |
-| ------------ | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       |  -> | Atributos a extrair (string separada por vírgulas)                                                                                                                              |
-| filterCol    | Collection |  -> | Coleção de atributos a extrair                                                                                                                                                                     |
-| options      | Integer    |  -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
-| Resultados   | Object     |  <- | Objeto criado a partir da entidade                                                                                                                                                                 |
+| Parâmetro    | Tipo       |     | Descrição                                                                                                                                                                                                    |
+| ------------ | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       |  -> | Atributos a extrair (string separada por vírgulas)                                                                                                                                        |
+| filterCol    | Collection |  -> | Coleção de atributos a extrair                                                                                                                                                                               |
+| options      | Integer    |  -> | `dk with primary key`: adiciona a propriedade \_\_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
+| Resultados   | Object     |  <- | Objeto criado a partir da entidade                                                                                                                                                                           |
 
 <!-- END REF -->
 

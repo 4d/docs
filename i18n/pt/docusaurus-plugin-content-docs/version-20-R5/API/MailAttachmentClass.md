@@ -87,7 +87,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | xml       | application/xml                               |
 | htm, html | text/html                                     |
 | mp3       | audio/mpeg                                    |
-| *other*   | application/octet-stream                      |
+| *outro*   | application/octet-stream                      |
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. Pode passar uma das constantes abaixo da constante tema de "Mail":
 

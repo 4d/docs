@@ -9,15 +9,15 @@ Qodly Studio for 4D は現在、**デベロッパー・プレビュー** の段�
 
 :::
 
-**Qodly Studio** は Webアプリケーション用のインターフェースビルダーです。 Webブラウザーやスマートフォンで動作するアプリケーションを設計するためのグラフィカルなフォームエディターをデベロッパーに提供します。 Qodly Studio は [ORDAオブジェクト](../ORDA/overview.md) をネイティブにサポートします。
+**Qodly Studio** は Webアプリケーション用のインターフェースビルダーです。 Webブラウザーやスマートフォンで動作するアプリケーションを設計するためのグラフィカルなページエディターをデベロッパーに提供します。 Qodly Studio は [ORDAオブジェクト](../ORDA/overview.md) をネイティブにサポートします。
 
 **4D環境** から直接 Qodly Studio を使用して、モダンで洗練されたインターフェースをビルドし、既存の 4Dプロジェクトに簡単に統合して、**オンプレミス** で運用することができます。
 
 Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](https://qodly.com) でも使用できます。
 
-Qodly Studio では、全く新しい WebUI を使い、データソースの概念に慣れ、次の操作を学ぶことができます:
+Qodly Studio では、全く新しい WebUI を使い、Qodly Sources の概念に慣れ、次の操作を学ぶことができます:
 
-- ページ上にコンポーネントを配置して Qodlyフォームを作成する
+- キャンバス上にコンポーネントを配置して Qodlyページを作成する
 - コンポーネントをデータにマッピングする
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
@@ -119,7 +119,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を使う
 
-### Documentation
+### ドキュメント
 
 公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
@@ -138,7 +138,7 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 |                                                                               | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                                                 | Qodlyデベロッパー向けの Qodly Studio                                                                     |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                                                                       |
-| Qodlyフォーム                                                                     | Qodly Studio Webform Editor                                                                           | Qodly Studio Webform Editor                                                                     |
+| Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                 | Qodly Studio ページエディター                                                                           |
 | デスクトップフォーム                                                                    | 4D IDE                                                                                                | _サポートされていません_                                                                                   |
 | プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
 | コーディング IDE                                                                    | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                                                                           |
@@ -150,12 +150,12 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 
 ### ランゲージ
 
-以下のコマンドとクラスは、Qodlyフォームのサーバーサイド管理に特化しています:
+以下のコマンドとクラスは、Qodlyページのサーバーサイド管理に特化しています:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) コマンド: Qodlyフォームをオブジェクトとして返します。
-- [`Web Event`](../API/WebFormClass.md#web-event) コマンド: Qodlyフォームのコンポーネント内でトリガーされたイベントを返します。
-- [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyフォームを管理する関数とプロパティを持ちます。
-- [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyフォームのコンポーネントを管理する関数とプロパティを持ちます。
+- [`Web Form`](../API/WebFormClass.md#web-form) コマンド: Qodlyページをオブジェクトとして返します。
+- [`Web Event`](../API/WebFormClass.md#web-event) コマンド: Qodlyページのコンポーネント内でトリガーされたイベントを返します。
+- [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyページを管理する関数とプロパティを持ちます。
+- [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyページのコンポーネントを管理する関数とプロパティを持ちます。
 
 ### プロジェクトメソッドを使用する
 
@@ -175,15 +175,15 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 
 ### レンダリングを有効化する
 
-Qodly Studio は Qodlyフォームを (含まれるレイアウト、データの紐付け、イベント駆動ロジック情報とともに) 構造化された JSONファイルにカプセル化します。 この JSONファイルは **Qodly レンダラー** によって即座に処理され、完全に機能する Webページを提供します。
+Qodly Studio は Qodlyページを (含まれるレイアウト、データの紐付け、イベント駆動ロジック情報とともに) 構造化された JSONファイルにカプセル化します。 この JSONファイルは **Qodly レンダラー** によって即座に処理され、完全に機能する Webページを提供します。
 
 :::info
 
-Qodly で Qodlyフォームをレンダリングする方法の詳細については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
+Qodly で Qodlyページをレンダリングする方法の詳細については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
 
 :::
 
-Qodlyフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
+Qodlyページのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
 - 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
 - [4D Webサーバー](webServer.md) を起動しておく必要があります。
@@ -198,21 +198,21 @@ Qodlyフォームのレンダリングを有効にするには、以下のオプ
 
 Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[4D WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。
 
-Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
+Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyページをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
 
-しかし、実際のフォームのレンダリングは Qodly Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
+しかし、実際のページのレンダリングは Qodly Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
 
-### Qodlyフォームへのアクセス
+### Qodlyページへのアクセス
 
 運用には、WebAdminサーバーは必要ありません。 Qodly Studio で作成された Webアプリケーションへのエンドユーザーアクセスは、4D RESTプロトコルに基づいているため、従来の 4Dリモートアプリケーションと同様に動作します。
 
-Qodlyフォームは以下の URL からダウンロードできます:
+Qodlyページは以下の URL からダウンロードできます:
 
 ```
-IP:port/$lib/renderer/?w=QodlyFormName
+IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-_IP:port_ は Webサーバーのアドレスを表し、_QodlyFormName_ は Qodlyフォームの名前です。
+_IP:port_ は Webサーバーのアドレスを表し、_QodlyPageName_ は Qodlyページの名前です。
 
 例:
 
@@ -222,31 +222,27 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## 強制ログイン
 
-Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を使用して、4Dクライアントライセンスを必要とする Webセッションが開かれる数を制御できます。 いつでもユーザーを [ログアウト](#ログアウト)して、消費ライセンス数を減らすこともできます。
+Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を使用することで、4Dクライアントライセンスを必要とする Webセッションが開かれる数を制御できます。 いつでもユーザーを [ログアウト](#ログアウト)して、消費ライセンス数を減らすこともできます。
 
-### 強制ログインモードの設定
+### 設定
 
-4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) を [Roles and Privileges ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) で設定することができます。設定は **Force login** オプションを使用しておこないます:
+[Roles and Privileges ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) の **Force login** オプションを使って、4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) が有効化されていることを確認してください。
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
-:::note
-
 このオプションは、[**roles.json** ファイル](../ORDA/privileges.md#rolesjson-ファイル) で直接設定することもできます。
 
-:::
+あとは、データストアクラスに実装した [`authentify()`](../REST/authUsers.md#function-authentify) 関数をこの Qodlyページから呼び出すだけです。 この場合、ユーザーが実際にログインした場合にのみライセンスが消費されます。
 
-"強制ログイン" モードが **無効** になっている場合 (デフォルトモード)、認証用の Qodlyフォームのレンダリングを含むすべての RESTリクエストは、サーバー上で Webセッションを作成し、認証の結果に関係なく 4D クライアントライセンスを消費します。 "強制ログイン" モードが **有効** になっている場合、ライセンスを消費せずに認証用の簡単な Qodlyフォームを表示することができます。 この Qodlyフォームから、データストアクラスに実装した [`authentify()`](../REST/authUsers.md#function-authentify) 関数を呼び出すだけです。 この場合、ユーザーが実際にログインした場合にのみライセンスが消費されます。
+:::note 互換性
 
-:::info
-
-詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
+従来のログインモード ([4D 20 R6 で非推奨](https://blog.4d.com/ja/force-login-now-is-the-default-mode-for-all-rest-authentications)) が有効になっている場合、認証用の Qodlyページのレンダリングを含むすべての RESTリクエストは、サーバー上で Webセッションを作成し、認証の結果に関係なく 4Dクライアントライセンスを消費します。 詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
 
 :::
 
 #### 例題
 
-ログイン/パスワード入力を含む単純な Qodlyフォームで、"Submit" ボタンは DataStore クラスに実装されている以下の `authentify()` 関数を呼び出します:
+ログイン/パスワード入力を含む単純な Qodlyページで、"Submit" ボタンは DataStore クラスに実装されている以下の `authentify()` 関数を呼び出します:
 
 ```4d
 
@@ -279,7 +275,7 @@ End if
 
 ["強制ログイン" モードが有効](#強制ログインモードの設定) な場合、Qodly Studio for 4D を使って、アプリケーションにログアウト機能を実装できます。
 
-ユーザーをログアウトするには、Qodlyフォームから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
+ユーザーをログアウトするには、Qodlyページから **Logout** 標準アクションを実行するだけです。 Qodly Studio では、この標準アクションをボタンなどに関連付けることができます:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
@@ -291,7 +287,7 @@ Webユーザーセッションからログアウトアクションをトリガ�
 
 ## レンダリングのためのライセンス消費について
 
-QodlyフォームのレンダリングはプロジェクトデータベースのメインWebサーバーを対象とするため、デフォルトモードではあらゆるフォームがレンダリングされるとき、また、"強制ログイン" モードではデータ処理や関数を実行するフォームがレンダリングされるときに、利用可能なライセンスが必要です。
+QodlyページのレンダリングはプロジェクトデータベースのメインWebサーバーを対象とするため、デフォルトモードではあらゆるページがレンダリングされるとき、また、"強制ログイン" モードではデータ処理や関数を実行するページがレンダリングされるときに、利用可能なライセンスが必要です。
 
 ### URLスキーム
 
@@ -333,7 +329,7 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 
 必要以上のライセンスを使用しないため、次のいずれかをお勧めします:
 
-- 別のブラウザータブでレンダラーを実行します (Qodlyフォームがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyFormName` を入力します)。
+- 別のブラウザータブでレンダラーを実行します (Qodlyページがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyPageName` を入力します)。
 - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
 - プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 

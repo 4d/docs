@@ -47,7 +47,7 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 このモードでは、以下のログインシーケンスを実装できます:
 
 1. 最初の RESTコール (たとえば Webフォームコール) では、"ゲスト" Webユーザーセッションが作成されます。 記述的リクエスト以外のリクエストを実行する権限も、ライセンスの消費もありません。
-2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+2. 事前に用意した [データストアクラス公開関数](../ORDA/ordaClasses.md#datastore-クラス) [`authentify()`](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。
 3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される Qodlyフォームを利用できます。
 4. ユーザーが正常に認証された場合、4Dライセンスがサーバー上で消費され、すべての RESTリクエストが受け入れられます。
 
@@ -79,7 +79,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 :::note
 
-The `authentify()` function can always be executed by a REST guest session, even if there is no specific **execute** permission on it for the datastore in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file).
+[`roles.json`ファイル](../ORDA/privileges.md#rolesjson-ファイル) の権限設定にかかわらず、RESTゲストセッションは常に `authentify()` 関数を実行できます。
 
 :::
 
@@ -105,15 +105,14 @@ var $user : cs.UsersEntity
 $users:=ds.Users.query("name = :1"; $credentials.name)
 $user:=$users.first()
 
-If ($user#Null) //the user is known
-	If (Verify password hash($credentials.password; $user.password))
-		Session.setPrivileges("vip")
-	Else
-
-		return "Wrong password"
-	End if
-Else
-        return "Wrong user"
+If ($user#Null) // 登録されているユーザーの場合
+    If (Verify password hash($credentials.password; $user.password))
+        Session.setPrivileges("vip")
+    Else 
+        return "パスワードに誤りがあります"
+    End if 
+Else 
+        return "登録されていないユーザーです"
 End if
 ```
 
@@ -169,7 +168,7 @@ function sendData(data) {
       }
   };
 
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); // RESTサーバーアドレス
 
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
@@ -188,22 +187,22 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 サーバーにログイン情報が送信されると、`On REST Authentication` データベースメソッドが呼び出されます:
 
 ```4d
-	//On REST Authentication
+// On REST Authentication データベースメソッド
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-	//A '/rest' URL has been called with headers username-4D and password-4D
+    // ヘッダーに username-4D と password-4D を含めて '/rest' URL が呼び出されました
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
         If (Verify password hash($password; $sales.password))
             fillSession($sales)
             $Accepted:=True
-        End if
-    End if
+        End if 
+    End if 
 End if
 ```
 

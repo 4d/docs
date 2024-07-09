@@ -18,7 +18,7 @@ También puede ordenar la lista de los valores de las columnas haciendo clic en 
 Para cada usuario conectado al servidor, la lista ofrece la siguiente información:
 
 - Sistema de la máquina cliente (macOS o Windows) como un icono.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. Si las contraseñas no están activadas y no se ha definido ningún alias, todos los usuarios se denominan "Diseñador".
+- **Usuario 4D**: nombre del usuario 4D, o alias si se ha establecido con el comando [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) en la máquina del usuario. Si las contraseñas no están activadas y no se ha definido ningún alias, todos los usuarios se denominan "Diseñador".
 - **Nombre de máquina**: Nombre de la máquina remota.
 - **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
 - **Dirección IP**: dirección IP de la máquina remota.
@@ -56,7 +56,7 @@ Este botón permite enviar un mensaje a los usuarios 4D seleccionados en la vent
 
 El mensaje se mostrará como una alerta en las máquinas remotas.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> Puede realizar la misma acción para usuarios remotos con el comando [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 ### Visualizar procesos
 

@@ -9,7 +9,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 ## Componentes interpretados y compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
+Los componentes pueden ser interpretados o [compilados](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
 - ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
@@ -20,7 +20,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 ### Básicos
 
-To load a component in your 4D project, you can either:
+Para cargar un componente en su proyecto 4D, usted puede:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
 - or, copy the component files in the [**Components** folder of your project](architecture.md#components).
@@ -58,7 +58,7 @@ The **/Sources/dependencies.json** file contents must have the following structu
 
 If you want to customize the location of the components that are [declared in the **dependencies.json** file](#dependenciesjson), you can use a **environment4d.json** file. This file allows you to declare the paths for the dependencies that are not stored at the same level as the project folder.
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file.
+You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Las rutas relativas son relativas al archivo environment4d.json.
 
 Ejemplos:
 
@@ -87,8 +87,8 @@ Since components can be installed in different ways, a priority order is applied
 **Máxima prioridad**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file.
-3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
+2. Componentes declarados en el archivo **dependencies.json**.
+3. Componentes 4D internos del usuario (por ejemplo, 4D NetKit, 4D SVG...)
 
 **Prioridad más baja**
 
@@ -102,13 +102,13 @@ In an opened project, you can get information about dependencies and their curre
 
 Para mostrar el panel Dependencias:
 
-- with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
+- con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
+- con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-A continuación se muestra el panel Dependencias. Dependencies are sorted by name in alphabetical order:
+A continuación se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
 ![dependency](../assets/en/Project/dependency.png)
 

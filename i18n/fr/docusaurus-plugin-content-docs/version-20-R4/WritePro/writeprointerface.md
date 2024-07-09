@@ -3,11 +3,11 @@ id: writeprointerface
 title: 4D Write Pro Interface
 ---
 
-4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
+L'interface de 4D WritePro offre un ensemble de palettes, qui permettent aux utilisateurs de personnaliser facilement un document 4D Write Pro.
 
-A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
+Un développeur 4D peut facilement implémenter ces palettes dans leur application. Ainsi, les utilisateurs finaux peuvent gérer toutes les propriétés de 4D Write Pro, telles que les polices, l'alignement du texte, les signets, la mise en page des tableaux et les cadres.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+La [documentation principale de l'interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le manuel *4D - Mode Développement*.
 
 You will find below the Table Wizard configuration documentation.
 
@@ -53,17 +53,17 @@ Once the table has been integrated into the document, the user can customize its
 
 ### WP Table Wizard template configuration
 
-The templates configuration includes:
+La configuration des modèles inclut:
 
-* Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-* Translating table, field, and formula names from the [translation file](#translation-files).
-* Designing graphic styles and customized  themes from the [theme file](#theme-files).
+* Définir les tables et les champs ainsi que préparer des formules adaptées à l'application à partir du [fichier de modèle](#template-files).
+* Traduction des noms de table, de champ et de formule à partir du [fichier de traduction](#translation-files).
+* Conception de styles graphiques et de thèmes personnalisés à partir du [fichier de thème](#theme-files).
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
 #### Template files
 
-The template file allows you to define the following:
+Le fichier de modèle vous permet de définir les éléments suivants :
 
 - the formula that returns an entity selection used as the table's data source,
 - the break formulas (if any break row can be inserted)

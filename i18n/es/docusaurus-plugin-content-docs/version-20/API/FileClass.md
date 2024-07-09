@@ -88,7 +88,7 @@ El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo o
 
 **File ( path { ; pathType } { ; \* })**
 
-En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA/myfile.txt").
+En el parámetro *path*, pase una ruta de archivo. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Sólo se admiten nombres de ruta absolutos con el comando `File`.
 

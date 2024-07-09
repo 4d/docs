@@ -25,11 +25,11 @@ title: VP MOVE CELLS
 
 #### Descripción
 
-The `VP MOVE CELLS` command <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or copies the values, style and formulas from _originRange_ to _targetRange_<!-- END REF -->.
+El comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->mueve o copia los valores, estilo y fórmulas de _originRange_ a _targetRange_<!-- END REF -->.
 
 _originRange_ y _targetRange_ pueden referirse a diferentes áreas View Pro.
 
-En _originRange_, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. If _originRange_ is a combined range, only the first one is used.
+En _originRange_, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. Si _originRange_ es un rango combinado, sólo se utiliza el primero.
 
 In _targetRange_, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 

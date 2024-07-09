@@ -178,6 +178,7 @@ module.exports =
 								"API/FileHandleClass",
 								"API/FolderClass",
 								"API/FunctionClass",
+								"API/HTTPAgentClass",
 								"API/HTTPRequestClass",
 								"API/IMAPTransporterClass",
 								"API/MailAttachmentClass",
@@ -779,8 +780,8 @@ module.exports =
 							},
 							items: [
 								"REST/catalog",
-								"REST/directory",
 								"REST/info",
+								"REST/singleton",
 								"REST/upload",
 							],
 						},
