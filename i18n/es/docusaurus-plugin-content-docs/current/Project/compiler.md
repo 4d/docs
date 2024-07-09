@@ -209,7 +209,7 @@ To re-enable warnings in a code section, use the following comments:
 Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
 Por ejemplo, para desactivar la siguiente advertencia:
 
-_1: Redefinition of variable $a (550.10)_
+_1: Redefinición de la variable $a (550.10)_
 
 ... sólo necesita escribir los siguientes comentarios en su método 4D:
 
