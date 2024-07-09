@@ -17,7 +17,7 @@ When no agent is associated to an HTTP request, a global agent with default valu
 
 </details>
 
-### HTTPAgent Object
+### Objeto HTTPAgent
 
 An HTTPAgent object is a shareable object.
 
