@@ -4,23 +4,23 @@ import Link from '@docusaurus/Link';
 
 const localizedLinks = {
   "homepage.sections.core-development.langage-ref-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.en.html',
+    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html',
     id: 'homepage.sections.core-development.langage-ref-url',
   }),
   "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.en.html',
+    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html',
     id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
   }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html',
+    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.en.html',
+    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html',
+    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html',
     id: 'homepage.sections.textensions.4D-Widgets-url',
   }),
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
@@ -168,7 +168,7 @@ const Sections = [
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-NetKit/tree/20R5">
+        <Link to="https://github.com/4d/4D-NetKit/tree/20R6">
           <Translate>4D NetKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>

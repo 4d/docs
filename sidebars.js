@@ -158,7 +158,7 @@ module.exports =
 						{
 							type: 'link',
 							label: 'Commands', //
-							href: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.en.html',
+							href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html',
 						},
 						{
 							type: "category",
@@ -641,7 +641,7 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.en.html',
+						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html',
 						},
 						{
 						  type: 'doc',
@@ -656,22 +656,22 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D NetKit', // The link label
-						  href: 'https://github.com/4d/4D-NetKit/tree/20R5',
+						  href: 'https://github.com/4d/4D-NetKit/tree/20R6',
 						},
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html',
+						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.en.html',
+						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html',
+						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
