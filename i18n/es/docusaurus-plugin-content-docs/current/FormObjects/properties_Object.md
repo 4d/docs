@@ -239,7 +239,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 #### Objetos soportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de plugin](pluginArea_overview.md)
 
 ---
 
