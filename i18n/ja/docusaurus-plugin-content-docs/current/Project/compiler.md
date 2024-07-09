@@ -75,7 +75,7 @@ title: コンパイル
 
 ### 警告を表示/隠す
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+**警告を表示/隠す** ボタンをクリックすると、コンパイラーウィンドウの [警告](#警告) の表示を切り替えることができます。
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -87,7 +87,7 @@ You can toggle the [warnings](#warnings) display in the Compiler window by click
 
 ## コンパイラー設定
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. [コンパイラーウィンドウ](#コンパイラーウィンドウ) の **コンパイラー設定** ボタンをクリックすると、コンパイラーページを直接開くことができます。
+ストラクチャー設定ダイアログボックスの "コンパイラー" タブでは、プロジェクトのコンパイルに関連するパラメーターを設定できます。 [コンパイラーウィンドウ](#コンパイラーウィンドウ) の **コンパイラー設定** ボタンをクリックすると、コンパイラーページを直接開くことができます。
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -162,56 +162,56 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 
-## Warnings
+## 警告
 
 警告は、コンパイラーがシンタックスチェックをおこなう際に生成するとメッセージです。 これらのメッセージの目的は、実行時エラーを引き起こす可能性のあるステートメントに注意を向けることです。 警告によりコンパイルが中断されることはありません。
 
-Depending on circumstances and the programming style used, warnings may be more or less relevant. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+状況や使用されるプログラミングスタイルによって、警告の重要性は変化します。 コンパイラーダイアログおよびコードエディター (4Dコードエディターまたは VS Code) にて、警告を有効/無効にすることができます。[警告タブ](#警告タブ) を使えばグローバルに、または [`//%W`](#ローカルに警告を無効化-有効化する) を使用することでローカルに設定できます。
 
-### Warnings tab
+### 警告タブ
 
 ![](../assets/en/Project/warnings-tab.png)
 
-This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+このタブでは、どの警告をグローバルに表示するかを定義できます。 警告のリストはコード順で並べられ、ローカライズされたラベルを確認することができます。
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+リストを絞り込むには、**コードとラベルを検索** テキストボックスを使用して、警告ラベルやコードを検索します。
 
-By default, all warning types are checked and enabled.
+デフォルトでは、すべての警告タイプがチェックされて有効になっています。
 
-When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+警告の表示状態を変更すると、プロジェクトの Settingsフォルダーに置かれる "warnings.json" ファイルに情報が保存されます。
 
-The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+**初期設定にリセット** ボタンは、すべての警告表示状態チェックボックスをデフォルト値に戻し、"warnings.json" ファイルを削除します。
 
-### Disabling and enabling warnings locally
+### ローカルに警告を無効化/有効化する
 
-You can control warnings in specific parts of your code by using special comments to disable or enable them.
+コードの特定の部分で警告を制御するには、専用のコメントを使用してそれらを無効化/有効化することができます。
 
-To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
-
-```4d
-// Before the selected code part use
-  //%W-<warning number>
-
-// After the selected code part use
-  //%W+<warning number>
-```
-
-To re-enable warnings in a code section, use the following comments:
+警告を無効にするには、警告を無効にするコードセクションの前後に次のコメントを挿入します:
 
 ```4d
-// Before the selected code part use
-  //%W+<warning number>
+// コードセクションの先頭に追加するコメント
+  //%W-<警告番号>
 
-// After the selected code part use
-  //%W-<warning number>
+// コードセクションの最後に追加するコメント
+  //%W+<警告番号>
 ```
 
-Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+警告を再有効化したいコードセクションがある場合には、その前後に次のコメントを挿入します:
+
+```4d
+// コードセクションの先頭に追加するコメント
+  //%W+<警告番号>
+
+// コードセクションの最後に追加するコメント
+  //%W-<警告番号>
+```
+
+無効化/有効化できるのは、番号の付いた警告に限られます。 警告番号は、コンパイルエラーリストの各メッセージの最後、または警告タブのリストに示されています。
 たとえば、次の警告を無効にしたいものとします:
 
-_1: Redefinition of variable $a (550.10)_
+_1: 変数 $a の再定義 (550.10)_
 
-... you just need to write the following comments in your 4D method:
+... それには、以下のコメントを 4Dメソッドに追加するだけです:
 
 ```4d
   var $a : Text
@@ -225,7 +225,7 @@ _1: Redefinition of variable $a (550.10)_
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+特別な警告コメントは、警告タブでの警告表示設定よりも優先されます。
 
 :::
 
