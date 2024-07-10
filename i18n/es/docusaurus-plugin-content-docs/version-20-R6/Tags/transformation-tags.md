@@ -51,9 +51,9 @@ sequenceDiagram
 
 ### Parsing
 
-El análisis del contenido de una fuente _plantilla_ se hace en dos contextos:
+El análisis del contenido de una fuente *plantilla* se hace en dos contextos:
 
-- Utilizando el comando `PROCESS 4D TAGS`; este comando acepta una _plantilla_ como entrada, así como los parámetros opcionales y devuelve un texto resultante del procesamiento.
+- Utilizando el comando `PROCESS 4D TAGS`; este comando acepta una *plantilla* como entrada, así como los parámetros opcionales y devuelve un texto resultante del procesamiento.
 
 - Utilizando el servidor HTTP integrado de 4D: [páginas plantilla](WebServer/templates.md) enviadas mediante los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (BLOB de tipo texto/html), `WEB SEND TEXT`, o llamadas utilizando URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. Para analizar páginas HTML en este caso, debe añadir el sufijo ".shtm" o ".shtml" (por ejemplo, http://www.server.com/dir/page.shtm).
 
@@ -85,7 +85,7 @@ La etiqueta `<!--#4DBASE -->` designa el directorio de trabajo que utilizará la
 
 Cuando se llama en una página Web, la etiqueta `<!--#4DBASE -->` modifica todas las llamadas posteriores a `<!--#4DINCLUDE-->` en esta página, hasta la siguiente `<!--........-->`, si la hay. Si la carpeta`<!--#4DBASE -->` se modifica desde dentro de un archivo incluido, recupera su valor original del archivo padre.
 
-El parámetro _folderPath_ debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
+El parámetro *folderPath* debe contener un nombre de ruta relativo a la página actual y debe terminar con una barra (`/`). La carpeta designada debe estar ubicada dentro de la carpeta Web.
 
 Pase la palabra clave "WEBFOLDER" para restablecer la ruta por defecto (relativa a la página).
 
@@ -183,7 +183,7 @@ Aquí están las características de la etiqueta 4DCODE:
 
 #### Sintaxis: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
-El comentario `<!--#4DEACH-->` permite iterar un elemento especificado sobre todos los valores de _expression_. El elemento se define como una _variable_ cuyo tipo depende del tipo de _expression_.
+El comentario `<!--#4DEACH-->` permite iterar un elemento especificado sobre todos los valores de *expression*. El elemento se define como una *variable* cuyo tipo depende del tipo de *expression*.
 
 El comentario `<!--#4DEACH-->` puede iterar a través de tres tipos de expresiones:
 
@@ -195,21 +195,21 @@ El número de iteraciones se evalúa al inicio y no cambiará durante el proceso
 
 ### `<!--#4DEACH item in collection-->`
 
-Esta sintaxis iterará en cada _elemento_ de la _colección_. La porción de código entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada elemento de la colección.
+Esta sintaxis iterará en cada *elemento* de la *colección*. La porción de código entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada elemento de la colección.
 
-El parámetro _item_ es una variable del mismo tipo que los elementos de la colección.
+El parámetro *item* es una variable del mismo tipo que los elementos de la colección.
 
-La colección debe contener sólo **elementos del mismo tipo**, de lo contrario se devuelve un error en cuanto se asigna a la variable _item_ el primer tipo de valor no coincidente.
+La colección debe contener sólo **elementos del mismo tipo**, de lo contrario se devuelve un error en cuanto se asigna a la variable *item* el primer tipo de valor no coincidente.
 
-El número de bucles se basa en el número de elementos de la colección. En cada iteración, la variable _item_ se rellena automáticamente con el elemento coincidente de la colección. Hay que tener en cuenta los siguientes puntos:
+El número de bucles se basa en el número de elementos de la colección. En cada iteración, la variable *item* se rellena automáticamente con el elemento coincidente de la colección. Hay que tener en cuenta los siguientes puntos:
 
-- Si la variable _item_ es de tipo objeto o de tipo colección (es decir, si _expression_ es una colección de objetos o de colecciones), la modificación de esta variable modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- La variable _item_ obtiene el mismo tipo que el primer elemento de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
-- Si la colección contiene elementos con un valor Null, se genera un error si el tipo de la variable _item_ no admite valores Null (como las variables entero largo).
+- Si la variable *item* es de tipo objeto o de tipo colección (es decir, si *expression* es una colección de objetos o de colecciones), la modificación de esta variable modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
+- La variable *item* obtiene el mismo tipo que el primer elemento de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- Si la colección contiene elementos con un valor Null, se genera un error si el tipo de la variable *item* no admite valores Null (como las variables entero largo).
 
 #### Ejemplo con una colección de valores escalares
 
-_getNames_ devuelve una colección de cadenas. El método ha sido declarado como "[disponible a través de etiquetas 4D y URLs](WebServer/allowProject.md)".
+*getNames* devuelve una colección de cadenas. El método ha sido declarado como "[disponible a través de etiquetas 4D y URLs](WebServer/allowProject.md)".
 
 ```html
  <table class="table">    
@@ -226,7 +226,7 @@ _getNames_ devuelve una colección de cadenas. El método ha sido declarado como
 
 #### Ejemplo con una colección de objetos
 
-_getSalesPersons_ devuelve una colección de objetos.
+*getSalesPersons* devuelve una colección de objetos.
 
 ```html
     <table class="table">    
@@ -247,11 +247,11 @@ _getSalesPersons_ devuelve una colección de objetos.
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-Esta sintaxis itera en cada _entidad_ de la _entitySelection_. La parte de código situada entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada entidad de la selección de entidades.
+Esta sintaxis itera en cada *entidad* de la *entitySelection*. La parte de código situada entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada entidad de la selección de entidades.
 
-El parámetro _entity_ es una variable objeto de la clase de selección de entidades.
+El parámetro *entity* es una variable objeto de la clase de selección de entidades.
 
-El número de bucles se basa en el número de entidades presentes en la selección de entidades. En cada iteración, la variable del objeto _entity_ se llena automáticamente con la entidad coincidente de la selección de entidades.
+El número de bucles se basa en el número de entidades presentes en la selección de entidades. En cada iteración, la variable del objeto *entity* se llena automáticamente con la entidad coincidente de la selección de entidades.
 
 #### Ejemplo con una tabla html
 
@@ -286,15 +286,15 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ### `<!--#4DEACH property in object-->`
 
-Esta sintaxis iterará en cada _propiedad_ del _objeto_. La parte de código situada entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada propiedad del objeto.
+Esta sintaxis iterará en cada *propiedad* del *objeto*. La parte de código situada entre `<!--#4DEACH -->` y `<!--#4DENDEACH-->` se repite para cada propiedad del objeto.
 
-El parámetro _property_ es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
+El parámetro *property* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
 Las propiedades del objeto se procesan según su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
 #### Ejemplo con las propiedades de un objeto
 
-_getGamers_ es un método proyecto que devuelve un objeto como ("María"; 10; "Ana"; 20; "Juan"; 40) para calcular la puntuación de los jugadores.
+*getGamers* es un método proyecto que devuelve un objeto como ("María"; 10; "Ana"; 20; "Juan"; 40) para calcular la puntuación de los jugadores.
 
 ```html
     <table class="table">    
@@ -359,7 +359,7 @@ En caso de error de interpretación, el texto insertado será `<!--#4DHTML myvar
 
 Utilizado con los comentarios `<!--#4DELSEIF-->` (opcional), `<!--#4DELSE-->` (opcional) y `<!--#4DENDIF-->`, el comentario `<!--#4DIF expression-->` ofrece la posibilidad de ejecutar porciones de código condicionalmente.
 
-El parámetro _expression_ puede contener toda expresión 4D válida que devuelva un valor booleano. Debe indicarse entre paréntesis y cumplir con las reglas de sintaxis de 4D.
+El parámetro *expression* puede contener toda expresión 4D válida que devuelva un valor booleano. Debe indicarse entre paréntesis y cumplir con las reglas de sintaxis de 4D.
 
 `<!--#4DIF expression-->` ... Los bloques `<!--#4DENDIF-->` pueden anidarse en varios niveles. Como en 4D, cada `<!--#4DIF expression-->` debe coincidir con un `<!--#4DENDIF-->`.
 
@@ -434,7 +434,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 #### Sintaxis: `<!--#4DINCLUDE path-->`
 
-Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro _path_) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body> </body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
+Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro *path*) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body> </body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
 Sin embargo, si la página HTML especificada no contiene etiquetas `<body>` y `</body>`, se incluye toda la página. Depende de usted verificar la consistencia de las meta-etiquetas.
 
@@ -443,11 +443,11 @@ Al incluir, independientemente de la extensión del nombre del archivo, 4D anali
 
 Una página incluida con el comentario `<!--#4DINCLUDE -->` se carga en la caché del servidor Web del mismo modo que las páginas llamadas a través de una URL o enviadas con el comando `WEB SEND FILE`.
 
-En _path_, coloque la ruta que va al documento a incluir. Atención: en el caso de una llamada a `4DINCLUDE`, la ruta es relativa al documento analizado, es decir, al documento "padre". Utilice la barra oblicua (/) como separador de carpetas y los dos puntos (..) para subir un nivel (sintaxis HTML). Cuando utiliza la etiqueta `4DINCLUDE` con el comando `PROCESS 4D TAGS`, la carpeta por defecto es la carpeta del proyecto.
+En *path*, coloque la ruta que va al documento a incluir. Atención: en el caso de una llamada a `4DINCLUDE`, la ruta es relativa al documento analizado, es decir, al documento "padre". Utilice la barra oblicua (/) como separador de carpetas y los dos puntos (..) para subir un nivel (sintaxis HTML). Cuando utiliza la etiqueta `4DINCLUDE` con el comando `PROCESS 4D TAGS`, la carpeta por defecto es la carpeta del proyecto.
 
 > Puede modificar la carpeta por defecto utilizada por la etiqueta `4DINCLUDE` en la página actual, utilizando la etiqueta `<!--#4DBASE -->` (ver más adelante).
 
-El número de `<!--#4DINCLUDE path-->` dentro de una página es ilimitado. Sin embargo, las llamadas `<!--#4DINCLUDE path-->` sólo pueden hacerse a un nivel. Esto significa que, por ejemplo, no puede insertar `<!--#4DINCLUDE mydoc3.html-->` en el cuerpo de la página _mydoc2.html_, que es llamado por `<!--#4DINCLUDE mydoc2-->` insertado en _mydoc1.html_. Además, 4D verifica que las inclusiones no son recursivas.
+El número de `<!--#4DINCLUDE path-->` dentro de una página es ilimitado. Sin embargo, las llamadas `<!--#4DINCLUDE path-->` sólo pueden hacerse a un nivel. Esto significa que, por ejemplo, no puede insertar `<!--#4DINCLUDE mydoc3.html-->` en el cuerpo de la página *mydoc2.html*, que es llamado por `<!--#4DINCLUDE mydoc2-->` insertado en *mydoc1.html*. Además, 4D verifica que las inclusiones no son recursivas.
 
 En caso de error, el texto insertado es "`<!--#4DINCLUDE path-->` :El documento no puede abrirse".
 
@@ -566,7 +566,7 @@ El método `my_method` puede ser el siguiente:
 
 ### `<!--#4DLOOP expression-->`
 
-Con esta sintaxis, la etiqueta `4DLOOP` hace un bucle mientras _expression_ devuelva `True`. La expresión puede ser cualquier expresión booleana válida y debe contener una parte variable a evaluar en cada bucle para evitar bucles infinitos.
+Con esta sintaxis, la etiqueta `4DLOOP` hace un bucle mientras *expression* devuelva `True`. La expresión puede ser cualquier expresión booleana válida y debe contener una parte variable a evaluar en cada bucle para evitar bucles infinitos.
 
 Por ejemplo, el siguiente código:
 
