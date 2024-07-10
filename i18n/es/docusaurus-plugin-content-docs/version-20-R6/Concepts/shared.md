@@ -69,7 +69,7 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada _locking identifier_. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
+**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
 
 ### Lectura
 
@@ -99,15 +99,15 @@ La sintaxis de la estructura `Use...End use` es:
  End use
 ```
 
-La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro _Shared_object_or_Shared_collection_ bajo la protección de un semáforo interno. _Shared_object_or_Shared_collection_ puede ser cualquier objeto o colección compartido válido.
+La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
 Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
-- Una vez que la línea **Use** se ejecuta con éxito, todas las propiedades/elementos de _Shared_object_or_Shared_collection_ están bloqueados para todos los demás procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
-- La secuencia _statement(s)_ puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
-- Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido.
-- Si otro proceso intenta acceder a una de las propiedades _Shared_object_or_Shared_collection_ o una propiedad conectada mientras se está ejecutando una secuencia **Use...End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
-- La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos del mismo grupo.
+- Una vez que la línea **Use** se ejecuta con éxito, todas las propiedades/elementos de *Shared_object_or_Shared_collection* están bloqueados para todos los demás procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
+- La secuencia *statement(s)* puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
+- Si se añade otro objeto o colección compartida como propiedad del parámetro *Shared_object_or_Shared_collection*, se conectan dentro del mismo grupo compartido.
+- Si otro proceso intenta acceder a una de las propiedades *Shared_object_or_Shared_collection* o una propiedad conectada mientras se está ejecutando una secuencia **Use...End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
+- La línea **End use** desbloquea las propiedades *Shared_object_or_Shared_collection* y todos los objetos del mismo grupo.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
 
 :::note
