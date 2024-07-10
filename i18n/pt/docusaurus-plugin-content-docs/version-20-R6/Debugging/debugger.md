@@ -23,7 +23,7 @@ Há várias formas de exibir o depurador:
 
 Quando chamada, a janela do depurador fornece o nome do método ou da função de classe que rastreia atualmente e a ação que causa o aparecimento inicial da janela do depurador. Por exemplo, na janela do depurador acima:
 
-- _Clients_BuildLogo_ es el método en que se hace seguimiento
+- *Clients_BuildLogo* es el método en que se hace seguimiento
 - La ventana del depurador apareció porque detectó una llamada al comando `C_PICTURE` y este comando fue uno de los a identificar
 
 A exibição de uma nova janela do depurador utiliza a mesma configuração que a última janela exibida na mesma sessão. Se executar vários processos usuário, pode rastreá-los de forma independente e ter uma janela do depurador aberta para cada processo.
@@ -154,7 +154,7 @@ $c:=a+b
 
    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. Haga clic en el botón **Step Over** nuevamente. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
+3. Haga clic en el botón **Step Over** nuevamente. O contador do programa está agora definido na linha com $c:=a+b. the **Line Objects** theme displays:
 
    | $c | Indefinido |
    | -- | ---------- |
@@ -400,11 +400,11 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponível para:
-  - _Métodos proyecto:_ muestra el contenido de los métodos en una nueva ventana del Editor de Código
-  - _Campos_: muestra las propiedades de los campos en el inspector de la ventana de estructura
-  - _Tablas:_ muestra las propiedades de la tabla en el inspector de la ventana de estructura
-  - _Formularios:_ muestra el formulario en el editor de formularios
-  - _Variables_ (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
+  - *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
+  - *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
+  - *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
+  - *Formularios:* muestra el formulario en el editor de formularios
+  - *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
