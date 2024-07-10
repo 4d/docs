@@ -66,16 +66,16 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 
 :::
 
-| Propiedad              | Tipo    | Por defecto                                                                                                                                       | Descripción                                                                   |
-| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                            |
-| maxSockets             | Integer | 65535                                                                                                                                             | Maximum number of sockets per server                                          |
-| maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                       |
-| timeout                | Real    | indefinido                                                                                                                                        | If defined, timeout after which an unused socket is closed                    |
-| certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Sets the active client certificates folder for the requests using the agent   |
-| minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente |
-| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocol used for the requests using the agent                                |
-| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent                       |
+| Propiedad              | Tipo    | Por defecto                                                                                                                                       | Descripción                                                                                     |
+| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                                              |
+| maxSockets             | Integer | 65535                                                                                                                                             | Maximum number of sockets per server                                                            |
+| maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                                         |
+| timeout                | Real    | indefinido                                                                                                                                        | If defined, timeout after which an unused socket is closed                                      |
+| certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
+| minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
+| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocol used for the requests using the agent                                                  |
+| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent                                         |
 
 :::note
 
