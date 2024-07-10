@@ -771,7 +771,7 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 La función `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> devuelve el valor actual del sello de la entidad<!-- END REF -->.
 
-El marcador interno se incrementa automáticamente en 4D cada vez que se guarda la entidad. Gestiona los accesos y modificaciones concurrentes de los usuarios a las mismas entidades (ver [**Bloqueo de entidades**](ORDA/entities.md#bloqueo-de-una-entidad)).
+El sello interno se incrementa automáticamente en 4D cada vez que se guarda la entidad. Gestiona los accesos y modificaciones concurrentes de los usuarios a las mismas entidades (ver [**Bloqueo de entidades**](ORDA/entities.md#bloqueo-de-una-entidad)).
 
 > Para una entidad nueva (nunca guardada), la función devuelve 0. Para saber si una entidad acaba de ser creada, se recomienda utilizar [.isNew()](#isnew).
 
@@ -866,7 +866,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 #### Descripción
 
-La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. En caso contrario, devuelve False.
+La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -1217,7 +1217,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 La función `.save()` <!-- REF #EntityClass.save().Summary --> guarda los cambios realizados en la entidad<!-- END REF --> en la tabla relacionada con su dataClass. Debe llamar a este método después de crear o modificar una entidad si quiere guardar los cambios realizados en ella.
 
-La operación de guardar se ejecuta sólo si se ha "tocado" al menos un atributo de la entidad (ver las funciones [`.touched()`](#touched) y [`.touchedAttributes()`](#touchedattributes)). En caso contrario, la función no hace nada (no se llama al trigger).
+La operación de guardar se ejecuta sólo si se ha "tocado" al menos un atributo de la entidad (ver las funciones [`.touched()`](#touched) y [`.touchedAttributes()`](#touchedattributes)). En caso contrario, la función no hace nada (no se llama al activador).
 
 En una aplicación multiusuario o multiproceso, la función `.save()` se ejecuta con el mecanismo del ["bloqueo optimista"](ORDA/entities.md#entity-locking), en el que un contador interno (stamp) se incrementa automáticamente cada vez que se guarda el registro.
 
@@ -1265,7 +1265,7 @@ Los siguientes valores pueden ser devueltos en las propiedades `status`y `status
 | `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista. **statusText asociado**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `dk status stamp has changed`             | 2     | El valor del marcador interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<br/><li>con `.save()`: error solo si no se utiliza la opción `dk auto merge`</li><li>con `.drop()`: error solo si no se utiliza la opción `dk force drop if stamp changed`</li><li>con `.lock()`: error solo si no se utiliza la opción `dk reload if stamp changed`</li><br/>**statusText asociado**: "Stamp has changed"                                                                                                                                                                                                                                                                                 |
-| `dk status wrong permission`              | 1     | Los privilegios actuales no permiten guardar la entidad. **StatusText asociado**: "Permission Error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `dk status wrong permission`              | 1     | Los privilegios actuales no permiten guardar la entidad. **Associated statusText**: "Permission Error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 #### Ejemplo 1
 
