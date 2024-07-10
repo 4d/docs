@@ -38,7 +38,7 @@ title: データ収集
 | license                 | Object                            | 製品ライセンスの名称と説明                                                                                               |
 | isRosetta               | Boolean                           | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
 | uniqueID                | Text                              | 4D Server の固有ID                                                                                             |
-| id                      | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (_データベース名の多項式ローリングハッシュ_)                                            |
+| id                      | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | dataFileSize            | Number                            | データファイルのサイズ (バイト単位)                                                                      |
 | indexesSize             | Number                            | インデックスのサイズ (バイト単位)                                                                       |
 | cacheSize               | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
