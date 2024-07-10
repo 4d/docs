@@ -247,7 +247,7 @@ Muestra/oculta el marco de la página cuando [modo visualización de página ](#
 
 ## Mostrar referências
 
-Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como _referencias_. Cuando esta opción está desactivada, las expresiones 4D se muestran como _valores_. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
+Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como *referencias*. Cuando esta opción está desactivada, las expresiones 4D se muestran como *valores*. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
 
 Por exemplo, se você tiver inserido a data atual junto com um formato, a data será exibida:
 
