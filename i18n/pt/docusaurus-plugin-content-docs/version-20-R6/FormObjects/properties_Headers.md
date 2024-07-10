@@ -23,9 +23,9 @@ Esta propiedad se utiliza para mostrar u ocultar [los encabezados de columna lis
 
 Esta propiedad se utiliza para definir la altura de línea de un encabezado de list box en **píxeles** o **líneas de texto** (cuando se muestra). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-- _Píxel_ - el valor de la altura se aplica directamente a la línea en cuestión, independientemente del tamaño de la fuente contenida en las columnas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+- *Píxel* - el valor de la altura se aplica directamente a la línea en cuestión, independientemente del tamaño de la fuente contenida en las columnas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-- _Línea_ - la altura se calcula teniendo en cuenta el tamaño de la fuente de la línea en cuestión.
+- *Línea* - la altura se calcula teniendo en cuenta el tamaño de la fuente de la línea en cuestión.
   - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
