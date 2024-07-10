@@ -155,7 +155,7 @@ Há casos em que é necessário armazenar dados como um tipo e utilizá-los como
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
 
 Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
 
@@ -199,14 +199,14 @@ myColl[3]  //acesso ao 4º elemento da colecção
 
 A linguagem 4D suporta classes de objectos. Añade un archivo `myClass.4dm` en la carpeta Project/Sources/Classes de un proyecto para crear una clase llamada "myClass".
 
-Para instanciar un objeto de la clase en un método, llame la clase usuario desde el _class store_ (`cs`) y utilice la función miembro `new()`. É possível passar parâmetros.
+Para instanciar un objeto de la clase en un método, llame la clase usuario desde el *class store* (`cs`) y utilice la función miembro `new()`. É possível passar parâmetros.
 
 ```4d
 // num método 4D
 $o:=cs.myClass.new()
 ```
 
-En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase _methodName_. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
+En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
 
 ```4d
 
