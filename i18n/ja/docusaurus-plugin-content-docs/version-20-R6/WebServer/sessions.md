@@ -27,7 +27,7 @@ Webセッションは次のものに使用されます:
 
 このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に _settings_ 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
+- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
 > メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
 
@@ -37,7 +37,7 @@ Webセッションは次のものに使用されます:
 
 ## セッションの実装
 
-[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID__AppName_"、_AppName_ はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。 この cookie は、アプリケーションのカレントWebセッションを参照します。
+[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID_*AppName*"、*AppName* はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。 この cookie は、アプリケーションのカレントWebセッションを参照します。
 
 :::info
 
@@ -45,13 +45,13 @@ Webセッションは次のものに使用されます:
 
 :::
 
-1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID__AppName_" cookie の存在と値をチェックします。
+1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID_*AppName*" cookie の存在と値をチェックします。
 
 2. cookie に値がある場合、4D は既存セッションの中からこのクッキーを作成したセッションを探し、見つかった場合には再利用します。
 
 3. クライアントからのリクエストが、すでに開かれているセッションに対応していない場合:
 
-- プライベートな "4DSID__AppName_" cookie を持つ新しいセッションが Webサーバー上に作成されます。
+- プライベートな "4DSID_*AppName*" cookie を持つ新しいセッションが Webサーバー上に作成されます。
 - 新しいゲスト `Session` オブジェクトが作成され、このスケーラブルWebセッション専用に使用されます。
 
 :::note
@@ -83,7 +83,7 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの _connectionInfo_ パラメーターを使っても設定できます。
+このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
 
 Webセッションが閉じられた後に [`Session`](API/SessionClass.md#session) コマンドが呼び出されると:
 
@@ -136,7 +136,7 @@ http://localhost:8044/authenticate.shtml
 
 > 本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、[HTTPS接続](API/WebServerClass.md#httpsenabled) を使用する必要があります。
 
-2. `authenticate.shtml` ページは、_userId_ と _password_ の入力フィールドを含むフォームで、4DACTION の POSTアクションを送信します:
+2. `authenticate.shtml` ページは、*userId* と *password* の入力フィールドを含むフォームで、4DACTION の POSTアクションを送信します:
 
 ```html
 <!DOCTYPE html>
@@ -154,7 +154,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. authenticate project メソッドは、_userID_ に合致する担当者を探し、_SalesPersons_ テーブルに保存されているハッシュ値をパスワードと照合します。
+3. authenticate project メソッドは、*userID* に合致する担当者を探し、*SalesPersons* テーブルに保存されているハッシュ値をパスワードと照合します。
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
