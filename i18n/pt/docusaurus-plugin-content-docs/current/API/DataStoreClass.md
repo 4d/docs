@@ -157,7 +157,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                 | * (ignorado)                                              |
 | api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                      | API key da instância Qodly cloud                                             |
 
-(1) If `tls` is true, the HTTPS protocol is used if:
+(1) Se `tls` for true, o protocolo HTTPS é utilizado se:
 
 - HTTPS for ativado no armazém de dados remoto
 - o número de porto especificado coincide com o porto HTTPS configurado nos ajustes do banco de dados
