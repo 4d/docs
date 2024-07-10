@@ -99,7 +99,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a _vpAreaName_ parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Some 4D View Pro commands require a _rangeObj_ parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Some 4D View Pro commands require a *rangeObj* parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
@@ -129,7 +129,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
 - area - Le nom de la zone 4D View Pro
-- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés _.column_ et _.sheet_.
+- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
 
 | Propriété |                                                                                       | Type       | Description                                                                                                                      | Disponible pour                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
