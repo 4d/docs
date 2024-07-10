@@ -25,7 +25,7 @@ title: 4D WritePro インターフェース
 
 ユーザーは、4D Write Pro インタフェースツールバーとサイドバーの "表を挿入" メニューボタンから表ウィザードダイアログを開きます。
 
-![](../assets/en/WritePro/tablewizard-interface.png)
+![](../assets/en/WritePro/tablewizard-interface2.png)
 
 このインターフェースで、ユーザーは最初のドロップダウンリストからテンプレートまたはテーブルを選択し、2番目のドロップダウンリストからテーマを選択します。
 
@@ -37,9 +37,11 @@ title: 4D WritePro インターフェース
 
 ##### 行について:
 
-![](../assets/en/WritePro/rows.PNG)
+![](../assets/en/WritePro/rows1.PNG)
 
 表ウィザードでは、ヘッダー行と追加の行の数 (それぞれ 0～5) を定義したり、[ブレーク行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6233076) (小計行) を繰り返し行の上または下に設定したり、[キャリーオーバー行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6236686) の表示/非表示を選択したりすることもできます。
+
+In addition, the user has the possibility to choose the table's behavior when its datasource is empty with the following options: Show data row, Hide date row, Hide table, Show placeholder row.
 
 ##### 表示について:
 
@@ -68,13 +70,7 @@ title: 4D WritePro インターフェース
 - 表のデータソースとして使用されるエンティティセレクションを返すフォーミュラ
 - ブレーク行のフォーミュラ (ブレーク行を挿入できる場合)
 - 表の列として使用できるデータクラス属性
-- ブレーク行、キャリーオーバー行、追加の行において、コンテキストメニューから選択可能なフォーミュラ
-
-:::info 制限
-
-現在の実装 (4D v20 R2) では、ブレーク行、データソース、コンテキストメニューに使用されるフォーミュラは、ホストデータベースのメソッドの呼び出しをサポートしていません。 この制限は次のバージョンで外される予定です。
-
-:::
+- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
 テンプレートファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" フォルダーに保存する必要があります。
 
@@ -99,6 +95,7 @@ JSON形式のテンプレートファイルには、以下の属性が含まれ�
 | extraFormulas                        | Collection |    | 追加の行に適用可能なフォーミュラオブジェクトのコレクション                                               |
 | extraFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
 | extraFormulas.source | Text       | ○  | Formula                                                                     |
+| placeholderFormulas                  | Collection |    | Collection of formula objects that are inserted in the placeholder row      |
 
 :::note フランス語のランゲージについて
 
@@ -222,26 +219,27 @@ JSON形式のトランスレーションファイルには、以下の属性が�
 
 JSON形式のテーマファイルには、以下の属性が含まれます:
 
-| 属性      | タイプ    | 必須 | 説明                                                              |
-| :------ | :----- | :- | :-------------------------------------------------------------- |
-| default | Object |    | すべての行に適用されるデフォルトスタイルを格納したオブジェクト。                                |
-| table   | Object |    | 表組みに適用されるスタイル定義を格納したオブジェクト。                                     |
-| rows    | Object |    | すべての行に適用されるスタイル定義を格納したオブジェクト。                                   |
-| cells   | Object |    | すべてのセルに適用されるスタイル定義を格納したオブジェクト。                                  |
-| header1 | Object |    | 先頭のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                |
-| header2 | Object |    | 2つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
-| header3 | Object |    | 3つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
-| header4 | Object |    | 4つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
-| header5 | Object |    | 5つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
-| headers | Object |    | header1、header2など専用のスタイル定義がない場合に、ヘッダー行に 適用されるスタイル定義を格納したオブジェクト。 |
-| data    | Object |    | 繰り返し行に適用されるスタイル定義を格納したオブジェクト。                                   |
-| break1  | Object |    | 1つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
-| break2  | Object |    | 2つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
-| break3  | Object |    | 3つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
-| break4  | Object |    | 4つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
-| break5  | Object |    | 5つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                               |
-| breaks  | Object |    | break1、break2など専用のスタイル定義がない場合に、ブレーク行に 適用されるスタイル定義を格納したオブジェクト。   |
-| bcor    | Object |    | 下部キャリーオーバー行に適用されるスタイル定義を格納したオブジェクト。                             |
+| 属性          | タイプ    | 必須 | 説明                                                                                     |
+| :---------- | :----- | :- | :------------------------------------------------------------------------------------- |
+| default     | Object |    | すべての行に適用されるデフォルトスタイルを格納したオブジェクト。                                                       |
+| table       | Object |    | 表組みに適用されるスタイル定義を格納したオブジェクト。                                                            |
+| rows        | Object |    | すべての行に適用されるスタイル定義を格納したオブジェクト。                                                          |
+| cells       | Object |    | すべてのセルに適用されるスタイル定義を格納したオブジェクト。                                                         |
+| header1     | Object |    | 先頭のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                       |
+| header2     | Object |    | 2つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| header3     | Object |    | 3つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| header4     | Object |    | 4つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| header5     | Object |    | 5つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| headers     | Object |    | header1、header2など専用のスタイル定義がない場合に、ヘッダー行に 適用されるスタイル定義を格納したオブジェクト。                        |
+| data        | Object |    | 繰り返し行に適用されるスタイル定義を格納したオブジェクト。                                                          |
+| break1      | Object |    | 1つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| break2      | Object |    | 2つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| break3      | Object |    | 3つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| break4      | Object |    | 4つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| break5      | Object |    | 5つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                                                      |
+| breaks      | Object |    | break1、break2など専用のスタイル定義がない場合に、ブレーク行に 適用されるスタイル定義を格納したオブジェクト。                          |
+| bcor        | Object |    | 下部キャリーオーバー行に適用されるスタイル定義を格納したオブジェクト。                                                    |
+| placeholder | Object |    | Object containing the default style applicable to the placeholder row. |
 
 JSONファイルで設定する各属性に対して、以下の WP属性を定義することができます ([対応する WP定数](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.ja.html) を指定します):
 
