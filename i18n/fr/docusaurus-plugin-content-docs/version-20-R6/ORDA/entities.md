@@ -131,7 +131,7 @@ Vous pouvez accéder aux données via le ou les objets associé(s) :
  $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
-Notez que dans l'exemple ci-dessus, _theClient_ et _companyProjects_ sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
+Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
@@ -254,7 +254,7 @@ Vous pouvez créer et utiliser simultanément autant de sélections d'entités d
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an _undefined_ value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+When entities are deleted, their references remain in the entity selection with an *undefined* value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
 
 :::
 
@@ -267,7 +267,7 @@ Une entity selection peut être **partageable** (lisible par plusieurs process, 
 Une entity selection **partageable** a les caractéristiques suivantes :
 
 - elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
-- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe (elle n'a pas de _locking identifier_) ;
+- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe (elle n'a pas de *locking identifier*) ;
 - elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable en utilisant la fonction [`.copy()`](API/EntitySelectionClass.md#copy) avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
 > La plupart des fonctions d'entity selection (telles que [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) prennent en charge les entity selection partageables puisqu'elles ne modifient pas la sélection d'origine (elles en renvoient une nouvelle).
@@ -284,7 +284,7 @@ La nature **partageable** ou **modifiable** d'une entity selection est définie 
 Une nouvelle entity selection est **partageable** dans les cas suivants :
 
 - la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#quer
-- la nouvelle entity selection est basée sur une relation [entity._attributeName_](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque _attributeName_ est un attribut lié 1-vers-N mais que l'entité n'appartient pas à une entity selection.
+- la nouvelle entity selection est basée sur une relation [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié 1-vers-N mais que l'entité n'appartient pas à une entity selection.
 - la nouvelle entity selection est explicitement copiée comme partageable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire avec l'option `ck shared`).
 
 Voici un exemple :
@@ -312,8 +312,8 @@ Une nouvelle entity selection **hérite** de la nature de l'entity selection ori
 
 - la nouvelle entity selection résulte de l'une des diverses fonctions des classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - the new entity selection is based upon a relation:
-  - [entity._attributeName_](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque _attributeName_ est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
-  - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque _attributeName_ est un attribut lié (de même nature que l'entity selection),
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque *attributeName* est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que l'entity selection),
   - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
 
 Exemples :
@@ -412,7 +412,7 @@ $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
 $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
-Ce code retourne dans _$localEmails_ une collection d'adresses e-mail sous forme de chaînes.
+Ce code retourne dans *$localEmails* une collection d'adresses e-mail sous forme de chaînes.
 
 ### Entity selections et attributs de relation
 
@@ -428,7 +428,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
   //Toutes les factures avec au moins une ligne liée à une pièce de $myParts
 ```
 
-La dernière ligne renverra dans _$myInvoices_ une entity selection de toutes les factures qui ont au moins une ligne liée à une pièce dans l'entity selection myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection et qu'aucune entité n'est retournée, le résultat est une entity selection vide, et non nulle.
+La dernière ligne renverra dans *$myInvoices* une entity selection de toutes les factures qui ont au moins une ligne liée à une pièce dans l'entity selection myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection et qu'aucune entité n'est retournée, le résultat est une entity selection vide, et non nulle.
 
 ## Restricting entity selections
 
@@ -525,8 +525,8 @@ Les filtres ne s'appliquent pas aux sélections d'enregistrements classiques gé
 | [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Only entities matching the filter are returned                                                                                                                                                                                                                                                                                                                                                                               |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtre appliqué si _attributeName_ est une entité liée ou des entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                 |
-| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtre appliqué si _attributeName_ correspond aux entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                             |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtre appliqué si *attributeName* est une entité liée ou des entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                 |
+| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtre appliqué si *attributeName* correspond aux entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                             |
 | [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. Par exemple, la fonction [`entity.next()`](../API/EntityClass.md#next) renverra l'entité suivante dans l'entity selection déjà filtrée. D'autre part, si l'entity selection n'est pas filtrée, [`entity.next()`](../API/EntityClass.md#next) fonctionnera sur les entités non filtrées.
@@ -550,7 +550,7 @@ ORDA vous propose deux modes de verrouillage d'entité :
 
 Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" qui est particulièrement adapté aux problématiques des applications web. Ce concept se caractérise par les principes de fonctionnement suivants :
 
-- Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» _a priori_ des entités.
+- Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
 - Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
 - Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) :
   - Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
