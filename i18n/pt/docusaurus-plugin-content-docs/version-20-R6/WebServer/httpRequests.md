@@ -9,7 +9,7 @@ O servidor web 4D oferece várias funcionalidades para lidar com solicitações 
 - la URL `/4DACTION` para llamar al código del lado del servidor
 - `WEB GET VARIABLES` para obtener valores de los objetos HTML enviados al servidor
 - otros comandos como `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, o `WEB GET BODY PART` permiten personalizar el tratamiento de las solicitudes, incluidas las cookies.
-- el método proyecto _COMPILER_WEB_, para declarar sus variables.
+- el método proyecto *COMPILER_WEB*, para declarar sus variables.
 
 ## On Web Connection
 
@@ -19,13 +19,13 @@ El método base `On Web Connection` puede utilizarse como punto de entrada al se
 
 El método base `On Web Connection` se llama automáticamente cuando el servidor recibe cualquier URL que no sea una ruta a una página existente en el servidor. O método da base de dados é chamado com o URL.
 
-Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
+Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
 ### Sintaxe
 
-**On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
+**On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
 | Parâmetros | Tipo |     | Descrição                                                                |
 | ---------- | ---- | :-: | ------------------------------------------------------------------------ |
@@ -72,7 +72,7 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. Por ejemplo, puede establecer una convención en la que el valor "_/Customers/Add_" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. Por ejemplo, puede establecer una convención en la que el valor "*/Customers/Add*" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
@@ -100,7 +100,7 @@ Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducid
 
 ## /4DACTION
 
-\*\*\*/4DACTION/_**MethodName**_<br/> \*\*/4DACTION/\*\*\*\*\*_MethodName/Param_
+\*\*\*/4DACTION/***MethodName***<br/> \*\*/4DACTION/\*\*\*\*\**MethodName/Param*
 
 | Parâmetros | Tipo |     | Descrição                                           |
 | ---------- | ---- | :-: | --------------------------------------------------- |
@@ -109,7 +109,7 @@ Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducid
 
 **Uso:** URL o acción del formulario.
 
-Esta URL permite llamar al método proyecto 4D _MethodName_ con un parámetro texto opcional _Param_. El método recibirá este parámetro en _$1_.
+Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro texto opcional *Param*. El método recibirá este parámetro en *$1*.
 
 - El método proyecto 4D debe haber sido [permitido para peticiones web](allowProject.md): el valor del atributo "Disponible a través de etiquetas y URLs 4D (4DACTION...)" debe haber sido marcado en las propiedades del método. Se o atributo não for verificado, o pedido Web é rejeitado.
 - Cuando 4D recibes una petición `/4DACTION/MethodName/Param`, se llama el método base `On Web Authentication` (si existe).
@@ -272,7 +272,7 @@ As principais características desta página são:
 
 - Incluye tres botones **Submit**: `vsbLogOn`, `vsbRegister` y `vsbInformation`.
 - Cuando se hace clic en **Log On**, el envío del formulario se procesa primero por la función de JavaScript `LogOn`. If no name is entered, the form is not even submitted to 4D, and a JavaScript alert is displayed.
-- El formulario tiene un método POST 4D así como un script Submit (_GetBrowserInformation_) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por _vtNav_App_.
+- El formulario tiene un método POST 4D así como un script Submit (*GetBrowserInformation*) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por *vtNav_App*.
   También incluye el objeto `vtUserName`.
 
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
@@ -312,8 +312,8 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
 
 As funcionalidades deste método são:
 
-- The values of the variables _vtNav_appName_, _vtNav_appVersion_, _vtNav_appCodeName_, and _vtNav_userAgent_ (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the _GetBrowserInformation_ JavaScript script.
-- De las variables vinculadas _vsbLogOn_, _vsbRegister_ y _vsbInformation_ a los tres botones de envío, sólo la correspondiente al botón que se ha presionado será recuperada por el comando `WEB GET VARIABLES`. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
+- The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
+- De las variables vinculadas *vsbLogOn*, *vsbRegister* y *vsbInformation* a los tres botones de envío, sólo la correspondiente al botón que se ha presionado será recuperada por el comando `WEB GET VARIABLES`. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
 
 Tenha em atenção que, com HTML, todos os objetos são objetos texto. Si se utiliza un objeto SELECT, es el valor del elemento resaltado en el objeto el que se devuelve en el comando `WEB GET VARIABLES`, y no la posición del elemento en el array como en 4D. `WEB GET VARIABLES` siempre devuelve valores de tipo Texto.
 
