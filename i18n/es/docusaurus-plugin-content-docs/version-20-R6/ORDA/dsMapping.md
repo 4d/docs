@@ -7,7 +7,7 @@ La tecnología ORDA se basa en un mapeo automático de una estructura de base su
 
 ## Mapeo de la estructura
 
-When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Cuando llama a un datastore utilizando el comando [`ds`](API/DataStoreClass.md#ds) o el comando [`Open datastore`](API/DataStoreClass.md#open-datastore), 4D referencia automáticamente las tablas y los campos de la estructura 4D correspondiente como propiedades del objeto [datastore](#datastore) devuelto:
 
 - Las tablas correspondientes a las dataclasses.
 - Los campos corresponden a los atributos de almacenamiento.
@@ -28,7 +28,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 > El mapeo ORDA no tiene en cuenta:
 >
 > - la opción "Invisible" para las tablas o los campos,
-> - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
+> - la estructura virtual definida mediante `SET TABLE TITLES` o `SET FIELD TITLES`,
 > - la propiedad "Manual" o "Automática" de las relaciones.
 
 ### Normas de control de acceso remoto
@@ -92,7 +92,7 @@ El datastore principal (por defecto) siempre está disponible a través del coma
 
 Una dataclass es el equivalente de una tabla. Se utiliza como modelo de objetos y hace referencia a todos los campos como atributos, incluidos los atributos relacionales (atributos construidos a partir de relaciones entre las dataclasses). Los atributos relacionales pueden utilizarse en las peticiones como cualquier otro atributo.
 
-Todas las dataclasses de un proyecto 4D están disponibles como propiedad del datastore `ds`. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
+Todas las dataclasses de un proyecto 4D están disponibles como propiedad del datastore `ds`. Para los datastores remotos a los que se accede a través de `Open datastore` o [peticiones REST](REST/gettingStarted.md), se debe seleccionar la opción **Exponer como recurso REST** al nivel de la estructura 4D para cada tabla expuesta que se desee exponer como dataclass en el datastore.
 
 Por ejemplo, considere la siguiente tabla en la estructura 4D:
 
@@ -141,7 +141,7 @@ Todos los campos elegibles de una tabla están disponibles como atributos de su 
 
 #### Atributos de almacenamiento y relacionales
 
-Los atributos de la Dataclass son de varios tipos: almacenamiento, relatedEntity y relatedEntities. Los atributos escalares (_es decir_, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
+Los atributos de la Dataclass son de varios tipos: almacenamiento, relatedEntity y relatedEntities. Los atributos escalares (*es decir*, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
 
 - Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Los valores asignados a un atributo de almacenamiento se almacenan como parte de la entidad cuando se guarda. Cuando se accede a un atributo de almacenamiento, su valor procede directamente del datastore. Los atributos de almacenamiento son el bloque de construcción más básico de una entidad y se definen por nombre y tipo de datos.
 - Un **atributo relacional** ofrece acceso a otras entidades. Los atributos relacionales pueden dar como resultado una entidad única (o ninguna entidad), o una selección de entidades (de 0 a N entidades). Los atributos relacionales se basan en las relaciones "clásicas" en la estructura relacional para ofrecer acceso directo a una entidad o a entidades relacionadas. Los atributos relacionales están disponibles directamente en ORDA utilizando sus nombres.
