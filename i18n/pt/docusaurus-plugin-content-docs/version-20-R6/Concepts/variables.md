@@ -167,17 +167,17 @@ O operador de atribuição é a maneira mais importante de criar uma variável e
 MyNumber:=3
 ```
 
-cria a variável _MyNumber_ e coloca o número 3 nela. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
+cria a variável *MyNumber* e coloca o número 3 nela. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
 
 > Geralmente não é recomendado criar variáveis sem [declarar seu tipo](#declaring-variables).
 
-Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar colocar o valor de MyNumber em um campo chamado [Products]Size, você escreveria _MyNumber_ no lado direito do operador de atribuição:
+Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar colocar o valor de MyNumber em um campo chamado [Products]Size, você escreveria *MyNumber* no lado direito do operador de atribuição:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-Nesse caso, _[Products]Size_ seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
+Nesse caso, *[Products]Size* seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
 
 Atribui-se dados a elementos de matriz utilizando chaves ({...}):
 
