@@ -7,7 +7,7 @@ Vous aurez souvent besoin de fournir des valeurs à vos méthodes et fonctions. 
 
 ## Vue d’ensemble
 
-**Les paramètres** (ou **arguments**) sont des données dont une méthode ou une fonction de classe a besoin pour s’exécuter. Le terme _paramètres_ ou _arguments_ est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERT` :
+**Les paramètres** (ou **arguments**) sont des données dont une méthode ou une fonction de classe a besoin pour s’exécuter. Le terme *paramètres* ou *arguments* est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERT` :
 
 ```4d
 ALERT("Bonjour")
@@ -35,7 +35,7 @@ EXECUTER METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //dans le contexte d'un sous-formulaire
 ```
 
-Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée _MaLongueur_.
+Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur*.
 
 ```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
@@ -168,7 +168,7 @@ Function square($x : Integer)
    return $x * $x
 ```
 
-> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est _indéfinie_.
+> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *indéfinie*.
 
 L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). Cependant, notez qu'elle met immédiatement fin à l'exécution du code. Par exemple :
 
@@ -382,8 +382,8 @@ Certains contextes ne prennent pas en charge la déclaration dans une méthode "
 
 ### Conflit entre les déclarations
 
-- Si un paramètre est déclaré à la fois dans un prototype `#DECLARE` et une méthode _Compiler__, l'entrée de la méthode _Compiler__ est ignorée.
-- Si un paramètre est déclaré à la fois dans un prototype `#DECLARE` et une méthode _Compiler__ mais avec un type de données différent, le Code Live Checker génère une erreur lors de la vérification de syntaxe et de la compilation.
+- Si un paramètre est déclaré à la fois dans un prototype `#DECLARE` et une méthode *Compiler_*, l'entrée de la méthode *Compiler_* est ignorée.
+- Si un paramètre est déclaré à la fois dans un prototype `#DECLARE` et une méthode *Compiler_* mais avec un type de données différent, le Code Live Checker génère une erreur lors de la vérification de syntaxe et de la compilation.
 
 ## Type de paramètre erroné
 
@@ -470,7 +470,7 @@ Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dan
 
 ## Paramètres optionnels
 
-Dans le manuel _Langage de 4D_, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre _okButtonTitle_ doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
+Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
 ```4d
 ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
@@ -573,9 +573,9 @@ Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle 
 
 ### Cas particuliers : objets et collections
 
-Vous devez faire attention au fait que les types de données Objet et Collection ne peuvent être gérés que par une référence (c'est-à-dire un _pointeur interne_).
+Vous devez faire attention au fait que les types de données Objet et Collection ne peuvent être gérés que par une référence (c'est-à-dire un *pointeur interne*).
 
-Par conséquent, lorsque vous utilisez ces types de données comme paramètres, `$1, $2 ...` ne contiennent pas des _valeurs_, mais des _références_. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](dt_pointer.md#passer-des-pointeurs-aux-méthodes), à la différence que les paramètres `$1, $2...` n'ont pas besoin d'être déréférencés dans la sous-routine.
+Par conséquent, lorsque vous utilisez ces types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](dt_pointer.md#passer-des-pointeurs-aux-méthodes), à la différence que les paramètres `$1, $2...` n'ont pas besoin d'être déréférencés dans la sous-routine.
 
 Par exemple, considérons la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
