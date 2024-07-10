@@ -36,7 +36,7 @@ Vous pouvez modifier la taille du cache dans la zone **Taille du cache des pages
 
 | Peut être configuré via | Nom                 | Commentaires                                                                                                                                           |
 | ----------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objet webServer         | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function. |
+| objet webServer         | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
 
 Dossier qui contient les fichiers de certificat TLS pour le serveur web.
 
@@ -44,7 +44,7 @@ Par défaut, avec 4D ou 4D Server, ces fichiers doivent être placés à côté 
 
 Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). Vous devez copier ces fichiers manuellement sur la machine distante.
 
-> Les fichiers de certificat TLS sont _key.pem_ (document contenant la clé de chiffrement privée) et _cert.pem_ (document contenant le certificat).
+> Les fichiers de certificat TLS sont *key.pem* (document contenant la clé de chiffrement privée) et *cert.pem* (document contenant le certificat).
 
 ## Jeu de caractères
 
@@ -119,7 +119,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | objet webServer         | `debugLog`      | number       |
 | `WEB SET OPTION`        | `Web debug log` | number       |
 
-Status of the HTTP request log file of the web server ([_HTTPDebugLog_nn.txt_](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
 | Valeur | Constante                      | Description                                                                                              |
 | ------ | ------------------------------ | -------------------------------------------------------------------------------------------------------- |
@@ -357,7 +357,7 @@ Statut de la gestion de l'ancienne session pour le serveur Web 4D (obsolète).
 | `WEB SET OPTION`         | `Web log recording`                                                 |              |
 | Fenêtre de configuration | [Log (type) page](../settings/web.md#log-format) | Menu popup   |
 
-Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier _logweb.txt_ et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier _logweb.txt_ est automatiquement placé dans le dossier Logs.
+Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier *logweb.txt* est automatiquement placé dans le dossier Logs.
 
 Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :
 
@@ -504,7 +504,7 @@ Dans ce cas, les robots n'auront accès à aucune partie du site.
 
 | Peut être configuré via  | Nom                                                                          | Commentaires                                                                                                                          |
 | ------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function |
+| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
 | `WEB SET ROOT FOLDER`    |                                                                              |                                                                                                                                       |
 | Fenêtre de configuration | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                       |
 
@@ -599,7 +599,7 @@ Les paramètres suivants sont toujours pris en charge mais reposent sur des fonc
 
 #### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
 
-Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées _/4DSYNC_.
+Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées */4DSYNC*.
 
 #### Validation de l'adresse IP de la session
 
