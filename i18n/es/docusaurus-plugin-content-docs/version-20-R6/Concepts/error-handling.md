@@ -23,7 +23,7 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 ## Error o estado
 
-Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto _status_. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
+Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto *status*. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
 
 Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. Esta categoría de errores genera excepciones y debe gestionarse mediante un método de gestión de errores o una palabra clave `Try()`.
 
@@ -33,7 +33,7 @@ En 4D, todos los errores pueden ser detectados y manejados por métodos proyecto
 
 Una vez instalados, los manejadores de errores son llamados automáticamente en modo interpretado o compilado en caso de error en la aplicación 4D o en uno de sus componentes. Se puede llamar a un manejador de errores diferente en función del contexto de ejecución (ver abajo).
 
-Para _instalar_ un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) con el nombre del método proyecto y (opcionalmente) el álcance como parámetros. Por ejemplo:
+Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) con el nombre del método proyecto y (opcionalmente) el álcance como parámetros. Por ejemplo:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Instala un método local de gestión de errores
@@ -94,7 +94,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 
 :::info
 
-4D mantiene automáticamente una serie de variables denominadas **variables sistema**, que responden a diferentes necesidades. Consulte el _Manual del lenguaje de 4D_.
+4D mantiene automáticamente una serie de variables denominadas **variables sistema**, que responden a diferentes necesidades. Consulte el *Manual del lenguaje de 4D*.
 
 :::
 
@@ -150,15 +150,15 @@ Try (expression) : any | Undefined
 
 ```
 
-_expresion_ puede ser toda expresión válida.
+*expresion* puede ser toda expresión válida.
 
-Si se produce un error durante su ejecución, se intercepta y no se muestra ningún diálogo de error, si un [método de gestión de errores](#installing-an-error-handling-method) fue instalado o no antes de la llamada a `Try()`. Si _expression_ devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Define`.
+Si se produce un error durante su ejecución, se intercepta y no se muestra ningún diálogo de error, si un [método de gestión de errores](#installing-an-error-handling-method) fue instalado o no antes de la llamada a `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Define`.
 
-Puede manejar los errores utilizando el comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Si _expression_ arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
+Puede manejar los errores utilizando el comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
 
 :::note
 
-Si un [método de gestión de errores](#installing-an-error-handling-method) es instalado por _expression_, es llamado en caso de error.
+Si un [método de gestión de errores](#installing-an-error-handling-method) es instalado por *expression*, es llamado en caso de error.
 
 :::
 
@@ -230,17 +230,17 @@ El código entre las palabras clave `Try` y `Catch` se ejecuta en primer lugar, 
 
 - Si no se lanza ningún error, la ejecución del código continúa después de la palabra clave correspondiente `End try`. El código situado entre las palabras clave `Catch` y `End try` no se ejecuta.
 - Si la ejecución del bloque de código arroja un error no diferido \*\*, el flujo de ejecución se detiene y ejecuta el bloque de código correspondiente `Catch`.
-- Si la ejecución del bloque de código arroja un _error diferido_, el flujo de ejecución continúa hasta el final del bloque `Try` y luego ejecuta el bloque de código correspondiente `Catch`.
+- Si la ejecución del bloque de código arroja un *error diferido*, el flujo de ejecución continúa hasta el final del bloque `Try` y luego ejecuta el bloque de código correspondiente `Catch`.
 
 :::note
 
-Si se lanza un error _diferido_ fuera del bloque `Try`, la ejecución del código continúa hasta el final del método o función.
+Si se lanza un error *diferido* fuera del bloque `Try`, la ejecución del código continúa hasta el final del método o función.
 
 :::
 
 :::info
 
-Para más información sobre errores _diferidos_ y _no diferidos_, por favor consulte la descripción del comando [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html).
+Para más información sobre errores *diferidos* y *no diferidos*, por favor consulte la descripción del comando [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html).
 
 :::
 
