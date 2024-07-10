@@ -26,7 +26,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 
 Le verrouillage peut se produire dans les modes Projet et Client/serveur lorsque :
 
-- Le fichier _settings.4DSettings_ est en 'Lecture seule' (Projets uniquement). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
+- Le fichier *settings.4DSettings* est en 'Lecture seule' (Projets uniquement). La modification d'un paramètre affiche une alerte pour le déverrouiller, le cas échéant.
 - Deux utilisateurs ou plus tentent de modifier les mêmes paramètres en même temps. Les paramètres ne peuvent pas être utilisés jusqu'à ce que le premier utilisateur les libère en fermant la fenêtre. (Client/serveur uniquement)
 
 Dans les deux cas, les paramètres peuvent être ouverts en 'Lecture seule', mais ne peuvent pas être utilisés tant qu'ils sont verrouillés.
