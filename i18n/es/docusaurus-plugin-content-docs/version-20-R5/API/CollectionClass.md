@@ -794,7 +794,7 @@ La función `.equal()` <!-- REF #collection.equal().Summary -->compara recursiva
 
 :::note Notas
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- La función `.equal()` solo comprueba la igualdad para los elementos de tipo cadena, booleano, número y null en las colecciones. No verifica la igualdad para objetos nativos.
 - Los elementos con valores **null** no son iguales a los elementos Undefined.
 
 :::
@@ -2824,7 +2824,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page.
+Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()`.
 
 :::
 
@@ -2870,7 +2870,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2881,7 +2881,7 @@ La retrollamada recibe los siguientes parámetros:
 La retrollamada define los siguientes parámetros:
 
 - *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
@@ -2955,7 +2955,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2966,7 +2966,7 @@ La retrollamada recibe los siguientes parámetros:
 La retrollamada define los siguientes parámetros:
 
 - *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
@@ -3089,7 +3089,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 > Esta función modifica la colección original.
 
 - If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
 By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
@@ -3229,7 +3229,7 @@ The returned collection contains the element specified by *startFrom* and all su
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *end* < 0 , se recalcula como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 
@@ -3292,7 +3292,7 @@ La retrollamada recibe los siguientes parámetros:
 Puede definir los siguientes parámetros:
 
 - (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
@@ -3378,7 +3378,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Si utilizó un método, debe definir el siguiente parámetro:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario.
 
 #### Ejemplo 1
 
