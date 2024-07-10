@@ -98,7 +98,7 @@ title: 4D View Pro エリアの設定
 
 ### シートの保護
 
-シート全体をロック (保護) するには、_isProtected_ プロパティを **true** に設定するだけです。 その上で、[locked](#レイアウト) セルスタイルプロパティを個別に設定することで、特定のセルをロック解除することができます。
+シート全体をロック (保護) するには、*isProtected* プロパティを **true** に設定するだけです。 その上で、[locked](#レイアウト) セルスタイルプロパティを個別に設定することで、特定のセルをロック解除することができます。
 
 | プロパティ             |                          | タイプ     | 説明                                                                        |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------- |
@@ -126,7 +126,7 @@ title: 4D View Pro エリアの設定
 
 4D View Pro には数値、日付、時間、そしてテキスト用のビルトインのフォーマットがありますが、カスタムパターンを作成することで、特殊文字やコードを使ったフォーマットでセルのコンテンツを表示することができます。
 
-たとえば、請求書において [VP SET VALUE](commands/vp-set-value.md) あるいは [VP SET NUM VALUE](commands/vp-set-num-value.md) コマンドを使用して金額を入力している場合、数値の桁数とは関係なく (つまり金額が $5.00 だろうと $5,000.00 だろうと) 通貨記号 ($, €, ¥, など)を同じ位置に整列させたい場合があるかもしれません。 この場合、フォーマット文字を使用してパターン _($\* #,##0.00)_ を指定することで、以下のように表示させることができます:
+たとえば、請求書において [VP SET VALUE](commands/vp-set-value.md) あるいは [VP SET NUM VALUE](commands/vp-set-num-value.md) コマンドを使用して金額を入力している場合、数値の桁数とは関係なく (つまり金額が $5.00 だろうと $5,000.00 だろうと) 通貨記号 ($, €, ¥, など)を同じ位置に整列させたい場合があるかもしれません。 この場合、フォーマット文字を使用してパターン *($\* #,##0.00)* を指定することで、以下のように表示させることができます:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -167,15 +167,15 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 | 定数                                        | 値                                    | 説明                                                                                                                                                                          |
 | ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `vk pattern full date time`               | "_fullDateTimePattern_"              | カレント言語設定における ISO 8601 フォーマットの完全な日付と時間。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy HH:mm:ss"                                     |
-| `vk pattern long date`                    | "_longDatePattern_"                  | カレント言語設定における ISO 8601 フォーマットの完全な日付。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy"                                                                                 |
-| `vk pattern long time`                    | "_longTimePattern_"                  | カレント言語設定における ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm:ss"                                                              |
-| `vk pattern month day`                    | "_monthDayPattern_"                  | カレント言語設定における ISO 8601 フォーマットの月日の日付。アメリカ合衆国でのデフォルトパターン: "MMMM dd"                                                                                            |
-| `vk pattern short date`                   | "_shortDatePattern_"                 | カレント言語設定における省略形の ISO 8601 フォーマットの日付。アメリカ合衆国でのデフォルトパターン: "MM/dd/yyyy"                                                                                        |
-| `vk pattern short time`                   | "_shortTimePattern_"                 | カレント言語設定における省略形の ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm"                                                                             |
-| `vk pattern sortable date time`           | "_sortableDateTimePattern_"          | カレント言語設定における、並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"          |
-| `vk pattern universal sortable date time` | "_universalSortableDateTimePattern_" | カレント言語設定における、UTCを使用した並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
-| `vk pattern year month`                   | "_yearMonthPattern_"                 | カレント言語設定における ISO 8601 フォーマットの年月。アメリカ合衆国でのデフォルトパターン: "yyyy MMMM"                                                                                             |
+| `vk pattern full date time`               | "*fullDateTimePattern*"              | カレント言語設定における ISO 8601 フォーマットの完全な日付と時間。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy HH:mm:ss"                                     |
+| `vk pattern long date`                    | "*longDatePattern*"                  | カレント言語設定における ISO 8601 フォーマットの完全な日付。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy"                                                                                 |
+| `vk pattern long time`                    | "*longTimePattern*"                  | カレント言語設定における ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm:ss"                                                              |
+| `vk pattern month day`                    | "*monthDayPattern*"                  | カレント言語設定における ISO 8601 フォーマットの月日の日付。アメリカ合衆国でのデフォルトパターン: "MMMM dd"                                                                                            |
+| `vk pattern short date`                   | "*shortDatePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの日付。アメリカ合衆国でのデフォルトパターン: "MM/dd/yyyy"                                                                                        |
+| `vk pattern short time`                   | "*shortTimePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm"                                                                             |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | カレント言語設定における、並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"          |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | カレント言語設定における、UTCを使用した並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
+| `vk pattern year month`                   | "*yearMonthPattern*"                 | カレント言語設定における ISO 8601 フォーマットの年月。アメリカ合衆国でのデフォルトパターン: "yyyy MMMM"                                                                                             |
 
 #### 例題
 
@@ -298,7 +298,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | S                     | 打ち消し線                                         | printInfo.headerLeft:="&Sこれはテキストです"                                                               | ~~これはテキストです~~                                        |   |
 | U                     | 下線                                            | printInfo.headerLeft:="&Uこれはテキストです"                                                               | これはテキストです (下線)                    |   |
 | B                     | 太字                                            | printInfo.headerLeft:="&Bこれはテキストです"                                                               | **これはテキストです**                                        |   |
-| I                     | イタリック                                         | printInfo.headerLeft:="&Iこれはテキストです"                                                               | _これはテキストです_                                          |   |
+| I                     | イタリック                                         | printInfo.headerLeft:="&Iこれはテキストです"                                                               | *これはテキストです*                                          |   |
 | "                     | フォント指定                                        | printInfo.headerLeft:="&\"Lucida Console\"&14This is text." | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |   |
 | K                     | 文字カラー指定                                       | printInfo.headerLeft:="&KFF0000これはテキストです"                                                         | これはテキストです (赤字)。                   |   |
 | F                     | ワークブック名                                       | printInfo.headerLeft:="&F"                                                                        | 2019 Monthly Revenue Forecasts                       |   |
