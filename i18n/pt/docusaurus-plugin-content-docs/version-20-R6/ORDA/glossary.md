@@ -138,7 +138,7 @@ Nesta documentação, o tipo de dados "Misto" é utilizado para designar os vár
 - collection
 - imagem(\*)
 
-_(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como_ `entitySelection.max( )`.
+*(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como* `entitySelection.max( )`.
 
 ## Bloqueio optimista
 
