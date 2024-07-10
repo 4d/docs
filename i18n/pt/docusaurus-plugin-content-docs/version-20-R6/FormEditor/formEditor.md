@@ -199,7 +199,7 @@ La caja de diálogo "Duplicar muchos" aparece cuando se selecciona uno o más ob
 - Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
 - Si desea crear una matriz de variables, seleccione la opción **Numerar las variables** y seleccione la dirección en la que se van a numerar las variables, ya sea por línea(s) o por columna(s).
-  Esta opção só está activa quando o objecto seleccionado é uma variável. Para más información sobre esta opción, consulte **Duplicar en una matriz** en el _Manual de diseño_.
+  Esta opção só está activa quando o objecto seleccionado é uma variável. Para más información sobre esta opción, consulte **Duplicar en una matriz** en el *Manual de diseño*.
 
 ### Mover objetos
 
@@ -322,7 +322,7 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
 
-4. To perform a distribution that uses the standard scheme, click **Preview** or _Apply_.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.</p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
+4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.</p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
 
 - Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
 - Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
@@ -395,7 +395,7 @@ While you are changing the data entry order, you can select a group of objects i
 
 Para criar um grupo de entrada de dados:
 
-1. Seleccione **Orden de entrada** en el menú _Formulario_ o haga clic en el botón de la barra de herramientas.
+1. Seleccione **Orden de entrada** en el menú *Formulario* o haga clic en el botón de la barra de herramientas.
 2. Desenhe uma seleção ao redor dos objetos que você deseja agrupar para entrada de dados.
 
 When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. A ordem de entrada de dados para os restantes objetos ajustam-se conforme necessário.
@@ -540,7 +540,7 @@ El principio de esta función es el siguiente: cada escudo está asociado a una 
 
 ### Usando escudos
 
-Para activar una marca, haga clic en el icono _Marca_ de la barra de herramientas hasta seleccionar la marca deseada. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
+Para activar una marca, haga clic en el icono *Marca* de la barra de herramientas hasta seleccionar la marca deseada. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
 
 Si no quiere mostrar marcas, seleccione **Sin marcas** en el menú de selección.
 
@@ -727,33 +727,33 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 You can show or hide objects belonging to a view at any time in the form's current page. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
-Por defecto, se muestran todas las vistas, como indica el icono _Mostrar/Ocultar_:
+Por defecto, se muestran todas las vistas, como indica el icono *Mostrar/Ocultar*:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-Para ocultar una vista, haga clic en el icono _Mostrar/Ocultar_. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
+Para ocultar una vista, haga clic en el icono *Mostrar/Ocultar*. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
 
 ![](../assets/en/FormEditor/hidden.png)
 
 > La [vista actual](#antes-del-comienzo) no se puede ocultar.
 
-Para mostrar una vista que está oculta, simplemente selecciónela o haga clic en el icono _Mostrar/Ocultar_ de esa vista.
+Para mostrar una vista que está oculta, simplemente selecciónela o haga clic en el icono *Mostrar/Ocultar* de esa vista.
 
 #### Bloqueio de objetos de uma vista
 
 É possível bloquear os objectos de uma vista. Isto impede que sejam selecionados, alterados ou eliminados do formulário. Una vez bloqueado, un objeto no puede seleccionarse mediante un clic, un rectángulo o el comando **Seleccionar objetos similares** del menú contextual. Esta função é útil para evitar erros de tratamento.
 
-Por defecto, todas las vistas están desbloqueadas, como lo indica el icono _Bloquear/Desbloquear_ que aparece junto a cada vista:
+Por defecto, todas las vistas están desbloqueadas, como lo indica el icono *Bloquear/Desbloquear* que aparece junto a cada vista:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-Para bloquear los objetos de una vista, haga clic en el icono _Bloquear/Desbloquear_. O cadeado está fechado, o que significa que a vista está agora bloqueada:
+Para bloquear los objetos de una vista, haga clic en el icono *Bloquear/Desbloquear*. O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
 
 > La [vista actual](#antes-del-comienzo) no se puede bloquear.
 
-Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono _Bloquear/Desbloquear_ de esa vista.
+Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono *Bloquear/Desbloquear* de esa vista.
 
 ## Zoom
 
