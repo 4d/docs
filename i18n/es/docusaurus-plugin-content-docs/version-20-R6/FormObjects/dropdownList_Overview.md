@@ -20,7 +20,7 @@ Puede crear diferentes tipos de listas desplegables con distintas funcionalidade
 | Lista de selección guardada como valor      | Crear en una lista de selección (estándar)                             | Lista             | Valor del elemento seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                        |
 | Lista de selección guardada como referencia | Creado sobre una lista de selección. La posición del elemento es guardada | Lista             | Referencia del elemento seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                 |
 | Lista de selección jerárquica               | Puede mostrar contenido jerárquico                                                        | Lista             | Referencia de la lista               | `dataSourceTypeHint: integer`                                                                                                       |
-| Acción estándar                             | Creado automáticamente por la acción                                                      | _cualquiera_      | _todo excepto referencia de lista_   | toda definición + `action: <action>` (+ `focusable: false` para acciones que se aplican a otras áreas)           |
+| Acción estándar                             | Creado automáticamente por la acción                                                      | *cualquiera*      | *todo excepto referencia de lista*   | toda definición + `action: <action>` (+ `focusable: false` para acciones que se aplican a otras áreas)           |
 
 ## Gestión de listas desplegables
 
