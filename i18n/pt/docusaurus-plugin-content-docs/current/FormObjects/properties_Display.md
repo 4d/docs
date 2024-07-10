@@ -584,7 +584,7 @@ Quando essa opção é selecionada, o texto passa automaticamente para a próxim
 
 #### Não selecionado para list box/Não para entrada
 
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 Quando esta opção é selecionada, 4D não faz nenhum retorno automático de linha e a última palavra que pode ser exibida pode ser truncada. Nas áreas de tipo de texto, são suportadas os retornos de carro:
 
