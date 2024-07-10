@@ -201,7 +201,7 @@ Cuando la función es llamada, recibe en la propiedad `$editor.editor` una copia
 
 Una vez completadas las operaciones, si la macro resulta en la modificación, adición o eliminación de objetos, puede pasar las propiedades editadas resultantes en `$result`. El procesador de macros analizará las propiedades devueltas y aplicará las operaciones necesarias en el formulario. Obviamente, cuanto menos propiedades devuelva, menos tiempo requerirá el procesamiento.
 
-Estas son las propiedades devueltas en el parámetro _$editor_:
+Estas son las propiedades devueltas en el parámetro *$editor*:
 
 | Propiedad                                                        | Tipo       | Descripción                                                                                       |
 | ---------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
