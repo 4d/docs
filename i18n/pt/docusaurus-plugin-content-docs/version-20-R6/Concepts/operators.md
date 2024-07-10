@@ -33,7 +33,7 @@ $col:=New collection //$col is initialized with an empty collection
 
 Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. São descritos com os tipos de dados, nas secções seguintes:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (em expressões **booleanas**)
 - [**Date operators**](dt_date.md#date-operators)
 - [**Time operators**](dt_time.md#time-operators)
 - [**Number operators**](dt_number.md#number-operators)
@@ -194,9 +194,9 @@ $tax:=$item.taxRate && ($item.price*$item.taxRate)
 Os operadores de curto-circuito são úteis em provas como:
 
 ```4d
-If(($myObject#Null) && ($myObject.value>10))
-	//code
-End if
+Se(($myObject#Null) && ($myObject.value>10))
+	//código
+Fim se
 ```
 
 Se $myObject for nulo, o segundo argumento não é executado e, por conseguinte, não é lançado qualquer erro.
@@ -242,7 +242,7 @@ En este caso, `$phone` almacenará un número de teléfono o la cadena "n/a".
 
 #### Exemplo 2
 
-Dada una tabla llamada Person con un campo _name_, así como un campo _maiden name_ para las mujeres casadas.
+Dada una tabla llamada Person con un campo *name*, así como un campo *maiden name* para las mujeres casadas.
 
 O exemplo seguinte verifica se existe um nome de solteira e armazena-o numa variável; caso contrário, armazena simplesmente o nome da pessoa:
 
@@ -341,7 +341,7 @@ Todos los demás valores se consideran **truthy**, incluyendo:
 
 - 0 - zero numérico (inteiro ou não)
 
-En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores _undefined_ y _null_ en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
+En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores *undefined* y *null* en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
 
 Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-or-operator-):
 
@@ -349,7 +349,7 @@ Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever _$object_ does not contain the `value` property OR when it is _null_. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
+... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
 
 En cuanto a los valores que representan las colecciones, los objetos o las cadenas, los valores "vacíos" se consideran como **falsy**. É útil quando se pretende atribuir um valor por defeito sempre que se encontra um valor vazio.
 
