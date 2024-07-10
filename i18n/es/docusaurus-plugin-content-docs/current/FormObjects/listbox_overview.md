@@ -147,7 +147,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Height (headers)](properties_Headers.md#height)                          | X              | X                  | X                                     |
 | [Height (footers)](properties_Footers.md#height)                          | X              | X                  | X                                     |
 | [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)             | X              | X                  | X                                     |
-| [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle)                        | X              | X                  | X                                     |
+| [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle)               | X              | X                  | X                                     |
 | [Hide selection highlight](properties_Appearance.md#hide-selection-highlight)                | X              | X                  | X                                     |
 | [Hierarchical List Box](properties_Object.md#hierarchical-list-box)                          | X              |                    |                                       |
 | [Highlight Set](properties_ListBox.md#highlight-set)                                         |                | X                  |                                       |
@@ -184,7 +184,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                     |
 | [Tipo](properties_Object.md#type)                                                            | X              | X                  | X                                     |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                     |
-| [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                       |
+| [Variable o Expresión](properties_Object.md#variable-or-expression)                          | X              | X                  |                                       |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                     |
 | [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                           | X              | X                  | X                                     |
 | [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                      | X              | X                  | X                                     |
