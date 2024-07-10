@@ -157,7 +157,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                 | * (ignorado)                                              |
 | api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                      | API key da instância Qodly cloud                                             |
 
-(1) If `tls` is true, the HTTPS protocol is used if:
+(1) Se `tls` for true, o protocolo HTTPS é utilizado se:
 
 - HTTPS for ativado no armazém de dados remoto
 - o número de porto especificado coincide com o porto HTTPS configurado nos ajustes do banco de dados
@@ -519,7 +519,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -715,7 +715,7 @@ Em um armazém de dados remoto:
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1096,7 +1096,7 @@ ds.setGlobalStamp($newValue)
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
