@@ -45,7 +45,7 @@ As funções são chamadas no objeto correspondente no datastore do servidor.
 > `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).\
 > A função é pesquisada primeiro na classe de seleção de entidades. Se não for encontrado, é procurado na dataclass. Por outras palavras, se uma função com o mesmo nome for definida tanto na classe DataClass como na classe EntitySelection, a função da classe de dataClass nunca será executada.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [_Use preemptive process_ setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
 
 ## Parâmetros
 
@@ -70,7 +70,7 @@ Todos os tipos de dados JSON são suportados nos parâmetros, incluindo os ponte
 
 ### Parâmetro da entidade
 
-Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). Se o parâmetro chave for omitido num pedido, é carregada uma nova entidade na memória do servidor.
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (*es decir,* propiedad __KEY). Se o parâmetro chave for omitido num pedido, é carregada uma nova entidade na memória do servidor.
 Também é possível transmitir valores para quaisquer atributos da entidade. Estes valores serão automaticamente utilizados para a entidade tratada no servidor.
 
 > Se o pedido enviar valores de atributos modificados para uma entidade existente no servidor, a função de modelo de dados ORDA chamada será automaticamente executada no servidor com valores modificados. Esta caraterística permite-lhe, por exemplo, verificar o resultado de uma operação numa entidade, depois de aplicar todas as regras de negócio, a partir da aplicação cliente. O usuário pode então decidir guardar ou não a entidade no servidor.
@@ -479,7 +479,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### Receber uma seleção de entidade como parâmetro
 
-En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una selección de entidad recibida ($1). En realidad, actualiza el atributo _finalExam_ con el valor recibido ($2). Devolve as chaves primárias das entidades atualizadas.
+En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una selección de entidad recibida ($1). En realidad, actualiza el atributo *finalExam* con el valor recibido ($2). Devolve as chaves primárias das entidades atualizadas.
 
 ```
 // Students class
