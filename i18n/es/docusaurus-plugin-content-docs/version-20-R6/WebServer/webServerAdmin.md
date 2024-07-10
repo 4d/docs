@@ -45,7 +45,7 @@ Al seleccionar este comando, la página de inicio del sitio web publicado por la
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL _localhost_, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
 
 ## Borrar la caché
 
@@ -72,9 +72,9 @@ La página **Watch** (sección **Web**) del Explorador de ejecución muestra la 
 
 ## URL para la administración
 
-Las URL de administración del sitio web le permiten controlar el sitio web publicado en su servidor. 4D Web Server acepta cuatro URLs específicas: _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ y _/4DWEBTEST_.
+Las URL de administración del sitio web le permiten controlar el sitio web publicado en su servidor. 4D Web Server acepta cuatro URLs específicas: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* y */4DWEBTEST*.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ y _/4DCACHECLEAR_ sólo están disponibles para el diseñador y el administrador de la base de datos. Si el sistema de contraseñas 4D no ha sido activado, estas URLs están disponibles para todos los usuarios. /4DWEBTEST está siempre disponible.
+> */4DSTATS*, */4DHTMLSTATS* y */4DCACHECLEAR* sólo están disponibles para el diseñador y el administrador de la base de datos. Si el sistema de contraseñas 4D no ha sido activado, estas URLs están disponibles para todos los usuarios. /4DWEBTEST está siempre disponible.
 
 ### /4DSTATS
 
@@ -94,7 +94,7 @@ Esta información puede permitirle comprobar el funcionamiento de su servidor y,
 
 ### /4DHTMLSTATS
 
-La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información que la URL _/4DSTATS_. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
+La URL */4DHTMLSTATS* devuelve, también como una HTML, la misma información que la URL */4DSTATS*. La diferencia es que el campo **Cached Objects** sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo **Objetos filtrados**.
 
 | Elemento                  | Descripción                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------------ |
@@ -107,11 +107,11 @@ La URL _/4DHTMLSTATS_ devuelve, también como una HTML, la misma información qu
 
 ### /4DCACHECLEAR
 
-La URL _/4DCACHECLEAR_ elimina inmediatamente las páginas estáticas y las imágenes de la caché. Por tanto, permite "forzar" la actualización de las páginas que han sido modificadas.
+La URL */4DCACHECLEAR* elimina inmediatamente las páginas estáticas y las imágenes de la caché. Por tanto, permite "forzar" la actualización de las páginas que han sido modificadas.
 
 ### /4DWEBTEST
 
-La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Cuando se llama a esta URL, 4D devuelve un archivo texto con los campos HTTP siguientes llenos:
+La URL */4DWEBTEST* permite verificar el estado del servidor web. Cuando se llama a esta URL, 4D devuelve un archivo texto con los campos HTTP siguientes llenos:
 
 | Campo HTTP | Descripción                                              | Ejemplo                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,8 +123,8 @@ La URL _/4DWEBTEST_ permite verificar el estado del servidor web. Cuando se llam
 
 4D le permite generar dos historiales de peticiones web:
 
-- un historial de depuración, útil en la fase de desarrollo del servidor web (_HTTPDebugLog.txt_),
-- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (_logweb.txt_).
+- un historial de depuración, útil en la fase de desarrollo del servidor web (*HTTPDebugLog.txt*),
+- un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (*logweb.txt*).
 
 Ambos archivos de historial se crean automáticamente en la carpeta **Logs** del proyecto de aplicación.
 
@@ -151,7 +151,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 El formato DLF (Combined Log Format) es similar al formato CLF (Common Log Format) y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent. Esta es la descripción de los formatos CLF/DLF (no personalizables):
 
@@ -209,9 +209,9 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 #### Frecuencia del backup
 
-Dado que un archivo _logweb.txt_ puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. La activación de una copia de seguridad puede basarse en un periodo de tiempo determinado (expresado en horas, días, semanas o meses), o en función del tamaño del archivo; cuando se alcanza el plazo establecido (o el tamaño del archivo), 4D cierra y archiva automáticamente el archivo de registro actual y crea uno nuevo.
+Dado que un archivo *logweb.txt* puede llegar a ser considerablemente grande, es posible establecer un mecanismo de archivo automático. La activación de una copia de seguridad puede basarse en un periodo de tiempo determinado (expresado en horas, días, semanas o meses), o en función del tamaño del archivo; cuando se alcanza el plazo establecido (o el tamaño del archivo), 4D cierra y archiva automáticamente el archivo de registro actual y crea uno nuevo.
 
-Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo _logweb.txt_.
+Cuando se activa la copia de seguridad del archivo de registro web, el archivo de registro se archiva en una carpeta llamada "Archivos Logweb", que se crea en el mismo nivel que el archivo *logweb.txt*.
 
 El fichero archivado se renombra según el siguiente ejemplo "DYYY_MM_DD_Thh_mm_ss.txt". For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: “D2020_09_04_T15_50_07.txt.” y 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
@@ -221,7 +221,7 @@ Los parámetros de copia de seguridad automáticadel logweb.txt se definen en la
 
 ![](../assets/en/WebServer/backup.png)
 
-Primero debe elegir la frecuencia (días, semanas, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 
