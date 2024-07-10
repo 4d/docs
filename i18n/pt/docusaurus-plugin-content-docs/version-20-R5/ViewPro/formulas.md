@@ -232,7 +232,7 @@ Date and Object parameters are handled in the following way:
 
 | Propriedade | Tipo   | Descrição        |
 | ----------- | ------ | ---------------- |
-| value       | Object | Object parameter |
+| value       | Object | Parâmetro Objeto |
 
 ### Valores retornados
 
