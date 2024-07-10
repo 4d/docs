@@ -119,7 +119,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を使う
 
-### ドキュメント
+### Documentation
 
 公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
@@ -139,7 +139,7 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                                                                       |
 | Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                 | Qodly Studio ページエディター                                                                           |
-| デスクトップフォーム                                                                    | 4D IDE                                                                                                | _サポートされていません_                                                                                   |
+| デスクトップフォーム                                                                    | 4D IDE                                                                                                | *サポートされていません*                                                                                   |
 | プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
 | コーディング IDE                                                                    | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                                                                           |
 | デバッガー                                                                         | 4D IDE デバッガー                                                                                          | Qodly Studio デバッガー                                                                              |
@@ -212,7 +212,7 @@ Qodlyページは以下の URL からダウンロードできます:
 IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-_IP:port_ は Webサーバーのアドレスを表し、_QodlyPageName_ は Qodlyページの名前です。
+*IP:port* は Webサーバーのアドレスを表し、*QodlyPageName* は Qodlyページの名前です。
 
 例:
 
