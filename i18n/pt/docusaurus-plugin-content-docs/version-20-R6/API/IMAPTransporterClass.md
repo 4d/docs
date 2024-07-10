@@ -822,10 +822,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                     |
-| ------- | ---------------------------- |
-| 18 R4   | Adicionado                   |
-| 19      | Add `isSubscribed` parameter |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 18 R4   | Adicionado                         |
+| 19      | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -900,9 +900,9 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 
-| Parâmetro  | Tipo |     | Descrição                     |
-| ---------- | ---- | :-: | ----------------------------- |
-| Resultados | Text |  <- | Hierarchy delimiter character |
+| Parâmetro  | Tipo |     | Descrição                           |
+| ---------- | ---- | :-: | ----------------------------------- |
+| Resultados | Text |  <- | Caractere delimitador de hierarquia |
 
 <!-- END REF -->
 
