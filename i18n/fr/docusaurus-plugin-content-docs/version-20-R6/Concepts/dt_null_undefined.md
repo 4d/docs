@@ -92,12 +92,12 @@ When expressions of a given type are expected in your 4D code, you can make sure
 | --------- | ----------------------- | -------- | -------------------------------------------------------------- | ------ |
 | Egalité   | Null `=` Null           | Boolean  | a.nullProp `=` b.nullProp      | True   |
 |           | Null `=` Undefined      | Boolean  | a.nullProp `=` b.undefinedProp | True   |
-|           | Null `=` _scalar value_ | Boolean  | a.nullProp `=` 42                              | False  |
+|           | Null `=` *scalar value* | Boolean  | a.nullProp `=` 42                              | False  |
 | Inégalité | Null `#` Null           | Boolean  | a.nullProp `#` b.nullProp      | False  |
 |           | Null `#` Undefined      | Boolean  | a.nullProp `#` b.undefinedProp | False  |
-|           | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42                              | True   |
+|           | Null `#` *scalar value* | Boolean  | a.nullProp `#` 42                              | True   |
 
-_scalar values_ are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Les autres types (Pointeur, Image, Objet, Collection) ont une valeur par défaut undefined ou null. Ex :
+*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Les autres types (Pointeur, Image, Objet, Collection) ont une valeur par défaut undefined ou null. Ex :
 
 ```4d
 var $object : Object
@@ -119,16 +119,16 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | ------------------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------- | ------ |
 | Egalité             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
 |                     | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
-|                     | Undefined `=` _other values_                       | Boolean  | a.undefinedProp `=` 42                              | False  |
+|                     | Undefined `=` *other values*                       | Boolean  | a.undefinedProp `=` 42                              | False  |
 | Inégalité           | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
 |                     | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
-|                     | Undefined `#` _other values_                       | Boolean  | a.undefinedProp `#` 42                              | True   |
+|                     | Undefined `#` *other values*                       | Boolean  | a.undefinedProp `#` 42                              | True   |
 | Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"                           | False  |
 | Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"                           | False  |
 | Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"                          | False  |
 | Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"                          | False  |
 
-_other values_ are expressions of any type with a value neither Undefined nor Null.
+*other values* are expressions of any type with a value neither Undefined nor Null.
 
 :::info
 
