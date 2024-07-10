@@ -84,7 +84,7 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
-#### Resultado
+#### Result
 
 La función devuelve un [**objeto transportador IMAP**](#object-imap-transporter). Todas las propiedades devueltas son de sólo lectura\*\*.
 
@@ -850,7 +850,7 @@ En el parámetro opcional `parameters`, pase un objeto que contenga valores para
 | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | isSubscribed | Boolean | <li>**True** para devolver sólo los buzones a los que se haya suscrito</li><li> **False** para devolver todos los buzones disponibles</li> |
 
-#### Resultado
+#### Result
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
@@ -910,7 +910,7 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 La función `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devuelve el caracter utilizado para delimitar niveles de jerarquía en el nombre del buzón<!-- END REF -->.
 
-El delimitador es un caracter que puede utilizarse para:
+El delimitador es un carácter que puede utilizarse para:
 
 - crear buzones de nivel inferior
 - buscar más arriba o más abajo en la jerarquía del buzón
@@ -1078,7 +1078,7 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
 
-#### Resultado
+#### Result
 
 `.getMails()` devuelve un objeto que contiene las siguientes colecciones:
 
@@ -1391,7 +1391,7 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 La función `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->elimina las banderas de los `msgIDs` para las `keywords` especificadas<!-- END REF -->.
 
-En el parámetro `msgIDs`, puede pasar:
+En el parámetro `msgIDs`, puedes pasar:
 
 - una *colección* que contiene los IDs únicos de mensajes específicos o
 - el ID único (*text*) de un solo mensaje o
