@@ -3,7 +3,7 @@ id: authUsers
 title: Usuários e sessões
 ---
 
-## Sessions
+## Sessões
 
 When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
