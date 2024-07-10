@@ -16,7 +16,7 @@ title: On Mouse Move
 
 イベントがオブジェクトに対してのみチェックされていた場合は、マウスカーソルがオブジェクトの描画エリア内にあった場合にのみイベントが生成されます。
 
-`On Mouse Move` イベントは、_MouseX_ および _MouseY_ システム変数を更新します。
+`On Mouse Move` イベントは、*MouseX* および *MouseY* システム変数を更新します。
 
 `OBJECT SET VISIBLE` コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
 
