@@ -9,7 +9,7 @@ title: HTTPリクエストの処理
 - サーバーサイドコードを呼び出すための `/4DACTION` URL。
 - サーバーに送信された HTMLオブジェクトから値を取得する `WEB GET VARIABLES`。
 - `WEB GET HTTP BODY`、`WEB GET HTTP HEADER`、`WEB GET BODY PART` などのコマンドによって、リクエスト処理をカスタマイズすることができます (cookie 含む)。
-- 変数を宣言するための _COMPILER_WEB_ プロジェクトメソッド。
+- 変数を宣言するための *COMPILER_WEB* プロジェクトメソッド。
 
 ## On Web Connection
 
@@ -19,13 +19,13 @@ title: HTTPリクエストの処理
 
 `On Web Connection` データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。 データベースメソッドは、URL とともに呼び出されます。
 
-たとえば、"_a/b/c_" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"_a/b/c.html_" はデータベースメソッドを呼び出しません。
+たとえば、"*a/b/c*" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"*a/b/c.html*" はデータベースメソッドを呼び出しません。
 
 > このリクエストは、事前に [`On Web Authentication`](authentication.md#on-web-authentication) データベースメソッド (あれば) に受け入れられているべきで、Webサーバーも起動している必要があります。
 
 ### シンタックス
 
-**On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
+**On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
 | 引数 | タイプ  |     | 説明                                              |
 | -- | ---- | :-: | ----------------------------------------------- |
@@ -74,7 +74,7 @@ title: HTTPリクエストの処理
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-この引数は必要に応じて自由に利用できます。 4D は単に URL のホスト部より後の部分を無視し、$1 に渡します。 たとえば、値 "_/Customers/Add_" が "`[Customers]` テーブルに新規レコードを直接追加する" ということを意味するような、オリジナルのルールを作成できます。 利用可能な値やデフォルトブックマークを Webユーザーに提供することで、アプリケーションの異なる部分へのショートカットを提供できます。 このようにして、Webユーザーは新しく接続するたびにナビゲーションを通過することなく、素早く Webサイトのリソースにアクセスできます。
+この引数は必要に応じて自由に利用できます。 4D は単に URL のホスト部より後の部分を無視し、$1 に渡します。 たとえば、値 "*/Customers/Add*" が "`[Customers]` テーブルに新規レコードを直接追加する" ということを意味するような、オリジナルのルールを作成できます。 利用可能な値やデフォルトブックマークを Webユーザーに提供することで、アプリケーションの異なる部分へのショートカットを提供できます。 このようにして、Webユーザーは新しく接続するたびにナビゲーションを通過することなく、素早く Webサイトのリソースにアクセスできます。
 
 ### $2 - HTTPリクエストのヘッダーとボディ
 
@@ -102,8 +102,8 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 ## /4DACTION
 
-\*\*/4DACTION/\*\*_MethodName_<br/>
-\*\*/4DACTION/\*\*_MethodName/Param_
+\*\*/4DACTION/\*\**MethodName*<br/>
+\*\*/4DACTION/\*\**MethodName/Param*
 
 | 引数         | タイプ  |     | 説明                    |
 | ---------- | ---- | :-: | --------------------- |
@@ -112,7 +112,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 **利用法**: URL またはフォームアクション
 
-この URL を使用して、任意の _Param_ テキスト引数とともに _MethodName_ に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を _$1_ に受け取ります。
+この URL を使用して、任意の *Param* テキスト引数とともに *MethodName* に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を *$1* に受け取ります。
 
 - 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
 - `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
@@ -282,7 +282,7 @@ return false
 
 - 送信のための **Submit** ボタンが 3つあります: `vsbLogOn`, `vsbRegister` そして `vsbInformation`。
 - **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
-- フォームは POST 4Dメソッドに加えて、ブラウザープロパティを _vtNav_App_ から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (_GetBrowserInformation_) を持っています。
+- フォームは POST 4Dメソッドに加えて、ブラウザープロパティを *vtNav_App* から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (*GetBrowserInformation*) を持っています。
   また、このページには `vtUserName` オブジェクトも含まれます。
 
 ユーザーが HTMLフォーム上のボタンのどれかをクリックした際に呼び出される `WWW_STD_FORM_POST` という 4Dメソッドを検証してみましょう。
@@ -323,8 +323,8 @@ return false
 
 このメソッドの機能は:
 
-- 変数 _vtNav_appName_, _vtNav_appVersion_, _vtNav_appCodeName_, そして _vtNav_userAgent_ の値 (同じ名前を持つ HTMLオブジェクトにそれぞれバインドされています) は 、`WEB GET VARIABLES` コマンドを使用することによって JavaScript のスクリプト _GetBrowserInformation_ で作成された HTMLオブジェクトから取得することができます。
-- 3つの投稿ボタンにバインドされている変数 _vsbLogOn_, _vsbRegister_ と _vsbInformation_ のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
+- 変数 *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, そして *vtNav_userAgent* の値 (同じ名前を持つ HTMLオブジェクトにそれぞれバインドされています) は 、`WEB GET VARIABLES` コマンドを使用することによって JavaScript のスクリプト *GetBrowserInformation* で作成された HTMLオブジェクトから取得することができます。
+- 3つの投稿ボタンにバインドされている変数 *vsbLogOn*, *vsbRegister* と *vsbInformation* のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
 
 HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
 
