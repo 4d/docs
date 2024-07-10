@@ -3,13 +3,13 @@ id: attributes
 title: $attributes
 ---
 
-Permite seleccionar los atributos relacionales a obtener de la dataclass (_por ejemplo_, `Company(1)?$attributes=employees.lastname` o `Employee?$attributes=employer.name`).
+Permite seleccionar los atributos relacionales a obtener de la dataclass (*por ejemplo*, `Company(1)?$attributes=employees.lastname` o `Employee?$attributes=employer.name`).
 
 ## Descrição
 
 Cuando tenga atributos relacionales en una dataclass, utilice `$attributes` para definir la ruta de los atributos cuyos valores desea obtener para la entidad o entidades relacionadas.
 
-Puede aplicar `$attributes` a una entidad (_p. Ej._, People(1)) o una entity selection (_p. Ej._, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
+Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity selection (*p. Ej.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
 - Si `$attributes` no se especifica en una consulta, o si se pasa el valor "\*", se extraen todos los atributos disponibles. Los atributos \*\*de entidad relacionada \*\* se extraen con la forma simple: un objeto con la propiedad `__KEY` (llave primaria) y `URI`. Los atributos de las **entidades relacionadas** no se extraen.
 
