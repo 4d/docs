@@ -29,7 +29,7 @@ Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
    Execute o comando `RESTORE` a partir de um método 4D.
    Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de log (.4bl) para ser restaurado e clique em **Abrir**.
-   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Por padrão, o 4D restaura os arquivos em uma pasta chamada _Archivename_ (sem extensão) localizada ao lado do arquivo. Pode exibir a rota:
+   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Por padrão, o 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) localizada ao lado do arquivo. Pode exibir a rota:
 
 ![](../assets/en/Backup/backup07.png)
 
