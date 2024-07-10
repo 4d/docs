@@ -11,7 +11,7 @@ Las señales son herramientas que ofrece el lenguaje 4D para gestionar las inter
 
 Una señal es un objeto compartido que debe ser pasado como parámetro a los comandos que llaman o crean trabajadores o procesos.
 
-A `4D.Signal` object contains the following built-in methods and properties:
+Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 
 - [`.wait()`](#wait)
 - [`.trigger()`](#trigger)
