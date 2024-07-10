@@ -98,7 +98,7 @@ L'objet options feuille 4D View Pro vous permet de contrôler plusieurs options 
 
 ### Protection de la feuille
 
-Pour verrouiller l'intégralité de la feuille, il suffit de mettre la propriété _isProtected_ à **vrai**. Vous pouvez alors déverrouiller les cellules individuellement en définissant la propriété de style de la cellule [verrouillée](#layout).
+Pour verrouiller l'intégralité de la feuille, il suffit de mettre la propriété *isProtected* à **vrai**. Vous pouvez alors déverrouiller les cellules individuellement en définissant la propriété de style de la cellule [verrouillée](#layout).
 
 | Propriété         |                          | Type    | Description                                                                                                                                                                           |
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -126,7 +126,7 @@ La définition d'un modèle de format garantit que le contenu de vos documents 4
 
 4D View Pro dispose de formats intégrés pour les chiffres, les dates, les heures et le texte, mais il vous est possible de créer vos propres modèles pour formater le contenu des cellules à l'aide de caractères et de codes spéciaux.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern _($\* #,##0.00_) which would display amounts as shown:
+For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern *($\* #,##0.00*) which would display amounts as shown:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -167,15 +167,15 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 | Constante                                 | Valeur                               | Commentaire                                                                                                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `vk pattern full date time`               | "_fullDateTimePattern_"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
-| `vk pattern long date`                    | "_longDatePattern_"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                                                   |
-| `vk pattern long time`                    | "_longTimePattern_"                  | ISO 8601 format for the time in current localization.USA default pattern: "HH:mm:ss"                                                                                  |
-| `vk pattern month day`                    | "_monthDayPattern_"                  | ISO 8601 format for the month and day in current localization.USA default pattern: "MMMM dd"                                                                                                          |
-| `vk pattern short date`                   | "_shortDatePattern_"                 | Abbreviated ISO 8601 format for the date in current localization.USA default pattern: "MM/dd/yyyy"                                                                                                    |
-| `vk pattern short time`                   | "_shortTimePattern_"                 | Abbreviated ISO 8601 format for the time in current localization.USA default pattern: "HH:mm"                                                                                         |
-| `vk pattern sortable date time`           | "_sortableDateTimePattern_"          | ISO 8601 format for the date and time in current localization which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"            |
-| `vk pattern universal sortable date time` | "_universalSortableDateTimePattern_" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
-| `vk pattern year month`                   | "_yearMonthPattern_"                 | ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"                                                                                                       |
+| `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
+| `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                                                   |
+| `vk pattern long time`                    | "*longTimePattern*"                  | ISO 8601 format for the time in current localization.USA default pattern: "HH:mm:ss"                                                                                  |
+| `vk pattern month day`                    | "*monthDayPattern*"                  | ISO 8601 format for the month and day in current localization.USA default pattern: "MMMM dd"                                                                                                          |
+| `vk pattern short date`                   | "*shortDatePattern*"                 | Abbreviated ISO 8601 format for the date in current localization.USA default pattern: "MM/dd/yyyy"                                                                                                    |
+| `vk pattern short time`                   | "*shortTimePattern*"                 | Abbreviated ISO 8601 format for the time in current localization.USA default pattern: "HH:mm"                                                                                         |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | ISO 8601 format for the date and time in current localization which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"            |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
+| `vk pattern year month`                   | "*yearMonthPattern*"                 | ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"                                                                                                       |
 
 #### Exemple
 
@@ -298,7 +298,7 @@ The following special characters allow the automatic addition or formatting of i
 | S                     | Strikethrough                                       | printInfo.headerLeft:="&SThis is text."                                           | ~~This is text.~~                               |   |
 | U                     | Souligné                                            | printInfo.headerLeft:="&UThis is text."                                           | This is text. (Underlined)   |   |
 | B                     | Souligné                                            | printInfo.headerLeft:="&BThis is text."                                           | **This is text.**                               |   |
-| I                     | Italique                                            | printInfo.headerLeft:="&IThis is text."                                           | _This is text._                                 |   |
+| I                     | Italique                                            | printInfo.headerLeft:="&IThis is text."                                           | *This is text.*                                 |   |
 | "                     | Font prefix                                         | printInfo.headerLeft:="&\"Lucida Console\"&14This is text." | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG)            |   |
 | K                     | Text Color prefix                                   | printInfo.headerLeft:="&KFF0000This is text."                                     | This is text (in red).       |   |
 | F                     | Workbook name                                       | printInfo.headerLeft:="&F"                                                                        | 2019 Monthly Revenue Forecasts                                  |   |
