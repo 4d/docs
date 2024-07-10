@@ -46,7 +46,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Define o texto selecionado como ligeiramente inclinado para a direita.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**] (https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > This is normal text.<br/>
 > _This is text in italics._
@@ -414,7 +414,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ## Array cores de Fonte
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
@@ -434,7 +434,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 ## Array estilo linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
