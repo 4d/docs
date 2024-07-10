@@ -23,7 +23,7 @@ Hay varias formas de conseguir que el depurador se muestre:
 
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
-- _Clients_BuildLogo_ es el método en que se hace seguimiento
+- *Clients_BuildLogo* es el método en que se hace seguimiento
 - La ventana del depurador apareció porque detectó una llamada al comando `C_PICTURE` y este comando fue uno de los a identificar
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
@@ -336,7 +336,7 @@ Para más información sobre el Editor de fórmulas, consulte el [Manual de refe
 - **Tablas y campos ordenados**: muestra la tabla y los campos en orden alfabético.
 - **Mostrar números enteros en hexadecimal**: muestra los números en notación hexadecimal. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
 
-## Panel de evaluación del código
+## Panel de código fuente
 
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
@@ -400,11 +400,11 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponible para:
-  - _Métodos proyecto:_ muestra el contenido de los métodos en una nueva ventana del Editor de Código
-  - _Campos_: muestra las propiedades de los campos en el inspector de la ventana de estructura
-  - _Tablas:_ muestra las propiedades de la tabla en el inspector de la ventana de estructura
-  - _Formularios:_ muestra el formulario en el editor de formularios
-  - _Variables_ (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
+  - *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
+  - *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
+  - *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
+  - *Formularios:* muestra el formulario en el editor de formularios
+  - *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
