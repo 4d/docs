@@ -18,7 +18,7 @@ Un attribut est la plus petite cellule de stockage dans une base de données rel
 - Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
 - Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
 
-> Les _attributs_ et les _propriétés_ sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
@@ -138,7 +138,7 @@ Dans cette documentation, le type de données "Mixte" est utilisé pour désigne
 - collection
 - image(\*)
 
-_(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans_ `entitySelection.max()`.
+*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
 
 ## Verrouillage optimiste
 
