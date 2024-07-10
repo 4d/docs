@@ -41,7 +41,7 @@ $style.foreColor:="red"
 $style.hAlign:=1
 $style.isVerticalText:=True
 $style.borderBottom:=New object("color";"#800080";"style";vk line style thick)
-$style.backgroundImage:=Null //remove a specific attribute
+$style.backgroundImage:=Null //remover um atributo específico
  
 VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 ```
