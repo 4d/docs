@@ -87,7 +87,7 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 ### Sintaxe
 
-**On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
+**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
 | Parâmetros | Tipo       |     | Descrição                                                                |
 | ---------- | ---------- | :-: | ------------------------------------------------------------------------ |
