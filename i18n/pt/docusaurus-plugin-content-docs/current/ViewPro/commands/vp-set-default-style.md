@@ -33,7 +33,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 $style:=New object
 $style.hAlign:=vk horizontal align left
 $style.font:="12pt papyrus"
-$style.backColor:="#E6E6FA" //light purple color
+$style.backColor:="#E6E6FA" //cor roxa clara
  
 VP SET DEFAULT STYLE("myDoc";$style)
 ```
