@@ -66,20 +66,20 @@ La siguiente tabla muestra las opciones disponibles:
 | Nombre del formato                               | Cadena JSON                                  | Ejemplo (sistema USA)                      |
 | ------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------- |
 | System date short                                | systemShort (por defecto) | 03/25/20                                                      |
-| System date abbreviated _(1)_ | systemMedium                                 | Wed, Mar 25, 2020                                             |
+| System date abbreviated *(1)* | systemMedium                                 | Wed, Mar 25, 2020                                             |
 | System date long                                 | systemLong                                   | Wednesday, March 25, 2020                                     |
 | RFC 822                                          | rfc822                                       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                                    | shortCentury                                 | 03/25/20 pero 04/25/2032 _(2)_             |
+| Short Century                                    | shortCentury                                 | 03/25/20 pero 04/25/2032 *(2)*             |
 | Internal date long                               | largo                                        | March 25, 2020                                                |
-| Fecha interna abreviada _(1)_ | abbreviated                                  | Mar 25, 2020                                                  |
+| Fecha interna abreviada *(1)* | abbreviated                                  | Mar 25, 2020                                                  |
 | Internal date short                              | short                                        | 03/25/2020                                                    |
-| ISO Date Time _(3)_           | iso8601                                      | 2020-03-25T00:00:00           |
+| ISO Date Time *(3)*           | iso8601                                      | 2020-03-25T00:00:00           |
 
-_(1)_ Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidad sólo se aplica a las versiones francesas de 4D.
+*(1)* Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidad sólo se aplica a las versiones francesas de 4D.
 
-_(2)_ El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
+*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
-_(3)_ El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
+*(3)* El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
 
 > Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
@@ -399,7 +399,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 | Nombre        | Tipos de datos | Valores posibles                                                                |
 | ------------- | -------------- | ------------------------------------------------------------------------------- |
-| booleanFormat | string         | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", por ejemplo "Assigned;Unassigned" |
+| booleanFormat | string         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objetos soportados
 
