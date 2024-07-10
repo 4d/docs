@@ -68,11 +68,11 @@ Trois options d’emplacement sont proposées :
 
 #### Prise en charge de Mecab (version japonaise)
 
-En système japonais, 4D prend en charge la librairie _MeCab_, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
+En système japonais, 4D prend en charge la librairie *MeCab*, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
 
-Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme _MeCab_et utiliser la librairie classique _ICU_.
+Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme *MeCab*et utiliser la librairie classique *ICU*.
 
-Pour désactiver _MeCab_, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
+Pour désactiver *MeCab*, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
 
 ![](../assets/en/settings/non-alphanumeric-chars.png)
 
@@ -92,9 +92,9 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
     Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. Dans ce cas, les bornes vous permettent de garantir des performances minimales dans tous les cas. Le schéma suivant illustre ce fonctionnement :
 
   Example for calculating cache memory:
-  _Physical memory to reserve = 256 MB
+  *Physical memory to reserve = 256 MB
   Percentage of the available memory used for the cache = 50%
-  Maximum size = 1 GB Minimum size = 128 MB_
+  Maximum size = 1 GB Minimum size = 128 MB*
 
   ![](../assets/en/settings/memory-maximum-size.png)
 
