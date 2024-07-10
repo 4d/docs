@@ -1436,7 +1436,7 @@ Búsqueda con marcadores de posición con nombre para los atributos y los valore
 
 Estos ejemplos ilustran las distintas formas de utilizar fórmulas con o sin parámetros en sus búsquedas.
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+La fórmula se da como texto con `eval()` en el parámetro *queryString*:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1546,7 +1546,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 
 | Propiedad  | Tipo    | Descripción                                   |
 | ---------- | ------- | --------------------------------------------- |
