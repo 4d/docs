@@ -27,7 +27,7 @@ Les noms de fonctions doivent être conformes aux [règles standard de nommage d
 
 ## Propriétés des objets
 
-Le nom d'une propriété d'objet (aussi appelé _attribut_) peut contenir jusqu'à 255 caractères.
+Le nom d'une propriété d'objet (aussi appelé *attribut*) peut contenir jusqu'à 255 caractères.
 
 Les propriétés d'objets peuvent référencer des valeurs scalaires, des éléments ORDA, des fonctions de classe, d'autres objets, etc. Quelle que soit leur nature, les noms des propriétés d'objets doivent suivre certaines règles **si vous souhaitez utiliser la [notation à point](dt_object.md#propriétés-des-objets)** :
 
