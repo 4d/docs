@@ -35,7 +35,7 @@ Permite modificar o número da porta TCP/IP usada pelo servidor Web para as cone
 
 #### Allow database Access through 4DSYNC URLs
 
-_Nota de compatibilidad:_ esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
+*Nota de compatibilidad:* esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
 
 ### Caminhos
 
@@ -88,7 +88,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 #### Sessões herdadas (sessões de processo único)
 
-_Nota de compatibilidad:_ esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
+*Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
 Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
 
@@ -126,7 +126,7 @@ Set the authentication system that you want to apply to your Web server. São pr
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
 
 ## Opções (II)
 
@@ -158,7 +158,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parámetros CORS
 
 ### Formato do histórico
 
-Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
+Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
 > La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -262,7 +262,7 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo _Publicado en WSDL_. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
 - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
@@ -286,7 +286,7 @@ Inicia e pára o servidor REST. Ver [Configuración del servidor REST](../REST/c
 
 ### Acesso
 
-:::information Deprecated
+:::information Obsoleto
 
 **This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
 
