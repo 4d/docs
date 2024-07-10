@@ -201,7 +201,7 @@ Lorsque la fonction est appelée, elle reçoit dans la propriété `$editor.edit
 
 Une fois les opérations terminées, si la macro entraîne la modification, l'ajout ou la suppression d'objets, vous pouvez transmettre les propriétés modifiées résultantes dans `$result`. Le processeur de macros analysera les propriétés retournées et appliquera les opérations nécessaires dans le formulaire. Évidemment, moins vous retournez de propriétés, moins le traitement prendra du temps.
 
-Voici les propriétés retournées dans le paramètre _$editor_ :
+Voici les propriétés retournées dans le paramètre *$editor* :
 
 | Propriété                                                        | Type       | Description                                                                       |
 | ---------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
