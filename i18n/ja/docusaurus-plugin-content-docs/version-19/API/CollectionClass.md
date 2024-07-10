@@ -707,8 +707,8 @@ End use
 
 :::note 注記
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. ネイティブオブジェクトの等価性はチェックされません。
-- Elements with **null** values are not equal to Undefined elements.
+- `.equal()` 関数は、コレクション内の文字列、ブール値、数値、および null型要素の等価性をチェックするだけです。 ネイティブオブジェクトの等価性はチェックされません。
+- **null**値の要素は undefined要素と同じとはみなされません。
 
 :::
 
