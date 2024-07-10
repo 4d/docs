@@ -5,7 +5,7 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por defecto, _Automático_ está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por defecto, *Automático* está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
 
 #### Gramática JSON
 
@@ -23,7 +23,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 Define a cor de fundo de um objeto.
 
-En el caso de un list box, por defecto se selecciona _Automático_: la columna utiliza el color de fondo definido al nivel del list box.
+En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
 #### Gramática JSON
 
@@ -45,7 +45,7 @@ En el caso de un list box, por defecto se selecciona _Automático_: la columna u
 
 `List box de tipo coleção e seleção de entidades`
 
-Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the _4D Language Reference manual_.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the *4D Language Reference manual*.
 
 You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
 
@@ -160,7 +160,7 @@ Designa a espessura de uma linha.
 
 ## Array controle linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
