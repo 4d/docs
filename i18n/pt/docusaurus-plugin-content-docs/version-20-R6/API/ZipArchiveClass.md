@@ -219,7 +219,7 @@ Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* 
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Se uma senha for exigida mas não for passada, quando tentar ler os conteúdos do arquivo um erro será gerado.
 
-**Archive object**
+**Objeto arquivo**
 
 The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
