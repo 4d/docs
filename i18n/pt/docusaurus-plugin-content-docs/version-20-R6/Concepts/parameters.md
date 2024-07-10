@@ -7,7 +7,7 @@ Frequentemente será preciso passar dados para seus métodos. Isso é facilmente
 
 ## Visão Geral
 
-**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos _parámetros_ y _argumentos_ se utilizan indistintamente en este manual. Parâmetros também são passados para comandos integrados 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
+**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos *parámetros* y *argumentos* se utilizan indistintamente en este manual. Parâmetros também são passados para comandos integrados 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -35,7 +35,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //in the context of a subform
 ```
 
-Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada _MyLength_. Esta é a instrução:
+Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada *MyLength*. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -168,7 +168,7 @@ Function square($x : Integer)
    return $x * $x
 ```
 
-> Internamente, `return x` ejecuta `$0:=x` o (si se declara) `myReturnValue:=x`, y devuelve al llamante. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario _undefined_.
+> Internamente, `return x` ejecuta `$0:=x` o (si se declara) `myReturnValue:=x`, y devuelve al llamante. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario *undefined*.
 
 La instrucción `return` puede utilizarse junto con la sintaxis estándar para los [valores devueltos](#valor-devuelto) (el valor devuelto debe ser del tipo declarado). Entretanto lembre que isso finaliza imediatamente a execução de código. Por exemplo:
 
@@ -176,12 +176,12 @@ La instrucción `return` puede utilizarse junto con la sintaxis estándar para l
 Function getValue
 	$0:=10
 	return 20
-	// returns 20
+	// retorna 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// returns 10
+	// retorna 10
 ```
 
 ## Indireção dos parâmetros
@@ -210,10 +210,10 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
 
 ```4d
-//foo method
+//método foo
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
 For($i;1;Count parameters)
 	ALERT("param "+String($i)+" = "+String(${$i}))
@@ -223,7 +223,7 @@ End for
 Esta função pode ser chamada agora de várias formas:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //parâmetros extras foram passados
 ```
 
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
@@ -279,13 +279,13 @@ Esse método pode ser chamado com um número variável de parâmetros Real. No c
 
 ```4d
 
-$total1:=SumNumbers // returns 0 
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // retorna 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // retorna 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 ```
 
-:::note Compatibility Note
+:::note Nota de compatibilidade
 
 La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigue siendo compatible, pero ahora se prefiere la notación variable.
 
@@ -382,8 +382,8 @@ Alguns contextos não suportam a declaração em um método "Compiler_", portant
 
 ### Conflitos entre declarações
 
-- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método _Compiler__, se ignora la entrada del método  _Compiler__.
-- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método _Compiler__ pero con un tipo de datos diferente, Code Live Checker genera un error durante la verificación de sintaxis y la compilación.
+- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método *Compiler_*, se ignora la entrada del método  *Compiler_*.
+- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método *Compiler_* pero con un tipo de datos diferente, Code Live Checker genera un error durante la verificación de sintaxis y la compilación.
 
 ## Tipo de parámetro equivocado
 
@@ -470,7 +470,7 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 
 ## Parâmetros opcionais
 
-En el manual _Lenguaje de 4D_, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro _okButtonTitle_ puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
+En el manual *Lenguaje de 4D*, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro *okButtonTitle* puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
 
 ```4d
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
@@ -501,14 +501,12 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
- 
- #DECLARE ($message : Text; $path : Text; $wpArea : Object)
-  
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
  ALERT($message)
- If(Count parameters>=3)
+ If(Count parameters=3)
     WP SET TEXT($wpArea;$1;wk append)
  Else
-    If(Count parameters>=2)
+    If(Count parameters=2)
        TEXT TO DOCUMENT($path;$message)
     End if
  End if
@@ -570,9 +568,9 @@ Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar
 
 ### Casos particulares: objetos e coleções
 
-Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un _puntero_ interno).
+Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un *puntero* interno).
 
-Por consiguiente, cuando se utilizan estos tipos de datos como parámetros, `$1, $2...` no contienen _valores_ sino _referencias_. La modificación del valor de los parámetros `$1, $2...` dentro de la subrutina se propagará a cualquier lugar donde se utilice el objeto o colección fuente. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$1, $2...` no necesitan ser desreferenciados en la subrutina.
+Por consiguiente, cuando se utilizan estos tipos de datos como parámetros, `$1, $2...` no contienen *valores* sino *referencias*. La modificación del valor de los parámetros `$1, $2...` dentro de la subrutina se propagará a cualquier lugar donde se utilice el objeto o colección fuente. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$1, $2...` no necesitan ser desreferenciados en la subrutina.
 
 Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
 
