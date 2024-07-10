@@ -7,7 +7,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
 
-- the [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html) command,
+- o comando [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html),
 - the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html) commands,
 - the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
 
@@ -53,7 +53,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                                                          | EEEE          | Tuesday                                                               |
 |         |                                                                          | EEEEE         | T                                                                     |
 |         |                                                                          | EEEEEE        | Tu                                                                    |
-| e       | local day of week                                                        | e             | 2                                                                     |
+| e       | dia da semana local                                                      | e             | 2                                                                     |
 |         |                                                                          | ee            | 02                                                                    |
 |         |                                                                          | eee           | Tue                                                                   |
 |         |                                                                          | eeee          | Tuesday                                                               |
@@ -112,7 +112,7 @@ The following table lists all supported patterns for date and time formats.
 
 ### `L` (monopuesto) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
+In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 
@@ -124,13 +124,13 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### Zeros à esquerda
 
-In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" would give "001996".
+In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" daria "001996".
 
 ### Peças localizadas
 
 Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-Por ejemplo, para la hora `13:25:34`, "B" aparecerá _in the afternoon_ en un sistema estadounidense, y _après-midi_ en un sistema francés.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá *in the afternoon* en un sistema estadounidense, y *après-midi* en un sistema francés.
 
 ### Letras extras
 
