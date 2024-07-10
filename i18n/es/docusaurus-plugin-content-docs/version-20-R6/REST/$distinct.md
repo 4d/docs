@@ -3,7 +3,7 @@ id: distinct
 title: $distinct
 ---
 
-Devuelve los diferentes valores de un atributo específico en una colección (_por ejemplo_, `Company/name?$filter="name=a*"&$distinct=true`)
+Devuelve los diferentes valores de un atributo específico en una colección (*por ejemplo*, `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## Descripción
 
