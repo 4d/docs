@@ -46,10 +46,10 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Define o texto selecionado como ligeiramente inclinado para a direita.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**] (https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > This is normal text.<br/>
-> _This is text in italics._
+> *This is text in italics.*
 
 #### Gramática JSON
 
@@ -118,8 +118,8 @@ Estão disponíveis três temas de tipos de letra:
 
 Existem dois tipos de nomes de famílias de letras:
 
-- _family-name:_ El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
-- _generic-family:_ El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
+- *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
 You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
 
@@ -191,7 +191,7 @@ También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERT
 
 > Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
-El siguiente ejemplo utiliza un nombre de variable: introduzca _CompanyColor_ para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
+El siguiente ejemplo utiliza un nombre de variable: introduzca *CompanyColor* para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foreground color;Dark shadow color)
@@ -306,14 +306,14 @@ A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades
 | Nome da propriedade |              |                | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                  |
 | ------------------- | ------------ | -------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cell                |              |                | object | Allows applying the property to a single column.                                                                                                                                                                                                                                                           |
-|                     | _columnName_ |                | object | _columnName_ es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                            |
-|                     |              | _propertyName_ | string | as propriedades "stroke", "fill", "fontStyle", "fontWeight" ou "textDecoration" (ver acima). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. São ignorados se forem passados no objeto "célula" |
+|                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                            |
+|                     |              | *propertyName* | string | as propriedades "stroke", "fill", "fontStyle", "fontWeight" ou "textDecoration" (ver acima). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. São ignorados se forem passados no objeto "célula" |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Exemplos**
 
-En un método proyecto _Color_, escriba el siguiente código:
+En un método proyecto *Color*, escriba el siguiente código:
 
 ```4d
 //Color method
@@ -342,7 +342,7 @@ End if
  End case
 ```
 
-Entonces, el método _Color_ contendría:
+Entonces, el método *Color* contendría:
 
 ```4d
   //Color method
@@ -414,7 +414,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ## Array cores de Fonte
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
@@ -434,7 +434,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 ## Array estilo linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
