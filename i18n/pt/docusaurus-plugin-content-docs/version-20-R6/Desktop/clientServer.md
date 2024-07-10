@@ -57,7 +57,7 @@ Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá 
 
 ### Atualizar ficheiros de projeto no servidor
 
-4D Server crea y envía automáticamente a las máquinas remotas una versión [.4dz](building.md#build-compiled-structure) del archivo proyecto _.4DProject_ (no comprimido) en modo interpretado.
+4D Server crea y envía automáticamente a las máquinas remotas una versión [.4dz](building.md#build-compiled-structure) del archivo proyecto *.4DProject* (no comprimido) en modo interpretado.
 
 - Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, \*es decir, \*cuando el proyecto ha sido modificado y recargado por 4D Server. O projecto é recarregado:
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
