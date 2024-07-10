@@ -21,7 +21,7 @@ Elimina la entidad actual, la colección de entidades o la selección de entidad
 
 ### Descripción
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) _(e.g._, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -180,7 +180,7 @@ Actualiza y/o crea una o varias entidades
 
 ### Descripción
 
-`$method=update` le permite actualizar y/o crear una o más entidades en un solo **POST**. Si se actualiza y/o crea una entidad, se efectúa en un objeto con, para cada propiedad, un atributo y su valor, _por ejemplo_ `{ lastName: "Smith" }`. Si actualiza y/o crea varias entidades, debe crear una colección de objetos.
+`$method=update` le permite actualizar y/o crear una o más entidades en un solo **POST**. Si se actualiza y/o crea una entidad, se efectúa en un objeto con, para cada propiedad, un atributo y su valor, *por ejemplo* `{ lastName: "Smith" }`. Si actualiza y/o crea varias entidades, debe crear una colección de objetos.
 
 En cualquier caso, debe definir los **POST** datos en el **body** de la petición.
 
