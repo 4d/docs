@@ -26,7 +26,7 @@ Selecione a opção **Iniciar WebAdmin ao iniciar** na caixa de diálogo de par�
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Se usar uma aplicação 4D que tenha ou não interface, pode habilitar o modo de inicio automático utilizando o argumento abaixo _Interface de linha de comandos_:
+- Se usar uma aplicação 4D que tenha ou não interface, pode habilitar o modo de inicio automático utilizando o argumento abaixo *Interface de linha de comandos*:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -50,7 +50,7 @@ Configurar o componente `WebAdmin` é obrigatório em particular para definir a 
 
 Pode configurar o componente `WebAdmin` usando [Web Administration a caixa de diálogo de configurações](#settings-dialog-box) (ver abaixo).
 
-> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da _Interface de Linha de Comando_](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
+> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
 
 ### Caixa de diálogos de configurações
 
@@ -93,7 +93,7 @@ Rota da pasta onde o certificado TLS está localizado. Como padrão, a rota da p
 
 #### Modo de registro de depuração/debug
 
-O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog__nn_.txt, armazenada na pasta "Logs" da aplicação -- _nn_ é o número do arquivo). As opções abaixo estão disponíveis:
+O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog_*nn*.txt, armazenada na pasta "Logs" da aplicação -- *nn* é o número do arquivo). As opções abaixo estão disponíveis:
 
 - **Desactivado** (por defecto)
 - **Com todas as partes do corpo** - habilitado com partes do cuerpo das petições e respostas
