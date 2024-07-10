@@ -205,7 +205,7 @@ Los parámetros se pueden pasar a las funciones 4D que llaman a los métodos pro
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-Estos parámetros se reciben en _methodName_ en $1, $2...$N.
+Estos parámetros se reciben en *methodName* en $1, $2...$N.
 
 Tenga en cuenta que los ( ) son obligatorios, incluso si no se pasan parámetros:
 
@@ -213,7 +213,7 @@ Tenga en cuenta que los ( ) son obligatorios, incluso si no se pasan parámetros
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the _parameters_ collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades _minParams_ y _maxParams_.
+You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades *minParams* y *maxParams*.
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
@@ -221,7 +221,7 @@ Si no se declaran parámetros, los valores se pueden pasar secuencialmente a los
 
 Los parámetros Fecha y Objeto se tratan de la siguiente manera:
 
-- Las fechas en _jstype_ se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
+- Las fechas en *jstype* se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
 
 | Propiedad | Tipo  | Descripción      |
 | --------- | ----- | ---------------- |
@@ -361,4 +361,4 @@ Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 - **Ejecutable**: pertenece al proyecto local o a un componente cargado con la opción "Compartido por los componentes y el proyecto local" activada (ver [Compartir los métodos proyecto](../Concepts/components.md#sharing-of-project-methods)).
 - **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
 
-> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir la gramática de identificadores de JavaScript (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver _Acceso a los datos_) se ignora en todos los casos.
+> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir la gramática de identificadores de JavaScript (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver *Acceso a los datos*) se ignora en todos los casos.
