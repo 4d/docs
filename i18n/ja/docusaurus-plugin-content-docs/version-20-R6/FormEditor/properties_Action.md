@@ -1,6 +1,6 @@
 ---
 id: action
-title: 動作
+title: アクション
 ---
 
 ## メソッド
