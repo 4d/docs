@@ -35,7 +35,7 @@ Também é possível efetuar uma consulta utilizando $filter:
 
 `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/\{entitySetID\}:
+Também é possível eliminar um conjunto de entidades utilizando $entityset/\{entitySetID\}:
 
 `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
