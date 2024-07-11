@@ -1,6 +1,6 @@
 ---
 id: boolean
-title: Boolean
+title: ブール
 ---
 
 ブールのフィールド、変数、式は、true（真）またはfalse（偽）のいずれかになります。
