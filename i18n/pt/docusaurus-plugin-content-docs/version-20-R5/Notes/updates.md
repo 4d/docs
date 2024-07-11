@@ -122,7 +122,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 
 4D 20 inclui uma atualização da biblioteca ICU (veja abaixo) que forçará uma reconstrução automática dos índices do tipo alfa, texto e objeto. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
 
-:::caution 4D 20.1 index rebuild and client/server versions
+:::caution 4D 20.1 reconstrução dos índices e versões cliente/servidor
 
 4D 20.1 também inclui uma atualização da biblioteca ICU, que tem as seguintes consequências:
 
