@@ -5,7 +5,7 @@ title: リリースノート
 
 ## 4D 20 R6
 
-[**4D 20 R6 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R6/): 4D 20 R6 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), the blog post that lists all new features and enhancements in 4D 20 R6.
 
 #### ハイライト
 
@@ -33,7 +33,7 @@ title: リリースノート
 
 ## 4D 20 R5
 
-[**4D 20 R5 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R5/): 4D 20 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
 
 #### ハイライト
 
@@ -84,7 +84,7 @@ title: リリースノート
 
 ## 4D 20 R3
 
-[**4D 20 R3 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R3/): 4D 20 R3 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/), the blog post that lists all new features and enhancements in 4D 20 R3.
 
 #### ハイライト
 
@@ -396,7 +396,7 @@ ALERT($param1+" "+$param2)
 
 | ライブラリ     | 現在のバージョン                                  | 更新された 4D バージョン | 説明                                                                    |
 | --------- | ----------------------------------------- | -------------- | --------------------------------------------------------------------- |
-| BoringSSL | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**      | QUIC に使用                                                              |
+| BoringSSL | 0aa300b                                   | **20 R6**      | QUIC に使用                                                              |
 | CEF       | 121                                       | 20 R5          | Chromium 6167                                                         |
 | Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                |
 | ICU       | 73.2                      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                      |
