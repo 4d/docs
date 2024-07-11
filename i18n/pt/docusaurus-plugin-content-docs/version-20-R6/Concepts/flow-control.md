@@ -6,21 +6,21 @@ title: Fluxo de controlo
 Independentemente da simplicidade ou da complexidade de um método, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções dentro do método. Há três tipos de estruturas:
 
 - \*\*Sequencial: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: [People]lastName:=Uppercase([People]lastName)\`
-- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
+- **Branching**: Uma estrutura de bifurcação permite que os métodos testem uma condição e sigam caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional é a estrutura [`Se...Senão...Fim se`](#ifelseend-if), que direciona o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura ramificada é a [`Caso do...Senão...Caso final`](#case-ofelseend-case), que direciona o fluxo do programa para um dos muitos caminhos.
+- **Loop**: ao escrever métodos, é muito comum descobrir que você precisa de uma sequência de afirmações para repetir várias vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
   - [`While...End while`](#whileend-while)
   - [`Repeat...Until`](#repeatuntil)
   - [`For...End for`](#forend-for)
   - [`For each...End for each`](#for-eachend-for-each)
 
-Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
+Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de repetição pode ser usada de qualquer maneira, mas laços `While` e laços `repeat` são mais apropriados para repetir até que uma condição seja atendida, e laços `For` são mais apropriados para repetir um número específico de vezes. \`For each... End for each permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
-**Nota:** 4D permite anidar estructuras de programación hasta una "profundidad" de 512 niveles.
+**Nota:** 4D permite que você incorpore estruturas de programação até uma "profundidade" de 512 níveis.
 
 ## If... Else... End if
 
-La sintaxis de la estructura condicional `If...Else...End if` es:
+A sintaxe formal da estrutura de fluxo de controle `Se...Senão...Fim Se` é:
 
 ```4d
  If(Boolean_Expression)
@@ -30,7 +30,7 @@ La sintaxis de la estructura condicional `If...Else...End if` es:
  End if
 ```
 
-Tenga en cuenta que la parte `Else` es opcional; puede escribir:
+Note que a parte `Else` é opcional; pode escrever:
 
 ```4d
  If(Boolean_Expression)
@@ -38,7 +38,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
  End if
 ```
 
-La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. El `Else` es opcional; si se omite Else, la ejecución continúa con la primera instrucción (si la hay) que sigue al `End if`.
+A estrutura `Se...Senão...End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração Else é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir End if\`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -48,7 +48,7 @@ Note que a expressão booleana é sempre avaliada completamente. Considere parti
  End if
 ```
 
-A expressão é TRUE apenas se ambos os métodos forem TRUE. However, even if *MethodA* returns FALSE, 4D will still evaluate *MethodB*, which is a useless waste of time. Nesse caso, é mais interessante usar uma estrutra como:
+A expressão é TRUE apenas se ambos os métodos forem TRUE. No entanto, mesmo se *MethodA* retorna FALSE, 4D ainda avaliará *MethodB*, que é uma perda de tempo inútil. Nesse caso, é mais interessante usar uma estrutra como:
 
 ```4d
  If(MethodA)
@@ -58,9 +58,9 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. However, even if *M
  End if
 ```
 
-The result is similar and *MethodB* is evaluated only if necessary.
+O resultado é semelhante e *MethodB* é avaliado apenas se necessário.
 
-> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..
+> **Nota:** O [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If..Else.
 
 #### Exemplo
 
@@ -74,7 +74,7 @@ The result is similar and *MethodB* is evaluated only if necessary.
  End if 
 ```
 
-**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** A ramificação pode ser realizada sem instruções a serem executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  If(Boolean_Expression)
@@ -94,7 +94,7 @@ ou :
 
 ## Case of... Else... End case
 
-The formal syntax of the `Case of... Else...End case` control flow structure is:
+A sintaxe formal do `Caso do...Senão...Caso senão...Caso final` estrutura de fluxo de controle é:
 
 ```4d
  Case of
@@ -113,7 +113,7 @@ The formal syntax of the `Case of... Else...End case` control flow structure is:
  End case
 ```
 
-Tenga en cuenta que la parte `Else` es opcional; puede escribir:
+Note que a parte `Else` é opcional; pode escrever:
 
 ```4d
  Case of
@@ -130,7 +130,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
  End case
 ```
 
-As with the `If...Else...End if` structure, the `Case of... Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of... Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+Como na estrutura `Se...Senão...End if`, a estrutura `Caso do...Senão...Final de caso` também permite que seu método escolha entre ações alternativas. Ao contrário do `Se...Senão...End` se estrutura, o `Caso do...Senão... estrutura do caso` pode testar um número ilimitado e razoável de expressões booleanas e tomar medidas, dependendo do qual uma seja TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -138,9 +138,9 @@ Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos d
 :(bValidate=1)
 ```
 
-Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Si ninguno de los casos es TRUE, no se ejecutará ninguna de las instrucciones (si no se incluye la parte `Else`).
+Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Se nenhum dos casos for TRUE, nenhuma das afirmações será executada (se nenhuma parte `Senão` estiver incluída).
 
-Pode incluir uma instrução Else depois do último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al `Else`.
+Pode incluir uma instrução Else depois do último caso. Se todos os casos forem FALSE, as instruções que seguem `Else` serão executadas.
 
 #### Exemplo
 
@@ -148,38 +148,38 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
- End case
+    :(vResult=1) //Teste se o número é 1
+       ALERT("Um! ) //Se for 1, exibir um alerta
+    :(vResult=2) //Teste se o número é 2
+       ALERT("Dois. ) //Se for 2, exibir um alerta
+    :(vResult=3) //Testar se o número é 3
+       ALERT("Três". ) //Se for 3, exiba um alerta
+    Senão //Se não for 1, 2 ou 3, exibir um alerta
+       ALERT("Não era um, dois ou três. )
+End case
 ```
 
 Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) //Teste se o número é 1
+    ALERT("One.") //Se for 1, exiba um alerta
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Teste se o número é 2
+       ALERT("Two.") //Se for 2, exiba um alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exiba um alerta
+       Else //Se não for 1, 2 ou 3, exiba um alerta
           ALERT("It was not one, two, or three.")
        End if
     End if
  End if
 ```
 
-Remember that with a `Case of... Else...End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Lembre-se que com uma estrutura de caso `Case of...Else...End case`, apenas o primeiro caso VERDADEIRO é executado. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
-Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por exemplo, o código abaixo nunca terá sua última condição detectada:
+Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste de presença de condicionalidade 1 cobre o teste de presença de condicionalidade 1&condi2 e, por conseguinte, deve ser localizado por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
@@ -203,7 +203,7 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** A ramificação pode ser realizada sem instruções a serem executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  Case of
@@ -244,7 +244,7 @@ ou :
 
 ## While... End while
 
-La sintaxis de la estructura condicional `While...End while` es:
+A sintaxe formal da estrutura de fluxo de controle `While...End while` é:
 
 ```4d
  While(Boolean_Expression)
@@ -254,13 +254,13 @@ La sintaxis de la estructura condicional `While...End while` es:
  End while
 ```
 
-Un bucle `While...End while` ejecuta las instrucciones dentro del bucle mientras la expresión booleana sea TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+Um loop `While...End while` executa as declarações dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
+As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
-Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
+É comum inicializar o valor testado na expressão booleana imediatamente antes de entrar no loop `Enquanto...Fim enquanto`. Inicializar o valor significa definí-lo como algo apropriado, geralmente para que a expressão booleana seja VERDADEIRA e `While... End while` executa o laço.
 
-O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. The following loop continues forever because *NeverStop* is always TRUE:
+O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O seguinte loop continua para sempre porque *NeverStop* sempre é TRUE:
 
 ```4d
  NeverStop:=True
@@ -297,7 +297,7 @@ Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
-Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
+As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
 #### Exemplo
 
@@ -335,7 +335,7 @@ El bucle `For...End for` es un bucle controlado por un contador:
 - Si *Start_Expression* y *End_Expression* son iguales, el bucle se ejecutará sólo una vez.
 - Si *Start_Expression* es mayor que *End_Expression*, el bucle no se ejecutará en absoluto a menos que se especifique una *Increment_Expression* negativa. Ver os exemplos.
 
-Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
+As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
 #### Exemplos básicos
 
@@ -566,7 +566,7 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
   - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
   - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
+As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
 ### Loop através da coleção
 
