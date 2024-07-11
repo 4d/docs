@@ -793,8 +793,8 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare récursiv
 
 :::note Notes
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
-- Elements with **null** values are not equal to Undefined elements.
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::
 
