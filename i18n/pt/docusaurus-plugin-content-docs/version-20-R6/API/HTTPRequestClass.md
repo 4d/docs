@@ -124,7 +124,7 @@ In the *options* parameter, pass an object that can contain the following proper
 
 | Propriedade            | Tipo                                              | Descrição                                                                                                                                                                                                                                                                                                                                                           | Por padrão          |
 | ---------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| agent                  | [4D.HTTPAgent](HTTPAgentClass.md) | HTTPAgent to use for the HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.                                                                                          | Global agent object |
+| agent                  | [4D.HTTPAgent](HTTPAgentClass.md) | HTTPAgent para usar para o HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.                                                                                        | Global agent object |
 | automaticRedirections  | Parâmetros                                        | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                                                                                | True                |
 | body                   | Diferente de                                      | Body of the request (required in case of `post` or `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                                                              | indefinido          |
 | certificatesFolder     | [Folder](FolderClass.md)                          | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                                                                                                                   | indefinido          |
@@ -165,7 +165,7 @@ Aqui está a sequência de chamadas de retorno:
 
 4. If an error occurs, `onError` is executed once (and terminates the request)
 
-5. `onTerminate` is always executed once
+5. `onTerminate` é sempre executado uma vez
 
 #### objecto evento
 
@@ -422,7 +422,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. It triggers the `onTerminate` event.
+The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 
