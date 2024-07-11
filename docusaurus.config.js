@@ -247,7 +247,7 @@ module.exports = {
       headingIds: true,
     },
     anchors: {
-      maintainCase: true,
+      maintainCase: false,
     },
   },
 }
