@@ -12,7 +12,7 @@ title: VP SET DATE VALUE
 | 引数            | タイプ    |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト |                  |
-| dateValue     | 日付     | -> | 設定する日付値   |                  |
+| dateValue     | Date   | -> | 設定する日付値   |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
 #### 説明
