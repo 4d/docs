@@ -78,7 +78,7 @@ El parámetro opcional _paramObj_ le permite definir múltiples propiedades para
 - [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
 - La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del _paramObj_ para el código a ejecutar después de la exportación.
 
-Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the _formula_ property of the _paramObj_, if used.
+Una vez finalizada la operación de exportación, `VP EXPORT DOCUMENT` activa automáticamente la ejecución del método definido en la propiedad _formula_ del _paramObj_, si se usa.
 
 #### Pasar un método retrollamada (fórmula)
 
