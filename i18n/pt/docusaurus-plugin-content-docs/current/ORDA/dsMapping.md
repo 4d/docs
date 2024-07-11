@@ -141,7 +141,7 @@ Todos los campos elegibles de una tabla están disponibles como atributos de su 
 
 #### Atributos de armazenamento e de relação
 
-Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Los atributos escalares (_es decir_, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
+Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Los atributos escalares (_es decir_, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
 
 - Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
 - Un **atributo relacional** ofrece acceso a otras entidades. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.
