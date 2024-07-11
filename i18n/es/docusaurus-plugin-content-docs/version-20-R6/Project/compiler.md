@@ -176,7 +176,7 @@ This tab allows you to define which warnings should be displayed globally. From 
 
 To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
 
-By default, all warning types are checked and enabled.
+Por defecto, todos los tipos de advertencia están marcados y activados.
 
 When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
 
@@ -206,7 +206,7 @@ Para volver a habilitar las advertencias en una sección de código, utilice los
   //%W-<warning number>
 ```
 
-Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Sólo las advertencias con números pueden ser desactivadas o activadas. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
 Por ejemplo, para desactivar la siguiente advertencia:
 
 *1: Redefinición de la variable $a (550.10)*
