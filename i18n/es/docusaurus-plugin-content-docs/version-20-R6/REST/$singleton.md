@@ -11,7 +11,7 @@ Singleton functions are called in POST requests with the `$singleton` command an
 /rest/$singleton/VehicleFactory/buildVehicle
 ```
 
-with data in the body of the POST request: ["truck"]
+con los datos en el cuerpo de la petición POST: ["truck"]
 
 En el lenguaje 4D, esta llamada equivale a:
 
